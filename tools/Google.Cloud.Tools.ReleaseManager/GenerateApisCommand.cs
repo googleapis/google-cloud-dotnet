@@ -80,8 +80,9 @@ internal class GenerateApisCommand : ICommand
             return ExecuteForUnconfigured(args.Skip(1).ToArray());
         }
 
-        var catalog = ApiCatalog.LoadFromGeneratorInput(generatorInputDirectory);
         var apis = new List<ApiMetadata>();
+        var nonSourceGenerator = new NonSourceGenerator(generatorInputDirectory, generatorOutputDirectory);
+        var catalog = nonSourceGenerator.ApiCatalog;
 
         // If APIs have been specified, check they all exist before we start.
         if (args.Length == 0)
@@ -100,7 +101,6 @@ internal class GenerateApisCommand : ICommand
             }
         }
 
-        var nonSourceGenerator = new NonSourceGenerator(catalog, generatorInputDirectory, generatorOutputDirectory);
         foreach (var api in apis)
         {
             Generate(api);

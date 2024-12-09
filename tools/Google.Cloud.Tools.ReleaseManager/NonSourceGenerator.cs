@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using Google.Protobuf.WellKnownTypes;
+using LibGit2Sharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
@@ -144,7 +145,7 @@ internal sealed class NonSourceGenerator
             "issues/**"
         }.AsReadOnly();
 
-    private readonly ApiCatalog _catalog;
+    public ApiCatalog ApiCatalog { get; }
     private readonly string _generatorInputDirectory;
     private readonly string _outputDirectory;
 
@@ -161,18 +162,17 @@ internal sealed class NonSourceGenerator
         }
     }
 
-    // Creates an instance of the generator assuming "in-place" generation.
-    internal NonSourceGenerator(ApiCatalog catalog)
-        // TODO: Tidy this up.
-        : this(catalog, Path.Combine(DirectoryLayout.DetermineRootDirectory(), DirectoryLayout.GeneratorInput), DirectoryLayout.DetermineRootDirectory())
+    internal NonSourceGenerator(string generatorInputDirectory, string outputDirectory)
     {
-    }
-
-    internal NonSourceGenerator(ApiCatalog catalog, string generatorInputDirectory, string outputDirectory)
-    {
-        _catalog = catalog;
+        ApiCatalog = ApiCatalog.LoadFromGeneratorInput(generatorInputDirectory);
         _generatorInputDirectory = generatorInputDirectory;
         _outputDirectory = outputDirectory;
+    }
+
+    internal static NonSourceGenerator ForInPlaceGeneration()
+    {
+        var root = DirectoryLayout.DetermineRootDirectory();
+        return new NonSourceGenerator(Path.Combine(root, DirectoryLayout.GeneratorInput), root);
     }
 
     #region API-specific files
@@ -187,7 +187,7 @@ internal sealed class NonSourceGenerator
     /// <param name="api"></param>
     internal void GenerateApiFiles(ApiMetadata api)
     {
-        HashSet<string> apiNames = _catalog.CreateIdHashSet();
+        HashSet<string> apiNames = ApiCatalog.CreateIdHashSet();
 
         GenerateProjects(api, apiNames);
         GenerateSolutionFile(api);
@@ -632,13 +632,13 @@ api-name: {api.Id}
             "|---------|----------------|-------------|"
         };
 
-        var ambiguousDescriptions = _catalog.Apis
+        var ambiguousDescriptions = ApiCatalog.Apis
             .Select(api => api.EffectiveListingDescription)
             .GroupBy(description => description)
             .Where(g => g.Count() > 1)
             .Select(g => g.Key)
             .ToList();
-        foreach (var api in _catalog.Apis)
+        foreach (var api in ApiCatalog.Apis)
         {
             // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
             // We can cross that bridge when we come to it.
@@ -680,7 +680,7 @@ api-name: {api.Id}
         string json = File.ReadAllText(templatePath);
         JObject jobj = JObject.Parse(json);
         JArray ignorePaths = (JArray) jobj["ignorePaths"];
-        foreach (var api in _catalog.Apis)
+        foreach (var api in ApiCatalog.Apis)
         {
             ignorePaths.Add($"apis/{api.Id}/{api.Id}/**");
         }

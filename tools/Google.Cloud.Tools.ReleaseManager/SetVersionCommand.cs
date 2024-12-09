@@ -34,7 +34,8 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         internal int InternalExecute(string id, string version, bool quiet)
         {
-            var catalog = ApiCatalog.Load();
+            var nonSourceGenerator = NonSourceGenerator.ForInPlaceGeneration();
+            var catalog = nonSourceGenerator.ApiCatalog;
             var api = catalog[id];
 
             if (api.BlockRelease is string blockRelease)
@@ -49,7 +50,6 @@ namespace Google.Cloud.Tools.ReleaseManager
                 UpdateDependenciesCommand.UpdateDependencies(catalog, api);
             }
 
-            var nonSourceGenerator = new NonSourceGenerator(catalog);
             nonSourceGenerator.GenerateApiFiles(api);
             nonSourceGenerator.GenerateNonApiFiles();
 

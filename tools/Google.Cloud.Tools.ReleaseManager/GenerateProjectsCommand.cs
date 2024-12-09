@@ -33,7 +33,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // Now we know we can parse the API catalog, let's reformat it.
             ReformatApiCatalog(catalog);
 
-            var generator = new NonSourceGenerator(catalog);
+            var generator = NonSourceGenerator.ForInPlaceGeneration();
             foreach (var api in catalog.Apis)
             {
                 generator.GenerateApiFiles(api);

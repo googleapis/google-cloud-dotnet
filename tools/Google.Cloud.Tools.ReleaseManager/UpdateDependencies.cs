@@ -31,7 +31,8 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var catalog = ApiCatalog.Load();
+            var nonSourceGenerator = NonSourceGenerator.ForInPlaceGeneration();
+            var catalog = nonSourceGenerator.ApiCatalog;
             var apiNames = catalog.CreateIdHashSet();
 
             var apisToUpdate = catalog.Apis;
@@ -50,7 +51,6 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
             }
 
-            var nonSourceGenerator = new NonSourceGenerator(catalog);
             foreach (var api in apisToUpdate)
             {
                 UpdateDependencies(catalog, api);
