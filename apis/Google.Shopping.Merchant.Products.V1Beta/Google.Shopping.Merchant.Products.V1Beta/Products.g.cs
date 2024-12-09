@@ -82,10 +82,10 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
   #region Messages
   /// <summary>
   /// The processed product, built from multiple [product
-  /// inputs][[google.shopping.content.bundles.Products.ProductInput] after
-  /// applying rules and supplemental data sources. This processed product matches
-  /// what is shown in your Merchant Center account and in Shopping ads and other
-  /// surfaces across Google. Each product is built from exactly one primary
+  /// inputs][google.shopping.merchant.products.v1main.ProductInput]
+  /// after applying rules and supplemental data sources. This processed product
+  /// matches what is shown in your Merchant Center account and in Shopping ads and
+  /// other surfaces across Google. Each product is built from exactly one primary
   /// data source product input, and multiple supplemental data source inputs.
   /// After inserting, updating, or deleting a product input, it may take
   /// several minutes before the updated processed product can be retrieved.
@@ -157,7 +157,10 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// <summary>
     /// The name of the product.
     /// Format:
-    /// `"{product.name=accounts/{account}/products/{product}}"`
+    /// `"{product.name=accounts/{account}/products/{product}}"` where the last
+    /// section `product` consists of 4 parts:
+    /// channel~content_language~feed_label~offer_id
+    /// example for product name is "accounts/123/products/online~en~US~sku123"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -755,6 +758,10 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// <summary>
     /// Required. The name of the product to retrieve.
     /// Format: `accounts/{account}/products/{product}`
+    /// where the last section `product` consists of 4 parts:
+    /// channel~content_language~feed_label~offer_id
+    /// example for product name is
+    /// "accounts/123/products/online~en~US~sku123"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -970,7 +977,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// <summary>
     /// The maximum number of products to return. The service may return fewer than
     /// this value.
-    /// The maximum value is 1000; values above 1000 will be coerced to 1000.
+    /// The maximum value is 250; values above 250 will be coerced to 250.
     /// If unspecified, the maximum number of products will be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
