@@ -105,6 +105,7 @@ internal class GenerateApisCommand : ICommand
 
         foreach (var api in apis)
         {
+            Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Generating {api.Id}");
             if (api.Generator != GeneratorType.None)
             {
                 Generate(api);
@@ -119,7 +120,6 @@ internal class GenerateApisCommand : ICommand
     private void Generate(ApiMetadata api)
     {
         var layout = DirectoryLayout.ForApi(api.Id, generatorOutputDirectory, generatorInputDirectory);
-        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Generating {api.Id}");
         MaybeRunScript("pregeneration.sh");
         switch (api.Generator)
         {
