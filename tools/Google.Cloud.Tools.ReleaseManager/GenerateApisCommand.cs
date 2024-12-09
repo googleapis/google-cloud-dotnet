@@ -89,7 +89,7 @@ internal class GenerateApisCommand : ICommand
         // If APIs have been specified, check they all exist before we start.
         if (args.Length == 0)
         {
-            apis = catalog.Apis.Where(api => api.Generator != GeneratorType.None).ToList();
+            apis = catalog.Apis.ToList();
         }
         else
         {
@@ -105,7 +105,10 @@ internal class GenerateApisCommand : ICommand
 
         foreach (var api in apis)
         {
-            Generate(api);
+            if (api.Generator != GeneratorType.None)
+            {
+                Generate(api);
+            }
             nonSourceGenerator.GenerateApiFiles(api);
         }
         nonSourceGenerator.GenerateNonApiFiles();
