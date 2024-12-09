@@ -478,9 +478,9 @@ internal sealed class NonSourceGenerator
             projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{project}\", \"{project}\\{project}.csproj\", \"{{{guid}}}\"");
             projectLines.Add("EndProject");
             postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU");
-            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.Build = Debug|Any CPU");
+            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.Build.0 = Debug|Any CPU");
             postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
-            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
+            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.Build.0 = Release|Any CPU");
         }
 
         Guid GenerateGuid(string name)
