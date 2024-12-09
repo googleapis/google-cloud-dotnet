@@ -68,16 +68,16 @@ namespace Google.Apps.Chat.V1 {
             "Lmdvb2dsZWFwaXMuY29tL1NwYWNlRXZlbnQSKHNwYWNlcy97c3BhY2V9L3Nw",
             "YWNlRXZlbnRzL3tzcGFjZV9ldmVudH1CCQoHcGF5bG9hZCJMChRHZXRTcGFj",
             "ZUV2ZW50UmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29v",
-            "Z2xlYXBpcy5jb20vU3BhY2VFdmVudCKMAQoWTGlzdFNwYWNlRXZlbnRzUmVx",
+            "Z2xlYXBpcy5jb20vU3BhY2VFdmVudCKWAQoWTGlzdFNwYWNlRXZlbnRzUmVx",
             "dWVzdBI2CgZwYXJlbnQYASABKAlCJuBBAvpBIBIeY2hhdC5nb29nbGVhcGlz",
-            "LmNvbS9TcGFjZUV2ZW50EhEKCXBhZ2Vfc2l6ZRgFIAEoBRISCgpwYWdlX3Rv",
-            "a2VuGAYgASgJEhMKBmZpbHRlchgIIAEoCUID4EECImQKF0xpc3RTcGFjZUV2",
-            "ZW50c1Jlc3BvbnNlEjAKDHNwYWNlX2V2ZW50cxgBIAMoCzIaLmdvb2dsZS5j",
-            "aGF0LnYxLlNwYWNlRXZlbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQpoB",
-            "ChJjb20uZ29vZ2xlLmNoYXQudjFCD1NwYWNlRXZlbnRQcm90b1ABWixjbG91",
-            "ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqoCE0dv",
-            "b2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29v",
-            "Z2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
+            "LmNvbS9TcGFjZUV2ZW50EhYKCXBhZ2Vfc2l6ZRgFIAEoBUID4EEBEhcKCnBh",
+            "Z2VfdG9rZW4YBiABKAlCA+BBARITCgZmaWx0ZXIYCCABKAlCA+BBAiJkChdM",
+            "aXN0U3BhY2VFdmVudHNSZXNwb25zZRIwCgxzcGFjZV9ldmVudHMYASADKAsy",
+            "Gi5nb29nbGUuY2hhdC52MS5TcGFjZUV2ZW50EhcKD25leHRfcGFnZV90b2tl",
+            "bhgCIAEoCUKaAQoSY29tLmdvb2dsZS5jaGF0LnYxQg9TcGFjZUV2ZW50UHJv",
+            "dG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtj",
+            "aGF0cGKqAhNHb29nbGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hh",
+            "dFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.EventPayloadReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1786,8 +1786,8 @@ namespace Google.Apps.Chat.V1 {
     public const int PageTokenFieldNumber = 6;
     private string pageToken_ = "";
     /// <summary>
-    /// A page token, received from a previous list space events call. Provide this
-    /// to retrieve the subsequent page.
+    /// Optional. A page token, received from a previous list space events call.
+    /// Provide this to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided to list space events must
     /// match the call that provided the page token. Passing different values to

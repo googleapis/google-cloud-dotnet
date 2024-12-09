@@ -246,7 +246,8 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Who deleted the message and how it was deleted.
+      /// Who deleted the message and how it was deleted. More values may be added in
+      /// the future.
       /// </summary>
       public enum DeletionType {
         /// <summary>

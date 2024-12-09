@@ -25,34 +25,35 @@ namespace Google.Apps.Chat.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ch1nb29nbGUvY2hhdC92MS9yZWFjdGlvbi5wcm90bxIOZ29vZ2xlLmNoYXQu",
-            "djEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
-            "cGkvcmVzb3VyY2UucHJvdG8aGWdvb2dsZS9jaGF0L3YxL3VzZXIucHJvdG8i",
-            "wgEKCFJlYWN0aW9uEgwKBG5hbWUYASABKAkSJwoEdXNlchgCIAEoCzIULmdv",
-            "b2dsZS5jaGF0LnYxLlVzZXJCA+BBAxIkCgVlbW9qaRgDIAEoCzIVLmdvb2ds",
-            "ZS5jaGF0LnYxLkVtb2ppOlnqQVYKHGNoYXQuZ29vZ2xlYXBpcy5jb20vUmVh",
-            "Y3Rpb24SNnNwYWNlcy97c3BhY2V9L21lc3NhZ2VzL3ttZXNzYWdlfS9yZWFj",
-            "dGlvbnMve3JlYWN0aW9ufSJfCgVFbW9qaRIRCgd1bmljb2RlGAEgASgJSAAS",
-            "OAoMY3VzdG9tX2Vtb2ppGAIgASgLMhsuZ29vZ2xlLmNoYXQudjEuQ3VzdG9t",
-            "RW1vamlCA+BBA0gAQgkKB2NvbnRlbnQiHwoLQ3VzdG9tRW1vamkSEAoDdWlk",
-            "GAEgASgJQgPgQQMibAoURW1vamlSZWFjdGlvblN1bW1hcnkSJAoFZW1vamkY",
-            "ASABKAsyFS5nb29nbGUuY2hhdC52MS5FbW9qaRIbCg5yZWFjdGlvbl9jb3Vu",
-            "dBgCIAEoBUgAiAEBQhEKD19yZWFjdGlvbl9jb3VudCJ+ChVDcmVhdGVSZWFj",
-            "dGlvblJlcXVlc3QSNAoGcGFyZW50GAEgASgJQiTgQQL6QR4SHGNoYXQuZ29v",
-            "Z2xlYXBpcy5jb20vUmVhY3Rpb24SLwoIcmVhY3Rpb24YAiABKAsyGC5nb29n",
-            "bGUuY2hhdC52MS5SZWFjdGlvbkID4EECIpIBChRMaXN0UmVhY3Rpb25zUmVx",
-            "dWVzdBI0CgZwYXJlbnQYASABKAlCJOBBAvpBHhIcY2hhdC5nb29nbGVhcGlz",
-            "LmNvbS9SZWFjdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
-            "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQEiXQoVTGlz",
-            "dFJlYWN0aW9uc1Jlc3BvbnNlEisKCXJlYWN0aW9ucxgBIAMoCzIYLmdvb2ds",
-            "ZS5jaGF0LnYxLlJlYWN0aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJL",
-            "ChVEZWxldGVSZWFjdGlvblJlcXVlc3QSMgoEbmFtZRgBIAEoCUIk4EEC+kEe",
-            "ChxjaGF0Lmdvb2dsZWFwaXMuY29tL1JlYWN0aW9uQqYBChJjb20uZ29vZ2xl",
-            "LmNoYXQudjFCDVJlYWN0aW9uUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dv",
-            "b2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29v",
-            "Z2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
+            "djEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aG2dvb2dsZS9h",
+            "cGkvZmllbGRfaW5mby5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
+            "bxoZZ29vZ2xlL2NoYXQvdjEvdXNlci5wcm90byLMAQoIUmVhY3Rpb24SEQoE",
+            "bmFtZRgBIAEoCUID4EEIEicKBHVzZXIYAiABKAsyFC5nb29nbGUuY2hhdC52",
+            "MS5Vc2VyQgPgQQMSKQoFZW1vamkYAyABKAsyFS5nb29nbGUuY2hhdC52MS5F",
+            "bW9qaUID4EECOlnqQVYKHGNoYXQuZ29vZ2xlYXBpcy5jb20vUmVhY3Rpb24S",
+            "NnNwYWNlcy97c3BhY2V9L21lc3NhZ2VzL3ttZXNzYWdlfS9yZWFjdGlvbnMv",
+            "e3JlYWN0aW9ufSJkCgVFbW9qaRIWCgd1bmljb2RlGAEgASgJQgPgQQFIABI4",
+            "CgxjdXN0b21fZW1vamkYAiABKAsyGy5nb29nbGUuY2hhdC52MS5DdXN0b21F",
+            "bW9qaUID4EEDSABCCQoHY29udGVudCInCgtDdXN0b21FbW9qaRIYCgN1aWQY",
+            "ASABKAlCC+BBA+KMz9cIAggBInYKFEVtb2ppUmVhY3Rpb25TdW1tYXJ5EikK",
+            "BWVtb2ppGAEgASgLMhUuZ29vZ2xlLmNoYXQudjEuRW1vamlCA+BBAxIgCg5y",
+            "ZWFjdGlvbl9jb3VudBgCIAEoBUID4EEDSACIAQFCEQoPX3JlYWN0aW9uX2Nv",
+            "dW50In4KFUNyZWF0ZVJlYWN0aW9uUmVxdWVzdBI0CgZwYXJlbnQYASABKAlC",
+            "JOBBAvpBHhIcY2hhdC5nb29nbGVhcGlzLmNvbS9SZWFjdGlvbhIvCghyZWFj",
+            "dGlvbhgCIAEoCzIYLmdvb2dsZS5jaGF0LnYxLlJlYWN0aW9uQgPgQQIikgEK",
+            "FExpc3RSZWFjdGlvbnNSZXF1ZXN0EjQKBnBhcmVudBgBIAEoCUIk4EEC+kEe",
+            "EhxjaGF0Lmdvb2dsZWFwaXMuY29tL1JlYWN0aW9uEhYKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIY",
+            "BCABKAlCA+BBASJdChVMaXN0UmVhY3Rpb25zUmVzcG9uc2USKwoJcmVhY3Rp",
+            "b25zGAEgAygLMhguZ29vZ2xlLmNoYXQudjEuUmVhY3Rpb24SFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJIksKFURlbGV0ZVJlYWN0aW9uUmVxdWVzdBIyCgRu",
+            "YW1lGAEgASgJQiTgQQL6QR4KHGNoYXQuZ29vZ2xlYXBpcy5jb20vUmVhY3Rp",
+            "b25CpgEKEmNvbS5nb29nbGUuY2hhdC52MUINUmVhY3Rpb25Qcm90b1ABWixj",
+            "bG91ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqIC",
+            "C0RZTkFQSVByb3RvqgITR29vZ2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxB",
+            "cHBzXENoYXRcVjHqAhZHb29nbGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Reaction), global::Google.Apps.Chat.V1.Reaction.Parser, new[]{ "Name", "User", "Emoji" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Emoji), global::Google.Apps.Chat.V1.Emoji.Parser, new[]{ "Unicode", "CustomEmoji" }, new[]{ "Content" }, null, null, null),
@@ -122,7 +123,7 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the reaction.
+    /// Identifier. The resource name of the reaction.
     ///
     /// Format: `spaces/{space}/messages/{message}/reactions/{reaction}`
     /// </summary>
@@ -154,7 +155,7 @@ namespace Google.Apps.Chat.V1 {
     public const int EmojiFieldNumber = 3;
     private global::Google.Apps.Chat.V1.Emoji emoji_;
     /// <summary>
-    /// The emoji used in the reaction.
+    /// Required. The emoji used in the reaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -423,7 +424,7 @@ namespace Google.Apps.Chat.V1 {
     /// <summary>Field number for the "unicode" field.</summary>
     public const int UnicodeFieldNumber = 1;
     /// <summary>
-    /// A basic emoji represented by a unicode string.
+    /// Optional. A basic emoji represented by a unicode string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -911,7 +912,7 @@ namespace Google.Apps.Chat.V1 {
     public const int EmojiFieldNumber = 1;
     private global::Google.Apps.Chat.V1.Emoji emoji_;
     /// <summary>
-    /// Emoji associated with the reactions.
+    /// Output only. Emoji associated with the reactions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -928,7 +929,7 @@ namespace Google.Apps.Chat.V1 {
 
     private int reactionCount_;
     /// <summary>
-    /// The total number of reactions using the associated emoji.
+    /// Output only. The total number of reactions using the associated emoji.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
