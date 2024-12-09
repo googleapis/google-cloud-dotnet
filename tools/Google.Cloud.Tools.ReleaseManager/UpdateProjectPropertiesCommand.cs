@@ -21,6 +21,8 @@ using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager;
 
+// TODO: Create a GitHub action to run this and check it doesn't make any changes.
+
 public sealed class UpdateProjectPropertiesCommand : CommandBase
 {
     public UpdateProjectPropertiesCommand()

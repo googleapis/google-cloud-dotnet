@@ -613,7 +613,6 @@ api-name: {api.Id}
 
     private void RewriteReadme()
     {
-        var root = DirectoryLayout.DetermineRootDirectory();
         var templatePath = Path.Combine(_generatorInputDirectory, "README-template.md");
         var templateLines = File.ReadAllLines(templatePath).ToList();
 
@@ -674,6 +673,9 @@ api-name: {api.Id}
         File.WriteAllLines(outputPath, newContent);
     }
 
+    // TODO: It would be nice if we could configure renovate more statically than this.
+    // We should see how our change to use centrally-managed versions (and more defaulting)
+    // affects this.
     private void RewriteRenovate()
     {
         string templatePath = Path.Combine(_generatorInputDirectory, "renovate-template.json");

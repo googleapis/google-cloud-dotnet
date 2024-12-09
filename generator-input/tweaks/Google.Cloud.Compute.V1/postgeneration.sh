@@ -6,6 +6,10 @@ COMPUTE_OUTPUT=$GENERATOR_OUTPUT_DIR/apis/Google.Cloud.Compute.V1
 
 TFM=netstandard2.0
 
+# TODO: Try to eliminate some of this clunkiness. That could mean
+# always generating into an empty output directory, or possibly moving the
+# enum constant generator into the GAPIC generator.
+
 # Build the production library in a temporary directory so that we don't depend on
 # whether we're within a repo or not.
 rm -rf /tmp/compute
