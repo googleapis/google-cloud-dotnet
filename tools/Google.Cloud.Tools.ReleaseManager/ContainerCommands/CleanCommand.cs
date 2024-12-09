@@ -66,7 +66,11 @@ internal class CleanCommand : IContainerCommand
             // Source code
             DeleteAll(Directory.EnumerateFiles(layout.SourceDirectory, "*.g.cs", SearchOption.AllDirectories));
             // Snippet metadata
-            DeleteAll(Directory.EnumerateFiles(Path.Combine(layout.SourceDirectory, $"{id}.GeneratedSnippets"), "*.json"));
+            var generatedSnippetsDirectory = Path.Combine(layout.SourceDirectory, $"{id}.GeneratedSnippets");
+            if (Directory.Exists(generatedSnippetsDirectory))
+            {
+                DeleteAll(Directory.EnumerateFiles(generatedSnippetsDirectory, "*.json"));
+            }
             // GAPIC metadata
             File.Delete(Path.Combine(layout.SourceDirectory, "gapic_metadata.json"));
 
