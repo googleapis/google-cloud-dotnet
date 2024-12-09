@@ -37,7 +37,6 @@ internal class GenerateApisCommand : ICommand
     private const string GoogleApisDirectoryEnvironmentVariable = "GOOGLEAPIS";
     private const string GeneratorOutputDirectoryEnvironmentVariable = "GENERATOR_OUTPUT_DIR";
     private const string GeneratorInputDirectoryEnvironmentVariable = "GENERATOR_INPUT_DIR";
-    private const string TempDir = "tmp";
 
     private readonly string protocBinary;
     private readonly string gapicGeneratorBinary;
@@ -46,6 +45,7 @@ internal class GenerateApisCommand : ICommand
     private readonly string protobufToolsRootDirectory;
     private readonly string generatorInputDirectory;
     private readonly string generatorOutputDirectory;
+    private readonly string tempOutputDirectory;
 
     public string Description => "Generates APIs (used by generateapis.sh)";
 
@@ -63,11 +63,17 @@ internal class GenerateApisCommand : ICommand
         protobufToolsRootDirectory = Environment.GetEnvironmentVariable(ProtobufToolsRootEnvironmentVariable);
         generatorInputDirectory = Environment.GetEnvironmentVariable(GeneratorInputDirectoryEnvironmentVariable);
         generatorOutputDirectory = Environment.GetEnvironmentVariable(GeneratorOutputDirectoryEnvironmentVariable);
+        tempOutputDirectory = Path.Combine(Path.GetTempPath(), "generator-output");
     }
 
     public int Execute(string[] args)
     {
         ValidateEnvironment();
+        if (Directory.Exists(tempOutputDirectory))
+        {
+            Directory.Delete(tempOutputDirectory, true);
+        }
+        Directory.CreateDirectory(tempOutputDirectory);
 
         if (args.FirstOrDefault() == "--unconfigured")
         {
@@ -93,12 +99,6 @@ internal class GenerateApisCommand : ICommand
                 apis.Add(api);
             }
         }
-
-        if (Directory.Exists(TempDir))
-        {
-            Directory.Delete(TempDir, true);
-        }
-        Directory.CreateDirectory(TempDir);
 
         var nonSourceGenerator = new NonSourceGenerator(catalog, generatorInputDirectory, generatorOutputDirectory);
         foreach (var api in apis)
@@ -233,7 +233,7 @@ internal class GenerateApisCommand : ICommand
         IEnumerable<(string name, string value)> GetGapicPluginOptions()
         {
             string apiSrcDir = Path.Combine(googleApisDirectory, api.ProtoPath);
-            yield return ("log", $"tmp/generator-log-{api.Id}.txt");
+            yield return ("log", Path.Combine(tempOutputDirectory, $"generator-log-{api.Id}.txt"));
             yield return ("transport", api.Transport ?? "grpc");
             yield return ("rest-numeric-enums", api.RestNumericEnums.ToString());
 
@@ -370,11 +370,11 @@ internal class GenerateApisCommand : ICommand
             args = DetectApiDirectories();
         }
 
-        if (Directory.Exists(TempDir))
+        if (Directory.Exists(tempOutputDirectory))
         {
-            Directory.Delete(TempDir, true);
+            Directory.Delete(tempOutputDirectory, true);
         }
-        Directory.CreateDirectory(TempDir);
+        Directory.CreateDirectory(tempOutputDirectory);
 
         foreach (var arg in args)
         {
@@ -399,7 +399,7 @@ internal class GenerateApisCommand : ICommand
         // First figure out the C# namespace, which we'd normally use as the ID.
         // We need to use a mixture of C# options and the protobuf package, just like the API Index does.
         // That means we first need to generate a descriptor file set.
-        var descriptorFile = Path.Combine(TempDir, "descriptor.pb");
+        var descriptorFile = Path.Combine(tempOutputDirectory, "descriptor.pb");
         try
         {
             RunProtoc(apiDirectory,
