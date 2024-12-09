@@ -36,92 +36,94 @@ namespace Google.Apps.Chat.V1 {
             "aF9jb21tYW5kLnByb3RvGhpnb29nbGUvY2hhdC92MS9zcGFjZS5wcm90bxoZ",
             "Z29vZ2xlL2NoYXQvdjEvdXNlci5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2Zp",
             "ZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8iqQoKB01lc3NhZ2USDAoEbmFtZRgBIAEoCRIpCgZzZW5kZXIYAiABKAsy",
-            "FC5nb29nbGUuY2hhdC52MS5Vc2VyQgPgQQMSNwoLY3JlYXRlX3RpbWUYAyAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgbgQQXgQQESOQoQbGFz",
-            "dF91cGRhdGVfdGltZRgXIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxI0CgtkZWxldGVfdGltZRgaIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxIMCgR0ZXh0GAQgASgJEhsKDmZvcm1hdHRlZF90",
-            "ZXh0GCsgASgJQgPgQQMSPQoFY2FyZHMYBSADKAsyKi5nb29nbGUuY2hhdC52",
-            "MS5Db250ZXh0dWFsQWRkT25NYXJrdXAuQ2FyZEICGAESLAoIY2FyZHNfdjIY",
-            "FiADKAsyGi5nb29nbGUuY2hhdC52MS5DYXJkV2l0aElkEjQKC2Fubm90YXRp",
-            "b25zGAogAygLMhouZ29vZ2xlLmNoYXQudjEuQW5ub3RhdGlvbkID4EEDEiYK",
-            "BnRocmVhZBgLIAEoCzIWLmdvb2dsZS5jaGF0LnYxLlRocmVhZBIkCgVzcGFj",
-            "ZRgMIAEoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlEhUKDWZhbGxiYWNrX3Rl",
-            "eHQYDSABKAkSPAoPYWN0aW9uX3Jlc3BvbnNlGA4gASgLMh4uZ29vZ2xlLmNo",
-            "YXQudjEuQWN0aW9uUmVzcG9uc2VCA+BBBBIaCg1hcmd1bWVudF90ZXh0GA8g",
-            "ASgJQgPgQQMSOAoNc2xhc2hfY29tbWFuZBgRIAEoCzIcLmdvb2dsZS5jaGF0",
-            "LnYxLlNsYXNoQ29tbWFuZEID4EEDEi4KCmF0dGFjaG1lbnQYEiADKAsyGi5n",
-            "b29nbGUuY2hhdC52MS5BdHRhY2htZW50EjQKC21hdGNoZWRfdXJsGBQgASgL",
-            "MhouZ29vZ2xlLmNoYXQudjEuTWF0Y2hlZFVybEID4EEDEhkKDHRocmVhZF9y",
-            "ZXBseRgZIAEoCEID4EEDEiIKGmNsaWVudF9hc3NpZ25lZF9tZXNzYWdlX2lk",
-            "GCAgASgJEksKGGVtb2ppX3JlYWN0aW9uX3N1bW1hcmllcxghIAMoCzIkLmdv",
-            "b2dsZS5jaGF0LnYxLkVtb2ppUmVhY3Rpb25TdW1tYXJ5QgPgQQMSOQoWcHJp",
-            "dmF0ZV9tZXNzYWdlX3ZpZXdlchgkIAEoCzIULmdvb2dsZS5jaGF0LnYxLlVz",
-            "ZXJCA+BBBRJAChFkZWxldGlvbl9tZXRhZGF0YRgmIAEoCzIgLmdvb2dsZS5j",
-            "aGF0LnYxLkRlbGV0aW9uTWV0YWRhdGFCA+BBAxJLChdxdW90ZWRfbWVzc2Fn",
-            "ZV9tZXRhZGF0YRgnIAEoCzIlLmdvb2dsZS5jaGF0LnYxLlF1b3RlZE1lc3Nh",
-            "Z2VNZXRhZGF0YUID4EEDEjcKDWF0dGFjaGVkX2dpZnMYKiADKAsyGy5nb29n",
-            "bGUuY2hhdC52MS5BdHRhY2hlZEdpZkID4EEDEjoKEWFjY2Vzc29yeV93aWRn",
-            "ZXRzGCwgAygLMh8uZ29vZ2xlLmNoYXQudjEuQWNjZXNzb3J5V2lkZ2V0OkPq",
-            "QUAKG2NoYXQuZ29vZ2xlYXBpcy5jb20vTWVzc2FnZRIhc3BhY2VzL3tzcGFj",
-            "ZX0vbWVzc2FnZXMve21lc3NhZ2V9Ih8KC0F0dGFjaGVkR2lmEhAKA3VyaRgB",
-            "IAEoCUID4EEDIokCChVRdW90ZWRNZXNzYWdlTWV0YWRhdGESMQoEbmFtZRgB",
-            "IAEoCUIj4EED+kEdChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USOQoQ",
-            "bGFzdF91cGRhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAzqBAepBfgopY2hhdC5nb29nbGVhcGlzLmNvbS9RdW90ZWRN",
-            "ZXNzYWdlTWV0YWRhdGESUXNwYWNlcy97c3BhY2V9L21lc3NhZ2VzL3ttZXNz",
-            "YWdlfS9xdW90ZWRNZXNzYWdlTWV0YWRhdGEve3F1b3RlZF9tZXNzYWdlX21l",
-            "dGFkYXRhfSJxCgZUaHJlYWQSDAoEbmFtZRgBIAEoCRIXCgp0aHJlYWRfa2V5",
-            "GAMgASgJQgPgQQE6QOpBPQoaY2hhdC5nb29nbGVhcGlzLmNvbS9UaHJlYWQS",
-            "H3NwYWNlcy97c3BhY2V9L3RocmVhZHMve3RocmVhZH0i0gQKDkFjdGlvblJl",
-            "c3BvbnNlEj4KBHR5cGUYASABKA4yKy5nb29nbGUuY2hhdC52MS5BY3Rpb25S",
-            "ZXNwb25zZS5SZXNwb25zZVR5cGVCA+BBBBIQCgN1cmwYAiABKAlCA+BBBBI4",
-            "Cg1kaWFsb2dfYWN0aW9uGAMgASgLMhwuZ29vZ2xlLmNoYXQudjEuRGlhbG9n",
-            "QWN0aW9uQgPgQQQSSQoOdXBkYXRlZF93aWRnZXQYBCABKAsyLC5nb29nbGUu",
-            "Y2hhdC52MS5BY3Rpb25SZXNwb25zZS5VcGRhdGVkV2lkZ2V0QgPgQQQaUgoO",
-            "U2VsZWN0aW9uSXRlbXMSQAoFaXRlbXMYASADKAsyMS5nb29nbGUuYXBwcy5j",
-            "YXJkLnYxLlNlbGVjdGlvbklucHV0LlNlbGVjdGlvbkl0ZW0adwoNVXBkYXRl",
-            "ZFdpZGdldBJECgtzdWdnZXN0aW9ucxgBIAEoCzItLmdvb2dsZS5jaGF0LnYx",
-            "LkFjdGlvblJlc3BvbnNlLlNlbGVjdGlvbkl0ZW1zSAASDgoGd2lkZ2V0GAIg",
-            "ASgJQhAKDnVwZGF0ZWRfd2lkZ2V0IpsBCgxSZXNwb25zZVR5cGUSFAoQVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEg8KC05FV19NRVNTQUdFEAESEgoOVVBEQVRFX01F",
-            "U1NBR0UQAhIdChlVUERBVEVfVVNFUl9NRVNTQUdFX0NBUkRTEAYSEgoOUkVR",
-            "VUVTVF9DT05GSUcQAxIKCgZESUFMT0cQBBIRCg1VUERBVEVfV0lER0VUEAci",
-            "UwoPQWNjZXNzb3J5V2lkZ2V0EjYKC2J1dHRvbl9saXN0GAEgASgLMh8uZ29v",
-            "Z2xlLmFwcHMuY2FyZC52MS5CdXR0b25MaXN0SABCCAoGYWN0aW9uIkYKEUdl",
-            "dE1lc3NhZ2VSZXF1ZXN0EjEKBG5hbWUYASABKAlCI+BBAvpBHQobY2hhdC5n",
-            "b29nbGVhcGlzLmNvbS9NZXNzYWdlIlgKFERlbGV0ZU1lc3NhZ2VSZXF1ZXN0",
-            "EjEKBG5hbWUYASABKAlCI+BBAvpBHQobY2hhdC5nb29nbGVhcGlzLmNvbS9N",
-            "ZXNzYWdlEg0KBWZvcmNlGAIgASgIIpIBChRVcGRhdGVNZXNzYWdlUmVxdWVz",
-            "dBItCgdtZXNzYWdlGAEgASgLMhcuZ29vZ2xlLmNoYXQudjEuTWVzc2FnZUID",
-            "4EECEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZp",
-            "ZWxkTWFzaxIaCg1hbGxvd19taXNzaW5nGAQgASgIQgPgQQEipAMKFENyZWF0",
-            "ZU1lc3NhZ2VSZXF1ZXN0EjMKBnBhcmVudBgBIAEoCUIj4EEC+kEdEhtjaGF0",
-            "Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USLQoHbWVzc2FnZRgEIAEoCzIXLmdv",
-            "b2dsZS5jaGF0LnYxLk1lc3NhZ2VCA+BBAhIZCgp0aHJlYWRfa2V5GAYgASgJ",
-            "QgUYAeBBARIXCgpyZXF1ZXN0X2lkGAcgASgJQgPgQQESWgoUbWVzc2FnZV9y",
-            "ZXBseV9vcHRpb24YCCABKA4yNy5nb29nbGUuY2hhdC52MS5DcmVhdGVNZXNz",
-            "YWdlUmVxdWVzdC5NZXNzYWdlUmVwbHlPcHRpb25CA+BBARIXCgptZXNzYWdl",
-            "X2lkGAkgASgJQgPgQQEifwoSTWVzc2FnZVJlcGx5T3B0aW9uEiQKIE1FU1NB",
-            "R0VfUkVQTFlfT1BUSU9OX1VOU1BFQ0lGSUVEEAASKAokUkVQTFlfTUVTU0FH",
-            "RV9GQUxMQkFDS19UT19ORVdfVEhSRUFEEAESGQoVUkVQTFlfTUVTU0FHRV9P",
-            "Ul9GQUlMEAIiqQEKE0xpc3RNZXNzYWdlc1JlcXVlc3QSMwoGcGFyZW50GAEg",
-            "ASgJQiPgQQL6QR0SG2NoYXQuZ29vZ2xlYXBpcy5jb20vTWVzc2FnZRIRCglw",
-            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIY",
-            "BCABKAkSEAoIb3JkZXJfYnkYBSABKAkSFAoMc2hvd19kZWxldGVkGAYgASgI",
-            "IloKFExpc3RNZXNzYWdlc1Jlc3BvbnNlEikKCG1lc3NhZ2VzGAEgAygLMhcu",
-            "Z29vZ2xlLmNoYXQudjEuTWVzc2FnZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
-            "KAkigQEKDERpYWxvZ0FjdGlvbhItCgZkaWFsb2cYASABKAsyFi5nb29nbGUu",
-            "Y2hhdC52MS5EaWFsb2dCA+BBBEgAEjgKDWFjdGlvbl9zdGF0dXMYAiABKAsy",
-            "HC5nb29nbGUuY2hhdC52MS5BY3Rpb25TdGF0dXNCA+BBBEIICgZhY3Rpb24i",
-            "NgoGRGlhbG9nEiwKBGJvZHkYASABKAsyGS5nb29nbGUuYXBwcy5jYXJkLnYx",
-            "LkNhcmRCA+BBBCJGCgpDYXJkV2l0aElkEg8KB2NhcmRfaWQYASABKAkSJwoE",
-            "Y2FyZBgCIAEoCzIZLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2FyZEKlAQoSY29t",
-            "Lmdvb2dsZS5jaGF0LnYxQgxNZXNzYWdlUHJvdG9QAVosY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtEWU5BUElQcm90",
-            "b6oCE0dvb2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx",
-            "6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
+            "dG8i1AoKB01lc3NhZ2USEQoEbmFtZRgBIAEoCUID4EEIEikKBnNlbmRlchgC",
+            "IAEoCzIULmdvb2dsZS5jaGF0LnYxLlVzZXJCA+BBAxI3CgtjcmVhdGVfdGlt",
+            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBuBBBeBBARI5",
+            "ChBsYXN0X3VwZGF0ZV90aW1lGBcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjQKC2RlbGV0ZV90aW1lGBogASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEhEKBHRleHQYBCABKAlCA+BBARIbCg5m",
+            "b3JtYXR0ZWRfdGV4dBgrIAEoCUID4EEDEj0KBWNhcmRzGAUgAygLMiouZ29v",
+            "Z2xlLmNoYXQudjEuQ29udGV4dHVhbEFkZE9uTWFya3VwLkNhcmRCAhgBEjEK",
+            "CGNhcmRzX3YyGBYgAygLMhouZ29vZ2xlLmNoYXQudjEuQ2FyZFdpdGhJZEID",
+            "4EEBEjQKC2Fubm90YXRpb25zGAogAygLMhouZ29vZ2xlLmNoYXQudjEuQW5u",
+            "b3RhdGlvbkID4EEDEiYKBnRocmVhZBgLIAEoCzIWLmdvb2dsZS5jaGF0LnYx",
+            "LlRocmVhZBIpCgVzcGFjZRgMIAEoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNl",
+            "QgPgQQMSGgoNZmFsbGJhY2tfdGV4dBgNIAEoCUID4EEBEjwKD2FjdGlvbl9y",
+            "ZXNwb25zZRgOIAEoCzIeLmdvb2dsZS5jaGF0LnYxLkFjdGlvblJlc3BvbnNl",
+            "QgPgQQQSGgoNYXJndW1lbnRfdGV4dBgPIAEoCUID4EEDEjgKDXNsYXNoX2Nv",
+            "bW1hbmQYESABKAsyHC5nb29nbGUuY2hhdC52MS5TbGFzaENvbW1hbmRCA+BB",
+            "AxIzCgphdHRhY2htZW50GBIgAygLMhouZ29vZ2xlLmNoYXQudjEuQXR0YWNo",
+            "bWVudEID4EEBEjQKC21hdGNoZWRfdXJsGBQgASgLMhouZ29vZ2xlLmNoYXQu",
+            "djEuTWF0Y2hlZFVybEID4EEDEhkKDHRocmVhZF9yZXBseRgZIAEoCEID4EED",
+            "EicKGmNsaWVudF9hc3NpZ25lZF9tZXNzYWdlX2lkGCAgASgJQgPgQQESSwoY",
+            "ZW1vamlfcmVhY3Rpb25fc3VtbWFyaWVzGCEgAygLMiQuZ29vZ2xlLmNoYXQu",
+            "djEuRW1vamlSZWFjdGlvblN1bW1hcnlCA+BBAxI8ChZwcml2YXRlX21lc3Nh",
+            "Z2Vfdmlld2VyGCQgASgLMhQuZ29vZ2xlLmNoYXQudjEuVXNlckIG4EEF4EEB",
+            "EkAKEWRlbGV0aW9uX21ldGFkYXRhGCYgASgLMiAuZ29vZ2xlLmNoYXQudjEu",
+            "RGVsZXRpb25NZXRhZGF0YUID4EEDEksKF3F1b3RlZF9tZXNzYWdlX21ldGFk",
+            "YXRhGCcgASgLMiUuZ29vZ2xlLmNoYXQudjEuUXVvdGVkTWVzc2FnZU1ldGFk",
+            "YXRhQgPgQQMSNwoNYXR0YWNoZWRfZ2lmcxgqIAMoCzIbLmdvb2dsZS5jaGF0",
+            "LnYxLkF0dGFjaGVkR2lmQgPgQQMSPwoRYWNjZXNzb3J5X3dpZGdldHMYLCAD",
+            "KAsyHy5nb29nbGUuY2hhdC52MS5BY2Nlc3NvcnlXaWRnZXRCA+BBATpD6kFA",
+            "ChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USIXNwYWNlcy97c3BhY2V9",
+            "L21lc3NhZ2VzL3ttZXNzYWdlfSIfCgtBdHRhY2hlZEdpZhIQCgN1cmkYASAB",
+            "KAlCA+BBAyKJAgoVUXVvdGVkTWVzc2FnZU1ldGFkYXRhEjEKBG5hbWUYASAB",
+            "KAlCI+BBA/pBHQobY2hhdC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlEjkKEGxh",
+            "c3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQM6gQHqQX4KKWNoYXQuZ29vZ2xlYXBpcy5jb20vUXVvdGVkTWVz",
+            "c2FnZU1ldGFkYXRhElFzcGFjZXMve3NwYWNlfS9tZXNzYWdlcy97bWVzc2Fn",
+            "ZX0vcXVvdGVkTWVzc2FnZU1ldGFkYXRhL3txdW90ZWRfbWVzc2FnZV9tZXRh",
+            "ZGF0YX0idgoGVGhyZWFkEhEKBG5hbWUYASABKAlCA+BBCBIXCgp0aHJlYWRf",
+            "a2V5GAMgASgJQgPgQQE6QOpBPQoaY2hhdC5nb29nbGVhcGlzLmNvbS9UaHJl",
+            "YWQSH3NwYWNlcy97c3BhY2V9L3RocmVhZHMve3RocmVhZH0i0gQKDkFjdGlv",
+            "blJlc3BvbnNlEj4KBHR5cGUYASABKA4yKy5nb29nbGUuY2hhdC52MS5BY3Rp",
+            "b25SZXNwb25zZS5SZXNwb25zZVR5cGVCA+BBBBIQCgN1cmwYAiABKAlCA+BB",
+            "BBI4Cg1kaWFsb2dfYWN0aW9uGAMgASgLMhwuZ29vZ2xlLmNoYXQudjEuRGlh",
+            "bG9nQWN0aW9uQgPgQQQSSQoOdXBkYXRlZF93aWRnZXQYBCABKAsyLC5nb29n",
+            "bGUuY2hhdC52MS5BY3Rpb25SZXNwb25zZS5VcGRhdGVkV2lkZ2V0QgPgQQQa",
+            "UgoOU2VsZWN0aW9uSXRlbXMSQAoFaXRlbXMYASADKAsyMS5nb29nbGUuYXBw",
+            "cy5jYXJkLnYxLlNlbGVjdGlvbklucHV0LlNlbGVjdGlvbkl0ZW0adwoNVXBk",
+            "YXRlZFdpZGdldBJECgtzdWdnZXN0aW9ucxgBIAEoCzItLmdvb2dsZS5jaGF0",
+            "LnYxLkFjdGlvblJlc3BvbnNlLlNlbGVjdGlvbkl0ZW1zSAASDgoGd2lkZ2V0",
+            "GAIgASgJQhAKDnVwZGF0ZWRfd2lkZ2V0IpsBCgxSZXNwb25zZVR5cGUSFAoQ",
+            "VFlQRV9VTlNQRUNJRklFRBAAEg8KC05FV19NRVNTQUdFEAESEgoOVVBEQVRF",
+            "X01FU1NBR0UQAhIdChlVUERBVEVfVVNFUl9NRVNTQUdFX0NBUkRTEAYSEgoO",
+            "UkVRVUVTVF9DT05GSUcQAxIKCgZESUFMT0cQBBIRCg1VUERBVEVfV0lER0VU",
+            "EAciUwoPQWNjZXNzb3J5V2lkZ2V0EjYKC2J1dHRvbl9saXN0GAEgASgLMh8u",
+            "Z29vZ2xlLmFwcHMuY2FyZC52MS5CdXR0b25MaXN0SABCCAoGYWN0aW9uIkYK",
+            "EUdldE1lc3NhZ2VSZXF1ZXN0EjEKBG5hbWUYASABKAlCI+BBAvpBHQobY2hh",
+            "dC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlIl0KFERlbGV0ZU1lc3NhZ2VSZXF1",
+            "ZXN0EjEKBG5hbWUYASABKAlCI+BBAvpBHQobY2hhdC5nb29nbGVhcGlzLmNv",
+            "bS9NZXNzYWdlEhIKBWZvcmNlGAIgASgIQgPgQQEilwEKFFVwZGF0ZU1lc3Nh",
+            "Z2VSZXF1ZXN0Ei0KB21lc3NhZ2UYASABKAsyFy5nb29nbGUuY2hhdC52MS5N",
+            "ZXNzYWdlQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuRmllbGRNYXNrQgPgQQISGgoNYWxsb3dfbWlzc2luZxgEIAEoCEID",
+            "4EEBIqQDChRDcmVhdGVNZXNzYWdlUmVxdWVzdBIzCgZwYXJlbnQYASABKAlC",
+            "I+BBAvpBHRIbY2hhdC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlEi0KB21lc3Nh",
+            "Z2UYBCABKAsyFy5nb29nbGUuY2hhdC52MS5NZXNzYWdlQgPgQQISGQoKdGhy",
+            "ZWFkX2tleRgGIAEoCUIFGAHgQQESFwoKcmVxdWVzdF9pZBgHIAEoCUID4EEB",
+            "EloKFG1lc3NhZ2VfcmVwbHlfb3B0aW9uGAggASgOMjcuZ29vZ2xlLmNoYXQu",
+            "djEuQ3JlYXRlTWVzc2FnZVJlcXVlc3QuTWVzc2FnZVJlcGx5T3B0aW9uQgPg",
+            "QQESFwoKbWVzc2FnZV9pZBgJIAEoCUID4EEBIn8KEk1lc3NhZ2VSZXBseU9w",
+            "dGlvbhIkCiBNRVNTQUdFX1JFUExZX09QVElPTl9VTlNQRUNJRklFRBAAEigK",
+            "JFJFUExZX01FU1NBR0VfRkFMTEJBQ0tfVE9fTkVXX1RIUkVBRBABEhkKFVJF",
+            "UExZX01FU1NBR0VfT1JfRkFJTBACIsIBChNMaXN0TWVzc2FnZXNSZXF1ZXN0",
+            "EjMKBnBhcmVudBgBIAEoCUIj4EEC+kEdEhtjaGF0Lmdvb2dsZWFwaXMuY29t",
+            "L01lc3NhZ2USFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
+            "bhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9yZGVyX2J5",
+            "GAUgASgJQgPgQQESGQoMc2hvd19kZWxldGVkGAYgASgIQgPgQQEiWgoUTGlz",
+            "dE1lc3NhZ2VzUmVzcG9uc2USKQoIbWVzc2FnZXMYASADKAsyFy5nb29nbGUu",
+            "Y2hhdC52MS5NZXNzYWdlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKBAQoM",
+            "RGlhbG9nQWN0aW9uEi0KBmRpYWxvZxgBIAEoCzIWLmdvb2dsZS5jaGF0LnYx",
+            "LkRpYWxvZ0ID4EEESAASOAoNYWN0aW9uX3N0YXR1cxgCIAEoCzIcLmdvb2ds",
+            "ZS5jaGF0LnYxLkFjdGlvblN0YXR1c0ID4EEEQggKBmFjdGlvbiI2CgZEaWFs",
+            "b2cSLAoEYm9keRgBIAEoCzIZLmdvb2dsZS5hcHBzLmNhcmQudjEuQ2FyZEID",
+            "4EEEIkYKCkNhcmRXaXRoSWQSDwoHY2FyZF9pZBgBIAEoCRInCgRjYXJkGAIg",
+            "ASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5DYXJkQqUBChJjb20uZ29vZ2xl",
+            "LmNoYXQudjFCDE1lc3NhZ2VQcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgITR29v",
+            "Z2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29n",
+            "bGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Card.V1.CardReflection.Descriptor, global::Google.Apps.Chat.V1.ActionStatusReflection.Descriptor, global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.ContextualAddonReflection.Descriptor, global::Google.Apps.Chat.V1.DeletionMetadataReflection.Descriptor, global::Google.Apps.Chat.V1.MatchedUrlReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.SlashCommandReflection.Descriptor, global::Google.Apps.Chat.V1.SpaceReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -224,7 +226,7 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the message.
+    /// Identifier. Resource name of the message.
     ///
     /// Format: `spaces/{space}/messages/{message}`
     ///
@@ -325,10 +327,10 @@ namespace Google.Apps.Chat.V1 {
     public const int TextFieldNumber = 4;
     private string text_ = "";
     /// <summary>
-    /// Plain-text body of the message. The first link to an image, video, or web
-    /// page generates a
-    /// [preview chip](https://developers.google.com/workspace/chat/preview-links).
-    /// You can also [@mention a Google Chat
+    /// Optional. Plain-text body of the message. The first link to an image,
+    /// video, or web page generates a [preview
+    /// chip](https://developers.google.com/workspace/chat/preview-links). You can
+    /// also [@mention a Google Chat
     /// user](https://developers.google.com/workspace/chat/format-messages#messages-@mention),
     /// or everyone in the space.
     ///
@@ -407,7 +409,7 @@ namespace Google.Apps.Chat.V1 {
         = pb::FieldCodec.ForMessage(178, global::Google.Apps.Chat.V1.CardWithId.Parser);
     private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.CardWithId> cardsV2_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.CardWithId>();
     /// <summary>
-    /// An array of
+    /// Optional. An array of
     /// [cards](https://developers.google.com/workspace/chat/api/reference/rest/v1/cards).
     ///
     /// Only Chat apps can create cards. If your Chat app [authenticates as a
@@ -460,9 +462,9 @@ namespace Google.Apps.Chat.V1 {
     public const int SpaceFieldNumber = 12;
     private global::Google.Apps.Chat.V1.Space space_;
     /// <summary>
-    /// If your Chat app [authenticates as a
+    /// Output only. If your Chat app [authenticates as a
     /// user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
-    /// the output populates the
+    /// the output only populates the
     /// [space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces)
     /// `name`.
     /// </summary>
@@ -479,8 +481,8 @@ namespace Google.Apps.Chat.V1 {
     public const int FallbackTextFieldNumber = 13;
     private string fallbackText_ = "";
     /// <summary>
-    /// A plain-text description of the message's cards, used when the actual cards
-    /// can't be displayed—for example, mobile notifications.
+    /// Optional. A plain-text description of the message's cards, used when the
+    /// actual cards can't be displayed—for example, mobile notifications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -544,7 +546,7 @@ namespace Google.Apps.Chat.V1 {
         = pb::FieldCodec.ForMessage(146, global::Google.Apps.Chat.V1.Attachment.Parser);
     private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.Attachment> attachment_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.Attachment>();
     /// <summary>
-    /// User-uploaded attachment.
+    /// Optional. User-uploaded attachment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -627,10 +629,10 @@ namespace Google.Apps.Chat.V1 {
     public const int PrivateMessageViewerFieldNumber = 36;
     private global::Google.Apps.Chat.V1.User privateMessageViewer_;
     /// <summary>
-    /// Immutable. Input for creating a message, otherwise output only. The user
-    /// that can view the message. When set, the message is private and only
-    /// visible to the specified user and the Chat app. To include this field in
-    /// your request, you must call the Chat API using [app
+    /// Optional. Immutable. Input for creating a message, otherwise output only.
+    /// The user that can view the message. When set, the message is private and
+    /// only visible to the specified user and the Chat app. To include this field
+    /// in your request, you must call the Chat API using [app
     /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
     /// and omit the following:
     ///
@@ -702,10 +704,10 @@ namespace Google.Apps.Chat.V1 {
         = pb::FieldCodec.ForMessage(354, global::Google.Apps.Chat.V1.AccessoryWidget.Parser);
     private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.AccessoryWidget> accessoryWidgets_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.AccessoryWidget>();
     /// <summary>
-    /// One or more interactive widgets that appear at the bottom of a message.
-    /// You can add accessory widgets to messages that contain text, cards, or both
-    /// text and cards. Not supported for messages that contain dialogs. For
-    /// details, see [Add interactive widgets at the bottom of a
+    /// Optional. One or more interactive widgets that appear at the bottom of a
+    /// message. You can add accessory widgets to messages that contain text,
+    /// cards, or both text and cards. Not supported for messages that contain
+    /// dialogs. For details, see [Add interactive widgets at the bottom of a
     /// message](https://developers.google.com/workspace/chat/create-messages#add-accessory-widgets).
     ///
     /// Creating a message with accessory widgets requires [app
@@ -1992,7 +1994,7 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the thread.
+    /// Identifier. Resource name of the thread.
     ///
     /// Example: `spaces/{space}/threads/{thread}`
     /// </summary>
@@ -2748,8 +2750,8 @@ namespace Google.Apps.Chat.V1 {
       }
 
       /// <summary>
-      /// The response of the updated widget.
-      /// Used to provide autocomplete options for a widget.
+      /// For `selectionInput` widgets, returns autocomplete suggestions for a
+      /// multiselect menu.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UpdatedWidget : pb::IMessage<UpdatedWidget>
@@ -3552,8 +3554,8 @@ namespace Google.Apps.Chat.V1 {
     public const int ForceFieldNumber = 2;
     private bool force_;
     /// <summary>
-    /// When `true`, deleting a message also deletes its threaded replies. When
-    /// `false`, if a message has threaded replies, deletion fails.
+    /// Optional. When `true`, deleting a message also deletes its threaded
+    /// replies. When `false`, if a message has threaded replies, deletion fails.
     ///
     /// Only applies when [authenticating as a
     /// user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
@@ -4169,6 +4171,12 @@ namespace Google.Apps.Chat.V1 {
     /// <summary>
     /// Optional. Specifies whether a message starts a thread or replies to one.
     /// Only supported in named spaces.
+    ///
+    /// When [responding to user
+    /// interactions](https://developers.google.com/workspace/chat/receive-respond-interactions),
+    /// this field is ignored. For interactions within a thread, the reply is
+    /// created in the same thread. Otherwise, the reply is created as a new
+    /// thread.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4580,8 +4588,8 @@ namespace Google.Apps.Chat.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of messages returned. The service might return fewer
-    /// messages than this value.
+    /// Optional. The maximum number of messages returned. The service might return
+    /// fewer messages than this value.
     ///
     /// If unspecified, at most 25 are returned.
     ///
@@ -4603,10 +4611,8 @@ namespace Google.Apps.Chat.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// Optional, if resuming from a previous query.
-    ///
-    /// A page token received from a previous list messages call. Provide this
-    /// parameter to retrieve the subsequent page.
+    /// Optional. A page token received from a previous list messages call. Provide
+    /// this parameter to retrieve the subsequent page.
     ///
     /// When paginating, all other parameters provided should match the call that
     /// provided the page token. Passing different values to the other parameters
@@ -4625,7 +4631,7 @@ namespace Google.Apps.Chat.V1 {
     public const int FilterFieldNumber = 4;
     private string filter_ = "";
     /// <summary>
-    /// A query filter.
+    /// Optional. A query filter.
     ///
     /// You can filter messages by date (`create_time`) and thread (`thread.name`).
     ///
@@ -4676,10 +4682,8 @@ namespace Google.Apps.Chat.V1 {
     public const int OrderByFieldNumber = 5;
     private string orderBy_ = "";
     /// <summary>
-    /// Optional, if resuming from a previous query.
-    ///
-    /// How the list of messages is ordered. Specify a value to order by an
-    /// ordering operation. Valid ordering operation values are as follows:
+    /// Optional. How the list of messages is ordered. Specify a value to order by
+    /// an ordering operation. Valid ordering operation values are as follows:
     ///
     /// - `ASC` for ascending.
     ///
@@ -4700,8 +4704,9 @@ namespace Google.Apps.Chat.V1 {
     public const int ShowDeletedFieldNumber = 6;
     private bool showDeleted_;
     /// <summary>
-    /// Whether to include deleted messages. Deleted messages include deleted time
-    /// and metadata about their deletion, but message content is unavailable.
+    /// Optional. Whether to include deleted messages. Deleted messages include
+    /// deleted time and metadata about their deletion, but message content is
+    /// unavailable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

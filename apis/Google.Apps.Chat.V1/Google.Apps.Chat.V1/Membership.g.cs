@@ -29,45 +29,45 @@ namespace Google.Apps.Chat.V1 {
             "L2FwaS9yZXNvdXJjZS5wcm90bxoaZ29vZ2xlL2NoYXQvdjEvZ3JvdXAucHJv",
             "dG8aGWdvb2dsZS9jaGF0L3YxL3VzZXIucHJvdG8aIGdvb2dsZS9wcm90b2J1",
             "Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIpAFCgpNZW1iZXJzaGlwEjEKBG5hbWUYASABKAlCI/pBIAoeY2hh",
-            "dC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEj4KBXN0YXRlGAIgASgOMiou",
-            "Z29vZ2xlLmNoYXQudjEuTWVtYmVyc2hpcC5NZW1iZXJzaGlwU3RhdGVCA+BB",
-            "AxI8CgRyb2xlGAcgASgOMikuZ29vZ2xlLmNoYXQudjEuTWVtYmVyc2hpcC5N",
-            "ZW1iZXJzaGlwUm9sZUID4EEBEiYKBm1lbWJlchgDIAEoCzIULmdvb2dsZS5j",
-            "aGF0LnYxLlVzZXJIABItCgxncm91cF9tZW1iZXIYBSABKAsyFS5nb29nbGUu",
-            "Y2hhdC52MS5Hcm91cEgAEjcKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEIG4EEF4EEBEjcKC2RlbGV0ZV90aW1lGAgg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIG4EEF4EEBIl4KD01l",
-            "bWJlcnNoaXBTdGF0ZRIgChxNRU1CRVJTSElQX1NUQVRFX1VOU1BFQ0lGSUVE",
-            "EAASCgoGSk9JTkVEEAESCwoHSU5WSVRFRBACEhAKDE5PVF9BX01FTUJFUhAD",
-            "IlQKDk1lbWJlcnNoaXBSb2xlEh8KG01FTUJFUlNISVBfUk9MRV9VTlNQRUNJ",
-            "RklFRBAAEg8KC1JPTEVfTUVNQkVSEAESEAoMUk9MRV9NQU5BR0VSEAI6ROpB",
-            "QQoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEh9zcGFjZXMve3Nw",
-            "YWNlfS9tZW1iZXJzL3ttZW1iZXJ9QgwKCm1lbWJlclR5cGUioAEKF0NyZWF0",
-            "ZU1lbWJlcnNoaXBSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC+kEgEh5j",
-            "aGF0Lmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXASMwoKbWVtYmVyc2hpcBgC",
-            "IAEoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAhIYChB1c2Vf",
-            "YWRtaW5fYWNjZXNzGAUgASgIIp4BChdVcGRhdGVNZW1iZXJzaGlwUmVxdWVz",
-            "dBIzCgptZW1iZXJzaGlwGAEgASgLMhouZ29vZ2xlLmNoYXQudjEuTWVtYmVy",
-            "c2hpcEID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLkZpZWxkTWFza0ID4EECEhgKEHVzZV9hZG1pbl9hY2Nlc3MYAyABKAgi",
-            "5QEKFkxpc3RNZW1iZXJzaGlwc1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibg",
-            "QQL6QSASHmNoYXQuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIWCglwYWdl",
-            "X3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoG",
-            "ZmlsdGVyGAUgASgJQgPgQQESGAoLc2hvd19ncm91cHMYBiABKAhCA+BBARIZ",
-            "CgxzaG93X2ludml0ZWQYByABKAhCA+BBARIYChB1c2VfYWRtaW5fYWNjZXNz",
-            "GAggASgIImgKF0xpc3RNZW1iZXJzaGlwc1Jlc3BvbnNlEjQKC21lbWJlcnNo",
-            "aXBzGAEgAygLMhouZ29vZ2xlLmNoYXQudjEuTWVtYmVyc2hpcEID4EEGEhcK",
-            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJmChRHZXRNZW1iZXJzaGlwUmVxdWVz",
-            "dBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQuZ29vZ2xlYXBpcy5jb20v",
-            "TWVtYmVyc2hpcBIYChB1c2VfYWRtaW5fYWNjZXNzGAMgASgIImkKF0RlbGV0",
-            "ZU1lbWJlcnNoaXBSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeY2hh",
-            "dC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEhgKEHVzZV9hZG1pbl9hY2Nl",
-            "c3MYAiABKAhCqAEKEmNvbS5nb29nbGUuY2hhdC52MUIPTWVtYmVyc2hpcFBy",
-            "b3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9jaGF0cGI7",
-            "Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0LlYxygIT",
-            "R29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFi",
-            "BnByb3RvMw=="));
+            "LnByb3RvIvoECgpNZW1iZXJzaGlwEhEKBG5hbWUYASABKAlCA+BBCBI+CgVz",
+            "dGF0ZRgCIAEoDjIqLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXAuTWVtYmVy",
+            "c2hpcFN0YXRlQgPgQQMSPAoEcm9sZRgHIAEoDjIpLmdvb2dsZS5jaGF0LnYx",
+            "Lk1lbWJlcnNoaXAuTWVtYmVyc2hpcFJvbGVCA+BBARIrCgZtZW1iZXIYAyAB",
+            "KAsyFC5nb29nbGUuY2hhdC52MS5Vc2VyQgPgQQFIABIyCgxncm91cF9tZW1i",
+            "ZXIYBSABKAsyFS5nb29nbGUuY2hhdC52MS5Hcm91cEID4EEBSAASNwoLY3Jl",
+            "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgbg",
+            "QQXgQQESNwoLZGVsZXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgbgQQXgQQEiXgoPTWVtYmVyc2hpcFN0YXRlEiAKHE1FTUJF",
+            "UlNISVBfU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZKT0lORUQQARILCgdJTlZJ",
+            "VEVEEAISEAoMTk9UX0FfTUVNQkVSEAMiVAoOTWVtYmVyc2hpcFJvbGUSHwob",
+            "TUVNQkVSU0hJUF9ST0xFX1VOU1BFQ0lGSUVEEAASDwoLUk9MRV9NRU1CRVIQ",
+            "ARIQCgxST0xFX01BTkFHRVIQAjpE6kFBCh5jaGF0Lmdvb2dsZWFwaXMuY29t",
+            "L01lbWJlcnNoaXASH3NwYWNlcy97c3BhY2V9L21lbWJlcnMve21lbWJlcn1C",
+            "DAoKbWVtYmVyVHlwZSKlAQoXQ3JlYXRlTWVtYmVyc2hpcFJlcXVlc3QSNgoG",
+            "cGFyZW50GAEgASgJQibgQQL6QSASHmNoYXQuZ29vZ2xlYXBpcy5jb20vTWVt",
+            "YmVyc2hpcBIzCgptZW1iZXJzaGlwGAIgASgLMhouZ29vZ2xlLmNoYXQudjEu",
+            "TWVtYmVyc2hpcEID4EECEh0KEHVzZV9hZG1pbl9hY2Nlc3MYBSABKAhCA+BB",
+            "ASKjAQoXVXBkYXRlTWVtYmVyc2hpcFJlcXVlc3QSMwoKbWVtYmVyc2hpcBgB",
+            "IAEoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAhI0Cgt1cGRh",
+            "dGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BB",
+            "AhIdChB1c2VfYWRtaW5fYWNjZXNzGAMgASgIQgPgQQEi6gEKFkxpc3RNZW1i",
+            "ZXJzaGlwc1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSASHmNoYXQu",
+            "Z29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIWCglwYWdlX3NpemUYAiABKAVC",
+            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAUgASgJ",
+            "QgPgQQESGAoLc2hvd19ncm91cHMYBiABKAhCA+BBARIZCgxzaG93X2ludml0",
+            "ZWQYByABKAhCA+BBARIdChB1c2VfYWRtaW5fYWNjZXNzGAggASgIQgPgQQEi",
+            "aAoXTGlzdE1lbWJlcnNoaXBzUmVzcG9uc2USNAoLbWVtYmVyc2hpcHMYASAD",
+            "KAsyGi5nb29nbGUuY2hhdC52MS5NZW1iZXJzaGlwQgPgQQYSFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJImsKFEdldE1lbWJlcnNoaXBSZXF1ZXN0EjQKBG5h",
+            "bWUYASABKAlCJuBBAvpBIAoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJz",
+            "aGlwEh0KEHVzZV9hZG1pbl9hY2Nlc3MYAyABKAhCA+BBASJuChdEZWxldGVN",
+            "ZW1iZXJzaGlwUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmNoYXQu",
+            "Z29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIdChB1c2VfYWRtaW5fYWNjZXNz",
+            "GAIgASgIQgPgQQFCqAEKEmNvbS5nb29nbGUuY2hhdC52MUIPTWVtYmVyc2hp",
+            "cFByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9jaGF0",
+            "cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0LlYx",
+            "ygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.GroupReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -150,7 +150,7 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the membership, assigned by the server.
+    /// Identifier. Resource name of the membership, assigned by the server.
     ///
     /// Format: `spaces/{space}/members/{member}`
     /// </summary>
@@ -199,7 +199,7 @@ namespace Google.Apps.Chat.V1 {
     /// <summary>Field number for the "member" field.</summary>
     public const int MemberFieldNumber = 3;
     /// <summary>
-    /// The Google Chat user or app the membership corresponds to.
+    /// Optional. The Google Chat user or app the membership corresponds to.
     /// If your Chat app [authenticates as a
     /// user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
     /// the output populates the
@@ -219,7 +219,10 @@ namespace Google.Apps.Chat.V1 {
     /// <summary>Field number for the "group_member" field.</summary>
     public const int GroupMemberFieldNumber = 5;
     /// <summary>
-    /// The Google Group the membership corresponds to.
+    /// Optional. The Google Group the membership corresponds to.
+    ///
+    /// Reading or mutating memberships for Google Groups requires [user
+    /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -744,21 +747,42 @@ namespace Google.Apps.Chat.V1 {
     private global::Google.Apps.Chat.V1.Membership membership_;
     /// <summary>
     /// Required. The membership relation to create.
+    ///
     /// The `memberType` field must contain a user with the `user.name` and
     /// `user.type` fields populated. The server will assign a resource name
     /// and overwrite anything specified.
+    ///
     /// When a Chat app creates a membership relation for a human user, it must use
-    /// the `chat.memberships` scope, set `user.type` to `HUMAN`, and set
-    /// `user.name` with format `users/{user}`, where `{user}` can be the email
-    /// address for the user. For users in the same Workspace organization `{user}`
-    /// can also be the `id` of the
-    /// [person](https://developers.google.com/people/api/rest/v1/people) from the
-    /// People API, or the `id` for the user in the Directory API. For example, if
-    /// the People API Person profile ID for `user@example.com` is `123456789`, you
-    /// can add the user to the space by setting the `membership.member.name` to
-    /// `users/user@example.com` or `users/123456789`. When a Chat app creates a
-    /// membership relation for itself, it must use the `chat.memberships.app`
-    /// scope, set `user.type` to `BOT`, and set `user.name` to `users/app`.
+    /// certain authorization scopes and set specific values for certain fields:
+    ///
+    /// - When [authenticating as a
+    /// user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
+    /// the `chat.memberships` authorization scope is required.
+    ///
+    /// - When [authenticating as an
+    /// app](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app),
+    /// the `chat.app.memberships` authorization scope is required.
+    /// Authenticating as an app is available in [Developer
+    /// Preview](https://developers.google.com/workspace/preview).
+    ///
+    /// - Set `user.type` to `HUMAN`, and set `user.name` with format
+    /// `users/{user}`, where `{user}` can be the email address for the user. For
+    /// users in the same Workspace organization `{user}` can also be the `id` of
+    /// the [person](https://developers.google.com/people/api/rest/v1/people) from
+    /// the People API, or the `id` for the user in the Directory API. For example,
+    /// if the People API Person profile ID for `user@example.com` is `123456789`,
+    /// you can add the user to the space by setting the `membership.member.name`
+    /// to `users/user@example.com` or `users/123456789`.
+    ///
+    /// Inviting users external to the Workspace organization that owns the space
+    /// requires [user
+    /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+    ///
+    /// When a Chat app creates a membership relation for itself, it must
+    /// [authenticate as a
+    /// user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+    /// and use the `chat.memberships.app` scope, set `user.type` to `BOT`, and set
+    /// `user.name` to `users/app`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -773,7 +797,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UseAdminAccessFieldNumber = 5;
     private bool useAdminAccess_;
     /// <summary>
-    /// When `true`, the method runs using the user's Google Workspace
+    /// Optional. When `true`, the method runs using the user's Google Workspace
     /// administrator privileges.
     ///
     /// The calling user must be a Google Workspace administrator with the
@@ -1076,7 +1100,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UseAdminAccessFieldNumber = 3;
     private bool useAdminAccess_;
     /// <summary>
-    /// When `true`, the method runs using the user's Google Workspace
+    /// Optional. When `true`, the method runs using the user's Google Workspace
     /// administrator privileges.
     ///
     /// The calling user must be a Google Workspace administrator with the
@@ -1507,7 +1531,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UseAdminAccessFieldNumber = 8;
     private bool useAdminAccess_;
     /// <summary>
-    /// When `true`, the method runs using the user's Google Workspace
+    /// Optional. When `true`, the method runs using the user's Google Workspace
     /// administrator privileges.
     ///
     /// The calling user must be a Google Workspace administrator with the
@@ -2093,9 +2117,7 @@ namespace Google.Apps.Chat.V1 {
     ///
     /// Format: `spaces/{space}/members/{member}` or `spaces/{space}/members/app`
     ///
-    /// When [authenticated as a
-    /// user](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user),
-    /// you can use the user's email as an alias for `{member}`. For example,
+    /// You can use the user's email as an alias for `{member}`. For example,
     /// `spaces/{space}/members/example@gmail.com` where `example@gmail.com` is the
     /// email of the Google Chat user.
     /// </summary>
@@ -2112,7 +2134,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UseAdminAccessFieldNumber = 3;
     private bool useAdminAccess_;
     /// <summary>
-    /// When `true`, the method runs using the user's Google Workspace
+    /// Optional. When `true`, the method runs using the user's Google Workspace
     /// administrator privileges.
     ///
     /// The calling user must be a Google Workspace administrator with the
@@ -2372,7 +2394,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UseAdminAccessFieldNumber = 2;
     private bool useAdminAccess_;
     /// <summary>
-    /// When `true`, the method runs using the user's Google Workspace
+    /// Optional. When `true`, the method runs using the user's Google Workspace
     /// administrator privileges.
     ///
     /// The calling user must be a Google Workspace administrator with the

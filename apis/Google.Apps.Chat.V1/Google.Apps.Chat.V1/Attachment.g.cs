@@ -26,31 +26,31 @@ namespace Google.Apps.Chat.V1 {
           string.Concat(
             "Ch9nb29nbGUvY2hhdC92MS9hdHRhY2htZW50LnByb3RvEg5nb29nbGUuY2hh",
             "dC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
-            "L2FwaS9yZXNvdXJjZS5wcm90byLzAwoKQXR0YWNobWVudBIMCgRuYW1lGAEg",
-            "ASgJEhkKDGNvbnRlbnRfbmFtZRgCIAEoCUID4EEDEhkKDGNvbnRlbnRfdHlw",
-            "ZRgDIAEoCUID4EEDEkAKE2F0dGFjaG1lbnRfZGF0YV9yZWYYBCABKAsyIS5n",
-            "b29nbGUuY2hhdC52MS5BdHRhY2htZW50RGF0YVJlZkgAEjsKDmRyaXZlX2Rh",
-            "dGFfcmVmGAcgASgLMhwuZ29vZ2xlLmNoYXQudjEuRHJpdmVEYXRhUmVmQgPg",
-            "QQNIABIaCg10aHVtYm5haWxfdXJpGAUgASgJQgPgQQMSGQoMZG93bmxvYWRf",
-            "dXJpGAYgASgJQgPgQQMSNgoGc291cmNlGAkgASgOMiEuZ29vZ2xlLmNoYXQu",
-            "djEuQXR0YWNobWVudC5Tb3VyY2VCA+BBAyJGCgZTb3VyY2USFgoSU09VUkNF",
-            "X1VOU1BFQ0lGSUVEEAASDgoKRFJJVkVfRklMRRABEhQKEFVQTE9BREVEX0NP",
-            "TlRFTlQQAjpf6kFcCh5jaGF0Lmdvb2dsZWFwaXMuY29tL0F0dGFjaG1lbnQS",
-            "OnNwYWNlcy97c3BhY2V9L21lc3NhZ2VzL3ttZXNzYWdlfS9hdHRhY2htZW50",
-            "cy97YXR0YWNobWVudH1CCgoIZGF0YV9yZWYiJQoMRHJpdmVEYXRhUmVmEhUK",
-            "DWRyaXZlX2ZpbGVfaWQYAiABKAkiSwoRQXR0YWNobWVudERhdGFSZWYSFQoN",
-            "cmVzb3VyY2VfbmFtZRgBIAEoCRIfChdhdHRhY2htZW50X3VwbG9hZF90b2tl",
-            "bhgCIAEoCSJMChRHZXRBdHRhY2htZW50UmVxdWVzdBI0CgRuYW1lGAEgASgJ",
-            "QibgQQL6QSAKHmNoYXQuZ29vZ2xlYXBpcy5jb20vQXR0YWNobWVudCJlChdV",
-            "cGxvYWRBdHRhY2htZW50UmVxdWVzdBIzCgZwYXJlbnQYASABKAlCI+BBAvpB",
-            "HRIbY2hhdC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlEhUKCGZpbGVuYW1lGAQg",
-            "ASgJQgPgQQIiWgoYVXBsb2FkQXR0YWNobWVudFJlc3BvbnNlEj4KE2F0dGFj",
-            "aG1lbnRfZGF0YV9yZWYYASABKAsyIS5nb29nbGUuY2hhdC52MS5BdHRhY2ht",
-            "ZW50RGF0YVJlZkKoAQoSY29tLmdvb2dsZS5jaGF0LnYxQg9BdHRhY2htZW50",
-            "UHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2NoYXRw",
-            "YjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQuVjHK",
-            "AhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpW",
-            "MWIGcHJvdG8z"));
+            "L2FwaS9yZXNvdXJjZS5wcm90byL9AwoKQXR0YWNobWVudBIRCgRuYW1lGAEg",
+            "ASgJQgPgQQESGQoMY29udGVudF9uYW1lGAIgASgJQgPgQQMSGQoMY29udGVu",
+            "dF90eXBlGAMgASgJQgPgQQMSRQoTYXR0YWNobWVudF9kYXRhX3JlZhgEIAEo",
+            "CzIhLmdvb2dsZS5jaGF0LnYxLkF0dGFjaG1lbnREYXRhUmVmQgPgQQFIABI7",
+            "Cg5kcml2ZV9kYXRhX3JlZhgHIAEoCzIcLmdvb2dsZS5jaGF0LnYxLkRyaXZl",
+            "RGF0YVJlZkID4EEDSAASGgoNdGh1bWJuYWlsX3VyaRgFIAEoCUID4EEDEhkK",
+            "DGRvd25sb2FkX3VyaRgGIAEoCUID4EEDEjYKBnNvdXJjZRgJIAEoDjIhLmdv",
+            "b2dsZS5jaGF0LnYxLkF0dGFjaG1lbnQuU291cmNlQgPgQQMiRgoGU291cmNl",
+            "EhYKElNPVVJDRV9VTlNQRUNJRklFRBAAEg4KCkRSSVZFX0ZJTEUQARIUChBV",
+            "UExPQURFRF9DT05URU5UEAI6X+pBXAoeY2hhdC5nb29nbGVhcGlzLmNvbS9B",
+            "dHRhY2htZW50EjpzcGFjZXMve3NwYWNlfS9tZXNzYWdlcy97bWVzc2FnZX0v",
+            "YXR0YWNobWVudHMve2F0dGFjaG1lbnR9QgoKCGRhdGFfcmVmIiUKDERyaXZl",
+            "RGF0YVJlZhIVCg1kcml2ZV9maWxlX2lkGAIgASgJIlUKEUF0dGFjaG1lbnRE",
+            "YXRhUmVmEhoKDXJlc291cmNlX25hbWUYASABKAlCA+BBARIkChdhdHRhY2ht",
+            "ZW50X3VwbG9hZF90b2tlbhgCIAEoCUID4EEBIkwKFEdldEF0dGFjaG1lbnRS",
+            "ZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeY2hhdC5nb29nbGVhcGlz",
+            "LmNvbS9BdHRhY2htZW50ImUKF1VwbG9hZEF0dGFjaG1lbnRSZXF1ZXN0EjMK",
+            "BnBhcmVudBgBIAEoCUIj4EEC+kEdEhtjaGF0Lmdvb2dsZWFwaXMuY29tL01l",
+            "c3NhZ2USFQoIZmlsZW5hbWUYBCABKAlCA+BBAiJaChhVcGxvYWRBdHRhY2ht",
+            "ZW50UmVzcG9uc2USPgoTYXR0YWNobWVudF9kYXRhX3JlZhgBIAEoCzIhLmdv",
+            "b2dsZS5jaGF0LnYxLkF0dGFjaG1lbnREYXRhUmVmQqgBChJjb20uZ29vZ2xl",
+            "LmNoYXQudjFCD0F0dGFjaG1lbnRQcm90b1ABWixjbG91ZC5nb29nbGUuY29t",
+            "L2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgIT",
+            "R29vZ2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZH",
+            "b29nbGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -132,7 +132,7 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the attachment, in the form
+    /// Optional. Resource name of the attachment, in the form
     /// `spaces/{space}/messages/{message}/attachments/{attachment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -177,8 +177,9 @@ namespace Google.Apps.Chat.V1 {
     /// <summary>Field number for the "attachment_data_ref" field.</summary>
     public const int AttachmentDataRefFieldNumber = 4;
     /// <summary>
-    /// A reference to the attachment data. This field is used with the media API
-    /// to download the attachment data.
+    /// Optional. A reference to the attachment data. This field is used to
+    /// create or update messages with attachments, or with the media API to
+    /// download the attachment data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -883,8 +884,8 @@ namespace Google.Apps.Chat.V1 {
     public const int ResourceNameFieldNumber = 1;
     private string resourceName_ = "";
     /// <summary>
-    /// The resource name of the attachment data. This field is used with the media
-    /// API to download the attachment data.
+    /// Optional. The resource name of the attachment data. This field is used with
+    /// the media API to download the attachment data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -899,9 +900,9 @@ namespace Google.Apps.Chat.V1 {
     public const int AttachmentUploadTokenFieldNumber = 2;
     private string attachmentUploadToken_ = "";
     /// <summary>
-    /// Opaque token containing a reference to an uploaded attachment. Treated by
-    /// clients as an opaque string and used to create or update Chat messages with
-    /// attachments.
+    /// Optional. Opaque token containing a reference to an uploaded attachment.
+    /// Treated by clients as an opaque string and used to create or update Chat
+    /// messages with attachments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

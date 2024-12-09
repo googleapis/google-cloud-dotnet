@@ -28,94 +28,96 @@ namespace Google.Apps.Chat.V1 {
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
             "cmVzb3VyY2UucHJvdG8aImdvb2dsZS9jaGF0L3YxL2hpc3Rvcnlfc3RhdGUu",
             "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIvYUCgVTcGFjZRIMCgRuYW1l",
-            "GAEgASgJEi8KBHR5cGUYAiABKA4yGi5nb29nbGUuY2hhdC52MS5TcGFjZS5U",
-            "eXBlQgUYAeBBAxIzCgpzcGFjZV90eXBlGAogASgOMh8uZ29vZ2xlLmNoYXQu",
-            "djEuU3BhY2UuU3BhY2VUeXBlEh8KEnNpbmdsZV91c2VyX2JvdF9kbRgEIAEo",
-            "CEID4EEBEhcKCHRocmVhZGVkGAUgASgIQgUYAeBBAxIUCgxkaXNwbGF5X25h",
-            "bWUYAyABKAkSIgoVZXh0ZXJuYWxfdXNlcl9hbGxvd2VkGAggASgIQgPgQQUS",
-            "TQoVc3BhY2VfdGhyZWFkaW5nX3N0YXRlGAkgASgOMikuZ29vZ2xlLmNoYXQu",
-            "djEuU3BhY2UuU3BhY2VUaHJlYWRpbmdTdGF0ZUID4EEDEjkKDXNwYWNlX2Rl",
-            "dGFpbHMYCyABKAsyIi5nb29nbGUuY2hhdC52MS5TcGFjZS5TcGFjZURldGFp",
-            "bHMSOQoTc3BhY2VfaGlzdG9yeV9zdGF0ZRgNIAEoDjIcLmdvb2dsZS5jaGF0",
-            "LnYxLkhpc3RvcnlTdGF0ZRIYCgtpbXBvcnRfbW9kZRgQIAEoCEID4EEBEjcK",
-            "C2NyZWF0ZV90aW1lGBEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEIG4EEF4EEBEjkKEGxhc3RfYWN0aXZlX3RpbWUYEiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSHAoPYWRtaW5faW5zdGFsbGVkGBMg",
-            "ASgIQgPgQQMSRAoQbWVtYmVyc2hpcF9jb3VudBgUIAEoCzIlLmdvb2dsZS5j",
-            "aGF0LnYxLlNwYWNlLk1lbWJlcnNoaXBDb3VudEID4EEDEkIKD2FjY2Vzc19z",
-            "ZXR0aW5ncxgXIAEoCzIkLmdvb2dsZS5jaGF0LnYxLlNwYWNlLkFjY2Vzc1Nl",
-            "dHRpbmdzQgPgQQESFgoJc3BhY2VfdXJpGBkgASgJQgPgQQMSZAoecHJlZGVm",
-            "aW5lZF9wZXJtaXNzaW9uX3NldHRpbmdzGBogASgOMjIuZ29vZ2xlLmNoYXQu",
-            "djEuU3BhY2UuUHJlZGVmaW5lZFBlcm1pc3Npb25TZXR0aW5nc0IG4EEE4EEB",
-            "SAASTAoTcGVybWlzc2lvbl9zZXR0aW5ncxgbIAEoCzIoLmdvb2dsZS5jaGF0",
-            "LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nc0ID4EEBSAASQAoXaW1wb3J0",
-            "X21vZGVfZXhwaXJlX3RpbWUYHCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMaNwoMU3BhY2VEZXRhaWxzEhMKC2Rlc2NyaXB0aW9uGAEg",
-            "ASgJEhIKCmd1aWRlbGluZXMYAiABKAkaVQoPTWVtYmVyc2hpcENvdW50EiYK",
-            "HmpvaW5lZF9kaXJlY3RfaHVtYW5fdXNlcl9jb3VudBgEIAEoBRIaChJqb2lu",
-            "ZWRfZ3JvdXBfY291bnQYBSABKAUawAEKDkFjY2Vzc1NldHRpbmdzEksKDGFj",
-            "Y2Vzc19zdGF0ZRgBIAEoDjIwLmdvb2dsZS5jaGF0LnYxLlNwYWNlLkFjY2Vz",
-            "c1NldHRpbmdzLkFjY2Vzc1N0YXRlQgPgQQMSFQoIYXVkaWVuY2UYAyABKAlC",
-            "A+BBASJKCgtBY2Nlc3NTdGF0ZRIcChhBQ0NFU1NfU1RBVEVfVU5TUEVDSUZJ",
-            "RUQQABILCgdQUklWQVRFEAESEAoMRElTQ09WRVJBQkxFEAIahQYKElBlcm1p",
-            "c3Npb25TZXR0aW5ncxJPChltYW5hZ2VfbWVtYmVyc19hbmRfZ3JvdXBzGAEg",
-            "ASgLMicuZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lvblNldHRpbmdI",
-            "AIgBARJKChRtb2RpZnlfc3BhY2VfZGV0YWlscxgCIAEoCzInLmdvb2dsZS5j",
-            "aGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nSAGIAQESRAoOdG9nZ2xl",
-            "X2hpc3RvcnkYAyABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNz",
-            "aW9uU2V0dGluZ0gCiAEBEkgKEnVzZV9hdF9tZW50aW9uX2FsbBgEIAEoCzIn",
-            "Lmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nSAOIAQES",
-            "QQoLbWFuYWdlX2FwcHMYBSABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5Q",
-            "ZXJtaXNzaW9uU2V0dGluZ0gEiAEBEkUKD21hbmFnZV93ZWJob29rcxgGIAEo",
-            "CzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nSAWI",
-            "AQESSAoNcG9zdF9tZXNzYWdlcxgHIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNw",
-            "YWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQNIBogBARJECg5yZXBseV9tZXNz",
-            "YWdlcxgIIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25T",
-            "ZXR0aW5nSAeIAQFCHAoaX21hbmFnZV9tZW1iZXJzX2FuZF9ncm91cHNCFwoV",
-            "X21vZGlmeV9zcGFjZV9kZXRhaWxzQhEKD190b2dnbGVfaGlzdG9yeUIVChNf",
-            "dXNlX2F0X21lbnRpb25fYWxsQg4KDF9tYW5hZ2VfYXBwc0ISChBfbWFuYWdl",
-            "X3dlYmhvb2tzQhAKDl9wb3N0X21lc3NhZ2VzQhEKD19yZXBseV9tZXNzYWdl",
-            "cxpGChFQZXJtaXNzaW9uU2V0dGluZxIYChBtYW5hZ2Vyc19hbGxvd2VkGAEg",
-            "ASgIEhcKD21lbWJlcnNfYWxsb3dlZBgCIAEoCCIuCgRUeXBlEhQKEFRZUEVf",
-            "VU5TUEVDSUZJRUQQABIICgRST09NEAESBgoCRE0QAiJWCglTcGFjZVR5cGUS",
-            "GgoWU1BBQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgkKBVNQQUNFEAESDgoKR1JP",
-            "VVBfQ0hBVBACEhIKDkRJUkVDVF9NRVNTQUdFEAMiggEKE1NwYWNlVGhyZWFk",
-            "aW5nU3RhdGUSJQohU1BBQ0VfVEhSRUFESU5HX1NUQVRFX1VOU1BFQ0lGSUVE",
-            "EAASFQoRVEhSRUFERURfTUVTU0FHRVMQAhIUChBHUk9VUEVEX01FU1NBR0VT",
-            "EAMSFwoTVU5USFJFQURFRF9NRVNTQUdFUxAEIn8KHFByZWRlZmluZWRQZXJt",
-            "aXNzaW9uU2V0dGluZ3MSLgoqUFJFREVGSU5FRF9QRVJNSVNTSU9OX1NFVFRJ",
-            "TkdTX1VOU1BFQ0lGSUVEEAASFwoTQ09MTEFCT1JBVElPTl9TUEFDRRABEhYK",
-            "EkFOTk9VTkNFTUVOVF9TUEFDRRACOi7qQSsKGWNoYXQuZ29vZ2xlYXBpcy5j",
-            "b20vU3BhY2USDnNwYWNlcy97c3BhY2V9QhsKGXNwYWNlX3Blcm1pc3Npb25f",
-            "c2V0dGluZ3MiWAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EikKBXNwYWNlGAEgASgL",
-            "MhUuZ29vZ2xlLmNoYXQudjEuU3BhY2VCA+BBAhIXCgpyZXF1ZXN0X2lkGAIg",
-            "ASgJQgPgQQEiWQoRTGlzdFNwYWNlc1JlcXVlc3QSFgoJcGFnZV9zaXplGAEg",
-            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgCIAEoCUID4EEBEhMKBmZpbHRlchgD",
-            "IAEoCUID4EEBIlQKEkxpc3RTcGFjZXNSZXNwb25zZRIlCgZzcGFjZXMYASAD",
-            "KAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZRIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkiXAoPR2V0U3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpB",
-            "GwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIYChB1c2VfYWRtaW5fYWNj",
-            "ZXNzGAIgASgIIi0KGEZpbmREaXJlY3RNZXNzYWdlUmVxdWVzdBIRCgRuYW1l",
-            "GAEgASgJQgPgQQIiigEKElVwZGF0ZVNwYWNlUmVxdWVzdBIpCgVzcGFjZRgB",
-            "IAEoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlQgPgQQISLwoLdXBkYXRlX21h",
-            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrEhgKEHVzZV9h",
-            "ZG1pbl9hY2Nlc3MYAyABKAgigQEKE1NlYXJjaFNwYWNlc1JlcXVlc3QSGAoQ",
-            "dXNlX2FkbWluX2FjY2VzcxgBIAEoCBIRCglwYWdlX3NpemUYAiABKAUSEgoK",
-            "cGFnZV90b2tlbhgDIAEoCRISCgVxdWVyeRgEIAEoCUID4EECEhUKCG9yZGVy",
-            "X2J5GAUgASgJQgPgQQEiagoUU2VhcmNoU3BhY2VzUmVzcG9uc2USJQoGc3Bh",
-            "Y2VzGAEgAygLMhUuZ29vZ2xlLmNoYXQudjEuU3BhY2USFwoPbmV4dF9wYWdl",
-            "X3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUiXwoSRGVsZXRlU3Bh",
-            "Y2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpBGwoZY2hhdC5nb29nbGVh",
-            "cGlzLmNvbS9TcGFjZRIYChB1c2VfYWRtaW5fYWNjZXNzGAIgASgIIk0KGkNv",
-            "bXBsZXRlSW1wb3J0U3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpB",
-            "GwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZSJDChtDb21wbGV0ZUltcG9y",
-            "dFNwYWNlUmVzcG9uc2USJAoFc3BhY2UYASABKAsyFS5nb29nbGUuY2hhdC52",
-            "MS5TcGFjZUKjAQoSY29tLmdvb2dsZS5jaGF0LnYxQgpTcGFjZVByb3RvUAFa",
-            "LGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBi",
-            "ogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0LlYxygITR29vZ2xl",
-            "XEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFiBnByb3Rv",
-            "Mw=="));
+            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItMVCgVTcGFjZRIRCgRuYW1l",
+            "GAEgASgJQgPgQQgSLwoEdHlwZRgCIAEoDjIaLmdvb2dsZS5jaGF0LnYxLlNw",
+            "YWNlLlR5cGVCBRgB4EEDEjgKCnNwYWNlX3R5cGUYCiABKA4yHy5nb29nbGUu",
+            "Y2hhdC52MS5TcGFjZS5TcGFjZVR5cGVCA+BBARIfChJzaW5nbGVfdXNlcl9i",
+            "b3RfZG0YBCABKAhCA+BBARIXCgh0aHJlYWRlZBgFIAEoCEIFGAHgQQMSGQoM",
+            "ZGlzcGxheV9uYW1lGAMgASgJQgPgQQESJQoVZXh0ZXJuYWxfdXNlcl9hbGxv",
+            "d2VkGAggASgIQgbgQQXgQQESTQoVc3BhY2VfdGhyZWFkaW5nX3N0YXRlGAkg",
+            "ASgOMikuZ29vZ2xlLmNoYXQudjEuU3BhY2UuU3BhY2VUaHJlYWRpbmdTdGF0",
+            "ZUID4EEDEj4KDXNwYWNlX2RldGFpbHMYCyABKAsyIi5nb29nbGUuY2hhdC52",
+            "MS5TcGFjZS5TcGFjZURldGFpbHNCA+BBARI+ChNzcGFjZV9oaXN0b3J5X3N0",
+            "YXRlGA0gASgOMhwuZ29vZ2xlLmNoYXQudjEuSGlzdG9yeVN0YXRlQgPgQQES",
+            "GAoLaW1wb3J0X21vZGUYECABKAhCA+BBARI3CgtjcmVhdGVfdGltZRgRIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBuBBBeBBARI5ChBsYXN0",
+            "X2FjdGl2ZV90aW1lGBIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDEhwKD2FkbWluX2luc3RhbGxlZBgTIAEoCEID4EEDEkQKEG1lbWJl",
+            "cnNoaXBfY291bnQYFCABKAsyJS5nb29nbGUuY2hhdC52MS5TcGFjZS5NZW1i",
+            "ZXJzaGlwQ291bnRCA+BBAxJCCg9hY2Nlc3Nfc2V0dGluZ3MYFyABKAsyJC5n",
+            "b29nbGUuY2hhdC52MS5TcGFjZS5BY2Nlc3NTZXR0aW5nc0ID4EEBEhYKCXNw",
+            "YWNlX3VyaRgZIAEoCUID4EEDEmQKHnByZWRlZmluZWRfcGVybWlzc2lvbl9z",
+            "ZXR0aW5ncxgaIAEoDjIyLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlByZWRlZmlu",
+            "ZWRQZXJtaXNzaW9uU2V0dGluZ3NCBuBBBOBBAUgAEkwKE3Blcm1pc3Npb25f",
+            "c2V0dGluZ3MYGyABKAsyKC5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNz",
+            "aW9uU2V0dGluZ3NCA+BBAUgAEkAKF2ltcG9ydF9tb2RlX2V4cGlyZV90aW1l",
+            "GBwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGkEKDFNw",
+            "YWNlRGV0YWlscxIYCgtkZXNjcmlwdGlvbhgBIAEoCUID4EEBEhcKCmd1aWRl",
+            "bGluZXMYAiABKAlCA+BBARpfCg9NZW1iZXJzaGlwQ291bnQSKwoeam9pbmVk",
+            "X2RpcmVjdF9odW1hbl91c2VyX2NvdW50GAQgASgFQgPgQQMSHwoSam9pbmVk",
+            "X2dyb3VwX2NvdW50GAUgASgFQgPgQQMawAEKDkFjY2Vzc1NldHRpbmdzEksK",
+            "DGFjY2Vzc19zdGF0ZRgBIAEoDjIwLmdvb2dsZS5jaGF0LnYxLlNwYWNlLkFj",
+            "Y2Vzc1NldHRpbmdzLkFjY2Vzc1N0YXRlQgPgQQMSFQoIYXVkaWVuY2UYAyAB",
+            "KAlCA+BBASJKCgtBY2Nlc3NTdGF0ZRIcChhBQ0NFU1NfU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABILCgdQUklWQVRFEAESEAoMRElTQ09WRVJBQkxFEAIaqAYKElBl",
+            "cm1pc3Npb25TZXR0aW5ncxJUChltYW5hZ2VfbWVtYmVyc19hbmRfZ3JvdXBz",
+            "GAEgASgLMicuZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lvblNldHRp",
+            "bmdCA+BBAUgAiAEBEk8KFG1vZGlmeV9zcGFjZV9kZXRhaWxzGAIgASgLMicu",
+            "Z29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lvblNldHRpbmdCA+BBAUgB",
+            "iAEBEkkKDnRvZ2dsZV9oaXN0b3J5GAMgASgLMicuZ29vZ2xlLmNoYXQudjEu",
+            "U3BhY2UuUGVybWlzc2lvblNldHRpbmdCA+BBAUgCiAEBEk0KEnVzZV9hdF9t",
+            "ZW50aW9uX2FsbBgEIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1p",
+            "c3Npb25TZXR0aW5nQgPgQQFIA4gBARJGCgttYW5hZ2VfYXBwcxgFIAEoCzIn",
+            "Lmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQFI",
+            "BIgBARJKCg9tYW5hZ2Vfd2ViaG9va3MYBiABKAsyJy5nb29nbGUuY2hhdC52",
+            "MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID4EEBSAWIAQESSAoNcG9zdF9t",
+            "ZXNzYWdlcxgHIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Np",
+            "b25TZXR0aW5nQgPgQQNIBogBARJJCg5yZXBseV9tZXNzYWdlcxgIIAEoCzIn",
+            "Lmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQFI",
+            "B4gBAUIcChpfbWFuYWdlX21lbWJlcnNfYW5kX2dyb3Vwc0IXChVfbW9kaWZ5",
+            "X3NwYWNlX2RldGFpbHNCEQoPX3RvZ2dsZV9oaXN0b3J5QhUKE191c2VfYXRf",
+            "bWVudGlvbl9hbGxCDgoMX21hbmFnZV9hcHBzQhIKEF9tYW5hZ2Vfd2ViaG9v",
+            "a3NCEAoOX3Bvc3RfbWVzc2FnZXNCEQoPX3JlcGx5X21lc3NhZ2VzGlAKEVBl",
+            "cm1pc3Npb25TZXR0aW5nEh0KEG1hbmFnZXJzX2FsbG93ZWQYASABKAhCA+BB",
+            "ARIcCg9tZW1iZXJzX2FsbG93ZWQYAiABKAhCA+BBASIuCgRUeXBlEhQKEFRZ",
+            "UEVfVU5TUEVDSUZJRUQQABIICgRST09NEAESBgoCRE0QAiJWCglTcGFjZVR5",
+            "cGUSGgoWU1BBQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgkKBVNQQUNFEAESDgoK",
+            "R1JPVVBfQ0hBVBACEhIKDkRJUkVDVF9NRVNTQUdFEAMiggEKE1NwYWNlVGhy",
+            "ZWFkaW5nU3RhdGUSJQohU1BBQ0VfVEhSRUFESU5HX1NUQVRFX1VOU1BFQ0lG",
+            "SUVEEAASFQoRVEhSRUFERURfTUVTU0FHRVMQAhIUChBHUk9VUEVEX01FU1NB",
+            "R0VTEAMSFwoTVU5USFJFQURFRF9NRVNTQUdFUxAEIn8KHFByZWRlZmluZWRQ",
+            "ZXJtaXNzaW9uU2V0dGluZ3MSLgoqUFJFREVGSU5FRF9QRVJNSVNTSU9OX1NF",
+            "VFRJTkdTX1VOU1BFQ0lGSUVEEAASFwoTQ09MTEFCT1JBVElPTl9TUEFDRRAB",
+            "EhYKEkFOTk9VTkNFTUVOVF9TUEFDRRACOi7qQSsKGWNoYXQuZ29vZ2xlYXBp",
+            "cy5jb20vU3BhY2USDnNwYWNlcy97c3BhY2V9QhsKGXNwYWNlX3Blcm1pc3Np",
+            "b25fc2V0dGluZ3MiWAoSQ3JlYXRlU3BhY2VSZXF1ZXN0EikKBXNwYWNlGAEg",
+            "ASgLMhUuZ29vZ2xlLmNoYXQudjEuU3BhY2VCA+BBAhIXCgpyZXF1ZXN0X2lk",
+            "GAIgASgJQgPgQQEiWQoRTGlzdFNwYWNlc1JlcXVlc3QSFgoJcGFnZV9zaXpl",
+            "GAEgASgFQgPgQQESFwoKcGFnZV90b2tlbhgCIAEoCUID4EEBEhMKBmZpbHRl",
+            "chgDIAEoCUID4EEBIlQKEkxpc3RTcGFjZXNSZXNwb25zZRIlCgZzcGFjZXMY",
+            "ASADKAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZRIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkiYQoPR2V0U3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBB",
+            "AvpBGwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIdChB1c2VfYWRtaW5f",
+            "YWNjZXNzGAIgASgIQgPgQQEiLQoYRmluZERpcmVjdE1lc3NhZ2VSZXF1ZXN0",
+            "EhEKBG5hbWUYASABKAlCA+BBAiKUAQoSVXBkYXRlU3BhY2VSZXF1ZXN0EikK",
+            "BXNwYWNlGAEgASgLMhUuZ29vZ2xlLmNoYXQudjEuU3BhY2VCA+BBAhI0Cgt1",
+            "cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC",
+            "A+BBAhIdChB1c2VfYWRtaW5fYWNjZXNzGAMgASgIQgPgQQEigQEKE1NlYXJj",
+            "aFNwYWNlc1JlcXVlc3QSGAoQdXNlX2FkbWluX2FjY2VzcxgBIAEoCBIRCglw",
+            "YWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRISCgVxdWVyeRgE",
+            "IAEoCUID4EECEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEiagoUU2VhcmNoU3Bh",
+            "Y2VzUmVzcG9uc2USJQoGc3BhY2VzGAEgAygLMhUuZ29vZ2xlLmNoYXQudjEu",
+            "U3BhY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUY",
+            "AyABKAUiZAoSRGVsZXRlU3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBB",
+            "AvpBGwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIdChB1c2VfYWRtaW5f",
+            "YWNjZXNzGAIgASgIQgPgQQEiTQoaQ29tcGxldGVJbXBvcnRTcGFjZVJlcXVl",
+            "c3QSLwoEbmFtZRgBIAEoCUIh4EEC+kEbChljaGF0Lmdvb2dsZWFwaXMuY29t",
+            "L1NwYWNlIkMKG0NvbXBsZXRlSW1wb3J0U3BhY2VSZXNwb25zZRIkCgVzcGFj",
+            "ZRgBIAEoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlQqMBChJjb20uZ29vZ2xl",
+            "LmNoYXQudjFCClNwYWNlUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9j",
+            "aGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dvb2ds",
+            "ZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xl",
+            "OjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.HistoryStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -220,7 +222,7 @@ namespace Google.Apps.Chat.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Resource name of the space.
+    /// Identifier. Resource name of the space.
     ///
     /// Format: `spaces/{space}`
     ///
@@ -261,8 +263,8 @@ namespace Google.Apps.Chat.V1 {
     public const int SpaceTypeFieldNumber = 10;
     private global::Google.Apps.Chat.V1.Space.Types.SpaceType spaceType_ = global::Google.Apps.Chat.V1.Space.Types.SpaceType.Unspecified;
     /// <summary>
-    /// The type of space. Required when creating a space or updating the space
-    /// type of a space. Output only for other usage.
+    /// Optional. The type of space. Required when creating a space or updating the
+    /// space type of a space. Output only for other usage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -310,7 +312,7 @@ namespace Google.Apps.Chat.V1 {
     public const int DisplayNameFieldNumber = 3;
     private string displayName_ = "";
     /// <summary>
-    /// The space's display name. Required when [creating a
+    /// Optional. The space's display name. Required when [creating a
     /// space](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces/create)
     /// with a `spaceType` of `SPACE`. If you receive the error message
     /// `ALREADY_EXISTS` when creating a space or updating the `displayName`, try a
@@ -334,9 +336,9 @@ namespace Google.Apps.Chat.V1 {
     public const int ExternalUserAllowedFieldNumber = 8;
     private bool externalUserAllowed_;
     /// <summary>
-    /// Immutable. Whether this space permits any Google Chat user as a member.
-    /// Input when creating a space in a Google Workspace organization. Omit this
-    /// field when creating spaces in the following conditions:
+    /// Optional. Immutable. Whether this space permits any Google Chat user as a
+    /// member. Input when creating a space in a Google Workspace organization.
+    /// Omit this field when creating spaces in the following conditions:
     ///
     ///   * The authenticated user uses a consumer account (unmanaged user
     ///     account). By default, a space created by a consumer account permits any
@@ -372,7 +374,7 @@ namespace Google.Apps.Chat.V1 {
     public const int SpaceDetailsFieldNumber = 11;
     private global::Google.Apps.Chat.V1.Space.Types.SpaceDetails spaceDetails_;
     /// <summary>
-    /// Details about the space including description and rules.
+    /// Optional. Details about the space including description and rules.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -387,7 +389,7 @@ namespace Google.Apps.Chat.V1 {
     public const int SpaceHistoryStateFieldNumber = 13;
     private global::Google.Apps.Chat.V1.HistoryState spaceHistoryState_ = global::Google.Apps.Chat.V1.HistoryState.Unspecified;
     /// <summary>
-    /// The message history state for messages and threads in this space.
+    /// Optional. The message history state for messages and threads in this space.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -405,6 +407,9 @@ namespace Google.Apps.Chat.V1 {
     /// Optional. Whether this space is created in `Import Mode` as part of a data
     /// migration into Google Workspace. While spaces are being imported, they
     /// aren't visible to users until the import is complete.
+    ///
+    /// Creating a space in `Import Mode`requires [user
+    /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1665,8 +1670,8 @@ namespace Google.Apps.Chat.V1 {
         public const int JoinedDirectHumanUserCountFieldNumber = 4;
         private int joinedDirectHumanUserCount_;
         /// <summary>
-        /// Count of human users that have directly joined the space, not counting
-        /// users joined by having membership in a joined group.
+        /// Output only. Count of human users that have directly joined the space,
+        /// not counting users joined by having membership in a joined group.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1681,7 +1686,7 @@ namespace Google.Apps.Chat.V1 {
         public const int JoinedGroupCountFieldNumber = 5;
         private int joinedGroupCount_;
         /// <summary>
-        /// Count of all groups that have directly joined the space.
+        /// Output only. Count of all groups that have directly joined the space.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1931,8 +1936,23 @@ namespace Google.Apps.Chat.V1 {
         /// To use the default target audience for the Google Workspace organization,
         /// set to `audiences/default`.
         ///
+        /// Reading the target audience supports:
+        ///
+        /// - [User
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        ///
+        /// - [App
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app)
+        /// with [administrator
+        /// approval](https://support.google.com/a?p=chat-app-auth)
+        /// with the `chat.app.spaces` scope in [Developer
+        /// Preview](https://developers.google.com/workspace/preview).
+        ///
         /// This field is not populated when using the `chat.bot` scope with [app
         /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        ///
+        /// Setting the target audience requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2123,6 +2143,9 @@ namespace Google.Apps.Chat.V1 {
             /// invited to the space can also discover and access the space. To learn
             /// more, see [Make a space discoverable to specific
             /// users](https://developers.google.com/workspace/chat/space-target-audience).
+            ///
+            /// Creating discoverable spaces requires [user
+            /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
             /// </summary>
             [pbr::OriginalName("DISCOVERABLE")] Discoverable = 2,
           }
@@ -2195,7 +2218,7 @@ namespace Google.Apps.Chat.V1 {
         public const int ManageMembersAndGroupsFieldNumber = 1;
         private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting manageMembersAndGroups_;
         /// <summary>
-        /// Setting for managing members and groups in a space.
+        /// Optional. Setting for managing members and groups in a space.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2210,7 +2233,8 @@ namespace Google.Apps.Chat.V1 {
         public const int ModifySpaceDetailsFieldNumber = 2;
         private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting modifySpaceDetails_;
         /// <summary>
-        /// Setting for updating space name, avatar, description and guidelines.
+        /// Optional. Setting for updating space name, avatar, description and
+        /// guidelines.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2225,7 +2249,7 @@ namespace Google.Apps.Chat.V1 {
         public const int ToggleHistoryFieldNumber = 3;
         private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting toggleHistory_;
         /// <summary>
-        /// Setting for toggling space history on and off.
+        /// Optional. Setting for toggling space history on and off.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2240,7 +2264,7 @@ namespace Google.Apps.Chat.V1 {
         public const int UseAtMentionAllFieldNumber = 4;
         private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting useAtMentionAll_;
         /// <summary>
-        /// Setting for using @all in a space.
+        /// Optional. Setting for using @all in a space.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2255,7 +2279,7 @@ namespace Google.Apps.Chat.V1 {
         public const int ManageAppsFieldNumber = 5;
         private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting manageApps_;
         /// <summary>
-        /// Setting for managing apps in a space.
+        /// Optional. Setting for managing apps in a space.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2270,7 +2294,7 @@ namespace Google.Apps.Chat.V1 {
         public const int ManageWebhooksFieldNumber = 6;
         private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting manageWebhooks_;
         /// <summary>
-        /// Setting for managing webhooks in a space.
+        /// Optional. Setting for managing webhooks in a space.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2300,7 +2324,7 @@ namespace Google.Apps.Chat.V1 {
         public const int ReplyMessagesFieldNumber = 8;
         private global::Google.Apps.Chat.V1.Space.Types.PermissionSetting replyMessages_;
         /// <summary>
-        /// Setting for replying to messages in a space.
+        /// Optional. Setting for replying to messages in a space.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2737,7 +2761,7 @@ namespace Google.Apps.Chat.V1 {
         public const int ManagersAllowedFieldNumber = 1;
         private bool managersAllowed_;
         /// <summary>
-        /// Whether spaces managers have this permission.
+        /// Optional. Whether spaces managers have this permission.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2752,7 +2776,7 @@ namespace Google.Apps.Chat.V1 {
         public const int MembersAllowedFieldNumber = 2;
         private bool membersAllowed_;
         /// <summary>
-        /// Whether non-manager members have this permission.
+        /// Optional. Whether non-manager members have this permission.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2979,15 +3003,12 @@ namespace Google.Apps.Chat.V1 {
     private global::Google.Apps.Chat.V1.Space space_;
     /// <summary>
     /// Required. The `displayName` and `spaceType` fields must be populated.  Only
-    /// `SpaceType.SPACE` is supported.
+    /// `SpaceType.SPACE`  and `SpaceType.GROUP_CHAT` are supported.
+    /// `SpaceType.GROUP_CHAT` can only be used if `importMode` is set to true.
     ///
     /// If you receive the error message `ALREADY_EXISTS`,
     /// try a different `displayName`. An existing space within the Google
     /// Workspace organization might already use this display name.
-    ///
-    /// If you're a member of the [Developer Preview
-    /// program](https://developers.google.com/workspace/preview),
-    /// `SpaceType.GROUP_CHAT` can be used if `importMode` is set to true.
     ///
     /// The space `name` is assigned on the server so anything specified in this
     /// field will be ignored.
@@ -3791,7 +3812,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UseAdminAccessFieldNumber = 2;
     private bool useAdminAccess_;
     /// <summary>
-    /// When `true`, the method runs using the user's Google Workspace
+    /// Optional. When `true`, the method runs using the user's Google Workspace
     /// administrator privileges.
     ///
     /// The calling user must be a Google Workspace administrator with the
@@ -4321,7 +4342,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UseAdminAccessFieldNumber = 3;
     private bool useAdminAccess_;
     /// <summary>
-    /// When `true`, the method runs using the user's Google Workspace
+    /// Optional. When `true`, the method runs using the user's Google Workspace
     /// administrator privileges.
     ///
     /// The calling user must be a Google Workspace administrator with the
@@ -5348,7 +5369,7 @@ namespace Google.Apps.Chat.V1 {
     public const int UseAdminAccessFieldNumber = 2;
     private bool useAdminAccess_;
     /// <summary>
-    /// When `true`, the method runs using the user's Google Workspace
+    /// Optional. When `true`, the method runs using the user's Google Workspace
     /// administrator privileges.
     ///
     /// The calling user must be a Google Workspace administrator with the
