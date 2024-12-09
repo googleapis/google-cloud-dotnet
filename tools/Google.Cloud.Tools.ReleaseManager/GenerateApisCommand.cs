@@ -30,13 +30,13 @@ internal class GenerateApisCommand : ICommand
         @"C:\Program Files\Git\usr\bin\bash.exe",
         "/usr/bin/bash"
     };
-    private const string ProtocEnvironmentVariable = "PROTOC";
-    private const string ProtobufToolsRootEnvironmentVariable = "PROTOBUF_TOOLS_ROOT";
-    private const string GapicGeneratorEnvironmentVariable = "GAPIC_PLUGIN";
-    private const string GrpcGeneratorEnvironmentVariable = "GRPC_PLUGIN";
-    private const string GoogleApisDirectoryEnvironmentVariable = "GOOGLEAPIS";
-    private const string GeneratorOutputDirectoryEnvironmentVariable = "GENERATOR_OUTPUT_DIR";
-    private const string GeneratorInputDirectoryEnvironmentVariable = "GENERATOR_INPUT_DIR";
+    internal const string ProtocEnvironmentVariable = "PROTOC";
+    internal const string ProtobufToolsRootEnvironmentVariable = "PROTOBUF_TOOLS_ROOT";
+    internal const string GapicGeneratorEnvironmentVariable = "GAPIC_PLUGIN";
+    internal const string GrpcGeneratorEnvironmentVariable = "GRPC_PLUGIN";
+    internal const string GoogleApisDirectoryEnvironmentVariable = "GOOGLEAPIS";
+    internal const string GeneratorOutputDirectoryEnvironmentVariable = "GENERATOR_OUTPUT_DIR";
+    internal const string GeneratorInputDirectoryEnvironmentVariable = "GENERATOR_INPUT_DIR";
 
     private readonly string protocBinary;
     private readonly string gapicGeneratorBinary;
@@ -68,14 +68,16 @@ internal class GenerateApisCommand : ICommand
 
     public int Execute(string[] args)
     {
-        ValidateEnvironment();
+        bool generateUnconfigured = args.FirstOrDefault() == "--unconfigured";
+
+        ValidateEnvironment(!generateUnconfigured);
         if (Directory.Exists(tempOutputDirectory))
         {
             Directory.Delete(tempOutputDirectory, true);
         }
         Directory.CreateDirectory(tempOutputDirectory);
 
-        if (args.FirstOrDefault() == "--unconfigured")
+        if (generateUnconfigured)
         {
             return ExecuteForUnconfigured(args.Skip(1).ToArray());
         }
@@ -307,7 +309,7 @@ internal class GenerateApisCommand : ICommand
         }
     }
 
-    private void ValidateEnvironment()
+    private void ValidateEnvironment(bool requireGeneratorInput)
     {
         ValidateFile(protocBinary, "protoc");
         ValidateFile(gapicGeneratorBinary, "GAPIC generator");
@@ -315,6 +317,7 @@ internal class GenerateApisCommand : ICommand
         ValidateDirectory(googleApisDirectory, "googleapis");
         ValidateDirectory(protobufToolsRootDirectory, "protobuf tools root");
         ValidateDirectory(generatorOutputDirectory, "generator output");
+        ValidateDirectory(generatorInputDirectory, "generator input");
         // This will throw if we can't detect bash.
         GetBashExecutable();
 
@@ -353,11 +356,7 @@ internal class GenerateApisCommand : ICommand
     // at some point, but this is a convenient location for prototyping.
     private int ExecuteForUnconfigured(string[] args)
     {
-        // TODO: Maybe have another way of specifying this, eventually.
-        // (Potentially just use generatorOutputDirectory.)
-        var root = DirectoryLayout.DetermineRootDirectory();
-
-        var outputRoot = Path.Combine(root, "unconfigured-generation");
+        var outputRoot = Path.Combine(generatorOutputDirectory, "unconfigured-generation");
         if (Directory.Exists(outputRoot))
         {
             Directory.Delete(outputRoot, true);
