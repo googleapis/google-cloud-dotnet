@@ -9,7 +9,7 @@
     <LangVersion>latest</LangVersion>
 
     <!-- Sign this assembly so it can be used by source manipulation projects. -->
-    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
+    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('toolversions.sh', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
     <AssemblyOriginatorKeyFile>$(RepoRoot)/apis/GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>True</SignAssembly>
   </PropertyGroup>

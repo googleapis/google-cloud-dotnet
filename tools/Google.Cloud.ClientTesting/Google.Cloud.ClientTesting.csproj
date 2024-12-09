@@ -4,8 +4,7 @@
     <IsPackable>false</IsPackable>
     <TargetFrameworks>netstandard2.1;net462</TargetFrameworks>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
-
-    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
+    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('toolversions.sh', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
     <AssemblyOriginatorKeyFile>$(RepoRoot)/apis/GoogleApis.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>True</SignAssembly>
   </PropertyGroup>

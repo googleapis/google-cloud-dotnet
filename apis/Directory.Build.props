@@ -18,7 +18,7 @@
     -->
   <PropertyGroup>
     <!-- Make the repository root available for other properties -->
-    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('.gitignore', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
+    <RepoRoot>$([System.IO.Path]::GetDirectoryName($([MSBuild]::GetPathOfFileAbove('toolversions.sh', '$(MSBuildThisFileDirectory)'))))</RepoRoot>
 
     <!-- Build properties -->
     <AssemblyOriginatorKeyFile>$(RepoRoot)/apis/GoogleApis.snk</AssemblyOriginatorKeyFile>
