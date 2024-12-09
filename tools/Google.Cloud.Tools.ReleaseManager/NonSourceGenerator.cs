@@ -13,13 +13,10 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Google.Protobuf.WellKnownTypes;
-using LibGit2Sharp;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -40,6 +37,8 @@ namespace Google.Cloud.Tools.ReleaseManager;
 ///
 /// This is effectively the business logic underlying <see cref="GenerateProjectsCommand"/>,
 /// but designed for use from multiple places.
+///
+/// This class is also responsible for being able to clean up anything it created.
 /// </summary>
 internal sealed class NonSourceGenerator
 {
@@ -692,7 +691,43 @@ api-name: {api.Id}
         Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
         File.WriteAllText(outputPath, json);
     }
-#endregion
+    #endregion
+
+    #region Clean-up
+    public void CleanApiFiles(string id)
+    {
+        var apiRoot = DirectoryLayout.ForApi(id, _outputDirectory, _generatorInputDirectory).SourceDirectory;
+
+        // We just try to delete everything we *might* generate, whether it exists or not.
+        Delete($"{id}.sln");
+        Delete(".repo-metadata.json");
+        Delete(".repo-metadata.json");
+        Delete(".OwlBot.yaml");
+        Delete(".OwlBot-ForceRegeneration.txt");
+
+        DeleteProject("");
+        DeleteProject(".Tests");
+        DeleteProject(".IntegrationTests");
+        DeleteProject(".GeneratedSnippets");
+        DeleteProject(".Snippets");
+
+        void DeleteProject(string suffix) => Delete($"{id}{suffix}/{id}{suffix}.csproj");
+        void Delete(string relativeFile)
+        {
+            string absoluteFile = Path.Combine(apiRoot, relativeFile);
+            if (File.Exists(absoluteFile))
+            {
+                File.Delete(absoluteFile);
+            }
+        }
+    }
+
+    public void CleanNonApiFiles()
+    {
+        File.Delete(Path.Combine(_outputDirectory, "README.md"));
+        File.Delete(Path.Combine(_outputDirectory, ".github", "renovate.json"));
+    }
+    #endregion
 
     /// <summary>
     /// Returns the main output directory for an API (i.e. "apis/{id}").
