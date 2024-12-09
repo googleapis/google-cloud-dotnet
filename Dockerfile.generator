@@ -1,0 +1,49 @@
+# Copyright 2024 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0.414-jammy AS build
+
+WORKDIR /src
+
+# Additional tooling required to regenerate libraries and project files.
+RUN apt-get update
+RUN apt-get install -y unzip
+
+# Copy files which are needed for building
+COPY apis/GoogleApis.snk apis/GoogleApis.snk
+COPY Directory.Packages.props .
+COPY global.json .
+COPY tools tools
+COPY toolversions.sh .
+
+# Build our tooling (which provides the entry point)
+RUN dotnet build tools/Google.Cloud.Tools.ReleaseManager -c Release
+
+# Install protobuf, the gRPC plugin and GAPIC generator, ready to run
+RUN bash -c 'source toolversions.sh && install_protoc && install_microgenerator && install_grpc'
+
+FROM mcr.microsoft.com/dotnet/sdk:6.0.414-jammy
+
+WORKDIR /app
+COPY --from=build /src/packages/Google.Protobuf.Tools.* protobuf
+COPY --from=build /src/packages/Grpc.Tools.* grpc
+COPY --from=build /src/gapic-generator-csharp/Google.Api.Generator/bin/Release/*/* gapic
+COPY --from=build /src/tools/Google.Cloud.Tools.ReleaseManager/bin/Release/* ReleaseManager
+
+ENV PROTOBUF_TOOLS_ROOT=/app/protobuf
+ENV PROTOC=/app/protobuf/tools/linux_x64/protoc
+ENV GRPC_PLUGIN=/app/grpc/tools/linux_x64/grpc_csharp_plugin
+ENV GAPIC_PLUGIN=/app/gapic/Google.Api.Generator
+
+ENTRYPOINT ["dotnet", "ReleaseManager/Google.Cloud.Tools.ReleaseManager.dll", "container"]
