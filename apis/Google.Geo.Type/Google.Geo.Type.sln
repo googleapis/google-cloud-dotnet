@@ -1,22 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Geo.Type", "Google.Geo.Type\Google.Geo.Type.csproj", "{2D6C75F9-0762-41C1-A0CC-86E76A243F03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Geo.Type", "Google.Geo.Type\Google.Geo.Type.csproj", "{B6019832-8FC8-6F29-133D-2F91B2944022}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2D6C75F9-0762-41C1-A0CC-86E76A243F03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D6C75F9-0762-41C1-A0CC-86E76A243F03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D6C75F9-0762-41C1-A0CC-86E76A243F03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D6C75F9-0762-41C1-A0CC-86E76A243F03}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {B6019832-8FC8-6F29-133D-2F91B2944022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {B6019832-8FC8-6F29-133D-2F91B2944022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {B6019832-8FC8-6F29-133D-2F91B2944022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {B6019832-8FC8-6F29-133D-2F91B2944022}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
 EndGlobal

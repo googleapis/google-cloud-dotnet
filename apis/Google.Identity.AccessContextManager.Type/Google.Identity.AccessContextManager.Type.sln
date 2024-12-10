@@ -1,22 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Identity.AccessContextManager.Type", "Google.Identity.AccessContextManager.Type\Google.Identity.AccessContextManager.Type.csproj", "{9C78A5D0-E263-424E-92EF-4C8566D26157}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Identity.AccessContextManager.Type", "Google.Identity.AccessContextManager.Type\Google.Identity.AccessContextManager.Type.csproj", "{AB50B3D8-7F8A-0E77-5ABF-527B63B4558B}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C78A5D0-E263-424E-92EF-4C8566D26157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C78A5D0-E263-424E-92EF-4C8566D26157}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C78A5D0-E263-424E-92EF-4C8566D26157}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C78A5D0-E263-424E-92EF-4C8566D26157}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {AB50B3D8-7F8A-0E77-5ABF-527B63B4558B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {AB50B3D8-7F8A-0E77-5ABF-527B63B4558B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {AB50B3D8-7F8A-0E77-5ABF-527B63B4558B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {AB50B3D8-7F8A-0E77-5ABF-527B63B4558B}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
 EndGlobal
