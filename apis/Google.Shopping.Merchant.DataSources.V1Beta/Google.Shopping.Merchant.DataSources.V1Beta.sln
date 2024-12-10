@@ -1,40 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.DataSources.V1Beta", "Google.Shopping.Merchant.DataSources.V1Beta\Google.Shopping.Merchant.DataSources.V1Beta.csproj", "{8A4B5DB8-D199-4873-9B89-12649F967BB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.DataSources.V1Beta", "Google.Shopping.Merchant.DataSources.V1Beta\Google.Shopping.Merchant.DataSources.V1Beta.csproj", "{AF36C6E0-FE57-B62C-645B-B79E388ED063}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.DataSources.V1Beta.GeneratedSnippets", "Google.Shopping.Merchant.DataSources.V1Beta.GeneratedSnippets\Google.Shopping.Merchant.DataSources.V1Beta.GeneratedSnippets.csproj", "{95CD088B-A014-4D7F-98C5-7B8BA33FD356}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.DataSources.V1Beta.Snippets", "Google.Shopping.Merchant.DataSources.V1Beta.Snippets\Google.Shopping.Merchant.DataSources.V1Beta.Snippets.csproj", "{44827D75-DFEE-D964-6A93-FAC128EA8921}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{71FA3C13-485F-4D49-A7C1-683FAB8F4D33}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.DataSources.V1Beta.Snippets", "Google.Shopping.Merchant.DataSources.V1Beta.Snippets\Google.Shopping.Merchant.DataSources.V1Beta.Snippets.csproj", "{C07B2B17-EBA5-446B-8ED1-345B04E487D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.DataSources.V1Beta.GeneratedSnippets", "Google.Shopping.Merchant.DataSources.V1Beta.GeneratedSnippets\Google.Shopping.Merchant.DataSources.V1Beta.GeneratedSnippets.csproj", "{C1BE7046-2566-C65E-9FA6-A263BAD26EF0}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8A4B5DB8-D199-4873-9B89-12649F967BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8A4B5DB8-D199-4873-9B89-12649F967BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A4B5DB8-D199-4873-9B89-12649F967BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8A4B5DB8-D199-4873-9B89-12649F967BB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95CD088B-A014-4D7F-98C5-7B8BA33FD356}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95CD088B-A014-4D7F-98C5-7B8BA33FD356}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95CD088B-A014-4D7F-98C5-7B8BA33FD356}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95CD088B-A014-4D7F-98C5-7B8BA33FD356}.Release|Any CPU.Build.0 = Release|Any CPU
-		{71FA3C13-485F-4D49-A7C1-683FAB8F4D33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{71FA3C13-485F-4D49-A7C1-683FAB8F4D33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{71FA3C13-485F-4D49-A7C1-683FAB8F4D33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{71FA3C13-485F-4D49-A7C1-683FAB8F4D33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C07B2B17-EBA5-446B-8ED1-345B04E487D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C07B2B17-EBA5-446B-8ED1-345B04E487D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C07B2B17-EBA5-446B-8ED1-345B04E487D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C07B2B17-EBA5-446B-8ED1-345B04E487D8}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {AF36C6E0-FE57-B62C-645B-B79E388ED063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {AF36C6E0-FE57-B62C-645B-B79E388ED063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {AF36C6E0-FE57-B62C-645B-B79E388ED063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {AF36C6E0-FE57-B62C-645B-B79E388ED063}.Release|Any CPU.Build.0 = Release|Any CPU
+        {44827D75-DFEE-D964-6A93-FAC128EA8921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {44827D75-DFEE-D964-6A93-FAC128EA8921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {44827D75-DFEE-D964-6A93-FAC128EA8921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {44827D75-DFEE-D964-6A93-FAC128EA8921}.Release|Any CPU.Build.0 = Release|Any CPU
+        {C1BE7046-2566-C65E-9FA6-A263BAD26EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {C1BE7046-2566-C65E-9FA6-A263BAD26EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {C1BE7046-2566-C65E-9FA6-A263BAD26EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {C1BE7046-2566-C65E-9FA6-A263BAD26EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
 EndGlobal

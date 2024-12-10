@@ -1,40 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ManagedKafka.V1", "Google.Cloud.ManagedKafka.V1\Google.Cloud.ManagedKafka.V1.csproj", "{0D90577F-68E7-4AF5-A392-AEF4289EC4A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ManagedKafka.V1", "Google.Cloud.ManagedKafka.V1\Google.Cloud.ManagedKafka.V1.csproj", "{8427C6C3-EB17-69C7-69F6-01078FE51B86}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ManagedKafka.V1.GeneratedSnippets", "Google.Cloud.ManagedKafka.V1.GeneratedSnippets\Google.Cloud.ManagedKafka.V1.GeneratedSnippets.csproj", "{661FC0EA-B1BA-4CA8-A5D0-F570E5B5F705}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ManagedKafka.V1.Snippets", "Google.Cloud.ManagedKafka.V1.Snippets\Google.Cloud.ManagedKafka.V1.Snippets.csproj", "{23B24E52-9112-45C0-2FA6-299B246C3A50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{22E3D735-086D-4D8D-9123-9A26C93F4AEB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ManagedKafka.V1.Snippets", "Google.Cloud.ManagedKafka.V1.Snippets\Google.Cloud.ManagedKafka.V1.Snippets.csproj", "{02C7C6CA-9A3E-4285-8A76-CE49249C1875}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ManagedKafka.V1.GeneratedSnippets", "Google.Cloud.ManagedKafka.V1.GeneratedSnippets\Google.Cloud.ManagedKafka.V1.GeneratedSnippets.csproj", "{92EDD7DC-1C7D-C4C4-6A7C-2C8F560034A4}"
 EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0D90577F-68E7-4AF5-A392-AEF4289EC4A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D90577F-68E7-4AF5-A392-AEF4289EC4A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D90577F-68E7-4AF5-A392-AEF4289EC4A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D90577F-68E7-4AF5-A392-AEF4289EC4A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{661FC0EA-B1BA-4CA8-A5D0-F570E5B5F705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{661FC0EA-B1BA-4CA8-A5D0-F570E5B5F705}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{661FC0EA-B1BA-4CA8-A5D0-F570E5B5F705}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{661FC0EA-B1BA-4CA8-A5D0-F570E5B5F705}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22E3D735-086D-4D8D-9123-9A26C93F4AEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22E3D735-086D-4D8D-9123-9A26C93F4AEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22E3D735-086D-4D8D-9123-9A26C93F4AEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22E3D735-086D-4D8D-9123-9A26C93F4AEB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02C7C6CA-9A3E-4285-8A76-CE49249C1875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02C7C6CA-9A3E-4285-8A76-CE49249C1875}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02C7C6CA-9A3E-4285-8A76-CE49249C1875}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02C7C6CA-9A3E-4285-8A76-CE49249C1875}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {8427C6C3-EB17-69C7-69F6-01078FE51B86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {8427C6C3-EB17-69C7-69F6-01078FE51B86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {8427C6C3-EB17-69C7-69F6-01078FE51B86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {8427C6C3-EB17-69C7-69F6-01078FE51B86}.Release|Any CPU.Build.0 = Release|Any CPU
+        {23B24E52-9112-45C0-2FA6-299B246C3A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {23B24E52-9112-45C0-2FA6-299B246C3A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {23B24E52-9112-45C0-2FA6-299B246C3A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {23B24E52-9112-45C0-2FA6-299B246C3A50}.Release|Any CPU.Build.0 = Release|Any CPU
+        {92EDD7DC-1C7D-C4C4-6A7C-2C8F560034A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {92EDD7DC-1C7D-C4C4-6A7C-2C8F560034A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {92EDD7DC-1C7D-C4C4-6A7C-2C8F560034A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {92EDD7DC-1C7D-C4C4-6A7C-2C8F560034A4}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
 EndGlobal
