@@ -6365,6 +6365,28 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Shopping.Merchant.Reviews.V1Beta",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Merchant",
+      "productUrl": "https://developers.google.com/merchant/api",
+      "description": "Recommended Google client library to access the Merchant Reviews API (v1beta) which allows you to programmatically manage your Merchant Center accounts.",
+      "tags": [
+        "shopping",
+        "reviews"
+      ],
+      "dependencies": {
+        "Google.Shopping.Type": "1.0.0-beta06"
+      },
+      "generator": "micro",
+      "protoPath": "google/shopping/merchant/reviews/v1beta",
+      "includeCommonResourcesProto": true,
+      "shortName": "merchantapi",
+      "serviceConfigFile": "merchantapi_v1beta.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Shopping.Type",
       "version": "1.0.0-beta06",
       "type": "other",
