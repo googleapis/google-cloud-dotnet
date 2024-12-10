@@ -80,8 +80,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             // the parent commit.
             var headCommit = repo.Head.Tip;
             var parentCommit = headCommit.Parents.First();
-            var headApisJson = headCommit.Tree["apis/apis.json"].Target;
-            var parentApisJson = parentCommit.Tree["apis/apis.json"].Target;
+            var headApisJson = headCommit.Tree["generator-input/apis.json"].Target;
+            var parentApisJson = parentCommit.Tree["generator-input/apis.json"].Target;
 
             // Let's not even bother parsing if apis.json hasn't changed.
             if (headApisJson.Sha == parentApisJson.Sha)
