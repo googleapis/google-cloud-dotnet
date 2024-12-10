@@ -674,6 +674,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class ResumeInstancesInstanceGroupManagerRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class SetInstanceTemplateInstanceGroupManagerRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
@@ -684,6 +693,33 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class SetTargetPoolsInstanceGroupManagerRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StartInstancesInstanceGroupManagerRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StopInstancesInstanceGroupManagerRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SuspendInstancesInstanceGroupManagerRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
         {
@@ -1959,6 +1995,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class ResumeInstancesRegionInstanceGroupManagerRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class SetInstanceTemplateRegionInstanceGroupManagerRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -1969,6 +2014,33 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class SetTargetPoolsRegionInstanceGroupManagerRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StartInstancesRegionInstanceGroupManagerRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class StopInstancesRegionInstanceGroupManagerRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SuspendInstancesRegionInstanceGroupManagerRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -2230,6 +2302,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class RemoveRuleRegionSecurityPolicyRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class SetLabelsRegionSecurityPolicyRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {

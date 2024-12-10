@@ -1267,6 +1267,12 @@
                 "ResizeAsync"
               ]
             },
+            "ResumeInstances": {
+              "methods": [
+                "ResumeInstances",
+                "ResumeInstancesAsync"
+              ]
+            },
             "SetInstanceTemplate": {
               "methods": [
                 "SetInstanceTemplate",
@@ -1277,6 +1283,24 @@
               "methods": [
                 "SetTargetPools",
                 "SetTargetPoolsAsync"
+              ]
+            },
+            "StartInstances": {
+              "methods": [
+                "StartInstances",
+                "StartInstancesAsync"
+              ]
+            },
+            "StopInstances": {
+              "methods": [
+                "StopInstances",
+                "StopInstancesAsync"
+              ]
+            },
+            "SuspendInstances": {
+              "methods": [
+                "SuspendInstances",
+                "SuspendInstancesAsync"
               ]
             },
             "UpdatePerInstanceConfigs": {
@@ -2360,6 +2384,27 @@
         }
       }
     },
+    "NetworkProfiles": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NetworkProfilesClient",
+          "rpcs": {
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Networks": {
       "clients": {
         "grpc": {
@@ -3352,6 +3397,12 @@
                 "ResizeAsync"
               ]
             },
+            "ResumeInstances": {
+              "methods": [
+                "ResumeInstances",
+                "ResumeInstancesAsync"
+              ]
+            },
             "SetInstanceTemplate": {
               "methods": [
                 "SetInstanceTemplate",
@@ -3362,6 +3413,24 @@
               "methods": [
                 "SetTargetPools",
                 "SetTargetPoolsAsync"
+              ]
+            },
+            "StartInstances": {
+              "methods": [
+                "StartInstances",
+                "StartInstancesAsync"
+              ]
+            },
+            "StopInstances": {
+              "methods": [
+                "StopInstances",
+                "StopInstancesAsync"
+              ]
+            },
+            "SuspendInstances": {
+              "methods": [
+                "SuspendInstances",
+                "SuspendInstancesAsync"
               ]
             },
             "UpdatePerInstanceConfigs": {
@@ -3797,6 +3866,12 @@
               "methods": [
                 "RemoveRule",
                 "RemoveRuleAsync"
+              ]
+            },
+            "SetLabels": {
+              "methods": [
+                "SetLabels",
+                "SetLabelsAsync"
               ]
             }
           }

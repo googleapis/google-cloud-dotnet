@@ -1167,6 +1167,15 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedM3"/>.</summary>
                 public const string MemoryOptimizedM3 = "MEMORY_OPTIMIZED_M3";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX416Tb"/>.</summary>
+                public const string MemoryOptimizedX416Tb = "MEMORY_OPTIMIZED_X4_16TB";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX424Tb"/>.</summary>
+                public const string MemoryOptimizedX424Tb = "MEMORY_OPTIMIZED_X4_24TB";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.MemoryOptimizedX432Tb"/>.</summary>
+                public const string MemoryOptimizedX432Tb = "MEMORY_OPTIMIZED_X4_32TB";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.StorageOptimizedZ3"/>.</summary>
                 public const string StorageOptimizedZ3 = "STORAGE_OPTIMIZED_Z3";
 
@@ -2123,6 +2132,23 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerResizeRequest.Types.State.Succeeded"/>.</summary>
                 public const string Succeeded = "SUCCEEDED";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStandbyPolicy"/> message.</summary>
+        public static class InstanceGroupManagerStandbyPolicy
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStandbyPolicy.Types.Mode"/> enum.</summary>
+            public static class Mode
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStandbyPolicy.Types.Mode.UndefinedMode"/>.</summary>
+                public const string UndefinedMode = "UNDEFINED_MODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStandbyPolicy.Types.Mode.Manual"/>.</summary>
+                public const string Manual = "MANUAL";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InstanceGroupManagerStandbyPolicy.Types.Mode.ScaleOutPool"/>.</summary>
+                public const string ScaleOutPool = "SCALE_OUT_POOL";
             }
         }
 
@@ -3440,6 +3466,12 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkInterface.Types.NicType.Idpf"/>.</summary>
                 public const string Idpf = "IDPF";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkInterface.Types.NicType.Irdma"/>.</summary>
+                public const string Irdma = "IRDMA";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkInterface.Types.NicType.Mrdma"/>.</summary>
+                public const string Mrdma = "MRDMA";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkInterface.Types.NicType.UnspecifiedNicType"/>.</summary>
                 public const string UnspecifiedNicType = "UNSPECIFIED_NIC_TYPE";
 
@@ -3514,9 +3546,375 @@ namespace Google.Cloud.Compute.V1
             }
         }
 
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileLocation"/> message.</summary>
+        public static class NetworkProfileLocation
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileLocation.Types.Scope"/> enum.</summary>
+            public static class Scope
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileLocation.Types.Scope.UndefinedScope"/>.</summary>
+                public const string UndefinedScope = "UNDEFINED_SCOPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileLocation.Types.Scope.Region"/>.</summary>
+                public const string Region = "REGION";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileLocation.Types.Scope.Zone"/>.</summary>
+                public const string Zone = "ZONE";
+            }
+        }
+
+        /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures"/> message.</summary>
+        public static class NetworkProfileNetworkFeatures
+        {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes"/> enum.</summary>
+            public static class AddressPurposes
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.UndefinedAddressPurposes"/>.</summary>
+                public const string UndefinedAddressPurposes = "UNDEFINED_ADDRESS_PURPOSES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.DnsResolver"/>.</summary>
+                public const string DnsResolver = "DNS_RESOLVER";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.GceEndpoint"/>.</summary>
+                public const string GceEndpoint = "GCE_ENDPOINT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.IpsecInterconnect"/>.</summary>
+                public const string IpsecInterconnect = "IPSEC_INTERCONNECT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.NatAuto"/>.</summary>
+                public const string NatAuto = "NAT_AUTO";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.PrivateServiceConnect"/>.</summary>
+                public const string PrivateServiceConnect = "PRIVATE_SERVICE_CONNECT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.Serverless"/>.</summary>
+                public const string Serverless = "SERVERLESS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.SharedLoadbalancerVip"/>.</summary>
+                public const string SharedLoadbalancerVip = "SHARED_LOADBALANCER_VIP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AddressPurposes.VpcPeering"/>.</summary>
+                public const string VpcPeering = "VPC_PEERING";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAliasIpRanges"/> enum.</summary>
+            public static class AllowAliasIpRanges
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAliasIpRanges.UndefinedAllowAliasIpRanges"/>.</summary>
+                public const string UndefinedAllowAliasIpRanges = "UNDEFINED_ALLOW_ALIAS_IP_RANGES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAliasIpRanges.AliasIpRangesAllowed"/>.</summary>
+                public const string AliasIpRangesAllowed = "ALIAS_IP_RANGES_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAliasIpRanges.AliasIpRangesBlocked"/>.</summary>
+                public const string AliasIpRangesBlocked = "ALIAS_IP_RANGES_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAutoModeSubnet"/> enum.</summary>
+            public static class AllowAutoModeSubnet
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAutoModeSubnet.UndefinedAllowAutoModeSubnet"/>.</summary>
+                public const string UndefinedAllowAutoModeSubnet = "UNDEFINED_ALLOW_AUTO_MODE_SUBNET";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAutoModeSubnet.AutoModeSubnetAllowed"/>.</summary>
+                public const string AutoModeSubnetAllowed = "AUTO_MODE_SUBNET_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowAutoModeSubnet.AutoModeSubnetBlocked"/>.</summary>
+                public const string AutoModeSubnetBlocked = "AUTO_MODE_SUBNET_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowClassDFirewalls"/> enum.</summary>
+            public static class AllowClassDFirewalls
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowClassDFirewalls.UndefinedAllowClassDFirewalls"/>.</summary>
+                public const string UndefinedAllowClassDFirewalls = "UNDEFINED_ALLOW_CLASS_D_FIREWALLS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowClassDFirewalls.ClassDFirewallsAllowed"/>.</summary>
+                public const string ClassDFirewallsAllowed = "CLASS_D_FIREWALLS_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowClassDFirewalls.ClassDFirewallsBlocked"/>.</summary>
+                public const string ClassDFirewallsBlocked = "CLASS_D_FIREWALLS_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowCloudNat"/> enum.</summary>
+            public static class AllowCloudNat
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowCloudNat.UndefinedAllowCloudNat"/>.</summary>
+                public const string UndefinedAllowCloudNat = "UNDEFINED_ALLOW_CLOUD_NAT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowCloudNat.CloudNatAllowed"/>.</summary>
+                public const string CloudNatAllowed = "CLOUD_NAT_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowCloudNat.CloudNatBlocked"/>.</summary>
+                public const string CloudNatBlocked = "CLOUD_NAT_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowCloudRouter"/> enum.</summary>
+            public static class AllowCloudRouter
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowCloudRouter.UndefinedAllowCloudRouter"/>.</summary>
+                public const string UndefinedAllowCloudRouter = "UNDEFINED_ALLOW_CLOUD_ROUTER";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowCloudRouter.CloudRouterAllowed"/>.</summary>
+                public const string CloudRouterAllowed = "CLOUD_ROUTER_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowCloudRouter.CloudRouterBlocked"/>.</summary>
+                public const string CloudRouterBlocked = "CLOUD_ROUTER_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowExternalIpAccess"/> enum.</summary>
+            public static class AllowExternalIpAccess
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowExternalIpAccess.UndefinedAllowExternalIpAccess"/>.</summary>
+                public const string UndefinedAllowExternalIpAccess = "UNDEFINED_ALLOW_EXTERNAL_IP_ACCESS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowExternalIpAccess.ExternalIpAccessAllowed"/>.</summary>
+                public const string ExternalIpAccessAllowed = "EXTERNAL_IP_ACCESS_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowExternalIpAccess.ExternalIpAccessBlocked"/>.</summary>
+                public const string ExternalIpAccessBlocked = "EXTERNAL_IP_ACCESS_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowInterconnect"/> enum.</summary>
+            public static class AllowInterconnect
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowInterconnect.UndefinedAllowInterconnect"/>.</summary>
+                public const string UndefinedAllowInterconnect = "UNDEFINED_ALLOW_INTERCONNECT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowInterconnect.InterconnectAllowed"/>.</summary>
+                public const string InterconnectAllowed = "INTERCONNECT_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowInterconnect.InterconnectBlocked"/>.</summary>
+                public const string InterconnectBlocked = "INTERCONNECT_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowLoadBalancing"/> enum.</summary>
+            public static class AllowLoadBalancing
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowLoadBalancing.UndefinedAllowLoadBalancing"/>.</summary>
+                public const string UndefinedAllowLoadBalancing = "UNDEFINED_ALLOW_LOAD_BALANCING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowLoadBalancing.LoadBalancingAllowed"/>.</summary>
+                public const string LoadBalancingAllowed = "LOAD_BALANCING_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowLoadBalancing.LoadBalancingBlocked"/>.</summary>
+                public const string LoadBalancingBlocked = "LOAD_BALANCING_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowMultiNicInSameNetwork"/> enum.</summary>
+            public static class AllowMultiNicInSameNetwork
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowMultiNicInSameNetwork.UndefinedAllowMultiNicInSameNetwork"/>.</summary>
+                public const string UndefinedAllowMultiNicInSameNetwork = "UNDEFINED_ALLOW_MULTI_NIC_IN_SAME_NETWORK";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowMultiNicInSameNetwork.MultiNicInSameNetworkAllowed"/>.</summary>
+                public const string MultiNicInSameNetworkAllowed = "MULTI_NIC_IN_SAME_NETWORK_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowMultiNicInSameNetwork.MultiNicInSameNetworkBlocked"/>.</summary>
+                public const string MultiNicInSameNetworkBlocked = "MULTI_NIC_IN_SAME_NETWORK_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPacketMirroring"/> enum.</summary>
+            public static class AllowPacketMirroring
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPacketMirroring.UndefinedAllowPacketMirroring"/>.</summary>
+                public const string UndefinedAllowPacketMirroring = "UNDEFINED_ALLOW_PACKET_MIRRORING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPacketMirroring.PacketMirroringAllowed"/>.</summary>
+                public const string PacketMirroringAllowed = "PACKET_MIRRORING_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPacketMirroring.PacketMirroringBlocked"/>.</summary>
+                public const string PacketMirroringBlocked = "PACKET_MIRRORING_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPrivateGoogleAccess"/> enum.</summary>
+            public static class AllowPrivateGoogleAccess
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPrivateGoogleAccess.UndefinedAllowPrivateGoogleAccess"/>.</summary>
+                public const string UndefinedAllowPrivateGoogleAccess = "UNDEFINED_ALLOW_PRIVATE_GOOGLE_ACCESS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPrivateGoogleAccess.PrivateGoogleAccessAllowed"/>.</summary>
+                public const string PrivateGoogleAccessAllowed = "PRIVATE_GOOGLE_ACCESS_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPrivateGoogleAccess.PrivateGoogleAccessBlocked"/>.</summary>
+                public const string PrivateGoogleAccessBlocked = "PRIVATE_GOOGLE_ACCESS_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPsc"/> enum.</summary>
+            public static class AllowPsc
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPsc.UndefinedAllowPsc"/>.</summary>
+                public const string UndefinedAllowPsc = "UNDEFINED_ALLOW_PSC";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPsc.PscAllowed"/>.</summary>
+                public const string PscAllowed = "PSC_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowPsc.PscBlocked"/>.</summary>
+                public const string PscBlocked = "PSC_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSameNetworkUnicast"/> enum.</summary>
+            public static class AllowSameNetworkUnicast
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSameNetworkUnicast.UndefinedAllowSameNetworkUnicast"/>.</summary>
+                public const string UndefinedAllowSameNetworkUnicast = "UNDEFINED_ALLOW_SAME_NETWORK_UNICAST";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSameNetworkUnicast.SameNetworkUnicastAllowed"/>.</summary>
+                public const string SameNetworkUnicastAllowed = "SAME_NETWORK_UNICAST_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSameNetworkUnicast.SameNetworkUnicastBlocked"/>.</summary>
+                public const string SameNetworkUnicastBlocked = "SAME_NETWORK_UNICAST_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowStaticRoutes"/> enum.</summary>
+            public static class AllowStaticRoutes
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowStaticRoutes.UndefinedAllowStaticRoutes"/>.</summary>
+                public const string UndefinedAllowStaticRoutes = "UNDEFINED_ALLOW_STATIC_ROUTES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowStaticRoutes.StaticRoutesAllowed"/>.</summary>
+                public const string StaticRoutesAllowed = "STATIC_ROUTES_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowStaticRoutes.StaticRoutesBlocked"/>.</summary>
+                public const string StaticRoutesBlocked = "STATIC_ROUTES_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSubInterfaces"/> enum.</summary>
+            public static class AllowSubInterfaces
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSubInterfaces.UndefinedAllowSubInterfaces"/>.</summary>
+                public const string UndefinedAllowSubInterfaces = "UNDEFINED_ALLOW_SUB_INTERFACES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSubInterfaces.SubinterfacesAllowed"/>.</summary>
+                public const string SubinterfacesAllowed = "SUBINTERFACES_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowSubInterfaces.SubinterfacesBlocked"/>.</summary>
+                public const string SubinterfacesBlocked = "SUBINTERFACES_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcPeering"/> enum.</summary>
+            public static class AllowVpcPeering
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcPeering.UndefinedAllowVpcPeering"/>.</summary>
+                public const string UndefinedAllowVpcPeering = "UNDEFINED_ALLOW_VPC_PEERING";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcPeering.VpcPeeringAllowed"/>.</summary>
+                public const string VpcPeeringAllowed = "VPC_PEERING_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpcPeering.VpcPeeringBlocked"/>.</summary>
+                public const string VpcPeeringBlocked = "VPC_PEERING_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpn"/> enum.</summary>
+            public static class AllowVpn
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpn.UndefinedAllowVpn"/>.</summary>
+                public const string UndefinedAllowVpn = "UNDEFINED_ALLOW_VPN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpn.VpnAllowed"/>.</summary>
+                public const string VpnAllowed = "VPN_ALLOWED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.AllowVpn.VpnBlocked"/>.</summary>
+                public const string VpnBlocked = "VPN_BLOCKED";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.InterfaceTypes"/> enum.</summary>
+            public static class InterfaceTypes
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.InterfaceTypes.UndefinedInterfaceTypes"/>.</summary>
+                public const string UndefinedInterfaceTypes = "UNDEFINED_INTERFACE_TYPES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.InterfaceTypes.Gvnic"/>.</summary>
+                public const string Gvnic = "GVNIC";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.InterfaceTypes.Idpf"/>.</summary>
+                public const string Idpf = "IDPF";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.InterfaceTypes.Irdma"/>.</summary>
+                public const string Irdma = "IRDMA";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.InterfaceTypes.Mrdma"/>.</summary>
+                public const string Mrdma = "MRDMA";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.InterfaceTypes.UnspecifiedNicType"/>.</summary>
+                public const string UnspecifiedNicType = "UNSPECIFIED_NIC_TYPE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.InterfaceTypes.VirtioNet"/>.</summary>
+                public const string VirtioNet = "VIRTIO_NET";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetPurposes"/> enum.</summary>
+            public static class SubnetPurposes
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetPurposes.UndefinedSubnetPurposes"/>.</summary>
+                public const string UndefinedSubnetPurposes = "UNDEFINED_SUBNET_PURPOSES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetPurposes.SubnetPurposeCustomHardware"/>.</summary>
+                public const string SubnetPurposeCustomHardware = "SUBNET_PURPOSE_CUSTOM_HARDWARE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetPurposes.SubnetPurposePrivate"/>.</summary>
+                public const string SubnetPurposePrivate = "SUBNET_PURPOSE_PRIVATE";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetStackTypes"/> enum.</summary>
+            public static class SubnetStackTypes
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetStackTypes.UndefinedSubnetStackTypes"/>.</summary>
+                public const string UndefinedSubnetStackTypes = "UNDEFINED_SUBNET_STACK_TYPES";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetStackTypes.SubnetStackTypeIpv4Ipv6"/>.</summary>
+                public const string SubnetStackTypeIpv4Ipv6 = "SUBNET_STACK_TYPE_IPV4_IPV6";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetStackTypes.SubnetStackTypeIpv4Only"/>.</summary>
+                public const string SubnetStackTypeIpv4Only = "SUBNET_STACK_TYPE_IPV4_ONLY";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.SubnetStackTypes.SubnetStackTypeIpv6Only"/>.</summary>
+                public const string SubnetStackTypeIpv6Only = "SUBNET_STACK_TYPE_IPV6_ONLY";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.Unicast"/> enum.</summary>
+            public static class Unicast
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.Unicast.UndefinedUnicast"/>.</summary>
+                public const string UndefinedUnicast = "UNDEFINED_UNICAST";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.Unicast.Sdn"/>.</summary>
+                public const string Sdn = "UNICAST_SDN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkProfileNetworkFeatures.Types.Unicast.Ull"/>.</summary>
+                public const string Ull = "UNICAST_ULL";
+            }
+        }
+
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig"/> message.</summary>
         public static class NetworkRoutingConfig
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpBestPathSelectionMode"/> enum.</summary>
+            public static class BgpBestPathSelectionMode
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpBestPathSelectionMode.UndefinedBgpBestPathSelectionMode"/>.</summary>
+                public const string UndefinedBgpBestPathSelectionMode = "UNDEFINED_BGP_BEST_PATH_SELECTION_MODE";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpBestPathSelectionMode.Legacy"/>.</summary>
+                public const string Legacy = "LEGACY";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpBestPathSelectionMode.Standard"/>.</summary>
+                public const string Standard = "STANDARD";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpInterRegionCost"/> enum.</summary>
+            public static class BgpInterRegionCost
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpInterRegionCost.UndefinedBgpInterRegionCost"/>.</summary>
+                public const string UndefinedBgpInterRegionCost = "UNDEFINED_BGP_INTER_REGION_COST";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpInterRegionCost.AddCostToMed"/>.</summary>
+                public const string AddCostToMed = "ADD_COST_TO_MED";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpInterRegionCost.Default"/>.</summary>
+                public const string Default = "DEFAULT";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.RoutingMode"/> enum.</summary>
             public static class RoutingMode
             {
@@ -4746,6 +5144,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.PartialSuccess"/>.</summary>
                 public const string PartialSuccess = "PARTIAL_SUCCESS";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.QuotaInfoUnavailable"/>.</summary>
+                public const string QuotaInfoUnavailable = "QUOTA_INFO_UNAVAILABLE";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.QuotaStatusWarning.Types.Code.RequiredTosAgreement"/>.</summary>
                 public const string RequiredTosAgreement = "REQUIRED_TOS_AGREEMENT";
 
@@ -5034,6 +5435,22 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Route"/> message.</summary>
         public static class Route
         {
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Route.Types.NextHopOrigin"/> enum.</summary>
+            public static class NextHopOrigin
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Route.Types.NextHopOrigin.UndefinedNextHopOrigin"/>.</summary>
+                public const string UndefinedNextHopOrigin = "UNDEFINED_NEXT_HOP_ORIGIN";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Route.Types.NextHopOrigin.Egp"/>.</summary>
+                public const string Egp = "EGP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Route.Types.NextHopOrigin.Igp"/>.</summary>
+                public const string Igp = "IGP";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Route.Types.NextHopOrigin.Incomplete"/>.</summary>
+                public const string Incomplete = "INCOMPLETE";
+            }
+
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.Route.Types.RouteStatus"/> enum.</summary>
             public static class RouteStatus
             {
@@ -5777,6 +6194,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.TlsJa3Fingerprint"/>.</summary>
                 public const string TlsJa3Fingerprint = "TLS_JA3_FINGERPRINT";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.TlsJa4Fingerprint"/>.</summary>
+                public const string TlsJa4Fingerprint = "TLS_JA4_FINGERPRINT";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptions.Types.EnforceOnKey.UserIp"/>.</summary>
                 public const string UserIp = "USER_IP";
 
@@ -5817,6 +6237,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.TlsJa3Fingerprint"/>.</summary>
                 public const string TlsJa3Fingerprint = "TLS_JA3_FINGERPRINT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.TlsJa4Fingerprint"/>.</summary>
+                public const string TlsJa4Fingerprint = "TLS_JA4_FINGERPRINT";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyRuleRateLimitOptionsEnforceOnKeyConfig.Types.EnforceOnKeyType.UserIp"/>.</summary>
                 public const string UserIp = "USER_IP";
@@ -6333,6 +6756,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Subnetwork.Types.Purpose.InternalHttpsLoadBalancer"/>.</summary>
                 public const string InternalHttpsLoadBalancer = "INTERNAL_HTTPS_LOAD_BALANCER";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Subnetwork.Types.Purpose.PeerMigration"/>.</summary>
+                public const string PeerMigration = "PEER_MIGRATION";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Subnetwork.Types.Purpose.Private"/>.</summary>
                 public const string Private = "PRIVATE";
 
@@ -6543,6 +6969,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.TargetHttpsProxy.Types.TlsEarlyData.Strict"/>.</summary>
                 public const string Strict = "STRICT";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.TargetHttpsProxy.Types.TlsEarlyData.Unrestricted"/>.</summary>
+                public const string Unrestricted = "UNRESTRICTED";
             }
         }
 
@@ -6791,6 +7220,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.UsableSubnetwork.Types.Purpose.InternalHttpsLoadBalancer"/>.</summary>
                 public const string InternalHttpsLoadBalancer = "INTERNAL_HTTPS_LOAD_BALANCER";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.UsableSubnetwork.Types.Purpose.PeerMigration"/>.</summary>
+                public const string PeerMigration = "PEER_MIGRATION";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.UsableSubnetwork.Types.Purpose.Private"/>.</summary>
                 public const string Private = "PRIVATE";
 
@@ -7019,6 +7451,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.PartialSuccess"/>.</summary>
                 public const string PartialSuccess = "PARTIAL_SUCCESS";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.QuotaInfoUnavailable"/>.</summary>
+                public const string QuotaInfoUnavailable = "QUOTA_INFO_UNAVAILABLE";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warning.Types.Code.RequiredTosAgreement"/>.</summary>
                 public const string RequiredTosAgreement = "REQUIRED_TOS_AGREEMENT";
 
@@ -7113,6 +7548,9 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.PartialSuccess"/>.</summary>
                 public const string PartialSuccess = "PARTIAL_SUCCESS";
+
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.QuotaInfoUnavailable"/>.</summary>
+                public const string QuotaInfoUnavailable = "QUOTA_INFO_UNAVAILABLE";
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Warnings.Types.Code.RequiredTosAgreement"/>.</summary>
                 public const string RequiredTosAgreement = "REQUIRED_TOS_AGREEMENT";
