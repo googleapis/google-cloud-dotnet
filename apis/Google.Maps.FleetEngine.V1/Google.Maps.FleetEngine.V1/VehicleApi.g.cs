@@ -4521,7 +4521,8 @@ namespace Google.Maps.FleetEngine.V1 {
     public const int RequestedOrderedByFieldNumber = 9;
     private global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest.Types.VehicleMatchOrder requestedOrderedBy_ = global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest.Types.VehicleMatchOrder.UnknownVehicleMatchOrder;
     /// <summary>
-    /// The order requested for sorting vehicle matches.
+    /// The order requested for sorting vehicle matches. Equivalent to
+    /// `ordered_by`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4536,10 +4537,8 @@ namespace Google.Maps.FleetEngine.V1 {
     public const int OrderedByFieldNumber = 10;
     private global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest.Types.VehicleMatchOrder orderedBy_ = global::Google.Maps.FleetEngine.V1.SearchVehiclesRequest.Types.VehicleMatchOrder.UnknownVehicleMatchOrder;
     /// <summary>
-    /// The actual order that was used for this vehicle. Normally this
-    /// will match the 'order_by' field from the request; however, in certain
-    /// circumstances such as an internal server error, a different method
-    /// may be used (such as `PICKUP_POINT_STRAIGHT_DISTANCE`).
+    /// The order requested for sorting vehicle matches. Equivalent to
+    /// `requested_ordered_by`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
