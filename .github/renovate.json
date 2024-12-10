@@ -289,6 +289,7 @@
     "apis/Google.Shopping.Merchant.Promotions.V1Beta/Google.Shopping.Merchant.Promotions.V1Beta/**",
     "apis/Google.Shopping.Merchant.Quota.V1Beta/Google.Shopping.Merchant.Quota.V1Beta/**",
     "apis/Google.Shopping.Merchant.Reports.V1Beta/Google.Shopping.Merchant.Reports.V1Beta/**",
+    "apis/Google.Shopping.Merchant.Reviews.V1Beta/Google.Shopping.Merchant.Reviews.V1Beta/**",
     "apis/Google.Shopping.Type/Google.Shopping.Type/**",
     "apis/Grafeas.V1/Grafeas.V1/**"
   ],
