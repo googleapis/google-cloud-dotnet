@@ -54,9 +54,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "Si5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQ2xvdWRFeGFkYXRh",
             "SW5mcmFzdHJ1Y3R1cmVQcm9wZXJ0aWVzLlN0YXRlQgPgQQMSEgoFc2hhcGUY",
             "CCABKAlCA+BBAhIUCgdvY2lfdXJsGAkgASgJQgPgQQMSFgoJY3B1X2NvdW50",
-            "GAogASgFQgPgQQESGgoNbWF4X2NwdV9jb3VudBgLIAEoBUID4EEDEhsKDm1l",
-            "bW9yeV9zaXplX2diGAwgASgFQgPgQQESGgoNbWF4X21lbW9yeV9nYhgNIAEo",
-            "BUID4EEDEiQKF2RiX25vZGVfc3RvcmFnZV9zaXplX2diGA4gASgFQgPgQQES",
+            "GAogASgFQgPgQQMSGgoNbWF4X2NwdV9jb3VudBgLIAEoBUID4EEDEhsKDm1l",
+            "bW9yeV9zaXplX2diGAwgASgFQgPgQQMSGgoNbWF4X21lbW9yeV9nYhgNIAEo",
+            "BUID4EEDEiQKF2RiX25vZGVfc3RvcmFnZV9zaXplX2diGA4gASgFQgPgQQMS",
             "KAobbWF4X2RiX25vZGVfc3RvcmFnZV9zaXplX2diGA8gASgFQgPgQQMSIQoU",
             "ZGF0YV9zdG9yYWdlX3NpemVfdGIYECABKAFCA+BBAxIgChNtYXhfZGF0YV9z",
             "dG9yYWdlX3RiGBEgASgBQgPgQQMSJAoXYWN0aXZhdGVkX3N0b3JhZ2VfY291",
@@ -772,7 +772,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CpuCountFieldNumber = 10;
     private int cpuCount_;
     /// <summary>
-    /// Optional. The number of enabled CPU cores.
+    /// Output only. The number of enabled CPU cores.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -802,7 +802,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int MemorySizeGbFieldNumber = 12;
     private int memorySizeGb_;
     /// <summary>
-    /// Optional. The memory allocated in GBs.
+    /// Output only. The memory allocated in GBs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -832,7 +832,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DbNodeStorageSizeGbFieldNumber = 14;
     private int dbNodeStorageSizeGb_;
     /// <summary>
-    /// Optional. The local node storage allocated in GBs.
+    /// Output only. The local node storage allocated in GBs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
