@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.Common;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Octokit;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -46,6 +47,9 @@ internal sealed class NonSourceGenerator
     internal const string DefaultVersionValue = "default";
     internal const string DefaultNetstandardTarget = "netstandard2.0";
 
+    private const string ClientTestingName = "Google.Cloud.ClientTesting";
+    private const string RootRelativeClientTestingPath = @"..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj";
+
     /// <summary>
     /// In "new major version mode", *all* references between different APIs become project references
     /// in the csproj file, and all GAX/gRPC references are treated as being for the default versions,
@@ -61,7 +65,7 @@ internal sealed class NonSourceGenerator
     // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
     private static readonly Dictionary<string, string> KnownProjectReferences = new Dictionary<string, string>
     {
-        { "Google.Cloud.ClientTesting", @"..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" },
+        { ClientTestingName, $"..\\{RootRelativeClientTestingPath}"},
         { "Google.Cloud.Diagnostics.Common.Tests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj" },
         { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
     };
@@ -104,7 +108,7 @@ internal sealed class NonSourceGenerator
     // the packages in DefaultPackageVersions should be specified precisely in stable packages.
     private static readonly Dictionary<string, string> CommonTestDependencies = new Dictionary<string, string>
     {
-        { "Google.Cloud.ClientTesting", ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
+        { ClientTestingName, ProjectVersionValue }, // Needed for all snippets and some other tests - easiest to just default
         // These versions are in the top-level Directory.Build.props
         { "Microsoft.NET.Test.Sdk", DefaultVersionValue },
         { "xunit", DefaultVersionValue },
@@ -472,28 +476,42 @@ internal sealed class NonSourceGenerator
             "EndGlobal"
         };
 
-        foreach (var project in projects)
+        foreach (var project in api.DeriveProjects())
         {
-            var guid = GenerateGuid(project).ToString().ToUpperInvariant();
-            projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{project}\", \"{project}\\{project}.csproj\", \"{{{guid}}}\"");
-            projectLines.Add("EndProject");
-            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU");
-            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.Build.0 = Debug|Any CPU");
-            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
-            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.Build.0 = Release|Any CPU");
+            AddProject(project, $@"{project}\{project}.csproj");
         }
-
-        Guid GenerateGuid(string name)
+        if (api.DeriveProjects().Any(p => p.EndsWith("Tests", StringComparison.Ordinal) || p.EndsWith("Snippets", StringComparison.Ordinal)))
         {
-            // Note: We're using MD5 to get 16 bytes for the GUID.
-            // This is only meant to be unique - it doesn't need to be cryptographically secure at all.
-            var bytes = MD5.HashData(Encoding.UTF8.GetBytes(name));
-            return new Guid(bytes);
+            AddProject(ClientTestingName, RootRelativeClientTestingPath);
+        }
+        foreach (var pair in api.Dependencies.Where(pair => pair.Value == ProjectVersionValue))
+        {
+            string dependencyId = pair.Key;
+            AddProject(dependencyId, $@"..\{dependencyId}\{dependencyId}\{dependencyId}.csproj");
         }
 
         var allLines = prefixLines.Concat(projectLines).Concat(betweenLines).Concat(postSolutionLines).Concat(suffixLines);
         string text = string.Join("\r\n", allLines);
         File.WriteAllText(solutionFile, text);
+
+        void AddProject(string name, string path)
+        {
+            var guid = GenerateGuid(name).ToString().ToUpperInvariant();
+            projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{name}\", \"{path}\", \"{{{guid}}}\"");
+            projectLines.Add("EndProject");
+            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU");
+            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.Build.0 = Debug|Any CPU");
+            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
+            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.Build.0 = Release|Any CPU");
+
+            Guid GenerateGuid(string name)
+            {
+                // Note: We're using MD5 to get 16 bytes for the GUID.
+                // This is only meant to be unique - it doesn't need to be cryptographically secure at all.
+                var bytes = MD5.HashData(Encoding.UTF8.GetBytes(name));
+                return new Guid(bytes);
+            }
+        }
     }
 
     private void GenerateOwlBotConfiguration(ApiMetadata api)
