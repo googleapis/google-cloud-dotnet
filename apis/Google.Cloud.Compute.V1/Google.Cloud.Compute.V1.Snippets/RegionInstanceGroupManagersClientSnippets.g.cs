@@ -2398,6 +2398,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ResumeInstances</summary>
+        public void ResumeInstancesRequestObject()
+        {
+            // Snippet: ResumeInstances(ResumeInstancesRegionInstanceGroupManagerRequest, CallSettings)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = RegionInstanceGroupManagersClient.Create();
+            // Initialize request argument(s)
+            ResumeInstancesRegionInstanceGroupManagerRequest request = new ResumeInstancesRegionInstanceGroupManagerRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                InstanceGroupManager = "",
+                RegionInstanceGroupManagersResumeInstancesRequestResource = new RegionInstanceGroupManagersResumeInstancesRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.ResumeInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionInstanceGroupManagersClient.PollOnceResumeInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeInstancesAsync</summary>
+        public async Task ResumeInstancesRequestObjectAsync()
+        {
+            // Snippet: ResumeInstancesAsync(ResumeInstancesRegionInstanceGroupManagerRequest, CallSettings)
+            // Additional: ResumeInstancesAsync(ResumeInstancesRegionInstanceGroupManagerRequest, CancellationToken)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = await RegionInstanceGroupManagersClient.CreateAsync();
+            // Initialize request argument(s)
+            ResumeInstancesRegionInstanceGroupManagerRequest request = new ResumeInstancesRegionInstanceGroupManagerRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                InstanceGroupManager = "",
+                RegionInstanceGroupManagersResumeInstancesRequestResource = new RegionInstanceGroupManagersResumeInstancesRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.ResumeInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceResumeInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeInstances</summary>
+        public void ResumeInstances()
+        {
+            // Snippet: ResumeInstances(string, string, string, RegionInstanceGroupManagersResumeInstancesRequest, CallSettings)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = RegionInstanceGroupManagersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string instanceGroupManager = "";
+            RegionInstanceGroupManagersResumeInstancesRequest regionInstanceGroupManagersResumeInstancesRequestResource = new RegionInstanceGroupManagersResumeInstancesRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.ResumeInstances(project, region, instanceGroupManager, regionInstanceGroupManagersResumeInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionInstanceGroupManagersClient.PollOnceResumeInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeInstancesAsync</summary>
+        public async Task ResumeInstancesAsync()
+        {
+            // Snippet: ResumeInstancesAsync(string, string, string, RegionInstanceGroupManagersResumeInstancesRequest, CallSettings)
+            // Additional: ResumeInstancesAsync(string, string, string, RegionInstanceGroupManagersResumeInstancesRequest, CancellationToken)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = await RegionInstanceGroupManagersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string instanceGroupManager = "";
+            RegionInstanceGroupManagersResumeInstancesRequest regionInstanceGroupManagersResumeInstancesRequestResource = new RegionInstanceGroupManagersResumeInstancesRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.ResumeInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersResumeInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceResumeInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SetInstanceTemplate</summary>
         public void SetInstanceTemplateRequestObject()
         {
@@ -2665,6 +2803,420 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceSetTargetPoolsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartInstances</summary>
+        public void StartInstancesRequestObject()
+        {
+            // Snippet: StartInstances(StartInstancesRegionInstanceGroupManagerRequest, CallSettings)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = RegionInstanceGroupManagersClient.Create();
+            // Initialize request argument(s)
+            StartInstancesRegionInstanceGroupManagerRequest request = new StartInstancesRegionInstanceGroupManagerRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                InstanceGroupManager = "",
+                RegionInstanceGroupManagersStartInstancesRequestResource = new RegionInstanceGroupManagersStartInstancesRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.StartInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionInstanceGroupManagersClient.PollOnceStartInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartInstancesAsync</summary>
+        public async Task StartInstancesRequestObjectAsync()
+        {
+            // Snippet: StartInstancesAsync(StartInstancesRegionInstanceGroupManagerRequest, CallSettings)
+            // Additional: StartInstancesAsync(StartInstancesRegionInstanceGroupManagerRequest, CancellationToken)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = await RegionInstanceGroupManagersClient.CreateAsync();
+            // Initialize request argument(s)
+            StartInstancesRegionInstanceGroupManagerRequest request = new StartInstancesRegionInstanceGroupManagerRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                InstanceGroupManager = "",
+                RegionInstanceGroupManagersStartInstancesRequestResource = new RegionInstanceGroupManagersStartInstancesRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.StartInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceStartInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartInstances</summary>
+        public void StartInstances()
+        {
+            // Snippet: StartInstances(string, string, string, RegionInstanceGroupManagersStartInstancesRequest, CallSettings)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = RegionInstanceGroupManagersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string instanceGroupManager = "";
+            RegionInstanceGroupManagersStartInstancesRequest regionInstanceGroupManagersStartInstancesRequestResource = new RegionInstanceGroupManagersStartInstancesRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.StartInstances(project, region, instanceGroupManager, regionInstanceGroupManagersStartInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionInstanceGroupManagersClient.PollOnceStartInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartInstancesAsync</summary>
+        public async Task StartInstancesAsync()
+        {
+            // Snippet: StartInstancesAsync(string, string, string, RegionInstanceGroupManagersStartInstancesRequest, CallSettings)
+            // Additional: StartInstancesAsync(string, string, string, RegionInstanceGroupManagersStartInstancesRequest, CancellationToken)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = await RegionInstanceGroupManagersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string instanceGroupManager = "";
+            RegionInstanceGroupManagersStartInstancesRequest regionInstanceGroupManagersStartInstancesRequestResource = new RegionInstanceGroupManagersStartInstancesRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.StartInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersStartInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceStartInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopInstances</summary>
+        public void StopInstancesRequestObject()
+        {
+            // Snippet: StopInstances(StopInstancesRegionInstanceGroupManagerRequest, CallSettings)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = RegionInstanceGroupManagersClient.Create();
+            // Initialize request argument(s)
+            StopInstancesRegionInstanceGroupManagerRequest request = new StopInstancesRegionInstanceGroupManagerRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                InstanceGroupManager = "",
+                RegionInstanceGroupManagersStopInstancesRequestResource = new RegionInstanceGroupManagersStopInstancesRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.StopInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionInstanceGroupManagersClient.PollOnceStopInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopInstancesAsync</summary>
+        public async Task StopInstancesRequestObjectAsync()
+        {
+            // Snippet: StopInstancesAsync(StopInstancesRegionInstanceGroupManagerRequest, CallSettings)
+            // Additional: StopInstancesAsync(StopInstancesRegionInstanceGroupManagerRequest, CancellationToken)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = await RegionInstanceGroupManagersClient.CreateAsync();
+            // Initialize request argument(s)
+            StopInstancesRegionInstanceGroupManagerRequest request = new StopInstancesRegionInstanceGroupManagerRequest
+            {
+                RequestId = "",
+                Region = "",
+                Project = "",
+                InstanceGroupManager = "",
+                RegionInstanceGroupManagersStopInstancesRequestResource = new RegionInstanceGroupManagersStopInstancesRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.StopInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceStopInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopInstances</summary>
+        public void StopInstances()
+        {
+            // Snippet: StopInstances(string, string, string, RegionInstanceGroupManagersStopInstancesRequest, CallSettings)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = RegionInstanceGroupManagersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string instanceGroupManager = "";
+            RegionInstanceGroupManagersStopInstancesRequest regionInstanceGroupManagersStopInstancesRequestResource = new RegionInstanceGroupManagersStopInstancesRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.StopInstances(project, region, instanceGroupManager, regionInstanceGroupManagersStopInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionInstanceGroupManagersClient.PollOnceStopInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopInstancesAsync</summary>
+        public async Task StopInstancesAsync()
+        {
+            // Snippet: StopInstancesAsync(string, string, string, RegionInstanceGroupManagersStopInstancesRequest, CallSettings)
+            // Additional: StopInstancesAsync(string, string, string, RegionInstanceGroupManagersStopInstancesRequest, CancellationToken)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = await RegionInstanceGroupManagersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string instanceGroupManager = "";
+            RegionInstanceGroupManagersStopInstancesRequest regionInstanceGroupManagersStopInstancesRequestResource = new RegionInstanceGroupManagersStopInstancesRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.StopInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersStopInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceStopInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuspendInstances</summary>
+        public void SuspendInstancesRequestObject()
+        {
+            // Snippet: SuspendInstances(SuspendInstancesRegionInstanceGroupManagerRequest, CallSettings)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = RegionInstanceGroupManagersClient.Create();
+            // Initialize request argument(s)
+            SuspendInstancesRegionInstanceGroupManagerRequest request = new SuspendInstancesRegionInstanceGroupManagerRequest
+            {
+                RequestId = "",
+                Region = "",
+                RegionInstanceGroupManagersSuspendInstancesRequestResource = new RegionInstanceGroupManagersSuspendInstancesRequest(),
+                Project = "",
+                InstanceGroupManager = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.SuspendInstances(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionInstanceGroupManagersClient.PollOnceSuspendInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuspendInstancesAsync</summary>
+        public async Task SuspendInstancesRequestObjectAsync()
+        {
+            // Snippet: SuspendInstancesAsync(SuspendInstancesRegionInstanceGroupManagerRequest, CallSettings)
+            // Additional: SuspendInstancesAsync(SuspendInstancesRegionInstanceGroupManagerRequest, CancellationToken)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = await RegionInstanceGroupManagersClient.CreateAsync();
+            // Initialize request argument(s)
+            SuspendInstancesRegionInstanceGroupManagerRequest request = new SuspendInstancesRegionInstanceGroupManagerRequest
+            {
+                RequestId = "",
+                Region = "",
+                RegionInstanceGroupManagersSuspendInstancesRequestResource = new RegionInstanceGroupManagersSuspendInstancesRequest(),
+                Project = "",
+                InstanceGroupManager = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.SuspendInstancesAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceSuspendInstancesAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuspendInstances</summary>
+        public void SuspendInstances()
+        {
+            // Snippet: SuspendInstances(string, string, string, RegionInstanceGroupManagersSuspendInstancesRequest, CallSettings)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = RegionInstanceGroupManagersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string instanceGroupManager = "";
+            RegionInstanceGroupManagersSuspendInstancesRequest regionInstanceGroupManagersSuspendInstancesRequestResource = new RegionInstanceGroupManagersSuspendInstancesRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.SuspendInstances(project, region, instanceGroupManager, regionInstanceGroupManagersSuspendInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = regionInstanceGroupManagersClient.PollOnceSuspendInstances(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuspendInstancesAsync</summary>
+        public async Task SuspendInstancesAsync()
+        {
+            // Snippet: SuspendInstancesAsync(string, string, string, RegionInstanceGroupManagersSuspendInstancesRequest, CallSettings)
+            // Additional: SuspendInstancesAsync(string, string, string, RegionInstanceGroupManagersSuspendInstancesRequest, CancellationToken)
+            // Create client
+            RegionInstanceGroupManagersClient regionInstanceGroupManagersClient = await RegionInstanceGroupManagersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string instanceGroupManager = "";
+            RegionInstanceGroupManagersSuspendInstancesRequest regionInstanceGroupManagersSuspendInstancesRequestResource = new RegionInstanceGroupManagersSuspendInstancesRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.SuspendInstancesAsync(project, region, instanceGroupManager, regionInstanceGroupManagersSuspendInstancesRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await regionInstanceGroupManagersClient.PollOnceSuspendInstancesAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
