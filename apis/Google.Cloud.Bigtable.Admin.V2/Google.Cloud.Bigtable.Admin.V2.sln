@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.Admin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.Admin.V2.Tests", "Google.Cloud.Bigtable.Admin.V2.Tests\Google.Cloud.Bigtable.Admin.V2.Tests.csproj", "{A1D02997-8B42-ADC4-F454-A3835B35A024}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
         Debug|Any CPU = Debug|Any CPU
@@ -33,5 +35,9 @@ Global
         {A1D02997-8B42-ADC4-F454-A3835B35A024}.Debug|Any CPU.Build.0 = Debug|Any CPU
         {A1D02997-8B42-ADC4-F454-A3835B35A024}.Release|Any CPU.ActiveCfg = Release|Any CPU
         {A1D02997-8B42-ADC4-F454-A3835B35A024}.Release|Any CPU.Build.0 = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

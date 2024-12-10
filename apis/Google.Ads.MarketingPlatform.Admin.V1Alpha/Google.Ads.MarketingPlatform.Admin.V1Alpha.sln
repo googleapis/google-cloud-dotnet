@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Ads.MarketingPlatfor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Ads.MarketingPlatform.Admin.V1Alpha.GeneratedSnippets", "Google.Ads.MarketingPlatform.Admin.V1Alpha.GeneratedSnippets\Google.Ads.MarketingPlatform.Admin.V1Alpha.GeneratedSnippets.csproj", "{AB293ECE-D007-1D13-D1D0-80B55524E6A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
         Debug|Any CPU = Debug|Any CPU
@@ -27,5 +29,9 @@ Global
         {AB293ECE-D007-1D13-D1D0-80B55524E6A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
         {AB293ECE-D007-1D13-D1D0-80B55524E6A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
         {AB293ECE-D007-1D13-D1D0-80B55524E6A9}.Release|Any CPU.Build.0 = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Security.Publi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Security.PublicCA.V1Beta1.GeneratedSnippets", "Google.Cloud.Security.PublicCA.V1Beta1.GeneratedSnippets\Google.Cloud.Security.PublicCA.V1Beta1.GeneratedSnippets.csproj", "{66E7FD19-3B16-0055-F654-558BA7AB4D1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
         Debug|Any CPU = Debug|Any CPU
@@ -27,5 +29,9 @@ Global
         {66E7FD19-3B16-0055-F654-558BA7AB4D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
         {66E7FD19-3B16-0055-F654-558BA7AB4D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
         {66E7FD19-3B16-0055-F654-558BA7AB4D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

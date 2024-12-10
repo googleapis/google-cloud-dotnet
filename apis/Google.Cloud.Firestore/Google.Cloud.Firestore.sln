@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.Snip
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.Tests", "Google.Cloud.Firestore.Tests\Google.Cloud.Firestore.Tests.csproj", "{3023B3E0-2A3A-0DE8-37B9-FC5DEFC655A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Firestore.V1", "..\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1\Google.Cloud.Firestore.V1.csproj", "{73C26D2D-CC8B-10B3-B6AB-5B25E6859268}"
+EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
         Debug|Any CPU = Debug|Any CPU
@@ -45,5 +49,13 @@ Global
         {3023B3E0-2A3A-0DE8-37B9-FC5DEFC655A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
         {3023B3E0-2A3A-0DE8-37B9-FC5DEFC655A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
         {3023B3E0-2A3A-0DE8-37B9-FC5DEFC655A7}.Release|Any CPU.Build.0 = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
+        {73C26D2D-CC8B-10B3-B6AB-5B25E6859268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {73C26D2D-CC8B-10B3-B6AB-5B25E6859268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {73C26D2D-CC8B-10B3-B6AB-5B25E6859268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {73C26D2D-CC8B-10B3-B6AB-5B25E6859268}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal
