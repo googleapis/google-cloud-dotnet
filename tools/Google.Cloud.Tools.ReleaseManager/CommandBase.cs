@@ -94,7 +94,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     throw new UserErrorException($"Unable to find branch '{PrimaryBranch}'.");
                 }
 
-                var primaryCatalogJson = primary.Commits.First()["apis/apis.json"].Target.Peel<Blob>().GetContentText();
+                var primaryCatalogJson = primary.Commits.First()["generator-input/apis.json"].Target.Peel<Blob>().GetContentText();
                 return ApiCatalog.FromJson(primaryCatalogJson);
             }
         }
