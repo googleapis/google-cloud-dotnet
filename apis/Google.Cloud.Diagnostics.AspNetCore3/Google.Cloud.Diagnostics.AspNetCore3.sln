@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.As
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.AspNetCore3.Tests", "Google.Cloud.Diagnostics.AspNetCore3.Tests\Google.Cloud.Diagnostics.AspNetCore3.Tests.csproj", "{23A664CF-D9F3-A120-AF5C-581679E376DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Diagnostics.Common", "..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj", "{2FA0133E-01FE-AA78-78FE-944CB8AEAEC3}"
+EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
         Debug|Any CPU = Debug|Any CPU
@@ -33,5 +37,13 @@ Global
         {23A664CF-D9F3-A120-AF5C-581679E376DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
         {23A664CF-D9F3-A120-AF5C-581679E376DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
         {23A664CF-D9F3-A120-AF5C-581679E376DC}.Release|Any CPU.Build.0 = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
+        {2FA0133E-01FE-AA78-78FE-944CB8AEAEC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {2FA0133E-01FE-AA78-78FE-944CB8AEAEC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {2FA0133E-01FE-AA78-78FE-944CB8AEAEC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {2FA0133E-01FE-AA78-78FE-944CB8AEAEC3}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

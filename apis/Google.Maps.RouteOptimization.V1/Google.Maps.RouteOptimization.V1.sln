@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.RouteOptimizati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Maps.RouteOptimization.V1.GeneratedSnippets", "Google.Maps.RouteOptimization.V1.GeneratedSnippets\Google.Maps.RouteOptimization.V1.GeneratedSnippets.csproj", "{78FC3D05-1EFB-E037-C804-AD02D5F32BB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
         Debug|Any CPU = Debug|Any CPU
@@ -27,5 +29,9 @@ Global
         {78FC3D05-1EFB-E037-C804-AD02D5F32BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
         {78FC3D05-1EFB-E037-C804-AD02D5F32BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
         {78FC3D05-1EFB-E037-C804-AD02D5F32BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

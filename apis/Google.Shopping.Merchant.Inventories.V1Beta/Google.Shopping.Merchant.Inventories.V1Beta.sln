@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Merchant.Inventories.V1Beta.GeneratedSnippets", "Google.Shopping.Merchant.Inventories.V1Beta.GeneratedSnippets\Google.Shopping.Merchant.Inventories.V1Beta.GeneratedSnippets.csproj", "{0FE2B041-4267-27E3-6D5E-08C3BEC42E2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
         Debug|Any CPU = Debug|Any CPU
@@ -27,5 +29,9 @@ Global
         {0FE2B041-4267-27E3-6D5E-08C3BEC42E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
         {0FE2B041-4267-27E3-6D5E-08C3BEC42E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
         {0FE2B041-4267-27E3-6D5E-08C3BEC42E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal
