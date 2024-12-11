@@ -33,6 +33,9 @@ public sealed class UpdateFromBazelCommand : CommandBase
 
     protected override int ExecuteImpl(string[] args)
     {
+        var root = DirectoryLayout.DetermineRootDirectory();
+        var googleapis = Path.Combine(root, "googleapis");
+
         string id = args[0];
         var catalog = ApiCatalog.Load();
 
@@ -43,7 +46,7 @@ public sealed class UpdateFromBazelCommand : CommandBase
         bool anyUpdated = false;
         foreach (var apiId in ids)
         {
-            if (Update(catalog[apiId]))
+            if (Update(catalog[apiId], googleapis))
             {
                 anyUpdated = true;
                 Console.WriteLine($"Modified configuration for {apiId}");
@@ -57,11 +60,8 @@ public sealed class UpdateFromBazelCommand : CommandBase
         return 0;
     }
 
-    public bool Update(ApiMetadata api)
+    public static bool Update(ApiMetadata api, string googleapis)
     {
-        var root = DirectoryLayout.DetermineRootDirectory();
-        var googleapis = Path.Combine(root, "googleapis");
-
         var bazelFile = Path.Combine(googleapis, api.ProtoPath, "BUILD.bazel");
         if (!File.Exists(bazelFile))
         {
