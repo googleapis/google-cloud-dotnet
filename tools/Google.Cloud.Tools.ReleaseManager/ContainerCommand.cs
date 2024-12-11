@@ -38,6 +38,7 @@ public sealed class ContainerCommand : ICommand
         {
             "generate" => new GenerateCommand(),
             "clean" => new CleanCommand(),
+            "build" => new BuildCommand(),
             _ => throw new UserErrorException($"Unknown subcommand '{args[0]}'")
         };
 
