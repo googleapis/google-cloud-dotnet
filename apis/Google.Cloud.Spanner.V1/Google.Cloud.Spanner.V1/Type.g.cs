@@ -34,18 +34,18 @@ namespace Google.Cloud.Spanner.V1 {
             "dG9fdHlwZV9mcW4YBSABKAkifwoKU3RydWN0VHlwZRIzCgZmaWVsZHMYASAD",
             "KAsyIy5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlLkZpZWxkGjwKBUZp",
             "ZWxkEgwKBG5hbWUYASABKAkSJQoEdHlwZRgCIAEoCzIXLmdvb2dsZS5zcGFu",
-            "bmVyLnYxLlR5cGUq1QEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJ",
+            "bmVyLnYxLlR5cGUq3wEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9VTlNQRUNJ",
             "RklFRBAAEggKBEJPT0wQARIJCgVJTlQ2NBACEgsKB0ZMT0FUNjQQAxILCgdG",
             "TE9BVDMyEA8SDQoJVElNRVNUQU1QEAQSCAoEREFURRAFEgoKBlNUUklORxAG",
             "EgkKBUJZVEVTEAcSCQoFQVJSQVkQCBIKCgZTVFJVQ1QQCRILCgdOVU1FUklD",
             "EAoSCAoESlNPThALEgkKBVBST1RPEA0SCAoERU5VTRAOEgwKCElOVEVSVkFM",
-            "EBAqZAoSVHlwZUFubm90YXRpb25Db2RlEiQKIFRZUEVfQU5OT1RBVElPTl9D",
-            "T0RFX1VOU1BFQ0lGSUVEEAASDgoKUEdfTlVNRVJJQxACEgwKCFBHX0pTT05C",
-            "EAMSCgoGUEdfT0lEEARCrAEKFWNvbS5nb29nbGUuc3Bhbm5lci52MUIJVHlw",
-            "ZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5lci9hcGl2MS9z",
-            "cGFubmVycGI7c3Bhbm5lcnBiqgIXR29vZ2xlLkNsb3VkLlNwYW5uZXIuVjHK",
-            "AhdHb29nbGVcQ2xvdWRcU3Bhbm5lclxWMeoCGkdvb2dsZTo6Q2xvdWQ6OlNw",
-            "YW5uZXI6OlYxYgZwcm90bzM="));
+            "EBASCAoEVVVJRBARKmQKElR5cGVBbm5vdGF0aW9uQ29kZRIkCiBUWVBFX0FO",
+            "Tk9UQVRJT05fQ09ERV9VTlNQRUNJRklFRBAAEg4KClBHX05VTUVSSUMQAhIM",
+            "CghQR19KU09OQhADEgoKBlBHX09JRBAEQqwBChVjb20uZ29vZ2xlLnNwYW5u",
+            "ZXIudjFCCVR5cGVQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3NwYW5u",
+            "ZXIvYXBpdjEvc3Bhbm5lcnBiO3NwYW5uZXJwYqoCF0dvb2dsZS5DbG91ZC5T",
+            "cGFubmVyLlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6",
+            "OkNsb3VkOjpTcGFubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), typeof(global::Google.Cloud.Spanner.V1.TypeAnnotationCode), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -164,6 +164,11 @@ namespace Google.Cloud.Spanner.V1 {
     /// months, 3 days, 4 hours, 5 minutes, and 6.5 seconds.
     /// </summary>
     [pbr::OriginalName("INTERVAL")] Interval = 16,
+    /// <summary>
+    /// Encoded as `string`, in lower-case hexa-decimal format, as described
+    /// in RFC 9562, section 4.
+    /// </summary>
+    [pbr::OriginalName("UUID")] Uuid = 17,
   }
 
   /// <summary>
