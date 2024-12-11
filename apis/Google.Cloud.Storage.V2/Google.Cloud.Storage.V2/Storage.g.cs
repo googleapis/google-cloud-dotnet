@@ -218,260 +218,282 @@ namespace Google.Cloud.Storage.V2 {
             "ZVJlc3BvbnNlEh0KFXRvdGFsX2J5dGVzX3Jld3JpdHRlbhgBIAEoAxITCgtv",
             "YmplY3Rfc2l6ZRgCIAEoAxIMCgRkb25lGAMgASgIEhUKDXJld3JpdGVfdG9r",
             "ZW4YBCABKAkSKwoIcmVzb3VyY2UYBSABKAsyGS5nb29nbGUuc3RvcmFnZS52",
-            "Mi5PYmplY3Qi8gEKGlN0YXJ0UmVzdW1hYmxlV3JpdGVSZXF1ZXN0EkIKEXdy",
-            "aXRlX29iamVjdF9zcGVjGAEgASgLMiIuZ29vZ2xlLnN0b3JhZ2UudjIuV3Jp",
-            "dGVPYmplY3RTcGVjQgPgQQISUgocY29tbW9uX29iamVjdF9yZXF1ZXN0X3Bh",
-            "cmFtcxgDIAEoCzIsLmdvb2dsZS5zdG9yYWdlLnYyLkNvbW1vbk9iamVjdFJl",
-            "cXVlc3RQYXJhbXMSPAoQb2JqZWN0X2NoZWNrc3VtcxgFIAEoCzIiLmdvb2ds",
-            "ZS5zdG9yYWdlLnYyLk9iamVjdENoZWNrc3VtcyIwChtTdGFydFJlc3VtYWJs",
-            "ZVdyaXRlUmVzcG9uc2USEQoJdXBsb2FkX2lkGAEgASgJIu8DChNVcGRhdGVP",
-            "YmplY3RSZXF1ZXN0Ei4KBm9iamVjdBgBIAEoCzIZLmdvb2dsZS5zdG9yYWdl",
-            "LnYyLk9iamVjdEID4EECEiAKE2lmX2dlbmVyYXRpb25fbWF0Y2gYAiABKANI",
-            "AIgBARIkChdpZl9nZW5lcmF0aW9uX25vdF9tYXRjaBgDIAEoA0gBiAEBEiQK",
-            "F2lmX21ldGFnZW5lcmF0aW9uX21hdGNoGAQgASgDSAKIAQESKAobaWZfbWV0",
-            "YWdlbmVyYXRpb25fbm90X21hdGNoGAUgASgDSAOIAQESFgoOcHJlZGVmaW5l",
-            "ZF9hY2wYCiABKAkSNAoLdXBkYXRlX21hc2sYByABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuRmllbGRNYXNrQgPgQQISUgocY29tbW9uX29iamVjdF9yZXF1ZXN0",
-            "X3BhcmFtcxgIIAEoCzIsLmdvb2dsZS5zdG9yYWdlLnYyLkNvbW1vbk9iamVj",
-            "dFJlcXVlc3RQYXJhbXNCFgoUX2lmX2dlbmVyYXRpb25fbWF0Y2hCGgoYX2lm",
-            "X2dlbmVyYXRpb25fbm90X21hdGNoQhoKGF9pZl9tZXRhZ2VuZXJhdGlvbl9t",
-            "YXRjaEIeChxfaWZfbWV0YWdlbmVyYXRpb25fbm90X21hdGNoInwKGUNvbW1v",
-            "bk9iamVjdFJlcXVlc3RQYXJhbXMSHAoUZW5jcnlwdGlvbl9hbGdvcml0aG0Y",
-            "ASABKAkSHAoUZW5jcnlwdGlvbl9rZXlfYnl0ZXMYBCABKAwSIwobZW5jcnlw",
-            "dGlvbl9rZXlfc2hhMjU2X2J5dGVzGAUgASgMIsoFChBTZXJ2aWNlQ29uc3Rh",
-            "bnRzIrUFCgZWYWx1ZXMSFgoSVkFMVUVTX1VOU1BFQ0lGSUVEEAASGwoUTUFY",
-            "X1JFQURfQ0hVTktfQllURVMQgICAARIcChVNQVhfV1JJVEVfQ0hVTktfQllU",
-            "RVMQgICAARIZChJNQVhfT0JKRUNUX1NJWkVfTUIQgIDAAhIpCiRNQVhfQ1VT",
-            "VE9NX01FVEFEQVRBX0ZJRUxEX05BTUVfQllURVMQgAgSKgolTUFYX0NVU1RP",
-            "TV9NRVRBREFUQV9GSUVMRF9WQUxVRV9CWVRFUxCAIBIpCiRNQVhfQ1VTVE9N",
-            "X01FVEFEQVRBX1RPVEFMX1NJWkVfQllURVMQgEASKgokTUFYX0JVQ0tFVF9N",
-            "RVRBREFUQV9UT1RBTF9TSVpFX0JZVEVTEICgARInCiNNQVhfTk9USUZJQ0FU",
-            "SU9OX0NPTkZJR1NfUEVSX0JVQ0tFVBBkEiIKHk1BWF9MSUZFQ1lDTEVfUlVM",
-            "RVNfUEVSX0JVQ0tFVBBkEiYKIk1BWF9OT1RJRklDQVRJT05fQ1VTVE9NX0FU",
-            "VFJJQlVURVMQBRIxCixNQVhfTk9USUZJQ0FUSU9OX0NVU1RPTV9BVFRSSUJV",
-            "VEVfS0VZX0xFTkdUSBCAAhIzCi5NQVhfTk9USUZJQ0FUSU9OX0NVU1RPTV9B",
-            "VFRSSUJVVEVfVkFMVUVfTEVOR1RIEIAIEhwKGE1BWF9MQUJFTFNfRU5UUklF",
-            "U19DT1VOVBBAEh8KG01BWF9MQUJFTFNfS0VZX1ZBTFVFX0xFTkdUSBA/Eh8K",
-            "Gk1BWF9MQUJFTFNfS0VZX1ZBTFVFX0JZVEVTEIABEi4KKU1BWF9PQkpFQ1Rf",
-            "SURTX1BFUl9ERUxFVEVfT0JKRUNUU19SRVFVRVNUEOgHEh4KGlNQTElUX1RP",
-            "S0VOX01BWF9WQUxJRF9EQVlTEA4aAhABIqMcCgZCdWNrZXQSEQoEbmFtZRgB",
-            "IAEoCUID4EEFEhYKCWJ1Y2tldF9pZBgCIAEoCUID4EEDEgwKBGV0YWcYHSAB",
-            "KAkSRAoHcHJvamVjdBgDIAEoCUIz4EEF+kEtCitjbG91ZHJlc291cmNlbWFu",
-            "YWdlci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhsKDm1ldGFnZW5lcmF0aW9u",
-            "GAQgASgDQgPgQQMSFQoIbG9jYXRpb24YBSABKAlCA+BBBRIaCg1sb2NhdGlv",
-            "bl90eXBlGAYgASgJQgPgQQMSFQoNc3RvcmFnZV9jbGFzcxgHIAEoCRILCgNy",
-            "cG8YGyABKAkSMwoDYWNsGAggAygLMiYuZ29vZ2xlLnN0b3JhZ2UudjIuQnVj",
-            "a2V0QWNjZXNzQ29udHJvbBJCChJkZWZhdWx0X29iamVjdF9hY2wYCSADKAsy",
-            "Ji5nb29nbGUuc3RvcmFnZS52Mi5PYmplY3RBY2Nlc3NDb250cm9sEjYKCWxp",
-            "ZmVjeWNsZRgKIAEoCzIjLmdvb2dsZS5zdG9yYWdlLnYyLkJ1Y2tldC5MaWZl",
-            "Y3ljbGUSNAoLY3JlYXRlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSLAoEY29ycxgMIAMoCzIeLmdvb2dsZS5zdG9yYWdl",
-            "LnYyLkJ1Y2tldC5Db3JzEjQKC3VwZGF0ZV90aW1lGA0gASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEiAKGGRlZmF1bHRfZXZlbnRfYmFz",
-            "ZWRfaG9sZBgOIAEoCBI1CgZsYWJlbHMYDyADKAsyJS5nb29nbGUuc3RvcmFn",
-            "ZS52Mi5CdWNrZXQuTGFiZWxzRW50cnkSMgoHd2Vic2l0ZRgQIAEoCzIhLmdv",
-            "b2dsZS5zdG9yYWdlLnYyLkJ1Y2tldC5XZWJzaXRlEjgKCnZlcnNpb25pbmcY",
-            "ESABKAsyJC5nb29nbGUuc3RvcmFnZS52Mi5CdWNrZXQuVmVyc2lvbmluZxIy",
-            "Cgdsb2dnaW5nGBIgASgLMiEuZ29vZ2xlLnN0b3JhZ2UudjIuQnVja2V0Lkxv",
-            "Z2dpbmcSLAoFb3duZXIYEyABKAsyGC5nb29nbGUuc3RvcmFnZS52Mi5Pd25l",
-            "ckID4EEDEjgKCmVuY3J5cHRpb24YFCABKAsyJC5nb29nbGUuc3RvcmFnZS52",
-            "Mi5CdWNrZXQuRW5jcnlwdGlvbhIyCgdiaWxsaW5nGBUgASgLMiEuZ29vZ2xl",
-            "LnN0b3JhZ2UudjIuQnVja2V0LkJpbGxpbmcSQwoQcmV0ZW50aW9uX3BvbGlj",
-            "eRgWIAEoCzIpLmdvb2dsZS5zdG9yYWdlLnYyLkJ1Y2tldC5SZXRlbnRpb25Q",
-            "b2xpY3kSNwoKaWFtX2NvbmZpZxgXIAEoCzIjLmdvb2dsZS5zdG9yYWdlLnYy",
-            "LkJ1Y2tldC5JYW1Db25maWcSFQoNc2F0aXNmaWVzX3B6cxgZIAEoCBJQChdj",
-            "dXN0b21fcGxhY2VtZW50X2NvbmZpZxgaIAEoCzIvLmdvb2dsZS5zdG9yYWdl",
-            "LnYyLkJ1Y2tldC5DdXN0b21QbGFjZW1lbnRDb25maWcSNgoJYXV0b2NsYXNz",
-            "GBwgASgLMiMuZ29vZ2xlLnN0b3JhZ2UudjIuQnVja2V0LkF1dG9jbGFzcxJU",
-            "ChZoaWVyYXJjaGljYWxfbmFtZXNwYWNlGCAgASgLMi8uZ29vZ2xlLnN0b3Jh",
-            "Z2UudjIuQnVja2V0LkhpZXJhcmNoaWNhbE5hbWVzcGFjZUID4EEBEksKEnNv",
-            "ZnRfZGVsZXRlX3BvbGljeRgfIAEoCzIqLmdvb2dsZS5zdG9yYWdlLnYyLkJ1",
-            "Y2tldC5Tb2Z0RGVsZXRlUG9saWN5QgPgQQEaIQoHQmlsbGluZxIWCg5yZXF1",
-            "ZXN0ZXJfcGF5cxgBIAEoCBpYCgRDb3JzEg4KBm9yaWdpbhgBIAMoCRIOCgZt",
-            "ZXRob2QYAiADKAkSFwoPcmVzcG9uc2VfaGVhZGVyGAMgAygJEhcKD21heF9h",
-            "Z2Vfc2Vjb25kcxgEIAEoBRpNCgpFbmNyeXB0aW9uEj8KD2RlZmF1bHRfa21z",
-            "X2tleRgBIAEoCUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9Dcnlw",
-            "dG9LZXka7AEKCUlhbUNvbmZpZxJhCht1bmlmb3JtX2J1Y2tldF9sZXZlbF9h",
-            "Y2Nlc3MYASABKAsyPC5nb29nbGUuc3RvcmFnZS52Mi5CdWNrZXQuSWFtQ29u",
-            "ZmlnLlVuaWZvcm1CdWNrZXRMZXZlbEFjY2VzcxIgChhwdWJsaWNfYWNjZXNz",
-            "X3ByZXZlbnRpb24YAyABKAkaWgoYVW5pZm9ybUJ1Y2tldExldmVsQWNjZXNz",
-            "Eg8KB2VuYWJsZWQYASABKAgSLQoJbG9ja190aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBrzBQoJTGlmZWN5Y2xlEjYKBHJ1bGUYASAD",
-            "KAsyKC5nb29nbGUuc3RvcmFnZS52Mi5CdWNrZXQuTGlmZWN5Y2xlLlJ1bGUa",
-            "rQUKBFJ1bGUSPwoGYWN0aW9uGAEgASgLMi8uZ29vZ2xlLnN0b3JhZ2UudjIu",
-            "QnVja2V0LkxpZmVjeWNsZS5SdWxlLkFjdGlvbhJFCgljb25kaXRpb24YAiAB",
-            "KAsyMi5nb29nbGUuc3RvcmFnZS52Mi5CdWNrZXQuTGlmZWN5Y2xlLlJ1bGUu",
-            "Q29uZGl0aW9uGi0KBkFjdGlvbhIMCgR0eXBlGAEgASgJEhUKDXN0b3JhZ2Vf",
-            "Y2xhc3MYAiABKAka7QMKCUNvbmRpdGlvbhIVCghhZ2VfZGF5cxgBIAEoBUgA",
-            "iAEBEikKDmNyZWF0ZWRfYmVmb3JlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
-            "ZRIUCgdpc19saXZlGAMgASgISAGIAQESHwoSbnVtX25ld2VyX3ZlcnNpb25z",
-            "GAQgASgFSAKIAQESHQoVbWF0Y2hlc19zdG9yYWdlX2NsYXNzGAUgAygJEiMK",
-            "FmRheXNfc2luY2VfY3VzdG9tX3RpbWUYByABKAVIA4gBARItChJjdXN0b21f",
-            "dGltZV9iZWZvcmUYCCABKAsyES5nb29nbGUudHlwZS5EYXRlEicKGmRheXNf",
-            "c2luY2Vfbm9uY3VycmVudF90aW1lGAkgASgFSASIAQESMQoWbm9uY3VycmVu",
-            "dF90aW1lX2JlZm9yZRgKIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSFgoObWF0",
-            "Y2hlc19wcmVmaXgYCyADKAkSFgoObWF0Y2hlc19zdWZmaXgYDCADKAlCCwoJ",
-            "X2FnZV9kYXlzQgoKCF9pc19saXZlQhUKE19udW1fbmV3ZXJfdmVyc2lvbnNC",
-            "GQoXX2RheXNfc2luY2VfY3VzdG9tX3RpbWVCHQobX2RheXNfc2luY2Vfbm9u",
-            "Y3VycmVudF90aW1lGjgKB0xvZ2dpbmcSEgoKbG9nX2J1Y2tldBgBIAEoCRIZ",
-            "ChFsb2dfb2JqZWN0X3ByZWZpeBgCIAEoCRqPAQoPUmV0ZW50aW9uUG9saWN5",
-            "EjIKDmVmZmVjdGl2ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBIRCglpc19sb2NrZWQYAiABKAgSNQoScmV0ZW50aW9uX2R1cmF0",
-            "aW9uGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGrEBChBTb2Z0",
-            "RGVsZXRlUG9saWN5EjoKEnJldGVudGlvbl9kdXJhdGlvbhgBIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAiAEBEjcKDmVmZmVjdGl2ZV90aW1l",
-            "GAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBiAEBQhUKE19y",
-            "ZXRlbnRpb25fZHVyYXRpb25CEQoPX2VmZmVjdGl2ZV90aW1lGh0KClZlcnNp",
-            "b25pbmcSDwoHZW5hYmxlZBgBIAEoCBo7CgdXZWJzaXRlEhgKEG1haW5fcGFn",
-            "ZV9zdWZmaXgYASABKAkSFgoObm90X2ZvdW5kX3BhZ2UYAiABKAkaLwoVQ3Vz",
-            "dG9tUGxhY2VtZW50Q29uZmlnEhYKDmRhdGFfbG9jYXRpb25zGAEgAygJGosC",
-            "CglBdXRvY2xhc3MSDwoHZW5hYmxlZBgBIAEoCBI0Cgt0b2dnbGVfdGltZRgC",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIjChZ0ZXJt",
-            "aW5hbF9zdG9yYWdlX2NsYXNzGAMgASgJSACIAQESUAoidGVybWluYWxfc3Rv",
-            "cmFnZV9jbGFzc191cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBA0gBiAEBQhkKF190ZXJtaW5hbF9zdG9yYWdlX2Ns",
-            "YXNzQiUKI190ZXJtaW5hbF9zdG9yYWdlX2NsYXNzX3VwZGF0ZV90aW1lGi0K",
-            "FUhpZXJhcmNoaWNhbE5hbWVzcGFjZRIUCgdlbmFibGVkGAEgASgIQgPgQQEa",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ATpY6kFVCh1zdG9yYWdlLmdvb2dsZWFwaXMuY29tL0J1Y2tldBIjcHJvamVj",
-            "dHMve3Byb2plY3R9L2J1Y2tldHMve2J1Y2tldH0qB2J1Y2tldHMyBmJ1Y2tl",
-            "dCLOAQoTQnVja2V0QWNjZXNzQ29udHJvbBIMCgRyb2xlGAEgASgJEgoKAmlk",
-            "GAIgASgJEg4KBmVudGl0eRgDIAEoCRIXCgplbnRpdHlfYWx0GAkgASgJQgPg",
-            "QQMSEQoJZW50aXR5X2lkGAQgASgJEgwKBGV0YWcYCCABKAkSDQoFZW1haWwY",
-            "BSABKAkSDgoGZG9tYWluGAYgASgJEjQKDHByb2plY3RfdGVhbRgHIAEoCzIe",
-            "Lmdvb2dsZS5zdG9yYWdlLnYyLlByb2plY3RUZWFtIkkKD0NoZWNrc3VtbWVk",
-            "RGF0YRIWCgdjb250ZW50GAEgASgMQgUIAeBBARITCgZjcmMzMmMYAiABKAdI",
-            "AIgBAUIJCgdfY3JjMzJjIkMKD09iamVjdENoZWNrc3VtcxITCgZjcmMzMmMY",
-            "ASABKAdIAIgBARIQCghtZDVfaGFzaBgCIAEoDEIJCgdfY3JjMzJjIkwKEkN1",
-            "c3RvbWVyRW5jcnlwdGlvbhIcChRlbmNyeXB0aW9uX2FsZ29yaXRobRgBIAEo",
-            "CRIYChBrZXlfc2hhMjU2X2J5dGVzGAMgASgMIt8KCgZPYmplY3QSEQoEbmFt",
-            "ZRgBIAEoCUID4EEFEjUKBmJ1Y2tldBgCIAEoCUIl4EEF+kEfCh1zdG9yYWdl",
-            "Lmdvb2dsZWFwaXMuY29tL0J1Y2tldBIMCgRldGFnGBsgASgJEhcKCmdlbmVy",
-            "YXRpb24YAyABKANCA+BBBRIfCg1yZXN0b3JlX3Rva2VuGCMgASgJQgPgQQNI",
-            "AIgBARIbCg5tZXRhZ2VuZXJhdGlvbhgEIAEoA0ID4EEDEhUKDXN0b3JhZ2Vf",
-            "Y2xhc3MYBSABKAkSEQoEc2l6ZRgGIAEoA0ID4EEDEhgKEGNvbnRlbnRfZW5j",
-            "b2RpbmcYByABKAkSGwoTY29udGVudF9kaXNwb3NpdGlvbhgIIAEoCRIVCg1j",
-            "YWNoZV9jb250cm9sGAkgASgJEjMKA2FjbBgKIAMoCzImLmdvb2dsZS5zdG9y",
-            "YWdlLnYyLk9iamVjdEFjY2Vzc0NvbnRyb2wSGAoQY29udGVudF9sYW5ndWFn",
-            "ZRgLIAEoCRI0CgtkZWxldGVfdGltZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxIUCgxjb250ZW50X3R5cGUYDSABKAkSNAoLY3Jl",
-            "YXRlX3RpbWUYDiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMSHAoPY29tcG9uZW50X2NvdW50GA8gASgFQgPgQQMSOgoJY2hlY2tzdW1z",
-            "GBAgASgLMiIuZ29vZ2xlLnN0b3JhZ2UudjIuT2JqZWN0Q2hlY2tzdW1zQgPg",
-            "QQMSNAoLdXBkYXRlX3RpbWUYESABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSNwoHa21zX2tleRgSIAEoCUIm+kEjCiFjbG91ZGttcy5n",
-            "b29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSQgoZdXBkYXRlX3N0b3JhZ2VfY2xh",
-            "c3NfdGltZRgTIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIWCg50ZW1wb3JhcnlfaG9sZBgUIAEoCBI5ChVyZXRlbnRpb25fZXhwaXJl",
-            "X3RpbWUYFSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjkKCG1l",
-            "dGFkYXRhGBYgAygLMicuZ29vZ2xlLnN0b3JhZ2UudjIuT2JqZWN0Lk1ldGFk",
-            "YXRhRW50cnkSHQoQZXZlbnRfYmFzZWRfaG9sZBgXIAEoCEgBiAEBEiwKBW93",
-            "bmVyGBggASgLMhguZ29vZ2xlLnN0b3JhZ2UudjIuT3duZXJCA+BBAxJCChNj",
-            "dXN0b21lcl9lbmNyeXB0aW9uGBkgASgLMiUuZ29vZ2xlLnN0b3JhZ2UudjIu",
-            "Q3VzdG9tZXJFbmNyeXB0aW9uEi8KC2N1c3RvbV90aW1lGBogASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcBI+ChBzb2Z0X2RlbGV0ZV90aW1lGBwg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDSAKIAQESPgoQ",
-            "aGFyZF9kZWxldGVfdGltZRgdIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBA0gDiAEBGi8KDU1ldGFkYXRhRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4AUIQCg5fcmVzdG9yZV90b2tlbkITChFfZXZl",
-            "bnRfYmFzZWRfaG9sZEITChFfc29mdF9kZWxldGVfdGltZUITChFfaGFyZF9k",
-            "ZWxldGVfdGltZSLOAQoTT2JqZWN0QWNjZXNzQ29udHJvbBIMCgRyb2xlGAEg",
-            "ASgJEgoKAmlkGAIgASgJEg4KBmVudGl0eRgDIAEoCRIXCgplbnRpdHlfYWx0",
-            "GAkgASgJQgPgQQMSEQoJZW50aXR5X2lkGAQgASgJEgwKBGV0YWcYCCABKAkS",
-            "DQoFZW1haWwYBSABKAkSDgoGZG9tYWluGAYgASgJEjQKDHByb2plY3RfdGVh",
-            "bRgHIAEoCzIeLmdvb2dsZS5zdG9yYWdlLnYyLlByb2plY3RUZWFtImwKE0xp",
-            "c3RPYmplY3RzUmVzcG9uc2USKgoHb2JqZWN0cxgBIAMoCzIZLmdvb2dsZS5z",
-            "dG9yYWdlLnYyLk9iamVjdBIQCghwcmVmaXhlcxgCIAMoCRIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAyABKAkiMwoLUHJvamVjdFRlYW0SFgoOcHJvamVjdF9udW1i",
-            "ZXIYASABKAkSDAoEdGVhbRgCIAEoCSIqCgVPd25lchIOCgZlbnRpdHkYASAB",
-            "KAkSEQoJZW50aXR5X2lkGAIgASgJIkMKDENvbnRlbnRSYW5nZRINCgVzdGFy",
-            "dBgBIAEoAxILCgNlbmQYAiABKAMSFwoPY29tcGxldGVfbGVuZ3RoGAMgASgD",
-            "MowcCgdTdG9yYWdlEnIKDERlbGV0ZUJ1Y2tldBImLmdvb2dsZS5zdG9yYWdl",
-            "LnYyLkRlbGV0ZUJ1Y2tldFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiItpBBG5hbWWK0+STAhUSEwoEbmFtZRILe2J1Y2tldD0qKn0SbwoJR2V0",
-            "QnVja2V0EiMuZ29vZ2xlLnN0b3JhZ2UudjIuR2V0QnVja2V0UmVxdWVzdBoZ",
-            "Lmdvb2dsZS5zdG9yYWdlLnYyLkJ1Y2tldCIi2kEEbmFtZYrT5JMCFRITCgRu",
-            "YW1lEgt7YnVja2V0PSoqfRKrAQoMQ3JlYXRlQnVja2V0EiYuZ29vZ2xlLnN0",
-            "b3JhZ2UudjIuQ3JlYXRlQnVja2V0UmVxdWVzdBoZLmdvb2dsZS5zdG9yYWdl",
-            "LnYyLkJ1Y2tldCJY2kEXcGFyZW50LGJ1Y2tldCxidWNrZXRfaWSK0+STAjgS",
-            "FgoGcGFyZW50Egx7cHJvamVjdD0qKn0SHgoOYnVja2V0LnByb2plY3QSDHtw",
-            "cm9qZWN0PSoqfRKFAQoLTGlzdEJ1Y2tldHMSJS5nb29nbGUuc3RvcmFnZS52",
-            "Mi5MaXN0QnVja2V0c1JlcXVlc3QaJi5nb29nbGUuc3RvcmFnZS52Mi5MaXN0",
-            "QnVja2V0c1Jlc3BvbnNlIifaQQZwYXJlbnSK0+STAhgSFgoGcGFyZW50Egx7",
-            "cHJvamVjdD0qKn0SkwEKGUxvY2tCdWNrZXRSZXRlbnRpb25Qb2xpY3kSMy5n",
-            "b29nbGUuc3RvcmFnZS52Mi5Mb2NrQnVja2V0UmV0ZW50aW9uUG9saWN5UmVx",
-            "dWVzdBoZLmdvb2dsZS5zdG9yYWdlLnYyLkJ1Y2tldCIm2kEGYnVja2V0itPk",
-            "kwIXEhUKBmJ1Y2tldBILe2J1Y2tldD0qKn0SdQoMR2V0SWFtUG9saWN5EiIu",
-            "Z29vZ2xlLmlhbS52MS5HZXRJYW1Qb2xpY3lSZXF1ZXN0GhUuZ29vZ2xlLmlh",
-            "bS52MS5Qb2xpY3kiKtpBCHJlc291cmNlitPkkwIZEhcKCHJlc291cmNlEgt7",
-            "YnVja2V0PSoqfRJ8CgxTZXRJYW1Qb2xpY3kSIi5nb29nbGUuaWFtLnYxLlNl",
-            "dElhbVBvbGljeVJlcXVlc3QaFS5nb29nbGUuaWFtLnYxLlBvbGljeSIx2kEP",
-            "cmVzb3VyY2UscG9saWN5itPkkwIZEhcKCHJlc291cmNlEgt7YnVja2V0PSoq",
-            "fRKWAgoSVGVzdElhbVBlcm1pc3Npb25zEiguZ29vZ2xlLmlhbS52MS5UZXN0",
-            "SWFtUGVybWlzc2lvbnNSZXF1ZXN0GikuZ29vZ2xlLmlhbS52MS5UZXN0SWFt",
-            "UGVybWlzc2lvbnNSZXNwb25zZSKqAdpBFHJlc291cmNlLHBlcm1pc3Npb25z",
-            "itPkkwKMARIXCghyZXNvdXJjZRILe2J1Y2tldD0qKn0SNAoIcmVzb3VyY2US",
-            "KHtidWNrZXQ9cHJvamVjdHMvKi9idWNrZXRzLyp9L29iamVjdHMvKioSOwoI",
-            "cmVzb3VyY2USL3tidWNrZXQ9cHJvamVjdHMvKi9idWNrZXRzLyp9L21hbmFn",
-            "ZWRGb2xkZXJzLyoqEooBCgxVcGRhdGVCdWNrZXQSJi5nb29nbGUuc3RvcmFn",
-            "ZS52Mi5VcGRhdGVCdWNrZXRSZXF1ZXN0GhkuZ29vZ2xlLnN0b3JhZ2UudjIu",
-            "QnVja2V0IjfaQRJidWNrZXQsdXBkYXRlX21hc2uK0+STAhwSGgoLYnVja2V0",
-            "Lm5hbWUSC3tidWNrZXQ9Kip9En4KDUNvbXBvc2VPYmplY3QSJy5nb29nbGUu",
-            "c3RvcmFnZS52Mi5Db21wb3NlT2JqZWN0UmVxdWVzdBoZLmdvb2dsZS5zdG9y",
-            "YWdlLnYyLk9iamVjdCIpitPkkwIjEiEKEmRlc3RpbmF0aW9uLmJ1Y2tldBIL",
-            "e2J1Y2tldD0qKn0SmAEKDERlbGV0ZU9iamVjdBImLmdvb2dsZS5zdG9yYWdl",
-            "LnYyLkRlbGV0ZU9iamVjdFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiSNpBDWJ1Y2tldCxvYmplY3TaQRhidWNrZXQsb2JqZWN0LGdlbmVyYXRp",
-            "b26K0+STAhcSFQoGYnVja2V0Egt7YnVja2V0PSoqfRKNAQoNUmVzdG9yZU9i",
-            "amVjdBInLmdvb2dsZS5zdG9yYWdlLnYyLlJlc3RvcmVPYmplY3RSZXF1ZXN0",
-            "GhkuZ29vZ2xlLnN0b3JhZ2UudjIuT2JqZWN0IjjaQRhidWNrZXQsb2JqZWN0",
-            "LGdlbmVyYXRpb26K0+STAhcSFQoGYnVja2V0Egt7YnVja2V0PSoqfRK6AQoU",
-            "Q2FuY2VsUmVzdW1hYmxlV3JpdGUSLi5nb29nbGUuc3RvcmFnZS52Mi5DYW5j",
-            "ZWxSZXN1bWFibGVXcml0ZVJlcXVlc3QaLy5nb29nbGUuc3RvcmFnZS52Mi5D",
-            "YW5jZWxSZXN1bWFibGVXcml0ZVJlc3BvbnNlIkHaQQl1cGxvYWRfaWSK0+ST",
-            "Ai8SLQoJdXBsb2FkX2lkEiB7YnVja2V0PXByb2plY3RzLyovYnVja2V0cy8q",
-            "fS8qKhKVAQoJR2V0T2JqZWN0EiMuZ29vZ2xlLnN0b3JhZ2UudjIuR2V0T2Jq",
-            "ZWN0UmVxdWVzdBoZLmdvb2dsZS5zdG9yYWdlLnYyLk9iamVjdCJI2kENYnVj",
-            "a2V0LG9iamVjdNpBGGJ1Y2tldCxvYmplY3QsZ2VuZXJhdGlvborT5JMCFxIV",
-            "CgZidWNrZXQSC3tidWNrZXQ9Kip9EqUBCgpSZWFkT2JqZWN0EiQuZ29vZ2xl",
-            "LnN0b3JhZ2UudjIuUmVhZE9iamVjdFJlcXVlc3QaJS5nb29nbGUuc3RvcmFn",
-            "ZS52Mi5SZWFkT2JqZWN0UmVzcG9uc2UiSNpBDWJ1Y2tldCxvYmplY3TaQRhi",
-            "dWNrZXQsb2JqZWN0LGdlbmVyYXRpb26K0+STAhcSFQoGYnVja2V0Egt7YnVj",
-            "a2V0PSoqfTABEowBCgxVcGRhdGVPYmplY3QSJi5nb29nbGUuc3RvcmFnZS52",
-            "Mi5VcGRhdGVPYmplY3RSZXF1ZXN0GhkuZ29vZ2xlLnN0b3JhZ2UudjIuT2Jq",
-            "ZWN0IjnaQRJvYmplY3QsdXBkYXRlX21hc2uK0+STAh4SHAoNb2JqZWN0LmJ1",
-            "Y2tldBILe2J1Y2tldD0qKn0SYAoLV3JpdGVPYmplY3QSJS5nb29nbGUuc3Rv",
-            "cmFnZS52Mi5Xcml0ZU9iamVjdFJlcXVlc3QaJi5nb29nbGUuc3RvcmFnZS52",
-            "Mi5Xcml0ZU9iamVjdFJlc3BvbnNlIgAoARJuCg9CaWRpV3JpdGVPYmplY3QS",
-            "KS5nb29nbGUuc3RvcmFnZS52Mi5CaWRpV3JpdGVPYmplY3RSZXF1ZXN0Giou",
-            "Z29vZ2xlLnN0b3JhZ2UudjIuQmlkaVdyaXRlT2JqZWN0UmVzcG9uc2UiACgB",
-            "MAEShAEKC0xpc3RPYmplY3RzEiUuZ29vZ2xlLnN0b3JhZ2UudjIuTGlzdE9i",
-            "amVjdHNSZXF1ZXN0GiYuZ29vZ2xlLnN0b3JhZ2UudjIuTGlzdE9iamVjdHNS",
-            "ZXNwb25zZSIm2kEGcGFyZW50itPkkwIXEhUKBnBhcmVudBILe2J1Y2tldD0q",
-            "Kn0SmAEKDVJld3JpdGVPYmplY3QSJy5nb29nbGUuc3RvcmFnZS52Mi5SZXdy",
-            "aXRlT2JqZWN0UmVxdWVzdBoiLmdvb2dsZS5zdG9yYWdlLnYyLlJld3JpdGVS",
-            "ZXNwb25zZSI6itPkkwI0Eg8KDXNvdXJjZV9idWNrZXQSIQoSZGVzdGluYXRp",
-            "b25fYnVja2V0Egt7YnVja2V0PSoqfRKuAQoTU3RhcnRSZXN1bWFibGVXcml0",
-            "ZRItLmdvb2dsZS5zdG9yYWdlLnYyLlN0YXJ0UmVzdW1hYmxlV3JpdGVSZXF1",
-            "ZXN0Gi4uZ29vZ2xlLnN0b3JhZ2UudjIuU3RhcnRSZXN1bWFibGVXcml0ZVJl",
-            "c3BvbnNlIjiK0+STAjISMAohd3JpdGVfb2JqZWN0X3NwZWMucmVzb3VyY2Uu",
-            "YnVja2V0Egt7YnVja2V0PSoqfRKuAQoQUXVlcnlXcml0ZVN0YXR1cxIqLmdv",
-            "b2dsZS5zdG9yYWdlLnYyLlF1ZXJ5V3JpdGVTdGF0dXNSZXF1ZXN0GisuZ29v",
-            "Z2xlLnN0b3JhZ2UudjIuUXVlcnlXcml0ZVN0YXR1c1Jlc3BvbnNlIkHaQQl1",
-            "cGxvYWRfaWSK0+STAi8SLQoJdXBsb2FkX2lkEiB7YnVja2V0PXByb2plY3Rz",
-            "LyovYnVja2V0cy8qfS8qKhqnAspBFnN0b3JhZ2UuZ29vZ2xlYXBpcy5jb23S",
-            "QYoCaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
-            "Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
-            "YXRmb3JtLnJlYWQtb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2RldnN0b3JhZ2UuZnVsbF9jb250cm9sLGh0dHBzOi8vd3d3Lmdvb2ds",
-            "ZWFwaXMuY29tL2F1dGgvZGV2c3RvcmFnZS5yZWFkX29ubHksaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kZXZzdG9yYWdlLnJlYWRfd3JpdGVC",
-            "/AEKFWNvbS5nb29nbGUuc3RvcmFnZS52MkIMU3RvcmFnZVByb3RvUAFaPmNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vc3RvcmFnZS9pbnRlcm5hbC9hcGl2Mi9zdG9y",
-            "YWdlcGI7c3RvcmFnZXBiqgIXR29vZ2xlLkNsb3VkLlN0b3JhZ2UuVjLqQXgK",
-            "IWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJTcHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlf",
-            "cmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX1iBnByb3RvMw=="));
+            "Mi5PYmplY3Qi9wUKEU1vdmVPYmplY3RSZXF1ZXN0EjUKBmJ1Y2tldBgBIAEo",
+            "CUIl4EEC+kEfCh1zdG9yYWdlLmdvb2dsZWFwaXMuY29tL0J1Y2tldBIaCg1z",
+            "b3VyY2Vfb2JqZWN0GAIgASgJQgPgQQISHwoSZGVzdGluYXRpb25fb2JqZWN0",
+            "GAMgASgJQgPgQQISLAoaaWZfc291cmNlX2dlbmVyYXRpb25fbWF0Y2gYBCAB",
+            "KANCA+BBAUgAiAEBEjAKHmlmX3NvdXJjZV9nZW5lcmF0aW9uX25vdF9tYXRj",
+            "aBgFIAEoA0ID4EEBSAGIAQESMAoeaWZfc291cmNlX21ldGFnZW5lcmF0aW9u",
+            "X21hdGNoGAYgASgDQgPgQQFIAogBARI0CiJpZl9zb3VyY2VfbWV0YWdlbmVy",
+            "YXRpb25fbm90X21hdGNoGAcgASgDQgPgQQFIA4gBARIlChNpZl9nZW5lcmF0",
+            "aW9uX21hdGNoGAggASgDQgPgQQFIBIgBARIpChdpZl9nZW5lcmF0aW9uX25v",
+            "dF9tYXRjaBgJIAEoA0ID4EEBSAWIAQESKQoXaWZfbWV0YWdlbmVyYXRpb25f",
+            "bWF0Y2gYCiABKANCA+BBAUgGiAEBEi0KG2lmX21ldGFnZW5lcmF0aW9uX25v",
+            "dF9tYXRjaBgLIAEoA0ID4EEBSAeIAQFCHQobX2lmX3NvdXJjZV9nZW5lcmF0",
+            "aW9uX21hdGNoQiEKH19pZl9zb3VyY2VfZ2VuZXJhdGlvbl9ub3RfbWF0Y2hC",
+            "IQofX2lmX3NvdXJjZV9tZXRhZ2VuZXJhdGlvbl9tYXRjaEIlCiNfaWZfc291",
+            "cmNlX21ldGFnZW5lcmF0aW9uX25vdF9tYXRjaEIWChRfaWZfZ2VuZXJhdGlv",
+            "bl9tYXRjaEIaChhfaWZfZ2VuZXJhdGlvbl9ub3RfbWF0Y2hCGgoYX2lmX21l",
+            "dGFnZW5lcmF0aW9uX21hdGNoQh4KHF9pZl9tZXRhZ2VuZXJhdGlvbl9ub3Rf",
+            "bWF0Y2gi8gEKGlN0YXJ0UmVzdW1hYmxlV3JpdGVSZXF1ZXN0EkIKEXdyaXRl",
+            "X29iamVjdF9zcGVjGAEgASgLMiIuZ29vZ2xlLnN0b3JhZ2UudjIuV3JpdGVP",
+            "YmplY3RTcGVjQgPgQQISUgocY29tbW9uX29iamVjdF9yZXF1ZXN0X3BhcmFt",
+            "cxgDIAEoCzIsLmdvb2dsZS5zdG9yYWdlLnYyLkNvbW1vbk9iamVjdFJlcXVl",
+            "c3RQYXJhbXMSPAoQb2JqZWN0X2NoZWNrc3VtcxgFIAEoCzIiLmdvb2dsZS5z",
+            "dG9yYWdlLnYyLk9iamVjdENoZWNrc3VtcyIwChtTdGFydFJlc3VtYWJsZVdy",
+            "aXRlUmVzcG9uc2USEQoJdXBsb2FkX2lkGAEgASgJIu8DChNVcGRhdGVPYmpl",
+            "Y3RSZXF1ZXN0Ei4KBm9iamVjdBgBIAEoCzIZLmdvb2dsZS5zdG9yYWdlLnYy",
+            "Lk9iamVjdEID4EECEiAKE2lmX2dlbmVyYXRpb25fbWF0Y2gYAiABKANIAIgB",
+            "ARIkChdpZl9nZW5lcmF0aW9uX25vdF9tYXRjaBgDIAEoA0gBiAEBEiQKF2lm",
+            "X21ldGFnZW5lcmF0aW9uX21hdGNoGAQgASgDSAKIAQESKAobaWZfbWV0YWdl",
+            "bmVyYXRpb25fbm90X21hdGNoGAUgASgDSAOIAQESFgoOcHJlZGVmaW5lZF9h",
+            "Y2wYCiABKAkSNAoLdXBkYXRlX21hc2sYByABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuRmllbGRNYXNrQgPgQQISUgocY29tbW9uX29iamVjdF9yZXF1ZXN0X3Bh",
+            "cmFtcxgIIAEoCzIsLmdvb2dsZS5zdG9yYWdlLnYyLkNvbW1vbk9iamVjdFJl",
+            "cXVlc3RQYXJhbXNCFgoUX2lmX2dlbmVyYXRpb25fbWF0Y2hCGgoYX2lmX2dl",
+            "bmVyYXRpb25fbm90X21hdGNoQhoKGF9pZl9tZXRhZ2VuZXJhdGlvbl9tYXRj",
+            "aEIeChxfaWZfbWV0YWdlbmVyYXRpb25fbm90X21hdGNoInwKGUNvbW1vbk9i",
+            "amVjdFJlcXVlc3RQYXJhbXMSHAoUZW5jcnlwdGlvbl9hbGdvcml0aG0YASAB",
+            "KAkSHAoUZW5jcnlwdGlvbl9rZXlfYnl0ZXMYBCABKAwSIwobZW5jcnlwdGlv",
+            "bl9rZXlfc2hhMjU2X2J5dGVzGAUgASgMIsoFChBTZXJ2aWNlQ29uc3RhbnRz",
+            "IrUFCgZWYWx1ZXMSFgoSVkFMVUVTX1VOU1BFQ0lGSUVEEAASGwoUTUFYX1JF",
+            "QURfQ0hVTktfQllURVMQgICAARIcChVNQVhfV1JJVEVfQ0hVTktfQllURVMQ",
+            "gICAARIZChJNQVhfT0JKRUNUX1NJWkVfTUIQgIDAAhIpCiRNQVhfQ1VTVE9N",
+            "X01FVEFEQVRBX0ZJRUxEX05BTUVfQllURVMQgAgSKgolTUFYX0NVU1RPTV9N",
+            "RVRBREFUQV9GSUVMRF9WQUxVRV9CWVRFUxCAIBIpCiRNQVhfQ1VTVE9NX01F",
+            "VEFEQVRBX1RPVEFMX1NJWkVfQllURVMQgEASKgokTUFYX0JVQ0tFVF9NRVRB",
+            "REFUQV9UT1RBTF9TSVpFX0JZVEVTEICgARInCiNNQVhfTk9USUZJQ0FUSU9O",
+            "X0NPTkZJR1NfUEVSX0JVQ0tFVBBkEiIKHk1BWF9MSUZFQ1lDTEVfUlVMRVNf",
+            "UEVSX0JVQ0tFVBBkEiYKIk1BWF9OT1RJRklDQVRJT05fQ1VTVE9NX0FUVFJJ",
+            "QlVURVMQBRIxCixNQVhfTk9USUZJQ0FUSU9OX0NVU1RPTV9BVFRSSUJVVEVf",
+            "S0VZX0xFTkdUSBCAAhIzCi5NQVhfTk9USUZJQ0FUSU9OX0NVU1RPTV9BVFRS",
+            "SUJVVEVfVkFMVUVfTEVOR1RIEIAIEhwKGE1BWF9MQUJFTFNfRU5UUklFU19D",
+            "T1VOVBBAEh8KG01BWF9MQUJFTFNfS0VZX1ZBTFVFX0xFTkdUSBA/Eh8KGk1B",
+            "WF9MQUJFTFNfS0VZX1ZBTFVFX0JZVEVTEIABEi4KKU1BWF9PQkpFQ1RfSURT",
+            "X1BFUl9ERUxFVEVfT0JKRUNUU19SRVFVRVNUEOgHEh4KGlNQTElUX1RPS0VO",
+            "X01BWF9WQUxJRF9EQVlTEA4aAhABIqMcCgZCdWNrZXQSEQoEbmFtZRgBIAEo",
+            "CUID4EEFEhYKCWJ1Y2tldF9pZBgCIAEoCUID4EEDEgwKBGV0YWcYHSABKAkS",
+            "RAoHcHJvamVjdBgDIAEoCUIz4EEF+kEtCitjbG91ZHJlc291cmNlbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9Qcm9qZWN0EhsKDm1ldGFnZW5lcmF0aW9uGAQg",
+            "ASgDQgPgQQMSFQoIbG9jYXRpb24YBSABKAlCA+BBBRIaCg1sb2NhdGlvbl90",
+            "eXBlGAYgASgJQgPgQQMSFQoNc3RvcmFnZV9jbGFzcxgHIAEoCRILCgNycG8Y",
+            "GyABKAkSMwoDYWNsGAggAygLMiYuZ29vZ2xlLnN0b3JhZ2UudjIuQnVja2V0",
+            "QWNjZXNzQ29udHJvbBJCChJkZWZhdWx0X29iamVjdF9hY2wYCSADKAsyJi5n",
+            "b29nbGUuc3RvcmFnZS52Mi5PYmplY3RBY2Nlc3NDb250cm9sEjYKCWxpZmVj",
+            "eWNsZRgKIAEoCzIjLmdvb2dsZS5zdG9yYWdlLnYyLkJ1Y2tldC5MaWZlY3lj",
+            "bGUSNAoLY3JlYXRlX3RpbWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSLAoEY29ycxgMIAMoCzIeLmdvb2dsZS5zdG9yYWdlLnYy",
+            "LkJ1Y2tldC5Db3JzEjQKC3VwZGF0ZV90aW1lGA0gASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEiAKGGRlZmF1bHRfZXZlbnRfYmFzZWRf",
+            "aG9sZBgOIAEoCBI1CgZsYWJlbHMYDyADKAsyJS5nb29nbGUuc3RvcmFnZS52",
+            "Mi5CdWNrZXQuTGFiZWxzRW50cnkSMgoHd2Vic2l0ZRgQIAEoCzIhLmdvb2ds",
+            "ZS5zdG9yYWdlLnYyLkJ1Y2tldC5XZWJzaXRlEjgKCnZlcnNpb25pbmcYESAB",
+            "KAsyJC5nb29nbGUuc3RvcmFnZS52Mi5CdWNrZXQuVmVyc2lvbmluZxIyCgds",
+            "b2dnaW5nGBIgASgLMiEuZ29vZ2xlLnN0b3JhZ2UudjIuQnVja2V0LkxvZ2dp",
+            "bmcSLAoFb3duZXIYEyABKAsyGC5nb29nbGUuc3RvcmFnZS52Mi5Pd25lckID",
+            "4EEDEjgKCmVuY3J5cHRpb24YFCABKAsyJC5nb29nbGUuc3RvcmFnZS52Mi5C",
+            "dWNrZXQuRW5jcnlwdGlvbhIyCgdiaWxsaW5nGBUgASgLMiEuZ29vZ2xlLnN0",
+            "b3JhZ2UudjIuQnVja2V0LkJpbGxpbmcSQwoQcmV0ZW50aW9uX3BvbGljeRgW",
+            "IAEoCzIpLmdvb2dsZS5zdG9yYWdlLnYyLkJ1Y2tldC5SZXRlbnRpb25Qb2xp",
+            "Y3kSNwoKaWFtX2NvbmZpZxgXIAEoCzIjLmdvb2dsZS5zdG9yYWdlLnYyLkJ1",
+            "Y2tldC5JYW1Db25maWcSFQoNc2F0aXNmaWVzX3B6cxgZIAEoCBJQChdjdXN0",
+            "b21fcGxhY2VtZW50X2NvbmZpZxgaIAEoCzIvLmdvb2dsZS5zdG9yYWdlLnYy",
+            "LkJ1Y2tldC5DdXN0b21QbGFjZW1lbnRDb25maWcSNgoJYXV0b2NsYXNzGBwg",
+            "ASgLMiMuZ29vZ2xlLnN0b3JhZ2UudjIuQnVja2V0LkF1dG9jbGFzcxJUChZo",
+            "aWVyYXJjaGljYWxfbmFtZXNwYWNlGCAgASgLMi8uZ29vZ2xlLnN0b3JhZ2Uu",
+            "djIuQnVja2V0LkhpZXJhcmNoaWNhbE5hbWVzcGFjZUID4EEBEksKEnNvZnRf",
+            "ZGVsZXRlX3BvbGljeRgfIAEoCzIqLmdvb2dsZS5zdG9yYWdlLnYyLkJ1Y2tl",
+            "dC5Tb2Z0RGVsZXRlUG9saWN5QgPgQQEaIQoHQmlsbGluZxIWCg5yZXF1ZXN0",
+            "ZXJfcGF5cxgBIAEoCBpYCgRDb3JzEg4KBm9yaWdpbhgBIAMoCRIOCgZtZXRo",
+            "b2QYAiADKAkSFwoPcmVzcG9uc2VfaGVhZGVyGAMgAygJEhcKD21heF9hZ2Vf",
+            "c2Vjb25kcxgEIAEoBRpNCgpFbmNyeXB0aW9uEj8KD2RlZmF1bHRfa21zX2tl",
+            "eRgBIAEoCUIm+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9L",
+            "ZXka7AEKCUlhbUNvbmZpZxJhCht1bmlmb3JtX2J1Y2tldF9sZXZlbF9hY2Nl",
+            "c3MYASABKAsyPC5nb29nbGUuc3RvcmFnZS52Mi5CdWNrZXQuSWFtQ29uZmln",
+            "LlVuaWZvcm1CdWNrZXRMZXZlbEFjY2VzcxIgChhwdWJsaWNfYWNjZXNzX3By",
+            "ZXZlbnRpb24YAyABKAkaWgoYVW5pZm9ybUJ1Y2tldExldmVsQWNjZXNzEg8K",
+            "B2VuYWJsZWQYASABKAgSLQoJbG9ja190aW1lGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcBrzBQoJTGlmZWN5Y2xlEjYKBHJ1bGUYASADKAsy",
+            "KC5nb29nbGUuc3RvcmFnZS52Mi5CdWNrZXQuTGlmZWN5Y2xlLlJ1bGUarQUK",
+            "BFJ1bGUSPwoGYWN0aW9uGAEgASgLMi8uZ29vZ2xlLnN0b3JhZ2UudjIuQnVj",
+            "a2V0LkxpZmVjeWNsZS5SdWxlLkFjdGlvbhJFCgljb25kaXRpb24YAiABKAsy",
+            "Mi5nb29nbGUuc3RvcmFnZS52Mi5CdWNrZXQuTGlmZWN5Y2xlLlJ1bGUuQ29u",
+            "ZGl0aW9uGi0KBkFjdGlvbhIMCgR0eXBlGAEgASgJEhUKDXN0b3JhZ2VfY2xh",
+            "c3MYAiABKAka7QMKCUNvbmRpdGlvbhIVCghhZ2VfZGF5cxgBIAEoBUgAiAEB",
+            "EikKDmNyZWF0ZWRfYmVmb3JlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIU",
+            "Cgdpc19saXZlGAMgASgISAGIAQESHwoSbnVtX25ld2VyX3ZlcnNpb25zGAQg",
+            "ASgFSAKIAQESHQoVbWF0Y2hlc19zdG9yYWdlX2NsYXNzGAUgAygJEiMKFmRh",
+            "eXNfc2luY2VfY3VzdG9tX3RpbWUYByABKAVIA4gBARItChJjdXN0b21fdGlt",
+            "ZV9iZWZvcmUYCCABKAsyES5nb29nbGUudHlwZS5EYXRlEicKGmRheXNfc2lu",
+            "Y2Vfbm9uY3VycmVudF90aW1lGAkgASgFSASIAQESMQoWbm9uY3VycmVudF90",
+            "aW1lX2JlZm9yZRgKIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSFgoObWF0Y2hl",
+            "c19wcmVmaXgYCyADKAkSFgoObWF0Y2hlc19zdWZmaXgYDCADKAlCCwoJX2Fn",
+            "ZV9kYXlzQgoKCF9pc19saXZlQhUKE19udW1fbmV3ZXJfdmVyc2lvbnNCGQoX",
+            "X2RheXNfc2luY2VfY3VzdG9tX3RpbWVCHQobX2RheXNfc2luY2Vfbm9uY3Vy",
+            "cmVudF90aW1lGjgKB0xvZ2dpbmcSEgoKbG9nX2J1Y2tldBgBIAEoCRIZChFs",
+            "b2dfb2JqZWN0X3ByZWZpeBgCIAEoCRqPAQoPUmV0ZW50aW9uUG9saWN5EjIK",
+            "DmVmZmVjdGl2ZV90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIRCglpc19sb2NrZWQYAiABKAgSNQoScmV0ZW50aW9uX2R1cmF0aW9u",
+            "GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGrEBChBTb2Z0RGVs",
+            "ZXRlUG9saWN5EjoKEnJldGVudGlvbl9kdXJhdGlvbhgBIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbkgAiAEBEjcKDmVmZmVjdGl2ZV90aW1lGAIg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgBiAEBQhUKE19yZXRl",
+            "bnRpb25fZHVyYXRpb25CEQoPX2VmZmVjdGl2ZV90aW1lGh0KClZlcnNpb25p",
+            "bmcSDwoHZW5hYmxlZBgBIAEoCBo7CgdXZWJzaXRlEhgKEG1haW5fcGFnZV9z",
+            "dWZmaXgYASABKAkSFgoObm90X2ZvdW5kX3BhZ2UYAiABKAkaLwoVQ3VzdG9t",
+            "UGxhY2VtZW50Q29uZmlnEhYKDmRhdGFfbG9jYXRpb25zGAEgAygJGosCCglB",
+            "dXRvY2xhc3MSDwoHZW5hYmxlZBgBIAEoCBI0Cgt0b2dnbGVfdGltZRgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIjChZ0ZXJtaW5h",
+            "bF9zdG9yYWdlX2NsYXNzGAMgASgJSACIAQESUAoidGVybWluYWxfc3RvcmFn",
+            "ZV9jbGFzc191cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBA0gBiAEBQhkKF190ZXJtaW5hbF9zdG9yYWdlX2NsYXNz",
+            "QiUKI190ZXJtaW5hbF9zdG9yYWdlX2NsYXNzX3VwZGF0ZV90aW1lGi0KFUhp",
+            "ZXJhcmNoaWNhbE5hbWVzcGFjZRIUCgdlbmFibGVkGAEgASgIQgPgQQEaLQoL",
+            "TGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpY",
+            "6kFVCh1zdG9yYWdlLmdvb2dsZWFwaXMuY29tL0J1Y2tldBIjcHJvamVjdHMv",
+            "e3Byb2plY3R9L2J1Y2tldHMve2J1Y2tldH0qB2J1Y2tldHMyBmJ1Y2tldCLO",
+            "AQoTQnVja2V0QWNjZXNzQ29udHJvbBIMCgRyb2xlGAEgASgJEgoKAmlkGAIg",
+            "ASgJEg4KBmVudGl0eRgDIAEoCRIXCgplbnRpdHlfYWx0GAkgASgJQgPgQQMS",
+            "EQoJZW50aXR5X2lkGAQgASgJEgwKBGV0YWcYCCABKAkSDQoFZW1haWwYBSAB",
+            "KAkSDgoGZG9tYWluGAYgASgJEjQKDHByb2plY3RfdGVhbRgHIAEoCzIeLmdv",
+            "b2dsZS5zdG9yYWdlLnYyLlByb2plY3RUZWFtIkkKD0NoZWNrc3VtbWVkRGF0",
+            "YRIWCgdjb250ZW50GAEgASgMQgUIAeBBARITCgZjcmMzMmMYAiABKAdIAIgB",
+            "AUIJCgdfY3JjMzJjIkMKD09iamVjdENoZWNrc3VtcxITCgZjcmMzMmMYASAB",
+            "KAdIAIgBARIQCghtZDVfaGFzaBgCIAEoDEIJCgdfY3JjMzJjIkwKEkN1c3Rv",
+            "bWVyRW5jcnlwdGlvbhIcChRlbmNyeXB0aW9uX2FsZ29yaXRobRgBIAEoCRIY",
+            "ChBrZXlfc2hhMjU2X2J5dGVzGAMgASgMIpcLCgZPYmplY3QSEQoEbmFtZRgB",
+            "IAEoCUID4EEFEjUKBmJ1Y2tldBgCIAEoCUIl4EEF+kEfCh1zdG9yYWdlLmdv",
+            "b2dsZWFwaXMuY29tL0J1Y2tldBIMCgRldGFnGBsgASgJEhcKCmdlbmVyYXRp",
+            "b24YAyABKANCA+BBBRIfCg1yZXN0b3JlX3Rva2VuGCMgASgJQgPgQQNIAIgB",
+            "ARIbCg5tZXRhZ2VuZXJhdGlvbhgEIAEoA0ID4EEDEhUKDXN0b3JhZ2VfY2xh",
+            "c3MYBSABKAkSEQoEc2l6ZRgGIAEoA0ID4EEDEhgKEGNvbnRlbnRfZW5jb2Rp",
+            "bmcYByABKAkSGwoTY29udGVudF9kaXNwb3NpdGlvbhgIIAEoCRIVCg1jYWNo",
+            "ZV9jb250cm9sGAkgASgJEjMKA2FjbBgKIAMoCzImLmdvb2dsZS5zdG9yYWdl",
+            "LnYyLk9iamVjdEFjY2Vzc0NvbnRyb2wSGAoQY29udGVudF9sYW5ndWFnZRgL",
+            "IAEoCRI0CgtkZWxldGVfdGltZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxI2Cg1maW5hbGl6ZV90aW1lGCQgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhQKDGNvbnRlbnRfdHlwZRgNIAEo",
+            "CRI0CgtjcmVhdGVfdGltZRgOIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxIcCg9jb21wb25lbnRfY291bnQYDyABKAVCA+BBAxI6Cglj",
+            "aGVja3N1bXMYECABKAsyIi5nb29nbGUuc3RvcmFnZS52Mi5PYmplY3RDaGVj",
+            "a3N1bXNCA+BBAxI0Cgt1cGRhdGVfdGltZRgRIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI3CgdrbXNfa2V5GBIgASgJQib6QSMKIWNs",
+            "b3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJCChl1cGRhdGVfc3Rv",
+            "cmFnZV9jbGFzc190aW1lGBMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEhYKDnRlbXBvcmFyeV9ob2xkGBQgASgIEjkKFXJldGVudGlv",
+            "bl9leHBpcmVfdGltZRgVIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASOQoIbWV0YWRhdGEYFiADKAsyJy5nb29nbGUuc3RvcmFnZS52Mi5PYmpl",
+            "Y3QuTWV0YWRhdGFFbnRyeRIdChBldmVudF9iYXNlZF9ob2xkGBcgASgISAGI",
+            "AQESLAoFb3duZXIYGCABKAsyGC5nb29nbGUuc3RvcmFnZS52Mi5Pd25lckID",
+            "4EEDEkIKE2N1c3RvbWVyX2VuY3J5cHRpb24YGSABKAsyJS5nb29nbGUuc3Rv",
+            "cmFnZS52Mi5DdXN0b21lckVuY3J5cHRpb24SLwoLY3VzdG9tX3RpbWUYGiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEj4KEHNvZnRfZGVsZXRl",
+            "X3RpbWUYHCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNI",
+            "AogBARI+ChBoYXJkX2RlbGV0ZV90aW1lGB0gASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDSAOIAQEaLwoNTWV0YWRhdGFFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQhAKDl9yZXN0b3JlX3Rva2Vu",
+            "QhMKEV9ldmVudF9iYXNlZF9ob2xkQhMKEV9zb2Z0X2RlbGV0ZV90aW1lQhMK",
+            "EV9oYXJkX2RlbGV0ZV90aW1lIs4BChNPYmplY3RBY2Nlc3NDb250cm9sEgwK",
+            "BHJvbGUYASABKAkSCgoCaWQYAiABKAkSDgoGZW50aXR5GAMgASgJEhcKCmVu",
+            "dGl0eV9hbHQYCSABKAlCA+BBAxIRCgllbnRpdHlfaWQYBCABKAkSDAoEZXRh",
+            "ZxgIIAEoCRINCgVlbWFpbBgFIAEoCRIOCgZkb21haW4YBiABKAkSNAoMcHJv",
+            "amVjdF90ZWFtGAcgASgLMh4uZ29vZ2xlLnN0b3JhZ2UudjIuUHJvamVjdFRl",
+            "YW0ibAoTTGlzdE9iamVjdHNSZXNwb25zZRIqCgdvYmplY3RzGAEgAygLMhku",
+            "Z29vZ2xlLnN0b3JhZ2UudjIuT2JqZWN0EhAKCHByZWZpeGVzGAIgAygJEhcK",
+            "D25leHRfcGFnZV90b2tlbhgDIAEoCSIzCgtQcm9qZWN0VGVhbRIWCg5wcm9q",
+            "ZWN0X251bWJlchgBIAEoCRIMCgR0ZWFtGAIgASgJIioKBU93bmVyEg4KBmVu",
+            "dGl0eRgBIAEoCRIRCgllbnRpdHlfaWQYAiABKAkiQwoMQ29udGVudFJhbmdl",
+            "Eg0KBXN0YXJ0GAEgASgDEgsKA2VuZBgCIAEoAxIXCg9jb21wbGV0ZV9sZW5n",
+            "dGgYAyABKAMypR0KB1N0b3JhZ2UScgoMRGVsZXRlQnVja2V0EiYuZ29vZ2xl",
+            "LnN0b3JhZ2UudjIuRGVsZXRlQnVja2V0UmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSIi2kEEbmFtZYrT5JMCFRITCgRuYW1lEgt7YnVja2V0PSoq",
+            "fRJvCglHZXRCdWNrZXQSIy5nb29nbGUuc3RvcmFnZS52Mi5HZXRCdWNrZXRS",
+            "ZXF1ZXN0GhkuZ29vZ2xlLnN0b3JhZ2UudjIuQnVja2V0IiLaQQRuYW1litPk",
+            "kwIVEhMKBG5hbWUSC3tidWNrZXQ9Kip9EqsBCgxDcmVhdGVCdWNrZXQSJi5n",
+            "b29nbGUuc3RvcmFnZS52Mi5DcmVhdGVCdWNrZXRSZXF1ZXN0GhkuZ29vZ2xl",
+            "LnN0b3JhZ2UudjIuQnVja2V0IljaQRdwYXJlbnQsYnVja2V0LGJ1Y2tldF9p",
+            "ZIrT5JMCOBIWCgZwYXJlbnQSDHtwcm9qZWN0PSoqfRIeCg5idWNrZXQucHJv",
+            "amVjdBIMe3Byb2plY3Q9Kip9EoUBCgtMaXN0QnVja2V0cxIlLmdvb2dsZS5z",
+            "dG9yYWdlLnYyLkxpc3RCdWNrZXRzUmVxdWVzdBomLmdvb2dsZS5zdG9yYWdl",
+            "LnYyLkxpc3RCdWNrZXRzUmVzcG9uc2UiJ9pBBnBhcmVudIrT5JMCGBIWCgZw",
+            "YXJlbnQSDHtwcm9qZWN0PSoqfRKTAQoZTG9ja0J1Y2tldFJldGVudGlvblBv",
+            "bGljeRIzLmdvb2dsZS5zdG9yYWdlLnYyLkxvY2tCdWNrZXRSZXRlbnRpb25Q",
+            "b2xpY3lSZXF1ZXN0GhkuZ29vZ2xlLnN0b3JhZ2UudjIuQnVja2V0IibaQQZi",
+            "dWNrZXSK0+STAhcSFQoGYnVja2V0Egt7YnVja2V0PSoqfRJ1CgxHZXRJYW1Q",
+            "b2xpY3kSIi5nb29nbGUuaWFtLnYxLkdldElhbVBvbGljeVJlcXVlc3QaFS5n",
+            "b29nbGUuaWFtLnYxLlBvbGljeSIq2kEIcmVzb3VyY2WK0+STAhkSFwoIcmVz",
+            "b3VyY2USC3tidWNrZXQ9Kip9EnwKDFNldElhbVBvbGljeRIiLmdvb2dsZS5p",
+            "YW0udjEuU2V0SWFtUG9saWN5UmVxdWVzdBoVLmdvb2dsZS5pYW0udjEuUG9s",
+            "aWN5IjHaQQ9yZXNvdXJjZSxwb2xpY3mK0+STAhkSFwoIcmVzb3VyY2USC3ti",
+            "dWNrZXQ9Kip9EpYCChJUZXN0SWFtUGVybWlzc2lvbnMSKC5nb29nbGUuaWFt",
+            "LnYxLlRlc3RJYW1QZXJtaXNzaW9uc1JlcXVlc3QaKS5nb29nbGUuaWFtLnYx",
+            "LlRlc3RJYW1QZXJtaXNzaW9uc1Jlc3BvbnNlIqoB2kEUcmVzb3VyY2UscGVy",
+            "bWlzc2lvbnOK0+STAowBEhcKCHJlc291cmNlEgt7YnVja2V0PSoqfRI0Cghy",
+            "ZXNvdXJjZRIoe2J1Y2tldD1wcm9qZWN0cy8qL2J1Y2tldHMvKn0vb2JqZWN0",
+            "cy8qKhI7CghyZXNvdXJjZRIve2J1Y2tldD1wcm9qZWN0cy8qL2J1Y2tldHMv",
+            "Kn0vbWFuYWdlZEZvbGRlcnMvKioSigEKDFVwZGF0ZUJ1Y2tldBImLmdvb2ds",
+            "ZS5zdG9yYWdlLnYyLlVwZGF0ZUJ1Y2tldFJlcXVlc3QaGS5nb29nbGUuc3Rv",
+            "cmFnZS52Mi5CdWNrZXQiN9pBEmJ1Y2tldCx1cGRhdGVfbWFza4rT5JMCHBIa",
+            "CgtidWNrZXQubmFtZRILe2J1Y2tldD0qKn0SfgoNQ29tcG9zZU9iamVjdBIn",
+            "Lmdvb2dsZS5zdG9yYWdlLnYyLkNvbXBvc2VPYmplY3RSZXF1ZXN0GhkuZ29v",
+            "Z2xlLnN0b3JhZ2UudjIuT2JqZWN0IimK0+STAiMSIQoSZGVzdGluYXRpb24u",
+            "YnVja2V0Egt7YnVja2V0PSoqfRKYAQoMRGVsZXRlT2JqZWN0EiYuZ29vZ2xl",
+            "LnN0b3JhZ2UudjIuRGVsZXRlT2JqZWN0UmVxdWVzdBoWLmdvb2dsZS5wcm90",
+            "b2J1Zi5FbXB0eSJI2kENYnVja2V0LG9iamVjdNpBGGJ1Y2tldCxvYmplY3Qs",
+            "Z2VuZXJhdGlvborT5JMCFxIVCgZidWNrZXQSC3tidWNrZXQ9Kip9Eo0BCg1S",
+            "ZXN0b3JlT2JqZWN0EicuZ29vZ2xlLnN0b3JhZ2UudjIuUmVzdG9yZU9iamVj",
+            "dFJlcXVlc3QaGS5nb29nbGUuc3RvcmFnZS52Mi5PYmplY3QiONpBGGJ1Y2tl",
+            "dCxvYmplY3QsZ2VuZXJhdGlvborT5JMCFxIVCgZidWNrZXQSC3tidWNrZXQ9",
+            "Kip9EroBChRDYW5jZWxSZXN1bWFibGVXcml0ZRIuLmdvb2dsZS5zdG9yYWdl",
+            "LnYyLkNhbmNlbFJlc3VtYWJsZVdyaXRlUmVxdWVzdBovLmdvb2dsZS5zdG9y",
+            "YWdlLnYyLkNhbmNlbFJlc3VtYWJsZVdyaXRlUmVzcG9uc2UiQdpBCXVwbG9h",
+            "ZF9pZIrT5JMCLxItCgl1cGxvYWRfaWQSIHtidWNrZXQ9cHJvamVjdHMvKi9i",
+            "dWNrZXRzLyp9LyoqEpUBCglHZXRPYmplY3QSIy5nb29nbGUuc3RvcmFnZS52",
+            "Mi5HZXRPYmplY3RSZXF1ZXN0GhkuZ29vZ2xlLnN0b3JhZ2UudjIuT2JqZWN0",
+            "IkjaQQ1idWNrZXQsb2JqZWN02kEYYnVja2V0LG9iamVjdCxnZW5lcmF0aW9u",
+            "itPkkwIXEhUKBmJ1Y2tldBILe2J1Y2tldD0qKn0SpQEKClJlYWRPYmplY3QS",
+            "JC5nb29nbGUuc3RvcmFnZS52Mi5SZWFkT2JqZWN0UmVxdWVzdBolLmdvb2ds",
+            "ZS5zdG9yYWdlLnYyLlJlYWRPYmplY3RSZXNwb25zZSJI2kENYnVja2V0LG9i",
+            "amVjdNpBGGJ1Y2tldCxvYmplY3QsZ2VuZXJhdGlvborT5JMCFxIVCgZidWNr",
+            "ZXQSC3tidWNrZXQ9Kip9MAESjAEKDFVwZGF0ZU9iamVjdBImLmdvb2dsZS5z",
+            "dG9yYWdlLnYyLlVwZGF0ZU9iamVjdFJlcXVlc3QaGS5nb29nbGUuc3RvcmFn",
+            "ZS52Mi5PYmplY3QiOdpBEm9iamVjdCx1cGRhdGVfbWFza4rT5JMCHhIcCg1v",
+            "YmplY3QuYnVja2V0Egt7YnVja2V0PSoqfRJgCgtXcml0ZU9iamVjdBIlLmdv",
+            "b2dsZS5zdG9yYWdlLnYyLldyaXRlT2JqZWN0UmVxdWVzdBomLmdvb2dsZS5z",
+            "dG9yYWdlLnYyLldyaXRlT2JqZWN0UmVzcG9uc2UiACgBEm4KD0JpZGlXcml0",
+            "ZU9iamVjdBIpLmdvb2dsZS5zdG9yYWdlLnYyLkJpZGlXcml0ZU9iamVjdFJl",
+            "cXVlc3QaKi5nb29nbGUuc3RvcmFnZS52Mi5CaWRpV3JpdGVPYmplY3RSZXNw",
+            "b25zZSIAKAEwARKEAQoLTGlzdE9iamVjdHMSJS5nb29nbGUuc3RvcmFnZS52",
+            "Mi5MaXN0T2JqZWN0c1JlcXVlc3QaJi5nb29nbGUuc3RvcmFnZS52Mi5MaXN0",
+            "T2JqZWN0c1Jlc3BvbnNlIibaQQZwYXJlbnSK0+STAhcSFQoGcGFyZW50Egt7",
+            "YnVja2V0PSoqfRKYAQoNUmV3cml0ZU9iamVjdBInLmdvb2dsZS5zdG9yYWdl",
+            "LnYyLlJld3JpdGVPYmplY3RSZXF1ZXN0GiIuZ29vZ2xlLnN0b3JhZ2UudjIu",
+            "UmV3cml0ZVJlc3BvbnNlIjqK0+STAjQSDwoNc291cmNlX2J1Y2tldBIhChJk",
+            "ZXN0aW5hdGlvbl9idWNrZXQSC3tidWNrZXQ9Kip9Eq4BChNTdGFydFJlc3Vt",
+            "YWJsZVdyaXRlEi0uZ29vZ2xlLnN0b3JhZ2UudjIuU3RhcnRSZXN1bWFibGVX",
+            "cml0ZVJlcXVlc3QaLi5nb29nbGUuc3RvcmFnZS52Mi5TdGFydFJlc3VtYWJs",
+            "ZVdyaXRlUmVzcG9uc2UiOIrT5JMCMhIwCiF3cml0ZV9vYmplY3Rfc3BlYy5y",
+            "ZXNvdXJjZS5idWNrZXQSC3tidWNrZXQ9Kip9Eq4BChBRdWVyeVdyaXRlU3Rh",
+            "dHVzEiouZ29vZ2xlLnN0b3JhZ2UudjIuUXVlcnlXcml0ZVN0YXR1c1JlcXVl",
+            "c3QaKy5nb29nbGUuc3RvcmFnZS52Mi5RdWVyeVdyaXRlU3RhdHVzUmVzcG9u",
+            "c2UiQdpBCXVwbG9hZF9pZIrT5JMCLxItCgl1cGxvYWRfaWQSIHtidWNrZXQ9",
+            "cHJvamVjdHMvKi9idWNrZXRzLyp9LyoqEpYBCgpNb3ZlT2JqZWN0EiQuZ29v",
+            "Z2xlLnN0b3JhZ2UudjIuTW92ZU9iamVjdFJlcXVlc3QaGS5nb29nbGUuc3Rv",
+            "cmFnZS52Mi5PYmplY3QiR9pBJ2J1Y2tldCxzb3VyY2Vfb2JqZWN0LGRlc3Rp",
+            "bmF0aW9uX29iamVjdIrT5JMCFxIVCgZidWNrZXQSC3tidWNrZXQ9Kip9GqcC",
+            "ykEWc3RvcmFnZS5nb29nbGVhcGlzLmNvbdJBigJodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0ucmVhZC1vbmx5LGh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGV2c3RvcmFnZS5mdWxs",
+            "X2NvbnRyb2wsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kZXZz",
+            "dG9yYWdlLnJlYWRfb25seSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2RldnN0b3JhZ2UucmVhZF93cml0ZUL8AQoVY29tLmdvb2dsZS5zdG9y",
+            "YWdlLnYyQgxTdG9yYWdlUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9z",
+            "dG9yYWdlL2ludGVybmFsL2FwaXYyL3N0b3JhZ2VwYjtzdG9yYWdlcGKqAhdH",
+            "b29nbGUuQ2xvdWQuU3RvcmFnZS5WMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBp",
+            "cy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tj",
+            "cnlwdG9fa2V5fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -500,6 +522,7 @@ namespace Google.Cloud.Storage.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.QueryWriteStatusResponse), global::Google.Cloud.Storage.V2.QueryWriteStatusResponse.Parser, new[]{ "PersistedSize", "Resource" }, new[]{ "WriteStatus" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.RewriteObjectRequest), global::Google.Cloud.Storage.V2.RewriteObjectRequest.Parser, new[]{ "DestinationName", "DestinationBucket", "DestinationKmsKey", "Destination", "SourceBucket", "SourceObject", "SourceGeneration", "RewriteToken", "DestinationPredefinedAcl", "IfGenerationMatch", "IfGenerationNotMatch", "IfMetagenerationMatch", "IfMetagenerationNotMatch", "IfSourceGenerationMatch", "IfSourceGenerationNotMatch", "IfSourceMetagenerationMatch", "IfSourceMetagenerationNotMatch", "MaxBytesRewrittenPerCall", "CopySourceEncryptionAlgorithm", "CopySourceEncryptionKeyBytes", "CopySourceEncryptionKeySha256Bytes", "CommonObjectRequestParams", "ObjectChecksums" }, new[]{ "IfGenerationMatch", "IfGenerationNotMatch", "IfMetagenerationMatch", "IfMetagenerationNotMatch", "IfSourceGenerationMatch", "IfSourceGenerationNotMatch", "IfSourceMetagenerationMatch", "IfSourceMetagenerationNotMatch" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.RewriteResponse), global::Google.Cloud.Storage.V2.RewriteResponse.Parser, new[]{ "TotalBytesRewritten", "ObjectSize", "Done", "RewriteToken", "Resource" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.MoveObjectRequest), global::Google.Cloud.Storage.V2.MoveObjectRequest.Parser, new[]{ "Bucket", "SourceObject", "DestinationObject", "IfSourceGenerationMatch", "IfSourceGenerationNotMatch", "IfSourceMetagenerationMatch", "IfSourceMetagenerationNotMatch", "IfGenerationMatch", "IfGenerationNotMatch", "IfMetagenerationMatch", "IfMetagenerationNotMatch" }, new[]{ "IfSourceGenerationMatch", "IfSourceGenerationNotMatch", "IfSourceMetagenerationMatch", "IfSourceMetagenerationNotMatch", "IfGenerationMatch", "IfGenerationNotMatch", "IfMetagenerationMatch", "IfMetagenerationNotMatch" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.StartResumableWriteRequest), global::Google.Cloud.Storage.V2.StartResumableWriteRequest.Parser, new[]{ "WriteObjectSpec", "CommonObjectRequestParams", "ObjectChecksums" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.StartResumableWriteResponse), global::Google.Cloud.Storage.V2.StartResumableWriteResponse.Parser, new[]{ "UploadId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.UpdateObjectRequest), global::Google.Cloud.Storage.V2.UpdateObjectRequest.Parser, new[]{ "Object", "IfGenerationMatch", "IfGenerationNotMatch", "IfMetagenerationMatch", "IfMetagenerationNotMatch", "PredefinedAcl", "UpdateMask", "CommonObjectRequestParams" }, new[]{ "IfGenerationMatch", "IfGenerationNotMatch", "IfMetagenerationMatch", "IfMetagenerationNotMatch" }, null, null, null),
@@ -524,7 +547,7 @@ namespace Google.Cloud.Storage.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.ChecksummedData), global::Google.Cloud.Storage.V2.ChecksummedData.Parser, new[]{ "Content", "Crc32C" }, new[]{ "Crc32C" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.ObjectChecksums), global::Google.Cloud.Storage.V2.ObjectChecksums.Parser, new[]{ "Crc32C", "Md5Hash" }, new[]{ "Crc32C" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.CustomerEncryption), global::Google.Cloud.Storage.V2.CustomerEncryption.Parser, new[]{ "EncryptionAlgorithm", "KeySha256Bytes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.Object), global::Google.Cloud.Storage.V2.Object.Parser, new[]{ "Name", "Bucket", "Etag", "Generation", "RestoreToken", "Metageneration", "StorageClass", "Size", "ContentEncoding", "ContentDisposition", "CacheControl", "Acl", "ContentLanguage", "DeleteTime", "ContentType", "CreateTime", "ComponentCount", "Checksums", "UpdateTime", "KmsKey", "UpdateStorageClassTime", "TemporaryHold", "RetentionExpireTime", "Metadata", "EventBasedHold", "Owner", "CustomerEncryption", "CustomTime", "SoftDeleteTime", "HardDeleteTime" }, new[]{ "RestoreToken", "EventBasedHold", "SoftDeleteTime", "HardDeleteTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.Object), global::Google.Cloud.Storage.V2.Object.Parser, new[]{ "Name", "Bucket", "Etag", "Generation", "RestoreToken", "Metageneration", "StorageClass", "Size", "ContentEncoding", "ContentDisposition", "CacheControl", "Acl", "ContentLanguage", "DeleteTime", "FinalizeTime", "ContentType", "CreateTime", "ComponentCount", "Checksums", "UpdateTime", "KmsKey", "UpdateStorageClassTime", "TemporaryHold", "RetentionExpireTime", "Metadata", "EventBasedHold", "Owner", "CustomerEncryption", "CustomTime", "SoftDeleteTime", "HardDeleteTime" }, new[]{ "RestoreToken", "EventBasedHold", "SoftDeleteTime", "HardDeleteTime" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.ObjectAccessControl), global::Google.Cloud.Storage.V2.ObjectAccessControl.Parser, new[]{ "Role", "Id", "Entity", "EntityAlt", "EntityId", "Etag", "Email", "Domain", "ProjectTeam" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.ListObjectsResponse), global::Google.Cloud.Storage.V2.ListObjectsResponse.Parser, new[]{ "Objects", "Prefixes", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Storage.V2.ProjectTeam), global::Google.Cloud.Storage.V2.ProjectTeam.Parser, new[]{ "ProjectNumber", "Team" }, null, null, null, null),
@@ -8843,7 +8866,8 @@ namespace Google.Cloud.Storage.V2 {
     /// <summary>
     /// Checksums for the complete object. If the checksums computed by the service
     /// don't match the specified checksums the call will fail. May only be
-    /// provided in last request (with finish_write set).
+    /// provided in the first request or the
+    /// last request (with finish_write set).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12559,6 +12583,756 @@ namespace Google.Cloud.Storage.V2 {
   }
 
   /// <summary>
+  /// Request message for MoveObject.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MoveObjectRequest : pb::IMessage<MoveObjectRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MoveObjectRequest> _parser = new pb::MessageParser<MoveObjectRequest>(() => new MoveObjectRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MoveObjectRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[25]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveObjectRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveObjectRequest(MoveObjectRequest other) : this() {
+      _hasBits0 = other._hasBits0;
+      bucket_ = other.bucket_;
+      sourceObject_ = other.sourceObject_;
+      destinationObject_ = other.destinationObject_;
+      ifSourceGenerationMatch_ = other.ifSourceGenerationMatch_;
+      ifSourceGenerationNotMatch_ = other.ifSourceGenerationNotMatch_;
+      ifSourceMetagenerationMatch_ = other.ifSourceMetagenerationMatch_;
+      ifSourceMetagenerationNotMatch_ = other.ifSourceMetagenerationNotMatch_;
+      ifGenerationMatch_ = other.ifGenerationMatch_;
+      ifGenerationNotMatch_ = other.ifGenerationNotMatch_;
+      ifMetagenerationMatch_ = other.ifMetagenerationMatch_;
+      ifMetagenerationNotMatch_ = other.ifMetagenerationNotMatch_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MoveObjectRequest Clone() {
+      return new MoveObjectRequest(this);
+    }
+
+    /// <summary>Field number for the "bucket" field.</summary>
+    public const int BucketFieldNumber = 1;
+    private string bucket_ = "";
+    /// <summary>
+    /// Required. Name of the bucket in which the object resides.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Bucket {
+      get { return bucket_; }
+      set {
+        bucket_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_object" field.</summary>
+    public const int SourceObjectFieldNumber = 2;
+    private string sourceObject_ = "";
+    /// <summary>
+    /// Required. Name of the source object.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceObject {
+      get { return sourceObject_; }
+      set {
+        sourceObject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "destination_object" field.</summary>
+    public const int DestinationObjectFieldNumber = 3;
+    private string destinationObject_ = "";
+    /// <summary>
+    /// Required. Name of the destination object.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DestinationObject {
+      get { return destinationObject_; }
+      set {
+        destinationObject_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "if_source_generation_match" field.</summary>
+    public const int IfSourceGenerationMatchFieldNumber = 4;
+    private readonly static long IfSourceGenerationMatchDefaultValue = 0L;
+
+    private long ifSourceGenerationMatch_;
+    /// <summary>
+    /// Optional. Makes the operation conditional on whether the source object's
+    /// current generation matches the given value. `if_source_generation_match`
+    /// and `if_source_generation_not_match` conditions are mutually exclusive:
+    /// it's an error for both of them to be set in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfSourceGenerationMatch {
+      get { if ((_hasBits0 & 1) != 0) { return ifSourceGenerationMatch_; } else { return IfSourceGenerationMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        ifSourceGenerationMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_source_generation_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfSourceGenerationMatch {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "if_source_generation_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfSourceGenerationMatch() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "if_source_generation_not_match" field.</summary>
+    public const int IfSourceGenerationNotMatchFieldNumber = 5;
+    private readonly static long IfSourceGenerationNotMatchDefaultValue = 0L;
+
+    private long ifSourceGenerationNotMatch_;
+    /// <summary>
+    /// Optional. Makes the operation conditional on whether the source object's
+    /// current generation does not match the given value.
+    /// `if_source_generation_match` and `if_source_generation_not_match`
+    /// conditions are mutually exclusive: it's an error for both of them to be set
+    /// in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfSourceGenerationNotMatch {
+      get { if ((_hasBits0 & 2) != 0) { return ifSourceGenerationNotMatch_; } else { return IfSourceGenerationNotMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        ifSourceGenerationNotMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_source_generation_not_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfSourceGenerationNotMatch {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "if_source_generation_not_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfSourceGenerationNotMatch() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "if_source_metageneration_match" field.</summary>
+    public const int IfSourceMetagenerationMatchFieldNumber = 6;
+    private readonly static long IfSourceMetagenerationMatchDefaultValue = 0L;
+
+    private long ifSourceMetagenerationMatch_;
+    /// <summary>
+    /// Optional. Makes the operation conditional on whether the source object's
+    /// current metageneration matches the given value.
+    /// `if_source_metageneration_match` and `if_source_metageneration_not_match`
+    /// conditions are mutually exclusive: it's an error for both of them to be set
+    /// in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfSourceMetagenerationMatch {
+      get { if ((_hasBits0 & 4) != 0) { return ifSourceMetagenerationMatch_; } else { return IfSourceMetagenerationMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        ifSourceMetagenerationMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_source_metageneration_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfSourceMetagenerationMatch {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "if_source_metageneration_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfSourceMetagenerationMatch() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "if_source_metageneration_not_match" field.</summary>
+    public const int IfSourceMetagenerationNotMatchFieldNumber = 7;
+    private readonly static long IfSourceMetagenerationNotMatchDefaultValue = 0L;
+
+    private long ifSourceMetagenerationNotMatch_;
+    /// <summary>
+    /// Optional. Makes the operation conditional on whether the source object's
+    /// current metageneration does not match the given value.
+    /// `if_source_metageneration_match` and `if_source_metageneration_not_match`
+    /// conditions are mutually exclusive: it's an error for both of them to be set
+    /// in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfSourceMetagenerationNotMatch {
+      get { if ((_hasBits0 & 8) != 0) { return ifSourceMetagenerationNotMatch_; } else { return IfSourceMetagenerationNotMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        ifSourceMetagenerationNotMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_source_metageneration_not_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfSourceMetagenerationNotMatch {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "if_source_metageneration_not_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfSourceMetagenerationNotMatch() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "if_generation_match" field.</summary>
+    public const int IfGenerationMatchFieldNumber = 8;
+    private readonly static long IfGenerationMatchDefaultValue = 0L;
+
+    private long ifGenerationMatch_;
+    /// <summary>
+    /// Optional. Makes the operation conditional on whether the destination
+    /// object's current generation matches the given value. Setting to 0 makes the
+    /// operation succeed only if there are no live versions of the object.
+    /// `if_generation_match` and `if_generation_not_match` conditions are mutually
+    /// exclusive: it's an error for both of them to be set in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfGenerationMatch {
+      get { if ((_hasBits0 & 16) != 0) { return ifGenerationMatch_; } else { return IfGenerationMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        ifGenerationMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_generation_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfGenerationMatch {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "if_generation_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfGenerationMatch() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "if_generation_not_match" field.</summary>
+    public const int IfGenerationNotMatchFieldNumber = 9;
+    private readonly static long IfGenerationNotMatchDefaultValue = 0L;
+
+    private long ifGenerationNotMatch_;
+    /// <summary>
+    /// Optional. Makes the operation conditional on whether the destination
+    /// object's current generation does not match the given value. If no live
+    /// object exists, the precondition fails. Setting to 0 makes the operation
+    /// succeed only if there is a live version of the object.
+    /// `if_generation_match` and `if_generation_not_match` conditions are mutually
+    /// exclusive: it's an error for both of them to be set in the request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfGenerationNotMatch {
+      get { if ((_hasBits0 & 32) != 0) { return ifGenerationNotMatch_; } else { return IfGenerationNotMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        ifGenerationNotMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_generation_not_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfGenerationNotMatch {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "if_generation_not_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfGenerationNotMatch() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "if_metageneration_match" field.</summary>
+    public const int IfMetagenerationMatchFieldNumber = 10;
+    private readonly static long IfMetagenerationMatchDefaultValue = 0L;
+
+    private long ifMetagenerationMatch_;
+    /// <summary>
+    /// Optional. Makes the operation conditional on whether the destination
+    /// object's current metageneration matches the given value.
+    /// `if_metageneration_match` and `if_metageneration_not_match` conditions are
+    /// mutually exclusive: it's an error for both of them to be set in the
+    /// request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfMetagenerationMatch {
+      get { if ((_hasBits0 & 64) != 0) { return ifMetagenerationMatch_; } else { return IfMetagenerationMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        ifMetagenerationMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_metageneration_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfMetagenerationMatch {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "if_metageneration_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfMetagenerationMatch() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "if_metageneration_not_match" field.</summary>
+    public const int IfMetagenerationNotMatchFieldNumber = 11;
+    private readonly static long IfMetagenerationNotMatchDefaultValue = 0L;
+
+    private long ifMetagenerationNotMatch_;
+    /// <summary>
+    /// Optional. Makes the operation conditional on whether the destination
+    /// object's current metageneration does not match the given value.
+    /// `if_metageneration_match` and `if_metageneration_not_match` conditions are
+    /// mutually exclusive: it's an error for both of them to be set in the
+    /// request.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long IfMetagenerationNotMatch {
+      get { if ((_hasBits0 & 128) != 0) { return ifMetagenerationNotMatch_; } else { return IfMetagenerationNotMatchDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        ifMetagenerationNotMatch_ = value;
+      }
+    }
+    /// <summary>Gets whether the "if_metageneration_not_match" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasIfMetagenerationNotMatch {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "if_metageneration_not_match" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIfMetagenerationNotMatch() {
+      _hasBits0 &= ~128;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MoveObjectRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MoveObjectRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Bucket != other.Bucket) return false;
+      if (SourceObject != other.SourceObject) return false;
+      if (DestinationObject != other.DestinationObject) return false;
+      if (IfSourceGenerationMatch != other.IfSourceGenerationMatch) return false;
+      if (IfSourceGenerationNotMatch != other.IfSourceGenerationNotMatch) return false;
+      if (IfSourceMetagenerationMatch != other.IfSourceMetagenerationMatch) return false;
+      if (IfSourceMetagenerationNotMatch != other.IfSourceMetagenerationNotMatch) return false;
+      if (IfGenerationMatch != other.IfGenerationMatch) return false;
+      if (IfGenerationNotMatch != other.IfGenerationNotMatch) return false;
+      if (IfMetagenerationMatch != other.IfMetagenerationMatch) return false;
+      if (IfMetagenerationNotMatch != other.IfMetagenerationNotMatch) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Bucket.Length != 0) hash ^= Bucket.GetHashCode();
+      if (SourceObject.Length != 0) hash ^= SourceObject.GetHashCode();
+      if (DestinationObject.Length != 0) hash ^= DestinationObject.GetHashCode();
+      if (HasIfSourceGenerationMatch) hash ^= IfSourceGenerationMatch.GetHashCode();
+      if (HasIfSourceGenerationNotMatch) hash ^= IfSourceGenerationNotMatch.GetHashCode();
+      if (HasIfSourceMetagenerationMatch) hash ^= IfSourceMetagenerationMatch.GetHashCode();
+      if (HasIfSourceMetagenerationNotMatch) hash ^= IfSourceMetagenerationNotMatch.GetHashCode();
+      if (HasIfGenerationMatch) hash ^= IfGenerationMatch.GetHashCode();
+      if (HasIfGenerationNotMatch) hash ^= IfGenerationNotMatch.GetHashCode();
+      if (HasIfMetagenerationMatch) hash ^= IfMetagenerationMatch.GetHashCode();
+      if (HasIfMetagenerationNotMatch) hash ^= IfMetagenerationNotMatch.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Bucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Bucket);
+      }
+      if (SourceObject.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceObject);
+      }
+      if (DestinationObject.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DestinationObject);
+      }
+      if (HasIfSourceGenerationMatch) {
+        output.WriteRawTag(32);
+        output.WriteInt64(IfSourceGenerationMatch);
+      }
+      if (HasIfSourceGenerationNotMatch) {
+        output.WriteRawTag(40);
+        output.WriteInt64(IfSourceGenerationNotMatch);
+      }
+      if (HasIfSourceMetagenerationMatch) {
+        output.WriteRawTag(48);
+        output.WriteInt64(IfSourceMetagenerationMatch);
+      }
+      if (HasIfSourceMetagenerationNotMatch) {
+        output.WriteRawTag(56);
+        output.WriteInt64(IfSourceMetagenerationNotMatch);
+      }
+      if (HasIfGenerationMatch) {
+        output.WriteRawTag(64);
+        output.WriteInt64(IfGenerationMatch);
+      }
+      if (HasIfGenerationNotMatch) {
+        output.WriteRawTag(72);
+        output.WriteInt64(IfGenerationNotMatch);
+      }
+      if (HasIfMetagenerationMatch) {
+        output.WriteRawTag(80);
+        output.WriteInt64(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        output.WriteRawTag(88);
+        output.WriteInt64(IfMetagenerationNotMatch);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Bucket.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Bucket);
+      }
+      if (SourceObject.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceObject);
+      }
+      if (DestinationObject.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DestinationObject);
+      }
+      if (HasIfSourceGenerationMatch) {
+        output.WriteRawTag(32);
+        output.WriteInt64(IfSourceGenerationMatch);
+      }
+      if (HasIfSourceGenerationNotMatch) {
+        output.WriteRawTag(40);
+        output.WriteInt64(IfSourceGenerationNotMatch);
+      }
+      if (HasIfSourceMetagenerationMatch) {
+        output.WriteRawTag(48);
+        output.WriteInt64(IfSourceMetagenerationMatch);
+      }
+      if (HasIfSourceMetagenerationNotMatch) {
+        output.WriteRawTag(56);
+        output.WriteInt64(IfSourceMetagenerationNotMatch);
+      }
+      if (HasIfGenerationMatch) {
+        output.WriteRawTag(64);
+        output.WriteInt64(IfGenerationMatch);
+      }
+      if (HasIfGenerationNotMatch) {
+        output.WriteRawTag(72);
+        output.WriteInt64(IfGenerationNotMatch);
+      }
+      if (HasIfMetagenerationMatch) {
+        output.WriteRawTag(80);
+        output.WriteInt64(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        output.WriteRawTag(88);
+        output.WriteInt64(IfMetagenerationNotMatch);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Bucket.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Bucket);
+      }
+      if (SourceObject.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceObject);
+      }
+      if (DestinationObject.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DestinationObject);
+      }
+      if (HasIfSourceGenerationMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfSourceGenerationMatch);
+      }
+      if (HasIfSourceGenerationNotMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfSourceGenerationNotMatch);
+      }
+      if (HasIfSourceMetagenerationMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfSourceMetagenerationMatch);
+      }
+      if (HasIfSourceMetagenerationNotMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfSourceMetagenerationNotMatch);
+      }
+      if (HasIfGenerationMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfGenerationMatch);
+      }
+      if (HasIfGenerationNotMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfGenerationNotMatch);
+      }
+      if (HasIfMetagenerationMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfMetagenerationMatch);
+      }
+      if (HasIfMetagenerationNotMatch) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(IfMetagenerationNotMatch);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MoveObjectRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Bucket.Length != 0) {
+        Bucket = other.Bucket;
+      }
+      if (other.SourceObject.Length != 0) {
+        SourceObject = other.SourceObject;
+      }
+      if (other.DestinationObject.Length != 0) {
+        DestinationObject = other.DestinationObject;
+      }
+      if (other.HasIfSourceGenerationMatch) {
+        IfSourceGenerationMatch = other.IfSourceGenerationMatch;
+      }
+      if (other.HasIfSourceGenerationNotMatch) {
+        IfSourceGenerationNotMatch = other.IfSourceGenerationNotMatch;
+      }
+      if (other.HasIfSourceMetagenerationMatch) {
+        IfSourceMetagenerationMatch = other.IfSourceMetagenerationMatch;
+      }
+      if (other.HasIfSourceMetagenerationNotMatch) {
+        IfSourceMetagenerationNotMatch = other.IfSourceMetagenerationNotMatch;
+      }
+      if (other.HasIfGenerationMatch) {
+        IfGenerationMatch = other.IfGenerationMatch;
+      }
+      if (other.HasIfGenerationNotMatch) {
+        IfGenerationNotMatch = other.IfGenerationNotMatch;
+      }
+      if (other.HasIfMetagenerationMatch) {
+        IfMetagenerationMatch = other.IfMetagenerationMatch;
+      }
+      if (other.HasIfMetagenerationNotMatch) {
+        IfMetagenerationNotMatch = other.IfMetagenerationNotMatch;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Bucket = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceObject = input.ReadString();
+            break;
+          }
+          case 26: {
+            DestinationObject = input.ReadString();
+            break;
+          }
+          case 32: {
+            IfSourceGenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            IfSourceGenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            IfSourceMetagenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            IfSourceMetagenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 64: {
+            IfGenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 72: {
+            IfGenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            IfMetagenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 88: {
+            IfMetagenerationNotMatch = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Bucket = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceObject = input.ReadString();
+            break;
+          }
+          case 26: {
+            DestinationObject = input.ReadString();
+            break;
+          }
+          case 32: {
+            IfSourceGenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            IfSourceGenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            IfSourceMetagenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            IfSourceMetagenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 64: {
+            IfGenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 72: {
+            IfGenerationNotMatch = input.ReadInt64();
+            break;
+          }
+          case 80: {
+            IfMetagenerationMatch = input.ReadInt64();
+            break;
+          }
+          case 88: {
+            IfMetagenerationNotMatch = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message StartResumableWrite.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -12576,7 +13350,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12883,7 +13657,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13081,7 +13855,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13665,7 +14439,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13944,7 +14718,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14207,7 +14981,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20270,7 +21044,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20818,7 +21592,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21071,7 +21845,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21333,7 +22107,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21571,7 +22345,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21606,6 +22380,7 @@ namespace Google.Cloud.Storage.V2 {
       acl_ = other.acl_.Clone();
       contentLanguage_ = other.contentLanguage_;
       deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
+      finalizeTime_ = other.finalizeTime_ != null ? other.finalizeTime_.Clone() : null;
       contentType_ = other.contentType_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       componentCount_ = other.componentCount_;
@@ -21876,6 +22651,21 @@ namespace Google.Cloud.Storage.V2 {
       get { return deleteTime_; }
       set {
         deleteTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "finalize_time" field.</summary>
+    public const int FinalizeTimeFieldNumber = 36;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp finalizeTime_;
+    /// <summary>
+    /// Output only. The time when the object was finalized.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp FinalizeTime {
+      get { return finalizeTime_; }
+      set {
+        finalizeTime_ = value;
       }
     }
 
@@ -22205,6 +22995,7 @@ namespace Google.Cloud.Storage.V2 {
       if(!acl_.Equals(other.acl_)) return false;
       if (ContentLanguage != other.ContentLanguage) return false;
       if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      if (!object.Equals(FinalizeTime, other.FinalizeTime)) return false;
       if (ContentType != other.ContentType) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (ComponentCount != other.ComponentCount) return false;
@@ -22242,6 +23033,7 @@ namespace Google.Cloud.Storage.V2 {
       hash ^= acl_.GetHashCode();
       if (ContentLanguage.Length != 0) hash ^= ContentLanguage.GetHashCode();
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      if (finalizeTime_ != null) hash ^= FinalizeTime.GetHashCode();
       if (ContentType.Length != 0) hash ^= ContentType.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (ComponentCount != 0) hash ^= ComponentCount.GetHashCode();
@@ -22390,6 +23182,10 @@ namespace Google.Cloud.Storage.V2 {
         output.WriteRawTag(154, 2);
         output.WriteString(RestoreToken);
       }
+      if (finalizeTime_ != null) {
+        output.WriteRawTag(162, 2);
+        output.WriteMessage(FinalizeTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -22514,6 +23310,10 @@ namespace Google.Cloud.Storage.V2 {
         output.WriteRawTag(154, 2);
         output.WriteString(RestoreToken);
       }
+      if (finalizeTime_ != null) {
+        output.WriteRawTag(162, 2);
+        output.WriteMessage(FinalizeTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -22563,6 +23363,9 @@ namespace Google.Cloud.Storage.V2 {
       }
       if (deleteTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
+      if (finalizeTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FinalizeTime);
       }
       if (ContentType.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ContentType);
@@ -22664,6 +23467,12 @@ namespace Google.Cloud.Storage.V2 {
           DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DeleteTime.MergeFrom(other.DeleteTime);
+      }
+      if (other.finalizeTime_ != null) {
+        if (finalizeTime_ == null) {
+          FinalizeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        FinalizeTime.MergeFrom(other.FinalizeTime);
       }
       if (other.ContentType.Length != 0) {
         ContentType = other.ContentType;
@@ -22909,6 +23718,13 @@ namespace Google.Cloud.Storage.V2 {
             RestoreToken = input.ReadString();
             break;
           }
+          case 290: {
+            if (finalizeTime_ == null) {
+              FinalizeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinalizeTime);
+            break;
+          }
         }
       }
     #endif
@@ -23077,6 +23893,13 @@ namespace Google.Cloud.Storage.V2 {
             RestoreToken = input.ReadString();
             break;
           }
+          case 290: {
+            if (finalizeTime_ == null) {
+              FinalizeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(FinalizeTime);
+            break;
+          }
         }
       }
     }
@@ -23102,7 +23925,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23651,7 +24474,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23907,7 +24730,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24143,7 +24966,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -24379,7 +25202,7 @@ namespace Google.Cloud.Storage.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[40]; }
+      get { return global::Google.Cloud.Storage.V2.StorageReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
