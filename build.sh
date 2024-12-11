@@ -58,16 +58,15 @@ while (( "$#" )); do
   shift
 done
 
-# Build and test the tools, but only on Windows
-[[ "$OS" == "Windows_NT" ]] && tools="tools" || tools=""
-
-# Build ReleaseManager first separately, so that we get any build messages
-# here rather than when we try to run it
-dotnet build tools/Google.Cloud.Tools.ReleaseManager
-
 # If no APIs were specified explicitly, build all of them (and tools on Windows)
 if [[ ${#apis[@]} -eq 0 && $diff == false ]]
 then
+  # Build and test the tools, but only on Windows
+  [[ "$OS" == "Windows_NT" ]] && tools="tools" || tools=""
+
+  # Build ReleaseManager first separately, so that we get any build messages
+  # here rather than when we try to run it
+  dotnet build tools/Google.Cloud.Tools.ReleaseManager
   apis=(${tools} $(dotnet run --no-build --no-restore --project tools/Google.Cloud.Tools.ReleaseManager -- query-api-catalog list))
 fi
 
@@ -170,8 +169,8 @@ log_build_action "(End) Building"
 
 if [[ "$runtests" = true ]]
 then
-
   log_build_action "(Start) Client creation tests"
+  # TODO: allow a ReleaseManager binary to be passed in instead, if we've got one already.
   dotnet build -nologo -clp:NoSummary -v quiet tools/Google.Cloud.Tools.ReleaseManager
   for api in ${apis[*]}
   do
