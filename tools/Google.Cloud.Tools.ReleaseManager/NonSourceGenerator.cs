@@ -491,8 +491,10 @@ internal sealed class NonSourceGenerator
         }
 
         var allLines = prefixLines.Concat(projectLines).Concat(betweenLines).Concat(postSolutionLines).Concat(suffixLines);
-        string text = string.Join("\r\n", allLines);
-        File.WriteAllText(solutionFile, text);
+        // Note: this deliberately uses the platform-default line ending. That's how our git repository is set up (core.crlf)
+        // so we *expect* to have CRLF on Windows and LF on Linux. We have GitHub actions to detect any CRLF files in a PR,
+        // so we need to make sure that when an action on Linux rewrites solution files, it doesn't actually change anything.
+        File.WriteAllLines(solutionFile, allLines);
 
         void AddProject(string name, string path)
         {
