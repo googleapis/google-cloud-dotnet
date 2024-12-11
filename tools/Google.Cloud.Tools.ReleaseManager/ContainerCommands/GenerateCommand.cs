@@ -21,7 +21,7 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 /// <summary>
 /// Generates files for either a single API or all configured APIs. Expected options:
-/// - api-root: effectively the googleapis directory. We take a copy of this before running generation, unless we're running raw generation.
+/// - api-root: effectively the googleapis directory.
 /// - generator-input: optional, when omitted, run "raw generation"
 /// - output: root folder for result; required, must exist
 /// - api-path: (related to api-root) e.g. google/cloud/functions/v2
