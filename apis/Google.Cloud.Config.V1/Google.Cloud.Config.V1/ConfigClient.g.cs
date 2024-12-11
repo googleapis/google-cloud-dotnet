@@ -1764,7 +1764,7 @@ namespace Google.Cloud.Config.V1
             GetResourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
+        /// Lists [Resources][google.cloud.config.v1.Resource] in a given revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1773,7 +1773,7 @@ namespace Google.Cloud.Config.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
+        /// Lists [Resources][google.cloud.config.v1.Resource] in a given revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1782,7 +1782,7 @@ namespace Google.Cloud.Config.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
+        /// Lists [Resources][google.cloud.config.v1.Resource] in a given revision.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent in whose context the Resources are listed. The parent
@@ -1817,7 +1817,7 @@ namespace Google.Cloud.Config.V1
         }
 
         /// <summary>
-        /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
+        /// Lists [Resources][google.cloud.config.v1.Resource] in a given revision.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent in whose context the Resources are listed. The parent
@@ -1852,7 +1852,7 @@ namespace Google.Cloud.Config.V1
         }
 
         /// <summary>
-        /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
+        /// Lists [Resources][google.cloud.config.v1.Resource] in a given revision.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent in whose context the Resources are listed. The parent
@@ -1887,7 +1887,7 @@ namespace Google.Cloud.Config.V1
         }
 
         /// <summary>
-        /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
+        /// Lists [Resources][google.cloud.config.v1.Resource] in a given revision.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent in whose context the Resources are listed. The parent
@@ -3986,7 +3986,7 @@ namespace Google.Cloud.Config.V1
         }
 
         /// <summary>
-        /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
+        /// Lists [Resources][google.cloud.config.v1.Resource] in a given revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3998,7 +3998,7 @@ namespace Google.Cloud.Config.V1
         }
 
         /// <summary>
-        /// Lists [Resource][google.cloud.config.v1.Resource]s in a given revision.
+        /// Lists [Resources][google.cloud.config.v1.Resource] in a given revision.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
