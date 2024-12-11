@@ -155,6 +155,8 @@ namespace Google.Cloud.Storage.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.QueryWriteStatusRequest> __Marshaller_google_storage_v2_QueryWriteStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.QueryWriteStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.QueryWriteStatusResponse> __Marshaller_google_storage_v2_QueryWriteStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.QueryWriteStatusResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.V2.MoveObjectRequest> __Marshaller_google_storage_v2_MoveObjectRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.V2.MoveObjectRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Storage.V2.DeleteBucketRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteBucket = new grpc::Method<global::Google.Cloud.Storage.V2.DeleteBucketRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -331,6 +333,14 @@ namespace Google.Cloud.Storage.V2 {
         "QueryWriteStatus",
         __Marshaller_google_storage_v2_QueryWriteStatusRequest,
         __Marshaller_google_storage_v2_QueryWriteStatusResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.V2.MoveObjectRequest, global::Google.Cloud.Storage.V2.Object> __Method_MoveObject = new grpc::Method<global::Google.Cloud.Storage.V2.MoveObjectRequest, global::Google.Cloud.Storage.V2.Object>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MoveObject",
+        __Marshaller_google_storage_v2_MoveObjectRequest,
+        __Marshaller_google_storage_v2_Object);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -715,6 +725,18 @@ namespace Google.Cloud.Storage.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.QueryWriteStatusResponse> QueryWriteStatus(global::Google.Cloud.Storage.V2.QueryWriteStatusRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Moves the source object to the destination object in the same bucket.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.V2.Object> MoveObject(global::Google.Cloud.Storage.V2.MoveObjectRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2028,6 +2050,54 @@ namespace Google.Cloud.Storage.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryWriteStatus, null, options, request);
       }
+      /// <summary>
+      /// Moves the source object to the destination object in the same bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.V2.Object MoveObject(global::Google.Cloud.Storage.V2.MoveObjectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MoveObject(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Moves the source object to the destination object in the same bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.V2.Object MoveObject(global::Google.Cloud.Storage.V2.MoveObjectRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MoveObject, null, options, request);
+      }
+      /// <summary>
+      /// Moves the source object to the destination object in the same bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.Object> MoveObjectAsync(global::Google.Cloud.Storage.V2.MoveObjectRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MoveObjectAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Moves the source object to the destination object in the same bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.V2.Object> MoveObjectAsync(global::Google.Cloud.Storage.V2.MoveObjectRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MoveObject, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageClient NewInstance(ClientBaseConfiguration configuration)
@@ -2063,7 +2133,8 @@ namespace Google.Cloud.Storage.V2 {
           .AddMethod(__Method_ListObjects, serviceImpl.ListObjects)
           .AddMethod(__Method_RewriteObject, serviceImpl.RewriteObject)
           .AddMethod(__Method_StartResumableWrite, serviceImpl.StartResumableWrite)
-          .AddMethod(__Method_QueryWriteStatus, serviceImpl.QueryWriteStatus).Build();
+          .AddMethod(__Method_QueryWriteStatus, serviceImpl.QueryWriteStatus)
+          .AddMethod(__Method_MoveObject, serviceImpl.MoveObject).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2095,6 +2166,7 @@ namespace Google.Cloud.Storage.V2 {
       serviceBinder.AddMethod(__Method_RewriteObject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.RewriteObjectRequest, global::Google.Cloud.Storage.V2.RewriteResponse>(serviceImpl.RewriteObject));
       serviceBinder.AddMethod(__Method_StartResumableWrite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.StartResumableWriteRequest, global::Google.Cloud.Storage.V2.StartResumableWriteResponse>(serviceImpl.StartResumableWrite));
       serviceBinder.AddMethod(__Method_QueryWriteStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.QueryWriteStatusRequest, global::Google.Cloud.Storage.V2.QueryWriteStatusResponse>(serviceImpl.QueryWriteStatus));
+      serviceBinder.AddMethod(__Method_MoveObject, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.V2.MoveObjectRequest, global::Google.Cloud.Storage.V2.Object>(serviceImpl.MoveObject));
     }
 
   }

@@ -2333,5 +2333,120 @@ namespace GoogleCSharpSnippets
             gcsv::QueryWriteStatusResponse response = await storageClient.QueryWriteStatusAsync(uploadId);
             // End snippet
         }
+
+        /// <summary>Snippet for MoveObject</summary>
+        public void MoveObjectRequestObject()
+        {
+            // Snippet: MoveObject(MoveObjectRequest, CallSettings)
+            // Create client
+            gcsv::StorageClient storageClient = gcsv::StorageClient.Create();
+            // Initialize request argument(s)
+            gcsv::MoveObjectRequest request = new gcsv::MoveObjectRequest
+            {
+                BucketAsBucketName = gcsv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                SourceObject = "",
+                DestinationObject = "",
+                IfSourceGenerationMatch = 0L,
+                IfSourceGenerationNotMatch = 0L,
+                IfSourceMetagenerationMatch = 0L,
+                IfSourceMetagenerationNotMatch = 0L,
+                IfGenerationMatch = 0L,
+                IfGenerationNotMatch = 0L,
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+            };
+            // Make the request
+            gcsv::Object response = storageClient.MoveObject(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveObjectAsync</summary>
+        public async Task MoveObjectRequestObjectAsync()
+        {
+            // Snippet: MoveObjectAsync(MoveObjectRequest, CallSettings)
+            // Additional: MoveObjectAsync(MoveObjectRequest, CancellationToken)
+            // Create client
+            gcsv::StorageClient storageClient = await gcsv::StorageClient.CreateAsync();
+            // Initialize request argument(s)
+            gcsv::MoveObjectRequest request = new gcsv::MoveObjectRequest
+            {
+                BucketAsBucketName = gcsv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                SourceObject = "",
+                DestinationObject = "",
+                IfSourceGenerationMatch = 0L,
+                IfSourceGenerationNotMatch = 0L,
+                IfSourceMetagenerationMatch = 0L,
+                IfSourceMetagenerationNotMatch = 0L,
+                IfGenerationMatch = 0L,
+                IfGenerationNotMatch = 0L,
+                IfMetagenerationMatch = 0L,
+                IfMetagenerationNotMatch = 0L,
+            };
+            // Make the request
+            gcsv::Object response = await storageClient.MoveObjectAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveObject</summary>
+        public void MoveObject()
+        {
+            // Snippet: MoveObject(string, string, string, CallSettings)
+            // Create client
+            gcsv::StorageClient storageClient = gcsv::StorageClient.Create();
+            // Initialize request argument(s)
+            string bucket = "projects/[PROJECT]/buckets/[BUCKET]";
+            string sourceObject = "";
+            string destinationObject = "";
+            // Make the request
+            gcsv::Object response = storageClient.MoveObject(bucket, sourceObject, destinationObject);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveObjectAsync</summary>
+        public async Task MoveObjectAsync()
+        {
+            // Snippet: MoveObjectAsync(string, string, string, CallSettings)
+            // Additional: MoveObjectAsync(string, string, string, CancellationToken)
+            // Create client
+            gcsv::StorageClient storageClient = await gcsv::StorageClient.CreateAsync();
+            // Initialize request argument(s)
+            string bucket = "projects/[PROJECT]/buckets/[BUCKET]";
+            string sourceObject = "";
+            string destinationObject = "";
+            // Make the request
+            gcsv::Object response = await storageClient.MoveObjectAsync(bucket, sourceObject, destinationObject);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveObject</summary>
+        public void MoveObjectResourceNames()
+        {
+            // Snippet: MoveObject(BucketName, string, string, CallSettings)
+            // Create client
+            gcsv::StorageClient storageClient = gcsv::StorageClient.Create();
+            // Initialize request argument(s)
+            gcsv::BucketName bucket = gcsv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            string sourceObject = "";
+            string destinationObject = "";
+            // Make the request
+            gcsv::Object response = storageClient.MoveObject(bucket, sourceObject, destinationObject);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MoveObjectAsync</summary>
+        public async Task MoveObjectResourceNamesAsync()
+        {
+            // Snippet: MoveObjectAsync(BucketName, string, string, CallSettings)
+            // Additional: MoveObjectAsync(BucketName, string, string, CancellationToken)
+            // Create client
+            gcsv::StorageClient storageClient = await gcsv::StorageClient.CreateAsync();
+            // Initialize request argument(s)
+            gcsv::BucketName bucket = gcsv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            string sourceObject = "";
+            string destinationObject = "";
+            // Make the request
+            gcsv::Object response = await storageClient.MoveObjectAsync(bucket, sourceObject, destinationObject);
+            // End snippet
+        }
     }
 }

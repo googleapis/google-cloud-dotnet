@@ -82,6 +82,12 @@
                 "LockBucketRetentionPolicyAsync"
               ]
             },
+            "MoveObject": {
+              "methods": [
+                "MoveObject",
+                "MoveObjectAsync"
+              ]
+            },
             "QueryWriteStatus": {
               "methods": [
                 "QueryWriteStatus",

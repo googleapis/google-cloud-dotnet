@@ -668,6 +668,16 @@ namespace Google.Cloud.Storage.V2
         }
     }
 
+    public partial class MoveObjectRequest
+    {
+        /// <summary><see cref="BucketName"/>-typed view over the <see cref="Bucket"/> resource name property.</summary>
+        public BucketName BucketAsBucketName
+        {
+            get => string.IsNullOrEmpty(Bucket) ? null : BucketName.Parse(Bucket, allowUnparsed: true);
+            set => Bucket = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Bucket
     {
         /// <summary>

@@ -5464,6 +5464,325 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "storage_v2_generated_Storage_MoveObject_sync",
+      "title": "MoveObjectRequestObject",
+      "description": "Snippet for MoveObject",
+      "file": "StorageClient.MoveObjectRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveObject",
+        "fullName": "Google.Cloud.Storage.V2.StorageClient.MoveObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.V2.MoveObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.V2.Object",
+        "client": {
+          "shortName": "StorageClient",
+          "fullName": "Google.Cloud.Storage.V2.StorageClient"
+        },
+        "method": {
+          "shortName": "MoveObject",
+          "fullName": "google.storage.v2.Storage.MoveObject",
+          "service": {
+            "shortName": "Storage",
+            "fullName": "google.storage.v2.Storage"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_Storage_MoveObject_async",
+      "title": "MoveObjectRequestObjectAsync",
+      "description": "Snippet for MoveObjectAsync",
+      "file": "StorageClient.MoveObjectRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveObjectAsync",
+        "fullName": "Google.Cloud.Storage.V2.StorageClient.MoveObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.V2.MoveObjectRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.V2.Object>",
+        "client": {
+          "shortName": "StorageClient",
+          "fullName": "Google.Cloud.Storage.V2.StorageClient"
+        },
+        "method": {
+          "shortName": "MoveObject",
+          "fullName": "google.storage.v2.Storage.MoveObject",
+          "service": {
+            "shortName": "Storage",
+            "fullName": "google.storage.v2.Storage"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 53,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_Storage_MoveObject_sync_flattened",
+      "title": "MoveObject",
+      "description": "Snippet for MoveObject",
+      "file": "StorageClient.MoveObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveObject",
+        "fullName": "Google.Cloud.Storage.V2.StorageClient.MoveObject",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "bucket"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceObject"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationObject"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.V2.Object",
+        "client": {
+          "shortName": "StorageClient",
+          "fullName": "Google.Cloud.Storage.V2.StorageClient"
+        },
+        "method": {
+          "shortName": "MoveObject",
+          "fullName": "google.storage.v2.Storage.MoveObject",
+          "service": {
+            "shortName": "Storage",
+            "fullName": "google.storage.v2.Storage"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_Storage_MoveObject_async_flattened",
+      "title": "MoveObjectAsync",
+      "description": "Snippet for MoveObjectAsync",
+      "file": "StorageClient.MoveObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveObjectAsync",
+        "fullName": "Google.Cloud.Storage.V2.StorageClient.MoveObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "bucket"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceObject"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationObject"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.V2.Object>",
+        "client": {
+          "shortName": "StorageClient",
+          "fullName": "Google.Cloud.Storage.V2.StorageClient"
+        },
+        "method": {
+          "shortName": "MoveObject",
+          "fullName": "google.storage.v2.Storage.MoveObject",
+          "service": {
+            "shortName": "Storage",
+            "fullName": "google.storage.v2.Storage"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_Storage_MoveObject_sync_flattened_resourceNames",
+      "title": "MoveObjectResourceNames",
+      "description": "Snippet for MoveObject",
+      "file": "StorageClient.MoveObjectResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveObject",
+        "fullName": "Google.Cloud.Storage.V2.StorageClient.MoveObject",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.V2.BucketName",
+            "name": "bucket"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceObject"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationObject"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.V2.Object",
+        "client": {
+          "shortName": "StorageClient",
+          "fullName": "Google.Cloud.Storage.V2.StorageClient"
+        },
+        "method": {
+          "shortName": "MoveObject",
+          "fullName": "google.storage.v2.Storage.MoveObject",
+          "service": {
+            "shortName": "Storage",
+            "fullName": "google.storage.v2.Storage"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_Storage_MoveObject_async_flattened_resourceNames",
+      "title": "MoveObjectResourceNamesAsync",
+      "description": "Snippet for MoveObjectAsync",
+      "file": "StorageClient.MoveObjectResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MoveObjectAsync",
+        "fullName": "Google.Cloud.Storage.V2.StorageClient.MoveObjectAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.V2.BucketName",
+            "name": "bucket"
+          },
+          {
+            "type": "System.String",
+            "name": "sourceObject"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationObject"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.V2.Object>",
+        "client": {
+          "shortName": "StorageClient",
+          "fullName": "Google.Cloud.Storage.V2.StorageClient"
+        },
+        "method": {
+          "shortName": "MoveObject",
+          "fullName": "google.storage.v2.Storage.MoveObject",
+          "service": {
+            "shortName": "Storage",
+            "fullName": "google.storage.v2.Storage"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

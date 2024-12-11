@@ -72,6 +72,7 @@ namespace Google.Cloud.Storage.V2
             RewriteObjectSettings = existing.RewriteObjectSettings;
             StartResumableWriteSettings = existing.StartResumableWriteSettings;
             QueryWriteStatusSettings = existing.QueryWriteStatusSettings;
+            MoveObjectSettings = existing.MoveObjectSettings;
             OnCopy(existing);
         }
 
@@ -524,6 +525,27 @@ namespace Google.Cloud.Storage.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings QueryWriteStatusSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.MoveObject</c>
+        ///  and <c>StorageClient.MoveObjectAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MoveObjectSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageSettings"/> object.</returns>
@@ -3542,6 +3564,155 @@ namespace Google.Cloud.Storage.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<QueryWriteStatusResponse> QueryWriteStatusAsync(string uploadId, st::CancellationToken cancellationToken) =>
             QueryWriteStatusAsync(uploadId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Object MoveObject(MoveObjectRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Object> MoveObjectAsync(MoveObjectRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Object> MoveObjectAsync(MoveObjectRequest request, st::CancellationToken cancellationToken) =>
+            MoveObjectAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="bucket">
+        /// Required. Name of the bucket in which the object resides.
+        /// </param>
+        /// <param name="sourceObject">
+        /// Required. Name of the source object.
+        /// </param>
+        /// <param name="destinationObject">
+        /// Required. Name of the destination object.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Object MoveObject(string bucket, string sourceObject, string destinationObject, gaxgrpc::CallSettings callSettings = null) =>
+            MoveObject(new MoveObjectRequest
+            {
+                Bucket = gax::GaxPreconditions.CheckNotNullOrEmpty(bucket, nameof(bucket)),
+                SourceObject = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceObject, nameof(sourceObject)),
+                DestinationObject = gax::GaxPreconditions.CheckNotNullOrEmpty(destinationObject, nameof(destinationObject)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="bucket">
+        /// Required. Name of the bucket in which the object resides.
+        /// </param>
+        /// <param name="sourceObject">
+        /// Required. Name of the source object.
+        /// </param>
+        /// <param name="destinationObject">
+        /// Required. Name of the destination object.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Object> MoveObjectAsync(string bucket, string sourceObject, string destinationObject, gaxgrpc::CallSettings callSettings = null) =>
+            MoveObjectAsync(new MoveObjectRequest
+            {
+                Bucket = gax::GaxPreconditions.CheckNotNullOrEmpty(bucket, nameof(bucket)),
+                SourceObject = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceObject, nameof(sourceObject)),
+                DestinationObject = gax::GaxPreconditions.CheckNotNullOrEmpty(destinationObject, nameof(destinationObject)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="bucket">
+        /// Required. Name of the bucket in which the object resides.
+        /// </param>
+        /// <param name="sourceObject">
+        /// Required. Name of the source object.
+        /// </param>
+        /// <param name="destinationObject">
+        /// Required. Name of the destination object.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Object> MoveObjectAsync(string bucket, string sourceObject, string destinationObject, st::CancellationToken cancellationToken) =>
+            MoveObjectAsync(bucket, sourceObject, destinationObject, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="bucket">
+        /// Required. Name of the bucket in which the object resides.
+        /// </param>
+        /// <param name="sourceObject">
+        /// Required. Name of the source object.
+        /// </param>
+        /// <param name="destinationObject">
+        /// Required. Name of the destination object.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Object MoveObject(BucketName bucket, string sourceObject, string destinationObject, gaxgrpc::CallSettings callSettings = null) =>
+            MoveObject(new MoveObjectRequest
+            {
+                BucketAsBucketName = gax::GaxPreconditions.CheckNotNull(bucket, nameof(bucket)),
+                SourceObject = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceObject, nameof(sourceObject)),
+                DestinationObject = gax::GaxPreconditions.CheckNotNullOrEmpty(destinationObject, nameof(destinationObject)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="bucket">
+        /// Required. Name of the bucket in which the object resides.
+        /// </param>
+        /// <param name="sourceObject">
+        /// Required. Name of the source object.
+        /// </param>
+        /// <param name="destinationObject">
+        /// Required. Name of the destination object.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Object> MoveObjectAsync(BucketName bucket, string sourceObject, string destinationObject, gaxgrpc::CallSettings callSettings = null) =>
+            MoveObjectAsync(new MoveObjectRequest
+            {
+                BucketAsBucketName = gax::GaxPreconditions.CheckNotNull(bucket, nameof(bucket)),
+                SourceObject = gax::GaxPreconditions.CheckNotNullOrEmpty(sourceObject, nameof(sourceObject)),
+                DestinationObject = gax::GaxPreconditions.CheckNotNullOrEmpty(destinationObject, nameof(destinationObject)),
+            }, callSettings);
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="bucket">
+        /// Required. Name of the bucket in which the object resides.
+        /// </param>
+        /// <param name="sourceObject">
+        /// Required. Name of the source object.
+        /// </param>
+        /// <param name="destinationObject">
+        /// Required. Name of the destination object.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Object> MoveObjectAsync(BucketName bucket, string sourceObject, string destinationObject, st::CancellationToken cancellationToken) =>
+            MoveObjectAsync(bucket, sourceObject, destinationObject, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Storage client wrapper implementation, for convenient use.</summary>
@@ -3613,6 +3784,8 @@ namespace Google.Cloud.Storage.V2
         private readonly gaxgrpc::ApiCall<StartResumableWriteRequest, StartResumableWriteResponse> _callStartResumableWrite;
 
         private readonly gaxgrpc::ApiCall<QueryWriteStatusRequest, QueryWriteStatusResponse> _callQueryWriteStatus;
+
+        private readonly gaxgrpc::ApiCall<MoveObjectRequest, Object> _callMoveObject;
 
         /// <summary>
         /// Constructs a client wrapper for the Storage service, with the specified gRPC client and settings.
@@ -3695,6 +3868,9 @@ namespace Google.Cloud.Storage.V2
             _callQueryWriteStatus = clientHelper.BuildApiCall<QueryWriteStatusRequest, QueryWriteStatusResponse>("QueryWriteStatus", grpcClient.QueryWriteStatusAsync, grpcClient.QueryWriteStatus, effectiveSettings.QueryWriteStatusSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<QueryWriteStatusRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.UploadId));
             Modify_ApiCall(ref _callQueryWriteStatus);
             Modify_QueryWriteStatusApiCall(ref _callQueryWriteStatus);
+            _callMoveObject = clientHelper.BuildApiCall<MoveObjectRequest, Object>("MoveObject", grpcClient.MoveObjectAsync, grpcClient.MoveObject, effectiveSettings.MoveObjectSettings).WithGoogleRequestParam("bucket", request => request.Bucket);
+            Modify_ApiCall(ref _callMoveObject);
+            Modify_MoveObjectApiCall(ref _callMoveObject);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3750,6 +3926,8 @@ namespace Google.Cloud.Storage.V2
 
         partial void Modify_QueryWriteStatusApiCall(ref gaxgrpc::ApiCall<QueryWriteStatusRequest, QueryWriteStatusResponse> call);
 
+        partial void Modify_MoveObjectApiCall(ref gaxgrpc::ApiCall<MoveObjectRequest, Object> call);
+
         partial void OnConstruction(Storage.StorageClient grpcClient, StorageSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Storage client</summary>
@@ -3802,6 +3980,8 @@ namespace Google.Cloud.Storage.V2
         partial void Modify_StartResumableWriteRequest(ref StartResumableWriteRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryWriteStatusRequest(ref QueryWriteStatusRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MoveObjectRequest(ref MoveObjectRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Permanently deletes an empty bucket.
@@ -4548,6 +4728,30 @@ namespace Google.Cloud.Storage.V2
         {
             Modify_QueryWriteStatusRequest(ref request, ref callSettings);
             return _callQueryWriteStatus.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Object MoveObject(MoveObjectRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveObjectRequest(ref request, ref callSettings);
+            return _callMoveObject.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Moves the source object to the destination object in the same bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Object> MoveObjectAsync(MoveObjectRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MoveObjectRequest(ref request, ref callSettings);
+            return _callMoveObject.Async(request, callSettings);
         }
     }
 
