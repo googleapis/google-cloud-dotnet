@@ -14,6 +14,7 @@
 
 using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseManager.ContainerCommands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -55,6 +56,16 @@ public sealed class ContainerCommand : ICommand
             var nameValue = arg.Split('=', 2);
             options[nameValue[0].Substring(2)] = nameValue[1];
         }
-        return subcommand.Execute(options);
+        try
+        {
+            return subcommand.Execute(options);
+        }
+        catch (Exception e)
+        {
+            // By default, we just print the message if there's a UserErrorException.
+            // If the *container* fails, it's more useful to have a full stack trace.
+            Console.WriteLine(e);
+            return 1;
+        }
     }
 }
