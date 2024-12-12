@@ -1618,7 +1618,7 @@
     },
     {
       "id": "Google.Cloud.Config.V1",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "type": "grpc",
       "productName": "Infrastructure Manager",
       "productUrl": "https://cloud.google.com/infrastructure-manager/docs/overview",
@@ -1629,9 +1629,9 @@
         "resources"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Cloud.Location": "2.2.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.Cloud.Iam.V1": "3.4.0",
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/config/v1",

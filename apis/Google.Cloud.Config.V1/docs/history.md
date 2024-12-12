@@ -1,5 +1,20 @@
 # Version history
 
+## Version 1.6.0, released 2024-12-12
+
+### Bug fixes
+
+- Changed field behavior for an existing field `service_account` in message `.google.cloud.config.v1.Deployment` ([commit 57c3817](https://github.com/googleapis/google-cloud-dotnet/commit/57c3817524f12a40c5756fa6820df75c5a92a90f))
+- Changed field behavior for an existing field `service_account` in message `.google.cloud.config.v1.Preview` ([commit 57c3817](https://github.com/googleapis/google-cloud-dotnet/commit/57c3817524f12a40c5756fa6820df75c5a92a90f))
+
+### New features
+
+- Added annotations ([commit 57c3817](https://github.com/googleapis/google-cloud-dotnet/commit/57c3817524f12a40c5756fa6820df75c5a92a90f))
+
+### Documentation improvements
+
+- Service Account is a required field ([commit 57c3817](https://github.com/googleapis/google-cloud-dotnet/commit/57c3817524f12a40c5756fa6820df75c5a92a90f))
+
 ## Version 1.5.0, released 2024-04-29
 
 ### New features
