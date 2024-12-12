@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.13.0, released 2024-12-12
+
+### New features
+
+- A new value `NVIDIA_H100_MEGA_80GB` is added to enum `AcceleratorType` ([commit 1bb5a2d](https://github.com/googleapis/google-cloud-dotnet/commit/1bb5a2d2aded81918b6f3141f00cfd4e31a5ab02))
+
 ## Version 3.12.0, released 2024-12-06
 
 ### New features
