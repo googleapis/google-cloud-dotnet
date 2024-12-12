@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2024-12-12
+
+### New features
+
+- Add LLM parser proto to API ([commit 239b1c1](https://github.com/googleapis/google-cloud-dotnet/commit/239b1c14269962f5813649a2e34c77808fdaceaf))
+- Add Tool.GoogleSearch ([commit ec1d79d](https://github.com/googleapis/google-cloud-dotnet/commit/ec1d79d7d0a431eae959ffb5e25b641ab6ff08e1))
+- Add GenerationConfig.Modality ([commit ec1d79d](https://github.com/googleapis/google-cloud-dotnet/commit/ec1d79d7d0a431eae959ffb5e25b641ab6ff08e1))
+- Add GenerationConfig.SpeechConfig ([commit ec1d79d](https://github.com/googleapis/google-cloud-dotnet/commit/ec1d79d7d0a431eae959ffb5e25b641ab6ff08e1))
+- Add GenerationConfig.MediaResolution ([commit ec1d79d](https://github.com/googleapis/google-cloud-dotnet/commit/ec1d79d7d0a431eae959ffb5e25b641ab6ff08e1))
+- Enable FeatureGroup Service Account and IAM methods ([commit 6ee5a6b](https://github.com/googleapis/google-cloud-dotnet/commit/6ee5a6b34a6ab2f578644575d1de804dfa7eabc0))
+- A new value `NVIDIA_H100_MEGA_80GB` is added to enum `AcceleratorType` ([commit 0ced559](https://github.com/googleapis/google-cloud-dotnet/commit/0ced559c9981dfe9edee669f822ecf476480fcdb))
+- A new field `list_all_versions` to `ListPublisherModelsRequest` ([commit afd7734](https://github.com/googleapis/google-cloud-dotnet/commit/afd7734b115d6cad9ca3f094e60f08cc261c4134))
+
 ## Version 1.0.0-beta11, released 2024-12-06
 
 ### New features
