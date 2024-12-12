@@ -119,7 +119,7 @@
     },
     {
       "id": "Google.Apps.Chat.V1",
-      "version": "1.0.0-beta09",
+      "version": "1.0.0-beta10",
       "type": "grpc",
       "productName": "Google Chat",
       "productUrl": "https://developers.google.com/chat/concepts",

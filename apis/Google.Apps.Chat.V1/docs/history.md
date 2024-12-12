@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2024-12-12
+
+### Bug fixes
+
+- **BREAKING CHANGE** Changed field behavior for an existing field `update_mask` and `emoji` ([commit ec46bf2](https://github.com/googleapis/google-cloud-dotnet/commit/ec46bf2c127a0367e182b8e90874911d2a3f5635))
+
+### New features
+
+- Add missing field annotations in space.proto, message.proto, reaction.proto, space_event.proto, membership.proto, attachment.proto ([commit ec46bf2](https://github.com/googleapis/google-cloud-dotnet/commit/ec46bf2c127a0367e182b8e90874911d2a3f5635))
+
+### Documentation improvements
+
+- Update field annotations in space.proto, message.proto, reaction.proto, space_event.proto, membership.proto, attachment.proto ([commit ec46bf2](https://github.com/googleapis/google-cloud-dotnet/commit/ec46bf2c127a0367e182b8e90874911d2a3f5635))
+
 ## Version 1.0.0-beta09, released 2024-12-06
 
 ### New features
