@@ -27,24 +27,28 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "Cjhnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92MmJldGExL2NvbnZlcnNhdGlv",
             "bl9ldmVudC5wcm90bxIfZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRh",
             "MRoxZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjJiZXRhMS9wYXJ0aWNpcGFu",
-            "dC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iiwMKEUNvbnZlcnNh",
-            "dGlvbkV2ZW50EhQKDGNvbnZlcnNhdGlvbhgBIAEoCRJFCgR0eXBlGAIgASgO",
-            "MjcuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5Db252ZXJzYXRp",
-            "b25FdmVudC5UeXBlEigKDGVycm9yX3N0YXR1cxgDIAEoCzISLmdvb2dsZS5y",
-            "cGMuU3RhdHVzEkcKE25ld19tZXNzYWdlX3BheWxvYWQYBCABKAsyKC5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLk1lc3NhZ2VIACKaAQoEVHlw",
-            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASGAoUQ09OVkVSU0FUSU9OX1NUQVJU",
-            "RUQQARIZChVDT05WRVJTQVRJT05fRklOSVNIRUQQAhIdChlIVU1BTl9JTlRF",
-            "UlZFTlRJT05fTkVFREVEEAMSDwoLTkVXX01FU1NBR0UQBRIXChNVTlJFQ09W",
-            "RVJBQkxFX0VSUk9SEARCCQoHcGF5bG9hZEKrAQojY29tLmdvb2dsZS5jbG91",
-            "ZC5kaWFsb2dmbG93LnYyYmV0YTFCFkNvbnZlcnNhdGlvbkV2ZW50UHJvdG9Q",
-            "AVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYyYmV0YTEv",
-            "ZGlhbG9nZmxvd3BiO2RpYWxvZ2Zsb3dwYqICAkRGqgIfR29vZ2xlLkNsb3Vk",
-            "LkRpYWxvZ2Zsb3cuVjJCZXRhMWIGcHJvdG8z"));
+            "dC5wcm90bxotZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjJiZXRhMS9zZXNz",
+            "aW9uLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byKOBAoRQ29udmVy",
+            "c2F0aW9uRXZlbnQSFAoMY29udmVyc2F0aW9uGAEgASgJEkUKBHR5cGUYAiAB",
+            "KA4yNy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkNvbnZlcnNh",
+            "dGlvbkV2ZW50LlR5cGUSKAoMZXJyb3Jfc3RhdHVzGAMgASgLMhIuZ29vZ2xl",
+            "LnJwYy5TdGF0dXMSRwoTbmV3X21lc3NhZ2VfcGF5bG9hZBgEIAEoCzIoLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuTWVzc2FnZUgAEmUKHm5l",
+            "d19yZWNvZ25pdGlvbl9yZXN1bHRfcGF5bG9hZBgFIAEoCzI7Lmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU3RyZWFtaW5nUmVjb2duaXRpb25S",
+            "ZXN1bHRIACK2AQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASGAoUQ09O",
+            "VkVSU0FUSU9OX1NUQVJURUQQARIZChVDT05WRVJTQVRJT05fRklOSVNIRUQQ",
+            "AhIdChlIVU1BTl9JTlRFUlZFTlRJT05fTkVFREVEEAMSDwoLTkVXX01FU1NB",
+            "R0UQBRIaChZORVdfUkVDT0dOSVRJT05fUkVTVUxUEAcSFwoTVU5SRUNPVkVS",
+            "QUJMRV9FUlJPUhAEQgkKB3BheWxvYWRCqwEKI2NvbS5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52MmJldGExQhZDb252ZXJzYXRpb25FdmVudFByb3RvUAFa",
+            "Q2Nsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2Rp",
+            "YWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCH0dvb2dsZS5DbG91ZC5E",
+            "aWFsb2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2Beta1.ParticipantReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2Beta1.ParticipantReflection.Descriptor, global::Google.Cloud.Dialogflow.V2Beta1.SessionReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent), global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent.Parser, new[]{ "Conversation", "Type", "ErrorStatus", "NewMessagePayload" }, new[]{ "Payload" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent.Types.Type) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent), global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent.Parser, new[]{ "Conversation", "Type", "ErrorStatus", "NewMessagePayload", "NewRecognitionResultPayload" }, new[]{ "Payload" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent.Types.Type) }, null, null)
           }));
     }
     #endregion
@@ -96,6 +100,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       switch (other.PayloadCase) {
         case PayloadOneofCase.NewMessagePayload:
           NewMessagePayload = other.NewMessagePayload.Clone();
+          break;
+        case PayloadOneofCase.NewRecognitionResultPayload:
+          NewRecognitionResultPayload = other.NewRecognitionResultPayload.Clone();
           break;
       }
 
@@ -171,11 +178,27 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
     }
 
+    /// <summary>Field number for the "new_recognition_result_payload" field.</summary>
+    public const int NewRecognitionResultPayloadFieldNumber = 5;
+    /// <summary>
+    /// Payload of NEW_RECOGNITION_RESULT event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2Beta1.StreamingRecognitionResult NewRecognitionResultPayload {
+      get { return payloadCase_ == PayloadOneofCase.NewRecognitionResultPayload ? (global::Google.Cloud.Dialogflow.V2Beta1.StreamingRecognitionResult) payload_ : null; }
+      set {
+        payload_ = value;
+        payloadCase_ = value == null ? PayloadOneofCase.None : PayloadOneofCase.NewRecognitionResultPayload;
+      }
+    }
+
     private object payload_;
     /// <summary>Enum of possible cases for the "payload" oneof.</summary>
     public enum PayloadOneofCase {
       None = 0,
       NewMessagePayload = 4,
+      NewRecognitionResultPayload = 5,
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -210,6 +233,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (Type != other.Type) return false;
       if (!object.Equals(ErrorStatus, other.ErrorStatus)) return false;
       if (!object.Equals(NewMessagePayload, other.NewMessagePayload)) return false;
+      if (!object.Equals(NewRecognitionResultPayload, other.NewRecognitionResultPayload)) return false;
       if (PayloadCase != other.PayloadCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -222,6 +246,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (Type != global::Google.Cloud.Dialogflow.V2Beta1.ConversationEvent.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       if (errorStatus_ != null) hash ^= ErrorStatus.GetHashCode();
       if (payloadCase_ == PayloadOneofCase.NewMessagePayload) hash ^= NewMessagePayload.GetHashCode();
+      if (payloadCase_ == PayloadOneofCase.NewRecognitionResultPayload) hash ^= NewRecognitionResultPayload.GetHashCode();
       hash ^= (int) payloadCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -257,6 +282,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(34);
         output.WriteMessage(NewMessagePayload);
       }
+      if (payloadCase_ == PayloadOneofCase.NewRecognitionResultPayload) {
+        output.WriteRawTag(42);
+        output.WriteMessage(NewRecognitionResultPayload);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -283,6 +312,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(34);
         output.WriteMessage(NewMessagePayload);
       }
+      if (payloadCase_ == PayloadOneofCase.NewRecognitionResultPayload) {
+        output.WriteRawTag(42);
+        output.WriteMessage(NewRecognitionResultPayload);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -304,6 +337,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
       if (payloadCase_ == PayloadOneofCase.NewMessagePayload) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NewMessagePayload);
+      }
+      if (payloadCase_ == PayloadOneofCase.NewRecognitionResultPayload) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(NewRecognitionResultPayload);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -335,6 +371,12 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             NewMessagePayload = new global::Google.Cloud.Dialogflow.V2Beta1.Message();
           }
           NewMessagePayload.MergeFrom(other.NewMessagePayload);
+          break;
+        case PayloadOneofCase.NewRecognitionResultPayload:
+          if (NewRecognitionResultPayload == null) {
+            NewRecognitionResultPayload = new global::Google.Cloud.Dialogflow.V2Beta1.StreamingRecognitionResult();
+          }
+          NewRecognitionResultPayload.MergeFrom(other.NewRecognitionResultPayload);
           break;
       }
 
@@ -377,6 +419,15 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             NewMessagePayload = subBuilder;
             break;
           }
+          case 42: {
+            global::Google.Cloud.Dialogflow.V2Beta1.StreamingRecognitionResult subBuilder = new global::Google.Cloud.Dialogflow.V2Beta1.StreamingRecognitionResult();
+            if (payloadCase_ == PayloadOneofCase.NewRecognitionResultPayload) {
+              subBuilder.MergeFrom(NewRecognitionResultPayload);
+            }
+            input.ReadMessage(subBuilder);
+            NewRecognitionResultPayload = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -414,6 +465,15 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             }
             input.ReadMessage(subBuilder);
             NewMessagePayload = subBuilder;
+            break;
+          }
+          case 42: {
+            global::Google.Cloud.Dialogflow.V2Beta1.StreamingRecognitionResult subBuilder = new global::Google.Cloud.Dialogflow.V2Beta1.StreamingRecognitionResult();
+            if (payloadCase_ == PayloadOneofCase.NewRecognitionResultPayload) {
+              subBuilder.MergeFrom(NewRecognitionResultPayload);
+            }
+            input.ReadMessage(subBuilder);
+            NewRecognitionResultPayload = subBuilder;
             break;
           }
         }
@@ -455,6 +515,13 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         /// [ConversationProfile.new_message_event_notification_config][google.cloud.dialogflow.v2beta1.ConversationProfile.new_message_event_notification_config]
         /// </summary>
         [pbr::OriginalName("NEW_MESSAGE")] NewMessage = 5,
+        /// <summary>
+        /// An existing conversation has received a new speech recognition result.
+        /// This is mainly for delivering intermediate transcripts. The notification
+        /// is configured in
+        /// [ConversationProfile.new_recognition_event_notification_config][].
+        /// </summary>
+        [pbr::OriginalName("NEW_RECOGNITION_RESULT")] NewRecognitionResult = 7,
         /// <summary>
         /// Unrecoverable error during a telephone call.
         ///
