@@ -246,7 +246,7 @@ internal class GenerateApisCommand : ICommand
 
             if (api.ServiceConfigFile != "none")
             {
-                yield return("service-config", $"{apiSrcDir}/{api.ServiceConfigFile}");
+                yield return ("service-config", $"{apiSrcDir}/{api.ServiceConfigFile}");
             }
 
             var serviceConfigFiles = Directory.GetFiles(apiSrcDir, "*_grpc_service_config.json");
@@ -436,14 +436,14 @@ internal class GenerateApisCommand : ICommand
         // want to generate it.
         try
         {
-        RunProtoc(apiDirectory,
-            $"--csharp_out={productionDirectory}",
-            $"--csharp_opt=base_namespace={id}",
-            "--csharp_opt=file_extension=.g.cs",
-            $"--grpc_out={productionDirectory}",
-            $"--grpc_opt=base_namespace={id}",
-            "--grpc_opt=file_suffix=Grpc.g.cs",
-            $"--plugin=protoc-gen-grpc={_grpcGeneratorBinary}");
+            RunProtoc(apiDirectory,
+                $"--csharp_out={productionDirectory}",
+                $"--csharp_opt=base_namespace={id}",
+                "--csharp_opt=file_extension=.g.cs",
+                $"--grpc_out={productionDirectory}",
+                $"--grpc_opt=base_namespace={id}",
+                "--grpc_opt=file_suffix=Grpc.g.cs",
+                $"--plugin=protoc-gen-grpc={_grpcGeneratorBinary}");
         }
         catch (Exception e)
         {

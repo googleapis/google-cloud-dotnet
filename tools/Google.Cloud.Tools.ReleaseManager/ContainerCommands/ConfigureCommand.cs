@@ -15,7 +15,6 @@
 using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;

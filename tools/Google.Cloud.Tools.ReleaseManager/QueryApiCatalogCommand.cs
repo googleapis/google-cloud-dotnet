@@ -13,9 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Newtonsoft.Json.Linq;
 using System;
-using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager;

@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and 
 // limitations under the License.
 
-using Octokit;
 using System;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -44,7 +43,7 @@ public class AddPullRequestCommentCommand : CommandBase
         {
             client.Issue.Comment.Create(GitHubHelpers.RepositoryOwner, GitHubHelpers.RepositoryName, pr, comment).GetAwaiter().GetResult();
         }
-        catch(OverflowException ex) when (ex.StackTrace.Contains("Octokit.Internal.JsonHttpPipeline.DeserializeResponse"))
+        catch (OverflowException ex) when (ex.StackTrace.Contains("Octokit.Internal.JsonHttpPipeline.DeserializeResponse"))
         {
             // Octokit has issues with some response fields being int that need to be long.
             // See https://github.com/octokit/octokit.net/issues/1979 as an example (there are a few others).

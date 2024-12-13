@@ -59,7 +59,7 @@ internal class ShowDependencyLevelsCommand : CommandBase
                 Console.WriteLine(string.Join(", ", apiToDependencies.Keys));
                 return 0;
             }
-            
+
             Console.WriteLine($"Level {level}:");
             foreach (var id in next)
             {
@@ -79,7 +79,7 @@ internal class ShowDependencyLevelsCommand : CommandBase
             }
             level++;
         }
-        
+
         Console.WriteLine();
         Console.WriteLine("Grouped APIs:");
         foreach (var group in catalog.PackageGroups)
