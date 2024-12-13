@@ -25,10 +25,8 @@ export STORAGE_V2_IS_NOT_FOR_PRODUCTION_USE_IN_DOTNET=true
 # --diff: Detect which APIs to build based on a diff to the main branch
 # --regex regex: Only build APIs that match the given regex
 # --nobuild: Just list which APIs would be built; don't run the build
-# --coverage: Run tests with coverage enabled
 apis=()
 runtests=true
-runcoverage=false
 apiregex=
 nobuild=false
 diff=false
@@ -47,11 +45,6 @@ while (( "$#" )); do
   elif [[ "$1" == "--nobuild" ]]
   then
     nobuild=true
-  elif [[ "$1" == "--coverage" ]]
-  then
-    runcoverage=true
-    install_dotcover
-    mkdir -p coverage
   else
     apis+=($1)
   fi
@@ -188,14 +181,9 @@ then
   do
     testdir=$(dirname $testproject)
     log_build_action "Testing $testdir"
-    if [[ "$runcoverage" = true && -f "$testdir/coverage.xml" ]]
-    then
-      echo "(Running with coverage)"
-      (cd "$testdir"; $DOTCOVER cover "coverage.xml" --ReturnTargetExitCode)
-    else
-      # Note that even though we should have built everything by now,
-      # --no-build causes odd issues on GitHub CI.
-      dotnet test -nologo -c Release $testproject
+    # Note that even though we should have built everything by now,
+    # --no-build causes odd issues on GitHub CI.
+    dotnet test -nologo -c Release $testproject
     fi
   done < AllTests.txt
   log_build_action "(End) Unit tests"

@@ -9,8 +9,6 @@
 declare -r REPO_ROOT=$(readlink -f $(dirname ${BASH_SOURCE}))
 declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 
-declare -r DOTCOVER_VERSION=2019.3.4
-declare -r REPORTGENERATOR_VERSION=2.4.5.0
 declare -r PROTOC_VERSION=3.25.2
 declare -r GRPC_VERSION=2.60.0
 if [[ $GAPIC_GENERATOR_VERSION == "" ]]
@@ -19,10 +17,6 @@ then
 else
   echo "Using GAPIC generator override: ${GAPIC_GENERATOR_VERSION}"
 fi
-
-# Tools that only run under Windows (at the moment)
-declare -r DOTCOVER=$TOOL_PACKAGES/JetBrains.dotCover.CommandLineTools.$DOTCOVER_VERSION/tools/dotCover.exe
-declare -r REPORTGENERATOR=$TOOL_PACKAGES/ReportGenerator.$REPORTGENERATOR_VERSION/tools/ReportGenerator.exe
 
 declare -r PROTOBUF_TOOLS_ROOT=$TOOL_PACKAGES/Google.Protobuf.Tools.$PROTOC_VERSION
 
@@ -64,14 +58,6 @@ install_nuget_package() {
 
 # Installation functions, all of which should be unconditionally called
 # when required. (They handle the case where the tool is already installed.)
-
-install_dotcover() {
-  install_nuget_package JetBrains.dotCover.CommandLineTools $DOTCOVER_VERSION
-}
-
-install_reportgenerator() {
-  install_nuget_package ReportGenerator $REPORTGENERATOR_VERSION
-}
 
 install_protoc() {
   install_nuget_package Google.Protobuf.Tools $PROTOC_VERSION

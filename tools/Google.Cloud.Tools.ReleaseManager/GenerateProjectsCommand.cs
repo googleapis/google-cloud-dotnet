@@ -14,14 +14,13 @@
 
 using Google.Cloud.Tools.Common;
 using System;
-using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {
     public class GenerateProjectsCommand : CommandBase
     {
-        public GenerateProjectsCommand() : base("generate-projects", "Generates project files, coverage files etc from the API catalog")
+        public GenerateProjectsCommand() : base("generate-projects", "Generates project files, solution files etc from the API catalog")
         {
         }
 

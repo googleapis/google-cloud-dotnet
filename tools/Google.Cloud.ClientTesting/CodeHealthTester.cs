@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -23,17 +23,8 @@ namespace Google.Cloud.ClientTesting
 {
     public static class CodeHealthTester
     {
-        private static readonly HashSet<string> s_exemptedFields = new HashSet<string>()
-        {
-            "DataOnStack.Pointer",
-            "DataOnStack.StatementCount",
-            "DataOnStack.MetadataIndex",
-            "DataOnStack.MethodToken"
-        };
-
         private static readonly List<string> s_exemptedNamespacePrefixs = new List<string>
         {
-            "JetBrains", // Used for code coverage on some CI jobs.
             "Microsoft.CodeAnalysis",
             "System.Runtime.CompilerServices"
         };
@@ -54,8 +45,6 @@ namespace Google.Cloud.ClientTesting
                             where !field.IsPrivate && !field.IsLiteral
                             // Allow internal static readonly fields, e.g. for singletons
                             where !(field.IsAssembly && field.IsStatic && field.IsInitOnly)
-                            // Exempt fields added for coverage by dotCover
-                            where !s_exemptedFields.Contains($"{type.Name}.{field.Name}")
                             select $"{type.Name}.{field.Name}";
             // Force output to show the bad fields
             Assert.Equal(new string[0], badFields.ToList());
