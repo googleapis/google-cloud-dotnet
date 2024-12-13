@@ -489,9 +489,9 @@ internal class GenerateApisCommand : ICommand
         var sln = Path.Combine(sourceDirectory, $"{id}.sln");
         var projects = new List<string>
         {
-            $@"{id}\\{id}.csproj",
-            $@"{id}.Snippets\\{id}.Snippets.csproj",
-            $@"{id}.GeneratedSnippets\\{id}.GeneratedSnippets.csproj",
+            id,
+            $@"{id}.Snippets",
+            $@"{id}.GeneratedSnippets",
         };
         NonSourceGenerator.GenerateSolutionFile(sln, projects);
 
