@@ -357,14 +357,6 @@ internal class GenerateApisCommand : ICommand
     // at some point, but this is a convenient location for prototyping.
     private int ExecuteForUnconfigured(string[] args)
     {
-        var outputRoot = Path.Combine(generatorOutputDirectory, "unconfigured-generation");
-        if (Directory.Exists(outputRoot))
-        {
-            Directory.Delete(outputRoot, true);
-        }
-        Directory.CreateDirectory(outputRoot);
-
-
         if (args.Length == 0)
         {
             args = DetectApiDirectories();
@@ -378,12 +370,12 @@ internal class GenerateApisCommand : ICommand
 
         foreach (var arg in args)
         {
-            GenerateUnconfigured(arg, outputRoot);
+            GenerateUnconfigured(arg);
         }
         return 1;
     }
 
-    private void GenerateUnconfigured(string arg, string outputRoot)
+    private void GenerateUnconfigured(string arg)
     {
         Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Generating {arg}");
         var apiDirectory = Path.Combine(googleApisDirectory, arg);
@@ -427,7 +419,10 @@ internal class GenerateApisCommand : ICommand
 
         var id = namespaces[0];
 
-        var sourceDirectory = Path.Combine(outputRoot, id);
+        // Generate into a directory structure which matches the proto path name. (That makes it easy to find when building.)
+        // This may seem redundant when only generating a single API, but it means users can generate multiple APIs to a single
+        // output directory (even if that required multiple CLI invocations).
+        var sourceDirectory = Path.Combine(generatorOutputDirectory, arg);
         var productionDirectory = Path.Combine(sourceDirectory, id);
         Directory.CreateDirectory(productionDirectory);
 
