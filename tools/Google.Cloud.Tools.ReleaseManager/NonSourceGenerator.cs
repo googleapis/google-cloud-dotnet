@@ -15,7 +15,6 @@
 using Google.Cloud.Tools.Common;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Octokit;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -149,8 +148,7 @@ internal sealed class NonSourceGenerator
         }.AsReadOnly();
 
     public ApiCatalog ApiCatalog { get; }
-    private readonly string _generatorInputDirectory;
-    private readonly string _outputDirectory;
+    public RootLayout RootLayout { get; }
 
     /// <summary>
     /// This is in lieu of a unit test... just make sure that all the dependencies we're hard-coding the values for
@@ -165,18 +163,13 @@ internal sealed class NonSourceGenerator
         }
     }
 
-    internal NonSourceGenerator(string generatorInputDirectory, string outputDirectory)
+    internal NonSourceGenerator(RootLayout rootLayout)
     {
-        ApiCatalog = ApiCatalog.LoadFromGeneratorInput(generatorInputDirectory);
-        _generatorInputDirectory = generatorInputDirectory;
-        _outputDirectory = outputDirectory;
+        RootLayout = rootLayout;
+        ApiCatalog = ApiCatalog.Load(rootLayout);
     }
 
-    internal static NonSourceGenerator ForInPlaceGeneration()
-    {
-        var root = DirectoryLayout.DetermineRootDirectory();
-        return new NonSourceGenerator(Path.Combine(root, DirectoryLayout.GeneratorInput), root);
-    }
+    internal static NonSourceGenerator ForInPlaceGeneration() => new(RootLayout.ForCurrentDirectory());
 
     #region API-specific files
     /// <summary>
@@ -200,8 +193,7 @@ internal sealed class NonSourceGenerator
 
     private void GenerateProjects(ApiMetadata api, HashSet<string> apiNames)
     {
-        string apiRoot = GetApiDirectory(api);
-
+        var apiLayout = RootLayout.CreateApiLayout(api);
         var projects = api.DeriveProjects();
         foreach (var projectName in projects)
         {
@@ -300,7 +292,7 @@ internal sealed class NonSourceGenerator
 
         void WriteProjectFile(string projectName, XElement propertyGroup, XElement dependenciesItemGroup)
         {
-            var directory = Path.Combine(apiRoot, projectName);
+            var directory = Path.Combine(apiLayout.SourceDirectory, projectName);
             Directory.CreateDirectory(directory);
             var file = Path.Combine(directory, $"{projectName}.csproj");
             var doc = new XElement("Project",
@@ -312,7 +304,7 @@ internal sealed class NonSourceGenerator
             // with a ".csproj.google" extension in the API-specific "tweaks" directory (under generator-input/tweaks).
             // If this exists, it's expected to be an XML file, and any elements under the root
             // are included in the generated .csproj file.
-            var augmentationFile = Path.Combine(DirectoryLayout.ForApi(api.Id, _outputDirectory, _generatorInputDirectory).TweaksDirectory, $"{Path.GetFileName(directory)}.csproj.google");
+            var augmentationFile = Path.Combine(RootLayout.CreateApiLayout(api).TweaksDirectory, $"{Path.GetFileName(directory)}.csproj.google");
             if (File.Exists(augmentationFile))
             {
                 var augmentationDoc = XDocument.Load(augmentationFile);
@@ -445,9 +437,8 @@ internal sealed class NonSourceGenerator
     // Currently this is really ugly - it will be a lot cleaner with slnx files.
     private void GenerateSolutionFile(ApiMetadata api)
     {
-        string apiRoot = GetApiDirectory(api);
-
-        string solutionFile = Path.Combine(apiRoot, $"{api.Id}.sln");
+        var apiLayout = RootLayout.CreateApiLayout(api);
+        string solutionFile = Path.Combine(apiLayout.SourceDirectory, $"{api.Id}.sln");
         List<string> projectDirectories = new();
         foreach (var project in api.DeriveProjects())
         {
@@ -525,9 +516,9 @@ internal sealed class NonSourceGenerator
 
     private void GenerateOwlBotConfiguration(ApiMetadata api)
     {
-        string apiRoot = GetApiDirectory(api);
-        var owlBotConfigFile = Path.Combine(apiRoot, ".OwlBot.yaml");
-        var owlBotForceRegenerationFile = Path.Combine(apiRoot, ".OwlBot-ForceRegeneration.txt");
+        var apiLayout = RootLayout.CreateApiLayout(api);
+        var owlBotConfigFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot.yaml");
+        var owlBotForceRegenerationFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot-ForceRegeneration.txt");
         // We will recreate this if necessary.
         File.Delete(owlBotForceRegenerationFile);
         if (api.Generator == GeneratorType.None)
@@ -572,7 +563,7 @@ api-name: {api.Id}
         File.WriteAllText(owlBotConfigFile, content);
 
         var forceRegenerationReasons = new List<string>();
-        if (File.Exists(Path.Combine(DirectoryLayout.ForApi(api.Id, _outputDirectory, _generatorInputDirectory).TweaksDirectory, "pregeneration.sh")))
+        if (File.Exists(Path.Combine(apiLayout.TweaksDirectory, "pregeneration.sh")))
         {
             forceRegenerationReasons.Add("API requires pre-generation tweaks.");
         }
@@ -596,8 +587,8 @@ api-name: {api.Id}
     /// </summary>
     private void GenerateMetadataFile(ApiMetadata api)
     {
-        string apiRoot = GetApiDirectory(api);
-        string metadataPath = Path.Combine(apiRoot, ".repo-metadata.json");
+        var apiLayout = RootLayout.CreateApiLayout(api);
+        string metadataPath = Path.Combine(apiLayout.SourceDirectory, ".repo-metadata.json");
         var version = api.StructuredVersion;
         string versionBasedReleaseLevel =
             // Version "1.0.0-beta00" hasn't been released at all, so we don't have a package to talk about.
@@ -639,7 +630,7 @@ api-name: {api.Id}
 
     private void RewriteReadme()
     {
-        var templatePath = Path.Combine(_generatorInputDirectory, "README-template.md");
+        var templatePath = Path.Combine(RootLayout.GeneratorInput, "README-template.md");
         var templateLines = File.ReadAllLines(templatePath).ToList();
 
         var tableIndex = templateLines.IndexOf("{api-table}");
@@ -695,7 +686,7 @@ api-name: {api.Id}
         }
 
         var newContent = linesBefore.Concat(table).Concat(linesAfter);
-        var outputPath = Path.Combine(_outputDirectory, "README.md");
+        var outputPath = Path.Combine(RootLayout.GeneratorOutput, "README.md");
         File.WriteAllLines(outputPath, newContent);
     }
 
@@ -704,7 +695,7 @@ api-name: {api.Id}
     // affects this.
     private void RewriteRenovate()
     {
-        string templatePath = Path.Combine(_generatorInputDirectory, "renovate-template.json");
+        string templatePath = Path.Combine(RootLayout.GeneratorInput, "renovate-template.json");
         string json = File.ReadAllText(templatePath);
         JObject jobj = JObject.Parse(json);
         JArray ignorePaths = (JArray) jobj["ignorePaths"];
@@ -714,7 +705,7 @@ api-name: {api.Id}
         }
         json = jobj.ToString(Formatting.Indented);
 
-        string outputPath = Path.Combine(_outputDirectory, ".github", "renovate.json");
+        string outputPath = Path.Combine(RootLayout.GeneratorOutput, ".github", "renovate.json");
         Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
         File.WriteAllText(outputPath, json);
     }
@@ -723,7 +714,7 @@ api-name: {api.Id}
     #region Clean-up
     public void CleanApiFiles(string id)
     {
-        var apiRoot = DirectoryLayout.ForApi(id, _outputDirectory, _generatorInputDirectory).SourceDirectory;
+        var apiLayout = RootLayout.CreateApiLayout(id);
 
         // We just try to delete everything we *might* generate, whether it exists or not.
         Delete($"{id}.sln");
@@ -741,7 +732,7 @@ api-name: {api.Id}
         void DeleteProject(string suffix) => Delete($"{id}{suffix}/{id}{suffix}.csproj");
         void Delete(string relativeFile)
         {
-            string absoluteFile = Path.Combine(apiRoot, relativeFile);
+            string absoluteFile = Path.Combine(apiLayout.SourceDirectory, relativeFile);
             if (File.Exists(absoluteFile))
             {
                 File.Delete(absoluteFile);
@@ -751,13 +742,8 @@ api-name: {api.Id}
 
     public void CleanNonApiFiles()
     {
-        File.Delete(Path.Combine(_outputDirectory, "README.md"));
-        File.Delete(Path.Combine(_outputDirectory, ".github", "renovate.json"));
+        File.Delete(Path.Combine(RootLayout.GeneratorOutput, "README.md"));
+        File.Delete(Path.Combine(RootLayout.GeneratorOutput, ".github", "renovate.json"));
     }
     #endregion
-
-    /// <summary>
-    /// Returns the main output directory for an API (i.e. "apis/{id}").
-    /// </summary>
-    private string GetApiDirectory(ApiMetadata api) => DirectoryLayout.ForApi(api.Id, _outputDirectory, _generatorInputDirectory).SourceDirectory;
 }

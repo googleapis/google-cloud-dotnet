@@ -25,6 +25,13 @@ namespace Google.Cloud.Tools.Common
     /// </summary>
     public class ApiCatalog
     {
+        private const string CatalogFile = "apis.json";
+
+        /// <summary>
+        /// The path of the API catalog within the google-cloud-dotnet repository.
+        /// </summary>
+        public const string PathInRepository = $"{RootLayout.GeneratorInputName}/{CatalogFile}";
+
         /// <summary>
         /// Groups of related packages which need to be released together.
         /// </summary>
@@ -70,12 +77,6 @@ namespace Google.Cloud.Tools.Common
         }
 
         /// <summary>
-        /// The path to the API catalog (apis.json).
-        /// Note: this shouldn't be used when the generator input directory is non-standard.
-        /// </summary>
-        public static string CatalogPath => Path.Combine(DirectoryLayout.DetermineRootDirectory(), DirectoryLayout.GeneratorInput, "apis.json");
-
-        /// <summary>
         /// Creates a hash set of the IDs of all the APIs in the catalog.
         /// </summary>
         /// <returns>A hash set of IDs.</returns>
@@ -87,12 +88,18 @@ namespace Google.Cloud.Tools.Common
         public Dictionary<string, string> CreateRawVersionMap() => Apis.ToDictionary(api => api.Id, api => api.Version);
 
         /// <summary>
-        /// Loads the API catalog from the local disk, automatically determining the location.
+        /// Loads the API catalog from the local disk, using <see cref="RootLayout.ForRepositoryRoot"/> as the layout.
         /// </summary>
-        /// <returns></returns>
-        public static ApiCatalog Load() => LoadFromGeneratorInput(Path.Combine(DirectoryLayout.DetermineRootDirectory(), DirectoryLayout.GeneratorInput));
+        public static ApiCatalog Load() => Load(RootLayout.ForCurrentDirectory());
 
-        public static ApiCatalog LoadFromGeneratorInput(string generatorInputDirectory) => FromJson(File.ReadAllText(Path.Combine(generatorInputDirectory, "apis.json")));
+        /// <summary>
+        /// Returns the path to the API catalog for the given root layout.
+        /// </summary>
+        private static string GetCatalogPath(RootLayout layout) => Path.Combine(layout.GeneratorInput, CatalogFile);
+
+        public static ApiCatalog Load(RootLayout layout) => FromJson(File.ReadAllText(GetCatalogPath(layout)));
+
+        public void Save(RootLayout layout) => File.WriteAllText(GetCatalogPath(layout), FormatJson());
 
         /// <summary>
         /// Loads the API catalog from the given JSON.

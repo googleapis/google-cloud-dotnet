@@ -57,31 +57,21 @@ namespace Google.Cloud.Tools.ReleaseManager
                 nonSourceGenerator.GenerateApiFiles(api);
             }
             nonSourceGenerator.GenerateNonApiFiles();
-            string formatted = catalog.FormatJson();
-            string currentFileContent = File.ReadAllText(ApiCatalog.CatalogPath);
-            if (currentFileContent == formatted)
-            {
-                Console.WriteLine("No dependencies were updated.");
-            }
-            else
-            {
-                File.WriteAllText(ApiCatalog.CatalogPath, formatted);
-                Console.WriteLine("Updated apis.json");
-            }
+            catalog.Save(nonSourceGenerator.RootLayout);
             return 0;
         }
 
         private static List<ApiMetadata> FindApisToUpdateFromPreviousCommit(ApiCatalog catalog)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            using var repo = new Repository(rootLayout.RepositoryRoot);
             // OwlBot will be post-processing a new commit from either OwlBot itself or
             // release-please; we want to find out what the API catalog looked like in
             // the parent commit.
             var headCommit = repo.Head.Tip;
             var parentCommit = headCommit.Parents.First();
-            var headApisJson = headCommit.Tree["generator-input/apis.json"].Target;
-            var parentApisJson = parentCommit.Tree["generator-input/apis.json"].Target;
+            var headApisJson = headCommit.Tree[ApiCatalog.PathInRepository].Target;
+            var parentApisJson = parentCommit.Tree[ApiCatalog.PathInRepository].Target;
 
             // Let's not even bother parsing if apis.json hasn't changed.
             if (headApisJson.Sha == parentApisJson.Sha)

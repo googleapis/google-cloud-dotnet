@@ -61,12 +61,13 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
         public static ReleaseProposal CreateFromHistory(Repository repo, string id, StructuredVersion newVersion, string defaultMessage)
         {
-            var catalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
             var api = catalog[id];
             var oldVersion = api.StructuredVersion;
             api.Version = newVersion.ToString();
             var releases = Release.LoadReleases(repo, catalog, api).ToList();
-            string historyFilePath = HistoryFile.GetPathForPackage(api.Id);
+            string historyFilePath = HistoryFile.GetPathForPackage(rootLayout, api.Id);
             var historyFile = HistoryFile.Load(historyFilePath);
             if (!api.NoVersionHistory)
             {
@@ -119,8 +120,8 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 }
             }
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            using var repo = new Repository(rootLayout.RepositoryRoot);
 
             var original = repo.Head;
 
@@ -130,7 +131,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             Commands.Checkout(repo, releaseBranch);
 
             new SetVersionCommand().InternalExecute(Id, NewVersion.ToString(), quiet: true);
-            ModifiedHistoryFile.Save(HistoryFile.GetPathForPackage(Id));
+            ModifiedHistoryFile.Save(HistoryFile.GetPathForPackage(rootLayout, Id));
             new CommitCommand().InternalExecute();
 
             if (!config.DeferPush)

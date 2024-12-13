@@ -35,9 +35,10 @@ public class ConfigureCommand : IContainerCommand
         var apiPath = options["api-path"];
         var generatorInput = options["generator-input"];
 
-        var catalog = ApiCatalog.LoadFromGeneratorInput(generatorInput);
-        var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(apiRoot);
+        var rootLayout = RootLayout.ForConfiguration(generatorInput, apiRoot);
+        var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(rootLayout.Googleapis);
         var targetApi = apiIndex.Apis.FirstOrDefault(api => api.Directory == apiPath);
+        var catalog = ApiCatalog.Load(rootLayout);
 
         if (targetApi is null)
         {
@@ -52,8 +53,7 @@ public class ConfigureCommand : IContainerCommand
 
         api = AddCommand.ConfigureApi(apiRoot, catalog, targetApi);
         AddCommand.AddApiToCatalog(catalog, api);
-        File.WriteAllText(Path.Combine(generatorInput, "apis.json"), catalog.FormatJson());
-        Console.WriteLine($"Added {api.Id} to the API catalog.");
+        catalog.Save(rootLayout);
         return 0;
     }
 }

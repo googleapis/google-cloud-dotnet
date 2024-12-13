@@ -46,24 +46,24 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private static void Execute(string id)
         {
-            var catalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
             var api = catalog[id];
             if (api.NoVersionHistory)
             {
                 Console.WriteLine($"Skipping version history update for {id}");
                 return;
             }
-            string historyFilePath = HistoryFile.GetPathForPackage(id);
+            string historyFilePath = HistoryFile.GetPathForPackage(rootLayout, id);
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            using var repo = new Repository(rootLayout.RepositoryRoot);
             var releases = Release.LoadReleases(repo, catalog, api).ToList();
             var historyFile = HistoryFile.Load(historyFilePath);
             var sectionsInserted = historyFile.MergeReleases(releases, defaultMessage: null);
             if (sectionsInserted.Count != 0)
             {
                 historyFile.Save(historyFilePath);
-                var relativePath = Path.GetRelativePath(DirectoryLayout.DetermineRootDirectory(), historyFilePath)
+                var relativePath = Path.GetRelativePath(rootLayout.RepositoryRoot, historyFilePath)
                     .Replace('\\', '/');
                 Console.WriteLine($"Updated version history file: {relativePath}");
                 Console.WriteLine("New content:");

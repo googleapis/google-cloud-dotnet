@@ -66,7 +66,8 @@ public class CreateClientsCommand : CommandBase
     // We could consider refactoring later, if we find this is a problem.
     private Assembly PublishAndLoadAssembly(string id)
     {
-        var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
+        var rootLayout = RootLayout.ForCurrentDirectory();
+        var sourceRoot = rootLayout.CreateApiLayout(id).SourceDirectory;
 
         // Work out the TFM to publish, based on specified target frameworks.
         string tfm = GetTargetForReflectionLoad(id);

@@ -44,8 +44,9 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             string defaultMessage,
             Action<int, int> progressCallback)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            using var repo = new Repository(rootLayout.RepositoryRoot);
+
             progressCallback?.Invoke(0, catalog.Apis.Count);
             Console.WriteLine($"Analyzing changes by API (this may take a few minutes)");
             var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);

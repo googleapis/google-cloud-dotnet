@@ -33,9 +33,9 @@ namespace Google.Cloud.Tools.ReleaseManager
         protected override int ExecuteImpl(string[] args)
         {
             Console.WriteLine("Lagging packages (package ID, current version, date range of current version prerelease series):");
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var catalog = ApiCatalog.Load();
-            using (var repo = new Repository(root))
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
+            using (var repo = new Repository(rootLayout.RepositoryRoot))
             {
                 var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
                 foreach (var api in catalog.Apis)

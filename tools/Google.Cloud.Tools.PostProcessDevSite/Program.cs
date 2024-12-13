@@ -80,9 +80,10 @@ namespace Google.Cloud.Tools.PostProcessDevSite
 
         private Program(string apiId)
         {
-            DirectoryLayout layout = DirectoryLayout.ForApi(apiId);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            ApiLayout apiLayout = rootLayout.CreateApiLayout(apiId);
             _apiId = apiId;
-            _outputRoot = layout.DocsOutputDirectory;
+            _outputRoot = apiLayout.DocsOutputDirectory;
             _devSiteRoot = Path.Combine(_outputRoot, "devsite");
             _apiCatalog = ApiCatalog.Load();
             _apiIds = _apiCatalog.CreateIdHashSet();

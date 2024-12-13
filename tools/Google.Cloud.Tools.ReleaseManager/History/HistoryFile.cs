@@ -45,7 +45,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
         private HistoryFile(List<Section> sections) => Sections = sections;
 
-        public static string GetPathForPackage(string id) => Path.Combine(DirectoryLayout.ForApi(id).DocsSourceDirectory, MarkdownFile);
+        public static string GetPathForPackage(RootLayout rootLayout, string id) => Path.Combine(rootLayout.CreateApiLayout(id).DocsSourceDirectory, MarkdownFile);
 
         public static HistoryFile Load(string file)
         {

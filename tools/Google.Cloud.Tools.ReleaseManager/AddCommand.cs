@@ -47,13 +47,13 @@ namespace Google.Cloud.Tools.ReleaseManager
             string id = args[0];
             bool pull = args.Length == 1; // We've already validated that if we've got 2 arguments, the second is NoPullArgument...
 
-            var catalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
             if (catalog.Apis.Any(api => api.Id == id))
             {
                 throw new UserErrorException($"API {id} already exists in the API catalog.");
             }
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var googleapis = Path.Combine(root, "googleapis");
+            var googleapis = rootLayout.Googleapis;
 
             if (pull)
             {
@@ -90,7 +90,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             AddApiToCatalog(catalog, api);
 
             // Done. Let's write out the catalog and display what we've done.
-            File.WriteAllText(ApiCatalog.CatalogPath, catalog.FormatJson());
+            catalog.Save(rootLayout);
             Console.WriteLine($"Added {id} to the API catalog with the following configuration:");
             Console.WriteLine(api.Json.ToString(Formatting.Indented));
             return 0;

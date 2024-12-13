@@ -85,18 +85,17 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected ApiCatalog LoadPrimaryCatalog()
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new Repository(root))
-            {
-                var primary = repo.Branches.FirstOrDefault(b => b.FriendlyName == PrimaryBranch);
-                if (primary == null)
-                {
-                    throw new UserErrorException($"Unable to find branch '{PrimaryBranch}'.");
-                }
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            using var repo = new Repository(rootLayout.RepositoryRoot);
 
-                var primaryCatalogJson = primary.Commits.First()["generator-input/apis.json"].Target.Peel<Blob>().GetContentText();
-                return ApiCatalog.FromJson(primaryCatalogJson);
+            var primary = repo.Branches.FirstOrDefault(b => b.FriendlyName == PrimaryBranch);
+            if (primary == null)
+            {
+                throw new UserErrorException($"Unable to find branch '{PrimaryBranch}'.");
             }
+
+            var primaryCatalogJson = primary.Commits.First()[ApiCatalog.PathInRepository].Target.Peel<Blob>().GetContentText();
+            return ApiCatalog.FromJson(primaryCatalogJson);
         }
     }
 }

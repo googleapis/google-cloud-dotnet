@@ -27,11 +27,12 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var catalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
             ValidateApiCatalog(catalog);
             Console.WriteLine($"API catalog contains {catalog.Apis.Count} entries");
-            // Now we know we can parse the API catalog, let's reformat it.
-            ReformatApiCatalog(catalog);
+            // Now we know we can parse the API catalog, let's save it again, potentially reformatting.
+            catalog.Save(rootLayout);
 
             var generator = NonSourceGenerator.ForInPlaceGeneration();
             foreach (var api in catalog.Apis)
@@ -71,18 +72,6 @@ namespace Google.Cloud.Tools.ReleaseManager
                 {
                     throw new UserErrorException($"Package '{api.Id}' has bad project dependencies (outside package group '{api.PackageGroup.Id}': '{string.Join("', '", badDependencies)}'");
                 }
-            }
-        }
-
-        private static void ReformatApiCatalog(ApiCatalog catalog)
-        {
-            string path = ApiCatalog.CatalogPath;
-            string existing = File.ReadAllText(path);
-            string formatted = catalog.FormatJson();
-            if (existing != formatted)
-            {
-                File.WriteAllText(path, formatted);
-                Console.WriteLine("Reformatted apis.json");
             }
         }
     }

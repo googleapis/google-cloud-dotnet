@@ -53,32 +53,30 @@ namespace Google.Cloud.Tools.ReleaseManager
                 throw new UserErrorException(
                     $"Cannot downgrade from {diff.OldVersion} to {diff.NewVersion} without override. Set {DowngradeOverrideEnvironmentVariable}={diff.NewVersion} to override.");
             }
-            var apiCatalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var apiCatalog = ApiCatalog.Load(rootLayout);
             var api = apiCatalog[diff.Id];
             string header = $"Release {diff.Id} version {diff.NewVersion}";
             var bodyLines = GetCommitBodyLines();
             string message = string.Join("\n", new[] { header, "" }.Concat(bodyLines));
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new Repository(root))
-            {
-                RepositoryStatus status = repo.RetrieveStatus();
-                // TODO: Work out whether this is enough, and whether we actually need all of these.
-                // We basically want git add --all.
-                AddAll(status.Modified);
-                AddAll(status.Missing);
-                AddAll(status.Untracked);
-                repo.Index.Write();
-                var signature = repo.Config.BuildSignature(DateTimeOffset.UtcNow);
-                var commit = repo.Commit(message, signature, signature);
-                Console.WriteLine($"Created commit {commit.Sha}. Review the message and amend if necessary.");
+            using var repo = new Repository(rootLayout.RepositoryRoot);
+            RepositoryStatus status = repo.RetrieveStatus();
+            // TODO: Work out whether this is enough, and whether we actually need all of these.
+            // We basically want git add --all.
+            AddAll(status.Modified);
+            AddAll(status.Missing);
+            AddAll(status.Untracked);
+            repo.Index.Write();
+            var signature = repo.Config.BuildSignature(DateTimeOffset.UtcNow);
+            var commit = repo.Commit(message, signature, signature);
+            Console.WriteLine($"Created commit {commit.Sha}. Review the message and amend if necessary.");
 
-                void AddAll(IEnumerable<StatusEntry> entries)
+            void AddAll(IEnumerable<StatusEntry> entries)
+            {
+                foreach (var entry in entries)
                 {
-                    foreach (var entry in entries)
-                    {
-                        repo.Index.Add(entry.FilePath);
-                    }
+                    repo.Index.Add(entry.FilePath);
                 }
             }
             return 0;
@@ -92,7 +90,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
 
                 // Anything else really should have a history.
-                var historyFilePath = HistoryFile.GetPathForPackage(diff.Id);
+                var historyFilePath = HistoryFile.GetPathForPackage(rootLayout, diff.Id);
                 if (!File.Exists(historyFilePath))
                 {
                     throw new UserErrorException($"Cannot automate a release commit without a version history file.");

@@ -140,9 +140,10 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 }
             }
 
-            DirectoryLayout layout = api == "help" ? DirectoryLayout.ForHelpSnippets() : DirectoryLayout.ForApi(api);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var apiLayout = api == "help" ? ApiLayout.ForHelpSnippets(rootLayout) : rootLayout.CreateApiLayout(api);
 
-            string sourceDirectory = layout.SourceDirectory;
+            string sourceDirectory = apiLayout.SourceDirectory;
             string snippetsSource = Directory.GetDirectories(sourceDirectory, "*.Snippets").FirstOrDefault();
             if (snippetsSource == null)
             {
@@ -150,7 +151,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 return 0;
             }
 
-            string output = layout.SnippetOutputDirectory;
+            string output = apiLayout.SnippetOutputDirectory;
             if (!Directory.Exists(output))
             {
                 Directory.CreateDirectory(output);
@@ -163,7 +164,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 }
             }
 
-            var memberLookup = LoadMembersByType(layout.DocfxMetadataDirectory);
+            var memberLookup = LoadMembersByType(apiLayout.DocfxMetadataDirectory);
             Console.WriteLine($"Loaded {memberLookup.Count} types with {memberLookup.Sum(x => x.Count())} members");
             List<string> errors = new List<string>();
             var snippets = LoadAllSnippets(snippetsSource, api, errors);

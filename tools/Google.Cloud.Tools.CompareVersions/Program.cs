@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -89,7 +89,8 @@ namespace Google.Cloud.Tools.CompareVersions
         {
             if (version == "local")
             {
-                var sourceRoot = DirectoryLayout.ForApi(options.Package).SourceDirectory;
+                var rootLayout = RootLayout.ForCurrentDirectory();
+                var sourceRoot = rootLayout.CreateApiLayout(options.Package).SourceDirectory;
                 file = Path.Combine(sourceRoot, options.Package, "bin", "Release", options.Framework, $"{options.Package}.dll");
             }
             if (file != null)
