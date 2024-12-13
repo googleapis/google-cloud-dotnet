@@ -33,6 +33,7 @@ copy_one_api() {
   STAGING_DIR=owl-bot-staging/$1
   PACKAGE_DIR=apis/$1
   TWEAKS_DIR=generator-input/tweaks/$1
+  EXPORT GENERATOR_OUTPUT_DIR=$PWD
 
   # Determine the commit for googleapis to use based on the first Source-Link in
   # the comment from the last commit in the local directory.
