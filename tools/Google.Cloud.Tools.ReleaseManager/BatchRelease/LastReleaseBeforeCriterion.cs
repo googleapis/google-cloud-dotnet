@@ -36,8 +36,8 @@ public sealed class LastReleaseBeforeCriterion : IBatchCriterion
         string defaultMessage,
         Action<int, int> progressCallback)
     {
-        var root = DirectoryLayout.DetermineRootDirectory();
-        using var repo = new Repository(root);
+        var rootLayout = RootLayout.ForCurrentDirectory();
+        using var repo = new Repository(rootLayout.RepositoryRoot);
 
         var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
 

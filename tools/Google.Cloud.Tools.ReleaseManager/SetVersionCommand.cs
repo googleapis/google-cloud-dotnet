@@ -56,7 +56,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // Update the parsed JObject associated with the ID, and write it back to apis.json.
             api.Json["version"] = version;
             string formatted = catalog.FormatJson();
-            File.WriteAllText(ApiCatalog.CatalogPath, formatted);
+            catalog.Save(nonSourceGenerator.RootLayout);
             if (!quiet)
             {
                 Console.WriteLine("Updated apis.json");

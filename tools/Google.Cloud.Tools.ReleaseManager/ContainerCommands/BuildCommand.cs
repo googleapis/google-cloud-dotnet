@@ -53,8 +53,8 @@ public class BuildCommand : IContainerCommand
     private int BuildConfigured(Dictionary<string, string> options, string repoRoot)
     {
         var apiPath = options.GetValueOrDefault("api-path");
-        var generatorInput = Path.Combine(repoRoot, DirectoryLayout.GeneratorInput);
-        var catalog = ApiCatalog.LoadFromGeneratorInput(generatorInput);
+        var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
+        var catalog = ApiCatalog.Load(rootLayout);
 
         // Note: this (test support) is speculative.
         var test = options.GetValueOrDefault("test") == "true";

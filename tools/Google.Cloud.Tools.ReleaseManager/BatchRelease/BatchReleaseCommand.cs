@@ -31,6 +31,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         protected override int ExecuteImpl(string[] args)
         {
             string configFile = args[0];
+            var rootLayout = RootLayout.ForCurrentDirectory();
             var json = File.ReadAllText(configFile);
             var config = JsonConvert.DeserializeObject<BatchReleaseConfig>(json);
 
@@ -42,8 +43,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
             if (!config.DryRun)
             {
-                var root = DirectoryLayout.DetermineRootDirectory();
-                using var repo = new Repository(root);
+                using var repo = new Repository(rootLayout.RepositoryRoot);
 
                 if (repo.RetrieveStatus().IsDirty)
                 {
@@ -51,7 +51,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 }
             }
 
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(rootLayout);
             var criterion = criteria[0];
             Func<string, StructuredVersion, StructuredVersion> versionIncrementer =
                 config.PostMajorVersion

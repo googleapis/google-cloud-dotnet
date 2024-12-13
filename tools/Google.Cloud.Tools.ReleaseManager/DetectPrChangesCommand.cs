@@ -57,8 +57,8 @@ public class DetectPrChangesCommand : ICommand
 
         HashSet<string> LoadRepositoryTags()
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            using var repo = new Repository(rootLayout.RepositoryRoot);
             return new HashSet<string>(repo.Tags.Select(tag => tag.FriendlyName));
         }
     }

@@ -35,9 +35,12 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SuggestSmokeTestsCommand : CommandBase
     {
+        private readonly RootLayout _rootLayout;
+
         public SuggestSmokeTestsCommand()
             : base("suggest-smoke-tests", "Analyzes a client library for possible simple smoke tests", "id")
         {
+            _rootLayout = RootLayout.ForCurrentDirectory();
         }
 
         protected override int ExecuteImpl(string[] args)
@@ -63,7 +66,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 string testJson = JsonConvert.SerializeObject(tests, Formatting.Indented, serializerSettings);
                 Console.WriteLine(testJson);
                 Console.WriteLine();
-                var smokeTestsFile = Path.Combine(DirectoryLayout.ForApi(id).SourceDirectory, "smoketests.json");
+                var smokeTestsFile = Path.Combine(_rootLayout.CreateApiLayout(id).SourceDirectory, "smoketests.json");
                 if (File.Exists(smokeTestsFile))
                 {
                     Console.WriteLine("smoketests.json already exists, so it has been left alone.");
@@ -80,7 +83,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private Assembly PublishAndLoadAssembly(string id)
         {
             Console.WriteLine($"Publishing release version of library");
-            var sourceRoot = DirectoryLayout.ForApi(id).SourceDirectory;
+            var sourceRoot = _rootLayout.CreateApiLayout(id).SourceDirectory;
             string tfm = CreateClientsCommand.GetTargetForReflectionLoad(id);
             Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", tfm);
 

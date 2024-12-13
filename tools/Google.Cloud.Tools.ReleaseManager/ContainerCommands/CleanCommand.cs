@@ -32,9 +32,8 @@ internal class CleanCommand : IContainerCommand
     {
         var repoRoot = options["repo-root"];
         var apiPath = options.GetValueOrDefault("api-path");
-
-        var generatorInput = Path.Combine(repoRoot, DirectoryLayout.GeneratorInput);
-        var catalog = ApiCatalog.LoadFromGeneratorInput(generatorInput);
+        var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
+        var catalog = ApiCatalog.Load(rootLayout);
 
         List<ApiMetadata> apis;
         if (apiPath is not null)
@@ -55,7 +54,7 @@ internal class CleanCommand : IContainerCommand
             apis = catalog.Apis.ToList();
         }
 
-        var nonSourceGenerator = new NonSourceGenerator(generatorInput, repoRoot);
+        var nonSourceGenerator = new NonSourceGenerator(rootLayout);
 
         foreach (var api in apis)
         {
@@ -68,7 +67,7 @@ internal class CleanCommand : IContainerCommand
         void CleanApiFiles(ApiMetadata api)
         {
             Console.WriteLine($"Cleaning {api.Id}");
-            var layout = DirectoryLayout.ForApi(api.Id, repoRoot, generatorInput);
+            var apiLayout = rootLayout.CreateApiLayout(api);
 
             switch (api.Generator)
             {
@@ -80,12 +79,12 @@ internal class CleanCommand : IContainerCommand
                     DeleteGeneratedSource("");
                     DeleteGeneratedSource(".Snippets");
                     DeleteGeneratedSource(".GeneratedSnippets");
-                    var generatedSnippetsDirectory = Path.Combine(layout.SourceDirectory, $"{api.Id}.GeneratedSnippets");
+                    var generatedSnippetsDirectory = Path.Combine(apiLayout.SourceDirectory, $"{api.Id}.GeneratedSnippets");
                     if (Directory.Exists(generatedSnippetsDirectory))
                     {
                         DeleteAll(Directory.EnumerateFiles(generatedSnippetsDirectory, "*.json"));
                     }
-                    File.Delete(Path.Combine(layout.SourceDirectory, "gapic_metadata.json"));
+                    File.Delete(Path.Combine(apiLayout.SourceDirectory, "gapic_metadata.json"));
                     break;
                 default:
                     // We didn't generate any code, so we leave anything that's still there alone.
@@ -95,11 +94,11 @@ internal class CleanCommand : IContainerCommand
                     break;
             }
             nonSourceGenerator.CleanApiFiles(api.Id);
-            PruneEmptyDirectories(layout.SourceDirectory);
+            PruneEmptyDirectories(apiLayout.SourceDirectory);
 
             void DeleteGeneratedSource(string directorySuffix)
             {
-                var directory = Path.Combine(layout.SourceDirectory, $"{api.Id}{directorySuffix}");
+                var directory = Path.Combine(apiLayout.SourceDirectory, $"{api.Id}{directorySuffix}");
                 if (Directory.Exists(directory))
                 {
                     DeleteAll(Directory.EnumerateFiles(directory, "*.g.cs", SearchOption.AllDirectories));

@@ -46,11 +46,13 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
                 throw new UserErrorException("Please specify the API name");
             }
             string api = args[0];
-            var layout = DirectoryLayout.ForApi(api);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var apiLayout = rootLayout.CreateApiLayout(api);
+
             var apiCatalog = ApiCatalog.Load();
             var apiMetadata = apiCatalog[api];
 
-            string output = layout.DocsOutputDirectory;
+            string output = apiLayout.DocsOutputDirectory;
             if (Directory.Exists(output))
             {
                 Directory.Delete(output, true);
@@ -59,7 +61,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 
             CreateGoogleApisDevDocfxJson(apiCatalog, apiMetadata, output);
             CreateDevsiteDocfxJson(apiCatalog, apiMetadata, output);
-            CopyAndGenerateArticles(apiMetadata, layout.DocsSourceDirectory, output);
+            CopyAndGenerateArticles(apiMetadata, apiLayout.DocsSourceDirectory, output);
             CreateToc(api, output);
             return 0;
         }
@@ -285,8 +287,9 @@ present as a root for the [API reference documentation](obj/api/{api.Id}.yml).";
             {
                 return new List<string>();
             }
-            var layout = DirectoryLayout.ForApi(api.Id);
-            var packageSource = Path.Combine(layout.SourceDirectory, api.Id);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var apiLayout = rootLayout.CreateApiLayout(api);
+            var packageSource = Path.Combine(apiLayout.SourceDirectory, api.Id);
             var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs").Concat(Directory.GetFiles(packageSource, "*Client.g.cs"));
             return sourceFiles
                 .Where(file => File.ReadAllText(file).Contains(": gaxgrpc::ServiceSettingsBase")) // Check it contains a generated client

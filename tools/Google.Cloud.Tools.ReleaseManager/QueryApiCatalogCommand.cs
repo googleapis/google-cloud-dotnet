@@ -50,21 +50,13 @@ public class QueryApiCatalogCommand : CommandBase
         string field = args[1];
         string defaultValue = args.Length == 3 ? args[2] : null;
 
-        // Load the API catalog as plain JSON with no deserialization, for efficiency.
-        // This command is called multiple times per API during local generation, and
-        // ApiCatalog.Load does a lot of work we don't need.
-        var catalogJToken = JToken.Parse(File.ReadAllText(ApiCatalog.CatalogPath));
-
-        var apiJToken = catalogJToken["apis"]
-            .Children()
-            .OfType<JObject>()
-            .FirstOrDefault(obj => obj.TryGetValue("id", out var idToken) && idToken.Value<string>() == id);
-        if (apiJToken is null)
+        var catalog = ApiCatalog.Load();
+        if (!catalog.TryGetApi(id, out var api))
         {
             throw new UserErrorException($"No such API {id}");
         }
 
-        var result = apiJToken.TryGetValue(field, StringComparison.Ordinal, out var value)
+        var result = api.Json.TryGetValue(field, StringComparison.Ordinal, out var value)
             ? (string) value
             : defaultValue ?? throw new UserErrorException($"API {id} has no field {field}");
         Console.WriteLine(result);

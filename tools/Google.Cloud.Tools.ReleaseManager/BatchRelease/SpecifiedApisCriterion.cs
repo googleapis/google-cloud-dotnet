@@ -35,8 +35,8 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             string defaultMessage,
             Action<int, int> progressCallback)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using var repo = new Repository(root);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            using var repo = new Repository(rootLayout.RepositoryRoot);
 
             int progress = 0;
             foreach (var api in catalog.Apis)

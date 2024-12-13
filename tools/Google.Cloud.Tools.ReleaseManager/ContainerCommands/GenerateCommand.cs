@@ -42,17 +42,14 @@ internal class GenerateCommand : IContainerCommand
             throw new UserErrorException("At least one of api-path or generator-input must be specified");
         }
 
-        // Note: we expect the container to already have environment variables for
-        // protoc, protobuf tools root, the gRPC generator, and the GAPIC generator.
-
         // For unconfigured generation, we use a really minimal generator-input directory in the container itself.
         // At the time of writing, this is only used for the common resource config (which hadn't changed between March 2021
         // and December 2024, so is clearly pretty stable).
-        Environment.SetEnvironmentVariable(GenerateApisCommand.GeneratorInputDirectoryEnvironmentVariable, generatorInput ?? "/app/generator-input");
-        Environment.SetEnvironmentVariable(GenerateApisCommand.GeneratorOutputDirectoryEnvironmentVariable, output);
-        Environment.SetEnvironmentVariable(GenerateApisCommand.GoogleApisDirectoryEnvironmentVariable, apiRoot);
+        var rootLayout = RootLayout.ForGeneration(generatorInput ?? "/app/generator-input", output, apiRoot);
 
-        var generatorCommand = new GenerateApisCommand();
+        // Note: we expect the container to already have environment variables for
+        // protoc, protobuf tools root, the gRPC generator, and the GAPIC generator.
+        var generatorCommand = new GenerateApisCommand(rootLayout);
         if (generatorInput is null)
         {
             return generatorCommand.Execute(new[] { "--unconfigured", apiPath });
@@ -61,7 +58,7 @@ internal class GenerateCommand : IContainerCommand
         {
             if (apiPath is not null)
             {
-                var catalog = ApiCatalog.LoadFromGeneratorInput(generatorInput);
+                var catalog = ApiCatalog.Load(rootLayout);
                 var id = catalog.Apis.FirstOrDefault(api => api.ProtoPath == apiPath)?.Id;
                 if (id is null)
                 {

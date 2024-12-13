@@ -38,14 +38,12 @@ internal class GenerateApisCommand : ICommand
     internal const string GeneratorOutputDirectoryEnvironmentVariable = "GENERATOR_OUTPUT_DIR";
     internal const string GeneratorInputDirectoryEnvironmentVariable = "GENERATOR_INPUT_DIR";
 
-    private readonly string protocBinary;
-    private readonly string gapicGeneratorBinary;
-    private readonly string grpcGeneratorBinary;
-    private readonly string googleApisDirectory;
-    private readonly string protobufToolsRootDirectory;
-    private readonly string generatorInputDirectory;
-    private readonly string generatorOutputDirectory;
-    private readonly string tempOutputDirectory;
+    private readonly RootLayout _rootLayout;
+    private readonly string _protocBinary;
+    private readonly string _gapicGeneratorBinary;
+    private readonly string _grpcGeneratorBinary;
+    private readonly string _protobufToolsRootDirectory;
+    private readonly string _tempOutputDirectory;
 
     public string Description => "Generates APIs (used by generateapis.sh)";
 
@@ -53,27 +51,33 @@ internal class GenerateApisCommand : ICommand
 
     public string ExpectedArguments => $"[--unconfigured] [id...] (defaults to all APIs)";
 
-    public GenerateApisCommand()
+    public GenerateApisCommand(RootLayout rootLayout)
     {
         // These are only *validated* in Execute.
-        protocBinary = Environment.GetEnvironmentVariable(ProtocEnvironmentVariable);
-        gapicGeneratorBinary = Environment.GetEnvironmentVariable(GapicGeneratorEnvironmentVariable);
-        grpcGeneratorBinary = Environment.GetEnvironmentVariable(GrpcGeneratorEnvironmentVariable);
-        googleApisDirectory = Environment.GetEnvironmentVariable(GoogleApisDirectoryEnvironmentVariable);
-        protobufToolsRootDirectory = Environment.GetEnvironmentVariable(ProtobufToolsRootEnvironmentVariable);
-        generatorInputDirectory = Environment.GetEnvironmentVariable(GeneratorInputDirectoryEnvironmentVariable);
-        generatorOutputDirectory = Environment.GetEnvironmentVariable(GeneratorOutputDirectoryEnvironmentVariable);
-        tempOutputDirectory = Path.Combine(Path.GetTempPath(), "generator-output");
+        _rootLayout = rootLayout;
+        _protocBinary = Environment.GetEnvironmentVariable(ProtocEnvironmentVariable);
+        _gapicGeneratorBinary = Environment.GetEnvironmentVariable(GapicGeneratorEnvironmentVariable);
+        _grpcGeneratorBinary = Environment.GetEnvironmentVariable(GrpcGeneratorEnvironmentVariable);
+        _protobufToolsRootDirectory = Environment.GetEnvironmentVariable(ProtobufToolsRootEnvironmentVariable);
+        _tempOutputDirectory = Path.Combine(Path.GetTempPath(), "generator-output");
+    }
+
+    public GenerateApisCommand() : this(
+        RootLayout.ForGeneration(
+            Environment.GetEnvironmentVariable(GeneratorInputDirectoryEnvironmentVariable),
+            Environment.GetEnvironmentVariable(GeneratorOutputDirectoryEnvironmentVariable),
+            Environment.GetEnvironmentVariable(GoogleApisDirectoryEnvironmentVariable)))
+    {
     }
 
     public int Execute(string[] args)
     {
         ValidateEnvironment();
-        if (Directory.Exists(tempOutputDirectory))
+        if (Directory.Exists(_tempOutputDirectory))
         {
-            Directory.Delete(tempOutputDirectory, true);
+            Directory.Delete(_tempOutputDirectory, true);
         }
-        Directory.CreateDirectory(tempOutputDirectory);
+        Directory.CreateDirectory(_tempOutputDirectory);
 
         if (args.FirstOrDefault() == "--unconfigured")
         {
@@ -81,7 +85,7 @@ internal class GenerateApisCommand : ICommand
         }
 
         var apis = new List<ApiMetadata>();
-        var nonSourceGenerator = new NonSourceGenerator(generatorInputDirectory, generatorOutputDirectory);
+        var nonSourceGenerator = new NonSourceGenerator(_rootLayout);
         var catalog = nonSourceGenerator.ApiCatalog;
 
         // If APIs have been specified, check they all exist before we start.
@@ -117,7 +121,7 @@ internal class GenerateApisCommand : ICommand
 
     private void Generate(ApiMetadata api)
     {
-        var layout = DirectoryLayout.ForApi(api.Id, generatorOutputDirectory, generatorInputDirectory);
+        var apiLayout = _rootLayout.CreateApiLayout(api);
         MaybeRunScript("pregeneration.sh");
         switch (api.Generator)
         {
@@ -135,7 +139,7 @@ internal class GenerateApisCommand : ICommand
 
         void MaybeRunScript(string script)
         {
-            var fullScript = Path.Combine(layout.TweaksDirectory, script);
+            var fullScript = Path.Combine(apiLayout.TweaksDirectory, script);
             if (!File.Exists(fullScript))
             {
                 return;
@@ -144,7 +148,7 @@ internal class GenerateApisCommand : ICommand
             var psi = new ProcessStartInfo
             {
                 FileName = GetBashExecutable(),
-                WorkingDirectory = layout.TweaksDirectory,
+                WorkingDirectory = apiLayout.TweaksDirectory,
                 ArgumentList = { script }
             };
             Processes.RunAndPropagateOutput(psi, script);
@@ -154,7 +158,7 @@ internal class GenerateApisCommand : ICommand
         {
             // We only validate the top-level directory - this mirrors the old bash script; the code to validate nested
             // directories would be more complex for very limited benefit.
-            foreach (var file in Directory.GetFiles(Path.Combine(layout.SourceDirectory, api.Id), "*.g.cs"))
+            foreach (var file in Directory.GetFiles(Path.Combine(apiLayout.SourceDirectory, api.Id), "*.g.cs"))
             {
                 var nsLine = File.ReadLines(file).FirstOrDefault(line => line.StartsWith("namespace", StringComparison.Ordinal));
                 if (nsLine is null)
@@ -181,13 +185,13 @@ internal class GenerateApisCommand : ICommand
 
     private void GenerateGapicApi(ApiMetadata api)
     {
-        var layout = DirectoryLayout.ForApi(api.Id, generatorOutputDirectory, generatorInputDirectory);
-        string productionDirectory = Path.Combine(layout.SourceDirectory, api.Id);
+        var apiLayout = _rootLayout.CreateApiLayout(api);
+        string productionDirectory = Path.Combine(apiLayout.SourceDirectory, api.Id);
         Directory.CreateDirectory(productionDirectory);
         DeleteGeneratedFiles(productionDirectory);
-        DeleteGeneratedFiles(Path.Combine(layout.SourceDirectory, $"{api.Id}.Snippets"));
-        DeleteGeneratedFiles(Path.Combine(layout.SourceDirectory, $"{api.Id}.GeneratedSnippets"));
-        var protosDir = Path.Combine(googleApisDirectory, api.ProtoPath);
+        DeleteGeneratedFiles(Path.Combine(apiLayout.SourceDirectory, $"{api.Id}.Snippets"));
+        DeleteGeneratedFiles(Path.Combine(apiLayout.SourceDirectory, $"{api.Id}.GeneratedSnippets"));
+        var protosDir = Path.Combine(_rootLayout.Googleapis, api.ProtoPath);
 
         // The project files will be generated by the GAPIC generator, but regenerated afterwards
         // using the API catalog, so we should end up with the right result. Importantly, this
@@ -204,14 +208,14 @@ internal class GenerateApisCommand : ICommand
             $"--grpc_out={productionDirectory}",
             $"--grpc_opt=base_namespace={api.Id}",
             "--grpc_opt=file_suffix=Grpc.g.cs",
-            $"--plugin=protoc-gen-grpc={grpcGeneratorBinary}");
+            $"--plugin=protoc-gen-grpc={_grpcGeneratorBinary}");
 
         // GAPIC generation, which requires rather more configuration.
         var allGapicArguments = new List<string>
         {
-            $"--gapic_out={layout.SourceDirectory}",
+            $"--gapic_out={apiLayout.SourceDirectory}",
             "--plugin",
-            $"protoc-gen-gapic={gapicGeneratorBinary}"
+            $"protoc-gen-gapic={_gapicGeneratorBinary}"
         };
 
         foreach (var (name, value) in GetGapicPluginOptions())
@@ -221,22 +225,22 @@ internal class GenerateApisCommand : ICommand
 
         // Include Cloud Common protos so that operation result/metadata types can use the messages in them.
         // Nothing will be generated for these protos though.
-        foreach (var proto in Directory.GetFiles(Path.Combine(googleApisDirectory, "google", "cloud", "common"), "*.proto"))
+        foreach (var proto in Directory.GetFiles(Path.Combine(_rootLayout.Googleapis, "google", "cloud", "common"), "*.proto"))
         {
             allGapicArguments.Add(proto);
         }
         // Conditionally include Cloud common resources.
         if (api.IncludeCommonResourcesProto == true)
         {
-            allGapicArguments.Add($"{googleApisDirectory}/google/cloud/common_resources.proto");
+            allGapicArguments.Add($"{_rootLayout.Googleapis}/google/cloud/common_resources.proto");
         }
 
         RunProtoc(protosDir, allGapicArguments.ToArray());
 
         IEnumerable<(string name, string value)> GetGapicPluginOptions()
         {
-            string apiSrcDir = Path.Combine(googleApisDirectory, api.ProtoPath);
-            yield return ("log", Path.Combine(tempOutputDirectory, $"generator-log-{api.Id}.txt"));
+            string apiSrcDir = Path.Combine(_rootLayout.Googleapis, api.ProtoPath);
+            yield return ("log", Path.Combine(_tempOutputDirectory, $"generator-log-{api.Id}.txt"));
             yield return ("transport", api.Transport ?? "grpc");
             yield return ("rest-numeric-enums", api.RestNumericEnums.ToString());
 
@@ -251,21 +255,21 @@ internal class GenerateApisCommand : ICommand
                 yield return ("grpc-service-config", serviceConfigFiles[0]);
             }
 
-            yield return ("common-resources-config", Path.Combine(generatorInputDirectory, "CommonResourcesConfig.json"));
+            yield return ("common-resources-config", Path.Combine(_rootLayout.GeneratorInput, "CommonResourcesConfig.json"));
             if (api.CommonResourcesConfig is string config)
             {
-                yield return ("common-resources-config", Path.Combine(generatorInputDirectory, config));
+                yield return ("common-resources-config", Path.Combine(_rootLayout.GeneratorInput, config));
             }
         }
     }
 
     private void GenerateProtoApi(ApiMetadata api)
     {
-        var layout = DirectoryLayout.ForApi(api.Id, generatorOutputDirectory, generatorInputDirectory);
-        string productionDirectory = Path.Combine(layout.SourceDirectory, api.Id);
+        var apiLayout = _rootLayout.CreateApiLayout(api);
+        string productionDirectory = Path.Combine(apiLayout.SourceDirectory, api.Id);
         Directory.CreateDirectory(productionDirectory);
         DeleteGeneratedFiles(productionDirectory);
-        var protosDir = Path.Combine(googleApisDirectory, api.ProtoPath);
+        var protosDir = Path.Combine(_rootLayout.Googleapis, api.ProtoPath);
         RunProtoc(protosDir,
             $"--csharp_out={productionDirectory}",
             $"--csharp_opt=base_namespace={api.Id}",
@@ -281,12 +285,12 @@ internal class GenerateApisCommand : ICommand
         var protos = Directory.GetFiles(protoDirectory, "*.proto", SearchOption.AllDirectories);
         var psi = new ProcessStartInfo
         {
-            FileName = protocBinary,
+            FileName = _protocBinary,
             ArgumentList =
             {
                 // Common arguments
-                "-I", googleApisDirectory,
-                "-I", Path.Combine(protobufToolsRootDirectory, "tools")
+                "-I", _rootLayout.Googleapis,
+                "-I", Path.Combine(_protobufToolsRootDirectory, "tools")
             }
         };
         // Then the custom arguments passed in, then the protos.
@@ -312,13 +316,13 @@ internal class GenerateApisCommand : ICommand
 
     private void ValidateEnvironment()
     {
-        ValidateFile(protocBinary, "protoc");
-        ValidateFile(gapicGeneratorBinary, "GAPIC generator");
-        ValidateFile(grpcGeneratorBinary, "gRPC generator");
-        ValidateDirectory(googleApisDirectory, "googleapis");
-        ValidateDirectory(protobufToolsRootDirectory, "protobuf tools root");
-        ValidateDirectory(generatorOutputDirectory, "generator output");
-        ValidateDirectory(generatorInputDirectory, "generator input");
+        ValidateDirectory(_rootLayout.GeneratorInput, "generator output");
+        ValidateDirectory(_rootLayout.GeneratorOutput, "generator input");
+        ValidateDirectory(_rootLayout.Googleapis, "googleapis");
+        ValidateFile(_protocBinary, "protoc");
+        ValidateFile(_gapicGeneratorBinary, "GAPIC generator");
+        ValidateFile(_grpcGeneratorBinary, "gRPC generator");
+        ValidateDirectory(_protobufToolsRootDirectory, "protobuf tools root");
         // This will throw if we can't detect bash.
         GetBashExecutable();
 
@@ -362,11 +366,11 @@ internal class GenerateApisCommand : ICommand
             args = DetectApiDirectories();
         }
 
-        if (Directory.Exists(tempOutputDirectory))
+        if (Directory.Exists(_tempOutputDirectory))
         {
-            Directory.Delete(tempOutputDirectory, true);
+            Directory.Delete(_tempOutputDirectory, true);
         }
-        Directory.CreateDirectory(tempOutputDirectory);
+        Directory.CreateDirectory(_tempOutputDirectory);
 
         foreach (var arg in args)
         {
@@ -379,7 +383,7 @@ internal class GenerateApisCommand : ICommand
     private void GenerateUnconfigured(string arg)
     {
         Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Generating {arg}");
-        var apiDirectory = Path.Combine(googleApisDirectory, arg);
+        var apiDirectory = Path.Combine(_rootLayout.GeneratorOutput, arg);
         var configFiles = GetServiceConfigFiles(apiDirectory);
         if (configFiles.Count != 1)
         {
@@ -392,7 +396,7 @@ internal class GenerateApisCommand : ICommand
         // First figure out the C# namespace, which we'd normally use as the ID.
         // We need to use a mixture of C# options and the protobuf package, just like the API Index does.
         // That means we first need to generate a descriptor file set.
-        var descriptorFile = Path.Combine(tempOutputDirectory, "descriptor.pb");
+        var descriptorFile = Path.Combine(_tempOutputDirectory, "descriptor.pb");
         try
         {
             RunProtoc(apiDirectory,
@@ -423,7 +427,7 @@ internal class GenerateApisCommand : ICommand
         // Generate into a directory structure which matches the proto path name. (That makes it easy to find when building.)
         // This may seem redundant when only generating a single API, but it means users can generate multiple APIs to a single
         // output directory (even if that required multiple CLI invocations).
-        var sourceDirectory = Path.Combine(generatorOutputDirectory, arg);
+        var sourceDirectory = Path.Combine(_rootLayout.GeneratorOutput, arg);
         var productionDirectory = Path.Combine(sourceDirectory, id);
         Directory.CreateDirectory(productionDirectory);
 
@@ -439,7 +443,7 @@ internal class GenerateApisCommand : ICommand
             $"--grpc_out={productionDirectory}",
             $"--grpc_opt=base_namespace={id}",
             "--grpc_opt=file_suffix=Grpc.g.cs",
-            $"--plugin=protoc-gen-grpc={grpcGeneratorBinary}");
+            $"--plugin=protoc-gen-grpc={_grpcGeneratorBinary}");
         }
         catch (Exception e)
         {
@@ -452,7 +456,7 @@ internal class GenerateApisCommand : ICommand
         {
             $"--gapic_out={sourceDirectory}",
             "--plugin",
-            $"protoc-gen-gapic={gapicGeneratorBinary}"
+            $"protoc-gen-gapic={_gapicGeneratorBinary}"
         };
 
         foreach (var (name, value) in GetGapicPluginOptions())
@@ -462,7 +466,7 @@ internal class GenerateApisCommand : ICommand
 
         // Include Cloud Common protos so that operation result/metadata types can use the messages in them.
         // Nothing will be generated for these protos though.
-        foreach (var proto in Directory.GetFiles(Path.Combine(googleApisDirectory, "google", "cloud", "common"), "*.proto"))
+        foreach (var proto in Directory.GetFiles(Path.Combine(_rootLayout.Googleapis, "google", "cloud", "common"), "*.proto"))
         {
             allGapicArguments.Add(proto);
         }
@@ -473,7 +477,7 @@ internal class GenerateApisCommand : ICommand
         // Conditionally include Cloud common resources.
         if (includeCommonResourcesProto)
         {
-            allGapicArguments.Add($"{googleApisDirectory}/google/cloud/common_resources.proto");
+            allGapicArguments.Add($"{_rootLayout.Googleapis}/google/cloud/common_resources.proto");
         }
 
         try
@@ -502,7 +506,7 @@ internal class GenerateApisCommand : ICommand
             yield return ("transport", "grpc");
             yield return ("rest-numeric-enums", "True");
             yield return ("service-config", configFiles[0]);
-            yield return ("common-resources-config", Path.Combine(generatorInputDirectory, "CommonResourcesConfig.json"));
+            yield return ("common-resources-config", Path.Combine(_rootLayout.Googleapis, "CommonResourcesConfig.json"));
         }
     }
 
@@ -511,7 +515,7 @@ internal class GenerateApisCommand : ICommand
         Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Detecting API directories.");
         List<string> apiDirectories = new();
         var pending = new Queue<string>();
-        Enqueue(Directory.GetDirectories(googleApisDirectory).Where(d => !d.EndsWith(".git")));
+        Enqueue(Directory.GetDirectories(_rootLayout.Googleapis).Where(d => !d.EndsWith(".git")));
         while (pending.Count > 0)
         {
             var candidate = pending.Dequeue();
@@ -520,7 +524,7 @@ internal class GenerateApisCommand : ICommand
             {
                 // We've found an API: ignore child directories, but use this.
                 case 1:
-                    apiDirectories.Add(Path.GetRelativePath(googleApisDirectory, candidate).Replace('\\', '/'));
+                    apiDirectories.Add(Path.GetRelativePath(_rootLayout.Googleapis, candidate).Replace('\\', '/'));
                     break;
                 // Nothing: assume there may be child directories containing APIs.
                 case 0:

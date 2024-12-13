@@ -44,17 +44,15 @@ namespace Google.Cloud.Tools.ReleaseManager
             var gitHubToken = GetGitHubAccessToken();
             var gitHubClient = CreateGitHubClient(gitHubToken);
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new Repository(root))
-            {
-                ValidateNoChanges(repo);
-                // TODO: "--force" mode to skip this.
-                ValidateProjectReferences();
-                var upstream = GetUpstreamRemote(repo);
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            using var repo = new Repository(rootLayout.RepositoryRoot);
+            ValidateNoChanges(repo);
+            // TODO: "--force" mode to skip this.
+            ValidateProjectReferences();
+            var upstream = GetUpstreamRemote(repo);
 
-                string branch = PushBranch(repo, upstream, gitHubToken);
-                CreatePullRequest(repo, gitHubClient, branch);
-            }
+            string branch = PushBranch(repo, upstream, gitHubToken);
+            CreatePullRequest(repo, gitHubClient, branch);
             return 0;
         }
 

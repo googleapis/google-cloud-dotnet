@@ -175,13 +175,12 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
         private List<string> GetLocalGoogleApisCommitLines(string hash)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var googleapis = Path.Combine(root, "googleapis");
-            if (!Directory.Exists(googleapis))
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            if (!Directory.Exists(rootLayout.Googleapis))
             {
                 return null;
             }
-            using Repository googleApisLocalRepo = new Repository(googleapis);
+            using Repository googleApisLocalRepo = new Repository(rootLayout.Googleapis);
             var obj = googleApisLocalRepo.Lookup(new ObjectId(hash));
             if (obj is not Commit commit)
             {

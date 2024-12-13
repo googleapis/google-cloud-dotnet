@@ -31,7 +31,8 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var catalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
 
             // Work out the package group that we're modifying.
             var diffs = FindChangedVersions();
@@ -57,14 +58,14 @@ namespace Google.Cloud.Tools.ReleaseManager
                 .Where(diff => !catalog[diff.Id].NoVersionHistory)
                 .ToList();
 
-            if (diffsWithHistory.Any(diff => !File.Exists(HistoryFile.GetPathForPackage(diff.Id))))
+            if (diffsWithHistory.Any(diff => !File.Exists(HistoryFile.GetPathForPackage(rootLayout, diff.Id))))
             {
                 // Not a great message, but a very rare condition.
                 throw new UserErrorException($"Not all expected history file paths exist.");
             }
 
             var diffHistoryPairs = diffsWithHistory
-                .Select(diff => (diff, history: HistoryFile.Load(HistoryFile.GetPathForPackage(diff.Id))))
+                .Select(diff => (diff, history: HistoryFile.Load(HistoryFile.GetPathForPackage(rootLayout, diff.Id))))
                 .ToList();
 
 
@@ -103,29 +104,26 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             var message = string.Join("\n", lines);
 
-            var root = DirectoryLayout.DetermineRootDirectory();
-            using (var repo = new Repository(root))
-            {
-                RepositoryStatus status = repo.RetrieveStatus();
-                // TODO: Work out whether this is enough, and whether we actually need all of these.
-                // We basically want git add --all.
-                AddAll(status.Modified);
-                AddAll(status.Missing);
-                AddAll(status.Untracked);
-                repo.Index.Write();
-                var signature = repo.Config.BuildSignature(DateTimeOffset.UtcNow);
-                var commit = repo.Commit(message, signature, signature);
-                Console.WriteLine($"Created commit {commit.Sha}. Review the message and amend if necessary.");
+            using var repo = new Repository(rootLayout.RepositoryRoot);
+            RepositoryStatus status = repo.RetrieveStatus();
+            // TODO: Work out whether this is enough, and whether we actually need all of these.
+            // We basically want git add --all.
+            AddAll(status.Modified);
+            AddAll(status.Missing);
+            AddAll(status.Untracked);
+            repo.Index.Write();
+            var signature = repo.Config.BuildSignature(DateTimeOffset.UtcNow);
+            var commit = repo.Commit(message, signature, signature);
+            Console.WriteLine($"Created commit {commit.Sha}. Review the message and amend if necessary.");
+            return 0;
 
-                void AddAll(IEnumerable<StatusEntry> entries)
+            void AddAll(IEnumerable<StatusEntry> entries)
+            {
+                foreach (var entry in entries)
                 {
-                    foreach (var entry in entries)
-                    {
-                        repo.Index.Add(entry.FilePath);
-                    }
+                    repo.Index.Add(entry.FilePath);
                 }
             }
-            return 0;
         }
     }
 }

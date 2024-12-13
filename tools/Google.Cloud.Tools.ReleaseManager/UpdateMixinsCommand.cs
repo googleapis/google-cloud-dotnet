@@ -36,7 +36,6 @@ public sealed class UpdateMixinsCommand : CommandBase
         var catalog = nonSourceGenerator.ApiCatalog;
         var api = catalog[id];
 
-        var root = DirectoryLayout.DetermineRootDirectory();
         var apiIndex = ApiIndex.V1.Index.LoadFromGitHub(committish);
 
         var targetApiFromIndex = apiIndex.Apis.FirstOrDefault(api => api.DeriveCSharpNamespace() == id);
@@ -64,11 +63,9 @@ public sealed class UpdateMixinsCommand : CommandBase
         }
 
         api.Json["dependencies"] = new JObject(api.Dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
-        var layout = DirectoryLayout.ForApi(api.Id);
-        var apiNames = catalog.CreateIdHashSet();
+        var rootLayout = RootLayout.ForCurrentDirectory();
         nonSourceGenerator.GenerateApiFiles(api);
-        string formatted = catalog.FormatJson();
-        File.WriteAllText(ApiCatalog.CatalogPath, formatted);
+        catalog.Save(nonSourceGenerator.RootLayout);
         Console.WriteLine("Updated apis.json and project files");
         return 0;
     }

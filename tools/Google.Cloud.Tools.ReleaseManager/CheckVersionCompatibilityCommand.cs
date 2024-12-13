@@ -33,10 +33,10 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         public int Execute(string[] args)
         {
-            var root = DirectoryLayout.DetermineRootDirectory();
-            var catalog = ApiCatalog.Load();
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var catalog = ApiCatalog.Load(rootLayout);
             HashSet<string> tags;
-            using (var repo = new Repository(root))
+            using (var repo = new Repository(rootLayout.RepositoryRoot))
             {
                 tags = new HashSet<string>(repo.Tags.Select(tag => tag.FriendlyName));
             }
@@ -124,6 +124,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// </summary>
         private static Level CheckCompatibility(ApiMetadata api, StructuredVersion version)
         {
+            var rootLayout = RootLayout.ForCurrentDirectory();
+            var apiLayout = rootLayout.CreateApiLayout(api);
             Console.WriteLine($"Differences from {version}");
 
             // TODO: Remove this try/catch when we can detect that a package has never been pushed.
@@ -145,7 +147,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // Google.Cloud.Diagnostics.AspNetCore3 targets .NET Core 3.1
             string[] candidateTfms = { "netstandard2.1", "netstandard2.0", "netcoreapp3.1" };
             var sourceAssembly = candidateTfms
-                .Select(tfm => Path.Combine(DirectoryLayout.ForApi(api.Id).SourceDirectory, api.Id, "bin", "Release", tfm, $"{api.Id}.dll"))
+                .Select(tfm => Path.Combine(apiLayout.SourceDirectory, api.Id, "bin", "Release", tfm, $"{api.Id}.dll"))
                 .FirstOrDefault(File.Exists);
             if (sourceAssembly is null)
             {
