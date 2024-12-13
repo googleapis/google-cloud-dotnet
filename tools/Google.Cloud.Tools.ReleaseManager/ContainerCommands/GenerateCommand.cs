@@ -44,7 +44,11 @@ internal class GenerateCommand : IContainerCommand
 
         // Note: we expect the container to already have environment variables for
         // protoc, protobuf tools root, the gRPC generator, and the GAPIC generator.
-        Environment.SetEnvironmentVariable(GenerateApisCommand.GeneratorInputDirectoryEnvironmentVariable, generatorInput);
+
+        // For unconfigured generation, we use a really minimal generator-input directory in the container itself.
+        // At the time of writing, this is only used for the common resource config (which hadn't changed between March 2021
+        // and December 2024, so is clearly pretty stable).
+        Environment.SetEnvironmentVariable(GenerateApisCommand.GeneratorInputDirectoryEnvironmentVariable, generatorInput ?? "/app/generator-input");
         Environment.SetEnvironmentVariable(GenerateApisCommand.GeneratorOutputDirectoryEnvironmentVariable, output);
         Environment.SetEnvironmentVariable(GenerateApisCommand.GoogleApisDirectoryEnvironmentVariable, apiRoot);
 
