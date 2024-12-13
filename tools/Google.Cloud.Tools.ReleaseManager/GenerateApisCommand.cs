@@ -372,7 +372,8 @@ internal class GenerateApisCommand : ICommand
         {
             GenerateUnconfigured(arg);
         }
-        return 1;
+        Console.WriteLine($"{DateTime.UtcNow:yyyy-MM-dd'T'HH:mm:ss.fff}Z Generation complete.");
+        return 0;
     }
 
     private void GenerateUnconfigured(string arg)
