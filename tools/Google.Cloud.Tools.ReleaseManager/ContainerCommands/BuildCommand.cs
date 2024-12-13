@@ -33,7 +33,25 @@ public class BuildCommand : IContainerCommand
 {
     public int Execute(Dictionary<string, string> options)
     {
-        var repoRoot = options["repo-root"];
+        var repoRoot = options.GetValueOrDefault("repo-root");
+        var generatorOutput = options.GetValueOrDefault("generator-output");
+
+        if (repoRoot is null == generatorOutput is null)
+        {
+            Console.WriteLine("Exactly one of --repo-root or --generator-output must be specified.");
+            return 1;
+        }
+
+        return repoRoot is not null
+            ? BuildConfigured(options, repoRoot)
+            : BuildUnconfigured(options, generatorOutput);
+    }
+
+    /// <summary>
+    /// Build code from the repo root, using our normal build scripts.
+    /// </summary>
+    private int BuildConfigured(Dictionary<string, string> options, string repoRoot)
+    {
         var apiPath = options.GetValueOrDefault("api-path");
         var generatorInput = Path.Combine(repoRoot, DirectoryLayout.GeneratorInput);
         var catalog = ApiCatalog.LoadFromGeneratorInput(generatorInput);
@@ -72,13 +90,47 @@ public class BuildCommand : IContainerCommand
             WorkingDirectory = repoRoot
         };
         processArguments.ForEach(psi.ArgumentList.Add);
+        return ExecuteBuildProcess(psi);
+    }
 
+    /// <summary>
+    /// Build code from the repo root, using our normal build scripts.
+    /// </summary>
+    private int BuildUnconfigured(Dictionary<string, string> options, string generatorOutput)
+    {
+        string apiPath = options["api-path"];
+
+        var apiRoot = Path.Combine(generatorOutput, apiPath);
+        if (!Directory.Exists(apiRoot))
+        {
+            Console.WriteLine($"Expected directory '{apiRoot}' does not exist");
+            return 1;
+        }
+
+        var solutions = Directory.GetFiles(apiRoot, "*.sln");
+        if (solutions.Length != 1)
+        {
+            Console.WriteLine($"{solutions.Length} solution files in output directory. Aborting.");
+            return 1;
+        }
+        var solution = Path.GetFileName(solutions[0]); ;
+        Console.WriteLine($"Building {solution}");
+
+        var psi = new ProcessStartInfo
+        {
+            FileName = "/usr/bin/dotnet",
+            WorkingDirectory = apiRoot
+        };
+        var processArguments = new List<string> { "build", "-nologo", "-clp:NoSummary", "-v", "quiet", solution };
+        processArguments.ForEach(psi.ArgumentList.Add);
+        return ExecuteBuildProcess(psi);
+    }
+
+    private static int ExecuteBuildProcess(ProcessStartInfo psi)
+    {
         var process = Process.Start(psi)!;
         process.WaitForExit();
-        if (process.ExitCode != 0)
-        {
-            Console.WriteLine("Error during build");
-        }
+        Console.WriteLine(process.ExitCode == 0 ? "Build complete" : "Error during build");
         return process.ExitCode;
     }
 }
