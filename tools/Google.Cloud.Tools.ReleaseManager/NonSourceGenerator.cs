@@ -496,7 +496,9 @@ internal sealed class NonSourceGenerator
         {
             // We assume we always follow the convention of the project name (including the csproj file)
             // being the same as the name of the directory.
-            string name = Path.GetFileName(directory);
+            // On Windows, Path.GetFileName is fine with /-separated directories, whereas
+            // on Linux, it doesn't "know" that backslash is a separator. Normalize to slashes just to find the name.
+            string name = Path.GetFileName(directory.Replace('\\', '/'));
             var guid = GenerateGuid(name).ToString().ToUpperInvariant();
             projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{name}\", \"{directory}\\{name}.csproj\", \"{{{guid}}}\"");
             projectLines.Add("EndProject");
