@@ -14,7 +14,6 @@
 
 using Google.Cloud.Tools.Common;
 using System;
-using System.IO;
 
 namespace Google.Cloud.Tools.ReleaseManager
 {

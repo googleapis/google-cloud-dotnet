@@ -14,7 +14,6 @@
 
 using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
-using NuGet.Protocol.Plugins;
 using System;
 using System.Collections.Generic;
 
@@ -52,7 +51,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                     Console.WriteLine($"Skipping {api.Id} due to block: {blockReason}");
                     continue;
                 }
-                
+
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
                 yield return ReleaseProposal.CreateFromHistory(rootLayout, repo, api.Id, newVersion, defaultMessage);

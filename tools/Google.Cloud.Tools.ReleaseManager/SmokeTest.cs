@@ -13,7 +13,6 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
-using Mono.Cecil;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections;

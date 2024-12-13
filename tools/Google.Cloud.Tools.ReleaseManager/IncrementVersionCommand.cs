@@ -43,7 +43,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             if (api.BlockRelease is string blockRelease)
             {
-                throw new UserErrorException($"Changing the version of {api.Id} is blocked: {blockRelease}");                
+                throw new UserErrorException($"Changing the version of {api.Id} is blocked: {blockRelease}");
             }
 
             foreach (var apiToIncrement in apisToIncrement)

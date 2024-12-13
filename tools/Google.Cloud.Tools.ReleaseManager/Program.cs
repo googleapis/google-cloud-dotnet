@@ -78,7 +78,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 Console.WriteLine($"Unknown command: '{commandName}'");
                 ShowUsage(allCommands);
-           }
+            }
             return selectedCommand;
         }
 

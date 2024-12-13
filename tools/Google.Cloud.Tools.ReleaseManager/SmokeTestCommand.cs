@@ -64,7 +64,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             string tfm = CreateClientsCommand.GetTargetForReflectionLoad(RootLayout, id);
             // Publish the assembly.
-            var sourceRoot = RootLayout.CreateApiLayout(id).SourceDirectory;            
+            var sourceRoot = RootLayout.CreateApiLayout(id).SourceDirectory;
             Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", tfm);
 
             // Load it with reflection.
@@ -131,7 +131,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             void MaybeAddEnvironmentVariable(string environmentVariableId, string templateVariableId)
             {
-                var value = Environment.GetEnvironmentVariable(environmentVariableId);                
+                var value = Environment.GetEnvironmentVariable(environmentVariableId);
                 if (!string.IsNullOrEmpty(value))
                 {
                     ret[templateVariableId] = value;

@@ -14,7 +14,6 @@
 
 using Google.Cloud.Tools.Common;
 using System;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 

@@ -60,7 +60,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine($"Pulling googleapis directory");
                 using var repo = new Repository(googleapis);
                 string oldSha = repo.Head.Tip.Sha;
-                
+
                 // The "merger" signature will never be used, due to requiring fast-forward-only,
                 // but we have to specify something.
                 var merger = new Signature("Ignored", "ignored@google.com", DateTimeOffset.UtcNow);
