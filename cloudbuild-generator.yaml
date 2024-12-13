@@ -14,19 +14,19 @@
 
 timeout: 21600s  # 6 hours
 options:
- logging: CLOUD_LOGGING_ONLY
+  logging: CLOUD_LOGGING_ONLY
 steps:
 - id: 'build'
   name: gcr.io/cloud-builders/docker
   waitFor: ['-']
   args: [
-    'build', 
-    '-t', 
-    'us-central1-docker.pkg.dev/$PROJECT_ID/pipeline-images/google-cloud-dotnet-generator',
+    'build',
+    '-t',
+    'us-central1-docker.pkg.dev/$PROJECT_ID/pipeline-images/google-cloud-dotnet-generator:$SHORT_SHA',
     '-f',
     'Dockerfile.generator',
     '.'
   ]
 
 images:
-  - us-central1-docker.pkg.dev/$PROJECT_ID/pipeline-images/google-cloud-dotnet-generator
+  - us-central1-docker.pkg.dev/$PROJECT_ID/pipeline-images/google-cloud-dotnet-generator:$SHORT_SHA
