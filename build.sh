@@ -184,7 +184,6 @@ then
     # Note that even though we should have built everything by now,
     # --no-build causes odd issues on GitHub CI.
     dotnet test -nologo -c Release $testproject
-    fi
   done < AllTests.txt
   log_build_action "(End) Unit tests"
 fi
