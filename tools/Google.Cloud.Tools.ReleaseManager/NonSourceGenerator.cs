@@ -48,7 +48,7 @@ internal sealed class NonSourceGenerator
     internal const string DefaultNetstandardTarget = "netstandard2.0";
 
     private const string ClientTestingName = "Google.Cloud.ClientTesting";
-    private const string RootRelativeClientTestingPath = @"..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj";
+    private const string RootRelativeClientTestingDirectory = @"..\..\tools\Google.Cloud.ClientTesting";
 
     /// <summary>
     /// In "new major version mode", *all* references between different APIs become project references
@@ -65,7 +65,7 @@ internal sealed class NonSourceGenerator
     // Project references which don't just follow the pattern of ..\..\{package}\{package}\{package}.csproj
     private static readonly Dictionary<string, string> KnownProjectReferences = new Dictionary<string, string>
     {
-        { ClientTestingName, $"..\\{RootRelativeClientTestingPath}"},
+        { ClientTestingName, $"..\\{RootRelativeClientTestingDirectory}\\{ClientTestingName}.csproj"},
         { "Google.Cloud.Diagnostics.Common.Tests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.Tests\Google.Cloud.Diagnostics.Common.Tests.csproj" },
         { "Google.Cloud.Diagnostics.Common.IntegrationTests", @"..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" }
     };
@@ -448,24 +448,24 @@ internal sealed class NonSourceGenerator
         string apiRoot = GetApiDirectory(api);
 
         string solutionFile = Path.Combine(apiRoot, $"{api.Id}.sln");
-        List<string> projectPaths = new();
+        List<string> projectDirectories = new();
         foreach (var project in api.DeriveProjects())
         {
-            projectPaths.Add($@"{project}\{project}.csproj");
+            projectDirectories.Add(project);
         }
         if (api.DeriveProjects().Any(p => p.EndsWith("Tests", StringComparison.Ordinal) || p.EndsWith("Snippets", StringComparison.Ordinal)))
         {
-            projectPaths.Add(RootRelativeClientTestingPath);
+            projectDirectories.Add(RootRelativeClientTestingDirectory);
         }
         foreach (var pair in api.Dependencies.Where(pair => pair.Value == ProjectVersionValue))
         {
             string dependencyId = pair.Key;
-            projectPaths.Add($@"..\{dependencyId}\{dependencyId}\{dependencyId}.csproj");
+            projectDirectories.Add($@"..\{dependencyId}\{dependencyId}");
         }
-        GenerateSolutionFile(solutionFile, projectPaths);
+        GenerateSolutionFile(solutionFile, projectDirectories);
     }
 
-    internal static void GenerateSolutionFile(string file, List<string> projectPaths)
+    internal static void GenerateSolutionFile(string file, List<string> projectDirectories)
     {
         string[] prefixLines =
         {
@@ -492,11 +492,13 @@ internal sealed class NonSourceGenerator
             "EndGlobal"
         };
 
-        foreach (var path in projectPaths)
+        foreach (var directory in projectDirectories)
         {
-            string name = Path.GetFileNameWithoutExtension(path);
+            // We assume we always follow the convention of the project name (including the csproj file)
+            // being the same as the name of the directory.
+            string name = Path.GetFileName(directory);
             var guid = GenerateGuid(name).ToString().ToUpperInvariant();
-            projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{name}\", \"{path}\", \"{{{guid}}}\"");
+            projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{name}\", \"{directory}\\{name}.csproj\", \"{{{guid}}}\"");
             projectLines.Add("EndProject");
             postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU");
             postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.Build.0 = Debug|Any CPU");
