@@ -447,10 +447,26 @@ internal sealed class NonSourceGenerator
     {
         string apiRoot = GetApiDirectory(api);
 
-        // TODO: Add projects referred to via project references as well.
-        List<string> projects = api.DeriveProjects().ToList();
         string solutionFile = Path.Combine(apiRoot, $"{api.Id}.sln");
+        List<string> projectPaths = new();
+        foreach (var project in api.DeriveProjects())
+        {
+            projectPaths.Add($@"{project}\{project}.csproj");
+        }
+        if (api.DeriveProjects().Any(p => p.EndsWith("Tests", StringComparison.Ordinal) || p.EndsWith("Snippets", StringComparison.Ordinal)))
+        {
+            projectPaths.Add(RootRelativeClientTestingPath);
+        }
+        foreach (var pair in api.Dependencies.Where(pair => pair.Value == ProjectVersionValue))
+        {
+            string dependencyId = pair.Key;
+            projectPaths.Add($@"..\{dependencyId}\{dependencyId}\{dependencyId}.csproj");
+        }
+        GenerateSolutionFile(solutionFile, projectPaths);
+    }
 
+    internal static void GenerateSolutionFile(string file, List<string> projectPaths)
+    {
         string[] prefixLines =
         {
             "\uFEFF", // Byte order mark (on a line on its own), not written by File.WriteAllLines
@@ -476,28 +492,9 @@ internal sealed class NonSourceGenerator
             "EndGlobal"
         };
 
-        foreach (var project in api.DeriveProjects())
+        foreach (var path in projectPaths)
         {
-            AddProject(project, $@"{project}\{project}.csproj");
-        }
-        if (api.DeriveProjects().Any(p => p.EndsWith("Tests", StringComparison.Ordinal) || p.EndsWith("Snippets", StringComparison.Ordinal)))
-        {
-            AddProject(ClientTestingName, RootRelativeClientTestingPath);
-        }
-        foreach (var pair in api.Dependencies.Where(pair => pair.Value == ProjectVersionValue))
-        {
-            string dependencyId = pair.Key;
-            AddProject(dependencyId, $@"..\{dependencyId}\{dependencyId}\{dependencyId}.csproj");
-        }
-
-        var allLines = prefixLines.Concat(projectLines).Concat(betweenLines).Concat(postSolutionLines).Concat(suffixLines);
-        // Note: this deliberately uses the platform-default line ending. That's how our git repository is set up (core.crlf)
-        // so we *expect* to have CRLF on Windows and LF on Linux. We have GitHub actions to detect any CRLF files in a PR,
-        // so we need to make sure that when an action on Linux rewrites solution files, it doesn't actually change anything.
-        File.WriteAllLines(solutionFile, allLines);
-
-        void AddProject(string name, string path)
-        {
+            string name = Path.GetFileNameWithoutExtension(path);
             var guid = GenerateGuid(name).ToString().ToUpperInvariant();
             projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{name}\", \"{path}\", \"{{{guid}}}\"");
             projectLines.Add("EndProject");
@@ -506,7 +503,7 @@ internal sealed class NonSourceGenerator
             postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
             postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.Build.0 = Release|Any CPU");
 
-            Guid GenerateGuid(string name)
+            static Guid GenerateGuid(string name)
             {
                 // Note: We're using MD5 to get 16 bytes for the GUID.
                 // This is only meant to be unique - it doesn't need to be cryptographically secure at all.
@@ -514,6 +511,12 @@ internal sealed class NonSourceGenerator
                 return new Guid(bytes);
             }
         }
+
+        var allLines = prefixLines.Concat(projectLines).Concat(betweenLines).Concat(postSolutionLines).Concat(suffixLines);
+        // Note: this deliberately uses the platform-default line ending. That's how our git repository is set up (core.crlf)
+        // so we *expect* to have CRLF on Windows and LF on Linux. We have GitHub actions to detect any CRLF files in a PR,
+        // so we need to make sure that when an action on Linux rewrites solution files, it doesn't actually change anything.
+        File.WriteAllLines(file, allLines);
     }
 
     private void GenerateOwlBotConfiguration(ApiMetadata api)
