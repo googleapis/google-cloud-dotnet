@@ -37,6 +37,14 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         public string ExpectedArguments { get; }
 
+        /// <summary>
+        /// The RootLayout to use during the execution of this command.
+        /// </summary>
+        /// <remarks>
+        /// Currently this is always derived from the current directory, but we may later have a way of specifying it separately.
+        /// </remarks>
+        protected RootLayout RootLayout { get; }
+
         protected CommandBase(string command, string description, int minArgs, int maxArgs, string expectedArguments)
         {
             Command = command;
@@ -44,6 +52,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             _minArgs = minArgs;
             _maxArgs = maxArgs;
             ExpectedArguments = expectedArguments;
+            RootLayout = RootLayout.ForCurrentDirectory();
         }
 
         protected CommandBase(string command, string description, params string[] argNames)
@@ -71,7 +80,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected List<ApiVersionPair> FindChangedVersions()
         {
-            var currentCatalog = ApiCatalog.Load();
+            var currentCatalog = ApiCatalog.Load(RootLayout);
             var primaryCatalog = LoadPrimaryCatalog();
             var currentVersions = currentCatalog.CreateRawVersionMap();
             var primaryVersions = primaryCatalog.CreateRawVersionMap();
@@ -85,8 +94,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected ApiCatalog LoadPrimaryCatalog()
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            using var repo = new Repository(rootLayout.RepositoryRoot);
+            using var repo = new Repository(RootLayout.RepositoryRoot);
 
             var primary = repo.Branches.FirstOrDefault(b => b.FriendlyName == PrimaryBranch);
             if (primary == null)

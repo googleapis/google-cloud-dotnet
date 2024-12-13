@@ -32,6 +32,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         /// the second is the total number of API candidates that will be considered.
         /// </param>
         IEnumerable<ReleaseProposal> GetProposals(
+            RootLayout rootLayout,
             ApiCatalog catalog,
             Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
             string defaultMessage,

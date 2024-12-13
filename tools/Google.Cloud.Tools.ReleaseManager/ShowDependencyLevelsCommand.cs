@@ -31,7 +31,7 @@ internal class ShowDependencyLevelsCommand : CommandBase
 
     protected override int ExecuteImpl(string[] args)
     {
-        var catalog = ApiCatalog.Load();
+        var catalog = ApiCatalog.Load(RootLayout);
 
         var dependenciesOnGroups = catalog.Apis
             .Where(api => api.PackageGroup is null)

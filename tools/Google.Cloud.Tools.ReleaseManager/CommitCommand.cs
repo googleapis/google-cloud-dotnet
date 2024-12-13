@@ -53,14 +53,13 @@ namespace Google.Cloud.Tools.ReleaseManager
                 throw new UserErrorException(
                     $"Cannot downgrade from {diff.OldVersion} to {diff.NewVersion} without override. Set {DowngradeOverrideEnvironmentVariable}={diff.NewVersion} to override.");
             }
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            var apiCatalog = ApiCatalog.Load(rootLayout);
+            var apiCatalog = ApiCatalog.Load(RootLayout);
             var api = apiCatalog[diff.Id];
             string header = $"Release {diff.Id} version {diff.NewVersion}";
             var bodyLines = GetCommitBodyLines();
             string message = string.Join("\n", new[] { header, "" }.Concat(bodyLines));
 
-            using var repo = new Repository(rootLayout.RepositoryRoot);
+            using var repo = new Repository(RootLayout.RepositoryRoot);
             RepositoryStatus status = repo.RetrieveStatus();
             // TODO: Work out whether this is enough, and whether we actually need all of these.
             // We basically want git add --all.
@@ -90,7 +89,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
 
                 // Anything else really should have a history.
-                var historyFilePath = HistoryFile.GetPathForPackage(rootLayout, diff.Id);
+                var historyFilePath = HistoryFile.GetPathForPackage(RootLayout, diff.Id);
                 if (!File.Exists(historyFilePath))
                 {
                     throw new UserErrorException($"Cannot automate a release commit without a version history file.");

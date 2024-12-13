@@ -34,9 +34,8 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var catalog = ApiCatalog.Load();
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(rootLayout.Googleapis);
+            var catalog = ApiCatalog.Load(RootLayout);
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(RootLayout.Googleapis);
             int modifiedCount = 0;
 
             var directories = File.ReadAllLines("bazel-files.txt").Select(path => path[2..^12]);
@@ -61,7 +60,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             }
 
             Console.WriteLine($"Modified APIs: {modifiedCount}");
-            catalog.Save(rootLayout);
+            catalog.Save(RootLayout);
             return 0;
         }
     }

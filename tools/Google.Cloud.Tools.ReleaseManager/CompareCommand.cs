@@ -27,7 +27,6 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
             var idsToCheck = new List<string>();
             foreach (var diff in FindChangedVersions())
             {
@@ -45,7 +44,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     var api = diff.Id;
                     idsToCheck.Add(api);
                     Console.WriteLine($"Building {api} locally");
-                    var sourceRoot = rootLayout.CreateApiLayout(api).SourceDirectory;
+                    var sourceRoot = RootLayout.CreateApiLayout(api).SourceDirectory;
                     Processes.RunDotnet(sourceRoot, "build", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", api);
                 }
             }

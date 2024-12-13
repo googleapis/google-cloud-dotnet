@@ -32,7 +32,7 @@ public sealed class UpdateMixinsCommand : CommandBase
         string id = args[0];
         string committish = args[1];
 
-        var nonSourceGenerator = NonSourceGenerator.ForInPlaceGeneration();
+        var nonSourceGenerator = new NonSourceGenerator(RootLayout);
         var catalog = nonSourceGenerator.ApiCatalog;
         var api = catalog[id];
 
@@ -63,7 +63,6 @@ public sealed class UpdateMixinsCommand : CommandBase
         }
 
         api.Json["dependencies"] = new JObject(api.Dependencies.Select(pair => new JProperty(pair.Key, pair.Value)));
-        var rootLayout = RootLayout.ForCurrentDirectory();
         nonSourceGenerator.GenerateApiFiles(api);
         catalog.Save(nonSourceGenerator.RootLayout);
         Console.WriteLine("Updated apis.json and project files");

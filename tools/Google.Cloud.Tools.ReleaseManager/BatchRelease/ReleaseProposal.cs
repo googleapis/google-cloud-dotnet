@@ -59,9 +59,8 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         private ReleaseProposal(ApiMetadata api, StructuredVersion oldVersion, StructuredVersion newVersion, HistoryFile historyFile) =>
             (this.api, OldVersion, NewVersion, ModifiedHistoryFile) = (api, oldVersion, newVersion, historyFile);
 
-        public static ReleaseProposal CreateFromHistory(Repository repo, string id, StructuredVersion newVersion, string defaultMessage)
+        public static ReleaseProposal CreateFromHistory(RootLayout rootLayout, Repository repo, string id, StructuredVersion newVersion, string defaultMessage)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
             var catalog = ApiCatalog.Load(rootLayout);
             var api = catalog[id];
             var oldVersion = api.StructuredVersion;
@@ -71,7 +70,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             var historyFile = HistoryFile.Load(historyFilePath);
             if (!api.NoVersionHistory)
             {
-                var sectionsInserted = historyFile.MergeReleases(releases, defaultMessage);
+                var sectionsInserted = historyFile.MergeReleases(rootLayout, releases, defaultMessage);
                 if (sectionsInserted.Count != 1)
                 {
                     throw new UserErrorException($"API {api.Id} would have {sectionsInserted.Count} new history sections");
@@ -80,7 +79,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             return new ReleaseProposal(api, oldVersion, newVersion, historyFile);
         }
 
-        public void Execute(BatchReleaseConfig config)
+        public void Execute(RootLayout rootLayout, BatchReleaseConfig config)
         {
             Console.WriteLine(this);
 
@@ -120,7 +119,6 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 }
             }
 
-            var rootLayout = RootLayout.ForCurrentDirectory();
             using var repo = new Repository(rootLayout.RepositoryRoot);
 
             var original = repo.Head;

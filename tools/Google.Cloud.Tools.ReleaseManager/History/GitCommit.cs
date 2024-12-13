@@ -75,7 +75,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// Attempts to come up with suitable markdown for release notes, based on a commit.
         /// This is best effort, heuristic-based - and we'll want to tweak it over time.
         /// </summary>
-        internal IEnumerable<ReleaseNoteElement> GetReleaseNoteElements()
+        internal IEnumerable<ReleaseNoteElement> GetReleaseNoteElements(RootLayout rootLayout)
         {
             // Use the override if one has been provided for this commit, or the commit message otherwise.
             string message = CommitOverrides.HashPrefixToMessageMap.GetValueOrDefault(HashPrefix, _libGit2Commit.Message);
@@ -92,7 +92,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 if (sourceLink is object)
                 {
                     var commit = sourceLink.Split('/').Last();
-                    messageLines = GetGoogleApisCommitLines(commit) ?? messageLines;
+                    messageLines = GetGoogleApisCommitLines(rootLayout, commit) ?? messageLines;
                 }
                 messageLines = messageLines
                     .Where(line => !line.StartsWith("Committer: @"))
@@ -153,7 +153,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 IssuePattern.Replace(line, "[issue $1](https://github.com/googleapis/google-cloud-dotnet/issues/$1)");
         }
 
-        private List<string> GetGoogleApisCommitLines(string hash)
+        private List<string> GetGoogleApisCommitLines(RootLayout rootLayout, string hash)
         {
             if (s_googleApisCommitMessageCache.TryGetValue(hash, out var cachedResult))
             {
@@ -164,7 +164,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             // Otherwise, fetch from github. (The latter will fail eventually if there are a lot
             // of commits to fetch, but it means if the local googleapis repo is just a little
             // out of date, we can fetch the most recent commits from GitHub.)
-            var result = GetLocalGoogleApisCommitLines(hash) ?? GetGitHubGoogleApisCommitLines(hash);
+            var result = GetLocalGoogleApisCommitLines(rootLayout, hash) ?? GetGitHubGoogleApisCommitLines(hash);
 
             if (result != null)
             {
@@ -173,9 +173,8 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             return result;
         }
 
-        private List<string> GetLocalGoogleApisCommitLines(string hash)
+        private List<string> GetLocalGoogleApisCommitLines(RootLayout rootLayout, string hash)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
             if (!Directory.Exists(rootLayout.Googleapis))
             {
                 return null;

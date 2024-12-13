@@ -49,7 +49,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             var rootLayout = RootLayout.ForCurrentDirectory();
             var apiLayout = rootLayout.CreateApiLayout(api);
 
-            var apiCatalog = ApiCatalog.Load();
+            var apiCatalog = ApiCatalog.Load(rootLayout);
             var apiMetadata = apiCatalog[api];
 
             string output = apiLayout.DocsOutputDirectory;

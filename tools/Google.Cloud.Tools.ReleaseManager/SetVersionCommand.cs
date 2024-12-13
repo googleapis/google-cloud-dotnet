@@ -34,7 +34,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         internal int InternalExecute(string id, string version, bool quiet)
         {
-            var nonSourceGenerator = NonSourceGenerator.ForInPlaceGeneration();
+            var nonSourceGenerator = new NonSourceGenerator(RootLayout);
             var catalog = nonSourceGenerator.ApiCatalog;
             var api = catalog[id];
 

@@ -31,7 +31,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var nonSourceGenerator = NonSourceGenerator.ForInPlaceGeneration();
+            var nonSourceGenerator = new NonSourceGenerator(RootLayout);
             var catalog = nonSourceGenerator.ApiCatalog;
             var apiNames = catalog.CreateIdHashSet();
 
@@ -61,10 +61,9 @@ namespace Google.Cloud.Tools.ReleaseManager
             return 0;
         }
 
-        private static List<ApiMetadata> FindApisToUpdateFromPreviousCommit(ApiCatalog catalog)
+        private List<ApiMetadata> FindApisToUpdateFromPreviousCommit(ApiCatalog catalog)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            using var repo = new Repository(rootLayout.RepositoryRoot);
+            using var repo = new Repository(RootLayout.RepositoryRoot);
             // OwlBot will be post-processing a new commit from either OwlBot itself or
             // release-please; we want to find out what the API catalog looked like in
             // the parent commit.

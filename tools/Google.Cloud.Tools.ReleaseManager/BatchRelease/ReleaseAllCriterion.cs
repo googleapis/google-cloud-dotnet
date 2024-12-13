@@ -39,12 +39,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         public bool SkipDocumentationOnly { get; set; }
 
         IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(
+            RootLayout rootLayout,
             ApiCatalog catalog,
             Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
             string defaultMessage,
             Action<int, int> progressCallback)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
             using var repo = new Repository(rootLayout.RepositoryRoot);
 
             progressCallback?.Invoke(0, catalog.Apis.Count);
@@ -78,7 +78,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
                 if (SkipIfNoReleaseNotes)
                 {
-                    if (!commits.Any(c => c.GetReleaseNoteElements().Any(note => note.PublishInReleaseNotes)))
+                    if (!commits.Any(c => c.GetReleaseNoteElements(rootLayout).Any(note => note.PublishInReleaseNotes)))
                     {
                         Console.WriteLine($"Skipping {api.Id} which has {commits.Count} commit(s), but none generate release notes:");
                         foreach (var commit in commits)
@@ -93,7 +93,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
                 if (SkipDocumentationOnly)
                 {
-                    if (!commits.Any(c => c.GetReleaseNoteElements().Any(note => note.PublishInReleaseNotes && note.Type != History.ReleaseNoteElementType.Docs)))
+                    if (!commits.Any(c => c.GetReleaseNoteElements(rootLayout).Any(note => note.PublishInReleaseNotes && note.Type != History.ReleaseNoteElementType.Docs)))
                     {
                         Console.WriteLine($"Skipping {api.Id} which only contains documentation/trivial changes");
                         Console.WriteLine();
@@ -115,7 +115,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
-                yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
+                yield return ReleaseProposal.CreateFromHistory(rootLayout, repo, api.Id, newVersion, defaultMessage);
             }
 
             if (skippedPackageGroups.Any())

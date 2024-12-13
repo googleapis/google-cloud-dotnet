@@ -88,11 +88,6 @@ namespace Google.Cloud.Tools.Common
         public Dictionary<string, string> CreateRawVersionMap() => Apis.ToDictionary(api => api.Id, api => api.Version);
 
         /// <summary>
-        /// Loads the API catalog from the local disk, using <see cref="RootLayout.ForRepositoryRoot"/> as the layout.
-        /// </summary>
-        public static ApiCatalog Load() => Load(RootLayout.ForCurrentDirectory());
-
-        /// <summary>
         /// Returns the path to the API catalog for the given root layout.
         /// </summary>
         private static string GetCatalogPath(RootLayout layout) => Path.Combine(layout.GeneratorInput, CatalogFile);

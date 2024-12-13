@@ -30,12 +30,9 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public class SmokeTestCommand : CommandBase
     {
-        private readonly RootLayout _rootLayout;
-
         public SmokeTestCommand()
             : base("smoke-test", "Runs smoke tests for a package", "id")
         {
-            _rootLayout = RootLayout.ForCurrentDirectory();
         }
 
         protected override int ExecuteImpl(string[] args)
@@ -55,7 +52,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private List<SmokeTest> LoadSmokeTests(string id)
         {
-            var smokeTestsFile = Path.Combine(_rootLayout.CreateApiLayout(id).SourceDirectory, "smoketests.json");
+            var smokeTestsFile = Path.Combine(RootLayout.CreateApiLayout(id).SourceDirectory, "smoketests.json");
             return File.Exists(smokeTestsFile)
                 ? JsonConvert.DeserializeObject<List<SmokeTest>>(File.ReadAllText(smokeTestsFile))
                 : new List<SmokeTest>();
@@ -65,9 +62,9 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             Console.WriteLine($"Publishing release version of library");
 
-            string tfm = CreateClientsCommand.GetTargetForReflectionLoad(id);
+            string tfm = CreateClientsCommand.GetTargetForReflectionLoad(RootLayout, id);
             // Publish the assembly.
-            var sourceRoot = _rootLayout.CreateApiLayout(id).SourceDirectory;            
+            var sourceRoot = RootLayout.CreateApiLayout(id).SourceDirectory;            
             Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", tfm);
 
             // Load it with reflection.

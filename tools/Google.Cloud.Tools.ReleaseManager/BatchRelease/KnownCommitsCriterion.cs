@@ -36,12 +36,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         public HashSet<string> Commits { get; set; }
 
         IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(
+            RootLayout rootLayout,
             ApiCatalog catalog,
             Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
             string defaultMessage,
             Action<int, int> progressCallback)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
             using var repo = new Repository(rootLayout.RepositoryRoot);
             var pendingChangesByApi = GitHelpers.GetPendingChangesByApi(repo, catalog);
 
@@ -62,7 +62,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 }
 
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
-                var proposal = ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
+                var proposal = ReleaseProposal.CreateFromHistory(rootLayout, repo, api.Id, newVersion, defaultMessage);
 
                 // Potentially replace the natural history with an override
                 if (!string.IsNullOrEmpty(HistoryOverride) && proposal.NewHistorySection is HistoryFile.Section newSection)

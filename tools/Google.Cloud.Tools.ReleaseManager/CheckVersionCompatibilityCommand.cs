@@ -48,12 +48,12 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             foreach (var api in apisToCheck)
             {
-                CheckCompatibilityWithPreviousRelease(tags, api);
+                CheckCompatibilityWithPreviousRelease(rootLayout, tags, api);
             }
             return 0;
         }
 
-        internal static void CheckCompatibilityWithPreviousRelease(HashSet<string> allRepoTags, ApiMetadata api)
+        internal static void CheckCompatibilityWithPreviousRelease(RootLayout rootLayout, HashSet<string> allRepoTags, ApiMetadata api)
         {
             Console.WriteLine($"Checking compatibility for {api.Id} version {api.Version}");
             var prefix = api.Id + "-";
@@ -69,7 +69,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var comparisons = GetComparisons(api.StructuredVersion, taggedVersions);
             foreach (var (oldVersion, requiredLevel) in comparisons)
             {
-                var actualLevel = CheckCompatibility(api, oldVersion);
+                var actualLevel = CheckCompatibility(rootLayout, api, oldVersion);
                 if (actualLevel < requiredLevel)
                 {
                     throw new UserErrorException($"Required compatibility level: {requiredLevel}. Actual compatibility level: {actualLevel}.");
@@ -122,9 +122,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// Checks the compatibility of the locally-built API against a version on NuGet.
         /// This assumes the local package has already been built and is up-to-date.
         /// </summary>
-        private static Level CheckCompatibility(ApiMetadata api, StructuredVersion version)
+        private static Level CheckCompatibility(RootLayout rootLayout, ApiMetadata api, StructuredVersion version)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
             var apiLayout = rootLayout.CreateApiLayout(api);
             Console.WriteLine($"Differences from {version}");
 

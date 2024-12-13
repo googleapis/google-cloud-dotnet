@@ -31,7 +31,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             // It's slightly inefficient that we load the API catalog once here and once later on, and the code duplication
             // is annoying too, but it's insignficant really - and at least the code is simple.
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(RootLayout);
             var api = catalog[id];
 
             var apisToIncrement = new[] { api };

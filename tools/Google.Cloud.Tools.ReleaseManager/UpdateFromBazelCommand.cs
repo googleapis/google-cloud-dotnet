@@ -33,10 +33,8 @@ public sealed class UpdateFromBazelCommand : CommandBase
 
     protected override int ExecuteImpl(string[] args)
     {
-        var rootLayout = RootLayout.ForCurrentDirectory();
-
         string id = args[0];
-        var catalog = ApiCatalog.Load(rootLayout);
+        var catalog = ApiCatalog.Load(RootLayout);
 
         var ids = id == "all"
             ? catalog.Apis.Where(api => api.ProtoPath is string && api.Generator == GeneratorType.Micro).Select(api => api.Id).ToArray()
@@ -45,7 +43,7 @@ public sealed class UpdateFromBazelCommand : CommandBase
         bool anyUpdated = false;
         foreach (var apiId in ids)
         {
-            if (Update(catalog[apiId], rootLayout.Googleapis))
+            if (Update(catalog[apiId], RootLayout.Googleapis))
             {
                 anyUpdated = true;
                 Console.WriteLine($"Modified configuration for {apiId}");
@@ -54,7 +52,7 @@ public sealed class UpdateFromBazelCommand : CommandBase
 
         if (anyUpdated)
         {
-            catalog.Save(rootLayout);
+            catalog.Save(RootLayout);
         }
         return 0;
     }

@@ -44,8 +44,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             var gitHubToken = GetGitHubAccessToken();
             var gitHubClient = CreateGitHubClient(gitHubToken);
 
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            using var repo = new Repository(rootLayout.RepositoryRoot);
+            using var repo = new Repository(RootLayout.RepositoryRoot);
             ValidateNoChanges(repo);
             // TODO: "--force" mode to skip this.
             ValidateProjectReferences();
@@ -67,7 +66,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private void ValidateProjectReferences()
         {
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(RootLayout);
             var newReleaseIds = FindChangedVersions().Select(change => change.Id).ToList();
             foreach (var id in newReleaseIds)
             {
