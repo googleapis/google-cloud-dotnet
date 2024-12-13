@@ -11,4 +11,4 @@ jobs:
     - uses: actions/checkout@v4
         
     - name: Validate script permissions
-      run: '! stat -c "%a %n" apis/*/p*.sh | grep -v 755'
+      run: '! stat -c "%a %n" generator-input/tweaks/*/p*.sh | grep -v 755'
