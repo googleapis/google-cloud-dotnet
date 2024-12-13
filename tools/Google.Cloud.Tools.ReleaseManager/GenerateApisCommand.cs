@@ -492,6 +492,15 @@ internal class GenerateApisCommand : ICommand
             return;
         }
 
+        var sln = Path.Combine(sourceDirectory, $"{id}.sln");
+        var projects = new List<string>
+        {
+            $@"{id}\\{id}.csproj",
+            $@"{id}.Snippets\\{id}.Snippets.csproj",
+            $@"{id}.GeneratedSnippets\\{id}.GeneratedSnippets.csproj",
+        };
+        NonSourceGenerator.GenerateSolutionFile(sln, projects);
+
         IEnumerable<(string name, string value)> GetGapicPluginOptions()
         {
             // Mostly hard-coded values, as we don't have the relevant configuration.
