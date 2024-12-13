@@ -28,8 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(rootLayout.Googleapis);
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(RootLayout.Googleapis);
             foreach (var api in apiIndex.Apis)
             {
                 ReportAnomalies(api);

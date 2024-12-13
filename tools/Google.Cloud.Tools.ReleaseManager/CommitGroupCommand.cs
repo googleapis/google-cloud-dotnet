@@ -31,8 +31,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            var catalog = ApiCatalog.Load(rootLayout);
+            var catalog = ApiCatalog.Load(RootLayout);
 
             // Work out the package group that we're modifying.
             var diffs = FindChangedVersions();
@@ -58,14 +57,14 @@ namespace Google.Cloud.Tools.ReleaseManager
                 .Where(diff => !catalog[diff.Id].NoVersionHistory)
                 .ToList();
 
-            if (diffsWithHistory.Any(diff => !File.Exists(HistoryFile.GetPathForPackage(rootLayout, diff.Id))))
+            if (diffsWithHistory.Any(diff => !File.Exists(HistoryFile.GetPathForPackage(RootLayout, diff.Id))))
             {
                 // Not a great message, but a very rare condition.
                 throw new UserErrorException($"Not all expected history file paths exist.");
             }
 
             var diffHistoryPairs = diffsWithHistory
-                .Select(diff => (diff, history: HistoryFile.Load(HistoryFile.GetPathForPackage(rootLayout, diff.Id))))
+                .Select(diff => (diff, history: HistoryFile.Load(HistoryFile.GetPathForPackage(RootLayout, diff.Id))))
                 .ToList();
 
 
@@ -104,7 +103,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             var message = string.Join("\n", lines);
 
-            using var repo = new Repository(rootLayout.RepositoryRoot);
+            using var repo = new Repository(RootLayout.RepositoryRoot);
             RepositoryStatus status = repo.RetrieveStatus();
             // TODO: Work out whether this is enough, and whether we actually need all of these.
             // We basically want git add --all.

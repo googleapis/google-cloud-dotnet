@@ -31,12 +31,12 @@ public sealed class LastReleaseBeforeCriterion : IBatchCriterion
     }
 
     IEnumerable<ReleaseProposal> IBatchCriterion.GetProposals(
+        RootLayout rootLayout,
         ApiCatalog catalog,
         Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
         string defaultMessage,
         Action<int, int> progressCallback)
     {
-        var rootLayout = RootLayout.ForCurrentDirectory();
         using var repo = new Repository(rootLayout.RepositoryRoot);
 
         var allTags = repo.Tags.OrderByDescending(GitHelpers.GetDate).ToList();
@@ -61,7 +61,7 @@ public sealed class LastReleaseBeforeCriterion : IBatchCriterion
             }
 
             var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
-            yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
+            yield return ReleaseProposal.CreateFromHistory(rootLayout, repo, api.Id, newVersion, defaultMessage);
         }
         yield break;
     }

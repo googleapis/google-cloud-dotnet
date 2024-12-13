@@ -29,8 +29,7 @@ public sealed class PushReleaseBranchesCommand : CommandBase
 
     protected override int ExecuteImpl(string[] args)
     {
-        var rootLayout = RootLayout.ForCurrentDirectory();
-        using var repo = new Repository(rootLayout.RepositoryRoot);
+        using var repo = new Repository(RootLayout.RepositoryRoot);
 
         var originalBranch = repo.Head;
         var releaseBranches = repo.Branches.Where(b => b.FriendlyName.StartsWith("release-")).ToList();

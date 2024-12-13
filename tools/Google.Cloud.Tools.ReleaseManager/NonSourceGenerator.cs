@@ -169,8 +169,6 @@ internal sealed class NonSourceGenerator
         ApiCatalog = ApiCatalog.Load(rootLayout);
     }
 
-    internal static NonSourceGenerator ForInPlaceGeneration() => new(RootLayout.ForCurrentDirectory());
-
     #region API-specific files
     /// <summary>
     /// Generates all files specific to an API:

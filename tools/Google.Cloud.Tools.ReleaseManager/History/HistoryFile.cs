@@ -82,12 +82,13 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// <summary>
         /// Merges the given list of releases into the file, ignoring releases that are already present.
         /// </summary>
+        /// <param name="rootLayout">The root layout of the local file system, for local resolution of release notes.</param>
         /// <param name="releases">The list of releases to merge, in reverse-chronological order (so latest first).</param>
         /// <param name="defaultMessage">An optional release message to use when there are no commits with specific messages.
         /// If this is null <see cref="DefaultMessage"/> is used instead.
         /// </param>
         /// <returns>The new sections inserted into the history.</returns>
-        internal List<Section> MergeReleases(List<Release> releases, string defaultMessage)
+        internal List<Section> MergeReleases(RootLayout rootLayout, List<Release> releases, string defaultMessage)
         {
             List<Section> sectionsInserted = new List<Section>();
 
@@ -103,7 +104,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 {
                     break;
                 }
-                Section section = new Section(release, defaultMessage ?? DefaultMessage);
+                Section section = new Section(rootLayout, release, defaultMessage ?? DefaultMessage);
                 Sections.Insert(insertIndex, section);
                 sectionsInserted.Add(section);
                 insertIndex++;
@@ -128,7 +129,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 Lines = lines;
             }
 
-            internal Section(Release release, string defaultMessage)
+            internal Section(RootLayout rootLayout, Release release, string defaultMessage)
             {
                 Version = release.Version;
 
@@ -142,7 +143,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 }
                 else
                 {
-                    Lines.AddRange(GetNotesFromCommits(release.Commits));
+                    Lines.AddRange(GetNotesFromCommits(rootLayout, release.Commits));
                     // No "interesting" commits? That usually means it's just a dependency update.
                     if (Lines.Count == 2)
                     {
@@ -153,9 +154,9 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 }
             }
 
-            internal IEnumerable<string> GetNotesFromCommits(IReadOnlyList<GitCommit> commits) =>
+            internal IEnumerable<string> GetNotesFromCommits(RootLayout rootLayout, IReadOnlyList<GitCommit> commits) =>
                 commits
-                    .SelectMany(c => c.GetReleaseNoteElements())
+                    .SelectMany(c => c.GetReleaseNoteElements(rootLayout))
                     .Where(c => c.PublishInReleaseNotes)
                     .ToLookup(e => e.Type)
                     .OrderBy(g => g.Key)

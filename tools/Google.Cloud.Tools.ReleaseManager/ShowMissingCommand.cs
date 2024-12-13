@@ -32,9 +32,8 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            var catalog = ApiCatalog.Load(rootLayout);
-            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(rootLayout.Googleapis);
+            var catalog = ApiCatalog.Load(RootLayout);
+            var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(RootLayout.Googleapis);
             var stabilityFilter = BuildStabilityFilter(args[0]);
 
             var ignoredOrGeneratedPaths = new HashSet<string>(catalog.IgnoredPaths.Keys);

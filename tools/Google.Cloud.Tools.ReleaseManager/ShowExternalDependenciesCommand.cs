@@ -27,7 +27,7 @@ internal class ShowExternalDependenciesCommand : CommandBase
 
     protected override int ExecuteImpl(string[] args)
     {
-        var catalog = ApiCatalog.Load();
+        var catalog = ApiCatalog.Load(RootLayout);
 
         DisplayDependencies("Production", api => api.Dependencies);
         DisplayDependencies("Test", api => api.TestDependencies);

@@ -30,12 +30,12 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         }
 
         public IEnumerable<ReleaseProposal> GetProposals(
+            RootLayout rootLayout,
             ApiCatalog catalog,
             Func<string, StructuredVersion, StructuredVersion> versionIncrementer,
             string defaultMessage,
             Action<int, int> progressCallback)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
             using var repo = new Repository(rootLayout.RepositoryRoot);
 
             int progress = 0;
@@ -55,7 +55,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 
                 var newVersion = versionIncrementer(api.Id, api.StructuredVersion);
 
-                yield return ReleaseProposal.CreateFromHistory(repo, api.Id, newVersion, defaultMessage);
+                yield return ReleaseProposal.CreateFromHistory(rootLayout, repo, api.Id, newVersion, defaultMessage);
             }
         }
     }

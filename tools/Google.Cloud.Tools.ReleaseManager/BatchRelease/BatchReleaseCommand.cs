@@ -31,7 +31,6 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
         protected override int ExecuteImpl(string[] args)
         {
             string configFile = args[0];
-            var rootLayout = RootLayout.ForCurrentDirectory();
             var json = File.ReadAllText(configFile);
             var config = JsonConvert.DeserializeObject<BatchReleaseConfig>(json);
 
@@ -43,7 +42,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
 
             if (!config.DryRun)
             {
-                using var repo = new Repository(rootLayout.RepositoryRoot);
+                using var repo = new Repository(RootLayout.RepositoryRoot);
 
                 if (repo.RetrieveStatus().IsDirty)
                 {
@@ -51,7 +50,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
                 }
             }
 
-            var catalog = ApiCatalog.Load(rootLayout);
+            var catalog = ApiCatalog.Load(RootLayout);
             var criterion = criteria[0];
             Func<string, StructuredVersion, StructuredVersion> versionIncrementer =
                 config.PostMajorVersion
@@ -60,7 +59,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             string defaultMessage = config.DefaultHistoryMessageFile is null ? null : File.ReadAllText(config.DefaultHistoryMessageFile);
 
             var lastLog = DateTime.UtcNow;
-            var proposals = criterion.GetProposals(catalog, versionIncrementer, defaultMessage, MaybeLogProgress);
+            var proposals = criterion.GetProposals(RootLayout, catalog, versionIncrementer, defaultMessage, MaybeLogProgress);
 
             if (config.CollectProposalsEagerly)
             {
@@ -71,7 +70,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             foreach (var proposal in proposals)
             {
                 // Note: This takes into account the dry-run flag.
-                proposal.Execute(config);
+                proposal.Execute(RootLayout, config);
             }
 
             if (config.DeferPush && proposals.Any(p => p.Completed))

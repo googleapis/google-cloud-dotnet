@@ -28,7 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         {
             string id = args[0];
 
-            var catalog = ApiCatalog.Load();
+            var catalog = ApiCatalog.Load(RootLayout);
             var api = catalog[id];
 
             Console.WriteLine($"Current version of {id} in the API catalog: {api.Version}");

@@ -27,14 +27,13 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            var catalog = ApiCatalog.Load(rootLayout);
+            var catalog = ApiCatalog.Load(RootLayout);
             ValidateApiCatalog(catalog);
             Console.WriteLine($"API catalog contains {catalog.Apis.Count} entries");
             // Now we know we can parse the API catalog, let's save it again, potentially reformatting.
-            catalog.Save(rootLayout);
+            catalog.Save(RootLayout);
 
-            var generator = NonSourceGenerator.ForInPlaceGeneration();
+            var generator = new NonSourceGenerator(RootLayout);
             foreach (var api in catalog.Apis)
             {
                 generator.GenerateApiFiles(api);

@@ -35,11 +35,18 @@ public class DetectPrChangesCommand : ICommand
 
     public string ExpectedArguments => "<pre-PR git directory> <[id [id...]]";
 
+    private readonly RootLayout _rootLayout;
+
+    public DetectPrChangesCommand()
+    {
+        _rootLayout = RootLayout.ForCurrentDirectory();
+    }
+
     public int Execute(string[] args)
     {
         string oldCommitDirectory = args[0];
         bool anyFailures = false;
-        var catalog = ApiCatalog.Load();
+        var catalog = ApiCatalog.Load(_rootLayout);
         var tags = LoadRepositoryTags();
 
         var apiIds = args.Skip(1).ToList();
@@ -57,8 +64,7 @@ public class DetectPrChangesCommand : ICommand
 
         HashSet<string> LoadRepositoryTags()
         {
-            var rootLayout = RootLayout.ForCurrentDirectory();
-            using var repo = new Repository(rootLayout.RepositoryRoot);
+            using var repo = new Repository(_rootLayout.RepositoryRoot);
             return new HashSet<string>(repo.Tags.Select(tag => tag.FriendlyName));
         }
     }
@@ -123,7 +129,7 @@ public class DetectPrChangesCommand : ICommand
         LogHeader($"Comparing with previous NuGet package");
         try
         {
-            CheckVersionCompatibilityCommand.CheckCompatibilityWithPreviousRelease(tags, api);
+            CheckVersionCompatibilityCommand.CheckCompatibilityWithPreviousRelease(_rootLayout, tags, api);
         }
         catch (UserErrorException ex)
         {

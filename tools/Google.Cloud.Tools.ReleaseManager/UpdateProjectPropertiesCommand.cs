@@ -32,8 +32,7 @@ public sealed class UpdateProjectPropertiesCommand : CommandBase
 
     protected override int ExecuteImpl(string[] args)
     {
-        var rootLayout = RootLayout.ForCurrentDirectory();
-        var catalog = ApiCatalog.Load(rootLayout);
+        var catalog = ApiCatalog.Load(RootLayout);
 
         foreach (var api in catalog.Apis)
         {
@@ -63,16 +62,15 @@ public sealed class UpdateProjectPropertiesCommand : CommandBase
                 api.Json["projects"] = new JArray(array);
             }
         }
-        catalog.Save(rootLayout);
+        catalog.Save(RootLayout);
         return 0;
     }
 
-    private static IEnumerable<string> InferProjectsFromFileSystem(ApiMetadata api)
+    private IEnumerable<string> InferProjectsFromFileSystem(ApiMetadata api)
     {
-        var rootLayout = RootLayout.ForCurrentDirectory();
         // We infer that a directory is a project if it either has .csproj files or .cs files.
         // (This is to handle Google.Cloud.DevTools.Common, and any similar situations we may find later.)
-        var apiRoot = rootLayout.CreateApiLayout(api).SourceDirectory;
+        var apiRoot = RootLayout.CreateApiLayout(api).SourceDirectory;
         return Directory.GetDirectories(apiRoot)
                 .Where(pd => Directory.EnumerateFiles(pd, "*.cs").Any() || Directory.EnumerateFiles(pd, "*.csproj").Any())
                 .Select(Path.GetFileName);

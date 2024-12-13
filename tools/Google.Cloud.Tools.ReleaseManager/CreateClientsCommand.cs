@@ -32,7 +32,7 @@ public class CreateClientsCommand : CommandBase
     protected override int ExecuteImpl(string[] args)
     {
         string id = args[0];
-        var catalog = ApiCatalog.Load();
+        var catalog = ApiCatalog.Load(RootLayout);
         if (!catalog.TryGetApi(id, out var api))
         {
             throw new UserErrorException($"No such API: {id}");
@@ -52,10 +52,10 @@ public class CreateClientsCommand : CommandBase
     /// Returns the tfm (e.g. netstandard2.0 or netstandard2.1) to build/load for tools
     /// that need to load the library with reflection, e.g. for smoke tests.
     /// </summary>
-    internal static string GetTargetForReflectionLoad(string id)
+    internal static string GetTargetForReflectionLoad(RootLayout rootLayout, string id)
     {
         // Work out the TFM to publish, based on specified target frameworks.
-        var api = ApiCatalog.Load()[id];
+        var api = ApiCatalog.Load(rootLayout)[id];
         return api.TargetFrameworks?
             .Split(';')
             .FirstOrDefault(candidate => candidate.StartsWith("netstandard"))
@@ -66,11 +66,10 @@ public class CreateClientsCommand : CommandBase
     // We could consider refactoring later, if we find this is a problem.
     private Assembly PublishAndLoadAssembly(string id)
     {
-        var rootLayout = RootLayout.ForCurrentDirectory();
-        var sourceRoot = rootLayout.CreateApiLayout(id).SourceDirectory;
+        var sourceRoot = RootLayout.CreateApiLayout(id).SourceDirectory;
 
         // Work out the TFM to publish, based on specified target frameworks.
-        string tfm = GetTargetForReflectionLoad(id);
+        string tfm = GetTargetForReflectionLoad(RootLayout, id);
 
         // Note: we explicitly don't build here, as this code is normally run from a build script which has
         // has already built. Avoiding the rebuild saves a lot of time.

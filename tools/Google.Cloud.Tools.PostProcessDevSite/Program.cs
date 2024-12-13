@@ -85,7 +85,7 @@ namespace Google.Cloud.Tools.PostProcessDevSite
             _apiId = apiId;
             _outputRoot = apiLayout.DocsOutputDirectory;
             _devSiteRoot = Path.Combine(_outputRoot, "devsite");
-            _apiCatalog = ApiCatalog.Load();
+            _apiCatalog = ApiCatalog.Load(rootLayout);
             _apiIds = _apiCatalog.CreateIdHashSet();
         }
 

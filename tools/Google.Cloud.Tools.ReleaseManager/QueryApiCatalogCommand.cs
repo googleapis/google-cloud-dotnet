@@ -50,7 +50,7 @@ public class QueryApiCatalogCommand : CommandBase
         string field = args[1];
         string defaultValue = args.Length == 3 ? args[2] : null;
 
-        var catalog = ApiCatalog.Load();
+        var catalog = ApiCatalog.Load(RootLayout);
         if (!catalog.TryGetApi(id, out var api))
         {
             throw new UserErrorException($"No such API {id}");
@@ -65,7 +65,7 @@ public class QueryApiCatalogCommand : CommandBase
 
     private int ExecuteList(string[] args)
     {
-        var catalog = ApiCatalog.Load();
+        var catalog = ApiCatalog.Load(RootLayout);
         var apis = catalog.Apis.AsEnumerable();
         if (args.Length >= 1)
         {
