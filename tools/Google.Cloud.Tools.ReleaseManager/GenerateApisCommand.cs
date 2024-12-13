@@ -68,16 +68,14 @@ internal class GenerateApisCommand : ICommand
 
     public int Execute(string[] args)
     {
-        bool generateUnconfigured = args.FirstOrDefault() == "--unconfigured";
-
-        ValidateEnvironment(!generateUnconfigured);
+        ValidateEnvironment();
         if (Directory.Exists(tempOutputDirectory))
         {
             Directory.Delete(tempOutputDirectory, true);
         }
         Directory.CreateDirectory(tempOutputDirectory);
 
-        if (generateUnconfigured)
+        if (args.FirstOrDefault() == "--unconfigured")
         {
             return ExecuteForUnconfigured(args.Skip(1).ToArray());
         }
@@ -312,7 +310,7 @@ internal class GenerateApisCommand : ICommand
         }
     }
 
-    private void ValidateEnvironment(bool requireGeneratorInput)
+    private void ValidateEnvironment()
     {
         ValidateFile(protocBinary, "protoc");
         ValidateFile(gapicGeneratorBinary, "GAPIC generator");
@@ -508,9 +506,8 @@ internal class GenerateApisCommand : ICommand
             yield return ("transport", "grpc");
             yield return ("rest-numeric-enums", "True");
             yield return ("service-config", configFiles[0]);
-            yield return ("common-resources-config", "CommonResourcesConfig.json");
+            yield return ("common-resources-config", Path.Combine(generatorInputDirectory, "CommonResourcesConfig.json"));
         }
-
     }
 
     private string[] DetectApiDirectories()

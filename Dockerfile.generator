@@ -46,4 +46,8 @@ ENV PROTOC=/app/protobuf/tools/linux_x64/protoc
 ENV GRPC_PLUGIN=/app/grpc/tools/linux_x64/grpc_csharp_plugin
 ENV GAPIC_PLUGIN=/app/gapic/Google.Api.Generator
 
+# Create a really minimal generator-input in the container, for
+# "unconfigured" generation.
+COPY generator-input/CommonResourcesConfig.json generator-input/
+
 ENTRYPOINT ["dotnet", "ReleaseManager/Google.Cloud.Tools.ReleaseManager.dll", "container"]
