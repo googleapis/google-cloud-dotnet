@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.Common.V2", "Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2.csproj", "{46B04823-8C9B-DE2E-11D6-192CB3A7A945}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2", "Google.Cloud.Bigtable.Common.V2\Google.Cloud.Bigtable.Common.V2.csproj", "{576B2BF5-228C-C2EB-520E-845AB1C6A722}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,9 +11,9 @@ Global
         Release|Any CPU = Release|Any CPU
     EndGlobalSection
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {46B04823-8C9B-DE2E-11D6-192CB3A7A945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {46B04823-8C9B-DE2E-11D6-192CB3A7A945}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {46B04823-8C9B-DE2E-11D6-192CB3A7A945}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {46B04823-8C9B-DE2E-11D6-192CB3A7A945}.Release|Any CPU.Build.0 = Release|Any CPU
+        {576B2BF5-228C-C2EB-520E-845AB1C6A722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {576B2BF5-228C-C2EB-520E-845AB1C6A722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {576B2BF5-228C-C2EB-520E-845AB1C6A722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {576B2BF5-228C-C2EB-520E-845AB1C6A722}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

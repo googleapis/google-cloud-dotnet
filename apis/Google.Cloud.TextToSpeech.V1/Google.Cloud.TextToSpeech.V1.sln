@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.TextToSpeech.V1", "Google.Cloud.TextToSpeech.V1\Google.Cloud.TextToSpeech.V1.csproj", "{431F7E8F-A7E0-F0AE-8A02-A4B693B9302E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.TextToSpeech.V1\Google.Cloud.TextToSpeech.V1", "Google.Cloud.TextToSpeech.V1\Google.Cloud.TextToSpeech.V1.csproj", "{F1D89CDB-1B69-2EB8-5BB1-3D89906A6E01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.TextToSpeech.V1.Snippets", "Google.Cloud.TextToSpeech.V1.Snippets\Google.Cloud.TextToSpeech.V1.Snippets.csproj", "{DAF53C25-EA1D-BFF9-750C-CDD06F30073A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.TextToSpeech.V1.Snippets\Google.Cloud.TextToSpeech.V1.Snippets", "Google.Cloud.TextToSpeech.V1.Snippets\Google.Cloud.TextToSpeech.V1.Snippets.csproj", "{423E61D2-A07C-6AAA-43F3-1D8E815ACADE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.TextToSpeech.V1.GeneratedSnippets", "Google.Cloud.TextToSpeech.V1.GeneratedSnippets\Google.Cloud.TextToSpeech.V1.GeneratedSnippets.csproj", "{8D1666A5-5D91-EE41-9DD7-8123A6046003}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.TextToSpeech.V1.GeneratedSnippets\Google.Cloud.TextToSpeech.V1.GeneratedSnippets", "Google.Cloud.TextToSpeech.V1.GeneratedSnippets\Google.Cloud.TextToSpeech.V1.GeneratedSnippets.csproj", "{DE147D83-A403-D5F4-7F6F-F10EE3C58527}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{D966BB1C-1B6F-1563-D7D9-4F5C5ACF8B95}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,21 +17,21 @@ Global
         Release|Any CPU = Release|Any CPU
     EndGlobalSection
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {431F7E8F-A7E0-F0AE-8A02-A4B693B9302E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {431F7E8F-A7E0-F0AE-8A02-A4B693B9302E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {431F7E8F-A7E0-F0AE-8A02-A4B693B9302E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {431F7E8F-A7E0-F0AE-8A02-A4B693B9302E}.Release|Any CPU.Build.0 = Release|Any CPU
-        {DAF53C25-EA1D-BFF9-750C-CDD06F30073A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {DAF53C25-EA1D-BFF9-750C-CDD06F30073A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {DAF53C25-EA1D-BFF9-750C-CDD06F30073A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {DAF53C25-EA1D-BFF9-750C-CDD06F30073A}.Release|Any CPU.Build.0 = Release|Any CPU
-        {8D1666A5-5D91-EE41-9DD7-8123A6046003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {8D1666A5-5D91-EE41-9DD7-8123A6046003}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {8D1666A5-5D91-EE41-9DD7-8123A6046003}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {8D1666A5-5D91-EE41-9DD7-8123A6046003}.Release|Any CPU.Build.0 = Release|Any CPU
-        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
+        {F1D89CDB-1B69-2EB8-5BB1-3D89906A6E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {F1D89CDB-1B69-2EB8-5BB1-3D89906A6E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {F1D89CDB-1B69-2EB8-5BB1-3D89906A6E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {F1D89CDB-1B69-2EB8-5BB1-3D89906A6E01}.Release|Any CPU.Build.0 = Release|Any CPU
+        {423E61D2-A07C-6AAA-43F3-1D8E815ACADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {423E61D2-A07C-6AAA-43F3-1D8E815ACADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {423E61D2-A07C-6AAA-43F3-1D8E815ACADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {423E61D2-A07C-6AAA-43F3-1D8E815ACADE}.Release|Any CPU.Build.0 = Release|Any CPU
+        {DE147D83-A403-D5F4-7F6F-F10EE3C58527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {DE147D83-A403-D5F4-7F6F-F10EE3C58527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {DE147D83-A403-D5F4-7F6F-F10EE3C58527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {DE147D83-A403-D5F4-7F6F-F10EE3C58527}.Release|Any CPU.Build.0 = Release|Any CPU
+        {D966BB1C-1B6F-1563-D7D9-4F5C5ACF8B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {D966BB1C-1B6F-1563-D7D9-4F5C5ACF8B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {D966BB1C-1B6F-1563-D7D9-4F5C5ACF8B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {D966BB1C-1B6F-1563-D7D9-4F5C5ACF8B95}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

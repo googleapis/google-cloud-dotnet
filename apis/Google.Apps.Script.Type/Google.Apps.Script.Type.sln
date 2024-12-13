@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Apps.Script.Type", "Google.Apps.Script.Type\Google.Apps.Script.Type.csproj", "{68B64032-B55F-0199-C7AB-6BA2D218F280}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Apps.Script.Type\Google.Apps.Script.Type", "Google.Apps.Script.Type\Google.Apps.Script.Type.csproj", "{C24AF9FB-E942-E3C5-893B-EB9B8C87586B}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,9 +11,9 @@ Global
         Release|Any CPU = Release|Any CPU
     EndGlobalSection
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {68B64032-B55F-0199-C7AB-6BA2D218F280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {68B64032-B55F-0199-C7AB-6BA2D218F280}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {68B64032-B55F-0199-C7AB-6BA2D218F280}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {68B64032-B55F-0199-C7AB-6BA2D218F280}.Release|Any CPU.Build.0 = Release|Any CPU
+        {C24AF9FB-E942-E3C5-893B-EB9B8C87586B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {C24AF9FB-E942-E3C5-893B-EB9B8C87586B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {C24AF9FB-E942-E3C5-893B-EB9B8C87586B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {C24AF9FB-E942-E3C5-893B-EB9B8C87586B}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Apps.Card.V1", "Google.Apps.Card.V1\Google.Apps.Card.V1.csproj", "{FD3F842A-4479-C52D-60E2-F6FCEE975A03}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Apps.Card.V1\Google.Apps.Card.V1", "Google.Apps.Card.V1\Google.Apps.Card.V1.csproj", "{5A66A15B-9CA8-32C1-7587-6EBE1DAC40B1}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,9 +11,9 @@ Global
         Release|Any CPU = Release|Any CPU
     EndGlobalSection
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {FD3F842A-4479-C52D-60E2-F6FCEE975A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {FD3F842A-4479-C52D-60E2-F6FCEE975A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {FD3F842A-4479-C52D-60E2-F6FCEE975A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {FD3F842A-4479-C52D-60E2-F6FCEE975A03}.Release|Any CPU.Build.0 = Release|Any CPU
+        {5A66A15B-9CA8-32C1-7587-6EBE1DAC40B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {5A66A15B-9CA8-32C1-7587-6EBE1DAC40B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {5A66A15B-9CA8-32C1-7587-6EBE1DAC40B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {5A66A15B-9CA8-32C1-7587-6EBE1DAC40B1}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

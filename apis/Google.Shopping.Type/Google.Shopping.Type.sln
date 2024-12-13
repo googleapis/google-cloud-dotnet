@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Type", "Google.Shopping.Type\Google.Shopping.Type.csproj", "{A2A54199-863D-6FA7-F38A-EF1C60E9C757}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Shopping.Type\Google.Shopping.Type", "Google.Shopping.Type\Google.Shopping.Type.csproj", "{8DDAB70C-BD3D-0902-0F7E-B1CD8620A6CD}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,9 +11,9 @@ Global
         Release|Any CPU = Release|Any CPU
     EndGlobalSection
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {A2A54199-863D-6FA7-F38A-EF1C60E9C757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {A2A54199-863D-6FA7-F38A-EF1C60E9C757}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {A2A54199-863D-6FA7-F38A-EF1C60E9C757}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {A2A54199-863D-6FA7-F38A-EF1C60E9C757}.Release|Any CPU.Build.0 = Release|Any CPU
+        {8DDAB70C-BD3D-0902-0F7E-B1CD8620A6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {8DDAB70C-BD3D-0902-0F7E-B1CD8620A6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {8DDAB70C-BD3D-0902-0F7E-B1CD8620A6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {8DDAB70C-BD3D-0902-0F7E-B1CD8620A6CD}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal

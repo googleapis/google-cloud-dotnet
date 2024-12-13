@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32516.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Audit", "Google.Cloud.Audit\Google.Cloud.Audit.csproj", "{4CF1FA37-0CA8-1E03-E9EE-45F43CB41EC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Audit\Google.Cloud.Audit", "Google.Cloud.Audit\Google.Cloud.Audit.csproj", "{273CAB33-520E-2460-2E9B-2D4955F113A0}"
 EndProject
 Global
     GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,9 +11,9 @@ Global
         Release|Any CPU = Release|Any CPU
     EndGlobalSection
     GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {4CF1FA37-0CA8-1E03-E9EE-45F43CB41EC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {4CF1FA37-0CA8-1E03-E9EE-45F43CB41EC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {4CF1FA37-0CA8-1E03-E9EE-45F43CB41EC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {4CF1FA37-0CA8-1E03-E9EE-45F43CB41EC9}.Release|Any CPU.Build.0 = Release|Any CPU
+        {273CAB33-520E-2460-2E9B-2D4955F113A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {273CAB33-520E-2460-2E9B-2D4955F113A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {273CAB33-520E-2460-2E9B-2D4955F113A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {273CAB33-520E-2460-2E9B-2D4955F113A0}.Release|Any CPU.Build.0 = Release|Any CPU
     EndGlobalSection
 EndGlobal
