@@ -38,9 +38,13 @@ namespace GoogleCSharpSnippets
             // Create client
             QueryServiceClient queryServiceClient = await QueryServiceClient.CreateAsync();
             // Initialize request argument(s)
-            QueryTimeSeriesRequest request = new QueryTimeSeriesRequest { Name = "", Query = "", };
+#pragma warning disable CS0612
+            QueryTimeSeriesRequest request = new QueryTimeSeriesRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<QueryTimeSeriesResponse, TimeSeriesData> response = queryServiceClient.QueryTimeSeriesAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((TimeSeriesData item) =>
@@ -50,7 +54,9 @@ namespace GoogleCSharpSnippets
             });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
+#pragma warning disable CS0612
             await response.AsRawResponses().ForEachAsync((QueryTimeSeriesResponse page) =>
+#pragma warning restore CS0612
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

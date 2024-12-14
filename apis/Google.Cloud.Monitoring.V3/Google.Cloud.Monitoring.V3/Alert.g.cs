@@ -30,128 +30,156 @@ namespace Google.Cloud.Monitoring.V3 {
             "L3YzL2NvbW1vbi5wcm90bxoqZ29vZ2xlL21vbml0b3JpbmcvdjMvbXV0YXRp",
             "b25fcmVjb3JkLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
             "dG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoXZ29vZ2xlL3Jw",
-            "Yy9zdGF0dXMucHJvdG8ixiUKC0FsZXJ0UG9saWN5EhEKBG5hbWUYASABKAlC",
-            "A+BBCBIUCgxkaXNwbGF5X25hbWUYAiABKAkSRgoNZG9jdW1lbnRhdGlvbhgN",
-            "IAEoCzIvLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkRvY3Vt",
-            "ZW50YXRpb24SRgoLdXNlcl9sYWJlbHMYECADKAsyMS5nb29nbGUubW9uaXRv",
-            "cmluZy52My5BbGVydFBvbGljeS5Vc2VyTGFiZWxzRW50cnkSPwoKY29uZGl0",
-            "aW9ucxgMIAMoCzIrLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5",
-            "LkNvbmRpdGlvbhJJCghjb21iaW5lchgGIAEoDjI3Lmdvb2dsZS5tb25pdG9y",
-            "aW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbkNvbWJpbmVyVHlwZRIrCgdl",
-            "bmFibGVkGBEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkJvb2xWYWx1ZRIkCgh2",
-            "YWxpZGl0eRgSIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEh0KFW5vdGlmaWNh",
-            "dGlvbl9jaGFubmVscxgOIAMoCRI9Cg9jcmVhdGlvbl9yZWNvcmQYCiABKAsy",
-            "JC5nb29nbGUubW9uaXRvcmluZy52My5NdXRhdGlvblJlY29yZBI9Cg9tdXRh",
-            "dGlvbl9yZWNvcmQYCyABKAsyJC5nb29nbGUubW9uaXRvcmluZy52My5NdXRh",
-            "dGlvblJlY29yZBJHCg5hbGVydF9zdHJhdGVneRgVIAEoCzIvLmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkFsZXJ0U3RyYXRlZ3kSQQoIc2V2",
-            "ZXJpdHkYFiABKA4yKi5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
-            "eS5TZXZlcml0eUID4EEBGr4BCg1Eb2N1bWVudGF0aW9uEg8KB2NvbnRlbnQY",
-            "ASABKAkSEQoJbWltZV90eXBlGAIgASgJEhQKB3N1YmplY3QYAyABKAlCA+BB",
-            "ARJICgVsaW5rcxgEIAMoCzI0Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
-            "UG9saWN5LkRvY3VtZW50YXRpb24uTGlua0ID4EEBGikKBExpbmsSFAoMZGlz",
-            "cGxheV9uYW1lGAEgASgJEgsKA3VybBgCIAEoCRr3FQoJQ29uZGl0aW9uEgwK",
-            "BG5hbWUYDCABKAkSFAoMZGlzcGxheV9uYW1lGAYgASgJEloKE2NvbmRpdGlv",
-            "bl90aHJlc2hvbGQYASABKAsyOy5nb29nbGUubW9uaXRvcmluZy52My5BbGVy",
-            "dFBvbGljeS5Db25kaXRpb24uTWV0cmljVGhyZXNob2xkSAASVQoQY29uZGl0",
-            "aW9uX2Fic2VudBgCIAEoCzI5Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
-            "UG9saWN5LkNvbmRpdGlvbi5NZXRyaWNBYnNlbmNlSAASVQoVY29uZGl0aW9u",
-            "X21hdGNoZWRfbG9nGBQgASgLMjQuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
-            "cnRQb2xpY3kuQ29uZGl0aW9uLkxvZ01hdGNoSAASewojY29uZGl0aW9uX21v",
-            "bml0b3JpbmdfcXVlcnlfbGFuZ3VhZ2UYEyABKAsyTC5nb29nbGUubW9uaXRv",
-            "cmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uTW9uaXRvcmluZ1F1ZXJ5",
-            "TGFuZ3VhZ2VDb25kaXRpb25IABJ7CiNjb25kaXRpb25fcHJvbWV0aGV1c19x",
-            "dWVyeV9sYW5ndWFnZRgVIAEoCzJMLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFs",
-            "ZXJ0UG9saWN5LkNvbmRpdGlvbi5Qcm9tZXRoZXVzUXVlcnlMYW5ndWFnZUNv",
-            "bmRpdGlvbkgAGjUKB1RyaWdnZXISDwoFY291bnQYASABKAVIABIRCgdwZXJj",
-            "ZW50GAIgASgBSABCBgoEdHlwZRqeBQoPTWV0cmljVGhyZXNob2xkEhMKBmZp",
-            "bHRlchgCIAEoCUID4EECEjcKDGFnZ3JlZ2F0aW9ucxgIIAMoCzIhLmdvb2ds",
-            "ZS5tb25pdG9yaW5nLnYzLkFnZ3JlZ2F0aW9uEhoKEmRlbm9taW5hdG9yX2Zp",
-            "bHRlchgJIAEoCRJDChhkZW5vbWluYXRvcl9hZ2dyZWdhdGlvbnMYCiADKAsy",
-            "IS5nb29nbGUubW9uaXRvcmluZy52My5BZ2dyZWdhdGlvbhJlChBmb3JlY2Fz",
-            "dF9vcHRpb25zGAwgASgLMksuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQ",
-            "b2xpY3kuQ29uZGl0aW9uLk1ldHJpY1RocmVzaG9sZC5Gb3JlY2FzdE9wdGlv",
-            "bnMSOAoKY29tcGFyaXNvbhgEIAEoDjIkLmdvb2dsZS5tb25pdG9yaW5nLnYz",
-            "LkNvbXBhcmlzb25UeXBlEhcKD3RocmVzaG9sZF92YWx1ZRgFIAEoARIrCghk",
-            "dXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJECgd0",
-            "cmlnZ2VyGAcgASgLMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xp",
-            "Y3kuQ29uZGl0aW9uLlRyaWdnZXISYgoXZXZhbHVhdGlvbl9taXNzaW5nX2Rh",
-            "dGEYCyABKA4yQS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5D",
-            "b25kaXRpb24uRXZhbHVhdGlvbk1pc3NpbmdEYXRhGksKD0ZvcmVjYXN0T3B0",
-            "aW9ucxI4ChBmb3JlY2FzdF9ob3Jpem9uGAEgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uQgPgQQIa0AEKDU1ldHJpY0Fic2VuY2USEwoGZmlsdGVy",
-            "GAEgASgJQgPgQQISNwoMYWdncmVnYXRpb25zGAUgAygLMiEuZ29vZ2xlLm1v",
-            "bml0b3JpbmcudjMuQWdncmVnYXRpb24SKwoIZHVyYXRpb24YAiABKAsyGS5n",
-            "b29nbGUucHJvdG9idWYuRHVyYXRpb24SRAoHdHJpZ2dlchgDIAEoCzIzLmdv",
-            "b2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5Ucmln",
-            "Z2VyGrwBCghMb2dNYXRjaBITCgZmaWx0ZXIYASABKAlCA+BBAhJjChBsYWJl",
-            "bF9leHRyYWN0b3JzGAIgAygLMkkuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
-            "cnRQb2xpY3kuQ29uZGl0aW9uLkxvZ01hdGNoLkxhYmVsRXh0cmFjdG9yc0Vu",
-            "dHJ5GjYKFExhYmVsRXh0cmFjdG9yc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEaiAIKIE1vbml0b3JpbmdRdWVyeUxhbmd1YWdlQ29u",
-            "ZGl0aW9uEg0KBXF1ZXJ5GAEgASgJEisKCGR1cmF0aW9uGAIgASgLMhkuZ29v",
-            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uEkQKB3RyaWdnZXIYAyABKAsyMy5nb29n",
-            "bGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24uVHJpZ2dl",
-            "chJiChdldmFsdWF0aW9uX21pc3NpbmdfZGF0YRgEIAEoDjJBLmdvb2dsZS5t",
-            "b25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5FdmFsdWF0aW9u",
-            "TWlzc2luZ0RhdGEa9QIKIFByb21ldGhldXNRdWVyeUxhbmd1YWdlQ29uZGl0",
-            "aW9uEhIKBXF1ZXJ5GAEgASgJQgPgQQISMAoIZHVyYXRpb24YAiABKAsyGS5n",
-            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARI7ChNldmFsdWF0aW9uX2lu",
-            "dGVydmFsGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQES",
-            "bQoGbGFiZWxzGAQgAygLMlguZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQ",
-            "b2xpY3kuQ29uZGl0aW9uLlByb21ldGhldXNRdWVyeUxhbmd1YWdlQ29uZGl0",
-            "aW9uLkxhYmVsc0VudHJ5QgPgQQESFwoKcnVsZV9ncm91cBgFIAEoCUID4EEB",
-            "EhcKCmFsZXJ0X3J1bGUYBiABKAlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNr",
-            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIq0BChVFdmFsdWF0aW9uTWlz",
-            "c2luZ0RhdGESJwojRVZBTFVBVElPTl9NSVNTSU5HX0RBVEFfVU5TUEVDSUZJ",
-            "RUQQABIkCiBFVkFMVUFUSU9OX01JU1NJTkdfREFUQV9JTkFDVElWRRABEiIK",
-            "HkVWQUxVQVRJT05fTUlTU0lOR19EQVRBX0FDVElWRRACEiEKHUVWQUxVQVRJ",
-            "T05fTUlTU0lOR19EQVRBX05PX09QEAM6lwLqQZMCCi5tb25pdG9yaW5nLmdv",
-            "b2dsZWFwaXMuY29tL0FsZXJ0UG9saWN5Q29uZGl0aW9uEkZwcm9qZWN0cy97",
-            "cHJvamVjdH0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fS9jb25kaXRp",
-            "b25zL3tjb25kaXRpb259ElBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259",
-            "L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0vY29uZGl0aW9ucy97Y29u",
-            "ZGl0aW9ufRJEZm9sZGVycy97Zm9sZGVyfS9hbGVydFBvbGljaWVzL3thbGVy",
-            "dF9wb2xpY3l9L2NvbmRpdGlvbnMve2NvbmRpdGlvbn0SASpCCwoJY29uZGl0",
-            "aW9uGowFCg1BbGVydFN0cmF0ZWd5EmYKF25vdGlmaWNhdGlvbl9yYXRlX2xp",
-            "bWl0GAEgASgLMkUuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3ku",
-            "QWxlcnRTdHJhdGVneS5Ob3RpZmljYXRpb25SYXRlTGltaXQSYAoUbm90aWZp",
-            "Y2F0aW9uX3Byb21wdHMYAiADKA4yQi5nb29nbGUubW9uaXRvcmluZy52My5B",
-            "bGVydFBvbGljeS5BbGVydFN0cmF0ZWd5Lk5vdGlmaWNhdGlvblByb21wdBIt",
-            "CgphdXRvX2Nsb3NlGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "EnIKHW5vdGlmaWNhdGlvbl9jaGFubmVsX3N0cmF0ZWd5GAQgAygLMksuZ29v",
-            "Z2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQWxlcnRTdHJhdGVneS5O",
-            "b3RpZmljYXRpb25DaGFubmVsU3RyYXRlZ3kaQgoVTm90aWZpY2F0aW9uUmF0",
-            "ZUxpbWl0EikKBnBlcmlvZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbhp3ChtOb3RpZmljYXRpb25DaGFubmVsU3RyYXRlZ3kSIgoabm90aWZp",
-            "Y2F0aW9uX2NoYW5uZWxfbmFtZXMYASADKAkSNAoRcmVub3RpZnlfaW50ZXJ2",
-            "YWwYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iUQoSTm90aWZp",
-            "Y2F0aW9uUHJvbXB0EiMKH05PVElGSUNBVElPTl9QUk9NUFRfVU5TUEVDSUZJ",
-            "RUQQABIKCgZPUEVORUQQARIKCgZDTE9TRUQQAxoxCg9Vc2VyTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJhChVDb25kaXRp",
-            "b25Db21iaW5lclR5cGUSFwoTQ09NQklORV9VTlNQRUNJRklFRBAAEgcKA0FO",
-            "RBABEgYKAk9SEAISHgoaQU5EX1dJVEhfTUFUQ0hJTkdfUkVTT1VSQ0UQAyJK",
-            "CghTZXZlcml0eRIYChRTRVZFUklUWV9VTlNQRUNJRklFRBAAEgwKCENSSVRJ",
-            "Q0FMEAESCQoFRVJST1IQAhILCgdXQVJOSU5HEAM6yQHqQcUBCiVtb25pdG9y",
-            "aW5nLmdvb2dsZWFwaXMuY29tL0FsZXJ0UG9saWN5Ei9wcm9qZWN0cy97cHJv",
-            "amVjdH0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fRI5b3JnYW5pemF0",
-            "aW9ucy97b3JnYW5pemF0aW9ufS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xp",
-            "Y3l9Ei1mb2xkZXJzL3tmb2xkZXJ9L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3Bv",
-            "bGljeX0SASpCxQEKGGNvbS5nb29nbGUubW9uaXRvcmluZy52M0IKQWxlcnRQ",
-            "cm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3JpbmcvYXBpdjMv",
-            "djIvbW9uaXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5DbG91ZC5N",
-            "b25pdG9yaW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1H",
-            "b29nbGU6OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
+            "Yy9zdGF0dXMucHJvdG8aG2dvb2dsZS90eXBlL3RpbWVvZmRheS5wcm90byKV",
+            "LQoLQWxlcnRQb2xpY3kSEQoEbmFtZRgBIAEoCUID4EEIEhQKDGRpc3BsYXlf",
+            "bmFtZRgCIAEoCRJGCg1kb2N1bWVudGF0aW9uGA0gASgLMi8uZ29vZ2xlLm1v",
+            "bml0b3JpbmcudjMuQWxlcnRQb2xpY3kuRG9jdW1lbnRhdGlvbhJGCgt1c2Vy",
+            "X2xhYmVscxgQIAMoCzIxLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9s",
+            "aWN5LlVzZXJMYWJlbHNFbnRyeRI/Cgpjb25kaXRpb25zGAwgAygLMisuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uEkkKCGNv",
+            "bWJpbmVyGAYgASgOMjcuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xp",
+            "Y3kuQ29uZGl0aW9uQ29tYmluZXJUeXBlEisKB2VuYWJsZWQYESABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuQm9vbFZhbHVlEiQKCHZhbGlkaXR5GBIgASgLMhIu",
+            "Z29vZ2xlLnJwYy5TdGF0dXMSHQoVbm90aWZpY2F0aW9uX2NoYW5uZWxzGA4g",
+            "AygJEj0KD2NyZWF0aW9uX3JlY29yZBgKIAEoCzIkLmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzLk11dGF0aW9uUmVjb3JkEj0KD211dGF0aW9uX3JlY29yZBgLIAEo",
+            "CzIkLmdvb2dsZS5tb25pdG9yaW5nLnYzLk11dGF0aW9uUmVjb3JkEkcKDmFs",
+            "ZXJ0X3N0cmF0ZWd5GBUgASgLMi8uZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxl",
+            "cnRQb2xpY3kuQWxlcnRTdHJhdGVneRJBCghzZXZlcml0eRgWIAEoDjIqLmdv",
+            "b2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LlNldmVyaXR5QgPgQQEa",
+            "vgEKDURvY3VtZW50YXRpb24SDwoHY29udGVudBgBIAEoCRIRCgltaW1lX3R5",
+            "cGUYAiABKAkSFAoHc3ViamVjdBgDIAEoCUID4EEBEkgKBWxpbmtzGAQgAygL",
+            "MjQuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuRG9jdW1lbnRh",
+            "dGlvbi5MaW5rQgPgQQEaKQoETGluaxIUCgxkaXNwbGF5X25hbWUYASABKAkS",
+            "CwoDdXJsGAIgASgJGsYdCglDb25kaXRpb24SDAoEbmFtZRgMIAEoCRIUCgxk",
+            "aXNwbGF5X25hbWUYBiABKAkSWgoTY29uZGl0aW9uX3RocmVzaG9sZBgBIAEo",
+            "CzI7Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlv",
+            "bi5NZXRyaWNUaHJlc2hvbGRIABJVChBjb25kaXRpb25fYWJzZW50GAIgASgL",
+            "MjkuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9u",
+            "Lk1ldHJpY0Fic2VuY2VIABJVChVjb25kaXRpb25fbWF0Y2hlZF9sb2cYFCAB",
+            "KAsyNC5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRp",
+            "b24uTG9nTWF0Y2hIABJ7CiNjb25kaXRpb25fbW9uaXRvcmluZ19xdWVyeV9s",
+            "YW5ndWFnZRgTIAEoCzJMLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9s",
+            "aWN5LkNvbmRpdGlvbi5Nb25pdG9yaW5nUXVlcnlMYW5ndWFnZUNvbmRpdGlv",
+            "bkgAEnsKI2NvbmRpdGlvbl9wcm9tZXRoZXVzX3F1ZXJ5X2xhbmd1YWdlGBUg",
+            "ASgLMkwuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0",
+            "aW9uLlByb21ldGhldXNRdWVyeUxhbmd1YWdlQ29uZGl0aW9uSAASUQoNY29u",
+            "ZGl0aW9uX3NxbBgWIAEoCzI4Lmdvb2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0",
+            "UG9saWN5LkNvbmRpdGlvbi5TcWxDb25kaXRpb25IABo1CgdUcmlnZ2VyEg8K",
+            "BWNvdW50GAEgASgFSAASEQoHcGVyY2VudBgCIAEoAUgAQgYKBHR5cGUangUK",
+            "D01ldHJpY1RocmVzaG9sZBITCgZmaWx0ZXIYAiABKAlCA+BBAhI3CgxhZ2dy",
+            "ZWdhdGlvbnMYCCADKAsyIS5nb29nbGUubW9uaXRvcmluZy52My5BZ2dyZWdh",
+            "dGlvbhIaChJkZW5vbWluYXRvcl9maWx0ZXIYCSABKAkSQwoYZGVub21pbmF0",
+            "b3JfYWdncmVnYXRpb25zGAogAygLMiEuZ29vZ2xlLm1vbml0b3JpbmcudjMu",
+            "QWdncmVnYXRpb24SZQoQZm9yZWNhc3Rfb3B0aW9ucxgMIAEoCzJLLmdvb2ds",
+            "ZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5NZXRyaWNU",
+            "aHJlc2hvbGQuRm9yZWNhc3RPcHRpb25zEjgKCmNvbXBhcmlzb24YBCABKA4y",
+            "JC5nb29nbGUubW9uaXRvcmluZy52My5Db21wYXJpc29uVHlwZRIXCg90aHJl",
+            "c2hvbGRfdmFsdWUYBSABKAESKwoIZHVyYXRpb24YBiABKAsyGS5nb29nbGUu",
+            "cHJvdG9idWYuRHVyYXRpb24SRAoHdHJpZ2dlchgHIAEoCzIzLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5UcmlnZ2VyEmIK",
+            "F2V2YWx1YXRpb25fbWlzc2luZ19kYXRhGAsgASgOMkEuZ29vZ2xlLm1vbml0",
+            "b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLkV2YWx1YXRpb25NaXNz",
+            "aW5nRGF0YRpLCg9Gb3JlY2FzdE9wdGlvbnMSOAoQZm9yZWNhc3RfaG9yaXpv",
+            "bhgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECGtABCg1N",
+            "ZXRyaWNBYnNlbmNlEhMKBmZpbHRlchgBIAEoCUID4EECEjcKDGFnZ3JlZ2F0",
+            "aW9ucxgFIAMoCzIhLmdvb2dsZS5tb25pdG9yaW5nLnYzLkFnZ3JlZ2F0aW9u",
+            "EisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "EkQKB3RyaWdnZXIYAyABKAsyMy5nb29nbGUubW9uaXRvcmluZy52My5BbGVy",
+            "dFBvbGljeS5Db25kaXRpb24uVHJpZ2dlchq8AQoITG9nTWF0Y2gSEwoGZmls",
+            "dGVyGAEgASgJQgPgQQISYwoQbGFiZWxfZXh0cmFjdG9ycxgCIAMoCzJJLmdv",
+            "b2dsZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5Mb2dN",
+            "YXRjaC5MYWJlbEV4dHJhY3RvcnNFbnRyeRo2ChRMYWJlbEV4dHJhY3RvcnNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGogCCiBNb25p",
+            "dG9yaW5nUXVlcnlMYW5ndWFnZUNvbmRpdGlvbhINCgVxdWVyeRgBIAEoCRIr",
+            "CghkdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhJE",
+            "Cgd0cmlnZ2VyGAMgASgLMjMuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQ",
+            "b2xpY3kuQ29uZGl0aW9uLlRyaWdnZXISYgoXZXZhbHVhdGlvbl9taXNzaW5n",
+            "X2RhdGEYBCABKA4yQS5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGlj",
+            "eS5Db25kaXRpb24uRXZhbHVhdGlvbk1pc3NpbmdEYXRhGp0DCiBQcm9tZXRo",
+            "ZXVzUXVlcnlMYW5ndWFnZUNvbmRpdGlvbhISCgVxdWVyeRgBIAEoCUID4EEC",
+            "EjAKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "QgPgQQESOwoTZXZhbHVhdGlvbl9pbnRlcnZhbBgDIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbkID4EEBEm0KBmxhYmVscxgEIAMoCzJYLmdvb2ds",
+            "ZS5tb25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkNvbmRpdGlvbi5Qcm9tZXRo",
+            "ZXVzUXVlcnlMYW5ndWFnZUNvbmRpdGlvbi5MYWJlbHNFbnRyeUID4EEBEhcK",
+            "CnJ1bGVfZ3JvdXAYBSABKAlCA+BBARIXCgphbGVydF9ydWxlGAYgASgJQgPg",
+            "QQESJgoZZGlzYWJsZV9tZXRyaWNfdmFsaWRhdGlvbhgHIAEoCEID4EEBGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEa",
+            "0QYKDFNxbENvbmRpdGlvbhISCgVxdWVyeRgBIAEoCUID4EECElMKB21pbnV0",
+            "ZXMYAiABKAsyQC5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5D",
+            "b25kaXRpb24uU3FsQ29uZGl0aW9uLk1pbnV0ZXNIABJRCgZob3VybHkYAyAB",
+            "KAsyPy5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRp",
+            "b24uU3FsQ29uZGl0aW9uLkhvdXJseUgAEk8KBWRhaWx5GAQgASgLMj4uZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLlNxbENv",
+            "bmRpdGlvbi5EYWlseUgAEl8KDnJvd19jb3VudF90ZXN0GAUgASgLMkUuZ29v",
+            "Z2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQ29uZGl0aW9uLlNxbENv",
+            "bmRpdGlvbi5Sb3dDb3VudFRlc3RIARJcCgxib29sZWFuX3Rlc3QYBiABKAsy",
+            "RC5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Db25kaXRpb24u",
+            "U3FsQ29uZGl0aW9uLkJvb2xlYW5UZXN0SAEaIwoHTWludXRlcxIYCgtwZXJp",
+            "b2RpY2l0eRgBIAEoBUID4EECGlUKBkhvdXJseRIYCgtwZXJpb2RpY2l0eRgB",
+            "IAEoBUID4EECEh8KDW1pbnV0ZV9vZmZzZXQYAiABKAVCA+BBAUgAiAEBQhAK",
+            "Dl9taW51dGVfb2Zmc2V0GlYKBURhaWx5EhgKC3BlcmlvZGljaXR5GAEgASgF",
+            "QgPgQQISMwoOZXhlY3V0aW9uX3RpbWUYAiABKAsyFi5nb29nbGUudHlwZS5U",
+            "aW1lT2ZEYXlCA+BBARplCgxSb3dDb3VudFRlc3QSPQoKY29tcGFyaXNvbhgB",
+            "IAEoDjIkLmdvb2dsZS5tb25pdG9yaW5nLnYzLkNvbXBhcmlzb25UeXBlQgPg",
+            "QQISFgoJdGhyZXNob2xkGAIgASgDQgPgQQIaIgoLQm9vbGVhblRlc3QSEwoG",
+            "Y29sdW1uGAEgASgJQgPgQQJCCgoIc2NoZWR1bGVCCgoIZXZhbHVhdGUirQEK",
+            "FUV2YWx1YXRpb25NaXNzaW5nRGF0YRInCiNFVkFMVUFUSU9OX01JU1NJTkdf",
+            "REFUQV9VTlNQRUNJRklFRBAAEiQKIEVWQUxVQVRJT05fTUlTU0lOR19EQVRB",
+            "X0lOQUNUSVZFEAESIgoeRVZBTFVBVElPTl9NSVNTSU5HX0RBVEFfQUNUSVZF",
+            "EAISIQodRVZBTFVBVElPTl9NSVNTSU5HX0RBVEFfTk9fT1AQAzqXAupBkwIK",
+            "Lm1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQb2xpY3lDb25kaXRp",
+            "b24SRnByb2plY3RzL3twcm9qZWN0fS9hbGVydFBvbGljaWVzL3thbGVydF9w",
+            "b2xpY3l9L2NvbmRpdGlvbnMve2NvbmRpdGlvbn0SUG9yZ2FuaXphdGlvbnMv",
+            "e29yZ2FuaXphdGlvbn0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fS9j",
+            "b25kaXRpb25zL3tjb25kaXRpb259EkRmb2xkZXJzL3tmb2xkZXJ9L2FsZXJ0",
+            "UG9saWNpZXMve2FsZXJ0X3BvbGljeX0vY29uZGl0aW9ucy97Y29uZGl0aW9u",
+            "fRIBKkILCgljb25kaXRpb24ajAUKDUFsZXJ0U3RyYXRlZ3kSZgoXbm90aWZp",
+            "Y2F0aW9uX3JhdGVfbGltaXQYASABKAsyRS5nb29nbGUubW9uaXRvcmluZy52",
+            "My5BbGVydFBvbGljeS5BbGVydFN0cmF0ZWd5Lk5vdGlmaWNhdGlvblJhdGVM",
+            "aW1pdBJgChRub3RpZmljYXRpb25fcHJvbXB0cxgCIAMoDjJCLmdvb2dsZS5t",
+            "b25pdG9yaW5nLnYzLkFsZXJ0UG9saWN5LkFsZXJ0U3RyYXRlZ3kuTm90aWZp",
+            "Y2F0aW9uUHJvbXB0Ei0KCmF1dG9fY2xvc2UYAyABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb24Scgodbm90aWZpY2F0aW9uX2NoYW5uZWxfc3RyYXRl",
+            "Z3kYBCADKAsySy5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5B",
+            "bGVydFN0cmF0ZWd5Lk5vdGlmaWNhdGlvbkNoYW5uZWxTdHJhdGVneRpCChVO",
+            "b3RpZmljYXRpb25SYXRlTGltaXQSKQoGcGVyaW9kGAEgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uGncKG05vdGlmaWNhdGlvbkNoYW5uZWxTdHJh",
+            "dGVneRIiChpub3RpZmljYXRpb25fY2hhbm5lbF9uYW1lcxgBIAMoCRI0ChFy",
+            "ZW5vdGlmeV9pbnRlcnZhbBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbiJRChJOb3RpZmljYXRpb25Qcm9tcHQSIwofTk9USUZJQ0FUSU9OX1BS",
+            "T01QVF9VTlNQRUNJRklFRBAAEgoKBk9QRU5FRBABEgoKBkNMT1NFRBADGjEK",
+            "D1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBImEKFUNvbmRpdGlvbkNvbWJpbmVyVHlwZRIXChNDT01CSU5FX1VOU1BF",
+            "Q0lGSUVEEAASBwoDQU5EEAESBgoCT1IQAhIeChpBTkRfV0lUSF9NQVRDSElO",
+            "R19SRVNPVVJDRRADIkoKCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lG",
+            "SUVEEAASDAoIQ1JJVElDQUwQARIJCgVFUlJPUhACEgsKB1dBUk5JTkcQAzrJ",
+            "AepBxQEKJW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQb2xpY3kS",
+            "L3Byb2plY3RzL3twcm9qZWN0fS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xp",
+            "Y3l9Ejlvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2FsZXJ0UG9saWNp",
+            "ZXMve2FsZXJ0X3BvbGljeX0SLWZvbGRlcnMve2ZvbGRlcn0vYWxlcnRQb2xp",
+            "Y2llcy97YWxlcnRfcG9saWN5fRIBKkLFAQoYY29tLmdvb2dsZS5tb25pdG9y",
+            "aW5nLnYzQgpBbGVydFByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vbW9u",
+            "aXRvcmluZy9hcGl2My92Mi9tb25pdG9yaW5ncGI7bW9uaXRvcmluZ3BiqgIa",
+            "R29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVcQ2xvdWRcTW9u",
+            "aXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jpbmc6OlYzYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MutationRecordReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MutationRecordReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Parser, new[]{ "Name", "DisplayName", "Documentation", "UserLabels", "Conditions", "Combiner", "Enabled", "Validity", "NotificationChannels", "CreationRecord", "MutationRecord", "AlertStrategy", "Severity" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.ConditionCombinerType), typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Severity) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation.Parser, new[]{ "Content", "MimeType", "Subject", "Links" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation.Types.Link), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Documentation.Types.Link.Parser, new[]{ "DisplayName", "Url" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Parser, new[]{ "Name", "DisplayName", "ConditionThreshold", "ConditionAbsent", "ConditionMatchedLog", "ConditionMonitoringQueryLanguage", "ConditionPrometheusQueryLanguage" }, new[]{ "Condition" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger.Parser, new[]{ "Count", "Percent" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Parser, new[]{ "Name", "DisplayName", "ConditionThreshold", "ConditionAbsent", "ConditionMatchedLog", "ConditionMonitoringQueryLanguage", "ConditionPrometheusQueryLanguage", "ConditionSql" }, new[]{ "Condition" }, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.EvaluationMissingData) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.Trigger.Parser, new[]{ "Count", "Percent" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Parser, new[]{ "Filter", "Aggregations", "DenominatorFilter", "DenominatorAggregations", "ForecastOptions", "Comparison", "ThresholdValue", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricThreshold.Types.ForecastOptions.Parser, new[]{ "ForecastHorizon" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence.Parser, new[]{ "Filter", "Aggregations", "Duration", "Trigger" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch.Parser, new[]{ "Filter", "LabelExtractors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "Trigger", "EvaluationMissingData" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "EvaluationInterval", "Labels", "RuleGroup", "AlertRule" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "EvaluationInterval", "Labels", "RuleGroup", "AlertRule", "DisableMetricValidation" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Parser, new[]{ "Query", "Minutes", "Hourly", "Daily", "RowCountTest", "BooleanTest" }, new[]{ "Schedule", "Evaluate" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes.Parser, new[]{ "Periodicity" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly.Parser, new[]{ "Periodicity", "MinuteOffset" }, new[]{ "MinuteOffset" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily.Parser, new[]{ "Periodicity", "ExecutionTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest.Parser, new[]{ "Comparison", "Threshold" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest.Parser, new[]{ "Column" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Parser, new[]{ "NotificationRateLimit", "NotificationPrompts", "AutoClose", "NotificationChannelStrategy" }, null, new[]{ typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationPrompt) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit.Parser, new[]{ "Period" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationChannelStrategy.Parser, new[]{ "NotificationChannelNames", "RenotifyInterval" }, null, null, null, null)}),
             null, })
@@ -1613,6 +1641,9 @@ namespace Google.Cloud.Monitoring.V3 {
             case ConditionOneofCase.ConditionPrometheusQueryLanguage:
               ConditionPrometheusQueryLanguage = other.ConditionPrometheusQueryLanguage.Clone();
               break;
+            case ConditionOneofCase.ConditionSql:
+              ConditionSql = other.ConditionSql.Clone();
+              break;
           }
 
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1758,6 +1789,21 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "condition_sql" field.</summary>
+        public const int ConditionSqlFieldNumber = 22;
+        /// <summary>
+        /// A condition that periodically evaluates a SQL query result.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition ConditionSql {
+          get { return conditionCase_ == ConditionOneofCase.ConditionSql ? (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition) condition_ : null; }
+          set {
+            condition_ = value;
+            conditionCase_ = value == null ? ConditionOneofCase.None : ConditionOneofCase.ConditionSql;
+          }
+        }
+
         private object condition_;
         /// <summary>Enum of possible cases for the "condition" oneof.</summary>
         public enum ConditionOneofCase {
@@ -1767,6 +1813,7 @@ namespace Google.Cloud.Monitoring.V3 {
           ConditionMatchedLog = 20,
           ConditionMonitoringQueryLanguage = 19,
           ConditionPrometheusQueryLanguage = 21,
+          ConditionSql = 22,
         }
         private ConditionOneofCase conditionCase_ = ConditionOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1804,6 +1851,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (!object.Equals(ConditionMatchedLog, other.ConditionMatchedLog)) return false;
           if (!object.Equals(ConditionMonitoringQueryLanguage, other.ConditionMonitoringQueryLanguage)) return false;
           if (!object.Equals(ConditionPrometheusQueryLanguage, other.ConditionPrometheusQueryLanguage)) return false;
+          if (!object.Equals(ConditionSql, other.ConditionSql)) return false;
           if (ConditionCase != other.ConditionCase) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -1819,6 +1867,7 @@ namespace Google.Cloud.Monitoring.V3 {
           if (conditionCase_ == ConditionOneofCase.ConditionMatchedLog) hash ^= ConditionMatchedLog.GetHashCode();
           if (conditionCase_ == ConditionOneofCase.ConditionMonitoringQueryLanguage) hash ^= ConditionMonitoringQueryLanguage.GetHashCode();
           if (conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage) hash ^= ConditionPrometheusQueryLanguage.GetHashCode();
+          if (conditionCase_ == ConditionOneofCase.ConditionSql) hash ^= ConditionSql.GetHashCode();
           hash ^= (int) conditionCase_;
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -1866,6 +1915,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(170, 1);
             output.WriteMessage(ConditionPrometheusQueryLanguage);
           }
+          if (conditionCase_ == ConditionOneofCase.ConditionSql) {
+            output.WriteRawTag(178, 1);
+            output.WriteMessage(ConditionSql);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1904,6 +1957,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(170, 1);
             output.WriteMessage(ConditionPrometheusQueryLanguage);
           }
+          if (conditionCase_ == ConditionOneofCase.ConditionSql) {
+            output.WriteRawTag(178, 1);
+            output.WriteMessage(ConditionSql);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1934,6 +1991,9 @@ namespace Google.Cloud.Monitoring.V3 {
           }
           if (conditionCase_ == ConditionOneofCase.ConditionPrometheusQueryLanguage) {
             size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConditionPrometheusQueryLanguage);
+          }
+          if (conditionCase_ == ConditionOneofCase.ConditionSql) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(ConditionSql);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1983,6 +2043,12 @@ namespace Google.Cloud.Monitoring.V3 {
                 ConditionPrometheusQueryLanguage = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.PrometheusQueryLanguageCondition();
               }
               ConditionPrometheusQueryLanguage.MergeFrom(other.ConditionPrometheusQueryLanguage);
+              break;
+            case ConditionOneofCase.ConditionSql:
+              if (ConditionSql == null) {
+                ConditionSql = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition();
+              }
+              ConditionSql.MergeFrom(other.ConditionSql);
               break;
           }
 
@@ -2054,6 +2120,15 @@ namespace Google.Cloud.Monitoring.V3 {
                 ConditionPrometheusQueryLanguage = subBuilder;
                 break;
               }
+              case 178: {
+                global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition();
+                if (conditionCase_ == ConditionOneofCase.ConditionSql) {
+                  subBuilder.MergeFrom(ConditionSql);
+                }
+                input.ReadMessage(subBuilder);
+                ConditionSql = subBuilder;
+                break;
+              }
             }
           }
         #endif
@@ -2120,6 +2195,15 @@ namespace Google.Cloud.Monitoring.V3 {
                 }
                 input.ReadMessage(subBuilder);
                 ConditionPrometheusQueryLanguage = subBuilder;
+                break;
+              }
+              case 178: {
+                global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition();
+                if (conditionCase_ == ConditionOneofCase.ConditionSql) {
+                  subBuilder.MergeFrom(ConditionSql);
+                }
+                input.ReadMessage(subBuilder);
+                ConditionSql = subBuilder;
                 break;
               }
             }
@@ -4323,6 +4407,7 @@ namespace Google.Cloud.Monitoring.V3 {
               labels_ = other.labels_.Clone();
               ruleGroup_ = other.ruleGroup_;
               alertRule_ = other.alertRule_;
+              disableMetricValidation_ = other.disableMetricValidation_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -4462,6 +4547,29 @@ namespace Google.Cloud.Monitoring.V3 {
               }
             }
 
+            /// <summary>Field number for the "disable_metric_validation" field.</summary>
+            public const int DisableMetricValidationFieldNumber = 7;
+            private bool disableMetricValidation_;
+            /// <summary>
+            /// Optional. Whether to disable metric existence validation for this
+            /// condition.
+            ///
+            /// This allows alerting policies to be defined on metrics that do not yet
+            /// exist, improving advanced customer workflows such as configuring
+            /// alerting policies using Terraform.
+            ///
+            /// Users with the `monitoring.alertPolicyViewer` role are able to see the
+            /// name of the non-existent metric in the alerting policy condition.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool DisableMetricValidation {
+              get { return disableMetricValidation_; }
+              set {
+                disableMetricValidation_ = value;
+              }
+            }
+
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
@@ -4483,6 +4591,7 @@ namespace Google.Cloud.Monitoring.V3 {
               if (!Labels.Equals(other.Labels)) return false;
               if (RuleGroup != other.RuleGroup) return false;
               if (AlertRule != other.AlertRule) return false;
+              if (DisableMetricValidation != other.DisableMetricValidation) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -4496,6 +4605,7 @@ namespace Google.Cloud.Monitoring.V3 {
               hash ^= Labels.GetHashCode();
               if (RuleGroup.Length != 0) hash ^= RuleGroup.GetHashCode();
               if (AlertRule.Length != 0) hash ^= AlertRule.GetHashCode();
+              if (DisableMetricValidation != false) hash ^= DisableMetricValidation.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -4535,6 +4645,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteRawTag(50);
                 output.WriteString(AlertRule);
               }
+              if (DisableMetricValidation != false) {
+                output.WriteRawTag(56);
+                output.WriteBool(DisableMetricValidation);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -4566,6 +4680,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 output.WriteRawTag(50);
                 output.WriteString(AlertRule);
               }
+              if (DisableMetricValidation != false) {
+                output.WriteRawTag(56);
+                output.WriteBool(DisableMetricValidation);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -4591,6 +4709,9 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               if (AlertRule.Length != 0) {
                 size += 1 + pb::CodedOutputStream.ComputeStringSize(AlertRule);
+              }
+              if (DisableMetricValidation != false) {
+                size += 1 + 1;
               }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
@@ -4625,6 +4746,9 @@ namespace Google.Cloud.Monitoring.V3 {
               }
               if (other.AlertRule.Length != 0) {
                 AlertRule = other.AlertRule;
+              }
+              if (other.DisableMetricValidation != false) {
+                DisableMetricValidation = other.DisableMetricValidation;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -4669,6 +4793,10 @@ namespace Google.Cloud.Monitoring.V3 {
                   }
                   case 50: {
                     AlertRule = input.ReadString();
+                    break;
+                  }
+                  case 56: {
+                    DisableMetricValidation = input.ReadBool();
                     break;
                   }
                 }
@@ -4716,10 +4844,1707 @@ namespace Google.Cloud.Monitoring.V3 {
                     AlertRule = input.ReadString();
                     break;
                   }
+                  case 56: {
+                    DisableMetricValidation = input.ReadBool();
+                    break;
+                  }
                 }
               }
             }
             #endif
+
+          }
+
+          /// <summary>
+          /// A condition that allows alerting policies to be defined using GoogleSQL.
+          /// SQL conditions examine a sliding window of logs using GoogleSQL.
+          /// Alert policies with SQL conditions may incur additional billing.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class SqlCondition : pb::IMessage<SqlCondition>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SqlCondition> _parser = new pb::MessageParser<SqlCondition>(() => new SqlCondition());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SqlCondition> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Descriptor.NestedTypes[6]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SqlCondition() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SqlCondition(SqlCondition other) : this() {
+              query_ = other.query_;
+              switch (other.ScheduleCase) {
+                case ScheduleOneofCase.Minutes:
+                  Minutes = other.Minutes.Clone();
+                  break;
+                case ScheduleOneofCase.Hourly:
+                  Hourly = other.Hourly.Clone();
+                  break;
+                case ScheduleOneofCase.Daily:
+                  Daily = other.Daily.Clone();
+                  break;
+              }
+
+              switch (other.EvaluateCase) {
+                case EvaluateOneofCase.RowCountTest:
+                  RowCountTest = other.RowCountTest.Clone();
+                  break;
+                case EvaluateOneofCase.BooleanTest:
+                  BooleanTest = other.BooleanTest.Clone();
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SqlCondition Clone() {
+              return new SqlCondition(this);
+            }
+
+            /// <summary>Field number for the "query" field.</summary>
+            public const int QueryFieldNumber = 1;
+            private string query_ = "";
+            /// <summary>
+            /// Required. The Log Analytics SQL query to run, as a string.  The query
+            /// must conform to the required shape. Specifically, the query must not
+            /// try to filter the input by time.  A filter will automatically be
+            /// applied to filter the input so that the query receives all rows
+            /// received since the last time the query was run.
+            ///
+            /// For example, the following query extracts all log entries containing an
+            /// HTTP request:
+            ///
+            ///     SELECT
+            ///       timestamp, log_name, severity, http_request, resource, labels
+            ///     FROM
+            ///       my-project.global._Default._AllLogs
+            ///     WHERE
+            ///       http_request IS NOT NULL
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string Query {
+              get { return query_; }
+              set {
+                query_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+
+            /// <summary>Field number for the "minutes" field.</summary>
+            public const int MinutesFieldNumber = 2;
+            /// <summary>
+            /// Schedule the query to execute every so many minutes.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes Minutes {
+              get { return scheduleCase_ == ScheduleOneofCase.Minutes ? (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes) schedule_ : null; }
+              set {
+                schedule_ = value;
+                scheduleCase_ = value == null ? ScheduleOneofCase.None : ScheduleOneofCase.Minutes;
+              }
+            }
+
+            /// <summary>Field number for the "hourly" field.</summary>
+            public const int HourlyFieldNumber = 3;
+            /// <summary>
+            /// Schedule the query to execute every so many hours.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly Hourly {
+              get { return scheduleCase_ == ScheduleOneofCase.Hourly ? (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly) schedule_ : null; }
+              set {
+                schedule_ = value;
+                scheduleCase_ = value == null ? ScheduleOneofCase.None : ScheduleOneofCase.Hourly;
+              }
+            }
+
+            /// <summary>Field number for the "daily" field.</summary>
+            public const int DailyFieldNumber = 4;
+            /// <summary>
+            /// Schedule the query to execute every so many days.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily Daily {
+              get { return scheduleCase_ == ScheduleOneofCase.Daily ? (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily) schedule_ : null; }
+              set {
+                schedule_ = value;
+                scheduleCase_ = value == null ? ScheduleOneofCase.None : ScheduleOneofCase.Daily;
+              }
+            }
+
+            /// <summary>Field number for the "row_count_test" field.</summary>
+            public const int RowCountTestFieldNumber = 5;
+            /// <summary>
+            /// Test the row count against a threshold.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest RowCountTest {
+              get { return evaluateCase_ == EvaluateOneofCase.RowCountTest ? (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest) evaluate_ : null; }
+              set {
+                evaluate_ = value;
+                evaluateCase_ = value == null ? EvaluateOneofCase.None : EvaluateOneofCase.RowCountTest;
+              }
+            }
+
+            /// <summary>Field number for the "boolean_test" field.</summary>
+            public const int BooleanTestFieldNumber = 6;
+            /// <summary>
+            /// Test the boolean value in the indicated column.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest BooleanTest {
+              get { return evaluateCase_ == EvaluateOneofCase.BooleanTest ? (global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest) evaluate_ : null; }
+              set {
+                evaluate_ = value;
+                evaluateCase_ = value == null ? EvaluateOneofCase.None : EvaluateOneofCase.BooleanTest;
+              }
+            }
+
+            private object schedule_;
+            /// <summary>Enum of possible cases for the "schedule" oneof.</summary>
+            public enum ScheduleOneofCase {
+              None = 0,
+              Minutes = 2,
+              Hourly = 3,
+              Daily = 4,
+            }
+            private ScheduleOneofCase scheduleCase_ = ScheduleOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ScheduleOneofCase ScheduleCase {
+              get { return scheduleCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearSchedule() {
+              scheduleCase_ = ScheduleOneofCase.None;
+              schedule_ = null;
+            }
+
+            private object evaluate_;
+            /// <summary>Enum of possible cases for the "evaluate" oneof.</summary>
+            public enum EvaluateOneofCase {
+              None = 0,
+              RowCountTest = 5,
+              BooleanTest = 6,
+            }
+            private EvaluateOneofCase evaluateCase_ = EvaluateOneofCase.None;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public EvaluateOneofCase EvaluateCase {
+              get { return evaluateCase_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearEvaluate() {
+              evaluateCase_ = EvaluateOneofCase.None;
+              evaluate_ = null;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SqlCondition);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SqlCondition other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Query != other.Query) return false;
+              if (!object.Equals(Minutes, other.Minutes)) return false;
+              if (!object.Equals(Hourly, other.Hourly)) return false;
+              if (!object.Equals(Daily, other.Daily)) return false;
+              if (!object.Equals(RowCountTest, other.RowCountTest)) return false;
+              if (!object.Equals(BooleanTest, other.BooleanTest)) return false;
+              if (ScheduleCase != other.ScheduleCase) return false;
+              if (EvaluateCase != other.EvaluateCase) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Query.Length != 0) hash ^= Query.GetHashCode();
+              if (scheduleCase_ == ScheduleOneofCase.Minutes) hash ^= Minutes.GetHashCode();
+              if (scheduleCase_ == ScheduleOneofCase.Hourly) hash ^= Hourly.GetHashCode();
+              if (scheduleCase_ == ScheduleOneofCase.Daily) hash ^= Daily.GetHashCode();
+              if (evaluateCase_ == EvaluateOneofCase.RowCountTest) hash ^= RowCountTest.GetHashCode();
+              if (evaluateCase_ == EvaluateOneofCase.BooleanTest) hash ^= BooleanTest.GetHashCode();
+              hash ^= (int) scheduleCase_;
+              hash ^= (int) evaluateCase_;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Query.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Query);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Minutes) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Minutes);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Hourly) {
+                output.WriteRawTag(26);
+                output.WriteMessage(Hourly);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Daily) {
+                output.WriteRawTag(34);
+                output.WriteMessage(Daily);
+              }
+              if (evaluateCase_ == EvaluateOneofCase.RowCountTest) {
+                output.WriteRawTag(42);
+                output.WriteMessage(RowCountTest);
+              }
+              if (evaluateCase_ == EvaluateOneofCase.BooleanTest) {
+                output.WriteRawTag(50);
+                output.WriteMessage(BooleanTest);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Query.Length != 0) {
+                output.WriteRawTag(10);
+                output.WriteString(Query);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Minutes) {
+                output.WriteRawTag(18);
+                output.WriteMessage(Minutes);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Hourly) {
+                output.WriteRawTag(26);
+                output.WriteMessage(Hourly);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Daily) {
+                output.WriteRawTag(34);
+                output.WriteMessage(Daily);
+              }
+              if (evaluateCase_ == EvaluateOneofCase.RowCountTest) {
+                output.WriteRawTag(42);
+                output.WriteMessage(RowCountTest);
+              }
+              if (evaluateCase_ == EvaluateOneofCase.BooleanTest) {
+                output.WriteRawTag(50);
+                output.WriteMessage(BooleanTest);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Query.Length != 0) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(Query);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Minutes) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Minutes);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Hourly) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Hourly);
+              }
+              if (scheduleCase_ == ScheduleOneofCase.Daily) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(Daily);
+              }
+              if (evaluateCase_ == EvaluateOneofCase.RowCountTest) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(RowCountTest);
+              }
+              if (evaluateCase_ == EvaluateOneofCase.BooleanTest) {
+                size += 1 + pb::CodedOutputStream.ComputeMessageSize(BooleanTest);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SqlCondition other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Query.Length != 0) {
+                Query = other.Query;
+              }
+              switch (other.ScheduleCase) {
+                case ScheduleOneofCase.Minutes:
+                  if (Minutes == null) {
+                    Minutes = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes();
+                  }
+                  Minutes.MergeFrom(other.Minutes);
+                  break;
+                case ScheduleOneofCase.Hourly:
+                  if (Hourly == null) {
+                    Hourly = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly();
+                  }
+                  Hourly.MergeFrom(other.Hourly);
+                  break;
+                case ScheduleOneofCase.Daily:
+                  if (Daily == null) {
+                    Daily = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily();
+                  }
+                  Daily.MergeFrom(other.Daily);
+                  break;
+              }
+
+              switch (other.EvaluateCase) {
+                case EvaluateOneofCase.RowCountTest:
+                  if (RowCountTest == null) {
+                    RowCountTest = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest();
+                  }
+                  RowCountTest.MergeFrom(other.RowCountTest);
+                  break;
+                case EvaluateOneofCase.BooleanTest:
+                  if (BooleanTest == null) {
+                    BooleanTest = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest();
+                  }
+                  BooleanTest.MergeFrom(other.BooleanTest);
+                  break;
+              }
+
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    Query = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes();
+                    if (scheduleCase_ == ScheduleOneofCase.Minutes) {
+                      subBuilder.MergeFrom(Minutes);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Minutes = subBuilder;
+                    break;
+                  }
+                  case 26: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly();
+                    if (scheduleCase_ == ScheduleOneofCase.Hourly) {
+                      subBuilder.MergeFrom(Hourly);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Hourly = subBuilder;
+                    break;
+                  }
+                  case 34: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily();
+                    if (scheduleCase_ == ScheduleOneofCase.Daily) {
+                      subBuilder.MergeFrom(Daily);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Daily = subBuilder;
+                    break;
+                  }
+                  case 42: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest();
+                    if (evaluateCase_ == EvaluateOneofCase.RowCountTest) {
+                      subBuilder.MergeFrom(RowCountTest);
+                    }
+                    input.ReadMessage(subBuilder);
+                    RowCountTest = subBuilder;
+                    break;
+                  }
+                  case 50: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest();
+                    if (evaluateCase_ == EvaluateOneofCase.BooleanTest) {
+                      subBuilder.MergeFrom(BooleanTest);
+                    }
+                    input.ReadMessage(subBuilder);
+                    BooleanTest = subBuilder;
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    Query = input.ReadString();
+                    break;
+                  }
+                  case 18: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Minutes();
+                    if (scheduleCase_ == ScheduleOneofCase.Minutes) {
+                      subBuilder.MergeFrom(Minutes);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Minutes = subBuilder;
+                    break;
+                  }
+                  case 26: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Hourly();
+                    if (scheduleCase_ == ScheduleOneofCase.Hourly) {
+                      subBuilder.MergeFrom(Hourly);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Hourly = subBuilder;
+                    break;
+                  }
+                  case 34: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.Daily();
+                    if (scheduleCase_ == ScheduleOneofCase.Daily) {
+                      subBuilder.MergeFrom(Daily);
+                    }
+                    input.ReadMessage(subBuilder);
+                    Daily = subBuilder;
+                    break;
+                  }
+                  case 42: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.RowCountTest();
+                    if (evaluateCase_ == EvaluateOneofCase.RowCountTest) {
+                      subBuilder.MergeFrom(RowCountTest);
+                    }
+                    input.ReadMessage(subBuilder);
+                    RowCountTest = subBuilder;
+                    break;
+                  }
+                  case 50: {
+                    global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest subBuilder = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Types.BooleanTest();
+                    if (evaluateCase_ == EvaluateOneofCase.BooleanTest) {
+                      subBuilder.MergeFrom(BooleanTest);
+                    }
+                    input.ReadMessage(subBuilder);
+                    BooleanTest = subBuilder;
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the SqlCondition message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// Used to schedule the query to run every so many minutes.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class Minutes : pb::IMessage<Minutes>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Minutes> _parser = new pb::MessageParser<Minutes>(() => new Minutes());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Minutes> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Minutes() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Minutes(Minutes other) : this() {
+                  periodicity_ = other.periodicity_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Minutes Clone() {
+                  return new Minutes(this);
+                }
+
+                /// <summary>Field number for the "periodicity" field.</summary>
+                public const int PeriodicityFieldNumber = 1;
+                private int periodicity_;
+                /// <summary>
+                /// Required. Number of minutes between runs. The interval must be
+                /// greater than or equal to 5 minutes and less than or equal to 1440
+                /// minutes.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int Periodicity {
+                  get { return periodicity_; }
+                  set {
+                    periodicity_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Minutes);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Minutes other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Periodicity != other.Periodicity) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Periodicity != 0) hash ^= Periodicity.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Periodicity != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(Periodicity);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Periodicity != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(Periodicity);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Periodicity != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(Periodicity);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Minutes other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Periodicity != 0) {
+                    Periodicity = other.Periodicity;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 8: {
+                        Periodicity = input.ReadInt32();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        Periodicity = input.ReadInt32();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Used to schedule the query to run every so many hours.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class Hourly : pb::IMessage<Hourly>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Hourly> _parser = new pb::MessageParser<Hourly>(() => new Hourly());
+                private pb::UnknownFieldSet _unknownFields;
+                private int _hasBits0;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Hourly> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Descriptor.NestedTypes[1]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Hourly() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Hourly(Hourly other) : this() {
+                  _hasBits0 = other._hasBits0;
+                  periodicity_ = other.periodicity_;
+                  minuteOffset_ = other.minuteOffset_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Hourly Clone() {
+                  return new Hourly(this);
+                }
+
+                /// <summary>Field number for the "periodicity" field.</summary>
+                public const int PeriodicityFieldNumber = 1;
+                private int periodicity_;
+                /// <summary>
+                /// Required. The number of hours between runs. Must be greater than or
+                /// equal to 1 hour and less than or equal to 48 hours.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int Periodicity {
+                  get { return periodicity_; }
+                  set {
+                    periodicity_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "minute_offset" field.</summary>
+                public const int MinuteOffsetFieldNumber = 2;
+                private readonly static int MinuteOffsetDefaultValue = 0;
+
+                private int minuteOffset_;
+                /// <summary>
+                /// Optional. The number of minutes after the hour (in UTC) to run the
+                /// query. Must be greater than or equal to 0 minutes and less than or
+                /// equal to 59 minutes.  If left unspecified, then an arbitrary offset
+                /// is used.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int MinuteOffset {
+                  get { if ((_hasBits0 & 1) != 0) { return minuteOffset_; } else { return MinuteOffsetDefaultValue; } }
+                  set {
+                    _hasBits0 |= 1;
+                    minuteOffset_ = value;
+                  }
+                }
+                /// <summary>Gets whether the "minute_offset" field is set</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool HasMinuteOffset {
+                  get { return (_hasBits0 & 1) != 0; }
+                }
+                /// <summary>Clears the value of the "minute_offset" field</summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void ClearMinuteOffset() {
+                  _hasBits0 &= ~1;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Hourly);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Hourly other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Periodicity != other.Periodicity) return false;
+                  if (MinuteOffset != other.MinuteOffset) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Periodicity != 0) hash ^= Periodicity.GetHashCode();
+                  if (HasMinuteOffset) hash ^= MinuteOffset.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Periodicity != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(Periodicity);
+                  }
+                  if (HasMinuteOffset) {
+                    output.WriteRawTag(16);
+                    output.WriteInt32(MinuteOffset);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Periodicity != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(Periodicity);
+                  }
+                  if (HasMinuteOffset) {
+                    output.WriteRawTag(16);
+                    output.WriteInt32(MinuteOffset);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Periodicity != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(Periodicity);
+                  }
+                  if (HasMinuteOffset) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinuteOffset);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Hourly other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Periodicity != 0) {
+                    Periodicity = other.Periodicity;
+                  }
+                  if (other.HasMinuteOffset) {
+                    MinuteOffset = other.MinuteOffset;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 8: {
+                        Periodicity = input.ReadInt32();
+                        break;
+                      }
+                      case 16: {
+                        MinuteOffset = input.ReadInt32();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        Periodicity = input.ReadInt32();
+                        break;
+                      }
+                      case 16: {
+                        MinuteOffset = input.ReadInt32();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// Used to schedule the query to run every so many days.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class Daily : pb::IMessage<Daily>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Daily> _parser = new pb::MessageParser<Daily>(() => new Daily());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Daily> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Descriptor.NestedTypes[2]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Daily() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Daily(Daily other) : this() {
+                  periodicity_ = other.periodicity_;
+                  executionTime_ = other.executionTime_ != null ? other.executionTime_.Clone() : null;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Daily Clone() {
+                  return new Daily(this);
+                }
+
+                /// <summary>Field number for the "periodicity" field.</summary>
+                public const int PeriodicityFieldNumber = 1;
+                private int periodicity_;
+                /// <summary>
+                /// Required. The number of days between runs. Must be greater than or
+                /// equal to 1 day and less than or equal to 31 days.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int Periodicity {
+                  get { return periodicity_; }
+                  set {
+                    periodicity_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "execution_time" field.</summary>
+                public const int ExecutionTimeFieldNumber = 2;
+                private global::Google.Type.TimeOfDay executionTime_;
+                /// <summary>
+                /// Optional. The time of day (in UTC) at which the query should run. If
+                /// left unspecified, the server picks an arbitrary time of day and runs
+                /// the query at the same time each day.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Type.TimeOfDay ExecutionTime {
+                  get { return executionTime_; }
+                  set {
+                    executionTime_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Daily);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Daily other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Periodicity != other.Periodicity) return false;
+                  if (!object.Equals(ExecutionTime, other.ExecutionTime)) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Periodicity != 0) hash ^= Periodicity.GetHashCode();
+                  if (executionTime_ != null) hash ^= ExecutionTime.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Periodicity != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(Periodicity);
+                  }
+                  if (executionTime_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(ExecutionTime);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Periodicity != 0) {
+                    output.WriteRawTag(8);
+                    output.WriteInt32(Periodicity);
+                  }
+                  if (executionTime_ != null) {
+                    output.WriteRawTag(18);
+                    output.WriteMessage(ExecutionTime);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Periodicity != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(Periodicity);
+                  }
+                  if (executionTime_ != null) {
+                    size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExecutionTime);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Daily other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Periodicity != 0) {
+                    Periodicity = other.Periodicity;
+                  }
+                  if (other.executionTime_ != null) {
+                    if (executionTime_ == null) {
+                      ExecutionTime = new global::Google.Type.TimeOfDay();
+                    }
+                    ExecutionTime.MergeFrom(other.ExecutionTime);
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 8: {
+                        Periodicity = input.ReadInt32();
+                        break;
+                      }
+                      case 18: {
+                        if (executionTime_ == null) {
+                          ExecutionTime = new global::Google.Type.TimeOfDay();
+                        }
+                        input.ReadMessage(ExecutionTime);
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        Periodicity = input.ReadInt32();
+                        break;
+                      }
+                      case 18: {
+                        if (executionTime_ == null) {
+                          ExecutionTime = new global::Google.Type.TimeOfDay();
+                        }
+                        input.ReadMessage(ExecutionTime);
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// A test that checks if the number of rows in the result set
+              /// violates some threshold.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class RowCountTest : pb::IMessage<RowCountTest>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<RowCountTest> _parser = new pb::MessageParser<RowCountTest>(() => new RowCountTest());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<RowCountTest> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Descriptor.NestedTypes[3]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public RowCountTest() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public RowCountTest(RowCountTest other) : this() {
+                  comparison_ = other.comparison_;
+                  threshold_ = other.threshold_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public RowCountTest Clone() {
+                  return new RowCountTest(this);
+                }
+
+                /// <summary>Field number for the "comparison" field.</summary>
+                public const int ComparisonFieldNumber = 1;
+                private global::Google.Cloud.Monitoring.V3.ComparisonType comparison_ = global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified;
+                /// <summary>
+                /// Required. The comparison to apply between the number of rows returned
+                /// by the query and the threshold.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public global::Google.Cloud.Monitoring.V3.ComparisonType Comparison {
+                  get { return comparison_; }
+                  set {
+                    comparison_ = value;
+                  }
+                }
+
+                /// <summary>Field number for the "threshold" field.</summary>
+                public const int ThresholdFieldNumber = 2;
+                private long threshold_;
+                /// <summary>
+                /// Required. The value against which to compare the row count.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public long Threshold {
+                  get { return threshold_; }
+                  set {
+                    threshold_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as RowCountTest);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(RowCountTest other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Comparison != other.Comparison) return false;
+                  if (Threshold != other.Threshold) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) hash ^= Comparison.GetHashCode();
+                  if (Threshold != 0L) hash ^= Threshold.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
+                    output.WriteRawTag(8);
+                    output.WriteEnum((int) Comparison);
+                  }
+                  if (Threshold != 0L) {
+                    output.WriteRawTag(16);
+                    output.WriteInt64(Threshold);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
+                    output.WriteRawTag(8);
+                    output.WriteEnum((int) Comparison);
+                  }
+                  if (Threshold != 0L) {
+                    output.WriteRawTag(16);
+                    output.WriteInt64(Threshold);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
+                    size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Comparison);
+                  }
+                  if (Threshold != 0L) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt64Size(Threshold);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(RowCountTest other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Comparison != global::Google.Cloud.Monitoring.V3.ComparisonType.ComparisonUnspecified) {
+                    Comparison = other.Comparison;
+                  }
+                  if (other.Threshold != 0L) {
+                    Threshold = other.Threshold;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 8: {
+                        Comparison = (global::Google.Cloud.Monitoring.V3.ComparisonType) input.ReadEnum();
+                        break;
+                      }
+                      case 16: {
+                        Threshold = input.ReadInt64();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 8: {
+                        Comparison = (global::Google.Cloud.Monitoring.V3.ComparisonType) input.ReadEnum();
+                        break;
+                      }
+                      case 16: {
+                        Threshold = input.ReadInt64();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+              /// <summary>
+              /// A test that uses an alerting result in a boolean column produced by
+              /// the SQL query.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class BooleanTest : pb::IMessage<BooleanTest>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<BooleanTest> _parser = new pb::MessageParser<BooleanTest>(() => new BooleanTest());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<BooleanTest> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.SqlCondition.Descriptor.NestedTypes[4]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public BooleanTest() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public BooleanTest(BooleanTest other) : this() {
+                  column_ = other.column_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public BooleanTest Clone() {
+                  return new BooleanTest(this);
+                }
+
+                /// <summary>Field number for the "column" field.</summary>
+                public const int ColumnFieldNumber = 1;
+                private string column_ = "";
+                /// <summary>
+                /// Required. The name of the column containing the boolean value. If the
+                /// value in a row is NULL, that row is ignored.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string Column {
+                  get { return column_; }
+                  set {
+                    column_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as BooleanTest);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(BooleanTest other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (Column != other.Column) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (Column.Length != 0) hash ^= Column.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (Column.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Column);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (Column.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(Column);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (Column.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(Column);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(BooleanTest other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.Column.Length != 0) {
+                    Column = other.Column;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        Column = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                    switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        Column = input.ReadString();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
 
           }
 
