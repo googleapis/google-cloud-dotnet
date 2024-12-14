@@ -35,18 +35,13 @@ public class DetectPrChangesCommand : ICommand
 
     public string ExpectedArguments => "<pre-PR git directory> <[id [id...]]";
 
-    private readonly RootLayout _rootLayout;
-
-    public DetectPrChangesCommand()
-    {
-        _rootLayout = RootLayout.ForCurrentDirectory();
-    }
-
     public int Execute(string[] args)
     {
+        var rootLayout = RootLayout.ForCurrentDirectory();
+
         string oldCommitDirectory = args[0];
         bool anyFailures = false;
-        var catalog = ApiCatalog.Load(_rootLayout);
+        var catalog = ApiCatalog.Load(rootLayout);
         var tags = LoadRepositoryTags();
 
         var apiIds = args.Skip(1).ToList();
@@ -57,14 +52,14 @@ public class DetectPrChangesCommand : ICommand
                 LogHeader($"{id} has been deleted");
                 continue;
             }
-            anyFailures |= CompareApi(oldCommitDirectory, tags, api);
+            anyFailures |= CompareApi(rootLayout, oldCommitDirectory, tags, api);
         }
 
         return anyFailures ? 1 : 0;
 
         HashSet<string> LoadRepositoryTags()
         {
-            using var repo = new Repository(_rootLayout.RepositoryRoot);
+            using var repo = new Repository(rootLayout.RepositoryRoot);
             return new HashSet<string>(repo.Tags.Select(tag => tag.FriendlyName));
         }
     }
@@ -76,7 +71,7 @@ public class DetectPrChangesCommand : ICommand
     /// along the way (TFMs, output locations etc). We could potentially refactor much of it into a class,
     /// but it's simpler to keep it like this for now.</remarks>
     /// <returns>Whether the comparison has failed in some way.</returns>
-    private bool CompareApi(string oldCommitDirectory, HashSet<string> tags, ApiMetadata api)
+    private bool CompareApi(RootLayout rootLayout, string oldCommitDirectory, HashSet<string> tags, ApiMetadata api)
     {
         string id = api.Id;
         LogHeader($"Finding changes in {id}...");
@@ -129,7 +124,7 @@ public class DetectPrChangesCommand : ICommand
         LogHeader($"Comparing with previous NuGet package");
         try
         {
-            CheckVersionCompatibilityCommand.CheckCompatibilityWithPreviousRelease(_rootLayout, tags, api);
+            CheckVersionCompatibilityCommand.CheckCompatibilityWithPreviousRelease(rootLayout, tags, api);
         }
         catch (UserErrorException ex)
         {
