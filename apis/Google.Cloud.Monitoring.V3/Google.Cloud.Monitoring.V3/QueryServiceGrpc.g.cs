@@ -89,11 +89,15 @@ namespace Google.Cloud.Monitoring.V3 {
     public abstract partial class QueryServiceBase
     {
       /// <summary>
-      /// Queries time series using Monitoring Query Language.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse> QueryTimeSeries(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::ServerCallContext context)
       {
@@ -130,48 +134,64 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Queries time series using Monitoring Query Language.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse QueryTimeSeries(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryTimeSeries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse QueryTimeSeries(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_QueryTimeSeries, null, options, request);
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse> QueryTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return QueryTimeSeriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Queries time series using Monitoring Query Language.
+      /// Queries time series by using Monitoring Query Language (MQL). We recommend
+      /// using PromQL instead of MQL. For more information about the status of MQL,
+      /// see the [MQL deprecation
+      /// notice](https://cloud.google.com/stackdriver/docs/deprecations/mql).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Monitoring.V3.QueryTimeSeriesResponse> QueryTimeSeriesAsync(global::Google.Cloud.Monitoring.V3.QueryTimeSeriesRequest request, grpc::CallOptions options)
       {

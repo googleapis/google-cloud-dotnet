@@ -216,7 +216,7 @@ namespace Google.Cloud.Monitoring.V3 {
       }
 
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -521,7 +521,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteUptimeCheckConfig, null, options, request);
       }
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -534,7 +534,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListUptimeCheckIps(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -545,7 +545,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListUptimeCheckIps, null, options, request);
       }
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -558,7 +558,7 @@ namespace Google.Cloud.Monitoring.V3 {
         return ListUptimeCheckIpsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of IP addresses that checkers run from
+      /// Returns the list of IP addresses that checkers run from.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

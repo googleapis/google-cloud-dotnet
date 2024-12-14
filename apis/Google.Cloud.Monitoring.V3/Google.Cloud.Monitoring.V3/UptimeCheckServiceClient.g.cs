@@ -1515,7 +1515,7 @@ namespace Google.Cloud.Monitoring.V3
             DeleteUptimeCheckConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns the list of IP addresses that checkers run from
+        /// Returns the list of IP addresses that checkers run from.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1524,7 +1524,7 @@ namespace Google.Cloud.Monitoring.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of IP addresses that checkers run from
+        /// Returns the list of IP addresses that checkers run from.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1758,7 +1758,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Returns the list of IP addresses that checkers run from
+        /// Returns the list of IP addresses that checkers run from.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1770,7 +1770,7 @@ namespace Google.Cloud.Monitoring.V3
         }
 
         /// <summary>
-        /// Returns the list of IP addresses that checkers run from
+        /// Returns the list of IP addresses that checkers run from.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

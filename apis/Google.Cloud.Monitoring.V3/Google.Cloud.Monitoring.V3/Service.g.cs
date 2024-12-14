@@ -4457,7 +4457,7 @@ namespace Google.Cloud.Monitoring.V3 {
     private double goal_;
     /// <summary>
     /// The fraction of service that must be good in order for this objective to be
-    /// met. `0 &lt; goal &lt;= 0.999`.
+    /// met. `0 &lt; goal &lt;= 0.9999`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
