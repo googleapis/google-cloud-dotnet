@@ -52,4 +52,5 @@
   "41ec240": "skip", // Mistakenly had comment from FleetEngine breaking change
   "89b6060": "skip", // Mistakenly had comment from FleetEngine breaking change
   "e2e5e34": "skip", // Mistakenly had comment from FleetEngine breaking change
+  "7a33e9d": "skip", // Compute API non-change
 }
