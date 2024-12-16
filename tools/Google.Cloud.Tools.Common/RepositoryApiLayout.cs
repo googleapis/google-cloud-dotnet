@@ -17,21 +17,21 @@ using System.IO;
 namespace Google.Cloud.Tools.Common;
 
 /// <summary>
-/// Directory layout for a single API. 
+/// Directory layout for a single API, suitable for scenarios which expect the whole repository
+/// to be available.
 /// </summary>
-public class ApiLayout
+public class RepositoryApiLayout
 {
     /// <summary>
     /// Root of all source for this API, including production code, tests, snippets etc.
-    /// (This is derived from <see cref="RootLayout.GeneratorOutput">.)
     /// </summary>
-    public string SourceDirectory { get; }
+    public string SourceDirectory => Path.Combine(_rootLayout.RepositoryRoot, "apis", Id);
 
     /// <summary>
-    /// Location of API-specific tweaks for this API.
-    /// (This is derived from <see cref="RootLayout.GeneratorInput">.)
+    /// Directory for production source code for the library.
+    /// (This is derived from <see cref="RootLayout.GeneratorOutput">.)
     /// </summary>
-    public string TweaksDirectory { get; }
+    public string ProductionDirectory => Path.Combine(SourceDirectory, Id);
 
     /// <summary>
     /// ID of the API.
@@ -40,18 +40,26 @@ public class ApiLayout
 
     private readonly RootLayout _rootLayout;
 
-    private ApiLayout(RootLayout rootLayout, string id)
+    private RepositoryApiLayout(RootLayout rootLayout, string id)
     {
         _rootLayout = rootLayout;
-        SourceDirectory = Path.Combine(rootLayout.GeneratorOutput, "apis", id);
-        TweaksDirectory = Path.Combine(rootLayout.GeneratorInput, "tweaks", id);
         Id = id;
     }
 
-    internal static ApiLayout Create(RootLayout rootLayout, string id) => new(rootLayout, id);
+    internal static RepositoryApiLayout Create(RootLayout rootLayout, string id) => new(rootLayout, id);
 
     /// <summary>
     /// Creates a <see cref="DocsLayout"/> which is aware of the location of documentation-related directories.
     /// </summary>
     public DocsLayout CreateDocsLayout() => DocsLayout.ForApi(_rootLayout, Id);
+
+    /// <summary>
+    /// Returns the filename of the built (but not published) assembly for the given target framework moniker.
+    /// </summary>
+    public string GetReleaseAssembly(string tfm) => Path.Combine(ProductionDirectory, "bin", "Release", tfm, $"{Id}.dll");
+
+    /// <summary>
+    /// Returns the filename of the published assembly for the given target framework moniker.
+    /// </summary>
+    public string GetPublishedAssembly(string tfm) => Path.Combine(ProductionDirectory, "bin", "Release", tfm, "publish", $"{Id}.dll");
 }

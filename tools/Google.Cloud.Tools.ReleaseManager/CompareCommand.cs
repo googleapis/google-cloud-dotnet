@@ -44,7 +44,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                     var api = diff.Id;
                     idsToCheck.Add(api);
                     Console.WriteLine($"Building {api} locally");
-                    var sourceRoot = RootLayout.CreateApiLayout(api).SourceDirectory;
+                    var sourceRoot = RootLayout.CreateRepositoryApiLayout(api).SourceDirectory;
                     Processes.RunDotnet(sourceRoot, "build", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", api);
                 }
             }

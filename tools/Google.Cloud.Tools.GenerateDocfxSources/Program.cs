@@ -288,8 +288,8 @@ present as a root for the [API reference documentation](obj/api/{api.Id}.yml).";
                 return new List<string>();
             }
             var rootLayout = RootLayout.ForCurrentDirectory();
-            var apiLayout = rootLayout.CreateApiLayout(api);
-            var packageSource = Path.Combine(apiLayout.SourceDirectory, api.Id);
+            var apiLayout = rootLayout.CreateRepositoryApiLayout(api);
+            var packageSource = Path.Combine(apiLayout.ProductionDirectory);
             var sourceFiles = Directory.GetFiles(packageSource, "*Client.cs").Concat(Directory.GetFiles(packageSource, "*Client.g.cs"));
             return sourceFiles
                 .Where(file => File.ReadAllText(file).Contains(": gaxgrpc::ServiceSettingsBase")) // Check it contains a generated client

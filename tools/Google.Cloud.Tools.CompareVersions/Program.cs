@@ -89,9 +89,9 @@ namespace Google.Cloud.Tools.CompareVersions
         {
             if (version == "local")
             {
-                var rootLayout = RootLayout.ForCurrentDirectory();
-                var sourceRoot = rootLayout.CreateApiLayout(options.Package).SourceDirectory;
-                file = Path.Combine(sourceRoot, options.Package, "bin", "Release", options.Framework, $"{options.Package}.dll");
+                var apiLayout = RootLayout.ForCurrentDirectory().CreateRepositoryApiLayout(options.Package);
+                var productionRoot = apiLayout.ProductionDirectory;
+                file = apiLayout.GetReleaseAssembly(options.Framework);
             }
             if (file != null)
             {

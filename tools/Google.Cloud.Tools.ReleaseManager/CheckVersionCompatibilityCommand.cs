@@ -124,7 +124,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         /// </summary>
         private static Level CheckCompatibility(RootLayout rootLayout, ApiMetadata api, StructuredVersion version)
         {
-            var apiLayout = rootLayout.CreateApiLayout(api);
+            var apiLayout = rootLayout.CreateRepositoryApiLayout(api);
             Console.WriteLine($"Differences from {version}");
 
             // TODO: Remove this try/catch when we can detect that a package has never been pushed.
@@ -146,7 +146,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             // Google.Cloud.Diagnostics.AspNetCore3 targets .NET Core 3.1
             string[] candidateTfms = { "netstandard2.1", "netstandard2.0", "netcoreapp3.1" };
             var sourceAssembly = candidateTfms
-                .Select(tfm => Path.Combine(apiLayout.SourceDirectory, api.Id, "bin", "Release", tfm, $"{api.Id}.dll"))
+                .Select(apiLayout.GetReleaseAssembly)
                 .FirstOrDefault(File.Exists);
             if (sourceAssembly is null)
             {

@@ -191,7 +191,7 @@ internal sealed class NonSourceGenerator
 
     private void GenerateProjects(ApiMetadata api, HashSet<string> apiNames)
     {
-        var apiLayout = RootLayout.CreateApiLayout(api);
+        var apiLayout = RootLayout.CreateGeneratorApiLayout(api);
         var projects = api.DeriveProjects();
         foreach (var projectName in projects)
         {
@@ -292,7 +292,6 @@ internal sealed class NonSourceGenerator
         {
             var directory = Path.Combine(apiLayout.SourceDirectory, projectName);
             Directory.CreateDirectory(directory);
-            var file = Path.Combine(directory, $"{projectName}.csproj");
             var doc = new XElement("Project",
                     new XAttribute("Sdk", "Microsoft.NET.Sdk"),
                     propertyGroup,
@@ -302,7 +301,7 @@ internal sealed class NonSourceGenerator
             // with a ".csproj.google" extension in the API-specific "tweaks" directory (under generator-input/tweaks).
             // If this exists, it's expected to be an XML file, and any elements under the root
             // are included in the generated .csproj file.
-            var augmentationFile = Path.Combine(RootLayout.CreateApiLayout(api).TweaksDirectory, $"{Path.GetFileName(directory)}.csproj.google");
+            var augmentationFile = Path.Combine(RootLayout.CreateGeneratorApiLayout(api).TweaksDirectory, $"{projectName}.csproj.google");
             if (File.Exists(augmentationFile))
             {
                 var augmentationDoc = XDocument.Load(augmentationFile);
@@ -312,7 +311,8 @@ internal sealed class NonSourceGenerator
             // Don't use File.CreateText as that omits the byte order mark.
             // While byte order marks are nasty, Visual Studio will add it back any time a project file is
             // manually edited, so it's best if we follow suit.
-            using (var stream = File.Create(Path.Combine(directory, $"{Path.GetFileName(directory)}.csproj")))
+            var file = Path.Combine(directory, $"{projectName}.csproj");
+            using (var stream = File.Create(file))
             {
                 doc.Save(stream);
             }
@@ -435,7 +435,7 @@ internal sealed class NonSourceGenerator
     // Currently this is really ugly - it will be a lot cleaner with slnx files.
     private void GenerateSolutionFile(ApiMetadata api)
     {
-        var apiLayout = RootLayout.CreateApiLayout(api);
+        var apiLayout = RootLayout.CreateGeneratorApiLayout(api);
         string solutionFile = Path.Combine(apiLayout.SourceDirectory, $"{api.Id}.sln");
         List<string> projectDirectories = new();
         foreach (var project in api.DeriveProjects())
@@ -514,7 +514,7 @@ internal sealed class NonSourceGenerator
 
     private void GenerateOwlBotConfiguration(ApiMetadata api)
     {
-        var apiLayout = RootLayout.CreateApiLayout(api);
+        var apiLayout = RootLayout.CreateGeneratorApiLayout(api);
         var owlBotConfigFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot.yaml");
         var owlBotForceRegenerationFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot-ForceRegeneration.txt");
         // We will recreate this if necessary.
@@ -585,7 +585,7 @@ api-name: {api.Id}
     /// </summary>
     private void GenerateMetadataFile(ApiMetadata api)
     {
-        var apiLayout = RootLayout.CreateApiLayout(api);
+        var apiLayout = RootLayout.CreateGeneratorApiLayout(api);
         string metadataPath = Path.Combine(apiLayout.SourceDirectory, ".repo-metadata.json");
         var version = api.StructuredVersion;
         string versionBasedReleaseLevel =
@@ -710,30 +710,36 @@ api-name: {api.Id}
     #endregion
 
     #region Clean-up
-    public void CleanApiFiles(string id)
+    public void CleanApiFiles(ApiMetadata api)
     {
-        var apiLayout = RootLayout.CreateApiLayout(id);
+        var apiLayout = RootLayout.CreateGeneratorApiLayout(api);
 
         // We just try to delete everything we *might* generate, whether it exists or not.
-        Delete($"{id}.sln");
-        Delete(".repo-metadata.json");
-        Delete(".repo-metadata.json");
-        Delete(".OwlBot.yaml");
-        Delete(".OwlBot-ForceRegeneration.txt");
+        DeleteRelative($"{api.Id}.sln");
+        DeleteRelative(".repo-metadata.json");
+        DeleteRelative(".repo-metadata.json");
+        DeleteRelative(".OwlBot.yaml");
+        DeleteRelative(".OwlBot-ForceRegeneration.txt");
 
-        DeleteProject("");
-        DeleteProject(".Tests");
-        DeleteProject(".IntegrationTests");
-        DeleteProject(".GeneratedSnippets");
-        DeleteProject(".Snippets");
+        DeleteProject(apiLayout.ProductionDirectory);
+        DeleteProject(apiLayout.UnitTestsDirectory);
+        DeleteProject(apiLayout.IntegrationTestsDirectory);
+        DeleteProject(apiLayout.GeneratedSnippetsDirectory);
+        DeleteProject(apiLayout.SnippetsDirectory);
 
-        void DeleteProject(string suffix) => Delete($"{id}{suffix}/{id}{suffix}.csproj");
-        void Delete(string relativeFile)
+        void DeleteProject(string directory)
         {
-            string absoluteFile = Path.Combine(apiLayout.SourceDirectory, relativeFile);
-            if (File.Exists(absoluteFile))
+            string name = Path.GetFileName(directory.Replace('\\', '/'));
+            MaybeDelete(Path.Combine(directory, $"{name}.csproj"));
+        }
+
+        void DeleteRelative(string relativeFile) => MaybeDelete(Path.Combine(apiLayout.SourceDirectory, relativeFile));
+
+        void MaybeDelete(string file)
+        {
+            if (File.Exists(file))
             {
-                File.Delete(absoluteFile);
+                File.Delete(file);
             }
         }
     }
