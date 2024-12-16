@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.25.0, released 2024-12-16
+
+### New features
+
+- Add new fields for delivering intermediate transcriptions through PubSub ([commit b94ea2a](https://github.com/googleapis/google-cloud-dotnet/commit/b94ea2a6f6ca0d2551c7471c018da65ee381f65c))
+
 ## Version 4.24.0, released 2024-12-06
 
 ### New features
