@@ -66,17 +66,16 @@ public class CreateClientsCommand : CommandBase
     // We could consider refactoring later, if we find this is a problem.
     private Assembly PublishAndLoadAssembly(string id)
     {
-        var sourceRoot = RootLayout.CreateApiLayout(id).SourceDirectory;
+        var apiLayout = RootLayout.CreateRepositoryApiLayout(id);
 
         // Work out the TFM to publish, based on specified target frameworks.
         string tfm = GetTargetForReflectionLoad(RootLayout, id);
 
         // Note: we explicitly don't build here, as this code is normally run from a build script which has
         // has already built. Avoiding the rebuild saves a lot of time.
-        Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "--no-build", id, "-f", tfm);
+        Processes.RunDotnet(apiLayout.ProductionDirectory, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "--no-build", "-f", tfm);
 
-        var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", tfm, "publish", $"{id}.dll");
-        return Assembly.LoadFrom(assemblyFile);
+        return Assembly.LoadFrom(apiLayout.GetPublishedAssembly(tfm));
     }
 
     private void CreateClients(Assembly assembly, string id)

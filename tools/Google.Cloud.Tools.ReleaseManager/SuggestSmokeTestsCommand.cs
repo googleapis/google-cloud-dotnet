@@ -63,7 +63,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 string testJson = JsonConvert.SerializeObject(tests, Formatting.Indented, serializerSettings);
                 Console.WriteLine(testJson);
                 Console.WriteLine();
-                var smokeTestsFile = Path.Combine(RootLayout.CreateApiLayout(id).SourceDirectory, "smoketests.json");
+                var smokeTestsFile = Path.Combine(RootLayout.CreateRepositoryApiLayout(id).SourceDirectory, "smoketests.json");
                 if (File.Exists(smokeTestsFile))
                 {
                     Console.WriteLine("smoketests.json already exists, so it has been left alone.");
@@ -80,12 +80,10 @@ namespace Google.Cloud.Tools.ReleaseManager
         private Assembly PublishAndLoadAssembly(string id)
         {
             Console.WriteLine($"Publishing release version of library");
-            var sourceRoot = RootLayout.CreateApiLayout(id).SourceDirectory;
+            var apiLayout = RootLayout.CreateRepositoryApiLayout(id);
             string tfm = CreateClientsCommand.GetTargetForReflectionLoad(RootLayout, id);
-            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", tfm);
-
-            var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", tfm, "publish", $"{id}.dll");
-            return Assembly.LoadFrom(assemblyFile);
+            Processes.RunDotnet(apiLayout.ProductionDirectory, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "-f", tfm);
+            return Assembly.LoadFrom(apiLayout.GetPublishedAssembly(tfm));
         }
 
         private List<System.Type> FindClients(Assembly assembly) => assembly.GetTypes()

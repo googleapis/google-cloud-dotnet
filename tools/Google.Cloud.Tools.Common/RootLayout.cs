@@ -106,10 +106,11 @@ public sealed class RootLayout
         new(null, generatorInput, null, googleApis);
 
     // Convenience methods
-    public ApiLayout CreateApiLayout(string id) => ApiLayout.Create(this, id);
-    public ApiLayout CreateApiLayout(ApiMetadata api) => ApiLayout.Create(this, api.Id);
-    public DocsLayout CreateDocsLayout(string id) => CreateApiLayout(id).CreateDocsLayout();
-    public DocsLayout CreateDocsLayout(ApiMetadata api) => CreateApiLayout(api).CreateDocsLayout();
+    public RepositoryApiLayout CreateRepositoryApiLayout(string id) => RepositoryApiLayout.Create(this, id);
+    public RepositoryApiLayout CreateRepositoryApiLayout(ApiMetadata api) => RepositoryApiLayout.Create(this, api.Id);
+    public GeneratorApiLayout CreateGeneratorApiLayout(ApiMetadata api) => GeneratorApiLayout.Create(this, api.Id);
+    public DocsLayout CreateDocsLayout(string id) => CreateRepositoryApiLayout(id).CreateDocsLayout();
+    public DocsLayout CreateDocsLayout(ApiMetadata api) => CreateRepositoryApiLayout(api).CreateDocsLayout();
 
     /// <summary>
     /// Find the root directory of the project. We expect this to contain "apis" and "LICENSE".

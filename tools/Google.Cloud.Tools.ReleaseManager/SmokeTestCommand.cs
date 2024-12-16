@@ -52,7 +52,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         private List<SmokeTest> LoadSmokeTests(string id)
         {
-            var smokeTestsFile = Path.Combine(RootLayout.CreateApiLayout(id).SourceDirectory, "smoketests.json");
+            var smokeTestsFile = Path.Combine(RootLayout.CreateRepositoryApiLayout(id).SourceDirectory, "smoketests.json");
             return File.Exists(smokeTestsFile)
                 ? JsonConvert.DeserializeObject<List<SmokeTest>>(File.ReadAllText(smokeTestsFile))
                 : new List<SmokeTest>();
@@ -64,12 +64,11 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             string tfm = CreateClientsCommand.GetTargetForReflectionLoad(RootLayout, id);
             // Publish the assembly.
-            var sourceRoot = RootLayout.CreateApiLayout(id).SourceDirectory;
-            Processes.RunDotnet(sourceRoot, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", id, "-f", tfm);
+            var apiLayout = RootLayout.CreateRepositoryApiLayout(id);
+            Processes.RunDotnet(apiLayout.ProductionDirectory, "publish", "-nologo", "-clp:NoSummary", "-v", "quiet", "-c", "Release", "-f", tfm);
 
             // Load it with reflection.
-            var assemblyFile = Path.Combine(sourceRoot, id, "bin", "Release", tfm, "publish", $"{id}.dll");
-            return Assembly.LoadFrom(assemblyFile);
+            return Assembly.LoadFrom(apiLayout.GetPublishedAssembly(tfm));
         }
 
         private int RunTests(List<SmokeTest> tests, Assembly assembly, IReadOnlyDictionary<string, string> templateVariables)

@@ -70,7 +70,7 @@ public sealed class UpdateProjectPropertiesCommand : CommandBase
     {
         // We infer that a directory is a project if it either has .csproj files or .cs files.
         // (This is to handle Google.Cloud.DevTools.Common, and any similar situations we may find later.)
-        var apiRoot = RootLayout.CreateApiLayout(api).SourceDirectory;
+        var apiRoot = RootLayout.CreateRepositoryApiLayout(api).SourceDirectory;
         return Directory.GetDirectories(apiRoot)
                 .Where(pd => Directory.EnumerateFiles(pd, "*.cs").Any() || Directory.EnumerateFiles(pd, "*.csproj").Any())
                 .Select(Path.GetFileName);
