@@ -25,6 +25,7 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// - repo-root: path to the root of the clone
 /// - api-path: path to the API to clean generated files from, e.g. google/cloud/functions/v2
 ///   This is optional; when omitted, all configured APIs are cleaned.
+///   The special value of "none" means "clean non-API-specific files only".
 /// </summary>
 internal class CleanCommand : IContainerCommand
 {
@@ -36,7 +37,12 @@ internal class CleanCommand : IContainerCommand
         var catalog = ApiCatalog.Load(rootLayout);
 
         List<ApiMetadata> apis;
-        if (apiPath is not null)
+        // No APIs, just clean non-API-specific.
+        if (apiPath == "none")
+        {
+            apis = new();
+        }
+        else if (apiPath is not null)
         {
             apis = new List<ApiMetadata>();
             var targetApi = catalog.Apis.SingleOrDefault(api => api.ProtoPath == apiPath);
