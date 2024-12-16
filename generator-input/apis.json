@@ -3428,7 +3428,7 @@
       "protoPath": "google/monitoring/v3",
       "productName": "Google Cloud Monitoring",
       "productUrl": "https://cloud.google.com/monitoring/api/v3/",
-      "version": "3.12.0",
+      "version": "3.13.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Monitoring API, which manages your Google Cloud Monitoring data and configurations.",
       "tags": [
