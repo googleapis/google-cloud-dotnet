@@ -23,45 +23,35 @@ public class ApiLayout
 {
     /// <summary>
     /// Root of all source for this API, including production code, tests, snippets etc.
+    /// (This is derived from <see cref="RootLayout.GeneratorOutput">.)
     /// </summary>
     public string SourceDirectory { get; }
-    public string DocsOutputDirectory { get; }
-    public string DocfxMetadataDirectory { get; }
-    public string SnippetOutputDirectory { get; }
-    public string DocsSourceDirectory { get; }
+
+    /// <summary>
+    /// Location of API-specific tweaks for this API.
+    /// (This is derived from <see cref="RootLayout.GeneratorInput">.)
+    /// </summary>
     public string TweaksDirectory { get; }
 
-    private ApiLayout(string source, string docsOutput, string metadata, string snippetOutput, string docsSource, string tweaks)
+    /// <summary>
+    /// ID of the API.
+    /// </summary>
+    public string Id { get; }
+
+    private readonly RootLayout _rootLayout;
+
+    private ApiLayout(RootLayout rootLayout, string id)
     {
-        SourceDirectory = source;
-        DocsOutputDirectory = docsOutput;
-        DocfxMetadataDirectory = metadata;
-        SnippetOutputDirectory = snippetOutput;
-        DocsSourceDirectory = docsSource;
-        TweaksDirectory = tweaks;
+        _rootLayout = rootLayout;
+        SourceDirectory = Path.Combine(rootLayout.GeneratorOutput, "apis", id);
+        TweaksDirectory = Path.Combine(rootLayout.GeneratorInput, "tweaks", id);
+        Id = id;
     }
 
-    internal static ApiLayout Create(RootLayout rootLayout, string id)
-    {
-        var outputRoot = rootLayout.GeneratorOutput;
+    internal static ApiLayout Create(RootLayout rootLayout, string id) => new(rootLayout, id);
 
-        return new ApiLayout(
-            source: Path.Combine(outputRoot, "apis", id),
-            docsOutput: Path.Combine(outputRoot, "docs", "output", id),
-            metadata: Path.Combine(outputRoot, "docs", "output", id, "obj", "api"),
-            snippetOutput: Path.Combine(outputRoot, "docs", "output", id, "obj", "snippets"),
-            docsSource: Path.Combine(outputRoot, "apis", id, "docs"),
-            tweaks: Path.Combine(rootLayout.GeneratorInput, "tweaks", id)
-        );
-    }
-
-    public static ApiLayout ForHelpSnippets(RootLayout rootLayout) =>
-        new ApiLayout(
-            source: Path.Combine(rootLayout.RepositoryRoot, "tools"),
-            docsOutput: null,
-            metadata: null,
-            snippetOutput: Path.Combine(rootLayout.RepositoryRoot, "docs", "output", "help", "obj", "snippets"),
-            docsSource: null,
-            tweaks: null
-            );
+    /// <summary>
+    /// Creates a <see cref="DocsLayout"/> which is aware of the location of documentation-related directories.
+    /// </summary>
+    public DocsLayout CreateDocsLayout() => DocsLayout.ForApi(_rootLayout, Id);
 }

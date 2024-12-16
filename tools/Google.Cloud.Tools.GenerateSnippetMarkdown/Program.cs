@@ -141,17 +141,16 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
             }
 
             var rootLayout = RootLayout.ForCurrentDirectory();
-            var apiLayout = api == "help" ? ApiLayout.ForHelpSnippets(rootLayout) : rootLayout.CreateApiLayout(api);
+            var docsLayout = api == "help" ? DocsLayout.ForHelpSnippets(rootLayout) : rootLayout.CreateDocsLayout(api);
 
-            string sourceDirectory = apiLayout.SourceDirectory;
-            string snippetsSource = Directory.GetDirectories(sourceDirectory, "*.Snippets").FirstOrDefault();
-            if (snippetsSource == null)
+            string snippetsSource = docsLayout.SnippetSourceDirectory;
+            if (!Directory.Exists(snippetsSource))
             {
                 Console.WriteLine($"Unable to find snippets within API {api}. Ignoring this API.");
                 return 0;
             }
 
-            string output = apiLayout.SnippetOutputDirectory;
+            string output = docsLayout.SnippetOutputDirectory;
             if (!Directory.Exists(output))
             {
                 Directory.CreateDirectory(output);
@@ -164,7 +163,7 @@ namespace Google.Cloud.Tools.GenerateSnippetMarkdown
                 }
             }
 
-            var memberLookup = LoadMembersByType(apiLayout.DocfxMetadataDirectory);
+            var memberLookup = LoadMembersByType(docsLayout.DocfxMetadataDirectory);
             Console.WriteLine($"Loaded {memberLookup.Count} types with {memberLookup.Sum(x => x.Count())} members");
             List<string> errors = new List<string>();
             var snippets = LoadAllSnippets(snippetsSource, api, errors);

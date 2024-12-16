@@ -47,12 +47,12 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
             }
             string api = args[0];
             var rootLayout = RootLayout.ForCurrentDirectory();
-            var apiLayout = rootLayout.CreateApiLayout(api);
+            var docsLayout = rootLayout.CreateDocsLayout(api);
 
             var apiCatalog = ApiCatalog.Load(rootLayout);
             var apiMetadata = apiCatalog[api];
 
-            string output = apiLayout.DocsOutputDirectory;
+            string output = docsLayout.OutputDirectory;
             if (Directory.Exists(output))
             {
                 Directory.Delete(output, true);
@@ -61,7 +61,7 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 
             CreateGoogleApisDevDocfxJson(apiCatalog, apiMetadata, output);
             CreateDevsiteDocfxJson(apiCatalog, apiMetadata, output);
-            CopyAndGenerateArticles(apiMetadata, apiLayout.DocsSourceDirectory, output);
+            CopyAndGenerateArticles(apiMetadata, docsLayout.MarkdownDirectory, output);
             CreateToc(api, output);
             return 0;
         }
