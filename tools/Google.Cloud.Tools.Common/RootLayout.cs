@@ -108,7 +108,9 @@ public sealed class RootLayout
     // Convenience methods
     public ApiLayout CreateApiLayout(string id) => ApiLayout.Create(this, id);
     public ApiLayout CreateApiLayout(ApiMetadata api) => ApiLayout.Create(this, api.Id);
-    
+    public DocsLayout CreateDocsLayout(string id) => CreateApiLayout(id).CreateDocsLayout();
+    public DocsLayout CreateDocsLayout(ApiMetadata api) => CreateApiLayout(api).CreateDocsLayout();
+
     /// <summary>
     /// Find the root directory of the project. We expect this to contain "apis" and "LICENSE".
     /// </summary>
