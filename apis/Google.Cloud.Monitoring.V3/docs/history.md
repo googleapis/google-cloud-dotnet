@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.13.0, released 2024-12-16
+
+### New features
+
+- Added SqlCondition in AlertPolicy ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- Added PrometheusQueryLanguageCondition.disable_metric_validation ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- Deprecated QueryTimeSeries (MQL query endpoint) ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- Added TimeSeries.description for input only ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+
+### Documentation improvements
+
+- TimeSeries.unit allows limited updating by CreateTimeSeries ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- ServiceLevelObjective.goal must be <= 0.9999 ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+- ServiceAgentAuthentication supports generating an OAuth token ([commit 7468d5b](https://github.com/googleapis/google-cloud-dotnet/commit/7468d5befb4869909881424998f3be0a12467abe))
+
 ## Version 3.12.0, released 2024-12-06
 
 ### New features
