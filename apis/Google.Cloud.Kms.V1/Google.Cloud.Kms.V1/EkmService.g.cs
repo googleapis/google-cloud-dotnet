@@ -2517,7 +2517,7 @@ namespace Google.Cloud.Kms.V1 {
   /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] and
   /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] with a
   /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of
-  /// [EXTERNAL_VPC][CryptoKeyVersion.ProtectionLevel.EXTERNAL_VPC], as well as
+  /// [EXTERNAL_VPC][google.cloud.kms.v1.ProtectionLevel.EXTERNAL_VPC], as well as
   /// performing cryptographic operations using keys created within the
   /// [EkmConnection][google.cloud.kms.v1.EkmConnection].
   /// </summary>
@@ -2960,6 +2960,7 @@ namespace Google.Cloud.Kms.V1 {
         /// All [CryptoKeys][google.cloud.kms.v1.CryptoKey] created with this
         /// [EkmConnection][google.cloud.kms.v1.EkmConnection] use EKM-side key
         /// management operations initiated from Cloud KMS. This means that:
+        ///
         /// * When a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
         /// associated with this [EkmConnection][google.cloud.kms.v1.EkmConnection]
         /// is
@@ -2968,7 +2969,8 @@ namespace Google.Cloud.Kms.V1 {
         ///   external key material.
         /// * Destruction of external key material associated with this
         ///   [EkmConnection][google.cloud.kms.v1.EkmConnection] can be requested by
-        ///   calling [DestroyCryptoKeyVersion][EkmService.DestroyCryptoKeyVersion].
+        ///   calling
+        ///   [DestroyCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DestroyCryptoKeyVersion].
         /// * Automatic rotation of key material is supported.
         /// </summary>
         [pbr::OriginalName("CLOUD_KMS")] CloudKms = 2,
@@ -3301,7 +3303,7 @@ namespace Google.Cloud.Kms.V1 {
   /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] and
   /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] with a
   /// [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of
-  /// [EXTERNAL_VPC][CryptoKeyVersion.ProtectionLevel.EXTERNAL_VPC] in a given
+  /// [EXTERNAL_VPC][google.cloud.kms.v1.ProtectionLevel.EXTERNAL_VPC] in a given
   /// project and location.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
