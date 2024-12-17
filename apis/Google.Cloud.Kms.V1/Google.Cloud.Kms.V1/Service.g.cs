@@ -339,10 +339,10 @@ namespace Google.Cloud.Kms.V1 {
             "aW9ucy8qfTpnZW5lcmF0ZVJhbmRvbUJ5dGVzOgEqGnTKQRdjbG91ZGttcy5n",
             "b29nbGVhcGlzLmNvbdJBV2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
             "dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20v",
-            "YXV0aC9jbG91ZGttc0J/Chdjb20uZ29vZ2xlLmNsb3VkLmttcy52MUIIS21z",
+            "YXV0aC9jbG91ZGttc0J8Chdjb20uZ29vZ2xlLmNsb3VkLmttcy52MUIIS21z",
             "UHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9rbXMvYXBpdjEva21zcGI7",
-            "a21zcGL4AQGqAhNHb29nbGUuQ2xvdWQuS21zLlYxygITR29vZ2xlXENsb3Vk",
-            "XEttc1xWMWIGcHJvdG8z"));
+            "a21zcGKqAhNHb29nbGUuQ2xvdWQuS21zLlYxygITR29vZ2xlXENsb3VkXEtt",
+            "c1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -4997,7 +4997,9 @@ namespace Google.Cloud.Kms.V1 {
     /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], the
     /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must be a child of
     /// [ImportCryptoKeyVersionRequest.parent][google.cloud.kms.v1.ImportCryptoKeyVersionRequest.parent],
-    /// have been previously created via [ImportCryptoKeyVersion][], and be in
+    /// have been previously created via
+    /// [ImportCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.ImportCryptoKeyVersion],
+    /// and be in
     /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED]
     /// or
     /// [IMPORT_FAILED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.IMPORT_FAILED]
@@ -9973,7 +9975,8 @@ namespace Google.Cloud.Kms.V1 {
     /// checksum. [KeyManagementService][google.cloud.kms.v1.KeyManagementService]
     /// will report an error if the checksum verification fails. If you receive a
     /// checksum error, your client should verify that
-    /// CRC32C([MacVerifyRequest.tag][]) is equal to
+    /// CRC32C([MacVerifyRequest.mac][google.cloud.kms.v1.MacVerifyRequest.mac]) is
+    /// equal to
     /// [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c],
     /// and if so, perform a limited number of retries. A persistent mismatch may
     /// indicate an issue in your computation of the CRC32C checksum. Note: This
