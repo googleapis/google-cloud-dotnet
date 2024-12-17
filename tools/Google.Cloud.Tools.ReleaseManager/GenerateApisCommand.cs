@@ -505,7 +505,7 @@ internal class GenerateApisCommand : ICommand
             yield return ("transport", "grpc");
             yield return ("rest-numeric-enums", "True");
             yield return ("service-config", configFiles[0]);
-            yield return ("common-resources-config", Path.Combine(_rootLayout.Googleapis, "CommonResourcesConfig.json"));
+            yield return ("common-resources-config", Path.Combine(_rootLayout.GeneratorInput, "CommonResourcesConfig.json"));
         }
     }
 
