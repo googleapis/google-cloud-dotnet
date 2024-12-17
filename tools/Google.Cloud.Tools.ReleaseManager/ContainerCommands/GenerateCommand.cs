@@ -56,6 +56,11 @@ internal class GenerateCommand : IContainerCommand
         }
         else
         {
+            // Set environment variables used by scripts invoked by GenerateApisCommand.
+            Environment.SetEnvironmentVariable(GenerateApisCommand.GeneratorInputDirectoryEnvironmentVariable, rootLayout.GeneratorInput);
+            Environment.SetEnvironmentVariable(GenerateApisCommand.GeneratorOutputDirectoryEnvironmentVariable, rootLayout.GeneratorOutput);
+            Environment.SetEnvironmentVariable(GenerateApisCommand.GoogleApisDirectoryEnvironmentVariable, rootLayout.Googleapis);
+
             if (apiPath is not null)
             {
                 var catalog = ApiCatalog.Load(rootLayout);
