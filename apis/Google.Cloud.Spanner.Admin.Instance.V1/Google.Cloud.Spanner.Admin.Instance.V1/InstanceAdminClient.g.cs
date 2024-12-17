@@ -686,6 +686,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -695,6 +698,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -704,6 +710,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
@@ -739,6 +748,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
@@ -774,6 +786,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
@@ -809,6 +824,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="parent">
         /// Required. The name of the project for which a list of supported instance
@@ -955,7 +973,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -982,13 +1000,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1004,7 +1022,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -1031,13 +1049,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1053,7 +1071,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -1080,13 +1098,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1129,7 +1147,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -1156,13 +1174,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1175,10 +1193,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
@@ -1199,7 +1217,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -1226,13 +1244,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1245,10 +1263,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
@@ -1269,7 +1287,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -1296,13 +1314,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1315,10 +1333,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
@@ -1334,7 +1352,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -1361,13 +1379,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1380,10 +1398,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
@@ -1404,7 +1422,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -1431,13 +1449,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1450,10 +1468,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
@@ -1474,7 +1492,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -1501,13 +1519,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1520,10 +1538,10 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// configuration. Values are of the form `projects/&lt;project&gt;`.
         /// </param>
         /// <param name="instanceConfig">
-        /// Required. The InstanceConfig proto of the configuration to create.
-        /// instance_config.name must be
+        /// Required. The `InstanceConfig` proto of the configuration to create.
+        /// `instance_config.name` must be
         /// `&lt;parent&gt;/instanceConfigs/&lt;instance_config_id&gt;`.
-        /// instance_config.base_config must be a Google managed configuration name,
+        /// `instance_config.base_config` must be a Google-managed configuration name,
         /// e.g. &lt;parent&gt;/instanceConfigs/us-east1, &lt;parent&gt;/instanceConfigs/nam3.
         /// </param>
         /// <param name="instanceConfigId">
@@ -1539,7 +1557,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance configuration. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// long-running operation can be used to track
         /// the progress of updating the instance. If the named instance configuration
         /// does not exist, returns `NOT_FOUND`.
         /// 
@@ -1570,13 +1588,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the instance configuration modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1591,7 +1609,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance configuration. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// long-running operation can be used to track
         /// the progress of updating the instance. If the named instance configuration
         /// does not exist, returns `NOT_FOUND`.
         /// 
@@ -1622,13 +1640,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the instance configuration modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1643,7 +1661,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance configuration. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// long-running operation can be used to track
         /// the progress of updating the instance. If the named instance configuration
         /// does not exist, returns `NOT_FOUND`.
         /// 
@@ -1674,13 +1692,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the instance configuration modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1722,7 +1740,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance configuration. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// long-running operation can be used to track
         /// the progress of updating the instance. If the named instance configuration
         /// does not exist, returns `NOT_FOUND`.
         /// 
@@ -1753,13 +1771,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the instance configuration modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1794,7 +1812,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance configuration. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// long-running operation can be used to track
         /// the progress of updating the instance. If the named instance configuration
         /// does not exist, returns `NOT_FOUND`.
         /// 
@@ -1825,13 +1843,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the instance configuration modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -1866,7 +1884,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance configuration. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// long-running operation can be used to track
         /// the progress of updating the instance. If the named instance configuration
         /// does not exist, returns `NOT_FOUND`.
         /// 
@@ -1897,13 +1915,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the instance configuration modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -2113,12 +2131,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             DeleteInstanceConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists the user-managed instance configuration [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
         /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2132,12 +2150,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the user-managed instance configuration [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
         /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2151,12 +2169,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists the user-managed instance configuration [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
         /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2195,12 +2213,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists the user-managed instance configuration [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
         /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2239,12 +2257,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists the user-managed instance configuration [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
         /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2283,12 +2301,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists the user-managed instance configuration [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
         /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -2503,7 +2521,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose instance partitions should be listed. Values
-        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`. Use `{instance}
+        /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2537,7 +2557,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose instance partitions should be listed. Values
-        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`. Use `{instance}
+        /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2571,7 +2593,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose instance partitions should be listed. Values
-        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`. Use `{instance}
+        /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2605,7 +2629,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The instance whose instance partitions should be listed. Values
-        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`.
+        /// are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`. Use `{instance}
+        /// = '-'` to list instance partitions for all Instances in a project, e.g.,
+        /// `projects/myproject/instances/-`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2747,7 +2773,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2773,12 +2799,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2789,7 +2815,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2815,12 +2841,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2831,7 +2857,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2857,12 +2883,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2899,7 +2925,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2925,12 +2951,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -2958,7 +2984,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -2984,12 +3010,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -3017,7 +3043,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -3043,12 +3069,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -3071,7 +3097,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -3097,12 +3123,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -3130,7 +3156,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -3156,12 +3182,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -3189,7 +3215,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -3215,12 +3241,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="parent">
@@ -3243,8 +3269,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3272,12 +3297,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -3291,8 +3316,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3320,12 +3344,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -3339,8 +3363,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3368,12 +3391,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -3413,8 +3436,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3442,12 +3464,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -3477,8 +3499,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3506,12 +3527,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -3541,8 +3562,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -3570,12 +3590,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -4461,7 +4481,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4488,13 +4508,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -4506,7 +4526,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4533,13 +4553,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -4551,7 +4571,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4578,13 +4598,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -4623,7 +4643,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4650,13 +4670,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -4687,7 +4707,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4714,13 +4734,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -4751,7 +4771,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4778,13 +4798,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -4810,7 +4830,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4837,13 +4857,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -4874,7 +4894,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4901,13 +4921,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -4938,7 +4958,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -4965,13 +4985,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -5168,8 +5188,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance partition, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance partition. If the named instance
         /// partition does not exist, returns `NOT_FOUND`.
         /// 
@@ -5198,13 +5217,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// partition's tables.
         /// * The instance partition's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track the instance partition modification. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// 
@@ -5220,8 +5239,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance partition, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance partition. If the named instance
         /// partition does not exist, returns `NOT_FOUND`.
         /// 
@@ -5250,13 +5268,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// partition's tables.
         /// * The instance partition's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track the instance partition modification. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// 
@@ -5272,8 +5290,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance partition, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance partition. If the named instance
         /// partition does not exist, returns `NOT_FOUND`.
         /// 
@@ -5302,13 +5319,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// partition's tables.
         /// * The instance partition's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track the instance partition modification. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// 
@@ -5351,8 +5368,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance partition, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance partition. If the named instance
         /// partition does not exist, returns `NOT_FOUND`.
         /// 
@@ -5381,13 +5397,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// partition's tables.
         /// * The instance partition's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track the instance partition modification. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// 
@@ -5420,8 +5436,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance partition, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance partition. If the named instance
         /// partition does not exist, returns `NOT_FOUND`.
         /// 
@@ -5450,13 +5465,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// partition's tables.
         /// * The instance partition's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track the instance partition modification. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// 
@@ -5489,8 +5504,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance partition, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance partition. If the named instance
         /// partition does not exist, returns `NOT_FOUND`.
         /// 
@@ -5519,13 +5533,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// partition's tables.
         /// * The instance partition's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track the instance partition modification. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// 
@@ -5553,12 +5567,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             UpdateInstancePartitionAsync(instancePartition, fieldMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists instance partition [long-running
-        /// operations][google.longrunning.Operation] in the given instance.
+        /// Lists instance partition long-running operations in the given instance.
         /// An instance partition operation has a name of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -5576,12 +5589,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists instance partition [long-running
-        /// operations][google.longrunning.Operation] in the given instance.
+        /// Lists instance partition long-running operations in the given instance.
         /// An instance partition operation has a name of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -5599,12 +5611,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists instance partition [long-running
-        /// operations][google.longrunning.Operation] in the given instance.
+        /// Lists instance partition long-running operations in the given instance.
         /// An instance partition operation has a name of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -5647,12 +5658,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists instance partition [long-running
-        /// operations][google.longrunning.Operation] in the given instance.
+        /// Lists instance partition long-running operations in the given instance.
         /// An instance partition operation has a name of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -5695,12 +5705,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists instance partition [long-running
-        /// operations][google.longrunning.Operation] in the given instance.
+        /// Lists instance partition long-running operations in the given instance.
         /// An instance partition operation has a name of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -5743,12 +5752,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists instance partition [long-running
-        /// operations][google.longrunning.Operation] in the given instance.
+        /// Lists instance partition long-running operations in the given instance.
         /// An instance partition operation has a name of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -5792,7 +5800,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Moves an instance to the target instance configuration. You can use the
-        /// returned [long-running operation][google.longrunning.Operation] to track
+        /// returned long-running operation to track
         /// the progress of moving the instance.
         /// 
         /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
@@ -5823,13 +5831,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// transaction abort rate. However, moving an instance doesn't cause any
         /// downtime.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] has
+        /// The returned long-running operation has
         /// a name of the format
         /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the move instance operation. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance],
         /// if successful.
         /// Cancelling the operation sets its metadata's
@@ -5861,7 +5869,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Moves an instance to the target instance configuration. You can use the
-        /// returned [long-running operation][google.longrunning.Operation] to track
+        /// returned long-running operation to track
         /// the progress of moving the instance.
         /// 
         /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
@@ -5892,13 +5900,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// transaction abort rate. However, moving an instance doesn't cause any
         /// downtime.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] has
+        /// The returned long-running operation has
         /// a name of the format
         /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the move instance operation. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance],
         /// if successful.
         /// Cancelling the operation sets its metadata's
@@ -5930,7 +5938,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Moves an instance to the target instance configuration. You can use the
-        /// returned [long-running operation][google.longrunning.Operation] to track
+        /// returned long-running operation to track
         /// the progress of moving the instance.
         /// 
         /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
@@ -5961,13 +5969,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// transaction abort rate. However, moving an instance doesn't cause any
         /// downtime.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] has
+        /// The returned long-running operation has
         /// a name of the format
         /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the move instance operation. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance],
         /// if successful.
         /// Cancelling the operation sets its metadata's
@@ -6273,6 +6281,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6285,6 +6296,9 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Lists the supported instance configurations for a given project.
+        /// 
+        /// Returns both Google-managed configurations and user-managed
+        /// configurations.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6324,7 +6338,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -6351,13 +6365,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -6376,7 +6390,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance configuration and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance configuration. The instance configuration name is assigned by the
         /// caller. If the named instance configuration already exists,
@@ -6403,13 +6417,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false. Its state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// creation of the instance configuration. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceConfigMetadata][google.spanner.admin.instance.v1.CreateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -6431,7 +6445,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance configuration. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// long-running operation can be used to track
         /// the progress of updating the instance. If the named instance configuration
         /// does not exist, returns `NOT_FOUND`.
         /// 
@@ -6462,13 +6476,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the instance configuration modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -6486,7 +6500,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance configuration. The returned
-        /// [long-running operation][google.longrunning.Operation] can be used to track
+        /// long-running operation can be used to track
         /// the progress of updating the instance. If the named instance configuration
         /// does not exist, returns `NOT_FOUND`.
         /// 
@@ -6517,13 +6531,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// [reconciling][google.spanner.admin.instance.v1.InstanceConfig.reconciling]
         /// field becomes false.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_config_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the instance configuration modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceConfigMetadata][google.spanner.admin.instance.v1.UpdateInstanceConfigMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstanceConfig][google.spanner.admin.instance.v1.InstanceConfig], if
         /// successful.
         /// 
@@ -6578,12 +6592,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists the user-managed instance configuration [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
         /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -6600,12 +6614,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists the user-managed instance configuration [long-running
-        /// operations][google.longrunning.Operation] in the given project. An instance
+        /// Lists the user-managed instance configuration long-running
+        /// operations in the given project. An instance
         /// configuration operation has a name of the form
         /// `projects/&lt;project&gt;/instanceConfigs/&lt;instance_config&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -6698,7 +6712,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -6724,12 +6738,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6743,7 +6757,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance and begins preparing it to begin serving. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new
         /// instance. The instance name is assigned by the caller. If the
         /// named instance already exists, `CreateInstance` returns
@@ -6769,12 +6783,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// * The instance's allocated resource levels are readable via the API.
         /// * The instance's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track creation of the instance.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstanceMetadata][google.spanner.admin.instance.v1.CreateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -6791,8 +6805,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -6820,12 +6833,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -6842,8 +6855,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance. If the named instance does not
         /// exist, returns `NOT_FOUND`.
         /// 
@@ -6871,12 +6883,12 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// tables.
         /// * The instance's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and
         /// can be used to track the instance modification.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstanceMetadata][google.spanner.admin.instance.v1.UpdateInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance], if successful.
         /// 
         /// Authorization requires `spanner.instances.update` permission on
@@ -7062,7 +7074,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -7089,13 +7101,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -7110,7 +7122,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Creates an instance partition and begins preparing it to be used. The
-        /// returned [long-running operation][google.longrunning.Operation]
+        /// returned long-running operation
         /// can be used to track the progress of preparing the new instance partition.
         /// The instance partition name is assigned by the caller. If the named
         /// instance partition already exists, `CreateInstancePartition` returns
@@ -7137,13 +7149,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// API.
         /// * The instance partition's state becomes `READY`.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track creation of the instance partition.  The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [CreateInstancePartitionMetadata][google.spanner.admin.instance.v1.CreateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// </summary>
@@ -7197,8 +7209,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance partition, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance partition. If the named instance
         /// partition does not exist, returns `NOT_FOUND`.
         /// 
@@ -7227,13 +7238,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// partition's tables.
         /// * The instance partition's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track the instance partition modification. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// 
@@ -7252,8 +7263,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Updates an instance partition, and begins allocating or releasing resources
-        /// as requested. The returned [long-running
-        /// operation][google.longrunning.Operation] can be used to track the
+        /// as requested. The returned long-running operation can be used to track the
         /// progress of updating the instance partition. If the named instance
         /// partition does not exist, returns `NOT_FOUND`.
         /// 
@@ -7282,13 +7292,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// partition's tables.
         /// * The instance partition's new resource levels are readable via the API.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] will
+        /// The returned long-running operation will
         /// have a name of the format
         /// `&lt;instance_partition_name&gt;/operations/&lt;operation_id&gt;` and can be used to
         /// track the instance partition modification. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [UpdateInstancePartitionMetadata][google.spanner.admin.instance.v1.UpdateInstancePartitionMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [InstancePartition][google.spanner.admin.instance.v1.InstancePartition], if
         /// successful.
         /// 
@@ -7306,12 +7316,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists instance partition [long-running
-        /// operations][google.longrunning.Operation] in the given instance.
+        /// Lists instance partition long-running operations in the given instance.
         /// An instance partition operation has a name of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -7332,12 +7341,11 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         }
 
         /// <summary>
-        /// Lists instance partition [long-running
-        /// operations][google.longrunning.Operation] in the given instance.
+        /// Lists instance partition long-running operations in the given instance.
         /// An instance partition operation has a name of the form
         /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/instancePartitions/&lt;instance_partition&gt;/operations/&lt;operation&gt;`.
         /// The long-running operation
-        /// [metadata][google.longrunning.Operation.metadata] field type
+        /// metadata field type
         /// `metadata.type_url` describes the type of the metadata. Operations returned
         /// include those that have completed/failed/canceled within the last 7 days,
         /// and pending operations. Operations returned are ordered by
@@ -7362,7 +7370,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Moves an instance to the target instance configuration. You can use the
-        /// returned [long-running operation][google.longrunning.Operation] to track
+        /// returned long-running operation to track
         /// the progress of moving the instance.
         /// 
         /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
@@ -7393,13 +7401,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// transaction abort rate. However, moving an instance doesn't cause any
         /// downtime.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] has
+        /// The returned long-running operation has
         /// a name of the format
         /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the move instance operation. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance],
         /// if successful.
         /// Cancelling the operation sets its metadata's
@@ -7434,7 +7442,7 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
 
         /// <summary>
         /// Moves an instance to the target instance configuration. You can use the
-        /// returned [long-running operation][google.longrunning.Operation] to track
+        /// returned long-running operation to track
         /// the progress of moving the instance.
         /// 
         /// `MoveInstance` returns `FAILED_PRECONDITION` if the instance meets any of
@@ -7465,13 +7473,13 @@ namespace Google.Cloud.Spanner.Admin.Instance.V1
         /// transaction abort rate. However, moving an instance doesn't cause any
         /// downtime.
         /// 
-        /// The returned [long-running operation][google.longrunning.Operation] has
+        /// The returned long-running operation has
         /// a name of the format
         /// `&lt;instance_name&gt;/operations/&lt;operation_id&gt;` and can be used to track
         /// the move instance operation. The
-        /// [metadata][google.longrunning.Operation.metadata] field type is
+        /// metadata field type is
         /// [MoveInstanceMetadata][google.spanner.admin.instance.v1.MoveInstanceMetadata].
-        /// The [response][google.longrunning.Operation.response] field type is
+        /// The response field type is
         /// [Instance][google.spanner.admin.instance.v1.Instance],
         /// if successful.
         /// Cancelling the operation sets its metadata's
