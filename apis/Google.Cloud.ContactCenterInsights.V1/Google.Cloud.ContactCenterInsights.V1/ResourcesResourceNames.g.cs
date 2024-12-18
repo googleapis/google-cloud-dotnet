@@ -35,9 +35,19 @@ namespace Google.Cloud.ContactCenterInsights.V1
             /// .
             /// </summary>
             ProjectLocationConversation = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}</c>
+            /// .
+            /// </summary>
+            ProjectLocationAuthorizedViewSetAuthorizedViewConversation = 2,
         }
 
         private static gax::PathTemplate s_projectLocationConversation = new gax::PathTemplate("projects/{project}/locations/{location}/conversations/{conversation}");
+
+        private static gax::PathTemplate s_projectLocationAuthorizedViewSetAuthorizedViewConversation = new gax::PathTemplate("projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}");
 
         /// <summary>Creates a <see cref="ConversationName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -58,6 +68,21 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A new instance of <see cref="ConversationName"/> constructed from the provided ids.</returns>
         public static ConversationName FromProjectLocationConversation(string projectId, string locationId, string conversationId) =>
             new ConversationName(ResourceNameType.ProjectLocationConversation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), conversationId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)));
+
+        /// <summary>
+        /// Creates a <see cref="ConversationName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewSetId">The <c>AuthorizedViewSet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewId">The <c>AuthorizedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationId">The <c>Conversation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="ConversationName"/> constructed from the provided ids.</returns>
+        public static ConversationName FromProjectLocationAuthorizedViewSetAuthorizedViewConversation(string projectId, string locationId, string authorizedViewSetId, string authorizedViewId, string conversationId) =>
+            new ConversationName(ResourceNameType.ProjectLocationAuthorizedViewSetAuthorizedViewConversation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), authorizedViewSetId: gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewSetId, nameof(authorizedViewSetId)), authorizedViewId: gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)), conversationId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="ConversationName"/> with pattern
@@ -87,12 +112,38 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public static string FormatProjectLocationConversation(string projectId, string locationId, string conversationId) =>
             s_projectLocationConversation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="ConversationName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewSetId">The <c>AuthorizedViewSet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewId">The <c>AuthorizedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationId">The <c>Conversation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="ConversationName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationAuthorizedViewSetAuthorizedViewConversation(string projectId, string locationId, string authorizedViewSetId, string authorizedViewId, string conversationId) =>
+            s_projectLocationAuthorizedViewSetAuthorizedViewConversation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewSetId, nameof(authorizedViewSetId)), gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="ConversationName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/conversations/{conversation}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -109,6 +160,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <list type="bullet">
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/conversations/{conversation}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -132,6 +189,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/conversations/{conversation}</c></description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="conversationName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -151,6 +214,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <list type="bullet">
         /// <item>
         /// <description><c>projects/{project}/locations/{location}/conversations/{conversation}</c></description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -174,6 +243,11 @@ namespace Google.Cloud.ContactCenterInsights.V1
                 result = FromProjectLocationConversation(resourceName[0], resourceName[1], resourceName[2]);
                 return true;
             }
+            if (s_projectLocationAuthorizedViewSetAuthorizedViewConversation.TryParseName(conversationName, out resourceName))
+            {
+                result = FromProjectLocationAuthorizedViewSetAuthorizedViewConversation(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(conversationName, out gax::UnparsedResourceName unparsedResourceName))
@@ -186,10 +260,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
             return false;
         }
 
-        private ConversationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string conversationId = null, string locationId = null, string projectId = null)
+        private ConversationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string authorizedViewId = null, string authorizedViewSetId = null, string conversationId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            AuthorizedViewId = authorizedViewId;
+            AuthorizedViewSetId = authorizedViewSetId;
             ConversationId = conversationId;
             LocationId = locationId;
             ProjectId = projectId;
@@ -216,18 +292,30 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Conversation</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>AuthorizedView</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AuthorizedViewId { get; }
+
+        /// <summary>
+        /// The <c>AuthorizedViewSet</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AuthorizedViewSetId { get; }
+
+        /// <summary>
+        /// The <c>Conversation</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string ConversationId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -242,6 +330,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationConversation: return s_projectLocationConversation.Expand(ProjectId, LocationId, ConversationId);
+                case ResourceNameType.ProjectLocationAuthorizedViewSetAuthorizedViewConversation: return s_projectLocationAuthorizedViewSetAuthorizedViewConversation.Expand(ProjectId, LocationId, AuthorizedViewSetId, AuthorizedViewId, ConversationId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -288,9 +377,19 @@ namespace Google.Cloud.ContactCenterInsights.V1
             /// <c>projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}</c>.
             /// </summary>
             ProjectLocationConversationAnalysis = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}</c>
+            /// .
+            /// </summary>
+            ProjectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis = 2,
         }
 
         private static gax::PathTemplate s_projectLocationConversationAnalysis = new gax::PathTemplate("projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}");
+
+        private static gax::PathTemplate s_projectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis = new gax::PathTemplate("projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}");
 
         /// <summary>Creates a <see cref="AnalysisName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -312,6 +411,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A new instance of <see cref="AnalysisName"/> constructed from the provided ids.</returns>
         public static AnalysisName FromProjectLocationConversationAnalysis(string projectId, string locationId, string conversationId, string analysisId) =>
             new AnalysisName(ResourceNameType.ProjectLocationConversationAnalysis, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), conversationId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)), analysisId: gax::GaxPreconditions.CheckNotNullOrEmpty(analysisId, nameof(analysisId)));
+
+        /// <summary>
+        /// Creates a <see cref="AnalysisName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewSetId">The <c>AuthorizedViewSet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewId">The <c>AuthorizedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationId">The <c>Conversation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="analysisId">The <c>Analysis</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AnalysisName"/> constructed from the provided ids.</returns>
+        public static AnalysisName FromProjectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis(string projectId, string locationId, string authorizedViewSetId, string authorizedViewId, string conversationId, string analysisId) =>
+            new AnalysisName(ResourceNameType.ProjectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), authorizedViewSetId: gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewSetId, nameof(authorizedViewSetId)), authorizedViewId: gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)), conversationId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)), analysisId: gax::GaxPreconditions.CheckNotNullOrEmpty(analysisId, nameof(analysisId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="AnalysisName"/> with pattern
@@ -343,6 +458,27 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public static string FormatProjectLocationConversationAnalysis(string projectId, string locationId, string conversationId, string analysisId) =>
             s_projectLocationConversationAnalysis.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(analysisId, nameof(analysisId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AnalysisName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewSetId">The <c>AuthorizedViewSet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewId">The <c>AuthorizedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationId">The <c>Conversation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="analysisId">The <c>Analysis</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AnalysisName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis(string projectId, string locationId, string authorizedViewSetId, string authorizedViewId, string conversationId, string analysisId) =>
+            s_projectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewSetId, nameof(authorizedViewSetId)), gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(analysisId, nameof(analysisId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="AnalysisName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -350,6 +486,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -368,6 +510,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -394,6 +542,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <c>projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="analysisName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -413,6 +567,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversations/{conversation}/analyses/{analysis}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -437,6 +597,11 @@ namespace Google.Cloud.ContactCenterInsights.V1
                 result = FromProjectLocationConversationAnalysis(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
+            if (s_projectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis.TryParseName(analysisName, out resourceName))
+            {
+                result = FromProjectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4], resourceName[5]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(analysisName, out gax::UnparsedResourceName unparsedResourceName))
@@ -449,11 +614,13 @@ namespace Google.Cloud.ContactCenterInsights.V1
             return false;
         }
 
-        private AnalysisName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string analysisId = null, string conversationId = null, string locationId = null, string projectId = null)
+        private AnalysisName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string analysisId = null, string authorizedViewId = null, string authorizedViewSetId = null, string conversationId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             AnalysisId = analysisId;
+            AuthorizedViewId = authorizedViewId;
+            AuthorizedViewSetId = authorizedViewSetId;
             ConversationId = conversationId;
             LocationId = locationId;
             ProjectId = projectId;
@@ -481,23 +648,35 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Analysis</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Analysis</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string AnalysisId { get; }
 
         /// <summary>
-        /// The <c>Conversation</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>AuthorizedView</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AuthorizedViewId { get; }
+
+        /// <summary>
+        /// The <c>AuthorizedViewSet</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AuthorizedViewSetId { get; }
+
+        /// <summary>
+        /// The <c>Conversation</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string ConversationId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -512,6 +691,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationConversationAnalysis: return s_projectLocationConversationAnalysis.Expand(ProjectId, LocationId, ConversationId, AnalysisId);
+                case ResourceNameType.ProjectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis: return s_projectLocationAuthorizedViewSetAuthorizedViewConversationAnalysis.Expand(ProjectId, LocationId, AuthorizedViewSetId, AuthorizedViewId, ConversationId, AnalysisId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -559,9 +739,19 @@ namespace Google.Cloud.ContactCenterInsights.V1
             /// .
             /// </summary>
             ProjectLocationConversationFeedbackLabel = 1,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
+            /// .
+            /// </summary>
+            ProjectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel = 2,
         }
 
         private static gax::PathTemplate s_projectLocationConversationFeedbackLabel = new gax::PathTemplate("projects/{project}/locations/{location}/conversations/{conversation}/feedbackLabels/{feedback_label}");
+
+        private static gax::PathTemplate s_projectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel = new gax::PathTemplate("projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}");
 
         /// <summary>Creates a <see cref="FeedbackLabelName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -583,6 +773,22 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A new instance of <see cref="FeedbackLabelName"/> constructed from the provided ids.</returns>
         public static FeedbackLabelName FromProjectLocationConversationFeedbackLabel(string projectId, string locationId, string conversationId, string feedbackLabelId) =>
             new FeedbackLabelName(ResourceNameType.ProjectLocationConversationFeedbackLabel, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), conversationId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)), feedbackLabelId: gax::GaxPreconditions.CheckNotNullOrEmpty(feedbackLabelId, nameof(feedbackLabelId)));
+
+        /// <summary>
+        /// Creates a <see cref="FeedbackLabelName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewSetId">The <c>AuthorizedViewSet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewId">The <c>AuthorizedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationId">The <c>Conversation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="feedbackLabelId">The <c>FeedbackLabel</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="FeedbackLabelName"/> constructed from the provided ids.</returns>
+        public static FeedbackLabelName FromProjectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel(string projectId, string locationId, string authorizedViewSetId, string authorizedViewId, string conversationId, string feedbackLabelId) =>
+            new FeedbackLabelName(ResourceNameType.ProjectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), authorizedViewSetId: gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewSetId, nameof(authorizedViewSetId)), authorizedViewId: gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)), conversationId: gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)), feedbackLabelId: gax::GaxPreconditions.CheckNotNullOrEmpty(feedbackLabelId, nameof(feedbackLabelId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="FeedbackLabelName"/> with pattern
@@ -615,6 +821,27 @@ namespace Google.Cloud.ContactCenterInsights.V1
             s_projectLocationConversationFeedbackLabel.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(feedbackLabelId, nameof(feedbackLabelId)));
 
         /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="FeedbackLabelName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewSetId">The <c>AuthorizedViewSet</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authorizedViewId">The <c>AuthorizedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="conversationId">The <c>Conversation</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="feedbackLabelId">The <c>FeedbackLabel</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="FeedbackLabelName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel(string projectId, string locationId, string authorizedViewSetId, string authorizedViewId, string conversationId, string feedbackLabelId) =>
+            s_projectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewSetId, nameof(authorizedViewSetId)), gax::GaxPreconditions.CheckNotNullOrEmpty(authorizedViewId, nameof(authorizedViewId)), gax::GaxPreconditions.CheckNotNullOrEmpty(conversationId, nameof(conversationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(feedbackLabelId, nameof(feedbackLabelId)));
+
+        /// <summary>
         /// Parses the given resource name string into a new <see cref="FeedbackLabelName"/> instance.
         /// </summary>
         /// <remarks>
@@ -623,6 +850,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -641,6 +874,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -667,6 +906,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <c>projects/{project}/locations/{location}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="feedbackLabelName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -687,6 +932,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -711,6 +962,11 @@ namespace Google.Cloud.ContactCenterInsights.V1
                 result = FromProjectLocationConversationFeedbackLabel(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
+            if (s_projectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel.TryParseName(feedbackLabelName, out resourceName))
+            {
+                result = FromProjectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4], resourceName[5]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(feedbackLabelName, out gax::UnparsedResourceName unparsedResourceName))
@@ -723,10 +979,12 @@ namespace Google.Cloud.ContactCenterInsights.V1
             return false;
         }
 
-        private FeedbackLabelName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string conversationId = null, string feedbackLabelId = null, string locationId = null, string projectId = null)
+        private FeedbackLabelName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string authorizedViewId = null, string authorizedViewSetId = null, string conversationId = null, string feedbackLabelId = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            AuthorizedViewId = authorizedViewId;
+            AuthorizedViewSetId = authorizedViewSetId;
             ConversationId = conversationId;
             FeedbackLabelId = feedbackLabelId;
             LocationId = locationId;
@@ -755,24 +1013,36 @@ namespace Google.Cloud.ContactCenterInsights.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Conversation</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>AuthorizedView</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AuthorizedViewId { get; }
+
+        /// <summary>
+        /// The <c>AuthorizedViewSet</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
+        /// </summary>
+        public string AuthorizedViewSetId { get; }
+
+        /// <summary>
+        /// The <c>Conversation</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string ConversationId { get; }
 
         /// <summary>
-        /// The <c>FeedbackLabel</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
-        /// name.
+        /// The <c>FeedbackLabel</c> ID. May be <c>null</c>, depending on which resource name is contained by this
+        /// instance.
         /// </summary>
         public string FeedbackLabelId { get; }
 
         /// <summary>
-        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string LocationId { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -787,6 +1057,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.ProjectLocationConversationFeedbackLabel: return s_projectLocationConversationFeedbackLabel.Expand(ProjectId, LocationId, ConversationId, FeedbackLabelId);
+                case ResourceNameType.ProjectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel: return s_projectLocationAuthorizedViewSetAuthorizedViewConversationFeedbackLabel.Expand(ProjectId, LocationId, AuthorizedViewSetId, AuthorizedViewId, ConversationId, FeedbackLabelId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
