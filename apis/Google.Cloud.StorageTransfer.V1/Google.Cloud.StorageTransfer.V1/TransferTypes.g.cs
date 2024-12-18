@@ -119,131 +119,139 @@ namespace Google.Cloud.StorageTransfer.V1 {
             "Lmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuVHJhbnNmZXJNYW5pZmVzdBIe",
             "ChZzb3VyY2VfYWdlbnRfcG9vbF9uYW1lGBEgASgJEhwKFHNpbmtfYWdlbnRf",
             "cG9vbF9uYW1lGBIgASgJQgsKCWRhdGFfc2lua0INCgtkYXRhX3NvdXJjZUIc",
-            "ChppbnRlcm1lZGlhdGVfZGF0YV9sb2NhdGlvbiLxCwoPTWV0YWRhdGFPcHRp",
-            "b25zEkMKB3N5bWxpbmsYASABKA4yMi5nb29nbGUuc3RvcmFnZXRyYW5zZmVy",
-            "LnYxLk1ldGFkYXRhT3B0aW9ucy5TeW1saW5rEj0KBG1vZGUYAiABKA4yLy5n",
-            "b29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLk1ldGFkYXRhT3B0aW9ucy5Nb2Rl",
-            "EjsKA2dpZBgDIAEoDjIuLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuTWV0",
-            "YWRhdGFPcHRpb25zLkdJRBI7CgN1aWQYBCABKA4yLi5nb29nbGUuc3RvcmFn",
-            "ZXRyYW5zZmVyLnYxLk1ldGFkYXRhT3B0aW9ucy5VSUQSOwoDYWNsGAUgASgO",
-            "Mi4uZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5NZXRhZGF0YU9wdGlvbnMu",
-            "QWNsEk4KDXN0b3JhZ2VfY2xhc3MYBiABKA4yNy5nb29nbGUuc3RvcmFnZXRy",
-            "YW5zZmVyLnYxLk1ldGFkYXRhT3B0aW9ucy5TdG9yYWdlQ2xhc3MSUAoOdGVt",
-            "cG9yYXJ5X2hvbGQYByABKA4yOC5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYx",
-            "Lk1ldGFkYXRhT3B0aW9ucy5UZW1wb3JhcnlIb2xkEkIKB2ttc19rZXkYCCAB",
-            "KA4yMS5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLk1ldGFkYXRhT3B0aW9u",
-            "cy5LbXNLZXkSTAoMdGltZV9jcmVhdGVkGAkgASgOMjYuZ29vZ2xlLnN0b3Jh",
-            "Z2V0cmFuc2Zlci52MS5NZXRhZGF0YU9wdGlvbnMuVGltZUNyZWF0ZWQiSgoH",
-            "U3ltbGluaxIXChNTWU1MSU5LX1VOU1BFQ0lGSUVEEAASEAoMU1lNTElOS19T",
-            "S0lQEAESFAoQU1lNTElOS19QUkVTRVJWRRACIj4KBE1vZGUSFAoQTU9ERV9V",
-            "TlNQRUNJRklFRBAAEg0KCU1PREVfU0tJUBABEhEKDU1PREVfUFJFU0VSVkUQ",
-            "AiI4CgNHSUQSEwoPR0lEX1VOU1BFQ0lGSUVEEAASDAoIR0lEX1NLSVAQARIO",
-            "CgpHSURfTlVNQkVSEAIiOAoDVUlEEhMKD1VJRF9VTlNQRUNJRklFRBAAEgwK",
-            "CFVJRF9TS0lQEAESDgoKVUlEX05VTUJFUhACIlAKA0FjbBITCg9BQ0xfVU5T",
-            "UEVDSUZJRUQQABIiCh5BQ0xfREVTVElOQVRJT05fQlVDS0VUX0RFRkFVTFQQ",
-            "ARIQCgxBQ0xfUFJFU0VSVkUQAiLmAQoMU3RvcmFnZUNsYXNzEh0KGVNUT1JB",
-            "R0VfQ0xBU1NfVU5TUEVDSUZJRUQQABIsCihTVE9SQUdFX0NMQVNTX0RFU1RJ",
-            "TkFUSU9OX0JVQ0tFVF9ERUZBVUxUEAESGgoWU1RPUkFHRV9DTEFTU19QUkVT",
-            "RVJWRRACEhoKFlNUT1JBR0VfQ0xBU1NfU1RBTkRBUkQQAxIaChZTVE9SQUdF",
-            "X0NMQVNTX05FQVJMSU5FEAQSGgoWU1RPUkFHRV9DTEFTU19DT0xETElORRAF",
-            "EhkKFVNUT1JBR0VfQ0xBU1NfQVJDSElWRRAGImUKDVRlbXBvcmFyeUhvbGQS",
-            "HgoaVEVNUE9SQVJZX0hPTERfVU5TUEVDSUZJRUQQABIXChNURU1QT1JBUllf",
-            "SE9MRF9TS0lQEAESGwoXVEVNUE9SQVJZX0hPTERfUFJFU0VSVkUQAiJfCgZL",
-            "bXNLZXkSFwoTS01TX0tFWV9VTlNQRUNJRklFRBAAEiYKIktNU19LRVlfREVT",
-            "VElOQVRJT05fQlVDS0VUX0RFRkFVTFQQARIUChBLTVNfS0VZX1BSRVNFUlZF",
-            "EAIibAoLVGltZUNyZWF0ZWQSHAoYVElNRV9DUkVBVEVEX1VOU1BFQ0lGSUVE",
-            "EAASFQoRVElNRV9DUkVBVEVEX1NLSVAQARIoCiRUSU1FX0NSRUFURURfUFJF",
-            "U0VSVkVfQVNfQ1VTVE9NX1RJTUUQAiIkChBUcmFuc2Zlck1hbmlmZXN0EhAK",
-            "CGxvY2F0aW9uGAEgASgJIoUCCghTY2hlZHVsZRIzChNzY2hlZHVsZV9zdGFy",
-            "dF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EECEiwKEXNjaGVk",
-            "dWxlX2VuZF9kYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIxChFzdGFy",
-            "dF90aW1lX29mX2RheRgDIAEoCzIWLmdvb2dsZS50eXBlLlRpbWVPZkRheRIv",
-            "Cg9lbmRfdGltZV9vZl9kYXkYBCABKAsyFi5nb29nbGUudHlwZS5UaW1lT2ZE",
-            "YXkSMgoPcmVwZWF0X2ludGVydmFsGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uIp8BCgtFdmVudFN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQIS",
-            "OwoXZXZlbnRfc3RyZWFtX3N0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wEkAKHGV2ZW50X3N0cmVhbV9leHBpcmF0aW9uX3Rp",
-            "bWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIuAFCgtUcmFu",
-            "c2ZlckpvYhIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhIK",
-            "CnByb2plY3RfaWQYAyABKAkSPgoNdHJhbnNmZXJfc3BlYxgEIAEoCzInLmdv",
-            "b2dsZS5zdG9yYWdldHJhbnNmZXIudjEuVHJhbnNmZXJTcGVjEkoKE25vdGlm",
-            "aWNhdGlvbl9jb25maWcYCyABKAsyLS5nb29nbGUuc3RvcmFnZXRyYW5zZmVy",
-            "LnYxLk5vdGlmaWNhdGlvbkNvbmZpZxJACg5sb2dnaW5nX2NvbmZpZxgOIAEo",
-            "CzIoLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuTG9nZ2luZ0NvbmZpZxI1",
-            "CghzY2hlZHVsZRgFIAEoCzIjLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEu",
-            "U2NoZWR1bGUSPAoMZXZlbnRfc3RyZWFtGA8gASgLMiYuZ29vZ2xlLnN0b3Jh",
-            "Z2V0cmFuc2Zlci52MS5FdmVudFN0cmVhbRI9CgZzdGF0dXMYBiABKA4yLS5n",
-            "b29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLlRyYW5zZmVySm9iLlN0YXR1cxI2",
-            "Cg1jcmVhdGlvbl90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEj8KFmxhc3RfbW9kaWZpY2F0aW9uX3RpbWUYCCABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNgoNZGVsZXRpb25fdGlt",
-            "ZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIdChVs",
-            "YXRlc3Rfb3BlcmF0aW9uX25hbWUYDCABKAkiSAoGU3RhdHVzEhYKElNUQVRV",
-            "U19VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNBQkxFRBACEgsK",
-            "B0RFTEVURUQQAyI4Cg1FcnJvckxvZ0VudHJ5EhAKA3VybBgBIAEoCUID4EEC",
-            "EhUKDWVycm9yX2RldGFpbHMYAyADKAkimAEKDEVycm9yU3VtbWFyeRIpCgpl",
-            "cnJvcl9jb2RlGAEgASgOMhAuZ29vZ2xlLnJwYy5Db2RlQgPgQQISGAoLZXJy",
-            "b3JfY291bnQYAiABKANCA+BBAhJDChFlcnJvcl9sb2dfZW50cmllcxgDIAMo",
-            "CzIoLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuRXJyb3JMb2dFbnRyeSLD",
-            "BgoQVHJhbnNmZXJDb3VudGVycxIhChlvYmplY3RzX2ZvdW5kX2Zyb21fc291",
-            "cmNlGAEgASgDEh8KF2J5dGVzX2ZvdW5kX2Zyb21fc291cmNlGAIgASgDEiQK",
-            "HG9iamVjdHNfZm91bmRfb25seV9mcm9tX3NpbmsYAyABKAMSIgoaYnl0ZXNf",
-            "Zm91bmRfb25seV9mcm9tX3NpbmsYBCABKAMSKwojb2JqZWN0c19mcm9tX3Nv",
-            "dXJjZV9za2lwcGVkX2J5X3N5bmMYBSABKAMSKQohYnl0ZXNfZnJvbV9zb3Vy",
-            "Y2Vfc2tpcHBlZF9ieV9zeW5jGAYgASgDEh4KFm9iamVjdHNfY29waWVkX3Rv",
-            "X3NpbmsYByABKAMSHAoUYnl0ZXNfY29waWVkX3RvX3NpbmsYCCABKAMSIwob",
-            "b2JqZWN0c19kZWxldGVkX2Zyb21fc291cmNlGAkgASgDEiEKGWJ5dGVzX2Rl",
-            "bGV0ZWRfZnJvbV9zb3VyY2UYCiABKAMSIQoZb2JqZWN0c19kZWxldGVkX2Zy",
-            "b21fc2luaxgLIAEoAxIfChdieXRlc19kZWxldGVkX2Zyb21fc2luaxgMIAEo",
-            "AxIiChpvYmplY3RzX2Zyb21fc291cmNlX2ZhaWxlZBgNIAEoAxIgChhieXRl",
-            "c19mcm9tX3NvdXJjZV9mYWlsZWQYDiABKAMSKgoib2JqZWN0c19mYWlsZWRf",
-            "dG9fZGVsZXRlX2Zyb21fc2luaxgPIAEoAxIoCiBieXRlc19mYWlsZWRfdG9f",
-            "ZGVsZXRlX2Zyb21fc2luaxgQIAEoAxIlCh1kaXJlY3Rvcmllc19mb3VuZF9m",
-            "cm9tX3NvdXJjZRgRIAEoAxIuCiZkaXJlY3Rvcmllc19mYWlsZWRfdG9fbGlz",
-            "dF9mcm9tX3NvdXJjZRgSIAEoAxIzCitkaXJlY3Rvcmllc19zdWNjZXNzZnVs",
-            "bHlfbGlzdGVkX2Zyb21fc291cmNlGBMgASgDEicKH2ludGVybWVkaWF0ZV9v",
-            "YmplY3RzX2NsZWFuZWRfdXAYFiABKAMSLgomaW50ZXJtZWRpYXRlX29iamVj",
-            "dHNfZmFpbGVkX2NsZWFuZWRfdXAYFyABKAMipQMKEk5vdGlmaWNhdGlvbkNv",
-            "bmZpZxIZCgxwdWJzdWJfdG9waWMYASABKAlCA+BBAhJMCgtldmVudF90eXBl",
-            "cxgCIAMoDjI3Lmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuTm90aWZpY2F0",
-            "aW9uQ29uZmlnLkV2ZW50VHlwZRJYCg5wYXlsb2FkX2Zvcm1hdBgDIAEoDjI7",
-            "Lmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuTm90aWZpY2F0aW9uQ29uZmln",
-            "LlBheWxvYWRGb3JtYXRCA+BBAiKGAQoJRXZlbnRUeXBlEhoKFkVWRU5UX1RZ",
-            "UEVfVU5TUEVDSUZJRUQQABIeChpUUkFOU0ZFUl9PUEVSQVRJT05fU1VDQ0VT",
-            "UxABEh0KGVRSQU5TRkVSX09QRVJBVElPTl9GQUlMRUQQAhIeChpUUkFOU0ZF",
-            "Ul9PUEVSQVRJT05fQUJPUlRFRBADIkMKDVBheWxvYWRGb3JtYXQSHgoaUEFZ",
-            "TE9BRF9GT1JNQVRfVU5TUEVDSUZJRUQQABIICgROT05FEAESCAoESlNPThAC",
-            "IosDCg1Mb2dnaW5nQ29uZmlnEkwKC2xvZ19hY3Rpb25zGAEgAygOMjcuZ29v",
-            "Z2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5Mb2dnaW5nQ29uZmlnLkxvZ2dhYmxl",
-            "QWN0aW9uElcKEWxvZ19hY3Rpb25fc3RhdGVzGAIgAygOMjwuZ29vZ2xlLnN0",
-            "b3JhZ2V0cmFuc2Zlci52MS5Mb2dnaW5nQ29uZmlnLkxvZ2dhYmxlQWN0aW9u",
-            "U3RhdGUSJwofZW5hYmxlX29ucHJlbV9nY3NfdHJhbnNmZXJfbG9ncxgDIAEo",
-            "CCJRCg5Mb2dnYWJsZUFjdGlvbhIfChtMT0dHQUJMRV9BQ1RJT05fVU5TUEVD",
-            "SUZJRUQQABIICgRGSU5EEAESCgoGREVMRVRFEAISCAoEQ09QWRADIlcKE0xv",
-            "Z2dhYmxlQWN0aW9uU3RhdGUSJQohTE9HR0FCTEVfQUNUSU9OX1NUQVRFX1VO",
-            "U1BFQ0lGSUVEEAASDQoJU1VDQ0VFREVEEAESCgoGRkFJTEVEEAIixAUKEVRy",
-            "YW5zZmVyT3BlcmF0aW9uEgwKBG5hbWUYASABKAkSEgoKcHJvamVjdF9pZBgC",
-            "IAEoCRI+Cg10cmFuc2Zlcl9zcGVjGAMgASgLMicuZ29vZ2xlLnN0b3JhZ2V0",
-            "cmFuc2Zlci52MS5UcmFuc2ZlclNwZWMSSgoTbm90aWZpY2F0aW9uX2NvbmZp",
-            "ZxgKIAEoCzItLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuTm90aWZpY2F0",
-            "aW9uQ29uZmlnEkAKDmxvZ2dpbmdfY29uZmlnGAwgASgLMiguZ29vZ2xlLnN0",
-            "b3JhZ2V0cmFuc2Zlci52MS5Mb2dnaW5nQ29uZmlnEi4KCnN0YXJ0X3RpbWUY",
-            "BCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1l",
-            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJDCgZzdGF0dXMY",
-            "BiABKA4yMy5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLlRyYW5zZmVyT3Bl",
-            "cmF0aW9uLlN0YXR1cxI9Cghjb3VudGVycxgHIAEoCzIrLmdvb2dsZS5zdG9y",
-            "YWdldHJhbnNmZXIudjEuVHJhbnNmZXJDb3VudGVycxJBChBlcnJvcl9icmVh",
-            "a2Rvd25zGAggAygLMicuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5FcnJv",
-            "clN1bW1hcnkSGQoRdHJhbnNmZXJfam9iX25hbWUYCSABKAkifwoGU3RhdHVz",
-            "EhYKElNUQVRVU19VTlNQRUNJRklFRBAAEg8KC0lOX1BST0dSRVNTEAESCgoG",
-            "UEFVU0VEEAISCwoHU1VDQ0VTUxADEgoKBkZBSUxFRBAEEgsKB0FCT1JURUQQ",
-            "BRIKCgZRVUVVRUQQBhIOCgpTVVNQRU5ESU5HEAdC7wEKI2NvbS5nb29nbGUu",
-            "c3RvcmFnZXRyYW5zZmVyLnYxLnByb3RvQg1UcmFuc2ZlclR5cGVzWk1jbG91",
-            "ZC5nb29nbGUuY29tL2dvL3N0b3JhZ2V0cmFuc2Zlci9hcGl2MS9zdG9yYWdl",
-            "dHJhbnNmZXJwYjtzdG9yYWdldHJhbnNmZXJwYvgBAaoCH0dvb2dsZS5DbG91",
-            "ZC5TdG9yYWdlVHJhbnNmZXIuVjHKAh9Hb29nbGVcQ2xvdWRcU3RvcmFnZVRy",
-            "YW5zZmVyXFYx6gIiR29vZ2xlOjpDbG91ZDo6U3RvcmFnZVRyYW5zZmVyOjpW",
-            "MWIGcHJvdG8z"));
+            "ChppbnRlcm1lZGlhdGVfZGF0YV9sb2NhdGlvbiK3AgoPUmVwbGljYXRpb25T",
+            "cGVjEj0KD2djc19kYXRhX3NvdXJjZRgBIAEoCzIiLmdvb2dsZS5zdG9yYWdl",
+            "dHJhbnNmZXIudjEuR2NzRGF0YUgAEjsKDWdjc19kYXRhX3NpbmsYAiABKAsy",
+            "Ii5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLkdjc0RhdGFIARJGChFvYmpl",
+            "Y3RfY29uZGl0aW9ucxgDIAEoCzIrLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIu",
+            "djEuT2JqZWN0Q29uZGl0aW9ucxJEChB0cmFuc2Zlcl9vcHRpb25zGAQgASgL",
+            "MiouZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5UcmFuc2Zlck9wdGlvbnNC",
+            "DQoLZGF0YV9zb3VyY2VCCwoJZGF0YV9zaW5rIvELCg9NZXRhZGF0YU9wdGlv",
+            "bnMSQwoHc3ltbGluaxgBIAEoDjIyLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIu",
+            "djEuTWV0YWRhdGFPcHRpb25zLlN5bWxpbmsSPQoEbW9kZRgCIAEoDjIvLmdv",
+            "b2dsZS5zdG9yYWdldHJhbnNmZXIudjEuTWV0YWRhdGFPcHRpb25zLk1vZGUS",
+            "OwoDZ2lkGAMgASgOMi4uZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5NZXRh",
+            "ZGF0YU9wdGlvbnMuR0lEEjsKA3VpZBgEIAEoDjIuLmdvb2dsZS5zdG9yYWdl",
+            "dHJhbnNmZXIudjEuTWV0YWRhdGFPcHRpb25zLlVJRBI7CgNhY2wYBSABKA4y",
+            "Li5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLk1ldGFkYXRhT3B0aW9ucy5B",
+            "Y2wSTgoNc3RvcmFnZV9jbGFzcxgGIAEoDjI3Lmdvb2dsZS5zdG9yYWdldHJh",
+            "bnNmZXIudjEuTWV0YWRhdGFPcHRpb25zLlN0b3JhZ2VDbGFzcxJQCg50ZW1w",
+            "b3JhcnlfaG9sZBgHIAEoDjI4Lmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEu",
+            "TWV0YWRhdGFPcHRpb25zLlRlbXBvcmFyeUhvbGQSQgoHa21zX2tleRgIIAEo",
+            "DjIxLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuTWV0YWRhdGFPcHRpb25z",
+            "Lkttc0tleRJMCgx0aW1lX2NyZWF0ZWQYCSABKA4yNi5nb29nbGUuc3RvcmFn",
+            "ZXRyYW5zZmVyLnYxLk1ldGFkYXRhT3B0aW9ucy5UaW1lQ3JlYXRlZCJKCgdT",
+            "eW1saW5rEhcKE1NZTUxJTktfVU5TUEVDSUZJRUQQABIQCgxTWU1MSU5LX1NL",
+            "SVAQARIUChBTWU1MSU5LX1BSRVNFUlZFEAIiPgoETW9kZRIUChBNT0RFX1VO",
+            "U1BFQ0lGSUVEEAASDQoJTU9ERV9TS0lQEAESEQoNTU9ERV9QUkVTRVJWRRAC",
+            "IjgKA0dJRBITCg9HSURfVU5TUEVDSUZJRUQQABIMCghHSURfU0tJUBABEg4K",
+            "CkdJRF9OVU1CRVIQAiI4CgNVSUQSEwoPVUlEX1VOU1BFQ0lGSUVEEAASDAoI",
+            "VUlEX1NLSVAQARIOCgpVSURfTlVNQkVSEAIiUAoDQWNsEhMKD0FDTF9VTlNQ",
+            "RUNJRklFRBAAEiIKHkFDTF9ERVNUSU5BVElPTl9CVUNLRVRfREVGQVVMVBAB",
+            "EhAKDEFDTF9QUkVTRVJWRRACIuYBCgxTdG9yYWdlQ2xhc3MSHQoZU1RPUkFH",
+            "RV9DTEFTU19VTlNQRUNJRklFRBAAEiwKKFNUT1JBR0VfQ0xBU1NfREVTVElO",
+            "QVRJT05fQlVDS0VUX0RFRkFVTFQQARIaChZTVE9SQUdFX0NMQVNTX1BSRVNF",
+            "UlZFEAISGgoWU1RPUkFHRV9DTEFTU19TVEFOREFSRBADEhoKFlNUT1JBR0Vf",
+            "Q0xBU1NfTkVBUkxJTkUQBBIaChZTVE9SQUdFX0NMQVNTX0NPTERMSU5FEAUS",
+            "GQoVU1RPUkFHRV9DTEFTU19BUkNISVZFEAYiZQoNVGVtcG9yYXJ5SG9sZBIe",
+            "ChpURU1QT1JBUllfSE9MRF9VTlNQRUNJRklFRBAAEhcKE1RFTVBPUkFSWV9I",
+            "T0xEX1NLSVAQARIbChdURU1QT1JBUllfSE9MRF9QUkVTRVJWRRACIl8KBktt",
+            "c0tleRIXChNLTVNfS0VZX1VOU1BFQ0lGSUVEEAASJgoiS01TX0tFWV9ERVNU",
+            "SU5BVElPTl9CVUNLRVRfREVGQVVMVBABEhQKEEtNU19LRVlfUFJFU0VSVkUQ",
+            "AiJsCgtUaW1lQ3JlYXRlZBIcChhUSU1FX0NSRUFURURfVU5TUEVDSUZJRUQQ",
+            "ABIVChFUSU1FX0NSRUFURURfU0tJUBABEigKJFRJTUVfQ1JFQVRFRF9QUkVT",
+            "RVJWRV9BU19DVVNUT01fVElNRRACIiQKEFRyYW5zZmVyTWFuaWZlc3QSEAoI",
+            "bG9jYXRpb24YASABKAkihQIKCFNjaGVkdWxlEjMKE3NjaGVkdWxlX3N0YXJ0",
+            "X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQISLAoRc2NoZWR1",
+            "bGVfZW5kX2RhdGUYAiABKAsyES5nb29nbGUudHlwZS5EYXRlEjEKEXN0YXJ0",
+            "X3RpbWVfb2ZfZGF5GAMgASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5Ei8K",
+            "D2VuZF90aW1lX29mX2RheRgEIAEoCzIWLmdvb2dsZS50eXBlLlRpbWVPZkRh",
+            "eRIyCg9yZXBlYXRfaW50ZXJ2YWwYBSABKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb24inwEKC0V2ZW50U3RyZWFtEhEKBG5hbWUYASABKAlCA+BBAhI7",
+            "ChdldmVudF9zdHJlYW1fc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXASQAocZXZlbnRfc3RyZWFtX2V4cGlyYXRpb25fdGlt",
+            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAipgYKC1RyYW5z",
+            "ZmVySm9iEgwKBG5hbWUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSEgoK",
+            "cHJvamVjdF9pZBgDIAEoCRI+Cg10cmFuc2Zlcl9zcGVjGAQgASgLMicuZ29v",
+            "Z2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5UcmFuc2ZlclNwZWMSRAoQcmVwbGlj",
+            "YXRpb25fc3BlYxgRIAEoCzIqLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEu",
+            "UmVwbGljYXRpb25TcGVjEkoKE25vdGlmaWNhdGlvbl9jb25maWcYCyABKAsy",
+            "LS5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLk5vdGlmaWNhdGlvbkNvbmZp",
+            "ZxJACg5sb2dnaW5nX2NvbmZpZxgOIAEoCzIoLmdvb2dsZS5zdG9yYWdldHJh",
+            "bnNmZXIudjEuTG9nZ2luZ0NvbmZpZxI1CghzY2hlZHVsZRgFIAEoCzIjLmdv",
+            "b2dsZS5zdG9yYWdldHJhbnNmZXIudjEuU2NoZWR1bGUSPAoMZXZlbnRfc3Ry",
+            "ZWFtGA8gASgLMiYuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5FdmVudFN0",
+            "cmVhbRI9CgZzdGF0dXMYBiABKA4yLS5nb29nbGUuc3RvcmFnZXRyYW5zZmVy",
+            "LnYxLlRyYW5zZmVySm9iLlN0YXR1cxI2Cg1jcmVhdGlvbl90aW1lGAcgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj8KFmxhc3RfbW9k",
+            "aWZpY2F0aW9uX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSNgoNZGVsZXRpb25fdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIdChVsYXRlc3Rfb3BlcmF0aW9uX25hbWUY",
+            "DCABKAkiSAoGU3RhdHVzEhYKElNUQVRVU19VTlNQRUNJRklFRBAAEgsKB0VO",
+            "QUJMRUQQARIMCghESVNBQkxFRBACEgsKB0RFTEVURUQQAyI4Cg1FcnJvckxv",
+            "Z0VudHJ5EhAKA3VybBgBIAEoCUID4EECEhUKDWVycm9yX2RldGFpbHMYAyAD",
+            "KAkimAEKDEVycm9yU3VtbWFyeRIpCgplcnJvcl9jb2RlGAEgASgOMhAuZ29v",
+            "Z2xlLnJwYy5Db2RlQgPgQQISGAoLZXJyb3JfY291bnQYAiABKANCA+BBAhJD",
+            "ChFlcnJvcl9sb2dfZW50cmllcxgDIAMoCzIoLmdvb2dsZS5zdG9yYWdldHJh",
+            "bnNmZXIudjEuRXJyb3JMb2dFbnRyeSLDBgoQVHJhbnNmZXJDb3VudGVycxIh",
+            "ChlvYmplY3RzX2ZvdW5kX2Zyb21fc291cmNlGAEgASgDEh8KF2J5dGVzX2Zv",
+            "dW5kX2Zyb21fc291cmNlGAIgASgDEiQKHG9iamVjdHNfZm91bmRfb25seV9m",
+            "cm9tX3NpbmsYAyABKAMSIgoaYnl0ZXNfZm91bmRfb25seV9mcm9tX3NpbmsY",
+            "BCABKAMSKwojb2JqZWN0c19mcm9tX3NvdXJjZV9za2lwcGVkX2J5X3N5bmMY",
+            "BSABKAMSKQohYnl0ZXNfZnJvbV9zb3VyY2Vfc2tpcHBlZF9ieV9zeW5jGAYg",
+            "ASgDEh4KFm9iamVjdHNfY29waWVkX3RvX3NpbmsYByABKAMSHAoUYnl0ZXNf",
+            "Y29waWVkX3RvX3NpbmsYCCABKAMSIwobb2JqZWN0c19kZWxldGVkX2Zyb21f",
+            "c291cmNlGAkgASgDEiEKGWJ5dGVzX2RlbGV0ZWRfZnJvbV9zb3VyY2UYCiAB",
+            "KAMSIQoZb2JqZWN0c19kZWxldGVkX2Zyb21fc2luaxgLIAEoAxIfChdieXRl",
+            "c19kZWxldGVkX2Zyb21fc2luaxgMIAEoAxIiChpvYmplY3RzX2Zyb21fc291",
+            "cmNlX2ZhaWxlZBgNIAEoAxIgChhieXRlc19mcm9tX3NvdXJjZV9mYWlsZWQY",
+            "DiABKAMSKgoib2JqZWN0c19mYWlsZWRfdG9fZGVsZXRlX2Zyb21fc2luaxgP",
+            "IAEoAxIoCiBieXRlc19mYWlsZWRfdG9fZGVsZXRlX2Zyb21fc2luaxgQIAEo",
+            "AxIlCh1kaXJlY3Rvcmllc19mb3VuZF9mcm9tX3NvdXJjZRgRIAEoAxIuCiZk",
+            "aXJlY3Rvcmllc19mYWlsZWRfdG9fbGlzdF9mcm9tX3NvdXJjZRgSIAEoAxIz",
+            "CitkaXJlY3Rvcmllc19zdWNjZXNzZnVsbHlfbGlzdGVkX2Zyb21fc291cmNl",
+            "GBMgASgDEicKH2ludGVybWVkaWF0ZV9vYmplY3RzX2NsZWFuZWRfdXAYFiAB",
+            "KAMSLgomaW50ZXJtZWRpYXRlX29iamVjdHNfZmFpbGVkX2NsZWFuZWRfdXAY",
+            "FyABKAMipQMKEk5vdGlmaWNhdGlvbkNvbmZpZxIZCgxwdWJzdWJfdG9waWMY",
+            "ASABKAlCA+BBAhJMCgtldmVudF90eXBlcxgCIAMoDjI3Lmdvb2dsZS5zdG9y",
+            "YWdldHJhbnNmZXIudjEuTm90aWZpY2F0aW9uQ29uZmlnLkV2ZW50VHlwZRJY",
+            "Cg5wYXlsb2FkX2Zvcm1hdBgDIAEoDjI7Lmdvb2dsZS5zdG9yYWdldHJhbnNm",
+            "ZXIudjEuTm90aWZpY2F0aW9uQ29uZmlnLlBheWxvYWRGb3JtYXRCA+BBAiKG",
+            "AQoJRXZlbnRUeXBlEhoKFkVWRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIeChpU",
+            "UkFOU0ZFUl9PUEVSQVRJT05fU1VDQ0VTUxABEh0KGVRSQU5TRkVSX09QRVJB",
+            "VElPTl9GQUlMRUQQAhIeChpUUkFOU0ZFUl9PUEVSQVRJT05fQUJPUlRFRBAD",
+            "IkMKDVBheWxvYWRGb3JtYXQSHgoaUEFZTE9BRF9GT1JNQVRfVU5TUEVDSUZJ",
+            "RUQQABIICgROT05FEAESCAoESlNPThACIosDCg1Mb2dnaW5nQ29uZmlnEkwK",
+            "C2xvZ19hY3Rpb25zGAEgAygOMjcuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52",
+            "MS5Mb2dnaW5nQ29uZmlnLkxvZ2dhYmxlQWN0aW9uElcKEWxvZ19hY3Rpb25f",
+            "c3RhdGVzGAIgAygOMjwuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5Mb2dn",
+            "aW5nQ29uZmlnLkxvZ2dhYmxlQWN0aW9uU3RhdGUSJwofZW5hYmxlX29ucHJl",
+            "bV9nY3NfdHJhbnNmZXJfbG9ncxgDIAEoCCJRCg5Mb2dnYWJsZUFjdGlvbhIf",
+            "ChtMT0dHQUJMRV9BQ1RJT05fVU5TUEVDSUZJRUQQABIICgRGSU5EEAESCgoG",
+            "REVMRVRFEAISCAoEQ09QWRADIlcKE0xvZ2dhYmxlQWN0aW9uU3RhdGUSJQoh",
+            "TE9HR0FCTEVfQUNUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASDQoJU1VDQ0VF",
+            "REVEEAESCgoGRkFJTEVEEAIixAUKEVRyYW5zZmVyT3BlcmF0aW9uEgwKBG5h",
+            "bWUYASABKAkSEgoKcHJvamVjdF9pZBgCIAEoCRI+Cg10cmFuc2Zlcl9zcGVj",
+            "GAMgASgLMicuZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5UcmFuc2ZlclNw",
+            "ZWMSSgoTbm90aWZpY2F0aW9uX2NvbmZpZxgKIAEoCzItLmdvb2dsZS5zdG9y",
+            "YWdldHJhbnNmZXIudjEuTm90aWZpY2F0aW9uQ29uZmlnEkAKDmxvZ2dpbmdf",
+            "Y29uZmlnGAwgASgLMiguZ29vZ2xlLnN0b3JhZ2V0cmFuc2Zlci52MS5Mb2dn",
+            "aW5nQ29uZmlnEi4KCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBJDCgZzdGF0dXMYBiABKA4yMy5nb29nbGUuc3RvcmFn",
+            "ZXRyYW5zZmVyLnYxLlRyYW5zZmVyT3BlcmF0aW9uLlN0YXR1cxI9Cghjb3Vu",
+            "dGVycxgHIAEoCzIrLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEuVHJhbnNm",
+            "ZXJDb3VudGVycxJBChBlcnJvcl9icmVha2Rvd25zGAggAygLMicuZ29vZ2xl",
+            "LnN0b3JhZ2V0cmFuc2Zlci52MS5FcnJvclN1bW1hcnkSGQoRdHJhbnNmZXJf",
+            "am9iX25hbWUYCSABKAkifwoGU3RhdHVzEhYKElNUQVRVU19VTlNQRUNJRklF",
+            "RBAAEg8KC0lOX1BST0dSRVNTEAESCgoGUEFVU0VEEAISCwoHU1VDQ0VTUxAD",
+            "EgoKBkZBSUxFRBAEEgsKB0FCT1JURUQQBRIKCgZRVUVVRUQQBhIOCgpTVVNQ",
+            "RU5ESU5HEAdC7AEKI2NvbS5nb29nbGUuc3RvcmFnZXRyYW5zZmVyLnYxLnBy",
+            "b3RvQg1UcmFuc2ZlclR5cGVzWk1jbG91ZC5nb29nbGUuY29tL2dvL3N0b3Jh",
+            "Z2V0cmFuc2Zlci9hcGl2MS9zdG9yYWdldHJhbnNmZXJwYjtzdG9yYWdldHJh",
+            "bnNmZXJwYqoCH0dvb2dsZS5DbG91ZC5TdG9yYWdlVHJhbnNmZXIuVjHKAh9H",
+            "b29nbGVcQ2xvdWRcU3RvcmFnZVRyYW5zZmVyXFYx6gIiR29vZ2xlOjpDbG91",
+            "ZDo6U3RvcmFnZVRyYW5zZmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -262,11 +270,12 @@ namespace Google.Cloud.StorageTransfer.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.AgentPool), global::Google.Cloud.StorageTransfer.V1.AgentPool.Parser, new[]{ "Name", "DisplayName", "State", "BandwidthLimit" }, null, new[]{ typeof(global::Google.Cloud.StorageTransfer.V1.AgentPool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.AgentPool.Types.BandwidthLimit), global::Google.Cloud.StorageTransfer.V1.AgentPool.Types.BandwidthLimit.Parser, new[]{ "LimitMbps" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.TransferOptions), global::Google.Cloud.StorageTransfer.V1.TransferOptions.Parser, new[]{ "OverwriteObjectsAlreadyExistingInSink", "DeleteObjectsUniqueInSink", "DeleteObjectsFromSourceAfterTransfer", "OverwriteWhen", "MetadataOptions" }, null, new[]{ typeof(global::Google.Cloud.StorageTransfer.V1.TransferOptions.Types.OverwriteWhen) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.TransferSpec), global::Google.Cloud.StorageTransfer.V1.TransferSpec.Parser, new[]{ "GcsDataSink", "PosixDataSink", "GcsDataSource", "AwsS3DataSource", "HttpDataSource", "PosixDataSource", "AzureBlobStorageDataSource", "AwsS3CompatibleDataSource", "HdfsDataSource", "GcsIntermediateDataLocation", "ObjectConditions", "TransferOptions", "TransferManifest", "SourceAgentPoolName", "SinkAgentPoolName" }, new[]{ "DataSink", "DataSource", "IntermediateDataLocation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.ReplicationSpec), global::Google.Cloud.StorageTransfer.V1.ReplicationSpec.Parser, new[]{ "GcsDataSource", "GcsDataSink", "ObjectConditions", "TransferOptions" }, new[]{ "DataSource", "DataSink" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions), global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Parser, new[]{ "Symlink", "Mode", "Gid", "Uid", "Acl", "StorageClass", "TemporaryHold", "KmsKey", "TimeCreated" }, null, new[]{ typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.Symlink), typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.Mode), typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.GID), typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.UID), typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.Acl), typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.StorageClass), typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.TemporaryHold), typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.KmsKey), typeof(global::Google.Cloud.StorageTransfer.V1.MetadataOptions.Types.TimeCreated) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.TransferManifest), global::Google.Cloud.StorageTransfer.V1.TransferManifest.Parser, new[]{ "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.Schedule), global::Google.Cloud.StorageTransfer.V1.Schedule.Parser, new[]{ "ScheduleStartDate", "ScheduleEndDate", "StartTimeOfDay", "EndTimeOfDay", "RepeatInterval" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.EventStream), global::Google.Cloud.StorageTransfer.V1.EventStream.Parser, new[]{ "Name", "EventStreamStartTime", "EventStreamExpirationTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.TransferJob), global::Google.Cloud.StorageTransfer.V1.TransferJob.Parser, new[]{ "Name", "Description", "ProjectId", "TransferSpec", "NotificationConfig", "LoggingConfig", "Schedule", "EventStream", "Status", "CreationTime", "LastModificationTime", "DeletionTime", "LatestOperationName" }, null, new[]{ typeof(global::Google.Cloud.StorageTransfer.V1.TransferJob.Types.Status) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.TransferJob), global::Google.Cloud.StorageTransfer.V1.TransferJob.Parser, new[]{ "Name", "Description", "ProjectId", "TransferSpec", "ReplicationSpec", "NotificationConfig", "LoggingConfig", "Schedule", "EventStream", "Status", "CreationTime", "LastModificationTime", "DeletionTime", "LatestOperationName" }, null, new[]{ typeof(global::Google.Cloud.StorageTransfer.V1.TransferJob.Types.Status) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.ErrorLogEntry), global::Google.Cloud.StorageTransfer.V1.ErrorLogEntry.Parser, new[]{ "Url", "ErrorDetails" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.ErrorSummary), global::Google.Cloud.StorageTransfer.V1.ErrorSummary.Parser, new[]{ "ErrorCode", "ErrorCount", "ErrorLogEntries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageTransfer.V1.TransferCounters), global::Google.Cloud.StorageTransfer.V1.TransferCounters.Parser, new[]{ "ObjectsFoundFromSource", "BytesFoundFromSource", "ObjectsFoundOnlyFromSink", "BytesFoundOnlyFromSink", "ObjectsFromSourceSkippedBySync", "BytesFromSourceSkippedBySync", "ObjectsCopiedToSink", "BytesCopiedToSink", "ObjectsDeletedFromSource", "BytesDeletedFromSource", "ObjectsDeletedFromSink", "BytesDeletedFromSink", "ObjectsFromSourceFailed", "BytesFromSourceFailed", "ObjectsFailedToDeleteFromSink", "BytesFailedToDeleteFromSink", "DirectoriesFoundFromSource", "DirectoriesFailedToListFromSource", "DirectoriesSuccessfullyListedFromSource", "IntermediateObjectsCleanedUp", "IntermediateObjectsFailedCleanedUp" }, null, null, null, null),
@@ -2704,43 +2713,43 @@ namespace Google.Cloud.StorageTransfer.V1 {
   }
 
   /// <summary>
-  /// An HttpData resource specifies a list of objects on the web to be transferred
-  /// over HTTP.  The information of the objects to be transferred is contained in
-  /// a file referenced by a URL. The first line in the file must be
-  /// `"TsvHttpData-1.0"`, which specifies the format of the file.  Subsequent
-  /// lines specify the information of the list of objects, one object per list
-  /// entry. Each entry has the following tab-delimited fields:
+  /// An HttpData resource specifies a list of objects on the web to be
+  ///  transferred over HTTP.  The information of the objects to be transferred is
+  ///  contained in a file referenced by a URL. The first line in the file must be
+  ///  `"TsvHttpData-1.0"`, which specifies the format of the file.  Subsequent
+  ///  lines specify the information of the list of objects, one object per list
+  ///  entry. Each entry has the following tab-delimited fields:
   ///
-  /// * **HTTP URL** — The location of the object.
+  ///  * **HTTP URL** — The location of the object.
   ///
-  /// * **Length** — The size of the object in bytes.
+  ///  * **Length** — The size of the object in bytes.
   ///
-  /// * **MD5** — The base64-encoded MD5 hash of the object.
+  ///  * **MD5** — The base64-encoded MD5 hash of the object.
   ///
-  /// For an example of a valid TSV file, see
-  /// [Transferring data from
-  /// URLs](https://cloud.google.com/storage-transfer/docs/create-url-list).
+  ///  For an example of a valid TSV file, see
+  ///  [Transferring data from
+  ///  URLs](https://cloud.google.com/storage-transfer/docs/create-url-list).
   ///
-  /// When transferring data based on a URL list, keep the following in mind:
+  ///  When transferring data based on a URL list, keep the following in mind:
   ///
   /// * When an object located at `http(s)://hostname:port/&lt;URL-path>` is
-  /// transferred to a data sink, the name of the object at the data sink is
+  ///  transferred to a data sink, the name of the object at the data sink is
   /// `&lt;hostname>/&lt;URL-path>`.
   ///
   /// * If the specified size of an object does not match the actual size of the
-  /// object fetched, the object is not transferred.
+  ///  object fetched, the object is not transferred.
   ///
   /// * If the specified MD5 does not match the MD5 computed from the transferred
-  /// bytes, the object transfer fails.
+  ///  bytes, the object transfer fails.
   ///
   /// * Ensure that each URL you specify is publicly accessible. For
-  /// example, in Cloud Storage you can
-  /// [share an object publicly]
-  /// (/storage/docs/cloud-console#_sharingdata) and get a link to it.
+  ///  example, in Cloud Storage you can
+  ///  [share an object publicly]
+  ///  (/storage/docs/cloud-console#_sharingdata) and get a link to it.
   ///
   /// * Storage Transfer Service obeys `robots.txt` rules and requires the source
-  /// HTTP server to support `Range` requests and to return a `Content-Length`
-  /// header in each response.
+  ///  HTTP server to support `Range` requests and to return a `Content-Length`
+  ///  header in each response.
   ///
   /// * [ObjectConditions][google.storagetransfer.v1.ObjectConditions] have no
   /// effect when filtering objects to transfer.
@@ -6157,6 +6166,434 @@ namespace Google.Cloud.StorageTransfer.V1 {
   }
 
   /// <summary>
+  /// Specifies the configuration for a cross-bucket replication job. Cross-bucket
+  /// replication copies new or updated objects from a source Cloud Storage bucket
+  /// to a destination Cloud Storage bucket. Existing objects in the source bucket
+  /// are not copied by a new cross-bucket replication job.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ReplicationSpec : pb::IMessage<ReplicationSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ReplicationSpec> _parser = new pb::MessageParser<ReplicationSpec>(() => new ReplicationSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ReplicationSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicationSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicationSpec(ReplicationSpec other) : this() {
+      objectConditions_ = other.objectConditions_ != null ? other.objectConditions_.Clone() : null;
+      transferOptions_ = other.transferOptions_ != null ? other.transferOptions_.Clone() : null;
+      switch (other.DataSourceCase) {
+        case DataSourceOneofCase.GcsDataSource:
+          GcsDataSource = other.GcsDataSource.Clone();
+          break;
+      }
+
+      switch (other.DataSinkCase) {
+        case DataSinkOneofCase.GcsDataSink:
+          GcsDataSink = other.GcsDataSink.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ReplicationSpec Clone() {
+      return new ReplicationSpec(this);
+    }
+
+    /// <summary>Field number for the "gcs_data_source" field.</summary>
+    public const int GcsDataSourceFieldNumber = 1;
+    /// <summary>
+    /// The Cloud Storage bucket from which to replicate objects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.StorageTransfer.V1.GcsData GcsDataSource {
+      get { return dataSourceCase_ == DataSourceOneofCase.GcsDataSource ? (global::Google.Cloud.StorageTransfer.V1.GcsData) dataSource_ : null; }
+      set {
+        dataSource_ = value;
+        dataSourceCase_ = value == null ? DataSourceOneofCase.None : DataSourceOneofCase.GcsDataSource;
+      }
+    }
+
+    /// <summary>Field number for the "gcs_data_sink" field.</summary>
+    public const int GcsDataSinkFieldNumber = 2;
+    /// <summary>
+    /// The Cloud Storage bucket to which to replicate objects.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.StorageTransfer.V1.GcsData GcsDataSink {
+      get { return dataSinkCase_ == DataSinkOneofCase.GcsDataSink ? (global::Google.Cloud.StorageTransfer.V1.GcsData) dataSink_ : null; }
+      set {
+        dataSink_ = value;
+        dataSinkCase_ = value == null ? DataSinkOneofCase.None : DataSinkOneofCase.GcsDataSink;
+      }
+    }
+
+    /// <summary>Field number for the "object_conditions" field.</summary>
+    public const int ObjectConditionsFieldNumber = 3;
+    private global::Google.Cloud.StorageTransfer.V1.ObjectConditions objectConditions_;
+    /// <summary>
+    /// Object conditions that determine which objects are transferred. For
+    /// replication jobs, only `include_prefixes` and `exclude_prefixes` are
+    /// supported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.StorageTransfer.V1.ObjectConditions ObjectConditions {
+      get { return objectConditions_; }
+      set {
+        objectConditions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "transfer_options" field.</summary>
+    public const int TransferOptionsFieldNumber = 4;
+    private global::Google.Cloud.StorageTransfer.V1.TransferOptions transferOptions_;
+    /// <summary>
+    /// Specifies the metadata options to be applied during replication.
+    /// Delete options are not supported. If a delete option is specified, the
+    /// request fails with an [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT]
+    /// error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.StorageTransfer.V1.TransferOptions TransferOptions {
+      get { return transferOptions_; }
+      set {
+        transferOptions_ = value;
+      }
+    }
+
+    private object dataSource_;
+    /// <summary>Enum of possible cases for the "data_source" oneof.</summary>
+    public enum DataSourceOneofCase {
+      None = 0,
+      GcsDataSource = 1,
+    }
+    private DataSourceOneofCase dataSourceCase_ = DataSourceOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataSourceOneofCase DataSourceCase {
+      get { return dataSourceCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDataSource() {
+      dataSourceCase_ = DataSourceOneofCase.None;
+      dataSource_ = null;
+    }
+
+    private object dataSink_;
+    /// <summary>Enum of possible cases for the "data_sink" oneof.</summary>
+    public enum DataSinkOneofCase {
+      None = 0,
+      GcsDataSink = 2,
+    }
+    private DataSinkOneofCase dataSinkCase_ = DataSinkOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DataSinkOneofCase DataSinkCase {
+      get { return dataSinkCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDataSink() {
+      dataSinkCase_ = DataSinkOneofCase.None;
+      dataSink_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ReplicationSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ReplicationSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(GcsDataSource, other.GcsDataSource)) return false;
+      if (!object.Equals(GcsDataSink, other.GcsDataSink)) return false;
+      if (!object.Equals(ObjectConditions, other.ObjectConditions)) return false;
+      if (!object.Equals(TransferOptions, other.TransferOptions)) return false;
+      if (DataSourceCase != other.DataSourceCase) return false;
+      if (DataSinkCase != other.DataSinkCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (dataSourceCase_ == DataSourceOneofCase.GcsDataSource) hash ^= GcsDataSource.GetHashCode();
+      if (dataSinkCase_ == DataSinkOneofCase.GcsDataSink) hash ^= GcsDataSink.GetHashCode();
+      if (objectConditions_ != null) hash ^= ObjectConditions.GetHashCode();
+      if (transferOptions_ != null) hash ^= TransferOptions.GetHashCode();
+      hash ^= (int) dataSourceCase_;
+      hash ^= (int) dataSinkCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (dataSourceCase_ == DataSourceOneofCase.GcsDataSource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDataSource);
+      }
+      if (dataSinkCase_ == DataSinkOneofCase.GcsDataSink) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GcsDataSink);
+      }
+      if (objectConditions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ObjectConditions);
+      }
+      if (transferOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TransferOptions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (dataSourceCase_ == DataSourceOneofCase.GcsDataSource) {
+        output.WriteRawTag(10);
+        output.WriteMessage(GcsDataSource);
+      }
+      if (dataSinkCase_ == DataSinkOneofCase.GcsDataSink) {
+        output.WriteRawTag(18);
+        output.WriteMessage(GcsDataSink);
+      }
+      if (objectConditions_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ObjectConditions);
+      }
+      if (transferOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TransferOptions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (dataSourceCase_ == DataSourceOneofCase.GcsDataSource) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDataSource);
+      }
+      if (dataSinkCase_ == DataSinkOneofCase.GcsDataSink) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDataSink);
+      }
+      if (objectConditions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ObjectConditions);
+      }
+      if (transferOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransferOptions);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ReplicationSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.objectConditions_ != null) {
+        if (objectConditions_ == null) {
+          ObjectConditions = new global::Google.Cloud.StorageTransfer.V1.ObjectConditions();
+        }
+        ObjectConditions.MergeFrom(other.ObjectConditions);
+      }
+      if (other.transferOptions_ != null) {
+        if (transferOptions_ == null) {
+          TransferOptions = new global::Google.Cloud.StorageTransfer.V1.TransferOptions();
+        }
+        TransferOptions.MergeFrom(other.TransferOptions);
+      }
+      switch (other.DataSourceCase) {
+        case DataSourceOneofCase.GcsDataSource:
+          if (GcsDataSource == null) {
+            GcsDataSource = new global::Google.Cloud.StorageTransfer.V1.GcsData();
+          }
+          GcsDataSource.MergeFrom(other.GcsDataSource);
+          break;
+      }
+
+      switch (other.DataSinkCase) {
+        case DataSinkOneofCase.GcsDataSink:
+          if (GcsDataSink == null) {
+            GcsDataSink = new global::Google.Cloud.StorageTransfer.V1.GcsData();
+          }
+          GcsDataSink.MergeFrom(other.GcsDataSink);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.StorageTransfer.V1.GcsData subBuilder = new global::Google.Cloud.StorageTransfer.V1.GcsData();
+            if (dataSourceCase_ == DataSourceOneofCase.GcsDataSource) {
+              subBuilder.MergeFrom(GcsDataSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDataSource = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.StorageTransfer.V1.GcsData subBuilder = new global::Google.Cloud.StorageTransfer.V1.GcsData();
+            if (dataSinkCase_ == DataSinkOneofCase.GcsDataSink) {
+              subBuilder.MergeFrom(GcsDataSink);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDataSink = subBuilder;
+            break;
+          }
+          case 26: {
+            if (objectConditions_ == null) {
+              ObjectConditions = new global::Google.Cloud.StorageTransfer.V1.ObjectConditions();
+            }
+            input.ReadMessage(ObjectConditions);
+            break;
+          }
+          case 34: {
+            if (transferOptions_ == null) {
+              TransferOptions = new global::Google.Cloud.StorageTransfer.V1.TransferOptions();
+            }
+            input.ReadMessage(TransferOptions);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.StorageTransfer.V1.GcsData subBuilder = new global::Google.Cloud.StorageTransfer.V1.GcsData();
+            if (dataSourceCase_ == DataSourceOneofCase.GcsDataSource) {
+              subBuilder.MergeFrom(GcsDataSource);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDataSource = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.StorageTransfer.V1.GcsData subBuilder = new global::Google.Cloud.StorageTransfer.V1.GcsData();
+            if (dataSinkCase_ == DataSinkOneofCase.GcsDataSink) {
+              subBuilder.MergeFrom(GcsDataSink);
+            }
+            input.ReadMessage(subBuilder);
+            GcsDataSink = subBuilder;
+            break;
+          }
+          case 26: {
+            if (objectConditions_ == null) {
+              ObjectConditions = new global::Google.Cloud.StorageTransfer.V1.ObjectConditions();
+            }
+            input.ReadMessage(ObjectConditions);
+            break;
+          }
+          case 34: {
+            if (transferOptions_ == null) {
+              TransferOptions = new global::Google.Cloud.StorageTransfer.V1.TransferOptions();
+            }
+            input.ReadMessage(TransferOptions);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Specifies the metadata options for running a transfer.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -6174,7 +6611,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6911,7 +7348,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7110,7 +7547,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7567,7 +8004,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7870,7 +8307,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7894,6 +8331,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       description_ = other.description_;
       projectId_ = other.projectId_;
       transferSpec_ = other.transferSpec_ != null ? other.transferSpec_.Clone() : null;
+      replicationSpec_ = other.replicationSpec_ != null ? other.replicationSpec_.Clone() : null;
       notificationConfig_ = other.notificationConfig_ != null ? other.notificationConfig_.Clone() : null;
       loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
       schedule_ = other.schedule_ != null ? other.schedule_.Clone() : null;
@@ -7994,6 +8432,21 @@ namespace Google.Cloud.StorageTransfer.V1 {
       get { return transferSpec_; }
       set {
         transferSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "replication_spec" field.</summary>
+    public const int ReplicationSpecFieldNumber = 17;
+    private global::Google.Cloud.StorageTransfer.V1.ReplicationSpec replicationSpec_;
+    /// <summary>
+    /// Replication specification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.StorageTransfer.V1.ReplicationSpec ReplicationSpec {
+      get { return replicationSpec_; }
+      set {
+        replicationSpec_ = value;
       }
     }
 
@@ -8164,6 +8617,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       if (Description != other.Description) return false;
       if (ProjectId != other.ProjectId) return false;
       if (!object.Equals(TransferSpec, other.TransferSpec)) return false;
+      if (!object.Equals(ReplicationSpec, other.ReplicationSpec)) return false;
       if (!object.Equals(NotificationConfig, other.NotificationConfig)) return false;
       if (!object.Equals(LoggingConfig, other.LoggingConfig)) return false;
       if (!object.Equals(Schedule, other.Schedule)) return false;
@@ -8184,6 +8638,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (transferSpec_ != null) hash ^= TransferSpec.GetHashCode();
+      if (replicationSpec_ != null) hash ^= ReplicationSpec.GetHashCode();
       if (notificationConfig_ != null) hash ^= NotificationConfig.GetHashCode();
       if (loggingConfig_ != null) hash ^= LoggingConfig.GetHashCode();
       if (schedule_ != null) hash ^= Schedule.GetHashCode();
@@ -8263,6 +8718,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(EventStream);
       }
+      if (replicationSpec_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(ReplicationSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8325,6 +8784,10 @@ namespace Google.Cloud.StorageTransfer.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(EventStream);
       }
+      if (replicationSpec_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(ReplicationSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8346,6 +8809,9 @@ namespace Google.Cloud.StorageTransfer.V1 {
       }
       if (transferSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TransferSpec);
+      }
+      if (replicationSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReplicationSpec);
       }
       if (notificationConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(NotificationConfig);
@@ -8400,6 +8866,12 @@ namespace Google.Cloud.StorageTransfer.V1 {
           TransferSpec = new global::Google.Cloud.StorageTransfer.V1.TransferSpec();
         }
         TransferSpec.MergeFrom(other.TransferSpec);
+      }
+      if (other.replicationSpec_ != null) {
+        if (replicationSpec_ == null) {
+          ReplicationSpec = new global::Google.Cloud.StorageTransfer.V1.ReplicationSpec();
+        }
+        ReplicationSpec.MergeFrom(other.ReplicationSpec);
       }
       if (other.notificationConfig_ != null) {
         if (notificationConfig_ == null) {
@@ -8540,6 +9012,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
             input.ReadMessage(EventStream);
             break;
           }
+          case 138: {
+            if (replicationSpec_ == null) {
+              ReplicationSpec = new global::Google.Cloud.StorageTransfer.V1.ReplicationSpec();
+            }
+            input.ReadMessage(ReplicationSpec);
+            break;
+          }
         }
       }
     #endif
@@ -8631,6 +9110,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
             input.ReadMessage(EventStream);
             break;
           }
+          case 138: {
+            if (replicationSpec_ == null) {
+              ReplicationSpec = new global::Google.Cloud.StorageTransfer.V1.ReplicationSpec();
+            }
+            input.ReadMessage(ReplicationSpec);
+            break;
+          }
         }
       }
     }
@@ -8689,7 +9175,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8916,7 +9402,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9184,7 +9670,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10221,7 +10707,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10555,7 +11041,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10869,7 +11355,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

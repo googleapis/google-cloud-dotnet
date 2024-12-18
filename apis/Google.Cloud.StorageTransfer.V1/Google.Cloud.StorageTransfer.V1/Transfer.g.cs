@@ -118,12 +118,12 @@ namespace Google.Cloud.StorageTransfer.V1 {
             "Zi5FbXB0eSIx2kEEbmFtZYLT5JMCJCoiL3YxL3tuYW1lPXByb2plY3RzLyov",
             "YWdlbnRQb29scy8qfRpSykEec3RvcmFnZXRyYW5zZmVyLmdvb2dsZWFwaXMu",
             "Y29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybULvAQojY29tLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEucHJv",
+            "bGF0Zm9ybULsAQojY29tLmdvb2dsZS5zdG9yYWdldHJhbnNmZXIudjEucHJv",
             "dG9CDVRyYW5zZmVyUHJvdG9aTWNsb3VkLmdvb2dsZS5jb20vZ28vc3RvcmFn",
             "ZXRyYW5zZmVyL2FwaXYxL3N0b3JhZ2V0cmFuc2ZlcnBiO3N0b3JhZ2V0cmFu",
-            "c2ZlcnBi+AEBqgIfR29vZ2xlLkNsb3VkLlN0b3JhZ2VUcmFuc2Zlci5WMcoC",
-            "H0dvb2dsZVxDbG91ZFxTdG9yYWdlVHJhbnNmZXJcVjHqAiJHb29nbGU6OkNs",
-            "b3VkOjpTdG9yYWdlVHJhbnNmZXI6OlYxYgZwcm90bzM="));
+            "c2ZlcnBiqgIfR29vZ2xlLkNsb3VkLlN0b3JhZ2VUcmFuc2Zlci5WMcoCH0dv",
+            "b2dsZVxDbG91ZFxTdG9yYWdlVHJhbnNmZXJcVjHqAiJHb29nbGU6OkNsb3Vk",
+            "OjpTdG9yYWdlVHJhbnNmZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1437,17 +1437,32 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private string filter_ = "";
     /// <summary>
     /// Required. A list of query parameters specified as JSON text in the form of:
-    /// `{"projectId":"my_project_id",
-    ///  "jobNames":["jobid1","jobid2",...],
-    ///  "jobStatuses":["status1","status2",...]}`
     ///
-    /// Since `jobNames` and `jobStatuses` support multiple values, their values
-    /// must be specified with array notation. `projectId` is required.
-    /// `jobNames` and `jobStatuses` are optional.  The valid values for
-    /// `jobStatuses` are case-insensitive:
-    /// [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED],
-    /// [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED], and
-    /// [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED].
+    /// ```
+    /// {
+    ///   "projectId":"my_project_id",
+    ///   "jobNames":["jobid1","jobid2",...],
+    ///   "jobStatuses":["status1","status2",...],
+    ///   "dataBackend":"QUERY_REPLICATION_CONFIGS",
+    ///   "sourceBucket":"source-bucket-name",
+    ///   "sinkBucket":"sink-bucket-name",
+    /// }
+    /// ```
+    ///
+    /// The JSON formatting in the example is for display only; provide the
+    /// query parameters without spaces or line breaks.
+    ///
+    /// * `projectId` is required.
+    /// * Since `jobNames` and `jobStatuses` support multiple values, their values
+    ///   must be specified with array notation. `jobNames` and `jobStatuses` are
+    ///   optional. Valid values are case-insensitive:
+    ///     * [ENABLED][google.storagetransfer.v1.TransferJob.Status.ENABLED]
+    ///     * [DISABLED][google.storagetransfer.v1.TransferJob.Status.DISABLED]
+    ///     * [DELETED][google.storagetransfer.v1.TransferJob.Status.DELETED]
+    /// * Specify `"dataBackend":"QUERY_REPLICATION_CONFIGS"` to return a list of
+    ///   cross-bucket replication jobs.
+    /// * Limit the results to jobs from a particular bucket with `sourceBucket`
+    ///   and/or to a particular bucket with `sinkBucket`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
