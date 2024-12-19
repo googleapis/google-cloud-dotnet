@@ -85,11 +85,14 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             "ZXh0RW51bUID4EEDEhgKC2Rlc2NyaXB0aW9uGAYgASgJQgPgQQMSEwoGZGV0",
             "YWlsGAcgASgJQgPgQQMSGgoNZG9jdW1lbnRhdGlvbhgIIAEoCUID4EEDIkcK",
             "CFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASEAoMTk9UX0lN",
-            "UEFDVEVEEAESDwoLRElTQVBQUk9WRUQQAkKXAQorY29tLmdvb2dsZS5zaG9w",
+            "UEFDVEVEEAESDwoLRElTQVBQUk9WRUQQAkKZAgorY29tLmdvb2dsZS5zaG9w",
             "cGluZy5tZXJjaGFudC5yZXZpZXdzLnYxYmV0YUIZUHJvZHVjdFJldmlld3ND",
             "b21tb25Qcm90b1ABWktjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21l",
-            "cmNoYW50L3Jldmlld3MvYXBpdjFiZXRhL3Jldmlld3NwYjtyZXZpZXdzcGJi",
-            "BnByb3RvMw=="));
+            "cmNoYW50L3Jldmlld3MvYXBpdjFiZXRhL3Jldmlld3NwYjtyZXZpZXdzcGKq",
+            "AidHb29nbGUuU2hvcHBpbmcuTWVyY2hhbnQuUmV2aWV3cy5WMUJldGHKAidH",
+            "b29nbGVcU2hvcHBpbmdcTWVyY2hhbnRcUmV2aWV3c1xWMWJldGHqAitHb29n",
+            "bGU6OlNob3BwaW5nOjpNZXJjaGFudDo6UmV2aWV3czo6VjFiZXRhYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
