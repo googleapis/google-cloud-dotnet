@@ -3627,7 +3627,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for requesting list of events.
+  /// Requests list of events.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEventsRequest : pb::IMessage<ListEventsRequest>
@@ -4012,7 +4012,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for response to listing events.
+  /// Response to request for listing events.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListEventsResponse : pb::IMessage<ListEventsResponse>
@@ -4270,7 +4270,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for getting an event.
+  /// Gets information about a specific event.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetEventRequest : pb::IMessage<GetEventRequest>
@@ -4472,7 +4472,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for requesting list of organization events.
+  /// Requests list of events that affect an organization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrganizationEventsRequest : pb::IMessage<ListOrganizationEventsRequest>
@@ -4862,7 +4862,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for response to listing organization events.
+  /// Response to request for listing organization events.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrganizationEventsResponse : pb::IMessage<ListOrganizationEventsResponse>
@@ -5120,7 +5120,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for getting an organization event.
+  /// Gets information about a specific event affecting an organization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOrganizationEventRequest : pb::IMessage<GetOrganizationEventRequest>
@@ -5324,7 +5324,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for requesting list of organization impacts.
+  /// Requests list of projects under an organization affected by an event.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrganizationImpactsRequest : pb::IMessage<ListOrganizationImpactsRequest>
@@ -5674,7 +5674,8 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for response to listing organization impacts.
+  /// Response to request for listing projects under an organization affected by an
+  /// event.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListOrganizationImpactsResponse : pb::IMessage<ListOrganizationImpactsResponse>
@@ -5934,7 +5935,7 @@ namespace Google.Cloud.ServiceHealth.V1 {
   }
 
   /// <summary>
-  /// Message for getting an organization impact.
+  /// Gets information about an event that affects a project under an organization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetOrganizationImpactRequest : pb::IMessage<GetOrganizationImpactRequest>
