@@ -78,12 +78,15 @@ namespace Google.Shopping.Merchant.Reviews.V1Beta {
             "cm90b2J1Zi5FbXB0eSJC2kEEbmFtZYLT5JMCNSozL3Jldmlld3MvdjFiZXRh",
             "L3tuYW1lPWFjY291bnRzLyovbWVyY2hhbnRSZXZpZXdzLyp9GkfKQRptZXJj",
             "aGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvY29udGVudELNAQorY29tLmdvb2dsZS5zaG9wcGluZy5t",
+            "aXMuY29tL2F1dGgvY29udGVudELPAgorY29tLmdvb2dsZS5zaG9wcGluZy5t",
             "ZXJjaGFudC5yZXZpZXdzLnYxYmV0YUIUTWVyY2hhbnRSZXZpZXdzUHJvdG9Q",
             "AVpLY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9yZXZp",
-            "ZXdzL2FwaXYxYmV0YS9yZXZpZXdzcGI7cmV2aWV3c3Bi6kE4CiJtZXJjaGFu",
-            "dGFwaS5nb29nbGVhcGlzLmNvbS9BY2NvdW50EhJhY2NvdW50cy97YWNjb3Vu",
-            "dH1iBnByb3RvMw=="));
+            "ZXdzL2FwaXYxYmV0YS9yZXZpZXdzcGI7cmV2aWV3c3BiqgInR29vZ2xlLlNo",
+            "b3BwaW5nLk1lcmNoYW50LlJldmlld3MuVjFCZXRhygInR29vZ2xlXFNob3Bw",
+            "aW5nXE1lcmNoYW50XFJldmlld3NcVjFiZXRh6gIrR29vZ2xlOjpTaG9wcGlu",
+            "Zzo6TWVyY2hhbnQ6OlJldmlld3M6OlYxYmV0YepBOAoibWVyY2hhbnRhcGku",
+            "Z29vZ2xlYXBpcy5jb20vQWNjb3VudBISYWNjb3VudHMve2FjY291bnR9YgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Shopping.Merchant.Reviews.V1Beta.MerchantreviewsCommonReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
