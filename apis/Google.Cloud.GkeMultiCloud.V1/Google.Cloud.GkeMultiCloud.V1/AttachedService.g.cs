@@ -1571,6 +1571,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     ///  *   `proxy_config.kubernetes_secret.name`.
     ///  *   `proxy_config.kubernetes_secret.namespace`.
     ///  *   `security_posture_config.vulnerability_mode`
+    ///  *   `monitoring_config.cloud_monitoring_config.enabled`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
