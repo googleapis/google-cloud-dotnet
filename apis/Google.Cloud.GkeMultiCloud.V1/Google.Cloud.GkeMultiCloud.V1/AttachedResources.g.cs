@@ -29,7 +29,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
             "c291cmNlLnByb3RvGjRnb29nbGUvY2xvdWQvZ2tlbXVsdGljbG91ZC92MS9j",
             "b21tb25fcmVzb3VyY2VzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIs4MCg9BdHRhY2hlZENsdXN0ZXISDAoEbmFtZRgBIAEoCRIY",
+            "YW1wLnByb3RvIssNCg9BdHRhY2hlZENsdXN0ZXISDAoEbmFtZRgBIAEoCRIY",
             "CgtkZXNjcmlwdGlvbhgCIAEoCUID4EEBEksKC29pZGNfY29uZmlnGAMgASgL",
             "MjEuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXR0YWNoZWRPaWRj",
             "Q29uZmlnQgPgQQISHQoQcGxhdGZvcm1fdmVyc2lvbhgEIAEoCUID4EECEhkK",
@@ -58,41 +58,44 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             "b24YGSABKAsyMi5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5CaW5h",
             "cnlBdXRob3JpemF0aW9uQgPgQQESWgoXc2VjdXJpdHlfcG9zdHVyZV9jb25m",
             "aWcYGiABKAsyNC5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5TZWN1",
-            "cml0eVBvc3R1cmVDb25maWdCA+BBARoyChBBbm5vdGF0aW9uc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEidQoFU3RhdGUSFQoRU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARILCgdSVU5OSU5H",
-            "EAISDwoLUkVDT05DSUxJTkcQAxIMCghTVE9QUElORxAEEgkKBUVSUk9SEAUS",
-            "DAoIREVHUkFERUQQBjp+6kF7Cixna2VtdWx0aWNsb3VkLmdvb2dsZWFwaXMu",
-            "Y29tL0F0dGFjaGVkQ2x1c3RlchJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
-            "aW9ucy97bG9jYXRpb259L2F0dGFjaGVkQ2x1c3RlcnMve2F0dGFjaGVkX2Ns",
-            "dXN0ZXJ9Ir0BCh1BdHRhY2hlZENsdXN0ZXJzQXV0aG9yaXphdGlvbhJMCgth",
-            "ZG1pbl91c2VycxgBIAMoCzIyLmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3Vk",
-            "LnYxLkF0dGFjaGVkQ2x1c3RlclVzZXJCA+BBARJOCgxhZG1pbl9ncm91cHMY",
-            "AiADKAsyMy5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5BdHRhY2hl",
-            "ZENsdXN0ZXJHcm91cEID4EEBIiwKE0F0dGFjaGVkQ2x1c3RlclVzZXISFQoI",
-            "dXNlcm5hbWUYASABKAlCA+BBAiIqChRBdHRhY2hlZENsdXN0ZXJHcm91cBIS",
-            "CgVncm91cBgBIAEoCUID4EECIjsKEkF0dGFjaGVkT2lkY0NvbmZpZxISCgpp",
-            "c3N1ZXJfdXJsGAEgASgJEhEKBGp3a3MYAiABKAxCA+BBASLuAQoUQXR0YWNo",
-            "ZWRTZXJ2ZXJDb25maWcSDAoEbmFtZRgBIAEoCRJSCg52YWxpZF92ZXJzaW9u",
-            "cxgCIAMoCzI6Lmdvb2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF0dGFj",
-            "aGVkUGxhdGZvcm1WZXJzaW9uSW5mbzp06kFxCjFna2VtdWx0aWNsb3VkLmdv",
-            "b2dsZWFwaXMuY29tL0F0dGFjaGVkU2VydmVyQ29uZmlnEjxwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXR0YWNoZWRTZXJ2ZXJD",
-            "b25maWciLgobQXR0YWNoZWRQbGF0Zm9ybVZlcnNpb25JbmZvEg8KB3ZlcnNp",
-            "b24YASABKAkiJwoUQXR0YWNoZWRDbHVzdGVyRXJyb3ISDwoHbWVzc2FnZRgB",
-            "IAEoCSJhChNBdHRhY2hlZFByb3h5Q29uZmlnEkoKEWt1YmVybmV0ZXNfc2Vj",
-            "cmV0GAEgASgLMi8uZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuS3Vi",
-            "ZXJuZXRlc1NlY3JldCIzChBLdWJlcm5ldGVzU2VjcmV0EgwKBG5hbWUYASAB",
-            "KAkSEQoJbmFtZXNwYWNlGAIgASgJQukBCiFjb20uZ29vZ2xlLmNsb3VkLmdr",
-            "ZW11bHRpY2xvdWQudjFCFkF0dGFjaGVkUmVzb3VyY2VzUHJvdG9QAVpHY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9na2VtdWx0aWNsb3VkL2FwaXYxL2drZW11bHRp",
-            "Y2xvdWRwYjtna2VtdWx0aWNsb3VkcGKqAh1Hb29nbGUuQ2xvdWQuR2tlTXVs",
-            "dGlDbG91ZC5WMcoCHUdvb2dsZVxDbG91ZFxHa2VNdWx0aUNsb3VkXFYx6gIg",
-            "R29vZ2xlOjpDbG91ZDo6R2tlTXVsdGlDbG91ZDo6VjFiBnByb3RvMw=="));
+            "cml0eVBvc3R1cmVDb25maWdCA+BBARJOCgR0YWdzGBsgAygLMjguZ29vZ2xl",
+            "LmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXR0YWNoZWRDbHVzdGVyLlRhZ3NF",
+            "bnRyeUIG4EEB4EEEGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ARorCglUYWdzRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASJ1CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEhAKDFBST1ZJU0lPTklORxABEgsKB1JVTk5JTkcQAhIPCgtSRUNP",
+            "TkNJTElORxADEgwKCFNUT1BQSU5HEAQSCQoFRVJST1IQBRIMCghERUdSQURF",
+            "RBAGOn7qQXsKLGdrZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5jb20vQXR0YWNo",
+            "ZWRDbHVzdGVyEktwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vYXR0YWNoZWRDbHVzdGVycy97YXR0YWNoZWRfY2x1c3Rlcn0ivQEK",
+            "HUF0dGFjaGVkQ2x1c3RlcnNBdXRob3JpemF0aW9uEkwKC2FkbWluX3VzZXJz",
+            "GAEgAygLMjIuZ29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXR0YWNo",
+            "ZWRDbHVzdGVyVXNlckID4EEBEk4KDGFkbWluX2dyb3VwcxgCIAMoCzIzLmdv",
+            "b2dsZS5jbG91ZC5na2VtdWx0aWNsb3VkLnYxLkF0dGFjaGVkQ2x1c3Rlckdy",
+            "b3VwQgPgQQEiLAoTQXR0YWNoZWRDbHVzdGVyVXNlchIVCgh1c2VybmFtZRgB",
+            "IAEoCUID4EECIioKFEF0dGFjaGVkQ2x1c3Rlckdyb3VwEhIKBWdyb3VwGAEg",
+            "ASgJQgPgQQIiOwoSQXR0YWNoZWRPaWRjQ29uZmlnEhIKCmlzc3Vlcl91cmwY",
+            "ASABKAkSEQoEandrcxgCIAEoDEID4EEBIu4BChRBdHRhY2hlZFNlcnZlckNv",
+            "bmZpZxIMCgRuYW1lGAEgASgJElIKDnZhbGlkX3ZlcnNpb25zGAIgAygLMjou",
+            "Z29vZ2xlLmNsb3VkLmdrZW11bHRpY2xvdWQudjEuQXR0YWNoZWRQbGF0Zm9y",
+            "bVZlcnNpb25JbmZvOnTqQXEKMWdrZW11bHRpY2xvdWQuZ29vZ2xlYXBpcy5j",
+            "b20vQXR0YWNoZWRTZXJ2ZXJDb25maWcSPHByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9hdHRhY2hlZFNlcnZlckNvbmZpZyIuChtB",
+            "dHRhY2hlZFBsYXRmb3JtVmVyc2lvbkluZm8SDwoHdmVyc2lvbhgBIAEoCSIn",
+            "ChRBdHRhY2hlZENsdXN0ZXJFcnJvchIPCgdtZXNzYWdlGAEgASgJImEKE0F0",
+            "dGFjaGVkUHJveHlDb25maWcSSgoRa3ViZXJuZXRlc19zZWNyZXQYASABKAsy",
+            "Ly5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91ZC52MS5LdWJlcm5ldGVzU2Vj",
+            "cmV0IjMKEEt1YmVybmV0ZXNTZWNyZXQSDAoEbmFtZRgBIAEoCRIRCgluYW1l",
+            "c3BhY2UYAiABKAlC6QEKIWNvbS5nb29nbGUuY2xvdWQuZ2tlbXVsdGljbG91",
+            "ZC52MUIWQXR0YWNoZWRSZXNvdXJjZXNQcm90b1ABWkdjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2drZW11bHRpY2xvdWQvYXBpdjEvZ2tlbXVsdGljbG91ZHBiO2dr",
+            "ZW11bHRpY2xvdWRwYqoCHUdvb2dsZS5DbG91ZC5Ha2VNdWx0aUNsb3VkLlYx",
+            "ygIdR29vZ2xlXENsb3VkXEdrZU11bHRpQ2xvdWRcVjHqAiBHb29nbGU6OkNs",
+            "b3VkOjpHa2VNdWx0aUNsb3VkOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GkeMultiCloud.V1.CommonResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster), global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster.Parser, new[]{ "Name", "Description", "OidcConfig", "PlatformVersion", "Distribution", "ClusterRegion", "Fleet", "State", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "KubernetesVersion", "Annotations", "WorkloadIdentityConfig", "LoggingConfig", "Errors", "Authorization", "MonitoringConfig", "ProxyConfig", "BinaryAuthorization", "SecurityPostureConfig" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster), global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster.Parser, new[]{ "Name", "Description", "OidcConfig", "PlatformVersion", "Distribution", "ClusterRegion", "Fleet", "State", "Uid", "Reconciling", "CreateTime", "UpdateTime", "Etag", "KubernetesVersion", "Annotations", "WorkloadIdentityConfig", "LoggingConfig", "Errors", "Authorization", "MonitoringConfig", "ProxyConfig", "BinaryAuthorization", "SecurityPostureConfig", "Tags" }, null, new[]{ typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedCluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedClustersAuthorization), global::Google.Cloud.GkeMultiCloud.V1.AttachedClustersAuthorization.Parser, new[]{ "AdminUsers", "AdminGroups" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedClusterUser), global::Google.Cloud.GkeMultiCloud.V1.AttachedClusterUser.Parser, new[]{ "Username" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeMultiCloud.V1.AttachedClusterGroup), global::Google.Cloud.GkeMultiCloud.V1.AttachedClusterGroup.Parser, new[]{ "Group" }, null, null, null, null),
@@ -169,6 +172,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       proxyConfig_ = other.proxyConfig_ != null ? other.proxyConfig_.Clone() : null;
       binaryAuthorization_ = other.binaryAuthorization_ != null ? other.binaryAuthorization_.Clone() : null;
       securityPostureConfig_ = other.securityPostureConfig_ != null ? other.securityPostureConfig_.Clone() : null;
+      tags_ = other.tags_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -549,6 +553,31 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       }
     }
 
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 27;
+    private static readonly pbc::MapField<string, string>.Codec _map_tags_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 218);
+    private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Input only. Tag keys/values directly bound to this resource.
+    ///
+    /// Tag key must be specified in the format &lt;tag namespace>/&lt;tag key name>
+    /// where the tag namespace is the ID of the organization or name of the
+    /// project that the tag key is defined in.
+    /// The short name of a tag key or value can have a maximum length of 256
+    /// characters. The permitted character set for the short name includes UTF-8
+    /// encoded Unicode characters except single quotes ('), double quotes ("),
+    /// backslashes (\), and forward slashes (/).
+    ///
+    /// See [Tags](http://cloud/resource-manager/docs/tags/tags-overview)
+    /// for more details on Google Cloud Platform tags.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Tags {
+      get { return tags_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -587,6 +616,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (!object.Equals(ProxyConfig, other.ProxyConfig)) return false;
       if (!object.Equals(BinaryAuthorization, other.BinaryAuthorization)) return false;
       if (!object.Equals(SecurityPostureConfig, other.SecurityPostureConfig)) return false;
+      if (!Tags.Equals(other.Tags)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -617,6 +647,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (proxyConfig_ != null) hash ^= ProxyConfig.GetHashCode();
       if (binaryAuthorization_ != null) hash ^= BinaryAuthorization.GetHashCode();
       if (securityPostureConfig_ != null) hash ^= SecurityPostureConfig.GetHashCode();
+      hash ^= Tags.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -721,6 +752,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(SecurityPostureConfig);
       }
+      tags_.WriteTo(output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -817,6 +849,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(SecurityPostureConfig);
       }
+      tags_.WriteTo(ref output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -892,6 +925,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
       if (securityPostureConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SecurityPostureConfig);
       }
+      size += tags_.CalculateSize(_map_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1002,6 +1036,7 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
         }
         SecurityPostureConfig.MergeFrom(other.SecurityPostureConfig);
       }
+      tags_.MergeFrom(other.tags_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1142,6 +1177,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
             input.ReadMessage(SecurityPostureConfig);
             break;
           }
+          case 218: {
+            tags_.AddEntriesFrom(input, _map_tags_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1280,6 +1319,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
               SecurityPostureConfig = new global::Google.Cloud.GkeMultiCloud.V1.SecurityPostureConfig();
             }
             input.ReadMessage(SecurityPostureConfig);
+            break;
+          }
+          case 218: {
+            tags_.AddEntriesFrom(ref input, _map_tags_codec);
             break;
           }
         }
@@ -2876,6 +2919,10 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// The Kubernetes Secret resource that contains the HTTP(S) proxy
     /// configuration. The secret must be a JSON encoded proxy configuration
     /// as described in
+    /// https://cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/eks/how-to/use-a-proxy#configure-proxy-support
+    /// for EKS clusters and
+    /// https://cloud.google.com/kubernetes-engine/multi-cloud/docs/attached/aks/how-to/use-a-proxy#configure-proxy-support
+    /// for AKS clusters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
