@@ -344,7 +344,7 @@ namespace Google.Shopping.Css.V1 {
     public const int LowPriceFieldNumber = 3;
     private global::Google.Shopping.Type.Price lowPrice_;
     /// <summary>
-    /// Low Price of the aggregate offer.
+    /// Low Price of the CSS Product.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -359,7 +359,7 @@ namespace Google.Shopping.Css.V1 {
     public const int HighPriceFieldNumber = 4;
     private global::Google.Shopping.Type.Price highPrice_;
     /// <summary>
-    /// High Price of the aggregate offer.
+    /// High Price of the CSS Product.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -376,7 +376,7 @@ namespace Google.Shopping.Css.V1 {
 
     private long numberOfOffers_;
     /// <summary>
-    /// The number of aggregate offers.
+    /// The number of CSS Products.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -433,7 +433,7 @@ namespace Google.Shopping.Css.V1 {
     public const int HeadlineOfferPriceFieldNumber = 7;
     private global::Google.Shopping.Type.Price headlineOfferPrice_;
     /// <summary>
-    /// Headline Price of the aggregate offer.
+    /// Headline Price of the CSS Product.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -506,7 +506,7 @@ namespace Google.Shopping.Css.V1 {
     public const int HeadlineOfferShippingPriceFieldNumber = 41;
     private global::Google.Shopping.Type.Price headlineOfferShippingPrice_;
     /// <summary>
-    /// Headline Price of the aggregate offer.
+    /// Headline Price of the CSS Product.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4274,7 +4274,7 @@ namespace Google.Shopping.Css.V1 {
             = pb::FieldCodec.ForString(18);
         private readonly pbc::RepeatedField<string> approvedCountries_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is
+        /// List of country codes (ISO 3166-1 alpha-2) where the CSS Product is
         /// approved.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4289,7 +4289,7 @@ namespace Google.Shopping.Css.V1 {
             = pb::FieldCodec.ForString(26);
         private readonly pbc::RepeatedField<string> pendingCountries_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is
+        /// List of country codes (ISO 3166-1 alpha-2) where the CSS Product is
         /// pending approval.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4304,7 +4304,7 @@ namespace Google.Shopping.Css.V1 {
             = pb::FieldCodec.ForString(34);
         private readonly pbc::RepeatedField<string> disapprovedCountries_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// List of country codes (ISO 3166-1 alpha-2) where the aggregate offer is
+        /// List of country codes (ISO 3166-1 alpha-2) where the CSS Product is
         /// disapproved.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4563,7 +4563,7 @@ namespace Google.Shopping.Css.V1 {
         public const int ServabilityFieldNumber = 2;
         private string servability_ = "";
         /// <summary>
-        /// How this issue affects serving of the aggregate offer.
+        /// How this issue affects serving of the CSS Product.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4671,7 +4671,7 @@ namespace Google.Shopping.Css.V1 {
         private readonly pbc::RepeatedField<string> applicableCountries_ = new pbc::RepeatedField<string>();
         /// <summary>
         /// List of country codes (ISO 3166-1 alpha-2) where issue applies to the
-        /// aggregate offer.
+        /// CSS Product.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

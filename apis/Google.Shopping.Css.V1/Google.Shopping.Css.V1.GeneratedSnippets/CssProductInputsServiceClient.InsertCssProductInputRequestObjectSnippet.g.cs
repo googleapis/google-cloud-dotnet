@@ -38,7 +38,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 CssProductInput = new CssProductInput(),
-                FeedId = 0L,
             };
             // Make the request
             CssProductInput response = cssProductInputsServiceClient.InsertCssProductInput(request);

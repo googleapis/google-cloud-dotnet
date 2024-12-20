@@ -2039,12 +2039,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 44,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -2088,12 +2088,212 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_UpdateCssProductInput_sync",
+      "title": "UpdateCssProductInputRequestObject",
+      "description": "Snippet for UpdateCssProductInput",
+      "file": "CssProductInputsServiceClient.UpdateCssProductInputRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCssProductInput",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.UpdateCssProductInput",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.UpdateCssProductInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.CssProductInput",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.UpdateCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_UpdateCssProductInput_async",
+      "title": "UpdateCssProductInputRequestObjectAsync",
+      "description": "Snippet for UpdateCssProductInputAsync",
+      "file": "CssProductInputsServiceClient.UpdateCssProductInputRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCssProductInputAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.UpdateCssProductInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.UpdateCssProductInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.CssProductInput>",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.UpdateCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
           "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_UpdateCssProductInput_sync_flattened",
+      "title": "UpdateCssProductInput",
+      "description": "Snippet for UpdateCssProductInput",
+      "file": "CssProductInputsServiceClient.UpdateCssProductInputSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCssProductInput",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.UpdateCssProductInput",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.CssProductInput",
+            "name": "cssProductInput"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Css.V1.CssProductInput",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.UpdateCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "css_v1_generated_CssProductInputsService_UpdateCssProductInput_async_flattened",
+      "title": "UpdateCssProductInputAsync",
+      "description": "Snippet for UpdateCssProductInputAsync",
+      "file": "CssProductInputsServiceClient.UpdateCssProductInputAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateCssProductInputAsync",
+        "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient.UpdateCssProductInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Css.V1.CssProductInput",
+            "name": "cssProductInput"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Css.V1.CssProductInput>",
+        "client": {
+          "shortName": "CssProductInputsServiceClient",
+          "fullName": "Google.Shopping.Css.V1.CssProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateCssProductInput",
+          "fullName": "google.shopping.css.v1.CssProductInputsService.UpdateCssProductInput",
+          "service": {
+            "shortName": "CssProductInputsService",
+            "fullName": "google.shopping.css.v1.CssProductInputsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]

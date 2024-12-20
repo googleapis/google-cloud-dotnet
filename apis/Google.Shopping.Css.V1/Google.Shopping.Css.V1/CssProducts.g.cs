@@ -270,7 +270,7 @@ namespace Google.Shopping.Css.V1 {
   }
 
   /// <summary>
-  /// The processed CSS Product(a.k.a Aggregate Offer internally).
+  /// The processed CSS Product.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CssProduct : pb::IMessage<CssProduct>

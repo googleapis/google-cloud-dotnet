@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START css_v1_generated_CssProductInputsService_InsertCssProductInput_async]
+    // [START css_v1_generated_CssProductInputsService_UpdateCssProductInput_sync_flattened]
+    using Google.Protobuf.WellKnownTypes;
     using Google.Shopping.Css.V1;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCssProductInputsServiceClientSnippets
     {
-        /// <summary>Snippet for InsertCssProductInputAsync</summary>
+        /// <summary>Snippet for UpdateCssProductInput</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +30,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task InsertCssProductInputRequestObjectAsync()
+        public void UpdateCssProductInput()
         {
             // Create client
-            CssProductInputsServiceClient cssProductInputsServiceClient = await CssProductInputsServiceClient.CreateAsync();
+            CssProductInputsServiceClient cssProductInputsServiceClient = CssProductInputsServiceClient.Create();
             // Initialize request argument(s)
-            InsertCssProductInputRequest request = new InsertCssProductInputRequest
-            {
-                ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
-                CssProductInput = new CssProductInput(),
-            };
+            CssProductInput cssProductInput = new CssProductInput();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            CssProductInput response = await cssProductInputsServiceClient.InsertCssProductInputAsync(request);
+            CssProductInput response = cssProductInputsServiceClient.UpdateCssProductInput(cssProductInput, updateMask);
         }
     }
-    // [END css_v1_generated_CssProductInputsService_InsertCssProductInput_async]
+    // [END css_v1_generated_CssProductInputsService_UpdateCssProductInput_sync_flattened]
 }

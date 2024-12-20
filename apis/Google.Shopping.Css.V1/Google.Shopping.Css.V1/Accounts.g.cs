@@ -221,8 +221,8 @@ namespace Google.Shopping.Css.V1 {
     /// <summary>
     /// Optional. The maximum number of accounts to return. The service may return
     /// fewer than this value. If unspecified, at most 50 accounts will be
-    /// returned. The maximum value is 1000; values above 1000 will be coerced to
-    /// 1000.
+    /// returned. The maximum value is 100; values above 100 will be coerced to
+    /// 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

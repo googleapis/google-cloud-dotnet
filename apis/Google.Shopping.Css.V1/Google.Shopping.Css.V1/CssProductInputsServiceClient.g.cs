@@ -48,6 +48,7 @@ namespace Google.Shopping.Css.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             InsertCssProductInputSettings = existing.InsertCssProductInputSettings;
+            UpdateCssProductInputSettings = existing.UpdateCssProductInputSettings;
             DeleteCssProductInputSettings = existing.DeleteCssProductInputSettings;
             OnCopy(existing);
         }
@@ -66,6 +67,19 @@ namespace Google.Shopping.Css.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings InsertCssProductInputSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CssProductInputsServiceClient.UpdateCssProductInput</c> and
+        /// <c>CssProductInputsServiceClient.UpdateCssProductInputAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCssProductInputSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -266,6 +280,149 @@ namespace Google.Shopping.Css.V1
             InsertCssProductInputAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the existing Css Product input in your CSS Center account.
+        /// 
+        /// After inserting, updating, or deleting a CSS Product input, it may take
+        /// several minutes before the processed Css Product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CssProductInput UpdateCssProductInput(UpdateCssProductInputRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the existing Css Product input in your CSS Center account.
+        /// 
+        /// After inserting, updating, or deleting a CSS Product input, it may take
+        /// several minutes before the processed Css Product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CssProductInput> UpdateCssProductInputAsync(UpdateCssProductInputRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the existing Css Product input in your CSS Center account.
+        /// 
+        /// After inserting, updating, or deleting a CSS Product input, it may take
+        /// several minutes before the processed Css Product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CssProductInput> UpdateCssProductInputAsync(UpdateCssProductInputRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCssProductInputAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the existing Css Product input in your CSS Center account.
+        /// 
+        /// After inserting, updating, or deleting a CSS Product input, it may take
+        /// several minutes before the processed Css Product can be retrieved.
+        /// </summary>
+        /// <param name="cssProductInput">
+        /// Required. The CSS product input resource to update. Information you submit
+        /// will be applied to the processed CSS product as well.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of CSS product attributes to be updated.
+        /// 
+        /// If the update mask is omitted, then it is treated as implied field mask
+        /// equivalent to all fields that are populated (have a non-empty value).
+        /// 
+        /// Attributes specified in the update mask without a value specified in the
+        /// body will be deleted from the CSS product.
+        /// 
+        /// Update mask can only be specified for top level fields in
+        /// attributes and custom attributes.
+        /// 
+        /// To specify the update mask for custom attributes you need to add the
+        /// `custom_attribute.` prefix.
+        /// 
+        /// Providing special "*" value for full CSS product replacement is not
+        /// supported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CssProductInput UpdateCssProductInput(CssProductInput cssProductInput, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCssProductInput(new UpdateCssProductInputRequest
+            {
+                CssProductInput = gax::GaxPreconditions.CheckNotNull(cssProductInput, nameof(cssProductInput)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the existing Css Product input in your CSS Center account.
+        /// 
+        /// After inserting, updating, or deleting a CSS Product input, it may take
+        /// several minutes before the processed Css Product can be retrieved.
+        /// </summary>
+        /// <param name="cssProductInput">
+        /// Required. The CSS product input resource to update. Information you submit
+        /// will be applied to the processed CSS product as well.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of CSS product attributes to be updated.
+        /// 
+        /// If the update mask is omitted, then it is treated as implied field mask
+        /// equivalent to all fields that are populated (have a non-empty value).
+        /// 
+        /// Attributes specified in the update mask without a value specified in the
+        /// body will be deleted from the CSS product.
+        /// 
+        /// Update mask can only be specified for top level fields in
+        /// attributes and custom attributes.
+        /// 
+        /// To specify the update mask for custom attributes you need to add the
+        /// `custom_attribute.` prefix.
+        /// 
+        /// Providing special "*" value for full CSS product replacement is not
+        /// supported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CssProductInput> UpdateCssProductInputAsync(CssProductInput cssProductInput, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCssProductInputAsync(new UpdateCssProductInputRequest
+            {
+                CssProductInput = gax::GaxPreconditions.CheckNotNull(cssProductInput, nameof(cssProductInput)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the existing Css Product input in your CSS Center account.
+        /// 
+        /// After inserting, updating, or deleting a CSS Product input, it may take
+        /// several minutes before the processed Css Product can be retrieved.
+        /// </summary>
+        /// <param name="cssProductInput">
+        /// Required. The CSS product input resource to update. Information you submit
+        /// will be applied to the processed CSS product as well.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of CSS product attributes to be updated.
+        /// 
+        /// If the update mask is omitted, then it is treated as implied field mask
+        /// equivalent to all fields that are populated (have a non-empty value).
+        /// 
+        /// Attributes specified in the update mask without a value specified in the
+        /// body will be deleted from the CSS product.
+        /// 
+        /// Update mask can only be specified for top level fields in
+        /// attributes and custom attributes.
+        /// 
+        /// To specify the update mask for custom attributes you need to add the
+        /// `custom_attribute.` prefix.
+        /// 
+        /// Providing special "*" value for full CSS product replacement is not
+        /// supported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CssProductInput> UpdateCssProductInputAsync(CssProductInput cssProductInput, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCssProductInputAsync(cssProductInput, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a CSS Product input from your CSS Center account.
         /// 
         /// After a delete it may take several minutes until the input is no longer
@@ -413,6 +570,8 @@ namespace Google.Shopping.Css.V1
     {
         private readonly gaxgrpc::ApiCall<InsertCssProductInputRequest, CssProductInput> _callInsertCssProductInput;
 
+        private readonly gaxgrpc::ApiCall<UpdateCssProductInputRequest, CssProductInput> _callUpdateCssProductInput;
+
         private readonly gaxgrpc::ApiCall<DeleteCssProductInputRequest, wkt::Empty> _callDeleteCssProductInput;
 
         /// <summary>
@@ -436,6 +595,9 @@ namespace Google.Shopping.Css.V1
             _callInsertCssProductInput = clientHelper.BuildApiCall<InsertCssProductInputRequest, CssProductInput>("InsertCssProductInput", grpcClient.InsertCssProductInputAsync, grpcClient.InsertCssProductInput, effectiveSettings.InsertCssProductInputSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callInsertCssProductInput);
             Modify_InsertCssProductInputApiCall(ref _callInsertCssProductInput);
+            _callUpdateCssProductInput = clientHelper.BuildApiCall<UpdateCssProductInputRequest, CssProductInput>("UpdateCssProductInput", grpcClient.UpdateCssProductInputAsync, grpcClient.UpdateCssProductInput, effectiveSettings.UpdateCssProductInputSettings).WithGoogleRequestParam("css_product_input.name", request => request.CssProductInput?.Name);
+            Modify_ApiCall(ref _callUpdateCssProductInput);
+            Modify_UpdateCssProductInputApiCall(ref _callUpdateCssProductInput);
             _callDeleteCssProductInput = clientHelper.BuildApiCall<DeleteCssProductInputRequest, wkt::Empty>("DeleteCssProductInput", grpcClient.DeleteCssProductInputAsync, grpcClient.DeleteCssProductInput, effectiveSettings.DeleteCssProductInputSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCssProductInput);
             Modify_DeleteCssProductInputApiCall(ref _callDeleteCssProductInput);
@@ -446,6 +608,8 @@ namespace Google.Shopping.Css.V1
 
         partial void Modify_InsertCssProductInputApiCall(ref gaxgrpc::ApiCall<InsertCssProductInputRequest, CssProductInput> call);
 
+        partial void Modify_UpdateCssProductInputApiCall(ref gaxgrpc::ApiCall<UpdateCssProductInputRequest, CssProductInput> call);
+
         partial void Modify_DeleteCssProductInputApiCall(ref gaxgrpc::ApiCall<DeleteCssProductInputRequest, wkt::Empty> call);
 
         partial void OnConstruction(CssProductInputsService.CssProductInputsServiceClient grpcClient, CssProductInputsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -454,6 +618,8 @@ namespace Google.Shopping.Css.V1
         public override CssProductInputsService.CssProductInputsServiceClient GrpcClient { get; }
 
         partial void Modify_InsertCssProductInputRequest(ref InsertCssProductInputRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCssProductInputRequest(ref UpdateCssProductInputRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteCssProductInputRequest(ref DeleteCssProductInputRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -489,6 +655,36 @@ namespace Google.Shopping.Css.V1
         {
             Modify_InsertCssProductInputRequest(ref request, ref callSettings);
             return _callInsertCssProductInput.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the existing Css Product input in your CSS Center account.
+        /// 
+        /// After inserting, updating, or deleting a CSS Product input, it may take
+        /// several minutes before the processed Css Product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CssProductInput UpdateCssProductInput(UpdateCssProductInputRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCssProductInputRequest(ref request, ref callSettings);
+            return _callUpdateCssProductInput.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the existing Css Product input in your CSS Center account.
+        /// 
+        /// After inserting, updating, or deleting a CSS Product input, it may take
+        /// several minutes before the processed Css Product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CssProductInput> UpdateCssProductInputAsync(UpdateCssProductInputRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCssProductInputRequest(ref request, ref callSettings);
+            return _callUpdateCssProductInput.Async(request, callSettings);
         }
 
         /// <summary>
