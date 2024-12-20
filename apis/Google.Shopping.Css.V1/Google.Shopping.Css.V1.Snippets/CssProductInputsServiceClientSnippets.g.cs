@@ -16,6 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Protobuf.WellKnownTypes;
     using Google.Shopping.Css.V1;
     using System.Threading.Tasks;
 
@@ -33,7 +34,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 CssProductInput = new CssProductInput(),
-                FeedId = 0L,
             };
             // Make the request
             CssProductInput response = cssProductInputsServiceClient.InsertCssProductInput(request);
@@ -52,10 +52,73 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsAccountName = AccountName.FromAccount("[ACCOUNT]"),
                 CssProductInput = new CssProductInput(),
-                FeedId = 0L,
             };
             // Make the request
             CssProductInput response = await cssProductInputsServiceClient.InsertCssProductInputAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCssProductInput</summary>
+        public void UpdateCssProductInputRequestObject()
+        {
+            // Snippet: UpdateCssProductInput(UpdateCssProductInputRequest, CallSettings)
+            // Create client
+            CssProductInputsServiceClient cssProductInputsServiceClient = CssProductInputsServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateCssProductInputRequest request = new UpdateCssProductInputRequest
+            {
+                CssProductInput = new CssProductInput(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            CssProductInput response = cssProductInputsServiceClient.UpdateCssProductInput(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCssProductInputAsync</summary>
+        public async Task UpdateCssProductInputRequestObjectAsync()
+        {
+            // Snippet: UpdateCssProductInputAsync(UpdateCssProductInputRequest, CallSettings)
+            // Additional: UpdateCssProductInputAsync(UpdateCssProductInputRequest, CancellationToken)
+            // Create client
+            CssProductInputsServiceClient cssProductInputsServiceClient = await CssProductInputsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateCssProductInputRequest request = new UpdateCssProductInputRequest
+            {
+                CssProductInput = new CssProductInput(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            CssProductInput response = await cssProductInputsServiceClient.UpdateCssProductInputAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCssProductInput</summary>
+        public void UpdateCssProductInput()
+        {
+            // Snippet: UpdateCssProductInput(CssProductInput, FieldMask, CallSettings)
+            // Create client
+            CssProductInputsServiceClient cssProductInputsServiceClient = CssProductInputsServiceClient.Create();
+            // Initialize request argument(s)
+            CssProductInput cssProductInput = new CssProductInput();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CssProductInput response = cssProductInputsServiceClient.UpdateCssProductInput(cssProductInput, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateCssProductInputAsync</summary>
+        public async Task UpdateCssProductInputAsync()
+        {
+            // Snippet: UpdateCssProductInputAsync(CssProductInput, FieldMask, CallSettings)
+            // Additional: UpdateCssProductInputAsync(CssProductInput, FieldMask, CancellationToken)
+            // Create client
+            CssProductInputsServiceClient cssProductInputsServiceClient = await CssProductInputsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CssProductInput cssProductInput = new CssProductInput();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            CssProductInput response = await cssProductInputsServiceClient.UpdateCssProductInputAsync(cssProductInput, updateMask);
             // End snippet
         }
 

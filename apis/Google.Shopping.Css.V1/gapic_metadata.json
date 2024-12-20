@@ -81,6 +81,12 @@
                 "InsertCssProductInput",
                 "InsertCssProductInputAsync"
               ]
+            },
+            "UpdateCssProductInput": {
+              "methods": [
+                "UpdateCssProductInput",
+                "UpdateCssProductInputAsync"
+              ]
             }
           }
         }

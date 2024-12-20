@@ -69,6 +69,8 @@ namespace Google.Shopping.Css.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Css.V1.CssProductInput> __Marshaller_google_shopping_css_v1_CssProductInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Css.V1.CssProductInput.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Css.V1.UpdateCssProductInputRequest> __Marshaller_google_shopping_css_v1_UpdateCssProductInputRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Css.V1.UpdateCssProductInputRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Css.V1.DeleteCssProductInputRequest> __Marshaller_google_shopping_css_v1_DeleteCssProductInputRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Css.V1.DeleteCssProductInputRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
@@ -79,6 +81,14 @@ namespace Google.Shopping.Css.V1 {
         __ServiceName,
         "InsertCssProductInput",
         __Marshaller_google_shopping_css_v1_InsertCssProductInputRequest,
+        __Marshaller_google_shopping_css_v1_CssProductInput);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Css.V1.UpdateCssProductInputRequest, global::Google.Shopping.Css.V1.CssProductInput> __Method_UpdateCssProductInput = new grpc::Method<global::Google.Shopping.Css.V1.UpdateCssProductInputRequest, global::Google.Shopping.Css.V1.CssProductInput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCssProductInput",
+        __Marshaller_google_shopping_css_v1_UpdateCssProductInputRequest,
         __Marshaller_google_shopping_css_v1_CssProductInput);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -112,6 +122,21 @@ namespace Google.Shopping.Css.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Css.V1.CssProductInput> InsertCssProductInput(global::Google.Shopping.Css.V1.InsertCssProductInputRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the existing Css Product input in your CSS Center account.
+      ///
+      /// After inserting, updating, or deleting a CSS Product input, it may take
+      /// several minutes before the processed Css Product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Css.V1.CssProductInput> UpdateCssProductInput(global::Google.Shopping.Css.V1.UpdateCssProductInputRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -229,6 +254,66 @@ namespace Google.Shopping.Css.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_InsertCssProductInput, null, options, request);
       }
       /// <summary>
+      /// Updates the existing Css Product input in your CSS Center account.
+      ///
+      /// After inserting, updating, or deleting a CSS Product input, it may take
+      /// several minutes before the processed Css Product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Css.V1.CssProductInput UpdateCssProductInput(global::Google.Shopping.Css.V1.UpdateCssProductInputRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCssProductInput(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the existing Css Product input in your CSS Center account.
+      ///
+      /// After inserting, updating, or deleting a CSS Product input, it may take
+      /// several minutes before the processed Css Product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Css.V1.CssProductInput UpdateCssProductInput(global::Google.Shopping.Css.V1.UpdateCssProductInputRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCssProductInput, null, options, request);
+      }
+      /// <summary>
+      /// Updates the existing Css Product input in your CSS Center account.
+      ///
+      /// After inserting, updating, or deleting a CSS Product input, it may take
+      /// several minutes before the processed Css Product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Css.V1.CssProductInput> UpdateCssProductInputAsync(global::Google.Shopping.Css.V1.UpdateCssProductInputRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCssProductInputAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the existing Css Product input in your CSS Center account.
+      ///
+      /// After inserting, updating, or deleting a CSS Product input, it may take
+      /// several minutes before the processed Css Product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Css.V1.CssProductInput> UpdateCssProductInputAsync(global::Google.Shopping.Css.V1.UpdateCssProductInputRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCssProductInput, null, options, request);
+      }
+      /// <summary>
       /// Deletes a CSS Product input from your CSS Center account.
       ///
       /// After a delete it may take several minutes until the input is no longer
@@ -303,6 +388,7 @@ namespace Google.Shopping.Css.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_InsertCssProductInput, serviceImpl.InsertCssProductInput)
+          .AddMethod(__Method_UpdateCssProductInput, serviceImpl.UpdateCssProductInput)
           .AddMethod(__Method_DeleteCssProductInput, serviceImpl.DeleteCssProductInput).Build();
     }
 
@@ -314,6 +400,7 @@ namespace Google.Shopping.Css.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CssProductInputsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_InsertCssProductInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Css.V1.InsertCssProductInputRequest, global::Google.Shopping.Css.V1.CssProductInput>(serviceImpl.InsertCssProductInput));
+      serviceBinder.AddMethod(__Method_UpdateCssProductInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Css.V1.UpdateCssProductInputRequest, global::Google.Shopping.Css.V1.CssProductInput>(serviceImpl.UpdateCssProductInput));
       serviceBinder.AddMethod(__Method_DeleteCssProductInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Css.V1.DeleteCssProductInputRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCssProductInput));
     }
 
