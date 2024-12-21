@@ -21,6 +21,7 @@ using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using sc = System.Collections;
@@ -49,6 +50,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetPublisherModelSettings = existing.GetPublisherModelSettings;
             ListPublisherModelsSettings = existing.ListPublisherModelsSettings;
+            DeployPublisherModelSettings = existing.DeployPublisherModelSettings;
+            DeployPublisherModelOperationsSettings = existing.DeployPublisherModelOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -81,6 +84,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListPublisherModelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelGardenServiceClient.DeployPublisherModel</c> and
+        /// <c>ModelGardenServiceClient.DeployPublisherModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeployPublisherModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ModelGardenServiceClient.DeployPublisherModel</c> and
+        /// <c>ModelGardenServiceClient.DeployPublisherModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeployPublisherModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -444,6 +478,60 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             }
             return ListPublisherModelsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Deploys publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> DeployPublisherModel(DeployPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deploys publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> DeployPublisherModelAsync(DeployPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deploys publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> DeployPublisherModelAsync(DeployPublisherModelRequest request, st::CancellationToken cancellationToken) =>
+            DeployPublisherModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeployPublisherModel</c>.</summary>
+        public virtual lro::OperationsClient DeployPublisherModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeployPublisherModel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> PollOnceDeployPublisherModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployPublisherModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeployPublisherModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> PollOnceDeployPublisherModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployPublisherModelOperationsClient, callSettings);
     }
 
     /// <summary>ModelGardenService client wrapper implementation, for convenient use.</summary>
@@ -455,6 +543,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         private readonly gaxgrpc::ApiCall<GetPublisherModelRequest, PublisherModel> _callGetPublisherModel;
 
         private readonly gaxgrpc::ApiCall<ListPublisherModelsRequest, ListPublisherModelsResponse> _callListPublisherModels;
+
+        private readonly gaxgrpc::ApiCall<DeployPublisherModelRequest, lro::Operation> _callDeployPublisherModel;
 
         /// <summary>
         /// Constructs a client wrapper for the ModelGardenService service, with the specified gRPC client and settings.
@@ -471,6 +561,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            DeployPublisherModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployPublisherModelOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callGetPublisherModel = clientHelper.BuildApiCall<GetPublisherModelRequest, PublisherModel>("GetPublisherModel", grpcClient.GetPublisherModelAsync, grpcClient.GetPublisherModel, effectiveSettings.GetPublisherModelSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -479,6 +570,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callListPublisherModels = clientHelper.BuildApiCall<ListPublisherModelsRequest, ListPublisherModelsResponse>("ListPublisherModels", grpcClient.ListPublisherModelsAsync, grpcClient.ListPublisherModels, effectiveSettings.ListPublisherModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPublisherModels);
             Modify_ListPublisherModelsApiCall(ref _callListPublisherModels);
+            _callDeployPublisherModel = clientHelper.BuildApiCall<DeployPublisherModelRequest, lro::Operation>("DeployPublisherModel", grpcClient.DeployPublisherModelAsync, grpcClient.DeployPublisherModel, effectiveSettings.DeployPublisherModelSettings).WithGoogleRequestParam("destination", request => request.Destination);
+            Modify_ApiCall(ref _callDeployPublisherModel);
+            Modify_DeployPublisherModelApiCall(ref _callDeployPublisherModel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -487,6 +581,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetPublisherModelApiCall(ref gaxgrpc::ApiCall<GetPublisherModelRequest, PublisherModel> call);
 
         partial void Modify_ListPublisherModelsApiCall(ref gaxgrpc::ApiCall<ListPublisherModelsRequest, ListPublisherModelsResponse> call);
+
+        partial void Modify_DeployPublisherModelApiCall(ref gaxgrpc::ApiCall<DeployPublisherModelRequest, lro::Operation> call);
 
         partial void OnConstruction(ModelGardenService.ModelGardenServiceClient grpcClient, ModelGardenServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -502,6 +598,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetPublisherModelRequest(ref GetPublisherModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListPublisherModelsRequest(ref ListPublisherModelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeployPublisherModelRequest(ref DeployPublisherModelRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a Model Garden publisher model.
@@ -550,6 +648,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             Modify_ListPublisherModelsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPublisherModelsRequest, ListPublisherModelsResponse, PublisherModel>(_callListPublisherModels, request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>DeployPublisherModel</c>.</summary>
+        public override lro::OperationsClient DeployPublisherModelOperationsClient { get; }
+
+        /// <summary>
+        /// Deploys publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> DeployPublisherModel(DeployPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployPublisherModelRequest(ref request, ref callSettings);
+            return new lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>(_callDeployPublisherModel.Sync(request, callSettings), DeployPublisherModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Deploys publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> DeployPublisherModelAsync(DeployPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployPublisherModelRequest(ref request, ref callSettings);
+            return new lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>(await _callDeployPublisherModel.Async(request, callSettings).ConfigureAwait(false), DeployPublisherModelOperationsClient);
+        }
     }
 
     public partial class ListPublisherModelsRequest : gaxgrpc::IPageRequest
@@ -562,6 +687,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public scg::IEnumerator<PublisherModel> GetEnumerator() => PublisherModels.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class ModelGardenService
+    {
+        public partial class ModelGardenServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 
     public static partial class ModelGardenService

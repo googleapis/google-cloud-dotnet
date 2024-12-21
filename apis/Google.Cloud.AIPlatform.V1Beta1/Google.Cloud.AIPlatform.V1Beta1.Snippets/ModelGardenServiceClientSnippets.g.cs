@@ -17,7 +17,9 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.AIPlatform.V1Beta1;
+    using Google.LongRunning;
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -313,6 +315,83 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployPublisherModel</summary>
+        public void DeployPublisherModelRequestObject()
+        {
+            // Snippet: DeployPublisherModel(DeployPublisherModelRequest, CallSettings)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
+            // Initialize request argument(s)
+            DeployPublisherModelRequest request = new DeployPublisherModelRequest
+            {
+                Model = "",
+                DestinationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                EndpointDisplayName = "",
+                DedicatedResources = new DedicatedResources(),
+                ModelDisplayName = "",
+                HuggingFaceAccessToken = "",
+                AcceptEula = false,
+            };
+            // Make the request
+            Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> response = modelGardenServiceClient.DeployPublisherModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            DeployPublisherModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> retrievedResponse = modelGardenServiceClient.PollOnceDeployPublisherModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPublisherModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeployPublisherModelAsync</summary>
+        public async Task DeployPublisherModelRequestObjectAsync()
+        {
+            // Snippet: DeployPublisherModelAsync(DeployPublisherModelRequest, CallSettings)
+            // Additional: DeployPublisherModelAsync(DeployPublisherModelRequest, CancellationToken)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeployPublisherModelRequest request = new DeployPublisherModelRequest
+            {
+                Model = "",
+                DestinationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                EndpointDisplayName = "",
+                DedicatedResources = new DedicatedResources(),
+                ModelDisplayName = "",
+                HuggingFaceAccessToken = "",
+                AcceptEula = false,
+            };
+            // Make the request
+            Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> response = await modelGardenServiceClient.DeployPublisherModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            DeployPublisherModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> retrievedResponse = await modelGardenServiceClient.PollOnceDeployPublisherModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                DeployPublisherModelResponse retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }
