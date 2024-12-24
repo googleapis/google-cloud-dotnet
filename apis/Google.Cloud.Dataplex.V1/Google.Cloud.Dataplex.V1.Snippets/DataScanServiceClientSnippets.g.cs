@@ -367,6 +367,7 @@ namespace GoogleCSharpSnippets
             gcdv::DeleteDataScanRequest request = new gcdv::DeleteDataScanRequest
             {
                 DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Force = false,
             };
             // Make the request
             Operation<Empty, gcdv::OperationMetadata> response = dataScanServiceClient.DeleteDataScan(request);
@@ -400,6 +401,7 @@ namespace GoogleCSharpSnippets
             gcdv::DeleteDataScanRequest request = new gcdv::DeleteDataScanRequest
             {
                 DataScanName = gcdv::DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Force = false,
             };
             // Make the request
             Operation<Empty, gcdv::OperationMetadata> response = await dataScanServiceClient.DeleteDataScanAsync(request);

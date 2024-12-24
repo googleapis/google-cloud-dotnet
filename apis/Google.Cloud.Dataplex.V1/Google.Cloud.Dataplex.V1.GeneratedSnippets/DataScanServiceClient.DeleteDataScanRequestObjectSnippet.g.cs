@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             DeleteDataScanRequest request = new DeleteDataScanRequest
             {
                 DataScanName = DataScanName.FromProjectLocationDataScan("[PROJECT]", "[LOCATION]", "[DATASCAN]"),
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = dataScanServiceClient.DeleteDataScan(request);
