@@ -682,7 +682,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.
+        /// Optional. Mask of fields to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -690,7 +690,7 @@ namespace Google.Cloud.Dataplex.V1
             UpdateDataScan(new UpdateDataScanRequest
             {
                 DataScan = gax::GaxPreconditions.CheckNotNull(dataScan, nameof(dataScan)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -702,7 +702,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.
+        /// Optional. Mask of fields to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -710,7 +710,7 @@ namespace Google.Cloud.Dataplex.V1
             UpdateDataScanAsync(new UpdateDataScanRequest
             {
                 DataScan = gax::GaxPreconditions.CheckNotNull(dataScan, nameof(dataScan)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -722,7 +722,7 @@ namespace Google.Cloud.Dataplex.V1
         /// Only fields specified in `update_mask` are updated.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask of fields to update.
+        /// Optional. Mask of fields to update.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

@@ -3781,6 +3781,8 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="query">
         /// Required. The query against which entries in scope should be matched.
+        /// The query syntax is defined in [Search syntax for Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3819,6 +3821,8 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="query">
         /// Required. The query against which entries in scope should be matched.
+        /// The query syntax is defined in [Search syntax for Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3857,6 +3861,8 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="query">
         /// Required. The query against which entries in scope should be matched.
+        /// The query syntax is defined in [Search syntax for Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3895,6 +3901,8 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="query">
         /// Required. The query against which entries in scope should be matched.
+        /// The query syntax is defined in [Search syntax for Dataplex
+        /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

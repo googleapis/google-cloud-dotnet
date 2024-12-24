@@ -12036,7 +12036,7 @@ namespace Google.Cloud.Dataplex.V1 {
     /// specified path. For example, to attach an aspect to a field that is
     /// specified by the `schema` aspect, the path should have the format
     /// `Schema.&lt;field_name>`.
-    /// * `&lt;aspect_type_reference>*` - matches aspects of the given type for all
+    /// * `&lt;aspect_type_reference>@*` - matches aspects of the given type for all
     /// paths.
     /// * `*@path` - matches aspects of all types on the given path.
     ///
@@ -13761,6 +13761,8 @@ namespace Google.Cloud.Dataplex.V1 {
     private string query_ = "";
     /// <summary>
     /// Required. The query against which entries in scope should be matched.
+    /// The query syntax is defined in [Search syntax for Dataplex
+    /// Catalog](https://cloud.google.com/dataplex/docs/search-syntax).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -13809,6 +13811,10 @@ namespace Google.Cloud.Dataplex.V1 {
     private string orderBy_ = "";
     /// <summary>
     /// Optional. Specifies the ordering of results.
+    /// Supported values are:
+    /// * `relevance` (default)
+    /// * `last_modified_timestamp`
+    /// * `last_modified_timestamp asc`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15008,9 +15014,9 @@ namespace Google.Cloud.Dataplex.V1 {
     /// aspect type and are attached directly to the entry.
     /// * `{aspect_type_reference}@{path}`: matches aspects that belong to the
     /// specified aspect type and path.
-    /// * `{aspect_type_reference}@*`: matches aspects that belong to the specified
-    /// aspect type for all paths.
-    ///
+    /// * `&lt;aspect_type_reference>@*` : matches aspects of the given type for all
+    /// paths.
+    /// * `*@path` : matches aspects of all types on the given path.
     /// Replace `{aspect_type_reference}` with a reference to the aspect type, in
     /// the format
     /// `{project_id_or_number}.{location_id}.{aspect_type_id}`.
