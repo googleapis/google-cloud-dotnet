@@ -3948,7 +3948,8 @@
       "shortName": "parametermanager",
       "serviceConfigFile": "parametermanager_v1.yaml",
       "transport": "grpc+rest",
-      "restNumericEnums": true
+      "restNumericEnums": true,
+      "blockRelease": "See b/385027294"
     },
     {
       "id": "Google.Cloud.PhishingProtection.V1Beta1",
