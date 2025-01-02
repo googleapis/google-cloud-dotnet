@@ -181,6 +181,7 @@
     "apis/Google.Cloud.OsLogin.V1Beta/Google.Cloud.OsLogin.V1Beta/**",
     "apis/Google.Cloud.Parallelstore.V1/Google.Cloud.Parallelstore.V1/**",
     "apis/Google.Cloud.Parallelstore.V1Beta/Google.Cloud.Parallelstore.V1Beta/**",
+    "apis/Google.Cloud.ParameterManager.V1/Google.Cloud.ParameterManager.V1/**",
     "apis/Google.Cloud.PhishingProtection.V1Beta1/Google.Cloud.PhishingProtection.V1Beta1/**",
     "apis/Google.Cloud.PolicySimulator.V1/Google.Cloud.PolicySimulator.V1/**",
     "apis/Google.Cloud.PolicyTroubleshooter.Iam.V3/Google.Cloud.PolicyTroubleshooter.Iam.V3/**",
