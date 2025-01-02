@@ -1,0 +1,17 @@
+[
+  {
+    "method": "ListParameters",
+    "client": "ParameterManagerClient",
+    "endpoint": "parametermanager.us-central1.rep.googleapis.com",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-central1"
+    }
+  },
+  {
+    "method": "ListParameters",
+    "client": "ParameterManagerClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/global"
+    }
+  }
+]
