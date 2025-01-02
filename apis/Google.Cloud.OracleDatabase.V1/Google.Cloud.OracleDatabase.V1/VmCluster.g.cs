@@ -67,7 +67,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "Y3AYFSABKAVCA+BBAxInChpzY2FuX2xpc3RlbmVyX3BvcnRfdGNwX3NzbBgW",
             "IAEoBUID4EEDEhMKBmRvbWFpbhgXIAEoCUID4EEDEhUKCHNjYW5fZG5zGBgg",
             "ASgJQgPgQQMSFQoIaG9zdG5hbWUYGSABKAlCA+BBAxIbCg5jcHVfY29yZV9j",
-            "b3VudBgaIAEoBUID4EECEhsKDnN5c3RlbV92ZXJzaW9uGBsgASgJQgPgQQMS",
+            "b3VudBgaIAEoBUID4EECEhsKDnN5c3RlbV92ZXJzaW9uGBsgASgJQgPgQQES",
             "GAoLc2Nhbl9pcF9pZHMYHCADKAlCA+BBAxIfChJzY2FuX2Ruc19yZWNvcmRf",
             "aWQYHSABKAlCA+BBAxIUCgdvY2lfdXJsGB4gASgJQgPgQQMSHAoPZGJfc2Vy",
             "dmVyX29jaWRzGB8gAygJQgPgQQESGwoOY29tcGFydG1lbnRfaWQYICABKAlC",
@@ -1116,7 +1116,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int SystemVersionFieldNumber = 27;
     private string systemVersion_ = "";
     /// <summary>
-    /// Output only. Operating system version of the image.
+    /// Optional. Operating system version of the image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
