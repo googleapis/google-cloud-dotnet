@@ -55,6 +55,7 @@ namespace GoogleCSharpSnippets
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 DisableKeywordMatch = false,
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
+                RelevanceThreshold = SearchJobsRequest.Types.RelevanceThreshold.Unspecified,
             };
             // Make the request
             SearchJobsResponse response = await jobServiceClient.SearchJobsAsync(request);
