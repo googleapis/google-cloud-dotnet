@@ -3927,6 +3927,30 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.ParameterManager.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Parameter Manager",
+      "productUrl": "https://cloud.google.com/secret-manager/parameter-manager/docs/overview",
+      "description": "Recommended Google client library to access the Parameter Manager API, which is a single source of truth to store, access and manage the lifecycle of your workload parameters. Parameter Manager aims to make management of sensitive application parameters effortless for customers without diminishing focus on security.",
+      "tags": [
+        "parameters",
+        "workload",
+        "management"
+      ],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.4.0",
+        "Google.Cloud.Location": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/parametermanager/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "parametermanager",
+      "serviceConfigFile": "parametermanager_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.PhishingProtection.V1Beta1",
       "generator": "micro",
       "protoPath": "google/cloud/phishingprotection/v1beta1",
