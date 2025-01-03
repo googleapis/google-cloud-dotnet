@@ -53,6 +53,7 @@ namespace GoogleCSharpSnippets
                 DiversificationLevel = SearchJobsRequest.Types.DiversificationLevel.Unspecified,
                 CustomRankingInfo = new SearchJobsRequest.Types.CustomRankingInfo(),
                 KeywordMatchMode = SearchJobsRequest.Types.KeywordMatchMode.Unspecified,
+                RelevanceThreshold = SearchJobsRequest.Types.RelevanceThreshold.Unspecified,
             };
             // Make the request
             SearchJobsResponse response = jobServiceClient.SearchJobs(request);
