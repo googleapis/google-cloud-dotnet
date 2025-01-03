@@ -1848,7 +1848,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The resource name of the target catalog, in the format of
-    /// `catalogs/{catalog}'.
+    /// `catalogs/{catalog}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4562,7 +4562,7 @@ namespace Google.Cloud.PrivateCatalog.V1Beta1 {
     private string name_ = "";
     /// <summary>
     /// Output only. The resource name of the version, in the format
-    /// `catalogs/{catalog}/products/{product}/versions/[a-z][-a-z0-9]*[a-z0-9]'.
+    /// `catalogs/{catalog}/products/{product}/versions/[a-z][-a-z0-9]*[a-z0-9]`.
     ///
     /// A unique identifier for the version under a product.
     /// </summary>
