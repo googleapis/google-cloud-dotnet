@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>2.7.0</Version>
+    <Version>2.8.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Anthos Multi-Cloud API, which provides a way to manage Kubernetes clusters that run on AWS and Azure infrastructure using the Anthos Multi-Cloud API. Combined with Connect, you can manage Kubernetes clusters on Google Cloud, AWS, and Azure from the Google Cloud Console.  When you create a cluster with Anthos Multi-Cloud, Google creates the resources needed and brings up a cluster on your behalf. You can deploy workloads with the Anthos Multi-Cloud API or the gcloud and kubectl command-line tools.</Description>
