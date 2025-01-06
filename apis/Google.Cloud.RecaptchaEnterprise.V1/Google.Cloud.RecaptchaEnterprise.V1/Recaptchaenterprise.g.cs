@@ -4636,10 +4636,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// </summary>
       public enum FraudPrevention {
         /// <summary>
-        /// Default, unspecified setting. If opted in for automatic detection,
-        /// `fraud_prevention_assessment` is returned based on the request.
-        /// Otherwise, `fraud_prevention_assessment` is returned if
-        /// `transaction_data` is present in the `Event` and Fraud Prevention is
+        /// Default, unspecified setting. `fraud_prevention_assessment` is returned
+        /// if `transaction_data` is present in `Event` and Fraud Prevention is
         /// enabled in the Google Cloud console.
         /// </summary>
         [pbr::OriginalName("FRAUD_PREVENTION_UNSPECIFIED")] Unspecified = 0,
@@ -4649,8 +4647,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         /// </summary>
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
-        /// Disable Fraud Prevention for this assessment, regardless of opt-in
-        /// status or Google Cloud console settings.
+        /// Disable Fraud Prevention for this assessment, regardless of Google Cloud
+        /// console settings.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
       }
