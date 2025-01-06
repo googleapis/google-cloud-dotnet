@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta13, released 2025-01-06
+
+### New features
+
+- Add Model Garden deploy API ([commit bc4928d](https://github.com/googleapis/google-cloud-dotnet/commit/bc4928dd78560d2cf7854bc37cb9f4f63f269cef))
+- Add a new thought field in content proto ([commit f267357](https://github.com/googleapis/google-cloud-dotnet/commit/f26735783a4d532cc78c933b05a1c552ce2f6c9b))
+
+### Documentation improvements
+
+- A comment for field `labels` in message `.google.cloud.aiplatform.v1beta1.PublisherModel` is changed ([commit bc4928d](https://github.com/googleapis/google-cloud-dotnet/commit/bc4928dd78560d2cf7854bc37cb9f4f63f269cef))
+
 ## Version 1.0.0-beta12, released 2024-12-12
 
 ### New features
