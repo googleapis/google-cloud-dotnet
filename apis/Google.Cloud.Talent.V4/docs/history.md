@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.7.0, released 2025-01-06
+
+### New features
+
+- A new enum `RelevanceThreshold` is added ([commit 45971fe](https://github.com/googleapis/google-cloud-dotnet/commit/45971fe3f5dc4f09ebfa57ea979253085bd78d1a))
+- A new field `relevance_threshold` is added to message `.google.cloud.talent.v4.SearchJobsRequest` ([commit 45971fe](https://github.com/googleapis/google-cloud-dotnet/commit/45971fe3f5dc4f09ebfa57ea979253085bd78d1a))
+
+### Documentation improvements
+
+- Multiple fixes for links in documentation ([commit 45971fe](https://github.com/googleapis/google-cloud-dotnet/commit/45971fe3f5dc4f09ebfa57ea979253085bd78d1a))
+
 ## Version 2.6.0, released 2024-05-14
 
 ### New features
