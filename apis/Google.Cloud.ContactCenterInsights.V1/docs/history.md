@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.19.0, released 2025-01-06
+
+### New features
+
+- A new resource pattern value `projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}` added to the resource definition `contactcenterinsights.googleapis.com/Conversation` ([commit 3b15a19](https://github.com/googleapis/google-cloud-dotnet/commit/3b15a195acfda579bff8f120c3da9557cd03a1ac))
+- A new field `agent_type` is added to message `.google.cloud.contactcenterinsights.v1.Conversation` ([commit 3b15a19](https://github.com/googleapis/google-cloud-dotnet/commit/3b15a195acfda579bff8f120c3da9557cd03a1ac))
+- A new resource pattern value `projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/analyses/{analysis}` added to the resource definition `contactcenterinsights.googleapis.com/Analysis` ([commit 3b15a19](https://github.com/googleapis/google-cloud-dotnet/commit/3b15a195acfda579bff8f120c3da9557cd03a1ac))
+- A new resource pattern value `projects/{project}/locations/{location}/authorizedViewSets/{authorized_view_set}/authorizedViews/{authorized_view}/conversations/{conversation}/feedbackLabels/{feedback_label}` added to the resource definition `contactcenterinsights.googleapis.com/FeedbackLabel` ([commit 3b15a19](https://github.com/googleapis/google-cloud-dotnet/commit/3b15a195acfda579bff8f120c3da9557cd03a1ac))
+
 ## Version 2.18.0, released 2024-11-18
 
 ### New features
