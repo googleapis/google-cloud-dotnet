@@ -5232,7 +5232,7 @@
       "protoPath": "google/cloud/talent/v4beta1",
       "productName": "Google Cloud Talent Solution",
       "productUrl": "https://cloud.google.com/talent-solution/",
-      "version": "3.0.0-beta05",
+      "version": "3.0.0-beta06",
       "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Talent solution API (v4 beta1) which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.",
@@ -5241,7 +5241,7 @@
         "Jobs"
       ],
       "dependencies": {
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "shortName": "jobs",
       "serviceConfigFile": "jobs_v4beta1.yaml",
