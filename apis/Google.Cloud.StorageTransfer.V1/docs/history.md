@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.8.0, released 2025-01-06
+
+### New features
+
+- Support cross-bucket replication ([commit 7dea52d](https://github.com/googleapis/google-cloud-dotnet/commit/7dea52d9add3fe9892ae97524d1033b8aac145d2))
+
 ## Version 2.7.0, released 2024-09-09
 
 ### New features
