@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.5.0, released 2025-01-06
+
+### New features
+
+- A new field `force` is added to message `.google.cloud.dataplex.v1.DeleteDataScanRequest` ([commit cd7c4a2](https://github.com/googleapis/google-cloud-dotnet/commit/cd7c4a21176ae7da80669defa9da0550c7bf5470))
+
+### Documentation improvements
+
+- Miscellaneous doc updates ([commit cd7c4a2](https://github.com/googleapis/google-cloud-dotnet/commit/cd7c4a21176ae7da80669defa9da0550c7bf5470))
+
 ## Version 3.4.0, released 2024-11-18
 
 ### New features
