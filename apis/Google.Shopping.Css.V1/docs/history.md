@@ -1,5 +1,29 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2025-01-06
+
+### New features
+
+- UpdateCssProduct is added to CssProductInput proto ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+
+### Documentation improvements
+
+- Mark `freshness_time` as deprecated ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `page_size` in message `.google.shopping.css.v1.ListChildAccountsRequest` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `low_price` in message `.google.shopping.css.v1.Attributes` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `high_price` in message `.google.shopping.css.v1.Attributes` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `number_of_offers` in message `.google.shopping.css.v1.Attributes` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `headline_offer_price` in message `.google.shopping.css.v1.Attributes` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `headline_offer_shipping_price` in message `.google.shopping.css.v1.Attributes` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `approved_countries` in message `.google.shopping.css.v1.CssProductStatus` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `pending_countries` in message `.google.shopping.css.v1.CssProductStatus` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `disapproved_countries` in message `.google.shopping.css.v1.CssProductStatus` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `servability` in message `.google.shopping.css.v1.CssProductStatus` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `applicable_countries` in message `.google.shopping.css.v1.CssProductStatus` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for field `feed_id` in message`.google.shopping.css.v1.InsertCssProductInputRequest` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- A comment for message `CssProduct` is changed ([commit 76bc3bd](https://github.com/googleapis/google-cloud-dotnet/commit/76bc3bd61adbf4a1793ae1ff8f708ecf932ad259))
+- Fix comment on list account labels ([commit 4c15ac9](https://github.com/googleapis/google-cloud-dotnet/commit/4c15ac9c65d0e308b2806eea7da13a2eef4903a3))
+
 ## Version 1.0.0-beta05, released 2024-10-29
 
 ### New features
