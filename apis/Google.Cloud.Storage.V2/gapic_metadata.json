@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "StorageClient",
           "rpcs": {
+            "BidiReadObject": {
+              "methods": [
+                "BidiReadObject",
+                "BidiReadObjectAsync"
+              ]
+            },
             "BidiWriteObject": {
               "methods": [
                 "BidiWriteObject",

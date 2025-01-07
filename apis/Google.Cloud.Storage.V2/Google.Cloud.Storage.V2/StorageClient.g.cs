@@ -63,6 +63,8 @@ namespace Google.Cloud.Storage.V2
             CancelResumableWriteSettings = existing.CancelResumableWriteSettings;
             GetObjectSettings = existing.GetObjectSettings;
             ReadObjectSettings = existing.ReadObjectSettings;
+            BidiReadObjectSettings = existing.BidiReadObjectSettings;
+            BidiReadObjectStreamingSettings = existing.BidiReadObjectStreamingSettings;
             UpdateObjectSettings = existing.UpdateObjectSettings;
             WriteObjectSettings = existing.WriteObjectSettings;
             WriteObjectStreamingSettings = existing.WriteObjectStreamingSettings;
@@ -378,6 +380,20 @@ namespace Google.Cloud.Storage.V2
         /// </summary>
         /// <remarks>Timeout: 60 seconds.</remarks>
         public gaxgrpc::CallSettings ReadObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageClient.BidiReadObject</c> and <c>StorageClient.BidiReadObjectAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 60 seconds.</remarks>
+        public gaxgrpc::CallSettings BidiReadObjectSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::BidirectionalStreamingSettings"/> for calls to <c>StorageClient.BidiReadObject</c> and
+        /// <c>StorageClient.BidiReadObjectAsync</c>.
+        /// </summary>
+        /// <remarks>The default local send queue size is 100.</remarks>
+        public gaxgrpc::BidirectionalStreamingSettings BidiReadObjectStreamingSettings { get; set; } = new gaxgrpc::BidirectionalStreamingSettings(100);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>StorageClient.UpdateObject</c>
@@ -2023,12 +2039,26 @@ namespace Google.Cloud.Storage.V2
             ComposeObjectAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2037,12 +2067,26 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2051,12 +2095,26 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2065,12 +2123,26 @@ namespace Google.Cloud.Storage.V2
             DeleteObjectAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2090,12 +2162,26 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2115,12 +2201,26 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2136,12 +2236,26 @@ namespace Google.Cloud.Storage.V2
             DeleteObjectAsync(bucket, @object, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2161,12 +2275,26 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2186,12 +2314,26 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2207,12 +2349,26 @@ namespace Google.Cloud.Storage.V2
             DeleteObjectAsync(bucket, @object, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2237,12 +2393,26 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2267,12 +2437,26 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2292,12 +2476,26 @@ namespace Google.Cloud.Storage.V2
             DeleteObjectAsync(bucket, @object, generation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2322,12 +2520,26 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2352,12 +2564,26 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2637,7 +2863,14 @@ namespace Google.Cloud.Storage.V2
             CancelResumableWriteAsync(uploadId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2646,7 +2879,14 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2655,7 +2895,14 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2664,7 +2911,14 @@ namespace Google.Cloud.Storage.V2
             GetObjectAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2682,7 +2936,14 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2700,7 +2961,14 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2714,7 +2982,14 @@ namespace Google.Cloud.Storage.V2
             GetObjectAsync(bucket, @object, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2732,7 +3007,14 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2750,7 +3032,14 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2764,7 +3053,14 @@ namespace Google.Cloud.Storage.V2
             GetObjectAsync(bucket, @object, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2787,7 +3083,14 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2810,7 +3113,14 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2828,7 +3138,14 @@ namespace Google.Cloud.Storage.V2
             GetObjectAsync(bucket, @object, generation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2851,7 +3168,14 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2874,7 +3198,14 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="bucket">
         /// Required. Name of the bucket in which the object resides.
@@ -2899,7 +3230,13 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Reads an object's data.
+        /// Retrieves object data.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2908,7 +3245,13 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Reads an object's data.
+        /// Retrieves object data.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. The name of the bucket containing the object to read.
@@ -2926,7 +3269,13 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Reads an object's data.
+        /// Retrieves object data.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. The name of the bucket containing the object to read.
@@ -2944,7 +3293,13 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Reads an object's data.
+        /// Retrieves object data.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. The name of the bucket containing the object to read.
@@ -2967,7 +3322,13 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Reads an object's data.
+        /// Retrieves object data.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="bucket">
         /// Required. The name of the bucket containing the object to read.
@@ -2988,6 +3349,41 @@ namespace Google.Cloud.Storage.V2
                 Object = gax::GaxPreconditions.CheckNotNullOrEmpty(@object, nameof(@object)),
                 Generation = generation,
             }, callSettings);
+
+        /// <summary>
+        /// Bidirectional streaming methods for
+        /// <see cref="BidiReadObject(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
+        /// </summary>
+        public abstract partial class BidiReadObjectStream : gaxgrpc::BidirectionalStreamingBase<BidiReadObjectRequest, BidiReadObjectResponse>
+        {
+        }
+
+        /// <summary>
+        /// Reads an object's data.
+        /// 
+        /// This is a bi-directional API with the added support for reading multiple
+        /// ranges within one stream both within and across multiple messages.
+        /// If the server encountered an error for any of the inputs, the stream will
+        /// be closed with the relevant error code.
+        /// Because the API allows for multiple outstanding requests, when the stream
+        /// is closed the error response will contain a BidiReadObjectRangesError proto
+        /// in the error extension describing the error for each outstanding read_id.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// 
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
+        /// 
+        /// This API is currently in preview and is not yet available for general
+        /// use.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public virtual BidiReadObjectStream BidiReadObject(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null) =>
+            throw new sys::NotImplementedException();
 
         /// <summary>
         /// Updates an object's metadata.
@@ -3167,12 +3563,18 @@ namespace Google.Cloud.Storage.V2
         /// whether the service views the object as complete.
         /// 
         /// Attempting to resume an already finalized object will result in an OK
-        /// status, with a WriteObjectResponse containing the finalized object's
+        /// status, with a `WriteObjectResponse` containing the finalized object's
         /// metadata.
         /// 
         /// Alternatively, the BidiWriteObject operation may be used to write an
         /// object with controls over flushing and the ability to fetch the ability to
         /// determine the current persisted size.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.create`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -3213,6 +3615,13 @@ namespace Google.Cloud.Storage.V2
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// The authenticated user requires `storage.objects.list`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions)
+        /// to use this method. To return object ACLs, the authenticated user must also
+        /// have the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3222,6 +3631,13 @@ namespace Google.Cloud.Storage.V2
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// The authenticated user requires `storage.objects.list`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions)
+        /// to use this method. To return object ACLs, the authenticated user must also
+        /// have the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3231,6 +3647,13 @@ namespace Google.Cloud.Storage.V2
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// The authenticated user requires `storage.objects.list`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions)
+        /// to use this method. To return object ACLs, the authenticated user must also
+        /// have the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which to look for objects.
@@ -3264,6 +3687,13 @@ namespace Google.Cloud.Storage.V2
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// The authenticated user requires `storage.objects.list`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions)
+        /// to use this method. To return object ACLs, the authenticated user must also
+        /// have the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which to look for objects.
@@ -3297,6 +3727,13 @@ namespace Google.Cloud.Storage.V2
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// The authenticated user requires `storage.objects.list`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions)
+        /// to use this method. To return object ACLs, the authenticated user must also
+        /// have the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which to look for objects.
@@ -3330,6 +3767,13 @@ namespace Google.Cloud.Storage.V2
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// The authenticated user requires `storage.objects.list`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions)
+        /// to use this method. To return object ACLs, the authenticated user must also
+        /// have the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of the bucket in which to look for objects.
@@ -3392,9 +3836,19 @@ namespace Google.Cloud.Storage.V2
             RewriteObjectAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Starts a resumable write. How long the write operation remains valid, and
-        /// what happens when the write operation becomes invalid, are
-        /// service-dependent.
+        /// Starts a resumable write operation. This
+        /// method is part of the [Resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// This allows you to upload large objects in multiple chunks, which is more
+        /// resilient to network interruptions than a single upload. The validity
+        /// duration of the write operation, and the consequences of it becoming
+        /// invalid, are service-dependent.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.create`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3403,9 +3857,19 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts a resumable write. How long the write operation remains valid, and
-        /// what happens when the write operation becomes invalid, are
-        /// service-dependent.
+        /// Starts a resumable write operation. This
+        /// method is part of the [Resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// This allows you to upload large objects in multiple chunks, which is more
+        /// resilient to network interruptions than a single upload. The validity
+        /// duration of the write operation, and the consequences of it becoming
+        /// invalid, are service-dependent.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.create`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3414,9 +3878,19 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Starts a resumable write. How long the write operation remains valid, and
-        /// what happens when the write operation becomes invalid, are
-        /// service-dependent.
+        /// Starts a resumable write operation. This
+        /// method is part of the [Resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// This allows you to upload large objects in multiple chunks, which is more
+        /// resilient to network interruptions than a single upload. The validity
+        /// duration of the write operation, and the consequences of it becoming
+        /// invalid, are service-dependent.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.create`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3425,18 +3899,22 @@ namespace Google.Cloud.Storage.V2
             StartResumableWriteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Determines the `persisted_size` for an object that is being written, which
-        /// can then be used as the `write_offset` for the next `Write()` call.
+        /// Determines the `persisted_size` of an object that is being written. This
+        /// method is part of the [resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// The returned value is the size of the object that has been persisted so
+        /// far. The value can be used as the `write_offset` for the next `Write()`
+        /// call.
         /// 
-        /// If the object does not exist (i.e., the object has been deleted, or the
-        /// first `Write()` has not yet reached the service), this method returns the
+        /// If the object does not exist, meaning if it was deleted, or the
+        /// first `Write()` has not yet reached the service, this method returns the
         /// error `NOT_FOUND`.
         /// 
-        /// The client **may** call `QueryWriteStatus()` at any time to determine how
-        /// much data has been processed for this object. This is useful if the
-        /// client is buffering data and needs to know which data can be safely
-        /// evicted. For any sequence of `QueryWriteStatus()` calls for a given
-        /// object name, the sequence of returned `persisted_size` values will be
+        /// This method is useful for clients that buffer data and need to know which
+        /// data can be safely evicted. The client can call `QueryWriteStatus()` at any
+        /// time to determine how much data has been logged for this object.
+        /// For any sequence of `QueryWriteStatus()` calls for a given
+        /// object name, the sequence of returned `persisted_size` values are
         /// non-decreasing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3446,18 +3924,22 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Determines the `persisted_size` for an object that is being written, which
-        /// can then be used as the `write_offset` for the next `Write()` call.
+        /// Determines the `persisted_size` of an object that is being written. This
+        /// method is part of the [resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// The returned value is the size of the object that has been persisted so
+        /// far. The value can be used as the `write_offset` for the next `Write()`
+        /// call.
         /// 
-        /// If the object does not exist (i.e., the object has been deleted, or the
-        /// first `Write()` has not yet reached the service), this method returns the
+        /// If the object does not exist, meaning if it was deleted, or the
+        /// first `Write()` has not yet reached the service, this method returns the
         /// error `NOT_FOUND`.
         /// 
-        /// The client **may** call `QueryWriteStatus()` at any time to determine how
-        /// much data has been processed for this object. This is useful if the
-        /// client is buffering data and needs to know which data can be safely
-        /// evicted. For any sequence of `QueryWriteStatus()` calls for a given
-        /// object name, the sequence of returned `persisted_size` values will be
+        /// This method is useful for clients that buffer data and need to know which
+        /// data can be safely evicted. The client can call `QueryWriteStatus()` at any
+        /// time to determine how much data has been logged for this object.
+        /// For any sequence of `QueryWriteStatus()` calls for a given
+        /// object name, the sequence of returned `persisted_size` values are
         /// non-decreasing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3467,18 +3949,22 @@ namespace Google.Cloud.Storage.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Determines the `persisted_size` for an object that is being written, which
-        /// can then be used as the `write_offset` for the next `Write()` call.
+        /// Determines the `persisted_size` of an object that is being written. This
+        /// method is part of the [resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// The returned value is the size of the object that has been persisted so
+        /// far. The value can be used as the `write_offset` for the next `Write()`
+        /// call.
         /// 
-        /// If the object does not exist (i.e., the object has been deleted, or the
-        /// first `Write()` has not yet reached the service), this method returns the
+        /// If the object does not exist, meaning if it was deleted, or the
+        /// first `Write()` has not yet reached the service, this method returns the
         /// error `NOT_FOUND`.
         /// 
-        /// The client **may** call `QueryWriteStatus()` at any time to determine how
-        /// much data has been processed for this object. This is useful if the
-        /// client is buffering data and needs to know which data can be safely
-        /// evicted. For any sequence of `QueryWriteStatus()` calls for a given
-        /// object name, the sequence of returned `persisted_size` values will be
+        /// This method is useful for clients that buffer data and need to know which
+        /// data can be safely evicted. The client can call `QueryWriteStatus()` at any
+        /// time to determine how much data has been logged for this object.
+        /// For any sequence of `QueryWriteStatus()` calls for a given
+        /// object name, the sequence of returned `persisted_size` values are
         /// non-decreasing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3488,18 +3974,22 @@ namespace Google.Cloud.Storage.V2
             QueryWriteStatusAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Determines the `persisted_size` for an object that is being written, which
-        /// can then be used as the `write_offset` for the next `Write()` call.
+        /// Determines the `persisted_size` of an object that is being written. This
+        /// method is part of the [resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// The returned value is the size of the object that has been persisted so
+        /// far. The value can be used as the `write_offset` for the next `Write()`
+        /// call.
         /// 
-        /// If the object does not exist (i.e., the object has been deleted, or the
-        /// first `Write()` has not yet reached the service), this method returns the
+        /// If the object does not exist, meaning if it was deleted, or the
+        /// first `Write()` has not yet reached the service, this method returns the
         /// error `NOT_FOUND`.
         /// 
-        /// The client **may** call `QueryWriteStatus()` at any time to determine how
-        /// much data has been processed for this object. This is useful if the
-        /// client is buffering data and needs to know which data can be safely
-        /// evicted. For any sequence of `QueryWriteStatus()` calls for a given
-        /// object name, the sequence of returned `persisted_size` values will be
+        /// This method is useful for clients that buffer data and need to know which
+        /// data can be safely evicted. The client can call `QueryWriteStatus()` at any
+        /// time to determine how much data has been logged for this object.
+        /// For any sequence of `QueryWriteStatus()` calls for a given
+        /// object name, the sequence of returned `persisted_size` values are
         /// non-decreasing.
         /// </summary>
         /// <param name="uploadId">
@@ -3515,18 +4005,22 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Determines the `persisted_size` for an object that is being written, which
-        /// can then be used as the `write_offset` for the next `Write()` call.
+        /// Determines the `persisted_size` of an object that is being written. This
+        /// method is part of the [resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// The returned value is the size of the object that has been persisted so
+        /// far. The value can be used as the `write_offset` for the next `Write()`
+        /// call.
         /// 
-        /// If the object does not exist (i.e., the object has been deleted, or the
-        /// first `Write()` has not yet reached the service), this method returns the
+        /// If the object does not exist, meaning if it was deleted, or the
+        /// first `Write()` has not yet reached the service, this method returns the
         /// error `NOT_FOUND`.
         /// 
-        /// The client **may** call `QueryWriteStatus()` at any time to determine how
-        /// much data has been processed for this object. This is useful if the
-        /// client is buffering data and needs to know which data can be safely
-        /// evicted. For any sequence of `QueryWriteStatus()` calls for a given
-        /// object name, the sequence of returned `persisted_size` values will be
+        /// This method is useful for clients that buffer data and need to know which
+        /// data can be safely evicted. The client can call `QueryWriteStatus()` at any
+        /// time to determine how much data has been logged for this object.
+        /// For any sequence of `QueryWriteStatus()` calls for a given
+        /// object name, the sequence of returned `persisted_size` values are
         /// non-decreasing.
         /// </summary>
         /// <param name="uploadId">
@@ -3542,18 +4036,22 @@ namespace Google.Cloud.Storage.V2
             }, callSettings);
 
         /// <summary>
-        /// Determines the `persisted_size` for an object that is being written, which
-        /// can then be used as the `write_offset` for the next `Write()` call.
+        /// Determines the `persisted_size` of an object that is being written. This
+        /// method is part of the [resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// The returned value is the size of the object that has been persisted so
+        /// far. The value can be used as the `write_offset` for the next `Write()`
+        /// call.
         /// 
-        /// If the object does not exist (i.e., the object has been deleted, or the
-        /// first `Write()` has not yet reached the service), this method returns the
+        /// If the object does not exist, meaning if it was deleted, or the
+        /// first `Write()` has not yet reached the service, this method returns the
         /// error `NOT_FOUND`.
         /// 
-        /// The client **may** call `QueryWriteStatus()` at any time to determine how
-        /// much data has been processed for this object. This is useful if the
-        /// client is buffering data and needs to know which data can be safely
-        /// evicted. For any sequence of `QueryWriteStatus()` calls for a given
-        /// object name, the sequence of returned `persisted_size` values will be
+        /// This method is useful for clients that buffer data and need to know which
+        /// data can be safely evicted. The client can call `QueryWriteStatus()` at any
+        /// time to determine how much data has been logged for this object.
+        /// For any sequence of `QueryWriteStatus()` calls for a given
+        /// object name, the sequence of returned `persisted_size` values are
         /// non-decreasing.
         /// </summary>
         /// <param name="uploadId">
@@ -3771,6 +4269,8 @@ namespace Google.Cloud.Storage.V2
 
         private readonly gaxgrpc::ApiServerStreamingCall<ReadObjectRequest, ReadObjectResponse> _callReadObject;
 
+        private readonly gaxgrpc::ApiBidirectionalStreamingCall<BidiReadObjectRequest, BidiReadObjectResponse> _callBidiReadObject;
+
         private readonly gaxgrpc::ApiCall<UpdateObjectRequest, Object> _callUpdateObject;
 
         private readonly gaxgrpc::ApiClientStreamingCall<WriteObjectRequest, WriteObjectResponse> _callWriteObject;
@@ -3847,6 +4347,9 @@ namespace Google.Cloud.Storage.V2
             _callReadObject = clientHelper.BuildApiCall<ReadObjectRequest, ReadObjectResponse>("ReadObject", grpcClient.ReadObject, effectiveSettings.ReadObjectSettings).WithGoogleRequestParam("bucket", request => request.Bucket);
             Modify_ApiCall(ref _callReadObject);
             Modify_ReadObjectApiCall(ref _callReadObject);
+            _callBidiReadObject = clientHelper.BuildApiCall<BidiReadObjectRequest, BidiReadObjectResponse>("BidiReadObject", grpcClient.BidiReadObject, effectiveSettings.BidiReadObjectSettings, effectiveSettings.BidiReadObjectStreamingSettings);
+            Modify_ApiCall(ref _callBidiReadObject);
+            Modify_BidiReadObjectApiCall(ref _callBidiReadObject);
             _callUpdateObject = clientHelper.BuildApiCall<UpdateObjectRequest, Object>("UpdateObject", grpcClient.UpdateObjectAsync, grpcClient.UpdateObject, effectiveSettings.UpdateObjectSettings).WithGoogleRequestParam("bucket", request => request.Object?.Bucket);
             Modify_ApiCall(ref _callUpdateObject);
             Modify_UpdateObjectApiCall(ref _callUpdateObject);
@@ -3912,6 +4415,8 @@ namespace Google.Cloud.Storage.V2
 
         partial void Modify_ReadObjectApiCall(ref gaxgrpc::ApiServerStreamingCall<ReadObjectRequest, ReadObjectResponse> call);
 
+        partial void Modify_BidiReadObjectApiCall(ref gaxgrpc::ApiBidirectionalStreamingCall<BidiReadObjectRequest, BidiReadObjectResponse> call);
+
         partial void Modify_UpdateObjectApiCall(ref gaxgrpc::ApiCall<UpdateObjectRequest, Object> call);
 
         partial void Modify_WriteObjectApiCall(ref gaxgrpc::ApiClientStreamingCall<WriteObjectRequest, WriteObjectResponse> call);
@@ -3962,6 +4467,10 @@ namespace Google.Cloud.Storage.V2
         partial void Modify_GetObjectRequest(ref GetObjectRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReadObjectRequest(ref ReadObjectRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BidiReadObjectRequestCallSettings(ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BidiReadObjectRequestRequest(ref BidiReadObjectRequest request);
 
         partial void Modify_UpdateObjectRequest(ref UpdateObjectRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4246,12 +4755,26 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4263,12 +4786,26 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Deletes an object and its metadata.
+        /// Deletes an object and its metadata. Deletions are permanent if versioning
+        /// is not enabled for the bucket, or if the generation parameter is used, or
+        /// if [soft delete](https://cloud.google.com/storage/docs/soft-delete) is not
+        /// enabled for the bucket.
+        /// When this API is used to delete an object from a bucket that has soft
+        /// delete policy enabled, the object becomes soft deleted, and the
+        /// `softDeleteTime` and `hardDeleteTime` properties are set on the object.
+        /// This API cannot be used to permanently delete soft-deleted objects.
+        /// Soft-deleted objects are permanently deleted according to their
+        /// `hardDeleteTime`.
         /// 
-        /// Deletions are normally permanent when versioning is disabled or whenever
-        /// the generation parameter is used. However, if soft delete is enabled for
-        /// the bucket, deleted objects can be restored using RestoreObject until the
-        /// soft delete retention period has passed.
+        /// You can use the [`RestoreObject`][google.storage.v2.Storage.RestoreObject]
+        /// API to restore soft-deleted objects until the soft delete retention period
+        /// has passed.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.delete`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4342,7 +4879,14 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4354,7 +4898,14 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Retrieves an object's metadata.
+        /// Retrieves object metadata.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket. To return object ACLs, the authenticated user must also have
+        /// the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4375,7 +4926,13 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Reads an object's data.
+        /// Retrieves object data.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4384,6 +4941,84 @@ namespace Google.Cloud.Storage.V2
         {
             Modify_ReadObjectRequest(ref request, ref callSettings);
             return new ReadObjectStreamImpl(_callReadObject.Call(request, callSettings));
+        }
+
+        internal sealed partial class BidiReadObjectStreamImpl : BidiReadObjectStream
+        {
+            /// <summary>Construct the bidirectional streaming method for <c>BidiReadObject</c>.</summary>
+            /// <param name="service">The service containing this streaming method.</param>
+            /// <param name="call">The underlying gRPC duplex streaming call.</param>
+            /// <param name="writeBuffer">
+            /// The <see cref="gaxgrpc::BufferedClientStreamWriter{BidiReadObjectRequest}"/> instance associated with
+            /// this streaming call.
+            /// </param>
+            public BidiReadObjectStreamImpl(StorageClientImpl service, grpccore::AsyncDuplexStreamingCall<BidiReadObjectRequest, BidiReadObjectResponse> call, gaxgrpc::BufferedClientStreamWriter<BidiReadObjectRequest> writeBuffer)
+            {
+                _service = service;
+                GrpcCall = call;
+                _writeBuffer = writeBuffer;
+            }
+
+            private StorageClientImpl _service;
+
+            private gaxgrpc::BufferedClientStreamWriter<BidiReadObjectRequest> _writeBuffer;
+
+            public override grpccore::AsyncDuplexStreamingCall<BidiReadObjectRequest, BidiReadObjectResponse> GrpcCall { get; }
+
+            private BidiReadObjectRequest ModifyRequest(BidiReadObjectRequest request)
+            {
+                _service.Modify_BidiReadObjectRequestRequest(ref request);
+                return request;
+            }
+
+            public override stt::Task TryWriteAsync(BidiReadObjectRequest message) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message));
+
+            public override stt::Task WriteAsync(BidiReadObjectRequest message) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message));
+
+            public override stt::Task TryWriteAsync(BidiReadObjectRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.TryWriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task WriteAsync(BidiReadObjectRequest message, grpccore::WriteOptions options) =>
+                _writeBuffer.WriteAsync(ModifyRequest(message), options);
+
+            public override stt::Task TryWriteCompleteAsync() => _writeBuffer.TryWriteCompleteAsync();
+
+            public override stt::Task WriteCompleteAsync() => _writeBuffer.WriteCompleteAsync();
+        }
+
+        /// <summary>
+        /// Reads an object's data.
+        /// 
+        /// This is a bi-directional API with the added support for reading multiple
+        /// ranges within one stream both within and across multiple messages.
+        /// If the server encountered an error for any of the inputs, the stream will
+        /// be closed with the relevant error code.
+        /// Because the API allows for multiple outstanding requests, when the stream
+        /// is closed the error response will contain a BidiReadObjectRangesError proto
+        /// in the error extension describing the error for each outstanding read_id.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.get`
+        /// 
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
+        /// 
+        /// This API is currently in preview and is not yet available for general
+        /// use.
+        /// </summary>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
+        /// <returns>The client-server stream.</returns>
+        public override StorageClient.BidiReadObjectStream BidiReadObject(gaxgrpc::CallSettings callSettings = null, gaxgrpc::BidirectionalStreamingSettings streamingSettings = null)
+        {
+            Modify_BidiReadObjectRequestCallSettings(ref callSettings);
+            gaxgrpc::BidirectionalStreamingSettings effectiveStreamingSettings = streamingSettings ?? _callBidiReadObject.StreamingSettings;
+            grpccore::AsyncDuplexStreamingCall<BidiReadObjectRequest, BidiReadObjectResponse> call = _callBidiReadObject.Call(callSettings);
+            gaxgrpc::BufferedClientStreamWriter<BidiReadObjectRequest> writeBuffer = new gaxgrpc::BufferedClientStreamWriter<BidiReadObjectRequest>(call.RequestStream, effectiveStreamingSettings.BufferedClientWriterCapacity);
+            return new BidiReadObjectStreamImpl(this, call, writeBuffer);
         }
 
         /// <summary>
@@ -4511,12 +5146,18 @@ namespace Google.Cloud.Storage.V2
         /// whether the service views the object as complete.
         /// 
         /// Attempting to resume an already finalized object will result in an OK
-        /// status, with a WriteObjectResponse containing the finalized object's
+        /// status, with a `WriteObjectResponse` containing the finalized object's
         /// metadata.
         /// 
         /// Alternatively, the BidiWriteObject operation may be used to write an
         /// object with controls over flushing and the ability to fetch the ability to
         /// determine the current persisted size.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.create`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <param name="streamingSettings">If not null, applies streaming overrides to this RPC call.</param>
@@ -4606,6 +5247,13 @@ namespace Google.Cloud.Storage.V2
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// The authenticated user requires `storage.objects.list`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions)
+        /// to use this method. To return object ACLs, the authenticated user must also
+        /// have the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4618,6 +5266,13 @@ namespace Google.Cloud.Storage.V2
 
         /// <summary>
         /// Retrieves a list of objects matching the criteria.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// The authenticated user requires `storage.objects.list`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions)
+        /// to use this method. To return object ACLs, the authenticated user must also
+        /// have the `storage.objects.getIamPolicy` permission.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4655,9 +5310,19 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Starts a resumable write. How long the write operation remains valid, and
-        /// what happens when the write operation becomes invalid, are
-        /// service-dependent.
+        /// Starts a resumable write operation. This
+        /// method is part of the [Resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// This allows you to upload large objects in multiple chunks, which is more
+        /// resilient to network interruptions than a single upload. The validity
+        /// duration of the write operation, and the consequences of it becoming
+        /// invalid, are service-dependent.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.create`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4669,9 +5334,19 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Starts a resumable write. How long the write operation remains valid, and
-        /// what happens when the write operation becomes invalid, are
-        /// service-dependent.
+        /// Starts a resumable write operation. This
+        /// method is part of the [Resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// This allows you to upload large objects in multiple chunks, which is more
+        /// resilient to network interruptions than a single upload. The validity
+        /// duration of the write operation, and the consequences of it becoming
+        /// invalid, are service-dependent.
+        /// 
+        /// **IAM Permissions**:
+        /// 
+        /// Requires `storage.objects.create`
+        /// [IAM permission](https://cloud.google.com/iam/docs/overview#permissions) on
+        /// the bucket.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4683,18 +5358,22 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Determines the `persisted_size` for an object that is being written, which
-        /// can then be used as the `write_offset` for the next `Write()` call.
+        /// Determines the `persisted_size` of an object that is being written. This
+        /// method is part of the [resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// The returned value is the size of the object that has been persisted so
+        /// far. The value can be used as the `write_offset` for the next `Write()`
+        /// call.
         /// 
-        /// If the object does not exist (i.e., the object has been deleted, or the
-        /// first `Write()` has not yet reached the service), this method returns the
+        /// If the object does not exist, meaning if it was deleted, or the
+        /// first `Write()` has not yet reached the service, this method returns the
         /// error `NOT_FOUND`.
         /// 
-        /// The client **may** call `QueryWriteStatus()` at any time to determine how
-        /// much data has been processed for this object. This is useful if the
-        /// client is buffering data and needs to know which data can be safely
-        /// evicted. For any sequence of `QueryWriteStatus()` calls for a given
-        /// object name, the sequence of returned `persisted_size` values will be
+        /// This method is useful for clients that buffer data and need to know which
+        /// data can be safely evicted. The client can call `QueryWriteStatus()` at any
+        /// time to determine how much data has been logged for this object.
+        /// For any sequence of `QueryWriteStatus()` calls for a given
+        /// object name, the sequence of returned `persisted_size` values are
         /// non-decreasing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4707,18 +5386,22 @@ namespace Google.Cloud.Storage.V2
         }
 
         /// <summary>
-        /// Determines the `persisted_size` for an object that is being written, which
-        /// can then be used as the `write_offset` for the next `Write()` call.
+        /// Determines the `persisted_size` of an object that is being written. This
+        /// method is part of the [resumable
+        /// upload](https://cloud.google.com/storage/docs/resumable-uploads) feature.
+        /// The returned value is the size of the object that has been persisted so
+        /// far. The value can be used as the `write_offset` for the next `Write()`
+        /// call.
         /// 
-        /// If the object does not exist (i.e., the object has been deleted, or the
-        /// first `Write()` has not yet reached the service), this method returns the
+        /// If the object does not exist, meaning if it was deleted, or the
+        /// first `Write()` has not yet reached the service, this method returns the
         /// error `NOT_FOUND`.
         /// 
-        /// The client **may** call `QueryWriteStatus()` at any time to determine how
-        /// much data has been processed for this object. This is useful if the
-        /// client is buffering data and needs to know which data can be safely
-        /// evicted. For any sequence of `QueryWriteStatus()` calls for a given
-        /// object name, the sequence of returned `persisted_size` values will be
+        /// This method is useful for clients that buffer data and need to know which
+        /// data can be safely evicted. The client can call `QueryWriteStatus()` at any
+        /// time to determine how much data has been logged for this object.
+        /// For any sequence of `QueryWriteStatus()` calls for a given
+        /// object name, the sequence of returned `persisted_size` values are
         /// non-decreasing.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
