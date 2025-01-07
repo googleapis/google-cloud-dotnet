@@ -1732,6 +1732,57 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for BidiReadObject</summary>
+        public async Task BidiReadObject()
+        {
+            // Snippet: BidiReadObject(CallSettings, BidirectionalStreamingSettings)
+            // Create client
+            gcsv::StorageClient storageClient = gcsv::StorageClient.Create();
+            // Initialize streaming call, retrieving the stream object
+            using gcsv::StorageClient.BidiReadObjectStream response = storageClient.BidiReadObject();
+
+            // Sending requests and retrieving responses can be arbitrarily interleaved
+            // Exact sequence will depend on client/server behavior
+
+            // Create task to do something with responses from server
+            Task responseHandlerTask = Task.Run(async () =>
+            {
+                // Note that C# 8 code can use await foreach
+                AsyncResponseStream<gcsv::BidiReadObjectResponse> responseStream = response.GetResponseStream();
+                while (await responseStream.MoveNextAsync())
+                {
+                    gcsv::BidiReadObjectResponse responseItem = responseStream.Current;
+                    // Do something with streamed response
+                }
+                // The response stream has completed
+            });
+
+            // Send requests to the server
+            bool done = false;
+            while (!done)
+            {
+                // Initialize a request
+                gcsv::BidiReadObjectRequest request = new gcsv::BidiReadObjectRequest
+                {
+                    ReadObjectSpec = new gcsv::BidiReadObjectSpec(),
+                    ReadRanges =
+                    {
+                        new gcsv::ReadRange(),
+                    },
+                };
+                // Stream a request to the server
+                await response.WriteAsync(request);
+                // Set "done" to true when sending requests is complete
+            }
+
+            // Complete writing requests to the stream
+            await response.WriteCompleteAsync();
+            // Await the response handler
+            // This will complete once all server responses have been processed
+            await responseHandlerTask;
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateObject</summary>
         public void UpdateObjectRequestObject()
         {

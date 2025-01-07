@@ -4513,6 +4513,54 @@
       ]
     },
     {
+      "regionTag": "storage_v2_generated_Storage_BidiReadObject_sync",
+      "title": "BidiReadObject",
+      "description": "Snippet for BidiReadObject",
+      "file": "StorageClient.BidiReadObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BidiReadObject",
+        "fullName": "Google.Cloud.Storage.V2.StorageClient.BidiReadObject",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.V2.StorageClient+BidiReadObjectStream",
+        "client": {
+          "shortName": "StorageClient",
+          "fullName": "Google.Cloud.Storage.V2.StorageClient"
+        },
+        "method": {
+          "shortName": "BidiReadObject",
+          "fullName": "google.storage.v2.Storage.BidiReadObject",
+          "service": {
+            "shortName": "Storage",
+            "fullName": "google.storage.v2.Storage"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "storage_v2_generated_Storage_UpdateObject_sync",
       "title": "UpdateObjectRequestObject",
       "description": "Snippet for UpdateObject",

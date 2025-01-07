@@ -628,6 +628,26 @@ namespace Google.Cloud.Storage.V2
         }
     }
 
+    public partial class BidiReadObjectSpec
+    {
+        /// <summary><see cref="BucketName"/>-typed view over the <see cref="Bucket"/> resource name property.</summary>
+        public BucketName BucketAsBucketName
+        {
+            get => string.IsNullOrEmpty(Bucket) ? null : BucketName.Parse(Bucket, allowUnparsed: true);
+            set => Bucket = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AppendObjectSpec
+    {
+        /// <summary><see cref="BucketName"/>-typed view over the <see cref="Bucket"/> resource name property.</summary>
+        public BucketName BucketAsBucketName
+        {
+            get => string.IsNullOrEmpty(Bucket) ? null : BucketName.Parse(Bucket, allowUnparsed: true);
+            set => Bucket = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListObjectsRequest
     {
         /// <summary><see cref="BucketName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
