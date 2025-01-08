@@ -901,6 +901,73 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ValidateDirectoryService</summary>
+        public void ValidateDirectoryServiceRequestObject()
+        {
+            // Snippet: ValidateDirectoryService(ValidateDirectoryServiceRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ValidateDirectoryServiceRequest request = new ValidateDirectoryServiceRequest
+            {
+                StoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+                DirectoryServiceType = DirectoryServiceType.Unspecified,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.ValidateDirectoryService(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceValidateDirectoryService(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ValidateDirectoryServiceAsync</summary>
+        public async Task ValidateDirectoryServiceRequestObjectAsync()
+        {
+            // Snippet: ValidateDirectoryServiceAsync(ValidateDirectoryServiceRequest, CallSettings)
+            // Additional: ValidateDirectoryServiceAsync(ValidateDirectoryServiceRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ValidateDirectoryServiceRequest request = new ValidateDirectoryServiceRequest
+            {
+                StoragePoolName = StoragePoolName.FromProjectLocationStoragePool("[PROJECT]", "[LOCATION]", "[STORAGE_POOL]"),
+                DirectoryServiceType = DirectoryServiceType.Unspecified,
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.ValidateDirectoryServiceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceValidateDirectoryServiceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for SwitchActiveReplicaZone</summary>
         public void SwitchActiveReplicaZoneRequestObject()
         {

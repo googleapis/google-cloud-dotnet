@@ -1423,6 +1423,103 @@
       ]
     },
     {
+      "regionTag": "netapp_v1_generated_NetApp_ValidateDirectoryService_sync",
+      "title": "ValidateDirectoryServiceRequestObject",
+      "description": "Snippet for ValidateDirectoryService",
+      "file": "NetAppClient.ValidateDirectoryServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateDirectoryService",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ValidateDirectoryService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ValidateDirectoryService",
+          "fullName": "google.cloud.netapp.v1.NetApp.ValidateDirectoryService",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ValidateDirectoryService_async",
+      "title": "ValidateDirectoryServiceRequestObjectAsync",
+      "description": "Snippet for ValidateDirectoryServiceAsync",
+      "file": "NetAppClient.ValidateDirectoryServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateDirectoryServiceAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ValidateDirectoryServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ValidateDirectoryService",
+          "fullName": "google.cloud.netapp.v1.NetApp.ValidateDirectoryService",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "netapp_v1_generated_NetApp_SwitchActiveReplicaZone_sync",
       "title": "SwitchActiveReplicaZoneRequestObject",
       "description": "Snippet for SwitchActiveReplicaZone",

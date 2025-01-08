@@ -80,6 +80,8 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest> __Marshaller_google_cloud_netapp_v1_DeleteStoragePoolRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest> __Marshaller_google_cloud_netapp_v1_ValidateDirectoryServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest> __Marshaller_google_cloud_netapp_v1_SwitchActiveReplicaZoneRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListVolumesRequest> __Marshaller_google_cloud_netapp_v1_ListVolumesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListVolumesRequest.Parser));
@@ -250,6 +252,14 @@ namespace Google.Cloud.NetApp.V1 {
         __ServiceName,
         "DeleteStoragePool",
         __Marshaller_google_cloud_netapp_v1_DeleteStoragePoolRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest, global::Google.LongRunning.Operation> __Method_ValidateDirectoryService = new grpc::Method<global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ValidateDirectoryService",
+        __Marshaller_google_cloud_netapp_v1_ValidateDirectoryServiceRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -710,6 +720,19 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteStoragePool(global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// ValidateDirectoryService does a connectivity check for a directory service
+      /// policy attached to the storage pool.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ValidateDirectoryService(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1580,6 +1603,58 @@ namespace Google.Cloud.NetApp.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteStoragePoolAsync(global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteStoragePool, null, options, request);
+      }
+      /// <summary>
+      /// ValidateDirectoryService does a connectivity check for a directory service
+      /// policy attached to the storage pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ValidateDirectoryService(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ValidateDirectoryService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ValidateDirectoryService does a connectivity check for a directory service
+      /// policy attached to the storage pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ValidateDirectoryService(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ValidateDirectoryService, null, options, request);
+      }
+      /// <summary>
+      /// ValidateDirectoryService does a connectivity check for a directory service
+      /// policy attached to the storage pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ValidateDirectoryServiceAsync(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ValidateDirectoryServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// ValidateDirectoryService does a connectivity check for a directory service
+      /// policy attached to the storage pool.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ValidateDirectoryServiceAsync(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ValidateDirectoryService, null, options, request);
       }
       /// <summary>
       /// This operation will switch the active/replica zone for a regional
@@ -3992,6 +4067,7 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_GetStoragePool, serviceImpl.GetStoragePool)
           .AddMethod(__Method_UpdateStoragePool, serviceImpl.UpdateStoragePool)
           .AddMethod(__Method_DeleteStoragePool, serviceImpl.DeleteStoragePool)
+          .AddMethod(__Method_ValidateDirectoryService, serviceImpl.ValidateDirectoryService)
           .AddMethod(__Method_SwitchActiveReplicaZone, serviceImpl.SwitchActiveReplicaZone)
           .AddMethod(__Method_ListVolumes, serviceImpl.ListVolumes)
           .AddMethod(__Method_GetVolume, serviceImpl.GetVolume)
@@ -4055,6 +4131,7 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_GetStoragePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetStoragePoolRequest, global::Google.Cloud.NetApp.V1.StoragePool>(serviceImpl.GetStoragePool));
       serviceBinder.AddMethod(__Method_UpdateStoragePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateStoragePool));
       serviceBinder.AddMethod(__Method_DeleteStoragePool, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteStoragePool));
+      serviceBinder.AddMethod(__Method_ValidateDirectoryService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest, global::Google.LongRunning.Operation>(serviceImpl.ValidateDirectoryService));
       serviceBinder.AddMethod(__Method_SwitchActiveReplicaZone, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest, global::Google.LongRunning.Operation>(serviceImpl.SwitchActiveReplicaZone));
       serviceBinder.AddMethod(__Method_ListVolumes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListVolumesRequest, global::Google.Cloud.NetApp.V1.ListVolumesResponse>(serviceImpl.ListVolumes));
       serviceBinder.AddMethod(__Method_GetVolume, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetVolumeRequest, global::Google.Cloud.NetApp.V1.Volume>(serviceImpl.GetVolume));

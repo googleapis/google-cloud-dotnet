@@ -7958,9 +7958,7 @@ namespace Google.Cloud.NetApp.V1 {
     public const int ReplicationFieldNumber = 1;
     private string replication_ = "";
     /// <summary>
-    /// Required. Desired Identifier (name) of the replication which will be created for this volume.
-    /// Format:
-    /// `projects/{project_id}/locations/{location}/volumes/{volume_id}/replications/{replication_id}`
+    /// Required. Desired name for the replication of this volume.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

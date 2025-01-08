@@ -57,6 +57,8 @@ namespace Google.Cloud.NetApp.V1
             UpdateStoragePoolOperationsSettings = existing.UpdateStoragePoolOperationsSettings.Clone();
             DeleteStoragePoolSettings = existing.DeleteStoragePoolSettings;
             DeleteStoragePoolOperationsSettings = existing.DeleteStoragePoolOperationsSettings.Clone();
+            ValidateDirectoryServiceSettings = existing.ValidateDirectoryServiceSettings;
+            ValidateDirectoryServiceOperationsSettings = existing.ValidateDirectoryServiceOperationsSettings.Clone();
             SwitchActiveReplicaZoneSettings = existing.SwitchActiveReplicaZoneSettings;
             SwitchActiveReplicaZoneOperationsSettings = existing.SwitchActiveReplicaZoneOperationsSettings.Clone();
             ListVolumesSettings = existing.ListVolumesSettings;
@@ -266,6 +268,36 @@ namespace Google.Cloud.NetApp.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteStoragePoolOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.ValidateDirectoryService</c> and <c>NetAppClient.ValidateDirectoryServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ValidateDirectoryServiceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.ValidateDirectoryService</c> and
+        /// <c>NetAppClient.ValidateDirectoryServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ValidateDirectoryServiceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2373,6 +2405,63 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteStoragePoolAsync(StoragePoolName name, st::CancellationToken cancellationToken) =>
             DeleteStoragePoolAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// ValidateDirectoryService does a connectivity check for a directory service
+        /// policy attached to the storage pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> ValidateDirectoryService(ValidateDirectoryServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// ValidateDirectoryService does a connectivity check for a directory service
+        /// policy attached to the storage pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ValidateDirectoryServiceAsync(ValidateDirectoryServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// ValidateDirectoryService does a connectivity check for a directory service
+        /// policy attached to the storage pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ValidateDirectoryServiceAsync(ValidateDirectoryServiceRequest request, st::CancellationToken cancellationToken) =>
+            ValidateDirectoryServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ValidateDirectoryService</c>.</summary>
+        public virtual lro::OperationsClient ValidateDirectoryServiceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ValidateDirectoryService</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceValidateDirectoryService(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ValidateDirectoryServiceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ValidateDirectoryService</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceValidateDirectoryServiceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ValidateDirectoryServiceOperationsClient, callSettings);
 
         /// <summary>
         /// This operation will switch the active/replica zone for a regional
@@ -8609,6 +8698,8 @@ namespace Google.Cloud.NetApp.V1
 
         private readonly gaxgrpc::ApiCall<DeleteStoragePoolRequest, lro::Operation> _callDeleteStoragePool;
 
+        private readonly gaxgrpc::ApiCall<ValidateDirectoryServiceRequest, lro::Operation> _callValidateDirectoryService;
+
         private readonly gaxgrpc::ApiCall<SwitchActiveReplicaZoneRequest, lro::Operation> _callSwitchActiveReplicaZone;
 
         private readonly gaxgrpc::ApiCall<ListVolumesRequest, ListVolumesResponse> _callListVolumes;
@@ -8725,6 +8816,7 @@ namespace Google.Cloud.NetApp.V1
             CreateStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateStoragePoolOperationsSettings, logger);
             UpdateStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateStoragePoolOperationsSettings, logger);
             DeleteStoragePoolOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteStoragePoolOperationsSettings, logger);
+            ValidateDirectoryServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ValidateDirectoryServiceOperationsSettings, logger);
             SwitchActiveReplicaZoneOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SwitchActiveReplicaZoneOperationsSettings, logger);
             CreateVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateVolumeOperationsSettings, logger);
             UpdateVolumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateVolumeOperationsSettings, logger);
@@ -8773,6 +8865,9 @@ namespace Google.Cloud.NetApp.V1
             _callDeleteStoragePool = clientHelper.BuildApiCall<DeleteStoragePoolRequest, lro::Operation>("DeleteStoragePool", grpcClient.DeleteStoragePoolAsync, grpcClient.DeleteStoragePool, effectiveSettings.DeleteStoragePoolSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteStoragePool);
             Modify_DeleteStoragePoolApiCall(ref _callDeleteStoragePool);
+            _callValidateDirectoryService = clientHelper.BuildApiCall<ValidateDirectoryServiceRequest, lro::Operation>("ValidateDirectoryService", grpcClient.ValidateDirectoryServiceAsync, grpcClient.ValidateDirectoryService, effectiveSettings.ValidateDirectoryServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callValidateDirectoryService);
+            Modify_ValidateDirectoryServiceApiCall(ref _callValidateDirectoryService);
             _callSwitchActiveReplicaZone = clientHelper.BuildApiCall<SwitchActiveReplicaZoneRequest, lro::Operation>("SwitchActiveReplicaZone", grpcClient.SwitchActiveReplicaZoneAsync, grpcClient.SwitchActiveReplicaZone, effectiveSettings.SwitchActiveReplicaZoneSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSwitchActiveReplicaZone);
             Modify_SwitchActiveReplicaZoneApiCall(ref _callSwitchActiveReplicaZone);
@@ -8935,6 +9030,8 @@ namespace Google.Cloud.NetApp.V1
 
         partial void Modify_DeleteStoragePoolApiCall(ref gaxgrpc::ApiCall<DeleteStoragePoolRequest, lro::Operation> call);
 
+        partial void Modify_ValidateDirectoryServiceApiCall(ref gaxgrpc::ApiCall<ValidateDirectoryServiceRequest, lro::Operation> call);
+
         partial void Modify_SwitchActiveReplicaZoneApiCall(ref gaxgrpc::ApiCall<SwitchActiveReplicaZoneRequest, lro::Operation> call);
 
         partial void Modify_ListVolumesApiCall(ref gaxgrpc::ApiCall<ListVolumesRequest, ListVolumesResponse> call);
@@ -9050,6 +9147,8 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_UpdateStoragePoolRequest(ref UpdateStoragePoolRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteStoragePoolRequest(ref DeleteStoragePoolRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ValidateDirectoryServiceRequest(ref ValidateDirectoryServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SwitchActiveReplicaZoneRequest(ref SwitchActiveReplicaZoneRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -9276,6 +9375,35 @@ namespace Google.Cloud.NetApp.V1
         {
             Modify_DeleteStoragePoolRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteStoragePool.Async(request, callSettings).ConfigureAwait(false), DeleteStoragePoolOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ValidateDirectoryService</c>.</summary>
+        public override lro::OperationsClient ValidateDirectoryServiceOperationsClient { get; }
+
+        /// <summary>
+        /// ValidateDirectoryService does a connectivity check for a directory service
+        /// policy attached to the storage pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> ValidateDirectoryService(ValidateDirectoryServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ValidateDirectoryServiceRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callValidateDirectoryService.Sync(request, callSettings), ValidateDirectoryServiceOperationsClient);
+        }
+
+        /// <summary>
+        /// ValidateDirectoryService does a connectivity check for a directory service
+        /// policy attached to the storage pool.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> ValidateDirectoryServiceAsync(ValidateDirectoryServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ValidateDirectoryServiceRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callValidateDirectoryService.Async(request, callSettings).ConfigureAwait(false), ValidateDirectoryServiceOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>SwitchActiveReplicaZone</c>.</summary>

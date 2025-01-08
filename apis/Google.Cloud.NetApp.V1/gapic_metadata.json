@@ -328,6 +328,12 @@
                 "UpdateVolumeAsync"
               ]
             },
+            "ValidateDirectoryService": {
+              "methods": [
+                "ValidateDirectoryService",
+                "ValidateDirectoryServiceAsync"
+              ]
+            },
             "VerifyKmsConfig": {
               "methods": [
                 "VerifyKmsConfig",
