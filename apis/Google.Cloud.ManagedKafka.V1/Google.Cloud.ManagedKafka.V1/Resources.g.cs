@@ -87,14 +87,17 @@ namespace Google.Cloud.ManagedKafka.V1 {
             "dGFtcEID4EEDEhMKBnRhcmdldBgDIAEoCUID4EEDEhEKBHZlcmIYBCABKAlC",
             "A+BBAxIbCg5zdGF0dXNfbWVzc2FnZRgFIAEoCUID4EEDEiMKFnJlcXVlc3Rl",
             "ZF9jYW5jZWxsYXRpb24YBiABKAhCA+BBAxIYCgthcGlfdmVyc2lvbhgHIAEo",
-            "CUID4EEDQtUCCiBjb20uZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MUIO",
+            "CUID4EEDQsMDCiBjb20uZ29vZ2xlLmNsb3VkLm1hbmFnZWRrYWZrYS52MUIO",
             "UmVzb3VyY2VzUHJvdG9QAVpEY2xvdWQuZ29vZ2xlLmNvbS9nby9tYW5hZ2Vk",
             "a2Fma2EvYXBpdjEvbWFuYWdlZGthZmthcGI7bWFuYWdlZGthZmthcGKqAhxH",
             "b29nbGUuQ2xvdWQuTWFuYWdlZEthZmthLlYxygIcR29vZ2xlXENsb3VkXE1h",
             "bmFnZWRLYWZrYVxWMeoCH0dvb2dsZTo6Q2xvdWQ6Ok1hbmFnZWRLYWZrYTo6",
             "VjHqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJTcHJv",
             "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdz",
-            "L3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX1iBnByb3RvMw=="));
+            "L3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX3qQWsKKnNlY3Jl",
+            "dG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbhI9cHJvamVj",
+            "dHMve3Byb2plY3R9L3NlY3JldHMve3NlY3JldH0vdmVyc2lvbnMve3NlY3Jl",
+            "dF92ZXJzaW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
