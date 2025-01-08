@@ -27,27 +27,28 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "CjBnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvZW50aXRsZW1lbnQu",
             "cHJvdG8SHmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MRofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90byLFAwoLRW50aXRsZW1lbnQSEQoEbmFtZRgBIAEoCUID4EEIElIK",
+            "ZS5wcm90byLcAwoLRW50aXRsZW1lbnQSEQoEbmFtZRgBIAEoCUID4EEIElIK",
             "FWNsb3VkX2FjY291bnRfZGV0YWlscxgCIAEoCzIzLmdvb2dsZS5jbG91ZC5v",
             "cmFjbGVkYXRhYmFzZS52MS5DbG91ZEFjY291bnREZXRhaWxzEhsKDmVudGl0",
             "bGVtZW50X2lkGAMgASgJQgPgQQMSRQoFc3RhdGUYBCABKA4yMS5nb29nbGUu",
             "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRW50aXRsZW1lbnQuU3RhdGVCA+BB",
-            "AyJaCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhYKEkFDQ09VTlRf",
+            "AyJxCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhYKEkFDQ09VTlRf",
             "Tk9UX0xJTktFRBABEhYKEkFDQ09VTlRfTk9UX0FDVElWRRACEgoKBkFDVElW",
-            "RRADOo4B6kGKAQopb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vRW50",
-            "aXRsZW1lbnQSQnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9lbnRpdGxlbWVudHMve2VudGl0bGVtZW50fSoMZW50aXRsZW1lbnRz",
-            "MgtlbnRpdGxlbWVudCLlAQoTQ2xvdWRBY2NvdW50RGV0YWlscxIaCg1jbG91",
-            "ZF9hY2NvdW50GAEgASgJQgPgQQMSJgoZY2xvdWRfYWNjb3VudF9ob21lX3Jl",
-            "Z2lvbhgCIAEoCUID4EEDEisKGWxpbmtfZXhpc3RpbmdfYWNjb3VudF91cmkY",
-            "AyABKAlCA+BBA0gAiAEBEiYKFGFjY291bnRfY3JlYXRpb25fdXJpGAQgASgJ",
-            "QgPgQQNIAYgBAUIcChpfbGlua19leGlzdGluZ19hY2NvdW50X3VyaUIXChVf",
-            "YWNjb3VudF9jcmVhdGlvbl91cmlC6gEKImNvbS5nb29nbGUuY2xvdWQub3Jh",
-            "Y2xlZGF0YWJhc2UudjFCEEVudGl0bGVtZW50UHJvdG9QAVpKY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9vcmFjbGVkYXRhYmFzZS9hcGl2MS9vcmFjbGVkYXRhYmFz",
-            "ZXBiO29yYWNsZWRhdGFiYXNlcGKqAh5Hb29nbGUuQ2xvdWQuT3JhY2xlRGF0",
-            "YWJhc2UuVjHKAh5Hb29nbGVcQ2xvdWRcT3JhY2xlRGF0YWJhc2VcVjHqAiFH",
-            "b29nbGU6OkNsb3VkOjpPcmFjbGVEYXRhYmFzZTo6VjFiBnByb3RvMw=="));
+            "RRADEhUKEUFDQ09VTlRfU1VTUEVOREVEEAQ6jgHqQYoBCilvcmFjbGVkYXRh",
+            "YmFzZS5nb29nbGVhcGlzLmNvbS9FbnRpdGxlbWVudBJCcHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2VudGl0bGVtZW50cy97ZW50",
+            "aXRsZW1lbnR9KgxlbnRpdGxlbWVudHMyC2VudGl0bGVtZW50IuUBChNDbG91",
+            "ZEFjY291bnREZXRhaWxzEhoKDWNsb3VkX2FjY291bnQYASABKAlCA+BBAxIm",
+            "ChljbG91ZF9hY2NvdW50X2hvbWVfcmVnaW9uGAIgASgJQgPgQQMSKwoZbGlu",
+            "a19leGlzdGluZ19hY2NvdW50X3VyaRgDIAEoCUID4EEDSACIAQESJgoUYWNj",
+            "b3VudF9jcmVhdGlvbl91cmkYBCABKAlCA+BBA0gBiAEBQhwKGl9saW5rX2V4",
+            "aXN0aW5nX2FjY291bnRfdXJpQhcKFV9hY2NvdW50X2NyZWF0aW9uX3VyaULq",
+            "AQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUIQRW50aXRs",
+            "ZW1lbnRQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFi",
+            "YXNlL2FwaXYxL29yYWNsZWRhdGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoC",
+            "Hkdvb2dsZS5DbG91ZC5PcmFjbGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91",
+            "ZFxPcmFjbGVEYXRhYmFzZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURh",
+            "dGFiYXNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -408,6 +409,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         /// Entitlement and Account are active.
         /// </summary>
         [pbr::OriginalName("ACTIVE")] Active = 3,
+        /// <summary>
+        /// Account is suspended.
+        /// </summary>
+        [pbr::OriginalName("ACCOUNT_SUSPENDED")] AccountSuspended = 4,
       }
 
     }
