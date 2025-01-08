@@ -32,14 +32,16 @@ namespace Google.Cloud.NetApp.V1 {
             "VU5TUEVDSUZJRUQQABILCgdQUkVNSVVNEAESCwoHRVhUUkVNRRACEgwKCFNU",
             "QU5EQVJEEAMSCAoERkxFWBAEKlUKDkVuY3J5cHRpb25UeXBlEh8KG0VOQ1JZ",
             "UFRJT05fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1NFUlZJQ0VfTUFOQUdFRBAB",
-            "Eg0KCUNMT1VEX0tNUxACQq0BChpjb20uZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
-            "MUILQ29tbW9uUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAv",
-            "YXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBw",
-            "LlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6",
-            "Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
+            "Eg0KCUNMT1VEX0tNUxACKlQKFERpcmVjdG9yeVNlcnZpY2VUeXBlEiYKIkRJ",
+            "UkVDVE9SWV9TRVJWSUNFX1RZUEVfVU5TUEVDSUZJRUQQABIUChBBQ1RJVkVf",
+            "RElSRUNUT1JZEAFCrQEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQgtD",
+            "b21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFwcC9hcGl2",
+            "MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRBcHAuVjHK",
+            "AhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91ZDo6TmV0",
+            "QXBwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels" }, null, null, null, null)
           }));
     }
@@ -89,6 +91,20 @@ namespace Google.Cloud.NetApp.V1 {
     /// Customer managed encryption key, which is stored in KMS.
     /// </summary>
     [pbr::OriginalName("CLOUD_KMS")] CloudKms = 2,
+  }
+
+  /// <summary>
+  /// Type of directory service
+  /// </summary>
+  public enum DirectoryServiceType {
+    /// <summary>
+    /// Directory service type is not specified.
+    /// </summary>
+    [pbr::OriginalName("DIRECTORY_SERVICE_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Active directory policy attached to the storage pool.
+    /// </summary>
+    [pbr::OriginalName("ACTIVE_DIRECTORY")] ActiveDirectory = 1,
   }
 
   #endregion
