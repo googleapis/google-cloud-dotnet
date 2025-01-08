@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>1.1.0</Version>
+    <Version>1.0.0-beta00</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the Google Cloud Quotas API (v1), which provides Google Cloud service consumers with management and observability for resource usage, quotas, and restrictions of the services they consume.</Description>
+    <Description>Recommended Google client library to access the Google Cloud Quotas API (v1beta), which provides Google Cloud service consumers with management and observability for resource usage, quotas, and restrictions of the services they consume.</Description>
     <PackageTags>usage;monitoring;resources;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
