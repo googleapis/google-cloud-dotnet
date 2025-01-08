@@ -1513,7 +1513,7 @@
     },
     {
       "id": "Google.Cloud.CloudQuotas.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Quotas",
       "productUrl": "https://cloud.google.com/docs/quotas/api-overview",
@@ -1526,12 +1526,11 @@
       "dependencies": {},
       "generator": "micro",
       "protoPath": "google/api/cloudquotas/v1beta",
-      "includeCommonResourcesProto": true,
+      "includeCommonResourcesProto": false,
       "shortName": "cloudquotas",
       "serviceConfigFile": "cloudquotas_v1beta.yaml",
       "transport": "grpc+rest",
-      "restNumericEnums": true,
-      "includeCommonResourcesProto": false
+      "restNumericEnums": true
     },
     {
       "id": "Google.Cloud.Commerce.Consumer.Procurement.V1",
