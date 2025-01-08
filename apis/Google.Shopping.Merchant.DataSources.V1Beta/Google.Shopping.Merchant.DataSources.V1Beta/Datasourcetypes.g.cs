@@ -51,18 +51,19 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
             "Z2lvbmFsSW52ZW50b3J5RGF0YVNvdXJjZRIaCgpmZWVkX2xhYmVsGAQgASgJ",
             "QgbgQQLgQQUSIAoQY29udGVudF9sYW5ndWFnZRgFIAEoCUIG4EEC4EEFIlcK",
             "E1Byb21vdGlvbkRhdGFTb3VyY2USHgoOdGFyZ2V0X2NvdW50cnkYASABKAlC",
-            "BuBBAuBBBRIgChBjb250ZW50X2xhbmd1YWdlGAIgASgJQgbgQQLgQQUijgEK",
-            "E0RhdGFTb3VyY2VSZWZlcmVuY2USDgoEc2VsZhgBIAEoCEgAEicKGHByaW1h",
-            "cnlfZGF0YV9zb3VyY2VfbmFtZRgDIAEoCUID4EEBSAASLAodc3VwcGxlbWVu",
-            "dGFsX2RhdGFfc291cmNlX25hbWUYAiABKAlCA+BBAUgAQhAKDmRhdGFfc291",
-            "cmNlX2lkQrACCi9jb20uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFz",
-            "b3VyY2VzLnYxYmV0YUIURGF0YXNvdXJjZXR5cGVzUHJvdG9QAVpXY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9kYXRhc291cmNlcy9h",
-            "cGl2MWJldGEvZGF0YXNvdXJjZXNwYjtkYXRhc291cmNlc3BiqgIrR29vZ2xl",
-            "LlNob3BwaW5nLk1lcmNoYW50LkRhdGFTb3VyY2VzLlYxQmV0YcoCK0dvb2ds",
-            "ZVxTaG9wcGluZ1xNZXJjaGFudFxEYXRhU291cmNlc1xWMWJldGHqAi9Hb29n",
-            "bGU6OlNob3BwaW5nOjpNZXJjaGFudDo6RGF0YVNvdXJjZXM6OlYxYmV0YWIG",
-            "cHJvdG8z"));
+            "BuBBAuBBBRIgChBjb250ZW50X2xhbmd1YWdlGAIgASgJQgbgQQLgQQUiGQoX",
+            "UHJvZHVjdFJldmlld0RhdGFTb3VyY2UiGgoYTWVyY2hhbnRSZXZpZXdEYXRh",
+            "U291cmNlIo4BChNEYXRhU291cmNlUmVmZXJlbmNlEg4KBHNlbGYYASABKAhI",
+            "ABInChhwcmltYXJ5X2RhdGFfc291cmNlX25hbWUYAyABKAlCA+BBAUgAEiwK",
+            "HXN1cHBsZW1lbnRhbF9kYXRhX3NvdXJjZV9uYW1lGAIgASgJQgPgQQFIAEIQ",
+            "Cg5kYXRhX3NvdXJjZV9pZEKwAgovY29tLmdvb2dsZS5zaG9wcGluZy5tZXJj",
+            "aGFudC5kYXRhc291cmNlcy52MWJldGFCFERhdGFzb3VyY2V0eXBlc1Byb3Rv",
+            "UAFaV2Nsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBpbmcvbWVyY2hhbnQvZGF0",
+            "YXNvdXJjZXMvYXBpdjFiZXRhL2RhdGFzb3VyY2VzcGI7ZGF0YXNvdXJjZXNw",
+            "YqoCK0dvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5EYXRhU291cmNlcy5WMUJl",
+            "dGHKAitHb29nbGVcU2hvcHBpbmdcTWVyY2hhbnRcRGF0YVNvdXJjZXNcVjFi",
+            "ZXRh6gIvR29vZ2xlOjpTaG9wcGluZzo6TWVyY2hhbnQ6OkRhdGFTb3VyY2Vz",
+            "OjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -71,6 +72,8 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.LocalInventoryDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.LocalInventoryDataSource.Parser, new[]{ "FeedLabel", "ContentLanguage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.RegionalInventoryDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.RegionalInventoryDataSource.Parser, new[]{ "FeedLabel", "ContentLanguage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PromotionDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.PromotionDataSource.Parser, new[]{ "TargetCountry", "ContentLanguage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.ProductReviewDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.ProductReviewDataSource.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.MerchantReviewDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.MerchantReviewDataSource.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.DataSourceReference), global::Google.Shopping.Merchant.DataSources.V1Beta.DataSourceReference.Parser, new[]{ "Self", "PrimaryDataSourceName", "SupplementalDataSourceName" }, new[]{ "DataSourceId" }, null, null, null)
           }));
     }
@@ -581,10 +584,8 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
         /// To link the data source to the default rule, you need to add a
         /// new reference to this list (in sequential order).
         ///
-        /// To unlink the data source from the default rule, you need to remove the
-        /// given reference from this list. To create attribute rules that are
-        /// different from the default rule, see [Set up your attribute
-        /// rules](//support.google.com/merchants/answer/14994083).
+        /// To unlink the data source from the default rule, you need to
+        /// remove the given reference from this list.
         ///
         /// Changing the order of this list will result in changing the priority of
         /// data sources in the default rule.
@@ -728,12 +729,9 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
   }
 
   /// <summary>
-  /// The supplemental data source for local and online products. Supplemental API
-  /// data sources must not have `feedLabel` and `contentLanguage` fields set. You
-  /// can only use supplemental data sources to update existing products. For
-  /// information about creating a supplemental data source, see [Create a
-  /// supplemental data source and link it to the primary data
-  /// source](/merchant/api/guides/data-sources/overview#create-supplemental-data-source).
+  /// The supplemental data source for local and online products. After creation,
+  /// you should make sure to link the supplemental product data source into one or
+  /// more primary product data sources.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SupplementalProductDataSource : pb::IMessage<SupplementalProductDataSource>
@@ -799,7 +797,11 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
     ///
     /// `feedLabel` and `contentLanguage` must be either both set or unset for data
     /// sources with product content type.
-    /// They must be set for data sources with a file input.
+    ///
+    /// They must be set for data sources with a [file
+    /// input][google.shopping.merchant.datasources.v1main.FileInput].
+    /// The fields must be unset for data sources without [file
+    /// input][google.shopping.merchant.datasources.v1main.FileInput].
     ///
     /// If set, the data source will only accept products matching this
     /// combination. If unset, the data source will accept produts without that
@@ -1781,6 +1783,318 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
   }
 
   /// <summary>
+  /// The product review data source.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProductReviewDataSource : pb::IMessage<ProductReviewDataSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProductReviewDataSource> _parser = new pb::MessageParser<ProductReviewDataSource>(() => new ProductReviewDataSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProductReviewDataSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.DataSources.V1Beta.DatasourcetypesReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductReviewDataSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductReviewDataSource(ProductReviewDataSource other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductReviewDataSource Clone() {
+      return new ProductReviewDataSource(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProductReviewDataSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProductReviewDataSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProductReviewDataSource other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// The merchant review data source.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MerchantReviewDataSource : pb::IMessage<MerchantReviewDataSource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MerchantReviewDataSource> _parser = new pb::MessageParser<MerchantReviewDataSource>(() => new MerchantReviewDataSource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MerchantReviewDataSource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.DataSources.V1Beta.DatasourcetypesReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MerchantReviewDataSource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MerchantReviewDataSource(MerchantReviewDataSource other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MerchantReviewDataSource Clone() {
+      return new MerchantReviewDataSource(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MerchantReviewDataSource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MerchantReviewDataSource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MerchantReviewDataSource other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Data source reference can be used to manage related data sources within the
   /// data source service.
   /// </summary>
@@ -1799,7 +2113,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.DataSources.V1Beta.DatasourcetypesReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Shopping.Merchant.DataSources.V1Beta.DatasourcetypesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

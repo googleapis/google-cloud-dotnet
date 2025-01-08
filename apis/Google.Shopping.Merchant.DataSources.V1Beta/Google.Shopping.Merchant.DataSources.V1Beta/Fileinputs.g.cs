@@ -371,12 +371,12 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
         [pbr::OriginalName("UPLOAD")] Upload = 1,
         /// <summary>
         /// The file is fetched from the configured
-        /// [fetch_uri][google.shopping.content.bundles.DataSources.FileInput.FetchSettings.fetch_uri].
+        /// [fetch_uri][google.shopping.merchant.datasources.v1beta.FileInput.FetchSettings.fetch_uri].
         /// </summary>
         [pbr::OriginalName("FETCH")] Fetch = 2,
         /// <summary>
         /// The file is fetched from Google Sheets specified in the
-        /// [fetch_uri][google.shopping.content.bundles.DataSources.FileInput.FetchSettings.fetch_uri].
+        /// [fetch_uri][google.shopping.merchant.datasources.v1beta.FileInput.FetchSettings.fetch_uri].
         /// </summary>
         [pbr::OriginalName("GOOGLE_SHEETS")] GoogleSheets = 3,
       }
@@ -553,8 +553,8 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
         public const int UsernameFieldNumber = 8;
         private string username_ = "";
         /// <summary>
-        /// Optional. An optional user name for [fetch
-        /// url][google.shopping.content.bundles.DataSources.FileInput.fetch_url].
+        /// Optional. An optional user name for
+        /// [fetch_uri][google.shopping.merchant.datasources.v1beta.FileInput.FetchSettings.fetch_uri].
         /// Used for [submitting data sources through
         /// SFTP](https://support.google.com/merchants/answer/13813117).
         /// </summary>
@@ -571,8 +571,8 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
         public const int PasswordFieldNumber = 9;
         private string password_ = "";
         /// <summary>
-        /// Optional. An optional password for [fetch
-        /// url][google.shopping.content.bundles.DataSources.FileInput.fetch_url].
+        /// Optional. An optional password for
+        /// [fetch_uri][google.shopping.merchant.datasources.v1beta.FileInput.FetchSettings.fetch_uri].
         /// Used for [submitting data sources through
         /// SFTP](https://support.google.com/merchants/answer/13813117).
         /// </summary>
