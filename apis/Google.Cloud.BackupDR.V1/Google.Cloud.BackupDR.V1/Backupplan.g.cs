@@ -289,8 +289,8 @@ namespace Google.Cloud.BackupDR.V1 {
     private string resourceType_ = "";
     /// <summary>
     /// Required. The resource type to which the `BackupPlan` will be applied.
-    /// Examples include, "compute.googleapis.com/Instance" and
-    /// "storage.googleapis.com/Bucket".
+    /// Examples include, "compute.googleapis.com/Instance",
+    /// "sqladmin.googleapis.com/Instance", or "alloydb.googleapis.com/Cluster".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -837,6 +837,12 @@ namespace Google.Cloud.BackupDR.V1 {
     /// Required. Configures the duration for which backup data will be kept. It is
     /// defined in “days”. The value should be greater than or equal to minimum
     /// enforced retention of the backup vault.
+    ///
+    /// Minimum value is 1 and maximum value is 90 for hourly backups.
+    /// Minimum value is 1 and maximum value is 90 for daily backups.
+    /// Minimum value is 7 and maximum value is 186 for weekly backups.
+    /// Minimum value is 30 and maximum value is 732 for monthly backups.
+    /// Minimum value is 365 and maximum value is 36159 for yearly backups.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

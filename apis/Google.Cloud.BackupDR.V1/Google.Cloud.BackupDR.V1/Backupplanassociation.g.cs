@@ -29,59 +29,59 @@ namespace Google.Cloud.BackupDR.V1 {
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aG2dvb2dsZS9hcGkvZmllbGRfaW5m",
             "by5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3By",
             "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJv",
-            "dG8i1AUKFUJhY2t1cFBsYW5Bc3NvY2lhdGlvbhIUCgRuYW1lGAEgASgJQgbg",
-            "QQjgQQMSGgoNcmVzb3VyY2VfdHlwZRgCIAEoCUID4EEBEhgKCHJlc291cmNl",
-            "GAMgASgJQgbgQQXgQQISPwoLYmFja3VwX3BsYW4YBCABKAlCKuBBAvpBJAoi",
-            "YmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUGxhbhI0CgtjcmVhdGVf",
-            "dGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
-            "Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxJJCgVzdGF0ZRgHIAEoDjI1Lmdvb2dsZS5jbG91ZC5iYWNrdXBk",
-            "ci52MS5CYWNrdXBQbGFuQXNzb2NpYXRpb24uU3RhdGVCA+BBAxJIChFydWxl",
-            "c19jb25maWdfaW5mbxgIIAMoCzIoLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52",
-            "MS5SdWxlQ29uZmlnSW5mb0ID4EEDEhgKC2RhdGFfc291cmNlGAkgASgJQgPg",
-            "QQMiVAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElO",
-            "RxABEgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAMSDAoISU5BQ1RJVkUQBDq8",
-            "AepBuAEKLWJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW5Bc3Nv",
-            "Y2lhdGlvbhJYcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2JhY2t1cFBsYW5Bc3NvY2lhdGlvbnMve2JhY2t1cF9wbGFuX2Fzc29j",
-            "aWF0aW9ufSoWYmFja3VwUGxhbkFzc29jaWF0aW9uczIVYmFja3VwUGxhbkFz",
-            "c29jaWF0aW9uIokDCg5SdWxlQ29uZmlnSW5mbxIUCgdydWxlX2lkGAEgASgJ",
-            "QgPgQQMSWAoRbGFzdF9iYWNrdXBfc3RhdGUYAyABKA4yOC5nb29nbGUuY2xv",
-            "dWQuYmFja3VwZHIudjEuUnVsZUNvbmZpZ0luZm8uTGFzdEJhY2t1cFN0YXRl",
-            "QgPgQQMSMgoRbGFzdF9iYWNrdXBfZXJyb3IYBCABKAsyEi5nb29nbGUucnBj",
-            "LlN0YXR1c0ID4EEDElAKJ2xhc3Rfc3VjY2Vzc2Z1bF9iYWNrdXBfY29uc2lz",
-            "dGVuY3lfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAyKAAQoPTGFzdEJhY2t1cFN0YXRlEiEKHUxBU1RfQkFDS1VQX1NUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASGAoURklSU1RfQkFDS1VQX1BFTkRJTkcQARIVChFQ",
-            "RVJNSVNTSU9OX0RFTklFRBACEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxFRBAE",
-            "IowCCiJDcmVhdGVCYWNrdXBQbGFuQXNzb2NpYXRpb25SZXF1ZXN0EkUKBnBh",
-            "cmVudBgBIAEoCUI14EEC+kEvEi1iYWNrdXBkci5nb29nbGVhcGlzLmNvbS9C",
-            "YWNrdXBQbGFuQXNzb2NpYXRpb24SJwoaYmFja3VwX3BsYW5fYXNzb2NpYXRp",
-            "b25faWQYAiABKAlCA+BBAhJVChdiYWNrdXBfcGxhbl9hc3NvY2lhdGlvbhgD",
-            "IAEoCzIvLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBQbGFuQXNz",
-            "b2NpYXRpb25CA+BBAhIfCgpyZXF1ZXN0X2lkGAQgASgJQgvgQQHijM/XCAII",
-            "ASKwAQohTGlzdEJhY2t1cFBsYW5Bc3NvY2lhdGlvbnNSZXF1ZXN0EkUKBnBh",
-            "cmVudBgBIAEoCUI14EEC+kEvEi1iYWNrdXBkci5nb29nbGVhcGlzLmNvbS9C",
-            "YWNrdXBQbGFuQXNzb2NpYXRpb24SFgoJcGFnZV9zaXplGAIgASgFQgPgQQES",
-            "FwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEB",
-            "IqUBCiJMaXN0QmFja3VwUGxhbkFzc29jaWF0aW9uc1Jlc3BvbnNlElEKGGJh",
-            "Y2t1cF9wbGFuX2Fzc29jaWF0aW9ucxgBIAMoCzIvLmdvb2dsZS5jbG91ZC5i",
-            "YWNrdXBkci52MS5CYWNrdXBQbGFuQXNzb2NpYXRpb24SFwoPbmV4dF9wYWdl",
-            "X3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJImYKH0dldEJhY2t1",
-            "cFBsYW5Bc3NvY2lhdGlvblJlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC+kEv",
-            "Ci1iYWNrdXBkci5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuQXNzb2NpYXRp",
-            "b24iigEKIkRlbGV0ZUJhY2t1cFBsYW5Bc3NvY2lhdGlvblJlcXVlc3QSQwoE",
-            "bmFtZRgBIAEoCUI14EEC+kEvCi1iYWNrdXBkci5nb29nbGVhcGlzLmNvbS9C",
-            "YWNrdXBQbGFuQXNzb2NpYXRpb24SHwoKcmVxdWVzdF9pZBgCIAEoCUIL4EEB",
-            "4ozP1wgCCAEikgEKFFRyaWdnZXJCYWNrdXBSZXF1ZXN0EkMKBG5hbWUYASAB",
-            "KAlCNeBBAvpBLwotYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUGxh",
-            "bkFzc29jaWF0aW9uEhQKB3J1bGVfaWQYAiABKAlCA+BBAhIfCgpyZXF1ZXN0",
-            "X2lkGAMgASgJQgvgQQHijM/XCAIIAULKAQocY29tLmdvb2dsZS5jbG91ZC5i",
-            "YWNrdXBkci52MUIaQmFja3VwUGxhbkFzc29jaWF0aW9uUHJvdG9QAVo4Y2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9iYWNrdXBkcnBiO2Jh",
-            "Y2t1cGRycGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIuVjHKAhhHb29nbGVc",
-            "Q2xvdWRcQmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3VkOjpCYWNrdXBEUjo6",
-            "VjFiBnByb3RvMw=="));
+            "dG8i1wUKFUJhY2t1cFBsYW5Bc3NvY2lhdGlvbhIUCgRuYW1lGAEgASgJQgbg",
+            "QQjgQQMSHQoNcmVzb3VyY2VfdHlwZRgCIAEoCUIG4EEF4EECEhgKCHJlc291",
+            "cmNlGAMgASgJQgbgQQXgQQISPwoLYmFja3VwX3BsYW4YBCABKAlCKuBBAvpB",
+            "JAoiYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3VwUGxhbhI0CgtjcmVh",
+            "dGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxI0Cgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxJJCgVzdGF0ZRgHIAEoDjI1Lmdvb2dsZS5jbG91ZC5iYWNr",
+            "dXBkci52MS5CYWNrdXBQbGFuQXNzb2NpYXRpb24uU3RhdGVCA+BBAxJIChFy",
+            "dWxlc19jb25maWdfaW5mbxgIIAMoCzIoLmdvb2dsZS5jbG91ZC5iYWNrdXBk",
+            "ci52MS5SdWxlQ29uZmlnSW5mb0ID4EEDEhgKC2RhdGFfc291cmNlGAkgASgJ",
+            "QgPgQQMiVAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVB",
+            "VElORxABEgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAMSDAoISU5BQ1RJVkUQ",
+            "BDq8AepBuAEKLWJhY2t1cGRyLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBsYW5B",
+            "c3NvY2lhdGlvbhJYcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2JhY2t1cFBsYW5Bc3NvY2lhdGlvbnMve2JhY2t1cF9wbGFuX2Fz",
+            "c29jaWF0aW9ufSoWYmFja3VwUGxhbkFzc29jaWF0aW9uczIVYmFja3VwUGxh",
+            "bkFzc29jaWF0aW9uIokDCg5SdWxlQ29uZmlnSW5mbxIUCgdydWxlX2lkGAEg",
+            "ASgJQgPgQQMSWAoRbGFzdF9iYWNrdXBfc3RhdGUYAyABKA4yOC5nb29nbGUu",
+            "Y2xvdWQuYmFja3VwZHIudjEuUnVsZUNvbmZpZ0luZm8uTGFzdEJhY2t1cFN0",
+            "YXRlQgPgQQMSMgoRbGFzdF9iYWNrdXBfZXJyb3IYBCABKAsyEi5nb29nbGUu",
+            "cnBjLlN0YXR1c0ID4EEDElAKJ2xhc3Rfc3VjY2Vzc2Z1bF9iYWNrdXBfY29u",
+            "c2lzdGVuY3lfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAyKAAQoPTGFzdEJhY2t1cFN0YXRlEiEKHUxBU1RfQkFDS1VQX1NU",
+            "QVRFX1VOU1BFQ0lGSUVEEAASGAoURklSU1RfQkFDS1VQX1BFTkRJTkcQARIV",
+            "ChFQRVJNSVNTSU9OX0RFTklFRBACEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxF",
+            "RBAEIowCCiJDcmVhdGVCYWNrdXBQbGFuQXNzb2NpYXRpb25SZXF1ZXN0EkUK",
+            "BnBhcmVudBgBIAEoCUI14EEC+kEvEi1iYWNrdXBkci5nb29nbGVhcGlzLmNv",
+            "bS9CYWNrdXBQbGFuQXNzb2NpYXRpb24SJwoaYmFja3VwX3BsYW5fYXNzb2Np",
+            "YXRpb25faWQYAiABKAlCA+BBAhJVChdiYWNrdXBfcGxhbl9hc3NvY2lhdGlv",
+            "bhgDIAEoCzIvLmdvb2dsZS5jbG91ZC5iYWNrdXBkci52MS5CYWNrdXBQbGFu",
+            "QXNzb2NpYXRpb25CA+BBAhIfCgpyZXF1ZXN0X2lkGAQgASgJQgvgQQHijM/X",
+            "CAIIASKwAQohTGlzdEJhY2t1cFBsYW5Bc3NvY2lhdGlvbnNSZXF1ZXN0EkUK",
+            "BnBhcmVudBgBIAEoCUI14EEC+kEvEi1iYWNrdXBkci5nb29nbGVhcGlzLmNv",
+            "bS9CYWNrdXBQbGFuQXNzb2NpYXRpb24SFgoJcGFnZV9zaXplGAIgASgFQgPg",
+            "QQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID",
+            "4EEBIqUBCiJMaXN0QmFja3VwUGxhbkFzc29jaWF0aW9uc1Jlc3BvbnNlElEK",
+            "GGJhY2t1cF9wbGFuX2Fzc29jaWF0aW9ucxgBIAMoCzIvLmdvb2dsZS5jbG91",
+            "ZC5iYWNrdXBkci52MS5CYWNrdXBQbGFuQXNzb2NpYXRpb24SFwoPbmV4dF9w",
+            "YWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJImYKH0dldEJh",
+            "Y2t1cFBsYW5Bc3NvY2lhdGlvblJlcXVlc3QSQwoEbmFtZRgBIAEoCUI14EEC",
+            "+kEvCi1iYWNrdXBkci5nb29nbGVhcGlzLmNvbS9CYWNrdXBQbGFuQXNzb2Np",
+            "YXRpb24iigEKIkRlbGV0ZUJhY2t1cFBsYW5Bc3NvY2lhdGlvblJlcXVlc3QS",
+            "QwoEbmFtZRgBIAEoCUI14EEC+kEvCi1iYWNrdXBkci5nb29nbGVhcGlzLmNv",
+            "bS9CYWNrdXBQbGFuQXNzb2NpYXRpb24SHwoKcmVxdWVzdF9pZBgCIAEoCUIL",
+            "4EEB4ozP1wgCCAEikgEKFFRyaWdnZXJCYWNrdXBSZXF1ZXN0EkMKBG5hbWUY",
+            "ASABKAlCNeBBAvpBLwotYmFja3VwZHIuZ29vZ2xlYXBpcy5jb20vQmFja3Vw",
+            "UGxhbkFzc29jaWF0aW9uEhQKB3J1bGVfaWQYAiABKAlCA+BBAhIfCgpyZXF1",
+            "ZXN0X2lkGAMgASgJQgvgQQHijM/XCAIIAULKAQocY29tLmdvb2dsZS5jbG91",
+            "ZC5iYWNrdXBkci52MUIaQmFja3VwUGxhbkFzc29jaWF0aW9uUHJvdG9QAVo4",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9iYWNrdXBkci9hcGl2MS9iYWNrdXBkcnBi",
+            "O2JhY2t1cGRycGKqAhhHb29nbGUuQ2xvdWQuQmFja3VwRFIuVjHKAhhHb29n",
+            "bGVcQ2xvdWRcQmFja3VwRFJcVjHqAhtHb29nbGU6OkNsb3VkOjpCYWNrdXBE",
+            "Ujo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -177,7 +177,8 @@ namespace Google.Cloud.BackupDR.V1 {
     public const int ResourceTypeFieldNumber = 2;
     private string resourceType_ = "";
     /// <summary>
-    /// Optional. Resource type of workload on which backupplan is applied
+    /// Required. Immutable. Resource type of workload on which backupplan is
+    /// applied
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -284,11 +285,8 @@ namespace Google.Cloud.BackupDR.V1 {
     public const int DataSourceFieldNumber = 9;
     private string dataSource_ = "";
     /// <summary>
-    /// Output only. Output Only.
-    ///
-    /// Resource name of data source which will be used as storage location for
-    /// backups taken.
-    /// Format :
+    /// Output only. Resource name of data source which will be used as storage
+    /// location for backups taken. Format :
     /// projects/{project}/locations/{location}/backupVaults/{backupvault}/dataSources/{datasource}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -722,9 +720,7 @@ namespace Google.Cloud.BackupDR.V1 {
     public const int RuleIdFieldNumber = 1;
     private string ruleId_ = "";
     /// <summary>
-    /// Output only. Output Only.
-    ///
-    /// Backup Rule id fetched from backup plan.
+    /// Output only. Backup Rule id fetched from backup plan.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -754,9 +750,7 @@ namespace Google.Cloud.BackupDR.V1 {
     public const int LastBackupErrorFieldNumber = 4;
     private global::Google.Rpc.Status lastBackupError_;
     /// <summary>
-    /// Output only. Output Only.
-    ///
-    /// google.rpc.Status object to store the last backup error.
+    /// Output only. google.rpc.Status object to store the last backup error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

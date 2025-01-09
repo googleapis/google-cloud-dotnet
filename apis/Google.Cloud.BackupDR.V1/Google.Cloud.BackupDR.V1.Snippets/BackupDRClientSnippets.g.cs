@@ -1776,6 +1776,7 @@ namespace GoogleCSharpSnippets
                 Etag = "",
                 ValidateOnly = false,
                 AllowMissing = false,
+                IgnoreBackupPlanReferences = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupVault(request);
@@ -1814,6 +1815,7 @@ namespace GoogleCSharpSnippets
                 Etag = "",
                 ValidateOnly = false,
                 AllowMissing = false,
+                IgnoreBackupPlanReferences = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupVaultAsync(request);
@@ -5011,6 +5013,75 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 BackupPlanAssociation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitializeService</summary>
+        public void InitializeServiceRequestObject()
+        {
+            // Snippet: InitializeService(InitializeServiceRequest, CallSettings)
+            // Create client
+            BackupDRClient backupDRClient = BackupDRClient.Create();
+            // Initialize request argument(s)
+            InitializeServiceRequest request = new InitializeServiceRequest
+            {
+                Name = "",
+                ResourceType = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<InitializeServiceResponse, OperationMetadata> response = backupDRClient.InitializeService(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InitializeServiceResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            InitializeServiceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InitializeServiceResponse, OperationMetadata> retrievedResponse = backupDRClient.PollOnceInitializeService(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InitializeServiceResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for InitializeServiceAsync</summary>
+        public async Task InitializeServiceRequestObjectAsync()
+        {
+            // Snippet: InitializeServiceAsync(InitializeServiceRequest, CallSettings)
+            // Additional: InitializeServiceAsync(InitializeServiceRequest, CancellationToken)
+            // Create client
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
+            // Initialize request argument(s)
+            InitializeServiceRequest request = new InitializeServiceRequest
+            {
+                Name = "",
+                ResourceType = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<InitializeServiceResponse, OperationMetadata> response = await backupDRClient.InitializeServiceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<InitializeServiceResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            InitializeServiceResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<InitializeServiceResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitializeServiceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                InitializeServiceResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

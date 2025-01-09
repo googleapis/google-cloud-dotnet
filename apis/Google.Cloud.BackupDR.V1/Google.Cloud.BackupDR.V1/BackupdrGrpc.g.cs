@@ -145,6 +145,8 @@ namespace Google.Cloud.BackupDR.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest> __Marshaller_google_cloud_backupdr_v1_DeleteBackupPlanAssociationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.TriggerBackupRequest> __Marshaller_google_cloud_backupdr_v1_TriggerBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.TriggerBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest> __Marshaller_google_cloud_backupdr_v1_InitializeServiceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BackupDR.V1.InitializeServiceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.ListManagementServersRequest, global::Google.Cloud.BackupDR.V1.ListManagementServersResponse> __Method_ListManagementServers = new grpc::Method<global::Google.Cloud.BackupDR.V1.ListManagementServersRequest, global::Google.Cloud.BackupDR.V1.ListManagementServersResponse>(
@@ -360,6 +362,14 @@ namespace Google.Cloud.BackupDR.V1 {
         __ServiceName,
         "TriggerBackup",
         __Marshaller_google_cloud_backupdr_v1_TriggerBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest, global::Google.LongRunning.Operation> __Method_InitializeService = new grpc::Method<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InitializeService",
+        __Marshaller_google_cloud_backupdr_v1_InitializeServiceRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -694,6 +704,18 @@ namespace Google.Cloud.BackupDR.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TriggerBackup(global::Google.Cloud.BackupDR.V1.TriggerBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Initializes the service related config for a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> InitializeService(global::Google.Cloud.BackupDR.V1.InitializeServiceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2031,6 +2053,54 @@ namespace Google.Cloud.BackupDR.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TriggerBackup, null, options, request);
       }
+      /// <summary>
+      /// Initializes the service related config for a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation InitializeService(global::Google.Cloud.BackupDR.V1.InitializeServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InitializeService(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initializes the service related config for a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation InitializeService(global::Google.Cloud.BackupDR.V1.InitializeServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InitializeService, null, options, request);
+      }
+      /// <summary>
+      /// Initializes the service related config for a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InitializeServiceAsync(global::Google.Cloud.BackupDR.V1.InitializeServiceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InitializeServiceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initializes the service related config for a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> InitializeServiceAsync(global::Google.Cloud.BackupDR.V1.InitializeServiceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InitializeService, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override BackupDRClient NewInstance(ClientBaseConfiguration configuration)
@@ -2071,7 +2141,8 @@ namespace Google.Cloud.BackupDR.V1 {
           .AddMethod(__Method_GetBackupPlanAssociation, serviceImpl.GetBackupPlanAssociation)
           .AddMethod(__Method_ListBackupPlanAssociations, serviceImpl.ListBackupPlanAssociations)
           .AddMethod(__Method_DeleteBackupPlanAssociation, serviceImpl.DeleteBackupPlanAssociation)
-          .AddMethod(__Method_TriggerBackup, serviceImpl.TriggerBackup).Build();
+          .AddMethod(__Method_TriggerBackup, serviceImpl.TriggerBackup)
+          .AddMethod(__Method_InitializeService, serviceImpl.InitializeService).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2108,6 +2179,7 @@ namespace Google.Cloud.BackupDR.V1 {
       serviceBinder.AddMethod(__Method_ListBackupPlanAssociations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.ListBackupPlanAssociationsRequest, global::Google.Cloud.BackupDR.V1.ListBackupPlanAssociationsResponse>(serviceImpl.ListBackupPlanAssociations));
       serviceBinder.AddMethod(__Method_DeleteBackupPlanAssociation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.DeleteBackupPlanAssociationRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupPlanAssociation));
       serviceBinder.AddMethod(__Method_TriggerBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.TriggerBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.TriggerBackup));
+      serviceBinder.AddMethod(__Method_InitializeService, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BackupDR.V1.InitializeServiceRequest, global::Google.LongRunning.Operation>(serviceImpl.InitializeService));
     }
 
   }

@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 Etag = "",
                 ValidateOnly = false,
                 AllowMissing = false,
+                IgnoreBackupPlanReferences = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await backupDRClient.DeleteBackupVaultAsync(request);
