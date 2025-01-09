@@ -106,6 +106,12 @@
                 "GetManagementServerAsync"
               ]
             },
+            "InitializeService": {
+              "methods": [
+                "InitializeService",
+                "InitializeServiceAsync"
+              ]
+            },
             "ListBackupPlanAssociations": {
               "methods": [
                 "ListBackupPlanAssociations",

@@ -91,6 +91,8 @@ namespace Google.Cloud.BackupDR.V1
             DeleteBackupPlanAssociationOperationsSettings = existing.DeleteBackupPlanAssociationOperationsSettings.Clone();
             TriggerBackupSettings = existing.TriggerBackupSettings;
             TriggerBackupOperationsSettings = existing.TriggerBackupOperationsSettings.Clone();
+            InitializeServiceSettings = existing.InitializeServiceSettings;
+            InitializeServiceOperationsSettings = existing.InitializeServiceOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -738,6 +740,42 @@ namespace Google.Cloud.BackupDR.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings TriggerBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackupDRClient.InitializeService</c> and <c>BackupDRClient.InitializeServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings InitializeServiceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BackupDRClient.InitializeService</c> and
+        /// <c>BackupDRClient.InitializeServiceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings InitializeServiceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -4872,6 +4910,60 @@ namespace Google.Cloud.BackupDR.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<BackupPlanAssociation, OperationMetadata>> TriggerBackupAsync(BackupPlanAssociationName name, string ruleId, st::CancellationToken cancellationToken) =>
             TriggerBackupAsync(name, ruleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Initializes the service related config for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<InitializeServiceResponse, OperationMetadata> InitializeService(InitializeServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initializes the service related config for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeServiceResponse, OperationMetadata>> InitializeServiceAsync(InitializeServiceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initializes the service related config for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<InitializeServiceResponse, OperationMetadata>> InitializeServiceAsync(InitializeServiceRequest request, st::CancellationToken cancellationToken) =>
+            InitializeServiceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>InitializeService</c>.</summary>
+        public virtual lro::OperationsClient InitializeServiceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>InitializeService</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<InitializeServiceResponse, OperationMetadata> PollOnceInitializeService(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InitializeServiceResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitializeServiceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>InitializeService</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<InitializeServiceResponse, OperationMetadata>> PollOnceInitializeServiceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<InitializeServiceResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InitializeServiceOperationsClient, callSettings);
     }
 
     /// <summary>BackupDR client wrapper implementation, for convenient use.</summary>
@@ -4934,6 +5026,8 @@ namespace Google.Cloud.BackupDR.V1
 
         private readonly gaxgrpc::ApiCall<TriggerBackupRequest, lro::Operation> _callTriggerBackup;
 
+        private readonly gaxgrpc::ApiCall<InitializeServiceRequest, lro::Operation> _callInitializeService;
+
         /// <summary>
         /// Constructs a client wrapper for the BackupDR service, with the specified gRPC client and settings.
         /// </summary>
@@ -4963,6 +5057,7 @@ namespace Google.Cloud.BackupDR.V1
             CreateBackupPlanAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPlanAssociationOperationsSettings, logger);
             DeleteBackupPlanAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPlanAssociationOperationsSettings, logger);
             TriggerBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.TriggerBackupOperationsSettings, logger);
+            InitializeServiceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.InitializeServiceOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListManagementServers = clientHelper.BuildApiCall<ListManagementServersRequest, ListManagementServersResponse>("ListManagementServers", grpcClient.ListManagementServersAsync, grpcClient.ListManagementServers, effectiveSettings.ListManagementServersSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -5046,6 +5141,9 @@ namespace Google.Cloud.BackupDR.V1
             _callTriggerBackup = clientHelper.BuildApiCall<TriggerBackupRequest, lro::Operation>("TriggerBackup", grpcClient.TriggerBackupAsync, grpcClient.TriggerBackup, effectiveSettings.TriggerBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callTriggerBackup);
             Modify_TriggerBackupApiCall(ref _callTriggerBackup);
+            _callInitializeService = clientHelper.BuildApiCall<InitializeServiceRequest, lro::Operation>("InitializeService", grpcClient.InitializeServiceAsync, grpcClient.InitializeService, effectiveSettings.InitializeServiceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callInitializeService);
+            Modify_InitializeServiceApiCall(ref _callInitializeService);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5104,6 +5202,8 @@ namespace Google.Cloud.BackupDR.V1
         partial void Modify_DeleteBackupPlanAssociationApiCall(ref gaxgrpc::ApiCall<DeleteBackupPlanAssociationRequest, lro::Operation> call);
 
         partial void Modify_TriggerBackupApiCall(ref gaxgrpc::ApiCall<TriggerBackupRequest, lro::Operation> call);
+
+        partial void Modify_InitializeServiceApiCall(ref gaxgrpc::ApiCall<InitializeServiceRequest, lro::Operation> call);
 
         partial void OnConstruction(BackupDR.BackupDRClient grpcClient, BackupDRSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -5169,6 +5269,8 @@ namespace Google.Cloud.BackupDR.V1
         partial void Modify_DeleteBackupPlanAssociationRequest(ref DeleteBackupPlanAssociationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TriggerBackupRequest(ref TriggerBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_InitializeServiceRequest(ref InitializeServiceRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists ManagementServers in a given project and location.
@@ -5862,6 +5964,33 @@ namespace Google.Cloud.BackupDR.V1
         {
             Modify_TriggerBackupRequest(ref request, ref callSettings);
             return new lro::Operation<BackupPlanAssociation, OperationMetadata>(await _callTriggerBackup.Async(request, callSettings).ConfigureAwait(false), TriggerBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>InitializeService</c>.</summary>
+        public override lro::OperationsClient InitializeServiceOperationsClient { get; }
+
+        /// <summary>
+        /// Initializes the service related config for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<InitializeServiceResponse, OperationMetadata> InitializeService(InitializeServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InitializeServiceRequest(ref request, ref callSettings);
+            return new lro::Operation<InitializeServiceResponse, OperationMetadata>(_callInitializeService.Sync(request, callSettings), InitializeServiceOperationsClient);
+        }
+
+        /// <summary>
+        /// Initializes the service related config for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<InitializeServiceResponse, OperationMetadata>> InitializeServiceAsync(InitializeServiceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_InitializeServiceRequest(ref request, ref callSettings);
+            return new lro::Operation<InitializeServiceResponse, OperationMetadata>(await _callInitializeService.Async(request, callSettings).ConfigureAwait(false), InitializeServiceOperationsClient);
         }
     }
 

@@ -16,14 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START backupdr_v1_generated_BackupDR_DeleteBackupVault_sync]
+    // [START backupdr_v1_generated_BackupDR_InitializeService_async]
     using Google.Cloud.BackupDR.V1;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedBackupDRClientSnippets
     {
-        /// <summary>Snippet for DeleteBackupVault</summary>
+        /// <summary>Snippet for InitializeServiceAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,40 +31,36 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void DeleteBackupVaultRequestObject()
+        public async Task InitializeServiceRequestObjectAsync()
         {
             // Create client
-            BackupDRClient backupDRClient = BackupDRClient.Create();
+            BackupDRClient backupDRClient = await BackupDRClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteBackupVaultRequest request = new DeleteBackupVaultRequest
+            InitializeServiceRequest request = new InitializeServiceRequest
             {
-                BackupVaultName = BackupVaultName.FromProjectLocationBackupvault("[PROJECT]", "[LOCATION]", "[BACKUPVAULT]"),
+                Name = "",
+                ResourceType = "",
                 RequestId = "",
-                Force = false,
-                Etag = "",
-                ValidateOnly = false,
-                AllowMissing = false,
-                IgnoreBackupPlanReferences = false,
             };
             // Make the request
-            Operation<Empty, OperationMetadata> response = backupDRClient.DeleteBackupVault(request);
+            Operation<InitializeServiceResponse, OperationMetadata> response = await backupDRClient.InitializeServiceAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<InitializeServiceResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Empty result = completedResponse.Result;
+            InitializeServiceResponse result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, OperationMetadata> retrievedResponse = backupDRClient.PollOnceDeleteBackupVault(operationName);
+            Operation<InitializeServiceResponse, OperationMetadata> retrievedResponse = await backupDRClient.PollOnceInitializeServiceAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Empty retrievedResult = retrievedResponse.Result;
+                InitializeServiceResponse retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END backupdr_v1_generated_BackupDR_DeleteBackupVault_sync]
+    // [END backupdr_v1_generated_BackupDR_InitializeService_async]
 }

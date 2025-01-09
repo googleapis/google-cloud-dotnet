@@ -2704,12 +2704,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 67,
+          "end": 68,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 65,
+          "end": 66,
           "type": "SHORT"
         }
       ]
@@ -2753,12 +2753,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 68,
+          "end": 69,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 66,
+          "end": 67,
           "type": "SHORT"
         }
       ]
@@ -7862,6 +7862,103 @@
         {
           "start": 36,
           "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_InitializeService_sync",
+      "title": "InitializeServiceRequestObject",
+      "description": "Snippet for InitializeService",
+      "file": "BackupDRClient.InitializeServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeService",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.InitializeService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.InitializeServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.InitializeServiceResponse, Google.Cloud.BackupDR.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "InitializeService",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.InitializeService",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "backupdr_v1_generated_BackupDR_InitializeService_async",
+      "title": "InitializeServiceRequestObjectAsync",
+      "description": "Snippet for InitializeServiceAsync",
+      "file": "BackupDRClient.InitializeServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InitializeServiceAsync",
+        "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient.InitializeServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.BackupDR.V1.InitializeServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.BackupDR.V1.InitializeServiceResponse, Google.Cloud.BackupDR.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BackupDRClient",
+          "fullName": "Google.Cloud.BackupDR.V1.BackupDRClient"
+        },
+        "method": {
+          "shortName": "InitializeService",
+          "fullName": "google.cloud.backupdr.v1.BackupDR.InitializeService",
+          "service": {
+            "shortName": "BackupDR",
+            "fullName": "google.cloud.backupdr.v1.BackupDR"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
           "type": "SHORT"
         }
       ]
