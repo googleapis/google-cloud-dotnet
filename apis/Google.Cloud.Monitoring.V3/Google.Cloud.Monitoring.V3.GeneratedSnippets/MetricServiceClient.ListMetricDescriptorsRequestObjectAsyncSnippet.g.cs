@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
             {
                 Filter = "",
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
+                ActiveOnly = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(request);

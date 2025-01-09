@@ -701,6 +701,7 @@ namespace GoogleCSharpSnippets
             {
                 Filter = "",
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
+                ActiveOnly = false,
             };
             // Make the request
             PagedEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptors(request);
@@ -750,6 +751,7 @@ namespace GoogleCSharpSnippets
             {
                 Filter = "",
                 ProjectName = ProjectName.FromProject("[PROJECT]"),
+                ActiveOnly = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListMetricDescriptorsResponse, MetricDescriptor> response = metricServiceClient.ListMetricDescriptorsAsync(request);
