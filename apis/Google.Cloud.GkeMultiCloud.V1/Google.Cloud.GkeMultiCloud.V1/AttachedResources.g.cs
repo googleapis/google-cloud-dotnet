@@ -569,7 +569,8 @@ namespace Google.Cloud.GkeMultiCloud.V1 {
     /// encoded Unicode characters except single quotes ('), double quotes ("),
     /// backslashes (\), and forward slashes (/).
     ///
-    /// See [Tags](http://cloud/resource-manager/docs/tags/tags-overview)
+    /// See
+    /// [Tags](https://cloud.google.com/resource-manager/docs/tags/tags-overview)
     /// for more details on Google Cloud Platform tags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
