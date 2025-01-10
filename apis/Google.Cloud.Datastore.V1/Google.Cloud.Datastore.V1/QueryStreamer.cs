@@ -41,7 +41,8 @@ namespace Google.Cloud.Datastore.V1
 
         private static void ModifyRequest(RunQueryRequest request, RunQueryResponse response)
         {
-            if (response.Query is null || response.Batch is null)
+            // Explain-only responses don't have batches, but will only have one response anyway.
+            if (response.Batch is null)
             {
                 return;
             }
@@ -49,8 +50,14 @@ namespace Google.Cloud.Datastore.V1
             // Transition from GQL to structured queries.
             if (response.Query != null)
             {
+                // If the response doesn't have a query, presumably we're in explain-only mode; return.
+                if (response.Query is null)
+                {
+                    return;
+                }
                 request.Query = response.Query;
             }
+
             // Offset/limit/cursor handling.
             var query = request.Query;
             var batch = response.Batch;
