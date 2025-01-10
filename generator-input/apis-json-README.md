@@ -2,7 +2,6 @@
 
 (While Json .NET allows comments in JSON, other parsers are stricter.)
 
-
 `apis.json` lists all the APIs (and similar; some aren't strictly
 APIs) that we generate project files for.
 
