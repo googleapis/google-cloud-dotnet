@@ -26,6 +26,24 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 {
     public class Program
     {
+        private const string ProductDocumentationStub = @"{{title}}
+
+{{description}}
+
+{{version}}
+
+{{installation}}
+
+{{auth}}
+
+## Getting started
+
+{{client-classes}}
+
+{{client-construction}}
+";
+        private const string NonProductDocumentationStub = "{{non-product-stub}}";
+
         private static int Main(string[] args)
         {
             try
@@ -150,11 +168,14 @@ namespace Google.Cloud.Tools.GenerateDocfxSources
 
         private static void CopyAndGenerateArticles(ApiMetadata api, string inputDirectory, string outputDirectory)
         {
-            // Make sure there's a landing page.
+            // If there's no landing page, work out the right stub and transform that.
             var index = Path.Combine(inputDirectory, "index.md");
             if (!File.Exists(index))
             {
-                throw new UserErrorException($"No index.md file for {api.Id}. Please add one!");
+                bool isProduct = api.ProductName != null && api.ProductUrl != null;
+                string stubText = isProduct ? ProductDocumentationStub : NonProductDocumentationStub;
+                string transformedText = TransformDocTemplate(api, stubText);
+                File.WriteAllText(Path.Combine(outputDirectory, "index.md"), transformedText);
             }
 
             // TODO: Do this properly, with templating etc.
