@@ -703,11 +703,37 @@ namespace Google.Cloud.Firestore
         /// <returns>A snapshot of documents matching the query.</returns>
         public Task<QuerySnapshot> GetSnapshotAsync(CancellationToken cancellationToken = default) => GetSnapshotAsync(null, cancellationToken);
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public async Task<PlanSummary> ExplainAsync(CancellationToken cancellationToken = default)
+        {
+            var profileSnapshot = await GetProfileSnapshotAsync(transactionId: null, explainOptions: new ExplainOptions { Analyze = false }, cancellationToken).ConfigureAwait(false);
+            return profileSnapshot.Plan;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        public Task<QueryProfileInfo<QuerySnapshot>> ExplainAnalyzeAsync(CancellationToken cancellationToken = default) =>
+            GetProfileSnapshotAsync(transactionId: null, explainOptions: new ExplainOptions { Analyze = true }, cancellationToken);
+
         internal async Task<QuerySnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
         {
-            var responses = StreamResponsesAsync(transactionId, cancellationToken, allowLimitToLast: true);
+            var profileSnapshot = await GetProfileSnapshotAsync(transactionId, explainOptions: null, cancellationToken).ConfigureAwait(false);
+            return profileSnapshot.Snapshot;
+        }
+
+        private async Task<QueryProfileInfo<QuerySnapshot>> GetProfileSnapshotAsync(ByteString transactionId, ExplainOptions explainOptions, CancellationToken cancellationToken)
+        {
+            var responses = StreamResponsesAsync(transactionId, explainOptions, cancellationToken, allowLimitToLast: true);
             Timestamp? readTime = null;
             List<DocumentSnapshot> snapshots = new List<DocumentSnapshot>();
+            ExplainMetrics metrics = null;
             await responses.ForEachAsync(response =>
             {
                 if (response.Document != null)
@@ -718,16 +744,21 @@ namespace Google.Cloud.Firestore
                 {
                     readTime = Timestamp.FromProto(response.ReadTime);
                 }
+                // This will be set on the last response, so we can always just remember "just the last value we saw".
+                metrics = response.ExplainMetrics;
             }, cancellationToken).ConfigureAwait(false);
 
-            GaxPreconditions.CheckState(readTime != null, "The stream returned from RunQuery did not provide a read timestamp.");
+            GaxPreconditions.CheckState(readTime is not null || explainOptions?.Analyze == false, "The stream returned from RunQuery did not provide a read timestamp.");
+            GaxPreconditions.CheckState(explainOptions is null || metrics is not null, "The stream returned from RunQuery did not provide metrics.");
             if (IsLimitToLast)
             {
                 // Reverse in-place. We *could* create an IReadOnlyList<T> which acted as a "reversing view"
                 // but that seems like unnecessary work for now.
                 snapshots.Reverse();
             }
-            return QuerySnapshot.ForDocuments(this, snapshots.AsReadOnly(), readTime.Value);
+            // We rely on QuerySnapshot.ReadTime not being accessed when we're just doing an explain operation.
+            var snapshot = QuerySnapshot.ForDocuments(this, snapshots.AsReadOnly(), readTime);
+            return new QueryProfileInfo<QuerySnapshot>(snapshot, metrics);
         }
 
         /// <summary>
@@ -753,20 +784,20 @@ namespace Google.Cloud.Firestore
             StreamAsync(transactionId: null, cancellationToken, false);
 
         internal IAsyncEnumerable<DocumentSnapshot> StreamAsync(ByteString transactionId, CancellationToken cancellationToken, bool allowLimitToLast) =>
-             StreamResponsesAsync(transactionId, cancellationToken, allowLimitToLast)
+             StreamResponsesAsync(transactionId, null, cancellationToken, allowLimitToLast)
                 .Where(resp => resp.Document != null)
                 .Select(resp => DocumentSnapshot.ForDocument(Database, resp.Document, Timestamp.FromProto(resp.ReadTime)));
 
         // Implementation note: this uses an iterator block so that we can dispose of the gRPC call
         // appropriately. The code will only execute when GetEnumerator() is called on the returned value,
         // so the gRPC call *will* be disposed so long as the caller disposes of the iterator (or completes it).
-        private async IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, [EnumeratorCancellation] CancellationToken cancellationToken, bool allowLimitToLast)
+        private async IAsyncEnumerable<RunQueryResponse> StreamResponsesAsync(ByteString transactionId, ExplainOptions explainOptions, [EnumeratorCancellation] CancellationToken cancellationToken, bool allowLimitToLast)
         {
             if (IsLimitToLast && !allowLimitToLast)
             {
                 throw new InvalidOperationException($"Cannot stream responses for query using {nameof(LimitToLast)}");
             }
-            var request = new RunQueryRequest { StructuredQuery = ToStructuredQuery(), Parent = ParentPath };
+            var request = new RunQueryRequest { StructuredQuery = ToStructuredQuery(), Parent = ParentPath, ExplainOptions = explainOptions };
             if (transactionId != null)
             {
                 request.Transaction = transactionId;

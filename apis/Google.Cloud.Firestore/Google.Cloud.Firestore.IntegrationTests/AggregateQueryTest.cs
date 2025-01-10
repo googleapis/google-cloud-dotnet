@@ -87,6 +87,32 @@ public class AggregateQueryTest
     }
 
     [Fact]
+    public async Task Sum_Explain()
+    {
+        CollectionReference collection = _fixture.StudentCollection;
+        var plan = await collection
+            .Aggregate(AggregateField.Sum("Level", "Sum_Of_Levels"), AggregateField.Sum("MathScore"), AggregateField.Sum("EnglishScore"), AggregateField.Sum("Name"))
+            .ExplainAsync();
+        Assert.NotNull(plan);
+    }
+
+    [Fact]
+    public async Task Sum_ExplainAnalyze()
+    {
+        CollectionReference collection = _fixture.StudentCollection;
+        var queryProfileInfo = await collection.Aggregate(AggregateField.Sum("Level", "Sum_Of_Levels"), AggregateField.Sum("MathScore"), AggregateField.Sum("EnglishScore"), AggregateField.Sum("Name"))
+            .ExplainAnalyzeAsync();
+        var plan = queryProfileInfo.Plan;
+        var stats = queryProfileInfo.Stats;
+        Assert.NotNull(plan);
+        Assert.NotNull(stats);
+        var snapshot = queryProfileInfo.Snapshot;
+        Assert.Equal(Student.Data.Sum(c => c.Level), snapshot.GetValue<long>("Sum_Of_Levels")); // Long value, Alias check 
+        Assert.Equal(Student.Data.Sum(c => c.MathScore), snapshot.GetValue<double>("Sum_MathScore")); // Double value check
+        Assert.Equal(double.NaN, snapshot.GetValue<double>("Sum_EnglishScore"));  // NaN value check
+    }
+
+    [Fact]
     public async Task Avg()
     {
         CollectionReference collection = _fixture.StudentCollection;

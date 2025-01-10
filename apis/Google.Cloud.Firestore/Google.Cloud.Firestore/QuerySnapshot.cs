@@ -28,16 +28,17 @@ namespace Google.Cloud.Firestore
     {
         private readonly Lazy<IReadOnlyList<DocumentSnapshot>> _lazyDocumentList;
         private readonly Lazy<IReadOnlyList<DocumentChange>> _lazyChangeList;
+        private readonly Timestamp? _readTime;
 
-        private QuerySnapshot(Query query, Func<IReadOnlyList<DocumentSnapshot>> documentProvider, Func<IReadOnlyList<DocumentChange>> changesProvider, Timestamp readTime)
+        private QuerySnapshot(Query query, Func<IReadOnlyList<DocumentSnapshot>> documentProvider, Func<IReadOnlyList<DocumentChange>> changesProvider, Timestamp? readTime)
         {
             Query = query;
             _lazyDocumentList = new Lazy<IReadOnlyList<DocumentSnapshot>>(documentProvider, LazyThreadSafetyMode.ExecutionAndPublication);
             _lazyChangeList = new Lazy<IReadOnlyList<DocumentChange>>(changesProvider, LazyThreadSafetyMode.ExecutionAndPublication);
-            ReadTime = readTime;
+            _readTime = readTime;
         }
 
-        internal static QuerySnapshot ForDocuments(Query query, IReadOnlyList<DocumentSnapshot> documents, Timestamp readTime) =>
+        internal static QuerySnapshot ForDocuments(Query query, IReadOnlyList<DocumentSnapshot> documents, Timestamp? readTime) =>
             new QuerySnapshot(query, () => documents, () => new LazyChangeList(documents), readTime);
 
         internal static QuerySnapshot ForChanges(Query query, IEnumerable<DocumentSnapshot> documentSet, IReadOnlyList<DocumentChange> changes, Timestamp readTime) =>
@@ -51,7 +52,7 @@ namespace Google.Cloud.Firestore
         /// <summary>
         /// The time at which the snapshot was read.
         /// </summary>
-        public Timestamp ReadTime { get; }
+        public Timestamp ReadTime => _readTime ?? throw new InvalidOperationException("No read time available");
 
         /// <summary>
         /// The documents in the snapshot.
