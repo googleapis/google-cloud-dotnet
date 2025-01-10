@@ -76,8 +76,12 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             return new HistoryFile(sections);
         }
 
-        public void Save(string file) =>
+        public void Save(string file)
+        {
+            // Make sure the directory exists. (This is a no-op if it already exists.)
+            new FileInfo(file).Directory.Create();
             File.WriteAllLines(file, Sections.SelectMany(section => section.Lines));
+        }
 
         /// <summary>
         /// Merges the given list of releases into the file, ignoring releases that are already present.
