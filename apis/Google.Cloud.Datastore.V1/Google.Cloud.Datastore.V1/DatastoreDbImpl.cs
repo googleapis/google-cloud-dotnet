@@ -15,7 +15,9 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using static Google.Cloud.Datastore.V1.CommitRequest.Types;
@@ -211,6 +213,24 @@ namespace Google.Cloud.Datastore.V1
                 GqlQuery = gqlQuery,
                 ReadOptions = GetReadOptions(readConsistency)
             };
+            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
+            return new AsyncLazyDatastoreQuery(streamer.Async());
+        }
+
+        /// <inheritdoc/>
+        public override LazyDatastoreQuery RunQueryLazily(AdvancedQuery query, CallSettings callSettings = null)
+        {
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            var request = query.ToRequest(ProjectId, DatabaseId, _partitionId);
+            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
+            return new LazyDatastoreQuery(streamer.Sync());
+        }
+
+        /// <inheritdoc/>
+        public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(AdvancedQuery query, CallSettings callSettings = null)
+        {
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            var request = query.ToRequest(ProjectId, DatabaseId, _partitionId);
             var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
             return new AsyncLazyDatastoreQuery(streamer.Async());
         }

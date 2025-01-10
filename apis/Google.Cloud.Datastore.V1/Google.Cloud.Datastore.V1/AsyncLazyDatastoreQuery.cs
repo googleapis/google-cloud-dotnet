@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,6 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using static Google.Cloud.Datastore.V1.QueryResultBatch.Types;
 
 namespace Google.Cloud.Datastore.V1
 {
@@ -63,9 +64,10 @@ namespace Google.Cloud.Datastore.V1
             // cursors etc, but that's likely to be insignificant compared with the
             // entity data, and is immediately eligible for garbage collection.
             var responses = await _responses.ToListAsync().ConfigureAwait(false);
-            var entities = responses.SelectMany(r => r.Batch.EntityResults.Select(er => er.Entity)).ToList().AsReadOnly();
+            var entities = responses.SelectMany(r => r.Batch?.EntityResults.Select(er => er.Entity) ?? Enumerable.Empty<Entity>()).ToList().AsReadOnly();
             var lastBatch = responses.Last().Batch;
-            return new DatastoreQueryResults(entities, lastBatch.MoreResults, lastBatch.EndCursor);
+            var metrics = responses.Last().ExplainMetrics;
+            return new DatastoreQueryResults(entities, lastBatch?.MoreResults ?? MoreResultsType.Unspecified, lastBatch?.EndCursor, metrics);
         }
 
         /// <inheritdoc />

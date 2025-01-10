@@ -41,6 +41,11 @@ namespace Google.Cloud.Datastore.V1
 
         private static void ModifyRequest(RunQueryRequest request, RunQueryResponse response)
         {
+            if (response.Query is null || response.Batch is null)
+            {
+                return;
+            }
+
             // Transition from GQL to structured queries.
             if (response.Query != null)
             {
@@ -58,7 +63,7 @@ namespace Google.Cloud.Datastore.V1
         }
 
         private static bool MoreResultsAvailable(RunQueryResponse response) =>
-            response.Batch.MoreResults == MoreResultsType.NotFinished;
+            response.Batch?.MoreResults == MoreResultsType.NotFinished;
 
         internal IAsyncEnumerable<RunQueryResponse> Async() => new AsyncQueryEnumerable(this);
 
