@@ -89,6 +89,8 @@ namespace Google.Cloud.NetworkManagement.V1
             yield return ConnectivityTestReflection.Descriptor;
             yield return ReachabilityReflection.Descriptor;
             yield return TraceReflection.Descriptor;
+            yield return VpcFlowLogsReflection.Descriptor;
+            yield return VpcFlowLogsConfigReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }
