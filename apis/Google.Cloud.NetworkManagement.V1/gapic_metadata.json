@@ -49,6 +49,45 @@
           }
         }
       }
+    },
+    "VpcFlowLogsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VpcFlowLogsServiceClient",
+          "rpcs": {
+            "CreateVpcFlowLogsConfig": {
+              "methods": [
+                "CreateVpcFlowLogsConfig",
+                "CreateVpcFlowLogsConfigAsync"
+              ]
+            },
+            "DeleteVpcFlowLogsConfig": {
+              "methods": [
+                "DeleteVpcFlowLogsConfig",
+                "DeleteVpcFlowLogsConfigAsync"
+              ]
+            },
+            "GetVpcFlowLogsConfig": {
+              "methods": [
+                "GetVpcFlowLogsConfig",
+                "GetVpcFlowLogsConfigAsync"
+              ]
+            },
+            "ListVpcFlowLogsConfigs": {
+              "methods": [
+                "ListVpcFlowLogsConfigs",
+                "ListVpcFlowLogsConfigsAsync"
+              ]
+            },
+            "UpdateVpcFlowLogsConfig": {
+              "methods": [
+                "UpdateVpcFlowLogsConfig",
+                "UpdateVpcFlowLogsConfigAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }
