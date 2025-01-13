@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.7.0, released 2025-01-13
+
+### New features
+
+- Specify retry configuration ([commit 37e089e](https://github.com/googleapis/google-cloud-dotnet/commit/37e089ea191718875a26126e3e572264a7ff244c))
+
 ## Version 1.6.0, released 2024-12-12
 
 ### Bug fixes
