@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.14.0, released 2025-01-13
+
+### New features
+
+- Add option to enable structured logging ([commit 881f147](https://github.com/googleapis/google-cloud-dotnet/commit/881f147890736fc7eb43747dec7db60afa527841))
+- Add GoModule to Artifact and Results messages and new GO_MODULE_H1 hash type ([commit 6903167](https://github.com/googleapis/google-cloud-dotnet/commit/6903167f75cb3fc38012f0780fefd1a2492dcf9f))
+
 ## Version 2.13.0, released 2024-10-29
 
 ### New features
