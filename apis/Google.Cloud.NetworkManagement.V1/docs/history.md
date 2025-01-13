@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.13.0, released 2025-01-13
+
+### New features
+
+- Expose the new v1 vpcflowlogs api proto ([commit 31f0b69](https://github.com/googleapis/google-cloud-dotnet/commit/31f0b691ec321fafc065d17e5b69b6b9a64d004e))
+
 ## Version 2.12.0, released 2024-11-18
 
 ### New features
