@@ -4130,12 +4130,12 @@
       "protoPath": "google/pubsub/v1",
       "productName": "Cloud Pub/Sub",
       "productUrl": "https://cloud.google.com/pubsub/",
-      "version": "3.19.0",
+      "version": "3.20.0",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Recommended Google client library to access the Google Cloud Pub/Sub API, which provides reliable, many-to-many, asynchronous messaging between applications.",
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0"
+        "Google.Cloud.Iam.V1": "3.4.0"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "default",
