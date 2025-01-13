@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2025-01-13
+
+### New features
+
+- Adds new resource_definition option ([commit 48e8d4b](https://github.com/googleapis/google-cloud-dotnet/commit/48e8d4bcd05be9ef6865a1ef94ce4429111f1e3d))
+
 ## Version 1.0.0-beta02, released 2024-12-06
 
 ### New features

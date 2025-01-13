@@ -3262,7 +3262,7 @@
     },
     {
       "id": "Google.Cloud.ManagedKafka.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Managed Service for Apache Kafka API",
       "productUrl": "https://cloud.google.com/managed-kafka",
