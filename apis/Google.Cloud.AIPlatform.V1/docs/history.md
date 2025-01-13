@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.14.0, released 2025-01-13
+
+### New features
+
+- Add Context Cache to v1 ([commit 9997d14](https://github.com/googleapis/google-cloud-dotnet/commit/9997d14f4a344d1bff059fec85eb0b5cda081efc))
+
 ## Version 3.13.0, released 2024-12-12
 
 ### New features
