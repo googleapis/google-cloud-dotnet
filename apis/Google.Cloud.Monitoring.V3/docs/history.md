@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.14.0, released 2025-01-13
+
+### New features
+
+- Add active_only field to ListMetricDescriptorsRequest ([commit fa011c0](https://github.com/googleapis/google-cloud-dotnet/commit/fa011c0b115313c5815a59fed28408031743d8e4))
+
 ## Version 3.13.0, released 2024-12-16
 
 ### New features
