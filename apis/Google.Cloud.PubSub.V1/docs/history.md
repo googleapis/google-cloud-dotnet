@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.20.0, released 2025-01-13
+
+### New features
+
+- Add Kafka-based sources to IngestionDataSourceSettings proto and IngestionFailureEvent proto ([commit 9324e45](https://github.com/googleapis/google-cloud-dotnet/commit/9324e45437b5ac8b7e972edaaa183a366f7d4600))
+
 ## Version 3.19.0, released 2024-10-24
 
 ### Bug fixes
