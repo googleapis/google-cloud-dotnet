@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2025-01-13
+
+### New features
+
+- StreamingSynthesize now supports opus ([commit f12b892](https://github.com/googleapis/google-cloud-dotnet/commit/f12b892a397252181d30582124f865fbf8fd3c3a))
+
 ## Version 3.9.0, released 2024-10-29
 
 ### New features
