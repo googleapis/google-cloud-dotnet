@@ -596,6 +596,45 @@
         }
       }
     },
+    "GenAiCacheService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GenAiCacheServiceClient",
+          "rpcs": {
+            "CreateCachedContent": {
+              "methods": [
+                "CreateCachedContent",
+                "CreateCachedContentAsync"
+              ]
+            },
+            "DeleteCachedContent": {
+              "methods": [
+                "DeleteCachedContent",
+                "DeleteCachedContentAsync"
+              ]
+            },
+            "GetCachedContent": {
+              "methods": [
+                "GetCachedContent",
+                "GetCachedContentAsync"
+              ]
+            },
+            "ListCachedContents": {
+              "methods": [
+                "ListCachedContents",
+                "ListCachedContentsAsync"
+              ]
+            },
+            "UpdateCachedContent": {
+              "methods": [
+                "UpdateCachedContent",
+                "UpdateCachedContentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "GenAiTuningService": {
       "clients": {
         "grpc": {

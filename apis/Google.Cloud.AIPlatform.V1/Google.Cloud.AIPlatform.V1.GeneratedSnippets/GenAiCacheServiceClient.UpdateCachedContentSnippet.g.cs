@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1_generated_PredictionService_GenerateContent_sync]
+    // [START aiplatform_v1_generated_GenAiCacheService_UpdateCachedContent_sync_flattened]
     using Google.Cloud.AIPlatform.V1;
+    using Google.Protobuf.WellKnownTypes;
 
-    public sealed partial class GeneratedPredictionServiceClientSnippets
+    public sealed partial class GeneratedGenAiCacheServiceClientSnippets
     {
-        /// <summary>Snippet for GenerateContent</summary>
+        /// <summary>Snippet for UpdateCachedContent</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,29 +30,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GenerateContentRequestObject()
+        public void UpdateCachedContent()
         {
             // Create client
-            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            GenAiCacheServiceClient genAiCacheServiceClient = GenAiCacheServiceClient.Create();
             // Initialize request argument(s)
-            GenerateContentRequest request = new GenerateContentRequest
-            {
-                Contents = { new Content(), },
-                SafetySettings =
-                {
-                    new SafetySetting(),
-                },
-                GenerationConfig = new GenerationConfig(),
-                Model = "",
-                Tools = { new Tool(), },
-                ToolConfig = new ToolConfig(),
-                SystemInstruction = new Content(),
-                CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
-                Labels = { { "", "" }, },
-            };
+            CachedContent cachedContent = new CachedContent();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            GenerateContentResponse response = predictionServiceClient.GenerateContent(request);
+            CachedContent response = genAiCacheServiceClient.UpdateCachedContent(cachedContent, updateMask);
         }
     }
-    // [END aiplatform_v1_generated_PredictionService_GenerateContent_sync]
+    // [END aiplatform_v1_generated_GenAiCacheService_UpdateCachedContent_sync_flattened]
 }

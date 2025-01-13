@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START aiplatform_v1_generated_PredictionService_GenerateContent_sync]
+    // [START aiplatform_v1_generated_GenAiCacheService_DeleteCachedContent_async]
     using Google.Cloud.AIPlatform.V1;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedPredictionServiceClientSnippets
+    public sealed partial class GeneratedGenAiCacheServiceClientSnippets
     {
-        /// <summary>Snippet for GenerateContent</summary>
+        /// <summary>Snippet for DeleteCachedContentAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,29 +30,18 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GenerateContentRequestObject()
+        public async Task DeleteCachedContentRequestObjectAsync()
         {
             // Create client
-            PredictionServiceClient predictionServiceClient = PredictionServiceClient.Create();
+            GenAiCacheServiceClient genAiCacheServiceClient = await GenAiCacheServiceClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateContentRequest request = new GenerateContentRequest
+            DeleteCachedContentRequest request = new DeleteCachedContentRequest
             {
-                Contents = { new Content(), },
-                SafetySettings =
-                {
-                    new SafetySetting(),
-                },
-                GenerationConfig = new GenerationConfig(),
-                Model = "",
-                Tools = { new Tool(), },
-                ToolConfig = new ToolConfig(),
-                SystemInstruction = new Content(),
-                CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
-                Labels = { { "", "" }, },
+                CachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
             };
             // Make the request
-            GenerateContentResponse response = predictionServiceClient.GenerateContent(request);
+            await genAiCacheServiceClient.DeleteCachedContentAsync(request);
         }
     }
-    // [END aiplatform_v1_generated_PredictionService_GenerateContent_sync]
+    // [END aiplatform_v1_generated_GenAiCacheService_DeleteCachedContent_async]
 }
