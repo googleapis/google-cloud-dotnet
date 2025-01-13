@@ -1,5 +1,24 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-01-13
+
+### New features
+
+- New field `product_review_data_source` added in message `.google.shopping.merchant.datasources.v1beta.DataSource` to specify the datasource of the product review ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- New field `merchant_review_data_source` added in message `.google.shopping.merchant.datasources.v1beta.DataSource` to specify the datasource of the merchant review ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- A new message `ProductReviewDataSource` is added to specify the datasource of the product review ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- A new message `MerchantReviewDataSource` is added to specify the datasource of the merchant review ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+
+### Documentation improvements
+
+- A comment for field `take_from_data_sources` in message `.google.shopping.merchant.datasources.v1beta.PrimaryProductDataSource` is changed ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- A comment for message `SupplementalProductDataSource` is changed ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- A comment for field `feed_label` in message `.google.shopping.merchant.datasources.v1beta.SupplementalProductDataSource` is changed ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- A comment for field `username` in message `.google.shopping.merchant.datasources.v1beta.FileInput` is changed ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- A comment for field `password` in message `.google.shopping.merchant.datasources.v1beta.FileInput` is changed ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- A comment for enum value `FETCH` in enum `FileInputType` is changed ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+- A comment for enum value `GOOGLE_SHEETS` in enum `FileInputType` is changed ([commit ba2f546](https://github.com/googleapis/google-cloud-dotnet/commit/ba2f546cb4226cffdb924a9ab8dad7476b9fd2eb))
+
 ## Version 1.0.0-beta03, released 2024-10-07
 
 ### New features
