@@ -5348,7 +5348,7 @@
       "protoPath": "google/cloud/texttospeech/v1",
       "productName": "Google Cloud Text-to-Speech",
       "productUrl": "https://cloud.google.com/text-to-speech",
-      "version": "3.9.0",
+      "version": "3.10.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Text-to-Speech API v1, synthesizes natural-sounding speech by applying powerful neural network models.",
       "dependencies": {
