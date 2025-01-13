@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2025-01-13
+
+### New features
+
+- Add UNKNOWN to TPU node state, This state will be used to prevent a node from being marked as READY during diagnose after it has failed repair ([commit 5bcb874](https://github.com/googleapis/google-cloud-dotnet/commit/5bcb874031918e9b82d7cdf9ae947d044a5522f6))
+
 ## Version 2.3.0, released 2024-05-14
 
 ### New features
