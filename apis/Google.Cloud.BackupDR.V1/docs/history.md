@@ -1,5 +1,34 @@
 # Version history
 
+## Version 2.1.0, released 2025-01-13
+
+### Bug fixes
+
+- Update field behavior of `resource_type` field in message `BackupPlanAssociation` to `REQUIRED` ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+
+(This was already the effective behavior.)
+
+### New features
+
+- Add InitializeServiceAPI ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- Update field behavior of `networks` field in message `ManagementServer` to `OPTIONAL` ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- Add enum to Backup Vault Access Restriction field ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- `ignore_backup_plan_references` added to the DeleteBackupVaultRequest ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+
+### Documentation improvements
+
+- A comment for field `networks` in message `.google.cloud.backupdr.v1.ManagementServer` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `requested_cancellation` in message `.google.cloud.backupdr.v1.OperationMetadata` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `resource_type` in message `.google.cloud.backupdr.v1.BackupPlan` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `backup_retention_days` in message `.google.cloud.backupdr.v1.BackupRule` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `resource_type` in message `.google.cloud.backupdr.v1.BackupPlanAssociation` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `data_source` in message `.google.cloud.backupdr.v1.BackupPlanAssociation` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `rule_id` in message `.google.cloud.backupdr.v1.RuleConfigInfo` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `last_backup_error` in message `.google.cloud.backupdr.v1.RuleConfigInfo` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for enum value `ACCESS_RESTRICTION_UNSPECIFIED` in enum `AccessRestriction` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `uid` in message `.google.cloud.backupdr.v1.BackupVault` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+- A comment for field `access_restriction` in message `.google.cloud.backupdr.v1.BackupVault` is changed ([commit 5eabb2d](https://github.com/googleapis/google-cloud-dotnet/commit/5eabb2d57f883a54d351b7223d20afa5162da248))
+
 ## Version 2.0.0, released 2024-10-14
 
 ### Bug fixes

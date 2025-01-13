@@ -742,7 +742,7 @@
     },
     {
       "id": "Google.Cloud.BackupDR.V1",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "type": "grpc",
       "productName": "Backup and DR Service",
       "productUrl": "https://cloud.google.com/backup-disaster-recovery/docs/concepts/backup-dr",
@@ -752,7 +752,7 @@
         "disaster-recovery"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.Cloud.Location": "2.3.0",
         "Google.LongRunning": "3.3.0"
       },
