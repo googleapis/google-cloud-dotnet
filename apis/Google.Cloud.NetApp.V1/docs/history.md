@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.7.0, released 2025-01-13
+
+### New features
+
+- Add ValidateDirectoryService API for testing AD connection of a storage pool ([commit 7a948bf](https://github.com/googleapis/google-cloud-dotnet/commit/7a948bf016724e3e8a1cf5a689130991e61cb0a0))
+
+### Documentation improvements
+
+- Removed the format for `replication` in message `google.cloud.netapp.v1.HybridReplicationParameters` ([commit 7a948bf](https://github.com/googleapis/google-cloud-dotnet/commit/7a948bf016724e3e8a1cf5a689130991e61cb0a0))
+
 ## Version 1.6.0, released 2024-12-06
 
 ### New features
