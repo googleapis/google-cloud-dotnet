@@ -720,6 +720,7 @@ namespace GoogleCSharpSnippets
                 Tools = { new Tool(), },
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
+                CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
                 Labels = { { "", "" }, },
             };
             // Make the request
@@ -747,6 +748,7 @@ namespace GoogleCSharpSnippets
                 Tools = { new Tool(), },
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
+                CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
                 Labels = { { "", "" }, },
             };
             // Make the request
@@ -802,6 +804,7 @@ namespace GoogleCSharpSnippets
                 Tools = { new Tool(), },
                 ToolConfig = new ToolConfig(),
                 SystemInstruction = new Content(),
+                CachedContentAsCachedContentName = CachedContentName.FromProjectLocationCachedContent("[PROJECT]", "[LOCATION]", "[CACHED_CONTENT]"),
                 Labels = { { "", "" }, },
             };
             // Make the request, returning a streaming response

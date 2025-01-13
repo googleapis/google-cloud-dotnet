@@ -159,4 +159,16 @@ namespace Google.Cloud.AIPlatform.V1
             set => Endpoint = value?.ToString() ?? "";
         }
     }
+
+    public partial class GenerateContentRequest
+    {
+        /// <summary>
+        /// <see cref="CachedContentName"/>-typed view over the <see cref="CachedContent"/> resource name property.
+        /// </summary>
+        public CachedContentName CachedContentAsCachedContentName
+        {
+            get => string.IsNullOrEmpty(CachedContent) ? null : CachedContentName.Parse(CachedContent, allowUnparsed: true);
+            set => CachedContent = value?.ToString() ?? "";
+        }
+    }
 }

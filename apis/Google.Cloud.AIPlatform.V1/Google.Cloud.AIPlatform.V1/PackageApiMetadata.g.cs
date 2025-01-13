@@ -93,6 +93,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return ApiAuthReflection.Descriptor;
             yield return ArtifactReflection.Descriptor;
             yield return BatchPredictionJobReflection.Descriptor;
+            yield return CachedContentReflection.Descriptor;
             yield return CompletionStatsReflection.Descriptor;
             yield return ContentReflection.Descriptor;
             yield return ContextReflection.Descriptor;
@@ -131,6 +132,7 @@ namespace Google.Cloud.AIPlatform.V1
             yield return FeaturestoreMonitoringReflection.Descriptor;
             yield return FeaturestoreOnlineServiceReflection.Descriptor;
             yield return FeaturestoreServiceReflection.Descriptor;
+            yield return GenAiCacheServiceReflection.Descriptor;
             yield return GenaiTuningServiceReflection.Descriptor;
             yield return HyperparameterTuningJobReflection.Descriptor;
             yield return IndexReflection.Descriptor;
