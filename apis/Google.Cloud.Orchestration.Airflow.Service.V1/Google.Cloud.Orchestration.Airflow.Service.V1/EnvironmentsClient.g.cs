@@ -1560,7 +1560,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// runs a single Composer component.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-2.*.*-airflow-*.*.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1575,7 +1575,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// runs a single Composer component.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-2.*.*-airflow-*.*.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1590,7 +1590,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// runs a single Composer component.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-2.*.*-airflow-*.*.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to get workloads for, in the form:
@@ -1630,7 +1630,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// runs a single Composer component.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-2.*.*-airflow-*.*.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to get workloads for, in the form:
@@ -1670,7 +1670,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// runs a single Composer component.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-2.*.*-airflow-*.*.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to get workloads for, in the form:
@@ -1710,7 +1710,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// runs a single Composer component.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-2.*.*-airflow-*.*.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to get workloads for, in the form:
@@ -3862,7 +3862,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// runs a single Composer component.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-2.*.*-airflow-*.*.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3880,7 +3880,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// runs a single Composer component.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-2.*.*-airflow-*.*.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
