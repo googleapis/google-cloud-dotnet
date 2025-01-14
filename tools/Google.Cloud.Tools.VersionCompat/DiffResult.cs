@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -14,13 +14,14 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 
 namespace Google.Cloud.Tools.VersionCompat
 {
     public class DiffResult
     {
-        public DiffResult(IReadOnlyList<Diff> diffs) => All = diffs;
+        public DiffResult(IEnumerable<Diff> diffs) => All = diffs.ToImmutableList();
         public IReadOnlyList<Diff> All { get; }
         public IEnumerable<Diff> Major => All.Where(x => x.Level == Level.Major);
         public IEnumerable<Diff> Minor => All.Where(x => x.Level == Level.Minor);
