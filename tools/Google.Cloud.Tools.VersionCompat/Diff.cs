@@ -1,4 +1,4 @@
-﻿// Copyright 2019 Google LLC
+// Copyright 2019 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ namespace Google.Cloud.Tools.VersionCompat
     {
         public static Diff Major(Cause cause, FormattableString msg) => new Diff(Level.Major, cause, msg);
         public static Diff Minor(Cause cause, FormattableString msg) => new Diff(Level.Minor, cause, msg);
+        public static Diff Create(Level level, Cause cause, FormattableString msg) => new Diff(level, cause, msg);
 
         private Diff(Level level, Cause cause, FormattableString msg) => (Level, Cause, Msg) = (level, cause, msg);
 

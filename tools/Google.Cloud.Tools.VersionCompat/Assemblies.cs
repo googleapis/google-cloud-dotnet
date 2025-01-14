@@ -32,21 +32,48 @@ namespace Google.Cloud.Tools.VersionCompat
     /// </summary>
     public static class Assemblies
     {
-        private static DiffResult Compare(IReadOnlyList<TypeDefinition> olderTypes, IReadOnlyList<TypeDefinition> newerTypes)
+        private static IEnumerable<Diff> CompareTypes(IEnumerable<TypeDefinition> olderTypes, IEnumerable<TypeDefinition> newerTypes)
         {
             var oWithNested = olderTypes.WithNested().ToImmutableList();
             var nWithNested = newerTypes.WithNested().ToImmutableList();
 
-            var diffs = TopLevel.Diffs(oWithNested, nWithNested).ToImmutableList();
+            return TopLevel.Diffs(oWithNested, nWithNested).ToImmutableList();
+        }
 
-            return new DiffResult(diffs);
+        private static IEnumerable<Diff> CompareDependencies(AssemblyDefinition older, AssemblyDefinition newer)
+        {
+            var olderDeps = older.MainModule.AssemblyReferences.Where(FilterDep).ToDictionary(d => d.Name, d => d.Version);
+            var newerDeps = newer.MainModule.AssemblyReferences.Where(FilterDep).ToDictionary(d => d.Name, d => d.Version);
+
+            var oldOnly = olderDeps
+                .Where(dep => !newerDeps.ContainsKey(dep.Key))
+                .OrderBy(dep => dep.Key, StringComparer.Ordinal)
+                .Select(pair => Diff.Minor(Cause.DependencyRemoved, $"Dependency {pair.Key} v{pair.Value} removed"));
+            var newOnly = newerDeps
+                .Where(dep => !olderDeps.ContainsKey(dep.Key))
+                .OrderBy(dep => dep.Key, StringComparer.Ordinal)
+                .Select(pair => Diff.Minor(Cause.DependencyAdded, $"Dependency {pair.Key} v{pair.Value} added"));
+            var changed = olderDeps
+                .Join(newerDeps, pair => pair.Key, pair => pair.Key, (oldPair, newPair) => (dep: oldPair.Key, oldVersion: oldPair.Value, newVersion: newPair.Value))
+                .Where(tuple => !tuple.oldVersion.Equals(tuple.newVersion))
+                .OrderBy(tuple => tuple.dep, StringComparer.Ordinal)
+                .Select(tuple => Diff.Create(
+                    tuple.oldVersion.Major == tuple.newVersion.Major ? Level.Minor : Level.Minor,
+                    Cause.DependencyChanged, $"Dependency {tuple.dep} changed from v{tuple.oldVersion} to v{tuple.newVersion}"));
+
+            return oldOnly.Concat(newOnly).Concat(changed);
+
+            // Filtering for aspects we don't care about, such as the actual target framework.
+            bool FilterDep(AssemblyNameReference asmName) => asmName.Name != "netstandard";
         }
 
         public static DiffResult Compare(AssemblyDefinition older, AssemblyDefinition newer, string testNamespace)
         {
             if (testNamespace == null)
             {
-                return Compare(older.Modules.SelectMany(x => x.Types).ToList(), newer.Modules.SelectMany(x => x.Types).ToList());
+                var diffs = CompareTypes(GetAllTypes(older), GetAllTypes(newer))
+                    .Concat(CompareDependencies(older, newer));
+                return new DiffResult(diffs);
             }
             else
             {
@@ -54,12 +81,12 @@ namespace Google.Cloud.Tools.VersionCompat
                 var newerTypesList = new List<TypeDefinition>();
                 var nsOlder = $"{testNamespace}.A.";
                 var nsNewer = $"{testNamespace}.B.";
-                foreach (var type in older.Modules.SelectMany(x => x.Types).Where(x => x.FullName.StartsWith(nsOlder)))
+                foreach (var type in GetAllTypes(older).Where(x => x.FullName.StartsWith(nsOlder)))
                 {
                     type.Namespace = type.Namespace.Replace($"{testNamespace}.A", testNamespace);
                     olderTypesList.Add(type);
                 }
-                foreach (var type in newer.Modules.SelectMany(x => x.Types).Where(x => x.FullName.StartsWith(nsNewer)))
+                foreach (var type in GetAllTypes(newer).Where(x => x.FullName.StartsWith(nsNewer)))
                 {
                     type.Namespace = type.Namespace.Replace($"{testNamespace}.B", testNamespace);
                     newerTypesList.Add(type);
@@ -68,8 +95,10 @@ namespace Google.Cloud.Tools.VersionCompat
                 {
                     throw new InvalidOperationException("Test data has no relevant types.");
                 }
-                return Compare(olderTypesList, newerTypesList);
+                return new DiffResult(CompareTypes(olderTypesList, newerTypesList));
             }
+
+            IEnumerable<TypeDefinition> GetAllTypes(AssemblyDefinition asm) => asm.Modules.SelectMany(x => x.Types);
         }
 
         /// <summary>

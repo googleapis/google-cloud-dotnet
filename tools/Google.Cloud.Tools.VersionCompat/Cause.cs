@@ -70,6 +70,9 @@ namespace Google.Cloud.Tools.VersionCompat
         ConstantMadeExported,
         ConstantTypeChanged,
         ConstantAccessModifierChanged,
-        ConstantValueChanged
+        ConstantValueChanged,
+        DependencyAdded,
+        DependencyChanged,
+        DependencyRemoved,
     }
 }
