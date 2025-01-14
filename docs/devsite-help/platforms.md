@@ -46,10 +46,11 @@ with details.
 
 ## Mobile platform support
 
-We do not currently support Xamarin or Unity. While we would like
-to, there are significant challenges around providing the level of
-automated testing and developer reproducibility required for us to
-feel comfortable describing these platforms as "supported".
+We do not currently support mobile platforms such as MAUI, Xamarin,
+or Unity. While we would like to, there are significant challenges
+around providing the level of automated testing and developer
+reproducibility required for us to feel comfortable describing these
+platforms as "supported".
 
 Additionally, the authentication model for the services is intended
 primarily for end user access to user-owned resources (such as
