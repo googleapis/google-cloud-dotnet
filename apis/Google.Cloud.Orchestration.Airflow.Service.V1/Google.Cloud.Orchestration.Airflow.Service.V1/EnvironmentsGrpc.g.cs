@@ -441,7 +441,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// runs a single Composer component.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-2.*.*-airflow-*.*.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1089,7 +1089,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// runs a single Composer component.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-2.*.*-airflow-*.*.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1106,7 +1106,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// runs a single Composer component.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-2.*.*-airflow-*.*.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1121,7 +1121,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// runs a single Composer component.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-2.*.*-airflow-*.*.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1138,7 +1138,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// runs a single Composer component.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-2.*.*-airflow-*.*.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
