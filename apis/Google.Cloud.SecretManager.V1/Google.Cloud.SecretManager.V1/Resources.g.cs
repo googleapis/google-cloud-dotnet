@@ -101,18 +101,18 @@ namespace Google.Cloud.SecretManager.V1 {
             "ZEVuY3J5cHRpb25TdGF0dXNCA+BBA0IUChJyZXBsaWNhdGlvbl9zdGF0dXMi",
             "RAofQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1cxIhChRrbXNfa2V5",
             "X3ZlcnNpb25fbmFtZRgBIAEoCUID4EECIl8KBVRvcGljEhEKBG5hbWUYASAB",
-            "KAlCA+BBAjpD6kFAChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXBy",
+            "KAlCA+BBCDpD6kFAChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXBy",
             "b2plY3RzL3twcm9qZWN0fS90b3BpY3Mve3RvcGljfSKAAQoIUm90YXRpb24S",
             "OwoSbmV4dF9yb3RhdGlvbl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcEID4EEBEjcKD3JvdGF0aW9uX3BlcmlvZBgCIAEoCzIZLmdv",
             "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEEIkwKDVNlY3JldFBheWxvYWQS",
             "DAoEZGF0YRgBIAEoDBIdCgtkYXRhX2NyYzMyYxgCIAEoA0ID4EEBSACIAQFC",
-            "DgoMX2RhdGFfY3JjMzJjQuoBCiFjb20uZ29vZ2xlLmNsb3VkLnNlY3JldG1h",
+            "DgoMX2RhdGFfY3JjMzJjQucBCiFjb20uZ29vZ2xlLmNsb3VkLnNlY3JldG1h",
             "bmFnZXIudjFCDlJlc291cmNlc1Byb3RvUAFaR2Nsb3VkLmdvb2dsZS5jb20v",
             "Z28vc2VjcmV0bWFuYWdlci9hcGl2MS9zZWNyZXRtYW5hZ2VycGI7c2VjcmV0",
-            "bWFuYWdlcnBi+AEBogIDR1NNqgIdR29vZ2xlLkNsb3VkLlNlY3JldE1hbmFn",
-            "ZXIuVjHKAh1Hb29nbGVcQ2xvdWRcU2VjcmV0TWFuYWdlclxWMeoCIEdvb2ds",
-            "ZTo6Q2xvdWQ6OlNlY3JldE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "bWFuYWdlcnBiogIDR1NNqgIdR29vZ2xlLkNsb3VkLlNlY3JldE1hbmFnZXIu",
+            "VjHKAh1Hb29nbGVcQ2xvdWRcU2VjcmV0TWFuYWdlclxWMeoCIEdvb2dsZTo6",
+            "Q2xvdWQ6OlNlY3JldE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -434,8 +434,8 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int CustomerManagedEncryptionFieldNumber = 15;
     private global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption customerManagedEncryption_;
     /// <summary>
-    /// Optional. The customer-managed encryption configuration of the Regionalised
-    /// Secrets. If no configuration is provided, Google-managed default encryption
+    /// Optional. The customer-managed encryption configuration of the regionalized
+    /// secrets. If no configuration is provided, Google-managed default encryption
     /// is used.
     ///
     /// Updates to the [Secret][google.cloud.secretmanager.v1.Secret] encryption
@@ -1118,9 +1118,8 @@ namespace Google.Cloud.SecretManager.V1 {
     /// Optional. Output only. Scheduled destroy time for secret version.
     /// This is a part of the Delayed secret version destroy feature. For a
     /// Secret with a valid version destroy TTL, when a secert version is
-    /// destroyed, the version is moved to disabled state and it is scheduled for
-    /// destruction. The version is destroyed only after the
-    /// `scheduled_destroy_time`.
+    /// destroyed, version is moved to disabled state and it is scheduled for
+    /// destruction Version is destroyed only after the scheduled_destroy_time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1138,7 +1137,7 @@ namespace Google.Cloud.SecretManager.V1 {
     /// Output only. The customer-managed encryption status of the
     /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion]. Only
     /// populated if customer-managed encryption is used and
-    /// [Secret][google.cloud.secretmanager.v1.Secret] is a Regionalised Secret.
+    /// [Secret][google.cloud.secretmanager.v1.Secret] is a regionalized secret.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2076,7 +2075,8 @@ namespace Google.Cloud.SecretManager.V1 {
       /// <summary>
       /// A replication policy that replicates the
       /// [Secret][google.cloud.secretmanager.v1.Secret] payload into the locations
-      /// specified in [Secret.replication.user_managed.replicas][]
+      /// specified in
+      /// [Replication.UserManaged.replicas][google.cloud.secretmanager.v1.Replication.UserManaged.replicas]
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UserManaged : pb::IMessage<UserManaged>
@@ -3967,10 +3967,10 @@ namespace Google.Cloud.SecretManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the Pub/Sub topic that will be published to,
-    /// in the following format: `projects/*/topics/*`. For publication to succeed,
-    /// the Secret Manager service agent must have the `pubsub.topic.publish`
-    /// permission on the topic. The Pub/Sub Publisher role
+    /// Identifier. The resource name of the Pub/Sub topic that will be published
+    /// to, in the following format: `projects/*/topics/*`. For publication to
+    /// succeed, the Secret Manager service agent must have the
+    /// `pubsub.topic.publish` permission on the topic. The Pub/Sub Publisher role
     /// (`roles/pubsub.publisher`) includes this permission.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
