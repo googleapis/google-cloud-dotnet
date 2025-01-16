@@ -109,13 +109,13 @@ namespace Google.Cloud.SecretManager.V1Beta2 {
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARI3Cg9yb3Rh",
             "dGlvbl9wZXJpb2QYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25C",
             "A+BBBCJMCg1TZWNyZXRQYXlsb2FkEgwKBGRhdGEYASABKAwSHQoLZGF0YV9j",
-            "cmMzMmMYAiABKANCA+BBAUgAiAEBQg4KDF9kYXRhX2NyYzMyY0KDAgomY29t",
+            "cmMzMmMYAiABKANCA+BBAUgAiAEBQg4KDF9kYXRhX2NyYzMyY0KAAgomY29t",
             "Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxYmV0YTJCDlJlc291cmNl",
             "c1Byb3RvUAFaTGNsb3VkLmdvb2dsZS5jb20vZ28vc2VjcmV0bWFuYWdlci9h",
-            "cGl2MWJldGEyL3NlY3JldG1hbmFnZXJwYjtzZWNyZXRtYW5hZ2VycGL4AQGi",
-            "AgNHU02qAiJHb29nbGUuQ2xvdWQuU2VjcmV0TWFuYWdlci5WMUJldGEyygIi",
-            "R29vZ2xlXENsb3VkXFNlY3JldE1hbmFnZXJcVjFiZXRhMuoCJUdvb2dsZTo6",
-            "Q2xvdWQ6OlNlY3JldE1hbmFnZXI6OlYxYmV0YTJiBnByb3RvMw=="));
+            "cGl2MWJldGEyL3NlY3JldG1hbmFnZXJwYjtzZWNyZXRtYW5hZ2VycGKiAgNH",
+            "U02qAiJHb29nbGUuQ2xvdWQuU2VjcmV0TWFuYWdlci5WMUJldGEyygIiR29v",
+            "Z2xlXENsb3VkXFNlY3JldE1hbmFnZXJcVjFiZXRhMuoCJUdvb2dsZTo6Q2xv",
+            "dWQ6OlNlY3JldE1hbmFnZXI6OlYxYmV0YTJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2081,7 +2081,8 @@ namespace Google.Cloud.SecretManager.V1Beta2 {
       /// <summary>
       /// A replication policy that replicates the
       /// [Secret][google.cloud.secretmanager.v1beta2.Secret] payload into the
-      /// locations specified in [Secret.replication.user_managed.replicas][]
+      /// locations specified in
+      /// [Replication.UserManaged.replicas][google.cloud.secretmanager.v1beta2.Replication.UserManaged.replicas]
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class UserManaged : pb::IMessage<UserManaged>
