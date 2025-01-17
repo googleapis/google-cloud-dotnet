@@ -1715,6 +1715,66 @@
         }
       }
     },
+    "ReasoningEngineExecutionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReasoningEngineExecutionServiceClient",
+          "rpcs": {
+            "QueryReasoningEngine": {
+              "methods": [
+                "QueryReasoningEngine",
+                "QueryReasoningEngineAsync"
+              ]
+            },
+            "StreamQueryReasoningEngine": {
+              "methods": [
+                "StreamQueryReasoningEngine",
+                "StreamQueryReasoningEngineAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ReasoningEngineService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReasoningEngineServiceClient",
+          "rpcs": {
+            "CreateReasoningEngine": {
+              "methods": [
+                "CreateReasoningEngine",
+                "CreateReasoningEngineAsync"
+              ]
+            },
+            "DeleteReasoningEngine": {
+              "methods": [
+                "DeleteReasoningEngine",
+                "DeleteReasoningEngineAsync"
+              ]
+            },
+            "GetReasoningEngine": {
+              "methods": [
+                "GetReasoningEngine",
+                "GetReasoningEngineAsync"
+              ]
+            },
+            "ListReasoningEngines": {
+              "methods": [
+                "ListReasoningEngines",
+                "ListReasoningEnginesAsync"
+              ]
+            },
+            "UpdateReasoningEngine": {
+              "methods": [
+                "UpdateReasoningEngine",
+                "UpdateReasoningEngineAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ScheduleService": {
       "clients": {
         "grpc": {

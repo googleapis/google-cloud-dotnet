@@ -71117,6 +71117,1547 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineExecutionService_QueryReasoningEngine_sync",
+      "title": "QueryReasoningEngineRequestObject",
+      "description": "Snippet for QueryReasoningEngine",
+      "file": "ReasoningEngineExecutionServiceClient.QueryReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient.QueryReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.QueryReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.QueryReasoningEngineResponse",
+        "client": {
+          "shortName": "ReasoningEngineExecutionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient"
+        },
+        "method": {
+          "shortName": "QueryReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService.QueryReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineExecutionService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineExecutionService_QueryReasoningEngine_async",
+      "title": "QueryReasoningEngineRequestObjectAsync",
+      "description": "Snippet for QueryReasoningEngineAsync",
+      "file": "ReasoningEngineExecutionServiceClient.QueryReasoningEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient.QueryReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.QueryReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.QueryReasoningEngineResponse>",
+        "client": {
+          "shortName": "ReasoningEngineExecutionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient"
+        },
+        "method": {
+          "shortName": "QueryReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService.QueryReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineExecutionService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineExecutionService_StreamQueryReasoningEngine_sync",
+      "title": "StreamQueryReasoningEngineRequestObject",
+      "description": "Snippet for StreamQueryReasoningEngine",
+      "file": "ReasoningEngineExecutionServiceClient.StreamQueryReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamQueryReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient.StreamQueryReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.StreamQueryReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient+StreamQueryReasoningEngineStream",
+        "client": {
+          "shortName": "ReasoningEngineExecutionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient"
+        },
+        "method": {
+          "shortName": "StreamQueryReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService.StreamQueryReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineExecutionService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_CreateReasoningEngine_sync",
+      "title": "CreateReasoningEngineRequestObject",
+      "description": "Snippet for CreateReasoningEngine",
+      "file": "ReasoningEngineServiceClient.CreateReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.CreateReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.CreateReasoningEngineOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.CreateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_CreateReasoningEngine_async",
+      "title": "CreateReasoningEngineRequestObjectAsync",
+      "description": "Snippet for CreateReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.CreateReasoningEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.CreateReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CreateReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.CreateReasoningEngineOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.CreateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_CreateReasoningEngine_sync_flattened",
+      "title": "CreateReasoningEngine",
+      "description": "Snippet for CreateReasoningEngine",
+      "file": "ReasoningEngineServiceClient.CreateReasoningEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.CreateReasoningEngine",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+            "name": "reasoningEngine"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.CreateReasoningEngineOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.CreateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_CreateReasoningEngine_async_flattened",
+      "title": "CreateReasoningEngineAsync",
+      "description": "Snippet for CreateReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.CreateReasoningEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.CreateReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+            "name": "reasoningEngine"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.CreateReasoningEngineOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.CreateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_CreateReasoningEngine_sync_flattened_resourceNames",
+      "title": "CreateReasoningEngineResourceNames",
+      "description": "Snippet for CreateReasoningEngine",
+      "file": "ReasoningEngineServiceClient.CreateReasoningEngineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.CreateReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+            "name": "reasoningEngine"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.CreateReasoningEngineOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.CreateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_CreateReasoningEngine_async_flattened_resourceNames",
+      "title": "CreateReasoningEngineResourceNamesAsync",
+      "description": "Snippet for CreateReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.CreateReasoningEngineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.CreateReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+            "name": "reasoningEngine"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.CreateReasoningEngineOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.CreateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_GetReasoningEngine_sync",
+      "title": "GetReasoningEngineRequestObject",
+      "description": "Snippet for GetReasoningEngine",
+      "file": "ReasoningEngineServiceClient.GetReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.GetReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.GetReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_GetReasoningEngine_async",
+      "title": "GetReasoningEngineRequestObjectAsync",
+      "description": "Snippet for GetReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.GetReasoningEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.GetReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.GetReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.GetReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_GetReasoningEngine_sync_flattened",
+      "title": "GetReasoningEngine",
+      "description": "Snippet for GetReasoningEngine",
+      "file": "ReasoningEngineServiceClient.GetReasoningEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.GetReasoningEngine",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.GetReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_GetReasoningEngine_async_flattened",
+      "title": "GetReasoningEngineAsync",
+      "description": "Snippet for GetReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.GetReasoningEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.GetReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.GetReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_GetReasoningEngine_sync_flattened_resourceNames",
+      "title": "GetReasoningEngineResourceNames",
+      "description": "Snippet for GetReasoningEngine",
+      "file": "ReasoningEngineServiceClient.GetReasoningEngineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.GetReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.GetReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_GetReasoningEngine_async_flattened_resourceNames",
+      "title": "GetReasoningEngineResourceNamesAsync",
+      "description": "Snippet for GetReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.GetReasoningEngineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.GetReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.GetReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_ListReasoningEngines_sync",
+      "title": "ListReasoningEnginesRequestObject",
+      "description": "Snippet for ListReasoningEngines",
+      "file": "ReasoningEngineServiceClient.ListReasoningEnginesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngines",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.ListReasoningEngines",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListReasoningEnginesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListReasoningEnginesResponse, Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngines",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.ListReasoningEngines",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_ListReasoningEngines_async",
+      "title": "ListReasoningEnginesRequestObjectAsync",
+      "description": "Snippet for ListReasoningEnginesAsync",
+      "file": "ReasoningEngineServiceClient.ListReasoningEnginesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEnginesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.ListReasoningEnginesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListReasoningEnginesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListReasoningEnginesResponse, Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngines",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.ListReasoningEngines",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_ListReasoningEngines_sync_flattened",
+      "title": "ListReasoningEngines",
+      "description": "Snippet for ListReasoningEngines",
+      "file": "ReasoningEngineServiceClient.ListReasoningEnginesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngines",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.ListReasoningEngines",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListReasoningEnginesResponse, Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngines",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.ListReasoningEngines",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_ListReasoningEngines_async_flattened",
+      "title": "ListReasoningEnginesAsync",
+      "description": "Snippet for ListReasoningEnginesAsync",
+      "file": "ReasoningEngineServiceClient.ListReasoningEnginesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEnginesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.ListReasoningEnginesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListReasoningEnginesResponse, Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngines",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.ListReasoningEngines",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_ListReasoningEngines_sync_flattened_resourceNames",
+      "title": "ListReasoningEnginesResourceNames",
+      "description": "Snippet for ListReasoningEngines",
+      "file": "ReasoningEngineServiceClient.ListReasoningEnginesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngines",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.ListReasoningEngines",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListReasoningEnginesResponse, Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngines",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.ListReasoningEngines",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_ListReasoningEngines_async_flattened_resourceNames",
+      "title": "ListReasoningEnginesResourceNamesAsync",
+      "description": "Snippet for ListReasoningEnginesAsync",
+      "file": "ReasoningEngineServiceClient.ListReasoningEnginesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEnginesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.ListReasoningEnginesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListReasoningEnginesResponse, Google.Cloud.AIPlatform.V1.ReasoningEngine>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngines",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.ListReasoningEngines",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_UpdateReasoningEngine_sync",
+      "title": "UpdateReasoningEngineRequestObject",
+      "description": "Snippet for UpdateReasoningEngine",
+      "file": "ReasoningEngineServiceClient.UpdateReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.UpdateReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.UpdateReasoningEngineOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.UpdateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_UpdateReasoningEngine_async",
+      "title": "UpdateReasoningEngineRequestObjectAsync",
+      "description": "Snippet for UpdateReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.UpdateReasoningEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.UpdateReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.UpdateReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.UpdateReasoningEngineOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.UpdateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_UpdateReasoningEngine_sync_flattened",
+      "title": "UpdateReasoningEngine",
+      "description": "Snippet for UpdateReasoningEngine",
+      "file": "ReasoningEngineServiceClient.UpdateReasoningEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.UpdateReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+            "name": "reasoningEngine"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.UpdateReasoningEngineOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.UpdateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_UpdateReasoningEngine_async_flattened",
+      "title": "UpdateReasoningEngineAsync",
+      "description": "Snippet for UpdateReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.UpdateReasoningEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.UpdateReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngine",
+            "name": "reasoningEngine"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1.ReasoningEngine, Google.Cloud.AIPlatform.V1.UpdateReasoningEngineOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.UpdateReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_DeleteReasoningEngine_sync",
+      "title": "DeleteReasoningEngineRequestObject",
+      "description": "Snippet for DeleteReasoningEngine",
+      "file": "ReasoningEngineServiceClient.DeleteReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.DeleteReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.DeleteReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_DeleteReasoningEngine_async",
+      "title": "DeleteReasoningEngineRequestObjectAsync",
+      "description": "Snippet for DeleteReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.DeleteReasoningEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.DeleteReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.DeleteReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.DeleteReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_DeleteReasoningEngine_sync_flattened",
+      "title": "DeleteReasoningEngine",
+      "description": "Snippet for DeleteReasoningEngine",
+      "file": "ReasoningEngineServiceClient.DeleteReasoningEngineSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.DeleteReasoningEngine",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.DeleteReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_DeleteReasoningEngine_async_flattened",
+      "title": "DeleteReasoningEngineAsync",
+      "description": "Snippet for DeleteReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.DeleteReasoningEngineAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.DeleteReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.DeleteReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_DeleteReasoningEngine_sync_flattened_resourceNames",
+      "title": "DeleteReasoningEngineResourceNames",
+      "description": "Snippet for DeleteReasoningEngine",
+      "file": "ReasoningEngineServiceClient.DeleteReasoningEngineResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.DeleteReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.DeleteReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineService_DeleteReasoningEngine_async_flattened_resourceNames",
+      "title": "DeleteReasoningEngineResourceNamesAsync",
+      "description": "Snippet for DeleteReasoningEngineAsync",
+      "file": "ReasoningEngineServiceClient.DeleteReasoningEngineResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient.DeleteReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ReasoningEngineName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService.DeleteReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ScheduleService_CreateSchedule_sync",
       "title": "CreateScheduleRequestObject",
       "description": "Snippet for CreateSchedule",
