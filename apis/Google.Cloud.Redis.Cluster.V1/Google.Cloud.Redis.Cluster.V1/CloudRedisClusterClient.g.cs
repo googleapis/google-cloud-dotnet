@@ -58,6 +58,18 @@ namespace Google.Cloud.Redis.Cluster.V1
             CreateClusterSettings = existing.CreateClusterSettings;
             CreateClusterOperationsSettings = existing.CreateClusterOperationsSettings.Clone();
             GetClusterCertificateAuthoritySettings = existing.GetClusterCertificateAuthoritySettings;
+            RescheduleClusterMaintenanceSettings = existing.RescheduleClusterMaintenanceSettings;
+            RescheduleClusterMaintenanceOperationsSettings = existing.RescheduleClusterMaintenanceOperationsSettings.Clone();
+            ListBackupCollectionsSettings = existing.ListBackupCollectionsSettings;
+            GetBackupCollectionSettings = existing.GetBackupCollectionSettings;
+            ListBackupsSettings = existing.ListBackupsSettings;
+            GetBackupSettings = existing.GetBackupSettings;
+            DeleteBackupSettings = existing.DeleteBackupSettings;
+            DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
+            ExportBackupSettings = existing.ExportBackupSettings;
+            ExportBackupOperationsSettings = existing.ExportBackupOperationsSettings.Clone();
+            BackupClusterSettings = existing.BackupClusterSettings;
+            BackupClusterOperationsSettings = existing.BackupClusterOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -192,6 +204,177 @@ namespace Google.Cloud.Redis.Cluster.V1
         public gaxgrpc::CallSettings GetClusterCertificateAuthoritySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.RescheduleClusterMaintenance</c> and
+        /// <c>CloudRedisClusterClient.RescheduleClusterMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RescheduleClusterMaintenanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClusterClient.RescheduleClusterMaintenance</c> and
+        /// <c>CloudRedisClusterClient.RescheduleClusterMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RescheduleClusterMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.ListBackupCollections</c> and
+        /// <c>CloudRedisClusterClient.ListBackupCollectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupCollectionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.GetBackupCollection</c> and <c>CloudRedisClusterClient.GetBackupCollectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupCollectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.ListBackups</c> and <c>CloudRedisClusterClient.ListBackupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.GetBackup</c> and <c>CloudRedisClusterClient.GetBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.DeleteBackup</c> and <c>CloudRedisClusterClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClusterClient.DeleteBackup</c> and
+        /// <c>CloudRedisClusterClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.ExportBackup</c> and <c>CloudRedisClusterClient.ExportBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClusterClient.ExportBackup</c> and
+        /// <c>CloudRedisClusterClient.ExportBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClusterClient.BackupCluster</c> and <c>CloudRedisClusterClient.BackupClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BackupClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClusterClient.BackupCluster</c> and
+        /// <c>CloudRedisClusterClient.BackupClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BackupClusterOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -270,12 +453,6 @@ namespace Google.Cloud.Redis.Cluster.V1
     /// 
     /// Note that location_id must be a GCP `region`; for example:
     /// * `projects/redpepper-1290/locations/us-central1/clusters/my-redis`
-    /// 
-    /// We use API version selector for Flex APIs
-    /// * The versioning strategy is release-based versioning
-    /// * Our backend CLH only deals with the superset version (called v1main)
-    /// * Existing backend for Redis Gen1 and MRR is not touched.
-    /// * More details in go/redis-flex-api-versioning
     /// </remarks>
     public abstract partial class CloudRedisClusterClient
     {
@@ -298,7 +475,7 @@ namespace Google.Cloud.Redis.Cluster.V1
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudRedisCluster.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(CloudRedisCluster.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
@@ -1388,6 +1565,1212 @@ namespace Google.Cloud.Redis.Cluster.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CertificateAuthority> GetClusterCertificateAuthorityAsync(CertificateAuthorityName name, st::CancellationToken cancellationToken) =>
             GetClusterCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, wkt::Any> RescheduleClusterMaintenance(RescheduleClusterMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> RescheduleClusterMaintenanceAsync(RescheduleClusterMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> RescheduleClusterMaintenanceAsync(RescheduleClusterMaintenanceRequest request, st::CancellationToken cancellationToken) =>
+            RescheduleClusterMaintenanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RescheduleClusterMaintenance</c>.</summary>
+        public virtual lro::OperationsClient RescheduleClusterMaintenanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RescheduleClusterMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Cluster, wkt::Any> PollOnceRescheduleClusterMaintenance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, wkt::Any>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleClusterMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RescheduleClusterMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> PollOnceRescheduleClusterMaintenanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, wkt::Any>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleClusterMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis Cluster instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, wkt::Any> RescheduleClusterMaintenance(string name, RescheduleClusterMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleClusterMaintenance(new RescheduleClusterMaintenanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis Cluster instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> RescheduleClusterMaintenanceAsync(string name, RescheduleClusterMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleClusterMaintenanceAsync(new RescheduleClusterMaintenanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis Cluster instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> RescheduleClusterMaintenanceAsync(string name, RescheduleClusterMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, st::CancellationToken cancellationToken) =>
+            RescheduleClusterMaintenanceAsync(name, rescheduleType, scheduleTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis Cluster instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, wkt::Any> RescheduleClusterMaintenance(ClusterName name, RescheduleClusterMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleClusterMaintenance(new RescheduleClusterMaintenanceRequest
+            {
+                ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis Cluster instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> RescheduleClusterMaintenanceAsync(ClusterName name, RescheduleClusterMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleClusterMaintenanceAsync(new RescheduleClusterMaintenanceRequest
+            {
+                ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis Cluster instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as
+        /// well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> RescheduleClusterMaintenanceAsync(ClusterName name, RescheduleClusterMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, st::CancellationToken cancellationToken) =>
+            RescheduleClusterMaintenanceAsync(name, rescheduleType, scheduleTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollections(ListBackupCollectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollectionsAsync(ListBackupCollectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection location using the
+        /// form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupCollectionsRequest request = new ListBackupCollectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupCollections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection location using the
+        /// form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupCollectionsRequest request = new ListBackupCollectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupCollectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection location using the
+        /// form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupCollectionsRequest request = new ListBackupCollectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupCollections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection location using the
+        /// form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupCollectionsRequest request = new ListBackupCollectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupCollectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupCollection GetBackupCollection(GetBackupCollectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(GetBackupCollectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(GetBackupCollectionRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupCollectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupCollection GetBackupCollection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupCollection(new GetBackupCollectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupCollectionAsync(new GetBackupCollectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupCollectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupCollection GetBackupCollection(BackupCollectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupCollection(new GetBackupCollectionRequest
+            {
+                BackupCollectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(BackupCollectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupCollectionAsync(new GetBackupCollectionRequest
+            {
+                BackupCollectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(BackupCollectionName name, st::CancellationToken cancellationToken) =>
+            GetBackupCollectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(BackupCollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsBackupCollectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(BackupCollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsBackupCollectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, wkt::Any> DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteBackupAsync(DeleteBackupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteBackup</c>.</summary>
+        public virtual lro::OperationsClient DeleteBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, wkt::Any> PollOnceDeleteBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, wkt::Any>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> PollOnceDeleteBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, wkt::Any>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, wkt::Any> DeleteBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, wkt::Any> DeleteBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, wkt::Any> ExportBackup(ExportBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, wkt::Any>> ExportBackupAsync(ExportBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, wkt::Any>> ExportBackupAsync(ExportBackupRequest request, st::CancellationToken cancellationToken) =>
+            ExportBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportBackup</c>.</summary>
+        public virtual lro::OperationsClient ExportBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Backup, wkt::Any> PollOnceExportBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, wkt::Any>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Backup, wkt::Any>> PollOnceExportBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, wkt::Any>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, wkt::Any> BackupCluster(BackupClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> BackupClusterAsync(BackupClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> BackupClusterAsync(BackupClusterRequest request, st::CancellationToken cancellationToken) =>
+            BackupClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BackupCluster</c>.</summary>
+        public virtual lro::OperationsClient BackupClusterOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BackupCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Cluster, wkt::Any> PollOnceBackupCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, wkt::Any>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BackupClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BackupCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> PollOnceBackupClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, wkt::Any>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BackupClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis cluster resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, wkt::Any> BackupCluster(string name, gaxgrpc::CallSettings callSettings = null) =>
+            BackupCluster(new BackupClusterRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis cluster resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> BackupClusterAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            BackupClusterAsync(new BackupClusterRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis cluster resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> BackupClusterAsync(string name, st::CancellationToken cancellationToken) =>
+            BackupClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis cluster resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, wkt::Any> BackupCluster(ClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            BackupCluster(new BackupClusterRequest
+            {
+                ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis cluster resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> BackupClusterAsync(ClusterName name, gaxgrpc::CallSettings callSettings = null) =>
+            BackupClusterAsync(new BackupClusterRequest
+            {
+                ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis cluster resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/clusters/{cluster_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, wkt::Any>> BackupClusterAsync(ClusterName name, st::CancellationToken cancellationToken) =>
+            BackupClusterAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudRedisCluster client wrapper implementation, for convenient use.</summary>
@@ -1407,12 +2790,6 @@ namespace Google.Cloud.Redis.Cluster.V1
     /// 
     /// Note that location_id must be a GCP `region`; for example:
     /// * `projects/redpepper-1290/locations/us-central1/clusters/my-redis`
-    /// 
-    /// We use API version selector for Flex APIs
-    /// * The versioning strategy is release-based versioning
-    /// * Our backend CLH only deals with the superset version (called v1main)
-    /// * Existing backend for Redis Gen1 and MRR is not touched.
-    /// * More details in go/redis-flex-api-versioning
     /// </remarks>
     public sealed partial class CloudRedisClusterClientImpl : CloudRedisClusterClient
     {
@@ -1427,6 +2804,22 @@ namespace Google.Cloud.Redis.Cluster.V1
         private readonly gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> _callCreateCluster;
 
         private readonly gaxgrpc::ApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority> _callGetClusterCertificateAuthority;
+
+        private readonly gaxgrpc::ApiCall<RescheduleClusterMaintenanceRequest, lro::Operation> _callRescheduleClusterMaintenance;
+
+        private readonly gaxgrpc::ApiCall<ListBackupCollectionsRequest, ListBackupCollectionsResponse> _callListBackupCollections;
+
+        private readonly gaxgrpc::ApiCall<GetBackupCollectionRequest, BackupCollection> _callGetBackupCollection;
+
+        private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
+
+        private readonly gaxgrpc::ApiCall<GetBackupRequest, Backup> _callGetBackup;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> _callDeleteBackup;
+
+        private readonly gaxgrpc::ApiCall<ExportBackupRequest, lro::Operation> _callExportBackup;
+
+        private readonly gaxgrpc::ApiCall<BackupClusterRequest, lro::Operation> _callBackupCluster;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudRedisCluster service, with the specified gRPC client and settings.
@@ -1446,6 +2839,10 @@ namespace Google.Cloud.Redis.Cluster.V1
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
             DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings, logger);
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
+            RescheduleClusterMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RescheduleClusterMaintenanceOperationsSettings, logger);
+            DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            ExportBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportBackupOperationsSettings, logger);
+            BackupClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BackupClusterOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListClusters = clientHelper.BuildApiCall<ListClustersRequest, ListClustersResponse>("ListClusters", grpcClient.ListClustersAsync, grpcClient.ListClusters, effectiveSettings.ListClustersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListClusters);
@@ -1465,6 +2862,30 @@ namespace Google.Cloud.Redis.Cluster.V1
             _callGetClusterCertificateAuthority = clientHelper.BuildApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority>("GetClusterCertificateAuthority", grpcClient.GetClusterCertificateAuthorityAsync, grpcClient.GetClusterCertificateAuthority, effectiveSettings.GetClusterCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetClusterCertificateAuthority);
             Modify_GetClusterCertificateAuthorityApiCall(ref _callGetClusterCertificateAuthority);
+            _callRescheduleClusterMaintenance = clientHelper.BuildApiCall<RescheduleClusterMaintenanceRequest, lro::Operation>("RescheduleClusterMaintenance", grpcClient.RescheduleClusterMaintenanceAsync, grpcClient.RescheduleClusterMaintenance, effectiveSettings.RescheduleClusterMaintenanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRescheduleClusterMaintenance);
+            Modify_RescheduleClusterMaintenanceApiCall(ref _callRescheduleClusterMaintenance);
+            _callListBackupCollections = clientHelper.BuildApiCall<ListBackupCollectionsRequest, ListBackupCollectionsResponse>("ListBackupCollections", grpcClient.ListBackupCollectionsAsync, grpcClient.ListBackupCollections, effectiveSettings.ListBackupCollectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupCollections);
+            Modify_ListBackupCollectionsApiCall(ref _callListBackupCollections);
+            _callGetBackupCollection = clientHelper.BuildApiCall<GetBackupCollectionRequest, BackupCollection>("GetBackupCollection", grpcClient.GetBackupCollectionAsync, grpcClient.GetBackupCollection, effectiveSettings.GetBackupCollectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupCollection);
+            Modify_GetBackupCollectionApiCall(ref _callGetBackupCollection);
+            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackups);
+            Modify_ListBackupsApiCall(ref _callListBackups);
+            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>("GetBackup", grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackup);
+            Modify_GetBackupApiCall(ref _callGetBackup);
+            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>("DeleteBackup", grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackup);
+            Modify_DeleteBackupApiCall(ref _callDeleteBackup);
+            _callExportBackup = clientHelper.BuildApiCall<ExportBackupRequest, lro::Operation>("ExportBackup", grpcClient.ExportBackupAsync, grpcClient.ExportBackup, effectiveSettings.ExportBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportBackup);
+            Modify_ExportBackupApiCall(ref _callExportBackup);
+            _callBackupCluster = clientHelper.BuildApiCall<BackupClusterRequest, lro::Operation>("BackupCluster", grpcClient.BackupClusterAsync, grpcClient.BackupCluster, effectiveSettings.BackupClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callBackupCluster);
+            Modify_BackupClusterApiCall(ref _callBackupCluster);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1481,6 +2902,22 @@ namespace Google.Cloud.Redis.Cluster.V1
         partial void Modify_CreateClusterApiCall(ref gaxgrpc::ApiCall<CreateClusterRequest, lro::Operation> call);
 
         partial void Modify_GetClusterCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<GetClusterCertificateAuthorityRequest, CertificateAuthority> call);
+
+        partial void Modify_RescheduleClusterMaintenanceApiCall(ref gaxgrpc::ApiCall<RescheduleClusterMaintenanceRequest, lro::Operation> call);
+
+        partial void Modify_ListBackupCollectionsApiCall(ref gaxgrpc::ApiCall<ListBackupCollectionsRequest, ListBackupCollectionsResponse> call);
+
+        partial void Modify_GetBackupCollectionApiCall(ref gaxgrpc::ApiCall<GetBackupCollectionRequest, BackupCollection> call);
+
+        partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
+
+        partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
+
+        partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> call);
+
+        partial void Modify_ExportBackupApiCall(ref gaxgrpc::ApiCall<ExportBackupRequest, lro::Operation> call);
+
+        partial void Modify_BackupClusterApiCall(ref gaxgrpc::ApiCall<BackupClusterRequest, lro::Operation> call);
 
         partial void OnConstruction(CloudRedisCluster.CloudRedisClusterClient grpcClient, CloudRedisClusterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1501,6 +2938,22 @@ namespace Google.Cloud.Redis.Cluster.V1
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetClusterCertificateAuthorityRequest(ref GetClusterCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RescheduleClusterMaintenanceRequest(ref RescheduleClusterMaintenanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupCollectionsRequest(ref ListBackupCollectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupCollectionRequest(ref GetBackupCollectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupRequest(ref GetBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportBackupRequest(ref ExportBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BackupClusterRequest(ref BackupClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all Redis clusters owned by a project in either the specified
@@ -1694,9 +3147,251 @@ namespace Google.Cloud.Redis.Cluster.V1
             Modify_GetClusterCertificateAuthorityRequest(ref request, ref callSettings);
             return _callGetClusterCertificateAuthority.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>RescheduleClusterMaintenance</c>.</summary>
+        public override lro::OperationsClient RescheduleClusterMaintenanceOperationsClient { get; }
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Cluster, wkt::Any> RescheduleClusterMaintenance(RescheduleClusterMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleClusterMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, wkt::Any>(_callRescheduleClusterMaintenance.Sync(request, callSettings), RescheduleClusterMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Cluster, wkt::Any>> RescheduleClusterMaintenanceAsync(RescheduleClusterMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleClusterMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, wkt::Any>(await _callRescheduleClusterMaintenance.Async(request, callSettings).ConfigureAwait(false), RescheduleClusterMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupCollection"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollections(ListBackupCollectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupCollectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupCollectionsRequest, ListBackupCollectionsResponse, BackupCollection>(_callListBackupCollections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupCollection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollectionsAsync(ListBackupCollectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupCollectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupCollectionsRequest, ListBackupCollectionsResponse, BackupCollection>(_callListBackupCollections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupCollection GetBackupCollection(GetBackupCollectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupCollectionRequest(ref request, ref callSettings);
+            return _callGetBackupCollection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupCollection> GetBackupCollectionAsync(GetBackupCollectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupCollectionRequest(ref request, ref callSettings);
+            return _callGetBackupCollection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteBackup</c>.</summary>
+        public override lro::OperationsClient DeleteBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, wkt::Any> DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, wkt::Any>(_callDeleteBackup.Sync(request, callSettings), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, wkt::Any>(await _callDeleteBackup.Async(request, callSettings).ConfigureAwait(false), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportBackup</c>.</summary>
+        public override lro::OperationsClient ExportBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Backup, wkt::Any> ExportBackup(ExportBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, wkt::Any>(_callExportBackup.Sync(request, callSettings), ExportBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Backup, wkt::Any>> ExportBackupAsync(ExportBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, wkt::Any>(await _callExportBackup.Async(request, callSettings).ConfigureAwait(false), ExportBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BackupCluster</c>.</summary>
+        public override lro::OperationsClient BackupClusterOperationsClient { get; }
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Cluster, wkt::Any> BackupCluster(BackupClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BackupClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, wkt::Any>(_callBackupCluster.Sync(request, callSettings), BackupClusterOperationsClient);
+        }
+
+        /// <summary>
+        /// Backup Redis Cluster.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the cluster's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Cluster, wkt::Any>> BackupClusterAsync(BackupClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BackupClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, wkt::Any>(await _callBackupCluster.Async(request, callSettings).ConfigureAwait(false), BackupClusterOperationsClient);
+        }
     }
 
     public partial class ListClustersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupCollectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1704,6 +3399,22 @@ namespace Google.Cloud.Redis.Cluster.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Cluster> GetEnumerator() => Clusters.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupCollectionsResponse : gaxgrpc::IPageResponse<BackupCollection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupCollection> GetEnumerator() => BackupCollections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupsResponse : gaxgrpc::IPageResponse<Backup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Backup> GetEnumerator() => Backups.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
