@@ -31,9 +31,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public void GetNote()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request

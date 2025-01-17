@@ -31,9 +31,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public void GetOccurrenceResourceNames()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request

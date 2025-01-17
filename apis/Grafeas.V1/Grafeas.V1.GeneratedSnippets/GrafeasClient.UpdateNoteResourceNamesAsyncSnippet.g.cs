@@ -33,9 +33,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public async Task UpdateNoteResourceNamesAsync()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             Note note = new Note();

@@ -32,9 +32,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public void BatchCreateNotesResourceNames()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };

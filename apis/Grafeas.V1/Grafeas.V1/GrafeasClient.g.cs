@@ -356,6 +356,9 @@ namespace Grafeas.V1
             grpccore::CallInvoker callInvoker = await CreateCallInvokerAsync(cancellationToken).ConfigureAwait(false);
             return GrafeasClient.Create(callInvoker, GetEffectiveSettings(Settings?.Clone()), Logger);
         }
+
+        /// <summary>Returns the channel pool to use when no other options are specified.</summary>
+        protected override gaxgrpc::ChannelPool GetChannelPool() => GrafeasClient.ChannelPool;
     }
 
     /// <summary>Grafeas client wrapper, for convenient use.</summary>
@@ -377,13 +380,18 @@ namespace Grafeas.V1
     /// </remarks>
     public abstract partial class GrafeasClient
     {
+        /// <summary>
+        /// The default endpoint for the Grafeas service, which is a host of "containeranalysis.googleapis.com" and a
+        /// port of 443.
+        /// </summary>
+        public static string DefaultEndpoint { get; } = "containeranalysis.googleapis.com:443";
 
         /// <summary>The default Grafeas scopes.</summary>
         /// <remarks>The default Grafeas scopes are:<list type="bullet"></list></remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
 
         /// <summary>The service metadata associated with this client type.</summary>
-        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Grafeas.Descriptor, null, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
+        public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Grafeas.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc, PackageApiMetadata.ApiMetadata);
 
         internal static gaxgrpc::ChannelPool ChannelPool { get; } = new gaxgrpc::ChannelPool(ServiceMetadata);
 
