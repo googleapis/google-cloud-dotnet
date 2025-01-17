@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             ListBackupsRequest request = new ListBackupsRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             ListBackupsResponse response = firestoreAdminClient.ListBackups(request);

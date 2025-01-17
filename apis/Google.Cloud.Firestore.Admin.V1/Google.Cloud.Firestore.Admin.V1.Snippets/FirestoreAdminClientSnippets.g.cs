@@ -2510,6 +2510,7 @@ namespace GoogleCSharpSnippets
             gcfav::ListBackupsRequest request = new gcfav::ListBackupsRequest
             {
                 ParentAsLocationName = gcfav::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             gcfav::ListBackupsResponse response = firestoreAdminClient.ListBackups(request);
@@ -2527,6 +2528,7 @@ namespace GoogleCSharpSnippets
             gcfav::ListBackupsRequest request = new gcfav::ListBackupsRequest
             {
                 ParentAsLocationName = gcfav::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             gcfav::ListBackupsResponse response = await firestoreAdminClient.ListBackupsAsync(request);
