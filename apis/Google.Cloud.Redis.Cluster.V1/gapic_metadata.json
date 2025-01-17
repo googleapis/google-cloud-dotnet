@@ -10,16 +10,46 @@
         "grpc": {
           "libraryClient": "CloudRedisClusterClient",
           "rpcs": {
+            "BackupCluster": {
+              "methods": [
+                "BackupCluster",
+                "BackupClusterAsync"
+              ]
+            },
             "CreateCluster": {
               "methods": [
                 "CreateCluster",
                 "CreateClusterAsync"
               ]
             },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
             "DeleteCluster": {
               "methods": [
                 "DeleteCluster",
                 "DeleteClusterAsync"
+              ]
+            },
+            "ExportBackup": {
+              "methods": [
+                "ExportBackup",
+                "ExportBackupAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetBackupCollection": {
+              "methods": [
+                "GetBackupCollection",
+                "GetBackupCollectionAsync"
               ]
             },
             "GetCluster": {
@@ -34,10 +64,28 @@
                 "GetClusterCertificateAuthorityAsync"
               ]
             },
+            "ListBackupCollections": {
+              "methods": [
+                "ListBackupCollections",
+                "ListBackupCollectionsAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
             "ListClusters": {
               "methods": [
                 "ListClusters",
                 "ListClustersAsync"
+              ]
+            },
+            "RescheduleClusterMaintenance": {
+              "methods": [
+                "RescheduleClusterMaintenance",
+                "RescheduleClusterMaintenanceAsync"
               ]
             },
             "UpdateCluster": {
