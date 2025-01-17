@@ -23,6 +23,12 @@ and `Google.Cloud.Translation.V2` libraries support builders as well, but with f
 
 ## Specifying credentials
 
+**Important**: If you accept a credential configuration (credential JSON/File/Stream) from an external source
+for authentication to Google Cloud, you must validate it before providing it to any Google API or library.
+Providing an unvalidated credential configuration to Google APIs can compromise the security of your systems and data.
+For more information, refer to
+[Validate credential configurations from external sources](https://cloud.google.com/docs/authentication/external/externally-sourced-credentials).
+
 The following properties are used for specifying and configuring which credentials a client
 uses to authenticate and authorize requests. When no properties are set,
 [application default credentials](https://cloud.google.com/docs/authentication/production#automatically) are used.
