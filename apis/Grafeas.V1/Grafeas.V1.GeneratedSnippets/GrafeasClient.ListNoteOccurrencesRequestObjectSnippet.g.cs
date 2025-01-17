@@ -33,9 +33,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public void ListNoteOccurrencesRequestObject()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {

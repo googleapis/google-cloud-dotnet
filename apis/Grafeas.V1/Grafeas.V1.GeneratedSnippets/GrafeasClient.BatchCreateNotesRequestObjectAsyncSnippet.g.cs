@@ -32,9 +32,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public async Task BatchCreateNotesRequestObjectAsync()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {

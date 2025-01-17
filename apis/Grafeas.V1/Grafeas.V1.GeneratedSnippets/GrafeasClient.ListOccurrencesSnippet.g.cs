@@ -33,9 +33,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public void ListOccurrences()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";

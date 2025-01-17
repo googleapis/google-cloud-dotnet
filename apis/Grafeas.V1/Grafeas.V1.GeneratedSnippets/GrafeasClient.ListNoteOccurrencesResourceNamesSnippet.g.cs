@@ -33,9 +33,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public void ListNoteOccurrencesResourceNames()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             string filter = "";

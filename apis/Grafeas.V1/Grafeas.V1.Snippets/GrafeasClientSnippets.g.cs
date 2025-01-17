@@ -30,10 +30,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrence</summary>
         public void GetOccurrenceRequestObject()
         {
-            string endpoint = "";
             // Snippet: GetOccurrence(GetOccurrenceRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             GetOccurrenceRequest request = new GetOccurrenceRequest
             {
@@ -47,11 +46,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceAsync</summary>
         public async Task GetOccurrenceRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceAsync(GetOccurrenceRequest, CallSettings)
             // Additional: GetOccurrenceAsync(GetOccurrenceRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             GetOccurrenceRequest request = new GetOccurrenceRequest
             {
@@ -65,10 +63,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrence</summary>
         public void GetOccurrence()
         {
-            string endpoint = "";
             // Snippet: GetOccurrence(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -79,11 +76,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceAsync</summary>
         public async Task GetOccurrenceAsync()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceAsync(string, CallSettings)
             // Additional: GetOccurrenceAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -94,10 +90,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrence</summary>
         public void GetOccurrenceResourceNames()
         {
-            string endpoint = "";
             // Snippet: GetOccurrence(OccurrenceName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -108,11 +103,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceAsync</summary>
         public async Task GetOccurrenceResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceAsync(OccurrenceName, CallSettings)
             // Additional: GetOccurrenceAsync(OccurrenceName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -123,10 +117,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListOccurrences</summary>
         public void ListOccurrencesRequestObject()
         {
-            string endpoint = "";
             // Snippet: ListOccurrences(ListOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ListOccurrencesRequest request = new ListOccurrencesRequest
             {
@@ -173,10 +166,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListOccurrencesAsync</summary>
         public async Task ListOccurrencesRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: ListOccurrencesAsync(ListOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ListOccurrencesRequest request = new ListOccurrencesRequest
             {
@@ -223,10 +215,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListOccurrences</summary>
         public void ListOccurrences()
         {
-            string endpoint = "";
             // Snippet: ListOccurrences(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";
@@ -270,10 +261,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListOccurrencesAsync</summary>
         public async Task ListOccurrencesAsync()
         {
-            string endpoint = "";
             // Snippet: ListOccurrencesAsync(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";
@@ -317,10 +307,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListOccurrences</summary>
         public void ListOccurrencesResourceNames()
         {
-            string endpoint = "";
             // Snippet: ListOccurrences(ProjectName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string filter = "";
@@ -364,10 +353,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListOccurrencesAsync</summary>
         public async Task ListOccurrencesResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: ListOccurrencesAsync(ProjectName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string filter = "";
@@ -411,10 +399,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteOccurrence</summary>
         public void DeleteOccurrenceRequestObject()
         {
-            string endpoint = "";
             // Snippet: DeleteOccurrence(DeleteOccurrenceRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             DeleteOccurrenceRequest request = new DeleteOccurrenceRequest
             {
@@ -428,11 +415,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteOccurrenceAsync</summary>
         public async Task DeleteOccurrenceRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: DeleteOccurrenceAsync(DeleteOccurrenceRequest, CallSettings)
             // Additional: DeleteOccurrenceAsync(DeleteOccurrenceRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             DeleteOccurrenceRequest request = new DeleteOccurrenceRequest
             {
@@ -446,10 +432,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteOccurrence</summary>
         public void DeleteOccurrence()
         {
-            string endpoint = "";
             // Snippet: DeleteOccurrence(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -460,11 +445,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteOccurrenceAsync</summary>
         public async Task DeleteOccurrenceAsync()
         {
-            string endpoint = "";
             // Snippet: DeleteOccurrenceAsync(string, CallSettings)
             // Additional: DeleteOccurrenceAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -475,10 +459,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteOccurrence</summary>
         public void DeleteOccurrenceResourceNames()
         {
-            string endpoint = "";
             // Snippet: DeleteOccurrence(OccurrenceName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -489,11 +472,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteOccurrenceAsync</summary>
         public async Task DeleteOccurrenceResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: DeleteOccurrenceAsync(OccurrenceName, CallSettings)
             // Additional: DeleteOccurrenceAsync(OccurrenceName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -504,10 +486,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateOccurrence</summary>
         public void CreateOccurrenceRequestObject()
         {
-            string endpoint = "";
             // Snippet: CreateOccurrence(CreateOccurrenceRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
@@ -522,11 +503,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateOccurrenceAsync</summary>
         public async Task CreateOccurrenceRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: CreateOccurrenceAsync(CreateOccurrenceRequest, CallSettings)
             // Additional: CreateOccurrenceAsync(CreateOccurrenceRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             CreateOccurrenceRequest request = new CreateOccurrenceRequest
             {
@@ -541,10 +521,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateOccurrence</summary>
         public void CreateOccurrence()
         {
-            string endpoint = "";
             // Snippet: CreateOccurrence(string, Occurrence, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             Occurrence occurrence = new Occurrence();
@@ -556,11 +535,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateOccurrenceAsync</summary>
         public async Task CreateOccurrenceAsync()
         {
-            string endpoint = "";
             // Snippet: CreateOccurrenceAsync(string, Occurrence, CallSettings)
             // Additional: CreateOccurrenceAsync(string, Occurrence, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             Occurrence occurrence = new Occurrence();
@@ -572,10 +550,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateOccurrence</summary>
         public void CreateOccurrenceResourceNames()
         {
-            string endpoint = "";
             // Snippet: CreateOccurrence(ProjectName, Occurrence, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             Occurrence occurrence = new Occurrence();
@@ -587,11 +564,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateOccurrenceAsync</summary>
         public async Task CreateOccurrenceResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: CreateOccurrenceAsync(ProjectName, Occurrence, CallSettings)
             // Additional: CreateOccurrenceAsync(ProjectName, Occurrence, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             Occurrence occurrence = new Occurrence();
@@ -603,10 +579,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateOccurrences</summary>
         public void BatchCreateOccurrencesRequestObject()
         {
-            string endpoint = "";
             // Snippet: BatchCreateOccurrences(BatchCreateOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
@@ -621,11 +596,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateOccurrencesAsync</summary>
         public async Task BatchCreateOccurrencesRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: BatchCreateOccurrencesAsync(BatchCreateOccurrencesRequest, CallSettings)
             // Additional: BatchCreateOccurrencesAsync(BatchCreateOccurrencesRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             BatchCreateOccurrencesRequest request = new BatchCreateOccurrencesRequest
             {
@@ -640,10 +614,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateOccurrences</summary>
         public void BatchCreateOccurrences()
         {
-            string endpoint = "";
             // Snippet: BatchCreateOccurrences(string, IEnumerable<Occurrence>, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };
@@ -655,11 +628,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateOccurrencesAsync</summary>
         public async Task BatchCreateOccurrencesAsync()
         {
-            string endpoint = "";
             // Snippet: BatchCreateOccurrencesAsync(string, IEnumerable<Occurrence>, CallSettings)
             // Additional: BatchCreateOccurrencesAsync(string, IEnumerable<Occurrence>, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };
@@ -671,10 +643,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateOccurrences</summary>
         public void BatchCreateOccurrencesResourceNames()
         {
-            string endpoint = "";
             // Snippet: BatchCreateOccurrences(ProjectName, IEnumerable<Occurrence>, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };
@@ -686,11 +657,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateOccurrencesAsync</summary>
         public async Task BatchCreateOccurrencesResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: BatchCreateOccurrencesAsync(ProjectName, IEnumerable<Occurrence>, CallSettings)
             // Additional: BatchCreateOccurrencesAsync(ProjectName, IEnumerable<Occurrence>, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };
@@ -702,10 +672,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateOccurrence</summary>
         public void UpdateOccurrenceRequestObject()
         {
-            string endpoint = "";
             // Snippet: UpdateOccurrence(UpdateOccurrenceRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             UpdateOccurrenceRequest request = new UpdateOccurrenceRequest
             {
@@ -721,11 +690,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateOccurrenceAsync</summary>
         public async Task UpdateOccurrenceRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: UpdateOccurrenceAsync(UpdateOccurrenceRequest, CallSettings)
             // Additional: UpdateOccurrenceAsync(UpdateOccurrenceRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             UpdateOccurrenceRequest request = new UpdateOccurrenceRequest
             {
@@ -741,10 +709,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateOccurrence</summary>
         public void UpdateOccurrence()
         {
-            string endpoint = "";
             // Snippet: UpdateOccurrence(string, Occurrence, FieldMask, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             Occurrence occurrence = new Occurrence();
@@ -757,11 +724,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateOccurrenceAsync</summary>
         public async Task UpdateOccurrenceAsync()
         {
-            string endpoint = "";
             // Snippet: UpdateOccurrenceAsync(string, Occurrence, FieldMask, CallSettings)
             // Additional: UpdateOccurrenceAsync(string, Occurrence, FieldMask, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             Occurrence occurrence = new Occurrence();
@@ -774,10 +740,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateOccurrence</summary>
         public void UpdateOccurrenceResourceNames()
         {
-            string endpoint = "";
             // Snippet: UpdateOccurrence(OccurrenceName, Occurrence, FieldMask, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             Occurrence occurrence = new Occurrence();
@@ -790,11 +755,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateOccurrenceAsync</summary>
         public async Task UpdateOccurrenceResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: UpdateOccurrenceAsync(OccurrenceName, Occurrence, FieldMask, CallSettings)
             // Additional: UpdateOccurrenceAsync(OccurrenceName, Occurrence, FieldMask, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             Occurrence occurrence = new Occurrence();
@@ -807,10 +771,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceNote</summary>
         public void GetOccurrenceNoteRequestObject()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceNote(GetOccurrenceNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             GetOccurrenceNoteRequest request = new GetOccurrenceNoteRequest
             {
@@ -824,11 +787,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceNoteAsync</summary>
         public async Task GetOccurrenceNoteRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceNoteAsync(GetOccurrenceNoteRequest, CallSettings)
             // Additional: GetOccurrenceNoteAsync(GetOccurrenceNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             GetOccurrenceNoteRequest request = new GetOccurrenceNoteRequest
             {
@@ -842,10 +804,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceNote</summary>
         public void GetOccurrenceNote()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceNote(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -856,11 +817,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceNoteAsync</summary>
         public async Task GetOccurrenceNoteAsync()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceNoteAsync(string, CallSettings)
             // Additional: GetOccurrenceNoteAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/occurrences/[OCCURRENCE]";
             // Make the request
@@ -871,10 +831,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceNote</summary>
         public void GetOccurrenceNoteResourceNames()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceNote(OccurrenceName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -885,11 +844,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetOccurrenceNoteAsync</summary>
         public async Task GetOccurrenceNoteResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: GetOccurrenceNoteAsync(OccurrenceName, CallSettings)
             // Additional: GetOccurrenceNoteAsync(OccurrenceName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             OccurrenceName name = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]");
             // Make the request
@@ -900,10 +858,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetNote</summary>
         public void GetNoteRequestObject()
         {
-            string endpoint = "";
             // Snippet: GetNote(GetNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             GetNoteRequest request = new GetNoteRequest
             {
@@ -917,11 +874,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetNoteAsync</summary>
         public async Task GetNoteRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: GetNoteAsync(GetNoteRequest, CallSettings)
             // Additional: GetNoteAsync(GetNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             GetNoteRequest request = new GetNoteRequest
             {
@@ -935,10 +891,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetNote</summary>
         public void GetNote()
         {
-            string endpoint = "";
             // Snippet: GetNote(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request
@@ -949,11 +904,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetNoteAsync</summary>
         public async Task GetNoteAsync()
         {
-            string endpoint = "";
             // Snippet: GetNoteAsync(string, CallSettings)
             // Additional: GetNoteAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request
@@ -964,10 +918,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetNote</summary>
         public void GetNoteResourceNames()
         {
-            string endpoint = "";
             // Snippet: GetNote(NoteName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             // Make the request
@@ -978,11 +931,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for GetNoteAsync</summary>
         public async Task GetNoteResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: GetNoteAsync(NoteName, CallSettings)
             // Additional: GetNoteAsync(NoteName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             // Make the request
@@ -993,10 +945,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNotes</summary>
         public void ListNotesRequestObject()
         {
-            string endpoint = "";
             // Snippet: ListNotes(ListNotesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ListNotesRequest request = new ListNotesRequest
             {
@@ -1043,10 +994,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNotesAsync</summary>
         public async Task ListNotesRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: ListNotesAsync(ListNotesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ListNotesRequest request = new ListNotesRequest
             {
@@ -1093,10 +1043,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNotes</summary>
         public void ListNotes()
         {
-            string endpoint = "";
             // Snippet: ListNotes(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";
@@ -1140,10 +1089,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNotesAsync</summary>
         public async Task ListNotesAsync()
         {
-            string endpoint = "";
             // Snippet: ListNotesAsync(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string filter = "";
@@ -1187,10 +1135,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNotes</summary>
         public void ListNotesResourceNames()
         {
-            string endpoint = "";
             // Snippet: ListNotes(ProjectName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string filter = "";
@@ -1234,10 +1181,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNotesAsync</summary>
         public async Task ListNotesResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: ListNotesAsync(ProjectName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string filter = "";
@@ -1281,10 +1227,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteNote</summary>
         public void DeleteNoteRequestObject()
         {
-            string endpoint = "";
             // Snippet: DeleteNote(DeleteNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             DeleteNoteRequest request = new DeleteNoteRequest
             {
@@ -1298,11 +1243,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteNoteAsync</summary>
         public async Task DeleteNoteRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: DeleteNoteAsync(DeleteNoteRequest, CallSettings)
             // Additional: DeleteNoteAsync(DeleteNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             DeleteNoteRequest request = new DeleteNoteRequest
             {
@@ -1316,10 +1260,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteNote</summary>
         public void DeleteNote()
         {
-            string endpoint = "";
             // Snippet: DeleteNote(string, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request
@@ -1330,11 +1273,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteNoteAsync</summary>
         public async Task DeleteNoteAsync()
         {
-            string endpoint = "";
             // Snippet: DeleteNoteAsync(string, CallSettings)
             // Additional: DeleteNoteAsync(string, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             // Make the request
@@ -1345,10 +1287,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteNote</summary>
         public void DeleteNoteResourceNames()
         {
-            string endpoint = "";
             // Snippet: DeleteNote(NoteName, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             // Make the request
@@ -1359,11 +1300,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for DeleteNoteAsync</summary>
         public async Task DeleteNoteResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: DeleteNoteAsync(NoteName, CallSettings)
             // Additional: DeleteNoteAsync(NoteName, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             // Make the request
@@ -1374,10 +1314,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateNote</summary>
         public void CreateNoteRequestObject()
         {
-            string endpoint = "";
             // Snippet: CreateNote(CreateNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             CreateNoteRequest request = new CreateNoteRequest
             {
@@ -1393,11 +1332,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateNoteAsync</summary>
         public async Task CreateNoteRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: CreateNoteAsync(CreateNoteRequest, CallSettings)
             // Additional: CreateNoteAsync(CreateNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             CreateNoteRequest request = new CreateNoteRequest
             {
@@ -1413,10 +1351,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateNote</summary>
         public void CreateNote()
         {
-            string endpoint = "";
             // Snippet: CreateNote(string, string, Note, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string noteId = "";
@@ -1429,11 +1366,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateNoteAsync</summary>
         public async Task CreateNoteAsync()
         {
-            string endpoint = "";
             // Snippet: CreateNoteAsync(string, string, Note, CallSettings)
             // Additional: CreateNoteAsync(string, string, Note, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             string noteId = "";
@@ -1446,10 +1382,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateNote</summary>
         public void CreateNoteResourceNames()
         {
-            string endpoint = "";
             // Snippet: CreateNote(ProjectName, string, Note, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string noteId = "";
@@ -1462,11 +1397,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for CreateNoteAsync</summary>
         public async Task CreateNoteResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: CreateNoteAsync(ProjectName, string, Note, CallSettings)
             // Additional: CreateNoteAsync(ProjectName, string, Note, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             string noteId = "";
@@ -1479,10 +1413,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateNotes</summary>
         public void BatchCreateNotesRequestObject()
         {
-            string endpoint = "";
             // Snippet: BatchCreateNotes(BatchCreateNotesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
@@ -1497,11 +1430,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateNotesAsync</summary>
         public async Task BatchCreateNotesRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: BatchCreateNotesAsync(BatchCreateNotesRequest, CallSettings)
             // Additional: BatchCreateNotesAsync(BatchCreateNotesRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             BatchCreateNotesRequest request = new BatchCreateNotesRequest
             {
@@ -1516,10 +1448,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateNotes</summary>
         public void BatchCreateNotes()
         {
-            string endpoint = "";
             // Snippet: BatchCreateNotes(string, IDictionary<string,Note>, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };
@@ -1531,11 +1462,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateNotesAsync</summary>
         public async Task BatchCreateNotesAsync()
         {
-            string endpoint = "";
             // Snippet: BatchCreateNotesAsync(string, IDictionary<string,Note>, CallSettings)
             // Additional: BatchCreateNotesAsync(string, IDictionary<string,Note>, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]";
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };
@@ -1547,10 +1477,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateNotes</summary>
         public void BatchCreateNotesResourceNames()
         {
-            string endpoint = "";
             // Snippet: BatchCreateNotes(ProjectName, IDictionary<string,Note>, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };
@@ -1562,11 +1491,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for BatchCreateNotesAsync</summary>
         public async Task BatchCreateNotesResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: BatchCreateNotesAsync(ProjectName, IDictionary<string,Note>, CallSettings)
             // Additional: BatchCreateNotesAsync(ProjectName, IDictionary<string,Note>, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IDictionary<string, Note> notes = new Dictionary<string, Note> { { "", new Note() }, };
@@ -1578,10 +1506,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateNote</summary>
         public void UpdateNoteRequestObject()
         {
-            string endpoint = "";
             // Snippet: UpdateNote(UpdateNoteRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             UpdateNoteRequest request = new UpdateNoteRequest
             {
@@ -1597,11 +1524,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateNoteAsync</summary>
         public async Task UpdateNoteRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: UpdateNoteAsync(UpdateNoteRequest, CallSettings)
             // Additional: UpdateNoteAsync(UpdateNoteRequest, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             UpdateNoteRequest request = new UpdateNoteRequest
             {
@@ -1617,10 +1543,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateNote</summary>
         public void UpdateNote()
         {
-            string endpoint = "";
             // Snippet: UpdateNote(string, Note, FieldMask, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             Note note = new Note();
@@ -1633,11 +1558,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateNoteAsync</summary>
         public async Task UpdateNoteAsync()
         {
-            string endpoint = "";
             // Snippet: UpdateNoteAsync(string, Note, FieldMask, CallSettings)
             // Additional: UpdateNoteAsync(string, Note, FieldMask, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             Note note = new Note();
@@ -1650,10 +1574,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateNote</summary>
         public void UpdateNoteResourceNames()
         {
-            string endpoint = "";
             // Snippet: UpdateNote(NoteName, Note, FieldMask, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             Note note = new Note();
@@ -1666,11 +1589,10 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for UpdateNoteAsync</summary>
         public async Task UpdateNoteResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: UpdateNoteAsync(NoteName, Note, FieldMask, CallSettings)
             // Additional: UpdateNoteAsync(NoteName, Note, FieldMask, CancellationToken)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             Note note = new Note();
@@ -1683,10 +1605,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNoteOccurrences</summary>
         public void ListNoteOccurrencesRequestObject()
         {
-            string endpoint = "";
             // Snippet: ListNoteOccurrences(ListNoteOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
@@ -1733,10 +1654,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNoteOccurrencesAsync</summary>
         public async Task ListNoteOccurrencesRequestObjectAsync()
         {
-            string endpoint = "";
             // Snippet: ListNoteOccurrencesAsync(ListNoteOccurrencesRequest, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ListNoteOccurrencesRequest request = new ListNoteOccurrencesRequest
             {
@@ -1783,10 +1703,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNoteOccurrences</summary>
         public void ListNoteOccurrences()
         {
-            string endpoint = "";
             // Snippet: ListNoteOccurrences(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             string filter = "";
@@ -1830,10 +1749,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNoteOccurrencesAsync</summary>
         public async Task ListNoteOccurrencesAsync()
         {
-            string endpoint = "";
             // Snippet: ListNoteOccurrencesAsync(string, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             string filter = "";
@@ -1877,10 +1795,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNoteOccurrences</summary>
         public void ListNoteOccurrencesResourceNames()
         {
-            string endpoint = "";
             // Snippet: ListNoteOccurrences(NoteName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = GrafeasClient.Create();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             string filter = "";
@@ -1924,10 +1841,9 @@ namespace GoogleCSharpSnippets
         /// <summary>Snippet for ListNoteOccurrencesAsync</summary>
         public async Task ListNoteOccurrencesResourceNamesAsync()
         {
-            string endpoint = "";
             // Snippet: ListNoteOccurrencesAsync(NoteName, string, string, int?, CallSettings)
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             NoteName name = NoteName.FromProjectNote("[PROJECT]", "[NOTE]");
             string filter = "";

@@ -35,9 +35,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public async Task ListNoteOccurrencesAsync()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/notes/[NOTE]";
             string filter = "";

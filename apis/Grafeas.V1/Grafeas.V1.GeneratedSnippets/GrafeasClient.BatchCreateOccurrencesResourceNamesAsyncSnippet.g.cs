@@ -33,9 +33,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public async Task BatchCreateOccurrencesResourceNamesAsync()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             ProjectName parent = ProjectName.FromProject("[PROJECT]");
             IEnumerable<Occurrence> occurrences = new Occurrence[] { new Occurrence(), };

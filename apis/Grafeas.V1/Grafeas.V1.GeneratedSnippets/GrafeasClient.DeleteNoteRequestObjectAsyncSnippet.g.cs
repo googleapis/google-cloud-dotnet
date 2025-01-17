@@ -32,9 +32,8 @@ namespace GoogleCSharpSnippets
         /// </remarks>
         public async Task DeleteNoteRequestObjectAsync()
         {
-            string endpoint = "";
             // Create client
-            GrafeasClient grafeasClient = new GrafeasClientBuilder { Endpoint = endpoint }.Build();
+            GrafeasClient grafeasClient = await GrafeasClient.CreateAsync();
             // Initialize request argument(s)
             DeleteNoteRequest request = new DeleteNoteRequest
             {
