@@ -1,0 +1,1080 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.FleetEngine.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "maps.fleetengine.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_CreateTrip_sync",
+      "title": "CreateTripRequestObject",
+      "description": "Snippet for CreateTrip",
+      "file": "TripServiceClient.CreateTripRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTrip",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.CreateTrip",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.CreateTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.FleetEngine.V1.Trip",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTrip",
+          "fullName": "maps.fleetengine.v1.TripService.CreateTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_CreateTrip_async",
+      "title": "CreateTripRequestObjectAsync",
+      "description": "Snippet for CreateTripAsync",
+      "file": "TripServiceClient.CreateTripRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateTripAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.CreateTripAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.CreateTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.FleetEngine.V1.Trip>",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "CreateTrip",
+          "fullName": "maps.fleetengine.v1.TripService.CreateTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_GetTrip_sync",
+      "title": "GetTripRequestObject",
+      "description": "Snippet for GetTrip",
+      "file": "TripServiceClient.GetTripRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrip",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.GetTrip",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.GetTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.FleetEngine.V1.Trip",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "GetTrip",
+          "fullName": "maps.fleetengine.v1.TripService.GetTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_GetTrip_async",
+      "title": "GetTripRequestObjectAsync",
+      "description": "Snippet for GetTripAsync",
+      "file": "TripServiceClient.GetTripRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTripAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.GetTripAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.GetTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.FleetEngine.V1.Trip>",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "GetTrip",
+          "fullName": "maps.fleetengine.v1.TripService.GetTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_ReportBillableTrip_sync",
+      "title": "ReportBillableTripRequestObject",
+      "description": "Snippet for ReportBillableTrip",
+      "file": "TripServiceClient.ReportBillableTripRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportBillableTrip",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.ReportBillableTrip",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.ReportBillableTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "ReportBillableTrip",
+          "fullName": "maps.fleetengine.v1.TripService.ReportBillableTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_ReportBillableTrip_async",
+      "title": "ReportBillableTripRequestObjectAsync",
+      "description": "Snippet for ReportBillableTripAsync",
+      "file": "TripServiceClient.ReportBillableTripRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ReportBillableTripAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.ReportBillableTripAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.ReportBillableTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "ReportBillableTrip",
+          "fullName": "maps.fleetengine.v1.TripService.ReportBillableTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_SearchTrips_sync",
+      "title": "SearchTripsRequestObject",
+      "description": "Snippet for SearchTrips",
+      "file": "TripServiceClient.SearchTripsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTrips",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.SearchTrips",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.SearchTripsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.FleetEngine.V1.SearchTripsResponse, Google.Maps.FleetEngine.V1.Trip>",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "SearchTrips",
+          "fullName": "maps.fleetengine.v1.TripService.SearchTrips",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_SearchTrips_async",
+      "title": "SearchTripsRequestObjectAsync",
+      "description": "Snippet for SearchTripsAsync",
+      "file": "TripServiceClient.SearchTripsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTripsAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.SearchTripsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.SearchTripsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.FleetEngine.V1.SearchTripsResponse, Google.Maps.FleetEngine.V1.Trip>",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "SearchTrips",
+          "fullName": "maps.fleetengine.v1.TripService.SearchTrips",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_UpdateTrip_sync",
+      "title": "UpdateTripRequestObject",
+      "description": "Snippet for UpdateTrip",
+      "file": "TripServiceClient.UpdateTripRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTrip",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.UpdateTrip",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.UpdateTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.FleetEngine.V1.Trip",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTrip",
+          "fullName": "maps.fleetengine.v1.TripService.UpdateTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_UpdateTrip_async",
+      "title": "UpdateTripRequestObjectAsync",
+      "description": "Snippet for UpdateTripAsync",
+      "file": "TripServiceClient.UpdateTripRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateTripAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.UpdateTripAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.UpdateTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.FleetEngine.V1.Trip>",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateTrip",
+          "fullName": "maps.fleetengine.v1.TripService.UpdateTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_CreateVehicle_sync",
+      "title": "CreateVehicleRequestObject",
+      "description": "Snippet for CreateVehicle",
+      "file": "VehicleServiceClient.CreateVehicleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVehicle",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.CreateVehicle",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.CreateVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.FleetEngine.V1.Vehicle",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.CreateVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_CreateVehicle_async",
+      "title": "CreateVehicleRequestObjectAsync",
+      "description": "Snippet for CreateVehicleAsync",
+      "file": "VehicleServiceClient.CreateVehicleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.CreateVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.CreateVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.FleetEngine.V1.Vehicle>",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.CreateVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_GetVehicle_sync",
+      "title": "GetVehicleRequestObject",
+      "description": "Snippet for GetVehicle",
+      "file": "VehicleServiceClient.GetVehicleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVehicle",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.GetVehicle",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.GetVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.FleetEngine.V1.Vehicle",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "GetVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.GetVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_GetVehicle_async",
+      "title": "GetVehicleRequestObjectAsync",
+      "description": "Snippet for GetVehicleAsync",
+      "file": "VehicleServiceClient.GetVehicleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.GetVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.GetVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.FleetEngine.V1.Vehicle>",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "GetVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.GetVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_UpdateVehicle_sync",
+      "title": "UpdateVehicleRequestObject",
+      "description": "Snippet for UpdateVehicle",
+      "file": "VehicleServiceClient.UpdateVehicleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVehicle",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.UpdateVehicle",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.UpdateVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.FleetEngine.V1.Vehicle",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.UpdateVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_UpdateVehicle_async",
+      "title": "UpdateVehicleRequestObjectAsync",
+      "description": "Snippet for UpdateVehicleAsync",
+      "file": "VehicleServiceClient.UpdateVehicleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.UpdateVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.UpdateVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.FleetEngine.V1.Vehicle>",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.UpdateVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_UpdateVehicleAttributes_sync",
+      "title": "UpdateVehicleAttributesRequestObject",
+      "description": "Snippet for UpdateVehicleAttributes",
+      "file": "VehicleServiceClient.UpdateVehicleAttributesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVehicleAttributes",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.UpdateVehicleAttributes",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.UpdateVehicleAttributesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.FleetEngine.V1.UpdateVehicleAttributesResponse",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVehicleAttributes",
+          "fullName": "maps.fleetengine.v1.VehicleService.UpdateVehicleAttributes",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_UpdateVehicleAttributes_async",
+      "title": "UpdateVehicleAttributesRequestObjectAsync",
+      "description": "Snippet for UpdateVehicleAttributesAsync",
+      "file": "VehicleServiceClient.UpdateVehicleAttributesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVehicleAttributesAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.UpdateVehicleAttributesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.UpdateVehicleAttributesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.FleetEngine.V1.UpdateVehicleAttributesResponse>",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVehicleAttributes",
+          "fullName": "maps.fleetengine.v1.VehicleService.UpdateVehicleAttributes",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_ListVehicles_sync",
+      "title": "ListVehiclesRequestObject",
+      "description": "Snippet for ListVehicles",
+      "file": "VehicleServiceClient.ListVehiclesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVehicles",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.ListVehicles",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.ListVehiclesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Maps.FleetEngine.V1.ListVehiclesResponse, Google.Maps.FleetEngine.V1.Vehicle>",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "ListVehicles",
+          "fullName": "maps.fleetengine.v1.VehicleService.ListVehicles",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 98,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 96,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_ListVehicles_async",
+      "title": "ListVehiclesRequestObjectAsync",
+      "description": "Snippet for ListVehiclesAsync",
+      "file": "VehicleServiceClient.ListVehiclesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVehiclesAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.ListVehiclesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.ListVehiclesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Maps.FleetEngine.V1.ListVehiclesResponse, Google.Maps.FleetEngine.V1.Vehicle>",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "ListVehicles",
+          "fullName": "maps.fleetengine.v1.VehicleService.ListVehicles",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 100,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 98,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_SearchVehicles_sync",
+      "title": "SearchVehiclesRequestObject",
+      "description": "Snippet for SearchVehicles",
+      "file": "VehicleServiceClient.SearchVehiclesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchVehicles",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.SearchVehicles",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.SearchVehiclesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.FleetEngine.V1.SearchVehiclesResponse",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "SearchVehicles",
+          "fullName": "maps.fleetengine.v1.VehicleService.SearchVehicles",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_SearchVehicles_async",
+      "title": "SearchVehiclesRequestObjectAsync",
+      "description": "Snippet for SearchVehiclesAsync",
+      "file": "VehicleServiceClient.SearchVehiclesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchVehiclesAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.SearchVehiclesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.SearchVehiclesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.FleetEngine.V1.SearchVehiclesResponse>",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "SearchVehicles",
+          "fullName": "maps.fleetengine.v1.VehicleService.SearchVehicles",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
