@@ -2296,6 +2296,12 @@
                 "AddRuleAsync"
               ]
             },
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
             "CloneRules": {
               "methods": [
                 "CloneRules",
