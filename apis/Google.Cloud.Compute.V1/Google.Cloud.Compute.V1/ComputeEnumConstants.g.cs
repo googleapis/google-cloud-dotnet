@@ -2515,6 +2515,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachment.Types.Bandwidth.UndefinedBandwidth"/>.</summary>
                 public const string UndefinedBandwidth = "UNDEFINED_BANDWIDTH";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachment.Types.Bandwidth.Bps100G"/>.</summary>
+                public const string Bps100G = "BPS_100G";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.InterconnectAttachment.Types.Bandwidth.Bps100M"/>.</summary>
                 public const string Bps100M = "BPS_100M";
 
@@ -3913,6 +3916,13 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.BgpInterRegionCost.Default"/>.</summary>
                 public const string Default = "DEFAULT";
+            }
+
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.EffectiveBgpInterRegionCost"/> enum.</summary>
+            public static class EffectiveBgpInterRegionCost
+            {
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.EffectiveBgpInterRegionCost.UndefinedEffectiveBgpInterRegionCost"/>.</summary>
+                public const string UndefinedEffectiveBgpInterRegionCost = "UNDEFINED_EFFECTIVE_BGP_INTER_REGION_COST";
             }
 
             /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.NetworkRoutingConfig.Types.RoutingMode"/> enum.</summary>
