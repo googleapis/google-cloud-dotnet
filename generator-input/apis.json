@@ -3376,7 +3376,7 @@
     },
     {
       "id": "Google.Cloud.Memorystore.V1Beta",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Memorystore",
       "productUrl": "https://cloud.google.com/memorystore/docs/valkey",
