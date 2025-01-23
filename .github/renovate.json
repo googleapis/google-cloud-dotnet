@@ -156,6 +156,8 @@
     "apis/Google.Cloud.MediaTranslation.V1Beta1/Google.Cloud.MediaTranslation.V1Beta1/**",
     "apis/Google.Cloud.Memcache.V1/Google.Cloud.Memcache.V1/**",
     "apis/Google.Cloud.Memcache.V1Beta2/Google.Cloud.Memcache.V1Beta2/**",
+    "apis/Google.Cloud.Memorystore.V1/Google.Cloud.Memorystore.V1/**",
+    "apis/Google.Cloud.Memorystore.V1Beta/Google.Cloud.Memorystore.V1Beta/**",
     "apis/Google.Cloud.Metastore.V1/Google.Cloud.Metastore.V1/**",
     "apis/Google.Cloud.Metastore.V1Alpha/Google.Cloud.Metastore.V1Alpha/**",
     "apis/Google.Cloud.Metastore.V1Beta/Google.Cloud.Metastore.V1Beta/**",
