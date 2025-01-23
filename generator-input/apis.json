@@ -3351,6 +3351,30 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Memorystore.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Memorystore",
+      "productUrl": "https://cloud.google.com/memorystore/docs/valkey",
+      "description": "Recommended Google client library to administer Cloud Memorystore, a fully-managed database service that provides a managed version of popular open source caching solutions.",
+      "tags": [
+        "Memorystore",
+        "Valkey",
+        "Cache"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/memorystore/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "memorystore",
+      "serviceConfigFile": "memorystore_v1.yaml",
+      "transport": "rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Metastore.V1",
       "version": "2.9.0",
       "type": "grpc",
