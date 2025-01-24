@@ -70,7 +70,7 @@ namespace Google.Apps.Script.Type {
     /// </summary>
     [pbr::OriginalName("HTTP_AUTHORIZATION_HEADER_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Send an ID token for the project-specific Google Workspace Add-ons system
+    /// Send an ID token for the project-specific Google Workspace add-ons system
     /// service account (default)
     /// </summary>
     [pbr::OriginalName("SYSTEM_ID_TOKEN")] SystemIdToken = 1,
