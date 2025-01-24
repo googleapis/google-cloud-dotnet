@@ -30,28 +30,13 @@ public class GetBucketTest
     [Fact]
     public async Task SoftDeleted()
     {
-        var softDeleteBucket  = _fixture.CreateBucket(Guid.NewGuid().ToString() + "-soft-delete", false, true);
-        var bucket = await _fixture.Client.GetBucketAsync(softDeleteBucket.Name, new GetBucketOptions { SoftDeleted = false });
-
-        await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
-        var softDeleted = await _fixture.Client.GetBucketAsync(softDeleteBucket.Name, new GetBucketOptions { SoftDeleted = true, Generation = bucket.Generation });
-        Assert.NotNull(bucket.Generation);
-        Assert.NotNull(softDeleted.Generation);
-        Assert.Equal(bucket.Generation, softDeleted.Generation);
-    }
-
-    [Fact]
-    public async Task GetSoftDeletedBucket()
-    {
-        var softDeleteBucket = _fixture.CreateBucket(Guid.NewGuid().ToString() + "-soft-delete", false, true);
-        var bucket = await _fixture.Client.GetBucketAsync(softDeleteBucket.Name, new GetBucketOptions { SoftDeleted = false });
+        var bucketName = _fixture.GenerateBucketName();
+        var softDeleteBucket = _fixture.CreateBucket(bucketName, false, true);
         await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
 
-        var softDeleted = await _fixture.Client.GetBucketAsync(softDeleteBucket.Name, new GetBucketOptions { SoftDeleted = true, Generation = bucket.Generation });
-        
-        Assert.NotNull(bucket.Name);
-        Assert.NotNull(softDeleted.Name);
-        Assert.Equal(bucket.Name, softDeleted.Name);
+        var softDeleted = await _fixture.Client.GetBucketAsync(softDeleteBucket.Name, new GetBucketOptions { SoftDeleted = true, Generation = softDeleteBucket.Generation });
+        Assert.Equal(softDeleteBucket.Name, softDeleted.Name);
+        Assert.Equal(softDeleteBucket.Generation, softDeleted.Generation);
         Assert.NotNull(softDeleted.SoftDeleteTimeDateTimeOffset);
         Assert.NotNull(softDeleted.HardDeleteTimeDateTimeOffset);
     }
