@@ -119,9 +119,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlRvb2xCA+BBARJWChFnZW5lcmF0",
             "aW9uX2NvbmZpZxgHIAEoCzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "YmV0YTEuR2VuZXJhdGlvbkNvbmZpZ0ID4EEBSAGIAQFCFQoTX3N5c3RlbV9p",
-            "bnN0cnVjdGlvbkIUChJfZ2VuZXJhdGlvbl9jb25maWciTgoTQ291bnRUb2tl",
-            "bnNSZXNwb25zZRIUCgx0b3RhbF90b2tlbnMYASABKAUSIQoZdG90YWxfYmls",
-            "bGFibGVfY2hhcmFjdGVycxgCIAEoBSLJBQoWR2VuZXJhdGVDb250ZW50UmVx",
+            "bnN0cnVjdGlvbkIUChJfZ2VuZXJhdGlvbl9jb25maWcipwEKE0NvdW50VG9r",
+            "ZW5zUmVzcG9uc2USFAoMdG90YWxfdG9rZW5zGAEgASgFEiEKGXRvdGFsX2Jp",
+            "bGxhYmxlX2NoYXJhY3RlcnMYAiABKAUSVwoVcHJvbXB0X3Rva2Vuc19kZXRh",
+            "aWxzGAMgAygLMjMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5N",
+            "b2RhbGl0eVRva2VuQ291bnRCA+BBAyLJBQoWR2VuZXJhdGVDb250ZW50UmVx",
             "dWVzdBISCgVtb2RlbBgFIAEoCUID4EECEj8KCGNvbnRlbnRzGAIgAygLMigu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5Db250ZW50QgPgQQIS",
             "TgoSc3lzdGVtX2luc3RydWN0aW9uGAggASgLMiguZ29vZ2xlLmNsb3VkLmFp",
@@ -137,7 +139,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ElEKEWdlbmVyYXRpb25fY29uZmlnGAQgASgLMjEuZ29vZ2xlLmNsb3VkLmFp",
             "cGxhdGZvcm0udjFiZXRhMS5HZW5lcmF0aW9uQ29uZmlnQgPgQQEaLQoLTGFi",
             "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4AUIVChNf",
-            "c3lzdGVtX2luc3RydWN0aW9uIrYGChdHZW5lcmF0ZUNvbnRlbnRSZXNwb25z",
+            "c3lzdGVtX2luc3RydWN0aW9uIsQIChdHZW5lcmF0ZUNvbnRlbnRSZXNwb25z",
             "ZRJDCgpjYW5kaWRhdGVzGAIgAygLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
             "cm0udjFiZXRhMS5DYW5kaWRhdGVCA+BBAxIaCg1tb2RlbF92ZXJzaW9uGAsg",
             "ASgJQgPgQQMSZQoPcHJvbXB0X2ZlZWRiYWNrGAMgASgLMkcuZ29vZ2xlLmNs",
@@ -152,10 +154,16 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "UmF0aW5nQgPgQQMSIQoUYmxvY2tfcmVhc29uX21lc3NhZ2UYAyABKAlCA+BB",
             "AyJtCg1CbG9ja2VkUmVhc29uEh4KGkJMT0NLRURfUkVBU09OX1VOU1BFQ0lG",
             "SUVEEAASCgoGU0FGRVRZEAESCQoFT1RIRVIQAhINCglCTE9DS0xJU1QQAxIW",
-            "ChJQUk9ISUJJVEVEX0NPTlRFTlQQBBqPAQoNVXNhZ2VNZXRhZGF0YRIaChJw",
+            "ChJQUk9ISUJJVEVEX0NPTlRFTlQQBBqdAwoNVXNhZ2VNZXRhZGF0YRIaChJw",
             "cm9tcHRfdG9rZW5fY291bnQYASABKAUSHgoWY2FuZGlkYXRlc190b2tlbl9j",
             "b3VudBgCIAEoBRIZChF0b3RhbF90b2tlbl9jb3VudBgDIAEoBRInChpjYWNo",
-            "ZWRfY29udGVudF90b2tlbl9jb3VudBgFIAEoBUID4EEDIoQBChZDaGF0Q29t",
+            "ZWRfY29udGVudF90b2tlbl9jb3VudBgFIAEoBUID4EEDElcKFXByb21wdF90",
+            "b2tlbnNfZGV0YWlscxgJIAMoCzIzLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuTW9kYWxpdHlUb2tlbkNvdW50QgPgQQMSVgoUY2FjaGVfdG9r",
+            "ZW5zX2RldGFpbHMYCiADKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MWJldGExLk1vZGFsaXR5VG9rZW5Db3VudEID4EEDElsKGWNhbmRpZGF0ZXNf",
+            "dG9rZW5zX2RldGFpbHMYCyADKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MWJldGExLk1vZGFsaXR5VG9rZW5Db3VudEID4EEDIoQBChZDaGF0Q29t",
             "cGxldGlvbnNSZXF1ZXN0EjwKCGVuZHBvaW50GAEgASgJQirgQQL6QSQKImFp",
             "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vRW5kcG9pbnQSLAoJaHR0cF9ib2R5",
             "GAIgASgLMhQuZ29vZ2xlLmFwaS5IdHRwQm9keUID4EEBIoMBChpQcmVkaWN0",
@@ -287,10 +295,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ExplainResponse), global::Google.Cloud.AIPlatform.V1Beta1.ExplainResponse.Parser, new[]{ "Explanations", "ConcurrentExplanations", "DeployedModelId", "Predictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ExplainResponse.Types.ConcurrentExplanation), global::Google.Cloud.AIPlatform.V1Beta1.ExplainResponse.Types.ConcurrentExplanation.Parser, new[]{ "Explanations" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CountTokensRequest), global::Google.Cloud.AIPlatform.V1Beta1.CountTokensRequest.Parser, new[]{ "Endpoint", "Model", "Instances", "Contents", "SystemInstruction", "Tools", "GenerationConfig" }, new[]{ "SystemInstruction", "GenerationConfig" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CountTokensResponse), global::Google.Cloud.AIPlatform.V1Beta1.CountTokensResponse.Parser, new[]{ "TotalTokens", "TotalBillableCharacters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CountTokensResponse), global::Google.Cloud.AIPlatform.V1Beta1.CountTokensResponse.Parser, new[]{ "TotalTokens", "TotalBillableCharacters", "PromptTokensDetails" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentRequest), global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentRequest.Parser, new[]{ "Model", "Contents", "SystemInstruction", "CachedContent", "Tools", "ToolConfig", "Labels", "SafetySettings", "GenerationConfig" }, new[]{ "SystemInstruction" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse), global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Parser, new[]{ "Candidates", "ModelVersion", "PromptFeedback", "UsageMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Types.PromptFeedback), global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Types.PromptFeedback.Parser, new[]{ "BlockReason", "SafetyRatings", "BlockReasonMessage" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Types.PromptFeedback.Types.BlockedReason) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Types.UsageMetadata), global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Types.UsageMetadata.Parser, new[]{ "PromptTokenCount", "CandidatesTokenCount", "TotalTokenCount", "CachedContentTokenCount" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Types.UsageMetadata), global::Google.Cloud.AIPlatform.V1Beta1.GenerateContentResponse.Types.UsageMetadata.Parser, new[]{ "PromptTokenCount", "CandidatesTokenCount", "TotalTokenCount", "CachedContentTokenCount", "PromptTokensDetails", "CacheTokensDetails", "CandidatesTokensDetails" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ChatCompletionsRequest), global::Google.Cloud.AIPlatform.V1Beta1.ChatCompletionsRequest.Parser, new[]{ "Endpoint", "HttpBody" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictLongRunningResponse), global::Google.Cloud.AIPlatform.V1Beta1.PredictLongRunningResponse.Parser, new[]{ "GenerateVideoResponse" }, new[]{ "Response" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictLongRunningMetadata), global::Google.Cloud.AIPlatform.V1Beta1.PredictLongRunningMetadata.Parser, null, null, null, null, null),
@@ -5909,6 +5917,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public CountTokensResponse(CountTokensResponse other) : this() {
       totalTokens_ = other.totalTokens_;
       totalBillableCharacters_ = other.totalBillableCharacters_;
+      promptTokensDetails_ = other.promptTokensDetails_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5949,6 +5958,20 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "prompt_tokens_details" field.</summary>
+    public const int PromptTokensDetailsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> _repeated_promptTokensDetails_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> promptTokensDetails_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount>();
+    /// <summary>
+    /// Output only. List of modalities that were processed in the request input.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> PromptTokensDetails {
+      get { return promptTokensDetails_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5966,6 +5989,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (TotalTokens != other.TotalTokens) return false;
       if (TotalBillableCharacters != other.TotalBillableCharacters) return false;
+      if(!promptTokensDetails_.Equals(other.promptTokensDetails_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5975,6 +5999,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int hash = 1;
       if (TotalTokens != 0) hash ^= TotalTokens.GetHashCode();
       if (TotalBillableCharacters != 0) hash ^= TotalBillableCharacters.GetHashCode();
+      hash ^= promptTokensDetails_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6001,6 +6026,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(16);
         output.WriteInt32(TotalBillableCharacters);
       }
+      promptTokensDetails_.WriteTo(output, _repeated_promptTokensDetails_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6019,6 +6045,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(16);
         output.WriteInt32(TotalBillableCharacters);
       }
+      promptTokensDetails_.WriteTo(ref output, _repeated_promptTokensDetails_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6035,6 +6062,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (TotalBillableCharacters != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalBillableCharacters);
       }
+      size += promptTokensDetails_.CalculateSize(_repeated_promptTokensDetails_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -6053,6 +6081,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (other.TotalBillableCharacters != 0) {
         TotalBillableCharacters = other.TotalBillableCharacters;
       }
+      promptTokensDetails_.Add(other.promptTokensDetails_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6076,6 +6105,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             TotalBillableCharacters = input.ReadInt32();
             break;
           }
+          case 26: {
+            promptTokensDetails_.AddEntriesFrom(input, _repeated_promptTokensDetails_codec);
+            break;
+          }
         }
       }
     #endif
@@ -6097,6 +6130,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 16: {
             TotalBillableCharacters = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            promptTokensDetails_.AddEntriesFrom(ref input, _repeated_promptTokensDetails_codec);
             break;
           }
         }
@@ -7305,6 +7342,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           candidatesTokenCount_ = other.candidatesTokenCount_;
           totalTokenCount_ = other.totalTokenCount_;
           cachedContentTokenCount_ = other.cachedContentTokenCount_;
+          promptTokensDetails_ = other.promptTokensDetails_.Clone();
+          cacheTokensDetails_ = other.cacheTokensDetails_.Clone();
+          candidatesTokensDetails_ = other.candidatesTokensDetails_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -7377,6 +7417,49 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "prompt_tokens_details" field.</summary>
+        public const int PromptTokensDetailsFieldNumber = 9;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> _repeated_promptTokensDetails_codec
+            = pb::FieldCodec.ForMessage(74, global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> promptTokensDetails_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount>();
+        /// <summary>
+        /// Output only. List of modalities that were processed in the request input.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> PromptTokensDetails {
+          get { return promptTokensDetails_; }
+        }
+
+        /// <summary>Field number for the "cache_tokens_details" field.</summary>
+        public const int CacheTokensDetailsFieldNumber = 10;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> _repeated_cacheTokensDetails_codec
+            = pb::FieldCodec.ForMessage(82, global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> cacheTokensDetails_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount>();
+        /// <summary>
+        /// Output only. List of modalities of the cached content in the request
+        /// input.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> CacheTokensDetails {
+          get { return cacheTokensDetails_; }
+        }
+
+        /// <summary>Field number for the "candidates_tokens_details" field.</summary>
+        public const int CandidatesTokensDetailsFieldNumber = 11;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> _repeated_candidatesTokensDetails_codec
+            = pb::FieldCodec.ForMessage(90, global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> candidatesTokensDetails_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount>();
+        /// <summary>
+        /// Output only. List of modalities that were returned in the response.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ModalityTokenCount> CandidatesTokensDetails {
+          get { return candidatesTokensDetails_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -7396,6 +7479,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (CandidatesTokenCount != other.CandidatesTokenCount) return false;
           if (TotalTokenCount != other.TotalTokenCount) return false;
           if (CachedContentTokenCount != other.CachedContentTokenCount) return false;
+          if(!promptTokensDetails_.Equals(other.promptTokensDetails_)) return false;
+          if(!cacheTokensDetails_.Equals(other.cacheTokensDetails_)) return false;
+          if(!candidatesTokensDetails_.Equals(other.candidatesTokensDetails_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -7407,6 +7493,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (CandidatesTokenCount != 0) hash ^= CandidatesTokenCount.GetHashCode();
           if (TotalTokenCount != 0) hash ^= TotalTokenCount.GetHashCode();
           if (CachedContentTokenCount != 0) hash ^= CachedContentTokenCount.GetHashCode();
+          hash ^= promptTokensDetails_.GetHashCode();
+          hash ^= cacheTokensDetails_.GetHashCode();
+          hash ^= candidatesTokensDetails_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -7441,6 +7530,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(40);
             output.WriteInt32(CachedContentTokenCount);
           }
+          promptTokensDetails_.WriteTo(output, _repeated_promptTokensDetails_codec);
+          cacheTokensDetails_.WriteTo(output, _repeated_cacheTokensDetails_codec);
+          candidatesTokensDetails_.WriteTo(output, _repeated_candidatesTokensDetails_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -7467,6 +7559,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(40);
             output.WriteInt32(CachedContentTokenCount);
           }
+          promptTokensDetails_.WriteTo(ref output, _repeated_promptTokensDetails_codec);
+          cacheTokensDetails_.WriteTo(ref output, _repeated_cacheTokensDetails_codec);
+          candidatesTokensDetails_.WriteTo(ref output, _repeated_candidatesTokensDetails_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -7489,6 +7584,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (CachedContentTokenCount != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(CachedContentTokenCount);
           }
+          size += promptTokensDetails_.CalculateSize(_repeated_promptTokensDetails_codec);
+          size += cacheTokensDetails_.CalculateSize(_repeated_cacheTokensDetails_codec);
+          size += candidatesTokensDetails_.CalculateSize(_repeated_candidatesTokensDetails_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -7513,6 +7611,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           if (other.CachedContentTokenCount != 0) {
             CachedContentTokenCount = other.CachedContentTokenCount;
           }
+          promptTokensDetails_.Add(other.promptTokensDetails_);
+          cacheTokensDetails_.Add(other.cacheTokensDetails_);
+          candidatesTokensDetails_.Add(other.candidatesTokensDetails_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -7544,6 +7645,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 CachedContentTokenCount = input.ReadInt32();
                 break;
               }
+              case 74: {
+                promptTokensDetails_.AddEntriesFrom(input, _repeated_promptTokensDetails_codec);
+                break;
+              }
+              case 82: {
+                cacheTokensDetails_.AddEntriesFrom(input, _repeated_cacheTokensDetails_codec);
+                break;
+              }
+              case 90: {
+                candidatesTokensDetails_.AddEntriesFrom(input, _repeated_candidatesTokensDetails_codec);
+                break;
+              }
             }
           }
         #endif
@@ -7573,6 +7686,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 40: {
                 CachedContentTokenCount = input.ReadInt32();
+                break;
+              }
+              case 74: {
+                promptTokensDetails_.AddEntriesFrom(ref input, _repeated_promptTokensDetails_codec);
+                break;
+              }
+              case 82: {
+                cacheTokensDetails_.AddEntriesFrom(ref input, _repeated_cacheTokensDetails_codec);
+                break;
+              }
+              case 90: {
+                candidatesTokensDetails_.AddEntriesFrom(ref input, _repeated_candidatesTokensDetails_codec);
                 break;
               }
             }
