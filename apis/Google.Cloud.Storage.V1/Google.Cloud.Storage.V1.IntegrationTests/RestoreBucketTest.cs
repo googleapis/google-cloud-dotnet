@@ -16,28 +16,27 @@ using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Google.Cloud.Storage.V1.IntegrationTests
+namespace Google.Cloud.Storage.V1.IntegrationTests;
+
+[Collection(nameof(StorageFixture))]
+public class RestoreBucketTest
 {
-    [Collection(nameof(StorageFixture))]
-    public class RestoreBucketTest
+    private readonly StorageFixture _fixture;
+
+    public RestoreBucketTest(StorageFixture fixture)
     {
-        private readonly StorageFixture _fixture;
+        _fixture = fixture;
+    }
 
-        public RestoreBucketTest(StorageFixture fixture)
-        {
-            _fixture = fixture;
-        }
+    [Fact]
+    public async Task RestoreSoftDeletedBucket()
+    {
+        var bucketName = _fixture.GenerateBucketName();
+        var softDeleteBucket = _fixture.CreateBucket(bucketName, false, true);
+        await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
 
-        [Fact]
-        public async Task RestoreSoftDeletedBucket()
-        {
-            var softDeleteBucket = _fixture.CreateBucket(Guid.NewGuid().ToString() + "-soft-delete", false, true);
-            var bucket = await _fixture.Client.GetBucketAsync(softDeleteBucket.Name, new GetBucketOptions { SoftDeleted = false });
-            await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
-
-            var restored = await _fixture.Client.RestoreBucketAsync(softDeleteBucket.Name, bucket.Generation.Value);
-            Assert.Equal(bucket.Name, restored.Name);
-            Assert.Equal(bucket.Generation, restored.Generation);
-        }
+        var restored = await _fixture.Client.RestoreBucketAsync(softDeleteBucket.Name, softDeleteBucket.Generation.Value);
+        Assert.Equal(softDeleteBucket.Name, restored.Name);
+        Assert.Equal(softDeleteBucket.Generation, restored.Generation);
     }
 }
