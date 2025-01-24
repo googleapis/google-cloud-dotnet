@@ -29,16 +29,19 @@ public sealed class RestoreBucketOptions
     /// what information is returned when restoration is successful.
     /// </summary>
     public Projection? Projection { get; set; }
+
     /// <summary>
     /// The encryption key to use for this operation. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
     /// will be used instead. Use <see cref="EncryptionKey.None"/> to remove encryption headers from this request.
     /// </summary>
     public EncryptionKey EncryptionKey { get; set; }
+
     /// <summary>
     /// If set, this is the ID of the project which will be billed for the request.
     /// The caller must have suitable permissions for the project being billed.
     /// </summary>
     public string UserProject { get; set; }
+
     /// <summary>
     /// Options to pass custom retry configuration for each API request.
     /// </summary>
