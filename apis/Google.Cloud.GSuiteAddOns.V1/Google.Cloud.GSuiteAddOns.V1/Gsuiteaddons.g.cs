@@ -155,7 +155,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message to get Google Workspace Add-ons authorization information.
+  /// Request message to get Google Workspace add-ons authorization information.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAuthorizationRequest : pb::IMessage<GetAuthorizationRequest>
@@ -206,7 +206,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the project for which to get the Google Workspace Add-ons
+    /// Required. Name of the project for which to get the Google Workspace add-ons
     /// authorization information.
     ///
     /// Example: `projects/my_project/authorization`.
@@ -2914,7 +2914,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   }
 
   /// <summary>
-  /// A Google Workspace Add-on deployment
+  /// A Google Workspace add-on deployment
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Deployment : pb::IMessage<Deployment>
@@ -2999,7 +2999,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     public const int AddOnsFieldNumber = 3;
     private global::Google.Cloud.GSuiteAddOns.V1.AddOns addOns_;
     /// <summary>
-    /// The Google Workspace Add-on configuration.
+    /// The Google Workspace add-on configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3232,7 +3232,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
   }
 
   /// <summary>
-  /// A Google Workspace Add-on configuration.
+  /// A Google Workspace add-on configuration.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AddOns : pb::IMessage<AddOns>
@@ -3290,7 +3290,7 @@ namespace Google.Cloud.GSuiteAddOns.V1 {
     public const int CommonFieldNumber = 1;
     private global::Google.Apps.Script.Type.CommonAddOnManifest common_;
     /// <summary>
-    /// Configuration that is common across all Google Workspace Add-ons.
+    /// Configuration that is common across all Google Workspace add-ons.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
