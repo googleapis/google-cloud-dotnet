@@ -27,7 +27,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Ci1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJlX3ZpZXcucHJv",
             "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
             "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItEQCgtGZWF0dXJl",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIs0SCgtGZWF0dXJl",
             "VmlldxJXChBiaWdfcXVlcnlfc291cmNlGAYgASgLMjYuZ29vZ2xlLmNsb3Vk",
             "LmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuQmlnUXVlcnlTb3VyY2VCA+BB",
             "AUgAEmUKF2ZlYXR1cmVfcmVnaXN0cnlfc291cmNlGAkgASgLMj0uZ29vZ2xl",
@@ -42,48 +42,54 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bHNFbnRyeUID4EEBEkcKC3N5bmNfY29uZmlnGAcgASgLMjIuZ29vZ2xlLmNs",
             "b3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuU3luY0NvbmZpZxJOCgxp",
             "bmRleF9jb25maWcYDyABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MS5GZWF0dXJlVmlldy5JbmRleENvbmZpZ0ID4EEBEhoKDXNhdGlzZmllc19w",
-            "enMYEyABKAhCA+BBAxIaCg1zYXRpc2ZpZXNfcHppGBQgASgIQgPgQQMaQgoO",
-            "QmlnUXVlcnlTb3VyY2USEAoDdXJpGAEgASgJQgPgQQISHgoRZW50aXR5X2lk",
-            "X2NvbHVtbnMYAiADKAlCA+BBAhozCgpTeW5jQ29uZmlnEgwKBGNyb24YASAB",
-            "KAkSFwoKY29udGludW91cxgCIAEoCEID4EEBGucFCgtJbmRleENvbmZpZxJf",
-            "Cg50cmVlX2FoX2NvbmZpZxgGIAEoCzJALmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkZlYXR1cmVWaWV3LkluZGV4Q29uZmlnLlRyZWVBSENvbmZpZ0ID",
-            "4EEBSAASZwoSYnJ1dGVfZm9yY2VfY29uZmlnGAcgASgLMkQuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuSW5kZXhDb25maWcuQnJ1",
-            "dGVGb3JjZUNvbmZpZ0ID4EEBSAASHQoQZW1iZWRkaW5nX2NvbHVtbhgBIAEo",
-            "CUID4EEBEhsKDmZpbHRlcl9jb2x1bW5zGAIgAygJQgPgQQESHAoPY3Jvd2Rp",
-            "bmdfY29sdW1uGAMgASgJQgPgQQESJQoTZW1iZWRkaW5nX2RpbWVuc2lvbhgE",
-            "IAEoBUID4EEBSAGIAQESawoVZGlzdGFuY2VfbWVhc3VyZV90eXBlGAUgASgO",
-            "MkcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZVZpZXcuSW5k",
-            "ZXhDb25maWcuRGlzdGFuY2VNZWFzdXJlVHlwZUID4EEBGhIKEEJydXRlRm9y",
-            "Y2VDb25maWcaWQoMVHJlZUFIQ29uZmlnEisKGWxlYWZfbm9kZV9lbWJlZGRp",
-            "bmdfY291bnQYASABKANCA+BBAUgAiAEBQhwKGl9sZWFmX25vZGVfZW1iZWRk",
-            "aW5nX2NvdW50IoQBChNEaXN0YW5jZU1lYXN1cmVUeXBlEiUKIURJU1RBTkNF",
-            "X01FQVNVUkVfVFlQRV9VTlNQRUNJRklFRBAAEhcKE1NRVUFSRURfTDJfRElT",
-            "VEFOQ0UQARITCg9DT1NJTkVfRElTVEFOQ0UQAhIYChRET1RfUFJPRFVDVF9E",
-            "SVNUQU5DRRADQhIKEGFsZ29yaXRobV9jb25maWdCFgoUX2VtYmVkZGluZ19k",
-            "aW1lbnNpb24a/gEKFUZlYXR1cmVSZWdpc3RyeVNvdXJjZRJnCg5mZWF0dXJl",
-            "X2dyb3VwcxgBIAMoCzJKLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZl",
-            "YXR1cmVWaWV3LkZlYXR1cmVSZWdpc3RyeVNvdXJjZS5GZWF0dXJlR3JvdXBC",
-            "A+BBAhIgCg5wcm9qZWN0X251bWJlchgCIAEoA0ID4EEBSACIAQEaRwoMRmVh",
-            "dHVyZUdyb3VwEh0KEGZlYXR1cmVfZ3JvdXBfaWQYASABKAlCA+BBAhIYCgtm",
-            "ZWF0dXJlX2lkcxgCIAMoCUID4EECQhEKD19wcm9qZWN0X251bWJlcho/Cg9W",
-            "ZXJ0ZXhSYWdTb3VyY2USEAoDdXJpGAEgASgJQgPgQQISGgoNcmFnX2NvcnB1",
-            "c19pZBgCIAEoA0ID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAE6mwHqQZcBCiVhaXBsYXRmb3JtLmdvb2dsZWFw",
-            "aXMuY29tL0ZlYXR1cmVWaWV3Em5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vZmVhdHVyZU9ubGluZVN0b3Jlcy97ZmVhdHVyZV9v",
-            "bmxpbmVfc3RvcmV9L2ZlYXR1cmVWaWV3cy97ZmVhdHVyZV92aWV3fUIICgZz",
-            "b3VyY2VCzgEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIQRmVh",
-            "dHVyZVZpZXdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZv",
-            "cm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5D",
-            "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
-            "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "MS5GZWF0dXJlVmlldy5JbmRleENvbmZpZ0ID4EEBElkKEnNlcnZpY2VfYWdl",
+            "bnRfdHlwZRgOIAEoDjI4Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZl",
+            "YXR1cmVWaWV3LlNlcnZpY2VBZ2VudFR5cGVCA+BBARIiChVzZXJ2aWNlX2Fj",
+            "Y291bnRfZW1haWwYDSABKAlCA+BBAxIaCg1zYXRpc2ZpZXNfcHpzGBMgASgI",
+            "QgPgQQMSGgoNc2F0aXNmaWVzX3B6aRgUIAEoCEID4EEDGkIKDkJpZ1F1ZXJ5",
+            "U291cmNlEhAKA3VyaRgBIAEoCUID4EECEh4KEWVudGl0eV9pZF9jb2x1bW5z",
+            "GAIgAygJQgPgQQIaMwoKU3luY0NvbmZpZxIMCgRjcm9uGAEgASgJEhcKCmNv",
+            "bnRpbnVvdXMYAiABKAhCA+BBARrnBQoLSW5kZXhDb25maWcSXwoOdHJlZV9h",
+            "aF9jb25maWcYBiABKAsyQC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5G",
+            "ZWF0dXJlVmlldy5JbmRleENvbmZpZy5UcmVlQUhDb25maWdCA+BBAUgAEmcK",
+            "EmJydXRlX2ZvcmNlX2NvbmZpZxgHIAEoCzJELmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLkZlYXR1cmVWaWV3LkluZGV4Q29uZmlnLkJydXRlRm9yY2VD",
+            "b25maWdCA+BBAUgAEh0KEGVtYmVkZGluZ19jb2x1bW4YASABKAlCA+BBARIb",
+            "Cg5maWx0ZXJfY29sdW1ucxgCIAMoCUID4EEBEhwKD2Nyb3dkaW5nX2NvbHVt",
+            "bhgDIAEoCUID4EEBEiUKE2VtYmVkZGluZ19kaW1lbnNpb24YBCABKAVCA+BB",
+            "AUgBiAEBEmsKFWRpc3RhbmNlX21lYXN1cmVfdHlwZRgFIAEoDjJHLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVWaWV3LkluZGV4Q29uZmln",
+            "LkRpc3RhbmNlTWVhc3VyZVR5cGVCA+BBARoSChBCcnV0ZUZvcmNlQ29uZmln",
+            "GlkKDFRyZWVBSENvbmZpZxIrChlsZWFmX25vZGVfZW1iZWRkaW5nX2NvdW50",
+            "GAEgASgDQgPgQQFIAIgBAUIcChpfbGVhZl9ub2RlX2VtYmVkZGluZ19jb3Vu",
+            "dCKEAQoTRGlzdGFuY2VNZWFzdXJlVHlwZRIlCiFESVNUQU5DRV9NRUFTVVJF",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIXChNTUVVBUkVEX0wyX0RJU1RBTkNFEAES",
+            "EwoPQ09TSU5FX0RJU1RBTkNFEAISGAoURE9UX1BST0RVQ1RfRElTVEFOQ0UQ",
+            "A0ISChBhbGdvcml0aG1fY29uZmlnQhYKFF9lbWJlZGRpbmdfZGltZW5zaW9u",
+            "Gv4BChVGZWF0dXJlUmVnaXN0cnlTb3VyY2USZwoOZmVhdHVyZV9ncm91cHMY",
+            "ASADKAsySi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlVmll",
+            "dy5GZWF0dXJlUmVnaXN0cnlTb3VyY2UuRmVhdHVyZUdyb3VwQgPgQQISIAoO",
+            "cHJvamVjdF9udW1iZXIYAiABKANCA+BBAUgAiAEBGkcKDEZlYXR1cmVHcm91",
+            "cBIdChBmZWF0dXJlX2dyb3VwX2lkGAEgASgJQgPgQQISGAoLZmVhdHVyZV9p",
+            "ZHMYAiADKAlCA+BBAkIRCg9fcHJvamVjdF9udW1iZXIaPwoPVmVydGV4UmFn",
+            "U291cmNlEhAKA3VyaRgBIAEoCUID4EECEhoKDXJhZ19jb3JwdXNfaWQYAiAB",
+            "KANCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBInsKEFNlcnZpY2VBZ2VudFR5cGUSIgoeU0VSVklDRV9BR0VO",
+            "VF9UWVBFX1VOU1BFQ0lGSUVEEAASHgoaU0VSVklDRV9BR0VOVF9UWVBFX1BS",
+            "T0pFQ1QQARIjCh9TRVJWSUNFX0FHRU5UX1RZUEVfRkVBVFVSRV9WSUVXEAI6",
+            "mwHqQZcBCiVhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0ZlYXR1cmVWaWV3",
+            "Em5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZmVh",
+            "dHVyZU9ubGluZVN0b3Jlcy97ZmVhdHVyZV9vbmxpbmVfc3RvcmV9L2ZlYXR1",
+            "cmVWaWV3cy97ZmVhdHVyZV92aWV3fUIICgZzb3VyY2VCzgEKHmNvbS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIQRmVhdHVyZVZpZXdQcm90b1ABWj5j",
+            "bG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9y",
+            "bXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
+            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
+            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "VertexRagSource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig", "IndexConfig", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView), global::Google.Cloud.AIPlatform.V1.FeatureView.Parser, new[]{ "BigQuerySource", "FeatureRegistrySource", "VertexRagSource", "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "SyncConfig", "IndexConfig", "ServiceAgentType", "ServiceAccountEmail", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "Source" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.BigQuerySource.Parser, new[]{ "Uri", "EntityIdColumns" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.SyncConfig.Parser, new[]{ "Cron", "Continuous" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Parser, new[]{ "TreeAhConfig", "BruteForceConfig", "EmbeddingColumn", "FilterColumns", "CrowdingColumn", "EmbeddingDimension", "DistanceMeasureType" }, new[]{ "AlgorithmConfig", "EmbeddingDimension" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.DistanceMeasureType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.BruteForceConfig.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig), global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig.Types.TreeAHConfig.Parser, new[]{ "LeafNodeEmbeddingCount" }, new[]{ "LeafNodeEmbeddingCount" }, null, null, null)}),
@@ -142,6 +148,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       labels_ = other.labels_.Clone();
       syncConfig_ = other.syncConfig_ != null ? other.syncConfig_.Clone() : null;
       indexConfig_ = other.indexConfig_ != null ? other.indexConfig_.Clone() : null;
+      serviceAgentType_ = other.serviceAgentType_;
+      serviceAccountEmail_ = other.serviceAccountEmail_;
       satisfiesPzs_ = other.satisfiesPzs_;
       satisfiesPzi_ = other.satisfiesPzi_;
       switch (other.SourceCase) {
@@ -333,6 +341,43 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "service_agent_type" field.</summary>
+    public const int ServiceAgentTypeFieldNumber = 14;
+    private global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType serviceAgentType_ = global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType.Unspecified;
+    /// <summary>
+    /// Optional. Service agent type used during data sync. By default, the Vertex
+    /// AI Service Agent is used. When using an IAM Policy to isolate this
+    /// FeatureView within a project, a separate service account should be
+    /// provisioned by setting this field to `SERVICE_AGENT_TYPE_FEATURE_VIEW`.
+    /// This will generate a separate service account to access the BigQuery source
+    /// table.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType ServiceAgentType {
+      get { return serviceAgentType_; }
+      set {
+        serviceAgentType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "service_account_email" field.</summary>
+    public const int ServiceAccountEmailFieldNumber = 13;
+    private string serviceAccountEmail_ = "";
+    /// <summary>
+    /// Output only. A Service Account unique to this FeatureView. The role
+    /// bigquery.dataViewer should be granted to this service account to allow
+    /// Vertex AI Feature Store to sync data to the online store.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccountEmail {
+      get { return serviceAccountEmail_; }
+      set {
+        serviceAccountEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "satisfies_pzs" field.</summary>
     public const int SatisfiesPzsFieldNumber = 19;
     private bool satisfiesPzs_;
@@ -410,6 +455,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!Labels.Equals(other.Labels)) return false;
       if (!object.Equals(SyncConfig, other.SyncConfig)) return false;
       if (!object.Equals(IndexConfig, other.IndexConfig)) return false;
+      if (ServiceAgentType != other.ServiceAgentType) return false;
+      if (ServiceAccountEmail != other.ServiceAccountEmail) return false;
       if (SatisfiesPzs != other.SatisfiesPzs) return false;
       if (SatisfiesPzi != other.SatisfiesPzi) return false;
       if (SourceCase != other.SourceCase) return false;
@@ -430,6 +477,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       hash ^= Labels.GetHashCode();
       if (syncConfig_ != null) hash ^= SyncConfig.GetHashCode();
       if (indexConfig_ != null) hash ^= IndexConfig.GetHashCode();
+      if (ServiceAgentType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType.Unspecified) hash ^= ServiceAgentType.GetHashCode();
+      if (ServiceAccountEmail.Length != 0) hash ^= ServiceAccountEmail.GetHashCode();
       if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
       if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       hash ^= (int) sourceCase_;
@@ -479,6 +528,14 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (sourceCase_ == SourceOneofCase.FeatureRegistrySource) {
         output.WriteRawTag(74);
         output.WriteMessage(FeatureRegistrySource);
+      }
+      if (ServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ServiceAccountEmail);
+      }
+      if (ServiceAgentType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) ServiceAgentType);
       }
       if (indexConfig_ != null) {
         output.WriteRawTag(122);
@@ -535,6 +592,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(74);
         output.WriteMessage(FeatureRegistrySource);
       }
+      if (ServiceAccountEmail.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(ServiceAccountEmail);
+      }
+      if (ServiceAgentType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) ServiceAgentType);
+      }
       if (indexConfig_ != null) {
         output.WriteRawTag(122);
         output.WriteMessage(IndexConfig);
@@ -589,6 +654,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (indexConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(IndexConfig);
       }
+      if (ServiceAgentType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ServiceAgentType);
+      }
+      if (ServiceAccountEmail.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccountEmail);
+      }
       if (SatisfiesPzs != false) {
         size += 2 + 1;
       }
@@ -637,6 +708,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           IndexConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig();
         }
         IndexConfig.MergeFrom(other.IndexConfig);
+      }
+      if (other.ServiceAgentType != global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType.Unspecified) {
+        ServiceAgentType = other.ServiceAgentType;
+      }
+      if (other.ServiceAccountEmail.Length != 0) {
+        ServiceAccountEmail = other.ServiceAccountEmail;
       }
       if (other.SatisfiesPzs != false) {
         SatisfiesPzs = other.SatisfiesPzs;
@@ -731,6 +808,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             FeatureRegistrySource = subBuilder;
             break;
           }
+          case 106: {
+            ServiceAccountEmail = input.ReadString();
+            break;
+          }
+          case 112: {
+            ServiceAgentType = (global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType) input.ReadEnum();
+            break;
+          }
           case 122: {
             if (indexConfig_ == null) {
               IndexConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig();
@@ -821,6 +906,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             FeatureRegistrySource = subBuilder;
             break;
           }
+          case 106: {
+            ServiceAccountEmail = input.ReadString();
+            break;
+          }
+          case 112: {
+            ServiceAgentType = (global::Google.Cloud.AIPlatform.V1.FeatureView.Types.ServiceAgentType) input.ReadEnum();
+            break;
+          }
           case 122: {
             if (indexConfig_ == null) {
               IndexConfig = new global::Google.Cloud.AIPlatform.V1.FeatureView.Types.IndexConfig();
@@ -855,6 +948,28 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Service agent type used during data sync.
+      /// </summary>
+      public enum ServiceAgentType {
+        /// <summary>
+        /// By default, the project-level Vertex AI Service Agent is enabled.
+        /// </summary>
+        [pbr::OriginalName("SERVICE_AGENT_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Indicates the project-level Vertex AI Service Agent
+        /// (https://cloud.google.com/vertex-ai/docs/general/access-control#service-agents)
+        /// will be used during sync jobs.
+        /// </summary>
+        [pbr::OriginalName("SERVICE_AGENT_TYPE_PROJECT")] Project = 1,
+        /// <summary>
+        /// Enable a FeatureView service account to be created by Vertex AI and
+        /// output in the field `service_account_email`. This service account will
+        /// be used to read from the source BigQuery table during sync.
+        /// </summary>
+        [pbr::OriginalName("SERVICE_AGENT_TYPE_FEATURE_VIEW")] FeatureView = 2,
+      }
+
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class BigQuerySource : pb::IMessage<BigQuerySource>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
