@@ -386,4 +386,22 @@ namespace Google.Cloud.AIPlatform.V1
             set => SharedResources = value?.ToString() ?? "";
         }
     }
+
+    public partial class SpeculativeDecodingSpec
+    {
+        public partial class Types
+        {
+            public partial class DraftModelSpeculation
+            {
+                /// <summary>
+                /// <see cref="ModelName"/>-typed view over the <see cref="DraftModel"/> resource name property.
+                /// </summary>
+                public ModelName DraftModelAsModelName
+                {
+                    get => string.IsNullOrEmpty(DraftModel) ? null : ModelName.Parse(DraftModel, allowUnparsed: true);
+                    set => DraftModel = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
 }
