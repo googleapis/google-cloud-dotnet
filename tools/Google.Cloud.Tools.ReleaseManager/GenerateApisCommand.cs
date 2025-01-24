@@ -112,6 +112,7 @@ internal class GenerateApisCommand : ICommand
             {
                 Generate(api);
             }
+            nonSourceGenerator.CleanApiFiles(api);
             nonSourceGenerator.GenerateApiFiles(api);
         }
         nonSourceGenerator.GenerateNonApiFiles();
