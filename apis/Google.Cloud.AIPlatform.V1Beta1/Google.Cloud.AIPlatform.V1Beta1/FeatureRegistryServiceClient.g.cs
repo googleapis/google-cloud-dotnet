@@ -74,6 +74,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             CreateFeatureMonitorOperationsSettings = existing.CreateFeatureMonitorOperationsSettings.Clone();
             GetFeatureMonitorSettings = existing.GetFeatureMonitorSettings;
             ListFeatureMonitorsSettings = existing.ListFeatureMonitorsSettings;
+            UpdateFeatureMonitorSettings = existing.UpdateFeatureMonitorSettings;
+            UpdateFeatureMonitorOperationsSettings = existing.UpdateFeatureMonitorOperationsSettings.Clone();
             DeleteFeatureMonitorSettings = existing.DeleteFeatureMonitorSettings;
             DeleteFeatureMonitorOperationsSettings = existing.DeleteFeatureMonitorOperationsSettings.Clone();
             CreateFeatureMonitorJobSettings = existing.CreateFeatureMonitorJobSettings;
@@ -409,6 +411,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListFeatureMonitorsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FeatureRegistryServiceClient.UpdateFeatureMonitor</c> and
+        /// <c>FeatureRegistryServiceClient.UpdateFeatureMonitorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateFeatureMonitorSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>FeatureRegistryServiceClient.UpdateFeatureMonitor</c> and
+        /// <c>FeatureRegistryServiceClient.UpdateFeatureMonitorAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateFeatureMonitorOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3226,6 +3259,146 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary>
+        /// Updates the parameters of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> UpdateFeatureMonitor(UpdateFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>> UpdateFeatureMonitorAsync(UpdateFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>> UpdateFeatureMonitorAsync(UpdateFeatureMonitorRequest request, st::CancellationToken cancellationToken) =>
+            UpdateFeatureMonitorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateFeatureMonitor</c>.</summary>
+        public virtual lro::OperationsClient UpdateFeatureMonitorOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateFeatureMonitor</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> PollOnceUpdateFeatureMonitor(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateFeatureMonitorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateFeatureMonitor</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>> PollOnceUpdateFeatureMonitorAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateFeatureMonitorOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="featureMonitor">
+        /// Required. The FeatureMonitor's `name` field is used to identify the
+        /// FeatureMonitor to be updated. Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// FeatureMonitor resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then only the non-empty fields present in the
+        /// request will be overwritten. Set the update_mask to `*` to override all
+        /// fields.
+        /// 
+        /// Updatable fields:
+        /// 
+        /// * `labels`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> UpdateFeatureMonitor(FeatureMonitor featureMonitor, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFeatureMonitor(new UpdateFeatureMonitorRequest
+            {
+                FeatureMonitor = gax::GaxPreconditions.CheckNotNull(featureMonitor, nameof(featureMonitor)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="featureMonitor">
+        /// Required. The FeatureMonitor's `name` field is used to identify the
+        /// FeatureMonitor to be updated. Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// FeatureMonitor resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then only the non-empty fields present in the
+        /// request will be overwritten. Set the update_mask to `*` to override all
+        /// fields.
+        /// 
+        /// Updatable fields:
+        /// 
+        /// * `labels`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>> UpdateFeatureMonitorAsync(FeatureMonitor featureMonitor, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFeatureMonitorAsync(new UpdateFeatureMonitorRequest
+            {
+                FeatureMonitor = gax::GaxPreconditions.CheckNotNull(featureMonitor, nameof(featureMonitor)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="featureMonitor">
+        /// Required. The FeatureMonitor's `name` field is used to identify the
+        /// FeatureMonitor to be updated. Format:
+        /// `projects/{project}/locations/{location}/featureGroups/{feature_group}/featureMonitors/{feature_monitor}`
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// FeatureMonitor resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then only the non-empty fields present in the
+        /// request will be overwritten. Set the update_mask to `*` to override all
+        /// fields.
+        /// 
+        /// Updatable fields:
+        /// 
+        /// * `labels`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>> UpdateFeatureMonitorAsync(FeatureMonitor featureMonitor, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateFeatureMonitorAsync(featureMonitor, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a single FeatureMonitor.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3841,6 +4014,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse> _callListFeatureMonitors;
 
+        private readonly gaxgrpc::ApiCall<UpdateFeatureMonitorRequest, lro::Operation> _callUpdateFeatureMonitor;
+
         private readonly gaxgrpc::ApiCall<DeleteFeatureMonitorRequest, lro::Operation> _callDeleteFeatureMonitor;
 
         private readonly gaxgrpc::ApiCall<CreateFeatureMonitorJobRequest, FeatureMonitorJob> _callCreateFeatureMonitorJob;
@@ -3875,6 +4050,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             UpdateFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFeatureOperationsSettings, logger);
             DeleteFeatureOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureOperationsSettings, logger);
             CreateFeatureMonitorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFeatureMonitorOperationsSettings, logger);
+            UpdateFeatureMonitorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFeatureMonitorOperationsSettings, logger);
             DeleteFeatureMonitorOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFeatureMonitorOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
@@ -3920,6 +4096,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callListFeatureMonitors = clientHelper.BuildApiCall<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse>("ListFeatureMonitors", grpcClient.ListFeatureMonitorsAsync, grpcClient.ListFeatureMonitors, effectiveSettings.ListFeatureMonitorsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFeatureMonitors);
             Modify_ListFeatureMonitorsApiCall(ref _callListFeatureMonitors);
+            _callUpdateFeatureMonitor = clientHelper.BuildApiCall<UpdateFeatureMonitorRequest, lro::Operation>("UpdateFeatureMonitor", grpcClient.UpdateFeatureMonitorAsync, grpcClient.UpdateFeatureMonitor, effectiveSettings.UpdateFeatureMonitorSettings).WithGoogleRequestParam("feature_monitor.name", request => request.FeatureMonitor?.Name);
+            Modify_ApiCall(ref _callUpdateFeatureMonitor);
+            Modify_UpdateFeatureMonitorApiCall(ref _callUpdateFeatureMonitor);
             _callDeleteFeatureMonitor = clientHelper.BuildApiCall<DeleteFeatureMonitorRequest, lro::Operation>("DeleteFeatureMonitor", grpcClient.DeleteFeatureMonitorAsync, grpcClient.DeleteFeatureMonitor, effectiveSettings.DeleteFeatureMonitorSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFeatureMonitor);
             Modify_DeleteFeatureMonitorApiCall(ref _callDeleteFeatureMonitor);
@@ -3964,6 +4143,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetFeatureMonitorApiCall(ref gaxgrpc::ApiCall<GetFeatureMonitorRequest, FeatureMonitor> call);
 
         partial void Modify_ListFeatureMonitorsApiCall(ref gaxgrpc::ApiCall<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse> call);
+
+        partial void Modify_UpdateFeatureMonitorApiCall(ref gaxgrpc::ApiCall<UpdateFeatureMonitorRequest, lro::Operation> call);
 
         partial void Modify_DeleteFeatureMonitorApiCall(ref gaxgrpc::ApiCall<DeleteFeatureMonitorRequest, lro::Operation> call);
 
@@ -4011,6 +4192,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetFeatureMonitorRequest(ref GetFeatureMonitorRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListFeatureMonitorsRequest(ref ListFeatureMonitorsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateFeatureMonitorRequest(ref UpdateFeatureMonitorRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteFeatureMonitorRequest(ref DeleteFeatureMonitorRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4378,6 +4561,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_ListFeatureMonitorsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListFeatureMonitorsRequest, ListFeatureMonitorsResponse, FeatureMonitor>(_callListFeatureMonitors, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateFeatureMonitor</c>.</summary>
+        public override lro::OperationsClient UpdateFeatureMonitorOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> UpdateFeatureMonitor(UpdateFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFeatureMonitorRequest(ref request, ref callSettings);
+            return new lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>(_callUpdateFeatureMonitor.Sync(request, callSettings), UpdateFeatureMonitorOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single FeatureMonitor.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>> UpdateFeatureMonitorAsync(UpdateFeatureMonitorRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateFeatureMonitorRequest(ref request, ref callSettings);
+            return new lro::Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata>(await _callUpdateFeatureMonitor.Async(request, callSettings).ConfigureAwait(false), UpdateFeatureMonitorOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteFeatureMonitor</c>.</summary>
