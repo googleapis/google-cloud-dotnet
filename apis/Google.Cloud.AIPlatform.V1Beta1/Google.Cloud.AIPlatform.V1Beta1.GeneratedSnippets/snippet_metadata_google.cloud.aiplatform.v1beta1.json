@@ -20384,6 +20384,206 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_FeatureRegistryService_UpdateFeatureMonitor_sync",
+      "title": "UpdateFeatureMonitorRequestObject",
+      "description": "Snippet for UpdateFeatureMonitor",
+      "file": "FeatureRegistryServiceClient.UpdateFeatureMonitorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeatureMonitor",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureRegistryServiceClient.UpdateFeatureMonitor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.FeatureMonitor, Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorOperationMetadata>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFeatureMonitor",
+          "fullName": "google.cloud.aiplatform.v1beta1.FeatureRegistryService.UpdateFeatureMonitor",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1beta1.FeatureRegistryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_FeatureRegistryService_UpdateFeatureMonitor_async",
+      "title": "UpdateFeatureMonitorRequestObjectAsync",
+      "description": "Snippet for UpdateFeatureMonitorAsync",
+      "file": "FeatureRegistryServiceClient.UpdateFeatureMonitorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeatureMonitorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureRegistryServiceClient.UpdateFeatureMonitorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.FeatureMonitor, Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorOperationMetadata>>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFeatureMonitor",
+          "fullName": "google.cloud.aiplatform.v1beta1.FeatureRegistryService.UpdateFeatureMonitor",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1beta1.FeatureRegistryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_FeatureRegistryService_UpdateFeatureMonitor_sync_flattened",
+      "title": "UpdateFeatureMonitor",
+      "description": "Snippet for UpdateFeatureMonitor",
+      "file": "FeatureRegistryServiceClient.UpdateFeatureMonitorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeatureMonitor",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureRegistryServiceClient.UpdateFeatureMonitor",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.FeatureMonitor",
+            "name": "featureMonitor"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.FeatureMonitor, Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorOperationMetadata>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFeatureMonitor",
+          "fullName": "google.cloud.aiplatform.v1beta1.FeatureRegistryService.UpdateFeatureMonitor",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1beta1.FeatureRegistryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_FeatureRegistryService_UpdateFeatureMonitor_async_flattened",
+      "title": "UpdateFeatureMonitorAsync",
+      "description": "Snippet for UpdateFeatureMonitorAsync",
+      "file": "FeatureRegistryServiceClient.UpdateFeatureMonitorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFeatureMonitorAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureRegistryServiceClient.UpdateFeatureMonitorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.FeatureMonitor",
+            "name": "featureMonitor"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.FeatureMonitor, Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorOperationMetadata>>",
+        "client": {
+          "shortName": "FeatureRegistryServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureRegistryServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFeatureMonitor",
+          "fullName": "google.cloud.aiplatform.v1beta1.FeatureRegistryService.UpdateFeatureMonitor",
+          "service": {
+            "shortName": "FeatureRegistryService",
+            "fullName": "google.cloud.aiplatform.v1beta1.FeatureRegistryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_FeatureRegistryService_DeleteFeatureMonitor_sync",
       "title": "DeleteFeatureMonitorRequestObject",
       "description": "Snippet for DeleteFeatureMonitor",

@@ -537,6 +537,12 @@
                 "UpdateFeatureGroup",
                 "UpdateFeatureGroupAsync"
               ]
+            },
+            "UpdateFeatureMonitor": {
+              "methods": [
+                "UpdateFeatureMonitor",
+                "UpdateFeatureMonitorAsync"
+              ]
             }
           }
         }

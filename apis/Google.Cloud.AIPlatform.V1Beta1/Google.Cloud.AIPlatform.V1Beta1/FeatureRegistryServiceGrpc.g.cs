@@ -107,6 +107,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListFeatureMonitorsResponse> __Marshaller_google_cloud_aiplatform_v1beta1_ListFeatureMonitorsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListFeatureMonitorsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest> __Marshaller_google_cloud_aiplatform_v1beta1_UpdateFeatureMonitorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.DeleteFeatureMonitorRequest> __Marshaller_google_cloud_aiplatform_v1beta1_DeleteFeatureMonitorRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.DeleteFeatureMonitorRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.CreateFeatureMonitorJobRequest> __Marshaller_google_cloud_aiplatform_v1beta1_CreateFeatureMonitorJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.CreateFeatureMonitorJobRequest.Parser));
@@ -230,6 +232,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "ListFeatureMonitors",
         __Marshaller_google_cloud_aiplatform_v1beta1_ListFeatureMonitorsRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_ListFeatureMonitorsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest, global::Google.LongRunning.Operation> __Method_UpdateFeatureMonitor = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateFeatureMonitor",
+        __Marshaller_google_cloud_aiplatform_v1beta1_UpdateFeatureMonitorRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.DeleteFeatureMonitorRequest, global::Google.LongRunning.Operation> __Method_DeleteFeatureMonitor = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.DeleteFeatureMonitorRequest, global::Google.LongRunning.Operation>(
@@ -437,6 +447,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.ListFeatureMonitorsResponse> ListFeatureMonitors(global::Google.Cloud.AIPlatform.V1Beta1.ListFeatureMonitorsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single FeatureMonitor.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateFeatureMonitor(global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1191,6 +1213,54 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListFeatureMonitors, null, options, request);
       }
       /// <summary>
+      /// Updates the parameters of a single FeatureMonitor.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateFeatureMonitor(global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFeatureMonitor(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single FeatureMonitor.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateFeatureMonitor(global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateFeatureMonitor, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single FeatureMonitor.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateFeatureMonitorAsync(global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateFeatureMonitorAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single FeatureMonitor.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateFeatureMonitorAsync(global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateFeatureMonitor, null, options, request);
+      }
+      /// <summary>
       /// Deletes a single FeatureMonitor.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1410,6 +1480,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           .AddMethod(__Method_CreateFeatureMonitor, serviceImpl.CreateFeatureMonitor)
           .AddMethod(__Method_GetFeatureMonitor, serviceImpl.GetFeatureMonitor)
           .AddMethod(__Method_ListFeatureMonitors, serviceImpl.ListFeatureMonitors)
+          .AddMethod(__Method_UpdateFeatureMonitor, serviceImpl.UpdateFeatureMonitor)
           .AddMethod(__Method_DeleteFeatureMonitor, serviceImpl.DeleteFeatureMonitor)
           .AddMethod(__Method_CreateFeatureMonitorJob, serviceImpl.CreateFeatureMonitorJob)
           .AddMethod(__Method_GetFeatureMonitorJob, serviceImpl.GetFeatureMonitorJob)
@@ -1437,6 +1508,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_CreateFeatureMonitor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CreateFeatureMonitorRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateFeatureMonitor));
       serviceBinder.AddMethod(__Method_GetFeatureMonitor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetFeatureMonitorRequest, global::Google.Cloud.AIPlatform.V1Beta1.FeatureMonitor>(serviceImpl.GetFeatureMonitor));
       serviceBinder.AddMethod(__Method_ListFeatureMonitors, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ListFeatureMonitorsRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListFeatureMonitorsResponse>(serviceImpl.ListFeatureMonitors));
+      serviceBinder.AddMethod(__Method_UpdateFeatureMonitor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.UpdateFeatureMonitorRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateFeatureMonitor));
       serviceBinder.AddMethod(__Method_DeleteFeatureMonitor, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeleteFeatureMonitorRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteFeatureMonitor));
       serviceBinder.AddMethod(__Method_CreateFeatureMonitorJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.CreateFeatureMonitorJobRequest, global::Google.Cloud.AIPlatform.V1Beta1.FeatureMonitorJob>(serviceImpl.CreateFeatureMonitorJob));
       serviceBinder.AddMethod(__Method_GetFeatureMonitorJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetFeatureMonitorJobRequest, global::Google.Cloud.AIPlatform.V1Beta1.FeatureMonitorJob>(serviceImpl.GetFeatureMonitorJob));

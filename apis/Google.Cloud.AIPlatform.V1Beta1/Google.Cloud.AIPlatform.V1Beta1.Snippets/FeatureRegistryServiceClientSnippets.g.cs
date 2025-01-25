@@ -2776,6 +2776,134 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateFeatureMonitor</summary>
+        public void UpdateFeatureMonitorRequestObject()
+        {
+            // Snippet: UpdateFeatureMonitor(UpdateFeatureMonitorRequest, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateFeatureMonitorRequest request = new UpdateFeatureMonitorRequest
+            {
+                FeatureMonitor = new FeatureMonitor(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> response = featureRegistryServiceClient.UpdateFeatureMonitor(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceUpdateFeatureMonitor(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeatureMonitorAsync</summary>
+        public async Task UpdateFeatureMonitorRequestObjectAsync()
+        {
+            // Snippet: UpdateFeatureMonitorAsync(UpdateFeatureMonitorRequest, CallSettings)
+            // Additional: UpdateFeatureMonitorAsync(UpdateFeatureMonitorRequest, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateFeatureMonitorRequest request = new UpdateFeatureMonitorRequest
+            {
+                FeatureMonitor = new FeatureMonitor(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> response = await featureRegistryServiceClient.UpdateFeatureMonitorAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceUpdateFeatureMonitorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeatureMonitor</summary>
+        public void UpdateFeatureMonitor()
+        {
+            // Snippet: UpdateFeatureMonitor(FeatureMonitor, FieldMask, CallSettings)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = FeatureRegistryServiceClient.Create();
+            // Initialize request argument(s)
+            FeatureMonitor featureMonitor = new FeatureMonitor();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> response = featureRegistryServiceClient.UpdateFeatureMonitor(featureMonitor, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> retrievedResponse = featureRegistryServiceClient.PollOnceUpdateFeatureMonitor(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeatureMonitorAsync</summary>
+        public async Task UpdateFeatureMonitorAsync()
+        {
+            // Snippet: UpdateFeatureMonitorAsync(FeatureMonitor, FieldMask, CallSettings)
+            // Additional: UpdateFeatureMonitorAsync(FeatureMonitor, FieldMask, CancellationToken)
+            // Create client
+            FeatureRegistryServiceClient featureRegistryServiceClient = await FeatureRegistryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureMonitor featureMonitor = new FeatureMonitor();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> response = await featureRegistryServiceClient.UpdateFeatureMonitorAsync(featureMonitor, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            FeatureMonitor result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<FeatureMonitor, UpdateFeatureMonitorOperationMetadata> retrievedResponse = await featureRegistryServiceClient.PollOnceUpdateFeatureMonitorAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                FeatureMonitor retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteFeatureMonitor</summary>
         public void DeleteFeatureMonitorRequestObject()
         {
