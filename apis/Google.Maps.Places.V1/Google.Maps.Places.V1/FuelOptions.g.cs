@@ -26,22 +26,23 @@ namespace Google.Maps.Places.V1 {
           string.Concat(
             "Cihnb29nbGUvbWFwcy9wbGFjZXMvdjEvZnVlbF9vcHRpb25zLnByb3RvEhVn",
             "b29nbGUubWFwcy5wbGFjZXMudjEaH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8aF2dvb2dsZS90eXBlL21vbmV5LnByb3RvIv8DCgtGdWVsT3B0",
+            "bXAucHJvdG8aF2dvb2dsZS90eXBlL21vbmV5LnByb3RvIpoECgtGdWVsT3B0",
             "aW9ucxJBCgtmdWVsX3ByaWNlcxgBIAMoCzIsLmdvb2dsZS5tYXBzLnBsYWNl",
-            "cy52MS5GdWVsT3B0aW9ucy5GdWVsUHJpY2UarAMKCUZ1ZWxQcmljZRJDCgR0",
+            "cy52MS5GdWVsT3B0aW9ucy5GdWVsUHJpY2UaxwMKCUZ1ZWxQcmljZRJDCgR0",
             "eXBlGAEgASgOMjUuZ29vZ2xlLm1hcHMucGxhY2VzLnYxLkZ1ZWxPcHRpb25z",
             "LkZ1ZWxQcmljZS5GdWVsVHlwZRIhCgVwcmljZRgCIAEoCzISLmdvb2dsZS50",
             "eXBlLk1vbmV5Ei8KC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcCKFAgoIRnVlbFR5cGUSGQoVRlVFTF9UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASCgoGRElFU0VMEAESFAoQUkVHVUxBUl9VTkxFQURFRBACEgwK",
-            "CE1JREdSQURFEAMSCwoHUFJFTUlVTRAEEggKBFNQOTEQBRIMCghTUDkxX0Ux",
-            "MBAGEggKBFNQOTIQBxIICgRTUDk1EAgSDAoIU1A5NV9FMTAQCRIICgRTUDk4",
-            "EAoSCAoEU1A5ORALEgkKBVNQMTAwEAwSBwoDTFBHEA0SBwoDRTgwEA4SBwoD",
-            "RTg1EA8SCwoHTUVUSEFORRAQEg4KCkJJT19ESUVTRUwQERIQCgxUUlVDS19E",
-            "SUVTRUwQEkKhAQoZY29tLmdvb2dsZS5tYXBzLnBsYWNlcy52MUIQRnVlbE9w",
-            "dGlvbnNQcm90b1ABWjdjbG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2Vz",
-            "L2FwaXYxL3BsYWNlc3BiO3BsYWNlc3BiogIGR01QU1YxqgIVR29vZ2xlLk1h",
-            "cHMuUGxhY2VzLlYxygIVR29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
+            "YnVmLlRpbWVzdGFtcCKgAgoIRnVlbFR5cGUSGQoVRlVFTF9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASCgoGRElFU0VMEAESDwoLRElFU0VMX1BMVVMQExIUChBSRUdV",
+            "TEFSX1VOTEVBREVEEAISDAoITUlER1JBREUQAxILCgdQUkVNSVVNEAQSCAoE",
+            "U1A5MRAFEgwKCFNQOTFfRTEwEAYSCAoEU1A5MhAHEggKBFNQOTUQCBIMCghT",
+            "UDk1X0UxMBAJEggKBFNQOTgQChIICgRTUDk5EAsSCQoFU1AxMDAQDBIHCgNM",
+            "UEcQDRIHCgNFODAQDhIHCgNFODUQDxIICgRFMTAwEBQSCwoHTUVUSEFORRAQ",
+            "Eg4KCkJJT19ESUVTRUwQERIQCgxUUlVDS19ESUVTRUwQEkKhAQoZY29tLmdv",
+            "b2dsZS5tYXBzLnBsYWNlcy52MUIQRnVlbE9wdGlvbnNQcm90b1ABWjdjbG91",
+            "ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3Bs",
+            "YWNlc3BiogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIVR29v",
+            "Z2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -552,6 +553,10 @@ namespace Google.Maps.Places.V1 {
             /// </summary>
             [pbr::OriginalName("DIESEL")] Diesel = 1,
             /// <summary>
+            /// Diesel plus fuel.
+            /// </summary>
+            [pbr::OriginalName("DIESEL_PLUS")] DieselPlus = 19,
+            /// <summary>
             /// Regular unleaded.
             /// </summary>
             [pbr::OriginalName("REGULAR_UNLEADED")] RegularUnleaded = 2,
@@ -596,7 +601,7 @@ namespace Google.Maps.Places.V1 {
             /// </summary>
             [pbr::OriginalName("SP100")] Sp100 = 12,
             /// <summary>
-            /// LPG.
+            /// Liquefied Petroleum Gas.
             /// </summary>
             [pbr::OriginalName("LPG")] Lpg = 13,
             /// <summary>
@@ -607,6 +612,10 @@ namespace Google.Maps.Places.V1 {
             /// E 85.
             /// </summary>
             [pbr::OriginalName("E85")] E85 = 15,
+            /// <summary>
+            /// E 100.
+            /// </summary>
+            [pbr::OriginalName("E100")] E100 = 20,
             /// <summary>
             /// Methane.
             /// </summary>
