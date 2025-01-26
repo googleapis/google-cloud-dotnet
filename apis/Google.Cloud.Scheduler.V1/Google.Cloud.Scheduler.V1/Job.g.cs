@@ -25,39 +25,40 @@ namespace Google.Cloud.Scheduler.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvc2NoZWR1bGVyL3YxL2pvYi5wcm90bxIZZ29vZ2xl",
-            "LmNsb3VkLnNjaGVkdWxlci52MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
-            "bxomZ29vZ2xlL2Nsb3VkL3NjaGVkdWxlci92MS90YXJnZXQucHJvdG8aHmdv",
-            "b2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iywYK",
-            "A0pvYhIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEkAKDXB1",
-            "YnN1Yl90YXJnZXQYBCABKAsyJy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYx",
-            "LlB1YnN1YlRhcmdldEgAElAKFmFwcF9lbmdpbmVfaHR0cF90YXJnZXQYBSAB",
-            "KAsyLi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLkFwcEVuZ2luZUh0dHBU",
-            "YXJnZXRIABI8CgtodHRwX3RhcmdldBgGIAEoCzIlLmdvb2dsZS5jbG91ZC5z",
-            "Y2hlZHVsZXIudjEuSHR0cFRhcmdldEgAEhAKCHNjaGVkdWxlGBQgASgJEhEK",
-            "CXRpbWVfem9uZRgVIAEoCRI0ChB1c2VyX3VwZGF0ZV90aW1lGAkgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIzCgVzdGF0ZRgKIAEoDjIkLmdv",
-            "b2dsZS5jbG91ZC5zY2hlZHVsZXIudjEuSm9iLlN0YXRlEiIKBnN0YXR1cxgL",
-            "IAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEjEKDXNjaGVkdWxlX3RpbWUYESAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjUKEWxhc3RfYXR0ZW1w",
-            "dF90aW1lGBIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI8Cgxy",
-            "ZXRyeV9jb25maWcYEyABKAsyJi5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYx",
-            "LlJldHJ5Q29uZmlnEjMKEGF0dGVtcHRfZGVhZGxpbmUYFiABKAsyGS5nb29n",
-            "bGUucHJvdG9idWYuRHVyYXRpb24iWAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVD",
-            "SUZJRUQQABILCgdFTkFCTEVEEAESCgoGUEFVU0VEEAISDAoIRElTQUJMRUQQ",
-            "AxIRCg1VUERBVEVfRkFJTEVEEAQ6WupBVwohY2xvdWRzY2hlZHVsZXIuZ29v",
-            "Z2xlYXBpcy5jb20vSm9iEjJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vam9icy97am9ifUIICgZ0YXJnZXQi4gEKC1JldHJ5Q29u",
-            "ZmlnEhMKC3JldHJ5X2NvdW50GAEgASgFEjUKEm1heF9yZXRyeV9kdXJhdGlv",
-            "bhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI3ChRtaW5fYmFj",
-            "a29mZl9kdXJhdGlvbhgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "bhI3ChRtYXhfYmFja29mZl9kdXJhdGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbhIVCg1tYXhfZG91YmxpbmdzGAUgASgFQmgKHWNvbS5n",
-            "b29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxQghKb2JQcm90b1ABWjtjbG91ZC5n",
-            "b29nbGUuY29tL2dvL3NjaGVkdWxlci9hcGl2MS9zY2hlZHVsZXJwYjtzY2hl",
-            "ZHVsZXJwYmIGcHJvdG8z"));
+            "LmNsb3VkLnNjaGVkdWxlci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
+            "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxomZ29vZ2xlL2Ns",
+            "b3VkL3NjaGVkdWxlci92MS90YXJnZXQucHJvdG8aHmdvb2dsZS9wcm90b2J1",
+            "Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
+            "cm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8i7wYKA0pvYhIMCgRuYW1l",
+            "GAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEkAKDXB1YnN1Yl90YXJnZXQY",
+            "BCABKAsyJy5nb29nbGUuY2xvdWQuc2NoZWR1bGVyLnYxLlB1YnN1YlRhcmdl",
+            "dEgAElAKFmFwcF9lbmdpbmVfaHR0cF90YXJnZXQYBSABKAsyLi5nb29nbGUu",
+            "Y2xvdWQuc2NoZWR1bGVyLnYxLkFwcEVuZ2luZUh0dHBUYXJnZXRIABI8Cgto",
+            "dHRwX3RhcmdldBgGIAEoCzIlLmdvb2dsZS5jbG91ZC5zY2hlZHVsZXIudjEu",
+            "SHR0cFRhcmdldEgAEhAKCHNjaGVkdWxlGBQgASgJEhEKCXRpbWVfem9uZRgV",
+            "IAEoCRI5ChB1c2VyX3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjgKBXN0YXRlGAogASgOMiQuZ29vZ2xlLmNs",
+            "b3VkLnNjaGVkdWxlci52MS5Kb2IuU3RhdGVCA+BBAxInCgZzdGF0dXMYCyAB",
+            "KAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDEjYKDXNjaGVkdWxlX3RpbWUY",
+            "ESABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOgoRbGFz",
+            "dF9hdHRlbXB0X3RpbWUYEiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSPAoMcmV0cnlfY29uZmlnGBMgASgLMiYuZ29vZ2xlLmNsb3Vk",
+            "LnNjaGVkdWxlci52MS5SZXRyeUNvbmZpZxIzChBhdHRlbXB0X2RlYWRsaW5l",
+            "GBYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIlgKBVN0YXRlEhUK",
+            "EVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgoKBlBBVVNFRBAC",
+            "EgwKCERJU0FCTEVEEAMSEQoNVVBEQVRFX0ZBSUxFRBAEOmXqQWIKIWNsb3Vk",
+            "c2NoZWR1bGVyLmdvb2dsZWFwaXMuY29tL0pvYhIycHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMve2pvYn0qBGpvYnMyA2pv",
+            "YkIICgZ0YXJnZXQi4gEKC1JldHJ5Q29uZmlnEhMKC3JldHJ5X2NvdW50GAEg",
+            "ASgFEjUKEm1heF9yZXRyeV9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbhI3ChRtaW5fYmFja29mZl9kdXJhdGlvbhgDIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhI3ChRtYXhfYmFja29mZl9kdXJh",
+            "dGlvbhgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhIVCg1tYXhf",
+            "ZG91YmxpbmdzGAUgASgFQmgKHWNvbS5nb29nbGUuY2xvdWQuc2NoZWR1bGVy",
+            "LnYxQghKb2JQcm90b1ABWjtjbG91ZC5nb29nbGUuY29tL2dvL3NjaGVkdWxl",
+            "ci9hcGl2MS9zY2hlZHVsZXJwYjtzY2hlZHVsZXJwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Scheduler.V1.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Scheduler.V1.TargetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.Job), global::Google.Cloud.Scheduler.V1.Job.Parser, new[]{ "Name", "Description", "PubsubTarget", "AppEngineHttpTarget", "HttpTarget", "Schedule", "TimeZone", "UserUpdateTime", "State", "Status", "ScheduleTime", "LastAttemptTime", "RetryConfig", "AttemptDeadline" }, new[]{ "Target" }, new[]{ typeof(global::Google.Cloud.Scheduler.V1.Job.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Scheduler.V1.RetryConfig), global::Google.Cloud.Scheduler.V1.RetryConfig.Parser, new[]{ "RetryCount", "MaxRetryDuration", "MinBackoffDuration", "MaxBackoffDuration", "MaxDoublings" }, null, null, null, null)
@@ -262,7 +263,11 @@ namespace Google.Cloud.Scheduler.V1 {
     /// If [retry_count][google.cloud.scheduler.v1.RetryConfig.retry_count] > 0 and
     /// a job attempt fails, the job will be tried a total of
     /// [retry_count][google.cloud.scheduler.v1.RetryConfig.retry_count] times,
-    /// with exponential backoff, until the next scheduled start time.
+    /// with exponential backoff, until the next scheduled start time. If
+    /// retry_count is 0, a job attempt will not be retried if it fails. Instead
+    /// the Cloud Scheduler system will wait for the next scheduled execution time.
+    /// Setting retry_count to 0 does not prevent failed jobs from running
+    /// according to schedule after the failure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1098,9 +1103,10 @@ namespace Google.Cloud.Scheduler.V1 {
     ///
     /// The default value of retry_count is zero.
     ///
-    /// If retry_count is zero, a job attempt will *not* be retried if
+    /// If retry_count is 0, a job attempt will not be retried if
     /// it fails. Instead the Cloud Scheduler system will wait for the
-    /// next scheduled execution time.
+    /// next scheduled execution time. Setting retry_count to 0 does not prevent
+    /// failed jobs from running according to schedule after the failure.
     ///
     /// If retry_count is set to a non-zero number then Cloud Scheduler
     /// will retry failed attempts, using exponential backoff,
@@ -1193,7 +1199,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// [min_backoff_duration][google.cloud.scheduler.v1.RetryConfig.min_backoff_duration]
     /// is 10s,
     /// [max_backoff_duration][google.cloud.scheduler.v1.RetryConfig.max_backoff_duration]
-    /// is 300s, and `max_doublings` is 3, then the a job will first be retried in
+    /// is 300s, and `max_doublings` is 3, then the job will first be retried in
     /// 10s. The retry interval will double three times, and then increase linearly
     /// by 2^3 * 10s.  Finally, the job will retry at intervals of
     /// [max_backoff_duration][google.cloud.scheduler.v1.RetryConfig.max_backoff_duration]
