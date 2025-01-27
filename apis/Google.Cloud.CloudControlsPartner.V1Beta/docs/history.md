@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-01-27
+
+### New features
+
+- A new method `CreateCustomer` is added to service `CloudControlsPartnerCore` ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+- A new method `UpdateCustomer` is added to service `CloudControlsPartnerCore` ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+- A new method `DeleteCustomer` is added to service `CloudControlsPartnerCore` ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+- A new field `organization_domain` is added to message `.google.cloud.cloudcontrolspartner.v1beta.Customer` ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+- A new message `CreateCustomerRequest` is added ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+- A new message `UpdateCustomerRequest` is added ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+- A new message `DeleteCustomerRequest` is added ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+
+### Documentation improvements
+
+- A comment for field `requested_cancellation` in message `.google.cloud.cloudcontrolspartner.v1beta.OperationMetadata` is changed ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+- A comment for enum value `VIRTRU` in enum `EkmSolution` is changed ([commit e637833](https://github.com/googleapis/google-cloud-dotnet/commit/e637833261207acce8f14e44690eb2b94497a6cf))
+
 ## Version 1.0.0-beta03, released 2024-09-16
 
 ### New features
