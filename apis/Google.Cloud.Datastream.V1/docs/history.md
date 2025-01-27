@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.9.0, released 2025-01-27
+
+### New features
+
+- A new field `ssl_config` is added to message `.google.cloud.datastream.v1.PostgresqlProfile` ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+- A new message `PostgresqlSslConfig` is added ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+
+### Documentation improvements
+
+- A comment for message `OracleAsmConfig` is changed ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+- A comment for field `password` in message `.google.cloud.datastream.v1.OracleAsmConfig` is changed ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+- A comment for field `name` in message `.google.cloud.datastream.v1.PrivateConnection` is changed ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+- A comment for field `name` in message `.google.cloud.datastream.v1.Route` is changed ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+- A comment for field `name` in message `.google.cloud.datastream.v1.ConnectionProfile` is changed ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+- A comment for field `name` in message `.google.cloud.datastream.v1.Stream` is changed ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+- A comment for field `name` in message `.google.cloud.datastream.v1.StreamObject` is changed ([commit d7026f2](https://github.com/googleapis/google-cloud-dotnet/commit/d7026f26a7f2af014a3536e9b1e6023c01c8c3ff))
+
 ## Version 2.8.0, released 2024-12-06
 
 ### New features
