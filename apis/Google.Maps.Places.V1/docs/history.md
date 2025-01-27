@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2025-01-27
+
+### New features
+
+- Add more fuel type enum values ([commit 284d087](https://github.com/googleapis/google-cloud-dotnet/commit/284d08737db3d61aecd7fd43aeb5a3d0ca63cac1))
+
+### Documentation improvements
+
+- A comment for enum value `LPG` in enum `FuelType` is changed to be clearer. ([commit 284d087](https://github.com/googleapis/google-cloud-dotnet/commit/284d08737db3d61aecd7fd43aeb5a3d0ca63cac1))
+
 ## Version 1.0.0-beta10, released 2024-11-18
 
 ### New features
