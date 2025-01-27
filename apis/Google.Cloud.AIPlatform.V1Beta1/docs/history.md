@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta14, released 2025-01-27
+
+### New features
+
+- Remove autorater config related visibility v1beta1 ([commit 0f0bb7a](https://github.com/googleapis/google-cloud-dotnet/commit/0f0bb7ab82f229c827b611d51a08d51693f54214))
+- Enable UpdateFeatureMonitor in v1beta1 API version ([commit c1ca304](https://github.com/googleapis/google-cloud-dotnet/commit/c1ca3040e3746a5da6e70caefaa9122f555d3e72))
+- Add per-modality token count break downs for GenAI APIs ([commit fcf3080](https://github.com/googleapis/google-cloud-dotnet/commit/fcf3080eb36f2e6862897e433ee7dd521f2de185))
+- Enable FeatureGroup IAM Methods in v1beta1 API version ([commit f74c733](https://github.com/googleapis/google-cloud-dotnet/commit/f74c73333870b89ab5f85cfedd032cb21b5f00d5))
+- Add machine_spec, data_persistent_disk_spec, network_spec, euc_config, shielded_vm_config to `.google.cloud.aiplatform.v1beta1.NotebookRuntime` ([commit c1bc4e9](https://github.com/googleapis/google-cloud-dotnet/commit/c1bc4e99bf551d0a9e08eb8ade33c85845b783ec))
+- Add retrieval_config to ToolConfig v1beta1 ([commit d12475e](https://github.com/googleapis/google-cloud-dotnet/commit/d12475ebe56adb1252ce21a122b41d25e8cdda89))
+
+### Documentation improvements
+
+- Deprecate `is_default` in message `.google.cloud.aiplatform.v1beta1.NotebookRuntimeTemplate` ([commit c1bc4e9](https://github.com/googleapis/google-cloud-dotnet/commit/c1bc4e99bf551d0a9e08eb8ade33c85845b783ec))
+- Deprecate `service_account` in message `.google.cloud.aiplatform.v1beta1.NotebookRuntimeTemplate` ([commit c1bc4e9](https://github.com/googleapis/google-cloud-dotnet/commit/c1bc4e99bf551d0a9e08eb8ade33c85845b783ec))
+- Deprecate `service_account` in message `.google.cloud.aiplatform.v1beta1.NotebookRuntime` ([commit c1bc4e9](https://github.com/googleapis/google-cloud-dotnet/commit/c1bc4e99bf551d0a9e08eb8ade33c85845b783ec))
+
 ## Version 1.0.0-beta13, released 2025-01-06
 
 ### New features
