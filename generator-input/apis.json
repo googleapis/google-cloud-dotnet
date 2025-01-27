@@ -1944,7 +1944,7 @@
     },
     {
       "id": "Google.Cloud.Datastream.V1",
-      "version": "2.8.0",
+      "version": "2.9.0",
       "type": "grpc",
       "productName": "DataStream",
       "productUrl": "https://cloud.google.com/datastream/docs",
@@ -1954,7 +1954,7 @@
         "synchronization"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.Cloud.Location": "2.3.0",
         "Google.LongRunning": "3.3.0"
       },
