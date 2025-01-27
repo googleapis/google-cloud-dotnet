@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.15.0, released 2025-01-27
+
+### New features
+
+- Expose code execution tool API to v1 ([commit 211a43b](https://github.com/googleapis/google-cloud-dotnet/commit/211a43b6408ec56e1a14958606ea9501f1060e9f))
+- Enable FeatureView Service Account in v1 API version ([commit 34dc1ce](https://github.com/googleapis/google-cloud-dotnet/commit/34dc1ce66d1079f9a1314a3bf4fa901d5d1655b1))
+- Add per-modality token count break downs for GenAI APIs ([commit 2bcde58](https://github.com/googleapis/google-cloud-dotnet/commit/2bcde58e01cb095c711ede71c3782659ecab8083))
+- Add speculative decoding spec to DeployedModel proto ([commit 82e8ed5](https://github.com/googleapis/google-cloud-dotnet/commit/82e8ed5c5884869131537c2c0ae0134410b1b2d0))
+- Add machine_spec, data_persistent_disk_spec, network_spec, euc_config, shielded_vm_config to message `.google.cloud.aiplatform.v1.NotebookRuntime` ([commit 4b7f03d](https://github.com/googleapis/google-cloud-dotnet/commit/4b7f03d8c197a823ccc00b99c420de6080924318))
+- Reasoning Engine v1 GAPIC release ([commit b5ac4d9](https://github.com/googleapis/google-cloud-dotnet/commit/b5ac4d90c0ce4d62c74d81b34da679f898b83bf4))
+- Add retrieval_config to ToolConfig v1 ([commit bb1c6e6](https://github.com/googleapis/google-cloud-dotnet/commit/bb1c6e6d73a8a4b96956dcf454d3d6fe588c468b))
+
+### Documentation improvements
+
+- Deprecate `is_default` in message `.google.cloud.aiplatform.v1.NotebookRuntimeTemplate` ([commit 4b7f03d](https://github.com/googleapis/google-cloud-dotnet/commit/4b7f03d8c197a823ccc00b99c420de6080924318))
+- Deprecate `service_account` in message `.google.cloud.aiplatform.v1.NotebookRuntimeTemplate` ([commit 4b7f03d](https://github.com/googleapis/google-cloud-dotnet/commit/4b7f03d8c197a823ccc00b99c420de6080924318))
+- Deprecate `service_account` in message `.google.cloud.aiplatform.v1.NotebookRuntime` ([commit 4b7f03d](https://github.com/googleapis/google-cloud-dotnet/commit/4b7f03d8c197a823ccc00b99c420de6080924318))
+
 ## Version 3.14.0, released 2025-01-13
 
 ### New features
