@@ -36,7 +36,6 @@ public sealed partial class StorageClientImpl : StorageClient
     {
         ValidateBucketName(bucket);
         var request = Service.Buckets.Restore(bucket, generation);
-        ApplyEncryptionKey(options?.EncryptionKey, kmsNameFromOptions: null, request);
         options?.ModifyRequest(request);
         RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.IdempotentRetryOptions;
         MarkAsRetriable(request, retryOptions);
