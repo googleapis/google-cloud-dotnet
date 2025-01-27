@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>3.21.0</Version>
+    <Version>3.22.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Recommended Google client library to access the Google Cloud Bigtable Instance and Table Admin APIs.</Description>
@@ -11,7 +11,7 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
     <PackageReference Include="Google.Cloud.Bigtable.Common.V2" VersionOverride="[3.2.0, 4.0.0)" />
-    <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.3.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.4.0, 4.0.0)" />
     <PackageReference Include="Google.LongRunning" VersionOverride="[3.3.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
