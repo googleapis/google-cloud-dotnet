@@ -4302,7 +4302,7 @@
     },
     {
       "id": "Google.Cloud.Redis.Cluster.V1",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "type": "grpc",
       "productName": "Google Cloud Memorystore for Redis (cluster management)",
       "productUrl": "https://cloud.google.com/memorystore/docs/redis",
