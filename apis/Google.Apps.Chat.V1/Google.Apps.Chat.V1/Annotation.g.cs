@@ -26,50 +26,55 @@ namespace Google.Apps.Chat.V1 {
           string.Concat(
             "Ch9nb29nbGUvY2hhdC92MS9hbm5vdGF0aW9uLnByb3RvEg5nb29nbGUuY2hh",
             "dC52MRoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL2NoYXQv",
-            "djEvYXR0YWNobWVudC5wcm90bxoZZ29vZ2xlL2NoYXQvdjEvdXNlci5wcm90",
-            "byK8AgoKQW5ub3RhdGlvbhIsCgR0eXBlGAEgASgOMh4uZ29vZ2xlLmNoYXQu",
-            "djEuQW5ub3RhdGlvblR5cGUSGAoLc3RhcnRfaW5kZXgYAiABKAVIAYgBARIO",
-            "CgZsZW5ndGgYAyABKAUSOwoMdXNlcl9tZW50aW9uGAQgASgLMiMuZ29vZ2xl",
-            "LmNoYXQudjEuVXNlck1lbnRpb25NZXRhZGF0YUgAEj0KDXNsYXNoX2NvbW1h",
-            "bmQYBSABKAsyJC5nb29nbGUuY2hhdC52MS5TbGFzaENvbW1hbmRNZXRhZGF0",
-            "YUgAEj4KEnJpY2hfbGlua19tZXRhZGF0YRgGIAEoCzIgLmdvb2dsZS5jaGF0",
-            "LnYxLlJpY2hMaW5rTWV0YWRhdGFIAEIKCghtZXRhZGF0YUIOCgxfc3RhcnRf",
-            "aW5kZXgipQEKE1VzZXJNZW50aW9uTWV0YWRhdGESIgoEdXNlchgBIAEoCzIU",
-            "Lmdvb2dsZS5jaGF0LnYxLlVzZXISNgoEdHlwZRgCIAEoDjIoLmdvb2dsZS5j",
-            "aGF0LnYxLlVzZXJNZW50aW9uTWV0YWRhdGEuVHlwZSIyCgRUeXBlEhQKEFRZ",
-            "UEVfVU5TUEVDSUZJRUQQABIHCgNBREQQARILCgdNRU5USU9OEAIi6AEKFFNs",
-            "YXNoQ29tbWFuZE1ldGFkYXRhEiEKA2JvdBgBIAEoCzIULmdvb2dsZS5jaGF0",
-            "LnYxLlVzZXISNwoEdHlwZRgCIAEoDjIpLmdvb2dsZS5jaGF0LnYxLlNsYXNo",
-            "Q29tbWFuZE1ldGFkYXRhLlR5cGUSFAoMY29tbWFuZF9uYW1lGAMgASgJEhIK",
-            "CmNvbW1hbmRfaWQYBCABKAMSFwoPdHJpZ2dlcnNfZGlhbG9nGAUgASgIIjEK",
-            "BFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FERBABEgoKBklOVk9L",
-            "RRACIrsCChBSaWNoTGlua01ldGFkYXRhEgsKA3VyaRgBIAEoCRJFCg5yaWNo",
-            "X2xpbmtfdHlwZRgCIAEoDjItLmdvb2dsZS5jaGF0LnYxLlJpY2hMaW5rTWV0",
-            "YWRhdGEuUmljaExpbmtUeXBlEjgKD2RyaXZlX2xpbmtfZGF0YRgDIAEoCzId",
-            "Lmdvb2dsZS5jaGF0LnYxLkRyaXZlTGlua0RhdGFIABJBChRjaGF0X3NwYWNl",
-            "X2xpbmtfZGF0YRgEIAEoCzIhLmdvb2dsZS5jaGF0LnYxLkNoYXRTcGFjZUxp",
-            "bmtEYXRhSAAiTgoMUmljaExpbmtUeXBlEh4KGlJJQ0hfTElOS19UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASDgoKRFJJVkVfRklMRRABEg4KCkNIQVRfU1BBQ0UQAkIG",
-            "CgRkYXRhIlgKDURyaXZlTGlua0RhdGESNAoOZHJpdmVfZGF0YV9yZWYYASAB",
-            "KAsyHC5nb29nbGUuY2hhdC52MS5Ecml2ZURhdGFSZWYSEQoJbWltZV90eXBl",
-            "GAIgASgJIqYBChFDaGF0U3BhY2VMaW5rRGF0YRItCgVzcGFjZRgBIAEoCUIe",
-            "+kEbChljaGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNlEi8KBnRocmVhZBgCIAEo",
-            "CUIf+kEcChpjaGF0Lmdvb2dsZWFwaXMuY29tL1RocmVhZBIxCgdtZXNzYWdl",
-            "GAMgASgJQiD6QR0KG2NoYXQuZ29vZ2xlYXBpcy5jb20vTWVzc2FnZSplCg5B",
-            "bm5vdGF0aW9uVHlwZRIfChtBTk5PVEFUSU9OX1RZUEVfVU5TUEVDSUZJRUQQ",
-            "ABIQCgxVU0VSX01FTlRJT04QARIRCg1TTEFTSF9DT01NQU5EEAISDQoJUklD",
-            "SF9MSU5LEANCqAEKEmNvbS5nb29nbGUuY2hhdC52MUIPQW5ub3RhdGlvblBy",
-            "b3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9hcGl2MS9jaGF0cGI7",
-            "Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBwcy5DaGF0LlYxygIT",
-            "R29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBwczo6Q2hhdDo6VjFi",
-            "BnByb3RvMw=="));
+            "djEvYXR0YWNobWVudC5wcm90bxodZ29vZ2xlL2NoYXQvdjEvcmVhY3Rpb24u",
+            "cHJvdG8aGWdvb2dsZS9jaGF0L3YxL3VzZXIucHJvdG8iggMKCkFubm90YXRp",
+            "b24SLAoEdHlwZRgBIAEoDjIeLmdvb2dsZS5jaGF0LnYxLkFubm90YXRpb25U",
+            "eXBlEhgKC3N0YXJ0X2luZGV4GAIgASgFSAGIAQESDgoGbGVuZ3RoGAMgASgF",
+            "EjsKDHVzZXJfbWVudGlvbhgEIAEoCzIjLmdvb2dsZS5jaGF0LnYxLlVzZXJN",
+            "ZW50aW9uTWV0YWRhdGFIABI9Cg1zbGFzaF9jb21tYW5kGAUgASgLMiQuZ29v",
+            "Z2xlLmNoYXQudjEuU2xhc2hDb21tYW5kTWV0YWRhdGFIABI+ChJyaWNoX2xp",
+            "bmtfbWV0YWRhdGEYBiABKAsyIC5nb29nbGUuY2hhdC52MS5SaWNoTGlua01l",
+            "dGFkYXRhSAASRAoVY3VzdG9tX2Vtb2ppX21ldGFkYXRhGAcgASgLMiMuZ29v",
+            "Z2xlLmNoYXQudjEuQ3VzdG9tRW1vamlNZXRhZGF0YUgAQgoKCG1ldGFkYXRh",
+            "Qg4KDF9zdGFydF9pbmRleCKlAQoTVXNlck1lbnRpb25NZXRhZGF0YRIiCgR1",
+            "c2VyGAEgASgLMhQuZ29vZ2xlLmNoYXQudjEuVXNlchI2CgR0eXBlGAIgASgO",
+            "MiguZ29vZ2xlLmNoYXQudjEuVXNlck1lbnRpb25NZXRhZGF0YS5UeXBlIjIK",
+            "BFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FERBABEgsKB01FTlRJ",
+            "T04QAiLoAQoUU2xhc2hDb21tYW5kTWV0YWRhdGESIQoDYm90GAEgASgLMhQu",
+            "Z29vZ2xlLmNoYXQudjEuVXNlchI3CgR0eXBlGAIgASgOMikuZ29vZ2xlLmNo",
+            "YXQudjEuU2xhc2hDb21tYW5kTWV0YWRhdGEuVHlwZRIUCgxjb21tYW5kX25h",
+            "bWUYAyABKAkSEgoKY29tbWFuZF9pZBgEIAEoAxIXCg90cmlnZ2Vyc19kaWFs",
+            "b2cYBSABKAgiMQoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASBwoDQURE",
+            "EAESCgoGSU5WT0tFEAIiuwIKEFJpY2hMaW5rTWV0YWRhdGESCwoDdXJpGAEg",
+            "ASgJEkUKDnJpY2hfbGlua190eXBlGAIgASgOMi0uZ29vZ2xlLmNoYXQudjEu",
+            "UmljaExpbmtNZXRhZGF0YS5SaWNoTGlua1R5cGUSOAoPZHJpdmVfbGlua19k",
+            "YXRhGAMgASgLMh0uZ29vZ2xlLmNoYXQudjEuRHJpdmVMaW5rRGF0YUgAEkEK",
+            "FGNoYXRfc3BhY2VfbGlua19kYXRhGAQgASgLMiEuZ29vZ2xlLmNoYXQudjEu",
+            "Q2hhdFNwYWNlTGlua0RhdGFIACJOCgxSaWNoTGlua1R5cGUSHgoaUklDSF9M",
+            "SU5LX1RZUEVfVU5TUEVDSUZJRUQQABIOCgpEUklWRV9GSUxFEAESDgoKQ0hB",
+            "VF9TUEFDRRACQgYKBGRhdGEiSAoTQ3VzdG9tRW1vamlNZXRhZGF0YRIxCgxj",
+            "dXN0b21fZW1vamkYASABKAsyGy5nb29nbGUuY2hhdC52MS5DdXN0b21FbW9q",
+            "aSJYCg1Ecml2ZUxpbmtEYXRhEjQKDmRyaXZlX2RhdGFfcmVmGAEgASgLMhwu",
+            "Z29vZ2xlLmNoYXQudjEuRHJpdmVEYXRhUmVmEhEKCW1pbWVfdHlwZRgCIAEo",
+            "CSKmAQoRQ2hhdFNwYWNlTGlua0RhdGESLQoFc3BhY2UYASABKAlCHvpBGwoZ",
+            "Y2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIvCgZ0aHJlYWQYAiABKAlCH/pB",
+            "HAoaY2hhdC5nb29nbGVhcGlzLmNvbS9UaHJlYWQSMQoHbWVzc2FnZRgDIAEo",
+            "CUIg+kEdChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2UqdwoOQW5ub3Rh",
+            "dGlvblR5cGUSHwobQU5OT1RBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASEAoM",
+            "VVNFUl9NRU5USU9OEAESEQoNU0xBU0hfQ09NTUFORBACEg0KCVJJQ0hfTElO",
+            "SxADEhAKDENVU1RPTV9FTU9KSRAEQqgBChJjb20uZ29vZ2xlLmNoYXQudjFC",
+            "D0Fubm90YXRpb25Qcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dvL2NoYXQv",
+            "YXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgITR29vZ2xlLkFw",
+            "cHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29nbGU6OkFw",
+            "cHM6OkNoYXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Apps.Chat.V1.AnnotationType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Annotation), global::Google.Apps.Chat.V1.Annotation.Parser, new[]{ "Type", "StartIndex", "Length", "UserMention", "SlashCommand", "RichLinkMetadata" }, new[]{ "Metadata", "StartIndex" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Annotation), global::Google.Apps.Chat.V1.Annotation.Parser, new[]{ "Type", "StartIndex", "Length", "UserMention", "SlashCommand", "RichLinkMetadata", "CustomEmojiMetadata" }, new[]{ "Metadata", "StartIndex" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.UserMentionMetadata), global::Google.Apps.Chat.V1.UserMentionMetadata.Parser, new[]{ "User", "Type" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.UserMentionMetadata.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.SlashCommandMetadata), global::Google.Apps.Chat.V1.SlashCommandMetadata.Parser, new[]{ "Bot", "Type", "CommandName", "CommandId", "TriggersDialog" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.SlashCommandMetadata.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.RichLinkMetadata), global::Google.Apps.Chat.V1.RichLinkMetadata.Parser, new[]{ "Uri", "RichLinkType", "DriveLinkData", "ChatSpaceLinkData" }, new[]{ "Data" }, new[]{ typeof(global::Google.Apps.Chat.V1.RichLinkMetadata.Types.RichLinkType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CustomEmojiMetadata), global::Google.Apps.Chat.V1.CustomEmojiMetadata.Parser, new[]{ "CustomEmoji" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.DriveLinkData), global::Google.Apps.Chat.V1.DriveLinkData.Parser, new[]{ "DriveDataRef", "MimeType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ChatSpaceLinkData), global::Google.Apps.Chat.V1.ChatSpaceLinkData.Parser, new[]{ "Space", "Thread", "Message" }, null, null, null, null)
           }));
@@ -98,6 +103,10 @@ namespace Google.Apps.Chat.V1 {
     /// A rich link annotation.
     /// </summary>
     [pbr::OriginalName("RICH_LINK")] RichLink = 3,
+    /// <summary>
+    /// A custom emoji annotation.
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_EMOJI")] CustomEmoji = 4,
   }
 
   #endregion
@@ -181,6 +190,9 @@ namespace Google.Apps.Chat.V1 {
           break;
         case MetadataOneofCase.RichLinkMetadata:
           RichLinkMetadata = other.RichLinkMetadata.Clone();
+          break;
+        case MetadataOneofCase.CustomEmojiMetadata:
+          CustomEmojiMetadata = other.CustomEmojiMetadata.Clone();
           break;
       }
 
@@ -300,6 +312,21 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_emoji_metadata" field.</summary>
+    public const int CustomEmojiMetadataFieldNumber = 7;
+    /// <summary>
+    /// The metadata for a custom emoji.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.CustomEmojiMetadata CustomEmojiMetadata {
+      get { return metadataCase_ == MetadataOneofCase.CustomEmojiMetadata ? (global::Google.Apps.Chat.V1.CustomEmojiMetadata) metadata_ : null; }
+      set {
+        metadata_ = value;
+        metadataCase_ = value == null ? MetadataOneofCase.None : MetadataOneofCase.CustomEmojiMetadata;
+      }
+    }
+
     private object metadata_;
     /// <summary>Enum of possible cases for the "metadata" oneof.</summary>
     public enum MetadataOneofCase {
@@ -307,6 +334,7 @@ namespace Google.Apps.Chat.V1 {
       UserMention = 4,
       SlashCommand = 5,
       RichLinkMetadata = 6,
+      CustomEmojiMetadata = 7,
     }
     private MetadataOneofCase metadataCase_ = MetadataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -343,6 +371,7 @@ namespace Google.Apps.Chat.V1 {
       if (!object.Equals(UserMention, other.UserMention)) return false;
       if (!object.Equals(SlashCommand, other.SlashCommand)) return false;
       if (!object.Equals(RichLinkMetadata, other.RichLinkMetadata)) return false;
+      if (!object.Equals(CustomEmojiMetadata, other.CustomEmojiMetadata)) return false;
       if (MetadataCase != other.MetadataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -357,6 +386,7 @@ namespace Google.Apps.Chat.V1 {
       if (metadataCase_ == MetadataOneofCase.UserMention) hash ^= UserMention.GetHashCode();
       if (metadataCase_ == MetadataOneofCase.SlashCommand) hash ^= SlashCommand.GetHashCode();
       if (metadataCase_ == MetadataOneofCase.RichLinkMetadata) hash ^= RichLinkMetadata.GetHashCode();
+      if (metadataCase_ == MetadataOneofCase.CustomEmojiMetadata) hash ^= CustomEmojiMetadata.GetHashCode();
       hash ^= (int) metadataCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -400,6 +430,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(RichLinkMetadata);
       }
+      if (metadataCase_ == MetadataOneofCase.CustomEmojiMetadata) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CustomEmojiMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -434,6 +468,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(RichLinkMetadata);
       }
+      if (metadataCase_ == MetadataOneofCase.CustomEmojiMetadata) {
+        output.WriteRawTag(58);
+        output.WriteMessage(CustomEmojiMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -461,6 +499,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (metadataCase_ == MetadataOneofCase.RichLinkMetadata) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RichLinkMetadata);
+      }
+      if (metadataCase_ == MetadataOneofCase.CustomEmojiMetadata) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomEmojiMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -501,6 +542,12 @@ namespace Google.Apps.Chat.V1 {
             RichLinkMetadata = new global::Google.Apps.Chat.V1.RichLinkMetadata();
           }
           RichLinkMetadata.MergeFrom(other.RichLinkMetadata);
+          break;
+        case MetadataOneofCase.CustomEmojiMetadata:
+          if (CustomEmojiMetadata == null) {
+            CustomEmojiMetadata = new global::Google.Apps.Chat.V1.CustomEmojiMetadata();
+          }
+          CustomEmojiMetadata.MergeFrom(other.CustomEmojiMetadata);
           break;
       }
 
@@ -558,6 +605,15 @@ namespace Google.Apps.Chat.V1 {
             RichLinkMetadata = subBuilder;
             break;
           }
+          case 58: {
+            global::Google.Apps.Chat.V1.CustomEmojiMetadata subBuilder = new global::Google.Apps.Chat.V1.CustomEmojiMetadata();
+            if (metadataCase_ == MetadataOneofCase.CustomEmojiMetadata) {
+              subBuilder.MergeFrom(CustomEmojiMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            CustomEmojiMetadata = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -610,6 +666,15 @@ namespace Google.Apps.Chat.V1 {
             }
             input.ReadMessage(subBuilder);
             RichLinkMetadata = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Apps.Chat.V1.CustomEmojiMetadata subBuilder = new global::Google.Apps.Chat.V1.CustomEmojiMetadata();
+            if (metadataCase_ == MetadataOneofCase.CustomEmojiMetadata) {
+              subBuilder.MergeFrom(CustomEmojiMetadata);
+            }
+            input.ReadMessage(subBuilder);
+            CustomEmojiMetadata = subBuilder;
             break;
           }
         }
@@ -1677,6 +1742,211 @@ namespace Google.Apps.Chat.V1 {
   }
 
   /// <summary>
+  /// Annotation metadata for custom emoji.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CustomEmojiMetadata : pb::IMessage<CustomEmojiMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CustomEmojiMetadata> _parser = new pb::MessageParser<CustomEmojiMetadata>(() => new CustomEmojiMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CustomEmojiMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomEmojiMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomEmojiMetadata(CustomEmojiMetadata other) : this() {
+      customEmoji_ = other.customEmoji_ != null ? other.customEmoji_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CustomEmojiMetadata Clone() {
+      return new CustomEmojiMetadata(this);
+    }
+
+    /// <summary>Field number for the "custom_emoji" field.</summary>
+    public const int CustomEmojiFieldNumber = 1;
+    private global::Google.Apps.Chat.V1.CustomEmoji customEmoji_;
+    /// <summary>
+    /// The custom emoji.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.CustomEmoji CustomEmoji {
+      get { return customEmoji_; }
+      set {
+        customEmoji_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CustomEmojiMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CustomEmojiMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CustomEmoji, other.CustomEmoji)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (customEmoji_ != null) hash ^= CustomEmoji.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (customEmoji_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CustomEmoji);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (customEmoji_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CustomEmoji);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (customEmoji_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomEmoji);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CustomEmojiMetadata other) {
+      if (other == null) {
+        return;
+      }
+      if (other.customEmoji_ != null) {
+        if (customEmoji_ == null) {
+          CustomEmoji = new global::Google.Apps.Chat.V1.CustomEmoji();
+        }
+        CustomEmoji.MergeFrom(other.CustomEmoji);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (customEmoji_ == null) {
+              CustomEmoji = new global::Google.Apps.Chat.V1.CustomEmoji();
+            }
+            input.ReadMessage(CustomEmoji);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (customEmoji_ == null) {
+              CustomEmoji = new global::Google.Apps.Chat.V1.CustomEmoji();
+            }
+            input.ReadMessage(CustomEmoji);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Data for Google Drive links.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1694,7 +1964,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1941,7 +2211,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
