@@ -55,6 +55,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             GetModelSettings = existing.GetModelSettings;
             ListModelsSettings = existing.ListModelsSettings;
             ListModelVersionsSettings = existing.ListModelVersionsSettings;
+            ListModelVersionCheckpointsSettings = existing.ListModelVersionCheckpointsSettings;
             UpdateModelSettings = existing.UpdateModelSettings;
             UpdateExplanationDatasetSettings = existing.UpdateExplanationDatasetSettings;
             UpdateExplanationDatasetOperationsSettings = existing.UpdateExplanationDatasetOperationsSettings.Clone();
@@ -146,6 +147,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListModelVersionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelServiceClient.ListModelVersionCheckpoints</c> and
+        /// <c>ModelServiceClient.ListModelVersionCheckpointsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListModelVersionCheckpointsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1198,6 +1212,180 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 request.PageSize = pageSize.Value;
             }
             return ListModelVersionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpoints(ListModelVersionCheckpointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpointsAsync(ListModelVersionCheckpointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to list checkpoints for.
+        /// `projects/{project}/locations/{location}/models/{model}@{version}`
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the latest version will be
+        /// used.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpoints(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionCheckpoints(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to list checkpoints for.
+        /// `projects/{project}/locations/{location}/models/{model}@{version}`
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the latest version will be
+        /// used.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpointsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionCheckpointsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to list checkpoints for.
+        /// `projects/{project}/locations/{location}/models/{model}@{version}`
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the latest version will be
+        /// used.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpoints(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionCheckpoints(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the model version to list checkpoints for.
+        /// `projects/{project}/locations/{location}/models/{model}@{version}`
+        /// Example: `projects/{project}/locations/{location}/models/{model}@2`
+        /// or
+        /// `projects/{project}/locations/{location}/models/{model}@golden`
+        /// If no version ID or alias is specified, the latest version will be
+        /// used.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpointsAsync(ModelName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListModelVersionCheckpointsRequest request = new ListModelVersionCheckpointsRequest
+            {
+                ModelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListModelVersionCheckpointsAsync(request, callSettings);
         }
 
         /// <summary>
@@ -3503,6 +3691,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<ListModelVersionsRequest, ListModelVersionsResponse> _callListModelVersions;
 
+        private readonly gaxgrpc::ApiCall<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse> _callListModelVersionCheckpoints;
+
         private readonly gaxgrpc::ApiCall<UpdateModelRequest, Model> _callUpdateModel;
 
         private readonly gaxgrpc::ApiCall<UpdateExplanationDatasetRequest, lro::Operation> _callUpdateExplanationDataset;
@@ -3566,6 +3756,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callListModelVersions = clientHelper.BuildApiCall<ListModelVersionsRequest, ListModelVersionsResponse>("ListModelVersions", grpcClient.ListModelVersionsAsync, grpcClient.ListModelVersions, effectiveSettings.ListModelVersionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListModelVersions);
             Modify_ListModelVersionsApiCall(ref _callListModelVersions);
+            _callListModelVersionCheckpoints = clientHelper.BuildApiCall<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse>("ListModelVersionCheckpoints", grpcClient.ListModelVersionCheckpointsAsync, grpcClient.ListModelVersionCheckpoints, effectiveSettings.ListModelVersionCheckpointsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callListModelVersionCheckpoints);
+            Modify_ListModelVersionCheckpointsApiCall(ref _callListModelVersionCheckpoints);
             _callUpdateModel = clientHelper.BuildApiCall<UpdateModelRequest, Model>("UpdateModel", grpcClient.UpdateModelAsync, grpcClient.UpdateModel, effectiveSettings.UpdateModelSettings).WithGoogleRequestParam("model.name", request => request.Model?.Name);
             Modify_ApiCall(ref _callUpdateModel);
             Modify_UpdateModelApiCall(ref _callUpdateModel);
@@ -3621,6 +3814,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         partial void Modify_ListModelVersionsApiCall(ref gaxgrpc::ApiCall<ListModelVersionsRequest, ListModelVersionsResponse> call);
 
+        partial void Modify_ListModelVersionCheckpointsApiCall(ref gaxgrpc::ApiCall<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse> call);
+
         partial void Modify_UpdateModelApiCall(ref gaxgrpc::ApiCall<UpdateModelRequest, Model> call);
 
         partial void Modify_UpdateExplanationDatasetApiCall(ref gaxgrpc::ApiCall<UpdateExplanationDatasetRequest, lro::Operation> call);
@@ -3667,6 +3862,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_ListModelsRequest(ref ListModelsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListModelVersionsRequest(ref ListModelVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListModelVersionCheckpointsRequest(ref ListModelVersionCheckpointsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateModelRequest(ref UpdateModelRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -3793,6 +3990,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_ListModelVersionsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListModelVersionsRequest, ListModelVersionsResponse, Model>(_callListModelVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public override gax::PagedEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpoints(ListModelVersionCheckpointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListModelVersionCheckpointsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse, ModelVersionCheckpoint>(_callListModelVersionCheckpoints, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists checkpoints of the specified model version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ModelVersionCheckpoint"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListModelVersionCheckpointsResponse, ModelVersionCheckpoint> ListModelVersionCheckpointsAsync(ListModelVersionCheckpointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListModelVersionCheckpointsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListModelVersionCheckpointsRequest, ListModelVersionCheckpointsResponse, ModelVersionCheckpoint>(_callListModelVersionCheckpoints, request, callSettings);
         }
 
         /// <summary>
@@ -4197,6 +4418,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     {
     }
 
+    public partial class ListModelVersionCheckpointsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListModelEvaluationsRequest : gaxgrpc::IPageRequest
     {
     }
@@ -4217,6 +4442,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Model> GetEnumerator() => Models.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListModelVersionCheckpointsResponse : gaxgrpc::IPageResponse<ModelVersionCheckpoint>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ModelVersionCheckpoint> GetEnumerator() => Checkpoints.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
