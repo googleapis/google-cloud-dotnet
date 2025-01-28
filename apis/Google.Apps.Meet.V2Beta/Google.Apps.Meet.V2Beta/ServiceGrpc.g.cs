@@ -75,6 +75,18 @@ namespace Google.Apps.Meet.V2Beta {
     static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest> __Marshaller_google_apps_meet_v2beta_EndActiveConferenceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.CreateMemberRequest> __Marshaller_google_apps_meet_v2beta_CreateMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.CreateMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.Member> __Marshaller_google_apps_meet_v2beta_Member = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.Member.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.GetMemberRequest> __Marshaller_google_apps_meet_v2beta_GetMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.GetMemberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.ListMembersRequest> __Marshaller_google_apps_meet_v2beta_ListMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.ListMembersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.ListMembersResponse> __Marshaller_google_apps_meet_v2beta_ListMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.ListMembersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.DeleteMemberRequest> __Marshaller_google_apps_meet_v2beta_DeleteMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.DeleteMemberRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Meet.V2Beta.CreateSpaceRequest, global::Google.Apps.Meet.V2Beta.Space> __Method_CreateSpace = new grpc::Method<global::Google.Apps.Meet.V2Beta.CreateSpaceRequest, global::Google.Apps.Meet.V2Beta.Space>(
@@ -108,6 +120,38 @@ namespace Google.Apps.Meet.V2Beta {
         __Marshaller_google_apps_meet_v2beta_EndActiveConferenceRequest,
         __Marshaller_google_protobuf_Empty);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2Beta.CreateMemberRequest, global::Google.Apps.Meet.V2Beta.Member> __Method_CreateMember = new grpc::Method<global::Google.Apps.Meet.V2Beta.CreateMemberRequest, global::Google.Apps.Meet.V2Beta.Member>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateMember",
+        __Marshaller_google_apps_meet_v2beta_CreateMemberRequest,
+        __Marshaller_google_apps_meet_v2beta_Member);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2Beta.GetMemberRequest, global::Google.Apps.Meet.V2Beta.Member> __Method_GetMember = new grpc::Method<global::Google.Apps.Meet.V2Beta.GetMemberRequest, global::Google.Apps.Meet.V2Beta.Member>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMember",
+        __Marshaller_google_apps_meet_v2beta_GetMemberRequest,
+        __Marshaller_google_apps_meet_v2beta_Member);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2Beta.ListMembersRequest, global::Google.Apps.Meet.V2Beta.ListMembersResponse> __Method_ListMembers = new grpc::Method<global::Google.Apps.Meet.V2Beta.ListMembersRequest, global::Google.Apps.Meet.V2Beta.ListMembersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMembers",
+        __Marshaller_google_apps_meet_v2beta_ListMembersRequest,
+        __Marshaller_google_apps_meet_v2beta_ListMembersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2Beta.DeleteMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteMember = new grpc::Method<global::Google.Apps.Meet.V2Beta.DeleteMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMember",
+        __Marshaller_google_apps_meet_v2beta_DeleteMemberRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -119,7 +163,6 @@ namespace Google.Apps.Meet.V2Beta {
     public abstract partial class SpacesServiceBase
     {
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Creates a space.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -132,8 +175,10 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -145,8 +190,10 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -158,14 +205,83 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Ends an active conference (if there is one).
+      /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> EndActiveConference(global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Create a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2Beta.Member> CreateMember(global::Google.Apps.Meet.V2Beta.CreateMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Get a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2Beta.Member> GetMember(global::Google.Apps.Meet.V2Beta.GetMemberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// List members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2Beta.ListMembersResponse> ListMembers(global::Google.Apps.Meet.V2Beta.ListMembersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Delete the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMember(global::Google.Apps.Meet.V2Beta.DeleteMemberRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -200,7 +316,6 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Creates a space.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -214,7 +329,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CreateSpace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Creates a space.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -226,7 +340,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_CreateSpace, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Creates a space.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -240,7 +353,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CreateSpaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Creates a space.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -252,8 +364,10 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSpace, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -266,8 +380,10 @@ namespace Google.Apps.Meet.V2Beta {
         return GetSpace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -278,8 +394,10 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetSpace, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -292,8 +410,10 @@ namespace Google.Apps.Meet.V2Beta {
         return GetSpaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -304,8 +424,10 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetSpace, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -318,8 +440,10 @@ namespace Google.Apps.Meet.V2Beta {
         return UpdateSpace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -330,8 +454,10 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSpace, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -344,8 +470,10 @@ namespace Google.Apps.Meet.V2Beta {
         return UpdateSpaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -356,8 +484,10 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSpace, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Ends an active conference (if there is one).
+      /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -370,8 +500,10 @@ namespace Google.Apps.Meet.V2Beta {
         return EndActiveConference(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Ends an active conference (if there is one).
+      /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -382,8 +514,10 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_EndActiveConference, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Ends an active conference (if there is one).
+      /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -396,8 +530,10 @@ namespace Google.Apps.Meet.V2Beta {
         return EndActiveConferenceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Ends an active conference (if there is one).
+      /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -406,6 +542,274 @@ namespace Google.Apps.Meet.V2Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EndActiveConferenceAsync(global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_EndActiveConference, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Create a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2Beta.Member CreateMember(global::Google.Apps.Meet.V2Beta.CreateMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Create a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2Beta.Member CreateMember(global::Google.Apps.Meet.V2Beta.CreateMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateMember, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Create a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.Member> CreateMemberAsync(global::Google.Apps.Meet.V2Beta.CreateMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Create a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.Member> CreateMemberAsync(global::Google.Apps.Meet.V2Beta.CreateMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateMember, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Get a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2Beta.Member GetMember(global::Google.Apps.Meet.V2Beta.GetMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Get a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2Beta.Member GetMember(global::Google.Apps.Meet.V2Beta.GetMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMember, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Get a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.Member> GetMemberAsync(global::Google.Apps.Meet.V2Beta.GetMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Get a member.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted, this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.Member> GetMemberAsync(global::Google.Apps.Meet.V2Beta.GetMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMember, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// List members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2Beta.ListMembersResponse ListMembers(global::Google.Apps.Meet.V2Beta.ListMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMembers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// List members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2Beta.ListMembersResponse ListMembers(global::Google.Apps.Meet.V2Beta.ListMembersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMembers, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// List members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.ListMembersResponse> ListMembersAsync(global::Google.Apps.Meet.V2Beta.ListMembersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMembersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// List members.
+      ///
+      /// This API supports the `fields` parameter in
+      /// [SystemParameterContext](https://cloud.google.com/apis/docs/system-parameters).
+      /// When the `fields` parameter is omitted this API response will default to
+      /// "name,email,role,user".
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.ListMembersResponse> ListMembersAsync(global::Google.Apps.Meet.V2Beta.ListMembersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMembers, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Delete the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMember(global::Google.Apps.Meet.V2Beta.DeleteMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Delete the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMember(global::Google.Apps.Meet.V2Beta.DeleteMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteMember, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Delete the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMemberAsync(global::Google.Apps.Meet.V2Beta.DeleteMemberRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Delete the member who was previously assigned roles in the space.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMemberAsync(global::Google.Apps.Meet.V2Beta.DeleteMemberRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteMember, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -424,7 +828,11 @@ namespace Google.Apps.Meet.V2Beta {
           .AddMethod(__Method_CreateSpace, serviceImpl.CreateSpace)
           .AddMethod(__Method_GetSpace, serviceImpl.GetSpace)
           .AddMethod(__Method_UpdateSpace, serviceImpl.UpdateSpace)
-          .AddMethod(__Method_EndActiveConference, serviceImpl.EndActiveConference).Build();
+          .AddMethod(__Method_EndActiveConference, serviceImpl.EndActiveConference)
+          .AddMethod(__Method_CreateMember, serviceImpl.CreateMember)
+          .AddMethod(__Method_GetMember, serviceImpl.GetMember)
+          .AddMethod(__Method_ListMembers, serviceImpl.ListMembers)
+          .AddMethod(__Method_DeleteMember, serviceImpl.DeleteMember).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -438,6 +846,10 @@ namespace Google.Apps.Meet.V2Beta {
       serviceBinder.AddMethod(__Method_GetSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.GetSpaceRequest, global::Google.Apps.Meet.V2Beta.Space>(serviceImpl.GetSpace));
       serviceBinder.AddMethod(__Method_UpdateSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.UpdateSpaceRequest, global::Google.Apps.Meet.V2Beta.Space>(serviceImpl.UpdateSpace));
       serviceBinder.AddMethod(__Method_EndActiveConference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.EndActiveConference));
+      serviceBinder.AddMethod(__Method_CreateMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.CreateMemberRequest, global::Google.Apps.Meet.V2Beta.Member>(serviceImpl.CreateMember));
+      serviceBinder.AddMethod(__Method_GetMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.GetMemberRequest, global::Google.Apps.Meet.V2Beta.Member>(serviceImpl.GetMember));
+      serviceBinder.AddMethod(__Method_ListMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.ListMembersRequest, global::Google.Apps.Meet.V2Beta.ListMembersResponse>(serviceImpl.ListMembers));
+      serviceBinder.AddMethod(__Method_DeleteMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.DeleteMemberRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMember));
     }
 
   }
@@ -637,7 +1049,6 @@ namespace Google.Apps.Meet.V2Beta {
     public abstract partial class ConferenceRecordsServiceBase
     {
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a conference record by conference ID.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -650,8 +1061,8 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the conference records by start time and in descending order.
+      /// Lists the conference records. By default, ordered by start time and in
+      /// descending order.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -663,7 +1074,6 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant by participant ID.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -676,8 +1086,7 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participants in a conference record, by default ordered by join
+      /// Lists the participants in a conference record. By default, ordered by join
       /// time and in descending order. This API supports `fields` as standard
       /// parameters like every other API. However, when the `fields` request
       /// parameter is omitted, this API defaults to `'participants/*,
@@ -693,7 +1102,6 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant session by participant session ID.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -706,9 +1114,8 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participant sessions of a participant in a conference record, by
-      /// default ordered by join time and in descending order. This API supports
+      /// Lists the participant sessions of a participant in a conference record. By
+      /// default, ordered by join time and in descending order. This API supports
       /// `fields` as standard parameters like every other API. However, when the
       /// `fields` request parameter is omitted this API defaults to
       /// `'participantsessions/*, next_page_token'`.
@@ -723,7 +1130,6 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a recording by recording ID.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -736,8 +1142,8 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the recording resources from the conference record.
+      /// Lists the recording resources from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -749,7 +1155,6 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a transcript by transcript ID.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -762,8 +1167,8 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the set of transcripts from the conference record.
+      /// Lists the set of transcripts from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -775,7 +1180,6 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a `TranscriptEntry` resource by entry ID.
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
@@ -792,7 +1196,6 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Lists the structured transcript entries per transcript. By default, ordered
       /// by start time and in ascending order.
       ///
@@ -839,7 +1242,6 @@ namespace Google.Apps.Meet.V2Beta {
       }
 
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a conference record by conference ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -853,7 +1255,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetConferenceRecord(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a conference record by conference ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -865,7 +1266,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetConferenceRecord, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a conference record by conference ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -879,7 +1279,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetConferenceRecordAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a conference record by conference ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -891,8 +1290,8 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetConferenceRecord, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the conference records by start time and in descending order.
+      /// Lists the conference records. By default, ordered by start time and in
+      /// descending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -905,8 +1304,8 @@ namespace Google.Apps.Meet.V2Beta {
         return ListConferenceRecords(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the conference records by start time and in descending order.
+      /// Lists the conference records. By default, ordered by start time and in
+      /// descending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -917,8 +1316,8 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListConferenceRecords, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the conference records by start time and in descending order.
+      /// Lists the conference records. By default, ordered by start time and in
+      /// descending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -931,8 +1330,8 @@ namespace Google.Apps.Meet.V2Beta {
         return ListConferenceRecordsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the conference records by start time and in descending order.
+      /// Lists the conference records. By default, ordered by start time and in
+      /// descending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -943,7 +1342,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListConferenceRecords, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant by participant ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -957,7 +1355,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetParticipant(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant by participant ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -969,7 +1366,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetParticipant, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant by participant ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -983,7 +1379,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetParticipantAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant by participant ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -995,8 +1390,7 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetParticipant, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participants in a conference record, by default ordered by join
+      /// Lists the participants in a conference record. By default, ordered by join
       /// time and in descending order. This API supports `fields` as standard
       /// parameters like every other API. However, when the `fields` request
       /// parameter is omitted, this API defaults to `'participants/*,
@@ -1013,8 +1407,7 @@ namespace Google.Apps.Meet.V2Beta {
         return ListParticipants(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participants in a conference record, by default ordered by join
+      /// Lists the participants in a conference record. By default, ordered by join
       /// time and in descending order. This API supports `fields` as standard
       /// parameters like every other API. However, when the `fields` request
       /// parameter is omitted, this API defaults to `'participants/*,
@@ -1029,8 +1422,7 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListParticipants, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participants in a conference record, by default ordered by join
+      /// Lists the participants in a conference record. By default, ordered by join
       /// time and in descending order. This API supports `fields` as standard
       /// parameters like every other API. However, when the `fields` request
       /// parameter is omitted, this API defaults to `'participants/*,
@@ -1047,8 +1439,7 @@ namespace Google.Apps.Meet.V2Beta {
         return ListParticipantsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participants in a conference record, by default ordered by join
+      /// Lists the participants in a conference record. By default, ordered by join
       /// time and in descending order. This API supports `fields` as standard
       /// parameters like every other API. However, when the `fields` request
       /// parameter is omitted, this API defaults to `'participants/*,
@@ -1063,7 +1454,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListParticipants, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant session by participant session ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1077,7 +1467,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetParticipantSession(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant session by participant session ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1089,7 +1478,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetParticipantSession, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant session by participant session ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1103,7 +1491,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetParticipantSessionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a participant session by participant session ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1115,9 +1502,8 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetParticipantSession, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participant sessions of a participant in a conference record, by
-      /// default ordered by join time and in descending order. This API supports
+      /// Lists the participant sessions of a participant in a conference record. By
+      /// default, ordered by join time and in descending order. This API supports
       /// `fields` as standard parameters like every other API. However, when the
       /// `fields` request parameter is omitted this API defaults to
       /// `'participantsessions/*, next_page_token'`.
@@ -1133,9 +1519,8 @@ namespace Google.Apps.Meet.V2Beta {
         return ListParticipantSessions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participant sessions of a participant in a conference record, by
-      /// default ordered by join time and in descending order. This API supports
+      /// Lists the participant sessions of a participant in a conference record. By
+      /// default, ordered by join time and in descending order. This API supports
       /// `fields` as standard parameters like every other API. However, when the
       /// `fields` request parameter is omitted this API defaults to
       /// `'participantsessions/*, next_page_token'`.
@@ -1149,9 +1534,8 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListParticipantSessions, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participant sessions of a participant in a conference record, by
-      /// default ordered by join time and in descending order. This API supports
+      /// Lists the participant sessions of a participant in a conference record. By
+      /// default, ordered by join time and in descending order. This API supports
       /// `fields` as standard parameters like every other API. However, when the
       /// `fields` request parameter is omitted this API defaults to
       /// `'participantsessions/*, next_page_token'`.
@@ -1167,9 +1551,8 @@ namespace Google.Apps.Meet.V2Beta {
         return ListParticipantSessionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the participant sessions of a participant in a conference record, by
-      /// default ordered by join time and in descending order. This API supports
+      /// Lists the participant sessions of a participant in a conference record. By
+      /// default, ordered by join time and in descending order. This API supports
       /// `fields` as standard parameters like every other API. However, when the
       /// `fields` request parameter is omitted this API defaults to
       /// `'participantsessions/*, next_page_token'`.
@@ -1183,7 +1566,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListParticipantSessions, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a recording by recording ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1197,7 +1579,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetRecording(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a recording by recording ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1209,7 +1590,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetRecording, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a recording by recording ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1223,7 +1603,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetRecordingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a recording by recording ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1235,8 +1614,8 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetRecording, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the recording resources from the conference record.
+      /// Lists the recording resources from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1249,8 +1628,8 @@ namespace Google.Apps.Meet.V2Beta {
         return ListRecordings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the recording resources from the conference record.
+      /// Lists the recording resources from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1261,8 +1640,8 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListRecordings, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the recording resources from the conference record.
+      /// Lists the recording resources from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1275,8 +1654,8 @@ namespace Google.Apps.Meet.V2Beta {
         return ListRecordingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the recording resources from the conference record.
+      /// Lists the recording resources from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1287,7 +1666,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListRecordings, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a transcript by transcript ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1301,7 +1679,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetTranscript(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a transcript by transcript ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1313,7 +1690,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetTranscript, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a transcript by transcript ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1327,7 +1703,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetTranscriptAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a transcript by transcript ID.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1339,8 +1714,8 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetTranscript, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the set of transcripts from the conference record.
+      /// Lists the set of transcripts from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1353,8 +1728,8 @@ namespace Google.Apps.Meet.V2Beta {
         return ListTranscripts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the set of transcripts from the conference record.
+      /// Lists the set of transcripts from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1365,8 +1740,8 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListTranscripts, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the set of transcripts from the conference record.
+      /// Lists the set of transcripts from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1379,8 +1754,8 @@ namespace Google.Apps.Meet.V2Beta {
         return ListTranscriptsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
-      /// Lists the set of transcripts from the conference record.
+      /// Lists the set of transcripts from the conference record. By default,
+      /// ordered by start time and in ascending order.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1391,7 +1766,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListTranscripts, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a `TranscriptEntry` resource by entry ID.
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
@@ -1409,7 +1783,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetTranscriptEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a `TranscriptEntry` resource by entry ID.
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
@@ -1425,7 +1798,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetTranscriptEntry, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a `TranscriptEntry` resource by entry ID.
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
@@ -1443,7 +1815,6 @@ namespace Google.Apps.Meet.V2Beta {
         return GetTranscriptEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Gets a `TranscriptEntry` resource by entry ID.
       ///
       /// Note: The transcript entries returned by the Google Meet API might not
@@ -1459,7 +1830,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetTranscriptEntry, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Lists the structured transcript entries per transcript. By default, ordered
       /// by start time and in ascending order.
       ///
@@ -1478,7 +1848,6 @@ namespace Google.Apps.Meet.V2Beta {
         return ListTranscriptEntries(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Lists the structured transcript entries per transcript. By default, ordered
       /// by start time and in ascending order.
       ///
@@ -1495,7 +1864,6 @@ namespace Google.Apps.Meet.V2Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListTranscriptEntries, null, options, request);
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Lists the structured transcript entries per transcript. By default, ordered
       /// by start time and in ascending order.
       ///
@@ -1514,7 +1882,6 @@ namespace Google.Apps.Meet.V2Beta {
         return ListTranscriptEntriesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// [Developer Preview](https://developers.google.com/workspace/preview).
       /// Lists the structured transcript entries per transcript. By default, ordered
       /// by start time and in ascending order.
       ///

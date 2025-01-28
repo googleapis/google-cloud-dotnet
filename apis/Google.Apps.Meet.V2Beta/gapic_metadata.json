@@ -91,10 +91,22 @@
         "grpc": {
           "libraryClient": "SpacesServiceClient",
           "rpcs": {
+            "CreateMember": {
+              "methods": [
+                "CreateMember",
+                "CreateMemberAsync"
+              ]
+            },
             "CreateSpace": {
               "methods": [
                 "CreateSpace",
                 "CreateSpaceAsync"
+              ]
+            },
+            "DeleteMember": {
+              "methods": [
+                "DeleteMember",
+                "DeleteMemberAsync"
               ]
             },
             "EndActiveConference": {
@@ -103,10 +115,22 @@
                 "EndActiveConferenceAsync"
               ]
             },
+            "GetMember": {
+              "methods": [
+                "GetMember",
+                "GetMemberAsync"
+              ]
+            },
             "GetSpace": {
               "methods": [
                 "GetSpace",
                 "GetSpaceAsync"
+              ]
+            },
+            "ListMembers": {
+              "methods": [
+                "ListMembers",
+                "ListMembersAsync"
               ]
             },
             "UpdateSpace": {

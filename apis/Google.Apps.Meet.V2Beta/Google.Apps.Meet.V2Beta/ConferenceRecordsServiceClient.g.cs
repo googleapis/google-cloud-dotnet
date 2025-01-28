@@ -362,8 +362,18 @@ namespace Google.Apps.Meet.V2Beta
         public static string DefaultEndpoint { get; } = "meet.googleapis.com:443";
 
         /// <summary>The default ConferenceRecordsService scopes.</summary>
-        /// <remarks>The default ConferenceRecordsService scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default ConferenceRecordsService scopes are:
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/meetings.space.created</description></item>
+        /// <item><description>https://www.googleapis.com/auth/meetings.space.readonly</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/meetings.space.created",
+            "https://www.googleapis.com/auth/meetings.space.readonly",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(ConferenceRecordsService.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
@@ -429,7 +439,6 @@ namespace Google.Apps.Meet.V2Beta
         public virtual ConferenceRecordsService.ConferenceRecordsServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -439,7 +448,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -449,7 +457,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -459,7 +466,6 @@ namespace Google.Apps.Meet.V2Beta
             GetConferenceRecordAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="name">
@@ -474,7 +480,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="name">
@@ -489,7 +494,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="name">
@@ -501,7 +505,6 @@ namespace Google.Apps.Meet.V2Beta
             GetConferenceRecordAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="name">
@@ -516,7 +519,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="name">
@@ -531,7 +533,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="name">
@@ -543,8 +544,8 @@ namespace Google.Apps.Meet.V2Beta
             GetConferenceRecordAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the conference records by start time and in descending order.
+        /// Lists the conference records. By default, ordered by start time and in
+        /// descending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -553,8 +554,8 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the conference records by start time and in descending order.
+        /// Lists the conference records. By default, ordered by start time and in
+        /// descending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -563,7 +564,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -573,7 +573,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -583,7 +582,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -593,7 +591,6 @@ namespace Google.Apps.Meet.V2Beta
             GetParticipantAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="name">
@@ -608,7 +605,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="name">
@@ -623,7 +619,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="name">
@@ -635,7 +630,6 @@ namespace Google.Apps.Meet.V2Beta
             GetParticipantAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="name">
@@ -650,7 +644,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="name">
@@ -665,7 +658,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="name">
@@ -677,8 +669,7 @@ namespace Google.Apps.Meet.V2Beta
             GetParticipantAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participants in a conference record, by default ordered by join
+        /// Lists the participants in a conference record. By default, ordered by join
         /// time and in descending order. This API supports `fields` as standard
         /// parameters like every other API. However, when the `fields` request
         /// parameter is omitted, this API defaults to `'participants/*,
@@ -691,8 +682,7 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participants in a conference record, by default ordered by join
+        /// Lists the participants in a conference record. By default, ordered by join
         /// time and in descending order. This API supports `fields` as standard
         /// parameters like every other API. However, when the `fields` request
         /// parameter is omitted, this API defaults to `'participants/*,
@@ -705,8 +695,7 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participants in a conference record, by default ordered by join
+        /// Lists the participants in a conference record. By default, ordered by join
         /// time and in descending order. This API supports `fields` as standard
         /// parameters like every other API. However, when the `fields` request
         /// parameter is omitted, this API defaults to `'participants/*,
@@ -743,8 +732,7 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participants in a conference record, by default ordered by join
+        /// Lists the participants in a conference record. By default, ordered by join
         /// time and in descending order. This API supports `fields` as standard
         /// parameters like every other API. However, when the `fields` request
         /// parameter is omitted, this API defaults to `'participants/*,
@@ -781,8 +769,7 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participants in a conference record, by default ordered by join
+        /// Lists the participants in a conference record. By default, ordered by join
         /// time and in descending order. This API supports `fields` as standard
         /// parameters like every other API. However, when the `fields` request
         /// parameter is omitted, this API defaults to `'participants/*,
@@ -819,8 +806,7 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participants in a conference record, by default ordered by join
+        /// Lists the participants in a conference record. By default, ordered by join
         /// time and in descending order. This API supports `fields` as standard
         /// parameters like every other API. However, when the `fields` request
         /// parameter is omitted, this API defaults to `'participants/*,
@@ -857,7 +843,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -867,7 +852,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -877,7 +861,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -887,7 +870,6 @@ namespace Google.Apps.Meet.V2Beta
             GetParticipantSessionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="name">
@@ -902,7 +884,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="name">
@@ -917,7 +898,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="name">
@@ -929,7 +909,6 @@ namespace Google.Apps.Meet.V2Beta
             GetParticipantSessionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="name">
@@ -944,7 +923,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="name">
@@ -959,7 +937,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="name">
@@ -971,9 +948,8 @@ namespace Google.Apps.Meet.V2Beta
             GetParticipantSessionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participant sessions of a participant in a conference record, by
-        /// default ordered by join time and in descending order. This API supports
+        /// Lists the participant sessions of a participant in a conference record. By
+        /// default, ordered by join time and in descending order. This API supports
         /// `fields` as standard parameters like every other API. However, when the
         /// `fields` request parameter is omitted this API defaults to
         /// `'participantsessions/*, next_page_token'`.
@@ -985,9 +961,8 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participant sessions of a participant in a conference record, by
-        /// default ordered by join time and in descending order. This API supports
+        /// Lists the participant sessions of a participant in a conference record. By
+        /// default, ordered by join time and in descending order. This API supports
         /// `fields` as standard parameters like every other API. However, when the
         /// `fields` request parameter is omitted this API defaults to
         /// `'participantsessions/*, next_page_token'`.
@@ -999,9 +974,8 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participant sessions of a participant in a conference record, by
-        /// default ordered by join time and in descending order. This API supports
+        /// Lists the participant sessions of a participant in a conference record. By
+        /// default, ordered by join time and in descending order. This API supports
         /// `fields` as standard parameters like every other API. However, when the
         /// `fields` request parameter is omitted this API defaults to
         /// `'participantsessions/*, next_page_token'`.
@@ -1038,9 +1012,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participant sessions of a participant in a conference record, by
-        /// default ordered by join time and in descending order. This API supports
+        /// Lists the participant sessions of a participant in a conference record. By
+        /// default, ordered by join time and in descending order. This API supports
         /// `fields` as standard parameters like every other API. However, when the
         /// `fields` request parameter is omitted this API defaults to
         /// `'participantsessions/*, next_page_token'`.
@@ -1077,9 +1050,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participant sessions of a participant in a conference record, by
-        /// default ordered by join time and in descending order. This API supports
+        /// Lists the participant sessions of a participant in a conference record. By
+        /// default, ordered by join time and in descending order. This API supports
         /// `fields` as standard parameters like every other API. However, when the
         /// `fields` request parameter is omitted this API defaults to
         /// `'participantsessions/*, next_page_token'`.
@@ -1116,9 +1088,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participant sessions of a participant in a conference record, by
-        /// default ordered by join time and in descending order. This API supports
+        /// Lists the participant sessions of a participant in a conference record. By
+        /// default, ordered by join time and in descending order. This API supports
         /// `fields` as standard parameters like every other API. However, when the
         /// `fields` request parameter is omitted this API defaults to
         /// `'participantsessions/*, next_page_token'`.
@@ -1155,7 +1126,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1165,7 +1135,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1175,7 +1144,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1185,7 +1153,6 @@ namespace Google.Apps.Meet.V2Beta
             GetRecordingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="name">
@@ -1200,7 +1167,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="name">
@@ -1215,7 +1181,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="name">
@@ -1227,7 +1192,6 @@ namespace Google.Apps.Meet.V2Beta
             GetRecordingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="name">
@@ -1242,7 +1206,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="name">
@@ -1257,7 +1220,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="name">
@@ -1269,8 +1231,8 @@ namespace Google.Apps.Meet.V2Beta
             GetRecordingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the recording resources from the conference record.
+        /// Lists the recording resources from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1279,8 +1241,8 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the recording resources from the conference record.
+        /// Lists the recording resources from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1289,8 +1251,8 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the recording resources from the conference record.
+        /// Lists the recording resources from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `conferenceRecords/{conference_record}`
@@ -1323,8 +1285,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the recording resources from the conference record.
+        /// Lists the recording resources from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `conferenceRecords/{conference_record}`
@@ -1357,8 +1319,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the recording resources from the conference record.
+        /// Lists the recording resources from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `conferenceRecords/{conference_record}`
@@ -1391,8 +1353,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the recording resources from the conference record.
+        /// Lists the recording resources from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `conferenceRecords/{conference_record}`
@@ -1425,7 +1387,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1435,7 +1396,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1445,7 +1405,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1455,7 +1414,6 @@ namespace Google.Apps.Meet.V2Beta
             GetTranscriptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="name">
@@ -1470,7 +1428,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="name">
@@ -1485,7 +1442,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="name">
@@ -1497,7 +1453,6 @@ namespace Google.Apps.Meet.V2Beta
             GetTranscriptAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="name">
@@ -1512,7 +1467,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="name">
@@ -1527,7 +1481,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="name">
@@ -1539,8 +1492,8 @@ namespace Google.Apps.Meet.V2Beta
             GetTranscriptAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the set of transcripts from the conference record.
+        /// Lists the set of transcripts from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1549,8 +1502,8 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the set of transcripts from the conference record.
+        /// Lists the set of transcripts from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1559,8 +1512,8 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the set of transcripts from the conference record.
+        /// Lists the set of transcripts from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `conferenceRecords/{conference_record}`
@@ -1593,8 +1546,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the set of transcripts from the conference record.
+        /// Lists the set of transcripts from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `conferenceRecords/{conference_record}`
@@ -1627,8 +1580,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the set of transcripts from the conference record.
+        /// Lists the set of transcripts from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `conferenceRecords/{conference_record}`
@@ -1661,8 +1614,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the set of transcripts from the conference record.
+        /// Lists the set of transcripts from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `conferenceRecords/{conference_record}`
@@ -1695,7 +1648,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1709,7 +1661,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1723,7 +1674,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1737,7 +1687,6 @@ namespace Google.Apps.Meet.V2Beta
             GetTranscriptEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1756,7 +1705,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1775,7 +1723,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1791,7 +1738,6 @@ namespace Google.Apps.Meet.V2Beta
             GetTranscriptEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1810,7 +1756,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1829,7 +1774,6 @@ namespace Google.Apps.Meet.V2Beta
             }, callSettings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -1845,7 +1789,6 @@ namespace Google.Apps.Meet.V2Beta
             GetTranscriptEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Lists the structured transcript entries per transcript. By default, ordered
         /// by start time and in ascending order.
         /// 
@@ -1860,7 +1803,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Lists the structured transcript entries per transcript. By default, ordered
         /// by start time and in ascending order.
         /// 
@@ -1875,7 +1817,6 @@ namespace Google.Apps.Meet.V2Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Lists the structured transcript entries per transcript. By default, ordered
         /// by start time and in ascending order.
         /// 
@@ -1915,7 +1856,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Lists the structured transcript entries per transcript. By default, ordered
         /// by start time and in ascending order.
         /// 
@@ -1955,7 +1895,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Lists the structured transcript entries per transcript. By default, ordered
         /// by start time and in ascending order.
         /// 
@@ -1995,7 +1934,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Lists the structured transcript entries per transcript. By default, ordered
         /// by start time and in ascending order.
         /// 
@@ -2178,7 +2116,6 @@ namespace Google.Apps.Meet.V2Beta
         partial void Modify_ListTranscriptEntriesRequest(ref ListTranscriptEntriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2191,7 +2128,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a conference record by conference ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2204,8 +2140,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the conference records by start time and in descending order.
+        /// Lists the conference records. By default, ordered by start time and in
+        /// descending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2217,8 +2153,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the conference records by start time and in descending order.
+        /// Lists the conference records. By default, ordered by start time and in
+        /// descending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2230,7 +2166,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2243,7 +2178,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant by participant ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2256,8 +2190,7 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participants in a conference record, by default ordered by join
+        /// Lists the participants in a conference record. By default, ordered by join
         /// time and in descending order. This API supports `fields` as standard
         /// parameters like every other API. However, when the `fields` request
         /// parameter is omitted, this API defaults to `'participants/*,
@@ -2273,8 +2206,7 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participants in a conference record, by default ordered by join
+        /// Lists the participants in a conference record. By default, ordered by join
         /// time and in descending order. This API supports `fields` as standard
         /// parameters like every other API. However, when the `fields` request
         /// parameter is omitted, this API defaults to `'participants/*,
@@ -2290,7 +2222,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2303,7 +2234,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a participant session by participant session ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2316,9 +2246,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participant sessions of a participant in a conference record, by
-        /// default ordered by join time and in descending order. This API supports
+        /// Lists the participant sessions of a participant in a conference record. By
+        /// default, ordered by join time and in descending order. This API supports
         /// `fields` as standard parameters like every other API. However, when the
         /// `fields` request parameter is omitted this API defaults to
         /// `'participantsessions/*, next_page_token'`.
@@ -2333,9 +2262,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the participant sessions of a participant in a conference record, by
-        /// default ordered by join time and in descending order. This API supports
+        /// Lists the participant sessions of a participant in a conference record. By
+        /// default, ordered by join time and in descending order. This API supports
         /// `fields` as standard parameters like every other API. However, when the
         /// `fields` request parameter is omitted this API defaults to
         /// `'participantsessions/*, next_page_token'`.
@@ -2350,7 +2278,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2363,7 +2290,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a recording by recording ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2376,8 +2302,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the recording resources from the conference record.
+        /// Lists the recording resources from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2389,8 +2315,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the recording resources from the conference record.
+        /// Lists the recording resources from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2402,7 +2328,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2415,7 +2340,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a transcript by transcript ID.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2428,8 +2352,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the set of transcripts from the conference record.
+        /// Lists the set of transcripts from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2441,8 +2365,8 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
-        /// Lists the set of transcripts from the conference record.
+        /// Lists the set of transcripts from the conference record. By default,
+        /// ordered by start time and in ascending order.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2454,7 +2378,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -2471,7 +2394,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Gets a `TranscriptEntry` resource by entry ID.
         /// 
         /// Note: The transcript entries returned by the Google Meet API might not
@@ -2488,7 +2410,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Lists the structured transcript entries per transcript. By default, ordered
         /// by start time and in ascending order.
         /// 
@@ -2506,7 +2427,6 @@ namespace Google.Apps.Meet.V2Beta
         }
 
         /// <summary>
-        /// [Developer Preview](https://developers.google.com/workspace/preview).
         /// Lists the structured transcript entries per transcript. By default, ordered
         /// by start time and in ascending order.
         /// 
