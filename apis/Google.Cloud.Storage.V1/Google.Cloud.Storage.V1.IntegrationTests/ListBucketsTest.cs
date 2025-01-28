@@ -84,12 +84,14 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var actualBuckets = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, new ListBucketsOptions { SoftDeletedOnly = true }).ToListAsync();
 
             foreach (var bucket in actualBuckets)
-            {
+            {   // Verify if the bucket is soft-deleted only 
+                Assert.NotNull(bucket.Generation);
+                Assert.NotNull(bucket.SoftDeleteTimeDateTimeOffset);
+                Assert.NotNull(bucket.HardDeleteTimeDateTimeOffset);
+
                 if (bucket.Name == softDeleteBucket.Name)
-                {
-                    Assert.NotNull(bucket.Generation);
-                    Assert.NotNull(bucket.SoftDeleteTimeDateTimeOffset);
-                    Assert.NotNull(bucket.HardDeleteTimeDateTimeOffset);
+                {   // Compare the generation number
+                    Assert.Equal(bucket.Generation, softDeleteBucket.Generation);
                 }
             }
         }
