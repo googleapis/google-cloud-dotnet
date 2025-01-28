@@ -2702,11 +2702,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// Numeric filter is used to search a subset of the entities by using boolean
       /// rules on numeric columns.
       /// For example:
-      /// Database Point 0: {name: “a” value_int: 42} {name: “b” value_float: 1.0}
-      /// Database Point 1:  {name: “a” value_int: 10} {name: “b” value_float: 2.0}
-      /// Database Point 2: {name: “a” value_int: -1} {name: “b” value_float: 3.0}
-      /// Query: {name: “a” value_int: 12 operator: LESS}    // Matches Point 1, 2
-      /// {name: “b” value_float: 2.0 operator: EQUAL} // Matches Point 1
+      /// Database Point 0: {name: "a" value_int: 42} {name: "b" value_float: 1.0}
+      /// Database Point 1:  {name: "a" value_int: 10} {name: "b" value_float: 2.0}
+      /// Database Point 2: {name: "a" value_int: -1} {name: "b" value_float: 3.0}
+      /// Query: {name: "a" value_int: 12 operator: LESS}    // Matches Point 1, 2
+      /// {name: "b" value_float: 2.0 operator: EQUAL} // Matches Point 1
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class NumericFilter : pb::IMessage<NumericFilter>
@@ -3161,7 +3161,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Datapoints for which Operator is true relative to the query’s Value
+          /// Datapoints for which Operator is true relative to the query's Value
           /// field will be allowlisted.
           /// </summary>
           public enum Operator {
