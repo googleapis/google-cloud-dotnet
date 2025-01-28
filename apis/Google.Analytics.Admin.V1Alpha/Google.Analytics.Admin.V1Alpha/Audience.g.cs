@@ -4521,7 +4521,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a GA4 Audience.
+  /// A resource message representing an Audience.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Audience : pb::IMessage<Audience>

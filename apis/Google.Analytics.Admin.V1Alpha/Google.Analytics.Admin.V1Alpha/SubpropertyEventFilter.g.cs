@@ -1563,7 +1563,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a GA4 Subproperty event filter.
+  /// A resource message representing a Google Analytics subproperty event filter.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SubpropertyEventFilter : pb::IMessage<SubpropertyEventFilter>

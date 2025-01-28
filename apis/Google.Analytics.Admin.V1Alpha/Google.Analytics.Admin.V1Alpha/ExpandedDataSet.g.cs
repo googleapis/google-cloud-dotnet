@@ -1497,7 +1497,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a GA4 ExpandedDataSet.
+  /// A resource message representing an `ExpandedDataSet`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ExpandedDataSet : pb::IMessage<ExpandedDataSet>
