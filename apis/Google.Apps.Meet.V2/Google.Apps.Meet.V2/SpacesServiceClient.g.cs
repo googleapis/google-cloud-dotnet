@@ -183,12 +183,14 @@ namespace Google.Apps.Meet.V2
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/meetings.space.created</description></item>
         /// <item><description>https://www.googleapis.com/auth/meetings.space.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/meetings.space.settings</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/meetings.space.created",
             "https://www.googleapis.com/auth/meetings.space.readonly",
+            "https://www.googleapis.com/auth/meetings.space.settings",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -315,7 +317,10 @@ namespace Google.Apps.Meet.V2
             CreateSpaceAsync(space, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -324,7 +329,10 @@ namespace Google.Apps.Meet.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -333,7 +341,10 @@ namespace Google.Apps.Meet.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -342,10 +353,31 @@ namespace Google.Apps.Meet.V2
             GetSpaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}` or `spaces/{meetingCode}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// `{meetingCode}` is an alias for the space. It's a typeable, unique
+        /// character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+        /// The maximum length is 128 characters.
+        /// 
+        /// A `meetingCode` shouldn't be stored long term as it can become
+        /// dissociated from a meeting space and can be reused for different meeting
+        /// spaces in the future. Generally, a `meetingCode` expires 365 days after
+        /// last use. For more information, see [Learn about meeting codes in Google
+        /// Meet](https://support.google.com/meet/answer/10710509).
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -356,10 +388,31 @@ namespace Google.Apps.Meet.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}` or `spaces/{meetingCode}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// `{meetingCode}` is an alias for the space. It's a typeable, unique
+        /// character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+        /// The maximum length is 128 characters.
+        /// 
+        /// A `meetingCode` shouldn't be stored long term as it can become
+        /// dissociated from a meeting space and can be reused for different meeting
+        /// spaces in the future. Generally, a `meetingCode` expires 365 days after
+        /// last use. For more information, see [Learn about meeting codes in Google
+        /// Meet](https://support.google.com/meet/answer/10710509).
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -370,10 +423,31 @@ namespace Google.Apps.Meet.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}` or `spaces/{meetingCode}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// `{meetingCode}` is an alias for the space. It's a typeable, unique
+        /// character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+        /// The maximum length is 128 characters.
+        /// 
+        /// A `meetingCode` shouldn't be stored long term as it can become
+        /// dissociated from a meeting space and can be reused for different meeting
+        /// spaces in the future. Generally, a `meetingCode` expires 365 days after
+        /// last use. For more information, see [Learn about meeting codes in Google
+        /// Meet](https://support.google.com/meet/answer/10710509).
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -381,10 +455,31 @@ namespace Google.Apps.Meet.V2
             GetSpaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}` or `spaces/{meetingCode}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// `{meetingCode}` is an alias for the space. It's a typeable, unique
+        /// character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+        /// The maximum length is 128 characters.
+        /// 
+        /// A `meetingCode` shouldn't be stored long term as it can become
+        /// dissociated from a meeting space and can be reused for different meeting
+        /// spaces in the future. Generally, a `meetingCode` expires 365 days after
+        /// last use. For more information, see [Learn about meeting codes in Google
+        /// Meet](https://support.google.com/meet/answer/10710509).
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -395,10 +490,31 @@ namespace Google.Apps.Meet.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}` or `spaces/{meetingCode}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// `{meetingCode}` is an alias for the space. It's a typeable, unique
+        /// character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+        /// The maximum length is 128 characters.
+        /// 
+        /// A `meetingCode` shouldn't be stored long term as it can become
+        /// dissociated from a meeting space and can be reused for different meeting
+        /// spaces in the future. Generally, a `meetingCode` expires 365 days after
+        /// last use. For more information, see [Learn about meeting codes in Google
+        /// Meet](https://support.google.com/meet/answer/10710509).
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -409,10 +525,31 @@ namespace Google.Apps.Meet.V2
             }, callSettings);
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}` or `spaces/{meetingCode}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// `{meetingCode}` is an alias for the space. It's a typeable, unique
+        /// character string and is non-case sensitive. For example, `abc-mnop-xyz`.
+        /// The maximum length is 128 characters.
+        /// 
+        /// A `meetingCode` shouldn't be stored long term as it can become
+        /// dissociated from a meeting space and can be reused for different meeting
+        /// spaces in the future. Generally, a `meetingCode` expires 365 days after
+        /// last use. For more information, see [Learn about meeting codes in Google
+        /// Meet](https://support.google.com/meet/answer/10710509).
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -420,7 +557,10 @@ namespace Google.Apps.Meet.V2
             GetSpaceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a space.
+        /// Updates details about a meeting space.
+        /// 
+        /// For an example, see [Update a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -429,7 +569,10 @@ namespace Google.Apps.Meet.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a space.
+        /// Updates details about a meeting space.
+        /// 
+        /// For an example, see [Update a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -438,7 +581,10 @@ namespace Google.Apps.Meet.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates a space.
+        /// Updates details about a meeting space.
+        /// 
+        /// For an example, see [Update a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -447,16 +593,21 @@ namespace Google.Apps.Meet.V2
             UpdateSpaceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates a space.
+        /// Updates details about a meeting space.
+        /// 
+        /// For an example, see [Update a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="space">
         /// Required. Space to be updated.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask used to specify the fields to be updated in the space.
-        /// If update_mask isn't provided, it defaults to '*' and updates all
-        /// fields provided in the request, including deleting fields not set in the
+        /// If update_mask isn't provided(not set, set with empty paths, or only has ""
+        /// as paths), it defaults to update all fields provided with values in the
         /// request.
+        /// Using "*" as update_mask will update all fields, including deleting fields
+        /// not set in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -468,16 +619,21 @@ namespace Google.Apps.Meet.V2
             }, callSettings);
 
         /// <summary>
-        /// Updates a space.
+        /// Updates details about a meeting space.
+        /// 
+        /// For an example, see [Update a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="space">
         /// Required. Space to be updated.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask used to specify the fields to be updated in the space.
-        /// If update_mask isn't provided, it defaults to '*' and updates all
-        /// fields provided in the request, including deleting fields not set in the
+        /// If update_mask isn't provided(not set, set with empty paths, or only has ""
+        /// as paths), it defaults to update all fields provided with values in the
         /// request.
+        /// Using "*" as update_mask will update all fields, including deleting fields
+        /// not set in the request.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -489,16 +645,21 @@ namespace Google.Apps.Meet.V2
             }, callSettings);
 
         /// <summary>
-        /// Updates a space.
+        /// Updates details about a meeting space.
+        /// 
+        /// For an example, see [Update a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="space">
         /// Required. Space to be updated.
         /// </param>
         /// <param name="updateMask">
         /// Optional. Field mask used to specify the fields to be updated in the space.
-        /// If update_mask isn't provided, it defaults to '*' and updates all
-        /// fields provided in the request, including deleting fields not set in the
+        /// If update_mask isn't provided(not set, set with empty paths, or only has ""
+        /// as paths), it defaults to update all fields provided with values in the
         /// request.
+        /// Using "*" as update_mask will update all fields, including deleting fields
+        /// not set in the request.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -507,6 +668,9 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -516,6 +680,9 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -525,6 +692,9 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -534,9 +704,20 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -548,9 +729,20 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -562,9 +754,20 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -573,9 +776,20 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -587,9 +801,20 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -601,9 +826,20 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the space.
+        /// 
+        /// Format: `spaces/{space}`.
+        /// 
+        /// `{space}` is the resource identifier for the space. It's a unique,
+        /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+        /// 
+        /// For more information, see [How Meet identifies a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -703,7 +939,10 @@ namespace Google.Apps.Meet.V2
         }
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -715,7 +954,10 @@ namespace Google.Apps.Meet.V2
         }
 
         /// <summary>
-        /// Gets a space by `space_id` or `meeting_code`.
+        /// Gets details about a meeting space.
+        /// 
+        /// For an example, see [Get a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -727,7 +969,10 @@ namespace Google.Apps.Meet.V2
         }
 
         /// <summary>
-        /// Updates a space.
+        /// Updates details about a meeting space.
+        /// 
+        /// For an example, see [Update a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -739,7 +984,10 @@ namespace Google.Apps.Meet.V2
         }
 
         /// <summary>
-        /// Updates a space.
+        /// Updates details about a meeting space.
+        /// 
+        /// For an example, see [Update a meeting
+        /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -752,6 +1000,9 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -764,6 +1015,9 @@ namespace Google.Apps.Meet.V2
 
         /// <summary>
         /// Ends an active conference (if there's one).
+        /// 
+        /// For an example, see [End active
+        /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
