@@ -5865,8 +5865,7 @@ namespace Google.Apps.Chat.V1
             DeleteMembershipAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -5880,8 +5879,7 @@ namespace Google.Apps.Chat.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -5895,8 +5893,7 @@ namespace Google.Apps.Chat.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -5910,8 +5907,7 @@ namespace Google.Apps.Chat.V1
             CreateReactionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -5936,8 +5932,7 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -5962,8 +5957,7 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -5984,8 +5978,7 @@ namespace Google.Apps.Chat.V1
             CreateReactionAsync(parent, reaction, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -6010,8 +6003,7 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -6036,8 +6028,7 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -6246,8 +6237,7 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -6261,8 +6251,7 @@ namespace Google.Apps.Chat.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -6276,8 +6265,7 @@ namespace Google.Apps.Chat.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -6291,8 +6279,7 @@ namespace Google.Apps.Chat.V1
             DeleteReactionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -6313,8 +6300,7 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -6335,8 +6321,7 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -6354,8 +6339,7 @@ namespace Google.Apps.Chat.V1
             DeleteReactionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -6376,8 +6360,7 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -6398,8 +6381,7 @@ namespace Google.Apps.Chat.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -9347,8 +9329,7 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -9365,8 +9346,7 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
-        /// Creates a reaction and adds it to a message. Only unicode emojis are
-        /// supported. For an example, see
+        /// Creates a reaction and adds it to a message. For an example, see
         /// [Add a reaction to a
         /// message](https://developers.google.com/workspace/chat/create-reactions).
         /// 
@@ -9417,8 +9397,7 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 
@@ -9435,8 +9414,7 @@ namespace Google.Apps.Chat.V1
         }
 
         /// <summary>
-        /// Deletes a reaction to a message. Only unicode emojis are supported.
-        /// For an example, see
+        /// Deletes a reaction to a message. For an example, see
         /// [Delete a
         /// reaction](https://developers.google.com/workspace/chat/delete-reactions).
         /// 

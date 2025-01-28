@@ -32,26 +32,26 @@ namespace Google.Apps.Chat.V1 {
             "MS5Vc2VyQgPgQQMSKQoFZW1vamkYAyABKAsyFS5nb29nbGUuY2hhdC52MS5F",
             "bW9qaUID4EECOlnqQVYKHGNoYXQuZ29vZ2xlYXBpcy5jb20vUmVhY3Rpb24S",
             "NnNwYWNlcy97c3BhY2V9L21lc3NhZ2VzL3ttZXNzYWdlfS9yZWFjdGlvbnMv",
-            "e3JlYWN0aW9ufSJkCgVFbW9qaRIWCgd1bmljb2RlGAEgASgJQgPgQQFIABI4",
+            "e3JlYWN0aW9ufSJfCgVFbW9qaRIWCgd1bmljb2RlGAEgASgJQgPgQQFIABIz",
             "CgxjdXN0b21fZW1vamkYAiABKAsyGy5nb29nbGUuY2hhdC52MS5DdXN0b21F",
-            "bW9qaUID4EEDSABCCQoHY29udGVudCInCgtDdXN0b21FbW9qaRIYCgN1aWQY",
-            "ASABKAlCC+BBA+KMz9cIAggBInYKFEVtb2ppUmVhY3Rpb25TdW1tYXJ5EikK",
-            "BWVtb2ppGAEgASgLMhUuZ29vZ2xlLmNoYXQudjEuRW1vamlCA+BBAxIgCg5y",
-            "ZWFjdGlvbl9jb3VudBgCIAEoBUID4EEDSACIAQFCEQoPX3JlYWN0aW9uX2Nv",
-            "dW50In4KFUNyZWF0ZVJlYWN0aW9uUmVxdWVzdBI0CgZwYXJlbnQYASABKAlC",
-            "JOBBAvpBHhIcY2hhdC5nb29nbGVhcGlzLmNvbS9SZWFjdGlvbhIvCghyZWFj",
-            "dGlvbhgCIAEoCzIYLmdvb2dsZS5jaGF0LnYxLlJlYWN0aW9uQgPgQQIikgEK",
-            "FExpc3RSZWFjdGlvbnNSZXF1ZXN0EjQKBnBhcmVudBgBIAEoCUIk4EEC+kEe",
-            "EhxjaGF0Lmdvb2dsZWFwaXMuY29tL1JlYWN0aW9uEhYKCXBhZ2Vfc2l6ZRgC",
-            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIY",
-            "BCABKAlCA+BBASJdChVMaXN0UmVhY3Rpb25zUmVzcG9uc2USKwoJcmVhY3Rp",
-            "b25zGAEgAygLMhguZ29vZ2xlLmNoYXQudjEuUmVhY3Rpb24SFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJIksKFURlbGV0ZVJlYWN0aW9uUmVxdWVzdBIyCgRu",
-            "YW1lGAEgASgJQiTgQQL6QR4KHGNoYXQuZ29vZ2xlYXBpcy5jb20vUmVhY3Rp",
-            "b25CpgEKEmNvbS5nb29nbGUuY2hhdC52MUINUmVhY3Rpb25Qcm90b1ABWixj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqIC",
-            "C0RZTkFQSVByb3RvqgITR29vZ2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxB",
-            "cHBzXENoYXRcVjHqAhZHb29nbGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
+            "bW9qaUgAQgkKB2NvbnRlbnQiJwoLQ3VzdG9tRW1vamkSGAoDdWlkGAEgASgJ",
+            "QgvgQQPijM/XCAIIASJ2ChRFbW9qaVJlYWN0aW9uU3VtbWFyeRIpCgVlbW9q",
+            "aRgBIAEoCzIVLmdvb2dsZS5jaGF0LnYxLkVtb2ppQgPgQQMSIAoOcmVhY3Rp",
+            "b25fY291bnQYAiABKAVCA+BBA0gAiAEBQhEKD19yZWFjdGlvbl9jb3VudCJ+",
+            "ChVDcmVhdGVSZWFjdGlvblJlcXVlc3QSNAoGcGFyZW50GAEgASgJQiTgQQL6",
+            "QR4SHGNoYXQuZ29vZ2xlYXBpcy5jb20vUmVhY3Rpb24SLwoIcmVhY3Rpb24Y",
+            "AiABKAsyGC5nb29nbGUuY2hhdC52MS5SZWFjdGlvbkID4EECIpIBChRMaXN0",
+            "UmVhY3Rpb25zUmVxdWVzdBI0CgZwYXJlbnQYASABKAlCJOBBAvpBHhIcY2hh",
+            "dC5nb29nbGVhcGlzLmNvbS9SZWFjdGlvbhIWCglwYWdlX3NpemUYAiABKAVC",
+            "A+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJ",
+            "QgPgQQEiXQoVTGlzdFJlYWN0aW9uc1Jlc3BvbnNlEisKCXJlYWN0aW9ucxgB",
+            "IAMoCzIYLmdvb2dsZS5jaGF0LnYxLlJlYWN0aW9uEhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCSJLChVEZWxldGVSZWFjdGlvblJlcXVlc3QSMgoEbmFtZRgB",
+            "IAEoCUIk4EEC+kEeChxjaGF0Lmdvb2dsZWFwaXMuY29tL1JlYWN0aW9uQqYB",
+            "ChJjb20uZ29vZ2xlLmNoYXQudjFCDVJlYWN0aW9uUHJvdG9QAVosY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2NoYXRwYjtjaGF0cGKiAgtEWU5B",
+            "UElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQuVjHKAhNHb29nbGVcQXBwc1xD",
+            "aGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -453,7 +453,7 @@ namespace Google.Apps.Chat.V1 {
     /// <summary>Field number for the "custom_emoji" field.</summary>
     public const int CustomEmojiFieldNumber = 2;
     /// <summary>
-    /// Output only. A custom emoji.
+    /// A custom emoji.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
