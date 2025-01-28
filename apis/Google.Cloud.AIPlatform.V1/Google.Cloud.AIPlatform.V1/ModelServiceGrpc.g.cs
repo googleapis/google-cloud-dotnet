@@ -80,6 +80,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse> __Marshaller_google_cloud_aiplatform_v1_ListModelVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest> __Marshaller_google_cloud_aiplatform_v1_ListModelVersionCheckpointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse> __Marshaller_google_cloud_aiplatform_v1_ListModelVersionCheckpointsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest> __Marshaller_google_cloud_aiplatform_v1_UpdateExplanationDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest.Parser));
@@ -151,6 +155,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         "ListModelVersions",
         __Marshaller_google_cloud_aiplatform_v1_ListModelVersionsRequest,
         __Marshaller_google_cloud_aiplatform_v1_ListModelVersionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest, global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse> __Method_ListModelVersionCheckpoints = new grpc::Method<global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest, global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListModelVersionCheckpoints",
+        __Marshaller_google_cloud_aiplatform_v1_ListModelVersionCheckpointsRequest,
+        __Marshaller_google_cloud_aiplatform_v1_ListModelVersionCheckpointsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest, global::Google.Cloud.AIPlatform.V1.Model> __Method_UpdateModel = new grpc::Method<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest, global::Google.Cloud.AIPlatform.V1.Model>(
@@ -318,6 +330,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse> ListModelVersions(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists checkpoints of the specified model version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse> ListModelVersionCheckpoints(global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -731,6 +755,54 @@ namespace Google.Cloud.AIPlatform.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse> ListModelVersionsAsync(global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListModelVersions, null, options, request);
+      }
+      /// <summary>
+      /// Lists checkpoints of the specified model version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse ListModelVersionCheckpoints(global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListModelVersionCheckpoints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists checkpoints of the specified model version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse ListModelVersionCheckpoints(global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListModelVersionCheckpoints, null, options, request);
+      }
+      /// <summary>
+      /// Lists checkpoints of the specified model version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse> ListModelVersionCheckpointsAsync(global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListModelVersionCheckpointsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists checkpoints of the specified model version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse> ListModelVersionCheckpointsAsync(global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListModelVersionCheckpoints, null, options, request);
       }
       /// <summary>
       /// Updates a Model.
@@ -1506,6 +1578,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_GetModel, serviceImpl.GetModel)
           .AddMethod(__Method_ListModels, serviceImpl.ListModels)
           .AddMethod(__Method_ListModelVersions, serviceImpl.ListModelVersions)
+          .AddMethod(__Method_ListModelVersionCheckpoints, serviceImpl.ListModelVersionCheckpoints)
           .AddMethod(__Method_UpdateModel, serviceImpl.UpdateModel)
           .AddMethod(__Method_UpdateExplanationDataset, serviceImpl.UpdateExplanationDataset)
           .AddMethod(__Method_DeleteModel, serviceImpl.DeleteModel)
@@ -1533,6 +1606,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_GetModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.GetModelRequest, global::Google.Cloud.AIPlatform.V1.Model>(serviceImpl.GetModel));
       serviceBinder.AddMethod(__Method_ListModels, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelsRequest, global::Google.Cloud.AIPlatform.V1.ListModelsResponse>(serviceImpl.ListModels));
       serviceBinder.AddMethod(__Method_ListModelVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelVersionsRequest, global::Google.Cloud.AIPlatform.V1.ListModelVersionsResponse>(serviceImpl.ListModelVersions));
+      serviceBinder.AddMethod(__Method_ListModelVersionCheckpoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest, global::Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse>(serviceImpl.ListModelVersionCheckpoints));
       serviceBinder.AddMethod(__Method_UpdateModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateModelRequest, global::Google.Cloud.AIPlatform.V1.Model>(serviceImpl.UpdateModel));
       serviceBinder.AddMethod(__Method_UpdateExplanationDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UpdateExplanationDatasetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateExplanationDataset));
       serviceBinder.AddMethod(__Method_DeleteModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteModel));

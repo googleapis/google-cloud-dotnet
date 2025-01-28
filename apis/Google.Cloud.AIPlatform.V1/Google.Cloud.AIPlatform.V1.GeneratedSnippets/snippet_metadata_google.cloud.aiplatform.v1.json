@@ -55192,6 +55192,325 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersionCheckpoints_sync",
+      "title": "ListModelVersionCheckpointsRequestObject",
+      "description": "Snippet for ListModelVersionCheckpoints",
+      "file": "ModelServiceClient.ListModelVersionCheckpointsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionCheckpoints",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionCheckpoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse, Google.Cloud.AIPlatform.V1.ModelVersionCheckpoint>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersionCheckpoints",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersionCheckpoints",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersionCheckpoints_async",
+      "title": "ListModelVersionCheckpointsRequestObjectAsync",
+      "description": "Snippet for ListModelVersionCheckpointsAsync",
+      "file": "ModelServiceClient.ListModelVersionCheckpointsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionCheckpointsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionCheckpointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse, Google.Cloud.AIPlatform.V1.ModelVersionCheckpoint>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersionCheckpoints",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersionCheckpoints",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersionCheckpoints_sync_flattened",
+      "title": "ListModelVersionCheckpoints",
+      "description": "Snippet for ListModelVersionCheckpoints",
+      "file": "ModelServiceClient.ListModelVersionCheckpointsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionCheckpoints",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionCheckpoints",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse, Google.Cloud.AIPlatform.V1.ModelVersionCheckpoint>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersionCheckpoints",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersionCheckpoints",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersionCheckpoints_async_flattened",
+      "title": "ListModelVersionCheckpointsAsync",
+      "description": "Snippet for ListModelVersionCheckpointsAsync",
+      "file": "ModelServiceClient.ListModelVersionCheckpointsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionCheckpointsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionCheckpointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse, Google.Cloud.AIPlatform.V1.ModelVersionCheckpoint>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersionCheckpoints",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersionCheckpoints",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersionCheckpoints_sync_flattened_resourceNames",
+      "title": "ListModelVersionCheckpointsResourceNames",
+      "description": "Snippet for ListModelVersionCheckpoints",
+      "file": "ModelServiceClient.ListModelVersionCheckpointsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionCheckpoints",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionCheckpoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse, Google.Cloud.AIPlatform.V1.ModelVersionCheckpoint>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersionCheckpoints",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersionCheckpoints",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ModelService_ListModelVersionCheckpoints_async_flattened_resourceNames",
+      "title": "ListModelVersionCheckpointsResourceNamesAsync",
+      "description": "Snippet for ListModelVersionCheckpointsAsync",
+      "file": "ModelServiceClient.ListModelVersionCheckpointsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListModelVersionCheckpointsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient.ListModelVersionCheckpointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.ModelName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1.ListModelVersionCheckpointsResponse, Google.Cloud.AIPlatform.V1.ModelVersionCheckpoint>",
+        "client": {
+          "shortName": "ModelServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ModelServiceClient"
+        },
+        "method": {
+          "shortName": "ListModelVersionCheckpoints",
+          "fullName": "google.cloud.aiplatform.v1.ModelService.ListModelVersionCheckpoints",
+          "service": {
+            "shortName": "ModelService",
+            "fullName": "google.cloud.aiplatform.v1.ModelService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ModelService_UpdateModel_sync",
       "title": "UpdateModelRequestObject",
       "description": "Snippet for UpdateModel",
