@@ -131,7 +131,10 @@ namespace Google.Apps.Meet.V2 {
       }
 
       /// <summary>
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -143,7 +146,10 @@ namespace Google.Apps.Meet.V2 {
       }
 
       /// <summary>
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -156,6 +162,9 @@ namespace Google.Apps.Meet.V2 {
 
       /// <summary>
       /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -244,7 +253,10 @@ namespace Google.Apps.Meet.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateSpace, null, options, request);
       }
       /// <summary>
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -257,7 +269,10 @@ namespace Google.Apps.Meet.V2 {
         return GetSpace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -268,7 +283,10 @@ namespace Google.Apps.Meet.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_GetSpace, null, options, request);
       }
       /// <summary>
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -281,7 +299,10 @@ namespace Google.Apps.Meet.V2 {
         return GetSpaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a space by `space_id` or `meeting_code`.
+      /// Gets details about a meeting space.
+      ///
+      /// For an example, see [Get a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#get-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -292,7 +313,10 @@ namespace Google.Apps.Meet.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_GetSpace, null, options, request);
       }
       /// <summary>
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -305,7 +329,10 @@ namespace Google.Apps.Meet.V2 {
         return UpdateSpace(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -316,7 +343,10 @@ namespace Google.Apps.Meet.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateSpace, null, options, request);
       }
       /// <summary>
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -329,7 +359,10 @@ namespace Google.Apps.Meet.V2 {
         return UpdateSpaceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Updates a space.
+      /// Updates details about a meeting space.
+      ///
+      /// For an example, see [Update a meeting
+      /// space](https://developers.google.com/meet/api/guides/meeting-spaces#update-meeting-space).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -341,6 +374,9 @@ namespace Google.Apps.Meet.V2 {
       }
       /// <summary>
       /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -354,6 +390,9 @@ namespace Google.Apps.Meet.V2 {
       }
       /// <summary>
       /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -365,6 +404,9 @@ namespace Google.Apps.Meet.V2 {
       }
       /// <summary>
       /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -378,6 +420,9 @@ namespace Google.Apps.Meet.V2 {
       }
       /// <summary>
       /// Ends an active conference (if there's one).
+      ///
+      /// For an example, see [End active
+      /// conference](https://developers.google.com/meet/api/guides/meeting-spaces#end-active-conference).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
