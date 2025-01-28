@@ -1552,6 +1552,12 @@
                 "ListModelEvaluationsAsync"
               ]
             },
+            "ListModelVersionCheckpoints": {
+              "methods": [
+                "ListModelVersionCheckpoints",
+                "ListModelVersionCheckpointsAsync"
+              ]
+            },
             "ListModelVersions": {
               "methods": [
                 "ListModelVersions",

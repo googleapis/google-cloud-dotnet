@@ -78,6 +78,18 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
     }
 
+    public partial class ListModelVersionCheckpointsRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::ModelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::ModelName ModelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::ModelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class UpdateExplanationDatasetRequest
     {
         /// <summary><see cref="ModelName"/>-typed view over the <see cref="Model"/> resource name property.</summary>
