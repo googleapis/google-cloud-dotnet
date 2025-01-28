@@ -24,7 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Analytics.Admin.V1Alpha {
   /// <summary>
-  /// Service Interface for the Analytics Admin API (GA4).
+  /// Service Interface for the Google Analytics Admin API.
   /// </summary>
   public static partial class AnalyticsAdminService
   {
@@ -1737,7 +1737,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -1809,7 +1809,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1823,7 +1823,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -1838,7 +1837,8 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1860,7 +1860,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1997,7 +1997,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -2137,6 +2137,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -2809,12 +2812,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// only be requested on Google Analytics 360 properties. This method is only
       /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -3713,7 +3721,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -3730,7 +3738,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -3745,7 +3753,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -3762,7 +3770,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns all accounts accessible by the caller.
       ///
-      /// Note that these accounts might not currently have GA4 properties.
+      /// Note that these accounts might not currently have GA properties.
       /// Soft-deleted (ie: "trashed") accounts are excluded by default.
       /// Returns an empty list if no relevant accounts are found.
       /// </summary>
@@ -4007,7 +4015,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListAccountSummaries, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4020,7 +4028,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4031,7 +4039,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_GetProperty, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4044,7 +4052,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetPropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" Property.
+      /// Lookup for a single GA Property.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4057,7 +4065,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -4075,7 +4082,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -4091,7 +4097,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -4109,7 +4114,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Returns child Properties under the specified parent Account.
       ///
-      /// Only "GA4" properties will be returned.
       /// Properties will be excluded if the caller does not have access.
       /// Soft-deleted (ie: "trashed") properties are excluded by default.
       /// Returns an empty list if no relevant properties are found.
@@ -4123,7 +4127,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListProperties, null, options, request);
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4136,7 +4141,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CreateProperty(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4147,7 +4153,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_CreateProperty, null, options, request);
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4160,7 +4167,8 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CreatePropertyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates an "GA4" property with the specified location and attributes.
+      /// Creates a Google Analytics property with the specified location and
+      /// attributes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4181,7 +4189,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4204,7 +4212,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4225,7 +4233,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4248,7 +4256,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// will be permanently purged.
       /// https://support.google.com/analytics/answer/6154772
       ///
-      /// Returns an error if the target is not found, or is not a GA4 Property.
+      /// Returns an error if the target is not found.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4759,7 +4767,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataSharingSettings, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4772,7 +4780,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetMeasurementProtocolSecret(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -4783,7 +4791,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.BlockingUnaryCall(__Method_GetMeasurementProtocolSecret, null, options, request);
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -4796,7 +4804,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         return GetMeasurementProtocolSecretAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lookup for a single "GA4" MeasurementProtocolSecret.
+      /// Lookup for a single MeasurementProtocolSecret.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5313,6 +5321,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5327,6 +5338,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -5339,6 +5353,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -5353,6 +5370,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <summary>
       /// Searches through all changes to an account or its children given the
       /// specified set of filters.
+      ///
+      /// Only returns the subset of changes supported by the API. The UI may return
+      /// additional changes.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -7980,12 +8000,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// only be requested on Google Analytics 360 properties. This method is only
       /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -8007,12 +8032,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// only be requested on Google Analytics 360 properties. This method is only
       /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -8032,12 +8062,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// only be requested on Google Analytics 360 properties. This method is only
       /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -8059,12 +8094,17 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// only be requested on Google Analytics 360 properties. This method is only
       /// available to Administrators.
       ///
-      /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-      /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+      /// These data access records include GA UI Reporting, GA UI Explorations,
+      /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
       /// data from Google Analytics through a linkage. These records don't include
       /// property configuration changes like adding a stream or changing a
       /// property's time zone. For configuration change history, see
       /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+      ///
+      /// To give your feedback on this API, complete the [Google Analytics Access
+      /// Reports
+      /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+      /// form.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

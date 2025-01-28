@@ -331,151 +331,154 @@ namespace Google.Analytics.Admin.V1Alpha {
             "Ci5hbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9DYWxjdWxhdGVkTWV0",
             "cmljEjtwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vY2FsY3VsYXRlZE1ldHJpY3Mv",
             "e2NhbGN1bGF0ZWRfbWV0cmljfSoRY2FsY3VsYXRlZE1ldHJpY3MyEGNhbGN1",
-            "bGF0ZWRNZXRyaWMiwgMKFURhdGFSZXRlbnRpb25TZXR0aW5ncxIRCgRuYW1l",
-            "GAEgASgJQgPgQQMSZQoUZXZlbnRfZGF0YV9yZXRlbnRpb24YAiABKA4yRy5n",
+            "bGF0ZWRNZXRyaWMisgQKFURhdGFSZXRlbnRpb25TZXR0aW5ncxIRCgRuYW1l",
+            "GAEgASgJQgPgQQMSagoUZXZlbnRfZGF0YV9yZXRlbnRpb24YAiABKA4yRy5n",
             "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuRGF0YVJldGVudGlvblNl",
-            "dHRpbmdzLlJldGVudGlvbkR1cmF0aW9uEicKH3Jlc2V0X3VzZXJfZGF0YV9v",
-            "bl9uZXdfYWN0aXZpdHkYAyABKAgingEKEVJldGVudGlvbkR1cmF0aW9uEiIK",
-            "HlJFVEVOVElPTl9EVVJBVElPTl9VTlNQRUNJRklFRBAAEg4KClRXT19NT05U",
-            "SFMQARITCg9GT1VSVEVFTl9NT05USFMQAxIVChFUV0VOVFlfU0lYX01PTlRI",
-            "UxAEEhcKE1RISVJUWV9FSUdIVF9NT05USFMQBRIQCgxGSUZUWV9NT05USFMQ",
-            "Bjpl6kFiCjNhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhUmV0",
-            "ZW50aW9uU2V0dGluZ3MSK3Byb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhUmV0",
-            "ZW50aW9uU2V0dGluZ3Mi/AsKE0F0dHJpYnV0aW9uU2V0dGluZ3MSEQoEbmFt",
-            "ZRgBIAEoCUID4EEDEpcBCixhY3F1aXNpdGlvbl9jb252ZXJzaW9uX2V2ZW50",
-            "X2xvb2tiYWNrX3dpbmRvdxgCIAEoDjJcLmdvb2dsZS5hbmFseXRpY3MuYWRt",
-            "aW4udjFhbHBoYS5BdHRyaWJ1dGlvblNldHRpbmdzLkFjcXVpc2l0aW9uQ29u",
-            "dmVyc2lvbkV2ZW50TG9va2JhY2tXaW5kb3dCA+BBAhKLAQomb3RoZXJfY29u",
-            "dmVyc2lvbl9ldmVudF9sb29rYmFja193aW5kb3cYAyABKA4yVi5nb29nbGUu",
-            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXR0cmlidXRpb25TZXR0aW5ncy5P",
-            "dGhlckNvbnZlcnNpb25FdmVudExvb2tiYWNrV2luZG93QgPgQQISdwobcmVw",
-            "b3J0aW5nX2F0dHJpYnV0aW9uX21vZGVsGAQgASgOMk0uZ29vZ2xlLmFuYWx5",
-            "dGljcy5hZG1pbi52MWFscGhhLkF0dHJpYnV0aW9uU2V0dGluZ3MuUmVwb3J0",
-            "aW5nQXR0cmlidXRpb25Nb2RlbEID4EECEoYBCiRhZHNfd2ViX2NvbnZlcnNp",
-            "b25fZGF0YV9leHBvcnRfc2NvcGUYBSABKA4yUy5nb29nbGUuYW5hbHl0aWNz",
-            "LmFkbWluLnYxYWxwaGEuQXR0cmlidXRpb25TZXR0aW5ncy5BZHNXZWJDb252",
-            "ZXJzaW9uRGF0YUV4cG9ydFNjb3BlQgPgQQIi2wEKKEFjcXVpc2l0aW9uQ29u",
-            "dmVyc2lvbkV2ZW50TG9va2JhY2tXaW5kb3cSPAo4QUNRVUlTSVRJT05fQ09O",
-            "VkVSU0lPTl9FVkVOVF9MT09LQkFDS19XSU5ET1dfVU5TUEVDSUZJRUQQABI3",
-            "CjNBQ1FVSVNJVElPTl9DT05WRVJTSU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRP",
-            "V183X0RBWVMQARI4CjRBQ1FVSVNJVElPTl9DT05WRVJTSU9OX0VWRU5UX0xP",
-            "T0tCQUNLX1dJTkRPV18zMF9EQVlTEAIi+AEKIk90aGVyQ29udmVyc2lvbkV2",
-            "ZW50TG9va2JhY2tXaW5kb3cSNgoyT1RIRVJfQ09OVkVSU0lPTl9FVkVOVF9M",
-            "T09LQkFDS19XSU5ET1dfVU5TUEVDSUZJRUQQABIyCi5PVEhFUl9DT05WRVJT",
-            "SU9OX0VWRU5UX0xPT0tCQUNLX1dJTkRPV18zMF9EQVlTEAESMgouT1RIRVJf",
-            "Q09OVkVSU0lPTl9FVkVOVF9MT09LQkFDS19XSU5ET1dfNjBfREFZUxACEjIK",
-            "Lk9USEVSX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XXzkwX0RB",
-            "WVMQAyLCAQoZUmVwb3J0aW5nQXR0cmlidXRpb25Nb2RlbBIrCidSRVBPUlRJ",
-            "TkdfQVRUUklCVVRJT05fTU9ERUxfVU5TUEVDSUZJRUQQABIpCiVQQUlEX0FO",
-            "RF9PUkdBTklDX0NIQU5ORUxTX0RBVEFfRFJJVkVOEAESKAokUEFJRF9BTkRf",
-            "T1JHQU5JQ19DSEFOTkVMU19MQVNUX0NMSUNLEAISIwofR09PR0xFX1BBSURf",
-            "Q0hBTk5FTFNfTEFTVF9DTElDSxAHIqYBCh9BZHNXZWJDb252ZXJzaW9uRGF0",
-            "YUV4cG9ydFNjb3BlEjQKMEFEU19XRUJfQ09OVkVSU0lPTl9EQVRBX0VYUE9S",
-            "VF9TQ09QRV9VTlNQRUNJRklFRBAAEhQKEE5PVF9TRUxFQ1RFRF9ZRVQQARId",
-            "ChlQQUlEX0FORF9PUkdBTklDX0NIQU5ORUxTEAISGAoUR09PR0xFX1BBSURf",
-            "Q0hBTk5FTFMQAzph6kFeCjFhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
-            "bS9BdHRyaWJ1dGlvblNldHRpbmdzEilwcm9wZXJ0aWVzL3twcm9wZXJ0eX0v",
-            "YXR0cmlidXRpb25TZXR0aW5ncyLxAQoNQWNjZXNzQmluZGluZxIOCgR1c2Vy",
-            "GAIgASgJSAASEQoEbmFtZRgBIAEoCUID4EEDEg0KBXJvbGVzGAMgAygJOpwB",
-            "6kGYAQorYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQWNjZXNzQmlu",
-            "ZGluZxIyYWNjb3VudHMve2FjY291bnR9L2FjY2Vzc0JpbmRpbmdzL3thY2Nl",
-            "c3NfYmluZGluZ30SNXByb3BlcnRpZXMve3Byb3BlcnR5fS9hY2Nlc3NCaW5k",
-            "aW5ncy97YWNjZXNzX2JpbmRpbmd9Qg8KDWFjY2Vzc190YXJnZXQiqgMKDEJp",
-            "Z1F1ZXJ5TGluaxIRCgRuYW1lGAEgASgJQgPgQQMSFAoHcHJvamVjdBgCIAEo",
-            "CUID4EEFEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEhwKFGRhaWx5X2V4cG9ydF9lbmFibGVkGAQgASgI",
-            "EiAKGHN0cmVhbWluZ19leHBvcnRfZW5hYmxlZBgFIAEoCBIiChpmcmVzaF9k",
-            "YWlseV9leHBvcnRfZW5hYmxlZBgJIAEoCBIeChZpbmNsdWRlX2FkdmVydGlz",
-            "aW5nX2lkGAYgASgIEhYKDmV4cG9ydF9zdHJlYW1zGAcgAygJEhcKD2V4Y2x1",
-            "ZGVkX2V2ZW50cxgIIAMoCRIgChBkYXRhc2V0X2xvY2F0aW9uGAogASgJQgbg",
-            "QQXgQQI6ZOpBYQoqYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQmln",
-            "UXVlcnlMaW5rEjNwcm9wZXJ0aWVzL3twcm9wZXJ0eX0vYmlnUXVlcnlMaW5r",
-            "cy97YmlncXVlcnlfbGlua30i8wMKG0VuaGFuY2VkTWVhc3VyZW1lbnRTZXR0",
-            "aW5ncxIRCgRuYW1lGAEgASgJQgPgQQMSFgoOc3RyZWFtX2VuYWJsZWQYAiAB",
-            "KAgSFwoPc2Nyb2xsc19lbmFibGVkGAMgASgIEh8KF291dGJvdW5kX2NsaWNr",
-            "c19lbmFibGVkGAQgASgIEhsKE3NpdGVfc2VhcmNoX2VuYWJsZWQYBSABKAgS",
-            "IAoYdmlkZW9fZW5nYWdlbWVudF9lbmFibGVkGAYgASgIEh4KFmZpbGVfZG93",
-            "bmxvYWRzX2VuYWJsZWQYByABKAgSHAoUcGFnZV9jaGFuZ2VzX2VuYWJsZWQY",
-            "CCABKAgSIQoZZm9ybV9pbnRlcmFjdGlvbnNfZW5hYmxlZBgJIAEoCBIjChZz",
-            "ZWFyY2hfcXVlcnlfcGFyYW1ldGVyGAogASgJQgPgQQISGwoTdXJpX3F1ZXJ5",
-            "X3BhcmFtZXRlchgLIAEoCTqMAepBiAEKOWFuYWx5dGljc2FkbWluLmdvb2ds",
-            "ZWFwaXMuY29tL0VuaGFuY2VkTWVhc3VyZW1lbnRTZXR0aW5ncxJLcHJvcGVy",
-            "dGllcy97cHJvcGVydHl9L2RhdGFTdHJlYW1zL3tkYXRhX3N0cmVhbX0vZW5o",
-            "YW5jZWRNZWFzdXJlbWVudFNldHRpbmdzIkIKEENvbm5lY3RlZFNpdGVUYWcS",
-            "GQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQISEwoGdGFnX2lkGAIgASgJQgPg",
-            "QQIilQIKFURhdGFSZWRhY3Rpb25TZXR0aW5ncxIRCgRuYW1lGAEgASgJQgPg",
-            "QQMSHwoXZW1haWxfcmVkYWN0aW9uX2VuYWJsZWQYAiABKAgSKQohcXVlcnlf",
-            "cGFyYW1ldGVyX3JlZGFjdGlvbl9lbmFibGVkGAMgASgIEhwKFHF1ZXJ5X3Bh",
-            "cmFtZXRlcl9rZXlzGAQgAygJOn/qQXwKM2FuYWx5dGljc2FkbWluLmdvb2ds",
-            "ZWFwaXMuY29tL0RhdGFSZWRhY3Rpb25TZXR0aW5ncxJFcHJvcGVydGllcy97",
-            "cHJvcGVydHl9L2RhdGFTdHJlYW1zL3tkYXRhX3N0cmVhbX0vZGF0YVJlZGFj",
-            "dGlvblNldHRpbmdzIqABCgtBZFNlbnNlTGluaxIRCgRuYW1lGAEgASgJQgPg",
-            "QQMSGwoOYWRfY2xpZW50X2NvZGUYAiABKAlCA+BBBTph6kFeCilhbmFseXRp",
-            "Y3NhZG1pbi5nb29nbGVhcGlzLmNvbS9BZFNlbnNlTGluaxIxcHJvcGVydGll",
-            "cy97cHJvcGVydHl9L2FkU2Vuc2VMaW5rcy97YWRzZW5zZV9saW5rfSKOAgoY",
-            "Um9sbHVwUHJvcGVydHlTb3VyY2VMaW5rEhEKBG5hbWUYASABKAlCA+BBAxIc",
-            "Cg9zb3VyY2VfcHJvcGVydHkYAiABKAlCA+BBBTrAAepBvAEKNmFuYWx5dGlj",
-            "c2FkbWluLmdvb2dsZWFwaXMuY29tL1JvbGx1cFByb3BlcnR5U291cmNlTGlu",
-            "axJNcHJvcGVydGllcy97cHJvcGVydHl9L3JvbGx1cFByb3BlcnR5U291cmNl",
-            "TGlua3Mve3JvbGx1cF9wcm9wZXJ0eV9zb3VyY2VfbGlua30qGXJvbGx1cFBy",
-            "b3BlcnR5U291cmNlTGlua3MyGHJvbGx1cFByb3BlcnR5U291cmNlTGluayqq",
-            "BAoQSW5kdXN0cnlDYXRlZ29yeRIhCh1JTkRVU1RSWV9DQVRFR09SWV9VTlNQ",
-            "RUNJRklFRBAAEg4KCkFVVE9NT1RJVkUQARIjCh9CVVNJTkVTU19BTkRfSU5E",
-            "VVNUUklBTF9NQVJLRVRTEAISCwoHRklOQU5DRRADEg4KCkhFQUxUSENBUkUQ",
-            "BBIOCgpURUNITk9MT0dZEAUSCgoGVFJBVkVMEAYSCQoFT1RIRVIQBxIaChZB",
-            "UlRTX0FORF9FTlRFUlRBSU5NRU5UEAgSFgoSQkVBVVRZX0FORF9GSVRORVNT",
-            "EAkSGAoUQk9PS1NfQU5EX0xJVEVSQVRVUkUQChISCg5GT09EX0FORF9EUklO",
-            "SxALEgkKBUdBTUVTEAwSFwoTSE9CQklFU19BTkRfTEVJU1VSRRANEhMKD0hP",
-            "TUVfQU5EX0dBUkRFThAOEhgKFElOVEVSTkVUX0FORF9URUxFQ09NEA8SFgoS",
-            "TEFXX0FORF9HT1ZFUk5NRU5UEBASCAoETkVXUxAREhYKEk9OTElORV9DT01N",
-            "VU5JVElFUxASEhYKElBFT1BMRV9BTkRfU09DSUVUWRATEhQKEFBFVFNfQU5E",
-            "X0FOSU1BTFMQFBIPCgtSRUFMX0VTVEFURRAVEg0KCVJFRkVSRU5DRRAWEgsK",
-            "B1NDSUVOQ0UQFxIKCgZTUE9SVFMQGBIWChJKT0JTX0FORF9FRFVDQVRJT04Q",
-            "GRIMCghTSE9QUElORxAaKmYKDFNlcnZpY2VMZXZlbBIdChlTRVJWSUNFX0xF",
-            "VkVMX1VOU1BFQ0lGSUVEEAASHQoZR09PR0xFX0FOQUxZVElDU19TVEFOREFS",
-            "RBABEhgKFEdPT0dMRV9BTkFMWVRJQ1NfMzYwEAIqSgoJQWN0b3JUeXBlEhoK",
-            "FkFDVE9SX1RZUEVfVU5TUEVDSUZJRUQQABIICgRVU0VSEAESCgoGU1lTVEVN",
-            "EAISCwoHU1VQUE9SVBADKlAKCkFjdGlvblR5cGUSGwoXQUNUSU9OX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABILCgdDUkVBVEVEEAESCwoHVVBEQVRFRBACEgsKB0RF",
-            "TEVURUQQAyq1BQoZQ2hhbmdlSGlzdG9yeVJlc291cmNlVHlwZRIsCihDSEFO",
-            "R0VfSElTVE9SWV9SRVNPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQUND",
-            "T1VOVBABEgwKCFBST1BFUlRZEAISEQoNRklSRUJBU0VfTElOSxAGEhMKD0dP",
-            "T0dMRV9BRFNfTElOSxAHEhsKF0dPT0dMRV9TSUdOQUxTX1NFVFRJTkdTEAgS",
-            "FAoQQ09OVkVSU0lPTl9FVkVOVBAJEh8KG01FQVNVUkVNRU5UX1BST1RPQ09M",
-            "X1NFQ1JFVBAKEhQKEENVU1RPTV9ESU1FTlNJT04QCxIRCg1DVVNUT01fTUVU",
-            "UklDEAwSGwoXREFUQV9SRVRFTlRJT05fU0VUVElOR1MQDRIlCiFESVNQTEFZ",
-            "X1ZJREVPXzM2MF9BRFZFUlRJU0VSX0xJTksQDhIuCipESVNQTEFZX1ZJREVP",
-            "XzM2MF9BRFZFUlRJU0VSX0xJTktfUFJPUE9TQUwQDxIXChNTRUFSQ0hfQURT",
-            "XzM2MF9MSU5LEBASDwoLREFUQV9TVFJFQU0QEhIYChRBVFRSSUJVVElPTl9T",
-            "RVRUSU5HUxAUEhUKEUVYUEFOREVEX0RBVEFfU0VUEBUSEQoNQ0hBTk5FTF9H",
-            "Uk9VUBAWEhEKDUJJR1FVRVJZX0xJTksQFxIhCh1FTkhBTkNFRF9NRUFTVVJF",
-            "TUVOVF9TRVRUSU5HUxAYEhsKF0RBVEFfUkVEQUNUSU9OX1NFVFRJTkdTEBkS",
-            "JwojU0tBRE5FVFdPUktfQ09OVkVSU0lPTl9WQUxVRV9TQ0hFTUEQGhIQCgxB",
-            "RFNFTlNFX0xJTksQGxIMCghBVURJRU5DRRAcEhUKEUVWRU5UX0NSRUFURV9S",
-            "VUxFEB0SFQoRQ0FMQ1VMQVRFRF9NRVRSSUMQHypzChJHb29nbGVTaWduYWxz",
-            "U3RhdGUSJAogR09PR0xFX1NJR05BTFNfU1RBVEVfVU5TUEVDSUZJRUQQABIa",
-            "ChZHT09HTEVfU0lHTkFMU19FTkFCTEVEEAESGwoXR09PR0xFX1NJR05BTFNf",
-            "RElTQUJMRUQQAiqOAQoUR29vZ2xlU2lnbmFsc0NvbnNlbnQSJgoiR09PR0xF",
-            "X1NJR05BTFNfQ09OU0VOVF9VTlNQRUNJRklFRBAAEiQKIEdPT0dMRV9TSUdO",
-            "QUxTX0NPTlNFTlRfQ09OU0VOVEVEEAISKAokR09PR0xFX1NJR05BTFNfQ09O",
-            "U0VOVF9OT1RfQ09OU0VOVEVEEAEqewodTGlua1Byb3Bvc2FsSW5pdGlhdGlu",
-            "Z1Byb2R1Y3QSMAosTElOS19QUk9QT1NBTF9JTklUSUFUSU5HX1BST0RVQ1Rf",
-            "VU5TUEVDSUZJRUQQABIUChBHT09HTEVfQU5BTFlUSUNTEAESEgoOTElOS0VE",
-            "X1BST0RVQ1QQAirEAQoRTGlua1Byb3Bvc2FsU3RhdGUSIwofTElOS19QUk9Q",
-            "T1NBTF9TVEFURV9VTlNQRUNJRklFRBAAEikKJUFXQUlUSU5HX1JFVklFV19G",
-            "Uk9NX0dPT0dMRV9BTkFMWVRJQ1MQARInCiNBV0FJVElOR19SRVZJRVdfRlJP",
-            "TV9MSU5LRURfUFJPRFVDVBACEg0KCVdJVEhEUkFXThADEgwKCERFQ0xJTkVE",
-            "EAQSCwoHRVhQSVJFRBAFEgwKCE9CU09MRVRFEAYqggEKDFByb3BlcnR5VHlw",
-            "ZRIdChlQUk9QRVJUWV9UWVBFX1VOU1BFQ0lGSUVEEAASGgoWUFJPUEVSVFlf",
-            "VFlQRV9PUkRJTkFSWRABEh0KGVBST1BFUlRZX1RZUEVfU1VCUFJPUEVSVFkQ",
-            "AhIYChRQUk9QRVJUWV9UWVBFX1JPTExVUBADKnEKC0NvYXJzZVZhbHVlEhwK",
-            "GENPQVJTRV9WQUxVRV9VTlNQRUNJRklFRBAAEhQKEENPQVJTRV9WQUxVRV9M",
-            "T1cQARIXChNDT0FSU0VfVkFMVUVfTUVESVVNEAISFQoRQ09BUlNFX1ZBTFVF",
-            "X0hJR0gQA0LLAQoiY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
-            "YUIOUmVzb3VyY2VzUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9hbmFs",
-            "eXRpY3MvYWRtaW4vYXBpdjFhbHBoYS9hZG1pbnBiO2FkbWlucGLqQVIKMm1h",
-            "cmtldGluZ3BsYXRmb3JtYWRtaW4uZ29vZ2xlYXBpcy5jb20vT3JnYW5pemF0",
-            "aW9uEhxvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259YgZwcm90bzM="));
+            "dHRpbmdzLlJldGVudGlvbkR1cmF0aW9uQgPgQQISaQoTdXNlcl9kYXRhX3Jl",
+            "dGVudGlvbhgEIAEoDjJHLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBo",
+            "YS5EYXRhUmV0ZW50aW9uU2V0dGluZ3MuUmV0ZW50aW9uRHVyYXRpb25CA+BB",
+            "AhInCh9yZXNldF91c2VyX2RhdGFfb25fbmV3X2FjdGl2aXR5GAMgASgIIp4B",
+            "ChFSZXRlbnRpb25EdXJhdGlvbhIiCh5SRVRFTlRJT05fRFVSQVRJT05fVU5T",
+            "UEVDSUZJRUQQABIOCgpUV09fTU9OVEhTEAESEwoPRk9VUlRFRU5fTU9OVEhT",
+            "EAMSFQoRVFdFTlRZX1NJWF9NT05USFMQBBIXChNUSElSVFlfRUlHSFRfTU9O",
+            "VEhTEAUSEAoMRklGVFlfTU9OVEhTEAY6ZepBYgozYW5hbHl0aWNzYWRtaW4u",
+            "Z29vZ2xlYXBpcy5jb20vRGF0YVJldGVudGlvblNldHRpbmdzEitwcm9wZXJ0",
+            "aWVzL3twcm9wZXJ0eX0vZGF0YVJldGVudGlvblNldHRpbmdzIvwLChNBdHRy",
+            "aWJ1dGlvblNldHRpbmdzEhEKBG5hbWUYASABKAlCA+BBAxKXAQosYWNxdWlz",
+            "aXRpb25fY29udmVyc2lvbl9ldmVudF9sb29rYmFja193aW5kb3cYAiABKA4y",
+            "XC5nb29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYWxwaGEuQXR0cmlidXRpb25T",
+            "ZXR0aW5ncy5BY3F1aXNpdGlvbkNvbnZlcnNpb25FdmVudExvb2tiYWNrV2lu",
+            "ZG93QgPgQQISiwEKJm90aGVyX2NvbnZlcnNpb25fZXZlbnRfbG9va2JhY2tf",
+            "d2luZG93GAMgASgOMlYuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhh",
+            "LkF0dHJpYnV0aW9uU2V0dGluZ3MuT3RoZXJDb252ZXJzaW9uRXZlbnRMb29r",
+            "YmFja1dpbmRvd0ID4EECEncKG3JlcG9ydGluZ19hdHRyaWJ1dGlvbl9tb2Rl",
+            "bBgEIAEoDjJNLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFhbHBoYS5BdHRy",
+            "aWJ1dGlvblNldHRpbmdzLlJlcG9ydGluZ0F0dHJpYnV0aW9uTW9kZWxCA+BB",
+            "AhKGAQokYWRzX3dlYl9jb252ZXJzaW9uX2RhdGFfZXhwb3J0X3Njb3BlGAUg",
+            "ASgOMlMuZ29vZ2xlLmFuYWx5dGljcy5hZG1pbi52MWFscGhhLkF0dHJpYnV0",
+            "aW9uU2V0dGluZ3MuQWRzV2ViQ29udmVyc2lvbkRhdGFFeHBvcnRTY29wZUID",
+            "4EECItsBCihBY3F1aXNpdGlvbkNvbnZlcnNpb25FdmVudExvb2tiYWNrV2lu",
+            "ZG93EjwKOEFDUVVJU0lUSU9OX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tf",
+            "V0lORE9XX1VOU1BFQ0lGSUVEEAASNwozQUNRVUlTSVRJT05fQ09OVkVSU0lP",
+            "Tl9FVkVOVF9MT09LQkFDS19XSU5ET1dfN19EQVlTEAESOAo0QUNRVUlTSVRJ",
+            "T05fQ09OVkVSU0lPTl9FVkVOVF9MT09LQkFDS19XSU5ET1dfMzBfREFZUxAC",
+            "IvgBCiJPdGhlckNvbnZlcnNpb25FdmVudExvb2tiYWNrV2luZG93EjYKMk9U",
+            "SEVSX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JBQ0tfV0lORE9XX1VOU1BFQ0lG",
+            "SUVEEAASMgouT1RIRVJfQ09OVkVSU0lPTl9FVkVOVF9MT09LQkFDS19XSU5E",
+            "T1dfMzBfREFZUxABEjIKLk9USEVSX0NPTlZFUlNJT05fRVZFTlRfTE9PS0JB",
+            "Q0tfV0lORE9XXzYwX0RBWVMQAhIyCi5PVEhFUl9DT05WRVJTSU9OX0VWRU5U",
+            "X0xPT0tCQUNLX1dJTkRPV185MF9EQVlTEAMiwgEKGVJlcG9ydGluZ0F0dHJp",
+            "YnV0aW9uTW9kZWwSKwonUkVQT1JUSU5HX0FUVFJJQlVUSU9OX01PREVMX1VO",
+            "U1BFQ0lGSUVEEAASKQolUEFJRF9BTkRfT1JHQU5JQ19DSEFOTkVMU19EQVRB",
+            "X0RSSVZFThABEigKJFBBSURfQU5EX09SR0FOSUNfQ0hBTk5FTFNfTEFTVF9D",
+            "TElDSxACEiMKH0dPT0dMRV9QQUlEX0NIQU5ORUxTX0xBU1RfQ0xJQ0sQByKm",
+            "AQofQWRzV2ViQ29udmVyc2lvbkRhdGFFeHBvcnRTY29wZRI0CjBBRFNfV0VC",
+            "X0NPTlZFUlNJT05fREFUQV9FWFBPUlRfU0NPUEVfVU5TUEVDSUZJRUQQABIU",
+            "ChBOT1RfU0VMRUNURURfWUVUEAESHQoZUEFJRF9BTkRfT1JHQU5JQ19DSEFO",
+            "TkVMUxACEhgKFEdPT0dMRV9QQUlEX0NIQU5ORUxTEAM6YepBXgoxYW5hbHl0",
+            "aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20vQXR0cmlidXRpb25TZXR0aW5ncxIp",
+            "cHJvcGVydGllcy97cHJvcGVydHl9L2F0dHJpYnV0aW9uU2V0dGluZ3Mi8QEK",
+            "DUFjY2Vzc0JpbmRpbmcSDgoEdXNlchgCIAEoCUgAEhEKBG5hbWUYASABKAlC",
+            "A+BBAxINCgVyb2xlcxgDIAMoCTqcAepBmAEKK2FuYWx5dGljc2FkbWluLmdv",
+            "b2dsZWFwaXMuY29tL0FjY2Vzc0JpbmRpbmcSMmFjY291bnRzL3thY2NvdW50",
+            "fS9hY2Nlc3NCaW5kaW5ncy97YWNjZXNzX2JpbmRpbmd9EjVwcm9wZXJ0aWVz",
+            "L3twcm9wZXJ0eX0vYWNjZXNzQmluZGluZ3Mve2FjY2Vzc19iaW5kaW5nfUIP",
+            "Cg1hY2Nlc3NfdGFyZ2V0IqoDCgxCaWdRdWVyeUxpbmsSEQoEbmFtZRgBIAEo",
+            "CUID4EEDEhQKB3Byb2plY3QYAiABKAlCA+BBBRI0CgtjcmVhdGVfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIcChRkYWls",
+            "eV9leHBvcnRfZW5hYmxlZBgEIAEoCBIgChhzdHJlYW1pbmdfZXhwb3J0X2Vu",
+            "YWJsZWQYBSABKAgSIgoaZnJlc2hfZGFpbHlfZXhwb3J0X2VuYWJsZWQYCSAB",
+            "KAgSHgoWaW5jbHVkZV9hZHZlcnRpc2luZ19pZBgGIAEoCBIWCg5leHBvcnRf",
+            "c3RyZWFtcxgHIAMoCRIXCg9leGNsdWRlZF9ldmVudHMYCCADKAkSIAoQZGF0",
+            "YXNldF9sb2NhdGlvbhgKIAEoCUIG4EEF4EECOmTqQWEKKmFuYWx5dGljc2Fk",
+            "bWluLmdvb2dsZWFwaXMuY29tL0JpZ1F1ZXJ5TGluaxIzcHJvcGVydGllcy97",
+            "cHJvcGVydHl9L2JpZ1F1ZXJ5TGlua3Mve2JpZ3F1ZXJ5X2xpbmt9IvMDChtF",
+            "bmhhbmNlZE1lYXN1cmVtZW50U2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID4EED",
+            "EhYKDnN0cmVhbV9lbmFibGVkGAIgASgIEhcKD3Njcm9sbHNfZW5hYmxlZBgD",
+            "IAEoCBIfChdvdXRib3VuZF9jbGlja3NfZW5hYmxlZBgEIAEoCBIbChNzaXRl",
+            "X3NlYXJjaF9lbmFibGVkGAUgASgIEiAKGHZpZGVvX2VuZ2FnZW1lbnRfZW5h",
+            "YmxlZBgGIAEoCBIeChZmaWxlX2Rvd25sb2Fkc19lbmFibGVkGAcgASgIEhwK",
+            "FHBhZ2VfY2hhbmdlc19lbmFibGVkGAggASgIEiEKGWZvcm1faW50ZXJhY3Rp",
+            "b25zX2VuYWJsZWQYCSABKAgSIwoWc2VhcmNoX3F1ZXJ5X3BhcmFtZXRlchgK",
+            "IAEoCUID4EECEhsKE3VyaV9xdWVyeV9wYXJhbWV0ZXIYCyABKAk6jAHqQYgB",
+            "CjlhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9FbmhhbmNlZE1lYXN1",
+            "cmVtZW50U2V0dGluZ3MSS3Byb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3Ry",
+            "ZWFtcy97ZGF0YV9zdHJlYW19L2VuaGFuY2VkTWVhc3VyZW1lbnRTZXR0aW5n",
+            "cyJCChBDb25uZWN0ZWRTaXRlVGFnEhkKDGRpc3BsYXlfbmFtZRgBIAEoCUID",
+            "4EECEhMKBnRhZ19pZBgCIAEoCUID4EECIpUCChVEYXRhUmVkYWN0aW9uU2V0",
+            "dGluZ3MSEQoEbmFtZRgBIAEoCUID4EEDEh8KF2VtYWlsX3JlZGFjdGlvbl9l",
+            "bmFibGVkGAIgASgIEikKIXF1ZXJ5X3BhcmFtZXRlcl9yZWRhY3Rpb25fZW5h",
+            "YmxlZBgDIAEoCBIcChRxdWVyeV9wYXJhbWV0ZXJfa2V5cxgEIAMoCTp/6kF8",
+            "CjNhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhUmVkYWN0aW9u",
+            "U2V0dGluZ3MSRXByb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhU3RyZWFtcy97",
+            "ZGF0YV9zdHJlYW19L2RhdGFSZWRhY3Rpb25TZXR0aW5ncyKgAQoLQWRTZW5z",
+            "ZUxpbmsSEQoEbmFtZRgBIAEoCUID4EEDEhsKDmFkX2NsaWVudF9jb2RlGAIg",
+            "ASgJQgPgQQU6YepBXgopYW5hbHl0aWNzYWRtaW4uZ29vZ2xlYXBpcy5jb20v",
+            "QWRTZW5zZUxpbmsSMXByb3BlcnRpZXMve3Byb3BlcnR5fS9hZFNlbnNlTGlu",
+            "a3Mve2Fkc2Vuc2VfbGlua30ijgIKGFJvbGx1cFByb3BlcnR5U291cmNlTGlu",
+            "axIRCgRuYW1lGAEgASgJQgPgQQMSHAoPc291cmNlX3Byb3BlcnR5GAIgASgJ",
+            "QgPgQQU6wAHqQbwBCjZhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9S",
+            "b2xsdXBQcm9wZXJ0eVNvdXJjZUxpbmsSTXByb3BlcnRpZXMve3Byb3BlcnR5",
+            "fS9yb2xsdXBQcm9wZXJ0eVNvdXJjZUxpbmtzL3tyb2xsdXBfcHJvcGVydHlf",
+            "c291cmNlX2xpbmt9Khlyb2xsdXBQcm9wZXJ0eVNvdXJjZUxpbmtzMhhyb2xs",
+            "dXBQcm9wZXJ0eVNvdXJjZUxpbmsqqgQKEEluZHVzdHJ5Q2F0ZWdvcnkSIQod",
+            "SU5EVVNUUllfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIOCgpBVVRPTU9USVZF",
+            "EAESIwofQlVTSU5FU1NfQU5EX0lORFVTVFJJQUxfTUFSS0VUUxACEgsKB0ZJ",
+            "TkFOQ0UQAxIOCgpIRUFMVEhDQVJFEAQSDgoKVEVDSE5PTE9HWRAFEgoKBlRS",
+            "QVZFTBAGEgkKBU9USEVSEAcSGgoWQVJUU19BTkRfRU5URVJUQUlOTUVOVBAI",
+            "EhYKEkJFQVVUWV9BTkRfRklUTkVTUxAJEhgKFEJPT0tTX0FORF9MSVRFUkFU",
+            "VVJFEAoSEgoORk9PRF9BTkRfRFJJTksQCxIJCgVHQU1FUxAMEhcKE0hPQkJJ",
+            "RVNfQU5EX0xFSVNVUkUQDRITCg9IT01FX0FORF9HQVJERU4QDhIYChRJTlRF",
+            "Uk5FVF9BTkRfVEVMRUNPTRAPEhYKEkxBV19BTkRfR09WRVJOTUVOVBAQEggK",
+            "BE5FV1MQERIWChJPTkxJTkVfQ09NTVVOSVRJRVMQEhIWChJQRU9QTEVfQU5E",
+            "X1NPQ0lFVFkQExIUChBQRVRTX0FORF9BTklNQUxTEBQSDwoLUkVBTF9FU1RB",
+            "VEUQFRINCglSRUZFUkVOQ0UQFhILCgdTQ0lFTkNFEBcSCgoGU1BPUlRTEBgS",
+            "FgoSSk9CU19BTkRfRURVQ0FUSU9OEBkSDAoIU0hPUFBJTkcQGipmCgxTZXJ2",
+            "aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEh0KGUdP",
+            "T0dMRV9BTkFMWVRJQ1NfU1RBTkRBUkQQARIYChRHT09HTEVfQU5BTFlUSUNT",
+            "XzM2MBACKkoKCUFjdG9yVHlwZRIaChZBQ1RPUl9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASCAoEVVNFUhABEgoKBlNZU1RFTRACEgsKB1NVUFBPUlQQAypQCgpBY3Rp",
+            "b25UeXBlEhsKF0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRF",
+            "RBABEgsKB1VQREFURUQQAhILCgdERUxFVEVEEAMqtQUKGUNoYW5nZUhpc3Rv",
+            "cnlSZXNvdXJjZVR5cGUSLAooQ0hBTkdFX0hJU1RPUllfUkVTT1VSQ0VfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgsKB0FDQ09VTlQQARIMCghQUk9QRVJUWRACEhEK",
+            "DUZJUkVCQVNFX0xJTksQBhITCg9HT09HTEVfQURTX0xJTksQBxIbChdHT09H",
+            "TEVfU0lHTkFMU19TRVRUSU5HUxAIEhQKEENPTlZFUlNJT05fRVZFTlQQCRIf",
+            "ChtNRUFTVVJFTUVOVF9QUk9UT0NPTF9TRUNSRVQQChIUChBDVVNUT01fRElN",
+            "RU5TSU9OEAsSEQoNQ1VTVE9NX01FVFJJQxAMEhsKF0RBVEFfUkVURU5USU9O",
+            "X1NFVFRJTkdTEA0SJQohRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9M",
+            "SU5LEA4SLgoqRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5LX1BS",
+            "T1BPU0FMEA8SFwoTU0VBUkNIX0FEU18zNjBfTElOSxAQEg8KC0RBVEFfU1RS",
+            "RUFNEBISGAoUQVRUUklCVVRJT05fU0VUVElOR1MQFBIVChFFWFBBTkRFRF9E",
+            "QVRBX1NFVBAVEhEKDUNIQU5ORUxfR1JPVVAQFhIRCg1CSUdRVUVSWV9MSU5L",
+            "EBcSIQodRU5IQU5DRURfTUVBU1VSRU1FTlRfU0VUVElOR1MQGBIbChdEQVRB",
+            "X1JFREFDVElPTl9TRVRUSU5HUxAZEicKI1NLQURORVRXT1JLX0NPTlZFUlNJ",
+            "T05fVkFMVUVfU0NIRU1BEBoSEAoMQURTRU5TRV9MSU5LEBsSDAoIQVVESUVO",
+            "Q0UQHBIVChFFVkVOVF9DUkVBVEVfUlVMRRAdEhUKEUNBTENVTEFURURfTUVU",
+            "UklDEB8qcwoSR29vZ2xlU2lnbmFsc1N0YXRlEiQKIEdPT0dMRV9TSUdOQUxT",
+            "X1NUQVRFX1VOU1BFQ0lGSUVEEAASGgoWR09PR0xFX1NJR05BTFNfRU5BQkxF",
+            "RBABEhsKF0dPT0dMRV9TSUdOQUxTX0RJU0FCTEVEEAIqjgEKFEdvb2dsZVNp",
+            "Z25hbHNDb25zZW50EiYKIkdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfVU5TUEVD",
+            "SUZJRUQQABIkCiBHT09HTEVfU0lHTkFMU19DT05TRU5UX0NPTlNFTlRFRBAC",
+            "EigKJEdPT0dMRV9TSUdOQUxTX0NPTlNFTlRfTk9UX0NPTlNFTlRFRBABKnsK",
+            "HUxpbmtQcm9wb3NhbEluaXRpYXRpbmdQcm9kdWN0EjAKLExJTktfUFJPUE9T",
+            "QUxfSU5JVElBVElOR19QUk9EVUNUX1VOU1BFQ0lGSUVEEAASFAoQR09PR0xF",
+            "X0FOQUxZVElDUxABEhIKDkxJTktFRF9QUk9EVUNUEAIqxAEKEUxpbmtQcm9w",
+            "b3NhbFN0YXRlEiMKH0xJTktfUFJPUE9TQUxfU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABIpCiVBV0FJVElOR19SRVZJRVdfRlJPTV9HT09HTEVfQU5BTFlUSUNTEAES",
+            "JwojQVdBSVRJTkdfUkVWSUVXX0ZST01fTElOS0VEX1BST0RVQ1QQAhINCglX",
+            "SVRIRFJBV04QAxIMCghERUNMSU5FRBAEEgsKB0VYUElSRUQQBRIMCghPQlNP",
+            "TEVURRAGKoIBCgxQcm9wZXJ0eVR5cGUSHQoZUFJPUEVSVFlfVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEhoKFlBST1BFUlRZX1RZUEVfT1JESU5BUlkQARIdChlQUk9Q",
+            "RVJUWV9UWVBFX1NVQlBST1BFUlRZEAISGAoUUFJPUEVSVFlfVFlQRV9ST0xM",
+            "VVAQAypxCgtDb2Fyc2VWYWx1ZRIcChhDT0FSU0VfVkFMVUVfVU5TUEVDSUZJ",
+            "RUQQABIUChBDT0FSU0VfVkFMVUVfTE9XEAESFwoTQ09BUlNFX1ZBTFVFX01F",
+            "RElVTRACEhUKEUNPQVJTRV9WQUxVRV9ISUdIEANCywEKImNvbS5nb29nbGUu",
+            "YW5hbHl0aWNzLmFkbWluLnYxYWxwaGFCDlJlc291cmNlc1Byb3RvUAFaPmNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYW5hbHl0aWNzL2FkbWluL2FwaXYxYWxwaGEv",
+            "YWRtaW5wYjthZG1pbnBi6kFSCjJtYXJrZXRpbmdwbGF0Zm9ybWFkbWluLmdv",
+            "b2dsZWFwaXMuY29tL09yZ2FuaXphdGlvbhIcb3JnYW5pemF0aW9ucy97b3Jn",
+            "YW5pemF0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Analytics.Admin.V1Alpha.AudienceReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.ChannelGroupReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.EventCreateAndEditReflection.Descriptor, global::Google.Analytics.Admin.V1Alpha.ExpandedDataSetReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Alpha.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Alpha.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Alpha.ActorType), typeof(global::Google.Analytics.Admin.V1Alpha.ActionType), typeof(global::Google.Analytics.Admin.V1Alpha.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState), typeof(global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct), typeof(global::Google.Analytics.Admin.V1Alpha.LinkProposalState), typeof(global::Google.Analytics.Admin.V1Alpha.PropertyType), typeof(global::Google.Analytics.Admin.V1Alpha.CoarseValue), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -507,7 +510,7 @@ namespace Google.Analytics.Admin.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension), global::Google.Analytics.Admin.V1Alpha.CustomDimension.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "Scope", "DisallowAdsPersonalization" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomDimension.Types.DimensionScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric), global::Google.Analytics.Admin.V1Alpha.CustomMetric.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "MeasurementUnit", "Scope", "RestrictedMetricType" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MeasurementUnit), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope), typeof(global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.RestrictedMetricType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.CalculatedMetric), global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Parser, new[]{ "Name", "Description", "DisplayName", "CalculatedMetricId", "MetricUnit", "RestrictedMetricType", "Formula", "InvalidMetricReference" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.MetricUnit), typeof(global::Google.Analytics.Admin.V1Alpha.CalculatedMetric.Types.RestrictedMetricType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings), global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings), global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "UserDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings), global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Parser, new[]{ "Name", "AcquisitionConversionEventLookbackWindow", "OtherConversionEventLookbackWindow", "ReportingAttributionModel", "AdsWebConversionDataExportScope" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AcquisitionConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.OtherConversionEventLookbackWindow), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.ReportingAttributionModel), typeof(global::Google.Analytics.Admin.V1Alpha.AttributionSettings.Types.AdsWebConversionDataExportScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.AccessBinding), global::Google.Analytics.Admin.V1Alpha.AccessBinding.Parser, new[]{ "User", "Name", "Roles" }, new[]{ "AccessTarget" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Alpha.BigQueryLink), global::Google.Analytics.Admin.V1Alpha.BigQueryLink.Parser, new[]{ "Name", "Project", "CreateTime", "DailyExportEnabled", "StreamingExportEnabled", "FreshDailyExportEnabled", "IncludeAdvertisingId", "ExportStreams", "ExcludedEvents", "DatasetLocation" }, null, null, null, null),
@@ -910,7 +913,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// Types of Property resources.
+  /// Types of `Property` resources.
   /// </summary>
   public enum PropertyType {
     /// <summary>
@@ -918,15 +921,15 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Ordinary GA4 property
+    /// Ordinary Google Analytics property
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_ORDINARY")] Ordinary = 1,
     /// <summary>
-    /// GA4 subproperty
+    /// Google Analytics subproperty
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_SUBPROPERTY")] Subproperty = 2,
     /// <summary>
-    /// GA4 rollup property
+    /// Google Analytics rollup property
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_ROLLUP")] Rollup = 3,
   }
@@ -1419,7 +1422,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A resource message representing a Google Analytics GA4 property.
+  /// A resource message representing a Google Analytics property.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Property : pb::IMessage<Property>
@@ -3523,7 +3526,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Firebase project.
+  /// A link between a Google Analytics property and a Firebase project.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FirebaseLink : pb::IMessage<FirebaseLink>
@@ -4054,7 +4057,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Google Ads account.
+  /// A link between a Google Analytics property and a Google Ads account.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GoogleAdsLink : pb::IMessage<GoogleAdsLink>
@@ -4927,7 +4930,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
   /// <summary>
   /// A virtual resource representing an overview of an account and
-  /// all its child GA4 properties.
+  /// all its child Google Analytics properties.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccountSummary : pb::IMessage<AccountSummary>
@@ -5236,7 +5239,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A virtual resource representing metadata for a GA4 property.
+  /// A virtual resource representing metadata for a Google Analytics property.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertySummary : pb::IMessage<PropertySummary>
@@ -6910,7 +6913,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int EventNameFieldNumber = 1;
     private string eventName_ = "";
     /// <summary>
-    /// Required. Name of the GA4 event. It must always be set.
+    /// Required. Name of the Google Analytics event. It must always be set.
     /// The max allowed display name length is 40 UTF-16 code units.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9612,7 +9615,8 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Display &amp; Video 360 advertiser.
+  /// A link between a Google Analytics property and a Display &amp; Video 360
+  /// advertiser.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DisplayVideo360AdvertiserLink : pb::IMessage<DisplayVideo360AdvertiserLink>
@@ -9737,9 +9741,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     private bool? campaignDataSharingEnabled_;
     /// <summary>
     /// Immutable. Enables the import of campaign data from Display &amp; Video 360
-    /// into the GA4 property. After link creation, this can only be updated from
-    /// the Display &amp; Video 360 product. If this field is not set on create, it
-    /// will be defaulted to true.
+    /// into the Google Analytics property. After link creation, this can only be
+    /// updated from the Display &amp; Video 360 product. If this field is not set on
+    /// create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9757,10 +9761,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     private bool? costDataSharingEnabled_;
     /// <summary>
     /// Immutable. Enables the import of cost data from Display &amp; Video 360 into
-    /// the GA4 property. This can only be enabled if campaign_data_sharing_enabled
-    /// is enabled. After link creation, this can only be updated from the Display
-    /// &amp; Video 360 product. If this field is not set on create, it will be
-    /// defaulted to true.
+    /// the Google Analytics property. This can only be enabled if
+    /// `campaign_data_sharing_enabled` is true. After link creation, this can
+    /// only be updated from the Display &amp; Video 360 product. If this field is not
+    /// set on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10044,8 +10048,8 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A proposal for a link between a GA4 property and a Display &amp; Video 360
-  /// advertiser.
+  /// A proposal for a link between a Google Analytics property and a Display &amp;
+  /// Video 360 advertiser.
   ///
   /// A proposal is converted to a DisplayVideo360AdvertiserLink once approved.
   /// Google Analytics admins approve inbound proposals while Display &amp; Video 360
@@ -10572,7 +10576,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Search Ads 360 entity.
+  /// A link between a Google Analytics property and a Search Ads 360 entity.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SearchAds360Link : pb::IMessage<SearchAds360Link>
@@ -10665,9 +10669,9 @@ namespace Google.Analytics.Admin.V1Alpha {
     private bool? campaignDataSharingEnabled_;
     /// <summary>
     /// Immutable. Enables the import of campaign data from Search Ads 360 into the
-    /// GA4 property. After link creation, this can only be updated from the Search
-    /// Ads 360 product.
-    /// If this field is not set on create, it will be defaulted to true.
+    /// Google Analytics property. After link creation, this can only be updated
+    /// from the Search Ads 360 product. If this field is not set on create, it
+    /// will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10684,11 +10688,11 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::FieldCodec<bool?> _single_costDataSharingEnabled_codec = pb::FieldCodec.ForStructWrapper<bool>(34);
     private bool? costDataSharingEnabled_;
     /// <summary>
-    /// Immutable. Enables the import of cost data from Search Ads 360 to the GA4
-    /// property. This can only be enabled if campaign_data_sharing_enabled is
-    /// enabled. After link creation, this can only be updated from
-    /// the Search Ads 360 product.
-    /// If this field is not set on create, it will be defaulted to true.
+    /// Immutable. Enables the import of cost data from Search Ads 360 to the
+    /// Google Analytics property. This can only be enabled if
+    /// campaign_data_sharing_enabled is enabled. After link creation, this can
+    /// only be updated from the Search Ads 360 product. If this field is not set
+    /// on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14683,6 +14687,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public DataRetentionSettings(DataRetentionSettings other) : this() {
       name_ = other.name_;
       eventDataRetention_ = other.eventDataRetention_;
+      userDataRetention_ = other.userDataRetention_;
       resetUserDataOnNewActivity_ = other.resetUserDataOnNewActivity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -14713,7 +14718,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int EventDataRetentionFieldNumber = 2;
     private global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration eventDataRetention_ = global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified;
     /// <summary>
-    /// The length of time that event-level data is retained.
+    /// Required. The length of time that event-level data is retained.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14721,6 +14726,21 @@ namespace Google.Analytics.Admin.V1Alpha {
       get { return eventDataRetention_; }
       set {
         eventDataRetention_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_data_retention" field.</summary>
+    public const int UserDataRetentionFieldNumber = 4;
+    private global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration userDataRetention_ = global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified;
+    /// <summary>
+    /// Required. The length of time that user-level data is retained.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration UserDataRetention {
+      get { return userDataRetention_; }
+      set {
+        userDataRetention_ = value;
       }
     }
 
@@ -14757,6 +14777,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (Name != other.Name) return false;
       if (EventDataRetention != other.EventDataRetention) return false;
+      if (UserDataRetention != other.UserDataRetention) return false;
       if (ResetUserDataOnNewActivity != other.ResetUserDataOnNewActivity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -14767,6 +14788,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (EventDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) hash ^= EventDataRetention.GetHashCode();
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) hash ^= UserDataRetention.GetHashCode();
       if (ResetUserDataOnNewActivity != false) hash ^= ResetUserDataOnNewActivity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -14798,6 +14820,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(24);
         output.WriteBool(ResetUserDataOnNewActivity);
       }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) UserDataRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -14820,6 +14846,10 @@ namespace Google.Analytics.Admin.V1Alpha {
         output.WriteRawTag(24);
         output.WriteBool(ResetUserDataOnNewActivity);
       }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) UserDataRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -14835,6 +14865,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (EventDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventDataRetention);
+      }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserDataRetention);
       }
       if (ResetUserDataOnNewActivity != false) {
         size += 1 + 1;
@@ -14856,6 +14889,9 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
       if (other.EventDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
         EventDataRetention = other.EventDataRetention;
+      }
+      if (other.UserDataRetention != global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        UserDataRetention = other.UserDataRetention;
       }
       if (other.ResetUserDataOnNewActivity != false) {
         ResetUserDataOnNewActivity = other.ResetUserDataOnNewActivity;
@@ -14887,6 +14923,10 @@ namespace Google.Analytics.Admin.V1Alpha {
             ResetUserDataOnNewActivity = input.ReadBool();
             break;
           }
+          case 32: {
+            UserDataRetention = (global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -14912,6 +14952,10 @@ namespace Google.Analytics.Admin.V1Alpha {
           }
           case 24: {
             ResetUserDataOnNewActivity = input.ReadBool();
+            break;
+          }
+          case 32: {
+            UserDataRetention = (global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration) input.ReadEnum();
             break;
           }
         }
@@ -14942,17 +14986,17 @@ namespace Google.Analytics.Admin.V1Alpha {
         [pbr::OriginalName("FOURTEEN_MONTHS")] FourteenMonths = 3,
         /// <summary>
         /// The data retention time duration is 26 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("TWENTY_SIX_MONTHS")] TwentySixMonths = 4,
         /// <summary>
         /// The data retention time duration is 38 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("THIRTY_EIGHT_MONTHS")] ThirtyEightMonths = 5,
         /// <summary>
         /// The data retention time duration is 50 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("FIFTY_MONTHS")] FiftyMonths = 6,
       }
@@ -15768,7 +15812,7 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 Property and BigQuery project.
+  /// A link between a Google Analytics property and BigQuery project.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BigQueryLink : pb::IMessage<BigQueryLink>
@@ -17494,7 +17538,8 @@ namespace Google.Analytics.Admin.V1Alpha {
   }
 
   /// <summary>
-  /// A link between a GA4 Property and an AdSense for Content ad client.
+  /// A link between a Google Analytics property and an AdSense for Content ad
+  /// client.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdSenseLink : pb::IMessage<AdSenseLink>
@@ -17563,8 +17608,8 @@ namespace Google.Analytics.Admin.V1Alpha {
     public const int AdClientCodeFieldNumber = 2;
     private string adClientCode_ = "";
     /// <summary>
-    /// Immutable. The AdSense ad client code that the GA4 property is linked to.
-    /// Example format: "ca-pub-1234567890"
+    /// Immutable. The AdSense ad client code that the Google Analytics property is
+    /// linked to. Example format: "ca-pub-1234567890"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
