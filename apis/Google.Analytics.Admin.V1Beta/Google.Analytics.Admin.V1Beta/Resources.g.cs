@@ -198,51 +198,54 @@ namespace Google.Analytics.Admin.V1Beta {
             "Eg0KCUNPU1RfREFUQRABEhAKDFJFVkVOVUVfREFUQRACOmTqQWEKKmFuYWx5",
             "dGljc2FkbWluLmdvb2dsZWFwaXMuY29tL0N1c3RvbU1ldHJpYxIzcHJvcGVy",
             "dGllcy97cHJvcGVydHl9L2N1c3RvbU1ldHJpY3Mve2N1c3RvbV9tZXRyaWN9",
-            "IsEDChVEYXRhUmV0ZW50aW9uU2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID4EED",
-            "EmQKFGV2ZW50X2RhdGFfcmV0ZW50aW9uGAIgASgOMkYuZ29vZ2xlLmFuYWx5",
+            "IrAEChVEYXRhUmV0ZW50aW9uU2V0dGluZ3MSEQoEbmFtZRgBIAEoCUID4EED",
+            "EmkKFGV2ZW50X2RhdGFfcmV0ZW50aW9uGAIgASgOMkYuZ29vZ2xlLmFuYWx5",
             "dGljcy5hZG1pbi52MWJldGEuRGF0YVJldGVudGlvblNldHRpbmdzLlJldGVu",
-            "dGlvbkR1cmF0aW9uEicKH3Jlc2V0X3VzZXJfZGF0YV9vbl9uZXdfYWN0aXZp",
-            "dHkYAyABKAgingEKEVJldGVudGlvbkR1cmF0aW9uEiIKHlJFVEVOVElPTl9E",
-            "VVJBVElPTl9VTlNQRUNJRklFRBAAEg4KClRXT19NT05USFMQARITCg9GT1VS",
-            "VEVFTl9NT05USFMQAxIVChFUV0VOVFlfU0lYX01PTlRIUxAEEhcKE1RISVJU",
-            "WV9FSUdIVF9NT05USFMQBRIQCgxGSUZUWV9NT05USFMQBjpl6kFiCjNhbmFs",
-            "eXRpY3NhZG1pbi5nb29nbGVhcGlzLmNvbS9EYXRhUmV0ZW50aW9uU2V0dGlu",
-            "Z3MSK3Byb3BlcnRpZXMve3Byb3BlcnR5fS9kYXRhUmV0ZW50aW9uU2V0dGlu",
-            "Z3MqqgQKEEluZHVzdHJ5Q2F0ZWdvcnkSIQodSU5EVVNUUllfQ0FURUdPUllf",
-            "VU5TUEVDSUZJRUQQABIOCgpBVVRPTU9USVZFEAESIwofQlVTSU5FU1NfQU5E",
-            "X0lORFVTVFJJQUxfTUFSS0VUUxACEgsKB0ZJTkFOQ0UQAxIOCgpIRUFMVEhD",
-            "QVJFEAQSDgoKVEVDSE5PTE9HWRAFEgoKBlRSQVZFTBAGEgkKBU9USEVSEAcS",
-            "GgoWQVJUU19BTkRfRU5URVJUQUlOTUVOVBAIEhYKEkJFQVVUWV9BTkRfRklU",
-            "TkVTUxAJEhgKFEJPT0tTX0FORF9MSVRFUkFUVVJFEAoSEgoORk9PRF9BTkRf",
-            "RFJJTksQCxIJCgVHQU1FUxAMEhcKE0hPQkJJRVNfQU5EX0xFSVNVUkUQDRIT",
-            "Cg9IT01FX0FORF9HQVJERU4QDhIYChRJTlRFUk5FVF9BTkRfVEVMRUNPTRAP",
-            "EhYKEkxBV19BTkRfR09WRVJOTUVOVBAQEggKBE5FV1MQERIWChJPTkxJTkVf",
-            "Q09NTVVOSVRJRVMQEhIWChJQRU9QTEVfQU5EX1NPQ0lFVFkQExIUChBQRVRT",
-            "X0FORF9BTklNQUxTEBQSDwoLUkVBTF9FU1RBVEUQFRINCglSRUZFUkVOQ0UQ",
-            "FhILCgdTQ0lFTkNFEBcSCgoGU1BPUlRTEBgSFgoSSk9CU19BTkRfRURVQ0FU",
-            "SU9OEBkSDAoIU0hPUFBJTkcQGipmCgxTZXJ2aWNlTGV2ZWwSHQoZU0VSVklD",
-            "RV9MRVZFTF9VTlNQRUNJRklFRBAAEh0KGUdPT0dMRV9BTkFMWVRJQ1NfU1RB",
-            "TkRBUkQQARIYChRHT09HTEVfQU5BTFlUSUNTXzM2MBACKkoKCUFjdG9yVHlw",
-            "ZRIaChZBQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEVVNFUhABEgoKBlNZ",
-            "U1RFTRACEgsKB1NVUFBPUlQQAypQCgpBY3Rpb25UeXBlEhsKF0FDVElPTl9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASCwoHQ1JFQVRFRBABEgsKB1VQREFURUQQAhIL",
-            "CgdERUxFVEVEEAMq/wIKGUNoYW5nZUhpc3RvcnlSZXNvdXJjZVR5cGUSLAoo",
-            "Q0hBTkdFX0hJU1RPUllfUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEgsK",
-            "B0FDQ09VTlQQARIMCghQUk9QRVJUWRACEhEKDUZJUkVCQVNFX0xJTksQBhIT",
-            "Cg9HT09HTEVfQURTX0xJTksQBxIbChdHT09HTEVfU0lHTkFMU19TRVRUSU5H",
-            "UxAIEhQKEENPTlZFUlNJT05fRVZFTlQQCRIfChtNRUFTVVJFTUVOVF9QUk9U",
-            "T0NPTF9TRUNSRVQQChIbChdEQVRBX1JFVEVOVElPTl9TRVRUSU5HUxANEiUK",
-            "IURJU1BMQVlfVklERU9fMzYwX0FEVkVSVElTRVJfTElOSxAOEi4KKkRJU1BM",
-            "QVlfVklERU9fMzYwX0FEVkVSVElTRVJfTElOS19QUk9QT1NBTBAPEg8KC0RB",
-            "VEFfU1RSRUFNEBISGAoUQVRUUklCVVRJT05fU0VUVElOR1MQFCqCAQoMUHJv",
-            "cGVydHlUeXBlEh0KGVBST1BFUlRZX1RZUEVfVU5TUEVDSUZJRUQQABIaChZQ",
-            "Uk9QRVJUWV9UWVBFX09SRElOQVJZEAESHQoZUFJPUEVSVFlfVFlQRV9TVUJQ",
-            "Uk9QRVJUWRACEhgKFFBST1BFUlRZX1RZUEVfUk9MTFVQEANCyQEKIWNvbS5n",
-            "b29nbGUuYW5hbHl0aWNzLmFkbWluLnYxYmV0YUIOUmVzb3VyY2VzUHJvdG9Q",
-            "AVo9Y2xvdWQuZ29vZ2xlLmNvbS9nby9hbmFseXRpY3MvYWRtaW4vYXBpdjFi",
-            "ZXRhL2FkbWlucGI7YWRtaW5wYupBUgoybWFya2V0aW5ncGxhdGZvcm1hZG1p",
-            "bi5nb29nbGVhcGlzLmNvbS9Pcmdhbml6YXRpb24SHG9yZ2FuaXphdGlvbnMv",
-            "e29yZ2FuaXphdGlvbn1iBnByb3RvMw=="));
+            "dGlvbkR1cmF0aW9uQgPgQQISaAoTdXNlcl9kYXRhX3JldGVudGlvbhgEIAEo",
+            "DjJGLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRhLkRhdGFSZXRlbnRp",
+            "b25TZXR0aW5ncy5SZXRlbnRpb25EdXJhdGlvbkID4EECEicKH3Jlc2V0X3Vz",
+            "ZXJfZGF0YV9vbl9uZXdfYWN0aXZpdHkYAyABKAgingEKEVJldGVudGlvbkR1",
+            "cmF0aW9uEiIKHlJFVEVOVElPTl9EVVJBVElPTl9VTlNQRUNJRklFRBAAEg4K",
+            "ClRXT19NT05USFMQARITCg9GT1VSVEVFTl9NT05USFMQAxIVChFUV0VOVFlf",
+            "U0lYX01PTlRIUxAEEhcKE1RISVJUWV9FSUdIVF9NT05USFMQBRIQCgxGSUZU",
+            "WV9NT05USFMQBjpl6kFiCjNhbmFseXRpY3NhZG1pbi5nb29nbGVhcGlzLmNv",
+            "bS9EYXRhUmV0ZW50aW9uU2V0dGluZ3MSK3Byb3BlcnRpZXMve3Byb3BlcnR5",
+            "fS9kYXRhUmV0ZW50aW9uU2V0dGluZ3MqqgQKEEluZHVzdHJ5Q2F0ZWdvcnkS",
+            "IQodSU5EVVNUUllfQ0FURUdPUllfVU5TUEVDSUZJRUQQABIOCgpBVVRPTU9U",
+            "SVZFEAESIwofQlVTSU5FU1NfQU5EX0lORFVTVFJJQUxfTUFSS0VUUxACEgsK",
+            "B0ZJTkFOQ0UQAxIOCgpIRUFMVEhDQVJFEAQSDgoKVEVDSE5PTE9HWRAFEgoK",
+            "BlRSQVZFTBAGEgkKBU9USEVSEAcSGgoWQVJUU19BTkRfRU5URVJUQUlOTUVO",
+            "VBAIEhYKEkJFQVVUWV9BTkRfRklUTkVTUxAJEhgKFEJPT0tTX0FORF9MSVRF",
+            "UkFUVVJFEAoSEgoORk9PRF9BTkRfRFJJTksQCxIJCgVHQU1FUxAMEhcKE0hP",
+            "QkJJRVNfQU5EX0xFSVNVUkUQDRITCg9IT01FX0FORF9HQVJERU4QDhIYChRJ",
+            "TlRFUk5FVF9BTkRfVEVMRUNPTRAPEhYKEkxBV19BTkRfR09WRVJOTUVOVBAQ",
+            "EggKBE5FV1MQERIWChJPTkxJTkVfQ09NTVVOSVRJRVMQEhIWChJQRU9QTEVf",
+            "QU5EX1NPQ0lFVFkQExIUChBQRVRTX0FORF9BTklNQUxTEBQSDwoLUkVBTF9F",
+            "U1RBVEUQFRINCglSRUZFUkVOQ0UQFhILCgdTQ0lFTkNFEBcSCgoGU1BPUlRT",
+            "EBgSFgoSSk9CU19BTkRfRURVQ0FUSU9OEBkSDAoIU0hPUFBJTkcQGipmCgxT",
+            "ZXJ2aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJRklFRBAAEh0K",
+            "GUdPT0dMRV9BTkFMWVRJQ1NfU1RBTkRBUkQQARIYChRHT09HTEVfQU5BTFlU",
+            "SUNTXzM2MBACKkoKCUFjdG9yVHlwZRIaChZBQ1RPUl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASCAoEVVNFUhABEgoKBlNZU1RFTRACEgsKB1NVUFBPUlQQAypQCgpB",
+            "Y3Rpb25UeXBlEhsKF0FDVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ1JF",
+            "QVRFRBABEgsKB1VQREFURUQQAhILCgdERUxFVEVEEAMqqAMKGUNoYW5nZUhp",
+            "c3RvcnlSZXNvdXJjZVR5cGUSLAooQ0hBTkdFX0hJU1RPUllfUkVTT1VSQ0Vf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgsKB0FDQ09VTlQQARIMCghQUk9QRVJUWRAC",
+            "EhEKDUZJUkVCQVNFX0xJTksQBhITCg9HT09HTEVfQURTX0xJTksQBxIbChdH",
+            "T09HTEVfU0lHTkFMU19TRVRUSU5HUxAIEhQKEENPTlZFUlNJT05fRVZFTlQQ",
+            "CRIfChtNRUFTVVJFTUVOVF9QUk9UT0NPTF9TRUNSRVQQChIUChBDVVNUT01f",
+            "RElNRU5TSU9OEAsSEQoNQ1VTVE9NX01FVFJJQxAMEhsKF0RBVEFfUkVURU5U",
+            "SU9OX1NFVFRJTkdTEA0SJQohRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNF",
+            "Ul9MSU5LEA4SLgoqRElTUExBWV9WSURFT18zNjBfQURWRVJUSVNFUl9MSU5L",
+            "X1BST1BPU0FMEA8SDwoLREFUQV9TVFJFQU0QEhIYChRBVFRSSUJVVElPTl9T",
+            "RVRUSU5HUxAUKoIBCgxQcm9wZXJ0eVR5cGUSHQoZUFJPUEVSVFlfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEhoKFlBST1BFUlRZX1RZUEVfT1JESU5BUlkQARIdChlQ",
+            "Uk9QRVJUWV9UWVBFX1NVQlBST1BFUlRZEAISGAoUUFJPUEVSVFlfVFlQRV9S",
+            "T0xMVVAQA0LJAQohY29tLmdvb2dsZS5hbmFseXRpY3MuYWRtaW4udjFiZXRh",
+            "Qg5SZXNvdXJjZXNQcm90b1ABWj1jbG91ZC5nb29nbGUuY29tL2dvL2FuYWx5",
+            "dGljcy9hZG1pbi9hcGl2MWJldGEvYWRtaW5wYjthZG1pbnBi6kFSCjJtYXJr",
+            "ZXRpbmdwbGF0Zm9ybWFkbWluLmdvb2dsZWFwaXMuY29tL09yZ2FuaXphdGlv",
+            "bhIcb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Admin.V1Beta.IndustryCategory), typeof(global::Google.Analytics.Admin.V1Beta.ServiceLevel), typeof(global::Google.Analytics.Admin.V1Beta.ActorType), typeof(global::Google.Analytics.Admin.V1Beta.ActionType), typeof(global::Google.Analytics.Admin.V1Beta.ChangeHistoryResourceType), typeof(global::Google.Analytics.Admin.V1Beta.PropertyType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -263,7 +266,7 @@ namespace Google.Analytics.Admin.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.KeyEvent), global::Google.Analytics.Admin.V1Beta.KeyEvent.Parser, new[]{ "Name", "EventName", "CreateTime", "Deletable", "Custom", "CountingMethod", "DefaultValue" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.CountingMethod) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue), global::Google.Analytics.Admin.V1Beta.KeyEvent.Types.DefaultValue.Parser, new[]{ "NumericValue", "CurrencyCode" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.CustomDimension), global::Google.Analytics.Admin.V1Beta.CustomDimension.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "Scope", "DisallowAdsPersonalization" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.CustomDimension.Types.DimensionScope) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.CustomMetric), global::Google.Analytics.Admin.V1Beta.CustomMetric.Parser, new[]{ "Name", "ParameterName", "DisplayName", "Description", "MeasurementUnit", "Scope", "RestrictedMetricType" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.MeasurementUnit), typeof(global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.MetricScope), typeof(global::Google.Analytics.Admin.V1Beta.CustomMetric.Types.RestrictedMetricType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.DataRetentionSettings), global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Admin.V1Beta.DataRetentionSettings), global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Parser, new[]{ "Name", "EventDataRetention", "UserDataRetention", "ResetUserDataOnNewActivity" }, null, new[]{ typeof(global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration) }, null, null)
           }));
     }
     #endregion
@@ -484,6 +487,14 @@ namespace Google.Analytics.Admin.V1Beta {
     /// </summary>
     [pbr::OriginalName("MEASUREMENT_PROTOCOL_SECRET")] MeasurementProtocolSecret = 10,
     /// <summary>
+    /// CustomDimension resource
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_DIMENSION")] CustomDimension = 11,
+    /// <summary>
+    /// CustomMetric resource
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_METRIC")] CustomMetric = 12,
+    /// <summary>
     /// DataRetentionSettings resource
     /// </summary>
     [pbr::OriginalName("DATA_RETENTION_SETTINGS")] DataRetentionSettings = 13,
@@ -506,7 +517,7 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// Types of Property resources.
+  /// Types of `Property` resources.
   /// </summary>
   public enum PropertyType {
     /// <summary>
@@ -514,15 +525,15 @@ namespace Google.Analytics.Admin.V1Beta {
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Ordinary GA4 property
+    /// Ordinary Google Analytics property
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_ORDINARY")] Ordinary = 1,
     /// <summary>
-    /// GA4 subproperty
+    /// Google Analytics subproperty
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_SUBPROPERTY")] Subproperty = 2,
     /// <summary>
-    /// GA4 rollup property
+    /// Google Analytics rollup property
     /// </summary>
     [pbr::OriginalName("PROPERTY_TYPE_ROLLUP")] Rollup = 3,
   }
@@ -990,7 +1001,7 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// A resource message representing a Google Analytics GA4 property.
+  /// A resource message representing a Google Analytics property.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Property : pb::IMessage<Property>
@@ -3094,7 +3105,7 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Firebase project.
+  /// A link between a Google Analytics property and a Firebase project.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class FirebaseLink : pb::IMessage<FirebaseLink>
@@ -3385,7 +3396,7 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// A link between a GA4 property and a Google Ads account.
+  /// A link between a Google Analytics property and a Google Ads account.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GoogleAdsLink : pb::IMessage<GoogleAdsLink>
@@ -4258,7 +4269,7 @@ namespace Google.Analytics.Admin.V1Beta {
 
   /// <summary>
   /// A virtual resource representing an overview of an account and
-  /// all its child GA4 properties.
+  /// all its child Google Analytics properties.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AccountSummary : pb::IMessage<AccountSummary>
@@ -4567,7 +4578,7 @@ namespace Google.Analytics.Admin.V1Beta {
   }
 
   /// <summary>
-  /// A virtual resource representing metadata for a GA4 property.
+  /// A virtual resource representing metadata for a Google Analytics property.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PropertySummary : pb::IMessage<PropertySummary>
@@ -9062,6 +9073,7 @@ namespace Google.Analytics.Admin.V1Beta {
     public DataRetentionSettings(DataRetentionSettings other) : this() {
       name_ = other.name_;
       eventDataRetention_ = other.eventDataRetention_;
+      userDataRetention_ = other.userDataRetention_;
       resetUserDataOnNewActivity_ = other.resetUserDataOnNewActivity_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -9092,7 +9104,7 @@ namespace Google.Analytics.Admin.V1Beta {
     public const int EventDataRetentionFieldNumber = 2;
     private global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration eventDataRetention_ = global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified;
     /// <summary>
-    /// The length of time that event-level data is retained.
+    /// Required. The length of time that event-level data is retained.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9100,6 +9112,21 @@ namespace Google.Analytics.Admin.V1Beta {
       get { return eventDataRetention_; }
       set {
         eventDataRetention_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user_data_retention" field.</summary>
+    public const int UserDataRetentionFieldNumber = 4;
+    private global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration userDataRetention_ = global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified;
+    /// <summary>
+    /// Required. The length of time that user-level data is retained.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration UserDataRetention {
+      get { return userDataRetention_; }
+      set {
+        userDataRetention_ = value;
       }
     }
 
@@ -9136,6 +9163,7 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (Name != other.Name) return false;
       if (EventDataRetention != other.EventDataRetention) return false;
+      if (UserDataRetention != other.UserDataRetention) return false;
       if (ResetUserDataOnNewActivity != other.ResetUserDataOnNewActivity) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -9146,6 +9174,7 @@ namespace Google.Analytics.Admin.V1Beta {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (EventDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) hash ^= EventDataRetention.GetHashCode();
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) hash ^= UserDataRetention.GetHashCode();
       if (ResetUserDataOnNewActivity != false) hash ^= ResetUserDataOnNewActivity.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -9177,6 +9206,10 @@ namespace Google.Analytics.Admin.V1Beta {
         output.WriteRawTag(24);
         output.WriteBool(ResetUserDataOnNewActivity);
       }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) UserDataRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -9199,6 +9232,10 @@ namespace Google.Analytics.Admin.V1Beta {
         output.WriteRawTag(24);
         output.WriteBool(ResetUserDataOnNewActivity);
       }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) UserDataRetention);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -9214,6 +9251,9 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (EventDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventDataRetention);
+      }
+      if (UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserDataRetention);
       }
       if (ResetUserDataOnNewActivity != false) {
         size += 1 + 1;
@@ -9235,6 +9275,9 @@ namespace Google.Analytics.Admin.V1Beta {
       }
       if (other.EventDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
         EventDataRetention = other.EventDataRetention;
+      }
+      if (other.UserDataRetention != global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration.Unspecified) {
+        UserDataRetention = other.UserDataRetention;
       }
       if (other.ResetUserDataOnNewActivity != false) {
         ResetUserDataOnNewActivity = other.ResetUserDataOnNewActivity;
@@ -9266,6 +9309,10 @@ namespace Google.Analytics.Admin.V1Beta {
             ResetUserDataOnNewActivity = input.ReadBool();
             break;
           }
+          case 32: {
+            UserDataRetention = (global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -9291,6 +9338,10 @@ namespace Google.Analytics.Admin.V1Beta {
           }
           case 24: {
             ResetUserDataOnNewActivity = input.ReadBool();
+            break;
+          }
+          case 32: {
+            UserDataRetention = (global::Google.Analytics.Admin.V1Beta.DataRetentionSettings.Types.RetentionDuration) input.ReadEnum();
             break;
           }
         }
@@ -9321,17 +9372,17 @@ namespace Google.Analytics.Admin.V1Beta {
         [pbr::OriginalName("FOURTEEN_MONTHS")] FourteenMonths = 3,
         /// <summary>
         /// The data retention time duration is 26 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("TWENTY_SIX_MONTHS")] TwentySixMonths = 4,
         /// <summary>
         /// The data retention time duration is 38 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("THIRTY_EIGHT_MONTHS")] ThirtyEightMonths = 5,
         /// <summary>
         /// The data retention time duration is 50 months.
-        /// Available to 360 properties only.
+        /// Available to 360 properties only. Available for event data only.
         /// </summary>
         [pbr::OriginalName("FIFTY_MONTHS")] FiftyMonths = 6,
       }

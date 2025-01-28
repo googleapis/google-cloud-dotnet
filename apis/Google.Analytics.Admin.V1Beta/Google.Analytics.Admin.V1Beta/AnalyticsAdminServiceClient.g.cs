@@ -1346,7 +1346,7 @@ namespace Google.Analytics.Admin.V1Beta
 
     /// <summary>AnalyticsAdminService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// Service Interface for the Analytics Admin API (GA4).
+    /// Service Interface for the Google Analytics Admin API.
     /// </remarks>
     public abstract partial class AnalyticsAdminServiceClient
     {
@@ -1553,7 +1553,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Returns all accounts accessible by the caller.
         /// 
-        /// Note that these accounts might not currently have GA4 properties.
+        /// Note that these accounts might not currently have GA properties.
         /// Soft-deleted (ie: "trashed") accounts are excluded by default.
         /// Returns an empty list if no relevant accounts are found.
         /// </summary>
@@ -1566,7 +1566,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Returns all accounts accessible by the caller.
         /// 
-        /// Note that these accounts might not currently have GA4 properties.
+        /// Note that these accounts might not currently have GA properties.
         /// Soft-deleted (ie: "trashed") accounts are excluded by default.
         /// Returns an empty list if no relevant accounts are found.
         /// </summary>
@@ -1918,7 +1918,7 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1927,7 +1927,7 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1936,7 +1936,7 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1945,7 +1945,7 @@ namespace Google.Analytics.Admin.V1Beta
             GetPropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1961,7 +1961,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1977,7 +1977,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -1990,7 +1990,7 @@ namespace Google.Analytics.Admin.V1Beta
             GetPropertyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -2006,7 +2006,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -2022,7 +2022,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the property to lookup.
@@ -2037,7 +2037,6 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Returns child Properties under the specified parent Account.
         /// 
-        /// Only "GA4" properties will be returned.
         /// Properties will be excluded if the caller does not have access.
         /// Soft-deleted (ie: "trashed") properties are excluded by default.
         /// Returns an empty list if no relevant properties are found.
@@ -2051,7 +2050,6 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Returns child Properties under the specified parent Account.
         /// 
-        /// Only "GA4" properties will be returned.
         /// Properties will be excluded if the caller does not have access.
         /// Soft-deleted (ie: "trashed") properties are excluded by default.
         /// Returns an empty list if no relevant properties are found.
@@ -2063,7 +2061,8 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an "GA4" property with the specified location and attributes.
+        /// Creates a Google Analytics property with the specified location and
+        /// attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2072,7 +2071,8 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an "GA4" property with the specified location and attributes.
+        /// Creates a Google Analytics property with the specified location and
+        /// attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2081,7 +2081,8 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an "GA4" property with the specified location and attributes.
+        /// Creates a Google Analytics property with the specified location and
+        /// attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2090,7 +2091,8 @@ namespace Google.Analytics.Admin.V1Beta
             CreatePropertyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an "GA4" property with the specified location and attributes.
+        /// Creates a Google Analytics property with the specified location and
+        /// attributes.
         /// </summary>
         /// <param name="property">
         /// Required. The property to create.
@@ -2105,7 +2107,8 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates an "GA4" property with the specified location and attributes.
+        /// Creates a Google Analytics property with the specified location and
+        /// attributes.
         /// </summary>
         /// <param name="property">
         /// Required. The property to create.
@@ -2120,7 +2123,8 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Creates an "GA4" property with the specified location and attributes.
+        /// Creates a Google Analytics property with the specified location and
+        /// attributes.
         /// </summary>
         /// <param name="property">
         /// Required. The property to create.
@@ -2142,7 +2146,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2161,7 +2165,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2180,7 +2184,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2199,7 +2203,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2225,7 +2229,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2251,7 +2255,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2274,7 +2278,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2300,7 +2304,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -2326,7 +2330,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the Property to soft-delete.
@@ -3469,7 +3473,7 @@ namespace Google.Analytics.Admin.V1Beta
             GetDataSharingSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3478,7 +3482,7 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3487,7 +3491,7 @@ namespace Google.Analytics.Admin.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3496,7 +3500,7 @@ namespace Google.Analytics.Admin.V1Beta
             GetMeasurementProtocolSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
@@ -3512,7 +3516,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
@@ -3528,7 +3532,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
@@ -3541,7 +3545,7 @@ namespace Google.Analytics.Admin.V1Beta
             GetMeasurementProtocolSecretAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
@@ -3557,7 +3561,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
@@ -3573,7 +3577,7 @@ namespace Google.Analytics.Admin.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the measurement protocol secret to lookup.
@@ -4121,6 +4125,9 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Searches through all changes to an account or its children given the
         /// specified set of filters.
+        /// 
+        /// Only returns the subset of changes supported by the API. The UI may return
+        /// additional changes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4131,6 +4138,9 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Searches through all changes to an account or its children given the
         /// specified set of filters.
+        /// 
+        /// Only returns the subset of changes supported by the API. The UI may return
+        /// additional changes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7422,12 +7432,17 @@ namespace Google.Analytics.Admin.V1Beta
         /// only be requested on Google Analytics 360 properties. This method is only
         /// available to Administrators.
         /// 
-        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+        /// These data access records include GA UI Reporting, GA UI Explorations,
+        /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
         /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// 
+        /// To give your feedback on this API, complete the [Google Analytics Access
+        /// Reports
+        /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+        /// form.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7445,12 +7460,17 @@ namespace Google.Analytics.Admin.V1Beta
         /// only be requested on Google Analytics 360 properties. This method is only
         /// available to Administrators.
         /// 
-        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+        /// These data access records include GA UI Reporting, GA UI Explorations,
+        /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
         /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// 
+        /// To give your feedback on this API, complete the [Google Analytics Access
+        /// Reports
+        /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+        /// form.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7468,12 +7488,17 @@ namespace Google.Analytics.Admin.V1Beta
         /// only be requested on Google Analytics 360 properties. This method is only
         /// available to Administrators.
         /// 
-        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+        /// These data access records include GA UI Reporting, GA UI Explorations,
+        /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
         /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// 
+        /// To give your feedback on this API, complete the [Google Analytics Access
+        /// Reports
+        /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+        /// form.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -7484,7 +7509,7 @@ namespace Google.Analytics.Admin.V1Beta
 
     /// <summary>AnalyticsAdminService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// Service Interface for the Analytics Admin API (GA4).
+    /// Service Interface for the Google Analytics Admin API.
     /// </remarks>
     public sealed partial class AnalyticsAdminServiceClientImpl : AnalyticsAdminServiceClient
     {
@@ -8037,7 +8062,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Returns all accounts accessible by the caller.
         /// 
-        /// Note that these accounts might not currently have GA4 properties.
+        /// Note that these accounts might not currently have GA properties.
         /// Soft-deleted (ie: "trashed") accounts are excluded by default.
         /// Returns an empty list if no relevant accounts are found.
         /// </summary>
@@ -8053,7 +8078,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Returns all accounts accessible by the caller.
         /// 
-        /// Note that these accounts might not currently have GA4 properties.
+        /// Note that these accounts might not currently have GA properties.
         /// Soft-deleted (ie: "trashed") accounts are excluded by default.
         /// Returns an empty list if no relevant accounts are found.
         /// </summary>
@@ -8183,7 +8208,7 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8195,7 +8220,7 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
-        /// Lookup for a single "GA4" Property.
+        /// Lookup for a single GA Property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8209,7 +8234,6 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Returns child Properties under the specified parent Account.
         /// 
-        /// Only "GA4" properties will be returned.
         /// Properties will be excluded if the caller does not have access.
         /// Soft-deleted (ie: "trashed") properties are excluded by default.
         /// Returns an empty list if no relevant properties are found.
@@ -8226,7 +8250,6 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Returns child Properties under the specified parent Account.
         /// 
-        /// Only "GA4" properties will be returned.
         /// Properties will be excluded if the caller does not have access.
         /// Soft-deleted (ie: "trashed") properties are excluded by default.
         /// Returns an empty list if no relevant properties are found.
@@ -8241,7 +8264,8 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
-        /// Creates an "GA4" property with the specified location and attributes.
+        /// Creates a Google Analytics property with the specified location and
+        /// attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8253,7 +8277,8 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
-        /// Creates an "GA4" property with the specified location and attributes.
+        /// Creates a Google Analytics property with the specified location and
+        /// attributes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8275,7 +8300,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8297,7 +8322,7 @@ namespace Google.Analytics.Admin.V1Beta
         /// will be permanently purged.
         /// https://support.google.com/analytics/answer/6154772
         /// 
-        /// Returns an error if the target is not found, or is not a GA4 Property.
+        /// Returns an error if the target is not found.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8533,7 +8558,7 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8545,7 +8570,7 @@ namespace Google.Analytics.Admin.V1Beta
         }
 
         /// <summary>
-        /// Lookup for a single "GA4" MeasurementProtocolSecret.
+        /// Lookup for a single MeasurementProtocolSecret.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8689,6 +8714,9 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Searches through all changes to an account or its children given the
         /// specified set of filters.
+        /// 
+        /// Only returns the subset of changes supported by the API. The UI may return
+        /// additional changes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8702,6 +8730,9 @@ namespace Google.Analytics.Admin.V1Beta
         /// <summary>
         /// Searches through all changes to an account or its children given the
         /// specified set of filters.
+        /// 
+        /// Only returns the subset of changes supported by the API. The UI may return
+        /// additional changes.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9396,12 +9427,17 @@ namespace Google.Analytics.Admin.V1Beta
         /// only be requested on Google Analytics 360 properties. This method is only
         /// available to Administrators.
         /// 
-        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+        /// These data access records include GA UI Reporting, GA UI Explorations,
+        /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
         /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// 
+        /// To give your feedback on this API, complete the [Google Analytics Access
+        /// Reports
+        /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+        /// form.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9422,12 +9458,17 @@ namespace Google.Analytics.Admin.V1Beta
         /// only be requested on Google Analytics 360 properties. This method is only
         /// available to Administrators.
         /// 
-        /// These data access records include GA4 UI Reporting, GA4 UI Explorations,
-        /// GA4 Data API, and other products like Firebase &amp; Admob that can retrieve
+        /// These data access records include GA UI Reporting, GA UI Explorations,
+        /// GA Data API, and other products like Firebase &amp; Admob that can retrieve
         /// data from Google Analytics through a linkage. These records don't include
         /// property configuration changes like adding a stream or changing a
         /// property's time zone. For configuration change history, see
         /// [searchChangeHistoryEvents](https://developers.google.com/analytics/devguides/config/admin/v1/rest/v1alpha/accounts/searchChangeHistoryEvents).
+        /// 
+        /// To give your feedback on this API, complete the [Google Analytics Access
+        /// Reports
+        /// feedback](https://docs.google.com/forms/d/e/1FAIpQLSdmEBUrMzAEdiEKk5TV5dEHvDUZDRlgWYdQdAeSdtR4hVjEhw/viewform)
+        /// form.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
