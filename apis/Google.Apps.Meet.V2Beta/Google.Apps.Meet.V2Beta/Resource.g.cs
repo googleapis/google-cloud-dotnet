@@ -35,88 +35,141 @@ namespace Google.Apps.Meet.V2Beta {
             "ZW5jZTou6kErChltZWV0Lmdvb2dsZWFwaXMuY29tL1NwYWNlEg5zcGFjZXMv",
             "e3NwYWNlfSJbChBBY3RpdmVDb25mZXJlbmNlEkcKEWNvbmZlcmVuY2VfcmVj",
             "b3JkGAEgASgJQizgQQP6QSYKJG1lZXQuZ29vZ2xlYXBpcy5jb20vQ29uZmVy",
-            "ZW5jZVJlY29yZCLPAgoLU3BhY2VDb25maWcSRAoLYWNjZXNzX3R5cGUYASAB",
+            "ZW5jZVJlY29yZCL7EQoLU3BhY2VDb25maWcSRAoLYWNjZXNzX3R5cGUYASAB",
             "KA4yLy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNvbmZpZy5BY2Nl",
             "c3NUeXBlElEKEmVudHJ5X3BvaW50X2FjY2VzcxgCIAEoDjI1Lmdvb2dsZS5h",
-            "cHBzLm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnLkVudHJ5UG9pbnRBY2Nlc3Mi",
-            "UAoKQWNjZXNzVHlwZRIbChdBQ0NFU1NfVFlQRV9VTlNQRUNJRklFRBAAEggK",
-            "BE9QRU4QARILCgdUUlVTVEVEEAISDgoKUkVTVFJJQ1RFRBADIlUKEEVudHJ5",
-            "UG9pbnRBY2Nlc3MSIgoeRU5UUllfUE9JTlRfQUNDRVNTX1VOU1BFQ0lGSUVE",
-            "EAASBwoDQUxMEAESFAoQQ1JFQVRPUl9BUFBfT05MWRACIuwCChBDb25mZXJl",
-            "bmNlUmVjb3JkEhEKBG5hbWUYASABKAlCA+BBCBIzCgpzdGFydF90aW1lGAIg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90",
-            "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
-            "C2V4cGlyZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEjAKBXNwYWNlGAUgASgJQiHgQQP6QRsKGW1lZXQuZ29vZ2xlYXBp",
-            "cy5jb20vU3BhY2U6depBcgokbWVldC5nb29nbGVhcGlzLmNvbS9Db25mZXJl",
-            "bmNlUmVjb3JkEiVjb25mZXJlbmNlUmVjb3Jkcy97Y29uZmVyZW5jZV9yZWNv",
-            "cmR9KhFjb25mZXJlbmNlUmVjb3JkczIQY29uZmVyZW5jZVJlY29yZCLgAwoL",
-            "UGFydGljaXBhbnQSPgoNc2lnbmVkaW5fdXNlchgEIAEoCzIlLmdvb2dsZS5h",
-            "cHBzLm1lZXQudjJiZXRhLlNpZ25lZGluVXNlckgAEkAKDmFub255bW91c191",
-            "c2VyGAUgASgLMiYuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuQW5vbnltb3Vz",
-            "VXNlckgAEjgKCnBob25lX3VzZXIYBiABKAsyIi5nb29nbGUuYXBwcy5tZWV0",
-            "LnYyYmV0YS5QaG9uZVVzZXJIABIRCgRuYW1lGAEgASgJQgPgQQMSPAoTZWFy",
-            "bGllc3Rfc3RhcnRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxI4Cg9sYXRlc3RfZW5kX3RpbWUYCCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQM6gQHqQX4KH21lZXQuZ29vZ2xlYXBp",
-            "cy5jb20vUGFydGljaXBhbnQSQGNvbmZlcmVuY2VSZWNvcmRzL3tjb25mZXJl",
-            "bmNlX3JlY29yZH0vcGFydGljaXBhbnRzL3twYXJ0aWNpcGFudH0qDHBhcnRp",
-            "Y2lwYW50czILcGFydGljaXBhbnRCBgoEdXNlciLTAgoSUGFydGljaXBhbnRT",
-            "ZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBCBIzCgpzdGFydF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOsEB6kG9",
-            "AQombWVldC5nb29nbGVhcGlzLmNvbS9QYXJ0aWNpcGFudFNlc3Npb24SamNv",
-            "bmZlcmVuY2VSZWNvcmRzL3tjb25mZXJlbmNlX3JlY29yZH0vcGFydGljaXBh",
-            "bnRzL3twYXJ0aWNpcGFudH0vcGFydGljaXBhbnRTZXNzaW9ucy97cGFydGlj",
-            "aXBhbnRfc2Vzc2lvbn0qE3BhcnRpY2lwYW50U2Vzc2lvbnMyEnBhcnRpY2lw",
-            "YW50U2Vzc2lvbiI8CgxTaWduZWRpblVzZXISEQoEdXNlchgBIAEoCUID4EED",
-            "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEDIioKDUFub255bW91c1VzZXIS",
-            "GQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQMiJgoJUGhvbmVVc2VyEhkKDGRp",
-            "c3BsYXlfbmFtZRgBIAEoCUID4EEDIuUDCglSZWNvcmRpbmcSSwoRZHJpdmVf",
-            "ZGVzdGluYXRpb24YBiABKAsyKS5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5E",
-            "cml2ZURlc3RpbmF0aW9uQgPgQQNIABIRCgRuYW1lGAEgASgJQgPgQQMSPAoF",
-            "c3RhdGUYAyABKA4yKC5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5SZWNvcmRp",
-            "bmcuU3RhdGVCA+BBAxIzCgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAUgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIkoKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASCwoHU1RBUlRFRBABEgkKBUVOREVEEAISEgoORklM",
-            "RV9HRU5FUkFURUQQAzp36kF0Ch1tZWV0Lmdvb2dsZWFwaXMuY29tL1JlY29y",
-            "ZGluZxI8Y29uZmVyZW5jZVJlY29yZHMve2NvbmZlcmVuY2VfcmVjb3JkfS9y",
-            "ZWNvcmRpbmdzL3tyZWNvcmRpbmd9KgpyZWNvcmRpbmdzMglyZWNvcmRpbmdC",
-            "DQoLZGVzdGluYXRpb24iPgoQRHJpdmVEZXN0aW5hdGlvbhIRCgRmaWxlGAEg",
-            "ASgJQgPgQQMSFwoKZXhwb3J0X3VyaRgCIAEoCUID4EEDIuoDCgpUcmFuc2Ny",
-            "aXB0EkkKEGRvY3NfZGVzdGluYXRpb24YBiABKAsyKC5nb29nbGUuYXBwcy5t",
-            "ZWV0LnYyYmV0YS5Eb2NzRGVzdGluYXRpb25CA+BBA0gAEhEKBG5hbWUYASAB",
-            "KAlCA+BBAxI9CgVzdGF0ZRgDIAEoDjIpLmdvb2dsZS5hcHBzLm1lZXQudjJi",
-            "ZXRhLlRyYW5zY3JpcHQuU3RhdGVCA+BBAxIzCgpzdGFydF90aW1lGAQgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1l",
-            "GAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIkoKBVN0",
-            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHU1RBUlRFRBABEgkKBUVO",
-            "REVEEAISEgoORklMRV9HRU5FUkFURUQQAzp86kF5Ch5tZWV0Lmdvb2dsZWFw",
-            "aXMuY29tL1RyYW5zY3JpcHQSPmNvbmZlcmVuY2VSZWNvcmRzL3tjb25mZXJl",
-            "bmNlX3JlY29yZH0vdHJhbnNjcmlwdHMve3RyYW5zY3JpcHR9Kgt0cmFuc2Ny",
-            "aXB0czIKdHJhbnNjcmlwdEINCgtkZXN0aW5hdGlvbiJBCg9Eb2NzRGVzdGlu",
-            "YXRpb24SFQoIZG9jdW1lbnQYASABKAlCA+BBAxIXCgpleHBvcnRfdXJpGAIg",
-            "ASgJQgPgQQMimQMKD1RyYW5zY3JpcHRFbnRyeRIRCgRuYW1lGAEgASgJQgPg",
-            "QQMSPAoLcGFydGljaXBhbnQYAiABKAlCJ+BBA/pBIQofbWVldC5nb29nbGVh",
-            "cGlzLmNvbS9QYXJ0aWNpcGFudBIRCgR0ZXh0GAMgASgJQgPgQQMSGgoNbGFu",
-            "Z3VhZ2VfY29kZRgEIAEoCUID4EEDEjMKCnN0YXJ0X3RpbWUYBSABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYBiAB",
-            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6nQHqQZkBCiNt",
-            "ZWV0Lmdvb2dsZWFwaXMuY29tL1RyYW5zY3JpcHRFbnRyeRJOY29uZmVyZW5j",
-            "ZVJlY29yZHMve2NvbmZlcmVuY2VfcmVjb3JkfS90cmFuc2NyaXB0cy97dHJh",
-            "bnNjcmlwdH0vZW50cmllcy97ZW50cnl9KhF0cmFuc2NyaXB0RW50cmllczIP",
-            "dHJhbnNjcmlwdEVudHJ5QrYBChtjb20uZ29vZ2xlLmFwcHMubWVldC52MmJl",
-            "dGFCDVJlc291cmNlUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9hcHBz",
-            "L21lZXQvYXBpdjJiZXRhL21lZXRwYjttZWV0cGKqAhdHb29nbGUuQXBwcy5N",
-            "ZWV0LlYyQmV0YcoCF0dvb2dsZVxBcHBzXE1lZXRcVjJiZXRh6gIaR29vZ2xl",
-            "OjpBcHBzOjpNZWV0OjpWMmJldGFiBnByb3RvMw=="));
+            "cHBzLm1lZXQudjJiZXRhLlNwYWNlQ29uZmlnLkVudHJ5UG9pbnRBY2Nlc3MS",
+            "QwoKbW9kZXJhdGlvbhgDIAEoDjIvLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRh",
+            "LlNwYWNlQ29uZmlnLk1vZGVyYXRpb24SXAoXbW9kZXJhdGlvbl9yZXN0cmlj",
+            "dGlvbnMYBCABKAsyOy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNv",
+            "bmZpZy5Nb2RlcmF0aW9uUmVzdHJpY3Rpb25zEm4KIWF0dGVuZGFuY2VfcmVw",
+            "b3J0X2dlbmVyYXRpb25fdHlwZRgGIAEoDjJDLmdvb2dsZS5hcHBzLm1lZXQu",
+            "djJiZXRhLlNwYWNlQ29uZmlnLkF0dGVuZGFuY2VSZXBvcnRHZW5lcmF0aW9u",
+            "VHlwZRJMCg9hcnRpZmFjdF9jb25maWcYByABKAsyMy5nb29nbGUuYXBwcy5t",
+            "ZWV0LnYyYmV0YS5TcGFjZUNvbmZpZy5BcnRpZmFjdENvbmZpZxqABQoWTW9k",
+            "ZXJhdGlvblJlc3RyaWN0aW9ucxJlChBjaGF0X3Jlc3RyaWN0aW9uGAEgASgO",
+            "MksuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuU3BhY2VDb25maWcuTW9kZXJh",
+            "dGlvblJlc3RyaWN0aW9ucy5SZXN0cmljdGlvblR5cGUSaQoUcmVhY3Rpb25f",
+            "cmVzdHJpY3Rpb24YAiABKA4ySy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5T",
+            "cGFjZUNvbmZpZy5Nb2RlcmF0aW9uUmVzdHJpY3Rpb25zLlJlc3RyaWN0aW9u",
+            "VHlwZRJoChNwcmVzZW50X3Jlc3RyaWN0aW9uGAMgASgOMksuZ29vZ2xlLmFw",
+            "cHMubWVldC52MmJldGEuU3BhY2VDb25maWcuTW9kZXJhdGlvblJlc3RyaWN0",
+            "aW9ucy5SZXN0cmljdGlvblR5cGUSeAobZGVmYXVsdF9qb2luX2FzX3ZpZXdl",
+            "cl90eXBlGAQgASgOMlMuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuU3BhY2VD",
+            "b25maWcuTW9kZXJhdGlvblJlc3RyaWN0aW9ucy5EZWZhdWx0Sm9pbkFzVmll",
+            "d2VyVHlwZSJXCg9SZXN0cmljdGlvblR5cGUSIAocUkVTVFJJQ1RJT05fVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEg4KCkhPU1RTX09OTFkQARISCg5OT19SRVNUUklD",
+            "VElPThACIlcKF0RlZmF1bHRKb2luQXNWaWV3ZXJUeXBlEisKJ0RFRkFVTFRf",
+            "Sk9JTl9BU19WSUVXRVJfVFlQRV9VTlNQRUNJRklFRBAAEgYKAk9OEAESBwoD",
+            "T0ZGEAIaiwYKDkFydGlmYWN0Q29uZmlnEl0KEHJlY29yZGluZ19jb25maWcY",
+            "ASABKAsyQy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNvbmZpZy5B",
+            "cnRpZmFjdENvbmZpZy5SZWNvcmRpbmdDb25maWcSZQoUdHJhbnNjcmlwdGlv",
+            "bl9jb25maWcYAiABKAsyRy5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFj",
+            "ZUNvbmZpZy5BcnRpZmFjdENvbmZpZy5UcmFuc2NyaXB0aW9uQ29uZmlnEmAK",
+            "EnNtYXJ0X25vdGVzX2NvbmZpZxgDIAEoCzJELmdvb2dsZS5hcHBzLm1lZXQu",
+            "djJiZXRhLlNwYWNlQ29uZmlnLkFydGlmYWN0Q29uZmlnLlNtYXJ0Tm90ZXND",
+            "b25maWcafAoPUmVjb3JkaW5nQ29uZmlnEmkKGWF1dG9fcmVjb3JkaW5nX2dl",
+            "bmVyYXRpb24YAiABKA4yRi5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFj",
+            "ZUNvbmZpZy5BcnRpZmFjdENvbmZpZy5BdXRvR2VuZXJhdGlvblR5cGUahAEK",
+            "E1RyYW5zY3JpcHRpb25Db25maWcSbQodYXV0b190cmFuc2NyaXB0aW9uX2dl",
+            "bmVyYXRpb24YAiABKA4yRi5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFj",
+            "ZUNvbmZpZy5BcnRpZmFjdENvbmZpZy5BdXRvR2VuZXJhdGlvblR5cGUafwoQ",
+            "U21hcnROb3Rlc0NvbmZpZxJrChthdXRvX3NtYXJ0X25vdGVzX2dlbmVyYXRp",
+            "b24YAiABKA4yRi5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5TcGFjZUNvbmZp",
+            "Zy5BcnRpZmFjdENvbmZpZy5BdXRvR2VuZXJhdGlvblR5cGUiSwoSQXV0b0dl",
+            "bmVyYXRpb25UeXBlEiQKIEFVVE9fR0VORVJBVElPTl9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASBgoCT04QARIHCgNPRkYQAiJQCgpBY2Nlc3NUeXBlEhsKF0FDQ0VT",
+            "U19UWVBFX1VOU1BFQ0lGSUVEEAASCAoET1BFThABEgsKB1RSVVNURUQQAhIO",
+            "CgpSRVNUUklDVEVEEAMiVQoQRW50cnlQb2ludEFjY2VzcxIiCh5FTlRSWV9Q",
+            "T0lOVF9BQ0NFU1NfVU5TUEVDSUZJRUQQABIHCgNBTEwQARIUChBDUkVBVE9S",
+            "X0FQUF9PTkxZEAIiOQoKTW9kZXJhdGlvbhIaChZNT0RFUkFUSU9OX1VOU1BF",
+            "Q0lGSUVEEAASBwoDT0ZGEAESBgoCT04QAiJ9Ch5BdHRlbmRhbmNlUmVwb3J0",
+            "R2VuZXJhdGlvblR5cGUSMQotQVRURU5EQU5DRV9SRVBPUlRfR0VORVJBVElP",
+            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPR0VORVJBVEVfUkVQT1JUEAESEwoP",
+            "RE9fTk9UX0dFTkVSQVRFEAIi6QEKBk1lbWJlchIRCgRuYW1lGAEgASgJQgPg",
+            "QQgSDQoFZW1haWwYAiABKAkSMgoEcm9sZRgDIAEoDjIkLmdvb2dsZS5hcHBz",
+            "Lm1lZXQudjJiZXRhLk1lbWJlci5Sb2xlEgwKBHVzZXIYBCABKAkiKAoEUm9s",
+            "ZRIUChBST0xFX1VOU1BFQ0lGSUVEEAASCgoGQ09IT1NUEAE6UepBTgoabWVl",
+            "dC5nb29nbGVhcGlzLmNvbS9NZW1iZXISH3NwYWNlcy97c3BhY2V9L21lbWJl",
+            "cnMve21lbWJlcn0qB21lbWJlcnMyBm1lbWJlciLsAgoQQ29uZmVyZW5jZVJl",
+            "Y29yZBIRCgRuYW1lGAEgASgJQgPgQQgSMwoKc3RhcnRfdGltZRgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtleHBp",
+            "cmVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxIwCgVzcGFjZRgFIAEoCUIh4EED+kEbChltZWV0Lmdvb2dsZWFwaXMuY29t",
+            "L1NwYWNlOnXqQXIKJG1lZXQuZ29vZ2xlYXBpcy5jb20vQ29uZmVyZW5jZVJl",
+            "Y29yZBIlY29uZmVyZW5jZVJlY29yZHMve2NvbmZlcmVuY2VfcmVjb3JkfSoR",
+            "Y29uZmVyZW5jZVJlY29yZHMyEGNvbmZlcmVuY2VSZWNvcmQi4AMKC1BhcnRp",
+            "Y2lwYW50Ej4KDXNpZ25lZGluX3VzZXIYBCABKAsyJS5nb29nbGUuYXBwcy5t",
+            "ZWV0LnYyYmV0YS5TaWduZWRpblVzZXJIABJACg5hbm9ueW1vdXNfdXNlchgF",
+            "IAEoCzImLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRhLkFub255bW91c1VzZXJI",
+            "ABI4CgpwaG9uZV91c2VyGAYgASgLMiIuZ29vZ2xlLmFwcHMubWVldC52MmJl",
+            "dGEuUGhvbmVVc2VySAASEQoEbmFtZRgBIAEoCUID4EEDEjwKE2VhcmxpZXN0",
+            "X3N0YXJ0X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSOAoPbGF0ZXN0X2VuZF90aW1lGAggASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDOoEB6kF+Ch9tZWV0Lmdvb2dsZWFwaXMuY29t",
+            "L1BhcnRpY2lwYW50EkBjb25mZXJlbmNlUmVjb3Jkcy97Y29uZmVyZW5jZV9y",
+            "ZWNvcmR9L3BhcnRpY2lwYW50cy97cGFydGljaXBhbnR9KgxwYXJ0aWNpcGFu",
+            "dHMyC3BhcnRpY2lwYW50QgYKBHVzZXIi0wIKElBhcnRpY2lwYW50U2Vzc2lv",
+            "bhIRCgRuYW1lGAEgASgJQgPgQQgSMwoKc3RhcnRfdGltZRgCIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgDIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAzrBAepBvQEKJm1l",
+            "ZXQuZ29vZ2xlYXBpcy5jb20vUGFydGljaXBhbnRTZXNzaW9uEmpjb25mZXJl",
+            "bmNlUmVjb3Jkcy97Y29uZmVyZW5jZV9yZWNvcmR9L3BhcnRpY2lwYW50cy97",
+            "cGFydGljaXBhbnR9L3BhcnRpY2lwYW50U2Vzc2lvbnMve3BhcnRpY2lwYW50",
+            "X3Nlc3Npb259KhNwYXJ0aWNpcGFudFNlc3Npb25zMhJwYXJ0aWNpcGFudFNl",
+            "c3Npb24iPAoMU2lnbmVkaW5Vc2VyEhEKBHVzZXIYASABKAlCA+BBAxIZCgxk",
+            "aXNwbGF5X25hbWUYAiABKAlCA+BBAyIqCg1Bbm9ueW1vdXNVc2VyEhkKDGRp",
+            "c3BsYXlfbmFtZRgBIAEoCUID4EEDIiYKCVBob25lVXNlchIZCgxkaXNwbGF5",
+            "X25hbWUYASABKAlCA+BBAyLlAwoJUmVjb3JkaW5nEksKEWRyaXZlX2Rlc3Rp",
+            "bmF0aW9uGAYgASgLMikuZ29vZ2xlLmFwcHMubWVldC52MmJldGEuRHJpdmVE",
+            "ZXN0aW5hdGlvbkID4EEDSAASEQoEbmFtZRgBIAEoCUID4EEDEjwKBXN0YXRl",
+            "GAMgASgOMiguZ29vZ2xlLmFwcHMubWVldC52MmJldGEuUmVjb3JkaW5nLlN0",
+            "YXRlQgPgQQMSMwoKc3RhcnRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJKCgVTdGF0ZRIVChFTVEFURV9VTlNQ",
+            "RUNJRklFRBAAEgsKB1NUQVJURUQQARIJCgVFTkRFRBACEhIKDkZJTEVfR0VO",
+            "RVJBVEVEEAM6d+pBdAodbWVldC5nb29nbGVhcGlzLmNvbS9SZWNvcmRpbmcS",
+            "PGNvbmZlcmVuY2VSZWNvcmRzL3tjb25mZXJlbmNlX3JlY29yZH0vcmVjb3Jk",
+            "aW5ncy97cmVjb3JkaW5nfSoKcmVjb3JkaW5nczIJcmVjb3JkaW5nQg0KC2Rl",
+            "c3RpbmF0aW9uIj4KEERyaXZlRGVzdGluYXRpb24SEQoEZmlsZRgBIAEoCUID",
+            "4EEDEhcKCmV4cG9ydF91cmkYAiABKAlCA+BBAyLqAwoKVHJhbnNjcmlwdBJJ",
+            "ChBkb2NzX2Rlc3RpbmF0aW9uGAYgASgLMiguZ29vZ2xlLmFwcHMubWVldC52",
+            "MmJldGEuRG9jc0Rlc3RpbmF0aW9uQgPgQQNIABIRCgRuYW1lGAEgASgJQgPg",
+            "QQMSPQoFc3RhdGUYAyABKA4yKS5nb29nbGUuYXBwcy5tZWV0LnYyYmV0YS5U",
+            "cmFuc2NyaXB0LlN0YXRlQgPgQQMSMwoKc3RhcnRfdGltZRgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgFIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJKCgVTdGF0ZRIV",
+            "ChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1NUQVJURUQQARIJCgVFTkRFRBAC",
+            "EhIKDkZJTEVfR0VORVJBVEVEEAM6fOpBeQoebWVldC5nb29nbGVhcGlzLmNv",
+            "bS9UcmFuc2NyaXB0Ej5jb25mZXJlbmNlUmVjb3Jkcy97Y29uZmVyZW5jZV9y",
+            "ZWNvcmR9L3RyYW5zY3JpcHRzL3t0cmFuc2NyaXB0fSoLdHJhbnNjcmlwdHMy",
+            "CnRyYW5zY3JpcHRCDQoLZGVzdGluYXRpb24iQQoPRG9jc0Rlc3RpbmF0aW9u",
+            "EhUKCGRvY3VtZW50GAEgASgJQgPgQQMSFwoKZXhwb3J0X3VyaRgCIAEoCUID",
+            "4EEDIpkDCg9UcmFuc2NyaXB0RW50cnkSEQoEbmFtZRgBIAEoCUID4EEDEjwK",
+            "C3BhcnRpY2lwYW50GAIgASgJQifgQQP6QSEKH21lZXQuZ29vZ2xlYXBpcy5j",
+            "b20vUGFydGljaXBhbnQSEQoEdGV4dBgDIAEoCUID4EEDEhoKDWxhbmd1YWdl",
+            "X2NvZGUYBCABKAlCA+BBAxIzCgpzdGFydF90aW1lGAUgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAYgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDOp0B6kGZAQojbWVldC5n",
+            "b29nbGVhcGlzLmNvbS9UcmFuc2NyaXB0RW50cnkSTmNvbmZlcmVuY2VSZWNv",
+            "cmRzL3tjb25mZXJlbmNlX3JlY29yZH0vdHJhbnNjcmlwdHMve3RyYW5zY3Jp",
+            "cHR9L2VudHJpZXMve2VudHJ5fSoRdHJhbnNjcmlwdEVudHJpZXMyD3RyYW5z",
+            "Y3JpcHRFbnRyeUK2AQobY29tLmdvb2dsZS5hcHBzLm1lZXQudjJiZXRhQg1S",
+            "ZXNvdXJjZVByb3RvUAFaNWNsb3VkLmdvb2dsZS5jb20vZ28vYXBwcy9tZWV0",
+            "L2FwaXYyYmV0YS9tZWV0cGI7bWVldHBiqgIXR29vZ2xlLkFwcHMuTWVldC5W",
+            "MkJldGHKAhdHb29nbGVcQXBwc1xNZWV0XFYyYmV0YeoCGkdvb2dsZTo6QXBw",
+            "czo6TWVldDo6VjJiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Space), global::Google.Apps.Meet.V2Beta.Space.Parser, new[]{ "Name", "MeetingUri", "MeetingCode", "Config", "ActiveConference" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.ActiveConference), global::Google.Apps.Meet.V2Beta.ActiveConference.Parser, new[]{ "ConferenceRecord" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Parser, new[]{ "AccessType", "EntryPointAccess" }, null, new[]{ typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AccessType), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.EntryPointAccess) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Parser, new[]{ "AccessType", "EntryPointAccess", "Moderation", "ModerationRestrictions", "AttendanceReportGenerationType", "ArtifactConfig" }, null, new[]{ typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AccessType), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.EntryPointAccess), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Parser, new[]{ "ChatRestriction", "ReactionRestriction", "PresentRestriction", "DefaultJoinAsViewerType" }, null, new[]{ typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType), typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Parser, new[]{ "RecordingConfig", "TranscriptionConfig", "SmartNotesConfig" }, null, new[]{ typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig.Parser, new[]{ "AutoRecordingGeneration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig.Parser, new[]{ "AutoTranscriptionGeneration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.SmartNotesConfig), global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.SmartNotesConfig.Parser, new[]{ "AutoSmartNotesGeneration" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Member), global::Google.Apps.Meet.V2Beta.Member.Parser, new[]{ "Name", "Email", "Role", "User" }, null, new[]{ typeof(global::Google.Apps.Meet.V2Beta.Member.Types.Role) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.ConferenceRecord), global::Google.Apps.Meet.V2Beta.ConferenceRecord.Parser, new[]{ "Name", "StartTime", "EndTime", "ExpireTime", "Space" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.Participant), global::Google.Apps.Meet.V2Beta.Participant.Parser, new[]{ "SignedinUser", "AnonymousUser", "PhoneUser", "Name", "EarliestStartTime", "LatestEndTime" }, new[]{ "User" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Meet.V2Beta.ParticipantSession), global::Google.Apps.Meet.V2Beta.ParticipantSession.Parser, new[]{ "Name", "StartTime", "EndTime" }, null, null, null, null),
@@ -135,7 +188,6 @@ namespace Google.Apps.Meet.V2Beta {
   }
   #region Messages
   /// <summary>
-  /// [Developer Preview](https://developers.google.com/workspace/preview).
   /// Virtual place where conferences are held. Only one active conference can be
   /// held in one space at any given time.
   /// </summary>
@@ -193,7 +245,14 @@ namespace Google.Apps.Meet.V2Beta {
     private string name_ = "";
     /// <summary>
     /// Immutable. Resource name of the space.
-    /// Format: `spaces/{space}`
+    ///
+    /// Format: `spaces/{space}`.
+    ///
+    /// `{space}` is the resource identifier for the space. It's a unique,
+    /// server-generated ID and is case sensitive. For example, `jQCFfuBOdN5z`.
+    ///
+    /// For more information, see [How Meet identifies a meeting
+    /// space](https://developers.google.com/meet/api/guides/meeting-spaces#identify-meeting-space).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -208,7 +267,8 @@ namespace Google.Apps.Meet.V2Beta {
     public const int MeetingUriFieldNumber = 2;
     private string meetingUri_ = "";
     /// <summary>
-    /// Output only. URI used to join meeting, such as
+    /// Output only. URI used to join meetings consisting of
+    /// `https://meet.google.com/` followed by the `meeting_code`. For example,
     /// `https://meet.google.com/abc-mnop-xyz`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -224,9 +284,13 @@ namespace Google.Apps.Meet.V2Beta {
     public const int MeetingCodeFieldNumber = 3;
     private string meetingCode_ = "";
     /// <summary>
-    /// Output only. Type friendly code to join the meeting. Format:
-    /// `[a-z]+-[a-z]+-[a-z]+` such as `abc-mnop-xyz`. The maximum length is 128
-    /// characters. Can ONLY be used as alias of the space ID to get the space.
+    /// Output only. Type friendly unique string used to join the meeting.
+    ///
+    /// Format: `[a-z]+-[a-z]+-[a-z]+`. For example, `abc-mnop-xyz`.
+    ///
+    /// The maximum length is 128 characters.
+    ///
+    /// Can only be used as an alias of the space name to get the space.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -256,7 +320,7 @@ namespace Google.Apps.Meet.V2Beta {
     public const int ActiveConferenceFieldNumber = 6;
     private global::Google.Apps.Meet.V2Beta.ActiveConference activeConference_;
     /// <summary>
-    /// Active conference if it exists.
+    /// Active conference, if it exists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -568,7 +632,7 @@ namespace Google.Apps.Meet.V2Beta {
     /// <summary>
     /// Output only. Reference to 'ConferenceRecord' resource.
     /// Format: `conferenceRecords/{conference_record}` where `{conference_record}`
-    /// is a unique id for each instance of a call within a space.
+    /// is a unique ID for each instance of a call within a space.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -752,6 +816,10 @@ namespace Google.Apps.Meet.V2Beta {
     public SpaceConfig(SpaceConfig other) : this() {
       accessType_ = other.accessType_;
       entryPointAccess_ = other.entryPointAccess_;
+      moderation_ = other.moderation_;
+      moderationRestrictions_ = other.moderationRestrictions_ != null ? other.moderationRestrictions_.Clone() : null;
+      attendanceReportGenerationType_ = other.attendanceReportGenerationType_;
+      artifactConfig_ = other.artifactConfig_ != null ? other.artifactConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -795,6 +863,73 @@ namespace Google.Apps.Meet.V2Beta {
       }
     }
 
+    /// <summary>Field number for the "moderation" field.</summary>
+    public const int ModerationFieldNumber = 3;
+    private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation moderation_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation.Unspecified;
+    /// <summary>
+    /// [Developer Preview](https://developers.google.com/workspace/preview):
+    /// The pre-configured moderation mode for the Meeting.
+    /// Default: Controlled by the user's policies.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation Moderation {
+      get { return moderation_; }
+      set {
+        moderation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "moderation_restrictions" field.</summary>
+    public const int ModerationRestrictionsFieldNumber = 4;
+    private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions moderationRestrictions_;
+    /// <summary>
+    /// [Developer Preview](https://developers.google.com/workspace/preview):
+    /// When moderation.ON, these restrictions go into effect for the meeting.
+    /// When moderation.OFF, will be reset to default ModerationRestrictions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions ModerationRestrictions {
+      get { return moderationRestrictions_; }
+      set {
+        moderationRestrictions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "attendance_report_generation_type" field.</summary>
+    public const int AttendanceReportGenerationTypeFieldNumber = 6;
+    private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType attendanceReportGenerationType_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType.Unspecified;
+    /// <summary>
+    /// [Developer Preview](https://developers.google.com/workspace/preview):
+    /// Whether attendance report is enabled for the meeting space.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType AttendanceReportGenerationType {
+      get { return attendanceReportGenerationType_; }
+      set {
+        attendanceReportGenerationType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "artifact_config" field.</summary>
+    public const int ArtifactConfigFieldNumber = 7;
+    private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig artifactConfig_;
+    /// <summary>
+    /// [Developer Preview](https://developers.google.com/workspace/preview):
+    /// Configuration pertaining to the auto-generated artifacts that the meeting
+    /// supports.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig ArtifactConfig {
+      get { return artifactConfig_; }
+      set {
+        artifactConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -812,6 +947,10 @@ namespace Google.Apps.Meet.V2Beta {
       }
       if (AccessType != other.AccessType) return false;
       if (EntryPointAccess != other.EntryPointAccess) return false;
+      if (Moderation != other.Moderation) return false;
+      if (!object.Equals(ModerationRestrictions, other.ModerationRestrictions)) return false;
+      if (AttendanceReportGenerationType != other.AttendanceReportGenerationType) return false;
+      if (!object.Equals(ArtifactConfig, other.ArtifactConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -821,6 +960,10 @@ namespace Google.Apps.Meet.V2Beta {
       int hash = 1;
       if (AccessType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AccessType.Unspecified) hash ^= AccessType.GetHashCode();
       if (EntryPointAccess != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.EntryPointAccess.Unspecified) hash ^= EntryPointAccess.GetHashCode();
+      if (Moderation != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation.Unspecified) hash ^= Moderation.GetHashCode();
+      if (moderationRestrictions_ != null) hash ^= ModerationRestrictions.GetHashCode();
+      if (AttendanceReportGenerationType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType.Unspecified) hash ^= AttendanceReportGenerationType.GetHashCode();
+      if (artifactConfig_ != null) hash ^= ArtifactConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -847,6 +990,22 @@ namespace Google.Apps.Meet.V2Beta {
         output.WriteRawTag(16);
         output.WriteEnum((int) EntryPointAccess);
       }
+      if (Moderation != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Moderation);
+      }
+      if (moderationRestrictions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ModerationRestrictions);
+      }
+      if (AttendanceReportGenerationType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) AttendanceReportGenerationType);
+      }
+      if (artifactConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ArtifactConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -865,6 +1024,22 @@ namespace Google.Apps.Meet.V2Beta {
         output.WriteRawTag(16);
         output.WriteEnum((int) EntryPointAccess);
       }
+      if (Moderation != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Moderation);
+      }
+      if (moderationRestrictions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ModerationRestrictions);
+      }
+      if (AttendanceReportGenerationType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) AttendanceReportGenerationType);
+      }
+      if (artifactConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ArtifactConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -880,6 +1055,18 @@ namespace Google.Apps.Meet.V2Beta {
       }
       if (EntryPointAccess != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.EntryPointAccess.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntryPointAccess);
+      }
+      if (Moderation != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Moderation);
+      }
+      if (moderationRestrictions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModerationRestrictions);
+      }
+      if (AttendanceReportGenerationType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AttendanceReportGenerationType);
+      }
+      if (artifactConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArtifactConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -898,6 +1085,24 @@ namespace Google.Apps.Meet.V2Beta {
       }
       if (other.EntryPointAccess != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.EntryPointAccess.Unspecified) {
         EntryPointAccess = other.EntryPointAccess;
+      }
+      if (other.Moderation != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation.Unspecified) {
+        Moderation = other.Moderation;
+      }
+      if (other.moderationRestrictions_ != null) {
+        if (moderationRestrictions_ == null) {
+          ModerationRestrictions = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions();
+        }
+        ModerationRestrictions.MergeFrom(other.ModerationRestrictions);
+      }
+      if (other.AttendanceReportGenerationType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType.Unspecified) {
+        AttendanceReportGenerationType = other.AttendanceReportGenerationType;
+      }
+      if (other.artifactConfig_ != null) {
+        if (artifactConfig_ == null) {
+          ArtifactConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig();
+        }
+        ArtifactConfig.MergeFrom(other.ArtifactConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -922,6 +1127,28 @@ namespace Google.Apps.Meet.V2Beta {
             EntryPointAccess = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.EntryPointAccess) input.ReadEnum();
             break;
           }
+          case 24: {
+            Moderation = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (moderationRestrictions_ == null) {
+              ModerationRestrictions = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions();
+            }
+            input.ReadMessage(ModerationRestrictions);
+            break;
+          }
+          case 48: {
+            AttendanceReportGenerationType = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (artifactConfig_ == null) {
+              ArtifactConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig();
+            }
+            input.ReadMessage(ArtifactConfig);
+            break;
+          }
         }
       }
     #endif
@@ -943,6 +1170,28 @@ namespace Google.Apps.Meet.V2Beta {
           }
           case 16: {
             EntryPointAccess = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.EntryPointAccess) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Moderation = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.Moderation) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (moderationRestrictions_ == null) {
+              ModerationRestrictions = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions();
+            }
+            input.ReadMessage(ModerationRestrictions);
+            break;
+          }
+          case 48: {
+            AttendanceReportGenerationType = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.AttendanceReportGenerationType) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (artifactConfig_ == null) {
+              ArtifactConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig();
+            }
+            input.ReadMessage(ArtifactConfig);
             break;
           }
         }
@@ -983,7 +1232,7 @@ namespace Google.Apps.Meet.V2Beta {
 
       /// <summary>
       /// Entry points that can be used to join a meeting.  Example:
-      /// `meet.google.com`, the Embed SDK Web, or a mobile application.
+      /// `meet.google.com`, the Meet Embed SDK Web, or a mobile application.
       /// </summary>
       public enum EntryPointAccess {
         /// <summary>
@@ -996,10 +1245,1344 @@ namespace Google.Apps.Meet.V2Beta {
         [pbr::OriginalName("ALL")] All = 1,
         /// <summary>
         /// Only entry points owned by the Google Cloud project that created the
-        /// space can be used to join meetings in this space.  Apps can use the Embed
-        /// SDK Web or mobile Meet SDKs to create owned entry points.
+        /// space can be used to join meetings in this space. Apps can use the Meet
+        /// Embed SDK Web or mobile Meet SDKs to create owned entry points.
         /// </summary>
         [pbr::OriginalName("CREATOR_APP_ONLY")] CreatorAppOnly = 2,
+      }
+
+      /// <summary>
+      /// The moderation mode for a meeting. When the moderation mode is on, the
+      /// meeting owner has more control over the meeting with features such as
+      /// co-host management (see message Member) and feature restrictions (see
+      /// message ModerationRestrictions).
+      /// </summary>
+      public enum Moderation {
+        /// <summary>
+        /// Moderation type is not specified. This is used to indicate the user
+        /// hasn't specified any value as the user does not intend to update the
+        /// state. Users are not allowed to set the value as unspecified.
+        /// </summary>
+        [pbr::OriginalName("MODERATION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Moderation is off.
+        /// </summary>
+        [pbr::OriginalName("OFF")] Off = 1,
+        /// <summary>
+        /// Moderation is on.
+        /// </summary>
+        [pbr::OriginalName("ON")] On = 2,
+      }
+
+      /// <summary>
+      /// Possible states of whether attendance report is enabled for the meeting
+      /// space.
+      /// </summary>
+      public enum AttendanceReportGenerationType {
+        /// <summary>
+        /// Default value specified by user policy.
+        /// This should never be returned.
+        /// </summary>
+        [pbr::OriginalName("ATTENDANCE_REPORT_GENERATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Attendance report will be generated and sent to drive/email.
+        /// </summary>
+        [pbr::OriginalName("GENERATE_REPORT")] GenerateReport = 1,
+        /// <summary>
+        /// Attendance report will not be generated.
+        /// </summary>
+        [pbr::OriginalName("DO_NOT_GENERATE")] DoNotGenerate = 2,
+      }
+
+      /// <summary>
+      /// Defines restrictions for features when the meeting is moderated.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ModerationRestrictions : pb::IMessage<ModerationRestrictions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ModerationRestrictions> _parser = new pb::MessageParser<ModerationRestrictions>(() => new ModerationRestrictions());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ModerationRestrictions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Meet.V2Beta.SpaceConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModerationRestrictions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModerationRestrictions(ModerationRestrictions other) : this() {
+          chatRestriction_ = other.chatRestriction_;
+          reactionRestriction_ = other.reactionRestriction_;
+          presentRestriction_ = other.presentRestriction_;
+          defaultJoinAsViewerType_ = other.defaultJoinAsViewerType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ModerationRestrictions Clone() {
+          return new ModerationRestrictions(this);
+        }
+
+        /// <summary>Field number for the "chat_restriction" field.</summary>
+        public const int ChatRestrictionFieldNumber = 1;
+        private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType chatRestriction_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified;
+        /// <summary>
+        /// Defines who has permission to send chat messages in the meeting space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType ChatRestriction {
+          get { return chatRestriction_; }
+          set {
+            chatRestriction_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "reaction_restriction" field.</summary>
+        public const int ReactionRestrictionFieldNumber = 2;
+        private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType reactionRestriction_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified;
+        /// <summary>
+        /// Defines who has permission to send reactions in the meeting space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType ReactionRestriction {
+          get { return reactionRestriction_; }
+          set {
+            reactionRestriction_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "present_restriction" field.</summary>
+        public const int PresentRestrictionFieldNumber = 3;
+        private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType presentRestriction_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified;
+        /// <summary>
+        /// Defines who has permission to share their screen in the meeting space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType PresentRestriction {
+          get { return presentRestriction_; }
+          set {
+            presentRestriction_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "default_join_as_viewer_type" field.</summary>
+        public const int DefaultJoinAsViewerTypeFieldNumber = 4;
+        private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType defaultJoinAsViewerType_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType.Unspecified;
+        /// <summary>
+        /// Defines whether to restrict the default role assigned to users as viewer.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType DefaultJoinAsViewerType {
+          get { return defaultJoinAsViewerType_; }
+          set {
+            defaultJoinAsViewerType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ModerationRestrictions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ModerationRestrictions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ChatRestriction != other.ChatRestriction) return false;
+          if (ReactionRestriction != other.ReactionRestriction) return false;
+          if (PresentRestriction != other.PresentRestriction) return false;
+          if (DefaultJoinAsViewerType != other.DefaultJoinAsViewerType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ChatRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) hash ^= ChatRestriction.GetHashCode();
+          if (ReactionRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) hash ^= ReactionRestriction.GetHashCode();
+          if (PresentRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) hash ^= PresentRestriction.GetHashCode();
+          if (DefaultJoinAsViewerType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType.Unspecified) hash ^= DefaultJoinAsViewerType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ChatRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ChatRestriction);
+          }
+          if (ReactionRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ReactionRestriction);
+          }
+          if (PresentRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) PresentRestriction);
+          }
+          if (DefaultJoinAsViewerType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) DefaultJoinAsViewerType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ChatRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ChatRestriction);
+          }
+          if (ReactionRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ReactionRestriction);
+          }
+          if (PresentRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            output.WriteRawTag(24);
+            output.WriteEnum((int) PresentRestriction);
+          }
+          if (DefaultJoinAsViewerType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType.Unspecified) {
+            output.WriteRawTag(32);
+            output.WriteEnum((int) DefaultJoinAsViewerType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ChatRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ChatRestriction);
+          }
+          if (ReactionRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReactionRestriction);
+          }
+          if (PresentRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PresentRestriction);
+          }
+          if (DefaultJoinAsViewerType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultJoinAsViewerType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ModerationRestrictions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ChatRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            ChatRestriction = other.ChatRestriction;
+          }
+          if (other.ReactionRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            ReactionRestriction = other.ReactionRestriction;
+          }
+          if (other.PresentRestriction != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType.Unspecified) {
+            PresentRestriction = other.PresentRestriction;
+          }
+          if (other.DefaultJoinAsViewerType != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType.Unspecified) {
+            DefaultJoinAsViewerType = other.DefaultJoinAsViewerType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ChatRestriction = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                ReactionRestriction = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType) input.ReadEnum();
+                break;
+              }
+              case 24: {
+                PresentRestriction = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType) input.ReadEnum();
+                break;
+              }
+              case 32: {
+                DefaultJoinAsViewerType = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ChatRestriction = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                ReactionRestriction = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType) input.ReadEnum();
+                break;
+              }
+              case 24: {
+                PresentRestriction = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.RestrictionType) input.ReadEnum();
+                break;
+              }
+              case 32: {
+                DefaultJoinAsViewerType = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ModerationRestrictions.Types.DefaultJoinAsViewerType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ModerationRestrictions message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Determines who has permission to use a particular feature.
+          /// </summary>
+          public enum RestrictionType {
+            /// <summary>
+            /// Default value specified by user policy.
+            /// This should never be returned.
+            /// </summary>
+            [pbr::OriginalName("RESTRICTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Meeting owner and co-host have the permission.
+            /// </summary>
+            [pbr::OriginalName("HOSTS_ONLY")] HostsOnly = 1,
+            /// <summary>
+            /// All Participants have permissions.
+            /// </summary>
+            [pbr::OriginalName("NO_RESTRICTION")] NoRestriction = 2,
+          }
+
+          /// <summary>
+          /// By default users will join as contributors. Hosts can restrict users to
+          /// join as viewers.
+          /// Note: If an explicit role is set for a users in the Member resource, the
+          /// user will join as that role.
+          /// </summary>
+          public enum DefaultJoinAsViewerType {
+            /// <summary>
+            /// Default value specified by user policy.
+            /// This should never be returned.
+            /// </summary>
+            [pbr::OriginalName("DEFAULT_JOIN_AS_VIEWER_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Users will by default join as viewers.
+            /// </summary>
+            [pbr::OriginalName("ON")] On = 1,
+            /// <summary>
+            /// Users will by default join as contributors.
+            /// </summary>
+            [pbr::OriginalName("OFF")] Off = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// Configuration related to meeting artifacts potentially generated by this
+      /// meeting space.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ArtifactConfig : pb::IMessage<ArtifactConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ArtifactConfig> _parser = new pb::MessageParser<ArtifactConfig>(() => new ArtifactConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ArtifactConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Meet.V2Beta.SpaceConfig.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ArtifactConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ArtifactConfig(ArtifactConfig other) : this() {
+          recordingConfig_ = other.recordingConfig_ != null ? other.recordingConfig_.Clone() : null;
+          transcriptionConfig_ = other.transcriptionConfig_ != null ? other.transcriptionConfig_.Clone() : null;
+          smartNotesConfig_ = other.smartNotesConfig_ != null ? other.smartNotesConfig_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ArtifactConfig Clone() {
+          return new ArtifactConfig(this);
+        }
+
+        /// <summary>Field number for the "recording_config" field.</summary>
+        public const int RecordingConfigFieldNumber = 1;
+        private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig recordingConfig_;
+        /// <summary>
+        /// Configuration for recording.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig RecordingConfig {
+          get { return recordingConfig_; }
+          set {
+            recordingConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "transcription_config" field.</summary>
+        public const int TranscriptionConfigFieldNumber = 2;
+        private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig transcriptionConfig_;
+        /// <summary>
+        /// Configuration for auto-transcript.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig TranscriptionConfig {
+          get { return transcriptionConfig_; }
+          set {
+            transcriptionConfig_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "smart_notes_config" field.</summary>
+        public const int SmartNotesConfigFieldNumber = 3;
+        private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.SmartNotesConfig smartNotesConfig_;
+        /// <summary>
+        /// Configuration for auto-smart-notes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.SmartNotesConfig SmartNotesConfig {
+          get { return smartNotesConfig_; }
+          set {
+            smartNotesConfig_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ArtifactConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ArtifactConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(RecordingConfig, other.RecordingConfig)) return false;
+          if (!object.Equals(TranscriptionConfig, other.TranscriptionConfig)) return false;
+          if (!object.Equals(SmartNotesConfig, other.SmartNotesConfig)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (recordingConfig_ != null) hash ^= RecordingConfig.GetHashCode();
+          if (transcriptionConfig_ != null) hash ^= TranscriptionConfig.GetHashCode();
+          if (smartNotesConfig_ != null) hash ^= SmartNotesConfig.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (recordingConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(RecordingConfig);
+          }
+          if (transcriptionConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(TranscriptionConfig);
+          }
+          if (smartNotesConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SmartNotesConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (recordingConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(RecordingConfig);
+          }
+          if (transcriptionConfig_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(TranscriptionConfig);
+          }
+          if (smartNotesConfig_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(SmartNotesConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (recordingConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(RecordingConfig);
+          }
+          if (transcriptionConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TranscriptionConfig);
+          }
+          if (smartNotesConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(SmartNotesConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ArtifactConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.recordingConfig_ != null) {
+            if (recordingConfig_ == null) {
+              RecordingConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig();
+            }
+            RecordingConfig.MergeFrom(other.RecordingConfig);
+          }
+          if (other.transcriptionConfig_ != null) {
+            if (transcriptionConfig_ == null) {
+              TranscriptionConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig();
+            }
+            TranscriptionConfig.MergeFrom(other.TranscriptionConfig);
+          }
+          if (other.smartNotesConfig_ != null) {
+            if (smartNotesConfig_ == null) {
+              SmartNotesConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.SmartNotesConfig();
+            }
+            SmartNotesConfig.MergeFrom(other.SmartNotesConfig);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (recordingConfig_ == null) {
+                  RecordingConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig();
+                }
+                input.ReadMessage(RecordingConfig);
+                break;
+              }
+              case 18: {
+                if (transcriptionConfig_ == null) {
+                  TranscriptionConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig();
+                }
+                input.ReadMessage(TranscriptionConfig);
+                break;
+              }
+              case 26: {
+                if (smartNotesConfig_ == null) {
+                  SmartNotesConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.SmartNotesConfig();
+                }
+                input.ReadMessage(SmartNotesConfig);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (recordingConfig_ == null) {
+                  RecordingConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.RecordingConfig();
+                }
+                input.ReadMessage(RecordingConfig);
+                break;
+              }
+              case 18: {
+                if (transcriptionConfig_ == null) {
+                  TranscriptionConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.TranscriptionConfig();
+                }
+                input.ReadMessage(TranscriptionConfig);
+                break;
+              }
+              case 26: {
+                if (smartNotesConfig_ == null) {
+                  SmartNotesConfig = new global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.SmartNotesConfig();
+                }
+                input.ReadMessage(SmartNotesConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ArtifactConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Determines whether an artifact can be automatically generated in the
+          /// meeting space.
+          /// </summary>
+          public enum AutoGenerationType {
+            /// <summary>
+            /// Default value specified by user policy.
+            /// This should never be returned.
+            /// </summary>
+            [pbr::OriginalName("AUTO_GENERATION_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The artifact is generated automatically.
+            /// </summary>
+            [pbr::OriginalName("ON")] On = 1,
+            /// <summary>
+            /// The artifact is not generated automatically.
+            /// </summary>
+            [pbr::OriginalName("OFF")] Off = 2,
+          }
+
+          /// <summary>
+          /// Configuration related to recording in a meeting space.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class RecordingConfig : pb::IMessage<RecordingConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<RecordingConfig> _parser = new pb::MessageParser<RecordingConfig>(() => new RecordingConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<RecordingConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RecordingConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RecordingConfig(RecordingConfig other) : this() {
+              autoRecordingGeneration_ = other.autoRecordingGeneration_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public RecordingConfig Clone() {
+              return new RecordingConfig(this);
+            }
+
+            /// <summary>Field number for the "auto_recording_generation" field.</summary>
+            public const int AutoRecordingGenerationFieldNumber = 2;
+            private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType autoRecordingGeneration_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified;
+            /// <summary>
+            /// Defines whether a meeting space is automatically recorded when someone
+            /// with the privilege to record joins the meeting.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType AutoRecordingGeneration {
+              get { return autoRecordingGeneration_; }
+              set {
+                autoRecordingGeneration_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as RecordingConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(RecordingConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (AutoRecordingGeneration != other.AutoRecordingGeneration) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (AutoRecordingGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) hash ^= AutoRecordingGeneration.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (AutoRecordingGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) AutoRecordingGeneration);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (AutoRecordingGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) AutoRecordingGeneration);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (AutoRecordingGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AutoRecordingGeneration);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(RecordingConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.AutoRecordingGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                AutoRecordingGeneration = other.AutoRecordingGeneration;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 16: {
+                    AutoRecordingGeneration = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 16: {
+                    AutoRecordingGeneration = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Configuration related to transcription in a meeting space.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class TranscriptionConfig : pb::IMessage<TranscriptionConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<TranscriptionConfig> _parser = new pb::MessageParser<TranscriptionConfig>(() => new TranscriptionConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<TranscriptionConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TranscriptionConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TranscriptionConfig(TranscriptionConfig other) : this() {
+              autoTranscriptionGeneration_ = other.autoTranscriptionGeneration_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TranscriptionConfig Clone() {
+              return new TranscriptionConfig(this);
+            }
+
+            /// <summary>Field number for the "auto_transcription_generation" field.</summary>
+            public const int AutoTranscriptionGenerationFieldNumber = 2;
+            private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType autoTranscriptionGeneration_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified;
+            /// <summary>
+            /// Defines whether the content of a meeting is automatically transcribed
+            /// when someone with the privilege to transcribe joins the meeting.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType AutoTranscriptionGeneration {
+              get { return autoTranscriptionGeneration_; }
+              set {
+                autoTranscriptionGeneration_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as TranscriptionConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(TranscriptionConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (AutoTranscriptionGeneration != other.AutoTranscriptionGeneration) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (AutoTranscriptionGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) hash ^= AutoTranscriptionGeneration.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (AutoTranscriptionGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) AutoTranscriptionGeneration);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (AutoTranscriptionGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) AutoTranscriptionGeneration);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (AutoTranscriptionGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AutoTranscriptionGeneration);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(TranscriptionConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.AutoTranscriptionGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                AutoTranscriptionGeneration = other.AutoTranscriptionGeneration;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 16: {
+                    AutoTranscriptionGeneration = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 16: {
+                    AutoTranscriptionGeneration = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Configuration related to smart notes in a meeting space. More
+          /// details about smart notes
+          /// https://support.google.com/meet/answer/14754931?hl=en.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class SmartNotesConfig : pb::IMessage<SmartNotesConfig>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<SmartNotesConfig> _parser = new pb::MessageParser<SmartNotesConfig>(() => new SmartNotesConfig());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<SmartNotesConfig> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SmartNotesConfig() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SmartNotesConfig(SmartNotesConfig other) : this() {
+              autoSmartNotesGeneration_ = other.autoSmartNotesGeneration_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public SmartNotesConfig Clone() {
+              return new SmartNotesConfig(this);
+            }
+
+            /// <summary>Field number for the "auto_smart_notes_generation" field.</summary>
+            public const int AutoSmartNotesGenerationFieldNumber = 2;
+            private global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType autoSmartNotesGeneration_ = global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified;
+            /// <summary>
+            /// Defines whether to automatically generate a summary and recap of the
+            /// meeting for all invitees in the organization when someone with the
+            /// privilege to enable smart notes joins the meeting.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType AutoSmartNotesGeneration {
+              get { return autoSmartNotesGeneration_; }
+              set {
+                autoSmartNotesGeneration_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as SmartNotesConfig);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(SmartNotesConfig other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (AutoSmartNotesGeneration != other.AutoSmartNotesGeneration) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (AutoSmartNotesGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) hash ^= AutoSmartNotesGeneration.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (AutoSmartNotesGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) AutoSmartNotesGeneration);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (AutoSmartNotesGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                output.WriteRawTag(16);
+                output.WriteEnum((int) AutoSmartNotesGeneration);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (AutoSmartNotesGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AutoSmartNotesGeneration);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(SmartNotesConfig other) {
+              if (other == null) {
+                return;
+              }
+              if (other.AutoSmartNotesGeneration != global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType.Unspecified) {
+                AutoSmartNotesGeneration = other.AutoSmartNotesGeneration;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 16: {
+                    AutoSmartNotesGeneration = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 16: {
+                    AutoSmartNotesGeneration = (global::Google.Apps.Meet.V2Beta.SpaceConfig.Types.ArtifactConfig.Types.AutoGenerationType) input.ReadEnum();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
       }
 
     }
@@ -1008,7 +2591,353 @@ namespace Google.Apps.Meet.V2Beta {
   }
 
   /// <summary>
-  /// [Developer Preview](https://developers.google.com/workspace/preview).
+  /// Users who are configured to have a role in the space. These users can
+  /// join the space without knocking.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Member : pb::IMessage<Member>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Member> _parser = new pb::MessageParser<Member>(() => new Member());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Member> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Member() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Member(Member other) : this() {
+      name_ = other.name_;
+      email_ = other.email_;
+      role_ = other.role_;
+      user_ = other.user_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Member Clone() {
+      return new Member(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. Resource name of the member.
+    /// Format: spaces/{space}/members/{member}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "email" field.</summary>
+    public const int EmailFieldNumber = 2;
+    private string email_ = "";
+    /// <summary>
+    /// Email for the member. This is required for creating the member.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Email {
+      get { return email_; }
+      set {
+        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "role" field.</summary>
+    public const int RoleFieldNumber = 3;
+    private global::Google.Apps.Meet.V2Beta.Member.Types.Role role_ = global::Google.Apps.Meet.V2Beta.Member.Types.Role.Unspecified;
+    /// <summary>
+    /// The meeting role assigned to the member.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Meet.V2Beta.Member.Types.Role Role {
+      get { return role_; }
+      set {
+        role_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "user" field.</summary>
+    public const int UserFieldNumber = 4;
+    private string user_ = "";
+    /// <summary>
+    /// [Developer Preview](https://developers.google.com/workspace/preview):
+    /// Unique name for the user. Interoperable with Admin SDK API and People API.
+    /// This will be empty for non google users. Setting both user and email in
+    /// request will result in error. Format: `users/{user}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string User {
+      get { return user_; }
+      set {
+        user_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Member);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Member other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Email != other.Email) return false;
+      if (Role != other.Role) return false;
+      if (User != other.User) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Email.Length != 0) hash ^= Email.GetHashCode();
+      if (Role != global::Google.Apps.Meet.V2Beta.Member.Types.Role.Unspecified) hash ^= Role.GetHashCode();
+      if (User.Length != 0) hash ^= User.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Email.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Email);
+      }
+      if (Role != global::Google.Apps.Meet.V2Beta.Member.Types.Role.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Role);
+      }
+      if (User.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(User);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Email.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Email);
+      }
+      if (Role != global::Google.Apps.Meet.V2Beta.Member.Types.Role.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Role);
+      }
+      if (User.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(User);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Email.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+      }
+      if (Role != global::Google.Apps.Meet.V2Beta.Member.Types.Role.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Role);
+      }
+      if (User.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(User);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Member other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Email.Length != 0) {
+        Email = other.Email;
+      }
+      if (other.Role != global::Google.Apps.Meet.V2Beta.Member.Types.Role.Unspecified) {
+        Role = other.Role;
+      }
+      if (other.User.Length != 0) {
+        User = other.User;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Email = input.ReadString();
+            break;
+          }
+          case 24: {
+            Role = (global::Google.Apps.Meet.V2Beta.Member.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            User = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Email = input.ReadString();
+            break;
+          }
+          case 24: {
+            Role = (global::Google.Apps.Meet.V2Beta.Member.Types.Role) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            User = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Member message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Role of this member in the space.
+      /// </summary>
+      public enum Role {
+        /// <summary>
+        /// This is used to indicate the user hasn't specified any value and the
+        /// user’s role will be determined upon joining the meetings between
+        /// 'contributor' and 'viewer' role depending on meeting configuration. More
+        /// details about viewer role
+        /// https://support.google.com/meet/answer/13658394?hl=en.
+        /// </summary>
+        [pbr::OriginalName("ROLE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Co-host role.
+        /// </summary>
+        [pbr::OriginalName("COHOST")] Cohost = 1,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Single instance of a meeting held in a space.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1026,7 +2955,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1066,7 +2995,7 @@ namespace Google.Apps.Meet.V2Beta {
     /// <summary>
     /// Identifier. Resource name of the conference record.
     /// Format: `conferenceRecords/{conference_record}` where `{conference_record}`
-    /// is a unique id for each instance of a call within a space.
+    /// is a unique ID for each instance of a call within a space.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1081,7 +3010,7 @@ namespace Google.Apps.Meet.V2Beta {
     public const int StartTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Output only. Timestamp when the conference started, always set.
+    /// Output only. Timestamp when the conference started. Always set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1112,9 +3041,9 @@ namespace Google.Apps.Meet.V2Beta {
     public const int ExpireTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
     /// <summary>
-    /// Output only. Server enforced expire time for when this conference record
-    /// resource is deleted. The resource is deleted 30 days after the conference
-    /// ends.
+    /// Output only. Server enforced expiration time for when this conference
+    /// record resource is deleted. The resource is deleted 30 days after the
+    /// conference ends.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1397,7 +3326,6 @@ namespace Google.Apps.Meet.V2Beta {
   }
 
   /// <summary>
-  /// [Developer Preview](https://developers.google.com/workspace/preview).
   /// User who attended or is attending a conference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1415,7 +3343,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1492,7 +3420,7 @@ namespace Google.Apps.Meet.V2Beta {
     /// <summary>Field number for the "phone_user" field.</summary>
     public const int PhoneUserFieldNumber = 6;
     /// <summary>
-    /// User who calls in from their phone.
+    /// User calling from their phone.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1524,8 +3452,7 @@ namespace Google.Apps.Meet.V2Beta {
     public const int EarliestStartTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp earliestStartTime_;
     /// <summary>
-    /// Output only. Time when the participant joined the meeting for the first
-    /// time.
+    /// Output only. Time when the participant first joined the meeting.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1541,7 +3468,7 @@ namespace Google.Apps.Meet.V2Beta {
     private global::Google.Protobuf.WellKnownTypes.Timestamp latestEndTime_;
     /// <summary>
     /// Output only. Time when the participant left the meeting for the last time.
-    /// This can be null if it is an active meeting.
+    /// This can be null if it's an active meeting.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1890,10 +3817,9 @@ namespace Google.Apps.Meet.V2Beta {
   }
 
   /// <summary>
-  /// [Developer Preview](https://developers.google.com/workspace/preview).
-  /// Refers to each unique join/leave session when a user joins a conference from
-  /// a device. Note that any time a user joins the conference a new unique ID is
-  /// assigned. That means if a user joins a space multiple times from the same
+  /// Refers to each unique join or leave session when a user joins a conference
+  /// from a device. Note that any time a user joins the conference a new unique ID
+  /// is assigned. That means if a user joins a space multiple times from the same
   /// device, they're assigned different IDs, and are also be treated as different
   /// participant sessions.
   /// </summary>
@@ -1912,7 +3838,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1963,7 +3889,7 @@ namespace Google.Apps.Meet.V2Beta {
     public const int StartTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
     /// <summary>
-    /// Output only. Timestamp when the user session started.
+    /// Output only. Timestamp when the user session starts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1978,7 +3904,7 @@ namespace Google.Apps.Meet.V2Beta {
     public const int EndTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
     /// <summary>
-    /// Output only. Timestamp when the user session ended. Unset if the user
+    /// Output only. Timestamp when the user session ends. Unset if the user
     /// session hasn’t ended.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2210,7 +4136,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2261,9 +4187,9 @@ namespace Google.Apps.Meet.V2Beta {
     public const int DisplayNameFieldNumber = 2;
     private string displayName_ = "";
     /// <summary>
-    /// Output only. For a personal device, it's the user's first and last name.
-    /// For a robot account, it's the admin specified device name. For example,
-    /// "Altostrat Room".
+    /// Output only. For a personal device, it's the user's first name and last
+    /// name. For a robot account, it's the administrator-specified device name.
+    /// For example, "Altostrat Room".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2449,7 +4375,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2646,7 +4572,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2680,7 +4606,7 @@ namespace Google.Apps.Meet.V2Beta {
     public const int DisplayNameFieldNumber = 1;
     private string displayName_ = "";
     /// <summary>
-    /// Output only. Partially redacted user's phone number when they call in.
+    /// Output only. Partially redacted user's phone number when calling.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2825,7 +4751,6 @@ namespace Google.Apps.Meet.V2Beta {
   }
 
   /// <summary>
-  /// [Developer Preview](https://developers.google.com/workspace/preview).
   /// Metadata about a recording created during a conference.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2843,7 +4768,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2885,7 +4810,7 @@ namespace Google.Apps.Meet.V2Beta {
     /// <summary>Field number for the "drive_destination" field.</summary>
     public const int DriveDestinationFieldNumber = 6;
     /// <summary>
-    /// Output only. Recording is saved to Google Drive as an mp4 file. The
+    /// Output only. Recording is saved to Google Drive as an MP4 file. The
     /// `drive_destination` includes the Drive `fileId` that can be used to
     /// download the file using the `files.get` method of the Drive API.
     /// </summary>
@@ -3296,7 +5221,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3520,7 +5445,6 @@ namespace Google.Apps.Meet.V2Beta {
   }
 
   /// <summary>
-  /// [Developer Preview](https://developers.google.com/workspace/preview).
   /// Metadata for a transcript generated from a conference. It refers to the ASR
   /// (Automatic Speech Recognition) result of user's speech during the conference.
   /// </summary>
@@ -3539,7 +5463,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3990,7 +5914,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4215,7 +6139,6 @@ namespace Google.Apps.Meet.V2Beta {
   }
 
   /// <summary>
-  /// [Developer Preview](https://developers.google.com/workspace/preview).
   /// Single entry for one user’s speech during a transcript session.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -4233,7 +6156,7 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Apps.Meet.V2Beta.ResourceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4288,7 +6211,7 @@ namespace Google.Apps.Meet.V2Beta {
     public const int ParticipantFieldNumber = 2;
     private string participant_ = "";
     /// <summary>
-    /// Output only. Refer to the participant who speaks.
+    /// Output only. Refers to the participant who speaks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

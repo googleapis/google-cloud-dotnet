@@ -226,6 +226,225 @@ namespace Google.Apps.Meet.V2Beta
         public static bool operator !=(SpaceName a, SpaceName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Member</c> resource.</summary>
+    public sealed partial class MemberName : gax::IResourceName, sys::IEquatable<MemberName>
+    {
+        /// <summary>The possible contents of <see cref="MemberName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>A resource name with pattern <c>spaces/{space}/members/{member}</c>.</summary>
+            SpaceMember = 1,
+        }
+
+        private static gax::PathTemplate s_spaceMember = new gax::PathTemplate("spaces/{space}/members/{member}");
+
+        /// <summary>Creates a <see cref="MemberName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="MemberName"/> containing the provided <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static MemberName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new MemberName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="MemberName"/> with the pattern <c>spaces/{space}/members/{member}</c>.
+        /// </summary>
+        /// <param name="spaceId">The <c>Space</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memberId">The <c>Member</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="MemberName"/> constructed from the provided ids.</returns>
+        public static MemberName FromSpaceMember(string spaceId, string memberId) =>
+            new MemberName(ResourceNameType.SpaceMember, spaceId: gax::GaxPreconditions.CheckNotNullOrEmpty(spaceId, nameof(spaceId)), memberId: gax::GaxPreconditions.CheckNotNullOrEmpty(memberId, nameof(memberId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MemberName"/> with pattern
+        /// <c>spaces/{space}/members/{member}</c>.
+        /// </summary>
+        /// <param name="spaceId">The <c>Space</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memberId">The <c>Member</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MemberName"/> with pattern <c>spaces/{space}/members/{member}</c>
+        /// .
+        /// </returns>
+        public static string Format(string spaceId, string memberId) => FormatSpaceMember(spaceId, memberId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MemberName"/> with pattern
+        /// <c>spaces/{space}/members/{member}</c>.
+        /// </summary>
+        /// <param name="spaceId">The <c>Space</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memberId">The <c>Member</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MemberName"/> with pattern <c>spaces/{space}/members/{member}</c>
+        /// .
+        /// </returns>
+        public static string FormatSpaceMember(string spaceId, string memberId) =>
+            s_spaceMember.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(spaceId, nameof(spaceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(memberId, nameof(memberId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="MemberName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>spaces/{space}/members/{member}</c></description></item></list>
+        /// </remarks>
+        /// <param name="memberName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="MemberName"/> if successful.</returns>
+        public static MemberName Parse(string memberName) => Parse(memberName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MemberName"/> instance; optionally allowing an
+        /// unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>spaces/{space}/members/{member}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="memberName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="MemberName"/> if successful.</returns>
+        public static MemberName Parse(string memberName, bool allowUnparsed) =>
+            TryParse(memberName, allowUnparsed, out MemberName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MemberName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>spaces/{space}/members/{member}</c></description></item></list>
+        /// </remarks>
+        /// <param name="memberName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MemberName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string memberName, out MemberName result) => TryParse(memberName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MemberName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet"><item><description><c>spaces/{space}/members/{member}</c></description></item></list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="memberName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MemberName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string memberName, bool allowUnparsed, out MemberName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(memberName, nameof(memberName));
+            gax::TemplatedResourceName resourceName;
+            if (s_spaceMember.TryParseName(memberName, out resourceName))
+            {
+                result = FromSpaceMember(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(memberName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private MemberName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string memberId = null, string spaceId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            MemberId = memberId;
+            SpaceId = spaceId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="MemberName"/> class from the component parts of pattern
+        /// <c>spaces/{space}/members/{member}</c>
+        /// </summary>
+        /// <param name="spaceId">The <c>Space</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="memberId">The <c>Member</c> ID. Must not be <c>null</c> or empty.</param>
+        public MemberName(string spaceId, string memberId) : this(ResourceNameType.SpaceMember, spaceId: gax::GaxPreconditions.CheckNotNullOrEmpty(spaceId, nameof(spaceId)), memberId: gax::GaxPreconditions.CheckNotNullOrEmpty(memberId, nameof(memberId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Member</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string MemberId { get; }
+
+        /// <summary>
+        /// The <c>Space</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string SpaceId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.SpaceMember: return s_spaceMember.Expand(SpaceId, MemberId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as MemberName);
+
+        /// <inheritdoc/>
+        public bool Equals(MemberName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(MemberName a, MemberName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(MemberName a, MemberName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>ConferenceRecord</c> resource.</summary>
     public sealed partial class ConferenceRecordName : gax::IResourceName, sys::IEquatable<ConferenceRecordName>
     {
@@ -1740,6 +1959,18 @@ namespace Google.Apps.Meet.V2Beta
         {
             get => string.IsNullOrEmpty(ConferenceRecord) ? null : ConferenceRecordName.Parse(ConferenceRecord, allowUnparsed: true);
             set => ConferenceRecord = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Member
+    {
+        /// <summary>
+        /// <see cref="gamv::MemberName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamv::MemberName MemberName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamv::MemberName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 

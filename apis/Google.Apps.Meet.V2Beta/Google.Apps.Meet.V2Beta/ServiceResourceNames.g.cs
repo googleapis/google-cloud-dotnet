@@ -43,6 +43,50 @@ namespace Google.Apps.Meet.V2Beta
         }
     }
 
+    public partial class CreateMemberRequest
+    {
+        /// <summary><see cref="SpaceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SpaceName ParentAsSpaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SpaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMemberRequest
+    {
+        /// <summary>
+        /// <see cref="gamv::MemberName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamv::MemberName MemberName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamv::MemberName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMembersRequest
+    {
+        /// <summary><see cref="SpaceName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SpaceName ParentAsSpaceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SpaceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteMemberRequest
+    {
+        /// <summary>
+        /// <see cref="gamv::MemberName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamv::MemberName MemberName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamv::MemberName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetConferenceRecordRequest
     {
         /// <summary>

@@ -4386,6 +4386,1199 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_sync",
+      "title": "CreateMemberRequestObject",
+      "description": "Snippet for CreateMember",
+      "file": "SpacesServiceClient.CreateMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.CreateMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_async",
+      "title": "CreateMemberRequestObjectAsync",
+      "description": "Snippet for CreateMemberAsync",
+      "file": "SpacesServiceClient.CreateMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.CreateMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_sync_flattened",
+      "title": "CreateMember",
+      "description": "Snippet for CreateMember",
+      "file": "SpacesServiceClient.CreateMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_async_flattened",
+      "title": "CreateMemberAsync",
+      "description": "Snippet for CreateMemberAsync",
+      "file": "SpacesServiceClient.CreateMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_sync_flattened_resourceNames",
+      "title": "CreateMemberResourceNames",
+      "description": "Snippet for CreateMember",
+      "file": "SpacesServiceClient.CreateMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_async_flattened_resourceNames",
+      "title": "CreateMemberResourceNamesAsync",
+      "description": "Snippet for CreateMemberAsync",
+      "file": "SpacesServiceClient.CreateMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_sync",
+      "title": "GetMemberRequestObject",
+      "description": "Snippet for GetMember",
+      "file": "SpacesServiceClient.GetMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_async",
+      "title": "GetMemberRequestObjectAsync",
+      "description": "Snippet for GetMemberAsync",
+      "file": "SpacesServiceClient.GetMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_sync_flattened",
+      "title": "GetMember",
+      "description": "Snippet for GetMember",
+      "file": "SpacesServiceClient.GetMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_async_flattened",
+      "title": "GetMemberAsync",
+      "description": "Snippet for GetMemberAsync",
+      "file": "SpacesServiceClient.GetMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_sync_flattened_resourceNames",
+      "title": "GetMemberResourceNames",
+      "description": "Snippet for GetMember",
+      "file": "SpacesServiceClient.GetMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.MemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_async_flattened_resourceNames",
+      "title": "GetMemberResourceNamesAsync",
+      "description": "Snippet for GetMemberAsync",
+      "file": "SpacesServiceClient.GetMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.MemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_sync",
+      "title": "ListMembersRequestObject",
+      "description": "Snippet for ListMembers",
+      "file": "SpacesServiceClient.ListMembersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembers",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembers",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_async",
+      "title": "ListMembersRequestObjectAsync",
+      "description": "Snippet for ListMembersAsync",
+      "file": "SpacesServiceClient.ListMembersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembersAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_sync_flattened",
+      "title": "ListMembers",
+      "description": "Snippet for ListMembers",
+      "file": "SpacesServiceClient.ListMembersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembers",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_async_flattened",
+      "title": "ListMembersAsync",
+      "description": "Snippet for ListMembersAsync",
+      "file": "SpacesServiceClient.ListMembersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembersAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_sync_flattened_resourceNames",
+      "title": "ListMembersResourceNames",
+      "description": "Snippet for ListMembers",
+      "file": "SpacesServiceClient.ListMembersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembers",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembers",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_async_flattened_resourceNames",
+      "title": "ListMembersResourceNamesAsync",
+      "description": "Snippet for ListMembersAsync",
+      "file": "SpacesServiceClient.ListMembersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembersAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_sync",
+      "title": "DeleteMemberRequestObject",
+      "description": "Snippet for DeleteMember",
+      "file": "SpacesServiceClient.DeleteMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.DeleteMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_async",
+      "title": "DeleteMemberRequestObjectAsync",
+      "description": "Snippet for DeleteMemberAsync",
+      "file": "SpacesServiceClient.DeleteMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.DeleteMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_sync_flattened",
+      "title": "DeleteMember",
+      "description": "Snippet for DeleteMember",
+      "file": "SpacesServiceClient.DeleteMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_async_flattened",
+      "title": "DeleteMemberAsync",
+      "description": "Snippet for DeleteMemberAsync",
+      "file": "SpacesServiceClient.DeleteMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_sync_flattened_resourceNames",
+      "title": "DeleteMemberResourceNames",
+      "description": "Snippet for DeleteMember",
+      "file": "SpacesServiceClient.DeleteMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.MemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_async_flattened_resourceNames",
+      "title": "DeleteMemberResourceNamesAsync",
+      "description": "Snippet for DeleteMemberAsync",
+      "file": "SpacesServiceClient.DeleteMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.MemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
