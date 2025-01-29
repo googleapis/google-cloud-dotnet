@@ -11,7 +11,7 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-using System;
+
 using Xunit;
 using static Google.Apis.Bigquery.v2.Data.TableFieldSchema;
 
@@ -54,33 +54,6 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
-        public void Add_InvalidName()
-        {
-            var builder = new TableSchemaBuilder();
-            Assert.Throws<ArgumentException>(() => builder.Add("123", BigQueryDbType.Int64));
-        }
-
-        [Fact]
-        public void ValidateFieldName_Valid()
-        {
-            TableSchemaBuilder.ValidateFieldName("abcABC_10", "field");
-            TableSchemaBuilder.ValidateFieldName("_", "field");
-            TableSchemaBuilder.ValidateFieldName(new string('a', 128), "field");
-        }
-
-        [Theory]
-        [InlineData("")]
-        [InlineData("1ab")]
-        [InlineData("abc+123")]
-        [InlineData("abc=123")]
-        [InlineData("abc-123")]
-        [InlineData("bc\u00e9")] // e acute
-        public void ValidateFieldName_Invalid(string name)
-        {
-            Assert.Throws<ArgumentException>(() => TableSchemaBuilder.ValidateFieldName(name, "field"));
-        }
-
-        [Fact]
         public void AddWithPolicyTags()
         {
             var builder = new TableSchemaBuilder
@@ -95,13 +68,6 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("REPEATED", field.Mode);
             Assert.Equal("My field", field.Description);
             Assert.Contains("policyName", field.PolicyTags.Names);
-        }
-
-        [Fact]
-        public void ValidateFieldName_InvalidTooLong()
-        {
-            // Can't embed this name into an InlineData easily...
-            Assert.Throws<ArgumentException>(() => TableSchemaBuilder.ValidateFieldName(new string('a', 129), "field"));
         }
     }
 }

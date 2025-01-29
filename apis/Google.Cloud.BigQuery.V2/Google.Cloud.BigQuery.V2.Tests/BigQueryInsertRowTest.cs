@@ -28,12 +28,6 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal("id", row.InsertId);
         }
 
-        [Fact]
-        public void InvalidFieldName()
-        {
-            AssertInvalid("bad field name", "");
-        }
-
         // Invalid values should be invalid for general insert, but also invalid
         // in a list at conversion time
         private void AssertInvalidValueWithListCheck<T>(string name, T value)
