@@ -151,7 +151,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="value">The value for the field, which must be <c>null</c> or one of the supported types.</param>
         public void Add(string key, object value)
         {
-            TableSchemaBuilder.ValidateFieldName(key, nameof(key));
+            GaxPreconditions.CheckNotNull(key, nameof(key));
             ValidateValue(value, nameof(value));
             _fields.Add(key, value);
         }
@@ -174,12 +174,12 @@ namespace Google.Cloud.BigQuery.V2
         {
             get
             {
-                TableSchemaBuilder.ValidateFieldName(name, nameof(name));
+                GaxPreconditions.CheckNotNull(name, nameof(name));
                 return _fields[name];
             }
             set
             {
-                TableSchemaBuilder.ValidateFieldName(name, nameof(name));
+                GaxPreconditions.CheckNotNull(name, nameof(name));
                 ValidateValue(value, nameof(value));
                 _fields[name] = value;
             }
