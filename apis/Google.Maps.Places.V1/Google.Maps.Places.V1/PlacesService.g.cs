@@ -152,7 +152,7 @@ namespace Google.Maps.Places.V1 {
             "U3VnZ2VzdGlvbi5Gb3JtYXR0YWJsZVRleHQSaAoRc3RydWN0dXJlZF9mb3Jt",
             "YXQYAiABKAsyTS5nb29nbGUubWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRl",
             "UGxhY2VzUmVzcG9uc2UuU3VnZ2VzdGlvbi5TdHJ1Y3R1cmVkRm9ybWF0QgYK",
-            "BGtpbmQy4QUKBlBsYWNlcxKLAQoMU2VhcmNoTmVhcmJ5EiouZ29vZ2xlLm1h",
+            "BGtpbmQykgYKBlBsYWNlcxKLAQoMU2VhcmNoTmVhcmJ5EiouZ29vZ2xlLm1h",
             "cHMucGxhY2VzLnYxLlNlYXJjaE5lYXJieVJlcXVlc3QaKy5nb29nbGUubWFw",
             "cy5wbGFjZXMudjEuU2VhcmNoTmVhcmJ5UmVzcG9uc2UiIoLT5JMCHCIXL3Yx",
             "L3BsYWNlczpzZWFyY2hOZWFyYnk6ASoSgwEKClNlYXJjaFRleHQSKC5nb29n",
@@ -168,11 +168,12 @@ namespace Google.Maps.Places.V1 {
             "Z29vZ2xlLm1hcHMucGxhY2VzLnYxLkF1dG9jb21wbGV0ZVBsYWNlc1JlcXVl",
             "c3QaMS5nb29nbGUubWFwcy5wbGFjZXMudjEuQXV0b2NvbXBsZXRlUGxhY2Vz",
             "UmVzcG9uc2UiIoLT5JMCHCIXL3YxL3BsYWNlczphdXRvY29tcGxldGU6ASoa",
-            "GMpBFXBsYWNlcy5nb29nbGVhcGlzLmNvbUKjAQoZY29tLmdvb2dsZS5tYXBz",
-            "LnBsYWNlcy52MUISUGxhY2VzU2VydmljZVByb3RvUAFaN2Nsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbWFwcy9wbGFjZXMvYXBpdjEvcGxhY2VzcGI7cGxhY2VzcGKi",
-            "AgZHTVBTVjGqAhVHb29nbGUuTWFwcy5QbGFjZXMuVjHKAhVHb29nbGVcTWFw",
-            "c1xQbGFjZXNcVjFiBnByb3RvMw=="));
+            "ScpBFXBsYWNlcy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2ds",
+            "ZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CowEKGWNvbS5nb29nbGUu",
+            "bWFwcy5wbGFjZXMudjFCElBsYWNlc1NlcnZpY2VQcm90b1ABWjdjbG91ZC5n",
+            "b29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3BiO3BsYWNl",
+            "c3BiogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIVR29vZ2xl",
+            "XE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.Places.V1.ContextualContentReflection.Descriptor, global::Google.Maps.Places.V1.EvChargingReflection.Descriptor, global::Google.Maps.Places.V1.GeometryReflection.Descriptor, global::Google.Maps.Places.V1.PlaceReflection.Descriptor, global::Google.Maps.Places.V1.PolylineReflection.Descriptor, global::Google.Maps.Places.V1.RouteModifiersReflection.Descriptor, global::Google.Maps.Places.V1.RoutingPreferenceReflection.Descriptor, global::Google.Maps.Places.V1.RoutingSummaryReflection.Descriptor, global::Google.Maps.Places.V1.TravelModeReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

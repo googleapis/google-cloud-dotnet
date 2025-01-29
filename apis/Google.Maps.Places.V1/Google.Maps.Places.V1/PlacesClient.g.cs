@@ -186,8 +186,16 @@ namespace Google.Maps.Places.V1
         public static string DefaultEndpoint { get; } = "places.googleapis.com:443";
 
         /// <summary>The default Places scopes.</summary>
-        /// <remarks>The default Places scopes are:<list type="bullet"></list></remarks>
-        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[] { });
+        /// <remarks>
+        /// The default Places scopes are:
+        /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// </list>
+        /// </remarks>
+        public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
+        {
+            "https://www.googleapis.com/auth/cloud-platform",
+        });
 
         /// <summary>The service metadata associated with this client type.</summary>
         public static gaxgrpc::ServiceMetadata ServiceMetadata { get; } = new gaxgrpc::ServiceMetadata(Places.Descriptor, DefaultEndpoint, DefaultScopes, true, gax::ApiTransports.Grpc | gax::ApiTransports.Rest, PackageApiMetadata.ApiMetadata);
