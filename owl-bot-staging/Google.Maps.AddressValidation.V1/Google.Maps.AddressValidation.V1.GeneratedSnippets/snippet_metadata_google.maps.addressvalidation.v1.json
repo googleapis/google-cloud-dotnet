@@ -1,0 +1,208 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.AddressValidation.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.addressvalidation.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "addressvalidation_v1_generated_AddressValidation_ValidateAddress_sync",
+      "title": "ValidateAddressRequestObject",
+      "description": "Snippet for ValidateAddress",
+      "file": "AddressValidationClient.ValidateAddressRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateAddress",
+        "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient.ValidateAddress",
+        "parameters": [
+          {
+            "type": "Google.Maps.AddressValidation.V1.ValidateAddressRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.AddressValidation.V1.ValidateAddressResponse",
+        "client": {
+          "shortName": "AddressValidationClient",
+          "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient"
+        },
+        "method": {
+          "shortName": "ValidateAddress",
+          "fullName": "google.maps.addressvalidation.v1.AddressValidation.ValidateAddress",
+          "service": {
+            "shortName": "AddressValidation",
+            "fullName": "google.maps.addressvalidation.v1.AddressValidation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "addressvalidation_v1_generated_AddressValidation_ValidateAddress_async",
+      "title": "ValidateAddressRequestObjectAsync",
+      "description": "Snippet for ValidateAddressAsync",
+      "file": "AddressValidationClient.ValidateAddressRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ValidateAddressAsync",
+        "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient.ValidateAddressAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.AddressValidation.V1.ValidateAddressRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.AddressValidation.V1.ValidateAddressResponse>",
+        "client": {
+          "shortName": "AddressValidationClient",
+          "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient"
+        },
+        "method": {
+          "shortName": "ValidateAddress",
+          "fullName": "google.maps.addressvalidation.v1.AddressValidation.ValidateAddress",
+          "service": {
+            "shortName": "AddressValidation",
+            "fullName": "google.maps.addressvalidation.v1.AddressValidation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "addressvalidation_v1_generated_AddressValidation_ProvideValidationFeedback_sync",
+      "title": "ProvideValidationFeedbackRequestObject",
+      "description": "Snippet for ProvideValidationFeedback",
+      "file": "AddressValidationClient.ProvideValidationFeedbackRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvideValidationFeedback",
+        "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient.ProvideValidationFeedback",
+        "parameters": [
+          {
+            "type": "Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.AddressValidation.V1.ProvideValidationFeedbackResponse",
+        "client": {
+          "shortName": "AddressValidationClient",
+          "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient"
+        },
+        "method": {
+          "shortName": "ProvideValidationFeedback",
+          "fullName": "google.maps.addressvalidation.v1.AddressValidation.ProvideValidationFeedback",
+          "service": {
+            "shortName": "AddressValidation",
+            "fullName": "google.maps.addressvalidation.v1.AddressValidation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "addressvalidation_v1_generated_AddressValidation_ProvideValidationFeedback_async",
+      "title": "ProvideValidationFeedbackRequestObjectAsync",
+      "description": "Snippet for ProvideValidationFeedbackAsync",
+      "file": "AddressValidationClient.ProvideValidationFeedbackRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvideValidationFeedbackAsync",
+        "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient.ProvideValidationFeedbackAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.AddressValidation.V1.ProvideValidationFeedbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.AddressValidation.V1.ProvideValidationFeedbackResponse>",
+        "client": {
+          "shortName": "AddressValidationClient",
+          "fullName": "Google.Maps.AddressValidation.V1.AddressValidationClient"
+        },
+        "method": {
+          "shortName": "ProvideValidationFeedback",
+          "fullName": "google.maps.addressvalidation.v1.AddressValidation.ProvideValidationFeedback",
+          "service": {
+            "shortName": "AddressValidation",
+            "fullName": "google.maps.addressvalidation.v1.AddressValidation"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
