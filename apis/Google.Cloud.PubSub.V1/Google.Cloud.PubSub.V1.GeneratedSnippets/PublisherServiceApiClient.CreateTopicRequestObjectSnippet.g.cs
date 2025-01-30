@@ -46,6 +46,10 @@ namespace GoogleCSharpSnippets
                 MessageRetentionDuration = new Duration(),
                 State = Topic.Types.State.Unspecified,
                 IngestionDataSourceSettings = new IngestionDataSourceSettings(),
+                MessageTransforms =
+                {
+                    new MessageTransform(),
+                },
             };
             // Make the request
             Topic response = publisherServiceApiClient.CreateTopic(request);

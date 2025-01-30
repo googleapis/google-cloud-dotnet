@@ -57,6 +57,10 @@ namespace GoogleCSharpSnippets
                 State = Subscription.Types.State.Unspecified,
                 CloudStorageConfig = new CloudStorageConfig(),
                 AnalyticsHubSubscriptionInfo = new Subscription.Types.AnalyticsHubSubscriptionInfo(),
+                MessageTransforms =
+                {
+                    new MessageTransform(),
+                },
             };
             // Make the request
             Subscription response = await subscriberServiceApiClient.CreateSubscriptionAsync(request);
