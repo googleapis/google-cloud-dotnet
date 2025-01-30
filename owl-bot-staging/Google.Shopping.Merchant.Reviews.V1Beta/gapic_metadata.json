@@ -1,0 +1,75 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.shopping.merchant.reviews.v1beta",
+  "libraryPackage": "Google.Shopping.Merchant.Reviews.V1Beta",
+  "services": {
+    "MerchantReviewsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MerchantReviewsServiceClient",
+          "rpcs": {
+            "DeleteMerchantReview": {
+              "methods": [
+                "DeleteMerchantReview",
+                "DeleteMerchantReviewAsync"
+              ]
+            },
+            "GetMerchantReview": {
+              "methods": [
+                "GetMerchantReview",
+                "GetMerchantReviewAsync"
+              ]
+            },
+            "InsertMerchantReview": {
+              "methods": [
+                "InsertMerchantReview",
+                "InsertMerchantReviewAsync"
+              ]
+            },
+            "ListMerchantReviews": {
+              "methods": [
+                "ListMerchantReviews",
+                "ListMerchantReviewsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ProductReviewsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProductReviewsServiceClient",
+          "rpcs": {
+            "DeleteProductReview": {
+              "methods": [
+                "DeleteProductReview",
+                "DeleteProductReviewAsync"
+              ]
+            },
+            "GetProductReview": {
+              "methods": [
+                "GetProductReview",
+                "GetProductReviewAsync"
+              ]
+            },
+            "InsertProductReview": {
+              "methods": [
+                "InsertProductReview",
+                "InsertProductReviewAsync"
+              ]
+            },
+            "ListProductReviews": {
+              "methods": [
+                "ListProductReviews",
+                "ListProductReviewsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

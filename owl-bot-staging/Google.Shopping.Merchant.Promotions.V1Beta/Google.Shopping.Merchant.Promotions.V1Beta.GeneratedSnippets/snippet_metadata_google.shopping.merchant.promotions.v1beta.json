@@ -1,0 +1,606 @@
+{
+  "clientLibrary": {
+    "name": "Google.Shopping.Merchant.Promotions.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.shopping.merchant.promotions.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_InsertPromotion_sync",
+      "title": "InsertPromotionRequestObject",
+      "description": "Snippet for InsertPromotion",
+      "file": "PromotionsServiceClient.InsertPromotionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertPromotion",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.InsertPromotion",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Promotions.V1Beta.InsertPromotionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Promotions.V1Beta.Promotion",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "InsertPromotion",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.InsertPromotion",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_InsertPromotion_async",
+      "title": "InsertPromotionRequestObjectAsync",
+      "description": "Snippet for InsertPromotionAsync",
+      "file": "PromotionsServiceClient.InsertPromotionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "InsertPromotionAsync",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.InsertPromotionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Promotions.V1Beta.InsertPromotionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Promotions.V1Beta.Promotion>",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "InsertPromotion",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.InsertPromotion",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_GetPromotion_sync",
+      "title": "GetPromotionRequestObject",
+      "description": "Snippet for GetPromotion",
+      "file": "PromotionsServiceClient.GetPromotionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPromotion",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.GetPromotion",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Promotions.V1Beta.GetPromotionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Promotions.V1Beta.Promotion",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetPromotion",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.GetPromotion",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_GetPromotion_async",
+      "title": "GetPromotionRequestObjectAsync",
+      "description": "Snippet for GetPromotionAsync",
+      "file": "PromotionsServiceClient.GetPromotionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPromotionAsync",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.GetPromotionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Promotions.V1Beta.GetPromotionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Promotions.V1Beta.Promotion>",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetPromotion",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.GetPromotion",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_GetPromotion_sync_flattened",
+      "title": "GetPromotion",
+      "description": "Snippet for GetPromotion",
+      "file": "PromotionsServiceClient.GetPromotionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPromotion",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.GetPromotion",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Promotions.V1Beta.Promotion",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetPromotion",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.GetPromotion",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_GetPromotion_async_flattened",
+      "title": "GetPromotionAsync",
+      "description": "Snippet for GetPromotionAsync",
+      "file": "PromotionsServiceClient.GetPromotionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPromotionAsync",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.GetPromotionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Promotions.V1Beta.Promotion>",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetPromotion",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.GetPromotion",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_GetPromotion_sync_flattened_resourceNames",
+      "title": "GetPromotionResourceNames",
+      "description": "Snippet for GetPromotion",
+      "file": "PromotionsServiceClient.GetPromotionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPromotion",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.GetPromotion",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Promotions.V1Beta.Promotion",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetPromotion",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.GetPromotion",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_GetPromotion_async_flattened_resourceNames",
+      "title": "GetPromotionResourceNamesAsync",
+      "description": "Snippet for GetPromotionAsync",
+      "file": "PromotionsServiceClient.GetPromotionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPromotionAsync",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.GetPromotionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Promotions.V1Beta.Promotion>",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "GetPromotion",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.GetPromotion",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_ListPromotions_sync",
+      "title": "ListPromotionsRequestObject",
+      "description": "Snippet for ListPromotions",
+      "file": "PromotionsServiceClient.ListPromotionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPromotions",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.ListPromotions",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Promotions.V1Beta.ListPromotionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Promotions.V1Beta.ListPromotionsResponse, Google.Shopping.Merchant.Promotions.V1Beta.Promotion>",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListPromotions",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.ListPromotions",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_ListPromotions_async",
+      "title": "ListPromotionsRequestObjectAsync",
+      "description": "Snippet for ListPromotionsAsync",
+      "file": "PromotionsServiceClient.ListPromotionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPromotionsAsync",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.ListPromotionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Promotions.V1Beta.ListPromotionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Promotions.V1Beta.ListPromotionsResponse, Google.Shopping.Merchant.Promotions.V1Beta.Promotion>",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListPromotions",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.ListPromotions",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_ListPromotions_sync_flattened",
+      "title": "ListPromotions",
+      "description": "Snippet for ListPromotions",
+      "file": "PromotionsServiceClient.ListPromotionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPromotions",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.ListPromotions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Shopping.Merchant.Promotions.V1Beta.ListPromotionsResponse, Google.Shopping.Merchant.Promotions.V1Beta.Promotion>",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListPromotions",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.ListPromotions",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_PromotionsService_ListPromotions_async_flattened",
+      "title": "ListPromotionsAsync",
+      "description": "Snippet for ListPromotionsAsync",
+      "file": "PromotionsServiceClient.ListPromotionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPromotionsAsync",
+        "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient.ListPromotionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Shopping.Merchant.Promotions.V1Beta.ListPromotionsResponse, Google.Shopping.Merchant.Promotions.V1Beta.Promotion>",
+        "client": {
+          "shortName": "PromotionsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Promotions.V1Beta.PromotionsServiceClient"
+        },
+        "method": {
+          "shortName": "ListPromotions",
+          "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService.ListPromotions",
+          "service": {
+            "shortName": "PromotionsService",
+            "fullName": "google.shopping.merchant.promotions.v1beta.PromotionsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
