@@ -3308,6 +3308,101 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for AddSplitPoints</summary>
+        public void AddSplitPointsRequestObject()
+        {
+            // Snippet: AddSplitPoints(AddSplitPointsRequest, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            AddSplitPointsRequest request = new AddSplitPointsRequest
+            {
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SplitPoints = { new SplitPoints(), },
+                Initiator = "",
+            };
+            // Make the request
+            AddSplitPointsResponse response = databaseAdminClient.AddSplitPoints(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPointsAsync</summary>
+        public async Task AddSplitPointsRequestObjectAsync()
+        {
+            // Snippet: AddSplitPointsAsync(AddSplitPointsRequest, CallSettings)
+            // Additional: AddSplitPointsAsync(AddSplitPointsRequest, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AddSplitPointsRequest request = new AddSplitPointsRequest
+            {
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                SplitPoints = { new SplitPoints(), },
+                Initiator = "",
+            };
+            // Make the request
+            AddSplitPointsResponse response = await databaseAdminClient.AddSplitPointsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPoints</summary>
+        public void AddSplitPoints()
+        {
+            // Snippet: AddSplitPoints(string, IEnumerable<SplitPoints>, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            IEnumerable<SplitPoints> splitPoints = new SplitPoints[] { new SplitPoints(), };
+            // Make the request
+            AddSplitPointsResponse response = databaseAdminClient.AddSplitPoints(database, splitPoints);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPointsAsync</summary>
+        public async Task AddSplitPointsAsync()
+        {
+            // Snippet: AddSplitPointsAsync(string, IEnumerable<SplitPoints>, CallSettings)
+            // Additional: AddSplitPointsAsync(string, IEnumerable<SplitPoints>, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            IEnumerable<SplitPoints> splitPoints = new SplitPoints[] { new SplitPoints(), };
+            // Make the request
+            AddSplitPointsResponse response = await databaseAdminClient.AddSplitPointsAsync(database, splitPoints);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPoints</summary>
+        public void AddSplitPointsResourceNames()
+        {
+            // Snippet: AddSplitPoints(DatabaseName, IEnumerable<SplitPoints>, CallSettings)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = DatabaseAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            IEnumerable<SplitPoints> splitPoints = new SplitPoints[] { new SplitPoints(), };
+            // Make the request
+            AddSplitPointsResponse response = databaseAdminClient.AddSplitPoints(database, splitPoints);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddSplitPointsAsync</summary>
+        public async Task AddSplitPointsResourceNamesAsync()
+        {
+            // Snippet: AddSplitPointsAsync(DatabaseName, IEnumerable<SplitPoints>, CallSettings)
+            // Additional: AddSplitPointsAsync(DatabaseName, IEnumerable<SplitPoints>, CancellationToken)
+            // Create client
+            DatabaseAdminClient databaseAdminClient = await DatabaseAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            IEnumerable<SplitPoints> splitPoints = new SplitPoints[] { new SplitPoints(), };
+            // Make the request
+            AddSplitPointsResponse response = await databaseAdminClient.AddSplitPointsAsync(database, splitPoints);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateBackupSchedule</summary>
         public void CreateBackupScheduleRequestObject()
         {

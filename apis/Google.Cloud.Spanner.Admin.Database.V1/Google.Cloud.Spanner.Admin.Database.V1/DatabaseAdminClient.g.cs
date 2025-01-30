@@ -75,6 +75,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             ListDatabaseOperationsSettings = existing.ListDatabaseOperationsSettings;
             ListBackupOperationsSettings = existing.ListBackupOperationsSettings;
             ListDatabaseRolesSettings = existing.ListDatabaseRolesSettings;
+            AddSplitPointsSettings = existing.AddSplitPointsSettings;
             CreateBackupScheduleSettings = existing.CreateBackupScheduleSettings;
             GetBackupScheduleSettings = existing.GetBackupScheduleSettings;
             UpdateBackupScheduleSettings = existing.UpdateBackupScheduleSettings;
@@ -559,6 +560,27 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDatabaseRolesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseAdminClient.AddSplitPoints</c> and <c>DatabaseAdminClient.AddSplitPointsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 32000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 3600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddSplitPointsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(32000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4920,6 +4942,157 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         }
 
         /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddSplitPointsResponse AddSplitPoints(AddSplitPointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(AddSplitPointsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(AddSplitPointsRequest request, st::CancellationToken cancellationToken) =>
+            AddSplitPointsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddSplitPointsResponse AddSplitPoints(string database, scg::IEnumerable<SplitPoints> splitPoints, gaxgrpc::CallSettings callSettings = null) =>
+            AddSplitPoints(new AddSplitPointsRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                SplitPoints =
+                {
+                    gax::GaxPreconditions.CheckNotNull(splitPoints, nameof(splitPoints)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(string database, scg::IEnumerable<SplitPoints> splitPoints, gaxgrpc::CallSettings callSettings = null) =>
+            AddSplitPointsAsync(new AddSplitPointsRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+                SplitPoints =
+                {
+                    gax::GaxPreconditions.CheckNotNull(splitPoints, nameof(splitPoints)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(string database, scg::IEnumerable<SplitPoints> splitPoints, st::CancellationToken cancellationToken) =>
+            AddSplitPointsAsync(database, splitPoints, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AddSplitPointsResponse AddSplitPoints(gcscv::DatabaseName database, scg::IEnumerable<SplitPoints> splitPoints, gaxgrpc::CallSettings callSettings = null) =>
+            AddSplitPoints(new AddSplitPointsRequest
+            {
+                DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                SplitPoints =
+                {
+                    gax::GaxPreconditions.CheckNotNull(splitPoints, nameof(splitPoints)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(gcscv::DatabaseName database, scg::IEnumerable<SplitPoints> splitPoints, gaxgrpc::CallSettings callSettings = null) =>
+            AddSplitPointsAsync(new AddSplitPointsRequest
+            {
+                DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+                SplitPoints =
+                {
+                    gax::GaxPreconditions.CheckNotNull(splitPoints, nameof(splitPoints)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database on whose tables/indexes split points are to be
+        /// added. Values are of the form
+        /// `projects/&lt;project&gt;/instances/&lt;instance&gt;/databases/&lt;database&gt;`.
+        /// </param>
+        /// <param name="splitPoints">
+        /// Required. The split points to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(gcscv::DatabaseName database, scg::IEnumerable<SplitPoints> splitPoints, st::CancellationToken cancellationToken) =>
+            AddSplitPointsAsync(database, splitPoints, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a new backup schedule.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5620,6 +5793,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         private readonly gaxgrpc::ApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse> _callListDatabaseRoles;
 
+        private readonly gaxgrpc::ApiCall<AddSplitPointsRequest, AddSplitPointsResponse> _callAddSplitPoints;
+
         private readonly gaxgrpc::ApiCall<CreateBackupScheduleRequest, BackupSchedule> _callCreateBackupSchedule;
 
         private readonly gaxgrpc::ApiCall<GetBackupScheduleRequest, BackupSchedule> _callGetBackupSchedule;
@@ -5711,6 +5886,9 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             _callListDatabaseRoles = clientHelper.BuildApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse>("ListDatabaseRoles", grpcClient.ListDatabaseRolesAsync, grpcClient.ListDatabaseRoles, effectiveSettings.ListDatabaseRolesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatabaseRoles);
             Modify_ListDatabaseRolesApiCall(ref _callListDatabaseRoles);
+            _callAddSplitPoints = clientHelper.BuildApiCall<AddSplitPointsRequest, AddSplitPointsResponse>("AddSplitPoints", grpcClient.AddSplitPointsAsync, grpcClient.AddSplitPoints, effectiveSettings.AddSplitPointsSettings).WithGoogleRequestParam("database", request => request.Database);
+            Modify_ApiCall(ref _callAddSplitPoints);
+            Modify_AddSplitPointsApiCall(ref _callAddSplitPoints);
             _callCreateBackupSchedule = clientHelper.BuildApiCall<CreateBackupScheduleRequest, BackupSchedule>("CreateBackupSchedule", grpcClient.CreateBackupScheduleAsync, grpcClient.CreateBackupSchedule, effectiveSettings.CreateBackupScheduleSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateBackupSchedule);
             Modify_CreateBackupScheduleApiCall(ref _callCreateBackupSchedule);
@@ -5771,6 +5949,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
 
         partial void Modify_ListDatabaseRolesApiCall(ref gaxgrpc::ApiCall<ListDatabaseRolesRequest, ListDatabaseRolesResponse> call);
 
+        partial void Modify_AddSplitPointsApiCall(ref gaxgrpc::ApiCall<AddSplitPointsRequest, AddSplitPointsResponse> call);
+
         partial void Modify_CreateBackupScheduleApiCall(ref gaxgrpc::ApiCall<CreateBackupScheduleRequest, BackupSchedule> call);
 
         partial void Modify_GetBackupScheduleApiCall(ref gaxgrpc::ApiCall<GetBackupScheduleRequest, BackupSchedule> call);
@@ -5825,6 +6005,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         partial void Modify_ListBackupOperationsRequest(ref ListBackupOperationsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDatabaseRolesRequest(ref ListDatabaseRolesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddSplitPointsRequest(ref AddSplitPointsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateBackupScheduleRequest(ref CreateBackupScheduleRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6606,6 +6788,30 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
         {
             Modify_ListDatabaseRolesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatabaseRolesRequest, ListDatabaseRolesResponse, DatabaseRole>(_callListDatabaseRoles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AddSplitPointsResponse AddSplitPoints(AddSplitPointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddSplitPointsRequest(ref request, ref callSettings);
+            return _callAddSplitPoints.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Adds split points to specified tables, indexes of a database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AddSplitPointsResponse> AddSplitPointsAsync(AddSplitPointsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddSplitPointsRequest(ref request, ref callSettings);
+            return _callAddSplitPoints.Async(request, callSettings);
         }
 
         /// <summary>

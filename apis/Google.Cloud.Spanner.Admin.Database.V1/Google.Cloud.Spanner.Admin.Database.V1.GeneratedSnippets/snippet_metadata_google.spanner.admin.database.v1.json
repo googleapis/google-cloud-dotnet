@@ -5907,6 +5907,309 @@
       ]
     },
     {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_AddSplitPoints_sync",
+      "title": "AddSplitPointsRequestObject",
+      "description": "Snippet for AddSplitPoints",
+      "file": "DatabaseAdminClient.AddSplitPointsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddSplitPoints",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.AddSplitPoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "AddSplitPoints",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.AddSplitPoints",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_AddSplitPoints_async",
+      "title": "AddSplitPointsRequestObjectAsync",
+      "description": "Snippet for AddSplitPointsAsync",
+      "file": "DatabaseAdminClient.AddSplitPointsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddSplitPointsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.AddSplitPointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "AddSplitPoints",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.AddSplitPoints",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_AddSplitPoints_sync_flattened",
+      "title": "AddSplitPoints",
+      "description": "Snippet for AddSplitPoints",
+      "file": "DatabaseAdminClient.AddSplitPointsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddSplitPoints",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.AddSplitPoints",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.Admin.Database.V1.SplitPoints>",
+            "name": "splitPoints"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "AddSplitPoints",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.AddSplitPoints",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_AddSplitPoints_async_flattened",
+      "title": "AddSplitPointsAsync",
+      "description": "Snippet for AddSplitPointsAsync",
+      "file": "DatabaseAdminClient.AddSplitPointsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddSplitPointsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.AddSplitPointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.Admin.Database.V1.SplitPoints>",
+            "name": "splitPoints"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "AddSplitPoints",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.AddSplitPoints",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_AddSplitPoints_sync_flattened_resourceNames",
+      "title": "AddSplitPointsResourceNames",
+      "description": "Snippet for AddSplitPoints",
+      "file": "DatabaseAdminClient.AddSplitPointsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddSplitPoints",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.AddSplitPoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.Admin.Database.V1.SplitPoints>",
+            "name": "splitPoints"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "AddSplitPoints",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.AddSplitPoints",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_DatabaseAdmin_AddSplitPoints_async_flattened_resourceNames",
+      "title": "AddSplitPointsResourceNamesAsync",
+      "description": "Snippet for AddSplitPointsAsync",
+      "file": "DatabaseAdminClient.AddSplitPointsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddSplitPointsAsync",
+        "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient.AddSplitPointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Spanner.Admin.Database.V1.SplitPoints>",
+            "name": "splitPoints"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse>",
+        "client": {
+          "shortName": "DatabaseAdminClient",
+          "fullName": "Google.Cloud.Spanner.Admin.Database.V1.DatabaseAdminClient"
+        },
+        "method": {
+          "shortName": "AddSplitPoints",
+          "fullName": "google.spanner.admin.database.v1.DatabaseAdmin.AddSplitPoints",
+          "service": {
+            "shortName": "DatabaseAdmin",
+            "fullName": "google.spanner.admin.database.v1.DatabaseAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "spanner_v1_generated_DatabaseAdmin_CreateBackupSchedule_sync",
       "title": "CreateBackupScheduleRequestObject",
       "description": "Snippet for CreateBackupSchedule",
