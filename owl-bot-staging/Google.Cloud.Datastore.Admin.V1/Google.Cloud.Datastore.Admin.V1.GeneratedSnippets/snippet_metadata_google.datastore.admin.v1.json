@@ -1,0 +1,834 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Datastore.Admin.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.datastore.admin.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ExportEntities_sync",
+      "title": "ExportEntitiesRequestObject",
+      "description": "Snippet for ExportEntities",
+      "file": "DatastoreAdminClient.ExportEntitiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEntities",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ExportEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.ExportEntitiesResponse, Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ExportEntities",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ExportEntities",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ExportEntities_async",
+      "title": "ExportEntitiesRequestObjectAsync",
+      "description": "Snippet for ExportEntitiesAsync",
+      "file": "DatastoreAdminClient.ExportEntitiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEntitiesAsync",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ExportEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ExportEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.ExportEntitiesResponse, Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata>>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ExportEntities",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ExportEntities",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ExportEntities_sync_flattened",
+      "title": "ExportEntities",
+      "description": "Snippet for ExportEntities",
+      "file": "DatastoreAdminClient.ExportEntitiesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEntities",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ExportEntities",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.EntityFilter",
+            "name": "entityFilter"
+          },
+          {
+            "type": "System.String",
+            "name": "outputUrlPrefix"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.ExportEntitiesResponse, Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ExportEntities",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ExportEntities",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ExportEntities_async_flattened",
+      "title": "ExportEntitiesAsync",
+      "description": "Snippet for ExportEntitiesAsync",
+      "file": "DatastoreAdminClient.ExportEntitiesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEntitiesAsync",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ExportEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.EntityFilter",
+            "name": "entityFilter"
+          },
+          {
+            "type": "System.String",
+            "name": "outputUrlPrefix"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.ExportEntitiesResponse, Google.Cloud.Datastore.Admin.V1.ExportEntitiesMetadata>>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ExportEntities",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ExportEntities",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ImportEntities_sync",
+      "title": "ImportEntitiesRequestObject",
+      "description": "Snippet for ImportEntities",
+      "file": "DatastoreAdminClient.ImportEntitiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntities",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ImportEntities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ImportEntities",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ImportEntities",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ImportEntities_async",
+      "title": "ImportEntitiesRequestObjectAsync",
+      "description": "Snippet for ImportEntitiesAsync",
+      "file": "DatastoreAdminClient.ImportEntitiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntitiesAsync",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ImportEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ImportEntitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata>>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ImportEntities",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ImportEntities",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ImportEntities_sync_flattened",
+      "title": "ImportEntities",
+      "description": "Snippet for ImportEntities",
+      "file": "DatastoreAdminClient.ImportEntitiesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntities",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ImportEntities",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "System.String",
+            "name": "inputUrl"
+          },
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.EntityFilter",
+            "name": "entityFilter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ImportEntities",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ImportEntities",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ImportEntities_async_flattened",
+      "title": "ImportEntitiesAsync",
+      "description": "Snippet for ImportEntitiesAsync",
+      "file": "DatastoreAdminClient.ImportEntitiesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ImportEntitiesAsync",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ImportEntitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.Collections.Generic.IDictionary<System.String, System.String>",
+            "name": "labels"
+          },
+          {
+            "type": "System.String",
+            "name": "inputUrl"
+          },
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.EntityFilter",
+            "name": "entityFilter"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Datastore.Admin.V1.ImportEntitiesMetadata>>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ImportEntities",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ImportEntities",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_CreateIndex_sync",
+      "title": "CreateIndexRequestObject",
+      "description": "Snippet for CreateIndex",
+      "file": "DatastoreAdminClient.CreateIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIndex",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.CreateIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.CreateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.Index, Google.Cloud.Datastore.Admin.V1.IndexOperationMetadata>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateIndex",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.CreateIndex",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_CreateIndex_async",
+      "title": "CreateIndexRequestObjectAsync",
+      "description": "Snippet for CreateIndexAsync",
+      "file": "DatastoreAdminClient.CreateIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateIndexAsync",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.CreateIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.CreateIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.Index, Google.Cloud.Datastore.Admin.V1.IndexOperationMetadata>>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateIndex",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.CreateIndex",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_DeleteIndex_sync",
+      "title": "DeleteIndexRequestObject",
+      "description": "Snippet for DeleteIndex",
+      "file": "DatastoreAdminClient.DeleteIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIndex",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.DeleteIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.Index, Google.Cloud.Datastore.Admin.V1.IndexOperationMetadata>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteIndex",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.DeleteIndex",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_DeleteIndex_async",
+      "title": "DeleteIndexRequestObjectAsync",
+      "description": "Snippet for DeleteIndexAsync",
+      "file": "DatastoreAdminClient.DeleteIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteIndexAsync",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.DeleteIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.DeleteIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Datastore.Admin.V1.Index, Google.Cloud.Datastore.Admin.V1.IndexOperationMetadata>>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteIndex",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.DeleteIndex",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_GetIndex_sync",
+      "title": "GetIndexRequestObject",
+      "description": "Snippet for GetIndex",
+      "file": "DatastoreAdminClient.GetIndexRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIndex",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.GetIndex",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.GetIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Datastore.Admin.V1.Index",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "GetIndex",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.GetIndex",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_GetIndex_async",
+      "title": "GetIndexRequestObjectAsync",
+      "description": "Snippet for GetIndexAsync",
+      "file": "DatastoreAdminClient.GetIndexRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIndexAsync",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.GetIndexAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.GetIndexRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Datastore.Admin.V1.Index>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "GetIndex",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.GetIndex",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ListIndexes_sync",
+      "title": "ListIndexesRequestObject",
+      "description": "Snippet for ListIndexes",
+      "file": "DatastoreAdminClient.ListIndexesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIndexes",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ListIndexes",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ListIndexesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Datastore.Admin.V1.ListIndexesResponse, Google.Cloud.Datastore.Admin.V1.Index>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ListIndexes",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ListIndexes",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "datastore_v1_generated_DatastoreAdmin_ListIndexes_async",
+      "title": "ListIndexesRequestObjectAsync",
+      "description": "Snippet for ListIndexesAsync",
+      "file": "DatastoreAdminClient.ListIndexesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIndexesAsync",
+        "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient.ListIndexesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Datastore.Admin.V1.ListIndexesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Datastore.Admin.V1.ListIndexesResponse, Google.Cloud.Datastore.Admin.V1.Index>",
+        "client": {
+          "shortName": "DatastoreAdminClient",
+          "fullName": "Google.Cloud.Datastore.Admin.V1.DatastoreAdminClient"
+        },
+        "method": {
+          "shortName": "ListIndexes",
+          "fullName": "google.datastore.admin.v1.DatastoreAdmin.ListIndexes",
+          "service": {
+            "shortName": "DatastoreAdmin",
+            "fullName": "google.datastore.admin.v1.DatastoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

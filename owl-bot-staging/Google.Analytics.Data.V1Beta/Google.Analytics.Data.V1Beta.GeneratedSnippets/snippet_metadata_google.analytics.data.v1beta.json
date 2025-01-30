@@ -1,0 +1,1984 @@
+{
+  "clientLibrary": {
+    "name": "Google.Analytics.Data.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.analytics.data.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_RunReport_sync",
+      "title": "RunReportRequestObject",
+      "description": "Snippet for RunReport",
+      "file": "BetaAnalyticsDataClient.RunReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunReport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunReport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.RunReportResponse",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "RunReport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.RunReport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_RunReport_async",
+      "title": "RunReportRequestObjectAsync",
+      "description": "Snippet for RunReportAsync",
+      "file": "BetaAnalyticsDataClient.RunReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunReportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.RunReportResponse>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "RunReport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.RunReport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_RunPivotReport_sync",
+      "title": "RunPivotReportRequestObject",
+      "description": "Snippet for RunPivotReport",
+      "file": "BetaAnalyticsDataClient.RunPivotReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunPivotReport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunPivotReport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunPivotReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.RunPivotReportResponse",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "RunPivotReport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.RunPivotReport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 55,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 53,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_RunPivotReport_async",
+      "title": "RunPivotReportRequestObjectAsync",
+      "description": "Snippet for RunPivotReportAsync",
+      "file": "BetaAnalyticsDataClient.RunPivotReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunPivotReportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunPivotReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunPivotReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.RunPivotReportResponse>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "RunPivotReport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.RunPivotReport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 56,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 54,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_BatchRunReports_sync",
+      "title": "BatchRunReportsRequestObject",
+      "description": "Snippet for BatchRunReports",
+      "file": "BetaAnalyticsDataClient.BatchRunReportsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRunReports",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.BatchRunReports",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.BatchRunReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.BatchRunReportsResponse",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "BatchRunReports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.BatchRunReports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_BatchRunReports_async",
+      "title": "BatchRunReportsRequestObjectAsync",
+      "description": "Snippet for BatchRunReportsAsync",
+      "file": "BetaAnalyticsDataClient.BatchRunReportsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRunReportsAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.BatchRunReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.BatchRunReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.BatchRunReportsResponse>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "BatchRunReports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.BatchRunReports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_BatchRunPivotReports_sync",
+      "title": "BatchRunPivotReportsRequestObject",
+      "description": "Snippet for BatchRunPivotReports",
+      "file": "BetaAnalyticsDataClient.BatchRunPivotReportsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRunPivotReports",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.BatchRunPivotReports",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "BatchRunPivotReports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.BatchRunPivotReports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_BatchRunPivotReports_async",
+      "title": "BatchRunPivotReportsRequestObjectAsync",
+      "description": "Snippet for BatchRunPivotReportsAsync",
+      "file": "BetaAnalyticsDataClient.BatchRunPivotReportsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchRunPivotReportsAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.BatchRunPivotReportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.BatchRunPivotReportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.BatchRunPivotReportsResponse>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "BatchRunPivotReports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.BatchRunPivotReports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetMetadata_sync",
+      "title": "GetMetadataRequestObject",
+      "description": "Snippet for GetMetadata",
+      "file": "BetaAnalyticsDataClient.GetMetadataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadata",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadata",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.GetMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.Metadata",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetMetadata",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetMetadata",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetMetadata_async",
+      "title": "GetMetadataRequestObjectAsync",
+      "description": "Snippet for GetMetadataAsync",
+      "file": "BetaAnalyticsDataClient.GetMetadataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.GetMetadataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.Metadata>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetMetadata",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetMetadata",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetMetadata_sync_flattened",
+      "title": "GetMetadata",
+      "description": "Snippet for GetMetadata",
+      "file": "BetaAnalyticsDataClient.GetMetadataSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadata",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadata",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.Metadata",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetMetadata",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetMetadata",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetMetadata_async_flattened",
+      "title": "GetMetadataAsync",
+      "description": "Snippet for GetMetadataAsync",
+      "file": "BetaAnalyticsDataClient.GetMetadataAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.Metadata>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetMetadata",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetMetadata",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetMetadata_sync_flattened_resourceNames",
+      "title": "GetMetadataResourceNames",
+      "description": "Snippet for GetMetadata",
+      "file": "BetaAnalyticsDataClient.GetMetadataResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadata",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadata",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.MetadataName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.Metadata",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetMetadata",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetMetadata",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetMetadata_async_flattened_resourceNames",
+      "title": "GetMetadataResourceNamesAsync",
+      "description": "Snippet for GetMetadataAsync",
+      "file": "BetaAnalyticsDataClient.GetMetadataResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMetadataAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetMetadataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.MetadataName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.Metadata>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetMetadata",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetMetadata",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_RunRealtimeReport_sync",
+      "title": "RunRealtimeReportRequestObject",
+      "description": "Snippet for RunRealtimeReport",
+      "file": "BetaAnalyticsDataClient.RunRealtimeReportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunRealtimeReport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunRealtimeReport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunRealtimeReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.RunRealtimeReportResponse",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "RunRealtimeReport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.RunRealtimeReport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 56,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 54,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_RunRealtimeReport_async",
+      "title": "RunRealtimeReportRequestObjectAsync",
+      "description": "Snippet for RunRealtimeReportAsync",
+      "file": "BetaAnalyticsDataClient.RunRealtimeReportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunRealtimeReportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.RunRealtimeReportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.RunRealtimeReportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.RunRealtimeReportResponse>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "RunRealtimeReport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.RunRealtimeReport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 57,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 55,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_CheckCompatibility_sync",
+      "title": "CheckCompatibilityRequestObject",
+      "description": "Snippet for CheckCompatibility",
+      "file": "BetaAnalyticsDataClient.CheckCompatibilityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckCompatibility",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CheckCompatibility",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.CheckCompatibilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.CheckCompatibilityResponse",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "CheckCompatibility",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.CheckCompatibility",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_CheckCompatibility_async",
+      "title": "CheckCompatibilityRequestObjectAsync",
+      "description": "Snippet for CheckCompatibilityAsync",
+      "file": "BetaAnalyticsDataClient.CheckCompatibilityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CheckCompatibilityAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CheckCompatibilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.CheckCompatibilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.CheckCompatibilityResponse>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "CheckCompatibility",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.CheckCompatibility",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_CreateAudienceExport_sync",
+      "title": "CreateAudienceExportRequestObject",
+      "description": "Snippet for CreateAudienceExport",
+      "file": "BetaAnalyticsDataClient.CreateAudienceExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceExport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CreateAudienceExport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.CreateAudienceExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Analytics.Data.V1Beta.AudienceExport, Google.Analytics.Data.V1Beta.AudienceExportMetadata>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.CreateAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_CreateAudienceExport_async",
+      "title": "CreateAudienceExportRequestObjectAsync",
+      "description": "Snippet for CreateAudienceExportAsync",
+      "file": "BetaAnalyticsDataClient.CreateAudienceExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceExportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CreateAudienceExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.CreateAudienceExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Analytics.Data.V1Beta.AudienceExport, Google.Analytics.Data.V1Beta.AudienceExportMetadata>>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.CreateAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_CreateAudienceExport_sync_flattened",
+      "title": "CreateAudienceExport",
+      "description": "Snippet for CreateAudienceExport",
+      "file": "BetaAnalyticsDataClient.CreateAudienceExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceExport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CreateAudienceExport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Data.V1Beta.AudienceExport",
+            "name": "audienceExport"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Analytics.Data.V1Beta.AudienceExport, Google.Analytics.Data.V1Beta.AudienceExportMetadata>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.CreateAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_CreateAudienceExport_async_flattened",
+      "title": "CreateAudienceExportAsync",
+      "description": "Snippet for CreateAudienceExportAsync",
+      "file": "BetaAnalyticsDataClient.CreateAudienceExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceExportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CreateAudienceExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Data.V1Beta.AudienceExport",
+            "name": "audienceExport"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Analytics.Data.V1Beta.AudienceExport, Google.Analytics.Data.V1Beta.AudienceExportMetadata>>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.CreateAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_CreateAudienceExport_sync_flattened_resourceNames",
+      "title": "CreateAudienceExportResourceNames",
+      "description": "Snippet for CreateAudienceExport",
+      "file": "BetaAnalyticsDataClient.CreateAudienceExportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceExport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CreateAudienceExport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Data.V1Beta.AudienceExport",
+            "name": "audienceExport"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Analytics.Data.V1Beta.AudienceExport, Google.Analytics.Data.V1Beta.AudienceExportMetadata>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.CreateAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_CreateAudienceExport_async_flattened_resourceNames",
+      "title": "CreateAudienceExportResourceNamesAsync",
+      "description": "Snippet for CreateAudienceExportAsync",
+      "file": "BetaAnalyticsDataClient.CreateAudienceExportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAudienceExportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.CreateAudienceExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Analytics.Data.V1Beta.AudienceExport",
+            "name": "audienceExport"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Analytics.Data.V1Beta.AudienceExport, Google.Analytics.Data.V1Beta.AudienceExportMetadata>>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "CreateAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.CreateAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_QueryAudienceExport_sync",
+      "title": "QueryAudienceExportRequestObject",
+      "description": "Snippet for QueryAudienceExport",
+      "file": "BetaAnalyticsDataClient.QueryAudienceExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryAudienceExport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.QueryAudienceExport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.QueryAudienceExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.QueryAudienceExportResponse",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "QueryAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.QueryAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_QueryAudienceExport_async",
+      "title": "QueryAudienceExportRequestObjectAsync",
+      "description": "Snippet for QueryAudienceExportAsync",
+      "file": "BetaAnalyticsDataClient.QueryAudienceExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryAudienceExportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.QueryAudienceExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.QueryAudienceExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.QueryAudienceExportResponse>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "QueryAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.QueryAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_QueryAudienceExport_sync_flattened",
+      "title": "QueryAudienceExport",
+      "description": "Snippet for QueryAudienceExport",
+      "file": "BetaAnalyticsDataClient.QueryAudienceExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryAudienceExport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.QueryAudienceExport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.QueryAudienceExportResponse",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "QueryAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.QueryAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_QueryAudienceExport_async_flattened",
+      "title": "QueryAudienceExportAsync",
+      "description": "Snippet for QueryAudienceExportAsync",
+      "file": "BetaAnalyticsDataClient.QueryAudienceExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "QueryAudienceExportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.QueryAudienceExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.QueryAudienceExportResponse>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "QueryAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.QueryAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetAudienceExport_sync",
+      "title": "GetAudienceExportRequestObject",
+      "description": "Snippet for GetAudienceExport",
+      "file": "BetaAnalyticsDataClient.GetAudienceExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceExport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetAudienceExport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.GetAudienceExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.AudienceExport",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetAudienceExport_async",
+      "title": "GetAudienceExportRequestObjectAsync",
+      "description": "Snippet for GetAudienceExportAsync",
+      "file": "BetaAnalyticsDataClient.GetAudienceExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceExportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetAudienceExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.GetAudienceExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetAudienceExport_sync_flattened",
+      "title": "GetAudienceExport",
+      "description": "Snippet for GetAudienceExport",
+      "file": "BetaAnalyticsDataClient.GetAudienceExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceExport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetAudienceExport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.AudienceExport",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetAudienceExport_async_flattened",
+      "title": "GetAudienceExportAsync",
+      "description": "Snippet for GetAudienceExportAsync",
+      "file": "BetaAnalyticsDataClient.GetAudienceExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceExportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetAudienceExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetAudienceExport_sync_flattened_resourceNames",
+      "title": "GetAudienceExportResourceNames",
+      "description": "Snippet for GetAudienceExport",
+      "file": "BetaAnalyticsDataClient.GetAudienceExportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceExport",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetAudienceExport",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.AudienceExportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Analytics.Data.V1Beta.AudienceExport",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_GetAudienceExport_async_flattened_resourceNames",
+      "title": "GetAudienceExportResourceNamesAsync",
+      "description": "Snippet for GetAudienceExportAsync",
+      "file": "BetaAnalyticsDataClient.GetAudienceExportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAudienceExportAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.GetAudienceExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.AudienceExportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "GetAudienceExport",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.GetAudienceExport",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_ListAudienceExports_sync",
+      "title": "ListAudienceExportsRequestObject",
+      "description": "Snippet for ListAudienceExports",
+      "file": "BetaAnalyticsDataClient.ListAudienceExportsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudienceExports",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.ListAudienceExports",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.ListAudienceExportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Data.V1Beta.ListAudienceExportsResponse, Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "ListAudienceExports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.ListAudienceExports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_ListAudienceExports_async",
+      "title": "ListAudienceExportsRequestObjectAsync",
+      "description": "Snippet for ListAudienceExportsAsync",
+      "file": "BetaAnalyticsDataClient.ListAudienceExportsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudienceExportsAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.ListAudienceExportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.ListAudienceExportsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Data.V1Beta.ListAudienceExportsResponse, Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "ListAudienceExports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.ListAudienceExports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_ListAudienceExports_sync_flattened",
+      "title": "ListAudienceExports",
+      "description": "Snippet for ListAudienceExports",
+      "file": "BetaAnalyticsDataClient.ListAudienceExportsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudienceExports",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.ListAudienceExports",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Data.V1Beta.ListAudienceExportsResponse, Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "ListAudienceExports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.ListAudienceExports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_ListAudienceExports_async_flattened",
+      "title": "ListAudienceExportsAsync",
+      "description": "Snippet for ListAudienceExportsAsync",
+      "file": "BetaAnalyticsDataClient.ListAudienceExportsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudienceExportsAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.ListAudienceExportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Data.V1Beta.ListAudienceExportsResponse, Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "ListAudienceExports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.ListAudienceExports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_ListAudienceExports_sync_flattened_resourceNames",
+      "title": "ListAudienceExportsResourceNames",
+      "description": "Snippet for ListAudienceExports",
+      "file": "BetaAnalyticsDataClient.ListAudienceExportsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudienceExports",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.ListAudienceExports",
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Analytics.Data.V1Beta.ListAudienceExportsResponse, Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "ListAudienceExports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.ListAudienceExports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "analyticsdata_v1beta_generated_BetaAnalyticsData_ListAudienceExports_async_flattened_resourceNames",
+      "title": "ListAudienceExportsResourceNamesAsync",
+      "description": "Snippet for ListAudienceExportsAsync",
+      "file": "BetaAnalyticsDataClient.ListAudienceExportsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAudienceExportsAsync",
+        "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient.ListAudienceExportsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Analytics.Data.V1Beta.PropertyName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Analytics.Data.V1Beta.ListAudienceExportsResponse, Google.Analytics.Data.V1Beta.AudienceExport>",
+        "client": {
+          "shortName": "BetaAnalyticsDataClient",
+          "fullName": "Google.Analytics.Data.V1Beta.BetaAnalyticsDataClient"
+        },
+        "method": {
+          "shortName": "ListAudienceExports",
+          "fullName": "google.analytics.data.v1beta.BetaAnalyticsData.ListAudienceExports",
+          "service": {
+            "shortName": "BetaAnalyticsData",
+            "fullName": "google.analytics.data.v1beta.BetaAnalyticsData"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

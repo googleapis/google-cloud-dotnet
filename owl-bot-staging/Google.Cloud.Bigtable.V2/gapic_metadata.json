@@ -1,0 +1,78 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.bigtable.v2",
+  "libraryPackage": "Google.Cloud.Bigtable.V2",
+  "services": {
+    "Bigtable": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BigtableServiceApiClient",
+          "rpcs": {
+            "CheckAndMutateRow": {
+              "methods": [
+                "CheckAndMutateRow",
+                "CheckAndMutateRowAsync"
+              ]
+            },
+            "ExecuteQuery": {
+              "methods": [
+                "ExecuteQuery",
+                "ExecuteQueryAsync"
+              ]
+            },
+            "GenerateInitialChangeStreamPartitions": {
+              "methods": [
+                "GenerateInitialChangeStreamPartitions",
+                "GenerateInitialChangeStreamPartitionsAsync"
+              ]
+            },
+            "MutateRow": {
+              "methods": [
+                "MutateRow",
+                "MutateRowAsync"
+              ]
+            },
+            "MutateRows": {
+              "methods": [
+                "MutateRows",
+                "MutateRowsAsync"
+              ]
+            },
+            "PingAndWarm": {
+              "methods": [
+                "PingAndWarm",
+                "PingAndWarmAsync"
+              ]
+            },
+            "ReadChangeStream": {
+              "methods": [
+                "ReadChangeStream",
+                "ReadChangeStreamAsync"
+              ]
+            },
+            "ReadModifyWriteRow": {
+              "methods": [
+                "ReadModifyWriteRow",
+                "ReadModifyWriteRowAsync"
+              ]
+            },
+            "ReadRows": {
+              "methods": [
+                "ReadRows",
+                "ReadRowsAsync"
+              ]
+            },
+            "SampleRowKeys": {
+              "methods": [
+                "SampleRowKeys",
+                "SampleRowKeysAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.privacy.dlp.v2",
+  "libraryPackage": "Google.Cloud.Dlp.V2",
+  "services": {
+    "DlpService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DlpServiceClient",
+          "rpcs": {
+            "ActivateJobTrigger": {
+              "methods": [
+                "ActivateJobTrigger",
+                "ActivateJobTriggerAsync"
+              ]
+            },
+            "CancelDlpJob": {
+              "methods": [
+                "CancelDlpJob",
+                "CancelDlpJobAsync"
+              ]
+            },
+            "CreateConnection": {
+              "methods": [
+                "CreateConnection",
+                "CreateConnectionAsync"
+              ]
+            },
+            "CreateDeidentifyTemplate": {
+              "methods": [
+                "CreateDeidentifyTemplate",
+                "CreateDeidentifyTemplateAsync"
+              ]
+            },
+            "CreateDiscoveryConfig": {
+              "methods": [
+                "CreateDiscoveryConfig",
+                "CreateDiscoveryConfigAsync"
+              ]
+            },
+            "CreateDlpJob": {
+              "methods": [
+                "CreateDlpJob",
+                "CreateDlpJobAsync"
+              ]
+            },
+            "CreateInspectTemplate": {
+              "methods": [
+                "CreateInspectTemplate",
+                "CreateInspectTemplateAsync"
+              ]
+            },
+            "CreateJobTrigger": {
+              "methods": [
+                "CreateJobTrigger",
+                "CreateJobTriggerAsync"
+              ]
+            },
+            "CreateStoredInfoType": {
+              "methods": [
+                "CreateStoredInfoType",
+                "CreateStoredInfoTypeAsync"
+              ]
+            },
+            "DeidentifyContent": {
+              "methods": [
+                "DeidentifyContent",
+                "DeidentifyContentAsync"
+              ]
+            },
+            "DeleteConnection": {
+              "methods": [
+                "DeleteConnection",
+                "DeleteConnectionAsync"
+              ]
+            },
+            "DeleteDeidentifyTemplate": {
+              "methods": [
+                "DeleteDeidentifyTemplate",
+                "DeleteDeidentifyTemplateAsync"
+              ]
+            },
+            "DeleteDiscoveryConfig": {
+              "methods": [
+                "DeleteDiscoveryConfig",
+                "DeleteDiscoveryConfigAsync"
+              ]
+            },
+            "DeleteDlpJob": {
+              "methods": [
+                "DeleteDlpJob",
+                "DeleteDlpJobAsync"
+              ]
+            },
+            "DeleteFileStoreDataProfile": {
+              "methods": [
+                "DeleteFileStoreDataProfile",
+                "DeleteFileStoreDataProfileAsync"
+              ]
+            },
+            "DeleteInspectTemplate": {
+              "methods": [
+                "DeleteInspectTemplate",
+                "DeleteInspectTemplateAsync"
+              ]
+            },
+            "DeleteJobTrigger": {
+              "methods": [
+                "DeleteJobTrigger",
+                "DeleteJobTriggerAsync"
+              ]
+            },
+            "DeleteStoredInfoType": {
+              "methods": [
+                "DeleteStoredInfoType",
+                "DeleteStoredInfoTypeAsync"
+              ]
+            },
+            "DeleteTableDataProfile": {
+              "methods": [
+                "DeleteTableDataProfile",
+                "DeleteTableDataProfileAsync"
+              ]
+            },
+            "FinishDlpJob": {
+              "methods": [
+                "FinishDlpJob",
+                "FinishDlpJobAsync"
+              ]
+            },
+            "GetColumnDataProfile": {
+              "methods": [
+                "GetColumnDataProfile",
+                "GetColumnDataProfileAsync"
+              ]
+            },
+            "GetConnection": {
+              "methods": [
+                "GetConnection",
+                "GetConnectionAsync"
+              ]
+            },
+            "GetDeidentifyTemplate": {
+              "methods": [
+                "GetDeidentifyTemplate",
+                "GetDeidentifyTemplateAsync"
+              ]
+            },
+            "GetDiscoveryConfig": {
+              "methods": [
+                "GetDiscoveryConfig",
+                "GetDiscoveryConfigAsync"
+              ]
+            },
+            "GetDlpJob": {
+              "methods": [
+                "GetDlpJob",
+                "GetDlpJobAsync"
+              ]
+            },
+            "GetFileStoreDataProfile": {
+              "methods": [
+                "GetFileStoreDataProfile",
+                "GetFileStoreDataProfileAsync"
+              ]
+            },
+            "GetInspectTemplate": {
+              "methods": [
+                "GetInspectTemplate",
+                "GetInspectTemplateAsync"
+              ]
+            },
+            "GetJobTrigger": {
+              "methods": [
+                "GetJobTrigger",
+                "GetJobTriggerAsync"
+              ]
+            },
+            "GetProjectDataProfile": {
+              "methods": [
+                "GetProjectDataProfile",
+                "GetProjectDataProfileAsync"
+              ]
+            },
+            "GetStoredInfoType": {
+              "methods": [
+                "GetStoredInfoType",
+                "GetStoredInfoTypeAsync"
+              ]
+            },
+            "GetTableDataProfile": {
+              "methods": [
+                "GetTableDataProfile",
+                "GetTableDataProfileAsync"
+              ]
+            },
+            "HybridInspectDlpJob": {
+              "methods": [
+                "HybridInspectDlpJob",
+                "HybridInspectDlpJobAsync"
+              ]
+            },
+            "HybridInspectJobTrigger": {
+              "methods": [
+                "HybridInspectJobTrigger",
+                "HybridInspectJobTriggerAsync"
+              ]
+            },
+            "InspectContent": {
+              "methods": [
+                "InspectContent",
+                "InspectContentAsync"
+              ]
+            },
+            "ListColumnDataProfiles": {
+              "methods": [
+                "ListColumnDataProfiles",
+                "ListColumnDataProfilesAsync"
+              ]
+            },
+            "ListConnections": {
+              "methods": [
+                "ListConnections",
+                "ListConnectionsAsync"
+              ]
+            },
+            "ListDeidentifyTemplates": {
+              "methods": [
+                "ListDeidentifyTemplates",
+                "ListDeidentifyTemplatesAsync"
+              ]
+            },
+            "ListDiscoveryConfigs": {
+              "methods": [
+                "ListDiscoveryConfigs",
+                "ListDiscoveryConfigsAsync"
+              ]
+            },
+            "ListDlpJobs": {
+              "methods": [
+                "ListDlpJobs",
+                "ListDlpJobsAsync"
+              ]
+            },
+            "ListFileStoreDataProfiles": {
+              "methods": [
+                "ListFileStoreDataProfiles",
+                "ListFileStoreDataProfilesAsync"
+              ]
+            },
+            "ListInfoTypes": {
+              "methods": [
+                "ListInfoTypes",
+                "ListInfoTypesAsync"
+              ]
+            },
+            "ListInspectTemplates": {
+              "methods": [
+                "ListInspectTemplates",
+                "ListInspectTemplatesAsync"
+              ]
+            },
+            "ListJobTriggers": {
+              "methods": [
+                "ListJobTriggers",
+                "ListJobTriggersAsync"
+              ]
+            },
+            "ListProjectDataProfiles": {
+              "methods": [
+                "ListProjectDataProfiles",
+                "ListProjectDataProfilesAsync"
+              ]
+            },
+            "ListStoredInfoTypes": {
+              "methods": [
+                "ListStoredInfoTypes",
+                "ListStoredInfoTypesAsync"
+              ]
+            },
+            "ListTableDataProfiles": {
+              "methods": [
+                "ListTableDataProfiles",
+                "ListTableDataProfilesAsync"
+              ]
+            },
+            "RedactImage": {
+              "methods": [
+                "RedactImage",
+                "RedactImageAsync"
+              ]
+            },
+            "ReidentifyContent": {
+              "methods": [
+                "ReidentifyContent",
+                "ReidentifyContentAsync"
+              ]
+            },
+            "SearchConnections": {
+              "methods": [
+                "SearchConnections",
+                "SearchConnectionsAsync"
+              ]
+            },
+            "UpdateConnection": {
+              "methods": [
+                "UpdateConnection",
+                "UpdateConnectionAsync"
+              ]
+            },
+            "UpdateDeidentifyTemplate": {
+              "methods": [
+                "UpdateDeidentifyTemplate",
+                "UpdateDeidentifyTemplateAsync"
+              ]
+            },
+            "UpdateDiscoveryConfig": {
+              "methods": [
+                "UpdateDiscoveryConfig",
+                "UpdateDiscoveryConfigAsync"
+              ]
+            },
+            "UpdateInspectTemplate": {
+              "methods": [
+                "UpdateInspectTemplate",
+                "UpdateInspectTemplateAsync"
+              ]
+            },
+            "UpdateJobTrigger": {
+              "methods": [
+                "UpdateJobTrigger",
+                "UpdateJobTriggerAsync"
+              ]
+            },
+            "UpdateStoredInfoType": {
+              "methods": [
+                "UpdateStoredInfoType",
+                "UpdateStoredInfoTypeAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

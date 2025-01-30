@@ -1,0 +1,312 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devtools.artifactregistry.v1",
+  "libraryPackage": "Google.Cloud.ArtifactRegistry.V1",
+  "services": {
+    "ArtifactRegistry": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ArtifactRegistryClient",
+          "rpcs": {
+            "BatchDeleteVersions": {
+              "methods": [
+                "BatchDeleteVersions",
+                "BatchDeleteVersionsAsync"
+              ]
+            },
+            "CreateAttachment": {
+              "methods": [
+                "CreateAttachment",
+                "CreateAttachmentAsync"
+              ]
+            },
+            "CreateRepository": {
+              "methods": [
+                "CreateRepository",
+                "CreateRepositoryAsync"
+              ]
+            },
+            "CreateRule": {
+              "methods": [
+                "CreateRule",
+                "CreateRuleAsync"
+              ]
+            },
+            "CreateTag": {
+              "methods": [
+                "CreateTag",
+                "CreateTagAsync"
+              ]
+            },
+            "DeleteAttachment": {
+              "methods": [
+                "DeleteAttachment",
+                "DeleteAttachmentAsync"
+              ]
+            },
+            "DeleteFile": {
+              "methods": [
+                "DeleteFile",
+                "DeleteFileAsync"
+              ]
+            },
+            "DeletePackage": {
+              "methods": [
+                "DeletePackage",
+                "DeletePackageAsync"
+              ]
+            },
+            "DeleteRepository": {
+              "methods": [
+                "DeleteRepository",
+                "DeleteRepositoryAsync"
+              ]
+            },
+            "DeleteRule": {
+              "methods": [
+                "DeleteRule",
+                "DeleteRuleAsync"
+              ]
+            },
+            "DeleteTag": {
+              "methods": [
+                "DeleteTag",
+                "DeleteTagAsync"
+              ]
+            },
+            "DeleteVersion": {
+              "methods": [
+                "DeleteVersion",
+                "DeleteVersionAsync"
+              ]
+            },
+            "GetAttachment": {
+              "methods": [
+                "GetAttachment",
+                "GetAttachmentAsync"
+              ]
+            },
+            "GetDockerImage": {
+              "methods": [
+                "GetDockerImage",
+                "GetDockerImageAsync"
+              ]
+            },
+            "GetFile": {
+              "methods": [
+                "GetFile",
+                "GetFileAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetMavenArtifact": {
+              "methods": [
+                "GetMavenArtifact",
+                "GetMavenArtifactAsync"
+              ]
+            },
+            "GetNpmPackage": {
+              "methods": [
+                "GetNpmPackage",
+                "GetNpmPackageAsync"
+              ]
+            },
+            "GetPackage": {
+              "methods": [
+                "GetPackage",
+                "GetPackageAsync"
+              ]
+            },
+            "GetProjectSettings": {
+              "methods": [
+                "GetProjectSettings",
+                "GetProjectSettingsAsync"
+              ]
+            },
+            "GetPythonPackage": {
+              "methods": [
+                "GetPythonPackage",
+                "GetPythonPackageAsync"
+              ]
+            },
+            "GetRepository": {
+              "methods": [
+                "GetRepository",
+                "GetRepositoryAsync"
+              ]
+            },
+            "GetRule": {
+              "methods": [
+                "GetRule",
+                "GetRuleAsync"
+              ]
+            },
+            "GetTag": {
+              "methods": [
+                "GetTag",
+                "GetTagAsync"
+              ]
+            },
+            "GetVPCSCConfig": {
+              "methods": [
+                "GetVPCSCConfig",
+                "GetVPCSCConfigAsync"
+              ]
+            },
+            "GetVersion": {
+              "methods": [
+                "GetVersion",
+                "GetVersionAsync"
+              ]
+            },
+            "ImportAptArtifacts": {
+              "methods": [
+                "ImportAptArtifacts",
+                "ImportAptArtifactsAsync"
+              ]
+            },
+            "ImportYumArtifacts": {
+              "methods": [
+                "ImportYumArtifacts",
+                "ImportYumArtifactsAsync"
+              ]
+            },
+            "ListAttachments": {
+              "methods": [
+                "ListAttachments",
+                "ListAttachmentsAsync"
+              ]
+            },
+            "ListDockerImages": {
+              "methods": [
+                "ListDockerImages",
+                "ListDockerImagesAsync"
+              ]
+            },
+            "ListFiles": {
+              "methods": [
+                "ListFiles",
+                "ListFilesAsync"
+              ]
+            },
+            "ListMavenArtifacts": {
+              "methods": [
+                "ListMavenArtifacts",
+                "ListMavenArtifactsAsync"
+              ]
+            },
+            "ListNpmPackages": {
+              "methods": [
+                "ListNpmPackages",
+                "ListNpmPackagesAsync"
+              ]
+            },
+            "ListPackages": {
+              "methods": [
+                "ListPackages",
+                "ListPackagesAsync"
+              ]
+            },
+            "ListPythonPackages": {
+              "methods": [
+                "ListPythonPackages",
+                "ListPythonPackagesAsync"
+              ]
+            },
+            "ListRepositories": {
+              "methods": [
+                "ListRepositories",
+                "ListRepositoriesAsync"
+              ]
+            },
+            "ListRules": {
+              "methods": [
+                "ListRules",
+                "ListRulesAsync"
+              ]
+            },
+            "ListTags": {
+              "methods": [
+                "ListTags",
+                "ListTagsAsync"
+              ]
+            },
+            "ListVersions": {
+              "methods": [
+                "ListVersions",
+                "ListVersionsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateFile": {
+              "methods": [
+                "UpdateFile",
+                "UpdateFileAsync"
+              ]
+            },
+            "UpdatePackage": {
+              "methods": [
+                "UpdatePackage",
+                "UpdatePackageAsync"
+              ]
+            },
+            "UpdateProjectSettings": {
+              "methods": [
+                "UpdateProjectSettings",
+                "UpdateProjectSettingsAsync"
+              ]
+            },
+            "UpdateRepository": {
+              "methods": [
+                "UpdateRepository",
+                "UpdateRepositoryAsync"
+              ]
+            },
+            "UpdateRule": {
+              "methods": [
+                "UpdateRule",
+                "UpdateRuleAsync"
+              ]
+            },
+            "UpdateTag": {
+              "methods": [
+                "UpdateTag",
+                "UpdateTagAsync"
+              ]
+            },
+            "UpdateVPCSCConfig": {
+              "methods": [
+                "UpdateVPCSCConfig",
+                "UpdateVPCSCConfigAsync"
+              ]
+            },
+            "UpdateVersion": {
+              "methods": [
+                "UpdateVersion",
+                "UpdateVersionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
