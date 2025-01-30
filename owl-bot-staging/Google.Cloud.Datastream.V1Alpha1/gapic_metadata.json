@@ -1,0 +1,144 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.datastream.v1alpha1",
+  "libraryPackage": "Google.Cloud.Datastream.V1Alpha1",
+  "services": {
+    "Datastream": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DatastreamClient",
+          "rpcs": {
+            "CreateConnectionProfile": {
+              "methods": [
+                "CreateConnectionProfile",
+                "CreateConnectionProfileAsync"
+              ]
+            },
+            "CreatePrivateConnection": {
+              "methods": [
+                "CreatePrivateConnection",
+                "CreatePrivateConnectionAsync"
+              ]
+            },
+            "CreateRoute": {
+              "methods": [
+                "CreateRoute",
+                "CreateRouteAsync"
+              ]
+            },
+            "CreateStream": {
+              "methods": [
+                "CreateStream",
+                "CreateStreamAsync"
+              ]
+            },
+            "DeleteConnectionProfile": {
+              "methods": [
+                "DeleteConnectionProfile",
+                "DeleteConnectionProfileAsync"
+              ]
+            },
+            "DeletePrivateConnection": {
+              "methods": [
+                "DeletePrivateConnection",
+                "DeletePrivateConnectionAsync"
+              ]
+            },
+            "DeleteRoute": {
+              "methods": [
+                "DeleteRoute",
+                "DeleteRouteAsync"
+              ]
+            },
+            "DeleteStream": {
+              "methods": [
+                "DeleteStream",
+                "DeleteStreamAsync"
+              ]
+            },
+            "DiscoverConnectionProfile": {
+              "methods": [
+                "DiscoverConnectionProfile",
+                "DiscoverConnectionProfileAsync"
+              ]
+            },
+            "FetchErrors": {
+              "methods": [
+                "FetchErrors",
+                "FetchErrorsAsync"
+              ]
+            },
+            "FetchStaticIps": {
+              "methods": [
+                "FetchStaticIps",
+                "FetchStaticIpsAsync"
+              ]
+            },
+            "GetConnectionProfile": {
+              "methods": [
+                "GetConnectionProfile",
+                "GetConnectionProfileAsync"
+              ]
+            },
+            "GetPrivateConnection": {
+              "methods": [
+                "GetPrivateConnection",
+                "GetPrivateConnectionAsync"
+              ]
+            },
+            "GetRoute": {
+              "methods": [
+                "GetRoute",
+                "GetRouteAsync"
+              ]
+            },
+            "GetStream": {
+              "methods": [
+                "GetStream",
+                "GetStreamAsync"
+              ]
+            },
+            "ListConnectionProfiles": {
+              "methods": [
+                "ListConnectionProfiles",
+                "ListConnectionProfilesAsync"
+              ]
+            },
+            "ListPrivateConnections": {
+              "methods": [
+                "ListPrivateConnections",
+                "ListPrivateConnectionsAsync"
+              ]
+            },
+            "ListRoutes": {
+              "methods": [
+                "ListRoutes",
+                "ListRoutesAsync"
+              ]
+            },
+            "ListStreams": {
+              "methods": [
+                "ListStreams",
+                "ListStreamsAsync"
+              ]
+            },
+            "UpdateConnectionProfile": {
+              "methods": [
+                "UpdateConnectionProfile",
+                "UpdateConnectionProfileAsync"
+              ]
+            },
+            "UpdateStream": {
+              "methods": [
+                "UpdateStream",
+                "UpdateStreamAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

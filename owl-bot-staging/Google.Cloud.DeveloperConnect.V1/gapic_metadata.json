@@ -1,0 +1,102 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.developerconnect.v1",
+  "libraryPackage": "Google.Cloud.DeveloperConnect.V1",
+  "services": {
+    "DeveloperConnect": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DeveloperConnectClient",
+          "rpcs": {
+            "CreateConnection": {
+              "methods": [
+                "CreateConnection",
+                "CreateConnectionAsync"
+              ]
+            },
+            "CreateGitRepositoryLink": {
+              "methods": [
+                "CreateGitRepositoryLink",
+                "CreateGitRepositoryLinkAsync"
+              ]
+            },
+            "DeleteConnection": {
+              "methods": [
+                "DeleteConnection",
+                "DeleteConnectionAsync"
+              ]
+            },
+            "DeleteGitRepositoryLink": {
+              "methods": [
+                "DeleteGitRepositoryLink",
+                "DeleteGitRepositoryLinkAsync"
+              ]
+            },
+            "FetchGitHubInstallations": {
+              "methods": [
+                "FetchGitHubInstallations",
+                "FetchGitHubInstallationsAsync"
+              ]
+            },
+            "FetchGitRefs": {
+              "methods": [
+                "FetchGitRefs",
+                "FetchGitRefsAsync"
+              ]
+            },
+            "FetchLinkableGitRepositories": {
+              "methods": [
+                "FetchLinkableGitRepositories",
+                "FetchLinkableGitRepositoriesAsync"
+              ]
+            },
+            "FetchReadToken": {
+              "methods": [
+                "FetchReadToken",
+                "FetchReadTokenAsync"
+              ]
+            },
+            "FetchReadWriteToken": {
+              "methods": [
+                "FetchReadWriteToken",
+                "FetchReadWriteTokenAsync"
+              ]
+            },
+            "GetConnection": {
+              "methods": [
+                "GetConnection",
+                "GetConnectionAsync"
+              ]
+            },
+            "GetGitRepositoryLink": {
+              "methods": [
+                "GetGitRepositoryLink",
+                "GetGitRepositoryLinkAsync"
+              ]
+            },
+            "ListConnections": {
+              "methods": [
+                "ListConnections",
+                "ListConnectionsAsync"
+              ]
+            },
+            "ListGitRepositoryLinks": {
+              "methods": [
+                "ListGitRepositoryLinks",
+                "ListGitRepositoryLinksAsync"
+              ]
+            },
+            "UpdateConnection": {
+              "methods": [
+                "UpdateConnection",
+                "UpdateConnectionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

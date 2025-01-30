@@ -1,0 +1,4153 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.DeveloperConnect.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.developerconnect.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListConnections_sync",
+      "title": "ListConnectionsRequestObject",
+      "description": "Snippet for ListConnections",
+      "file": "DeveloperConnectClient.ListConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse, Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListConnections",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListConnections_async",
+      "title": "ListConnectionsRequestObjectAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "DeveloperConnectClient.ListConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse, Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListConnections",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListConnections_sync_flattened",
+      "title": "ListConnections",
+      "description": "Snippet for ListConnections",
+      "file": "DeveloperConnectClient.ListConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse, Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListConnections",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListConnections_async_flattened",
+      "title": "ListConnectionsAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "DeveloperConnectClient.ListConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse, Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListConnections",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListConnections_sync_flattened_resourceNames",
+      "title": "ListConnectionsResourceNames",
+      "description": "Snippet for ListConnections",
+      "file": "DeveloperConnectClient.ListConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse, Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListConnections",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListConnections_async_flattened_resourceNames",
+      "title": "ListConnectionsResourceNamesAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "DeveloperConnectClient.ListConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListConnectionsResponse, Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListConnections",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetConnection_sync",
+      "title": "GetConnectionRequestObject",
+      "description": "Snippet for GetConnection",
+      "file": "DeveloperConnectClient.GetConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.Connection",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetConnection_async",
+      "title": "GetConnectionRequestObjectAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "DeveloperConnectClient.GetConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetConnection_sync_flattened",
+      "title": "GetConnection",
+      "description": "Snippet for GetConnection",
+      "file": "DeveloperConnectClient.GetConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.Connection",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetConnection_async_flattened",
+      "title": "GetConnectionAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "DeveloperConnectClient.GetConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetConnection_sync_flattened_resourceNames",
+      "title": "GetConnectionResourceNames",
+      "description": "Snippet for GetConnection",
+      "file": "DeveloperConnectClient.GetConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.Connection",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetConnection_async_flattened_resourceNames",
+      "title": "GetConnectionResourceNamesAsync",
+      "description": "Snippet for GetConnectionAsync",
+      "file": "DeveloperConnectClient.GetConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.Connection>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateConnection_sync",
+      "title": "CreateConnectionRequestObject",
+      "description": "Snippet for CreateConnection",
+      "file": "DeveloperConnectClient.CreateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateConnection_async",
+      "title": "CreateConnectionRequestObjectAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "DeveloperConnectClient.CreateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.CreateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateConnection_sync_flattened",
+      "title": "CreateConnection",
+      "description": "Snippet for CreateConnection",
+      "file": "DeveloperConnectClient.CreateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateConnection_async_flattened",
+      "title": "CreateConnectionAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "DeveloperConnectClient.CreateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateConnection_sync_flattened_resourceNames",
+      "title": "CreateConnectionResourceNames",
+      "description": "Snippet for CreateConnection",
+      "file": "DeveloperConnectClient.CreateConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateConnection",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateConnection_async_flattened_resourceNames",
+      "title": "CreateConnectionResourceNamesAsync",
+      "description": "Snippet for CreateConnectionAsync",
+      "file": "DeveloperConnectClient.CreateConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "connectionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_UpdateConnection_sync",
+      "title": "UpdateConnectionRequestObject",
+      "description": "Snippet for UpdateConnection",
+      "file": "DeveloperConnectClient.UpdateConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.UpdateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_UpdateConnection_async",
+      "title": "UpdateConnectionRequestObjectAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "DeveloperConnectClient.UpdateConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.UpdateConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.UpdateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_UpdateConnection_sync_flattened",
+      "title": "UpdateConnection",
+      "description": "Snippet for UpdateConnection",
+      "file": "DeveloperConnectClient.UpdateConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.UpdateConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.UpdateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_UpdateConnection_async_flattened",
+      "title": "UpdateConnectionAsync",
+      "description": "Snippet for UpdateConnectionAsync",
+      "file": "DeveloperConnectClient.UpdateConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.UpdateConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.Connection",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.Connection, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.UpdateConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteConnection_sync",
+      "title": "DeleteConnectionRequestObject",
+      "description": "Snippet for DeleteConnection",
+      "file": "DeveloperConnectClient.DeleteConnectionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteConnection_async",
+      "title": "DeleteConnectionRequestObjectAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "DeveloperConnectClient.DeleteConnectionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteConnectionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteConnection_sync_flattened",
+      "title": "DeleteConnection",
+      "description": "Snippet for DeleteConnection",
+      "file": "DeveloperConnectClient.DeleteConnectionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteConnection_async_flattened",
+      "title": "DeleteConnectionAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "DeveloperConnectClient.DeleteConnectionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteConnection_sync_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNames",
+      "description": "Snippet for DeleteConnection",
+      "file": "DeveloperConnectClient.DeleteConnectionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnection",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteConnection",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteConnection_async_flattened_resourceNames",
+      "title": "DeleteConnectionResourceNamesAsync",
+      "description": "Snippet for DeleteConnectionAsync",
+      "file": "DeveloperConnectClient.DeleteConnectionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectionAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteConnectionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnection",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteConnection",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateGitRepositoryLink_sync",
+      "title": "CreateGitRepositoryLinkRequestObject",
+      "description": "Snippet for CreateGitRepositoryLink",
+      "file": "DeveloperConnectClient.CreateGitRepositoryLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.CreateGitRepositoryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateGitRepositoryLink_async",
+      "title": "CreateGitRepositoryLinkRequestObjectAsync",
+      "description": "Snippet for CreateGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.CreateGitRepositoryLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.CreateGitRepositoryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateGitRepositoryLink_sync_flattened",
+      "title": "CreateGitRepositoryLink",
+      "description": "Snippet for CreateGitRepositoryLink",
+      "file": "DeveloperConnectClient.CreateGitRepositoryLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLink",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLinkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateGitRepositoryLink_async_flattened",
+      "title": "CreateGitRepositoryLinkAsync",
+      "description": "Snippet for CreateGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.CreateGitRepositoryLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLink",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLinkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateGitRepositoryLink_sync_flattened_resourceNames",
+      "title": "CreateGitRepositoryLinkResourceNames",
+      "description": "Snippet for CreateGitRepositoryLink",
+      "file": "DeveloperConnectClient.CreateGitRepositoryLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLink",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLinkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_CreateGitRepositoryLink_async_flattened_resourceNames",
+      "title": "CreateGitRepositoryLinkResourceNamesAsync",
+      "description": "Snippet for CreateGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.CreateGitRepositoryLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.CreateGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLink",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLinkId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "CreateGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.CreateGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteGitRepositoryLink_sync",
+      "title": "DeleteGitRepositoryLinkRequestObject",
+      "description": "Snippet for DeleteGitRepositoryLink",
+      "file": "DeveloperConnectClient.DeleteGitRepositoryLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteGitRepositoryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteGitRepositoryLink_async",
+      "title": "DeleteGitRepositoryLinkRequestObjectAsync",
+      "description": "Snippet for DeleteGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.DeleteGitRepositoryLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.DeleteGitRepositoryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteGitRepositoryLink_sync_flattened",
+      "title": "DeleteGitRepositoryLink",
+      "description": "Snippet for DeleteGitRepositoryLink",
+      "file": "DeveloperConnectClient.DeleteGitRepositoryLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteGitRepositoryLink_async_flattened",
+      "title": "DeleteGitRepositoryLinkAsync",
+      "description": "Snippet for DeleteGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.DeleteGitRepositoryLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteGitRepositoryLink_sync_flattened_resourceNames",
+      "title": "DeleteGitRepositoryLinkResourceNames",
+      "description": "Snippet for DeleteGitRepositoryLink",
+      "file": "DeveloperConnectClient.DeleteGitRepositoryLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_DeleteGitRepositoryLink_async_flattened_resourceNames",
+      "title": "DeleteGitRepositoryLinkResourceNamesAsync",
+      "description": "Snippet for DeleteGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.DeleteGitRepositoryLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.DeleteGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DeveloperConnect.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.DeleteGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListGitRepositoryLinks_sync",
+      "title": "ListGitRepositoryLinksRequestObject",
+      "description": "Snippet for ListGitRepositoryLinks",
+      "file": "DeveloperConnectClient.ListGitRepositoryLinksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGitRepositoryLinks",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListGitRepositoryLinks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListGitRepositoryLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListGitRepositoryLinksResponse, Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListGitRepositoryLinks",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListGitRepositoryLinks",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListGitRepositoryLinks_async",
+      "title": "ListGitRepositoryLinksRequestObjectAsync",
+      "description": "Snippet for ListGitRepositoryLinksAsync",
+      "file": "DeveloperConnectClient.ListGitRepositoryLinksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGitRepositoryLinksAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListGitRepositoryLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ListGitRepositoryLinksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListGitRepositoryLinksResponse, Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListGitRepositoryLinks",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListGitRepositoryLinks",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListGitRepositoryLinks_sync_flattened",
+      "title": "ListGitRepositoryLinks",
+      "description": "Snippet for ListGitRepositoryLinks",
+      "file": "DeveloperConnectClient.ListGitRepositoryLinksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGitRepositoryLinks",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListGitRepositoryLinks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListGitRepositoryLinksResponse, Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListGitRepositoryLinks",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListGitRepositoryLinks",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListGitRepositoryLinks_async_flattened",
+      "title": "ListGitRepositoryLinksAsync",
+      "description": "Snippet for ListGitRepositoryLinksAsync",
+      "file": "DeveloperConnectClient.ListGitRepositoryLinksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGitRepositoryLinksAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListGitRepositoryLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListGitRepositoryLinksResponse, Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListGitRepositoryLinks",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListGitRepositoryLinks",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListGitRepositoryLinks_sync_flattened_resourceNames",
+      "title": "ListGitRepositoryLinksResourceNames",
+      "description": "Snippet for ListGitRepositoryLinks",
+      "file": "DeveloperConnectClient.ListGitRepositoryLinksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGitRepositoryLinks",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListGitRepositoryLinks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.ListGitRepositoryLinksResponse, Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListGitRepositoryLinks",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListGitRepositoryLinks",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_ListGitRepositoryLinks_async_flattened_resourceNames",
+      "title": "ListGitRepositoryLinksResourceNamesAsync",
+      "description": "Snippet for ListGitRepositoryLinksAsync",
+      "file": "DeveloperConnectClient.ListGitRepositoryLinksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListGitRepositoryLinksAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.ListGitRepositoryLinksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.ListGitRepositoryLinksResponse, Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "ListGitRepositoryLinks",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.ListGitRepositoryLinks",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetGitRepositoryLink_sync",
+      "title": "GetGitRepositoryLinkRequestObject",
+      "description": "Snippet for GetGitRepositoryLink",
+      "file": "DeveloperConnectClient.GetGitRepositoryLinkRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetGitRepositoryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLink",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetGitRepositoryLink_async",
+      "title": "GetGitRepositoryLinkRequestObjectAsync",
+      "description": "Snippet for GetGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.GetGitRepositoryLinkRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GetGitRepositoryLinkRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetGitRepositoryLink_sync_flattened",
+      "title": "GetGitRepositoryLink",
+      "description": "Snippet for GetGitRepositoryLink",
+      "file": "DeveloperConnectClient.GetGitRepositoryLinkSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLink",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetGitRepositoryLink_async_flattened",
+      "title": "GetGitRepositoryLinkAsync",
+      "description": "Snippet for GetGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.GetGitRepositoryLinkAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetGitRepositoryLink_sync_flattened_resourceNames",
+      "title": "GetGitRepositoryLinkResourceNames",
+      "description": "Snippet for GetGitRepositoryLink",
+      "file": "DeveloperConnectClient.GetGitRepositoryLinkResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGitRepositoryLink",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetGitRepositoryLink",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLink",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_GetGitRepositoryLink_async_flattened_resourceNames",
+      "title": "GetGitRepositoryLinkResourceNamesAsync",
+      "description": "Snippet for GetGitRepositoryLinkAsync",
+      "file": "DeveloperConnectClient.GetGitRepositoryLinkResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetGitRepositoryLinkAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.GetGitRepositoryLinkAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.GitRepositoryLink>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "GetGitRepositoryLink",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.GetGitRepositoryLink",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadWriteToken_sync",
+      "title": "FetchReadWriteTokenRequestObject",
+      "description": "Snippet for FetchReadWriteToken",
+      "file": "DeveloperConnectClient.FetchReadWriteTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadWriteToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadWriteToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadWriteToken_async",
+      "title": "FetchReadWriteTokenRequestObjectAsync",
+      "description": "Snippet for FetchReadWriteTokenAsync",
+      "file": "DeveloperConnectClient.FetchReadWriteTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadWriteTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadWriteToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadWriteToken_sync_flattened",
+      "title": "FetchReadWriteToken",
+      "description": "Snippet for FetchReadWriteToken",
+      "file": "DeveloperConnectClient.FetchReadWriteTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadWriteToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadWriteToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadWriteToken_async_flattened",
+      "title": "FetchReadWriteTokenAsync",
+      "description": "Snippet for FetchReadWriteTokenAsync",
+      "file": "DeveloperConnectClient.FetchReadWriteTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadWriteTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadWriteToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadWriteToken_sync_flattened_resourceNames",
+      "title": "FetchReadWriteTokenResourceNames",
+      "description": "Snippet for FetchReadWriteToken",
+      "file": "DeveloperConnectClient.FetchReadWriteTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadWriteToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadWriteToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadWriteToken_async_flattened_resourceNames",
+      "title": "FetchReadWriteTokenResourceNamesAsync",
+      "description": "Snippet for FetchReadWriteTokenAsync",
+      "file": "DeveloperConnectClient.FetchReadWriteTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadWriteTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadWriteTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchReadWriteTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadWriteToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadWriteToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadToken_sync",
+      "title": "FetchReadTokenRequestObject",
+      "description": "Snippet for FetchReadToken",
+      "file": "DeveloperConnectClient.FetchReadTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchReadTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadToken_async",
+      "title": "FetchReadTokenRequestObjectAsync",
+      "description": "Snippet for FetchReadTokenAsync",
+      "file": "DeveloperConnectClient.FetchReadTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchReadTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadToken_sync_flattened",
+      "title": "FetchReadToken",
+      "description": "Snippet for FetchReadToken",
+      "file": "DeveloperConnectClient.FetchReadTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadToken_async_flattened",
+      "title": "FetchReadTokenAsync",
+      "description": "Snippet for FetchReadTokenAsync",
+      "file": "DeveloperConnectClient.FetchReadTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadToken_sync_flattened_resourceNames",
+      "title": "FetchReadTokenResourceNames",
+      "description": "Snippet for FetchReadToken",
+      "file": "DeveloperConnectClient.FetchReadTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadToken",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchReadToken_async_flattened_resourceNames",
+      "title": "FetchReadTokenResourceNamesAsync",
+      "description": "Snippet for FetchReadTokenAsync",
+      "file": "DeveloperConnectClient.FetchReadTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchReadTokenAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchReadTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchReadTokenResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchReadToken",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchReadToken",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchLinkableGitRepositories_sync",
+      "title": "FetchLinkableGitRepositoriesRequestObject",
+      "description": "Snippet for FetchLinkableGitRepositories",
+      "file": "DeveloperConnectClient.FetchLinkableGitRepositoriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchLinkableGitRepositories",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchLinkableGitRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse, Google.Cloud.DeveloperConnect.V1.LinkableGitRepository>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchLinkableGitRepositories",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchLinkableGitRepositories",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchLinkableGitRepositories_async",
+      "title": "FetchLinkableGitRepositoriesRequestObjectAsync",
+      "description": "Snippet for FetchLinkableGitRepositoriesAsync",
+      "file": "DeveloperConnectClient.FetchLinkableGitRepositoriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchLinkableGitRepositoriesAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchLinkableGitRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse, Google.Cloud.DeveloperConnect.V1.LinkableGitRepository>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchLinkableGitRepositories",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchLinkableGitRepositories",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchLinkableGitRepositories_sync_flattened",
+      "title": "FetchLinkableGitRepositories",
+      "description": "Snippet for FetchLinkableGitRepositories",
+      "file": "DeveloperConnectClient.FetchLinkableGitRepositoriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchLinkableGitRepositories",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchLinkableGitRepositories",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse, Google.Cloud.DeveloperConnect.V1.LinkableGitRepository>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchLinkableGitRepositories",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchLinkableGitRepositories",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchLinkableGitRepositories_async_flattened",
+      "title": "FetchLinkableGitRepositoriesAsync",
+      "description": "Snippet for FetchLinkableGitRepositoriesAsync",
+      "file": "DeveloperConnectClient.FetchLinkableGitRepositoriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchLinkableGitRepositoriesAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchLinkableGitRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse, Google.Cloud.DeveloperConnect.V1.LinkableGitRepository>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchLinkableGitRepositories",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchLinkableGitRepositories",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchLinkableGitRepositories_sync_flattened_resourceNames",
+      "title": "FetchLinkableGitRepositoriesResourceNames",
+      "description": "Snippet for FetchLinkableGitRepositories",
+      "file": "DeveloperConnectClient.FetchLinkableGitRepositoriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchLinkableGitRepositories",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchLinkableGitRepositories",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse, Google.Cloud.DeveloperConnect.V1.LinkableGitRepository>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchLinkableGitRepositories",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchLinkableGitRepositories",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchLinkableGitRepositories_async_flattened_resourceNames",
+      "title": "FetchLinkableGitRepositoriesResourceNamesAsync",
+      "description": "Snippet for FetchLinkableGitRepositoriesAsync",
+      "file": "DeveloperConnectClient.FetchLinkableGitRepositoriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchLinkableGitRepositoriesAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchLinkableGitRepositoriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "connection"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.FetchLinkableGitRepositoriesResponse, Google.Cloud.DeveloperConnect.V1.LinkableGitRepository>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchLinkableGitRepositories",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchLinkableGitRepositories",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitHubInstallations_sync",
+      "title": "FetchGitHubInstallationsRequestObject",
+      "description": "Snippet for FetchGitHubInstallations",
+      "file": "DeveloperConnectClient.FetchGitHubInstallationsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitHubInstallations",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitHubInstallations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitHubInstallations",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitHubInstallations",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitHubInstallations_async",
+      "title": "FetchGitHubInstallationsRequestObjectAsync",
+      "description": "Snippet for FetchGitHubInstallationsAsync",
+      "file": "DeveloperConnectClient.FetchGitHubInstallationsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitHubInstallationsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitHubInstallationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitHubInstallations",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitHubInstallations",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitHubInstallations_sync_flattened",
+      "title": "FetchGitHubInstallations",
+      "description": "Snippet for FetchGitHubInstallations",
+      "file": "DeveloperConnectClient.FetchGitHubInstallationsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitHubInstallations",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitHubInstallations",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitHubInstallations",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitHubInstallations",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitHubInstallations_async_flattened",
+      "title": "FetchGitHubInstallationsAsync",
+      "description": "Snippet for FetchGitHubInstallationsAsync",
+      "file": "DeveloperConnectClient.FetchGitHubInstallationsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitHubInstallationsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitHubInstallationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitHubInstallations",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitHubInstallations",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitHubInstallations_sync_flattened_resourceNames",
+      "title": "FetchGitHubInstallationsResourceNames",
+      "description": "Snippet for FetchGitHubInstallations",
+      "file": "DeveloperConnectClient.FetchGitHubInstallationsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitHubInstallations",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitHubInstallations",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsResponse",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitHubInstallations",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitHubInstallations",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitHubInstallations_async_flattened_resourceNames",
+      "title": "FetchGitHubInstallationsResourceNamesAsync",
+      "description": "Snippet for FetchGitHubInstallationsAsync",
+      "file": "DeveloperConnectClient.FetchGitHubInstallationsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitHubInstallationsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitHubInstallationsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.ConnectionName",
+            "name": "connection"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeveloperConnect.V1.FetchGitHubInstallationsResponse>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitHubInstallations",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitHubInstallations",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitRefs_sync",
+      "title": "FetchGitRefsRequestObject",
+      "description": "Snippet for FetchGitRefs",
+      "file": "DeveloperConnectClient.FetchGitRefsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse, System.String>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitRefs",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitRefs_async",
+      "title": "FetchGitRefsRequestObjectAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "DeveloperConnectClient.FetchGitRefsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse, System.String>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitRefs",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitRefs_sync_flattened",
+      "title": "FetchGitRefs",
+      "description": "Snippet for FetchGitRefs",
+      "file": "DeveloperConnectClient.FetchGitRefsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest+Types+RefType",
+            "name": "refType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse, System.String>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitRefs",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitRefs_async_flattened",
+      "title": "FetchGitRefsAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "DeveloperConnectClient.FetchGitRefsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest+Types+RefType",
+            "name": "refType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse, System.String>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitRefs",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitRefs_sync_flattened_resourceNames",
+      "title": "FetchGitRefsResourceNames",
+      "description": "Snippet for FetchGitRefs",
+      "file": "DeveloperConnectClient.FetchGitRefsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefs",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitRefs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest+Types+RefType",
+            "name": "refType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse, System.String>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitRefs",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerconnect_v1_generated_DeveloperConnect_FetchGitRefs_async_flattened_resourceNames",
+      "title": "FetchGitRefsResourceNamesAsync",
+      "description": "Snippet for FetchGitRefsAsync",
+      "file": "DeveloperConnectClient.FetchGitRefsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchGitRefsAsync",
+        "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient.FetchGitRefsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.GitRepositoryLinkName",
+            "name": "gitRepositoryLink"
+          },
+          {
+            "type": "Google.Cloud.DeveloperConnect.V1.FetchGitRefsRequest+Types+RefType",
+            "name": "refType"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeveloperConnect.V1.FetchGitRefsResponse, System.String>",
+        "client": {
+          "shortName": "DeveloperConnectClient",
+          "fullName": "Google.Cloud.DeveloperConnect.V1.DeveloperConnectClient"
+        },
+        "method": {
+          "shortName": "FetchGitRefs",
+          "fullName": "google.cloud.developerconnect.v1.DeveloperConnect.FetchGitRefs",
+          "service": {
+            "shortName": "DeveloperConnect",
+            "fullName": "google.cloud.developerconnect.v1.DeveloperConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
