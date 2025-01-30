@@ -1,0 +1,36 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.eventarc.publishing.v1",
+  "libraryPackage": "Google.Cloud.Eventarc.Publishing.V1",
+  "services": {
+    "Publisher": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PublisherClient",
+          "rpcs": {
+            "Publish": {
+              "methods": [
+                "Publish",
+                "PublishAsync"
+              ]
+            },
+            "PublishChannelConnectionEvents": {
+              "methods": [
+                "PublishChannelConnectionEvents",
+                "PublishChannelConnectionEventsAsync"
+              ]
+            },
+            "PublishEvents": {
+              "methods": [
+                "PublishEvents",
+                "PublishEventsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

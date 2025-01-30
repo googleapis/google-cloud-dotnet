@@ -1,0 +1,228 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.gdchardwaremanagement.v1alpha",
+  "libraryPackage": "Google.Cloud.GdcHardwareManagement.V1Alpha",
+  "services": {
+    "GDCHardwareManagement": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "GDCHardwareManagementClient",
+          "rpcs": {
+            "CreateComment": {
+              "methods": [
+                "CreateComment",
+                "CreateCommentAsync"
+              ]
+            },
+            "CreateHardware": {
+              "methods": [
+                "CreateHardware",
+                "CreateHardwareAsync"
+              ]
+            },
+            "CreateHardwareGroup": {
+              "methods": [
+                "CreateHardwareGroup",
+                "CreateHardwareGroupAsync"
+              ]
+            },
+            "CreateOrder": {
+              "methods": [
+                "CreateOrder",
+                "CreateOrderAsync"
+              ]
+            },
+            "CreateSite": {
+              "methods": [
+                "CreateSite",
+                "CreateSiteAsync"
+              ]
+            },
+            "CreateZone": {
+              "methods": [
+                "CreateZone",
+                "CreateZoneAsync"
+              ]
+            },
+            "DeleteHardware": {
+              "methods": [
+                "DeleteHardware",
+                "DeleteHardwareAsync"
+              ]
+            },
+            "DeleteHardwareGroup": {
+              "methods": [
+                "DeleteHardwareGroup",
+                "DeleteHardwareGroupAsync"
+              ]
+            },
+            "DeleteOrder": {
+              "methods": [
+                "DeleteOrder",
+                "DeleteOrderAsync"
+              ]
+            },
+            "DeleteSite": {
+              "methods": [
+                "DeleteSite",
+                "DeleteSiteAsync"
+              ]
+            },
+            "DeleteZone": {
+              "methods": [
+                "DeleteZone",
+                "DeleteZoneAsync"
+              ]
+            },
+            "GetChangeLogEntry": {
+              "methods": [
+                "GetChangeLogEntry",
+                "GetChangeLogEntryAsync"
+              ]
+            },
+            "GetComment": {
+              "methods": [
+                "GetComment",
+                "GetCommentAsync"
+              ]
+            },
+            "GetHardware": {
+              "methods": [
+                "GetHardware",
+                "GetHardwareAsync"
+              ]
+            },
+            "GetHardwareGroup": {
+              "methods": [
+                "GetHardwareGroup",
+                "GetHardwareGroupAsync"
+              ]
+            },
+            "GetOrder": {
+              "methods": [
+                "GetOrder",
+                "GetOrderAsync"
+              ]
+            },
+            "GetSite": {
+              "methods": [
+                "GetSite",
+                "GetSiteAsync"
+              ]
+            },
+            "GetSku": {
+              "methods": [
+                "GetSku",
+                "GetSkuAsync"
+              ]
+            },
+            "GetZone": {
+              "methods": [
+                "GetZone",
+                "GetZoneAsync"
+              ]
+            },
+            "ListChangeLogEntries": {
+              "methods": [
+                "ListChangeLogEntries",
+                "ListChangeLogEntriesAsync"
+              ]
+            },
+            "ListComments": {
+              "methods": [
+                "ListComments",
+                "ListCommentsAsync"
+              ]
+            },
+            "ListHardware": {
+              "methods": [
+                "ListHardware",
+                "ListHardwareAsync"
+              ]
+            },
+            "ListHardwareGroups": {
+              "methods": [
+                "ListHardwareGroups",
+                "ListHardwareGroupsAsync"
+              ]
+            },
+            "ListOrders": {
+              "methods": [
+                "ListOrders",
+                "ListOrdersAsync"
+              ]
+            },
+            "ListSites": {
+              "methods": [
+                "ListSites",
+                "ListSitesAsync"
+              ]
+            },
+            "ListSkus": {
+              "methods": [
+                "ListSkus",
+                "ListSkusAsync"
+              ]
+            },
+            "ListZones": {
+              "methods": [
+                "ListZones",
+                "ListZonesAsync"
+              ]
+            },
+            "RecordActionOnComment": {
+              "methods": [
+                "RecordActionOnComment",
+                "RecordActionOnCommentAsync"
+              ]
+            },
+            "SignalZoneState": {
+              "methods": [
+                "SignalZoneState",
+                "SignalZoneStateAsync"
+              ]
+            },
+            "SubmitOrder": {
+              "methods": [
+                "SubmitOrder",
+                "SubmitOrderAsync"
+              ]
+            },
+            "UpdateHardware": {
+              "methods": [
+                "UpdateHardware",
+                "UpdateHardwareAsync"
+              ]
+            },
+            "UpdateHardwareGroup": {
+              "methods": [
+                "UpdateHardwareGroup",
+                "UpdateHardwareGroupAsync"
+              ]
+            },
+            "UpdateOrder": {
+              "methods": [
+                "UpdateOrder",
+                "UpdateOrderAsync"
+              ]
+            },
+            "UpdateSite": {
+              "methods": [
+                "UpdateSite",
+                "UpdateSiteAsync"
+              ]
+            },
+            "UpdateZone": {
+              "methods": [
+                "UpdateZone",
+                "UpdateZoneAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

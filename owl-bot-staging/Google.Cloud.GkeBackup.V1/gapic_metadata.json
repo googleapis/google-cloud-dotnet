@@ -1,0 +1,168 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.gkebackup.v1",
+  "libraryPackage": "Google.Cloud.GkeBackup.V1",
+  "services": {
+    "BackupForGKE": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BackupForGKEClient",
+          "rpcs": {
+            "CreateBackup": {
+              "methods": [
+                "CreateBackup",
+                "CreateBackupAsync"
+              ]
+            },
+            "CreateBackupPlan": {
+              "methods": [
+                "CreateBackupPlan",
+                "CreateBackupPlanAsync"
+              ]
+            },
+            "CreateRestore": {
+              "methods": [
+                "CreateRestore",
+                "CreateRestoreAsync"
+              ]
+            },
+            "CreateRestorePlan": {
+              "methods": [
+                "CreateRestorePlan",
+                "CreateRestorePlanAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "DeleteBackupPlan": {
+              "methods": [
+                "DeleteBackupPlan",
+                "DeleteBackupPlanAsync"
+              ]
+            },
+            "DeleteRestore": {
+              "methods": [
+                "DeleteRestore",
+                "DeleteRestoreAsync"
+              ]
+            },
+            "DeleteRestorePlan": {
+              "methods": [
+                "DeleteRestorePlan",
+                "DeleteRestorePlanAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetBackupIndexDownloadUrl": {
+              "methods": [
+                "GetBackupIndexDownloadUrl",
+                "GetBackupIndexDownloadUrlAsync"
+              ]
+            },
+            "GetBackupPlan": {
+              "methods": [
+                "GetBackupPlan",
+                "GetBackupPlanAsync"
+              ]
+            },
+            "GetRestore": {
+              "methods": [
+                "GetRestore",
+                "GetRestoreAsync"
+              ]
+            },
+            "GetRestorePlan": {
+              "methods": [
+                "GetRestorePlan",
+                "GetRestorePlanAsync"
+              ]
+            },
+            "GetVolumeBackup": {
+              "methods": [
+                "GetVolumeBackup",
+                "GetVolumeBackupAsync"
+              ]
+            },
+            "GetVolumeRestore": {
+              "methods": [
+                "GetVolumeRestore",
+                "GetVolumeRestoreAsync"
+              ]
+            },
+            "ListBackupPlans": {
+              "methods": [
+                "ListBackupPlans",
+                "ListBackupPlansAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
+            "ListRestorePlans": {
+              "methods": [
+                "ListRestorePlans",
+                "ListRestorePlansAsync"
+              ]
+            },
+            "ListRestores": {
+              "methods": [
+                "ListRestores",
+                "ListRestoresAsync"
+              ]
+            },
+            "ListVolumeBackups": {
+              "methods": [
+                "ListVolumeBackups",
+                "ListVolumeBackupsAsync"
+              ]
+            },
+            "ListVolumeRestores": {
+              "methods": [
+                "ListVolumeRestores",
+                "ListVolumeRestoresAsync"
+              ]
+            },
+            "UpdateBackup": {
+              "methods": [
+                "UpdateBackup",
+                "UpdateBackupAsync"
+              ]
+            },
+            "UpdateBackupPlan": {
+              "methods": [
+                "UpdateBackupPlan",
+                "UpdateBackupPlanAsync"
+              ]
+            },
+            "UpdateRestore": {
+              "methods": [
+                "UpdateRestore",
+                "UpdateRestoreAsync"
+              ]
+            },
+            "UpdateRestorePlan": {
+              "methods": [
+                "UpdateRestorePlan",
+                "UpdateRestorePlanAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
