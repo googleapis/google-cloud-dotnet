@@ -1,0 +1,294 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.logging.v2",
+  "libraryPackage": "Google.Cloud.Logging.V2",
+  "services": {
+    "ConfigServiceV2": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConfigServiceV2Client",
+          "rpcs": {
+            "CopyLogEntries": {
+              "methods": [
+                "CopyLogEntries",
+                "CopyLogEntriesAsync"
+              ]
+            },
+            "CreateBucket": {
+              "methods": [
+                "CreateBucket",
+                "CreateBucketAsync"
+              ]
+            },
+            "CreateBucketAsync": {
+              "methods": [
+                "CreateBucketAsync",
+                "CreateBucketAsyncAsync"
+              ]
+            },
+            "CreateExclusion": {
+              "methods": [
+                "CreateExclusion",
+                "CreateExclusionAsync"
+              ]
+            },
+            "CreateLink": {
+              "methods": [
+                "CreateLink",
+                "CreateLinkAsync"
+              ]
+            },
+            "CreateSink": {
+              "methods": [
+                "CreateSink",
+                "CreateSinkAsync"
+              ]
+            },
+            "CreateView": {
+              "methods": [
+                "CreateView",
+                "CreateViewAsync"
+              ]
+            },
+            "DeleteBucket": {
+              "methods": [
+                "DeleteBucket",
+                "DeleteBucketAsync"
+              ]
+            },
+            "DeleteExclusion": {
+              "methods": [
+                "DeleteExclusion",
+                "DeleteExclusionAsync"
+              ]
+            },
+            "DeleteLink": {
+              "methods": [
+                "DeleteLink",
+                "DeleteLinkAsync"
+              ]
+            },
+            "DeleteSink": {
+              "methods": [
+                "DeleteSink",
+                "DeleteSinkAsync"
+              ]
+            },
+            "DeleteView": {
+              "methods": [
+                "DeleteView",
+                "DeleteViewAsync"
+              ]
+            },
+            "GetBucket": {
+              "methods": [
+                "GetBucket",
+                "GetBucketAsync"
+              ]
+            },
+            "GetCmekSettings": {
+              "methods": [
+                "GetCmekSettings",
+                "GetCmekSettingsAsync"
+              ]
+            },
+            "GetExclusion": {
+              "methods": [
+                "GetExclusion",
+                "GetExclusionAsync"
+              ]
+            },
+            "GetLink": {
+              "methods": [
+                "GetLink",
+                "GetLinkAsync"
+              ]
+            },
+            "GetSettings": {
+              "methods": [
+                "GetSettings",
+                "GetSettingsAsync"
+              ]
+            },
+            "GetSink": {
+              "methods": [
+                "GetSink",
+                "GetSinkAsync"
+              ]
+            },
+            "GetView": {
+              "methods": [
+                "GetView",
+                "GetViewAsync"
+              ]
+            },
+            "ListBuckets": {
+              "methods": [
+                "ListBuckets",
+                "ListBucketsAsync"
+              ]
+            },
+            "ListExclusions": {
+              "methods": [
+                "ListExclusions",
+                "ListExclusionsAsync"
+              ]
+            },
+            "ListLinks": {
+              "methods": [
+                "ListLinks",
+                "ListLinksAsync"
+              ]
+            },
+            "ListSinks": {
+              "methods": [
+                "ListSinks",
+                "ListSinksAsync"
+              ]
+            },
+            "ListViews": {
+              "methods": [
+                "ListViews",
+                "ListViewsAsync"
+              ]
+            },
+            "UndeleteBucket": {
+              "methods": [
+                "UndeleteBucket",
+                "UndeleteBucketAsync"
+              ]
+            },
+            "UpdateBucket": {
+              "methods": [
+                "UpdateBucket",
+                "UpdateBucketAsync"
+              ]
+            },
+            "UpdateBucketAsync": {
+              "methods": [
+                "UpdateBucketAsync",
+                "UpdateBucketAsyncAsync"
+              ]
+            },
+            "UpdateCmekSettings": {
+              "methods": [
+                "UpdateCmekSettings",
+                "UpdateCmekSettingsAsync"
+              ]
+            },
+            "UpdateExclusion": {
+              "methods": [
+                "UpdateExclusion",
+                "UpdateExclusionAsync"
+              ]
+            },
+            "UpdateSettings": {
+              "methods": [
+                "UpdateSettings",
+                "UpdateSettingsAsync"
+              ]
+            },
+            "UpdateSink": {
+              "methods": [
+                "UpdateSink",
+                "UpdateSinkAsync"
+              ]
+            },
+            "UpdateView": {
+              "methods": [
+                "UpdateView",
+                "UpdateViewAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "LoggingServiceV2": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LoggingServiceV2Client",
+          "rpcs": {
+            "DeleteLog": {
+              "methods": [
+                "DeleteLog",
+                "DeleteLogAsync"
+              ]
+            },
+            "ListLogEntries": {
+              "methods": [
+                "ListLogEntries",
+                "ListLogEntriesAsync"
+              ]
+            },
+            "ListLogs": {
+              "methods": [
+                "ListLogs",
+                "ListLogsAsync"
+              ]
+            },
+            "ListMonitoredResourceDescriptors": {
+              "methods": [
+                "ListMonitoredResourceDescriptors",
+                "ListMonitoredResourceDescriptorsAsync"
+              ]
+            },
+            "TailLogEntries": {
+              "methods": [
+                "TailLogEntries",
+                "TailLogEntriesAsync"
+              ]
+            },
+            "WriteLogEntries": {
+              "methods": [
+                "WriteLogEntries",
+                "WriteLogEntriesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MetricsServiceV2": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MetricsServiceV2Client",
+          "rpcs": {
+            "CreateLogMetric": {
+              "methods": [
+                "CreateLogMetric",
+                "CreateLogMetricAsync"
+              ]
+            },
+            "DeleteLogMetric": {
+              "methods": [
+                "DeleteLogMetric",
+                "DeleteLogMetricAsync"
+              ]
+            },
+            "GetLogMetric": {
+              "methods": [
+                "GetLogMetric",
+                "GetLogMetricAsync"
+              ]
+            },
+            "ListLogMetrics": {
+              "methods": [
+                "ListLogMetrics",
+                "ListLogMetricsAsync"
+              ]
+            },
+            "UpdateLogMetric": {
+              "methods": [
+                "UpdateLogMetric",
+                "UpdateLogMetricAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

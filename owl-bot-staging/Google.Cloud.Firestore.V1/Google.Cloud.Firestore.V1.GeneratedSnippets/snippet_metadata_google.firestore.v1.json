@@ -1,0 +1,1927 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Firestore.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.firestore.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "firestore_v1_generated_Firestore_GetDocument_sync",
+      "title": "GetDocumentRequestObject",
+      "description": "Snippet for GetDocument",
+      "file": "FirestoreClient.GetDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocument",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.GetDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.GetDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.Document",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.firestore.v1.Firestore.GetDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_GetDocument_async",
+      "title": "GetDocumentRequestObjectAsync",
+      "description": "Snippet for GetDocumentAsync",
+      "file": "FirestoreClient.GetDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDocumentAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.GetDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.GetDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.Document>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "GetDocument",
+          "fullName": "google.firestore.v1.Firestore.GetDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_ListDocuments_sync",
+      "title": "ListDocumentsRequestObject",
+      "description": "Snippet for ListDocuments",
+      "file": "FirestoreClient.ListDocumentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocuments",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ListDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.V1.ListDocumentsResponse, Google.Cloud.Firestore.V1.Document>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.firestore.v1.Firestore.ListDocuments",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_ListDocuments_async",
+      "title": "ListDocumentsRequestObjectAsync",
+      "description": "Snippet for ListDocumentsAsync",
+      "file": "FirestoreClient.ListDocumentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDocumentsAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListDocumentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ListDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.V1.ListDocumentsResponse, Google.Cloud.Firestore.V1.Document>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "ListDocuments",
+          "fullName": "google.firestore.v1.Firestore.ListDocuments",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 86,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 84,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_UpdateDocument_sync",
+      "title": "UpdateDocumentRequestObject",
+      "description": "Snippet for UpdateDocument",
+      "file": "FirestoreClient.UpdateDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDocument",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.UpdateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.UpdateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.Document",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "UpdateDocument",
+          "fullName": "google.firestore.v1.Firestore.UpdateDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_UpdateDocument_async",
+      "title": "UpdateDocumentRequestObjectAsync",
+      "description": "Snippet for UpdateDocumentAsync",
+      "file": "FirestoreClient.UpdateDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDocumentAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.UpdateDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.UpdateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.Document>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "UpdateDocument",
+          "fullName": "google.firestore.v1.Firestore.UpdateDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_UpdateDocument_sync_flattened",
+      "title": "UpdateDocument",
+      "description": "Snippet for UpdateDocument",
+      "file": "FirestoreClient.UpdateDocumentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDocument",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.UpdateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Firestore.V1.DocumentMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.Document",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "UpdateDocument",
+          "fullName": "google.firestore.v1.Firestore.UpdateDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_UpdateDocument_async_flattened",
+      "title": "UpdateDocumentAsync",
+      "description": "Snippet for UpdateDocumentAsync",
+      "file": "FirestoreClient.UpdateDocumentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDocumentAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.UpdateDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.Document",
+            "name": "document"
+          },
+          {
+            "type": "Google.Cloud.Firestore.V1.DocumentMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.Document>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "UpdateDocument",
+          "fullName": "google.firestore.v1.Firestore.UpdateDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_DeleteDocument_sync",
+      "title": "DeleteDocumentRequestObject",
+      "description": "Snippet for DeleteDocument",
+      "file": "FirestoreClient.DeleteDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocument",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.DeleteDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.DeleteDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.firestore.v1.Firestore.DeleteDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_DeleteDocument_async",
+      "title": "DeleteDocumentRequestObjectAsync",
+      "description": "Snippet for DeleteDocumentAsync",
+      "file": "FirestoreClient.DeleteDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocumentAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.DeleteDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.DeleteDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.firestore.v1.Firestore.DeleteDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_DeleteDocument_sync_flattened",
+      "title": "DeleteDocument",
+      "description": "Snippet for DeleteDocument",
+      "file": "FirestoreClient.DeleteDocumentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocument",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.DeleteDocument",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.firestore.v1.Firestore.DeleteDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_DeleteDocument_async_flattened",
+      "title": "DeleteDocumentAsync",
+      "description": "Snippet for DeleteDocumentAsync",
+      "file": "FirestoreClient.DeleteDocumentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDocumentAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.DeleteDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "DeleteDocument",
+          "fullName": "google.firestore.v1.Firestore.DeleteDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_BatchGetDocuments_sync",
+      "title": "BatchGetDocumentsRequestObject",
+      "description": "Snippet for BatchGetDocuments",
+      "file": "FirestoreClient.BatchGetDocumentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchGetDocuments",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BatchGetDocuments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BatchGetDocumentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+BatchGetDocumentsStream",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "BatchGetDocuments",
+          "fullName": "google.firestore.v1.Firestore.BatchGetDocuments",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_BeginTransaction_sync",
+      "title": "BeginTransactionRequestObject",
+      "description": "Snippet for BeginTransaction",
+      "file": "FirestoreClient.BeginTransactionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BeginTransaction",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BeginTransactionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.BeginTransactionResponse",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "BeginTransaction",
+          "fullName": "google.firestore.v1.Firestore.BeginTransaction",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_BeginTransaction_async",
+      "title": "BeginTransactionRequestObjectAsync",
+      "description": "Snippet for BeginTransactionAsync",
+      "file": "FirestoreClient.BeginTransactionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BeginTransactionAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BeginTransactionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BeginTransactionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.BeginTransactionResponse>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "BeginTransaction",
+          "fullName": "google.firestore.v1.Firestore.BeginTransaction",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_BeginTransaction_sync_flattened",
+      "title": "BeginTransaction",
+      "description": "Snippet for BeginTransaction",
+      "file": "FirestoreClient.BeginTransactionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BeginTransaction",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BeginTransaction",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.BeginTransactionResponse",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "BeginTransaction",
+          "fullName": "google.firestore.v1.Firestore.BeginTransaction",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_BeginTransaction_async_flattened",
+      "title": "BeginTransactionAsync",
+      "description": "Snippet for BeginTransactionAsync",
+      "file": "FirestoreClient.BeginTransactionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BeginTransactionAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BeginTransactionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.BeginTransactionResponse>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "BeginTransaction",
+          "fullName": "google.firestore.v1.Firestore.BeginTransaction",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Commit_sync",
+      "title": "CommitRequestObject",
+      "description": "Snippet for Commit",
+      "file": "FirestoreClient.CommitRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Commit",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Commit",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.CommitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.CommitResponse",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Commit",
+          "fullName": "google.firestore.v1.Firestore.Commit",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Commit_async",
+      "title": "CommitRequestObjectAsync",
+      "description": "Snippet for CommitAsync",
+      "file": "FirestoreClient.CommitRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.CommitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.CommitRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.CommitResponse>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Commit",
+          "fullName": "google.firestore.v1.Firestore.Commit",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Commit_sync_flattened",
+      "title": "Commit",
+      "description": "Snippet for Commit",
+      "file": "FirestoreClient.CommitSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Commit",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Commit",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Firestore.V1.Write>",
+            "name": "writes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.CommitResponse",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Commit",
+          "fullName": "google.firestore.v1.Firestore.Commit",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Commit_async_flattened",
+      "title": "CommitAsync",
+      "description": "Snippet for CommitAsync",
+      "file": "FirestoreClient.CommitAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CommitAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.CommitAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Firestore.V1.Write>",
+            "name": "writes"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.CommitResponse>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Commit",
+          "fullName": "google.firestore.v1.Firestore.Commit",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Rollback_sync",
+      "title": "RollbackRequestObject",
+      "description": "Snippet for Rollback",
+      "file": "FirestoreClient.RollbackRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Rollback",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Rollback",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.RollbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Rollback",
+          "fullName": "google.firestore.v1.Firestore.Rollback",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Rollback_async",
+      "title": "RollbackRequestObjectAsync",
+      "description": "Snippet for RollbackAsync",
+      "file": "FirestoreClient.RollbackRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.RollbackAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.RollbackRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Rollback",
+          "fullName": "google.firestore.v1.Firestore.Rollback",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Rollback_sync_flattened",
+      "title": "Rollback",
+      "description": "Snippet for Rollback",
+      "file": "FirestoreClient.RollbackSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Rollback",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Rollback",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transaction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Rollback",
+          "fullName": "google.firestore.v1.Firestore.Rollback",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Rollback_async_flattened",
+      "title": "RollbackAsync",
+      "description": "Snippet for RollbackAsync",
+      "file": "FirestoreClient.RollbackAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RollbackAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.RollbackAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Protobuf.ByteString",
+            "name": "transaction"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Rollback",
+          "fullName": "google.firestore.v1.Firestore.Rollback",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_RunQuery_sync",
+      "title": "RunQueryRequestObject",
+      "description": "Snippet for RunQuery",
+      "file": "FirestoreClient.RunQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunQuery",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.RunQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.RunQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+RunQueryStream",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "RunQuery",
+          "fullName": "google.firestore.v1.Firestore.RunQuery",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_RunAggregationQuery_sync",
+      "title": "RunAggregationQueryRequestObject",
+      "description": "Snippet for RunAggregationQuery",
+      "file": "FirestoreClient.RunAggregationQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunAggregationQuery",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.RunAggregationQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.RunAggregationQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+RunAggregationQueryStream",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "RunAggregationQuery",
+          "fullName": "google.firestore.v1.Firestore.RunAggregationQuery",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_PartitionQuery_sync",
+      "title": "PartitionQueryRequestObject",
+      "description": "Snippet for PartitionQuery",
+      "file": "FirestoreClient.PartitionQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PartitionQuery",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.PartitionQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.PartitionQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.V1.PartitionQueryResponse, Google.Cloud.Firestore.V1.Cursor>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "PartitionQuery",
+          "fullName": "google.firestore.v1.Firestore.PartitionQuery",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_PartitionQuery_async",
+      "title": "PartitionQueryRequestObjectAsync",
+      "description": "Snippet for PartitionQueryAsync",
+      "file": "FirestoreClient.PartitionQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PartitionQueryAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.PartitionQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.PartitionQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.V1.PartitionQueryResponse, Google.Cloud.Firestore.V1.Cursor>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "PartitionQuery",
+          "fullName": "google.firestore.v1.Firestore.PartitionQuery",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Write_sync",
+      "title": "Write",
+      "description": "Snippet for Write",
+      "file": "FirestoreClient.WriteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Write",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Write",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+WriteStream",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Write",
+          "fullName": "google.firestore.v1.Firestore.Write",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_Listen_sync",
+      "title": "Listen",
+      "description": "Snippet for Listen",
+      "file": "FirestoreClient.ListenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Listen",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.Listen",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.FirestoreClient+ListenStream",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "Listen",
+          "fullName": "google.firestore.v1.Firestore.Listen",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_ListCollectionIds_sync",
+      "title": "ListCollectionIdsRequestObject",
+      "description": "Snippet for ListCollectionIds",
+      "file": "FirestoreClient.ListCollectionIdsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollectionIds",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListCollectionIds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ListCollectionIdsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.V1.ListCollectionIdsResponse, System.String>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "ListCollectionIds",
+          "fullName": "google.firestore.v1.Firestore.ListCollectionIds",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_ListCollectionIds_async",
+      "title": "ListCollectionIdsRequestObjectAsync",
+      "description": "Snippet for ListCollectionIdsAsync",
+      "file": "FirestoreClient.ListCollectionIdsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollectionIdsAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListCollectionIdsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.ListCollectionIdsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.V1.ListCollectionIdsResponse, System.String>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "ListCollectionIds",
+          "fullName": "google.firestore.v1.Firestore.ListCollectionIds",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_ListCollectionIds_sync_flattened",
+      "title": "ListCollectionIds",
+      "description": "Snippet for ListCollectionIds",
+      "file": "FirestoreClient.ListCollectionIdsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollectionIds",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListCollectionIds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Firestore.V1.ListCollectionIdsResponse, System.String>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "ListCollectionIds",
+          "fullName": "google.firestore.v1.Firestore.ListCollectionIds",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_ListCollectionIds_async_flattened",
+      "title": "ListCollectionIdsAsync",
+      "description": "Snippet for ListCollectionIdsAsync",
+      "file": "FirestoreClient.ListCollectionIdsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListCollectionIdsAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.ListCollectionIdsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Firestore.V1.ListCollectionIdsResponse, System.String>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "ListCollectionIds",
+          "fullName": "google.firestore.v1.Firestore.ListCollectionIds",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_BatchWrite_sync",
+      "title": "BatchWriteRequestObject",
+      "description": "Snippet for BatchWrite",
+      "file": "FirestoreClient.BatchWriteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWrite",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BatchWrite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BatchWriteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.BatchWriteResponse",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "BatchWrite",
+          "fullName": "google.firestore.v1.Firestore.BatchWrite",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_BatchWrite_async",
+      "title": "BatchWriteRequestObjectAsync",
+      "description": "Snippet for BatchWriteAsync",
+      "file": "FirestoreClient.BatchWriteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWriteAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.BatchWriteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.BatchWriteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.BatchWriteResponse>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "BatchWrite",
+          "fullName": "google.firestore.v1.Firestore.BatchWrite",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_CreateDocument_sync",
+      "title": "CreateDocumentRequestObject",
+      "description": "Snippet for CreateDocument",
+      "file": "FirestoreClient.CreateDocumentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDocument",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.CreateDocument",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.CreateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.V1.Document",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "CreateDocument",
+          "fullName": "google.firestore.v1.Firestore.CreateDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_Firestore_CreateDocument_async",
+      "title": "CreateDocumentRequestObjectAsync",
+      "description": "Snippet for CreateDocumentAsync",
+      "file": "FirestoreClient.CreateDocumentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDocumentAsync",
+        "fullName": "Google.Cloud.Firestore.V1.FirestoreClient.CreateDocumentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.V1.CreateDocumentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.V1.Document>",
+        "client": {
+          "shortName": "FirestoreClient",
+          "fullName": "Google.Cloud.Firestore.V1.FirestoreClient"
+        },
+        "method": {
+          "shortName": "CreateDocument",
+          "fullName": "google.firestore.v1.Firestore.CreateDocument",
+          "service": {
+            "shortName": "Firestore",
+            "fullName": "google.firestore.v1.Firestore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

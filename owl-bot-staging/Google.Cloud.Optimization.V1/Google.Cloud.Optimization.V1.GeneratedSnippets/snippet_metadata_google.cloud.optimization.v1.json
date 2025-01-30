@@ -1,0 +1,208 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Optimization.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.optimization.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudoptimization_v1_generated_FleetRouting_OptimizeTours_sync",
+      "title": "OptimizeToursRequestObject",
+      "description": "Snippet for OptimizeTours",
+      "file": "FleetRoutingClient.OptimizeToursRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "OptimizeTours",
+        "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient.OptimizeTours",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Optimization.V1.OptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Optimization.V1.OptimizeToursResponse",
+        "client": {
+          "shortName": "FleetRoutingClient",
+          "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient"
+        },
+        "method": {
+          "shortName": "OptimizeTours",
+          "fullName": "google.cloud.optimization.v1.FleetRouting.OptimizeTours",
+          "service": {
+            "shortName": "FleetRouting",
+            "fullName": "google.cloud.optimization.v1.FleetRouting"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudoptimization_v1_generated_FleetRouting_OptimizeTours_async",
+      "title": "OptimizeToursRequestObjectAsync",
+      "description": "Snippet for OptimizeToursAsync",
+      "file": "FleetRoutingClient.OptimizeToursRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "OptimizeToursAsync",
+        "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient.OptimizeToursAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Optimization.V1.OptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Optimization.V1.OptimizeToursResponse>",
+        "client": {
+          "shortName": "FleetRoutingClient",
+          "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient"
+        },
+        "method": {
+          "shortName": "OptimizeTours",
+          "fullName": "google.cloud.optimization.v1.FleetRouting.OptimizeTours",
+          "service": {
+            "shortName": "FleetRouting",
+            "fullName": "google.cloud.optimization.v1.FleetRouting"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudoptimization_v1_generated_FleetRouting_BatchOptimizeTours_sync",
+      "title": "BatchOptimizeToursRequestObject",
+      "description": "Snippet for BatchOptimizeTours",
+      "file": "FleetRoutingClient.BatchOptimizeToursRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchOptimizeTours",
+        "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient.BatchOptimizeTours",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Optimization.V1.BatchOptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Optimization.V1.BatchOptimizeToursResponse, Google.Cloud.Optimization.V1.AsyncModelMetadata>",
+        "client": {
+          "shortName": "FleetRoutingClient",
+          "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient"
+        },
+        "method": {
+          "shortName": "BatchOptimizeTours",
+          "fullName": "google.cloud.optimization.v1.FleetRouting.BatchOptimizeTours",
+          "service": {
+            "shortName": "FleetRouting",
+            "fullName": "google.cloud.optimization.v1.FleetRouting"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudoptimization_v1_generated_FleetRouting_BatchOptimizeTours_async",
+      "title": "BatchOptimizeToursRequestObjectAsync",
+      "description": "Snippet for BatchOptimizeToursAsync",
+      "file": "FleetRoutingClient.BatchOptimizeToursRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchOptimizeToursAsync",
+        "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient.BatchOptimizeToursAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Optimization.V1.BatchOptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Optimization.V1.BatchOptimizeToursResponse, Google.Cloud.Optimization.V1.AsyncModelMetadata>>",
+        "client": {
+          "shortName": "FleetRoutingClient",
+          "fullName": "Google.Cloud.Optimization.V1.FleetRoutingClient"
+        },
+        "method": {
+          "shortName": "BatchOptimizeTours",
+          "fullName": "google.cloud.optimization.v1.FleetRouting.BatchOptimizeTours",
+          "service": {
+            "shortName": "FleetRouting",
+            "fullName": "google.cloud.optimization.v1.FleetRouting"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
