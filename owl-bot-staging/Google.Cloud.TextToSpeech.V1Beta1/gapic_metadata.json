@@ -1,0 +1,51 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.texttospeech.v1beta1",
+  "libraryPackage": "Google.Cloud.TextToSpeech.V1Beta1",
+  "services": {
+    "TextToSpeech": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TextToSpeechClient",
+          "rpcs": {
+            "ListVoices": {
+              "methods": [
+                "ListVoices",
+                "ListVoicesAsync"
+              ]
+            },
+            "StreamingSynthesize": {
+              "methods": [
+                "StreamingSynthesize",
+                "StreamingSynthesizeAsync"
+              ]
+            },
+            "SynthesizeSpeech": {
+              "methods": [
+                "SynthesizeSpeech",
+                "SynthesizeSpeechAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TextToSpeechLongAudioSynthesize": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TextToSpeechLongAudioSynthesizeClient",
+          "rpcs": {
+            "SynthesizeLongAudio": {
+              "methods": [
+                "SynthesizeLongAudio",
+                "SynthesizeLongAudioAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

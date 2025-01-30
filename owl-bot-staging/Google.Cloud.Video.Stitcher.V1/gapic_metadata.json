@@ -1,0 +1,198 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.video.stitcher.v1",
+  "libraryPackage": "Google.Cloud.Video.Stitcher.V1",
+  "services": {
+    "VideoStitcherService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "VideoStitcherServiceClient",
+          "rpcs": {
+            "CreateCdnKey": {
+              "methods": [
+                "CreateCdnKey",
+                "CreateCdnKeyAsync"
+              ]
+            },
+            "CreateLiveConfig": {
+              "methods": [
+                "CreateLiveConfig",
+                "CreateLiveConfigAsync"
+              ]
+            },
+            "CreateLiveSession": {
+              "methods": [
+                "CreateLiveSession",
+                "CreateLiveSessionAsync"
+              ]
+            },
+            "CreateSlate": {
+              "methods": [
+                "CreateSlate",
+                "CreateSlateAsync"
+              ]
+            },
+            "CreateVodConfig": {
+              "methods": [
+                "CreateVodConfig",
+                "CreateVodConfigAsync"
+              ]
+            },
+            "CreateVodSession": {
+              "methods": [
+                "CreateVodSession",
+                "CreateVodSessionAsync"
+              ]
+            },
+            "DeleteCdnKey": {
+              "methods": [
+                "DeleteCdnKey",
+                "DeleteCdnKeyAsync"
+              ]
+            },
+            "DeleteLiveConfig": {
+              "methods": [
+                "DeleteLiveConfig",
+                "DeleteLiveConfigAsync"
+              ]
+            },
+            "DeleteSlate": {
+              "methods": [
+                "DeleteSlate",
+                "DeleteSlateAsync"
+              ]
+            },
+            "DeleteVodConfig": {
+              "methods": [
+                "DeleteVodConfig",
+                "DeleteVodConfigAsync"
+              ]
+            },
+            "GetCdnKey": {
+              "methods": [
+                "GetCdnKey",
+                "GetCdnKeyAsync"
+              ]
+            },
+            "GetLiveAdTagDetail": {
+              "methods": [
+                "GetLiveAdTagDetail",
+                "GetLiveAdTagDetailAsync"
+              ]
+            },
+            "GetLiveConfig": {
+              "methods": [
+                "GetLiveConfig",
+                "GetLiveConfigAsync"
+              ]
+            },
+            "GetLiveSession": {
+              "methods": [
+                "GetLiveSession",
+                "GetLiveSessionAsync"
+              ]
+            },
+            "GetSlate": {
+              "methods": [
+                "GetSlate",
+                "GetSlateAsync"
+              ]
+            },
+            "GetVodAdTagDetail": {
+              "methods": [
+                "GetVodAdTagDetail",
+                "GetVodAdTagDetailAsync"
+              ]
+            },
+            "GetVodConfig": {
+              "methods": [
+                "GetVodConfig",
+                "GetVodConfigAsync"
+              ]
+            },
+            "GetVodSession": {
+              "methods": [
+                "GetVodSession",
+                "GetVodSessionAsync"
+              ]
+            },
+            "GetVodStitchDetail": {
+              "methods": [
+                "GetVodStitchDetail",
+                "GetVodStitchDetailAsync"
+              ]
+            },
+            "ListCdnKeys": {
+              "methods": [
+                "ListCdnKeys",
+                "ListCdnKeysAsync"
+              ]
+            },
+            "ListLiveAdTagDetails": {
+              "methods": [
+                "ListLiveAdTagDetails",
+                "ListLiveAdTagDetailsAsync"
+              ]
+            },
+            "ListLiveConfigs": {
+              "methods": [
+                "ListLiveConfigs",
+                "ListLiveConfigsAsync"
+              ]
+            },
+            "ListSlates": {
+              "methods": [
+                "ListSlates",
+                "ListSlatesAsync"
+              ]
+            },
+            "ListVodAdTagDetails": {
+              "methods": [
+                "ListVodAdTagDetails",
+                "ListVodAdTagDetailsAsync"
+              ]
+            },
+            "ListVodConfigs": {
+              "methods": [
+                "ListVodConfigs",
+                "ListVodConfigsAsync"
+              ]
+            },
+            "ListVodStitchDetails": {
+              "methods": [
+                "ListVodStitchDetails",
+                "ListVodStitchDetailsAsync"
+              ]
+            },
+            "UpdateCdnKey": {
+              "methods": [
+                "UpdateCdnKey",
+                "UpdateCdnKeyAsync"
+              ]
+            },
+            "UpdateLiveConfig": {
+              "methods": [
+                "UpdateLiveConfig",
+                "UpdateLiveConfigAsync"
+              ]
+            },
+            "UpdateSlate": {
+              "methods": [
+                "UpdateSlate",
+                "UpdateSlateAsync"
+              ]
+            },
+            "UpdateVodConfig": {
+              "methods": [
+                "UpdateVodConfig",
+                "UpdateVodConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
