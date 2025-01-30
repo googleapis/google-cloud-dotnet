@@ -1,0 +1,78 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.rapidmigrationassessment.v1",
+  "libraryPackage": "Google.Cloud.RapidMigrationAssessment.V1",
+  "services": {
+    "RapidMigrationAssessment": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RapidMigrationAssessmentClient",
+          "rpcs": {
+            "CreateAnnotation": {
+              "methods": [
+                "CreateAnnotation",
+                "CreateAnnotationAsync"
+              ]
+            },
+            "CreateCollector": {
+              "methods": [
+                "CreateCollector",
+                "CreateCollectorAsync"
+              ]
+            },
+            "DeleteCollector": {
+              "methods": [
+                "DeleteCollector",
+                "DeleteCollectorAsync"
+              ]
+            },
+            "GetAnnotation": {
+              "methods": [
+                "GetAnnotation",
+                "GetAnnotationAsync"
+              ]
+            },
+            "GetCollector": {
+              "methods": [
+                "GetCollector",
+                "GetCollectorAsync"
+              ]
+            },
+            "ListCollectors": {
+              "methods": [
+                "ListCollectors",
+                "ListCollectorsAsync"
+              ]
+            },
+            "PauseCollector": {
+              "methods": [
+                "PauseCollector",
+                "PauseCollectorAsync"
+              ]
+            },
+            "RegisterCollector": {
+              "methods": [
+                "RegisterCollector",
+                "RegisterCollectorAsync"
+              ]
+            },
+            "ResumeCollector": {
+              "methods": [
+                "ResumeCollector",
+                "ResumeCollectorAsync"
+              ]
+            },
+            "UpdateCollector": {
+              "methods": [
+                "UpdateCollector",
+                "UpdateCollectorAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
