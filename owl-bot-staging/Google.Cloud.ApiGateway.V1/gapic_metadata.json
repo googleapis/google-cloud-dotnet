@@ -1,0 +1,108 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.apigateway.v1",
+  "libraryPackage": "Google.Cloud.ApiGateway.V1",
+  "services": {
+    "ApiGatewayService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ApiGatewayServiceClient",
+          "rpcs": {
+            "CreateApi": {
+              "methods": [
+                "CreateApi",
+                "CreateApiAsync"
+              ]
+            },
+            "CreateApiConfig": {
+              "methods": [
+                "CreateApiConfig",
+                "CreateApiConfigAsync"
+              ]
+            },
+            "CreateGateway": {
+              "methods": [
+                "CreateGateway",
+                "CreateGatewayAsync"
+              ]
+            },
+            "DeleteApi": {
+              "methods": [
+                "DeleteApi",
+                "DeleteApiAsync"
+              ]
+            },
+            "DeleteApiConfig": {
+              "methods": [
+                "DeleteApiConfig",
+                "DeleteApiConfigAsync"
+              ]
+            },
+            "DeleteGateway": {
+              "methods": [
+                "DeleteGateway",
+                "DeleteGatewayAsync"
+              ]
+            },
+            "GetApi": {
+              "methods": [
+                "GetApi",
+                "GetApiAsync"
+              ]
+            },
+            "GetApiConfig": {
+              "methods": [
+                "GetApiConfig",
+                "GetApiConfigAsync"
+              ]
+            },
+            "GetGateway": {
+              "methods": [
+                "GetGateway",
+                "GetGatewayAsync"
+              ]
+            },
+            "ListApiConfigs": {
+              "methods": [
+                "ListApiConfigs",
+                "ListApiConfigsAsync"
+              ]
+            },
+            "ListApis": {
+              "methods": [
+                "ListApis",
+                "ListApisAsync"
+              ]
+            },
+            "ListGateways": {
+              "methods": [
+                "ListGateways",
+                "ListGatewaysAsync"
+              ]
+            },
+            "UpdateApi": {
+              "methods": [
+                "UpdateApi",
+                "UpdateApiAsync"
+              ]
+            },
+            "UpdateApiConfig": {
+              "methods": [
+                "UpdateApiConfig",
+                "UpdateApiConfigAsync"
+              ]
+            },
+            "UpdateGateway": {
+              "methods": [
+                "UpdateGateway",
+                "UpdateGatewayAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1704 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.AssuredWorkloads.V1Beta1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.assuredworkloads.v1beta1",
+        "version": "v1beta1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_CreateWorkload_sync",
+      "title": "CreateWorkloadRequestObject",
+      "description": "Snippet for CreateWorkload",
+      "file": "AssuredWorkloadsServiceClient.CreateWorkloadRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.CreateWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1Beta1.Workload, Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.CreateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_CreateWorkload_async",
+      "title": "CreateWorkloadRequestObjectAsync",
+      "description": "Snippet for CreateWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.CreateWorkloadRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.CreateWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1Beta1.Workload, Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata>>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.CreateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_CreateWorkload_sync_flattened",
+      "title": "CreateWorkload",
+      "description": "Snippet for CreateWorkload",
+      "file": "AssuredWorkloadsServiceClient.CreateWorkloadSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.CreateWorkload",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1Beta1.Workload, Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.CreateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_CreateWorkload_async_flattened",
+      "title": "CreateWorkloadAsync",
+      "description": "Snippet for CreateWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.CreateWorkloadAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.CreateWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1Beta1.Workload, Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata>>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.CreateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_CreateWorkload_sync_flattened_resourceNames",
+      "title": "CreateWorkloadResourceNames",
+      "description": "Snippet for CreateWorkload",
+      "file": "AssuredWorkloadsServiceClient.CreateWorkloadResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.CreateWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1Beta1.Workload, Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.CreateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_CreateWorkload_async_flattened_resourceNames",
+      "title": "CreateWorkloadResourceNamesAsync",
+      "description": "Snippet for CreateWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.CreateWorkloadResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.CreateWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AssuredWorkloads.V1Beta1.Workload, Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata>>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.CreateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_UpdateWorkload_sync",
+      "title": "UpdateWorkloadRequestObject",
+      "description": "Snippet for UpdateWorkload",
+      "file": "AssuredWorkloadsServiceClient.UpdateWorkloadRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.UpdateWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.UpdateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_UpdateWorkload_async",
+      "title": "UpdateWorkloadRequestObjectAsync",
+      "description": "Snippet for UpdateWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.UpdateWorkloadRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.UpdateWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.UpdateWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.UpdateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_UpdateWorkload_sync_flattened",
+      "title": "UpdateWorkload",
+      "description": "Snippet for UpdateWorkload",
+      "file": "AssuredWorkloadsServiceClient.UpdateWorkloadSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.UpdateWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.UpdateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_UpdateWorkload_async_flattened",
+      "title": "UpdateWorkloadAsync",
+      "description": "Snippet for UpdateWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.UpdateWorkloadAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.UpdateWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+            "name": "workload"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.UpdateWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedResources_sync",
+      "title": "RestrictAllowedResourcesRequestObject",
+      "description": "Snippet for RestrictAllowedResources",
+      "file": "AssuredWorkloadsServiceClient.RestrictAllowedResourcesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestrictAllowedResources",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.RestrictAllowedResources",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "RestrictAllowedResources",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.RestrictAllowedResources",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_RestrictAllowedResources_async",
+      "title": "RestrictAllowedResourcesRequestObjectAsync",
+      "description": "Snippet for RestrictAllowedResourcesAsync",
+      "file": "AssuredWorkloadsServiceClient.RestrictAllowedResourcesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestrictAllowedResourcesAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.RestrictAllowedResourcesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.RestrictAllowedResourcesResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "RestrictAllowedResources",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.RestrictAllowedResources",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_DeleteWorkload_sync",
+      "title": "DeleteWorkloadRequestObject",
+      "description": "Snippet for DeleteWorkload",
+      "file": "AssuredWorkloadsServiceClient.DeleteWorkloadRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.DeleteWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.DeleteWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_DeleteWorkload_async",
+      "title": "DeleteWorkloadRequestObjectAsync",
+      "description": "Snippet for DeleteWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.DeleteWorkloadRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.DeleteWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.DeleteWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.DeleteWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_DeleteWorkload_sync_flattened",
+      "title": "DeleteWorkload",
+      "description": "Snippet for DeleteWorkload",
+      "file": "AssuredWorkloadsServiceClient.DeleteWorkloadSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.DeleteWorkload",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.DeleteWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_DeleteWorkload_async_flattened",
+      "title": "DeleteWorkloadAsync",
+      "description": "Snippet for DeleteWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.DeleteWorkloadAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.DeleteWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.DeleteWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_DeleteWorkload_sync_flattened_resourceNames",
+      "title": "DeleteWorkloadResourceNames",
+      "description": "Snippet for DeleteWorkload",
+      "file": "AssuredWorkloadsServiceClient.DeleteWorkloadResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.DeleteWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.WorkloadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.DeleteWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_DeleteWorkload_async_flattened_resourceNames",
+      "title": "DeleteWorkloadResourceNamesAsync",
+      "description": "Snippet for DeleteWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.DeleteWorkloadResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.DeleteWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.WorkloadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.DeleteWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_GetWorkload_sync",
+      "title": "GetWorkloadRequestObject",
+      "description": "Snippet for GetWorkload",
+      "file": "AssuredWorkloadsServiceClient.GetWorkloadRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.GetWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.GetWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_GetWorkload_async",
+      "title": "GetWorkloadRequestObjectAsync",
+      "description": "Snippet for GetWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.GetWorkloadRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.GetWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.GetWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_GetWorkload_sync_flattened",
+      "title": "GetWorkload",
+      "description": "Snippet for GetWorkload",
+      "file": "AssuredWorkloadsServiceClient.GetWorkloadSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.GetWorkload",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.GetWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_GetWorkload_async_flattened",
+      "title": "GetWorkloadAsync",
+      "description": "Snippet for GetWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.GetWorkloadAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.GetWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.GetWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_GetWorkload_sync_flattened_resourceNames",
+      "title": "GetWorkloadResourceNames",
+      "description": "Snippet for GetWorkload",
+      "file": "AssuredWorkloadsServiceClient.GetWorkloadResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkload",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.GetWorkload",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.WorkloadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.Workload",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.GetWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_GetWorkload_async_flattened_resourceNames",
+      "title": "GetWorkloadResourceNamesAsync",
+      "description": "Snippet for GetWorkloadAsync",
+      "file": "AssuredWorkloadsServiceClient.GetWorkloadResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetWorkloadAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.GetWorkloadAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.WorkloadName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "GetWorkload",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.GetWorkload",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_AnalyzeWorkloadMove_sync",
+      "title": "AnalyzeWorkloadMoveRequestObject",
+      "description": "Snippet for AnalyzeWorkloadMove",
+      "file": "AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeWorkloadMove",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.AnalyzeWorkloadMove",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeWorkloadMove",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.AnalyzeWorkloadMove",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_AnalyzeWorkloadMove_async",
+      "title": "AnalyzeWorkloadMoveRequestObjectAsync",
+      "description": "Snippet for AnalyzeWorkloadMoveAsync",
+      "file": "AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeWorkloadMoveAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeWorkloadMove",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.AnalyzeWorkloadMove",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_AnalyzeWorkloadMove_sync_flattened",
+      "title": "AnalyzeWorkloadMove",
+      "description": "Snippet for AnalyzeWorkloadMove",
+      "file": "AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeWorkloadMove",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.AnalyzeWorkloadMove",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeWorkloadMove",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.AnalyzeWorkloadMove",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_AnalyzeWorkloadMove_async_flattened",
+      "title": "AnalyzeWorkloadMoveAsync",
+      "description": "Snippet for AnalyzeWorkloadMoveAsync",
+      "file": "AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnalyzeWorkloadMoveAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.AnalyzeWorkloadMoveAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "project"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AssuredWorkloads.V1Beta1.AnalyzeWorkloadMoveResponse>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "AnalyzeWorkloadMove",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.AnalyzeWorkloadMove",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_ListWorkloads_sync",
+      "title": "ListWorkloadsRequestObject",
+      "description": "Snippet for ListWorkloads",
+      "file": "AssuredWorkloadsServiceClient.ListWorkloadsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloads",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.ListWorkloads",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_ListWorkloads_async",
+      "title": "ListWorkloadsRequestObjectAsync",
+      "description": "Snippet for ListWorkloadsAsync",
+      "file": "AssuredWorkloadsServiceClient.ListWorkloadsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloadsAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.ListWorkloadsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.ListWorkloads",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_ListWorkloads_sync_flattened",
+      "title": "ListWorkloads",
+      "description": "Snippet for ListWorkloads",
+      "file": "AssuredWorkloadsServiceClient.ListWorkloadsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloads",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.ListWorkloads",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_ListWorkloads_async_flattened",
+      "title": "ListWorkloadsAsync",
+      "description": "Snippet for ListWorkloadsAsync",
+      "file": "AssuredWorkloadsServiceClient.ListWorkloadsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloadsAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.ListWorkloadsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.ListWorkloads",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_ListWorkloads_sync_flattened_resourceNames",
+      "title": "ListWorkloadsResourceNames",
+      "description": "Snippet for ListWorkloads",
+      "file": "AssuredWorkloadsServiceClient.ListWorkloadsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloads",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.ListWorkloads",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.ListWorkloads",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "assuredworkloads_v1beta1_generated_AssuredWorkloadsService_ListWorkloads_async_flattened_resourceNames",
+      "title": "ListWorkloadsResourceNamesAsync",
+      "description": "Snippet for ListWorkloadsAsync",
+      "file": "AssuredWorkloadsServiceClient.ListWorkloadsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkloadsAsync",
+        "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient.ListWorkloadsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AssuredWorkloads.V1Beta1.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse, Google.Cloud.AssuredWorkloads.V1Beta1.Workload>",
+        "client": {
+          "shortName": "AssuredWorkloadsServiceClient",
+          "fullName": "Google.Cloud.AssuredWorkloads.V1Beta1.AssuredWorkloadsServiceClient"
+        },
+        "method": {
+          "shortName": "ListWorkloads",
+          "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService.ListWorkloads",
+          "service": {
+            "shortName": "AssuredWorkloadsService",
+            "fullName": "google.cloud.assuredworkloads.v1beta1.AssuredWorkloadsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

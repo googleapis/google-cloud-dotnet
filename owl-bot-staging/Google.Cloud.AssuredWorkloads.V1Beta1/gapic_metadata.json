@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.assuredworkloads.v1beta1",
+  "libraryPackage": "Google.Cloud.AssuredWorkloads.V1Beta1",
+  "services": {
+    "AssuredWorkloadsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AssuredWorkloadsServiceClient",
+          "rpcs": {
+            "AnalyzeWorkloadMove": {
+              "methods": [
+                "AnalyzeWorkloadMove",
+                "AnalyzeWorkloadMoveAsync"
+              ]
+            },
+            "CreateWorkload": {
+              "methods": [
+                "CreateWorkload",
+                "CreateWorkloadAsync"
+              ]
+            },
+            "DeleteWorkload": {
+              "methods": [
+                "DeleteWorkload",
+                "DeleteWorkloadAsync"
+              ]
+            },
+            "GetWorkload": {
+              "methods": [
+                "GetWorkload",
+                "GetWorkloadAsync"
+              ]
+            },
+            "ListWorkloads": {
+              "methods": [
+                "ListWorkloads",
+                "ListWorkloadsAsync"
+              ]
+            },
+            "RestrictAllowedResources": {
+              "methods": [
+                "RestrictAllowedResources",
+                "RestrictAllowedResourcesAsync"
+              ]
+            },
+            "UpdateWorkload": {
+              "methods": [
+                "UpdateWorkload",
+                "UpdateWorkloadAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
