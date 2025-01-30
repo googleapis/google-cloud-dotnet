@@ -1119,6 +1119,9 @@ namespace Google.Cloud.Compute.V1
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.AcceleratorOptimizedA3Mega"/>.</summary>
                 public const string AcceleratorOptimizedA3Mega = "ACCELERATOR_OPTIMIZED_A3_MEGA";
 
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.AcceleratorOptimizedA3Ultra"/>.</summary>
+                public const string AcceleratorOptimizedA3Ultra = "ACCELERATOR_OPTIMIZED_A3_ULTRA";
+
                 /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.Commitment.Types.Type.ComputeOptimized"/>.</summary>
                 public const string ComputeOptimized = "COMPUTE_OPTIMIZED";
 
