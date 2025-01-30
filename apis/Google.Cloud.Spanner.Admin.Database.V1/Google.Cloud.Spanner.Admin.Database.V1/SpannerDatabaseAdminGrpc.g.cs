@@ -134,6 +134,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest> __Marshaller_google_spanner_admin_database_v1_AddSplitPointsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> __Marshaller_google_spanner_admin_database_v1_AddSplitPointsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest> __Marshaller_google_spanner_admin_database_v1_CreateBackupScheduleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Marshaller_google_spanner_admin_database_v1_BackupSchedule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule.Parser));
@@ -307,6 +311,14 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         "ListDatabaseRoles",
         __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesRequest,
         __Marshaller_google_spanner_admin_database_v1_ListDatabaseRolesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> __Method_AddSplitPoints = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddSplitPoints",
+        __Marshaller_google_spanner_admin_database_v1_AddSplitPointsRequest,
+        __Marshaller_google_spanner_admin_database_v1_AddSplitPointsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule> __Method_CreateBackupSchedule = new grpc::Method<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(
@@ -731,6 +743,18 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse> ListDatabaseRoles(global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> AddSplitPoints(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2333,6 +2357,54 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListDatabaseRoles, null, options, request);
       }
       /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse AddSplitPoints(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddSplitPoints(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse AddSplitPoints(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddSplitPoints, null, options, request);
+      }
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> AddSplitPointsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddSplitPointsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds split points to specified tables, indexes of a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse> AddSplitPointsAsync(global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddSplitPoints, null, options, request);
+      }
+      /// <summary>
       /// Creates a new backup schedule.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2606,6 +2678,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
           .AddMethod(__Method_ListDatabaseOperations, serviceImpl.ListDatabaseOperations)
           .AddMethod(__Method_ListBackupOperations, serviceImpl.ListBackupOperations)
           .AddMethod(__Method_ListDatabaseRoles, serviceImpl.ListDatabaseRoles)
+          .AddMethod(__Method_AddSplitPoints, serviceImpl.AddSplitPoints)
           .AddMethod(__Method_CreateBackupSchedule, serviceImpl.CreateBackupSchedule)
           .AddMethod(__Method_GetBackupSchedule, serviceImpl.GetBackupSchedule)
           .AddMethod(__Method_UpdateBackupSchedule, serviceImpl.UpdateBackupSchedule)
@@ -2640,6 +2713,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       serviceBinder.AddMethod(__Method_ListDatabaseOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseOperationsResponse>(serviceImpl.ListDatabaseOperations));
       serviceBinder.AddMethod(__Method_ListBackupOperations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListBackupOperationsResponse>(serviceImpl.ListBackupOperations));
       serviceBinder.AddMethod(__Method_ListDatabaseRoles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesRequest, global::Google.Cloud.Spanner.Admin.Database.V1.ListDatabaseRolesResponse>(serviceImpl.ListDatabaseRoles));
+      serviceBinder.AddMethod(__Method_AddSplitPoints, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsRequest, global::Google.Cloud.Spanner.Admin.Database.V1.AddSplitPointsResponse>(serviceImpl.AddSplitPoints));
       serviceBinder.AddMethod(__Method_CreateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.CreateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.CreateBackupSchedule));
       serviceBinder.AddMethod(__Method_GetBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.GetBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.GetBackupSchedule));
       serviceBinder.AddMethod(__Method_UpdateBackupSchedule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.Admin.Database.V1.UpdateBackupScheduleRequest, global::Google.Cloud.Spanner.Admin.Database.V1.BackupSchedule>(serviceImpl.UpdateBackupSchedule));
