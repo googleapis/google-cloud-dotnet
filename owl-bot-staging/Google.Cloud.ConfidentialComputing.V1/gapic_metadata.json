@@ -1,0 +1,30 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.confidentialcomputing.v1",
+  "libraryPackage": "Google.Cloud.ConfidentialComputing.V1",
+  "services": {
+    "ConfidentialComputing": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ConfidentialComputingClient",
+          "rpcs": {
+            "CreateChallenge": {
+              "methods": [
+                "CreateChallenge",
+                "CreateChallengeAsync"
+              ]
+            },
+            "VerifyAttestation": {
+              "methods": [
+                "VerifyAttestation",
+                "VerifyAttestationAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

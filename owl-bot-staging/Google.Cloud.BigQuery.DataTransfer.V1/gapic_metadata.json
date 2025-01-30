@@ -1,0 +1,114 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.bigquery.datatransfer.v1",
+  "libraryPackage": "Google.Cloud.BigQuery.DataTransfer.V1",
+  "services": {
+    "DataTransferService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataTransferServiceClient",
+          "rpcs": {
+            "CheckValidCreds": {
+              "methods": [
+                "CheckValidCreds",
+                "CheckValidCredsAsync"
+              ]
+            },
+            "CreateTransferConfig": {
+              "methods": [
+                "CreateTransferConfig",
+                "CreateTransferConfigAsync"
+              ]
+            },
+            "DeleteTransferConfig": {
+              "methods": [
+                "DeleteTransferConfig",
+                "DeleteTransferConfigAsync"
+              ]
+            },
+            "DeleteTransferRun": {
+              "methods": [
+                "DeleteTransferRun",
+                "DeleteTransferRunAsync"
+              ]
+            },
+            "EnrollDataSources": {
+              "methods": [
+                "EnrollDataSources",
+                "EnrollDataSourcesAsync"
+              ]
+            },
+            "GetDataSource": {
+              "methods": [
+                "GetDataSource",
+                "GetDataSourceAsync"
+              ]
+            },
+            "GetTransferConfig": {
+              "methods": [
+                "GetTransferConfig",
+                "GetTransferConfigAsync"
+              ]
+            },
+            "GetTransferRun": {
+              "methods": [
+                "GetTransferRun",
+                "GetTransferRunAsync"
+              ]
+            },
+            "ListDataSources": {
+              "methods": [
+                "ListDataSources",
+                "ListDataSourcesAsync"
+              ]
+            },
+            "ListTransferConfigs": {
+              "methods": [
+                "ListTransferConfigs",
+                "ListTransferConfigsAsync"
+              ]
+            },
+            "ListTransferLogs": {
+              "methods": [
+                "ListTransferLogs",
+                "ListTransferLogsAsync"
+              ]
+            },
+            "ListTransferRuns": {
+              "methods": [
+                "ListTransferRuns",
+                "ListTransferRunsAsync"
+              ]
+            },
+            "ScheduleTransferRuns": {
+              "methods": [
+                "ScheduleTransferRuns",
+                "ScheduleTransferRunsAsync"
+              ]
+            },
+            "StartManualTransferRuns": {
+              "methods": [
+                "StartManualTransferRuns",
+                "StartManualTransferRunsAsync"
+              ]
+            },
+            "UnenrollDataSources": {
+              "methods": [
+                "UnenrollDataSources",
+                "UnenrollDataSourcesAsync"
+              ]
+            },
+            "UpdateTransferConfig": {
+              "methods": [
+                "UpdateTransferConfig",
+                "UpdateTransferConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
