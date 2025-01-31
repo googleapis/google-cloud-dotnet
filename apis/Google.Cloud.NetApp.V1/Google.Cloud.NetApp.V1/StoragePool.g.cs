@@ -49,7 +49,7 @@ namespace Google.Cloud.NetApp.V1 {
             "YW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9y",
             "YWdlUG9vbCJZCh5Td2l0Y2hBY3RpdmVSZXBsaWNhWm9uZVJlcXVlc3QSNwoE",
             "bmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3Rv",
-            "cmFnZVBvb2wiqgkKC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
+            "cmFnZVBvb2wi4gkKC1N0b3JhZ2VQb29sEhEKBG5hbWUYASABKAlCA+BBCBJA",
             "Cg1zZXJ2aWNlX2xldmVsGAIgASgOMiQuZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
             "MS5TZXJ2aWNlTGV2ZWxCA+BBAhIZCgxjYXBhY2l0eV9naWIYAyABKANCA+BB",
             "AhIgChN2b2x1bWVfY2FwYWNpdHlfZ2liGAQgASgDQgPgQQMSGQoMdm9sdW1l",
@@ -68,22 +68,24 @@ namespace Google.Cloud.NetApp.V1 {
             "Lm5ldGFwcC52MS5FbmNyeXB0aW9uVHlwZUID4EEDEiYKFWdsb2JhbF9hY2Nl",
             "c3NfYWxsb3dlZBgRIAEoCEICGAFIAIgBARIfChJhbGxvd19hdXRvX3RpZXJp",
             "bmcYEiABKAhCA+BBARIZCgxyZXBsaWNhX3pvbmUYFCABKAlCA+BBARIRCgR6",
-            "b25lGBUgASgJQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
-            "BXZhbHVlGAIgASgJOgI4ASJ7CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
-            "RBAAEgkKBVJFQURZEAESDAoIQ1JFQVRJTkcQAhIMCghERUxFVElORxADEgwK",
-            "CFVQREFUSU5HEAQSDQoJUkVTVE9SSU5HEAUSDAoIRElTQUJMRUQQBhIJCgVF",
-            "UlJPUhAHOocB6kGDAQohbmV0YXBwLmdvb2dsZWFwaXMuY29tL1N0b3JhZ2VQ",
-            "b29sEkNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "c3RvcmFnZVBvb2xzL3tzdG9yYWdlX3Bvb2x9KgxzdG9yYWdlUG9vbHMyC3N0",
-            "b3JhZ2VQb29sQhgKFl9nbG9iYWxfYWNjZXNzX2FsbG93ZWQiqAEKH1ZhbGlk",
-            "YXRlRGlyZWN0b3J5U2VydmljZVJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC",
-            "+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vU3RvcmFnZVBvb2wSTAoWZGly",
-            "ZWN0b3J5X3NlcnZpY2VfdHlwZRgCIAEoDjIsLmdvb2dsZS5jbG91ZC5uZXRh",
-            "cHAudjEuRGlyZWN0b3J5U2VydmljZVR5cGVCsgEKGmNvbS5nb29nbGUuY2xv",
-            "dWQubmV0YXBwLnYxQhBTdG9yYWdlUG9vbFByb3RvUAFaMmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbmV0YXBwL2FwaXYxL25ldGFwcHBiO25ldGFwcHBiqgIWR29v",
-            "Z2xlLkNsb3VkLk5ldEFwcC5WMcoCFkdvb2dsZVxDbG91ZFxOZXRBcHBcVjHq",
-            "AhlHb29nbGU6OkNsb3VkOjpOZXRBcHA6OlYxYgZwcm90bzM="));
+            "b25lGBUgASgJQgPgQQESGgoNc2F0aXNmaWVzX3B6cxgXIAEoCEID4EEDEhoK",
+            "DXNhdGlzZmllc19wemkYGCABKAhCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInsKBVN0YXRlEhUKEVNUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCERF",
+            "TEVUSU5HEAMSDAoIVVBEQVRJTkcQBBINCglSRVNUT1JJTkcQBRIMCghESVNB",
+            "QkxFRBAGEgkKBUVSUk9SEAc6hwHqQYMBCiFuZXRhcHAuZ29vZ2xlYXBpcy5j",
+            "b20vU3RvcmFnZVBvb2wSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9zdG9yYWdlUG9vbHMve3N0b3JhZ2VfcG9vbH0qDHN0b3Jh",
+            "Z2VQb29sczILc3RvcmFnZVBvb2xCGAoWX2dsb2JhbF9hY2Nlc3NfYWxsb3dl",
+            "ZCKoAQofVmFsaWRhdGVEaXJlY3RvcnlTZXJ2aWNlUmVxdWVzdBI3CgRuYW1l",
+            "GAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9TdG9yYWdl",
+            "UG9vbBJMChZkaXJlY3Rvcnlfc2VydmljZV90eXBlGAIgASgOMiwuZ29vZ2xl",
+            "LmNsb3VkLm5ldGFwcC52MS5EaXJlY3RvcnlTZXJ2aWNlVHlwZUKyAQoaY29t",
+            "Lmdvb2dsZS5jbG91ZC5uZXRhcHAudjFCEFN0b3JhZ2VQb29sUHJvdG9QAVoy",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0",
+            "YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3Vk",
+            "XE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -94,7 +96,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest), global::Google.Cloud.NetApp.V1.UpdateStoragePoolRequest.Parser, new[]{ "UpdateMask", "StoragePool" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest), global::Google.Cloud.NetApp.V1.DeleteStoragePoolRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest), global::Google.Cloud.NetApp.V1.SwitchActiveReplicaZoneRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone" }, new[]{ "GlobalAccessAllowed" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.StoragePool), global::Google.Cloud.NetApp.V1.StoragePool.Parser, new[]{ "Name", "ServiceLevel", "CapacityGib", "VolumeCapacityGib", "VolumeCount", "State", "StateDetails", "CreateTime", "Description", "Labels", "Network", "ActiveDirectory", "KmsConfig", "LdapEnabled", "PsaRange", "EncryptionType", "GlobalAccessAllowed", "AllowAutoTiering", "ReplicaZone", "Zone", "SatisfiesPzs", "SatisfiesPzi" }, new[]{ "GlobalAccessAllowed" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.StoragePool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest), global::Google.Cloud.NetApp.V1.ValidateDirectoryServiceRequest.Parser, new[]{ "Name", "DirectoryServiceType" }, null, null, null, null)
           }));
     }
@@ -1911,6 +1913,8 @@ namespace Google.Cloud.NetApp.V1 {
       allowAutoTiering_ = other.allowAutoTiering_;
       replicaZone_ = other.replicaZone_;
       zone_ = other.zone_;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2243,6 +2247,36 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 23;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Reserved for future use
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 24;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2278,6 +2312,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (AllowAutoTiering != other.AllowAutoTiering) return false;
       if (ReplicaZone != other.ReplicaZone) return false;
       if (Zone != other.Zone) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2305,6 +2341,8 @@ namespace Google.Cloud.NetApp.V1 {
       if (AllowAutoTiering != false) hash ^= AllowAutoTiering.GetHashCode();
       if (ReplicaZone.Length != 0) hash ^= ReplicaZone.GetHashCode();
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2400,6 +2438,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(170, 1);
         output.WriteString(Zone);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(184, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2487,6 +2533,14 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(170, 1);
         output.WriteString(Zone);
       }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(184, 1);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(192, 1);
+        output.WriteBool(SatisfiesPzi);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2554,6 +2608,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (Zone.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Zone);
+      }
+      if (SatisfiesPzs != false) {
+        size += 2 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2627,6 +2687,12 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.Zone.Length != 0) {
         Zone = other.Zone;
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2726,6 +2792,14 @@ namespace Google.Cloud.NetApp.V1 {
             Zone = input.ReadString();
             break;
           }
+          case 184: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 192: {
+            SatisfiesPzi = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2822,6 +2896,14 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 170: {
             Zone = input.ReadString();
+            break;
+          }
+          case 184: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 192: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
         }

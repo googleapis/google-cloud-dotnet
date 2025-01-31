@@ -13687,6 +13687,1418 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListQuotaRules_sync",
+      "title": "ListQuotaRulesRequestObject",
+      "description": "Snippet for ListQuotaRules",
+      "file": "NetAppClient.ListQuotaRulesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaRules",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListQuotaRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListQuotaRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListQuotaRulesResponse, Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListQuotaRules",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListQuotaRules",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListQuotaRules_async",
+      "title": "ListQuotaRulesRequestObjectAsync",
+      "description": "Snippet for ListQuotaRulesAsync",
+      "file": "NetAppClient.ListQuotaRulesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaRulesAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListQuotaRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.ListQuotaRulesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListQuotaRulesResponse, Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListQuotaRules",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListQuotaRules",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListQuotaRules_sync_flattened",
+      "title": "ListQuotaRules",
+      "description": "Snippet for ListQuotaRules",
+      "file": "NetAppClient.ListQuotaRulesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaRules",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListQuotaRules",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListQuotaRulesResponse, Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListQuotaRules",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListQuotaRules",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListQuotaRules_async_flattened",
+      "title": "ListQuotaRulesAsync",
+      "description": "Snippet for ListQuotaRulesAsync",
+      "file": "NetAppClient.ListQuotaRulesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaRulesAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListQuotaRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListQuotaRulesResponse, Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListQuotaRules",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListQuotaRules",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListQuotaRules_sync_flattened_resourceNames",
+      "title": "ListQuotaRulesResourceNames",
+      "description": "Snippet for ListQuotaRules",
+      "file": "NetAppClient.ListQuotaRulesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaRules",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListQuotaRules",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.VolumeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetApp.V1.ListQuotaRulesResponse, Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListQuotaRules",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListQuotaRules",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_ListQuotaRules_async_flattened_resourceNames",
+      "title": "ListQuotaRulesResourceNamesAsync",
+      "description": "Snippet for ListQuotaRulesAsync",
+      "file": "NetAppClient.ListQuotaRulesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaRulesAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.ListQuotaRulesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.VolumeName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetApp.V1.ListQuotaRulesResponse, Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "ListQuotaRules",
+          "fullName": "google.cloud.netapp.v1.NetApp.ListQuotaRules",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetQuotaRule_sync",
+      "title": "GetQuotaRuleRequestObject",
+      "description": "Snippet for GetQuotaRule",
+      "file": "NetAppClient.GetQuotaRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetQuotaRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetQuotaRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.QuotaRule",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetQuotaRule_async",
+      "title": "GetQuotaRuleRequestObjectAsync",
+      "description": "Snippet for GetQuotaRuleAsync",
+      "file": "NetAppClient.GetQuotaRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.GetQuotaRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetQuotaRule_sync_flattened",
+      "title": "GetQuotaRule",
+      "description": "Snippet for GetQuotaRule",
+      "file": "NetAppClient.GetQuotaRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetQuotaRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.QuotaRule",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetQuotaRule_async_flattened",
+      "title": "GetQuotaRuleAsync",
+      "description": "Snippet for GetQuotaRuleAsync",
+      "file": "NetAppClient.GetQuotaRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetQuotaRule_sync_flattened_resourceNames",
+      "title": "GetQuotaRuleResourceNames",
+      "description": "Snippet for GetQuotaRule",
+      "file": "NetAppClient.GetQuotaRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetQuotaRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetApp.V1.QuotaRule",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_GetQuotaRule_async_flattened_resourceNames",
+      "title": "GetQuotaRuleResourceNamesAsync",
+      "description": "Snippet for GetQuotaRuleAsync",
+      "file": "NetAppClient.GetQuotaRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.GetQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetApp.V1.QuotaRule>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "GetQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.GetQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateQuotaRule_sync",
+      "title": "CreateQuotaRuleRequestObject",
+      "description": "Snippet for CreateQuotaRule",
+      "file": "NetAppClient.CreateQuotaRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateQuotaRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateQuotaRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateQuotaRule_async",
+      "title": "CreateQuotaRuleRequestObjectAsync",
+      "description": "Snippet for CreateQuotaRuleAsync",
+      "file": "NetAppClient.CreateQuotaRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.CreateQuotaRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateQuotaRule_sync_flattened",
+      "title": "CreateQuotaRule",
+      "description": "Snippet for CreateQuotaRule",
+      "file": "NetAppClient.CreateQuotaRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateQuotaRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRule",
+            "name": "quotaRule"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaRuleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateQuotaRule_async_flattened",
+      "title": "CreateQuotaRuleAsync",
+      "description": "Snippet for CreateQuotaRuleAsync",
+      "file": "NetAppClient.CreateQuotaRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRule",
+            "name": "quotaRule"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaRuleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateQuotaRule_sync_flattened_resourceNames",
+      "title": "CreateQuotaRuleResourceNames",
+      "description": "Snippet for CreateQuotaRule",
+      "file": "NetAppClient.CreateQuotaRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateQuotaRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.VolumeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRule",
+            "name": "quotaRule"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaRuleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_CreateQuotaRule_async_flattened_resourceNames",
+      "title": "CreateQuotaRuleResourceNamesAsync",
+      "description": "Snippet for CreateQuotaRuleAsync",
+      "file": "NetAppClient.CreateQuotaRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.CreateQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.VolumeName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRule",
+            "name": "quotaRule"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaRuleId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.CreateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateQuotaRule_sync",
+      "title": "UpdateQuotaRuleRequestObject",
+      "description": "Snippet for UpdateQuotaRule",
+      "file": "NetAppClient.UpdateQuotaRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateQuotaRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateQuotaRule_async",
+      "title": "UpdateQuotaRuleRequestObjectAsync",
+      "description": "Snippet for UpdateQuotaRuleAsync",
+      "file": "NetAppClient.UpdateQuotaRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateQuotaRule_sync_flattened",
+      "title": "UpdateQuotaRule",
+      "description": "Snippet for UpdateQuotaRule",
+      "file": "NetAppClient.UpdateQuotaRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateQuotaRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRule",
+            "name": "quotaRule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_UpdateQuotaRule_async_flattened",
+      "title": "UpdateQuotaRuleAsync",
+      "description": "Snippet for UpdateQuotaRuleAsync",
+      "file": "NetAppClient.UpdateQuotaRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.UpdateQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRule",
+            "name": "quotaRule"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetApp.V1.QuotaRule, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.UpdateQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteQuotaRule_sync",
+      "title": "DeleteQuotaRuleRequestObject",
+      "description": "Snippet for DeleteQuotaRule",
+      "file": "NetAppClient.DeleteQuotaRuleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteQuotaRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteQuotaRule_async",
+      "title": "DeleteQuotaRuleRequestObjectAsync",
+      "description": "Snippet for DeleteQuotaRuleAsync",
+      "file": "NetAppClient.DeleteQuotaRuleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteQuotaRule_sync_flattened",
+      "title": "DeleteQuotaRule",
+      "description": "Snippet for DeleteQuotaRule",
+      "file": "NetAppClient.DeleteQuotaRuleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteQuotaRule",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteQuotaRule_async_flattened",
+      "title": "DeleteQuotaRuleAsync",
+      "description": "Snippet for DeleteQuotaRuleAsync",
+      "file": "NetAppClient.DeleteQuotaRuleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteQuotaRule_sync_flattened_resourceNames",
+      "title": "DeleteQuotaRuleResourceNames",
+      "description": "Snippet for DeleteQuotaRule",
+      "file": "NetAppClient.DeleteQuotaRuleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQuotaRule",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteQuotaRule",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "netapp_v1_generated_NetApp_DeleteQuotaRule_async_flattened_resourceNames",
+      "title": "DeleteQuotaRuleResourceNamesAsync",
+      "description": "Snippet for DeleteQuotaRuleAsync",
+      "file": "NetAppClient.DeleteQuotaRuleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteQuotaRuleAsync",
+        "fullName": "Google.Cloud.NetApp.V1.NetAppClient.DeleteQuotaRuleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetApp.V1.QuotaRuleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetApp.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetAppClient",
+          "fullName": "Google.Cloud.NetApp.V1.NetAppClient"
+        },
+        "method": {
+          "shortName": "DeleteQuotaRule",
+          "fullName": "google.cloud.netapp.v1.NetApp.DeleteQuotaRule",
+          "service": {
+            "shortName": "NetApp",
+            "fullName": "google.cloud.netapp.v1.NetApp"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -140,6 +140,14 @@ namespace Google.Cloud.NetApp.V1
             UpdateBackupPolicyOperationsSettings = existing.UpdateBackupPolicyOperationsSettings.Clone();
             DeleteBackupPolicySettings = existing.DeleteBackupPolicySettings;
             DeleteBackupPolicyOperationsSettings = existing.DeleteBackupPolicyOperationsSettings.Clone();
+            ListQuotaRulesSettings = existing.ListQuotaRulesSettings;
+            GetQuotaRuleSettings = existing.GetQuotaRuleSettings;
+            CreateQuotaRuleSettings = existing.CreateQuotaRuleSettings;
+            CreateQuotaRuleOperationsSettings = existing.CreateQuotaRuleOperationsSettings.Clone();
+            UpdateQuotaRuleSettings = existing.UpdateQuotaRuleSettings;
+            UpdateQuotaRuleOperationsSettings = existing.UpdateQuotaRuleOperationsSettings.Clone();
+            DeleteQuotaRuleSettings = existing.DeleteQuotaRuleSettings;
+            DeleteQuotaRuleOperationsSettings = existing.DeleteQuotaRuleOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -1558,6 +1566,120 @@ namespace Google.Cloud.NetApp.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteBackupPolicyOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.ListQuotaRules</c>
+        ///  and <c>NetAppClient.ListQuotaRulesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListQuotaRulesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>NetAppClient.GetQuotaRule</c>
+        ///  and <c>NetAppClient.GetQuotaRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetQuotaRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.CreateQuotaRule</c> and <c>NetAppClient.CreateQuotaRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateQuotaRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.CreateQuotaRule</c> and
+        /// <c>NetAppClient.CreateQuotaRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateQuotaRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.UpdateQuotaRule</c> and <c>NetAppClient.UpdateQuotaRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateQuotaRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.UpdateQuotaRule</c> and
+        /// <c>NetAppClient.UpdateQuotaRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateQuotaRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetAppClient.DeleteQuotaRule</c> and <c>NetAppClient.DeleteQuotaRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteQuotaRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetAppClient.DeleteQuotaRule</c> and
+        /// <c>NetAppClient.DeleteQuotaRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteQuotaRuleOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -8680,6 +8802,700 @@ namespace Google.Cloud.NetApp.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupPolicyAsync(BackupPolicyName name, st::CancellationToken cancellationToken) =>
             DeleteBackupPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns list of all quota rules in a location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QuotaRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQuotaRulesResponse, QuotaRule> ListQuotaRules(ListQuotaRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns list of all quota rules in a location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QuotaRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQuotaRulesResponse, QuotaRule> ListQuotaRulesAsync(ListQuotaRulesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns list of all quota rules in a location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListQuotaRulesRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QuotaRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQuotaRulesResponse, QuotaRule> ListQuotaRules(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaRulesRequest request = new ListQuotaRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns list of all quota rules in a location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListQuotaRulesRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QuotaRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQuotaRulesResponse, QuotaRule> ListQuotaRulesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaRulesRequest request = new ListQuotaRulesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns list of all quota rules in a location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListQuotaRulesRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QuotaRule"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListQuotaRulesResponse, QuotaRule> ListQuotaRules(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaRulesRequest request = new ListQuotaRulesRequest
+            {
+                ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaRules(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns list of all quota rules in a location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListQuotaRulesRequest
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QuotaRule"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListQuotaRulesResponse, QuotaRule> ListQuotaRulesAsync(VolumeName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListQuotaRulesRequest request = new ListQuotaRulesRequest
+            {
+                ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListQuotaRulesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QuotaRule GetQuotaRule(GetQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QuotaRule> GetQuotaRuleAsync(GetQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QuotaRule> GetQuotaRuleAsync(GetQuotaRuleRequest request, st::CancellationToken cancellationToken) =>
+            GetQuotaRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QuotaRule GetQuotaRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQuotaRule(new GetQuotaRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QuotaRule> GetQuotaRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQuotaRuleAsync(new GetQuotaRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QuotaRule> GetQuotaRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            GetQuotaRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual QuotaRule GetQuotaRule(QuotaRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQuotaRule(new GetQuotaRuleRequest
+            {
+                QuotaRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QuotaRule> GetQuotaRuleAsync(QuotaRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetQuotaRuleAsync(new GetQuotaRuleRequest
+            {
+                QuotaRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<QuotaRule> GetQuotaRuleAsync(QuotaRuleName name, st::CancellationToken cancellationToken) =>
+            GetQuotaRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<QuotaRule, OperationMetadata> CreateQuotaRule(CreateQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> CreateQuotaRuleAsync(CreateQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> CreateQuotaRuleAsync(CreateQuotaRuleRequest request, st::CancellationToken cancellationToken) =>
+            CreateQuotaRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateQuotaRule</c>.</summary>
+        public virtual lro::OperationsClient CreateQuotaRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateQuotaRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<QuotaRule, OperationMetadata> PollOnceCreateQuotaRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QuotaRule, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateQuotaRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateQuotaRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> PollOnceCreateQuotaRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QuotaRule, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateQuotaRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateQuotaRuleRequest
+        /// </param>
+        /// <param name="quotaRule">
+        /// Required. Fields of the to be created quota rule.
+        /// </param>
+        /// <param name="quotaRuleId">
+        /// Required. ID of the quota rule to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<QuotaRule, OperationMetadata> CreateQuotaRule(string parent, QuotaRule quotaRule, string quotaRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQuotaRule(new CreateQuotaRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QuotaRule = gax::GaxPreconditions.CheckNotNull(quotaRule, nameof(quotaRule)),
+                QuotaRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(quotaRuleId, nameof(quotaRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateQuotaRuleRequest
+        /// </param>
+        /// <param name="quotaRule">
+        /// Required. Fields of the to be created quota rule.
+        /// </param>
+        /// <param name="quotaRuleId">
+        /// Required. ID of the quota rule to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> CreateQuotaRuleAsync(string parent, QuotaRule quotaRule, string quotaRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQuotaRuleAsync(new CreateQuotaRuleRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                QuotaRule = gax::GaxPreconditions.CheckNotNull(quotaRule, nameof(quotaRule)),
+                QuotaRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(quotaRuleId, nameof(quotaRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateQuotaRuleRequest
+        /// </param>
+        /// <param name="quotaRule">
+        /// Required. Fields of the to be created quota rule.
+        /// </param>
+        /// <param name="quotaRuleId">
+        /// Required. ID of the quota rule to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> CreateQuotaRuleAsync(string parent, QuotaRule quotaRule, string quotaRuleId, st::CancellationToken cancellationToken) =>
+            CreateQuotaRuleAsync(parent, quotaRule, quotaRuleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateQuotaRuleRequest
+        /// </param>
+        /// <param name="quotaRule">
+        /// Required. Fields of the to be created quota rule.
+        /// </param>
+        /// <param name="quotaRuleId">
+        /// Required. ID of the quota rule to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<QuotaRule, OperationMetadata> CreateQuotaRule(VolumeName parent, QuotaRule quotaRule, string quotaRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQuotaRule(new CreateQuotaRuleRequest
+            {
+                ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QuotaRule = gax::GaxPreconditions.CheckNotNull(quotaRule, nameof(quotaRule)),
+                QuotaRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(quotaRuleId, nameof(quotaRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateQuotaRuleRequest
+        /// </param>
+        /// <param name="quotaRule">
+        /// Required. Fields of the to be created quota rule.
+        /// </param>
+        /// <param name="quotaRuleId">
+        /// Required. ID of the quota rule to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> CreateQuotaRuleAsync(VolumeName parent, QuotaRule quotaRule, string quotaRuleId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateQuotaRuleAsync(new CreateQuotaRuleRequest
+            {
+                ParentAsVolumeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                QuotaRule = gax::GaxPreconditions.CheckNotNull(quotaRule, nameof(quotaRule)),
+                QuotaRuleId = gax::GaxPreconditions.CheckNotNullOrEmpty(quotaRuleId, nameof(quotaRuleId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for CreateQuotaRuleRequest
+        /// </param>
+        /// <param name="quotaRule">
+        /// Required. Fields of the to be created quota rule.
+        /// </param>
+        /// <param name="quotaRuleId">
+        /// Required. ID of the quota rule to create. Must be unique within the parent
+        /// resource. Must contain only letters, numbers, underscore and hyphen, with
+        /// the first character a letter or underscore, the last a letter or underscore
+        /// or a number, and a 63 character maximum.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> CreateQuotaRuleAsync(VolumeName parent, QuotaRule quotaRule, string quotaRuleId, st::CancellationToken cancellationToken) =>
+            CreateQuotaRuleAsync(parent, quotaRule, quotaRuleId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<QuotaRule, OperationMetadata> UpdateQuotaRule(UpdateQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> UpdateQuotaRuleAsync(UpdateQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> UpdateQuotaRuleAsync(UpdateQuotaRuleRequest request, st::CancellationToken cancellationToken) =>
+            UpdateQuotaRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateQuotaRule</c>.</summary>
+        public virtual lro::OperationsClient UpdateQuotaRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateQuotaRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<QuotaRule, OperationMetadata> PollOnceUpdateQuotaRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QuotaRule, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateQuotaRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateQuotaRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> PollOnceUpdateQuotaRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<QuotaRule, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateQuotaRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a quota rule.
+        /// </summary>
+        /// <param name="quotaRule">
+        /// Required. The quota rule being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Quota Rule resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<QuotaRule, OperationMetadata> UpdateQuotaRule(QuotaRule quotaRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateQuotaRule(new UpdateQuotaRuleRequest
+            {
+                UpdateMask = updateMask,
+                QuotaRule = gax::GaxPreconditions.CheckNotNull(quotaRule, nameof(quotaRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a quota rule.
+        /// </summary>
+        /// <param name="quotaRule">
+        /// Required. The quota rule being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Quota Rule resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> UpdateQuotaRuleAsync(QuotaRule quotaRule, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateQuotaRuleAsync(new UpdateQuotaRuleRequest
+            {
+                UpdateMask = updateMask,
+                QuotaRule = gax::GaxPreconditions.CheckNotNull(quotaRule, nameof(quotaRule)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a quota rule.
+        /// </summary>
+        /// <param name="quotaRule">
+        /// Required. The quota rule being updated
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// Quota Rule resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<QuotaRule, OperationMetadata>> UpdateQuotaRuleAsync(QuotaRule quotaRule, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateQuotaRuleAsync(quotaRule, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteQuotaRule(DeleteQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteQuotaRuleAsync(DeleteQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteQuotaRuleAsync(DeleteQuotaRuleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteQuotaRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteQuotaRule</c>.</summary>
+        public virtual lro::OperationsClient DeleteQuotaRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteQuotaRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteQuotaRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteQuotaRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteQuotaRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteQuotaRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteQuotaRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteQuotaRule(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQuotaRule(new DeleteQuotaRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteQuotaRuleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQuotaRuleAsync(new DeleteQuotaRuleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteQuotaRuleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteQuotaRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteQuotaRule(QuotaRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQuotaRule(new DeleteQuotaRuleRequest
+            {
+                QuotaRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteQuotaRuleAsync(QuotaRuleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteQuotaRuleAsync(new DeleteQuotaRuleRequest
+            {
+                QuotaRuleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the quota rule.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteQuotaRuleAsync(QuotaRuleName name, st::CancellationToken cancellationToken) =>
+            DeleteQuotaRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>NetApp client wrapper implementation, for convenient use.</summary>
@@ -8798,6 +9614,16 @@ namespace Google.Cloud.NetApp.V1
 
         private readonly gaxgrpc::ApiCall<DeleteBackupPolicyRequest, lro::Operation> _callDeleteBackupPolicy;
 
+        private readonly gaxgrpc::ApiCall<ListQuotaRulesRequest, ListQuotaRulesResponse> _callListQuotaRules;
+
+        private readonly gaxgrpc::ApiCall<GetQuotaRuleRequest, QuotaRule> _callGetQuotaRule;
+
+        private readonly gaxgrpc::ApiCall<CreateQuotaRuleRequest, lro::Operation> _callCreateQuotaRule;
+
+        private readonly gaxgrpc::ApiCall<UpdateQuotaRuleRequest, lro::Operation> _callUpdateQuotaRule;
+
+        private readonly gaxgrpc::ApiCall<DeleteQuotaRuleRequest, lro::Operation> _callDeleteQuotaRule;
+
         /// <summary>
         /// Constructs a client wrapper for the NetApp service, with the specified gRPC client and settings.
         /// </summary>
@@ -8849,6 +9675,9 @@ namespace Google.Cloud.NetApp.V1
             CreateBackupPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupPolicyOperationsSettings, logger);
             UpdateBackupPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupPolicyOperationsSettings, logger);
             DeleteBackupPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupPolicyOperationsSettings, logger);
+            CreateQuotaRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateQuotaRuleOperationsSettings, logger);
+            UpdateQuotaRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateQuotaRuleOperationsSettings, logger);
+            DeleteQuotaRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteQuotaRuleOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListStoragePools = clientHelper.BuildApiCall<ListStoragePoolsRequest, ListStoragePoolsResponse>("ListStoragePools", grpcClient.ListStoragePoolsAsync, grpcClient.ListStoragePools, effectiveSettings.ListStoragePoolsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListStoragePools);
@@ -9015,6 +9844,21 @@ namespace Google.Cloud.NetApp.V1
             _callDeleteBackupPolicy = clientHelper.BuildApiCall<DeleteBackupPolicyRequest, lro::Operation>("DeleteBackupPolicy", grpcClient.DeleteBackupPolicyAsync, grpcClient.DeleteBackupPolicy, effectiveSettings.DeleteBackupPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteBackupPolicy);
             Modify_DeleteBackupPolicyApiCall(ref _callDeleteBackupPolicy);
+            _callListQuotaRules = clientHelper.BuildApiCall<ListQuotaRulesRequest, ListQuotaRulesResponse>("ListQuotaRules", grpcClient.ListQuotaRulesAsync, grpcClient.ListQuotaRules, effectiveSettings.ListQuotaRulesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListQuotaRules);
+            Modify_ListQuotaRulesApiCall(ref _callListQuotaRules);
+            _callGetQuotaRule = clientHelper.BuildApiCall<GetQuotaRuleRequest, QuotaRule>("GetQuotaRule", grpcClient.GetQuotaRuleAsync, grpcClient.GetQuotaRule, effectiveSettings.GetQuotaRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetQuotaRule);
+            Modify_GetQuotaRuleApiCall(ref _callGetQuotaRule);
+            _callCreateQuotaRule = clientHelper.BuildApiCall<CreateQuotaRuleRequest, lro::Operation>("CreateQuotaRule", grpcClient.CreateQuotaRuleAsync, grpcClient.CreateQuotaRule, effectiveSettings.CreateQuotaRuleSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateQuotaRule);
+            Modify_CreateQuotaRuleApiCall(ref _callCreateQuotaRule);
+            _callUpdateQuotaRule = clientHelper.BuildApiCall<UpdateQuotaRuleRequest, lro::Operation>("UpdateQuotaRule", grpcClient.UpdateQuotaRuleAsync, grpcClient.UpdateQuotaRule, effectiveSettings.UpdateQuotaRuleSettings).WithGoogleRequestParam("quota_rule.name", request => request.QuotaRule?.Name);
+            Modify_ApiCall(ref _callUpdateQuotaRule);
+            Modify_UpdateQuotaRuleApiCall(ref _callUpdateQuotaRule);
+            _callDeleteQuotaRule = clientHelper.BuildApiCall<DeleteQuotaRuleRequest, lro::Operation>("DeleteQuotaRule", grpcClient.DeleteQuotaRuleAsync, grpcClient.DeleteQuotaRule, effectiveSettings.DeleteQuotaRuleSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteQuotaRule);
+            Modify_DeleteQuotaRuleApiCall(ref _callDeleteQuotaRule);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -9129,6 +9973,16 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_UpdateBackupPolicyApiCall(ref gaxgrpc::ApiCall<UpdateBackupPolicyRequest, lro::Operation> call);
 
         partial void Modify_DeleteBackupPolicyApiCall(ref gaxgrpc::ApiCall<DeleteBackupPolicyRequest, lro::Operation> call);
+
+        partial void Modify_ListQuotaRulesApiCall(ref gaxgrpc::ApiCall<ListQuotaRulesRequest, ListQuotaRulesResponse> call);
+
+        partial void Modify_GetQuotaRuleApiCall(ref gaxgrpc::ApiCall<GetQuotaRuleRequest, QuotaRule> call);
+
+        partial void Modify_CreateQuotaRuleApiCall(ref gaxgrpc::ApiCall<CreateQuotaRuleRequest, lro::Operation> call);
+
+        partial void Modify_UpdateQuotaRuleApiCall(ref gaxgrpc::ApiCall<UpdateQuotaRuleRequest, lro::Operation> call);
+
+        partial void Modify_DeleteQuotaRuleApiCall(ref gaxgrpc::ApiCall<DeleteQuotaRuleRequest, lro::Operation> call);
 
         partial void OnConstruction(NetApp.NetAppClient grpcClient, NetAppSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -9247,6 +10101,16 @@ namespace Google.Cloud.NetApp.V1
         partial void Modify_UpdateBackupPolicyRequest(ref UpdateBackupPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteBackupPolicyRequest(ref DeleteBackupPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListQuotaRulesRequest(ref ListQuotaRulesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetQuotaRuleRequest(ref GetQuotaRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateQuotaRuleRequest(ref CreateQuotaRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateQuotaRuleRequest(ref UpdateQuotaRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteQuotaRuleRequest(ref DeleteQuotaRuleRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns descriptions of all storage pools owned by the caller.
@@ -10697,6 +11561,135 @@ namespace Google.Cloud.NetApp.V1
             Modify_DeleteBackupPolicyRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackupPolicy.Async(request, callSettings).ConfigureAwait(false), DeleteBackupPolicyOperationsClient);
         }
+
+        /// <summary>
+        /// Returns list of all quota rules in a location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QuotaRule"/> resources.</returns>
+        public override gax::PagedEnumerable<ListQuotaRulesResponse, QuotaRule> ListQuotaRules(ListQuotaRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQuotaRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListQuotaRulesRequest, ListQuotaRulesResponse, QuotaRule>(_callListQuotaRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns list of all quota rules in a location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QuotaRule"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListQuotaRulesResponse, QuotaRule> ListQuotaRulesAsync(ListQuotaRulesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListQuotaRulesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListQuotaRulesRequest, ListQuotaRulesResponse, QuotaRule>(_callListQuotaRules, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override QuotaRule GetQuotaRule(GetQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQuotaRuleRequest(ref request, ref callSettings);
+            return _callGetQuotaRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns details of the specified quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<QuotaRule> GetQuotaRuleAsync(GetQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetQuotaRuleRequest(ref request, ref callSettings);
+            return _callGetQuotaRule.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateQuotaRule</c>.</summary>
+        public override lro::OperationsClient CreateQuotaRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<QuotaRule, OperationMetadata> CreateQuotaRule(CreateQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQuotaRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<QuotaRule, OperationMetadata>(_callCreateQuotaRule.Sync(request, callSettings), CreateQuotaRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<QuotaRule, OperationMetadata>> CreateQuotaRuleAsync(CreateQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateQuotaRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<QuotaRule, OperationMetadata>(await _callCreateQuotaRule.Async(request, callSettings).ConfigureAwait(false), CreateQuotaRuleOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateQuotaRule</c>.</summary>
+        public override lro::OperationsClient UpdateQuotaRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<QuotaRule, OperationMetadata> UpdateQuotaRule(UpdateQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateQuotaRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<QuotaRule, OperationMetadata>(_callUpdateQuotaRule.Sync(request, callSettings), UpdateQuotaRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<QuotaRule, OperationMetadata>> UpdateQuotaRuleAsync(UpdateQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateQuotaRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<QuotaRule, OperationMetadata>(await _callUpdateQuotaRule.Async(request, callSettings).ConfigureAwait(false), UpdateQuotaRuleOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteQuotaRule</c>.</summary>
+        public override lro::OperationsClient DeleteQuotaRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteQuotaRule(DeleteQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQuotaRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteQuotaRule.Sync(request, callSettings), DeleteQuotaRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a quota rule.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteQuotaRuleAsync(DeleteQuotaRuleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteQuotaRuleRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteQuotaRule.Async(request, callSettings).ConfigureAwait(false), DeleteQuotaRuleOperationsClient);
+        }
     }
 
     public partial class ListStoragePoolsRequest : gaxgrpc::IPageRequest
@@ -10732,6 +11725,10 @@ namespace Google.Cloud.NetApp.V1
     }
 
     public partial class ListBackupPoliciesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListQuotaRulesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -10803,6 +11800,14 @@ namespace Google.Cloud.NetApp.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BackupPolicy> GetEnumerator() => BackupPolicies.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListQuotaRulesResponse : gaxgrpc::IPageResponse<QuotaRule>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<QuotaRule> GetEnumerator() => QuotaRules.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -40,6 +40,12 @@
                 "CreateKmsConfigAsync"
               ]
             },
+            "CreateQuotaRule": {
+              "methods": [
+                "CreateQuotaRule",
+                "CreateQuotaRuleAsync"
+              ]
+            },
             "CreateReplication": {
               "methods": [
                 "CreateReplication",
@@ -92,6 +98,12 @@
               "methods": [
                 "DeleteKmsConfig",
                 "DeleteKmsConfigAsync"
+              ]
+            },
+            "DeleteQuotaRule": {
+              "methods": [
+                "DeleteQuotaRule",
+                "DeleteQuotaRuleAsync"
               ]
             },
             "DeleteReplication": {
@@ -160,6 +172,12 @@
                 "GetKmsConfigAsync"
               ]
             },
+            "GetQuotaRule": {
+              "methods": [
+                "GetQuotaRule",
+                "GetQuotaRuleAsync"
+              ]
+            },
             "GetReplication": {
               "methods": [
                 "GetReplication",
@@ -212,6 +230,12 @@
               "methods": [
                 "ListKmsConfigs",
                 "ListKmsConfigsAsync"
+              ]
+            },
+            "ListQuotaRules": {
+              "methods": [
+                "ListQuotaRules",
+                "ListQuotaRulesAsync"
               ]
             },
             "ListReplications": {
@@ -302,6 +326,12 @@
               "methods": [
                 "UpdateKmsConfig",
                 "UpdateKmsConfigAsync"
+              ]
+            },
+            "UpdateQuotaRule": {
+              "methods": [
+                "UpdateQuotaRule",
+                "UpdateQuotaRuleAsync"
               ]
             },
             "UpdateReplication": {
