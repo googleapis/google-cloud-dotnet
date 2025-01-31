@@ -413,10 +413,8 @@ namespace Google.Cloud.Monitoring.V3 {
     ///
     /// For example:
     ///
-    ///     ```
     ///     interval.start_time > "2022-03-11T00:00:00-08:00" AND
     ///         interval.end_time &lt; "2022-03-12T00:00:00-08:00"
-    ///     ```
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
