@@ -84,57 +84,59 @@ namespace Google.Cloud.NetApp.V1 {
             "Z2xlYXBpcy5jb20vUmVwbGljYXRpb24SU3Byb2plY3RzL3twcm9qZWN0fS9s",
             "b2NhdGlvbnMve2xvY2F0aW9ufS92b2x1bWVzL3t2b2x1bWV9L3JlcGxpY2F0",
             "aW9ucy97cmVwbGljYXRpb259KgxyZXBsaWNhdGlvbnMyC3JlcGxpY2F0aW9u",
-            "QgoKCF9oZWFsdGh5Qg4KDF9kZXNjcmlwdGlvbiKbAQoUSHlicmlkUGVlcmlu",
+            "QgoKCF9oZWFsdGh5Qg4KDF9kZXNjcmlwdGlvbiL2AQoUSHlicmlkUGVlcmlu",
             "Z0RldGFpbHMSFgoJc3VibmV0X2lwGAEgASgJQgPgQQESFAoHY29tbWFuZBgC",
             "IAEoCUID4EEBEjwKE2NvbW1hbmRfZXhwaXJ5X3RpbWUYAyABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESFwoKcGFzc3BocmFzZRgEIAEo",
-            "CUID4EEBIp0BChdMaXN0UmVwbGljYXRpb25zUmVxdWVzdBI5CgZwYXJlbnQY",
-            "ASABKAlCKeBBAvpBIxIhbmV0YXBwLmdvb2dsZWFwaXMuY29tL1JlcGxpY2F0",
-            "aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEhAK",
-            "CG9yZGVyX2J5GAQgASgJEg4KBmZpbHRlchgFIAEoCSKDAQoYTGlzdFJlcGxp",
-            "Y2F0aW9uc1Jlc3BvbnNlEjkKDHJlcGxpY2F0aW9ucxgBIAMoCzIjLmdvb2ds",
-            "ZS5jbG91ZC5uZXRhcHAudjEuUmVwbGljYXRpb24SFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIlAKFUdldFJlcGxpY2F0",
+            "CUID4EEBEh0KEHBlZXJfdm9sdW1lX25hbWUYBSABKAlCA+BBARIeChFwZWVy",
+            "X2NsdXN0ZXJfbmFtZRgGIAEoCUID4EEBEhoKDXBlZXJfc3ZtX25hbWUYByAB",
+            "KAlCA+BBASKdAQoXTGlzdFJlcGxpY2F0aW9uc1JlcXVlc3QSOQoGcGFyZW50",
+            "GAEgASgJQingQQL6QSMSIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNh",
+            "dGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIQ",
+            "CghvcmRlcl9ieRgEIAEoCRIOCgZmaWx0ZXIYBSABKAkigwEKGExpc3RSZXBs",
+            "aWNhdGlvbnNSZXNwb25zZRI5CgxyZXBsaWNhdGlvbnMYASADKAsyIy5nb29n",
+            "bGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0aW9uEhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJQChVHZXRSZXBsaWNh",
+            "dGlvblJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29v",
+            "Z2xlYXBpcy5jb20vUmVwbGljYXRpb24iiwIKG0Rlc3RpbmF0aW9uVm9sdW1l",
+            "UGFyYW1ldGVycxI/CgxzdG9yYWdlX3Bvb2wYASABKAlCKeBBAvpBIwohbmV0",
+            "YXBwLmdvb2dsZWFwaXMuY29tL1N0b3JhZ2VQb29sEhEKCXZvbHVtZV9pZBgC",
+            "IAEoCRISCgpzaGFyZV9uYW1lGAMgASgJEhgKC2Rlc2NyaXB0aW9uGAQgASgJ",
+            "SACIAQESRwoOdGllcmluZ19wb2xpY3kYBSABKAsyJS5nb29nbGUuY2xvdWQu",
+            "bmV0YXBwLnYxLlRpZXJpbmdQb2xpY3lCA+BBAUgBiAEBQg4KDF9kZXNjcmlw",
+            "dGlvbkIRCg9fdGllcmluZ19wb2xpY3kisQEKGENyZWF0ZVJlcGxpY2F0aW9u",
+            "UmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIxIhbmV0YXBwLmdvb2ds",
+            "ZWFwaXMuY29tL1JlcGxpY2F0aW9uEj0KC3JlcGxpY2F0aW9uGAIgASgLMiMu",
+            "Z29vZ2xlLmNsb3VkLm5ldGFwcC52MS5SZXBsaWNhdGlvbkID4EECEhsKDnJl",
+            "cGxpY2F0aW9uX2lkGAMgASgJQgPgQQIiUwoYRGVsZXRlUmVwbGljYXRpb25S",
+            "ZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2dsZWFw",
+            "aXMuY29tL1JlcGxpY2F0aW9uIo8BChhVcGRhdGVSZXBsaWNhdGlvblJlcXVl",
+            "c3QSNAoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
+            "bGRNYXNrQgPgQQISPQoLcmVwbGljYXRpb24YAiABKAsyIy5nb29nbGUuY2xv",
+            "dWQubmV0YXBwLnYxLlJlcGxpY2F0aW9uQgPgQQIiYAoWU3RvcFJlcGxpY2F0",
             "aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29n",
-            "bGVhcGlzLmNvbS9SZXBsaWNhdGlvbiKLAgobRGVzdGluYXRpb25Wb2x1bWVQ",
-            "YXJhbWV0ZXJzEj8KDHN0b3JhZ2VfcG9vbBgBIAEoCUIp4EEC+kEjCiFuZXRh",
-            "cHAuZ29vZ2xlYXBpcy5jb20vU3RvcmFnZVBvb2wSEQoJdm9sdW1lX2lkGAIg",
-            "ASgJEhIKCnNoYXJlX25hbWUYAyABKAkSGAoLZGVzY3JpcHRpb24YBCABKAlI",
-            "AIgBARJHCg50aWVyaW5nX3BvbGljeRgFIAEoCzIlLmdvb2dsZS5jbG91ZC5u",
-            "ZXRhcHAudjEuVGllcmluZ1BvbGljeUID4EEBSAGIAQFCDgoMX2Rlc2NyaXB0",
-            "aW9uQhEKD190aWVyaW5nX3BvbGljeSKxAQoYQ3JlYXRlUmVwbGljYXRpb25S",
-            "ZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjEiFuZXRhcHAuZ29vZ2xl",
-            "YXBpcy5jb20vUmVwbGljYXRpb24SPQoLcmVwbGljYXRpb24YAiABKAsyIy5n",
-            "b29nbGUuY2xvdWQubmV0YXBwLnYxLlJlcGxpY2F0aW9uQgPgQQISGwoOcmVw",
-            "bGljYXRpb25faWQYAyABKAlCA+BBAiJTChhEZWxldGVSZXBsaWNhdGlvblJl",
-            "cXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBp",
-            "cy5jb20vUmVwbGljYXRpb24ijwEKGFVwZGF0ZVJlcGxpY2F0aW9uUmVxdWVz",
-            "dBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVs",
-            "ZE1hc2tCA+BBAhI9CgtyZXBsaWNhdGlvbhgCIAEoCzIjLmdvb2dsZS5jbG91",
-            "ZC5uZXRhcHAudjEuUmVwbGljYXRpb25CA+BBAiJgChZTdG9wUmVwbGljYXRp",
-            "b25SZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2ds",
-            "ZWFwaXMuY29tL1JlcGxpY2F0aW9uEg0KBWZvcmNlGAIgASgIIlMKGFJlc3Vt",
-            "ZVJlcGxpY2F0aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5l",
-            "dGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbiJdCiJSZXZlcnNlUmVw",
-            "bGljYXRpb25EaXJlY3Rpb25SZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpB",
-            "IwohbmV0YXBwLmdvb2dsZWFwaXMuY29tL1JlcGxpY2F0aW9uIs0BChdFc3Rh",
-            "Ymxpc2hQZWVyaW5nUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5l",
-            "dGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbhIeChFwZWVyX2NsdXN0",
-            "ZXJfbmFtZRgCIAEoCUID4EECEhoKDXBlZXJfc3ZtX25hbWUYAyABKAlCA+BB",
-            "AhIeChFwZWVyX2lwX2FkZHJlc3NlcxgEIAMoCUID4EEBEh0KEHBlZXJfdm9s",
-            "dW1lX25hbWUYBSABKAlCA+BBAiJRChZTeW5jUmVwbGljYXRpb25SZXF1ZXN0",
-            "EjcKBG5hbWUYASABKAlCKeBBAvpBIwohbmV0YXBwLmdvb2dsZWFwaXMuY29t",
-            "L1JlcGxpY2F0aW9uQrIBChpjb20uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MUIQ",
-            "UmVwbGljYXRpb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFw",
-            "cC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRB",
-            "cHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91",
-            "ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
+            "bGVhcGlzLmNvbS9SZXBsaWNhdGlvbhINCgVmb3JjZRgCIAEoCCJTChhSZXN1",
+            "bWVSZXBsaWNhdGlvblJlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFu",
+            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGljYXRpb24iXQoiUmV2ZXJzZVJl",
+            "cGxpY2F0aW9uRGlyZWN0aW9uUmVxdWVzdBI3CgRuYW1lGAEgASgJQingQQL6",
+            "QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNvbS9SZXBsaWNhdGlvbiLNAQoXRXN0",
+            "YWJsaXNoUGVlcmluZ1JlcXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiFu",
+            "ZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGljYXRpb24SHgoRcGVlcl9jbHVz",
+            "dGVyX25hbWUYAiABKAlCA+BBAhIaCg1wZWVyX3N2bV9uYW1lGAMgASgJQgPg",
+            "QQISHgoRcGVlcl9pcF9hZGRyZXNzZXMYBCADKAlCA+BBARIdChBwZWVyX3Zv",
+            "bHVtZV9uYW1lGAUgASgJQgPgQQIiUQoWU3luY1JlcGxpY2F0aW9uUmVxdWVz",
+            "dBI3CgRuYW1lGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlzLmNv",
+            "bS9SZXBsaWNhdGlvbkKyAQoaY29tLmdvb2dsZS5jbG91ZC5uZXRhcHAudjFC",
+            "EFJlcGxpY2F0aW9uUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXRh",
+            "cHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBwcGKqAhZHb29nbGUuQ2xvdWQuTmV0",
+            "QXBwLlYxygIWR29vZ2xlXENsb3VkXE5ldEFwcFxWMeoCGUdvb2dsZTo6Q2xv",
+            "dWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.VolumeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.TransferStats), global::Google.Cloud.NetApp.V1.TransferStats.Parser, new[]{ "TransferBytes", "TotalTransferDuration", "LastTransferBytes", "LastTransferDuration", "LagDuration", "UpdateTime", "LastTransferEndTime", "LastTransferError" }, new[]{ "TransferBytes", "TotalTransferDuration", "LastTransferBytes", "LastTransferDuration", "LagDuration", "UpdateTime", "LastTransferEndTime", "LastTransferError" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.Replication), global::Google.Cloud.NetApp.V1.Replication.Parser, new[]{ "Name", "State", "StateDetails", "Role", "ReplicationSchedule", "MirrorState", "Healthy", "CreateTime", "DestinationVolume", "TransferStats", "Labels", "Description", "DestinationVolumeParameters", "SourceVolume", "HybridPeeringDetails", "ClusterLocation", "HybridReplicationType" }, new[]{ "Healthy", "Description" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.Replication.Types.State), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationRole), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.ReplicationSchedule), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.MirrorState), typeof(global::Google.Cloud.NetApp.V1.Replication.Types.HybridReplicationType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.HybridPeeringDetails), global::Google.Cloud.NetApp.V1.HybridPeeringDetails.Parser, new[]{ "SubnetIp", "Command", "CommandExpiryTime", "Passphrase" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.HybridPeeringDetails), global::Google.Cloud.NetApp.V1.HybridPeeringDetails.Parser, new[]{ "SubnetIp", "Command", "CommandExpiryTime", "Passphrase", "PeerVolumeName", "PeerClusterName", "PeerSvmName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListReplicationsRequest), global::Google.Cloud.NetApp.V1.ListReplicationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "OrderBy", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.ListReplicationsResponse), global::Google.Cloud.NetApp.V1.ListReplicationsResponse.Parser, new[]{ "Replications", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.GetReplicationRequest), global::Google.Cloud.NetApp.V1.GetReplicationRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -1810,6 +1812,9 @@ namespace Google.Cloud.NetApp.V1 {
       command_ = other.command_;
       commandExpiryTime_ = other.commandExpiryTime_ != null ? other.commandExpiryTime_.Clone() : null;
       passphrase_ = other.passphrase_;
+      peerVolumeName_ = other.peerVolumeName_;
+      peerClusterName_ = other.peerClusterName_;
+      peerSvmName_ = other.peerSvmName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1881,6 +1886,54 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "peer_volume_name" field.</summary>
+    public const int PeerVolumeNameFieldNumber = 5;
+    private string peerVolumeName_ = "";
+    /// <summary>
+    /// Optional. Name of the user's local source volume to be peered with the
+    /// destination volume.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerVolumeName {
+      get { return peerVolumeName_; }
+      set {
+        peerVolumeName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "peer_cluster_name" field.</summary>
+    public const int PeerClusterNameFieldNumber = 6;
+    private string peerClusterName_ = "";
+    /// <summary>
+    /// Optional. Name of the user's local source cluster to be peered with the
+    /// destination cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerClusterName {
+      get { return peerClusterName_; }
+      set {
+        peerClusterName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "peer_svm_name" field.</summary>
+    public const int PeerSvmNameFieldNumber = 7;
+    private string peerSvmName_ = "";
+    /// <summary>
+    /// Optional. Name of the user's local source vserver svm to be peered with the
+    /// destination vserver svm.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerSvmName {
+      get { return peerSvmName_; }
+      set {
+        peerSvmName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1900,6 +1953,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (Command != other.Command) return false;
       if (!object.Equals(CommandExpiryTime, other.CommandExpiryTime)) return false;
       if (Passphrase != other.Passphrase) return false;
+      if (PeerVolumeName != other.PeerVolumeName) return false;
+      if (PeerClusterName != other.PeerClusterName) return false;
+      if (PeerSvmName != other.PeerSvmName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1911,6 +1967,9 @@ namespace Google.Cloud.NetApp.V1 {
       if (Command.Length != 0) hash ^= Command.GetHashCode();
       if (commandExpiryTime_ != null) hash ^= CommandExpiryTime.GetHashCode();
       if (Passphrase.Length != 0) hash ^= Passphrase.GetHashCode();
+      if (PeerVolumeName.Length != 0) hash ^= PeerVolumeName.GetHashCode();
+      if (PeerClusterName.Length != 0) hash ^= PeerClusterName.GetHashCode();
+      if (PeerSvmName.Length != 0) hash ^= PeerSvmName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1945,6 +2004,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(34);
         output.WriteString(Passphrase);
       }
+      if (PeerVolumeName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PeerVolumeName);
+      }
+      if (PeerClusterName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(PeerClusterName);
+      }
+      if (PeerSvmName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(PeerSvmName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1971,6 +2042,18 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(34);
         output.WriteString(Passphrase);
       }
+      if (PeerVolumeName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(PeerVolumeName);
+      }
+      if (PeerClusterName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(PeerClusterName);
+      }
+      if (PeerSvmName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(PeerSvmName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1992,6 +2075,15 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (Passphrase.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Passphrase);
+      }
+      if (PeerVolumeName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerVolumeName);
+      }
+      if (PeerClusterName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerClusterName);
+      }
+      if (PeerSvmName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerSvmName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2019,6 +2111,15 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.Passphrase.Length != 0) {
         Passphrase = other.Passphrase;
+      }
+      if (other.PeerVolumeName.Length != 0) {
+        PeerVolumeName = other.PeerVolumeName;
+      }
+      if (other.PeerClusterName.Length != 0) {
+        PeerClusterName = other.PeerClusterName;
+      }
+      if (other.PeerSvmName.Length != 0) {
+        PeerSvmName = other.PeerSvmName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2054,6 +2155,18 @@ namespace Google.Cloud.NetApp.V1 {
             Passphrase = input.ReadString();
             break;
           }
+          case 42: {
+            PeerVolumeName = input.ReadString();
+            break;
+          }
+          case 50: {
+            PeerClusterName = input.ReadString();
+            break;
+          }
+          case 58: {
+            PeerSvmName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2086,6 +2199,18 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 34: {
             Passphrase = input.ReadString();
+            break;
+          }
+          case 42: {
+            PeerVolumeName = input.ReadString();
+            break;
+          }
+          case 50: {
+            PeerClusterName = input.ReadString();
+            break;
+          }
+          case 58: {
+            PeerSvmName = input.ReadString();
             break;
           }
         }

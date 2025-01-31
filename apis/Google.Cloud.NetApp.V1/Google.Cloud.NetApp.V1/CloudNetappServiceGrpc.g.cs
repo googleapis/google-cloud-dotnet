@@ -213,6 +213,20 @@ namespace Google.Cloud.NetApp.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest> __Marshaller_google_cloud_netapp_v1_UpdateBackupPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest> __Marshaller_google_cloud_netapp_v1_DeleteBackupPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest> __Marshaller_google_cloud_netapp_v1_ListQuotaRulesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse> __Marshaller_google_cloud_netapp_v1_ListQuotaRulesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest> __Marshaller_google_cloud_netapp_v1_GetQuotaRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.QuotaRule> __Marshaller_google_cloud_netapp_v1_QuotaRule = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.QuotaRule.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest> __Marshaller_google_cloud_netapp_v1_CreateQuotaRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest> __Marshaller_google_cloud_netapp_v1_UpdateQuotaRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest> __Marshaller_google_cloud_netapp_v1_DeleteQuotaRuleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse> __Method_ListStoragePools = new grpc::Method<global::Google.Cloud.NetApp.V1.ListStoragePoolsRequest, global::Google.Cloud.NetApp.V1.ListStoragePoolsResponse>(
@@ -652,6 +666,46 @@ namespace Google.Cloud.NetApp.V1 {
         __ServiceName,
         "DeleteBackupPolicy",
         __Marshaller_google_cloud_netapp_v1_DeleteBackupPolicyRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest, global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse> __Method_ListQuotaRules = new grpc::Method<global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest, global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListQuotaRules",
+        __Marshaller_google_cloud_netapp_v1_ListQuotaRulesRequest,
+        __Marshaller_google_cloud_netapp_v1_ListQuotaRulesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest, global::Google.Cloud.NetApp.V1.QuotaRule> __Method_GetQuotaRule = new grpc::Method<global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest, global::Google.Cloud.NetApp.V1.QuotaRule>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetQuotaRule",
+        __Marshaller_google_cloud_netapp_v1_GetQuotaRuleRequest,
+        __Marshaller_google_cloud_netapp_v1_QuotaRule);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest, global::Google.LongRunning.Operation> __Method_CreateQuotaRule = new grpc::Method<global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateQuotaRule",
+        __Marshaller_google_cloud_netapp_v1_CreateQuotaRuleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest, global::Google.LongRunning.Operation> __Method_UpdateQuotaRule = new grpc::Method<global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateQuotaRule",
+        __Marshaller_google_cloud_netapp_v1_UpdateQuotaRuleRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest, global::Google.LongRunning.Operation> __Method_DeleteQuotaRule = new grpc::Method<global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteQuotaRule",
+        __Marshaller_google_cloud_netapp_v1_DeleteQuotaRuleRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -1331,6 +1385,66 @@ namespace Google.Cloud.NetApp.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteBackupPolicy(global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns list of all quota rules in a location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse> ListQuotaRules(global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns details of the specified quota rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetApp.V1.QuotaRule> GetQuotaRule(global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new quota rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateQuotaRule(global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a quota rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateQuotaRule(global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a quota rule.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteQuotaRule(global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4048,6 +4162,246 @@ namespace Google.Cloud.NetApp.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteBackupPolicy, null, options, request);
       }
+      /// <summary>
+      /// Returns list of all quota rules in a location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse ListQuotaRules(global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQuotaRules(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns list of all quota rules in a location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse ListQuotaRules(global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListQuotaRules, null, options, request);
+      }
+      /// <summary>
+      /// Returns list of all quota rules in a location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse> ListQuotaRulesAsync(global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListQuotaRulesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns list of all quota rules in a location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse> ListQuotaRulesAsync(global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListQuotaRules, null, options, request);
+      }
+      /// <summary>
+      /// Returns details of the specified quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.QuotaRule GetQuotaRule(global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQuotaRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details of the specified quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetApp.V1.QuotaRule GetQuotaRule(global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetQuotaRule, null, options, request);
+      }
+      /// <summary>
+      /// Returns details of the specified quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.QuotaRule> GetQuotaRuleAsync(global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetQuotaRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns details of the specified quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetApp.V1.QuotaRule> GetQuotaRuleAsync(global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetQuotaRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateQuotaRule(global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQuotaRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateQuotaRule(global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateQuotaRule, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateQuotaRuleAsync(global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateQuotaRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateQuotaRuleAsync(global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateQuotaRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateQuotaRule(global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateQuotaRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateQuotaRule(global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateQuotaRule, null, options, request);
+      }
+      /// <summary>
+      /// Updates a quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateQuotaRuleAsync(global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateQuotaRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateQuotaRuleAsync(global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateQuotaRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteQuotaRule(global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQuotaRule(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteQuotaRule(global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteQuotaRule, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteQuotaRuleAsync(global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteQuotaRuleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a quota rule.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteQuotaRuleAsync(global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteQuotaRule, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NetAppClient NewInstance(ClientBaseConfiguration configuration)
@@ -4116,7 +4470,12 @@ namespace Google.Cloud.NetApp.V1 {
           .AddMethod(__Method_GetBackupPolicy, serviceImpl.GetBackupPolicy)
           .AddMethod(__Method_ListBackupPolicies, serviceImpl.ListBackupPolicies)
           .AddMethod(__Method_UpdateBackupPolicy, serviceImpl.UpdateBackupPolicy)
-          .AddMethod(__Method_DeleteBackupPolicy, serviceImpl.DeleteBackupPolicy).Build();
+          .AddMethod(__Method_DeleteBackupPolicy, serviceImpl.DeleteBackupPolicy)
+          .AddMethod(__Method_ListQuotaRules, serviceImpl.ListQuotaRules)
+          .AddMethod(__Method_GetQuotaRule, serviceImpl.GetQuotaRule)
+          .AddMethod(__Method_CreateQuotaRule, serviceImpl.CreateQuotaRule)
+          .AddMethod(__Method_UpdateQuotaRule, serviceImpl.UpdateQuotaRule)
+          .AddMethod(__Method_DeleteQuotaRule, serviceImpl.DeleteQuotaRule).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -4181,6 +4540,11 @@ namespace Google.Cloud.NetApp.V1 {
       serviceBinder.AddMethod(__Method_ListBackupPolicies, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListBackupPoliciesRequest, global::Google.Cloud.NetApp.V1.ListBackupPoliciesResponse>(serviceImpl.ListBackupPolicies));
       serviceBinder.AddMethod(__Method_UpdateBackupPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateBackupPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackupPolicy));
       serviceBinder.AddMethod(__Method_DeleteBackupPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteBackupPolicyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackupPolicy));
+      serviceBinder.AddMethod(__Method_ListQuotaRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.ListQuotaRulesRequest, global::Google.Cloud.NetApp.V1.ListQuotaRulesResponse>(serviceImpl.ListQuotaRules));
+      serviceBinder.AddMethod(__Method_GetQuotaRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.GetQuotaRuleRequest, global::Google.Cloud.NetApp.V1.QuotaRule>(serviceImpl.GetQuotaRule));
+      serviceBinder.AddMethod(__Method_CreateQuotaRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.CreateQuotaRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateQuotaRule));
+      serviceBinder.AddMethod(__Method_UpdateQuotaRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.UpdateQuotaRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateQuotaRule));
+      serviceBinder.AddMethod(__Method_DeleteQuotaRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetApp.V1.DeleteQuotaRuleRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteQuotaRule));
     }
 
   }

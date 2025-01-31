@@ -134,49 +134,49 @@ namespace Google.Cloud.NetApp.V1 {
             "dWxlEh4KEXNuYXBzaG90c190b19rZWVwGAEgASgBSACIAQESEwoGbWludXRl",
             "GAIgASgBSAGIAQESEQoEaG91chgDIAEoAUgCiAEBEhoKDWRheXNfb2ZfbW9u",
             "dGgYBCABKAlIA4gBAUIUChJfc25hcHNob3RzX3RvX2tlZXBCCQoHX21pbnV0",
-            "ZUIHCgVfaG91ckIQCg5fZGF5c19vZl9tb250aCJ9CgtNb3VudE9wdGlvbhIO",
-            "CgZleHBvcnQYASABKAkSEwoLZXhwb3J0X2Z1bGwYAiABKAkSMwoIcHJvdG9j",
-            "b2wYAyABKA4yIS5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlByb3RvY29scxIU",
-            "CgxpbnN0cnVjdGlvbnMYBCABKAkiUQoRUmVzdG9yZVBhcmFtZXRlcnMSGQoP",
-            "c291cmNlX3NuYXBzaG90GAEgASgJSAASFwoNc291cmNlX2JhY2t1cBgCIAEo",
-            "CUgAQggKBnNvdXJjZSKaAgoMQmFja3VwQ29uZmlnEkMKD2JhY2t1cF9wb2xp",
-            "Y2llcxgBIAMoCUIq4EEB+kEkCiJuZXRhcHAuZ29vZ2xlYXBpcy5jb20vQmFj",
-            "a3VwUG9saWN5Ej8KDGJhY2t1cF92YXVsdBgCIAEoCUIp4EEB+kEjCiFuZXRh",
-            "cHAuZ29vZ2xlYXBpcy5jb20vQmFja3VwVmF1bHQSKgoYc2NoZWR1bGVkX2Jh",
-            "Y2t1cF9lbmFibGVkGAMgASgIQgPgQQFIAIgBARIkChJiYWNrdXBfY2hhaW5f",
-            "Ynl0ZXMYBCABKANCA+BBA0gBiAEBQhsKGV9zY2hlZHVsZWRfYmFja3VwX2Vu",
-            "YWJsZWRCFQoTX2JhY2t1cF9jaGFpbl9ieXRlcyL5AQoNVGllcmluZ1BvbGlj",
-            "eRJPCgt0aWVyX2FjdGlvbhgBIAEoDjIwLmdvb2dsZS5jbG91ZC5uZXRhcHAu",
-            "djEuVGllcmluZ1BvbGljeS5UaWVyQWN0aW9uQgPgQQFIAIgBARIoChZjb29s",
-            "aW5nX3RocmVzaG9sZF9kYXlzGAIgASgFQgPgQQFIAYgBASJCCgpUaWVyQWN0",
-            "aW9uEhsKF1RJRVJfQUNUSU9OX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBAB",
-            "EgoKBlBBVVNFRBACQg4KDF90aWVyX2FjdGlvbkIZChdfY29vbGluZ190aHJl",
-            "c2hvbGRfZGF5cyKWAwobSHlicmlkUmVwbGljYXRpb25QYXJhbWV0ZXJzEj4K",
-            "C3JlcGxpY2F0aW9uGAEgASgJQingQQL6QSMKIW5ldGFwcC5nb29nbGVhcGlz",
-            "LmNvbS9SZXBsaWNhdGlvbhIdChBwZWVyX3ZvbHVtZV9uYW1lGAIgASgJQgPg",
-            "QQISHgoRcGVlcl9jbHVzdGVyX25hbWUYAyABKAlCA+BBAhIaCg1wZWVyX3N2",
-            "bV9uYW1lGAQgASgJQgPgQQISHgoRcGVlcl9pcF9hZGRyZXNzZXMYBSADKAlC",
-            "A+BBAhIdChBjbHVzdGVyX2xvY2F0aW9uGAYgASgJQgPgQQESGAoLZGVzY3Jp",
-            "cHRpb24YByABKAlCA+BBARJUCgZsYWJlbHMYCCADKAsyPy5nb29nbGUuY2xv",
-            "dWQubmV0YXBwLnYxLkh5YnJpZFJlcGxpY2F0aW9uUGFyYW1ldGVycy5MYWJl",
-            "bHNFbnRyeUID4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEqRQoJUHJvdG9jb2xzEhkKFVBST1RPQ09MU19VTlNQ",
-            "RUNJRklFRBAAEgkKBU5GU1YzEAESCQoFTkZTVjQQAhIHCgNTTUIQAypXCgpB",
-            "Y2Nlc3NUeXBlEhsKF0FDQ0VTU19UWVBFX1VOU1BFQ0lGSUVEEAASDQoJUkVB",
-            "RF9PTkxZEAESDgoKUkVBRF9XUklURRACEg0KCVJFQURfTk9ORRADKugBCgtT",
-            "TUJTZXR0aW5ncxIcChhTTUJfU0VUVElOR1NfVU5TUEVDSUZJRUQQABIQCgxF",
-            "TkNSWVBUX0RBVEEQARINCglCUk9XU0FCTEUQAhIRCg1DSEFOR0VfTk9USUZZ",
-            "EAMSEQoNTk9OX0JST1dTQUJMRRAEEgsKB09QTE9DS1MQBRIRCg1TSE9XX1NO",
-            "QVBTSE9UEAYSGgoWU0hPV19QUkVWSU9VU19WRVJTSU9OUxAHEhwKGEFDQ0VT",
-            "U19CQVNFRF9FTlVNRVJBVElPThAIEhoKFkNPTlRJTlVPVVNMWV9BVkFJTEFC",
-            "TEUQCSpDCg1TZWN1cml0eVN0eWxlEh4KGlNFQ1VSSVRZX1NUWUxFX1VOU1BF",
-            "Q0lGSUVEEAASCAoETlRGUxABEggKBFVOSVgQAipBChBSZXN0cmljdGVkQWN0",
-            "aW9uEiEKHVJFU1RSSUNURURfQUNUSU9OX1VOU1BFQ0lGSUVEEAASCgoGREVM",
-            "RVRFEAFCrQEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQgtWb2x1bWVQ",
-            "cm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFwcC9hcGl2MS9uZXRh",
-            "cHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRBcHAuVjHKAhZHb29n",
-            "bGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91ZDo6TmV0QXBwOjpW",
-            "MWIGcHJvdG8z"));
+            "ZUIHCgVfaG91ckIQCg5fZGF5c19vZl9tb250aCKeAQoLTW91bnRPcHRpb24S",
+            "DgoGZXhwb3J0GAEgASgJEhMKC2V4cG9ydF9mdWxsGAIgASgJEjMKCHByb3Rv",
+            "Y29sGAMgASgOMiEuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5Qcm90b2NvbHMS",
+            "FAoMaW5zdHJ1Y3Rpb25zGAQgASgJEh8KCmlwX2FkZHJlc3MYBSABKAlCC+BB",
+            "A+KMz9cIAggCIlEKEVJlc3RvcmVQYXJhbWV0ZXJzEhkKD3NvdXJjZV9zbmFw",
+            "c2hvdBgBIAEoCUgAEhcKDXNvdXJjZV9iYWNrdXAYAiABKAlIAEIICgZzb3Vy",
+            "Y2UimgIKDEJhY2t1cENvbmZpZxJDCg9iYWNrdXBfcG9saWNpZXMYASADKAlC",
+            "KuBBAfpBJAoibmV0YXBwLmdvb2dsZWFwaXMuY29tL0JhY2t1cFBvbGljeRI/",
+            "CgxiYWNrdXBfdmF1bHQYAiABKAlCKeBBAfpBIwohbmV0YXBwLmdvb2dsZWFw",
+            "aXMuY29tL0JhY2t1cFZhdWx0EioKGHNjaGVkdWxlZF9iYWNrdXBfZW5hYmxl",
+            "ZBgDIAEoCEID4EEBSACIAQESJAoSYmFja3VwX2NoYWluX2J5dGVzGAQgASgD",
+            "QgPgQQNIAYgBAUIbChlfc2NoZWR1bGVkX2JhY2t1cF9lbmFibGVkQhUKE19i",
+            "YWNrdXBfY2hhaW5fYnl0ZXMi+QEKDVRpZXJpbmdQb2xpY3kSTwoLdGllcl9h",
+            "Y3Rpb24YASABKA4yMC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlRpZXJpbmdQ",
+            "b2xpY3kuVGllckFjdGlvbkID4EEBSACIAQESKAoWY29vbGluZ190aHJlc2hv",
+            "bGRfZGF5cxgCIAEoBUID4EEBSAGIAQEiQgoKVGllckFjdGlvbhIbChdUSUVS",
+            "X0FDVElPTl9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIKCgZQQVVTRUQQ",
+            "AkIOCgxfdGllcl9hY3Rpb25CGQoXX2Nvb2xpbmdfdGhyZXNob2xkX2RheXMi",
+            "lgMKG0h5YnJpZFJlcGxpY2F0aW9uUGFyYW1ldGVycxI+CgtyZXBsaWNhdGlv",
+            "bhgBIAEoCUIp4EEC+kEjCiFuZXRhcHAuZ29vZ2xlYXBpcy5jb20vUmVwbGlj",
+            "YXRpb24SHQoQcGVlcl92b2x1bWVfbmFtZRgCIAEoCUID4EECEh4KEXBlZXJf",
+            "Y2x1c3Rlcl9uYW1lGAMgASgJQgPgQQISGgoNcGVlcl9zdm1fbmFtZRgEIAEo",
+            "CUID4EECEh4KEXBlZXJfaXBfYWRkcmVzc2VzGAUgAygJQgPgQQISHQoQY2x1",
+            "c3Rlcl9sb2NhdGlvbhgGIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAcgASgJ",
+            "QgPgQQESVAoGbGFiZWxzGAggAygLMj8uZ29vZ2xlLmNsb3VkLm5ldGFwcC52",
+            "MS5IeWJyaWRSZXBsaWNhdGlvblBhcmFtZXRlcnMuTGFiZWxzRW50cnlCA+BB",
+            "ARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBKkUKCVByb3RvY29scxIZChVQUk9UT0NPTFNfVU5TUEVDSUZJRUQQABIJ",
+            "CgVORlNWMxABEgkKBU5GU1Y0EAISBwoDU01CEAMqVwoKQWNjZXNzVHlwZRIb",
+            "ChdBQ0NFU1NfVFlQRV9VTlNQRUNJRklFRBAAEg0KCVJFQURfT05MWRABEg4K",
+            "ClJFQURfV1JJVEUQAhINCglSRUFEX05PTkUQAyroAQoLU01CU2V0dGluZ3MS",
+            "HAoYU01CX1NFVFRJTkdTX1VOU1BFQ0lGSUVEEAASEAoMRU5DUllQVF9EQVRB",
+            "EAESDQoJQlJPV1NBQkxFEAISEQoNQ0hBTkdFX05PVElGWRADEhEKDU5PTl9C",
+            "Uk9XU0FCTEUQBBILCgdPUExPQ0tTEAUSEQoNU0hPV19TTkFQU0hPVBAGEhoK",
+            "FlNIT1dfUFJFVklPVVNfVkVSU0lPTlMQBxIcChhBQ0NFU1NfQkFTRURfRU5V",
+            "TUVSQVRJT04QCBIaChZDT05USU5VT1VTTFlfQVZBSUxBQkxFEAkqQwoNU2Vj",
+            "dXJpdHlTdHlsZRIeChpTRUNVUklUWV9TVFlMRV9VTlNQRUNJRklFRBAAEggK",
+            "BE5URlMQARIICgRVTklYEAIqQQoQUmVzdHJpY3RlZEFjdGlvbhIhCh1SRVNU",
+            "UklDVEVEX0FDVElPTl9VTlNQRUNJRklFRBAAEgoKBkRFTEVURRABQq0BChpj",
+            "b20uZ29vZ2xlLmNsb3VkLm5ldGFwcC52MUILVm9sdW1lUHJvdG9QAVoyY2xv",
+            "dWQuZ29vZ2xlLmNvbS9nby9uZXRhcHAvYXBpdjEvbmV0YXBwcGI7bmV0YXBw",
+            "cGKqAhZHb29nbGUuQ2xvdWQuTmV0QXBwLlYxygIWR29vZ2xlXENsb3VkXE5l",
+            "dEFwcFxWMeoCGUdvb2dsZTo6Q2xvdWQ6Ok5ldEFwcDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetApp.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.Protocols), typeof(global::Google.Cloud.NetApp.V1.AccessType), typeof(global::Google.Cloud.NetApp.V1.SMBSettings), typeof(global::Google.Cloud.NetApp.V1.SecurityStyle), typeof(global::Google.Cloud.NetApp.V1.RestrictedAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -195,7 +195,7 @@ namespace Google.Cloud.NetApp.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.DailySchedule), global::Google.Cloud.NetApp.V1.DailySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute", "Hour" }, new[]{ "SnapshotsToKeep", "Minute", "Hour" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.WeeklySchedule), global::Google.Cloud.NetApp.V1.WeeklySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute", "Hour", "Day" }, new[]{ "SnapshotsToKeep", "Minute", "Hour", "Day" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.MonthlySchedule), global::Google.Cloud.NetApp.V1.MonthlySchedule.Parser, new[]{ "SnapshotsToKeep", "Minute", "Hour", "DaysOfMonth" }, new[]{ "SnapshotsToKeep", "Minute", "Hour", "DaysOfMonth" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.MountOption), global::Google.Cloud.NetApp.V1.MountOption.Parser, new[]{ "Export", "ExportFull", "Protocol", "Instructions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.MountOption), global::Google.Cloud.NetApp.V1.MountOption.Parser, new[]{ "Export", "ExportFull", "Protocol", "Instructions", "IpAddress" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.RestoreParameters), global::Google.Cloud.NetApp.V1.RestoreParameters.Parser, new[]{ "SourceSnapshot", "SourceBackup" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.BackupConfig), global::Google.Cloud.NetApp.V1.BackupConfig.Parser, new[]{ "BackupPolicies", "BackupVault", "ScheduledBackupEnabled", "BackupChainBytes" }, new[]{ "ScheduledBackupEnabled", "BackupChainBytes" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.TieringPolicy), global::Google.Cloud.NetApp.V1.TieringPolicy.Parser, new[]{ "TierAction", "CoolingThresholdDays" }, new[]{ "TierAction", "CoolingThresholdDays" }, new[]{ typeof(global::Google.Cloud.NetApp.V1.TieringPolicy.Types.TierAction) }, null, null),
@@ -6685,6 +6685,7 @@ namespace Google.Cloud.NetApp.V1 {
       exportFull_ = other.exportFull_;
       protocol_ = other.protocol_;
       instructions_ = other.instructions_;
+      ipAddress_ = other.ipAddress_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6754,6 +6755,21 @@ namespace Google.Cloud.NetApp.V1 {
       }
     }
 
+    /// <summary>Field number for the "ip_address" field.</summary>
+    public const int IpAddressFieldNumber = 5;
+    private string ipAddress_ = "";
+    /// <summary>
+    /// Output only. IP Address.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IpAddress {
+      get { return ipAddress_; }
+      set {
+        ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6773,6 +6789,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (ExportFull != other.ExportFull) return false;
       if (Protocol != other.Protocol) return false;
       if (Instructions != other.Instructions) return false;
+      if (IpAddress != other.IpAddress) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6784,6 +6801,7 @@ namespace Google.Cloud.NetApp.V1 {
       if (ExportFull.Length != 0) hash ^= ExportFull.GetHashCode();
       if (Protocol != global::Google.Cloud.NetApp.V1.Protocols.Unspecified) hash ^= Protocol.GetHashCode();
       if (Instructions.Length != 0) hash ^= Instructions.GetHashCode();
+      if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6818,6 +6836,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(34);
         output.WriteString(Instructions);
       }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(IpAddress);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6844,6 +6866,10 @@ namespace Google.Cloud.NetApp.V1 {
         output.WriteRawTag(34);
         output.WriteString(Instructions);
       }
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(IpAddress);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6865,6 +6891,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (Instructions.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Instructions);
+      }
+      if (IpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6889,6 +6918,9 @@ namespace Google.Cloud.NetApp.V1 {
       }
       if (other.Instructions.Length != 0) {
         Instructions = other.Instructions;
+      }
+      if (other.IpAddress.Length != 0) {
+        IpAddress = other.IpAddress;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6921,6 +6953,10 @@ namespace Google.Cloud.NetApp.V1 {
             Instructions = input.ReadString();
             break;
           }
+          case 42: {
+            IpAddress = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -6950,6 +6986,10 @@ namespace Google.Cloud.NetApp.V1 {
           }
           case 34: {
             Instructions = input.ReadString();
+            break;
+          }
+          case 42: {
+            IpAddress = input.ReadString();
             break;
           }
         }

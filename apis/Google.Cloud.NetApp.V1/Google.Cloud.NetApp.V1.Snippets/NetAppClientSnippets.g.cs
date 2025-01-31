@@ -8518,5 +8518,878 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ListQuotaRules</summary>
+        public void ListQuotaRulesRequestObject()
+        {
+            // Snippet: ListQuotaRules(ListQuotaRulesRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            ListQuotaRulesRequest request = new ListQuotaRulesRequest
+            {
+                ParentAsVolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListQuotaRulesResponse, QuotaRule> response = netAppClient.ListQuotaRules(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QuotaRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQuotaRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QuotaRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QuotaRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QuotaRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQuotaRulesAsync</summary>
+        public async Task ListQuotaRulesRequestObjectAsync()
+        {
+            // Snippet: ListQuotaRulesAsync(ListQuotaRulesRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            ListQuotaRulesRequest request = new ListQuotaRulesRequest
+            {
+                ParentAsVolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListQuotaRulesResponse, QuotaRule> response = netAppClient.ListQuotaRulesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QuotaRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQuotaRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QuotaRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QuotaRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QuotaRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQuotaRules</summary>
+        public void ListQuotaRules()
+        {
+            // Snippet: ListQuotaRules(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            PagedEnumerable<ListQuotaRulesResponse, QuotaRule> response = netAppClient.ListQuotaRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QuotaRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQuotaRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QuotaRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QuotaRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QuotaRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQuotaRulesAsync</summary>
+        public async Task ListQuotaRulesAsync()
+        {
+            // Snippet: ListQuotaRulesAsync(string, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            // Make the request
+            PagedAsyncEnumerable<ListQuotaRulesResponse, QuotaRule> response = netAppClient.ListQuotaRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QuotaRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQuotaRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QuotaRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QuotaRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QuotaRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQuotaRules</summary>
+        public void ListQuotaRulesResourceNames()
+        {
+            // Snippet: ListQuotaRules(VolumeName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            VolumeName parent = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            PagedEnumerable<ListQuotaRulesResponse, QuotaRule> response = netAppClient.ListQuotaRules(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QuotaRule item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQuotaRulesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QuotaRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QuotaRule> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QuotaRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQuotaRulesAsync</summary>
+        public async Task ListQuotaRulesResourceNamesAsync()
+        {
+            // Snippet: ListQuotaRulesAsync(VolumeName, string, int?, CallSettings)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeName parent = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            // Make the request
+            PagedAsyncEnumerable<ListQuotaRulesResponse, QuotaRule> response = netAppClient.ListQuotaRulesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QuotaRule item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQuotaRulesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QuotaRule item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QuotaRule> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QuotaRule item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQuotaRule</summary>
+        public void GetQuotaRuleRequestObject()
+        {
+            // Snippet: GetQuotaRule(GetQuotaRuleRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            GetQuotaRuleRequest request = new GetQuotaRuleRequest
+            {
+                QuotaRuleName = QuotaRuleName.FromProjectLocationVolumeQuotaRule("[PROJECT]", "[LOCATION]", "[VOLUME]", "[QUOTA_RULE]"),
+            };
+            // Make the request
+            QuotaRule response = netAppClient.GetQuotaRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQuotaRuleAsync</summary>
+        public async Task GetQuotaRuleRequestObjectAsync()
+        {
+            // Snippet: GetQuotaRuleAsync(GetQuotaRuleRequest, CallSettings)
+            // Additional: GetQuotaRuleAsync(GetQuotaRuleRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            GetQuotaRuleRequest request = new GetQuotaRuleRequest
+            {
+                QuotaRuleName = QuotaRuleName.FromProjectLocationVolumeQuotaRule("[PROJECT]", "[LOCATION]", "[VOLUME]", "[QUOTA_RULE]"),
+            };
+            // Make the request
+            QuotaRule response = await netAppClient.GetQuotaRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQuotaRule</summary>
+        public void GetQuotaRule()
+        {
+            // Snippet: GetQuotaRule(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/quotaRules/[QUOTA_RULE]";
+            // Make the request
+            QuotaRule response = netAppClient.GetQuotaRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQuotaRuleAsync</summary>
+        public async Task GetQuotaRuleAsync()
+        {
+            // Snippet: GetQuotaRuleAsync(string, CallSettings)
+            // Additional: GetQuotaRuleAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/quotaRules/[QUOTA_RULE]";
+            // Make the request
+            QuotaRule response = await netAppClient.GetQuotaRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQuotaRule</summary>
+        public void GetQuotaRuleResourceNames()
+        {
+            // Snippet: GetQuotaRule(QuotaRuleName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            QuotaRuleName name = QuotaRuleName.FromProjectLocationVolumeQuotaRule("[PROJECT]", "[LOCATION]", "[VOLUME]", "[QUOTA_RULE]");
+            // Make the request
+            QuotaRule response = netAppClient.GetQuotaRule(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetQuotaRuleAsync</summary>
+        public async Task GetQuotaRuleResourceNamesAsync()
+        {
+            // Snippet: GetQuotaRuleAsync(QuotaRuleName, CallSettings)
+            // Additional: GetQuotaRuleAsync(QuotaRuleName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            QuotaRuleName name = QuotaRuleName.FromProjectLocationVolumeQuotaRule("[PROJECT]", "[LOCATION]", "[VOLUME]", "[QUOTA_RULE]");
+            // Make the request
+            QuotaRule response = await netAppClient.GetQuotaRuleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaRule</summary>
+        public void CreateQuotaRuleRequestObject()
+        {
+            // Snippet: CreateQuotaRule(CreateQuotaRuleRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            CreateQuotaRuleRequest request = new CreateQuotaRuleRequest
+            {
+                ParentAsVolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                QuotaRule = new QuotaRule(),
+                QuotaRuleId = "",
+            };
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = netAppClient.CreateQuotaRule(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateQuotaRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaRuleAsync</summary>
+        public async Task CreateQuotaRuleRequestObjectAsync()
+        {
+            // Snippet: CreateQuotaRuleAsync(CreateQuotaRuleRequest, CallSettings)
+            // Additional: CreateQuotaRuleAsync(CreateQuotaRuleRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateQuotaRuleRequest request = new CreateQuotaRuleRequest
+            {
+                ParentAsVolumeName = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]"),
+                QuotaRule = new QuotaRule(),
+                QuotaRuleId = "",
+            };
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = await netAppClient.CreateQuotaRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateQuotaRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaRule</summary>
+        public void CreateQuotaRule()
+        {
+            // Snippet: CreateQuotaRule(string, QuotaRule, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            QuotaRule quotaRule = new QuotaRule();
+            string quotaRuleId = "";
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = netAppClient.CreateQuotaRule(parent, quotaRule, quotaRuleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateQuotaRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaRuleAsync</summary>
+        public async Task CreateQuotaRuleAsync()
+        {
+            // Snippet: CreateQuotaRuleAsync(string, QuotaRule, string, CallSettings)
+            // Additional: CreateQuotaRuleAsync(string, QuotaRule, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]";
+            QuotaRule quotaRule = new QuotaRule();
+            string quotaRuleId = "";
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = await netAppClient.CreateQuotaRuleAsync(parent, quotaRule, quotaRuleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateQuotaRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaRule</summary>
+        public void CreateQuotaRuleResourceNames()
+        {
+            // Snippet: CreateQuotaRule(VolumeName, QuotaRule, string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            VolumeName parent = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            QuotaRule quotaRule = new QuotaRule();
+            string quotaRuleId = "";
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = netAppClient.CreateQuotaRule(parent, quotaRule, quotaRuleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = netAppClient.PollOnceCreateQuotaRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaRuleAsync</summary>
+        public async Task CreateQuotaRuleResourceNamesAsync()
+        {
+            // Snippet: CreateQuotaRuleAsync(VolumeName, QuotaRule, string, CallSettings)
+            // Additional: CreateQuotaRuleAsync(VolumeName, QuotaRule, string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            VolumeName parent = VolumeName.FromProjectLocationVolume("[PROJECT]", "[LOCATION]", "[VOLUME]");
+            QuotaRule quotaRule = new QuotaRule();
+            string quotaRuleId = "";
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = await netAppClient.CreateQuotaRuleAsync(parent, quotaRule, quotaRuleId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = await netAppClient.PollOnceCreateQuotaRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQuotaRule</summary>
+        public void UpdateQuotaRuleRequestObject()
+        {
+            // Snippet: UpdateQuotaRule(UpdateQuotaRuleRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            UpdateQuotaRuleRequest request = new UpdateQuotaRuleRequest
+            {
+                UpdateMask = new FieldMask(),
+                QuotaRule = new QuotaRule(),
+            };
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = netAppClient.UpdateQuotaRule(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateQuotaRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQuotaRuleAsync</summary>
+        public async Task UpdateQuotaRuleRequestObjectAsync()
+        {
+            // Snippet: UpdateQuotaRuleAsync(UpdateQuotaRuleRequest, CallSettings)
+            // Additional: UpdateQuotaRuleAsync(UpdateQuotaRuleRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateQuotaRuleRequest request = new UpdateQuotaRuleRequest
+            {
+                UpdateMask = new FieldMask(),
+                QuotaRule = new QuotaRule(),
+            };
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = await netAppClient.UpdateQuotaRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateQuotaRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQuotaRule</summary>
+        public void UpdateQuotaRule()
+        {
+            // Snippet: UpdateQuotaRule(QuotaRule, FieldMask, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            QuotaRule quotaRule = new QuotaRule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = netAppClient.UpdateQuotaRule(quotaRule, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = netAppClient.PollOnceUpdateQuotaRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateQuotaRuleAsync</summary>
+        public async Task UpdateQuotaRuleAsync()
+        {
+            // Snippet: UpdateQuotaRuleAsync(QuotaRule, FieldMask, CallSettings)
+            // Additional: UpdateQuotaRuleAsync(QuotaRule, FieldMask, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            QuotaRule quotaRule = new QuotaRule();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<QuotaRule, OperationMetadata> response = await netAppClient.UpdateQuotaRuleAsync(quotaRule, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<QuotaRule, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            QuotaRule result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<QuotaRule, OperationMetadata> retrievedResponse = await netAppClient.PollOnceUpdateQuotaRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                QuotaRule retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQuotaRule</summary>
+        public void DeleteQuotaRuleRequestObject()
+        {
+            // Snippet: DeleteQuotaRule(DeleteQuotaRuleRequest, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            DeleteQuotaRuleRequest request = new DeleteQuotaRuleRequest
+            {
+                QuotaRuleName = QuotaRuleName.FromProjectLocationVolumeQuotaRule("[PROJECT]", "[LOCATION]", "[VOLUME]", "[QUOTA_RULE]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteQuotaRule(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteQuotaRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQuotaRuleAsync</summary>
+        public async Task DeleteQuotaRuleRequestObjectAsync()
+        {
+            // Snippet: DeleteQuotaRuleAsync(DeleteQuotaRuleRequest, CallSettings)
+            // Additional: DeleteQuotaRuleAsync(DeleteQuotaRuleRequest, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteQuotaRuleRequest request = new DeleteQuotaRuleRequest
+            {
+                QuotaRuleName = QuotaRuleName.FromProjectLocationVolumeQuotaRule("[PROJECT]", "[LOCATION]", "[VOLUME]", "[QUOTA_RULE]"),
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteQuotaRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteQuotaRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQuotaRule</summary>
+        public void DeleteQuotaRule()
+        {
+            // Snippet: DeleteQuotaRule(string, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/quotaRules/[QUOTA_RULE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteQuotaRule(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteQuotaRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQuotaRuleAsync</summary>
+        public async Task DeleteQuotaRuleAsync()
+        {
+            // Snippet: DeleteQuotaRuleAsync(string, CallSettings)
+            // Additional: DeleteQuotaRuleAsync(string, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/volumes/[VOLUME]/quotaRules/[QUOTA_RULE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteQuotaRuleAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteQuotaRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQuotaRule</summary>
+        public void DeleteQuotaRuleResourceNames()
+        {
+            // Snippet: DeleteQuotaRule(QuotaRuleName, CallSettings)
+            // Create client
+            NetAppClient netAppClient = NetAppClient.Create();
+            // Initialize request argument(s)
+            QuotaRuleName name = QuotaRuleName.FromProjectLocationVolumeQuotaRule("[PROJECT]", "[LOCATION]", "[VOLUME]", "[QUOTA_RULE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = netAppClient.DeleteQuotaRule(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = netAppClient.PollOnceDeleteQuotaRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteQuotaRuleAsync</summary>
+        public async Task DeleteQuotaRuleResourceNamesAsync()
+        {
+            // Snippet: DeleteQuotaRuleAsync(QuotaRuleName, CallSettings)
+            // Additional: DeleteQuotaRuleAsync(QuotaRuleName, CancellationToken)
+            // Create client
+            NetAppClient netAppClient = await NetAppClient.CreateAsync();
+            // Initialize request argument(s)
+            QuotaRuleName name = QuotaRuleName.FromProjectLocationVolumeQuotaRule("[PROJECT]", "[LOCATION]", "[VOLUME]", "[QUOTA_RULE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await netAppClient.DeleteQuotaRuleAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await netAppClient.PollOnceDeleteQuotaRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

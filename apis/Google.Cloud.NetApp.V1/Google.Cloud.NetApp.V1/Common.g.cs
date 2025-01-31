@@ -26,23 +26,27 @@ namespace Google.Cloud.NetApp.V1 {
           string.Concat(
             "CiNnb29nbGUvY2xvdWQvbmV0YXBwL3YxL2NvbW1vbi5wcm90bxIWZ29vZ2xl",
             "LmNsb3VkLm5ldGFwcC52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90byJfChBMb2NhdGlvbk1ldGFkYXRhEksKGHN1cHBvcnRlZF9zZXJ2aWNl",
-            "X2xldmVscxgBIAMoDjIkLmdvb2dsZS5jbG91ZC5uZXRhcHAudjEuU2Vydmlj",
-            "ZUxldmVsQgPgQQMqXwoMU2VydmljZUxldmVsEh0KGVNFUlZJQ0VfTEVWRUxf",
-            "VU5TUEVDSUZJRUQQABILCgdQUkVNSVVNEAESCwoHRVhUUkVNRRACEgwKCFNU",
-            "QU5EQVJEEAMSCAoERkxFWBAEKlUKDkVuY3J5cHRpb25UeXBlEh8KG0VOQ1JZ",
-            "UFRJT05fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1NFUlZJQ0VfTUFOQUdFRBAB",
-            "Eg0KCUNMT1VEX0tNUxACKlQKFERpcmVjdG9yeVNlcnZpY2VUeXBlEiYKIkRJ",
-            "UkVDVE9SWV9TRVJWSUNFX1RZUEVfVU5TUEVDSUZJRUQQABIUChBBQ1RJVkVf",
-            "RElSRUNUT1JZEAFCrQEKGmNvbS5nb29nbGUuY2xvdWQubmV0YXBwLnYxQgtD",
-            "b21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29tL2dvL25ldGFwcC9hcGl2",
-            "MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5DbG91ZC5OZXRBcHAuVjHK",
-            "AhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29vZ2xlOjpDbG91ZDo6TmV0",
-            "QXBwOjpWMWIGcHJvdG8z"));
+            "cm90byKxAQoQTG9jYXRpb25NZXRhZGF0YRJLChhzdXBwb3J0ZWRfc2Vydmlj",
+            "ZV9sZXZlbHMYASADKA4yJC5nb29nbGUuY2xvdWQubmV0YXBwLnYxLlNlcnZp",
+            "Y2VMZXZlbEID4EEDElAKGnN1cHBvcnRlZF9mbGV4X3BlcmZvcm1hbmNlGAIg",
+            "AygOMicuZ29vZ2xlLmNsb3VkLm5ldGFwcC52MS5GbGV4UGVyZm9ybWFuY2VC",
+            "A+BBAypfCgxTZXJ2aWNlTGV2ZWwSHQoZU0VSVklDRV9MRVZFTF9VTlNQRUNJ",
+            "RklFRBAAEgsKB1BSRU1JVU0QARILCgdFWFRSRU1FEAISDAoIU1RBTkRBUkQQ",
+            "AxIICgRGTEVYEAQqbgoPRmxleFBlcmZvcm1hbmNlEiAKHEZMRVhfUEVSRk9S",
+            "TUFOQ0VfVU5TUEVDSUZJRUQQABIcChhGTEVYX1BFUkZPUk1BTkNFX0RFRkFV",
+            "TFQQARIbChdGTEVYX1BFUkZPUk1BTkNFX0NVU1RPTRACKlUKDkVuY3J5cHRp",
+            "b25UeXBlEh8KG0VOQ1JZUFRJT05fVFlQRV9VTlNQRUNJRklFRBAAEhMKD1NF",
+            "UlZJQ0VfTUFOQUdFRBABEg0KCUNMT1VEX0tNUxACKlQKFERpcmVjdG9yeVNl",
+            "cnZpY2VUeXBlEiYKIkRJUkVDVE9SWV9TRVJWSUNFX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIUChBBQ1RJVkVfRElSRUNUT1JZEAFCrQEKGmNvbS5nb29nbGUuY2xv",
+            "dWQubmV0YXBwLnYxQgtDb21tb25Qcm90b1ABWjJjbG91ZC5nb29nbGUuY29t",
+            "L2dvL25ldGFwcC9hcGl2MS9uZXRhcHBwYjtuZXRhcHBwYqoCFkdvb2dsZS5D",
+            "bG91ZC5OZXRBcHAuVjHKAhZHb29nbGVcQ2xvdWRcTmV0QXBwXFYx6gIZR29v",
+            "Z2xlOjpDbG91ZDo6TmV0QXBwOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetApp.V1.ServiceLevel), typeof(global::Google.Cloud.NetApp.V1.FlexPerformance), typeof(global::Google.Cloud.NetApp.V1.EncryptionType), typeof(global::Google.Cloud.NetApp.V1.DirectoryServiceType), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetApp.V1.LocationMetadata), global::Google.Cloud.NetApp.V1.LocationMetadata.Parser, new[]{ "SupportedServiceLevels", "SupportedFlexPerformance" }, null, null, null, null)
           }));
     }
     #endregion
@@ -73,6 +77,24 @@ namespace Google.Cloud.NetApp.V1 {
     /// Flex service level.
     /// </summary>
     [pbr::OriginalName("FLEX")] Flex = 4,
+  }
+
+  /// <summary>
+  /// Flex Storage Pool performance.
+  /// </summary>
+  public enum FlexPerformance {
+    /// <summary>
+    /// Unspecified flex performance.
+    /// </summary>
+    [pbr::OriginalName("FLEX_PERFORMANCE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Flex Storage Pool with default performance.
+    /// </summary>
+    [pbr::OriginalName("FLEX_PERFORMANCE_DEFAULT")] Default = 1,
+    /// <summary>
+    /// Flex Storage Pool with custom performance.
+    /// </summary>
+    [pbr::OriginalName("FLEX_PERFORMANCE_CUSTOM")] Custom = 2,
   }
 
   /// <summary>
@@ -150,6 +172,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LocationMetadata(LocationMetadata other) : this() {
       supportedServiceLevels_ = other.supportedServiceLevels_.Clone();
+      supportedFlexPerformance_ = other.supportedFlexPerformance_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -173,6 +196,20 @@ namespace Google.Cloud.NetApp.V1 {
       get { return supportedServiceLevels_; }
     }
 
+    /// <summary>Field number for the "supported_flex_performance" field.</summary>
+    public const int SupportedFlexPerformanceFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.NetApp.V1.FlexPerformance> _repeated_supportedFlexPerformance_codec
+        = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.NetApp.V1.FlexPerformance) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.NetApp.V1.FlexPerformance> supportedFlexPerformance_ = new pbc::RepeatedField<global::Google.Cloud.NetApp.V1.FlexPerformance>();
+    /// <summary>
+    /// Output only. Supported flex performance in a location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.NetApp.V1.FlexPerformance> SupportedFlexPerformance {
+      get { return supportedFlexPerformance_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -189,6 +226,7 @@ namespace Google.Cloud.NetApp.V1 {
         return true;
       }
       if(!supportedServiceLevels_.Equals(other.supportedServiceLevels_)) return false;
+      if(!supportedFlexPerformance_.Equals(other.supportedFlexPerformance_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -197,6 +235,7 @@ namespace Google.Cloud.NetApp.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= supportedServiceLevels_.GetHashCode();
+      hash ^= supportedFlexPerformance_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -216,6 +255,7 @@ namespace Google.Cloud.NetApp.V1 {
       output.WriteRawMessage(this);
     #else
       supportedServiceLevels_.WriteTo(output, _repeated_supportedServiceLevels_codec);
+      supportedFlexPerformance_.WriteTo(output, _repeated_supportedFlexPerformance_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -227,6 +267,7 @@ namespace Google.Cloud.NetApp.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       supportedServiceLevels_.WriteTo(ref output, _repeated_supportedServiceLevels_codec);
+      supportedFlexPerformance_.WriteTo(ref output, _repeated_supportedFlexPerformance_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -238,6 +279,7 @@ namespace Google.Cloud.NetApp.V1 {
     public int CalculateSize() {
       int size = 0;
       size += supportedServiceLevels_.CalculateSize(_repeated_supportedServiceLevels_codec);
+      size += supportedFlexPerformance_.CalculateSize(_repeated_supportedFlexPerformance_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -251,6 +293,7 @@ namespace Google.Cloud.NetApp.V1 {
         return;
       }
       supportedServiceLevels_.Add(other.supportedServiceLevels_);
+      supportedFlexPerformance_.Add(other.supportedFlexPerformance_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -271,6 +314,11 @@ namespace Google.Cloud.NetApp.V1 {
             supportedServiceLevels_.AddEntriesFrom(input, _repeated_supportedServiceLevels_codec);
             break;
           }
+          case 18:
+          case 16: {
+            supportedFlexPerformance_.AddEntriesFrom(input, _repeated_supportedFlexPerformance_codec);
+            break;
+          }
         }
       }
     #endif
@@ -289,6 +337,11 @@ namespace Google.Cloud.NetApp.V1 {
           case 10:
           case 8: {
             supportedServiceLevels_.AddEntriesFrom(ref input, _repeated_supportedServiceLevels_codec);
+            break;
+          }
+          case 18:
+          case 16: {
+            supportedFlexPerformance_.AddEntriesFrom(ref input, _repeated_supportedFlexPerformance_codec);
             break;
           }
         }
