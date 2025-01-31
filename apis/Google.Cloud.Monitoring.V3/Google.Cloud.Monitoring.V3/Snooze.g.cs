@@ -27,23 +27,23 @@ namespace Google.Cloud.Monitoring.V3 {
             "CiFnb29nbGUvbW9uaXRvcmluZy92My9zbm9vemUucHJvdG8SFGdvb2dsZS5t",
             "b25pdG9yaW5nLnYzGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
             "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiFnb29nbGUvbW9uaXRvcmlu",
-            "Zy92My9jb21tb24ucHJvdG8ixQIKBlNub296ZRIRCgRuYW1lGAEgASgJQgPg",
+            "Zy92My9jb21tb24ucHJvdG8i1QIKBlNub296ZRIRCgRuYW1lGAEgASgJQgPg",
             "QQgSPAoIY3JpdGVyaWEYAyABKAsyJS5nb29nbGUubW9uaXRvcmluZy52My5T",
             "bm9vemUuQ3JpdGVyaWFCA+BBAhI5CghpbnRlcnZhbBgEIAEoCzIiLmdvb2ds",
             "ZS5tb25pdG9yaW5nLnYzLlRpbWVJbnRlcnZhbEID4EECEhkKDGRpc3BsYXlf",
-            "bmFtZRgFIAEoCUID4EECGkgKCENyaXRlcmlhEjwKCHBvbGljaWVzGAEgAygJ",
-            "Qir6QScKJW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQb2xpY3k6",
-            "SupBRwogbW9uaXRvcmluZy5nb29nbGVhcGlzLmNvbS9Tbm9vemUSI3Byb2pl",
-            "Y3RzL3twcm9qZWN0fS9zbm9vemVzL3tzbm9vemV9QsYBChhjb20uZ29vZ2xl",
-            "Lm1vbml0b3JpbmcudjNCC1Nub296ZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vbW9uaXRvcmluZy9hcGl2My92Mi9tb25pdG9yaW5ncGI7bW9uaXRv",
-            "cmluZ3BiqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPKAhpHb29nbGVc",
-            "Q2xvdWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6Ok1vbml0b3Jp",
-            "bmc6OlYzYgZwcm90bzM="));
+            "bmFtZRgFIAEoCUID4EECGlgKCENyaXRlcmlhEjwKCHBvbGljaWVzGAEgAygJ",
+            "Qir6QScKJW1vbml0b3JpbmcuZ29vZ2xlYXBpcy5jb20vQWxlcnRQb2xpY3kS",
+            "DgoGZmlsdGVyGAIgASgJOkrqQUcKIG1vbml0b3JpbmcuZ29vZ2xlYXBpcy5j",
+            "b20vU25vb3plEiNwcm9qZWN0cy97cHJvamVjdH0vc25vb3plcy97c25vb3pl",
+            "fULGAQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgtTbm9vemVQcm90b1AB",
+            "WkFjbG91ZC5nb29nbGUuY29tL2dvL21vbml0b3JpbmcvYXBpdjMvdjIvbW9u",
+            "aXRvcmluZ3BiO21vbml0b3JpbmdwYqoCGkdvb2dsZS5DbG91ZC5Nb25pdG9y",
+            "aW5nLlYzygIaR29vZ2xlXENsb3VkXE1vbml0b3JpbmdcVjPqAh1Hb29nbGU6",
+            "OkNsb3VkOjpNb25pdG9yaW5nOjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Snooze), global::Google.Cloud.Monitoring.V3.Snooze.Parser, new[]{ "Name", "Criteria", "Interval", "DisplayName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Snooze.Types.Criteria), global::Google.Cloud.Monitoring.V3.Snooze.Types.Criteria.Parser, new[]{ "Policies" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Snooze), global::Google.Cloud.Monitoring.V3.Snooze.Parser, new[]{ "Name", "Criteria", "Interval", "DisplayName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.Snooze.Types.Criteria), global::Google.Cloud.Monitoring.V3.Snooze.Types.Criteria.Parser, new[]{ "Policies", "Filter" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -441,6 +441,7 @@ namespace Google.Cloud.Monitoring.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Criteria(Criteria other) : this() {
           policies_ = other.policies_.Clone();
+          filter_ = other.filter_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -463,11 +464,41 @@ namespace Google.Cloud.Monitoring.V3 {
         ///
         /// There is a limit of 16 policies per snooze. This limit is checked during
         /// snooze creation.
+        /// Exactly 1 alert policy is required if `filter` is specified at the same
+        /// time.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Policies {
           get { return policies_; }
+        }
+
+        /// <summary>Field number for the "filter" field.</summary>
+        public const int FilterFieldNumber = 2;
+        private string filter_ = "";
+        /// <summary>
+        /// Optional. The filter string to match on Alert fields when silencing the
+        /// alerts. It follows the standard https://google.aip.dev/160 syntax.
+        /// A filter string used to apply the snooze to specific incidents
+        /// that have matching filter values.
+        /// Filters can be defined for snoozes that apply to one alerting
+        /// policy.
+        /// Filters must be a string formatted as one or more resource labels with
+        /// specific label values. If multiple resource labels are used, then they
+        /// must be connected with an AND operator. For example, the following filter
+        /// applies the snooze to incidents that have an instance ID of
+        /// `1234567890` and a zone of `us-central1-a`:
+        ///
+        ///     resource.labels.instance_id="1234567890" AND
+        ///     resource.labels.zone="us-central1-a"
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Filter {
+          get { return filter_; }
+          set {
+            filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -486,6 +517,7 @@ namespace Google.Cloud.Monitoring.V3 {
             return true;
           }
           if(!policies_.Equals(other.policies_)) return false;
+          if (Filter != other.Filter) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -494,6 +526,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public override int GetHashCode() {
           int hash = 1;
           hash ^= policies_.GetHashCode();
+          if (Filter.Length != 0) hash ^= Filter.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -513,6 +546,10 @@ namespace Google.Cloud.Monitoring.V3 {
           output.WriteRawMessage(this);
         #else
           policies_.WriteTo(output, _repeated_policies_codec);
+          if (Filter.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Filter);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -524,6 +561,10 @@ namespace Google.Cloud.Monitoring.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           policies_.WriteTo(ref output, _repeated_policies_codec);
+          if (Filter.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Filter);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -535,6 +576,9 @@ namespace Google.Cloud.Monitoring.V3 {
         public int CalculateSize() {
           int size = 0;
           size += policies_.CalculateSize(_repeated_policies_codec);
+          if (Filter.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -548,6 +592,9 @@ namespace Google.Cloud.Monitoring.V3 {
             return;
           }
           policies_.Add(other.policies_);
+          if (other.Filter.Length != 0) {
+            Filter = other.Filter;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -567,6 +614,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 policies_.AddEntriesFrom(input, _repeated_policies_codec);
                 break;
               }
+              case 18: {
+                Filter = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -584,6 +635,10 @@ namespace Google.Cloud.Monitoring.V3 {
                 break;
               case 10: {
                 policies_.AddEntriesFrom(ref input, _repeated_policies_codec);
+                break;
+              }
+              case 18: {
+                Filter = input.ReadString();
                 break;
               }
             }
