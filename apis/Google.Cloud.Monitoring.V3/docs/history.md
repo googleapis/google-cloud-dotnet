@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.15.0, released 2025-02-03
+
+### New features
+
+- Add filter field to snooze proto ([commit 164b017](https://github.com/googleapis/google-cloud-dotnet/commit/164b01761550b4824ad79eff16788995785bd483))
+
+### Documentation improvements
+
+- Remove extra fenced code block markers ([commit 164b017](https://github.com/googleapis/google-cloud-dotnet/commit/164b01761550b4824ad79eff16788995785bd483))
+
 ## Version 3.14.0, released 2025-01-13
 
 ### New features
