@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2025-02-03
+
+### New features
+
+- Add new OAuth scope `https://www.googleapis.com/auth/meetings.space.settings` to service `SpacesService` ([commit 651537a](https://github.com/googleapis/google-cloud-dotnet/commit/651537a95a5eb6eed4c3b78fc42429f2c4e4d6a4))
+
+### Documentation improvements
+
+- Improve docs for GetSpaceRequest, EndActiveConferenceRequest, ListConferenceRecordsRequest ([commit 651537a](https://github.com/googleapis/google-cloud-dotnet/commit/651537a95a5eb6eed4c3b78fc42429f2c4e4d6a4))
+
 ## Version 1.0.0-beta04, released 2024-05-08
 
 ### New features
