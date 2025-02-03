@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2025-02-03
+
+### Bug fixes
+
+- Add oauth scopes to Places proto ([commit ee54180](https://github.com/googleapis/google-cloud-dotnet/commit/ee54180880376324f52df3f50aa0107762ca765e))
+
 ## Version 1.0.0-beta11, released 2025-01-27
 
 ### New features
