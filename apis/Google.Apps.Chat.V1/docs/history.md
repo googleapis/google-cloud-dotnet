@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2025-02-03
+
+### New features
+
+- A new field `custom_emoji_metadata` is added to message `.google.chat.v1.Annotation` ([commit fa9d4b8](https://github.com/googleapis/google-cloud-dotnet/commit/fa9d4b85f0c329104fbc3dc113aca785b7808803))
+- A new message `CustomEmojiMetadata` is added ([commit fa9d4b8](https://github.com/googleapis/google-cloud-dotnet/commit/fa9d4b85f0c329104fbc3dc113aca785b7808803))
+- A new value `CUSTOM_EMOJI` is added to enum `AnnotationType` ([commit fa9d4b8](https://github.com/googleapis/google-cloud-dotnet/commit/fa9d4b85f0c329104fbc3dc113aca785b7808803))
+
+### Documentation improvements
+
+- A comment for method `CreateReaction` in service `ChatService` is changed ([commit fa9d4b8](https://github.com/googleapis/google-cloud-dotnet/commit/fa9d4b85f0c329104fbc3dc113aca785b7808803))
+- A comment for method `DeleteReaction` in service `ChatService` is changed ([commit fa9d4b8](https://github.com/googleapis/google-cloud-dotnet/commit/fa9d4b85f0c329104fbc3dc113aca785b7808803))
+- A comment for field `custom_emoji` in message `.google.chat.v1.Emoji` is changed ([commit fa9d4b8](https://github.com/googleapis/google-cloud-dotnet/commit/fa9d4b85f0c329104fbc3dc113aca785b7808803))
+
 ## Version 1.0.0-beta10, released 2024-12-12
 
 ### Bug fixes
