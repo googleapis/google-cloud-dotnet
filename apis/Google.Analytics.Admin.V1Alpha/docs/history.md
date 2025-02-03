@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.0.0-alpha21, released 2025-02-03
+
+### Bug fixes
+
+- Mark `event_data_retention` field in `DataRetentionSettings` as `REQUIRED` ([commit 22ae76a](https://github.com/googleapis/google-cloud-dotnet/commit/22ae76a162d95a8aee08c1b21a5540f335b2da53))
+
+### New features
+
+- Add `user_data_retention` field to `DataRetentionSettings` and mark as `REQUIRED` ([commit 22ae76a](https://github.com/googleapis/google-cloud-dotnet/commit/22ae76a162d95a8aee08c1b21a5540f335b2da53))
+
+### Documentation improvements
+
+- Replace "GA4" with "Google Analytics" or "GA" in all comments ([commit 22ae76a](https://github.com/googleapis/google-cloud-dotnet/commit/22ae76a162d95a8aee08c1b21a5540f335b2da53))
+
 ## Version 2.0.0-alpha20, released 2024-08-05
 
 ### Bug fixes
