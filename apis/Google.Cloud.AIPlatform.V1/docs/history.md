@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.16.0, released 2025-02-03
+
+### New features
+
+- Model Registry Checkpoint API ([commit 7d299ef](https://github.com/googleapis/google-cloud-dotnet/commit/7d299ef3ac6b222ee809493ed8d45731e0b859cf))
+- Add optimized config in v1 API ([commit 4f583e0](https://github.com/googleapis/google-cloud-dotnet/commit/4f583e04b31270c6e10fb8e186b6b7cb0d288d16))
+
+### Documentation improvements
+
+- Update comments for NumericFilter and Operator ([commit 4f583e0](https://github.com/googleapis/google-cloud-dotnet/commit/4f583e04b31270c6e10fb8e186b6b7cb0d288d16))
+
 ## Version 3.15.0, released 2025-01-27
 
 ### New features
