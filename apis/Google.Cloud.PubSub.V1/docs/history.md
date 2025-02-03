@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.21.0, released 2025-02-03
+
+### New features
+
+- Add support for message transforms to Topic and Subscription ([commit 97502ea](https://github.com/googleapis/google-cloud-dotnet/commit/97502ea06aaea8de9b80ac62fb9f3f1635d3fc49))
+
+### Documentation improvements
+
+- Fix link for AnalyticsHubSubscriptionInfo ([commit 97502ea](https://github.com/googleapis/google-cloud-dotnet/commit/97502ea06aaea8de9b80ac62fb9f3f1635d3fc49))
+
 ## Version 3.20.0, released 2025-01-13
 
 ### New features
