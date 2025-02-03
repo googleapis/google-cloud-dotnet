@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.8.0, released 2025-02-03
+
+### New features
+
+- Add support for Quota Rule apis ([commit 5c2f27b](https://github.com/googleapis/google-cloud-dotnet/commit/5c2f27b53160e0a373d11fc463f1537339f93e30))
+- Add ipAddress field to MountOption ([commit 5c2f27b](https://github.com/googleapis/google-cloud-dotnet/commit/5c2f27b53160e0a373d11fc463f1537339f93e30))
+
 ## Version 1.7.0, released 2025-01-13
 
 ### New features
