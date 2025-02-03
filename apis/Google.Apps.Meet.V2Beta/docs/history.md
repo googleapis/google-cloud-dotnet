@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2025-02-03
+
+### New features
+
+- Add methods for [configuring meeting spaces and members](https://developers.google.com/meet/api/guides/beta/configuration-beta) ([commit df0476e](https://github.com/googleapis/google-cloud-dotnet/commit/df0476e78bb12893756125115567ddfc908734a7))
+- Add new OAuth scope `https://www.googleapis.com/auth/meetings.space.settings` to service `SpacesService` ([commit df0476e](https://github.com/googleapis/google-cloud-dotnet/commit/df0476e78bb12893756125115567ddfc908734a7))
+
+### Documentation improvements
+
+- Improve docs for `GetSpaceRequest`, `EndActiveConferenceRequest`, `ListConferenceRecordsRequest` ([commit df0476e](https://github.com/googleapis/google-cloud-dotnet/commit/df0476e78bb12893756125115567ddfc908734a7))
+- Remove *Developer Preview* label from methods that are now generally available ([commit df0476e](https://github.com/googleapis/google-cloud-dotnet/commit/df0476e78bb12893756125115567ddfc908734a7))
+
 ## Version 1.0.0-beta05, released 2024-05-08
 
 ### New features
