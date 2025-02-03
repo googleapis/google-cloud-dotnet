@@ -1112,7 +1112,7 @@
       "id": "Google.Cloud.BigQuery.V2",
       "productName": "Google BigQuery",
       "productUrl": "https://cloud.google.com/bigquery/",
-      "version": "3.10.0",
+      "version": "3.11.0",
       "type": "rest",
       "description": "Recommended Google client library to access the BigQuery API. It wraps the Google.Apis.Bigquery.v2 client library, making common operations simpler in client code. BigQuery is a data platform for customers to create, manage, share and query data.",
       "dependencies": {
