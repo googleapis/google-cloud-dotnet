@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta15, released 2025-02-03
+
+### New features
+
+- Add rag_files_count to RagCorpus to count number of associated files ([commit 39f1a59](https://github.com/googleapis/google-cloud-dotnet/commit/39f1a590bdca3c35a42da95828480f432a56f552))
+- Model Registry Checkpoint API ([commit fc5de1c](https://github.com/googleapis/google-cloud-dotnet/commit/fc5de1c17745fe36bb37ab35f9b3d0078ae5a2a2))
+
 ## Version 1.0.0-beta14, released 2025-01-27
 
 ### New features
