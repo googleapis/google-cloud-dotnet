@@ -11,12 +11,6 @@ declare -r TOOL_PACKAGES=$REPO_ROOT/packages
 
 declare -r PROTOC_VERSION=3.25.2
 declare -r GRPC_VERSION=2.60.0
-if [[ $GAPIC_GENERATOR_VERSION == "" ]]
-then
-  declare -r GAPIC_GENERATOR_VERSION=v1.4.32
-else
-  echo "Using GAPIC generator override: ${GAPIC_GENERATOR_VERSION}"
-fi
 
 declare -r PROTOBUF_TOOLS_ROOT=$TOOL_PACKAGES/Google.Protobuf.Tools.$PROTOC_VERSION
 
@@ -90,30 +84,18 @@ install_microgenerator() {
   # we use that as the generator root dir.
   if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
   then
-    declare -r GENERATOR_ROOT=$CSHARP_GENERATOR_DIR
-  else
-    declare -r GENERATOR_ROOT=$REPO_ROOT/gapic-generator-csharp
-  fi
-  
-  export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/net6.0/$RUNTIME/publish/Google.Api.Generator$EXTENSION
-  
-  if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
-  then
     echo "Skipping microgenerator fetch: an existing directory for the generator has been specified"
-  elif [ -d $GENERATOR_ROOT ]
-  then
-    git -C $GENERATOR_ROOT fetch -q --tags
-    git -C $GENERATOR_ROOT checkout -q $GAPIC_GENERATOR_VERSION
+    (cd $CSHARP_GENERATOR_DIR; \
+     dotnet restore -v quiet; \
+     dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
+    export GAPIC_PLUGIN=$CSHARP_GENERATOR_DIR/Google.Api.Generator/bin/Release/net6.0/$RUNTIME/publish/Google.Api.Generator$EXTENSION
   else
-    git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -q
-    git -C $GENERATOR_ROOT checkout -q $GAPIC_GENERATOR_VERSION
+    # We don't just use "dotnet tool restore", as we need it installed in a specific
+    # path in order to access the executable directly (as it's a protoc plugin).
+    rm -rf gapic-generator
+    dotnet tool install Google.Api.Generator --tool-path gapic-generator > /dev/null
+    export GAPIC_PLUGIN=$REPO_ROOT/gapic-generator/google-gapic-generator$EXTENSION
   fi
-
-  # The dotnet restore step isn't generally required when cloning from elsewhere,
-  # but helps when running a local generator. (It does no harm even when not required.)
-  (cd $GENERATOR_ROOT; \
-   dotnet restore -v quiet; \
-   dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
 }
 
 install_grpc() {
