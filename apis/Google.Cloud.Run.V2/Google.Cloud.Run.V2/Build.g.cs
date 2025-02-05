@@ -28,7 +28,7 @@ namespace Google.Cloud.Run.V2 {
             "dWQucnVuLnYyGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29n",
             "bGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
             "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2xv",
-            "bmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8imQYKElN1Ym1pdEJ1aWxkUmVx",
+            "bmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8iugYKElN1Ym1pdEJ1aWxkUmVx",
             "dWVzdBITCgZwYXJlbnQYASABKAlCA+BBAhJBCg5zdG9yYWdlX3NvdXJjZRgC",
             "IAEoCzIiLmdvb2dsZS5jbG91ZC5ydW4udjIuU3RvcmFnZVNvdXJjZUID4EEC",
             "SAASFgoJaW1hZ2VfdXJpGAMgASgJQgPgQQISUgoPYnVpbGRwYWNrX2J1aWxk",
@@ -38,34 +38,35 @@ namespace Google.Cloud.Run.V2 {
             "QnVpbGRIARIcCg9zZXJ2aWNlX2FjY291bnQYBiABKAlCA+BBARJBCgt3b3Jr",
             "ZXJfcG9vbBgHIAEoCUIs4EEB+kEmCiRjbG91ZGJ1aWxkLmdvb2dsZWFwaXMu",
             "Y29tL1dvcmtlclBvb2wSEQoEdGFncxgIIAMoCUID4EEBGg0KC0RvY2tlckJ1",
-            "aWxkGtYCCg9CdWlsZHBhY2tzQnVpbGQSEwoHcnVudGltZRgBIAEoCUICGAES",
+            "aWxkGvcCCg9CdWlsZHBhY2tzQnVpbGQSEwoHcnVudGltZRgBIAEoCUICGAES",
             "HAoPZnVuY3Rpb25fdGFyZ2V0GAIgASgJQgPgQQESHAoPY2FjaGVfaW1hZ2Vf",
             "dXJpGAMgASgJQgPgQQESFwoKYmFzZV9pbWFnZRgEIAEoCUID4EEBEnUKFWVu",
             "dmlyb25tZW50X3ZhcmlhYmxlcxgFIAMoCzJRLmdvb2dsZS5jbG91ZC5ydW4u",
             "djIuU3VibWl0QnVpbGRSZXF1ZXN0LkJ1aWxkcGFja3NCdWlsZC5FbnZpcm9u",
             "bWVudFZhcmlhYmxlc0VudHJ5QgPgQQESJQoYZW5hYmxlX2F1dG9tYXRpY191",
-            "cGRhdGVzGAYgASgIQgPgQQEaOwoZRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBQggKBnNvdXJjZUIM",
-            "CgpidWlsZF90eXBlIoEBChNTdWJtaXRCdWlsZFJlc3BvbnNlEjYKD2J1aWxk",
-            "X29wZXJhdGlvbhgBIAEoCzIdLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24SFgoOYmFzZV9pbWFnZV91cmkYAiABKAkSGgoSYmFzZV9pbWFnZV93YXJu",
-            "aW5nGAMgASgJIlIKDVN0b3JhZ2VTb3VyY2USEwoGYnVja2V0GAEgASgJQgPg",
-            "QQISEwoGb2JqZWN0GAIgASgJQgPgQQISFwoKZ2VuZXJhdGlvbhgDIAEoA0ID",
-            "4EEBMvEBCgZCdWlsZHMSngEKC1N1Ym1pdEJ1aWxkEicuZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52Mi5TdWJtaXRCdWlsZFJlcXVlc3QaKC5nb29nbGUuY2xvdWQucnVu",
-            "LnYyLlN1Ym1pdEJ1aWxkUmVzcG9uc2UiPILT5JMCNiIxL3YyL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYnVpbGRzOnN1Ym1pdDoBKhpGykES",
-            "cnVuLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
-            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK+AQoXY29tLmdvb2dsZS5jbG91ZC5y",
-            "dW4udjJCCkJ1aWxkUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4v",
-            "YXBpdjIvcnVucGI7cnVucGLqQWkKJGNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5j",
-            "b20vV29ya2VyUG9vbBJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L3dvcmtlclBvb2xzL3t3b3JrZXJfcG9vbH1iBnByb3RvMw=="));
+            "cGRhdGVzGAYgASgIQgPgQQESHwoScHJvamVjdF9kZXNjcmlwdG9yGAcgASgJ",
+            "QgPgQQEaOwoZRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBQggKBnNvdXJjZUIMCgpidWlsZF90eXBl",
+            "IoEBChNTdWJtaXRCdWlsZFJlc3BvbnNlEjYKD2J1aWxkX29wZXJhdGlvbhgB",
+            "IAEoCzIdLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24SFgoOYmFzZV9p",
+            "bWFnZV91cmkYAiABKAkSGgoSYmFzZV9pbWFnZV93YXJuaW5nGAMgASgJIlIK",
+            "DVN0b3JhZ2VTb3VyY2USEwoGYnVja2V0GAEgASgJQgPgQQISEwoGb2JqZWN0",
+            "GAIgASgJQgPgQQISFwoKZ2VuZXJhdGlvbhgDIAEoA0ID4EEBMvEBCgZCdWls",
+            "ZHMSngEKC1N1Ym1pdEJ1aWxkEicuZ29vZ2xlLmNsb3VkLnJ1bi52Mi5TdWJt",
+            "aXRCdWlsZFJlcXVlc3QaKC5nb29nbGUuY2xvdWQucnVuLnYyLlN1Ym1pdEJ1",
+            "aWxkUmVzcG9uc2UiPILT5JMCNiIxL3YyL3twYXJlbnQ9cHJvamVjdHMvKi9s",
+            "b2NhdGlvbnMvKn0vYnVpbGRzOnN1Ym1pdDoBKhpGykEScnVuLmdvb2dsZWFw",
+            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
+            "ZC1wbGF0Zm9ybUK+AQoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCCkJ1aWxk",
+            "UHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVucGI7",
+            "cnVucGLqQWkKJGNsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vV29ya2VyUG9v",
+            "bBJBcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dv",
+            "cmtlclBvb2xzL3t3b3JrZXJfcG9vbH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest), global::Google.Cloud.Run.V2.SubmitBuildRequest.Parser, new[]{ "Parent", "StorageSource", "ImageUri", "BuildpackBuild", "DockerBuild", "ServiceAccount", "WorkerPool", "Tags" }, new[]{ "Source", "BuildType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.DockerBuild), global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.DockerBuild.Parser, null, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.BuildpacksBuild), global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.BuildpacksBuild.Parser, new[]{ "Runtime", "FunctionTarget", "CacheImageUri", "BaseImage", "EnvironmentVariables", "EnableAutomaticUpdates" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.BuildpacksBuild), global::Google.Cloud.Run.V2.SubmitBuildRequest.Types.BuildpacksBuild.Parser, new[]{ "Runtime", "FunctionTarget", "CacheImageUri", "BaseImage", "EnvironmentVariables", "EnableAutomaticUpdates", "ProjectDescriptor" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.SubmitBuildResponse), global::Google.Cloud.Run.V2.SubmitBuildResponse.Parser, new[]{ "BuildOperation", "BaseImageUri", "BaseImageWarning" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.StorageSource), global::Google.Cloud.Run.V2.StorageSource.Parser, new[]{ "Bucket", "Object", "Generation" }, null, null, null, null)
           }));
@@ -853,6 +854,7 @@ namespace Google.Cloud.Run.V2 {
           baseImage_ = other.baseImage_;
           environmentVariables_ = other.environmentVariables_.Clone();
           enableAutomaticUpdates_ = other.enableAutomaticUpdates_;
+          projectDescriptor_ = other.projectDescriptor_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -917,7 +919,7 @@ namespace Google.Cloud.Run.V2 {
         public const int BaseImageFieldNumber = 4;
         private string baseImage_ = "";
         /// <summary>
-        /// Optional. The base image used to opt into automatic base image updates.
+        /// Optional. The base image to use for the build.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -959,6 +961,23 @@ namespace Google.Cloud.Run.V2 {
           }
         }
 
+        /// <summary>Field number for the "project_descriptor" field.</summary>
+        public const int ProjectDescriptorFieldNumber = 7;
+        private string projectDescriptor_ = "";
+        /// <summary>
+        /// Optional. project_descriptor stores the path to the project descriptor
+        /// file. When empty, it means that there is no project descriptor file in
+        /// the source.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ProjectDescriptor {
+          get { return projectDescriptor_; }
+          set {
+            projectDescriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -980,6 +999,7 @@ namespace Google.Cloud.Run.V2 {
           if (BaseImage != other.BaseImage) return false;
           if (!EnvironmentVariables.Equals(other.EnvironmentVariables)) return false;
           if (EnableAutomaticUpdates != other.EnableAutomaticUpdates) return false;
+          if (ProjectDescriptor != other.ProjectDescriptor) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -993,6 +1013,7 @@ namespace Google.Cloud.Run.V2 {
           if (BaseImage.Length != 0) hash ^= BaseImage.GetHashCode();
           hash ^= EnvironmentVariables.GetHashCode();
           if (EnableAutomaticUpdates != false) hash ^= EnableAutomaticUpdates.GetHashCode();
+          if (ProjectDescriptor.Length != 0) hash ^= ProjectDescriptor.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1032,6 +1053,10 @@ namespace Google.Cloud.Run.V2 {
             output.WriteRawTag(48);
             output.WriteBool(EnableAutomaticUpdates);
           }
+          if (ProjectDescriptor.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(ProjectDescriptor);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1063,6 +1088,10 @@ namespace Google.Cloud.Run.V2 {
             output.WriteRawTag(48);
             output.WriteBool(EnableAutomaticUpdates);
           }
+          if (ProjectDescriptor.Length != 0) {
+            output.WriteRawTag(58);
+            output.WriteString(ProjectDescriptor);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1088,6 +1117,9 @@ namespace Google.Cloud.Run.V2 {
           size += environmentVariables_.CalculateSize(_map_environmentVariables_codec);
           if (EnableAutomaticUpdates != false) {
             size += 1 + 1;
+          }
+          if (ProjectDescriptor.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ProjectDescriptor);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1116,6 +1148,9 @@ namespace Google.Cloud.Run.V2 {
           environmentVariables_.MergeFrom(other.environmentVariables_);
           if (other.EnableAutomaticUpdates != false) {
             EnableAutomaticUpdates = other.EnableAutomaticUpdates;
+          }
+          if (other.ProjectDescriptor.Length != 0) {
+            ProjectDescriptor = other.ProjectDescriptor;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1156,6 +1191,10 @@ namespace Google.Cloud.Run.V2 {
                 EnableAutomaticUpdates = input.ReadBool();
                 break;
               }
+              case 58: {
+                ProjectDescriptor = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1193,6 +1232,10 @@ namespace Google.Cloud.Run.V2 {
               }
               case 48: {
                 EnableAutomaticUpdates = input.ReadBool();
+                break;
+              }
+              case 58: {
+                ProjectDescriptor = input.ReadString();
                 break;
               }
             }

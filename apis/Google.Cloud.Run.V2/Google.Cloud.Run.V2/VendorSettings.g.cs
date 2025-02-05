@@ -49,23 +49,36 @@ namespace Google.Cloud.Run.V2 {
             "YW5jZV9jb3VudBgGIAEoBUID4EEBSACIAQEiRgoLU2NhbGluZ01vZGUSHAoY",
             "U0NBTElOR19NT0RFX1VOU1BFQ0lGSUVEEAASDQoJQVVUT01BVElDEAESCgoG",
             "TUFOVUFMEAJCGAoWX21hbnVhbF9pbnN0YW5jZV9jb3VudCIoCgxOb2RlU2Vs",
-            "ZWN0b3ISGAoLYWNjZWxlcmF0b3IYASABKAlCA+BBAiqzAQoOSW5ncmVzc1Ry",
-            "YWZmaWMSHwobSU5HUkVTU19UUkFGRklDX1VOU1BFQ0lGSUVEEAASFwoTSU5H",
-            "UkVTU19UUkFGRklDX0FMTBABEiEKHUlOR1JFU1NfVFJBRkZJQ19JTlRFUk5B",
-            "TF9PTkxZEAISKgomSU5HUkVTU19UUkFGRklDX0lOVEVSTkFMX0xPQURfQkFM",
-            "QU5DRVIQAxIYChRJTkdSRVNTX1RSQUZGSUNfTk9ORRAEKn0KFEV4ZWN1dGlv",
-            "bkVudmlyb25tZW50EiUKIUVYRUNVVElPTl9FTlZJUk9OTUVOVF9VTlNQRUNJ",
-            "RklFRBAAEh4KGkVYRUNVVElPTl9FTlZJUk9OTUVOVF9HRU4xEAESHgoaRVhF",
-            "Q1VUSU9OX0VOVklST05NRU5UX0dFTjIQAipwCh1FbmNyeXB0aW9uS2V5UmV2",
-            "b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBUSU9OX0tFWV9SRVZPQ0FUSU9OX0FD",
-            "VElPTl9VTlNQRUNJRklFRBAAEg8KC1BSRVZFTlRfTkVXEAESDAoIU0hVVERP",
-            "V04QAkKgAgoXY29tLmdvb2dsZS5jbG91ZC5ydW4udjJCE1ZlbmRvclNldHRp",
-            "bmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIvcnVu",
-            "cGI7cnVucGLqQWMKKWJpbmFyeWF1dGhvcml6YXRpb24uZ29vZ2xlYXBpcy5j",
-            "b20vUG9saWN5Ehlwcm9qZWN0cy97cHJvamVjdH0vcG9saWN5Ehtsb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9wb2xpY3nqQVwKI25ldHdvcmtzZXJ2aWNlcy5nb29n",
-            "bGVhcGlzLmNvbS9NZXNoEjVwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vbWVzaGVzL3ttZXNofWIGcHJvdG8z"));
+            "ZWN0b3ISGAoLYWNjZWxlcmF0b3IYASABKAlCA+BBAiLRAwoLQnVpbGRDb25m",
+            "aWcSNQoEbmFtZRgBIAEoCUIn4EED+kEhCh9jbG91ZGJ1aWxkLmdvb2dsZWFw",
+            "aXMuY29tL0J1aWxkEhcKD3NvdXJjZV9sb2NhdGlvbhgCIAEoCRIcCg9mdW5j",
+            "dGlvbl90YXJnZXQYAyABKAlCA+BBARIWCglpbWFnZV91cmkYBCABKAlCA+BB",
+            "ARIXCgpiYXNlX2ltYWdlGAUgASgJQgPgQQESJQoYZW5hYmxlX2F1dG9tYXRp",
+            "Y191cGRhdGVzGAYgASgIQgPgQQESQQoLd29ya2VyX3Bvb2wYByABKAlCLOBB",
+            "AfpBJgokY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9Xb3JrZXJQb29sEl4K",
+            "FWVudmlyb25tZW50X3ZhcmlhYmxlcxgIIAMoCzI6Lmdvb2dsZS5jbG91ZC5y",
+            "dW4udjIuQnVpbGRDb25maWcuRW52aXJvbm1lbnRWYXJpYWJsZXNFbnRyeUID",
+            "4EEBEhwKD3NlcnZpY2VfYWNjb3VudBgJIAEoCUID4EEBGjsKGUVudmlyb25t",
+            "ZW50VmFyaWFibGVzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ASqzAQoOSW5ncmVzc1RyYWZmaWMSHwobSU5HUkVTU19UUkFGRklDX1VO",
+            "U1BFQ0lGSUVEEAASFwoTSU5HUkVTU19UUkFGRklDX0FMTBABEiEKHUlOR1JF",
+            "U1NfVFJBRkZJQ19JTlRFUk5BTF9PTkxZEAISKgomSU5HUkVTU19UUkFGRklD",
+            "X0lOVEVSTkFMX0xPQURfQkFMQU5DRVIQAxIYChRJTkdSRVNTX1RSQUZGSUNf",
+            "Tk9ORRAEKn0KFEV4ZWN1dGlvbkVudmlyb25tZW50EiUKIUVYRUNVVElPTl9F",
+            "TlZJUk9OTUVOVF9VTlNQRUNJRklFRBAAEh4KGkVYRUNVVElPTl9FTlZJUk9O",
+            "TUVOVF9HRU4xEAESHgoaRVhFQ1VUSU9OX0VOVklST05NRU5UX0dFTjIQAipw",
+            "Ch1FbmNyeXB0aW9uS2V5UmV2b2NhdGlvbkFjdGlvbhIwCixFTkNSWVBUSU9O",
+            "X0tFWV9SRVZPQ0FUSU9OX0FDVElPTl9VTlNQRUNJRklFRBAAEg8KC1BSRVZF",
+            "TlRfTkVXEAESDAoIU0hVVERPV04QAkL8AgoXY29tLmdvb2dsZS5jbG91ZC5y",
+            "dW4udjJCE1ZlbmRvclNldHRpbmdzUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9ydW4vYXBpdjIvcnVucGI7cnVucGLqQWMKKWJpbmFyeWF1dGhvcml6",
+            "YXRpb24uZ29vZ2xlYXBpcy5jb20vUG9saWN5Ehlwcm9qZWN0cy97cHJvamVj",
+            "dH0vcG9saWN5Ehtsb2NhdGlvbnMve2xvY2F0aW9ufS9wb2xpY3nqQVwKI25l",
+            "dHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoEjVwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbWVzaGVzL3ttZXNofepB",
+            "WQofY2xvdWRidWlsZC5nb29nbGVhcGlzLmNvbS9CdWlsZBI2cHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2J1aWxkcy97YnVpbGR9",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Run.V2.IngressTraffic), typeof(global::Google.Cloud.Run.V2.ExecutionEnvironment), typeof(global::Google.Cloud.Run.V2.EncryptionKeyRevocationAction), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -74,7 +87,8 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.RevisionScaling), global::Google.Cloud.Run.V2.RevisionScaling.Parser, new[]{ "MinInstanceCount", "MaxInstanceCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceMesh), global::Google.Cloud.Run.V2.ServiceMesh.Parser, new[]{ "Mesh" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ServiceScaling), global::Google.Cloud.Run.V2.ServiceScaling.Parser, new[]{ "MinInstanceCount", "ScalingMode", "ManualInstanceCount" }, new[]{ "ManualInstanceCount" }, new[]{ typeof(global::Google.Cloud.Run.V2.ServiceScaling.Types.ScalingMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.NodeSelector), global::Google.Cloud.Run.V2.NodeSelector.Parser, new[]{ "Accelerator" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.NodeSelector), global::Google.Cloud.Run.V2.NodeSelector.Parser, new[]{ "Accelerator" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.BuildConfig), global::Google.Cloud.Run.V2.BuildConfig.Parser, new[]{ "Name", "SourceLocation", "FunctionTarget", "ImageUri", "BaseImage", "EnableAutomaticUpdates", "WorkerPool", "EnvironmentVariables", "ServiceAccount" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -2010,6 +2024,524 @@ namespace Google.Cloud.Run.V2 {
             break;
           case 10: {
             Accelerator = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Describes the Build step of the function that builds a container from the
+  /// given source.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BuildConfig : pb::IMessage<BuildConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BuildConfig> _parser = new pb::MessageParser<BuildConfig>(() => new BuildConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BuildConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Run.V2.VendorSettingsReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuildConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuildConfig(BuildConfig other) : this() {
+      name_ = other.name_;
+      sourceLocation_ = other.sourceLocation_;
+      functionTarget_ = other.functionTarget_;
+      imageUri_ = other.imageUri_;
+      baseImage_ = other.baseImage_;
+      enableAutomaticUpdates_ = other.enableAutomaticUpdates_;
+      workerPool_ = other.workerPool_;
+      environmentVariables_ = other.environmentVariables_.Clone();
+      serviceAccount_ = other.serviceAccount_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BuildConfig Clone() {
+      return new BuildConfig(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The Cloud Build name of the latest successful deployment of
+    /// the function.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "source_location" field.</summary>
+    public const int SourceLocationFieldNumber = 2;
+    private string sourceLocation_ = "";
+    /// <summary>
+    /// The Cloud Storage bucket URI where the function source code is located.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceLocation {
+      get { return sourceLocation_; }
+      set {
+        sourceLocation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "function_target" field.</summary>
+    public const int FunctionTargetFieldNumber = 3;
+    private string functionTarget_ = "";
+    /// <summary>
+    /// Optional. The name of the function (as defined in source code) that will be
+    /// executed. Defaults to the resource name suffix, if not specified. For
+    /// backward compatibility, if function with given name is not found, then the
+    /// system will try to use function named "function".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FunctionTarget {
+      get { return functionTarget_; }
+      set {
+        functionTarget_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "image_uri" field.</summary>
+    public const int ImageUriFieldNumber = 4;
+    private string imageUri_ = "";
+    /// <summary>
+    /// Optional. Artifact Registry URI to store the built image.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImageUri {
+      get { return imageUri_; }
+      set {
+        imageUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "base_image" field.</summary>
+    public const int BaseImageFieldNumber = 5;
+    private string baseImage_ = "";
+    /// <summary>
+    /// Optional. The base image used to build the function.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BaseImage {
+      get { return baseImage_; }
+      set {
+        baseImage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enable_automatic_updates" field.</summary>
+    public const int EnableAutomaticUpdatesFieldNumber = 6;
+    private bool enableAutomaticUpdates_;
+    /// <summary>
+    /// Optional. Sets whether the function will receive automatic base image
+    /// updates.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableAutomaticUpdates {
+      get { return enableAutomaticUpdates_; }
+      set {
+        enableAutomaticUpdates_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "worker_pool" field.</summary>
+    public const int WorkerPoolFieldNumber = 7;
+    private string workerPool_ = "";
+    /// <summary>
+    /// Optional. Name of the Cloud Build Custom Worker Pool that should be used to
+    /// build the Cloud Run function. The format of this field is
+    /// `projects/{project}/locations/{region}/workerPools/{workerPool}` where
+    /// `{project}` and `{region}` are the project id and region respectively where
+    /// the worker pool is defined and `{workerPool}` is the short name of the
+    /// worker pool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WorkerPool {
+      get { return workerPool_; }
+      set {
+        workerPool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "environment_variables" field.</summary>
+    public const int EnvironmentVariablesFieldNumber = 8;
+    private static readonly pbc::MapField<string, string>.Codec _map_environmentVariables_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 66);
+    private readonly pbc::MapField<string, string> environmentVariables_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. User-provided build-time environment variables for the function
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> EnvironmentVariables {
+      get { return environmentVariables_; }
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 9;
+    private string serviceAccount_ = "";
+    /// <summary>
+    /// Optional. Service account to be used for building the container. The format
+    /// of this field is
+    /// `projects/{projectId}/serviceAccounts/{serviceAccountEmail}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAccount {
+      get { return serviceAccount_; }
+      set {
+        serviceAccount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BuildConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BuildConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (SourceLocation != other.SourceLocation) return false;
+      if (FunctionTarget != other.FunctionTarget) return false;
+      if (ImageUri != other.ImageUri) return false;
+      if (BaseImage != other.BaseImage) return false;
+      if (EnableAutomaticUpdates != other.EnableAutomaticUpdates) return false;
+      if (WorkerPool != other.WorkerPool) return false;
+      if (!EnvironmentVariables.Equals(other.EnvironmentVariables)) return false;
+      if (ServiceAccount != other.ServiceAccount) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (SourceLocation.Length != 0) hash ^= SourceLocation.GetHashCode();
+      if (FunctionTarget.Length != 0) hash ^= FunctionTarget.GetHashCode();
+      if (ImageUri.Length != 0) hash ^= ImageUri.GetHashCode();
+      if (BaseImage.Length != 0) hash ^= BaseImage.GetHashCode();
+      if (EnableAutomaticUpdates != false) hash ^= EnableAutomaticUpdates.GetHashCode();
+      if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
+      hash ^= EnvironmentVariables.GetHashCode();
+      if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SourceLocation.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceLocation);
+      }
+      if (FunctionTarget.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(FunctionTarget);
+      }
+      if (ImageUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ImageUri);
+      }
+      if (BaseImage.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(BaseImage);
+      }
+      if (EnableAutomaticUpdates != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(EnableAutomaticUpdates);
+      }
+      if (WorkerPool.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(WorkerPool);
+      }
+      environmentVariables_.WriteTo(output, _map_environmentVariables_codec);
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (SourceLocation.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SourceLocation);
+      }
+      if (FunctionTarget.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(FunctionTarget);
+      }
+      if (ImageUri.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ImageUri);
+      }
+      if (BaseImage.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(BaseImage);
+      }
+      if (EnableAutomaticUpdates != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(EnableAutomaticUpdates);
+      }
+      if (WorkerPool.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(WorkerPool);
+      }
+      environmentVariables_.WriteTo(ref output, _map_environmentVariables_codec);
+      if (ServiceAccount.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (SourceLocation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceLocation);
+      }
+      if (FunctionTarget.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(FunctionTarget);
+      }
+      if (ImageUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImageUri);
+      }
+      if (BaseImage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BaseImage);
+      }
+      if (EnableAutomaticUpdates != false) {
+        size += 1 + 1;
+      }
+      if (WorkerPool.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkerPool);
+      }
+      size += environmentVariables_.CalculateSize(_map_environmentVariables_codec);
+      if (ServiceAccount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BuildConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.SourceLocation.Length != 0) {
+        SourceLocation = other.SourceLocation;
+      }
+      if (other.FunctionTarget.Length != 0) {
+        FunctionTarget = other.FunctionTarget;
+      }
+      if (other.ImageUri.Length != 0) {
+        ImageUri = other.ImageUri;
+      }
+      if (other.BaseImage.Length != 0) {
+        BaseImage = other.BaseImage;
+      }
+      if (other.EnableAutomaticUpdates != false) {
+        EnableAutomaticUpdates = other.EnableAutomaticUpdates;
+      }
+      if (other.WorkerPool.Length != 0) {
+        WorkerPool = other.WorkerPool;
+      }
+      environmentVariables_.MergeFrom(other.environmentVariables_);
+      if (other.ServiceAccount.Length != 0) {
+        ServiceAccount = other.ServiceAccount;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceLocation = input.ReadString();
+            break;
+          }
+          case 26: {
+            FunctionTarget = input.ReadString();
+            break;
+          }
+          case 34: {
+            ImageUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            BaseImage = input.ReadString();
+            break;
+          }
+          case 48: {
+            EnableAutomaticUpdates = input.ReadBool();
+            break;
+          }
+          case 58: {
+            WorkerPool = input.ReadString();
+            break;
+          }
+          case 66: {
+            environmentVariables_.AddEntriesFrom(input, _map_environmentVariables_codec);
+            break;
+          }
+          case 74: {
+            ServiceAccount = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            SourceLocation = input.ReadString();
+            break;
+          }
+          case 26: {
+            FunctionTarget = input.ReadString();
+            break;
+          }
+          case 34: {
+            ImageUri = input.ReadString();
+            break;
+          }
+          case 42: {
+            BaseImage = input.ReadString();
+            break;
+          }
+          case 48: {
+            EnableAutomaticUpdates = input.ReadBool();
+            break;
+          }
+          case 58: {
+            WorkerPool = input.ReadString();
+            break;
+          }
+          case 66: {
+            environmentVariables_.AddEntriesFrom(ref input, _map_environmentVariables_codec);
+            break;
+          }
+          case 74: {
+            ServiceAccount = input.ReadString();
             break;
           }
         }
