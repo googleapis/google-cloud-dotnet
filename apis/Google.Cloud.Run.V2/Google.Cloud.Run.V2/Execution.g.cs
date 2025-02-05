@@ -44,55 +44,56 @@ namespace Google.Cloud.Run.V2 {
             "eRgCIAEoCBIMCgRldGFnGAMgASgJInEKFkNhbmNlbEV4ZWN1dGlvblJlcXVl",
             "c3QSMgoEbmFtZRgBIAEoCUIk4EEC+kEeChxydW4uZ29vZ2xlYXBpcy5jb20v",
             "RXhlY3V0aW9uEhUKDXZhbGlkYXRlX29ubHkYAiABKAgSDAoEZXRhZxgDIAEo",
-            "CSKCCgoJRXhlY3V0aW9uEhEKBG5hbWUYASABKAlCA+BBAxIQCgN1aWQYAiAB",
-            "KAlCA+BBAxIXCgpnZW5lcmF0aW9uGAMgASgDQgPgQQMSPwoGbGFiZWxzGAQg",
-            "AygLMiouZ29vZ2xlLmNsb3VkLnJ1bi52Mi5FeGVjdXRpb24uTGFiZWxzRW50",
-            "cnlCA+BBAxJJCgthbm5vdGF0aW9ucxgFIAMoCzIvLmdvb2dsZS5jbG91ZC5y",
-            "dW4udjIuRXhlY3V0aW9uLkFubm90YXRpb25zRW50cnlCA+BBAxI0CgtjcmVh",
-            "dGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIzCgpzdGFydF90aW1lGBYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcEID4EEDEjgKD2NvbXBsZXRpb25fdGltZRgHIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgIIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtkZWxldGVfdGlt",
-            "ZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtl",
-            "eHBpcmVfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxItCgxsYXVuY2hfc3RhZ2UYCyABKA4yFy5nb29nbGUuYXBpLkxhdW5j",
-            "aFN0YWdlEisKA2pvYhgMIAEoCUIe4EED+kEYChZydW4uZ29vZ2xlYXBpcy5j",
-            "b20vSm9iEhgKC3BhcmFsbGVsaXNtGA0gASgFQgPgQQMSFwoKdGFza19jb3Vu",
-            "dBgOIAEoBUID4EEDEjgKCHRlbXBsYXRlGA8gASgLMiEuZ29vZ2xlLmNsb3Vk",
-            "LnJ1bi52Mi5UYXNrVGVtcGxhdGVCA+BBAxIYCgtyZWNvbmNpbGluZxgQIAEo",
-            "CEID4EEDEjcKCmNvbmRpdGlvbnMYESADKAsyHi5nb29nbGUuY2xvdWQucnVu",
-            "LnYyLkNvbmRpdGlvbkID4EEDEiAKE29ic2VydmVkX2dlbmVyYXRpb24YEiAB",
-            "KANCA+BBAxIaCg1ydW5uaW5nX2NvdW50GBMgASgFQgPgQQMSHAoPc3VjY2Vl",
-            "ZGVkX2NvdW50GBQgASgFQgPgQQMSGQoMZmFpbGVkX2NvdW50GBUgASgFQgPg",
-            "QQMSHAoPY2FuY2VsbGVkX2NvdW50GBggASgFQgPgQQMSGgoNcmV0cmllZF9j",
-            "b3VudBgZIAEoBUID4EEDEhQKB2xvZ191cmkYGiABKAlCA+BBAxIaCg1zYXRp",
-            "c2ZpZXNfcHpzGBsgASgIQgPgQQMSEQoEZXRhZxhjIAEoCUID4EEDGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQ",
-            "QW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBOm/qQWwKHHJ1bi5nb29nbGVhcGlzLmNvbS9FeGVjdXRpb24SSXByb2pl",
-            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2J9",
-            "L2V4ZWN1dGlvbnMve2V4ZWN1dGlvbn1SAQEysQYKCkV4ZWN1dGlvbnMSngEK",
-            "DEdldEV4ZWN1dGlvbhIoLmdvb2dsZS5jbG91ZC5ydW4udjIuR2V0RXhlY3V0",
-            "aW9uUmVxdWVzdBoeLmdvb2dsZS5jbG91ZC5ydW4udjIuRXhlY3V0aW9uIkTa",
-            "QQRuYW1lgtPkkwI3EjUvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki9qb2JzLyovZXhlY3V0aW9ucy8qfRKxAQoOTGlzdEV4ZWN1dGlvbnMSKi5n",
-            "b29nbGUuY2xvdWQucnVuLnYyLkxpc3RFeGVjdXRpb25zUmVxdWVzdBorLmdv",
-            "b2dsZS5jbG91ZC5ydW4udjIuTGlzdEV4ZWN1dGlvbnNSZXNwb25zZSJG2kEG",
-            "cGFyZW50gtPkkwI3EjUvdjIve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2pvYnMvKn0vZXhlY3V0aW9ucxK8AQoPRGVsZXRlRXhlY3V0aW9uEisu",
-            "Z29vZ2xlLmNsb3VkLnJ1bi52Mi5EZWxldGVFeGVjdXRpb25SZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJdykEWCglFeGVjdXRpb24S",
-            "CUV4ZWN1dGlvbtpBBG5hbWWC0+STAjcqNS92Mi97bmFtZT1wcm9qZWN0cy8q",
-            "L2xvY2F0aW9ucy8qL2pvYnMvKi9leGVjdXRpb25zLyp9EsYBCg9DYW5jZWxF",
-            "eGVjdXRpb24SKy5nb29nbGUuY2xvdWQucnVuLnYyLkNhbmNlbEV4ZWN1dGlv",
-            "blJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImfKQRYK",
-            "CUV4ZWN1dGlvbhIJRXhlY3V0aW9u2kEEbmFtZYLT5JMCQSI8L3YyL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qL2V4ZWN1dGlvbnMvKn06",
-            "Y2FuY2VsOgEqGkbKQRJydW4uZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3",
-            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQlYKF2NvbS5n",
-            "b29nbGUuY2xvdWQucnVuLnYyQg5FeGVjdXRpb25Qcm90b1ABWiljbG91ZC5n",
-            "b29nbGUuY29tL2dvL3J1bi9hcGl2Mi9ydW5wYjtydW5wYmIGcHJvdG8z"));
+            "CSKYCgoJRXhlY3V0aW9uEhEKBG5hbWUYASABKAlCA+BBAxIQCgN1aWQYAiAB",
+            "KAlCA+BBAxIUCgdjcmVhdG9yGCAgASgJQgPgQQMSFwoKZ2VuZXJhdGlvbhgD",
+            "IAEoA0ID4EEDEj8KBmxhYmVscxgEIAMoCzIqLmdvb2dsZS5jbG91ZC5ydW4u",
+            "djIuRXhlY3V0aW9uLkxhYmVsc0VudHJ5QgPgQQMSSQoLYW5ub3RhdGlvbnMY",
+            "BSADKAsyLy5nb29nbGUuY2xvdWQucnVuLnYyLkV4ZWN1dGlvbi5Bbm5vdGF0",
+            "aW9uc0VudHJ5QgPgQQMSNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMwoKc3RhcnRfdGltZRgWIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI4Cg9jb21wbGV0aW9u",
+            "X3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "NAoLdXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSNAoLZGVsZXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSNAoLZXhwaXJlX3RpbWUYCiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSLQoMbGF1bmNoX3N0YWdlGAsg",
+            "ASgOMhcuZ29vZ2xlLmFwaS5MYXVuY2hTdGFnZRIrCgNqb2IYDCABKAlCHuBB",
+            "A/pBGAoWcnVuLmdvb2dsZWFwaXMuY29tL0pvYhIYCgtwYXJhbGxlbGlzbRgN",
+            "IAEoBUID4EEDEhcKCnRhc2tfY291bnQYDiABKAVCA+BBAxI4Cgh0ZW1wbGF0",
+            "ZRgPIAEoCzIhLmdvb2dsZS5jbG91ZC5ydW4udjIuVGFza1RlbXBsYXRlQgPg",
+            "QQMSGAoLcmVjb25jaWxpbmcYECABKAhCA+BBAxI3Cgpjb25kaXRpb25zGBEg",
+            "AygLMh4uZ29vZ2xlLmNsb3VkLnJ1bi52Mi5Db25kaXRpb25CA+BBAxIgChNv",
+            "YnNlcnZlZF9nZW5lcmF0aW9uGBIgASgDQgPgQQMSGgoNcnVubmluZ19jb3Vu",
+            "dBgTIAEoBUID4EEDEhwKD3N1Y2NlZWRlZF9jb3VudBgUIAEoBUID4EEDEhkK",
+            "DGZhaWxlZF9jb3VudBgVIAEoBUID4EEDEhwKD2NhbmNlbGxlZF9jb3VudBgY",
+            "IAEoBUID4EEDEhoKDXJldHJpZWRfY291bnQYGSABKAVCA+BBAxIUCgdsb2df",
+            "dXJpGBogASgJQgPgQQMSGgoNc2F0aXNmaWVzX3B6cxgbIAEoCEID4EEDEhEK",
+            "BGV0YWcYYyABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpv6kFsChxydW4uZ29vZ2xlYXBp",
+            "cy5jb20vRXhlY3V0aW9uEklwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vam9icy97am9ifS9leGVjdXRpb25zL3tleGVjdXRpb259",
+            "UgEBMrEGCgpFeGVjdXRpb25zEp4BCgxHZXRFeGVjdXRpb24SKC5nb29nbGUu",
+            "Y2xvdWQucnVuLnYyLkdldEV4ZWN1dGlvblJlcXVlc3QaHi5nb29nbGUuY2xv",
+            "dWQucnVuLnYyLkV4ZWN1dGlvbiJE2kEEbmFtZYLT5JMCNxI1L3YyL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovam9icy8qL2V4ZWN1dGlvbnMvKn0S",
+            "sQEKDkxpc3RFeGVjdXRpb25zEiouZ29vZ2xlLmNsb3VkLnJ1bi52Mi5MaXN0",
+            "RXhlY3V0aW9uc1JlcXVlc3QaKy5nb29nbGUuY2xvdWQucnVuLnYyLkxpc3RF",
+            "eGVjdXRpb25zUmVzcG9uc2UiRtpBBnBhcmVudILT5JMCNxI1L3YyL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyp9L2V4ZWN1dGlvbnMS",
+            "vAEKD0RlbGV0ZUV4ZWN1dGlvbhIrLmdvb2dsZS5jbG91ZC5ydW4udjIuRGVs",
+            "ZXRlRXhlY3V0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVy",
+            "YXRpb24iXcpBFgoJRXhlY3V0aW9uEglFeGVjdXRpb27aQQRuYW1lgtPkkwI3",
+            "KjUvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9qb2JzLyovZXhl",
+            "Y3V0aW9ucy8qfRLGAQoPQ2FuY2VsRXhlY3V0aW9uEisuZ29vZ2xlLmNsb3Vk",
+            "LnJ1bi52Mi5DYW5jZWxFeGVjdXRpb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
+            "dW5uaW5nLk9wZXJhdGlvbiJnykEWCglFeGVjdXRpb24SCUV4ZWN1dGlvbtpB",
+            "BG5hbWWC0+STAkEiPC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
+            "L2pvYnMvKi9leGVjdXRpb25zLyp9OmNhbmNlbDoBKhpGykEScnVuLmdvb2ds",
+            "ZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
+            "bG91ZC1wbGF0Zm9ybUJWChdjb20uZ29vZ2xlLmNsb3VkLnJ1bi52MkIORXhl",
+            "Y3V0aW9uUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9ydW4vYXBpdjIv",
+            "cnVucGI7cnVucGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.LaunchStageReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Run.V2.ConditionReflection.Descriptor, global::Google.Cloud.Run.V2.TaskTemplateReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -101,7 +102,7 @@ namespace Google.Cloud.Run.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.ListExecutionsResponse), global::Google.Cloud.Run.V2.ListExecutionsResponse.Parser, new[]{ "Executions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.DeleteExecutionRequest), global::Google.Cloud.Run.V2.DeleteExecutionRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.CancelExecutionRequest), global::Google.Cloud.Run.V2.CancelExecutionRequest.Parser, new[]{ "Name", "ValidateOnly", "Etag" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Execution), global::Google.Cloud.Run.V2.Execution.Parser, new[]{ "Name", "Uid", "Generation", "Labels", "Annotations", "CreateTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Job", "Parallelism", "TaskCount", "Template", "Reconciling", "Conditions", "ObservedGeneration", "RunningCount", "SucceededCount", "FailedCount", "CancelledCount", "RetriedCount", "LogUri", "SatisfiesPzs", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Run.V2.Execution), global::Google.Cloud.Run.V2.Execution.Parser, new[]{ "Name", "Uid", "Creator", "Generation", "Labels", "Annotations", "CreateTime", "StartTime", "CompletionTime", "UpdateTime", "DeleteTime", "ExpireTime", "LaunchStage", "Job", "Parallelism", "TaskCount", "Template", "Reconciling", "Conditions", "ObservedGeneration", "RunningCount", "SucceededCount", "FailedCount", "CancelledCount", "RetriedCount", "LogUri", "SatisfiesPzs", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -1457,6 +1458,7 @@ namespace Google.Cloud.Run.V2 {
     public Execution(Execution other) : this() {
       name_ = other.name_;
       uid_ = other.uid_;
+      creator_ = other.creator_;
       generation_ = other.generation_;
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
@@ -1520,6 +1522,21 @@ namespace Google.Cloud.Run.V2 {
       get { return uid_; }
       set {
         uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "creator" field.</summary>
+    public const int CreatorFieldNumber = 32;
+    private string creator_ = "";
+    /// <summary>
+    /// Output only. Email address of the authenticated creator.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Creator {
+      get { return creator_; }
+      set {
+        creator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -1681,7 +1698,8 @@ namespace Google.Cloud.Run.V2 {
     /// [Google Cloud Platform Launch
     /// Stages](https://cloud.google.com/terms/launch-stages). Cloud Run supports
     /// `ALPHA`, `BETA`, and `GA`.
-    /// &lt;p>Note that this value might not be what was used
+    ///
+    /// Note that this value might not be what was used
     /// as input. For example, if ALPHA was provided as input in the parent
     /// resource, but only BETA and GA-level features are were, this field will be
     /// BETA.
@@ -1950,6 +1968,7 @@ namespace Google.Cloud.Run.V2 {
       }
       if (Name != other.Name) return false;
       if (Uid != other.Uid) return false;
+      if (Creator != other.Creator) return false;
       if (Generation != other.Generation) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
@@ -1984,6 +2003,7 @@ namespace Google.Cloud.Run.V2 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (Creator.Length != 0) hash ^= Creator.GetHashCode();
       if (Generation != 0L) hash ^= Generation.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= Annotations.GetHashCode();
@@ -2122,6 +2142,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(216, 1);
         output.WriteBool(SatisfiesPzs);
       }
+      if (Creator.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(Creator);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -2231,6 +2255,10 @@ namespace Google.Cloud.Run.V2 {
         output.WriteRawTag(216, 1);
         output.WriteBool(SatisfiesPzs);
       }
+      if (Creator.Length != 0) {
+        output.WriteRawTag(130, 2);
+        output.WriteString(Creator);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -2250,6 +2278,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (Uid.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (Creator.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Creator);
       }
       if (Generation != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Generation);
@@ -2337,6 +2368,9 @@ namespace Google.Cloud.Run.V2 {
       }
       if (other.Uid.Length != 0) {
         Uid = other.Uid;
+      }
+      if (other.Creator.Length != 0) {
+        Creator = other.Creator;
       }
       if (other.Generation != 0L) {
         Generation = other.Generation;
@@ -2568,6 +2602,10 @@ namespace Google.Cloud.Run.V2 {
             SatisfiesPzs = input.ReadBool();
             break;
           }
+          case 258: {
+            Creator = input.ReadString();
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -2710,6 +2748,10 @@ namespace Google.Cloud.Run.V2 {
           }
           case 216: {
             SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 258: {
+            Creator = input.ReadString();
             break;
           }
           case 794: {
