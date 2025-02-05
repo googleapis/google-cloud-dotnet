@@ -4321,7 +4321,8 @@
       "shortName": "redis",
       "serviceConfigFile": "redis_v1.yaml",
       "restNumericEnums": true,
-      "includeCommonResourcesProto": true
+      "includeCommonResourcesProto": true,
+      "transport": "grpc+rest"
     },
     {
       "id": "Google.Cloud.Redis.V1",
