@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta16, released 2025-02-06
+
+### New features
+
+- EvaluateDataset API v1beta1 initial release ([commit b343f9f](https://github.com/googleapis/google-cloud-dotnet/commit/b343f9f9817575fa9968b0c8c9b25e402b91bd03))
+
 ## Version 1.0.0-beta15, released 2025-02-03
 
 ### New features
