@@ -1,0 +1,111 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.AreaInsights.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.areainsights.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "areainsights_v1_generated_AreaInsights_ComputeInsights_sync",
+      "title": "ComputeInsightsRequestObject",
+      "description": "Snippet for ComputeInsights",
+      "file": "AreaInsightsClient.ComputeInsightsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeInsights",
+        "fullName": "Google.Maps.AreaInsights.V1.AreaInsightsClient.ComputeInsights",
+        "parameters": [
+          {
+            "type": "Google.Maps.AreaInsights.V1.ComputeInsightsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.AreaInsights.V1.ComputeInsightsResponse",
+        "client": {
+          "shortName": "AreaInsightsClient",
+          "fullName": "Google.Maps.AreaInsights.V1.AreaInsightsClient"
+        },
+        "method": {
+          "shortName": "ComputeInsights",
+          "fullName": "google.maps.areainsights.v1.AreaInsights.ComputeInsights",
+          "service": {
+            "shortName": "AreaInsights",
+            "fullName": "google.maps.areainsights.v1.AreaInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "areainsights_v1_generated_AreaInsights_ComputeInsights_async",
+      "title": "ComputeInsightsRequestObjectAsync",
+      "description": "Snippet for ComputeInsightsAsync",
+      "file": "AreaInsightsClient.ComputeInsightsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeInsightsAsync",
+        "fullName": "Google.Maps.AreaInsights.V1.AreaInsightsClient.ComputeInsightsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.AreaInsights.V1.ComputeInsightsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.AreaInsights.V1.ComputeInsightsResponse>",
+        "client": {
+          "shortName": "AreaInsightsClient",
+          "fullName": "Google.Maps.AreaInsights.V1.AreaInsightsClient"
+        },
+        "method": {
+          "shortName": "ComputeInsights",
+          "fullName": "google.maps.areainsights.v1.AreaInsights.ComputeInsights",
+          "service": {
+            "shortName": "AreaInsights",
+            "fullName": "google.maps.areainsights.v1.AreaInsights"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

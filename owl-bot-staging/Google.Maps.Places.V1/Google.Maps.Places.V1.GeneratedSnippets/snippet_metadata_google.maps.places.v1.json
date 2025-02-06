@@ -1,0 +1,879 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.Places.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.places.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "places_v1_generated_Places_SearchNearby_sync",
+      "title": "SearchNearbyRequestObject",
+      "description": "Snippet for SearchNearby",
+      "file": "PlacesClient.SearchNearbyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchNearby",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.SearchNearby",
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.SearchNearbyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.SearchNearbyResponse",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "SearchNearby",
+          "fullName": "google.maps.places.v1.Places.SearchNearby",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_SearchNearby_async",
+      "title": "SearchNearbyRequestObjectAsync",
+      "description": "Snippet for SearchNearbyAsync",
+      "file": "PlacesClient.SearchNearbyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchNearbyAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.SearchNearbyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.SearchNearbyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.SearchNearbyResponse>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "SearchNearby",
+          "fullName": "google.maps.places.v1.Places.SearchNearby",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_SearchText_sync",
+      "title": "SearchTextRequestObject",
+      "description": "Snippet for SearchText",
+      "file": "PlacesClient.SearchTextRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchText",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.SearchText",
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.SearchTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.SearchTextResponse",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "SearchText",
+          "fullName": "google.maps.places.v1.Places.SearchText",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_SearchText_async",
+      "title": "SearchTextRequestObjectAsync",
+      "description": "Snippet for SearchTextAsync",
+      "file": "PlacesClient.SearchTextRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTextAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.SearchTextAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.SearchTextRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.SearchTextResponse>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "SearchText",
+          "fullName": "google.maps.places.v1.Places.SearchText",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPhotoMedia_sync",
+      "title": "GetPhotoMediaRequestObject",
+      "description": "Snippet for GetPhotoMedia",
+      "file": "PlacesClient.GetPhotoMediaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPhotoMedia",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPhotoMedia",
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.GetPhotoMediaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.PhotoMedia",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPhotoMedia",
+          "fullName": "google.maps.places.v1.Places.GetPhotoMedia",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPhotoMedia_async",
+      "title": "GetPhotoMediaRequestObjectAsync",
+      "description": "Snippet for GetPhotoMediaAsync",
+      "file": "PlacesClient.GetPhotoMediaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPhotoMediaAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPhotoMediaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.GetPhotoMediaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.PhotoMedia>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPhotoMedia",
+          "fullName": "google.maps.places.v1.Places.GetPhotoMedia",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPhotoMedia_sync_flattened",
+      "title": "GetPhotoMedia",
+      "description": "Snippet for GetPhotoMedia",
+      "file": "PlacesClient.GetPhotoMediaSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPhotoMedia",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPhotoMedia",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.PhotoMedia",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPhotoMedia",
+          "fullName": "google.maps.places.v1.Places.GetPhotoMedia",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPhotoMedia_async_flattened",
+      "title": "GetPhotoMediaAsync",
+      "description": "Snippet for GetPhotoMediaAsync",
+      "file": "PlacesClient.GetPhotoMediaAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPhotoMediaAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPhotoMediaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.PhotoMedia>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPhotoMedia",
+          "fullName": "google.maps.places.v1.Places.GetPhotoMedia",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPhotoMedia_sync_flattened_resourceNames",
+      "title": "GetPhotoMediaResourceNames",
+      "description": "Snippet for GetPhotoMedia",
+      "file": "PlacesClient.GetPhotoMediaResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPhotoMedia",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPhotoMedia",
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.PhotoMediaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.PhotoMedia",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPhotoMedia",
+          "fullName": "google.maps.places.v1.Places.GetPhotoMedia",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPhotoMedia_async_flattened_resourceNames",
+      "title": "GetPhotoMediaResourceNamesAsync",
+      "description": "Snippet for GetPhotoMediaAsync",
+      "file": "PlacesClient.GetPhotoMediaResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPhotoMediaAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPhotoMediaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.PhotoMediaName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.PhotoMedia>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPhotoMedia",
+          "fullName": "google.maps.places.v1.Places.GetPhotoMedia",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPlace_sync",
+      "title": "GetPlaceRequestObject",
+      "description": "Snippet for GetPlace",
+      "file": "PlacesClient.GetPlaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPlace",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPlace",
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.GetPlaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.Place",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPlace",
+          "fullName": "google.maps.places.v1.Places.GetPlace",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPlace_async",
+      "title": "GetPlaceRequestObjectAsync",
+      "description": "Snippet for GetPlaceAsync",
+      "file": "PlacesClient.GetPlaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPlaceAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPlaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.GetPlaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.Place>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPlace",
+          "fullName": "google.maps.places.v1.Places.GetPlace",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPlace_sync_flattened",
+      "title": "GetPlace",
+      "description": "Snippet for GetPlace",
+      "file": "PlacesClient.GetPlaceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPlace",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPlace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.Place",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPlace",
+          "fullName": "google.maps.places.v1.Places.GetPlace",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPlace_async_flattened",
+      "title": "GetPlaceAsync",
+      "description": "Snippet for GetPlaceAsync",
+      "file": "PlacesClient.GetPlaceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPlaceAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPlaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.Place>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPlace",
+          "fullName": "google.maps.places.v1.Places.GetPlace",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPlace_sync_flattened_resourceNames",
+      "title": "GetPlaceResourceNames",
+      "description": "Snippet for GetPlace",
+      "file": "PlacesClient.GetPlaceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPlace",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPlace",
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.PlaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.Place",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPlace",
+          "fullName": "google.maps.places.v1.Places.GetPlace",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_GetPlace_async_flattened_resourceNames",
+      "title": "GetPlaceResourceNamesAsync",
+      "description": "Snippet for GetPlaceAsync",
+      "file": "PlacesClient.GetPlaceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPlaceAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.GetPlaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.PlaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.Place>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "GetPlace",
+          "fullName": "google.maps.places.v1.Places.GetPlace",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_AutocompletePlaces_sync",
+      "title": "AutocompletePlacesRequestObject",
+      "description": "Snippet for AutocompletePlaces",
+      "file": "PlacesClient.AutocompletePlacesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AutocompletePlaces",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.AutocompletePlaces",
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.AutocompletePlacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Places.V1.AutocompletePlacesResponse",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "AutocompletePlaces",
+          "fullName": "google.maps.places.v1.Places.AutocompletePlaces",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 56,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 54,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "places_v1_generated_Places_AutocompletePlaces_async",
+      "title": "AutocompletePlacesRequestObjectAsync",
+      "description": "Snippet for AutocompletePlacesAsync",
+      "file": "PlacesClient.AutocompletePlacesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AutocompletePlacesAsync",
+        "fullName": "Google.Maps.Places.V1.PlacesClient.AutocompletePlacesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Places.V1.AutocompletePlacesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Places.V1.AutocompletePlacesResponse>",
+        "client": {
+          "shortName": "PlacesClient",
+          "fullName": "Google.Maps.Places.V1.PlacesClient"
+        },
+        "method": {
+          "shortName": "AutocompletePlaces",
+          "fullName": "google.maps.places.v1.Places.AutocompletePlaces",
+          "service": {
+            "shortName": "Places",
+            "fullName": "google.maps.places.v1.Places"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 57,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 55,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

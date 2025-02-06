@@ -1,0 +1,208 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.RouteOptimization.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.routeoptimization.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "routeoptimization_v1_generated_RouteOptimization_OptimizeTours_sync",
+      "title": "OptimizeToursRequestObject",
+      "description": "Snippet for OptimizeTours",
+      "file": "RouteOptimizationClient.OptimizeToursRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "OptimizeTours",
+        "fullName": "Google.Maps.RouteOptimization.V1.RouteOptimizationClient.OptimizeTours",
+        "parameters": [
+          {
+            "type": "Google.Maps.RouteOptimization.V1.OptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.RouteOptimization.V1.OptimizeToursResponse",
+        "client": {
+          "shortName": "RouteOptimizationClient",
+          "fullName": "Google.Maps.RouteOptimization.V1.RouteOptimizationClient"
+        },
+        "method": {
+          "shortName": "OptimizeTours",
+          "fullName": "google.maps.routeoptimization.v1.RouteOptimization.OptimizeTours",
+          "service": {
+            "shortName": "RouteOptimization",
+            "fullName": "google.maps.routeoptimization.v1.RouteOptimization"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "routeoptimization_v1_generated_RouteOptimization_OptimizeTours_async",
+      "title": "OptimizeToursRequestObjectAsync",
+      "description": "Snippet for OptimizeToursAsync",
+      "file": "RouteOptimizationClient.OptimizeToursRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "OptimizeToursAsync",
+        "fullName": "Google.Maps.RouteOptimization.V1.RouteOptimizationClient.OptimizeToursAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.RouteOptimization.V1.OptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.RouteOptimization.V1.OptimizeToursResponse>",
+        "client": {
+          "shortName": "RouteOptimizationClient",
+          "fullName": "Google.Maps.RouteOptimization.V1.RouteOptimizationClient"
+        },
+        "method": {
+          "shortName": "OptimizeTours",
+          "fullName": "google.maps.routeoptimization.v1.RouteOptimization.OptimizeTours",
+          "service": {
+            "shortName": "RouteOptimization",
+            "fullName": "google.maps.routeoptimization.v1.RouteOptimization"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 68,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 66,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "routeoptimization_v1_generated_RouteOptimization_BatchOptimizeTours_sync",
+      "title": "BatchOptimizeToursRequestObject",
+      "description": "Snippet for BatchOptimizeTours",
+      "file": "RouteOptimizationClient.BatchOptimizeToursRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchOptimizeTours",
+        "fullName": "Google.Maps.RouteOptimization.V1.RouteOptimizationClient.BatchOptimizeTours",
+        "parameters": [
+          {
+            "type": "Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Maps.RouteOptimization.V1.BatchOptimizeToursResponse, Google.Maps.RouteOptimization.V1.BatchOptimizeToursMetadata>",
+        "client": {
+          "shortName": "RouteOptimizationClient",
+          "fullName": "Google.Maps.RouteOptimization.V1.RouteOptimizationClient"
+        },
+        "method": {
+          "shortName": "BatchOptimizeTours",
+          "fullName": "google.maps.routeoptimization.v1.RouteOptimization.BatchOptimizeTours",
+          "service": {
+            "shortName": "RouteOptimization",
+            "fullName": "google.maps.routeoptimization.v1.RouteOptimization"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "routeoptimization_v1_generated_RouteOptimization_BatchOptimizeTours_async",
+      "title": "BatchOptimizeToursRequestObjectAsync",
+      "description": "Snippet for BatchOptimizeToursAsync",
+      "file": "RouteOptimizationClient.BatchOptimizeToursRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchOptimizeToursAsync",
+        "fullName": "Google.Maps.RouteOptimization.V1.RouteOptimizationClient.BatchOptimizeToursAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.RouteOptimization.V1.BatchOptimizeToursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Maps.RouteOptimization.V1.BatchOptimizeToursResponse, Google.Maps.RouteOptimization.V1.BatchOptimizeToursMetadata>>",
+        "client": {
+          "shortName": "RouteOptimizationClient",
+          "fullName": "Google.Maps.RouteOptimization.V1.RouteOptimizationClient"
+        },
+        "method": {
+          "shortName": "BatchOptimizeTours",
+          "fullName": "google.maps.routeoptimization.v1.RouteOptimization.BatchOptimizeTours",
+          "service": {
+            "shortName": "RouteOptimization",
+            "fullName": "google.maps.routeoptimization.v1.RouteOptimization"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
