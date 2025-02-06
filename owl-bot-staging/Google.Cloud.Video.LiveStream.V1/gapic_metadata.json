@@ -1,0 +1,174 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.video.livestream.v1",
+  "libraryPackage": "Google.Cloud.Video.LiveStream.V1",
+  "services": {
+    "LivestreamService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LivestreamServiceClient",
+          "rpcs": {
+            "CreateAsset": {
+              "methods": [
+                "CreateAsset",
+                "CreateAssetAsync"
+              ]
+            },
+            "CreateChannel": {
+              "methods": [
+                "CreateChannel",
+                "CreateChannelAsync"
+              ]
+            },
+            "CreateClip": {
+              "methods": [
+                "CreateClip",
+                "CreateClipAsync"
+              ]
+            },
+            "CreateEvent": {
+              "methods": [
+                "CreateEvent",
+                "CreateEventAsync"
+              ]
+            },
+            "CreateInput": {
+              "methods": [
+                "CreateInput",
+                "CreateInputAsync"
+              ]
+            },
+            "DeleteAsset": {
+              "methods": [
+                "DeleteAsset",
+                "DeleteAssetAsync"
+              ]
+            },
+            "DeleteChannel": {
+              "methods": [
+                "DeleteChannel",
+                "DeleteChannelAsync"
+              ]
+            },
+            "DeleteClip": {
+              "methods": [
+                "DeleteClip",
+                "DeleteClipAsync"
+              ]
+            },
+            "DeleteEvent": {
+              "methods": [
+                "DeleteEvent",
+                "DeleteEventAsync"
+              ]
+            },
+            "DeleteInput": {
+              "methods": [
+                "DeleteInput",
+                "DeleteInputAsync"
+              ]
+            },
+            "GetAsset": {
+              "methods": [
+                "GetAsset",
+                "GetAssetAsync"
+              ]
+            },
+            "GetChannel": {
+              "methods": [
+                "GetChannel",
+                "GetChannelAsync"
+              ]
+            },
+            "GetClip": {
+              "methods": [
+                "GetClip",
+                "GetClipAsync"
+              ]
+            },
+            "GetEvent": {
+              "methods": [
+                "GetEvent",
+                "GetEventAsync"
+              ]
+            },
+            "GetInput": {
+              "methods": [
+                "GetInput",
+                "GetInputAsync"
+              ]
+            },
+            "GetPool": {
+              "methods": [
+                "GetPool",
+                "GetPoolAsync"
+              ]
+            },
+            "ListAssets": {
+              "methods": [
+                "ListAssets",
+                "ListAssetsAsync"
+              ]
+            },
+            "ListChannels": {
+              "methods": [
+                "ListChannels",
+                "ListChannelsAsync"
+              ]
+            },
+            "ListClips": {
+              "methods": [
+                "ListClips",
+                "ListClipsAsync"
+              ]
+            },
+            "ListEvents": {
+              "methods": [
+                "ListEvents",
+                "ListEventsAsync"
+              ]
+            },
+            "ListInputs": {
+              "methods": [
+                "ListInputs",
+                "ListInputsAsync"
+              ]
+            },
+            "StartChannel": {
+              "methods": [
+                "StartChannel",
+                "StartChannelAsync"
+              ]
+            },
+            "StopChannel": {
+              "methods": [
+                "StopChannel",
+                "StopChannelAsync"
+              ]
+            },
+            "UpdateChannel": {
+              "methods": [
+                "UpdateChannel",
+                "UpdateChannelAsync"
+              ]
+            },
+            "UpdateInput": {
+              "methods": [
+                "UpdateInput",
+                "UpdateInputAsync"
+              ]
+            },
+            "UpdatePool": {
+              "methods": [
+                "UpdatePool",
+                "UpdatePoolAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
