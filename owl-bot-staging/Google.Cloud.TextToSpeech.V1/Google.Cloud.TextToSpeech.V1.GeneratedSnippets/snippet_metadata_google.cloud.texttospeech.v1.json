@@ -1,0 +1,559 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.TextToSpeech.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.texttospeech.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_ListVoices_sync",
+      "title": "ListVoicesRequestObject",
+      "description": "Snippet for ListVoices",
+      "file": "TextToSpeechClient.ListVoicesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVoices",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.ListVoices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.ListVoicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.TextToSpeech.V1.ListVoicesResponse",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "ListVoices",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.ListVoices",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_ListVoices_async",
+      "title": "ListVoicesRequestObjectAsync",
+      "description": "Snippet for ListVoicesAsync",
+      "file": "TextToSpeechClient.ListVoicesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVoicesAsync",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.ListVoicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.ListVoicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.TextToSpeech.V1.ListVoicesResponse>",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "ListVoices",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.ListVoices",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_ListVoices_sync_flattened",
+      "title": "ListVoices",
+      "description": "Snippet for ListVoices",
+      "file": "TextToSpeechClient.ListVoicesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVoices",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.ListVoices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.TextToSpeech.V1.ListVoicesResponse",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "ListVoices",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.ListVoices",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_ListVoices_async_flattened",
+      "title": "ListVoicesAsync",
+      "description": "Snippet for ListVoicesAsync",
+      "file": "TextToSpeechClient.ListVoicesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVoicesAsync",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.ListVoicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "languageCode"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.TextToSpeech.V1.ListVoicesResponse>",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "ListVoices",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.ListVoices",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_SynthesizeSpeech_sync",
+      "title": "SynthesizeSpeechRequestObject",
+      "description": "Snippet for SynthesizeSpeech",
+      "file": "TextToSpeechClient.SynthesizeSpeechRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SynthesizeSpeech",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.SynthesizeSpeech",
+        "parameters": [
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "SynthesizeSpeech",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.SynthesizeSpeech",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_SynthesizeSpeech_async",
+      "title": "SynthesizeSpeechRequestObjectAsync",
+      "description": "Snippet for SynthesizeSpeechAsync",
+      "file": "TextToSpeechClient.SynthesizeSpeechRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SynthesizeSpeechAsync",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.SynthesizeSpeechAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.SynthesizeSpeechRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse>",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "SynthesizeSpeech",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.SynthesizeSpeech",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_SynthesizeSpeech_sync_flattened",
+      "title": "SynthesizeSpeech",
+      "description": "Snippet for SynthesizeSpeech",
+      "file": "TextToSpeechClient.SynthesizeSpeechSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SynthesizeSpeech",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.SynthesizeSpeech",
+        "parameters": [
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.SynthesisInput",
+            "name": "input"
+          },
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.VoiceSelectionParams",
+            "name": "voice"
+          },
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.AudioConfig",
+            "name": "audioConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "SynthesizeSpeech",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.SynthesizeSpeech",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_SynthesizeSpeech_async_flattened",
+      "title": "SynthesizeSpeechAsync",
+      "description": "Snippet for SynthesizeSpeechAsync",
+      "file": "TextToSpeechClient.SynthesizeSpeechAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SynthesizeSpeechAsync",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.SynthesizeSpeechAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.SynthesisInput",
+            "name": "input"
+          },
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.VoiceSelectionParams",
+            "name": "voice"
+          },
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.AudioConfig",
+            "name": "audioConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse>",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "SynthesizeSpeech",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.SynthesizeSpeech",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeech_StreamingSynthesize_sync",
+      "title": "StreamingSynthesize",
+      "description": "Snippet for StreamingSynthesize",
+      "file": "TextToSpeechClient.StreamingSynthesizeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamingSynthesize",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient.StreamingSynthesize",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient+StreamingSynthesizeStream",
+        "client": {
+          "shortName": "TextToSpeechClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechClient"
+        },
+        "method": {
+          "shortName": "StreamingSynthesize",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeech.StreamingSynthesize",
+          "service": {
+            "shortName": "TextToSpeech",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeech"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeechLongAudioSynthesize_SynthesizeLongAudio_sync",
+      "title": "SynthesizeLongAudioRequestObject",
+      "description": "Snippet for SynthesizeLongAudio",
+      "file": "TextToSpeechLongAudioSynthesizeClient.SynthesizeLongAudioRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SynthesizeLongAudio",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechLongAudioSynthesizeClient.SynthesizeLongAudio",
+        "parameters": [
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.SynthesizeLongAudioRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.TextToSpeech.V1.SynthesizeLongAudioResponse, Google.Cloud.TextToSpeech.V1.SynthesizeLongAudioMetadata>",
+        "client": {
+          "shortName": "TextToSpeechLongAudioSynthesizeClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechLongAudioSynthesizeClient"
+        },
+        "method": {
+          "shortName": "SynthesizeLongAudio",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeechLongAudioSynthesize.SynthesizeLongAudio",
+          "service": {
+            "shortName": "TextToSpeechLongAudioSynthesize",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeechLongAudioSynthesize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "texttospeech_v1_generated_TextToSpeechLongAudioSynthesize_SynthesizeLongAudio_async",
+      "title": "SynthesizeLongAudioRequestObjectAsync",
+      "description": "Snippet for SynthesizeLongAudioAsync",
+      "file": "TextToSpeechLongAudioSynthesizeClient.SynthesizeLongAudioRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SynthesizeLongAudioAsync",
+        "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechLongAudioSynthesizeClient.SynthesizeLongAudioAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.TextToSpeech.V1.SynthesizeLongAudioRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.TextToSpeech.V1.SynthesizeLongAudioResponse, Google.Cloud.TextToSpeech.V1.SynthesizeLongAudioMetadata>>",
+        "client": {
+          "shortName": "TextToSpeechLongAudioSynthesizeClient",
+          "fullName": "Google.Cloud.TextToSpeech.V1.TextToSpeechLongAudioSynthesizeClient"
+        },
+        "method": {
+          "shortName": "SynthesizeLongAudio",
+          "fullName": "google.cloud.texttospeech.v1.TextToSpeechLongAudioSynthesize.SynthesizeLongAudio",
+          "service": {
+            "shortName": "TextToSpeechLongAudioSynthesize",
+            "fullName": "google.cloud.texttospeech.v1.TextToSpeechLongAudioSynthesize"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

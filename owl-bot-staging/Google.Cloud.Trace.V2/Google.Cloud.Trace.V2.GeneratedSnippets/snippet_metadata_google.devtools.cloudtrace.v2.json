@@ -1,0 +1,411 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Trace.V2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.devtools.cloudtrace.v2",
+        "version": "v2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudtrace_v2_generated_TraceService_BatchWriteSpans_sync",
+      "title": "BatchWriteSpansRequestObject",
+      "description": "Snippet for BatchWriteSpans",
+      "file": "TraceServiceClient.BatchWriteSpansRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWriteSpans",
+        "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpans",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V2.BatchWriteSpansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWriteSpans",
+          "fullName": "google.devtools.cloudtrace.v2.TraceService.BatchWriteSpans",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v2.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v2_generated_TraceService_BatchWriteSpans_async",
+      "title": "BatchWriteSpansRequestObjectAsync",
+      "description": "Snippet for BatchWriteSpansAsync",
+      "file": "TraceServiceClient.BatchWriteSpansRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWriteSpansAsync",
+        "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpansAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V2.BatchWriteSpansRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWriteSpans",
+          "fullName": "google.devtools.cloudtrace.v2.TraceService.BatchWriteSpans",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v2.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v2_generated_TraceService_BatchWriteSpans_sync_flattened",
+      "title": "BatchWriteSpans",
+      "description": "Snippet for BatchWriteSpans",
+      "file": "TraceServiceClient.BatchWriteSpansSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWriteSpans",
+        "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpans",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Trace.V2.Span>",
+            "name": "spans"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWriteSpans",
+          "fullName": "google.devtools.cloudtrace.v2.TraceService.BatchWriteSpans",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v2.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v2_generated_TraceService_BatchWriteSpans_async_flattened",
+      "title": "BatchWriteSpansAsync",
+      "description": "Snippet for BatchWriteSpansAsync",
+      "file": "TraceServiceClient.BatchWriteSpansAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWriteSpansAsync",
+        "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpansAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Trace.V2.Span>",
+            "name": "spans"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWriteSpans",
+          "fullName": "google.devtools.cloudtrace.v2.TraceService.BatchWriteSpans",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v2.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v2_generated_TraceService_BatchWriteSpans_sync_flattened_resourceNames",
+      "title": "BatchWriteSpansResourceNames",
+      "description": "Snippet for BatchWriteSpans",
+      "file": "TraceServiceClient.BatchWriteSpansResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWriteSpans",
+        "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpans",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Trace.V2.Span>",
+            "name": "spans"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWriteSpans",
+          "fullName": "google.devtools.cloudtrace.v2.TraceService.BatchWriteSpans",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v2.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v2_generated_TraceService_BatchWriteSpans_async_flattened_resourceNames",
+      "title": "BatchWriteSpansResourceNamesAsync",
+      "description": "Snippet for BatchWriteSpansAsync",
+      "file": "TraceServiceClient.BatchWriteSpansResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "BatchWriteSpansAsync",
+        "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.BatchWriteSpansAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "name"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable<Google.Cloud.Trace.V2.Span>",
+            "name": "spans"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "BatchWriteSpans",
+          "fullName": "google.devtools.cloudtrace.v2.TraceService.BatchWriteSpans",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v2.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v2_generated_TraceService_CreateSpan_sync",
+      "title": "CreateSpanRequestObject",
+      "description": "Snippet for CreateSpan",
+      "file": "TraceServiceClient.CreateSpanRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSpan",
+        "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.CreateSpan",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V2.Span",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Trace.V2.Span",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSpan",
+          "fullName": "google.devtools.cloudtrace.v2.TraceService.CreateSpan",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v2.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v2_generated_TraceService_CreateSpan_async",
+      "title": "CreateSpanRequestObjectAsync",
+      "description": "Snippet for CreateSpanAsync",
+      "file": "TraceServiceClient.CreateSpanRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSpanAsync",
+        "fullName": "Google.Cloud.Trace.V2.TraceServiceClient.CreateSpanAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V2.Span",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Trace.V2.Span>",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V2.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSpan",
+          "fullName": "google.devtools.cloudtrace.v2.TraceService.CreateSpan",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v2.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

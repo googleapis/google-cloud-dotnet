@@ -1,0 +1,3022 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Storage.Control.V2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.storage.control.v2",
+        "version": "v2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateFolder_sync",
+      "title": "CreateFolderRequestObject",
+      "description": "Snippet for CreateFolder",
+      "file": "StorageControlClient.CreateFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.CreateFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.Folder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateFolder_async",
+      "title": "CreateFolderRequestObjectAsync",
+      "description": "Snippet for CreateFolderAsync",
+      "file": "StorageControlClient.CreateFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.CreateFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateFolder_sync_flattened",
+      "title": "CreateFolder",
+      "description": "Snippet for CreateFolder",
+      "file": "StorageControlClient.CreateFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "System.String",
+            "name": "folderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.Folder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateFolder_async_flattened",
+      "title": "CreateFolderAsync",
+      "description": "Snippet for CreateFolderAsync",
+      "file": "StorageControlClient.CreateFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "System.String",
+            "name": "folderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateFolder_sync_flattened_resourceNames",
+      "title": "CreateFolderResourceNames",
+      "description": "Snippet for CreateFolder",
+      "file": "StorageControlClient.CreateFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "System.String",
+            "name": "folderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.Folder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateFolder_async_flattened_resourceNames",
+      "title": "CreateFolderResourceNamesAsync",
+      "description": "Snippet for CreateFolderAsync",
+      "file": "StorageControlClient.CreateFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.Folder",
+            "name": "folder"
+          },
+          {
+            "type": "System.String",
+            "name": "folderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolder_sync",
+      "title": "DeleteFolderRequestObject",
+      "description": "Snippet for DeleteFolder",
+      "file": "StorageControlClient.DeleteFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DeleteFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolder_async",
+      "title": "DeleteFolderRequestObjectAsync",
+      "description": "Snippet for DeleteFolderAsync",
+      "file": "StorageControlClient.DeleteFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DeleteFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolder_sync_flattened",
+      "title": "DeleteFolder",
+      "description": "Snippet for DeleteFolder",
+      "file": "StorageControlClient.DeleteFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolder_async_flattened",
+      "title": "DeleteFolderAsync",
+      "description": "Snippet for DeleteFolderAsync",
+      "file": "StorageControlClient.DeleteFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolder_sync_flattened_resourceNames",
+      "title": "DeleteFolderResourceNames",
+      "description": "Snippet for DeleteFolder",
+      "file": "StorageControlClient.DeleteFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteFolder_async_flattened_resourceNames",
+      "title": "DeleteFolderResourceNamesAsync",
+      "description": "Snippet for DeleteFolderAsync",
+      "file": "StorageControlClient.DeleteFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolder_sync",
+      "title": "GetFolderRequestObject",
+      "description": "Snippet for GetFolder",
+      "file": "StorageControlClient.GetFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.Folder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolder_async",
+      "title": "GetFolderRequestObjectAsync",
+      "description": "Snippet for GetFolderAsync",
+      "file": "StorageControlClient.GetFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolder_sync_flattened",
+      "title": "GetFolder",
+      "description": "Snippet for GetFolder",
+      "file": "StorageControlClient.GetFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.Folder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolder_async_flattened",
+      "title": "GetFolderAsync",
+      "description": "Snippet for GetFolderAsync",
+      "file": "StorageControlClient.GetFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolder_sync_flattened_resourceNames",
+      "title": "GetFolderResourceNames",
+      "description": "Snippet for GetFolder",
+      "file": "StorageControlClient.GetFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.Folder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetFolder_async_flattened_resourceNames",
+      "title": "GetFolderResourceNamesAsync",
+      "description": "Snippet for GetFolderAsync",
+      "file": "StorageControlClient.GetFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListFolders_sync",
+      "title": "ListFoldersRequestObject",
+      "description": "Snippet for ListFolders",
+      "file": "StorageControlClient.ListFoldersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFolders",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListFolders",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListFoldersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListFoldersResponse, Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListFolders_async",
+      "title": "ListFoldersRequestObjectAsync",
+      "description": "Snippet for ListFoldersAsync",
+      "file": "StorageControlClient.ListFoldersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFoldersAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListFoldersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListFoldersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListFoldersResponse, Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 85,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 83,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListFolders_sync_flattened",
+      "title": "ListFolders",
+      "description": "Snippet for ListFolders",
+      "file": "StorageControlClient.ListFoldersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFolders",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListFolders",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListFoldersResponse, Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListFolders_async_flattened",
+      "title": "ListFoldersAsync",
+      "description": "Snippet for ListFoldersAsync",
+      "file": "StorageControlClient.ListFoldersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFoldersAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListFoldersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListFoldersResponse, Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListFolders_sync_flattened_resourceNames",
+      "title": "ListFoldersResourceNames",
+      "description": "Snippet for ListFolders",
+      "file": "StorageControlClient.ListFoldersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFolders",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListFolders",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListFoldersResponse, Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListFolders_async_flattened_resourceNames",
+      "title": "ListFoldersResourceNamesAsync",
+      "description": "Snippet for ListFoldersAsync",
+      "file": "StorageControlClient.ListFoldersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFoldersAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListFoldersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListFoldersResponse, Google.Cloud.Storage.Control.V2.Folder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_RenameFolder_sync",
+      "title": "RenameFolderRequestObject",
+      "description": "Snippet for RenameFolder",
+      "file": "StorageControlClient.RenameFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenameFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.RenameFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RenameFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.Folder, Google.Cloud.Storage.Control.V2.RenameFolderMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "RenameFolder",
+          "fullName": "google.storage.control.v2.StorageControl.RenameFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_RenameFolder_async",
+      "title": "RenameFolderRequestObjectAsync",
+      "description": "Snippet for RenameFolderAsync",
+      "file": "StorageControlClient.RenameFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenameFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.RenameFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.RenameFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.Folder, Google.Cloud.Storage.Control.V2.RenameFolderMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "RenameFolder",
+          "fullName": "google.storage.control.v2.StorageControl.RenameFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_RenameFolder_sync_flattened",
+      "title": "RenameFolder",
+      "description": "Snippet for RenameFolder",
+      "file": "StorageControlClient.RenameFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenameFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.RenameFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationFolderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.Folder, Google.Cloud.Storage.Control.V2.RenameFolderMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "RenameFolder",
+          "fullName": "google.storage.control.v2.StorageControl.RenameFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_RenameFolder_async_flattened",
+      "title": "RenameFolderAsync",
+      "description": "Snippet for RenameFolderAsync",
+      "file": "StorageControlClient.RenameFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenameFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.RenameFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationFolderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.Folder, Google.Cloud.Storage.Control.V2.RenameFolderMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "RenameFolder",
+          "fullName": "google.storage.control.v2.StorageControl.RenameFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_RenameFolder_sync_flattened_resourceNames",
+      "title": "RenameFolderResourceNames",
+      "description": "Snippet for RenameFolder",
+      "file": "StorageControlClient.RenameFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenameFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.RenameFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationFolderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.Folder, Google.Cloud.Storage.Control.V2.RenameFolderMetadata>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "RenameFolder",
+          "fullName": "google.storage.control.v2.StorageControl.RenameFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_RenameFolder_async_flattened_resourceNames",
+      "title": "RenameFolderResourceNamesAsync",
+      "description": "Snippet for RenameFolderAsync",
+      "file": "StorageControlClient.RenameFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenameFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.RenameFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "destinationFolderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Storage.Control.V2.Folder, Google.Cloud.Storage.Control.V2.RenameFolderMetadata>>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "RenameFolder",
+          "fullName": "google.storage.control.v2.StorageControl.RenameFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetStorageLayout_sync",
+      "title": "GetStorageLayoutRequestObject",
+      "description": "Snippet for GetStorageLayout",
+      "file": "StorageControlClient.GetStorageLayoutRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStorageLayout",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetStorageLayout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.StorageLayout",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetStorageLayout",
+          "fullName": "google.storage.control.v2.StorageControl.GetStorageLayout",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetStorageLayout_async",
+      "title": "GetStorageLayoutRequestObjectAsync",
+      "description": "Snippet for GetStorageLayoutAsync",
+      "file": "StorageControlClient.GetStorageLayoutRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStorageLayoutAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetStorageLayoutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetStorageLayoutRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.StorageLayout>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetStorageLayout",
+          "fullName": "google.storage.control.v2.StorageControl.GetStorageLayout",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetStorageLayout_sync_flattened",
+      "title": "GetStorageLayout",
+      "description": "Snippet for GetStorageLayout",
+      "file": "StorageControlClient.GetStorageLayoutSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStorageLayout",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetStorageLayout",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.StorageLayout",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetStorageLayout",
+          "fullName": "google.storage.control.v2.StorageControl.GetStorageLayout",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetStorageLayout_async_flattened",
+      "title": "GetStorageLayoutAsync",
+      "description": "Snippet for GetStorageLayoutAsync",
+      "file": "StorageControlClient.GetStorageLayoutAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStorageLayoutAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetStorageLayoutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.StorageLayout>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetStorageLayout",
+          "fullName": "google.storage.control.v2.StorageControl.GetStorageLayout",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetStorageLayout_sync_flattened_resourceNames",
+      "title": "GetStorageLayoutResourceNames",
+      "description": "Snippet for GetStorageLayout",
+      "file": "StorageControlClient.GetStorageLayoutResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStorageLayout",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetStorageLayout",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.StorageLayoutName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.StorageLayout",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetStorageLayout",
+          "fullName": "google.storage.control.v2.StorageControl.GetStorageLayout",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetStorageLayout_async_flattened_resourceNames",
+      "title": "GetStorageLayoutResourceNamesAsync",
+      "description": "Snippet for GetStorageLayoutAsync",
+      "file": "StorageControlClient.GetStorageLayoutResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetStorageLayoutAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetStorageLayoutAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.StorageLayoutName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.StorageLayout>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetStorageLayout",
+          "fullName": "google.storage.control.v2.StorageControl.GetStorageLayout",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateManagedFolder_sync",
+      "title": "CreateManagedFolderRequestObject",
+      "description": "Snippet for CreateManagedFolder",
+      "file": "StorageControlClient.CreateManagedFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateManagedFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateManagedFolder_async",
+      "title": "CreateManagedFolderRequestObjectAsync",
+      "description": "Snippet for CreateManagedFolderAsync",
+      "file": "StorageControlClient.CreateManagedFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.CreateManagedFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateManagedFolder_sync_flattened",
+      "title": "CreateManagedFolder",
+      "description": "Snippet for CreateManagedFolder",
+      "file": "StorageControlClient.CreateManagedFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateManagedFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+            "name": "managedFolder"
+          },
+          {
+            "type": "System.String",
+            "name": "managedFolderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateManagedFolder_async_flattened",
+      "title": "CreateManagedFolderAsync",
+      "description": "Snippet for CreateManagedFolderAsync",
+      "file": "StorageControlClient.CreateManagedFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+            "name": "managedFolder"
+          },
+          {
+            "type": "System.String",
+            "name": "managedFolderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateManagedFolder_sync_flattened_resourceNames",
+      "title": "CreateManagedFolderResourceNames",
+      "description": "Snippet for CreateManagedFolder",
+      "file": "StorageControlClient.CreateManagedFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateManagedFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+            "name": "managedFolder"
+          },
+          {
+            "type": "System.String",
+            "name": "managedFolderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_CreateManagedFolder_async_flattened_resourceNames",
+      "title": "CreateManagedFolderResourceNamesAsync",
+      "description": "Snippet for CreateManagedFolderAsync",
+      "file": "StorageControlClient.CreateManagedFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.CreateManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+            "name": "managedFolder"
+          },
+          {
+            "type": "System.String",
+            "name": "managedFolderId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "CreateManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.CreateManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteManagedFolder_sync",
+      "title": "DeleteManagedFolderRequestObject",
+      "description": "Snippet for DeleteManagedFolder",
+      "file": "StorageControlClient.DeleteManagedFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteManagedFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteManagedFolder_async",
+      "title": "DeleteManagedFolderRequestObjectAsync",
+      "description": "Snippet for DeleteManagedFolderAsync",
+      "file": "StorageControlClient.DeleteManagedFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteManagedFolder_sync_flattened",
+      "title": "DeleteManagedFolder",
+      "description": "Snippet for DeleteManagedFolder",
+      "file": "StorageControlClient.DeleteManagedFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteManagedFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteManagedFolder_async_flattened",
+      "title": "DeleteManagedFolderAsync",
+      "description": "Snippet for DeleteManagedFolderAsync",
+      "file": "StorageControlClient.DeleteManagedFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteManagedFolder_sync_flattened_resourceNames",
+      "title": "DeleteManagedFolderResourceNames",
+      "description": "Snippet for DeleteManagedFolder",
+      "file": "StorageControlClient.DeleteManagedFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteManagedFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_DeleteManagedFolder_async_flattened_resourceNames",
+      "title": "DeleteManagedFolderResourceNamesAsync",
+      "description": "Snippet for DeleteManagedFolderAsync",
+      "file": "StorageControlClient.DeleteManagedFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.DeleteManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "DeleteManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.DeleteManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetManagedFolder_sync",
+      "title": "GetManagedFolderRequestObject",
+      "description": "Snippet for GetManagedFolder",
+      "file": "StorageControlClient.GetManagedFolderRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetManagedFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetManagedFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetManagedFolder_async",
+      "title": "GetManagedFolderRequestObjectAsync",
+      "description": "Snippet for GetManagedFolderAsync",
+      "file": "StorageControlClient.GetManagedFolderRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetManagedFolderRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetManagedFolder_sync_flattened",
+      "title": "GetManagedFolder",
+      "description": "Snippet for GetManagedFolder",
+      "file": "StorageControlClient.GetManagedFolderSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetManagedFolder",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetManagedFolder_async_flattened",
+      "title": "GetManagedFolderAsync",
+      "description": "Snippet for GetManagedFolderAsync",
+      "file": "StorageControlClient.GetManagedFolderAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetManagedFolder_sync_flattened_resourceNames",
+      "title": "GetManagedFolderResourceNames",
+      "description": "Snippet for GetManagedFolder",
+      "file": "StorageControlClient.GetManagedFolderResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetManagedFolder",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetManagedFolder",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.ManagedFolder",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetManagedFolder_async_flattened_resourceNames",
+      "title": "GetManagedFolderResourceNamesAsync",
+      "description": "Snippet for GetManagedFolderAsync",
+      "file": "StorageControlClient.GetManagedFolderResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetManagedFolderAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetManagedFolderAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ManagedFolderName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetManagedFolder",
+          "fullName": "google.storage.control.v2.StorageControl.GetManagedFolder",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListManagedFolders_sync",
+      "title": "ListManagedFoldersRequestObject",
+      "description": "Snippet for ListManagedFolders",
+      "file": "StorageControlClient.ListManagedFoldersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListManagedFolders",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListManagedFolders",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse, Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListManagedFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListManagedFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListManagedFolders_async",
+      "title": "ListManagedFoldersRequestObjectAsync",
+      "description": "Snippet for ListManagedFoldersAsync",
+      "file": "StorageControlClient.ListManagedFoldersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListManagedFoldersAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListManagedFoldersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse, Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListManagedFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListManagedFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListManagedFolders_sync_flattened",
+      "title": "ListManagedFolders",
+      "description": "Snippet for ListManagedFolders",
+      "file": "StorageControlClient.ListManagedFoldersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListManagedFolders",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListManagedFolders",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse, Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListManagedFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListManagedFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListManagedFolders_async_flattened",
+      "title": "ListManagedFoldersAsync",
+      "description": "Snippet for ListManagedFoldersAsync",
+      "file": "StorageControlClient.ListManagedFoldersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListManagedFoldersAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListManagedFoldersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse, Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListManagedFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListManagedFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListManagedFolders_sync_flattened_resourceNames",
+      "title": "ListManagedFoldersResourceNames",
+      "description": "Snippet for ListManagedFolders",
+      "file": "StorageControlClient.ListManagedFoldersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListManagedFolders",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListManagedFolders",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse, Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListManagedFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListManagedFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListManagedFolders_async_flattened_resourceNames",
+      "title": "ListManagedFoldersResourceNamesAsync",
+      "description": "Snippet for ListManagedFoldersAsync",
+      "file": "StorageControlClient.ListManagedFoldersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListManagedFoldersAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListManagedFoldersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.BucketName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse, Google.Cloud.Storage.Control.V2.ManagedFolder>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListManagedFolders",
+          "fullName": "google.storage.control.v2.StorageControl.ListManagedFolders",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

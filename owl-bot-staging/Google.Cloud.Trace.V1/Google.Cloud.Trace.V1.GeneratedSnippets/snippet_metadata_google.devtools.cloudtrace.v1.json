@@ -1,0 +1,620 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Trace.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.devtools.cloudtrace.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_ListTraces_sync",
+      "title": "ListTracesRequestObject",
+      "description": "Snippet for ListTraces",
+      "file": "TraceServiceClient.ListTracesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTraces",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.ListTraces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.ListTracesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Trace.V1.ListTracesResponse, Google.Cloud.Trace.V1.Trace>",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "ListTraces",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.ListTraces",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_ListTraces_async",
+      "title": "ListTracesRequestObjectAsync",
+      "description": "Snippet for ListTracesAsync",
+      "file": "TraceServiceClient.ListTracesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTracesAsync",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.ListTracesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Trace.V1.ListTracesResponse, Google.Cloud.Trace.V1.Trace>",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "ListTraces",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.ListTraces",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 86,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 84,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_ListTraces_sync_flattened",
+      "title": "ListTraces",
+      "description": "Snippet for ListTraces",
+      "file": "TraceServiceClient.ListTracesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTraces",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.ListTraces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Trace.V1.ListTracesResponse, Google.Cloud.Trace.V1.Trace>",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "ListTraces",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.ListTraces",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_ListTraces_async_flattened",
+      "title": "ListTracesAsync",
+      "description": "Snippet for ListTracesAsync",
+      "file": "TraceServiceClient.ListTracesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTracesAsync",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.ListTracesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Trace.V1.ListTracesResponse, Google.Cloud.Trace.V1.Trace>",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "ListTraces",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.ListTraces",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_GetTrace_sync",
+      "title": "GetTraceRequestObject",
+      "description": "Snippet for GetTrace",
+      "file": "TraceServiceClient.GetTraceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrace",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.GetTrace",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.GetTraceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Trace.V1.Trace",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "GetTrace",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.GetTrace",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_GetTrace_async",
+      "title": "GetTraceRequestObjectAsync",
+      "description": "Snippet for GetTraceAsync",
+      "file": "TraceServiceClient.GetTraceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTraceAsync",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.GetTraceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Trace.V1.Trace>",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "GetTrace",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.GetTrace",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_GetTrace_sync_flattened",
+      "title": "GetTrace",
+      "description": "Snippet for GetTrace",
+      "file": "TraceServiceClient.GetTraceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTrace",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.GetTrace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "traceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Trace.V1.Trace",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "GetTrace",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.GetTrace",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_GetTrace_async_flattened",
+      "title": "GetTraceAsync",
+      "description": "Snippet for GetTraceAsync",
+      "file": "TraceServiceClient.GetTraceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTraceAsync",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.GetTraceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "System.String",
+            "name": "traceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Trace.V1.Trace>",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "GetTrace",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.GetTrace",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_PatchTraces_sync",
+      "title": "PatchTracesRequestObject",
+      "description": "Snippet for PatchTraces",
+      "file": "TraceServiceClient.PatchTracesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchTraces",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.PatchTracesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "PatchTraces",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.PatchTraces",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_PatchTraces_async",
+      "title": "PatchTracesRequestObjectAsync",
+      "description": "Snippet for PatchTracesAsync",
+      "file": "TraceServiceClient.PatchTracesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchTracesAsync",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Trace.V1.PatchTracesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "PatchTraces",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.PatchTraces",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_PatchTraces_sync_flattened",
+      "title": "PatchTraces",
+      "description": "Snippet for PatchTraces",
+      "file": "TraceServiceClient.PatchTracesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchTraces",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.PatchTraces",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Trace.V1.Traces",
+            "name": "traces"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "PatchTraces",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.PatchTraces",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudtrace_v1_generated_TraceService_PatchTraces_async_flattened",
+      "title": "PatchTracesAsync",
+      "description": "Snippet for PatchTracesAsync",
+      "file": "TraceServiceClient.PatchTracesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PatchTracesAsync",
+        "fullName": "Google.Cloud.Trace.V1.TraceServiceClient.PatchTracesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "projectId"
+          },
+          {
+            "type": "Google.Cloud.Trace.V1.Traces",
+            "name": "traces"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TraceServiceClient",
+          "fullName": "Google.Cloud.Trace.V1.TraceServiceClient"
+        },
+        "method": {
+          "shortName": "PatchTraces",
+          "fullName": "google.devtools.cloudtrace.v1.TraceService.PatchTraces",
+          "service": {
+            "shortName": "TraceService",
+            "fullName": "google.devtools.cloudtrace.v1.TraceService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
