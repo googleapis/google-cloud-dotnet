@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.17.0, released 2025-02-06
+
+No API surface changes; just product renaming.
+
 ## Version 3.16.0, released 2025-02-03
 
 ### New features
