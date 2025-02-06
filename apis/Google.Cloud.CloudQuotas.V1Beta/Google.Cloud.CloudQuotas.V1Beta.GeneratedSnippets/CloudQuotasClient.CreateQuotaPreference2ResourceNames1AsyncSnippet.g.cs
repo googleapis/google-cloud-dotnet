@@ -16,7 +16,8 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened2_resourceNames]
+    // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened2_resourceNames1]
+    using Google.Cloud;
     using Google.Cloud.CloudQuotas.V1Beta;
     using System.Threading.Tasks;
 
@@ -30,7 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task CreateQuotaPreference2ResourceNamesAsync()
+        public async Task CreateQuotaPreference2ResourceNames1Async()
         {
             // Create client
             CloudQuotasClient cloudQuotasClient = await CloudQuotasClient.CreateAsync();
@@ -41,5 +42,5 @@ namespace GoogleCSharpSnippets
             QuotaPreference response = await cloudQuotasClient.CreateQuotaPreferenceAsync(parent, quotaPreference);
         }
     }
-    // [END cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened2_resourceNames]
+    // [END cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened2_resourceNames1]
 }

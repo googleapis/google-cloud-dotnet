@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async]
+    using Google.Cloud;
     using Google.Cloud.CloudQuotas.V1Beta;
     using System.Threading.Tasks;
 

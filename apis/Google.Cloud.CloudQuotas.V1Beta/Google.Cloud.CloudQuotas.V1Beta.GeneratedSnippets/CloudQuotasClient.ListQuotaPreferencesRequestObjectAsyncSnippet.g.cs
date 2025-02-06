@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_async]
     using Google.Api.Gax;
+    using Google.Cloud;
     using Google.Cloud.CloudQuotas.V1Beta;
     using System;
     using System.Linq;

@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync]
+    // [START cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync_flattened_resourceNames1]
     using Google.Api.Gax;
     using Google.Cloud;
     using Google.Cloud.CloudQuotas.V1Beta;
@@ -32,19 +32,14 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListQuotaPreferencesRequestObject()
+        public void ListQuotaPreferencesResourceNames1()
         {
             // Create client
             CloudQuotasClient cloudQuotasClient = CloudQuotasClient.Create();
             // Initialize request argument(s)
-            ListQuotaPreferencesRequest request = new ListQuotaPreferencesRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Filter = "",
-                OrderBy = "",
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedEnumerable<ListQuotaPreferencesResponse, QuotaPreference> response = cloudQuotasClient.ListQuotaPreferences(request);
+            PagedEnumerable<ListQuotaPreferencesResponse, QuotaPreference> response = cloudQuotasClient.ListQuotaPreferences(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (QuotaPreference item in response)
@@ -79,5 +74,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync]
+    // [END cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync_flattened_resourceNames1]
 }

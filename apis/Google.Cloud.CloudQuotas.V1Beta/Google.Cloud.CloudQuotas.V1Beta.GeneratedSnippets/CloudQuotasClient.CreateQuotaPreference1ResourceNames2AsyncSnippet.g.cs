@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync]
-    using Google.Cloud;
+    // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened1_resourceNames2]
     using Google.Cloud.CloudQuotas.V1Beta;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudQuotasClientSnippets
     {
-        /// <summary>Snippet for CreateQuotaPreference</summary>
+        /// <summary>Snippet for CreateQuotaPreferenceAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,24 +30,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateQuotaPreferenceRequestObject()
+        public async Task CreateQuotaPreference1ResourceNames2Async()
         {
             // Create client
-            CloudQuotasClient cloudQuotasClient = CloudQuotasClient.Create();
+            CloudQuotasClient cloudQuotasClient = await CloudQuotasClient.CreateAsync();
             // Initialize request argument(s)
-            CreateQuotaPreferenceRequest request = new CreateQuotaPreferenceRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                QuotaPreferenceId = "",
-                QuotaPreference = new QuotaPreference(),
-                IgnoreSafetyChecks =
-                {
-                    QuotaSafetyCheck.Unspecified,
-                },
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            QuotaPreference quotaPreference = new QuotaPreference();
+            string quotaPreferenceId = "";
             // Make the request
-            QuotaPreference response = cloudQuotasClient.CreateQuotaPreference(request);
+            QuotaPreference response = await cloudQuotasClient.CreateQuotaPreferenceAsync(parent, quotaPreference, quotaPreferenceId);
         }
     }
-    // [END cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync]
+    // [END cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened1_resourceNames2]
 }

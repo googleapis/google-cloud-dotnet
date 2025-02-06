@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync]
+    // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened1_resourceNames1]
     using Google.Cloud;
     using Google.Cloud.CloudQuotas.V1Beta;
 
@@ -30,24 +30,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateQuotaPreferenceRequestObject()
+        public void CreateQuotaPreference1ResourceNames1()
         {
             // Create client
             CloudQuotasClient cloudQuotasClient = CloudQuotasClient.Create();
             // Initialize request argument(s)
-            CreateQuotaPreferenceRequest request = new CreateQuotaPreferenceRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                QuotaPreferenceId = "",
-                QuotaPreference = new QuotaPreference(),
-                IgnoreSafetyChecks =
-                {
-                    QuotaSafetyCheck.Unspecified,
-                },
-            };
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            QuotaPreference quotaPreference = new QuotaPreference();
+            string quotaPreferenceId = "";
             // Make the request
-            QuotaPreference response = cloudQuotasClient.CreateQuotaPreference(request);
+            QuotaPreference response = cloudQuotasClient.CreateQuotaPreference(parent, quotaPreference, quotaPreferenceId);
         }
     }
-    // [END cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync]
+    // [END cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened1_resourceNames1]
 }

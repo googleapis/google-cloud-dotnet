@@ -720,6 +720,39 @@ namespace Google.Cloud.CloudQuotas.V1Beta
             get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (LocationName.TryParse(Parent, out LocationName location))
+                {
+                    return location;
+                }
+                if (LocationName.TryParse(Parent, out LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
+            set => Parent = value?.ToString() ?? "";
+        }
     }
 
     public partial class GetQuotaPreferenceRequest
@@ -742,6 +775,39 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         public LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gax::IResourceName ParentAsResourceName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Parent))
+                {
+                    return null;
+                }
+                if (LocationName.TryParse(Parent, out LocationName location))
+                {
+                    return location;
+                }
+                if (LocationName.TryParse(Parent, out LocationName location))
+                {
+                    return location;
+                }
+                return gax::UnparsedResourceName.Parse(Parent);
+            }
             set => Parent = value?.ToString() ?? "";
         }
     }

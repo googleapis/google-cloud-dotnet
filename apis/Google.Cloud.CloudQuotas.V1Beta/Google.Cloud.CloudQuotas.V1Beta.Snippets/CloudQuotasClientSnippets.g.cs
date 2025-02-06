@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Cloud;
     using Google.Cloud.CloudQuotas.V1Beta;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -580,7 +581,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListQuotaPreferences</summary>
-        public void ListQuotaPreferencesResourceNames()
+        public void ListQuotaPreferencesResourceNames1()
         {
             // Snippet: ListQuotaPreferences(LocationName, string, int?, CallSettings)
             // Create client
@@ -625,7 +626,97 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for ListQuotaPreferencesAsync</summary>
-        public async Task ListQuotaPreferencesResourceNamesAsync()
+        public async Task ListQuotaPreferencesResourceNames1Async()
+        {
+            // Snippet: ListQuotaPreferencesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudQuotasClient cloudQuotasClient = await CloudQuotasClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListQuotaPreferencesResponse, QuotaPreference> response = cloudQuotasClient.ListQuotaPreferencesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((QuotaPreference item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListQuotaPreferencesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QuotaPreference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QuotaPreference> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QuotaPreference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQuotaPreferences</summary>
+        public void ListQuotaPreferencesResourceNames2()
+        {
+            // Snippet: ListQuotaPreferences(LocationName, string, int?, CallSettings)
+            // Create client
+            CloudQuotasClient cloudQuotasClient = CloudQuotasClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListQuotaPreferencesResponse, QuotaPreference> response = cloudQuotasClient.ListQuotaPreferences(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (QuotaPreference item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListQuotaPreferencesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (QuotaPreference item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<QuotaPreference> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (QuotaPreference item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListQuotaPreferencesAsync</summary>
+        public async Task ListQuotaPreferencesResourceNames2Async()
         {
             // Snippet: ListQuotaPreferencesAsync(LocationName, string, int?, CallSettings)
             // Create client
@@ -833,7 +924,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateQuotaPreference</summary>
-        public void CreateQuotaPreference1ResourceNames()
+        public void CreateQuotaPreference1ResourceNames1()
         {
             // Snippet: CreateQuotaPreference(LocationName, QuotaPreference, string, CallSettings)
             // Create client
@@ -848,7 +939,38 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateQuotaPreferenceAsync</summary>
-        public async Task CreateQuotaPreference1ResourceNamesAsync()
+        public async Task CreateQuotaPreference1ResourceNames1Async()
+        {
+            // Snippet: CreateQuotaPreferenceAsync(LocationName, QuotaPreference, string, CallSettings)
+            // Additional: CreateQuotaPreferenceAsync(LocationName, QuotaPreference, string, CancellationToken)
+            // Create client
+            CloudQuotasClient cloudQuotasClient = await CloudQuotasClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            QuotaPreference quotaPreference = new QuotaPreference();
+            string quotaPreferenceId = "";
+            // Make the request
+            QuotaPreference response = await cloudQuotasClient.CreateQuotaPreferenceAsync(parent, quotaPreference, quotaPreferenceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaPreference</summary>
+        public void CreateQuotaPreference1ResourceNames2()
+        {
+            // Snippet: CreateQuotaPreference(LocationName, QuotaPreference, string, CallSettings)
+            // Create client
+            CloudQuotasClient cloudQuotasClient = CloudQuotasClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            QuotaPreference quotaPreference = new QuotaPreference();
+            string quotaPreferenceId = "";
+            // Make the request
+            QuotaPreference response = cloudQuotasClient.CreateQuotaPreference(parent, quotaPreference, quotaPreferenceId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaPreferenceAsync</summary>
+        public async Task CreateQuotaPreference1ResourceNames2Async()
         {
             // Snippet: CreateQuotaPreferenceAsync(LocationName, QuotaPreference, string, CallSettings)
             // Additional: CreateQuotaPreferenceAsync(LocationName, QuotaPreference, string, CancellationToken)
@@ -893,7 +1015,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateQuotaPreference</summary>
-        public void CreateQuotaPreference2ResourceNames()
+        public void CreateQuotaPreference2ResourceNames1()
         {
             // Snippet: CreateQuotaPreference(LocationName, QuotaPreference, CallSettings)
             // Create client
@@ -907,7 +1029,36 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for CreateQuotaPreferenceAsync</summary>
-        public async Task CreateQuotaPreference2ResourceNamesAsync()
+        public async Task CreateQuotaPreference2ResourceNames1Async()
+        {
+            // Snippet: CreateQuotaPreferenceAsync(LocationName, QuotaPreference, CallSettings)
+            // Additional: CreateQuotaPreferenceAsync(LocationName, QuotaPreference, CancellationToken)
+            // Create client
+            CloudQuotasClient cloudQuotasClient = await CloudQuotasClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            QuotaPreference quotaPreference = new QuotaPreference();
+            // Make the request
+            QuotaPreference response = await cloudQuotasClient.CreateQuotaPreferenceAsync(parent, quotaPreference);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaPreference</summary>
+        public void CreateQuotaPreference2ResourceNames2()
+        {
+            // Snippet: CreateQuotaPreference(LocationName, QuotaPreference, CallSettings)
+            // Create client
+            CloudQuotasClient cloudQuotasClient = CloudQuotasClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            QuotaPreference quotaPreference = new QuotaPreference();
+            // Make the request
+            QuotaPreference response = cloudQuotasClient.CreateQuotaPreference(parent, quotaPreference);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateQuotaPreferenceAsync</summary>
+        public async Task CreateQuotaPreference2ResourceNames2Async()
         {
             // Snippet: CreateQuotaPreferenceAsync(LocationName, QuotaPreference, CallSettings)
             // Additional: CreateQuotaPreferenceAsync(LocationName, QuotaPreference, CancellationToken)
