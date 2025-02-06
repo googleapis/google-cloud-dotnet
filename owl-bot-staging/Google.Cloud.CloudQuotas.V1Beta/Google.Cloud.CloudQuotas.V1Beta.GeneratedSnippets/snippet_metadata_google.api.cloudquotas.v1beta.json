@@ -1,0 +1,2763 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.CloudQuotas.V1Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.api.cloudquotas.v1beta",
+        "version": "v1beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaInfos_sync",
+      "title": "ListQuotaInfosRequestObject",
+      "description": "Snippet for ListQuotaInfos",
+      "file": "CloudQuotasClient.ListQuotaInfosRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaInfos",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaInfos",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.ListQuotaInfosRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaInfosResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaInfos",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaInfos",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaInfos_async",
+      "title": "ListQuotaInfosRequestObjectAsync",
+      "description": "Snippet for ListQuotaInfosAsync",
+      "file": "CloudQuotasClient.ListQuotaInfosRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaInfosAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaInfosAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.ListQuotaInfosRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaInfosResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaInfos",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaInfos",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaInfos_sync_flattened",
+      "title": "ListQuotaInfos",
+      "description": "Snippet for ListQuotaInfos",
+      "file": "CloudQuotasClient.ListQuotaInfosSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaInfos",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaInfos",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaInfosResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaInfos",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaInfos",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaInfos_async_flattened",
+      "title": "ListQuotaInfosAsync",
+      "description": "Snippet for ListQuotaInfosAsync",
+      "file": "CloudQuotasClient.ListQuotaInfosAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaInfosAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaInfosAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaInfosResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaInfos",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaInfos",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaInfos_sync_flattened_resourceNames",
+      "title": "ListQuotaInfosResourceNames",
+      "description": "Snippet for ListQuotaInfos",
+      "file": "CloudQuotasClient.ListQuotaInfosResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaInfos",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaInfos",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaInfosResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaInfos",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaInfos",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaInfos_async_flattened_resourceNames",
+      "title": "ListQuotaInfosResourceNamesAsync",
+      "description": "Snippet for ListQuotaInfosAsync",
+      "file": "CloudQuotasClient.ListQuotaInfosResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaInfosAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaInfosAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.ServiceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaInfosResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaInfos",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaInfos",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaInfo_sync",
+      "title": "GetQuotaInfoRequestObject",
+      "description": "Snippet for GetQuotaInfo",
+      "file": "CloudQuotasClient.GetQuotaInfoRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaInfo",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.GetQuotaInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaInfo",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaInfo",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaInfo",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaInfo_async",
+      "title": "GetQuotaInfoRequestObjectAsync",
+      "description": "Snippet for GetQuotaInfoAsync",
+      "file": "CloudQuotasClient.GetQuotaInfoRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaInfoAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.GetQuotaInfoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaInfo",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaInfo",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaInfo_sync_flattened",
+      "title": "GetQuotaInfo",
+      "description": "Snippet for GetQuotaInfo",
+      "file": "CloudQuotasClient.GetQuotaInfoSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaInfo",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaInfo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaInfo",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaInfo",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaInfo",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaInfo_async_flattened",
+      "title": "GetQuotaInfoAsync",
+      "description": "Snippet for GetQuotaInfoAsync",
+      "file": "CloudQuotasClient.GetQuotaInfoAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaInfoAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaInfo",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaInfo",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaInfo_sync_flattened_resourceNames",
+      "title": "GetQuotaInfoResourceNames",
+      "description": "Snippet for GetQuotaInfo",
+      "file": "CloudQuotasClient.GetQuotaInfoResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaInfo",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaInfo",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaInfoName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaInfo",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaInfo",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaInfo",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaInfo_async_flattened_resourceNames",
+      "title": "GetQuotaInfoResourceNamesAsync",
+      "description": "Snippet for GetQuotaInfoAsync",
+      "file": "CloudQuotasClient.GetQuotaInfoResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaInfoAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaInfoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaInfoName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaInfo>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaInfo",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaInfo",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync",
+      "title": "ListQuotaPreferencesRequestObject",
+      "description": "Snippet for ListQuotaPreferences",
+      "file": "CloudQuotasClient.ListQuotaPreferencesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaPreferences",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaPreferences",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaPreferences",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaPreferences",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_async",
+      "title": "ListQuotaPreferencesRequestObjectAsync",
+      "description": "Snippet for ListQuotaPreferencesAsync",
+      "file": "CloudQuotasClient.ListQuotaPreferencesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaPreferencesAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaPreferencesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaPreferences",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaPreferences",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync_flattened",
+      "title": "ListQuotaPreferences",
+      "description": "Snippet for ListQuotaPreferences",
+      "file": "CloudQuotasClient.ListQuotaPreferencesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaPreferences",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaPreferences",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaPreferences",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaPreferences",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_async_flattened",
+      "title": "ListQuotaPreferencesAsync",
+      "description": "Snippet for ListQuotaPreferencesAsync",
+      "file": "CloudQuotasClient.ListQuotaPreferencesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaPreferencesAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaPreferencesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaPreferences",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaPreferences",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync_flattened_resourceNames1",
+      "title": "ListQuotaPreferencesResourceNames1",
+      "description": "Snippet for ListQuotaPreferences",
+      "file": "CloudQuotasClient.ListQuotaPreferencesResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaPreferences",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaPreferences",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaPreferences",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaPreferences",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_async_flattened_resourceNames1",
+      "title": "ListQuotaPreferencesResourceNames1Async",
+      "description": "Snippet for ListQuotaPreferencesAsync",
+      "file": "CloudQuotasClient.ListQuotaPreferencesResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaPreferencesAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaPreferencesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaPreferences",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaPreferences",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync_flattened_resourceNames2",
+      "title": "ListQuotaPreferencesResourceNames2",
+      "description": "Snippet for ListQuotaPreferences",
+      "file": "CloudQuotasClient.ListQuotaPreferencesResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaPreferences",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaPreferences",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaPreferences",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaPreferences",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_async_flattened_resourceNames2",
+      "title": "ListQuotaPreferencesResourceNames2Async",
+      "description": "Snippet for ListQuotaPreferencesAsync",
+      "file": "CloudQuotasClient.ListQuotaPreferencesResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListQuotaPreferencesAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.ListQuotaPreferencesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.CloudQuotas.V1Beta.ListQuotaPreferencesResponse, Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "ListQuotaPreferences",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.ListQuotaPreferences",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaPreference_sync",
+      "title": "GetQuotaPreferenceRequestObject",
+      "description": "Snippet for GetQuotaPreference",
+      "file": "CloudQuotasClient.GetQuotaPreferenceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.GetQuotaPreferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaPreference_async",
+      "title": "GetQuotaPreferenceRequestObjectAsync",
+      "description": "Snippet for GetQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.GetQuotaPreferenceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.GetQuotaPreferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaPreference_sync_flattened",
+      "title": "GetQuotaPreference",
+      "description": "Snippet for GetQuotaPreference",
+      "file": "CloudQuotasClient.GetQuotaPreferenceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaPreference",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaPreference_async_flattened",
+      "title": "GetQuotaPreferenceAsync",
+      "description": "Snippet for GetQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.GetQuotaPreferenceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaPreference_sync_flattened_resourceNames",
+      "title": "GetQuotaPreferenceResourceNames",
+      "description": "Snippet for GetQuotaPreference",
+      "file": "CloudQuotasClient.GetQuotaPreferenceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreferenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_GetQuotaPreference_async_flattened_resourceNames",
+      "title": "GetQuotaPreferenceResourceNamesAsync",
+      "description": "Snippet for GetQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.GetQuotaPreferenceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.GetQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreferenceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "GetQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.GetQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync",
+      "title": "CreateQuotaPreferenceRequestObject",
+      "description": "Snippet for CreateQuotaPreference",
+      "file": "CloudQuotasClient.CreateQuotaPreferenceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.CreateQuotaPreferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async",
+      "title": "CreateQuotaPreferenceRequestObjectAsync",
+      "description": "Snippet for CreateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.CreateQuotaPreferenceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.CreateQuotaPreferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened1",
+      "title": "CreateQuotaPreference1",
+      "description": "Snippet for CreateQuotaPreference",
+      "file": "CloudQuotasClient.CreateQuotaPreference1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreference",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaPreferenceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened1",
+      "title": "CreateQuotaPreference1Async",
+      "description": "Snippet for CreateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.CreateQuotaPreference1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaPreferenceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened1_resourceNames1",
+      "title": "CreateQuotaPreference1ResourceNames1",
+      "description": "Snippet for CreateQuotaPreference",
+      "file": "CloudQuotasClient.CreateQuotaPreference1ResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaPreferenceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened1_resourceNames1",
+      "title": "CreateQuotaPreference1ResourceNames1Async",
+      "description": "Snippet for CreateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.CreateQuotaPreference1ResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaPreferenceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened1_resourceNames2",
+      "title": "CreateQuotaPreference1ResourceNames2",
+      "description": "Snippet for CreateQuotaPreference",
+      "file": "CloudQuotasClient.CreateQuotaPreference1ResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaPreferenceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened1_resourceNames2",
+      "title": "CreateQuotaPreference1ResourceNames2Async",
+      "description": "Snippet for CreateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.CreateQuotaPreference1ResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "System.String",
+            "name": "quotaPreferenceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened2",
+      "title": "CreateQuotaPreference2",
+      "description": "Snippet for CreateQuotaPreference",
+      "file": "CloudQuotasClient.CreateQuotaPreference2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreference",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened2",
+      "title": "CreateQuotaPreference2Async",
+      "description": "Snippet for CreateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.CreateQuotaPreference2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened2_resourceNames1",
+      "title": "CreateQuotaPreference2ResourceNames1",
+      "description": "Snippet for CreateQuotaPreference",
+      "file": "CloudQuotasClient.CreateQuotaPreference2ResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened2_resourceNames1",
+      "title": "CreateQuotaPreference2ResourceNames1Async",
+      "description": "Snippet for CreateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.CreateQuotaPreference2ResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened2_resourceNames2",
+      "title": "CreateQuotaPreference2ResourceNames2",
+      "description": "Snippet for CreateQuotaPreference",
+      "file": "CloudQuotasClient.CreateQuotaPreference2ResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened2_resourceNames2",
+      "title": "CreateQuotaPreference2ResourceNames2Async",
+      "description": "Snippet for CreateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.CreateQuotaPreference2ResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.CreateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "CreateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.CreateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_UpdateQuotaPreference_sync",
+      "title": "UpdateQuotaPreferenceRequestObject",
+      "description": "Snippet for UpdateQuotaPreference",
+      "file": "CloudQuotasClient.UpdateQuotaPreferenceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.UpdateQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.UpdateQuotaPreferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.UpdateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_UpdateQuotaPreference_async",
+      "title": "UpdateQuotaPreferenceRequestObjectAsync",
+      "description": "Snippet for UpdateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.UpdateQuotaPreferenceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.UpdateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.UpdateQuotaPreferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.UpdateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_UpdateQuotaPreference_sync_flattened",
+      "title": "UpdateQuotaPreference",
+      "description": "Snippet for UpdateQuotaPreference",
+      "file": "CloudQuotasClient.UpdateQuotaPreferenceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaPreference",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.UpdateQuotaPreference",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.UpdateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_CloudQuotas_UpdateQuotaPreference_async_flattened",
+      "title": "UpdateQuotaPreferenceAsync",
+      "description": "Snippet for UpdateQuotaPreferenceAsync",
+      "file": "CloudQuotasClient.UpdateQuotaPreferenceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaPreferenceAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient.UpdateQuotaPreferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaPreference",
+            "name": "quotaPreference"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaPreference>",
+        "client": {
+          "shortName": "CloudQuotasClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.CloudQuotasClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaPreference",
+          "fullName": "google.api.cloudquotas.v1beta.CloudQuotas.UpdateQuotaPreference",
+          "service": {
+            "shortName": "CloudQuotas",
+            "fullName": "google.api.cloudquotas.v1beta.CloudQuotas"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_UpdateQuotaAdjusterSettings_sync",
+      "title": "UpdateQuotaAdjusterSettingsRequestObject",
+      "description": "Snippet for UpdateQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.UpdateQuotaAdjusterSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.UpdateQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_UpdateQuotaAdjusterSettings_async",
+      "title": "UpdateQuotaAdjusterSettingsRequestObjectAsync",
+      "description": "Snippet for UpdateQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.UpdateQuotaAdjusterSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.UpdateQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_UpdateQuotaAdjusterSettings_sync_flattened",
+      "title": "UpdateQuotaAdjusterSettings",
+      "description": "Snippet for UpdateQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings",
+            "name": "quotaAdjusterSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.UpdateQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_UpdateQuotaAdjusterSettings_async_flattened",
+      "title": "UpdateQuotaAdjusterSettingsAsync",
+      "description": "Snippet for UpdateQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.UpdateQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings",
+            "name": "quotaAdjusterSettings"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "UpdateQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.UpdateQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_sync",
+      "title": "GetQuotaAdjusterSettingsRequestObject",
+      "description": "Snippet for GetQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.GetQuotaAdjusterSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_async",
+      "title": "GetQuotaAdjusterSettingsRequestObjectAsync",
+      "description": "Snippet for GetQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.GetQuotaAdjusterSettingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_sync_flattened",
+      "title": "GetQuotaAdjusterSettings",
+      "description": "Snippet for GetQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_async_flattened",
+      "title": "GetQuotaAdjusterSettingsAsync",
+      "description": "Snippet for GetQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_sync_flattened_resourceNames",
+      "title": "GetQuotaAdjusterSettingsResourceNames",
+      "description": "Snippet for GetQuotaAdjusterSettings",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettings",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudquotas_v1beta_generated_QuotaAdjusterSettingsManager_GetQuotaAdjusterSettings_async_flattened_resourceNames",
+      "title": "GetQuotaAdjusterSettingsResourceNamesAsync",
+      "description": "Snippet for GetQuotaAdjusterSettingsAsync",
+      "file": "QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetQuotaAdjusterSettingsAsync",
+        "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient.GetQuotaAdjusterSettingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettings>",
+        "client": {
+          "shortName": "QuotaAdjusterSettingsManagerClient",
+          "fullName": "Google.Cloud.CloudQuotas.V1Beta.QuotaAdjusterSettingsManagerClient"
+        },
+        "method": {
+          "shortName": "GetQuotaAdjusterSettings",
+          "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager.GetQuotaAdjusterSettings",
+          "service": {
+            "shortName": "QuotaAdjusterSettingsManager",
+            "fullName": "google.api.cloudquotas.v1beta.QuotaAdjusterSettingsManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
