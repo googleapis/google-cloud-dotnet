@@ -4,7 +4,7 @@
     <Version>1.2.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the AI Platform Notebooks API (v2), which is used to manage notebook resources in Google Cloud.</Description>
+    <Description>Recommended Google client library to access the Vertex AI Notebooks API (v2), which is used to manage notebook resources in Google Cloud.</Description>
     <PackageTags>ai;notebooks;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
