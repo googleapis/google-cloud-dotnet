@@ -1,0 +1,84 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.parametermanager.v1",
+  "libraryPackage": "Google.Cloud.ParameterManager.V1",
+  "services": {
+    "ParameterManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ParameterManagerClient",
+          "rpcs": {
+            "CreateParameter": {
+              "methods": [
+                "CreateParameter",
+                "CreateParameterAsync"
+              ]
+            },
+            "CreateParameterVersion": {
+              "methods": [
+                "CreateParameterVersion",
+                "CreateParameterVersionAsync"
+              ]
+            },
+            "DeleteParameter": {
+              "methods": [
+                "DeleteParameter",
+                "DeleteParameterAsync"
+              ]
+            },
+            "DeleteParameterVersion": {
+              "methods": [
+                "DeleteParameterVersion",
+                "DeleteParameterVersionAsync"
+              ]
+            },
+            "GetParameter": {
+              "methods": [
+                "GetParameter",
+                "GetParameterAsync"
+              ]
+            },
+            "GetParameterVersion": {
+              "methods": [
+                "GetParameterVersion",
+                "GetParameterVersionAsync"
+              ]
+            },
+            "ListParameterVersions": {
+              "methods": [
+                "ListParameterVersions",
+                "ListParameterVersionsAsync"
+              ]
+            },
+            "ListParameters": {
+              "methods": [
+                "ListParameters",
+                "ListParametersAsync"
+              ]
+            },
+            "RenderParameterVersion": {
+              "methods": [
+                "RenderParameterVersion",
+                "RenderParameterVersionAsync"
+              ]
+            },
+            "UpdateParameter": {
+              "methods": [
+                "UpdateParameter",
+                "UpdateParameterAsync"
+              ]
+            },
+            "UpdateParameterVersion": {
+              "methods": [
+                "UpdateParameterVersion",
+                "UpdateParameterVersionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2935 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.NetworkManagement.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.networkmanagement.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_sync",
+      "title": "ListConnectivityTestsRequestObject",
+      "description": "Snippet for ListConnectivityTests",
+      "file": "ReachabilityServiceClient.ListConnectivityTestsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectivityTests",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTests",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectivityTests",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.ListConnectivityTests",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_async",
+      "title": "ListConnectivityTestsRequestObjectAsync",
+      "description": "Snippet for ListConnectivityTestsAsync",
+      "file": "ReachabilityServiceClient.ListConnectivityTestsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectivityTestsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTestsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ListConnectivityTestsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectivityTests",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.ListConnectivityTests",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_sync_flattened",
+      "title": "ListConnectivityTests",
+      "description": "Snippet for ListConnectivityTests",
+      "file": "ReachabilityServiceClient.ListConnectivityTestsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectivityTests",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTests",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectivityTests",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.ListConnectivityTests",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_async_flattened",
+      "title": "ListConnectivityTestsAsync",
+      "description": "Snippet for ListConnectivityTestsAsync",
+      "file": "ReachabilityServiceClient.ListConnectivityTestsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectivityTestsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTestsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectivityTests",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.ListConnectivityTests",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_sync_flattened_resourceNames",
+      "title": "ListConnectivityTestsResourceNames",
+      "description": "Snippet for ListConnectivityTests",
+      "file": "ReachabilityServiceClient.ListConnectivityTestsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectivityTests",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTests",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectivityTests",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.ListConnectivityTests",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_ListConnectivityTests_async_flattened_resourceNames",
+      "title": "ListConnectivityTestsResourceNamesAsync",
+      "description": "Snippet for ListConnectivityTestsAsync",
+      "file": "ReachabilityServiceClient.ListConnectivityTestsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectivityTestsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.ListConnectivityTestsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListConnectivityTestsResponse, Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnectivityTests",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.ListConnectivityTests",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync",
+      "title": "GetConnectivityTestRequestObject",
+      "description": "Snippet for GetConnectivityTest",
+      "file": "ReachabilityServiceClient.GetConnectivityTestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.GetConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_async",
+      "title": "GetConnectivityTestRequestObjectAsync",
+      "description": "Snippet for GetConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.GetConnectivityTestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.GetConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.GetConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync_flattened",
+      "title": "GetConnectivityTest",
+      "description": "Snippet for GetConnectivityTest",
+      "file": "ReachabilityServiceClient.GetConnectivityTestSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTest",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.GetConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_async_flattened",
+      "title": "GetConnectivityTestAsync",
+      "description": "Snippet for GetConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.GetConnectivityTestAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.GetConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_sync_flattened_resourceNames",
+      "title": "GetConnectivityTestResourceNames",
+      "description": "Snippet for GetConnectivityTest",
+      "file": "ReachabilityServiceClient.GetConnectivityTestResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTestName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.GetConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_GetConnectivityTest_async_flattened_resourceNames",
+      "title": "GetConnectivityTestResourceNamesAsync",
+      "description": "Snippet for GetConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.GetConnectivityTestResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.GetConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTestName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.ConnectivityTest>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "GetConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.GetConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_sync",
+      "title": "CreateConnectivityTestRequestObject",
+      "description": "Snippet for CreateConnectivityTest",
+      "file": "ReachabilityServiceClient.CreateConnectivityTestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.CreateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_async",
+      "title": "CreateConnectivityTestRequestObjectAsync",
+      "description": "Snippet for CreateConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.CreateConnectivityTestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.CreateConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.CreateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_sync_flattened",
+      "title": "CreateConnectivityTest",
+      "description": "Snippet for CreateConnectivityTest",
+      "file": "ReachabilityServiceClient.CreateConnectivityTestSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTest",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "testId"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.CreateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_async_flattened",
+      "title": "CreateConnectivityTestAsync",
+      "description": "Snippet for CreateConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.CreateConnectivityTestAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "testId"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.CreateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_sync_flattened_resourceNames",
+      "title": "CreateConnectivityTestResourceNames",
+      "description": "Snippet for CreateConnectivityTest",
+      "file": "ReachabilityServiceClient.CreateConnectivityTestResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "testId"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.CreateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_CreateConnectivityTest_async_flattened_resourceNames",
+      "title": "CreateConnectivityTestResourceNamesAsync",
+      "description": "Snippet for CreateConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.CreateConnectivityTestResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.CreateConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "testId"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "CreateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.CreateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_UpdateConnectivityTest_sync",
+      "title": "UpdateConnectivityTestRequestObject",
+      "description": "Snippet for UpdateConnectivityTest",
+      "file": "ReachabilityServiceClient.UpdateConnectivityTestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.UpdateConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.UpdateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_UpdateConnectivityTest_async",
+      "title": "UpdateConnectivityTestRequestObjectAsync",
+      "description": "Snippet for UpdateConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.UpdateConnectivityTestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.UpdateConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.UpdateConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.UpdateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_UpdateConnectivityTest_sync_flattened",
+      "title": "UpdateConnectivityTest",
+      "description": "Snippet for UpdateConnectivityTest",
+      "file": "ReachabilityServiceClient.UpdateConnectivityTestSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.UpdateConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.UpdateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_UpdateConnectivityTest_async_flattened",
+      "title": "UpdateConnectivityTestAsync",
+      "description": "Snippet for UpdateConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.UpdateConnectivityTestAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.UpdateConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTest",
+            "name": "resource"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.UpdateConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_RerunConnectivityTest_sync",
+      "title": "RerunConnectivityTestRequestObject",
+      "description": "Snippet for RerunConnectivityTest",
+      "file": "ReachabilityServiceClient.RerunConnectivityTestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RerunConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.RerunConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "RerunConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.RerunConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_RerunConnectivityTest_async",
+      "title": "RerunConnectivityTestRequestObjectAsync",
+      "description": "Snippet for RerunConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.RerunConnectivityTestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RerunConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.RerunConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.RerunConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.ConnectivityTest, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "RerunConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.RerunConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync",
+      "title": "DeleteConnectivityTestRequestObject",
+      "description": "Snippet for DeleteConnectivityTest",
+      "file": "ReachabilityServiceClient.DeleteConnectivityTestRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.DeleteConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_async",
+      "title": "DeleteConnectivityTestRequestObjectAsync",
+      "description": "Snippet for DeleteConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.DeleteConnectivityTestRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.DeleteConnectivityTestRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.DeleteConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync_flattened",
+      "title": "DeleteConnectivityTest",
+      "description": "Snippet for DeleteConnectivityTest",
+      "file": "ReachabilityServiceClient.DeleteConnectivityTestSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTest",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.DeleteConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_async_flattened",
+      "title": "DeleteConnectivityTestAsync",
+      "description": "Snippet for DeleteConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.DeleteConnectivityTestAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.DeleteConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_sync_flattened_resourceNames",
+      "title": "DeleteConnectivityTestResourceNames",
+      "description": "Snippet for DeleteConnectivityTest",
+      "file": "ReachabilityServiceClient.DeleteConnectivityTestResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectivityTest",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTest",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTestName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.DeleteConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_ReachabilityService_DeleteConnectivityTest_async_flattened_resourceNames",
+      "title": "DeleteConnectivityTestResourceNamesAsync",
+      "description": "Snippet for DeleteConnectivityTestAsync",
+      "file": "ReachabilityServiceClient.DeleteConnectivityTestResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectivityTestAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient.DeleteConnectivityTestAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ConnectivityTestName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ReachabilityServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.ReachabilityServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectivityTest",
+          "fullName": "google.cloud.networkmanagement.v1.ReachabilityService.DeleteConnectivityTest",
+          "service": {
+            "shortName": "ReachabilityService",
+            "fullName": "google.cloud.networkmanagement.v1.ReachabilityService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_sync",
+      "title": "ListVpcFlowLogsConfigsRequestObject",
+      "description": "Snippet for ListVpcFlowLogsConfigs",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ListVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async",
+      "title": "ListVpcFlowLogsConfigsRequestObjectAsync",
+      "description": "Snippet for ListVpcFlowLogsConfigsAsync",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened",
+      "title": "ListVpcFlowLogsConfigs",
+      "description": "Snippet for ListVpcFlowLogsConfigs",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ListVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened",
+      "title": "ListVpcFlowLogsConfigsAsync",
+      "description": "Snippet for ListVpcFlowLogsConfigsAsync",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_sync_flattened_resourceNames",
+      "title": "ListVpcFlowLogsConfigsResourceNames",
+      "description": "Snippet for ListVpcFlowLogsConfigs",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigs",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ListVpcFlowLogsConfigs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_ListVpcFlowLogsConfigs_async_flattened_resourceNames",
+      "title": "ListVpcFlowLogsConfigsResourceNamesAsync",
+      "description": "Snippet for ListVpcFlowLogsConfigsAsync",
+      "file": "VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListVpcFlowLogsConfigsAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.ListVpcFlowLogsConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkManagement.V1.ListVpcFlowLogsConfigsResponse, Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "ListVpcFlowLogsConfigs",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.ListVpcFlowLogsConfigs",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_GetVpcFlowLogsConfig_sync",
+      "title": "GetVpcFlowLogsConfigRequestObject",
+      "description": "Snippet for GetVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.GetVpcFlowLogsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.GetVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_GetVpcFlowLogsConfig_async",
+      "title": "GetVpcFlowLogsConfigRequestObjectAsync",
+      "description": "Snippet for GetVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.GetVpcFlowLogsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.GetVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_GetVpcFlowLogsConfig_sync_flattened",
+      "title": "GetVpcFlowLogsConfig",
+      "description": "Snippet for GetVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.GetVpcFlowLogsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.GetVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_GetVpcFlowLogsConfig_async_flattened",
+      "title": "GetVpcFlowLogsConfigAsync",
+      "description": "Snippet for GetVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_GetVpcFlowLogsConfig_sync_flattened_resourceNames",
+      "title": "GetVpcFlowLogsConfigResourceNames",
+      "description": "Snippet for GetVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.GetVpcFlowLogsConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.GetVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_GetVpcFlowLogsConfig_async_flattened_resourceNames",
+      "title": "GetVpcFlowLogsConfigResourceNamesAsync",
+      "description": "Snippet for GetVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.GetVpcFlowLogsConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.GetVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "GetVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.GetVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_sync",
+      "title": "CreateVpcFlowLogsConfigRequestObject",
+      "description": "Snippet for CreateVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.CreateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_async",
+      "title": "CreateVpcFlowLogsConfigRequestObjectAsync",
+      "description": "Snippet for CreateVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.CreateVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_sync_flattened",
+      "title": "CreateVpcFlowLogsConfig",
+      "description": "Snippet for CreateVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.CreateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened",
+      "title": "CreateVpcFlowLogsConfigAsync",
+      "description": "Snippet for CreateVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_sync_flattened_resourceNames",
+      "title": "CreateVpcFlowLogsConfigResourceNames",
+      "description": "Snippet for CreateVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.CreateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_CreateVpcFlowLogsConfig_async_flattened_resourceNames",
+      "title": "CreateVpcFlowLogsConfigResourceNamesAsync",
+      "description": "Snippet for CreateVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.CreateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "vpcFlowLogsConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "CreateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.CreateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_UpdateVpcFlowLogsConfig_sync",
+      "title": "UpdateVpcFlowLogsConfigRequestObject",
+      "description": "Snippet for UpdateVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.UpdateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_UpdateVpcFlowLogsConfig_async",
+      "title": "UpdateVpcFlowLogsConfigRequestObjectAsync",
+      "description": "Snippet for UpdateVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.UpdateVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.UpdateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_UpdateVpcFlowLogsConfig_sync_flattened",
+      "title": "UpdateVpcFlowLogsConfig",
+      "description": "Snippet for UpdateVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.UpdateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_UpdateVpcFlowLogsConfig_async_flattened",
+      "title": "UpdateVpcFlowLogsConfigAsync",
+      "description": "Snippet for UpdateVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.UpdateVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig",
+            "name": "vpcFlowLogsConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfig, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.UpdateVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_DeleteVpcFlowLogsConfig_sync",
+      "title": "DeleteVpcFlowLogsConfigRequestObject",
+      "description": "Snippet for DeleteVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_DeleteVpcFlowLogsConfig_async",
+      "title": "DeleteVpcFlowLogsConfigRequestObjectAsync",
+      "description": "Snippet for DeleteVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.DeleteVpcFlowLogsConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_DeleteVpcFlowLogsConfig_sync_flattened",
+      "title": "DeleteVpcFlowLogsConfig",
+      "description": "Snippet for DeleteVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_DeleteVpcFlowLogsConfig_async_flattened",
+      "title": "DeleteVpcFlowLogsConfigAsync",
+      "description": "Snippet for DeleteVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_DeleteVpcFlowLogsConfig_sync_flattened_resourceNames",
+      "title": "DeleteVpcFlowLogsConfigResourceNames",
+      "description": "Snippet for DeleteVpcFlowLogsConfig",
+      "file": "VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfig",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkmanagement_v1_generated_VpcFlowLogsService_DeleteVpcFlowLogsConfig_async_flattened_resourceNames",
+      "title": "DeleteVpcFlowLogsConfigResourceNamesAsync",
+      "description": "Snippet for DeleteVpcFlowLogsConfigAsync",
+      "file": "VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVpcFlowLogsConfigAsync",
+        "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient.DeleteVpcFlowLogsConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkManagement.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "VpcFlowLogsServiceClient",
+          "fullName": "Google.Cloud.NetworkManagement.V1.VpcFlowLogsServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVpcFlowLogsConfig",
+          "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService.DeleteVpcFlowLogsConfig",
+          "service": {
+            "shortName": "VpcFlowLogsService",
+            "fullName": "google.cloud.networkmanagement.v1.VpcFlowLogsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
