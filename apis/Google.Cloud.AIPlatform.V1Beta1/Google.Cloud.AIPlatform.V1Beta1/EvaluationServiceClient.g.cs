@@ -21,6 +21,7 @@ using gciv = Google.Cloud.Iam.V1;
 using gcl = Google.Cloud.Location;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
+using lro = Google.LongRunning;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
@@ -47,6 +48,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             EvaluateInstancesSettings = existing.EvaluateInstancesSettings;
+            EvaluateDatasetSettings = existing.EvaluateDatasetSettings;
+            EvaluateDatasetOperationsSettings = existing.EvaluateDatasetOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -65,6 +68,36 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings EvaluateInstancesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EvaluationServiceClient.EvaluateDataset</c> and <c>EvaluationServiceClient.EvaluateDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EvaluateDatasetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EvaluationServiceClient.EvaluateDataset</c> and
+        /// <c>EvaluationServiceClient.EvaluateDatasetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings EvaluateDatasetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -249,6 +282,59 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<EvaluateInstancesResponse> EvaluateInstancesAsync(EvaluateInstancesRequest request, st::CancellationToken cancellationToken) =>
             EvaluateInstancesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Evaluates a dataset based on a set of given metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata> EvaluateDataset(EvaluateDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Evaluates a dataset based on a set of given metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>> EvaluateDatasetAsync(EvaluateDatasetRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Evaluates a dataset based on a set of given metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>> EvaluateDatasetAsync(EvaluateDatasetRequest request, st::CancellationToken cancellationToken) =>
+            EvaluateDatasetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>EvaluateDataset</c>.</summary>
+        public virtual lro::OperationsClient EvaluateDatasetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>EvaluateDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata> PollOnceEvaluateDataset(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EvaluateDatasetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>EvaluateDataset</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>> PollOnceEvaluateDatasetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), EvaluateDatasetOperationsClient, callSettings);
     }
 
     /// <summary>EvaluationService client wrapper implementation, for convenient use.</summary>
@@ -258,6 +344,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
     public sealed partial class EvaluationServiceClientImpl : EvaluationServiceClient
     {
         private readonly gaxgrpc::ApiCall<EvaluateInstancesRequest, EvaluateInstancesResponse> _callEvaluateInstances;
+
+        private readonly gaxgrpc::ApiCall<EvaluateDatasetRequest, lro::Operation> _callEvaluateDataset;
 
         /// <summary>
         /// Constructs a client wrapper for the EvaluationService service, with the specified gRPC client and settings.
@@ -274,17 +362,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            EvaluateDatasetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.EvaluateDatasetOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callEvaluateInstances = clientHelper.BuildApiCall<EvaluateInstancesRequest, EvaluateInstancesResponse>("EvaluateInstances", grpcClient.EvaluateInstancesAsync, grpcClient.EvaluateInstances, effectiveSettings.EvaluateInstancesSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callEvaluateInstances);
             Modify_EvaluateInstancesApiCall(ref _callEvaluateInstances);
+            _callEvaluateDataset = clientHelper.BuildApiCall<EvaluateDatasetRequest, lro::Operation>("EvaluateDataset", grpcClient.EvaluateDatasetAsync, grpcClient.EvaluateDataset, effectiveSettings.EvaluateDatasetSettings).WithGoogleRequestParam("location", request => request.Location);
+            Modify_ApiCall(ref _callEvaluateDataset);
+            Modify_EvaluateDatasetApiCall(ref _callEvaluateDataset);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_EvaluateInstancesApiCall(ref gaxgrpc::ApiCall<EvaluateInstancesRequest, EvaluateInstancesResponse> call);
+
+        partial void Modify_EvaluateDatasetApiCall(ref gaxgrpc::ApiCall<EvaluateDatasetRequest, lro::Operation> call);
 
         partial void OnConstruction(EvaluationService.EvaluationServiceClient grpcClient, EvaluationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -298,6 +392,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_EvaluateInstancesRequest(ref EvaluateInstancesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_EvaluateDatasetRequest(ref EvaluateDatasetRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Evaluates instances based on a given metric.
@@ -321,6 +417,47 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_EvaluateInstancesRequest(ref request, ref callSettings);
             return _callEvaluateInstances.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>EvaluateDataset</c>.</summary>
+        public override lro::OperationsClient EvaluateDatasetOperationsClient { get; }
+
+        /// <summary>
+        /// Evaluates a dataset based on a set of given metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata> EvaluateDataset(EvaluateDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EvaluateDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>(_callEvaluateDataset.Sync(request, callSettings), EvaluateDatasetOperationsClient);
+        }
+
+        /// <summary>
+        /// Evaluates a dataset based on a set of given metrics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>> EvaluateDatasetAsync(EvaluateDatasetRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EvaluateDatasetRequest(ref request, ref callSettings);
+            return new lro::Operation<EvaluateDatasetResponse, EvaluateDatasetOperationMetadata>(await _callEvaluateDataset.Async(request, callSettings).ConfigureAwait(false), EvaluateDatasetOperationsClient);
+        }
+    }
+
+    public static partial class EvaluationService
+    {
+        public partial class EvaluationServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
         }
     }
 

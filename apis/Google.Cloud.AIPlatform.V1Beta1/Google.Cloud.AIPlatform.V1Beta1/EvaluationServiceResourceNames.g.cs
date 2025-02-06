@@ -19,6 +19,18 @@ using gagr = Google.Api.Gax.ResourceNames;
 
 namespace Google.Cloud.AIPlatform.V1Beta1
 {
+    public partial class EvaluateDatasetRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Location"/> resource name property.
+        /// </summary>
+        public gagr::LocationName LocationAsLocationName
+        {
+            get => string.IsNullOrEmpty(Location) ? null : gagr::LocationName.Parse(Location, allowUnparsed: true);
+            set => Location = value?.ToString() ?? "";
+        }
+    }
+
     public partial class EvaluateInstancesRequest
     {
         /// <summary>

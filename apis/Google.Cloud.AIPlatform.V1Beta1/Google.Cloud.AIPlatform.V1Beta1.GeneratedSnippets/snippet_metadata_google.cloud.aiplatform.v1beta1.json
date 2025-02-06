@@ -9808,6 +9808,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_EvaluationService_EvaluateDataset_sync",
+      "title": "EvaluateDatasetRequestObject",
+      "description": "Snippet for EvaluateDataset",
+      "file": "EvaluationServiceClient.EvaluateDatasetRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EvaluateDataset",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceClient.EvaluateDataset",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetResponse, Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "EvaluateDataset",
+          "fullName": "google.cloud.aiplatform.v1beta1.EvaluationService.EvaluateDataset",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EvaluationService_EvaluateDataset_async",
+      "title": "EvaluateDatasetRequestObjectAsync",
+      "description": "Snippet for EvaluateDatasetAsync",
+      "file": "EvaluationServiceClient.EvaluateDatasetRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EvaluateDatasetAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceClient.EvaluateDatasetAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetResponse, Google.Cloud.AIPlatform.V1Beta1.EvaluateDatasetOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "EvaluateDataset",
+          "fullName": "google.cloud.aiplatform.v1beta1.EvaluationService.EvaluateDataset",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_ExtensionExecutionService_ExecuteExtension_sync",
       "title": "ExecuteExtensionRequestObject",
       "description": "Snippet for ExecuteExtension",
