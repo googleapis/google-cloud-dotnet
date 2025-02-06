@@ -1,0 +1,66 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.scheduler.v1",
+  "libraryPackage": "Google.Cloud.Scheduler.V1",
+  "services": {
+    "CloudScheduler": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudSchedulerClient",
+          "rpcs": {
+            "CreateJob": {
+              "methods": [
+                "CreateJob",
+                "CreateJobAsync"
+              ]
+            },
+            "DeleteJob": {
+              "methods": [
+                "DeleteJob",
+                "DeleteJobAsync"
+              ]
+            },
+            "GetJob": {
+              "methods": [
+                "GetJob",
+                "GetJobAsync"
+              ]
+            },
+            "ListJobs": {
+              "methods": [
+                "ListJobs",
+                "ListJobsAsync"
+              ]
+            },
+            "PauseJob": {
+              "methods": [
+                "PauseJob",
+                "PauseJobAsync"
+              ]
+            },
+            "ResumeJob": {
+              "methods": [
+                "ResumeJob",
+                "ResumeJobAsync"
+              ]
+            },
+            "RunJob": {
+              "methods": [
+                "RunJob",
+                "RunJobAsync"
+              ]
+            },
+            "UpdateJob": {
+              "methods": [
+                "UpdateJob",
+                "UpdateJobAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

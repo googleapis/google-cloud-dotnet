@@ -1,0 +1,933 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Profiler.V2",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.devtools.cloudprofiler.v2",
+        "version": "v2"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_sync",
+      "title": "ListProfilesRequestObject",
+      "description": "Snippet for ListProfiles",
+      "file": "ExportServiceClient.ListProfilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfiles",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.ListProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_async",
+      "title": "ListProfilesRequestObjectAsync",
+      "description": "Snippet for ListProfilesAsync",
+      "file": "ExportServiceClient.ListProfilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfilesAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.ListProfilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_sync_flattened",
+      "title": "ListProfiles",
+      "description": "Snippet for ListProfiles",
+      "file": "ExportServiceClient.ListProfilesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfiles",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfiles",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_async_flattened",
+      "title": "ListProfilesAsync",
+      "description": "Snippet for ListProfilesAsync",
+      "file": "ExportServiceClient.ListProfilesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfilesAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_sync_flattened_resourceNames",
+      "title": "ListProfilesResourceNames",
+      "description": "Snippet for ListProfiles",
+      "file": "ExportServiceClient.ListProfilesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfiles",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfiles",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ExportService_ListProfiles_async_flattened_resourceNames",
+      "title": "ListProfilesResourceNamesAsync",
+      "description": "Snippet for ListProfilesAsync",
+      "file": "ExportServiceClient.ListProfilesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProfilesAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient.ListProfilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Profiler.V2.ListProfilesResponse, Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ExportServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ExportServiceClient"
+        },
+        "method": {
+          "shortName": "ListProfiles",
+          "fullName": "google.devtools.cloudprofiler.v2.ExportService.ListProfiles",
+          "service": {
+            "shortName": "ExportService",
+            "fullName": "google.devtools.cloudprofiler.v2.ExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateProfile_sync",
+      "title": "CreateProfileRequestObject",
+      "description": "Snippet for CreateProfile",
+      "file": "ProfilerServiceClient.CreateProfileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateProfile",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.CreateProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Profiler.V2.Profile",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "CreateProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.CreateProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateProfile_async",
+      "title": "CreateProfileRequestObjectAsync",
+      "description": "Snippet for CreateProfileAsync",
+      "file": "ProfilerServiceClient.CreateProfileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateProfileAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.CreateProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "CreateProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.CreateProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_sync",
+      "title": "CreateOfflineProfileRequestObject",
+      "description": "Snippet for CreateOfflineProfile",
+      "file": "ProfilerServiceClient.CreateOfflineProfileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOfflineProfile",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateOfflineProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.CreateOfflineProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Profiler.V2.Profile",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOfflineProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.CreateOfflineProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async",
+      "title": "CreateOfflineProfileRequestObjectAsync",
+      "description": "Snippet for CreateOfflineProfileAsync",
+      "file": "ProfilerServiceClient.CreateOfflineProfileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOfflineProfileAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateOfflineProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.CreateOfflineProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOfflineProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.CreateOfflineProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_sync_flattened",
+      "title": "CreateOfflineProfile",
+      "description": "Snippet for CreateOfflineProfile",
+      "file": "ProfilerServiceClient.CreateOfflineProfileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOfflineProfile",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateOfflineProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Profiler.V2.Profile",
+            "name": "profile"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Profiler.V2.Profile",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOfflineProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.CreateOfflineProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async_flattened",
+      "title": "CreateOfflineProfileAsync",
+      "description": "Snippet for CreateOfflineProfileAsync",
+      "file": "ProfilerServiceClient.CreateOfflineProfileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOfflineProfileAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateOfflineProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Profiler.V2.Profile",
+            "name": "profile"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOfflineProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.CreateOfflineProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_sync_flattened_resourceNames",
+      "title": "CreateOfflineProfileResourceNames",
+      "description": "Snippet for CreateOfflineProfile",
+      "file": "ProfilerServiceClient.CreateOfflineProfileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOfflineProfile",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateOfflineProfile",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Profiler.V2.Profile",
+            "name": "profile"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Profiler.V2.Profile",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOfflineProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.CreateOfflineProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_CreateOfflineProfile_async_flattened_resourceNames",
+      "title": "CreateOfflineProfileResourceNamesAsync",
+      "description": "Snippet for CreateOfflineProfileAsync",
+      "file": "ProfilerServiceClient.CreateOfflineProfileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateOfflineProfileAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.CreateOfflineProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Profiler.V2.Profile",
+            "name": "profile"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "CreateOfflineProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.CreateOfflineProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_UpdateProfile_sync",
+      "title": "UpdateProfileRequestObject",
+      "description": "Snippet for UpdateProfile",
+      "file": "ProfilerServiceClient.UpdateProfileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProfile",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.UpdateProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.UpdateProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Profiler.V2.Profile",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.UpdateProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_UpdateProfile_async",
+      "title": "UpdateProfileRequestObjectAsync",
+      "description": "Snippet for UpdateProfileAsync",
+      "file": "ProfilerServiceClient.UpdateProfileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProfileAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.UpdateProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.UpdateProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.UpdateProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_UpdateProfile_sync_flattened",
+      "title": "UpdateProfile",
+      "description": "Snippet for UpdateProfile",
+      "file": "ProfilerServiceClient.UpdateProfileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProfile",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.UpdateProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.Profile",
+            "name": "profile"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Profiler.V2.Profile",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.UpdateProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprofiler_v2_generated_ProfilerService_UpdateProfile_async_flattened",
+      "title": "UpdateProfileAsync",
+      "description": "Snippet for UpdateProfileAsync",
+      "file": "ProfilerServiceClient.UpdateProfileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProfileAsync",
+        "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient.UpdateProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Profiler.V2.Profile",
+            "name": "profile"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Profiler.V2.Profile>",
+        "client": {
+          "shortName": "ProfilerServiceClient",
+          "fullName": "Google.Cloud.Profiler.V2.ProfilerServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateProfile",
+          "fullName": "google.devtools.cloudprofiler.v2.ProfilerService.UpdateProfile",
+          "service": {
+            "shortName": "ProfilerService",
+            "fullName": "google.devtools.cloudprofiler.v2.ProfilerService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

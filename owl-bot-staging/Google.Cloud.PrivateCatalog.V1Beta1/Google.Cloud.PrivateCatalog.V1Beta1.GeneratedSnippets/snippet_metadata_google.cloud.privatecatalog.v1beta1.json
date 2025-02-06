@@ -1,0 +1,305 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.PrivateCatalog.V1Beta1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.privatecatalog.v1beta1",
+        "version": "v1beta1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchCatalogs_sync",
+      "title": "SearchCatalogsRequestObject",
+      "description": "Snippet for SearchCatalogs",
+      "file": "PrivateCatalogClient.SearchCatalogsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCatalogs",
+        "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchCatalogs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Catalog>",
+        "client": {
+          "shortName": "PrivateCatalogClient",
+          "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient"
+        },
+        "method": {
+          "shortName": "SearchCatalogs",
+          "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchCatalogs",
+          "service": {
+            "shortName": "PrivateCatalog",
+            "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchCatalogs_async",
+      "title": "SearchCatalogsRequestObjectAsync",
+      "description": "Snippet for SearchCatalogsAsync",
+      "file": "PrivateCatalogClient.SearchCatalogsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchCatalogsAsync",
+        "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchCatalogsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchCatalogsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Catalog>",
+        "client": {
+          "shortName": "PrivateCatalogClient",
+          "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient"
+        },
+        "method": {
+          "shortName": "SearchCatalogs",
+          "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchCatalogs",
+          "service": {
+            "shortName": "PrivateCatalog",
+            "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchProducts_sync",
+      "title": "SearchProductsRequestObject",
+      "description": "Snippet for SearchProducts",
+      "file": "PrivateCatalogClient.SearchProductsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchProducts",
+        "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchProductsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Product>",
+        "client": {
+          "shortName": "PrivateCatalogClient",
+          "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient"
+        },
+        "method": {
+          "shortName": "SearchProducts",
+          "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchProducts",
+          "service": {
+            "shortName": "PrivateCatalog",
+            "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchProducts_async",
+      "title": "SearchProductsRequestObjectAsync",
+      "description": "Snippet for SearchProductsAsync",
+      "file": "PrivateCatalogClient.SearchProductsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchProductsAsync",
+        "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchProductsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Product>",
+        "client": {
+          "shortName": "PrivateCatalogClient",
+          "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient"
+        },
+        "method": {
+          "shortName": "SearchProducts",
+          "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchProducts",
+          "service": {
+            "shortName": "PrivateCatalog",
+            "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchVersions_sync",
+      "title": "SearchVersionsRequestObject",
+      "description": "Snippet for SearchVersions",
+      "file": "PrivateCatalogClient.SearchVersionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchVersions",
+        "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchVersions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchVersionsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Version>",
+        "client": {
+          "shortName": "PrivateCatalogClient",
+          "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient"
+        },
+        "method": {
+          "shortName": "SearchVersions",
+          "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchVersions",
+          "service": {
+            "shortName": "PrivateCatalog",
+            "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudprivatecatalog_v1beta1_generated_PrivateCatalog_SearchVersions_async",
+      "title": "SearchVersionsRequestObjectAsync",
+      "description": "Snippet for SearchVersionsAsync",
+      "file": "PrivateCatalogClient.SearchVersionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchVersionsAsync",
+        "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient.SearchVersionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.PrivateCatalog.V1Beta1.SearchVersionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.PrivateCatalog.V1Beta1.SearchVersionsResponse, Google.Cloud.PrivateCatalog.V1Beta1.Version>",
+        "client": {
+          "shortName": "PrivateCatalogClient",
+          "fullName": "Google.Cloud.PrivateCatalog.V1Beta1.PrivateCatalogClient"
+        },
+        "method": {
+          "shortName": "SearchVersions",
+          "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog.SearchVersions",
+          "service": {
+            "shortName": "PrivateCatalog",
+            "fullName": "google.cloud.privatecatalog.v1beta1.PrivateCatalog"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
