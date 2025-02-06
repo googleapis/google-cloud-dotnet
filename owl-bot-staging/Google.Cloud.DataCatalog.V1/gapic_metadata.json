@@ -1,0 +1,354 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.datacatalog.v1",
+  "libraryPackage": "Google.Cloud.DataCatalog.V1",
+  "services": {
+    "DataCatalog": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataCatalogClient",
+          "rpcs": {
+            "CreateEntry": {
+              "methods": [
+                "CreateEntry",
+                "CreateEntryAsync"
+              ]
+            },
+            "CreateEntryGroup": {
+              "methods": [
+                "CreateEntryGroup",
+                "CreateEntryGroupAsync"
+              ]
+            },
+            "CreateTag": {
+              "methods": [
+                "CreateTag",
+                "CreateTagAsync"
+              ]
+            },
+            "CreateTagTemplate": {
+              "methods": [
+                "CreateTagTemplate",
+                "CreateTagTemplateAsync"
+              ]
+            },
+            "CreateTagTemplateField": {
+              "methods": [
+                "CreateTagTemplateField",
+                "CreateTagTemplateFieldAsync"
+              ]
+            },
+            "DeleteEntry": {
+              "methods": [
+                "DeleteEntry",
+                "DeleteEntryAsync"
+              ]
+            },
+            "DeleteEntryGroup": {
+              "methods": [
+                "DeleteEntryGroup",
+                "DeleteEntryGroupAsync"
+              ]
+            },
+            "DeleteTag": {
+              "methods": [
+                "DeleteTag",
+                "DeleteTagAsync"
+              ]
+            },
+            "DeleteTagTemplate": {
+              "methods": [
+                "DeleteTagTemplate",
+                "DeleteTagTemplateAsync"
+              ]
+            },
+            "DeleteTagTemplateField": {
+              "methods": [
+                "DeleteTagTemplateField",
+                "DeleteTagTemplateFieldAsync"
+              ]
+            },
+            "GetEntry": {
+              "methods": [
+                "GetEntry",
+                "GetEntryAsync"
+              ]
+            },
+            "GetEntryGroup": {
+              "methods": [
+                "GetEntryGroup",
+                "GetEntryGroupAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetTagTemplate": {
+              "methods": [
+                "GetTagTemplate",
+                "GetTagTemplateAsync"
+              ]
+            },
+            "ImportEntries": {
+              "methods": [
+                "ImportEntries",
+                "ImportEntriesAsync"
+              ]
+            },
+            "ListEntries": {
+              "methods": [
+                "ListEntries",
+                "ListEntriesAsync"
+              ]
+            },
+            "ListEntryGroups": {
+              "methods": [
+                "ListEntryGroups",
+                "ListEntryGroupsAsync"
+              ]
+            },
+            "ListTags": {
+              "methods": [
+                "ListTags",
+                "ListTagsAsync"
+              ]
+            },
+            "LookupEntry": {
+              "methods": [
+                "LookupEntry",
+                "LookupEntryAsync"
+              ]
+            },
+            "ModifyEntryContacts": {
+              "methods": [
+                "ModifyEntryContacts",
+                "ModifyEntryContactsAsync"
+              ]
+            },
+            "ModifyEntryOverview": {
+              "methods": [
+                "ModifyEntryOverview",
+                "ModifyEntryOverviewAsync"
+              ]
+            },
+            "ReconcileTags": {
+              "methods": [
+                "ReconcileTags",
+                "ReconcileTagsAsync"
+              ]
+            },
+            "RenameTagTemplateField": {
+              "methods": [
+                "RenameTagTemplateField",
+                "RenameTagTemplateFieldAsync"
+              ]
+            },
+            "RenameTagTemplateFieldEnumValue": {
+              "methods": [
+                "RenameTagTemplateFieldEnumValue",
+                "RenameTagTemplateFieldEnumValueAsync"
+              ]
+            },
+            "RetrieveConfig": {
+              "methods": [
+                "RetrieveConfig",
+                "RetrieveConfigAsync"
+              ]
+            },
+            "RetrieveEffectiveConfig": {
+              "methods": [
+                "RetrieveEffectiveConfig",
+                "RetrieveEffectiveConfigAsync"
+              ]
+            },
+            "SearchCatalog": {
+              "methods": [
+                "SearchCatalog",
+                "SearchCatalogAsync"
+              ]
+            },
+            "SetConfig": {
+              "methods": [
+                "SetConfig",
+                "SetConfigAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "StarEntry": {
+              "methods": [
+                "StarEntry",
+                "StarEntryAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UnstarEntry": {
+              "methods": [
+                "UnstarEntry",
+                "UnstarEntryAsync"
+              ]
+            },
+            "UpdateEntry": {
+              "methods": [
+                "UpdateEntry",
+                "UpdateEntryAsync"
+              ]
+            },
+            "UpdateEntryGroup": {
+              "methods": [
+                "UpdateEntryGroup",
+                "UpdateEntryGroupAsync"
+              ]
+            },
+            "UpdateTag": {
+              "methods": [
+                "UpdateTag",
+                "UpdateTagAsync"
+              ]
+            },
+            "UpdateTagTemplate": {
+              "methods": [
+                "UpdateTagTemplate",
+                "UpdateTagTemplateAsync"
+              ]
+            },
+            "UpdateTagTemplateField": {
+              "methods": [
+                "UpdateTagTemplateField",
+                "UpdateTagTemplateFieldAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PolicyTagManager": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyTagManagerClient",
+          "rpcs": {
+            "CreatePolicyTag": {
+              "methods": [
+                "CreatePolicyTag",
+                "CreatePolicyTagAsync"
+              ]
+            },
+            "CreateTaxonomy": {
+              "methods": [
+                "CreateTaxonomy",
+                "CreateTaxonomyAsync"
+              ]
+            },
+            "DeletePolicyTag": {
+              "methods": [
+                "DeletePolicyTag",
+                "DeletePolicyTagAsync"
+              ]
+            },
+            "DeleteTaxonomy": {
+              "methods": [
+                "DeleteTaxonomy",
+                "DeleteTaxonomyAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetPolicyTag": {
+              "methods": [
+                "GetPolicyTag",
+                "GetPolicyTagAsync"
+              ]
+            },
+            "GetTaxonomy": {
+              "methods": [
+                "GetTaxonomy",
+                "GetTaxonomyAsync"
+              ]
+            },
+            "ListPolicyTags": {
+              "methods": [
+                "ListPolicyTags",
+                "ListPolicyTagsAsync"
+              ]
+            },
+            "ListTaxonomies": {
+              "methods": [
+                "ListTaxonomies",
+                "ListTaxonomiesAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdatePolicyTag": {
+              "methods": [
+                "UpdatePolicyTag",
+                "UpdatePolicyTagAsync"
+              ]
+            },
+            "UpdateTaxonomy": {
+              "methods": [
+                "UpdateTaxonomy",
+                "UpdateTaxonomyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PolicyTagManagerSerialization": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyTagManagerSerializationClient",
+          "rpcs": {
+            "ExportTaxonomies": {
+              "methods": [
+                "ExportTaxonomies",
+                "ExportTaxonomiesAsync"
+              ]
+            },
+            "ImportTaxonomies": {
+              "methods": [
+                "ImportTaxonomies",
+                "ImportTaxonomiesAsync"
+              ]
+            },
+            "ReplaceTaxonomy": {
+              "methods": [
+                "ReplaceTaxonomy",
+                "ReplaceTaxonomyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
