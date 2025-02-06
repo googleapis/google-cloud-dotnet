@@ -1,0 +1,168 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.devtools.artifactregistry.v1beta2",
+  "libraryPackage": "Google.Cloud.ArtifactRegistry.V1Beta2",
+  "services": {
+    "ArtifactRegistry": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ArtifactRegistryClient",
+          "rpcs": {
+            "CreateRepository": {
+              "methods": [
+                "CreateRepository",
+                "CreateRepositoryAsync"
+              ]
+            },
+            "CreateTag": {
+              "methods": [
+                "CreateTag",
+                "CreateTagAsync"
+              ]
+            },
+            "DeletePackage": {
+              "methods": [
+                "DeletePackage",
+                "DeletePackageAsync"
+              ]
+            },
+            "DeleteRepository": {
+              "methods": [
+                "DeleteRepository",
+                "DeleteRepositoryAsync"
+              ]
+            },
+            "DeleteTag": {
+              "methods": [
+                "DeleteTag",
+                "DeleteTagAsync"
+              ]
+            },
+            "DeleteVersion": {
+              "methods": [
+                "DeleteVersion",
+                "DeleteVersionAsync"
+              ]
+            },
+            "GetFile": {
+              "methods": [
+                "GetFile",
+                "GetFileAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetPackage": {
+              "methods": [
+                "GetPackage",
+                "GetPackageAsync"
+              ]
+            },
+            "GetProjectSettings": {
+              "methods": [
+                "GetProjectSettings",
+                "GetProjectSettingsAsync"
+              ]
+            },
+            "GetRepository": {
+              "methods": [
+                "GetRepository",
+                "GetRepositoryAsync"
+              ]
+            },
+            "GetTag": {
+              "methods": [
+                "GetTag",
+                "GetTagAsync"
+              ]
+            },
+            "GetVersion": {
+              "methods": [
+                "GetVersion",
+                "GetVersionAsync"
+              ]
+            },
+            "ImportAptArtifacts": {
+              "methods": [
+                "ImportAptArtifacts",
+                "ImportAptArtifactsAsync"
+              ]
+            },
+            "ImportYumArtifacts": {
+              "methods": [
+                "ImportYumArtifacts",
+                "ImportYumArtifactsAsync"
+              ]
+            },
+            "ListFiles": {
+              "methods": [
+                "ListFiles",
+                "ListFilesAsync"
+              ]
+            },
+            "ListPackages": {
+              "methods": [
+                "ListPackages",
+                "ListPackagesAsync"
+              ]
+            },
+            "ListRepositories": {
+              "methods": [
+                "ListRepositories",
+                "ListRepositoriesAsync"
+              ]
+            },
+            "ListTags": {
+              "methods": [
+                "ListTags",
+                "ListTagsAsync"
+              ]
+            },
+            "ListVersions": {
+              "methods": [
+                "ListVersions",
+                "ListVersionsAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateProjectSettings": {
+              "methods": [
+                "UpdateProjectSettings",
+                "UpdateProjectSettingsAsync"
+              ]
+            },
+            "UpdateRepository": {
+              "methods": [
+                "UpdateRepository",
+                "UpdateRepositoryAsync"
+              ]
+            },
+            "UpdateTag": {
+              "methods": [
+                "UpdateTag",
+                "UpdateTagAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,381 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.ApigeeConnect.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.apigeeconnect.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "apigeeconnect_v1_generated_ConnectionService_ListConnections_sync",
+      "title": "ListConnectionsRequestObject",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectionServiceClient.ListConnectionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeConnect.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.apigeeconnect.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.apigeeconnect.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apigeeconnect_v1_generated_ConnectionService_ListConnections_async",
+      "title": "ListConnectionsRequestObjectAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectionServiceClient.ListConnectionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeConnect.V1.ListConnectionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.apigeeconnect.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.apigeeconnect.v1.ConnectionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apigeeconnect_v1_generated_ConnectionService_ListConnections_sync_flattened",
+      "title": "ListConnections",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectionServiceClient.ListConnectionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.apigeeconnect.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.apigeeconnect.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apigeeconnect_v1_generated_ConnectionService_ListConnections_async_flattened",
+      "title": "ListConnectionsAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectionServiceClient.ListConnectionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.apigeeconnect.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.apigeeconnect.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apigeeconnect_v1_generated_ConnectionService_ListConnections_sync_flattened_resourceNames",
+      "title": "ListConnectionsResourceNames",
+      "description": "Snippet for ListConnections",
+      "file": "ConnectionServiceClient.ListConnectionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnections",
+        "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnections",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeConnect.V1.EndpointName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.apigeeconnect.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.apigeeconnect.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apigeeconnect_v1_generated_ConnectionService_ListConnections_async_flattened_resourceNames",
+      "title": "ListConnectionsResourceNamesAsync",
+      "description": "Snippet for ListConnectionsAsync",
+      "file": "ConnectionServiceClient.ListConnectionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectionsAsync",
+        "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient.ListConnectionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ApigeeConnect.V1.EndpointName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ApigeeConnect.V1.ListConnectionsResponse, Google.Cloud.ApigeeConnect.V1.Connection>",
+        "client": {
+          "shortName": "ConnectionServiceClient",
+          "fullName": "Google.Cloud.ApigeeConnect.V1.ConnectionServiceClient"
+        },
+        "method": {
+          "shortName": "ListConnections",
+          "fullName": "google.cloud.apigeeconnect.v1.ConnectionService.ListConnections",
+          "service": {
+            "shortName": "ConnectionService",
+            "fullName": "google.cloud.apigeeconnect.v1.ConnectionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "apigeeconnect_v1_generated_Tether_Egress_sync",
+      "title": "Egress",
+      "description": "Snippet for Egress",
+      "file": "TetherClient.EgressSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "Egress",
+        "fullName": "Google.Cloud.ApigeeConnect.V1.TetherClient.Egress",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ApigeeConnect.V1.TetherClient+EgressStream",
+        "client": {
+          "shortName": "TetherClient",
+          "fullName": "Google.Cloud.ApigeeConnect.V1.TetherClient"
+        },
+        "method": {
+          "shortName": "Egress",
+          "fullName": "google.cloud.apigeeconnect.v1.Tether.Egress",
+          "service": {
+            "shortName": "Tether",
+            "fullName": "google.cloud.apigeeconnect.v1.Tether"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 86,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 84,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.asset.v1",
+  "libraryPackage": "Google.Cloud.Asset.V1",
+  "services": {
+    "AssetService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AssetServiceClient",
+          "rpcs": {
+            "AnalyzeIamPolicy": {
+              "methods": [
+                "AnalyzeIamPolicy",
+                "AnalyzeIamPolicyAsync"
+              ]
+            },
+            "AnalyzeIamPolicyLongrunning": {
+              "methods": [
+                "AnalyzeIamPolicyLongrunning",
+                "AnalyzeIamPolicyLongrunningAsync"
+              ]
+            },
+            "AnalyzeMove": {
+              "methods": [
+                "AnalyzeMove",
+                "AnalyzeMoveAsync"
+              ]
+            },
+            "AnalyzeOrgPolicies": {
+              "methods": [
+                "AnalyzeOrgPolicies",
+                "AnalyzeOrgPoliciesAsync"
+              ]
+            },
+            "AnalyzeOrgPolicyGovernedAssets": {
+              "methods": [
+                "AnalyzeOrgPolicyGovernedAssets",
+                "AnalyzeOrgPolicyGovernedAssetsAsync"
+              ]
+            },
+            "AnalyzeOrgPolicyGovernedContainers": {
+              "methods": [
+                "AnalyzeOrgPolicyGovernedContainers",
+                "AnalyzeOrgPolicyGovernedContainersAsync"
+              ]
+            },
+            "BatchGetAssetsHistory": {
+              "methods": [
+                "BatchGetAssetsHistory",
+                "BatchGetAssetsHistoryAsync"
+              ]
+            },
+            "BatchGetEffectiveIamPolicies": {
+              "methods": [
+                "BatchGetEffectiveIamPolicies",
+                "BatchGetEffectiveIamPoliciesAsync"
+              ]
+            },
+            "CreateFeed": {
+              "methods": [
+                "CreateFeed",
+                "CreateFeedAsync"
+              ]
+            },
+            "CreateSavedQuery": {
+              "methods": [
+                "CreateSavedQuery",
+                "CreateSavedQueryAsync"
+              ]
+            },
+            "DeleteFeed": {
+              "methods": [
+                "DeleteFeed",
+                "DeleteFeedAsync"
+              ]
+            },
+            "DeleteSavedQuery": {
+              "methods": [
+                "DeleteSavedQuery",
+                "DeleteSavedQueryAsync"
+              ]
+            },
+            "ExportAssets": {
+              "methods": [
+                "ExportAssets",
+                "ExportAssetsAsync"
+              ]
+            },
+            "GetFeed": {
+              "methods": [
+                "GetFeed",
+                "GetFeedAsync"
+              ]
+            },
+            "GetSavedQuery": {
+              "methods": [
+                "GetSavedQuery",
+                "GetSavedQueryAsync"
+              ]
+            },
+            "ListAssets": {
+              "methods": [
+                "ListAssets",
+                "ListAssetsAsync"
+              ]
+            },
+            "ListFeeds": {
+              "methods": [
+                "ListFeeds",
+                "ListFeedsAsync"
+              ]
+            },
+            "ListSavedQueries": {
+              "methods": [
+                "ListSavedQueries",
+                "ListSavedQueriesAsync"
+              ]
+            },
+            "QueryAssets": {
+              "methods": [
+                "QueryAssets",
+                "QueryAssetsAsync"
+              ]
+            },
+            "SearchAllIamPolicies": {
+              "methods": [
+                "SearchAllIamPolicies",
+                "SearchAllIamPoliciesAsync"
+              ]
+            },
+            "SearchAllResources": {
+              "methods": [
+                "SearchAllResources",
+                "SearchAllResourcesAsync"
+              ]
+            },
+            "UpdateFeed": {
+              "methods": [
+                "UpdateFeed",
+                "UpdateFeedAsync"
+              ]
+            },
+            "UpdateSavedQuery": {
+              "methods": [
+                "UpdateSavedQuery",
+                "UpdateSavedQueryAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

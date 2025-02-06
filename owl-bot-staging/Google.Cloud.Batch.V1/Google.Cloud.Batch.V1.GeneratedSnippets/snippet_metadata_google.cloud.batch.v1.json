@@ -1,0 +1,1626 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Batch.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.batch.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "batch_v1_generated_BatchService_CreateJob_sync",
+      "title": "CreateJobRequestObject",
+      "description": "Snippet for CreateJob",
+      "file": "BatchServiceClient.CreateJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Job",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CreateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CreateJob_async",
+      "title": "CreateJobRequestObjectAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "BatchServiceClient.CreateJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CreateJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CreateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 51,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CreateJob_sync_flattened",
+      "title": "CreateJob",
+      "description": "Snippet for CreateJob",
+      "file": "BatchServiceClient.CreateJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Batch.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Job",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CreateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CreateJob_async_flattened",
+      "title": "CreateJobAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "BatchServiceClient.CreateJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CreateJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Batch.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CreateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CreateJob_sync_flattened_resourceNames",
+      "title": "CreateJobResourceNames",
+      "description": "Snippet for CreateJob",
+      "file": "BatchServiceClient.CreateJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Batch.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Job",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CreateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CreateJob_async_flattened_resourceNames",
+      "title": "CreateJobResourceNamesAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "BatchServiceClient.CreateJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CreateJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Batch.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CreateJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetJob_sync",
+      "title": "GetJobRequestObject",
+      "description": "Snippet for GetJob",
+      "file": "BatchServiceClient.GetJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Job",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.batch.v1.BatchService.GetJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetJob_async",
+      "title": "GetJobRequestObjectAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "BatchServiceClient.GetJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.batch.v1.BatchService.GetJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetJob_sync_flattened",
+      "title": "GetJob",
+      "description": "Snippet for GetJob",
+      "file": "BatchServiceClient.GetJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Job",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.batch.v1.BatchService.GetJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetJob_async_flattened",
+      "title": "GetJobAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "BatchServiceClient.GetJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.batch.v1.BatchService.GetJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetJob_sync_flattened_resourceNames",
+      "title": "GetJobResourceNames",
+      "description": "Snippet for GetJob",
+      "file": "BatchServiceClient.GetJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Job",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.batch.v1.BatchService.GetJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetJob_async_flattened_resourceNames",
+      "title": "GetJobResourceNamesAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "BatchServiceClient.GetJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.batch.v1.BatchService.GetJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_DeleteJob_sync",
+      "title": "DeleteJobRequestObject",
+      "description": "Snippet for DeleteJob",
+      "file": "BatchServiceClient.DeleteJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.DeleteJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Batch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.batch.v1.BatchService.DeleteJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_DeleteJob_async",
+      "title": "DeleteJobRequestObjectAsync",
+      "description": "Snippet for DeleteJobAsync",
+      "file": "BatchServiceClient.DeleteJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.DeleteJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.DeleteJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Batch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.batch.v1.BatchService.DeleteJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_DeleteJob_sync_flattened",
+      "title": "DeleteJob",
+      "description": "Snippet for DeleteJob",
+      "file": "BatchServiceClient.DeleteJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Batch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.batch.v1.BatchService.DeleteJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_DeleteJob_async_flattened",
+      "title": "DeleteJobAsync",
+      "description": "Snippet for DeleteJobAsync",
+      "file": "BatchServiceClient.DeleteJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.DeleteJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Batch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.batch.v1.BatchService.DeleteJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListJobs_sync",
+      "title": "ListJobsRequestObject",
+      "description": "Snippet for ListJobs",
+      "file": "BatchServiceClient.ListJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobs",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Batch.V1.ListJobsResponse, Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.batch.v1.BatchService.ListJobs",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListJobs_async",
+      "title": "ListJobsRequestObjectAsync",
+      "description": "Snippet for ListJobsAsync",
+      "file": "BatchServiceClient.ListJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobsAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Batch.V1.ListJobsResponse, Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.batch.v1.BatchService.ListJobs",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListJobs_sync_flattened",
+      "title": "ListJobs",
+      "description": "Snippet for ListJobs",
+      "file": "BatchServiceClient.ListJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobs",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Batch.V1.ListJobsResponse, Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.batch.v1.BatchService.ListJobs",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListJobs_async_flattened",
+      "title": "ListJobsAsync",
+      "description": "Snippet for ListJobsAsync",
+      "file": "BatchServiceClient.ListJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobsAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Batch.V1.ListJobsResponse, Google.Cloud.Batch.V1.Job>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.batch.v1.BatchService.ListJobs",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetTask_sync",
+      "title": "GetTaskRequestObject",
+      "description": "Snippet for GetTask",
+      "file": "BatchServiceClient.GetTaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.GetTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Task",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.batch.v1.BatchService.GetTask",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetTask_async",
+      "title": "GetTaskRequestObjectAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "BatchServiceClient.GetTaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.GetTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.batch.v1.BatchService.GetTask",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetTask_sync_flattened",
+      "title": "GetTask",
+      "description": "Snippet for GetTask",
+      "file": "BatchServiceClient.GetTaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Task",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.batch.v1.BatchService.GetTask",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetTask_async_flattened",
+      "title": "GetTaskAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "BatchServiceClient.GetTaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.batch.v1.BatchService.GetTask",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetTask_sync_flattened_resourceNames",
+      "title": "GetTaskResourceNames",
+      "description": "Snippet for GetTask",
+      "file": "BatchServiceClient.GetTaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTask",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetTask",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Batch.V1.Task",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.batch.v1.BatchService.GetTask",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_GetTask_async_flattened_resourceNames",
+      "title": "GetTaskResourceNamesAsync",
+      "description": "Snippet for GetTaskAsync",
+      "file": "BatchServiceClient.GetTaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTaskAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.GetTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "GetTask",
+          "fullName": "google.cloud.batch.v1.BatchService.GetTask",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListTasks_sync",
+      "title": "ListTasksRequestObject",
+      "description": "Snippet for ListTasks",
+      "file": "BatchServiceClient.ListTasksRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.ListTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Batch.V1.ListTasksResponse, Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.batch.v1.BatchService.ListTasks",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListTasks_async",
+      "title": "ListTasksRequestObjectAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "BatchServiceClient.ListTasksRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.ListTasksRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Batch.V1.ListTasksResponse, Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.batch.v1.BatchService.ListTasks",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListTasks_sync_flattened",
+      "title": "ListTasks",
+      "description": "Snippet for ListTasks",
+      "file": "BatchServiceClient.ListTasksSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListTasks",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Batch.V1.ListTasksResponse, Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.batch.v1.BatchService.ListTasks",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListTasks_async_flattened",
+      "title": "ListTasksAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "BatchServiceClient.ListTasksAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Batch.V1.ListTasksResponse, Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.batch.v1.BatchService.ListTasks",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListTasks_sync_flattened_resourceNames",
+      "title": "ListTasksResourceNames",
+      "description": "Snippet for ListTasks",
+      "file": "BatchServiceClient.ListTasksResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasks",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListTasks",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.TaskGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Batch.V1.ListTasksResponse, Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.batch.v1.BatchService.ListTasks",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_ListTasks_async_flattened_resourceNames",
+      "title": "ListTasksResourceNamesAsync",
+      "description": "Snippet for ListTasksAsync",
+      "file": "BatchServiceClient.ListTasksResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTasksAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.ListTasksAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.TaskGroupName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Batch.V1.ListTasksResponse, Google.Cloud.Batch.V1.Task>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "ListTasks",
+          "fullName": "google.cloud.batch.v1.BatchService.ListTasks",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
