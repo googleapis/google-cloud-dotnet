@@ -1,0 +1,111 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.GkeConnect.Gateway.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.gkeconnect.gateway.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "connectgateway_v1_generated_GatewayControl_GenerateCredentials_sync",
+      "title": "GenerateCredentialsRequestObject",
+      "description": "Snippet for GenerateCredentials",
+      "file": "GatewayControlClient.GenerateCredentialsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateCredentials",
+        "fullName": "Google.Cloud.GkeConnect.Gateway.V1.GatewayControlClient.GenerateCredentials",
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeConnect.Gateway.V1.GenerateCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.GkeConnect.Gateway.V1.GenerateCredentialsResponse",
+        "client": {
+          "shortName": "GatewayControlClient",
+          "fullName": "Google.Cloud.GkeConnect.Gateway.V1.GatewayControlClient"
+        },
+        "method": {
+          "shortName": "GenerateCredentials",
+          "fullName": "google.cloud.gkeconnect.gateway.v1.GatewayControl.GenerateCredentials",
+          "service": {
+            "shortName": "GatewayControl",
+            "fullName": "google.cloud.gkeconnect.gateway.v1.GatewayControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "connectgateway_v1_generated_GatewayControl_GenerateCredentials_async",
+      "title": "GenerateCredentialsRequestObjectAsync",
+      "description": "Snippet for GenerateCredentialsAsync",
+      "file": "GatewayControlClient.GenerateCredentialsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateCredentialsAsync",
+        "fullName": "Google.Cloud.GkeConnect.Gateway.V1.GatewayControlClient.GenerateCredentialsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.GkeConnect.Gateway.V1.GenerateCredentialsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.GkeConnect.Gateway.V1.GenerateCredentialsResponse>",
+        "client": {
+          "shortName": "GatewayControlClient",
+          "fullName": "Google.Cloud.GkeConnect.Gateway.V1.GatewayControlClient"
+        },
+        "method": {
+          "shortName": "GenerateCredentials",
+          "fullName": "google.cloud.gkeconnect.gateway.v1.GatewayControl.GenerateCredentials",
+          "service": {
+            "shortName": "GatewayControl",
+            "fullName": "google.cloud.gkeconnect.gateway.v1.GatewayControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
