@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.enterpriseknowledgegraph.v1",
+  "libraryPackage": "Google.Cloud.EnterpriseKnowledgeGraph.V1",
+  "services": {
+    "EnterpriseKnowledgeGraphService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EnterpriseKnowledgeGraphServiceClient",
+          "rpcs": {
+            "CancelEntityReconciliationJob": {
+              "methods": [
+                "CancelEntityReconciliationJob",
+                "CancelEntityReconciliationJobAsync"
+              ]
+            },
+            "CreateEntityReconciliationJob": {
+              "methods": [
+                "CreateEntityReconciliationJob",
+                "CreateEntityReconciliationJobAsync"
+              ]
+            },
+            "DeleteEntityReconciliationJob": {
+              "methods": [
+                "DeleteEntityReconciliationJob",
+                "DeleteEntityReconciliationJobAsync"
+              ]
+            },
+            "GetEntityReconciliationJob": {
+              "methods": [
+                "GetEntityReconciliationJob",
+                "GetEntityReconciliationJobAsync"
+              ]
+            },
+            "ListEntityReconciliationJobs": {
+              "methods": [
+                "ListEntityReconciliationJobs",
+                "ListEntityReconciliationJobsAsync"
+              ]
+            },
+            "Lookup": {
+              "methods": [
+                "Lookup",
+                "LookupAsync"
+              ]
+            },
+            "LookupPublicKg": {
+              "methods": [
+                "LookupPublicKg",
+                "LookupPublicKgAsync"
+              ]
+            },
+            "Search": {
+              "methods": [
+                "Search",
+                "SearchAsync"
+              ]
+            },
+            "SearchPublicKg": {
+              "methods": [
+                "SearchPublicKg",
+                "SearchPublicKgAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
