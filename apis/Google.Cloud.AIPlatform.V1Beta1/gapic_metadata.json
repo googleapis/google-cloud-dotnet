@@ -241,6 +241,12 @@
         "grpc": {
           "libraryClient": "EvaluationServiceClient",
           "rpcs": {
+            "EvaluateDataset": {
+              "methods": [
+                "EvaluateDataset",
+                "EvaluateDatasetAsync"
+              ]
+            },
             "EvaluateInstances": {
               "methods": [
                 "EvaluateInstances",
