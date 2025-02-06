@@ -1296,7 +1296,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             private bool semanticChunkingGroupSize_;
             /// <summary>
             /// Optional. The number of tokens to group together when evaluating
-            /// semantic similarity.
+            /// semantic similarity. THIS FIELD IS NOT YET USED.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1313,7 +1313,7 @@ namespace Google.Cloud.DocumentAI.V1Beta3 {
             /// <summary>
             /// Optional. The percentile of cosine dissimilarity that must be exceeded
             /// between a group of tokens and the next. The smaller this number is, the
-            /// more chunks will be generated.
+            /// more chunks will be generated. THIS FIELD IS NOT YET USED.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
