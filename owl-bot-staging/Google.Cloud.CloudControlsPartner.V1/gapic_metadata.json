@@ -1,0 +1,87 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.cloudcontrolspartner.v1",
+  "libraryPackage": "Google.Cloud.CloudControlsPartner.V1",
+  "services": {
+    "CloudControlsPartnerCore": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudControlsPartnerCoreClient",
+          "rpcs": {
+            "GetCustomer": {
+              "methods": [
+                "GetCustomer",
+                "GetCustomerAsync"
+              ]
+            },
+            "GetEkmConnections": {
+              "methods": [
+                "GetEkmConnections",
+                "GetEkmConnectionsAsync"
+              ]
+            },
+            "GetPartner": {
+              "methods": [
+                "GetPartner",
+                "GetPartnerAsync"
+              ]
+            },
+            "GetPartnerPermissions": {
+              "methods": [
+                "GetPartnerPermissions",
+                "GetPartnerPermissionsAsync"
+              ]
+            },
+            "GetWorkload": {
+              "methods": [
+                "GetWorkload",
+                "GetWorkloadAsync"
+              ]
+            },
+            "ListAccessApprovalRequests": {
+              "methods": [
+                "ListAccessApprovalRequests",
+                "ListAccessApprovalRequestsAsync"
+              ]
+            },
+            "ListCustomers": {
+              "methods": [
+                "ListCustomers",
+                "ListCustomersAsync"
+              ]
+            },
+            "ListWorkloads": {
+              "methods": [
+                "ListWorkloads",
+                "ListWorkloadsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CloudControlsPartnerMonitoring": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudControlsPartnerMonitoringClient",
+          "rpcs": {
+            "GetViolation": {
+              "methods": [
+                "GetViolation",
+                "GetViolationAsync"
+              ]
+            },
+            "ListViolations": {
+              "methods": [
+                "ListViolations",
+                "ListViolationsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

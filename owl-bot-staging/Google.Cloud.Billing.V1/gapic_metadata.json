@@ -1,0 +1,105 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.billing.v1",
+  "libraryPackage": "Google.Cloud.Billing.V1",
+  "services": {
+    "CloudBilling": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudBillingClient",
+          "rpcs": {
+            "CreateBillingAccount": {
+              "methods": [
+                "CreateBillingAccount",
+                "CreateBillingAccountAsync"
+              ]
+            },
+            "GetBillingAccount": {
+              "methods": [
+                "GetBillingAccount",
+                "GetBillingAccountAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "GetProjectBillingInfo": {
+              "methods": [
+                "GetProjectBillingInfo",
+                "GetProjectBillingInfoAsync"
+              ]
+            },
+            "ListBillingAccounts": {
+              "methods": [
+                "ListBillingAccounts",
+                "ListBillingAccountsAsync"
+              ]
+            },
+            "ListProjectBillingInfo": {
+              "methods": [
+                "ListProjectBillingInfo",
+                "ListProjectBillingInfoAsync"
+              ]
+            },
+            "MoveBillingAccount": {
+              "methods": [
+                "MoveBillingAccount",
+                "MoveBillingAccountAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
+              ]
+            },
+            "UpdateBillingAccount": {
+              "methods": [
+                "UpdateBillingAccount",
+                "UpdateBillingAccountAsync"
+              ]
+            },
+            "UpdateProjectBillingInfo": {
+              "methods": [
+                "UpdateProjectBillingInfo",
+                "UpdateProjectBillingInfoAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CloudCatalog": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudCatalogClient",
+          "rpcs": {
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "ListSkus": {
+              "methods": [
+                "ListSkus",
+                "ListSkusAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
