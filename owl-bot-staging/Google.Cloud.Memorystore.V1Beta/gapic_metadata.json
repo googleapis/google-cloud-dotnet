@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.memorystore.v1beta",
+  "libraryPackage": "Google.Cloud.Memorystore.V1Beta",
+  "services": {
+    "Memorystore": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MemorystoreClient",
+          "rpcs": {
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "GetCertificateAuthority": {
+              "methods": [
+                "GetCertificateAuthority",
+                "GetCertificateAuthorityAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
