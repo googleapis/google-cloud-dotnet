@@ -1,0 +1,5584 @@
+{
+  "clientLibrary": {
+    "name": "Google.Apps.Meet.V2Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.apps.meet.v2beta",
+        "version": "v2beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetConferenceRecord_sync",
+      "title": "GetConferenceRecordRequestObject",
+      "description": "Snippet for GetConferenceRecord",
+      "file": "ConferenceRecordsServiceClient.GetConferenceRecordRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConferenceRecord",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetConferenceRecord",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetConferenceRecordRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ConferenceRecord",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetConferenceRecord",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetConferenceRecord",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetConferenceRecord_async",
+      "title": "GetConferenceRecordRequestObjectAsync",
+      "description": "Snippet for GetConferenceRecordAsync",
+      "file": "ConferenceRecordsServiceClient.GetConferenceRecordRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConferenceRecordAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetConferenceRecordAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetConferenceRecordRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ConferenceRecord>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetConferenceRecord",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetConferenceRecord",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetConferenceRecord_sync_flattened",
+      "title": "GetConferenceRecord",
+      "description": "Snippet for GetConferenceRecord",
+      "file": "ConferenceRecordsServiceClient.GetConferenceRecordSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConferenceRecord",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetConferenceRecord",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ConferenceRecord",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetConferenceRecord",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetConferenceRecord",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetConferenceRecord_async_flattened",
+      "title": "GetConferenceRecordAsync",
+      "description": "Snippet for GetConferenceRecordAsync",
+      "file": "ConferenceRecordsServiceClient.GetConferenceRecordAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConferenceRecordAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetConferenceRecordAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ConferenceRecord>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetConferenceRecord",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetConferenceRecord",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetConferenceRecord_sync_flattened_resourceNames",
+      "title": "GetConferenceRecordResourceNames",
+      "description": "Snippet for GetConferenceRecord",
+      "file": "ConferenceRecordsServiceClient.GetConferenceRecordResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConferenceRecord",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetConferenceRecord",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ConferenceRecord",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetConferenceRecord",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetConferenceRecord",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetConferenceRecord_async_flattened_resourceNames",
+      "title": "GetConferenceRecordResourceNamesAsync",
+      "description": "Snippet for GetConferenceRecordAsync",
+      "file": "ConferenceRecordsServiceClient.GetConferenceRecordResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConferenceRecordAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetConferenceRecordAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ConferenceRecord>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetConferenceRecord",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetConferenceRecord",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListConferenceRecords_sync",
+      "title": "ListConferenceRecordsRequestObject",
+      "description": "Snippet for ListConferenceRecords",
+      "file": "ConferenceRecordsServiceClient.ListConferenceRecordsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConferenceRecords",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListConferenceRecords",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListConferenceRecordsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListConferenceRecordsResponse, Google.Apps.Meet.V2Beta.ConferenceRecord>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListConferenceRecords",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListConferenceRecords",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListConferenceRecords_async",
+      "title": "ListConferenceRecordsRequestObjectAsync",
+      "description": "Snippet for ListConferenceRecordsAsync",
+      "file": "ConferenceRecordsServiceClient.ListConferenceRecordsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConferenceRecordsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListConferenceRecordsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListConferenceRecordsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListConferenceRecordsResponse, Google.Apps.Meet.V2Beta.ConferenceRecord>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListConferenceRecords",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListConferenceRecords",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipant_sync",
+      "title": "GetParticipantRequestObject",
+      "description": "Snippet for GetParticipant",
+      "file": "ConferenceRecordsServiceClient.GetParticipantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipant",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipant",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetParticipantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Participant",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipant",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipant",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipant_async",
+      "title": "GetParticipantRequestObjectAsync",
+      "description": "Snippet for GetParticipantAsync",
+      "file": "ConferenceRecordsServiceClient.GetParticipantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetParticipantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipant",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipant",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipant_sync_flattened",
+      "title": "GetParticipant",
+      "description": "Snippet for GetParticipant",
+      "file": "ConferenceRecordsServiceClient.GetParticipantSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipant",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipant",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Participant",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipant",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipant",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipant_async_flattened",
+      "title": "GetParticipantAsync",
+      "description": "Snippet for GetParticipantAsync",
+      "file": "ConferenceRecordsServiceClient.GetParticipantAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipant",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipant",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipant_sync_flattened_resourceNames",
+      "title": "GetParticipantResourceNames",
+      "description": "Snippet for GetParticipant",
+      "file": "ConferenceRecordsServiceClient.GetParticipantResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipant",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipant",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ParticipantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Participant",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipant",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipant",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipant_async_flattened_resourceNames",
+      "title": "GetParticipantResourceNamesAsync",
+      "description": "Snippet for GetParticipantAsync",
+      "file": "ConferenceRecordsServiceClient.GetParticipantResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ParticipantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipant",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipant",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipants_sync",
+      "title": "ListParticipantsRequestObject",
+      "description": "Snippet for ListParticipants",
+      "file": "ConferenceRecordsServiceClient.ListParticipantsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipants",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipants",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListParticipantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListParticipantsResponse, Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipants",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipants",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipants_async",
+      "title": "ListParticipantsRequestObjectAsync",
+      "description": "Snippet for ListParticipantsAsync",
+      "file": "ConferenceRecordsServiceClient.ListParticipantsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListParticipantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListParticipantsResponse, Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipants",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipants",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipants_sync_flattened",
+      "title": "ListParticipants",
+      "description": "Snippet for ListParticipants",
+      "file": "ConferenceRecordsServiceClient.ListParticipantsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipants",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipants",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListParticipantsResponse, Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipants",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipants",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipants_async_flattened",
+      "title": "ListParticipantsAsync",
+      "description": "Snippet for ListParticipantsAsync",
+      "file": "ConferenceRecordsServiceClient.ListParticipantsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListParticipantsResponse, Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipants",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipants",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipants_sync_flattened_resourceNames",
+      "title": "ListParticipantsResourceNames",
+      "description": "Snippet for ListParticipants",
+      "file": "ConferenceRecordsServiceClient.ListParticipantsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipants",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipants",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListParticipantsResponse, Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipants",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipants",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipants_async_flattened_resourceNames",
+      "title": "ListParticipantsResourceNamesAsync",
+      "description": "Snippet for ListParticipantsAsync",
+      "file": "ConferenceRecordsServiceClient.ListParticipantsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListParticipantsResponse, Google.Apps.Meet.V2Beta.Participant>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipants",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipants",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipantSession_sync",
+      "title": "GetParticipantSessionRequestObject",
+      "description": "Snippet for GetParticipantSession",
+      "file": "ConferenceRecordsServiceClient.GetParticipantSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantSession",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantSession",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetParticipantSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ParticipantSession",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipantSession",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipantSession",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipantSession_async",
+      "title": "GetParticipantSessionRequestObjectAsync",
+      "description": "Snippet for GetParticipantSessionAsync",
+      "file": "ConferenceRecordsServiceClient.GetParticipantSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantSessionAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetParticipantSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipantSession",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipantSession",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipantSession_sync_flattened",
+      "title": "GetParticipantSession",
+      "description": "Snippet for GetParticipantSession",
+      "file": "ConferenceRecordsServiceClient.GetParticipantSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantSession",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ParticipantSession",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipantSession",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipantSession",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipantSession_async_flattened",
+      "title": "GetParticipantSessionAsync",
+      "description": "Snippet for GetParticipantSessionAsync",
+      "file": "ConferenceRecordsServiceClient.GetParticipantSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantSessionAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipantSession",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipantSession",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipantSession_sync_flattened_resourceNames",
+      "title": "GetParticipantSessionResourceNames",
+      "description": "Snippet for GetParticipantSession",
+      "file": "ConferenceRecordsServiceClient.GetParticipantSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantSession",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantSession",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ParticipantSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ParticipantSession",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipantSession",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipantSession",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetParticipantSession_async_flattened_resourceNames",
+      "title": "GetParticipantSessionResourceNamesAsync",
+      "description": "Snippet for GetParticipantSessionAsync",
+      "file": "ConferenceRecordsServiceClient.GetParticipantSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetParticipantSessionAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetParticipantSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ParticipantSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetParticipantSession",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetParticipantSession",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipantSessions_sync",
+      "title": "ListParticipantSessionsRequestObject",
+      "description": "Snippet for ListParticipantSessions",
+      "file": "ConferenceRecordsServiceClient.ListParticipantSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantSessions",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantSessions",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListParticipantSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListParticipantSessionsResponse, Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipantSessions",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipantSessions",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipantSessions_async",
+      "title": "ListParticipantSessionsRequestObjectAsync",
+      "description": "Snippet for ListParticipantSessionsAsync",
+      "file": "ConferenceRecordsServiceClient.ListParticipantSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantSessionsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListParticipantSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListParticipantSessionsResponse, Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipantSessions",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipantSessions",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipantSessions_sync_flattened",
+      "title": "ListParticipantSessions",
+      "description": "Snippet for ListParticipantSessions",
+      "file": "ConferenceRecordsServiceClient.ListParticipantSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantSessions",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListParticipantSessionsResponse, Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipantSessions",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipantSessions",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipantSessions_async_flattened",
+      "title": "ListParticipantSessionsAsync",
+      "description": "Snippet for ListParticipantSessionsAsync",
+      "file": "ConferenceRecordsServiceClient.ListParticipantSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantSessionsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListParticipantSessionsResponse, Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipantSessions",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipantSessions",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipantSessions_sync_flattened_resourceNames",
+      "title": "ListParticipantSessionsResourceNames",
+      "description": "Snippet for ListParticipantSessions",
+      "file": "ConferenceRecordsServiceClient.ListParticipantSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantSessions",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantSessions",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ParticipantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListParticipantSessionsResponse, Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipantSessions",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipantSessions",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListParticipantSessions_async_flattened_resourceNames",
+      "title": "ListParticipantSessionsResourceNamesAsync",
+      "description": "Snippet for ListParticipantSessionsAsync",
+      "file": "ConferenceRecordsServiceClient.ListParticipantSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListParticipantSessionsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListParticipantSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ParticipantName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListParticipantSessionsResponse, Google.Apps.Meet.V2Beta.ParticipantSession>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListParticipantSessions",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListParticipantSessions",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetRecording_sync",
+      "title": "GetRecordingRequestObject",
+      "description": "Snippet for GetRecording",
+      "file": "ConferenceRecordsServiceClient.GetRecordingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecording",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetRecording",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetRecordingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Recording",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetRecording",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetRecording",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetRecording_async",
+      "title": "GetRecordingRequestObjectAsync",
+      "description": "Snippet for GetRecordingAsync",
+      "file": "ConferenceRecordsServiceClient.GetRecordingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecordingAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetRecordingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetRecordingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetRecording",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetRecording",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetRecording_sync_flattened",
+      "title": "GetRecording",
+      "description": "Snippet for GetRecording",
+      "file": "ConferenceRecordsServiceClient.GetRecordingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecording",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetRecording",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Recording",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetRecording",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetRecording",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetRecording_async_flattened",
+      "title": "GetRecordingAsync",
+      "description": "Snippet for GetRecordingAsync",
+      "file": "ConferenceRecordsServiceClient.GetRecordingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecordingAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetRecordingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetRecording",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetRecording",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetRecording_sync_flattened_resourceNames",
+      "title": "GetRecordingResourceNames",
+      "description": "Snippet for GetRecording",
+      "file": "ConferenceRecordsServiceClient.GetRecordingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecording",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetRecording",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.RecordingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Recording",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetRecording",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetRecording",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetRecording_async_flattened_resourceNames",
+      "title": "GetRecordingResourceNamesAsync",
+      "description": "Snippet for GetRecordingAsync",
+      "file": "ConferenceRecordsServiceClient.GetRecordingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetRecordingAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetRecordingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.RecordingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetRecording",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetRecording",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListRecordings_sync",
+      "title": "ListRecordingsRequestObject",
+      "description": "Snippet for ListRecordings",
+      "file": "ConferenceRecordsServiceClient.ListRecordingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRecordings",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListRecordings",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListRecordingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListRecordingsResponse, Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListRecordings",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListRecordings",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListRecordings_async",
+      "title": "ListRecordingsRequestObjectAsync",
+      "description": "Snippet for ListRecordingsAsync",
+      "file": "ConferenceRecordsServiceClient.ListRecordingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRecordingsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListRecordingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListRecordingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListRecordingsResponse, Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListRecordings",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListRecordings",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListRecordings_sync_flattened",
+      "title": "ListRecordings",
+      "description": "Snippet for ListRecordings",
+      "file": "ConferenceRecordsServiceClient.ListRecordingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRecordings",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListRecordings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListRecordingsResponse, Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListRecordings",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListRecordings",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListRecordings_async_flattened",
+      "title": "ListRecordingsAsync",
+      "description": "Snippet for ListRecordingsAsync",
+      "file": "ConferenceRecordsServiceClient.ListRecordingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRecordingsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListRecordingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListRecordingsResponse, Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListRecordings",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListRecordings",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListRecordings_sync_flattened_resourceNames",
+      "title": "ListRecordingsResourceNames",
+      "description": "Snippet for ListRecordings",
+      "file": "ConferenceRecordsServiceClient.ListRecordingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRecordings",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListRecordings",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListRecordingsResponse, Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListRecordings",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListRecordings",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListRecordings_async_flattened_resourceNames",
+      "title": "ListRecordingsResourceNamesAsync",
+      "description": "Snippet for ListRecordingsAsync",
+      "file": "ConferenceRecordsServiceClient.ListRecordingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListRecordingsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListRecordingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListRecordingsResponse, Google.Apps.Meet.V2Beta.Recording>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListRecordings",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListRecordings",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscript_sync",
+      "title": "GetTranscriptRequestObject",
+      "description": "Snippet for GetTranscript",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscript",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscript",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetTranscriptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Transcript",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscript",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscript",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscript_async",
+      "title": "GetTranscriptRequestObjectAsync",
+      "description": "Snippet for GetTranscriptAsync",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetTranscriptRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscript",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscript",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscript_sync_flattened",
+      "title": "GetTranscript",
+      "description": "Snippet for GetTranscript",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscript",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscript",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Transcript",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscript",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscript",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscript_async_flattened",
+      "title": "GetTranscriptAsync",
+      "description": "Snippet for GetTranscriptAsync",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscript",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscript",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscript_sync_flattened_resourceNames",
+      "title": "GetTranscriptResourceNames",
+      "description": "Snippet for GetTranscript",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscript",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscript",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.TranscriptName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Transcript",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscript",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscript",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscript_async_flattened_resourceNames",
+      "title": "GetTranscriptResourceNamesAsync",
+      "description": "Snippet for GetTranscriptAsync",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.TranscriptName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscript",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscript",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscripts_sync",
+      "title": "ListTranscriptsRequestObject",
+      "description": "Snippet for ListTranscripts",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscripts",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscripts",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListTranscriptsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptsResponse, Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscripts",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscripts",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscripts_async",
+      "title": "ListTranscriptsRequestObjectAsync",
+      "description": "Snippet for ListTranscriptsAsync",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListTranscriptsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptsResponse, Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscripts",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscripts",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscripts_sync_flattened",
+      "title": "ListTranscripts",
+      "description": "Snippet for ListTranscripts",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscripts",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscripts",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptsResponse, Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscripts",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscripts",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscripts_async_flattened",
+      "title": "ListTranscriptsAsync",
+      "description": "Snippet for ListTranscriptsAsync",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptsResponse, Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscripts",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscripts",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscripts_sync_flattened_resourceNames",
+      "title": "ListTranscriptsResourceNames",
+      "description": "Snippet for ListTranscripts",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscripts",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscripts",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptsResponse, Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscripts",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscripts",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscripts_async_flattened_resourceNames",
+      "title": "ListTranscriptsResourceNamesAsync",
+      "description": "Snippet for ListTranscriptsAsync",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptsAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConferenceRecordName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptsResponse, Google.Apps.Meet.V2Beta.Transcript>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscripts",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscripts",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscriptEntry_sync",
+      "title": "GetTranscriptEntryRequestObject",
+      "description": "Snippet for GetTranscriptEntry",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptEntryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptEntry",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptEntry",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetTranscriptEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.TranscriptEntry",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscriptEntry",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscriptEntry",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscriptEntry_async",
+      "title": "GetTranscriptEntryRequestObjectAsync",
+      "description": "Snippet for GetTranscriptEntryAsync",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptEntryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptEntryAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetTranscriptEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscriptEntry",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscriptEntry",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscriptEntry_sync_flattened",
+      "title": "GetTranscriptEntry",
+      "description": "Snippet for GetTranscriptEntry",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptEntrySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptEntry",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptEntry",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.TranscriptEntry",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscriptEntry",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscriptEntry",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscriptEntry_async_flattened",
+      "title": "GetTranscriptEntryAsync",
+      "description": "Snippet for GetTranscriptEntryAsync",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptEntryAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptEntryAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscriptEntry",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscriptEntry",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscriptEntry_sync_flattened_resourceNames",
+      "title": "GetTranscriptEntryResourceNames",
+      "description": "Snippet for GetTranscriptEntry",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptEntryResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptEntry",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptEntry",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.TranscriptEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.TranscriptEntry",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscriptEntry",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscriptEntry",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_GetTranscriptEntry_async_flattened_resourceNames",
+      "title": "GetTranscriptEntryResourceNamesAsync",
+      "description": "Snippet for GetTranscriptEntryAsync",
+      "file": "ConferenceRecordsServiceClient.GetTranscriptEntryResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTranscriptEntryAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.GetTranscriptEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.TranscriptEntryName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "GetTranscriptEntry",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.GetTranscriptEntry",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscriptEntries_sync",
+      "title": "ListTranscriptEntriesRequestObject",
+      "description": "Snippet for ListTranscriptEntries",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptEntriesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptEntries",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptEntries",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListTranscriptEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptEntriesResponse, Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscriptEntries",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscriptEntries",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscriptEntries_async",
+      "title": "ListTranscriptEntriesRequestObjectAsync",
+      "description": "Snippet for ListTranscriptEntriesAsync",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptEntriesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptEntriesAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListTranscriptEntriesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptEntriesResponse, Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscriptEntries",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscriptEntries",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscriptEntries_sync_flattened",
+      "title": "ListTranscriptEntries",
+      "description": "Snippet for ListTranscriptEntries",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptEntriesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptEntries",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptEntries",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptEntriesResponse, Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscriptEntries",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscriptEntries",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscriptEntries_async_flattened",
+      "title": "ListTranscriptEntriesAsync",
+      "description": "Snippet for ListTranscriptEntriesAsync",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptEntriesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptEntriesAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptEntriesResponse, Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscriptEntries",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscriptEntries",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscriptEntries_sync_flattened_resourceNames",
+      "title": "ListTranscriptEntriesResourceNames",
+      "description": "Snippet for ListTranscriptEntries",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptEntriesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptEntries",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptEntries",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.TranscriptName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptEntriesResponse, Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscriptEntries",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscriptEntries",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_ConferenceRecordsService_ListTranscriptEntries_async_flattened_resourceNames",
+      "title": "ListTranscriptEntriesResourceNamesAsync",
+      "description": "Snippet for ListTranscriptEntriesAsync",
+      "file": "ConferenceRecordsServiceClient.ListTranscriptEntriesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTranscriptEntriesAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient.ListTranscriptEntriesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.TranscriptName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListTranscriptEntriesResponse, Google.Apps.Meet.V2Beta.TranscriptEntry>",
+        "client": {
+          "shortName": "ConferenceRecordsServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.ConferenceRecordsServiceClient"
+        },
+        "method": {
+          "shortName": "ListTranscriptEntries",
+          "fullName": "google.apps.meet.v2beta.ConferenceRecordsService.ListTranscriptEntries",
+          "service": {
+            "shortName": "ConferenceRecordsService",
+            "fullName": "google.apps.meet.v2beta.ConferenceRecordsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateSpace_sync",
+      "title": "CreateSpaceRequestObject",
+      "description": "Snippet for CreateSpace",
+      "file": "SpacesServiceClient.CreateSpaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSpace",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateSpace",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.CreateSpaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Space",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateSpace_async",
+      "title": "CreateSpaceRequestObjectAsync",
+      "description": "Snippet for CreateSpaceAsync",
+      "file": "SpacesServiceClient.CreateSpaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSpaceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateSpaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.CreateSpaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Space>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateSpace_sync_flattened",
+      "title": "CreateSpace",
+      "description": "Snippet for CreateSpace",
+      "file": "SpacesServiceClient.CreateSpaceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSpace",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateSpace",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.Space",
+            "name": "space"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Space",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateSpace_async_flattened",
+      "title": "CreateSpaceAsync",
+      "description": "Snippet for CreateSpaceAsync",
+      "file": "SpacesServiceClient.CreateSpaceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSpaceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateSpaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.Space",
+            "name": "space"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Space>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetSpace_sync",
+      "title": "GetSpaceRequestObject",
+      "description": "Snippet for GetSpace",
+      "file": "SpacesServiceClient.GetSpaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpace",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetSpace",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetSpaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Space",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetSpace_async",
+      "title": "GetSpaceRequestObjectAsync",
+      "description": "Snippet for GetSpaceAsync",
+      "file": "SpacesServiceClient.GetSpaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetSpaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetSpaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Space>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetSpace_sync_flattened",
+      "title": "GetSpace",
+      "description": "Snippet for GetSpace",
+      "file": "SpacesServiceClient.GetSpaceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpace",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetSpace",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Space",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetSpace_async_flattened",
+      "title": "GetSpaceAsync",
+      "description": "Snippet for GetSpaceAsync",
+      "file": "SpacesServiceClient.GetSpaceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetSpaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Space>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetSpace_sync_flattened_resourceNames",
+      "title": "GetSpaceResourceNames",
+      "description": "Snippet for GetSpace",
+      "file": "SpacesServiceClient.GetSpaceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpace",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetSpace",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Space",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetSpace_async_flattened_resourceNames",
+      "title": "GetSpaceResourceNamesAsync",
+      "description": "Snippet for GetSpaceAsync",
+      "file": "SpacesServiceClient.GetSpaceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetSpaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Space>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_UpdateSpace_sync",
+      "title": "UpdateSpaceRequestObject",
+      "description": "Snippet for UpdateSpace",
+      "file": "SpacesServiceClient.UpdateSpaceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpace",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.UpdateSpace",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.UpdateSpaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Space",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.UpdateSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_UpdateSpace_async",
+      "title": "UpdateSpaceRequestObjectAsync",
+      "description": "Snippet for UpdateSpaceAsync",
+      "file": "SpacesServiceClient.UpdateSpaceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.UpdateSpaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.UpdateSpaceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Space>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.UpdateSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_UpdateSpace_sync_flattened",
+      "title": "UpdateSpace",
+      "description": "Snippet for UpdateSpace",
+      "file": "SpacesServiceClient.UpdateSpaceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpace",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.UpdateSpace",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.Space",
+            "name": "space"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Space",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.UpdateSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_UpdateSpace_async_flattened",
+      "title": "UpdateSpaceAsync",
+      "description": "Snippet for UpdateSpaceAsync",
+      "file": "SpacesServiceClient.UpdateSpaceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.UpdateSpaceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.Space",
+            "name": "space"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Space>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpace",
+          "fullName": "google.apps.meet.v2beta.SpacesService.UpdateSpace",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_EndActiveConference_sync",
+      "title": "EndActiveConferenceRequestObject",
+      "description": "Snippet for EndActiveConference",
+      "file": "SpacesServiceClient.EndActiveConferenceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EndActiveConference",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.EndActiveConference",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.EndActiveConferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "EndActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.EndActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_EndActiveConference_async",
+      "title": "EndActiveConferenceRequestObjectAsync",
+      "description": "Snippet for EndActiveConferenceAsync",
+      "file": "SpacesServiceClient.EndActiveConferenceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EndActiveConferenceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.EndActiveConferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.EndActiveConferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "EndActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.EndActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_EndActiveConference_sync_flattened",
+      "title": "EndActiveConference",
+      "description": "Snippet for EndActiveConference",
+      "file": "SpacesServiceClient.EndActiveConferenceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EndActiveConference",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.EndActiveConference",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "EndActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.EndActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_EndActiveConference_async_flattened",
+      "title": "EndActiveConferenceAsync",
+      "description": "Snippet for EndActiveConferenceAsync",
+      "file": "SpacesServiceClient.EndActiveConferenceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EndActiveConferenceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.EndActiveConferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "EndActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.EndActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_EndActiveConference_sync_flattened_resourceNames",
+      "title": "EndActiveConferenceResourceNames",
+      "description": "Snippet for EndActiveConference",
+      "file": "SpacesServiceClient.EndActiveConferenceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EndActiveConference",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.EndActiveConference",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "EndActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.EndActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_EndActiveConference_async_flattened_resourceNames",
+      "title": "EndActiveConferenceResourceNamesAsync",
+      "description": "Snippet for EndActiveConferenceAsync",
+      "file": "SpacesServiceClient.EndActiveConferenceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EndActiveConferenceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.EndActiveConferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "EndActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.EndActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_sync",
+      "title": "CreateMemberRequestObject",
+      "description": "Snippet for CreateMember",
+      "file": "SpacesServiceClient.CreateMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.CreateMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_async",
+      "title": "CreateMemberRequestObjectAsync",
+      "description": "Snippet for CreateMemberAsync",
+      "file": "SpacesServiceClient.CreateMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.CreateMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_sync_flattened",
+      "title": "CreateMember",
+      "description": "Snippet for CreateMember",
+      "file": "SpacesServiceClient.CreateMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_async_flattened",
+      "title": "CreateMemberAsync",
+      "description": "Snippet for CreateMemberAsync",
+      "file": "SpacesServiceClient.CreateMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_sync_flattened_resourceNames",
+      "title": "CreateMemberResourceNames",
+      "description": "Snippet for CreateMember",
+      "file": "SpacesServiceClient.CreateMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_CreateMember_async_flattened_resourceNames",
+      "title": "CreateMemberResourceNamesAsync",
+      "description": "Snippet for CreateMemberAsync",
+      "file": "SpacesServiceClient.CreateMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.CreateMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Apps.Meet.V2Beta.Member",
+            "name": "member"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "CreateMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.CreateMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_sync",
+      "title": "GetMemberRequestObject",
+      "description": "Snippet for GetMember",
+      "file": "SpacesServiceClient.GetMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_async",
+      "title": "GetMemberRequestObjectAsync",
+      "description": "Snippet for GetMemberAsync",
+      "file": "SpacesServiceClient.GetMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.GetMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_sync_flattened",
+      "title": "GetMember",
+      "description": "Snippet for GetMember",
+      "file": "SpacesServiceClient.GetMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_async_flattened",
+      "title": "GetMemberAsync",
+      "description": "Snippet for GetMemberAsync",
+      "file": "SpacesServiceClient.GetMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_sync_flattened_resourceNames",
+      "title": "GetMemberResourceNames",
+      "description": "Snippet for GetMember",
+      "file": "SpacesServiceClient.GetMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.MemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.Member",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_GetMember_async_flattened_resourceNames",
+      "title": "GetMemberResourceNamesAsync",
+      "description": "Snippet for GetMemberAsync",
+      "file": "SpacesServiceClient.GetMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.GetMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.MemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "GetMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.GetMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_sync",
+      "title": "ListMembersRequestObject",
+      "description": "Snippet for ListMembers",
+      "file": "SpacesServiceClient.ListMembersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembers",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembers",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_async",
+      "title": "ListMembersRequestObjectAsync",
+      "description": "Snippet for ListMembersAsync",
+      "file": "SpacesServiceClient.ListMembersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembersAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ListMembersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_sync_flattened",
+      "title": "ListMembers",
+      "description": "Snippet for ListMembers",
+      "file": "SpacesServiceClient.ListMembersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembers",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_async_flattened",
+      "title": "ListMembersAsync",
+      "description": "Snippet for ListMembersAsync",
+      "file": "SpacesServiceClient.ListMembersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembersAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_sync_flattened_resourceNames",
+      "title": "ListMembersResourceNames",
+      "description": "Snippet for ListMembers",
+      "file": "SpacesServiceClient.ListMembersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembers",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembers",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ListMembers_async_flattened_resourceNames",
+      "title": "ListMembersResourceNamesAsync",
+      "description": "Snippet for ListMembersAsync",
+      "file": "SpacesServiceClient.ListMembersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMembersAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ListMembersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Apps.Meet.V2Beta.ListMembersResponse, Google.Apps.Meet.V2Beta.Member>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ListMembers",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ListMembers",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_sync",
+      "title": "DeleteMemberRequestObject",
+      "description": "Snippet for DeleteMember",
+      "file": "SpacesServiceClient.DeleteMemberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.DeleteMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_async",
+      "title": "DeleteMemberRequestObjectAsync",
+      "description": "Snippet for DeleteMemberAsync",
+      "file": "SpacesServiceClient.DeleteMemberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.DeleteMemberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_sync_flattened",
+      "title": "DeleteMember",
+      "description": "Snippet for DeleteMember",
+      "file": "SpacesServiceClient.DeleteMemberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMember",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_async_flattened",
+      "title": "DeleteMemberAsync",
+      "description": "Snippet for DeleteMemberAsync",
+      "file": "SpacesServiceClient.DeleteMemberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_sync_flattened_resourceNames",
+      "title": "DeleteMemberResourceNames",
+      "description": "Snippet for DeleteMember",
+      "file": "SpacesServiceClient.DeleteMemberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMember",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMember",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.MemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_DeleteMember_async_flattened_resourceNames",
+      "title": "DeleteMemberResourceNamesAsync",
+      "description": "Snippet for DeleteMemberAsync",
+      "file": "SpacesServiceClient.DeleteMemberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMemberAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.DeleteMemberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.MemberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteMember",
+          "fullName": "google.apps.meet.v2beta.SpacesService.DeleteMember",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

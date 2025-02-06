@@ -1,0 +1,72 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.accessapproval.v1",
+  "libraryPackage": "Google.Cloud.AccessApproval.V1",
+  "services": {
+    "AccessApproval": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AccessApprovalServiceClient",
+          "rpcs": {
+            "ApproveApprovalRequest": {
+              "methods": [
+                "ApproveApprovalRequest",
+                "ApproveApprovalRequestAsync"
+              ]
+            },
+            "DeleteAccessApprovalSettings": {
+              "methods": [
+                "DeleteAccessApprovalSettings",
+                "DeleteAccessApprovalSettingsAsync"
+              ]
+            },
+            "DismissApprovalRequest": {
+              "methods": [
+                "DismissApprovalRequest",
+                "DismissApprovalRequestAsync"
+              ]
+            },
+            "GetAccessApprovalServiceAccount": {
+              "methods": [
+                "GetAccessApprovalServiceAccount",
+                "GetAccessApprovalServiceAccountAsync"
+              ]
+            },
+            "GetAccessApprovalSettings": {
+              "methods": [
+                "GetAccessApprovalSettings",
+                "GetAccessApprovalSettingsAsync"
+              ]
+            },
+            "GetApprovalRequest": {
+              "methods": [
+                "GetApprovalRequest",
+                "GetApprovalRequestAsync"
+              ]
+            },
+            "InvalidateApprovalRequest": {
+              "methods": [
+                "InvalidateApprovalRequest",
+                "InvalidateApprovalRequestAsync"
+              ]
+            },
+            "ListApprovalRequests": {
+              "methods": [
+                "ListApprovalRequests",
+                "ListApprovalRequestsAsync"
+              ]
+            },
+            "UpdateAccessApprovalSettings": {
+              "methods": [
+                "UpdateAccessApprovalSettings",
+                "UpdateAccessApprovalSettingsAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

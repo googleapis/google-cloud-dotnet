@@ -1,0 +1,54 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.apps.events.subscriptions.v1",
+  "libraryPackage": "Google.Apps.Events.Subscriptions.V1",
+  "services": {
+    "SubscriptionsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SubscriptionsServiceClient",
+          "rpcs": {
+            "CreateSubscription": {
+              "methods": [
+                "CreateSubscription",
+                "CreateSubscriptionAsync"
+              ]
+            },
+            "DeleteSubscription": {
+              "methods": [
+                "DeleteSubscription",
+                "DeleteSubscriptionAsync"
+              ]
+            },
+            "GetSubscription": {
+              "methods": [
+                "GetSubscription",
+                "GetSubscriptionAsync"
+              ]
+            },
+            "ListSubscriptions": {
+              "methods": [
+                "ListSubscriptions",
+                "ListSubscriptionsAsync"
+              ]
+            },
+            "ReactivateSubscription": {
+              "methods": [
+                "ReactivateSubscription",
+                "ReactivateSubscriptionAsync"
+              ]
+            },
+            "UpdateSubscription": {
+              "methods": [
+                "UpdateSubscription",
+                "UpdateSubscriptionAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

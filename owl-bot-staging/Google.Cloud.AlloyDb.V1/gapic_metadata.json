@@ -1,0 +1,222 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.alloydb.v1",
+  "libraryPackage": "Google.Cloud.AlloyDb.V1",
+  "services": {
+    "AlloyDBAdmin": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AlloyDBAdminClient",
+          "rpcs": {
+            "BatchCreateInstances": {
+              "methods": [
+                "BatchCreateInstances",
+                "BatchCreateInstancesAsync"
+              ]
+            },
+            "CreateBackup": {
+              "methods": [
+                "CreateBackup",
+                "CreateBackupAsync"
+              ]
+            },
+            "CreateCluster": {
+              "methods": [
+                "CreateCluster",
+                "CreateClusterAsync"
+              ]
+            },
+            "CreateInstance": {
+              "methods": [
+                "CreateInstance",
+                "CreateInstanceAsync"
+              ]
+            },
+            "CreateSecondaryCluster": {
+              "methods": [
+                "CreateSecondaryCluster",
+                "CreateSecondaryClusterAsync"
+              ]
+            },
+            "CreateSecondaryInstance": {
+              "methods": [
+                "CreateSecondaryInstance",
+                "CreateSecondaryInstanceAsync"
+              ]
+            },
+            "CreateUser": {
+              "methods": [
+                "CreateUser",
+                "CreateUserAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
+            "DeleteCluster": {
+              "methods": [
+                "DeleteCluster",
+                "DeleteClusterAsync"
+              ]
+            },
+            "DeleteInstance": {
+              "methods": [
+                "DeleteInstance",
+                "DeleteInstanceAsync"
+              ]
+            },
+            "DeleteUser": {
+              "methods": [
+                "DeleteUser",
+                "DeleteUserAsync"
+              ]
+            },
+            "ExecuteSql": {
+              "methods": [
+                "ExecuteSql",
+                "ExecuteSqlAsync"
+              ]
+            },
+            "FailoverInstance": {
+              "methods": [
+                "FailoverInstance",
+                "FailoverInstanceAsync"
+              ]
+            },
+            "GenerateClientCertificate": {
+              "methods": [
+                "GenerateClientCertificate",
+                "GenerateClientCertificateAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetCluster": {
+              "methods": [
+                "GetCluster",
+                "GetClusterAsync"
+              ]
+            },
+            "GetConnectionInfo": {
+              "methods": [
+                "GetConnectionInfo",
+                "GetConnectionInfoAsync"
+              ]
+            },
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            },
+            "GetUser": {
+              "methods": [
+                "GetUser",
+                "GetUserAsync"
+              ]
+            },
+            "InjectFault": {
+              "methods": [
+                "InjectFault",
+                "InjectFaultAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
+            "ListClusters": {
+              "methods": [
+                "ListClusters",
+                "ListClustersAsync"
+              ]
+            },
+            "ListDatabases": {
+              "methods": [
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
+            "ListInstances": {
+              "methods": [
+                "ListInstances",
+                "ListInstancesAsync"
+              ]
+            },
+            "ListSupportedDatabaseFlags": {
+              "methods": [
+                "ListSupportedDatabaseFlags",
+                "ListSupportedDatabaseFlagsAsync"
+              ]
+            },
+            "ListUsers": {
+              "methods": [
+                "ListUsers",
+                "ListUsersAsync"
+              ]
+            },
+            "PromoteCluster": {
+              "methods": [
+                "PromoteCluster",
+                "PromoteClusterAsync"
+              ]
+            },
+            "RestartInstance": {
+              "methods": [
+                "RestartInstance",
+                "RestartInstanceAsync"
+              ]
+            },
+            "RestoreCluster": {
+              "methods": [
+                "RestoreCluster",
+                "RestoreClusterAsync"
+              ]
+            },
+            "SwitchoverCluster": {
+              "methods": [
+                "SwitchoverCluster",
+                "SwitchoverClusterAsync"
+              ]
+            },
+            "UpdateBackup": {
+              "methods": [
+                "UpdateBackup",
+                "UpdateBackupAsync"
+              ]
+            },
+            "UpdateCluster": {
+              "methods": [
+                "UpdateCluster",
+                "UpdateClusterAsync"
+              ]
+            },
+            "UpdateInstance": {
+              "methods": [
+                "UpdateInstance",
+                "UpdateInstanceAsync"
+              ]
+            },
+            "UpdateUser": {
+              "methods": [
+                "UpdateUser",
+                "UpdateUserAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
