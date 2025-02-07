@@ -202,7 +202,6 @@
     "apis/Google.Cloud.Redis.V1/Google.Cloud.Redis.V1/**",
     "apis/Google.Cloud.Redis.V1Beta1/Google.Cloud.Redis.V1Beta1/**",
     "apis/Google.Cloud.ResourceManager.V3/Google.Cloud.ResourceManager.V3/**",
-    "apis/Google.Cloud.ResourceSettings.V1/Google.Cloud.ResourceSettings.V1/**",
     "apis/Google.Cloud.Retail.V2/Google.Cloud.Retail.V2/**",
     "apis/Google.Cloud.Run.V2/Google.Cloud.Run.V2/**",
     "apis/Google.Cloud.Scheduler.V1/Google.Cloud.Scheduler.V1/**",
