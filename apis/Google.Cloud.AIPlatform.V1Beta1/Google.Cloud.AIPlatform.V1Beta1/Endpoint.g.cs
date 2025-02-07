@@ -66,7 +66,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "ZWFwaXMuY29tL0VuZHBvaW50Ejxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
             "b25zL3tsb2NhdGlvbn0vZW5kcG9pbnRzL3tlbmRwb2ludH0STXByb2plY3Rz",
             "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wdWJsaXNoZXJzL3tw",
-            "dWJsaXNoZXJ9L21vZGVscy97bW9kZWx9IqMJCg1EZXBsb3llZE1vZGVsElIK",
+            "dWJsaXNoZXJ9L21vZGVscy97bW9kZWx9Iu0JCg1EZXBsb3llZE1vZGVsElIK",
             "E2RlZGljYXRlZF9yZXNvdXJjZXMYByABKAsyMy5nb29nbGUuY2xvdWQuYWlw",
             "bGF0Zm9ybS52MWJldGExLkRlZGljYXRlZFJlc291cmNlc0gAElIKE2F1dG9t",
             "YXRpY19yZXNvdXJjZXMYCCABKAsyMy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
@@ -84,41 +84,49 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "aXZhdGVfZW5kcG9pbnRzGA4gASgLMjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
             "cm0udjFiZXRhMS5Qcml2YXRlRW5kcG9pbnRzQgPgQQMSWQoYZmFzdGVyX2Rl",
             "cGxveW1lbnRfY29uZmlnGBcgASgLMjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5GYXN0ZXJEZXBsb3ltZW50Q29uZmlnEkoKBnN0YXR1cxga",
-            "IAEoCzI1Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRGVwbG95",
-            "ZWRNb2RlbC5TdGF0dXNCA+BBAxJXCg1zeXN0ZW1fbGFiZWxzGBwgAygLMkAu",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EZXBsb3llZE1vZGVs",
-            "LlN5c3RlbUxhYmVsc0VudHJ5Gn8KBlN0YXR1cxIUCgdtZXNzYWdlGAEgASgJ",
-            "QgPgQQMSOQoQbGFzdF91cGRhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIkChdhdmFpbGFibGVfcmVwbGljYV9jb3Vu",
-            "dBgDIAEoBUID4EEDGjMKEVN5c3RlbUxhYmVsc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRINCgV2YWx1ZRgCIAEoCToCOAFCFgoUcHJlZGljdGlvbl9yZXNvdXJjZXMi",
-            "jwEKEFByaXZhdGVFbmRwb2ludHMSHQoQcHJlZGljdF9odHRwX3VyaRgBIAEo",
-            "CUID4EEDEh0KEGV4cGxhaW5faHR0cF91cmkYAiABKAlCA+BBAxIcCg9oZWFs",
-            "dGhfaHR0cF91cmkYAyABKAlCA+BBAxIfChJzZXJ2aWNlX2F0dGFjaG1lbnQY",
-            "BCABKAlCA+BBAyKhAQojUHJlZGljdFJlcXVlc3RSZXNwb25zZUxvZ2dpbmdD",
-            "b25maWcSDwoHZW5hYmxlZBgBIAEoCBIVCg1zYW1wbGluZ19yYXRlGAIgASgB",
-            "ElIKFGJpZ3F1ZXJ5X2Rlc3RpbmF0aW9uGAMgASgLMjQuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMS5CaWdRdWVyeURlc3RpbmF0aW9uIk4KFkNs",
-            "aWVudENvbm5lY3Rpb25Db25maWcSNAoRaW5mZXJlbmNlX3RpbWVvdXQYASAB",
-            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iNQoWRmFzdGVyRGVwbG95",
-            "bWVudENvbmZpZxIbChNmYXN0X3RyeW91dF9lbmFibGVkGAIgASgIQuQBCiNj",
-            "b20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUINRW5kcG9pbnRQ",
-            "cm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFi",
-            "ZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3Vk",
-            "LkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3Jt",
-            "XFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGEx",
-            "YgZwcm90bzM="));
+            "cm0udjFiZXRhMS5GYXN0ZXJEZXBsb3ltZW50Q29uZmlnEkgKD3JvbGxvdXRf",
+            "b3B0aW9ucxgZIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTEuUm9sbG91dE9wdGlvbnMSSgoGc3RhdHVzGBogASgLMjUuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EZXBsb3llZE1vZGVsLlN0YXR1c0ID",
+            "4EEDElcKDXN5c3RlbV9sYWJlbHMYHCADKAsyQC5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MWJldGExLkRlcGxveWVkTW9kZWwuU3lzdGVtTGFiZWxzRW50",
+            "cnkafwoGU3RhdHVzEhQKB21lc3NhZ2UYASABKAlCA+BBAxI5ChBsYXN0X3Vw",
+            "ZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDEiQKF2F2YWlsYWJsZV9yZXBsaWNhX2NvdW50GAMgASgFQgPgQQMaMwoR",
+            "U3lzdGVtTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4AUIWChRwcmVkaWN0aW9uX3Jlc291cmNlcyKPAQoQUHJpdmF0ZUVuZHBv",
+            "aW50cxIdChBwcmVkaWN0X2h0dHBfdXJpGAEgASgJQgPgQQMSHQoQZXhwbGFp",
+            "bl9odHRwX3VyaRgCIAEoCUID4EEDEhwKD2hlYWx0aF9odHRwX3VyaRgDIAEo",
+            "CUID4EEDEh8KEnNlcnZpY2VfYXR0YWNobWVudBgEIAEoCUID4EEDIqEBCiNQ",
+            "cmVkaWN0UmVxdWVzdFJlc3BvbnNlTG9nZ2luZ0NvbmZpZxIPCgdlbmFibGVk",
+            "GAEgASgIEhUKDXNhbXBsaW5nX3JhdGUYAiABKAESUgoUYmlncXVlcnlfZGVz",
+            "dGluYXRpb24YAyABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
+            "dGExLkJpZ1F1ZXJ5RGVzdGluYXRpb24iTgoWQ2xpZW50Q29ubmVjdGlvbkNv",
+            "bmZpZxI0ChFpbmZlcmVuY2VfdGltZW91dBgBIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbiI1ChZGYXN0ZXJEZXBsb3ltZW50Q29uZmlnEhsKE2Zh",
+            "c3RfdHJ5b3V0X2VuYWJsZWQYAiABKAgi9wEKDlJvbGxvdXRPcHRpb25zEiIK",
+            "GG1heF91bmF2YWlsYWJsZV9yZXBsaWNhcxgDIAEoBUgAEiQKGm1heF91bmF2",
+            "YWlsYWJsZV9wZXJjZW50YWdlGAQgASgFSAASHAoSbWF4X3N1cmdlX3JlcGxp",
+            "Y2FzGAUgASgFSAESHgoUbWF4X3N1cmdlX3BlcmNlbnRhZ2UYBiABKAVIARIf",
+            "ChdwcmV2aW91c19kZXBsb3llZF9tb2RlbBgBIAEoCRIcCg9yZXZpc2lvbl9u",
+            "dW1iZXIYAiABKAVCA+BBA0IRCg9tYXhfdW5hdmFpbGFibGVCCwoJbWF4X3N1",
+            "cmdlQuQBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIN",
+            "RW5kcG9pbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZv",
+            "cm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29v",
+            "Z2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxB",
+            "SVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3Jt",
+            "OjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Endpoint), global::Google.Cloud.AIPlatform.V1Beta1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "PrivateServiceConnectConfig", "ModelDeploymentMonitoringJob", "PredictRequestResponseLoggingConfig", "DedicatedEndpointEnabled", "DedicatedEndpointDns", "ClientConnectionConfig", "SatisfiesPzs", "SatisfiesPzi" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "EnableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "Status", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "EnableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "RolloutOptions", "Status", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig), global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig.Parser, new[]{ "InferenceTimeout" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig), global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig.Parser, new[]{ "FastTryoutEnabled" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig), global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig.Parser, new[]{ "FastTryoutEnabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions), global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions.Parser, new[]{ "MaxUnavailableReplicas", "MaxUnavailablePercentage", "MaxSurgeReplicas", "MaxSurgePercentage", "PreviousDeployedModel", "RevisionNumber" }, new[]{ "MaxUnavailable", "MaxSurge" }, null, null, null)
           }));
     }
     #endregion
@@ -1214,6 +1222,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       enableAccessLogging_ = other.enableAccessLogging_;
       privateEndpoints_ = other.privateEndpoints_ != null ? other.privateEndpoints_.Clone() : null;
       fasterDeploymentConfig_ = other.fasterDeploymentConfig_ != null ? other.fasterDeploymentConfig_.Clone() : null;
+      rolloutOptions_ = other.rolloutOptions_ != null ? other.rolloutOptions_.Clone() : null;
       status_ = other.status_ != null ? other.status_.Clone() : null;
       systemLabels_ = other.systemLabels_.Clone();
       switch (other.PredictionResourcesCase) {
@@ -1532,6 +1541,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "rollout_options" field.</summary>
+    public const int RolloutOptionsFieldNumber = 25;
+    private global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions rolloutOptions_;
+    /// <summary>
+    /// Options for configuring rolling deployments.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions RolloutOptions {
+      get { return rolloutOptions_; }
+      set {
+        rolloutOptions_ = value;
+      }
+    }
+
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 26;
     private global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status status_;
@@ -1614,6 +1638,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (EnableAccessLogging != other.EnableAccessLogging) return false;
       if (!object.Equals(PrivateEndpoints, other.PrivateEndpoints)) return false;
       if (!object.Equals(FasterDeploymentConfig, other.FasterDeploymentConfig)) return false;
+      if (!object.Equals(RolloutOptions, other.RolloutOptions)) return false;
       if (!object.Equals(Status, other.Status)) return false;
       if (!SystemLabels.Equals(other.SystemLabels)) return false;
       if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
@@ -1639,6 +1664,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (EnableAccessLogging != false) hash ^= EnableAccessLogging.GetHashCode();
       if (privateEndpoints_ != null) hash ^= PrivateEndpoints.GetHashCode();
       if (fasterDeploymentConfig_ != null) hash ^= FasterDeploymentConfig.GetHashCode();
+      if (rolloutOptions_ != null) hash ^= RolloutOptions.GetHashCode();
       if (status_ != null) hash ^= Status.GetHashCode();
       hash ^= SystemLabels.GetHashCode();
       hash ^= (int) predictionResourcesCase_;
@@ -1720,6 +1746,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(186, 1);
         output.WriteMessage(FasterDeploymentConfig);
       }
+      if (rolloutOptions_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(RolloutOptions);
+      }
       if (status_ != null) {
         output.WriteRawTag(210, 1);
         output.WriteMessage(Status);
@@ -1795,6 +1825,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(186, 1);
         output.WriteMessage(FasterDeploymentConfig);
       }
+      if (rolloutOptions_ != null) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(RolloutOptions);
+      }
       if (status_ != null) {
         output.WriteRawTag(210, 1);
         output.WriteMessage(Status);
@@ -1854,6 +1888,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (fasterDeploymentConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(FasterDeploymentConfig);
+      }
+      if (rolloutOptions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RolloutOptions);
       }
       if (status_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Status);
@@ -1918,6 +1955,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           FasterDeploymentConfig = new global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig();
         }
         FasterDeploymentConfig.MergeFrom(other.FasterDeploymentConfig);
+      }
+      if (other.rolloutOptions_ != null) {
+        if (rolloutOptions_ == null) {
+          RolloutOptions = new global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions();
+        }
+        RolloutOptions.MergeFrom(other.RolloutOptions);
       }
       if (other.status_ != null) {
         if (status_ == null) {
@@ -2041,6 +2084,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(FasterDeploymentConfig);
             break;
           }
+          case 202: {
+            if (rolloutOptions_ == null) {
+              RolloutOptions = new global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions();
+            }
+            input.ReadMessage(RolloutOptions);
+            break;
+          }
           case 210: {
             if (status_ == null) {
               Status = new global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status();
@@ -2147,6 +2197,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               FasterDeploymentConfig = new global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig();
             }
             input.ReadMessage(FasterDeploymentConfig);
+            break;
+          }
+          case 202: {
+            if (rolloutOptions_ == null) {
+              RolloutOptions = new global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions();
+            }
+            input.ReadMessage(RolloutOptions);
             break;
           }
           case 210: {
@@ -3464,6 +3521,528 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             break;
           case 16: {
             FastTryoutEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Configuration for rolling deployments.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RolloutOptions : pb::IMessage<RolloutOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RolloutOptions> _parser = new pb::MessageParser<RolloutOptions>(() => new RolloutOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RolloutOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RolloutOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RolloutOptions(RolloutOptions other) : this() {
+      previousDeployedModel_ = other.previousDeployedModel_;
+      revisionNumber_ = other.revisionNumber_;
+      switch (other.MaxUnavailableCase) {
+        case MaxUnavailableOneofCase.MaxUnavailableReplicas:
+          MaxUnavailableReplicas = other.MaxUnavailableReplicas;
+          break;
+        case MaxUnavailableOneofCase.MaxUnavailablePercentage:
+          MaxUnavailablePercentage = other.MaxUnavailablePercentage;
+          break;
+      }
+
+      switch (other.MaxSurgeCase) {
+        case MaxSurgeOneofCase.MaxSurgeReplicas:
+          MaxSurgeReplicas = other.MaxSurgeReplicas;
+          break;
+        case MaxSurgeOneofCase.MaxSurgePercentage:
+          MaxSurgePercentage = other.MaxSurgePercentage;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RolloutOptions Clone() {
+      return new RolloutOptions(this);
+    }
+
+    /// <summary>Field number for the "max_unavailable_replicas" field.</summary>
+    public const int MaxUnavailableReplicasFieldNumber = 3;
+    /// <summary>
+    /// Absolute count of replicas allowed to be unavailable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxUnavailableReplicas {
+      get { return HasMaxUnavailableReplicas ? (int) maxUnavailable_ : 0; }
+      set {
+        maxUnavailable_ = value;
+        maxUnavailableCase_ = MaxUnavailableOneofCase.MaxUnavailableReplicas;
+      }
+    }
+    /// <summary>Gets whether the "max_unavailable_replicas" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxUnavailableReplicas {
+      get { return maxUnavailableCase_ == MaxUnavailableOneofCase.MaxUnavailableReplicas; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "max_unavailable_replicas" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxUnavailableReplicas() {
+      if (HasMaxUnavailableReplicas) {
+        ClearMaxUnavailable();
+      }
+    }
+
+    /// <summary>Field number for the "max_unavailable_percentage" field.</summary>
+    public const int MaxUnavailablePercentageFieldNumber = 4;
+    /// <summary>
+    /// Percentage of replicas allowed to be unavailable.
+    /// For autoscaling deployments, this refers to the target replica count.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxUnavailablePercentage {
+      get { return HasMaxUnavailablePercentage ? (int) maxUnavailable_ : 0; }
+      set {
+        maxUnavailable_ = value;
+        maxUnavailableCase_ = MaxUnavailableOneofCase.MaxUnavailablePercentage;
+      }
+    }
+    /// <summary>Gets whether the "max_unavailable_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxUnavailablePercentage {
+      get { return maxUnavailableCase_ == MaxUnavailableOneofCase.MaxUnavailablePercentage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "max_unavailable_percentage" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxUnavailablePercentage() {
+      if (HasMaxUnavailablePercentage) {
+        ClearMaxUnavailable();
+      }
+    }
+
+    /// <summary>Field number for the "max_surge_replicas" field.</summary>
+    public const int MaxSurgeReplicasFieldNumber = 5;
+    /// <summary>
+    /// Absolute count of allowed additional replicas.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxSurgeReplicas {
+      get { return HasMaxSurgeReplicas ? (int) maxSurge_ : 0; }
+      set {
+        maxSurge_ = value;
+        maxSurgeCase_ = MaxSurgeOneofCase.MaxSurgeReplicas;
+      }
+    }
+    /// <summary>Gets whether the "max_surge_replicas" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxSurgeReplicas {
+      get { return maxSurgeCase_ == MaxSurgeOneofCase.MaxSurgeReplicas; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "max_surge_replicas" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxSurgeReplicas() {
+      if (HasMaxSurgeReplicas) {
+        ClearMaxSurge();
+      }
+    }
+
+    /// <summary>Field number for the "max_surge_percentage" field.</summary>
+    public const int MaxSurgePercentageFieldNumber = 6;
+    /// <summary>
+    /// Percentage of allowed additional replicas.
+    /// For autoscaling deployments, this refers to the target replica count.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxSurgePercentage {
+      get { return HasMaxSurgePercentage ? (int) maxSurge_ : 0; }
+      set {
+        maxSurge_ = value;
+        maxSurgeCase_ = MaxSurgeOneofCase.MaxSurgePercentage;
+      }
+    }
+    /// <summary>Gets whether the "max_surge_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMaxSurgePercentage {
+      get { return maxSurgeCase_ == MaxSurgeOneofCase.MaxSurgePercentage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "max_surge_percentage" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxSurgePercentage() {
+      if (HasMaxSurgePercentage) {
+        ClearMaxSurge();
+      }
+    }
+
+    /// <summary>Field number for the "previous_deployed_model" field.</summary>
+    public const int PreviousDeployedModelFieldNumber = 1;
+    private string previousDeployedModel_ = "";
+    /// <summary>
+    /// ID of the DeployedModel that this deployment should replace.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PreviousDeployedModel {
+      get { return previousDeployedModel_; }
+      set {
+        previousDeployedModel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "revision_number" field.</summary>
+    public const int RevisionNumberFieldNumber = 2;
+    private int revisionNumber_;
+    /// <summary>
+    /// Output only. Read-only. Revision number determines the relative priority of
+    /// DeployedModels in the same rollout. The DeployedModel with the largest
+    /// revision number specifies the intended state of the deployment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int RevisionNumber {
+      get { return revisionNumber_; }
+      set {
+        revisionNumber_ = value;
+      }
+    }
+
+    private object maxUnavailable_;
+    /// <summary>Enum of possible cases for the "max_unavailable" oneof.</summary>
+    public enum MaxUnavailableOneofCase {
+      None = 0,
+      MaxUnavailableReplicas = 3,
+      MaxUnavailablePercentage = 4,
+    }
+    private MaxUnavailableOneofCase maxUnavailableCase_ = MaxUnavailableOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaxUnavailableOneofCase MaxUnavailableCase {
+      get { return maxUnavailableCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxUnavailable() {
+      maxUnavailableCase_ = MaxUnavailableOneofCase.None;
+      maxUnavailable_ = null;
+    }
+
+    private object maxSurge_;
+    /// <summary>Enum of possible cases for the "max_surge" oneof.</summary>
+    public enum MaxSurgeOneofCase {
+      None = 0,
+      MaxSurgeReplicas = 5,
+      MaxSurgePercentage = 6,
+    }
+    private MaxSurgeOneofCase maxSurgeCase_ = MaxSurgeOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MaxSurgeOneofCase MaxSurgeCase {
+      get { return maxSurgeCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMaxSurge() {
+      maxSurgeCase_ = MaxSurgeOneofCase.None;
+      maxSurge_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RolloutOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RolloutOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MaxUnavailableReplicas != other.MaxUnavailableReplicas) return false;
+      if (MaxUnavailablePercentage != other.MaxUnavailablePercentage) return false;
+      if (MaxSurgeReplicas != other.MaxSurgeReplicas) return false;
+      if (MaxSurgePercentage != other.MaxSurgePercentage) return false;
+      if (PreviousDeployedModel != other.PreviousDeployedModel) return false;
+      if (RevisionNumber != other.RevisionNumber) return false;
+      if (MaxUnavailableCase != other.MaxUnavailableCase) return false;
+      if (MaxSurgeCase != other.MaxSurgeCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasMaxUnavailableReplicas) hash ^= MaxUnavailableReplicas.GetHashCode();
+      if (HasMaxUnavailablePercentage) hash ^= MaxUnavailablePercentage.GetHashCode();
+      if (HasMaxSurgeReplicas) hash ^= MaxSurgeReplicas.GetHashCode();
+      if (HasMaxSurgePercentage) hash ^= MaxSurgePercentage.GetHashCode();
+      if (PreviousDeployedModel.Length != 0) hash ^= PreviousDeployedModel.GetHashCode();
+      if (RevisionNumber != 0) hash ^= RevisionNumber.GetHashCode();
+      hash ^= (int) maxUnavailableCase_;
+      hash ^= (int) maxSurgeCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PreviousDeployedModel.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PreviousDeployedModel);
+      }
+      if (RevisionNumber != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(RevisionNumber);
+      }
+      if (HasMaxUnavailableReplicas) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxUnavailableReplicas);
+      }
+      if (HasMaxUnavailablePercentage) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxUnavailablePercentage);
+      }
+      if (HasMaxSurgeReplicas) {
+        output.WriteRawTag(40);
+        output.WriteInt32(MaxSurgeReplicas);
+      }
+      if (HasMaxSurgePercentage) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MaxSurgePercentage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PreviousDeployedModel.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PreviousDeployedModel);
+      }
+      if (RevisionNumber != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(RevisionNumber);
+      }
+      if (HasMaxUnavailableReplicas) {
+        output.WriteRawTag(24);
+        output.WriteInt32(MaxUnavailableReplicas);
+      }
+      if (HasMaxUnavailablePercentage) {
+        output.WriteRawTag(32);
+        output.WriteInt32(MaxUnavailablePercentage);
+      }
+      if (HasMaxSurgeReplicas) {
+        output.WriteRawTag(40);
+        output.WriteInt32(MaxSurgeReplicas);
+      }
+      if (HasMaxSurgePercentage) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MaxSurgePercentage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasMaxUnavailableReplicas) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxUnavailableReplicas);
+      }
+      if (HasMaxUnavailablePercentage) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxUnavailablePercentage);
+      }
+      if (HasMaxSurgeReplicas) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxSurgeReplicas);
+      }
+      if (HasMaxSurgePercentage) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxSurgePercentage);
+      }
+      if (PreviousDeployedModel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PreviousDeployedModel);
+      }
+      if (RevisionNumber != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(RevisionNumber);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RolloutOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PreviousDeployedModel.Length != 0) {
+        PreviousDeployedModel = other.PreviousDeployedModel;
+      }
+      if (other.RevisionNumber != 0) {
+        RevisionNumber = other.RevisionNumber;
+      }
+      switch (other.MaxUnavailableCase) {
+        case MaxUnavailableOneofCase.MaxUnavailableReplicas:
+          MaxUnavailableReplicas = other.MaxUnavailableReplicas;
+          break;
+        case MaxUnavailableOneofCase.MaxUnavailablePercentage:
+          MaxUnavailablePercentage = other.MaxUnavailablePercentage;
+          break;
+      }
+
+      switch (other.MaxSurgeCase) {
+        case MaxSurgeOneofCase.MaxSurgeReplicas:
+          MaxSurgeReplicas = other.MaxSurgeReplicas;
+          break;
+        case MaxSurgeOneofCase.MaxSurgePercentage:
+          MaxSurgePercentage = other.MaxSurgePercentage;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PreviousDeployedModel = input.ReadString();
+            break;
+          }
+          case 16: {
+            RevisionNumber = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MaxUnavailableReplicas = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            MaxUnavailablePercentage = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            MaxSurgeReplicas = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            MaxSurgePercentage = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PreviousDeployedModel = input.ReadString();
+            break;
+          }
+          case 16: {
+            RevisionNumber = input.ReadInt32();
+            break;
+          }
+          case 24: {
+            MaxUnavailableReplicas = input.ReadInt32();
+            break;
+          }
+          case 32: {
+            MaxUnavailablePercentage = input.ReadInt32();
+            break;
+          }
+          case 40: {
+            MaxSurgeReplicas = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            MaxSurgePercentage = input.ReadInt32();
             break;
           }
         }
