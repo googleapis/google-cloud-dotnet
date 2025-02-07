@@ -1,8 +1,0 @@
-{
-  "distribution_name": "Google.Cloud.ResourceSettings.V1",
-  "release_level": "stable",
-  "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ResourceSettings.V1/latest",
-  "library_type": "GAPIC_AUTO",
-  "language": "dotnet",
-  "api_shortname": "resourcesettings"
-}
