@@ -35,23 +35,21 @@ namespace Google.Cloud.Tools.ReleaseManager
             // and any API dependencies in this repo that don't keep history files themselves.
             var apiIds = new HashSet<string>(GetHistoryApiIds(catalog, api));
 
-            var predicates = apiIds.Select(CreateCommitPredicateForId).ToList();
+            var predicates = apiIds.Select(id => CreateCommitPredicateForPathPrefix($"apis/{id}/{id}/")).ToList();
             return commit => predicates.Any(p => p(commit));
-
-            Func<Commit, bool> CreateCommitPredicateForId(string id) =>
-                commit =>
-                {
-                    if (commit.Parents.Count() != 1)
-                    {
-                        return false;
-                    }
-                    var tree = commit.Tree;
-                    var parentTree = commit.Parents.First().Tree;
-                    var pathPrefix = $"apis/{id}/{id}/";
-                    // The commit is relevant if and only if the production code (or project) has changed.
-                    return tree[pathPrefix]?.Target.Sha != parentTree[pathPrefix]?.Target.Sha;
-                };
         }
+
+        internal static Func<Commit, bool> CreateCommitPredicateForPathPrefix(string pathPrefix) =>
+            commit =>
+            {
+                if (commit.Parents.Count() != 1)
+                {
+                    return false;
+                }
+                var tree = commit.Tree;
+                var parentTree = commit.Parents.First().Tree;
+                return tree[pathPrefix]?.Target.Sha != parentTree[pathPrefix]?.Target.Sha;
+            };
 
         /// <summary>
         /// Returns the APIs IDs from which the version history of the given API is constructed.
