@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened2_resourceNames1]
-    using Google.Cloud;
+    // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened1_resourceNames]
     using Google.Cloud.CloudQuotas.V1Beta;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudQuotasClientSnippets
     {
-        /// <summary>Snippet for CreateQuotaPreference</summary>
+        /// <summary>Snippet for CreateQuotaPreferenceAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,16 +30,17 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateQuotaPreference2ResourceNames1()
+        public async Task CreateQuotaPreference1ResourceNamesAsync()
         {
             // Create client
-            CloudQuotasClient cloudQuotasClient = CloudQuotasClient.Create();
+            CloudQuotasClient cloudQuotasClient = await CloudQuotasClient.CreateAsync();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             QuotaPreference quotaPreference = new QuotaPreference();
+            string quotaPreferenceId = "";
             // Make the request
-            QuotaPreference response = cloudQuotasClient.CreateQuotaPreference(parent, quotaPreference);
+            QuotaPreference response = await cloudQuotasClient.CreateQuotaPreferenceAsync(parent, quotaPreference, quotaPreferenceId);
         }
     }
-    // [END cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync_flattened2_resourceNames1]
+    // [END cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_async_flattened1_resourceNames]
 }

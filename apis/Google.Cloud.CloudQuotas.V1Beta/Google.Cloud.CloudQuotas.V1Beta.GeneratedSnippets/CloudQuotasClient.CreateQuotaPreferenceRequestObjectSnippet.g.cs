@@ -17,7 +17,6 @@
 namespace GoogleCSharpSnippets
 {
     // [START cloudquotas_v1beta_generated_CloudQuotas_CreateQuotaPreference_sync]
-    using Google.Cloud;
     using Google.Cloud.CloudQuotas.V1Beta;
 
     public sealed partial class GeneratedCloudQuotasClientSnippets

@@ -16,17 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_async_flattened_resourceNames1]
+    // [START cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync_flattened_resourceNames]
     using Google.Api.Gax;
-    using Google.Cloud;
     using Google.Cloud.CloudQuotas.V1Beta;
     using System;
-    using System.Linq;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedCloudQuotasClientSnippets
     {
-        /// <summary>Snippet for ListQuotaPreferencesAsync</summary>
+        /// <summary>Snippet for ListQuotaPreferences</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -34,24 +31,24 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task ListQuotaPreferencesResourceNames1Async()
+        public void ListQuotaPreferencesResourceNames()
         {
             // Create client
-            CloudQuotasClient cloudQuotasClient = await CloudQuotasClient.CreateAsync();
+            CloudQuotasClient cloudQuotasClient = CloudQuotasClient.Create();
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
-            PagedAsyncEnumerable<ListQuotaPreferencesResponse, QuotaPreference> response = cloudQuotasClient.ListQuotaPreferencesAsync(parent);
+            PagedEnumerable<ListQuotaPreferencesResponse, QuotaPreference> response = cloudQuotasClient.ListQuotaPreferences(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await response.ForEachAsync((QuotaPreference item) =>
+            foreach (QuotaPreference item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            });
+            }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await response.AsRawResponses().ForEachAsync((ListQuotaPreferencesResponse page) =>
+            foreach (ListQuotaPreferencesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
@@ -60,11 +57,11 @@ namespace GoogleCSharpSnippets
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            });
+            }
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<QuotaPreference> singlePage = await response.ReadPageAsync(pageSize);
+            Page<QuotaPreference> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (QuotaPreference item in singlePage)
@@ -76,5 +73,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_async_flattened_resourceNames1]
+    // [END cloudquotas_v1beta_generated_CloudQuotas_ListQuotaPreferences_sync_flattened_resourceNames]
 }
