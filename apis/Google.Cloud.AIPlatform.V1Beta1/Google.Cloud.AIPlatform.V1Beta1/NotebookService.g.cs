@@ -1075,6 +1075,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     ///     * A key including a space must be quoted. `labels."a key"`.
     ///   * `notebookRuntimeType` supports = and !=. notebookRuntimeType enum:
     ///   [USER_DEFINED, ONE_CLICK].
+    ///   * `machineType` supports = and !=.
+    ///   * `acceleratorType` supports = and !=.
     ///
     /// Some examples:
     ///
@@ -1082,6 +1084,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     ///   * `displayName="myDisplayName"`
     ///   * `labels.myKey="myValue"`
     ///   * `notebookRuntimeType=USER_DEFINED`
+    ///   * `machineType=e2-standard-4`
+    ///   * `acceleratorType=NVIDIA_TESLA_T4`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2989,6 +2993,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     ///   UI_RESOURCE_STATE_CREATION_FAILED].
     ///   * `notebookRuntimeType` supports = and !=. notebookRuntimeType enum:
     ///   [USER_DEFINED, ONE_CLICK].
+    ///   * `machineType` supports = and !=.
+    ///   * `acceleratorType` supports = and !=.
     ///
     /// Some examples:
     ///
@@ -3000,6 +3006,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     ///   * `runtimeUser="test@google.com"`
     ///   * `uiState=UI_RESOURCE_STATE_BEING_DELETED`
     ///   * `notebookRuntimeType=USER_DEFINED`
+    ///   * `machineType=e2-standard-4`
+    ///   * `acceleratorType=NVIDIA_TESLA_T4`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6430,7 +6438,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     /// <summary>
     /// Optional. The standard list page token.
     /// Typically obtained via
-    /// [ListNotebookExecutionJobs.next_page_token][] of the previous
+    /// [ListNotebookExecutionJobsResponse.next_page_token][google.cloud.aiplatform.v1beta1.ListNotebookExecutionJobsResponse.next_page_token]
+    /// of the previous
     /// [NotebookService.ListNotebookExecutionJobs][google.cloud.aiplatform.v1beta1.NotebookService.ListNotebookExecutionJobs]
     /// call.
     /// </summary>
@@ -6801,8 +6810,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results.
-    /// Pass to [ListNotebookExecutionJobs.page_token][] to obtain that
-    /// page.
+    /// Pass to
+    /// [ListNotebookExecutionJobsRequest.page_token][google.cloud.aiplatform.v1beta1.ListNotebookExecutionJobsRequest.page_token]
+    /// to obtain that page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
