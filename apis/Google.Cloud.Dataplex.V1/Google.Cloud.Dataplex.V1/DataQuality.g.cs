@@ -3074,6 +3074,8 @@ namespace Google.Cloud.Dataplex.V1 {
     /// evaluation, or
     /// * exclude `null` rows from the `evaluated_count`, by setting
     /// `ignore_nulls = true`.
+    ///
+    /// This field is not set for rule SqlAssertion.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3088,9 +3090,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int PassedCountFieldNumber = 8;
     private long passedCount_;
     /// <summary>
-    /// The number of rows which passed a rule evaluation.
-    ///
-    /// This field is only valid for row-level type rules.
+    /// This field is not set for rule SqlAssertion.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
