@@ -68,6 +68,7 @@ namespace GoogleCSharpSnippets
             ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListAnswerRecordsResponse, AnswerRecord> response = answerRecordsClient.ListAnswerRecords(request);
@@ -116,6 +117,7 @@ namespace GoogleCSharpSnippets
             ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListAnswerRecordsResponse, AnswerRecord> response = answerRecordsClient.ListAnswerRecordsAsync(request);
