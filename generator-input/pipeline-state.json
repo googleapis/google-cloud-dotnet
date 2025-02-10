@@ -882,11 +882,6 @@
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
-      "id": "google/cloud/resourcesettings/v1",
-      "lastGeneratedCommit": "7f62415454d05722b611faf0371242e287512710",
-      "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
-    },
-    {
       "id": "google/cloud/retail/v2",
       "lastGeneratedCommit": "d01eb4689472766df6822cdfcdb4412bfb4c2789",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
