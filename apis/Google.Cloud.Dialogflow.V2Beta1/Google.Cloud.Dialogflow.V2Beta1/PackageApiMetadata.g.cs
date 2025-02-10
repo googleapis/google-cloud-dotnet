@@ -79,6 +79,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1
             yield return IntentReflection.Descriptor;
             yield return KnowledgeBaseReflection.Descriptor;
             yield return ParticipantReflection.Descriptor;
+            yield return PhoneNumberReflection.Descriptor;
             yield return SessionReflection.Descriptor;
             yield return SessionEntityTypeReflection.Descriptor;
             yield return SipTrunkReflection.Descriptor;

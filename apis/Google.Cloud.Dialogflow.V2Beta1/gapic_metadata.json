@@ -677,6 +677,39 @@
         }
       }
     },
+    "PhoneNumbers": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PhoneNumbersClient",
+          "rpcs": {
+            "DeletePhoneNumber": {
+              "methods": [
+                "DeletePhoneNumber",
+                "DeletePhoneNumberAsync"
+              ]
+            },
+            "ListPhoneNumbers": {
+              "methods": [
+                "ListPhoneNumbers",
+                "ListPhoneNumbersAsync"
+              ]
+            },
+            "UndeletePhoneNumber": {
+              "methods": [
+                "UndeletePhoneNumber",
+                "UndeletePhoneNumberAsync"
+              ]
+            },
+            "UpdatePhoneNumber": {
+              "methods": [
+                "UpdatePhoneNumber",
+                "UpdatePhoneNumberAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "SessionEntityTypes": {
       "clients": {
         "grpc": {

@@ -2582,12 +2582,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -2631,12 +2631,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -26980,6 +26980,1210 @@
         {
           "start": 35,
           "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_ListPhoneNumbers_sync",
+      "title": "ListPhoneNumbersRequestObject",
+      "description": "Snippet for ListPhoneNumbers",
+      "file": "PhoneNumbersClient.ListPhoneNumbersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPhoneNumbers",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.ListPhoneNumbers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersResponse, Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "ListPhoneNumbers",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.ListPhoneNumbers",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_ListPhoneNumbers_async",
+      "title": "ListPhoneNumbersRequestObjectAsync",
+      "description": "Snippet for ListPhoneNumbersAsync",
+      "file": "PhoneNumbersClient.ListPhoneNumbersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPhoneNumbersAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.ListPhoneNumbersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersResponse, Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "ListPhoneNumbers",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.ListPhoneNumbers",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_ListPhoneNumbers_sync_flattened",
+      "title": "ListPhoneNumbers",
+      "description": "Snippet for ListPhoneNumbers",
+      "file": "PhoneNumbersClient.ListPhoneNumbersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPhoneNumbers",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.ListPhoneNumbers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersResponse, Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "ListPhoneNumbers",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.ListPhoneNumbers",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_ListPhoneNumbers_async_flattened",
+      "title": "ListPhoneNumbersAsync",
+      "description": "Snippet for ListPhoneNumbersAsync",
+      "file": "PhoneNumbersClient.ListPhoneNumbersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPhoneNumbersAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.ListPhoneNumbersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersResponse, Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "ListPhoneNumbers",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.ListPhoneNumbers",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_ListPhoneNumbers_sync_flattened_resourceNames1",
+      "title": "ListPhoneNumbersResourceNames1",
+      "description": "Snippet for ListPhoneNumbers",
+      "file": "PhoneNumbersClient.ListPhoneNumbersResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPhoneNumbers",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.ListPhoneNumbers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersResponse, Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "ListPhoneNumbers",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.ListPhoneNumbers",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_ListPhoneNumbers_async_flattened_resourceNames1",
+      "title": "ListPhoneNumbersResourceNames1Async",
+      "description": "Snippet for ListPhoneNumbersAsync",
+      "file": "PhoneNumbersClient.ListPhoneNumbersResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPhoneNumbersAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.ListPhoneNumbersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersResponse, Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "ListPhoneNumbers",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.ListPhoneNumbers",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_ListPhoneNumbers_sync_flattened_resourceNames2",
+      "title": "ListPhoneNumbersResourceNames2",
+      "description": "Snippet for ListPhoneNumbers",
+      "file": "PhoneNumbersClient.ListPhoneNumbersResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPhoneNumbers",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.ListPhoneNumbers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersResponse, Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "ListPhoneNumbers",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.ListPhoneNumbers",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_ListPhoneNumbers_async_flattened_resourceNames2",
+      "title": "ListPhoneNumbersResourceNames2Async",
+      "description": "Snippet for ListPhoneNumbersAsync",
+      "file": "PhoneNumbersClient.ListPhoneNumbersResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPhoneNumbersAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.ListPhoneNumbersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dialogflow.V2Beta1.ListPhoneNumbersResponse, Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "ListPhoneNumbers",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.ListPhoneNumbers",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UpdatePhoneNumber_sync",
+      "title": "UpdatePhoneNumberRequestObject",
+      "description": "Snippet for UpdatePhoneNumber",
+      "file": "PhoneNumbersClient.UpdatePhoneNumberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePhoneNumber",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UpdatePhoneNumber",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UpdatePhoneNumberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UpdatePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UpdatePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UpdatePhoneNumber_async",
+      "title": "UpdatePhoneNumberRequestObjectAsync",
+      "description": "Snippet for UpdatePhoneNumberAsync",
+      "file": "PhoneNumbersClient.UpdatePhoneNumberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePhoneNumberAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UpdatePhoneNumberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UpdatePhoneNumberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UpdatePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UpdatePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UpdatePhoneNumber_sync_flattened",
+      "title": "UpdatePhoneNumber",
+      "description": "Snippet for UpdatePhoneNumber",
+      "file": "PhoneNumbersClient.UpdatePhoneNumberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePhoneNumber",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UpdatePhoneNumber",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+            "name": "phoneNumber"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UpdatePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UpdatePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UpdatePhoneNumber_async_flattened",
+      "title": "UpdatePhoneNumberAsync",
+      "description": "Snippet for UpdatePhoneNumberAsync",
+      "file": "PhoneNumbersClient.UpdatePhoneNumberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePhoneNumberAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UpdatePhoneNumberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+            "name": "phoneNumber"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UpdatePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UpdatePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_DeletePhoneNumber_sync",
+      "title": "DeletePhoneNumberRequestObject",
+      "description": "Snippet for DeletePhoneNumber",
+      "file": "PhoneNumbersClient.DeletePhoneNumberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePhoneNumber",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.DeletePhoneNumber",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeletePhoneNumberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "DeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.DeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_DeletePhoneNumber_async",
+      "title": "DeletePhoneNumberRequestObjectAsync",
+      "description": "Snippet for DeletePhoneNumberAsync",
+      "file": "PhoneNumbersClient.DeletePhoneNumberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePhoneNumberAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.DeletePhoneNumberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.DeletePhoneNumberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "DeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.DeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_DeletePhoneNumber_sync_flattened",
+      "title": "DeletePhoneNumber",
+      "description": "Snippet for DeletePhoneNumber",
+      "file": "PhoneNumbersClient.DeletePhoneNumberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePhoneNumber",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.DeletePhoneNumber",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "DeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.DeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_DeletePhoneNumber_async_flattened",
+      "title": "DeletePhoneNumberAsync",
+      "description": "Snippet for DeletePhoneNumberAsync",
+      "file": "PhoneNumbersClient.DeletePhoneNumberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePhoneNumberAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.DeletePhoneNumberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "DeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.DeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_DeletePhoneNumber_sync_flattened_resourceNames",
+      "title": "DeletePhoneNumberResourceNames",
+      "description": "Snippet for DeletePhoneNumber",
+      "file": "PhoneNumbersClient.DeletePhoneNumberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePhoneNumber",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.DeletePhoneNumber",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "DeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.DeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_DeletePhoneNumber_async_flattened_resourceNames",
+      "title": "DeletePhoneNumberResourceNamesAsync",
+      "description": "Snippet for DeletePhoneNumberAsync",
+      "file": "PhoneNumbersClient.DeletePhoneNumberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePhoneNumberAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.DeletePhoneNumberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "DeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.DeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UndeletePhoneNumber_sync",
+      "title": "UndeletePhoneNumberRequestObject",
+      "description": "Snippet for UndeletePhoneNumber",
+      "file": "PhoneNumbersClient.UndeletePhoneNumberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeletePhoneNumber",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UndeletePhoneNumber",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UndeletePhoneNumberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UndeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UndeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UndeletePhoneNumber_async",
+      "title": "UndeletePhoneNumberRequestObjectAsync",
+      "description": "Snippet for UndeletePhoneNumberAsync",
+      "file": "PhoneNumbersClient.UndeletePhoneNumberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeletePhoneNumberAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UndeletePhoneNumberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.UndeletePhoneNumberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UndeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UndeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UndeletePhoneNumber_sync_flattened",
+      "title": "UndeletePhoneNumber",
+      "description": "Snippet for UndeletePhoneNumber",
+      "file": "PhoneNumbersClient.UndeletePhoneNumberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeletePhoneNumber",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UndeletePhoneNumber",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UndeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UndeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UndeletePhoneNumber_async_flattened",
+      "title": "UndeletePhoneNumberAsync",
+      "description": "Snippet for UndeletePhoneNumberAsync",
+      "file": "PhoneNumbersClient.UndeletePhoneNumberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeletePhoneNumberAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UndeletePhoneNumberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UndeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UndeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UndeletePhoneNumber_sync_flattened_resourceNames",
+      "title": "UndeletePhoneNumberResourceNames",
+      "description": "Snippet for UndeletePhoneNumber",
+      "file": "PhoneNumbersClient.UndeletePhoneNumberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeletePhoneNumber",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UndeletePhoneNumber",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumber",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UndeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UndeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dialogflow_v2beta1_generated_PhoneNumbers_UndeletePhoneNumber_async_flattened_resourceNames",
+      "title": "UndeletePhoneNumberResourceNamesAsync",
+      "description": "Snippet for UndeletePhoneNumberAsync",
+      "file": "PhoneNumbersClient.UndeletePhoneNumberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeletePhoneNumberAsync",
+        "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient.UndeletePhoneNumberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dialogflow.V2Beta1.PhoneNumber>",
+        "client": {
+          "shortName": "PhoneNumbersClient",
+          "fullName": "Google.Cloud.Dialogflow.V2Beta1.PhoneNumbersClient"
+        },
+        "method": {
+          "shortName": "UndeletePhoneNumber",
+          "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers.UndeletePhoneNumber",
+          "service": {
+            "shortName": "PhoneNumbers",
+            "fullName": "google.cloud.dialogflow.v2beta1.PhoneNumbers"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
