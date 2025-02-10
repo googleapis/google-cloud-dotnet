@@ -4416,7 +4416,7 @@
     },
     {
       "id": "Google.Cloud.Run.V2",
-      "version": "2.12.0",
+      "version": "2.13.0",
       "type": "grpc",
       "productName": "Cloud Run Admin",
       "productUrl": "https://cloud.google.com/run/docs",
@@ -4426,7 +4426,7 @@
         "admin"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.Cloud.Location": "2.3.0",
         "Google.LongRunning": "3.3.0"
       },

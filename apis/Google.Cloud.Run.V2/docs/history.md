@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.13.0, released 2025-02-10
+
+### New features
+
+- Add BuildConfig to Services for configuring Run functions ([commit a73130d](https://github.com/googleapis/google-cloud-dotnet/commit/a73130d3ce4213d802eefe51edc748fe07287f9e))
+- Add BuildInfo to Revision for displaying BuildConfig used for a specific revision deployment ([commit a73130d](https://github.com/googleapis/google-cloud-dotnet/commit/a73130d3ce4213d802eefe51edc748fe07287f9e))
+- Add Base Image URI to Container ([commit a73130d](https://github.com/googleapis/google-cloud-dotnet/commit/a73130d3ce4213d802eefe51edc748fe07287f9e))
+- Add creator field to Execution ([commit a73130d](https://github.com/googleapis/google-cloud-dotnet/commit/a73130d3ce4213d802eefe51edc748fe07287f9e))
+- Add project_descriptor to BuildspackBuild ([commit a73130d](https://github.com/googleapis/google-cloud-dotnet/commit/a73130d3ce4213d802eefe51edc748fe07287f9e))
+
+### Documentation improvements
+
+- Some typos were fixed and formatting changed ([commit a73130d](https://github.com/googleapis/google-cloud-dotnet/commit/a73130d3ce4213d802eefe51edc748fe07287f9e))
+
 ## Version 2.12.0, released 2024-12-06
 
 ### New features
