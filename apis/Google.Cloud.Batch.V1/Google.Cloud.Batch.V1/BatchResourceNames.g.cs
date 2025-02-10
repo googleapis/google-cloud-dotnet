@@ -44,6 +44,18 @@ namespace Google.Cloud.Batch.V1
         }
     }
 
+    public partial class CancelJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::JobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::JobName JobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::JobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListTasksRequest
     {
         /// <summary>

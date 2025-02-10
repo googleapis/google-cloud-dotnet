@@ -346,6 +346,191 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CancelJob</summary>
+        public void CancelJobRequestObject()
+        {
+            // Snippet: CancelJob(CancelJobRequest, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::CancelJobRequest request = new gcbv::CancelJobRequest
+            {
+                JobName = gcbv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> response = batchServiceClient.CancelJob(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcbv::CancelJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> retrievedResponse = batchServiceClient.PollOnceCancelJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcbv::CancelJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelJobAsync</summary>
+        public async Task CancelJobRequestObjectAsync()
+        {
+            // Snippet: CancelJobAsync(CancelJobRequest, CallSettings)
+            // Additional: CancelJobAsync(CancelJobRequest, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::CancelJobRequest request = new gcbv::CancelJobRequest
+            {
+                JobName = gcbv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> response = await batchServiceClient.CancelJobAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcbv::CancelJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceCancelJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcbv::CancelJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelJob</summary>
+        public void CancelJob()
+        {
+            // Snippet: CancelJob(string, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
+            // Make the request
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> response = batchServiceClient.CancelJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcbv::CancelJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> retrievedResponse = batchServiceClient.PollOnceCancelJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcbv::CancelJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelJobAsync</summary>
+        public async Task CancelJobAsync()
+        {
+            // Snippet: CancelJobAsync(string, CallSettings)
+            // Additional: CancelJobAsync(string, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/jobs/[JOB]";
+            // Make the request
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> response = await batchServiceClient.CancelJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcbv::CancelJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceCancelJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcbv::CancelJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelJob</summary>
+        public void CancelJobResourceNames()
+        {
+            // Snippet: CancelJob(JobName, CallSettings)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = gcbv::BatchServiceClient.Create();
+            // Initialize request argument(s)
+            gcbv::JobName name = gcbv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> response = batchServiceClient.CancelJob(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            gcbv::CancelJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> retrievedResponse = batchServiceClient.PollOnceCancelJob(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcbv::CancelJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelJobAsync</summary>
+        public async Task CancelJobResourceNamesAsync()
+        {
+            // Snippet: CancelJobAsync(JobName, CallSettings)
+            // Additional: CancelJobAsync(JobName, CancellationToken)
+            // Create client
+            gcbv::BatchServiceClient batchServiceClient = await gcbv::BatchServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::JobName name = gcbv::JobName.FromProjectLocationJob("[PROJECT]", "[LOCATION]", "[JOB]");
+            // Make the request
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> response = await batchServiceClient.CancelJobAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            gcbv::CancelJobResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<gcbv::CancelJobResponse, gcbv::OperationMetadata> retrievedResponse = await batchServiceClient.PollOnceCancelJobAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                gcbv::CancelJobResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListJobs</summary>
         public void ListJobsRequestObject()
         {

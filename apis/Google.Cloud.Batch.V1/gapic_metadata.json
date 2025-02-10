@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "BatchServiceClient",
           "rpcs": {
+            "CancelJob": {
+              "methods": [
+                "CancelJob",
+                "CancelJobAsync"
+              ]
+            },
             "CreateJob": {
               "methods": [
                 "CreateJob",
