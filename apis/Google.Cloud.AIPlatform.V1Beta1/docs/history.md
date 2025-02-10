@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta17, released 2025-02-10
+
+### New features
+
+- A new field `response_id` is added to message `.google.cloud.aiplatform.v1.GenerateContentResponse` ([commit 96edae6](https://github.com/googleapis/google-cloud-dotnet/commit/96edae615ae72e283fd7bcffc73aab724a24c17e))
+- A new field `create_time` is added to message `.google.cloud.aiplatform.v1.GenerateContentResponse` ([commit 96edae6](https://github.com/googleapis/google-cloud-dotnet/commit/96edae615ae72e283fd7bcffc73aab724a24c17e))
+- Add Notebooks Runtime Software Configuration ([commit 40f33a4](https://github.com/googleapis/google-cloud-dotnet/commit/40f33a4326873c397b8b6ed56c8373940dfe6684))
+- Add RolloutOptions to DeployedModel in v1beta1 endpoint.proto, add additional Probe options in v1beta1 model.proto ([commit aeee7bc](https://github.com/googleapis/google-cloud-dotnet/commit/aeee7bcc9bc126bbf92bebaffa135d4c68a74ca0))
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.cloud.aiplatform.v1beta1.ListNotebookRuntimeTemplatesRequest` is changed ([commit 40f33a4](https://github.com/googleapis/google-cloud-dotnet/commit/40f33a4326873c397b8b6ed56c8373940dfe6684))
+- A comment for field `filter` in message `.google.cloud.aiplatform.v1beta1.ListNotebookRuntimesRequest` is changed ([commit 40f33a4](https://github.com/googleapis/google-cloud-dotnet/commit/40f33a4326873c397b8b6ed56c8373940dfe6684))
+
 ## Version 1.0.0-beta16, released 2025-02-06
 
 ### New features
