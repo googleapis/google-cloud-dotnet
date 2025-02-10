@@ -76,6 +76,8 @@ namespace Google.Cloud.Batch.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1.CancelJobRequest> __Marshaller_google_cloud_batch_v1_CancelJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1.CancelJobRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1.ListJobsRequest> __Marshaller_google_cloud_batch_v1_ListJobsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1.ListJobsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Batch.V1.ListJobsResponse> __Marshaller_google_cloud_batch_v1_ListJobsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Batch.V1.ListJobsResponse.Parser));
@@ -110,6 +112,14 @@ namespace Google.Cloud.Batch.V1 {
         __ServiceName,
         "DeleteJob",
         __Marshaller_google_cloud_batch_v1_DeleteJobRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Batch.V1.CancelJobRequest, global::Google.LongRunning.Operation> __Method_CancelJob = new grpc::Method<global::Google.Cloud.Batch.V1.CancelJobRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CancelJob",
+        __Marshaller_google_cloud_batch_v1_CancelJobRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -178,6 +188,18 @@ namespace Google.Cloud.Batch.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteJob(global::Google.Cloud.Batch.V1.DeleteJobRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Cancel a Job.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CancelJob(global::Google.Cloud.Batch.V1.CancelJobRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -392,6 +414,54 @@ namespace Google.Cloud.Batch.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteJob, null, options, request);
       }
       /// <summary>
+      /// Cancel a Job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelJob(global::Google.Cloud.Batch.V1.CancelJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelJob(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancel a Job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CancelJob(global::Google.Cloud.Batch.V1.CancelJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CancelJob, null, options, request);
+      }
+      /// <summary>
+      /// Cancel a Job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelJobAsync(global::Google.Cloud.Batch.V1.CancelJobRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CancelJobAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Cancel a Job.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CancelJobAsync(global::Google.Cloud.Batch.V1.CancelJobRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CancelJob, null, options, request);
+      }
+      /// <summary>
       /// List all Jobs for a project within a region.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -552,6 +622,7 @@ namespace Google.Cloud.Batch.V1 {
           .AddMethod(__Method_CreateJob, serviceImpl.CreateJob)
           .AddMethod(__Method_GetJob, serviceImpl.GetJob)
           .AddMethod(__Method_DeleteJob, serviceImpl.DeleteJob)
+          .AddMethod(__Method_CancelJob, serviceImpl.CancelJob)
           .AddMethod(__Method_ListJobs, serviceImpl.ListJobs)
           .AddMethod(__Method_GetTask, serviceImpl.GetTask)
           .AddMethod(__Method_ListTasks, serviceImpl.ListTasks).Build();
@@ -567,6 +638,7 @@ namespace Google.Cloud.Batch.V1 {
       serviceBinder.AddMethod(__Method_CreateJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1.CreateJobRequest, global::Google.Cloud.Batch.V1.Job>(serviceImpl.CreateJob));
       serviceBinder.AddMethod(__Method_GetJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1.GetJobRequest, global::Google.Cloud.Batch.V1.Job>(serviceImpl.GetJob));
       serviceBinder.AddMethod(__Method_DeleteJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1.DeleteJobRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteJob));
+      serviceBinder.AddMethod(__Method_CancelJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1.CancelJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CancelJob));
       serviceBinder.AddMethod(__Method_ListJobs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1.ListJobsRequest, global::Google.Cloud.Batch.V1.ListJobsResponse>(serviceImpl.ListJobs));
       serviceBinder.AddMethod(__Method_GetTask, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1.GetTaskRequest, global::Google.Cloud.Batch.V1.Task>(serviceImpl.GetTask));
       serviceBinder.AddMethod(__Method_ListTasks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Batch.V1.ListTasksRequest, global::Google.Cloud.Batch.V1.ListTasksResponse>(serviceImpl.ListTasks));

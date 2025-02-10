@@ -809,6 +809,293 @@
       ]
     },
     {
+      "regionTag": "batch_v1_generated_BatchService_CancelJob_sync",
+      "title": "CancelJobRequestObject",
+      "description": "Snippet for CancelJob",
+      "file": "BatchServiceClient.CancelJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CancelJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.CancelJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Batch.V1.CancelJobResponse, Google.Cloud.Batch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CancelJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CancelJob_async",
+      "title": "CancelJobRequestObjectAsync",
+      "description": "Snippet for CancelJobAsync",
+      "file": "BatchServiceClient.CancelJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CancelJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.CancelJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Batch.V1.CancelJobResponse, Google.Cloud.Batch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CancelJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CancelJob_sync_flattened",
+      "title": "CancelJob",
+      "description": "Snippet for CancelJob",
+      "file": "BatchServiceClient.CancelJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CancelJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Batch.V1.CancelJobResponse, Google.Cloud.Batch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CancelJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CancelJob_async_flattened",
+      "title": "CancelJobAsync",
+      "description": "Snippet for CancelJobAsync",
+      "file": "BatchServiceClient.CancelJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CancelJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Batch.V1.CancelJobResponse, Google.Cloud.Batch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CancelJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CancelJob_sync_flattened_resourceNames",
+      "title": "CancelJobResourceNames",
+      "description": "Snippet for CancelJob",
+      "file": "BatchServiceClient.CancelJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJob",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CancelJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Batch.V1.CancelJobResponse, Google.Cloud.Batch.V1.OperationMetadata>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CancelJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "batch_v1_generated_BatchService_CancelJob_async_flattened_resourceNames",
+      "title": "CancelJobResourceNamesAsync",
+      "description": "Snippet for CancelJobAsync",
+      "file": "BatchServiceClient.CancelJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJobAsync",
+        "fullName": "Google.Cloud.Batch.V1.BatchServiceClient.CancelJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Batch.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Batch.V1.CancelJobResponse, Google.Cloud.Batch.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "BatchServiceClient",
+          "fullName": "Google.Cloud.Batch.V1.BatchServiceClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.batch.v1.BatchService.CancelJob",
+          "service": {
+            "shortName": "BatchService",
+            "fullName": "google.cloud.batch.v1.BatchService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "batch_v1_generated_BatchService_ListJobs_sync",
       "title": "ListJobsRequestObject",
       "description": "Snippet for ListJobs",
