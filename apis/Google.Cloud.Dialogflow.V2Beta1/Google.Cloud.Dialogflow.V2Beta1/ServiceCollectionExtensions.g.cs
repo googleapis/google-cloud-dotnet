@@ -485,6 +485,38 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>Adds a singleton <see cref="gcdv::PhoneNumbersClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPhoneNumbersClient(this IServiceCollection services, sys::Action<gcdv::PhoneNumbersClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::PhoneNumbersClientBuilder builder = new gcdv::PhoneNumbersClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gcdv::PhoneNumbersClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddPhoneNumbersClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gcdv::PhoneNumbersClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gcdv::PhoneNumbersClientBuilder builder = new gcdv::PhoneNumbersClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>
         /// Adds a singleton <see cref="gcdv::SessionEntityTypesClient"/> to <paramref name="services"/>.
         /// </summary>

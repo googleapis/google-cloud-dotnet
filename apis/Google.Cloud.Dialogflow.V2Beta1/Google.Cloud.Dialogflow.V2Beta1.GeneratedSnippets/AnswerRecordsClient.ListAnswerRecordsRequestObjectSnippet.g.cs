@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             ListAnswerRecordsRequest request = new ListAnswerRecordsRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListAnswerRecordsResponse, AnswerRecord> response = answerRecordsClient.ListAnswerRecords(request);
