@@ -18,12 +18,12 @@
     },
     {
       "id": "google/analytics/data/v1beta",
-      "lastGeneratedCommit": "3a6c7dcb9e3bc6792bb9b41939a8dd2bbd6dcaf9",
+      "lastGeneratedCommit": "6fb68312dc1372cbc497f0e5294c94945879736c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/apps/card/v1",
-      "lastGeneratedCommit": "436a34a5da04978e98859afe7487ce93d08e9c03",
+      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -48,7 +48,7 @@
     },
     {
       "id": "google/apps/script/type",
-      "lastGeneratedCommit": "d606bb4a7852604e4045948d6340e73cb0d1d70b",
+      "lastGeneratedCommit": "d196cb2d69e542020101d8a30f1e33497835a4f1",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -58,42 +58,42 @@
     },
     {
       "id": "google/cloud/accessapproval/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/advisorynotifications/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "51de26cce4b5ed4e7be991bedab8bcb789a8d1ae",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/alloydb/v1",
-      "lastGeneratedCommit": "113ddfebbe8d4e0639eb19fe91817a13edfc0c5c",
+      "lastGeneratedCommit": "1f3eb168e3fc43799e45e6e9df36cb3298e1d605",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/alloydb/v1alpha",
-      "lastGeneratedCommit": "f9f62cbb71591ab1e3fe2dfedb63ea08f17931a0",
+      "lastGeneratedCommit": "1f3eb168e3fc43799e45e6e9df36cb3298e1d605",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/alloydb/v1beta",
-      "lastGeneratedCommit": "c72f219fedbb57d3f83c10550e135c4824b670eb",
+      "lastGeneratedCommit": "1f3eb168e3fc43799e45e6e9df36cb3298e1d605",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/apigateway/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/aiplatform/v1beta1",
-      "lastGeneratedCommit": "093d2bf336895252da6970983581fff17801e5bf",
+      "lastGeneratedCommit": "901fc8ee4257d5d7b0d53ba3494fab53bf1a2a67",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/aiplatform/v1",
-      "lastGeneratedCommit": "27aa9d542f54ae1ea1277580550dd04aeb5b09f9",
+      "lastGeneratedCommit": "9a61deddf9bdccd92bc6701f26334f15857e853b",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -103,27 +103,27 @@
     },
     {
       "id": "google/api/apikeys/v2",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "51de26cce4b5ed4e7be991bedab8bcb789a8d1ae",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/apigeeconnect/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/apigeeregistry/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "cead73336b652505e12689826d9ad037eb8852b0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/appengine/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/apphub/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "54d659d0ae74f39e92755948b821a1495b3cb3c8",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -138,7 +138,7 @@
     },
     {
       "id": "google/cloud/asset/v1",
-      "lastGeneratedCommit": "c27097ea636b7b2699f1a1c9c6bf3fb66ff8a789",
+      "lastGeneratedCommit": "651af4b02f16b5c04c7c4f721d3533ca6869e7c8",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -148,12 +148,12 @@
     },
     {
       "id": "google/cloud/assuredworkloads/v1beta1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "620613892975f238bff26bb11658c07f564916bf",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/audit",
-      "lastGeneratedCommit": "42c04fea4338ba626095ec2cde5ea75827191581",
+      "lastGeneratedCommit": "9c586e8f14bcd6dfe47c35a5dcbeac446e634f73",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "id": "google/cloud/baremetalsolution/v2",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "51de26cce4b5ed4e7be991bedab8bcb789a8d1ae",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -183,22 +183,22 @@
     },
     {
       "id": "google/cloud/beyondcorp/appconnections/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "3d160b66bda7e37b90d6509b7ad2ce668e9350f1",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/beyondcorp/appconnectors/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "3d160b66bda7e37b90d6509b7ad2ce668e9350f1",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/beyondcorp/appgateways/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "3d160b66bda7e37b90d6509b7ad2ce668e9350f1",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/beyondcorp/clientgateways/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "3d160b66bda7e37b90d6509b7ad2ce668e9350f1",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -208,17 +208,17 @@
     },
     {
       "id": "google/cloud/bigquery/connection/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/bigquery/dataexchange/v1beta1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "6fb68312dc1372cbc497f0e5294c94945879736c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/bigquery/datapolicies/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "668cf05677fbb1bb3311bec0c3453ab782f62e91",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -258,7 +258,7 @@
     },
     {
       "id": "google/cloud/billing/budgets/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -283,7 +283,7 @@
     },
     {
       "id": "google/cloud/certificatemanager/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "b5cd5b2517482f1f3d09b89b901accd4f15cb265",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -298,7 +298,7 @@
     },
     {
       "id": "google/devtools/cloudbuild/v2",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "21d5d3def00d8e7dbba6037af0774161fabe56c9",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -313,7 +313,7 @@
     },
     {
       "id": "google/cloud/clouddms/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -328,7 +328,7 @@
     },
     {
       "id": "google/cloud/common",
-      "lastGeneratedCommit": "42c04fea4338ba626095ec2cde5ea75827191581",
+      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -343,7 +343,7 @@
     },
     {
       "id": "google/cloud/confidentialcomputing/v1alpha1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "5afbbeb4cc5e89393d279a60bc36d73982229f52",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -368,32 +368,32 @@
     },
     {
       "id": "google/cloud/datacatalog/lineage/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "b5cd5b2517482f1f3d09b89b901accd4f15cb265",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/datacatalog/v1",
-      "lastGeneratedCommit": "b82d9bc55c22ab930f09fa945df389b1f68e438a",
+      "lastGeneratedCommit": "34d78f08e32be18b731c5065b67758ff8a0e8db7",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/datafusion/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "336fb2d15f9beda2903e092199fd312649e5482e",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/dataflow/v1beta3",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "6fb68312dc1372cbc497f0e5294c94945879736c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/dataform/v1beta1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "6fb68312dc1372cbc497f0e5294c94945879736c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/dataplex/v1",
-      "lastGeneratedCommit": "9e966149c59f47f6305d66c98e2a9e7d9c26a2eb",
+      "lastGeneratedCommit": "8e62267f7710bd927871e03a52700894e27df553",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -403,7 +403,7 @@
     },
     {
       "id": "google/datastore/admin/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "cead73336b652505e12689826d9ad037eb8852b0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -443,12 +443,12 @@
     },
     {
       "id": "google/cloud/dialogflow/v2",
-      "lastGeneratedCommit": "35c27e3dff6a232c9c83014c677cf353c3a8aaf5",
+      "lastGeneratedCommit": "2dee81b474957f04a0c277f6bf91cfeb13f12f55",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/dialogflow/v2beta1",
-      "lastGeneratedCommit": "d140b5109f2abfe1ad4205c4a791cf16f09036c2",
+      "lastGeneratedCommit": "7dd0554109b347addff64d4bed93903e6ff4e18a",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -468,7 +468,7 @@
     },
     {
       "id": "google/cloud/documentai/v1",
-      "lastGeneratedCommit": "76ca663d1df1cdd8e48f45af6e84212c551533ed",
+      "lastGeneratedCommit": "4a6b902f1ec46023528873f5c776a74764cdd9cb",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -518,7 +518,7 @@
     },
     {
       "id": "google/cloud/filestore/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -538,7 +538,7 @@
     },
     {
       "id": "google/cloud/functions/v2",
-      "lastGeneratedCommit": "8652e28bd0156553465918b9b7564420da79456e",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -558,7 +558,7 @@
     },
     {
       "id": "google/cloud/gkebackup/v1",
-      "lastGeneratedCommit": "bcaed39fd1a805a6411a3992ea32dc1ba0ba7ec3",
+      "lastGeneratedCommit": "b5cd5b2517482f1f3d09b89b901accd4f15cb265",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -573,7 +573,7 @@
     },
     {
       "id": "google/cloud/gkehub/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "2eb3b6ab154343dd08512d3d3e7977873132d3af",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -583,37 +583,37 @@
     },
     {
       "id": "google/iam/admin/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "3b84c01b5b0b38ef6bc1bf82ce43901be8c927e1",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/iam/credentials/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/iam/v1",
-      "lastGeneratedCommit": "1c698854e0aacfb522cd1219d41da336d2db8ee0",
+      "lastGeneratedCommit": "b3fbe472cc3601bfdac9104af5529c93250f8c49",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/iam/v2",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "cead73336b652505e12689826d9ad037eb8852b0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/iap/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/ids/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "4b9324d4f8b719761b9e55dc5034def3c43009ab",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/kms/inventory/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "cead73336b652505e12689826d9ad037eb8852b0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -623,7 +623,7 @@
     },
     {
       "id": "google/cloud/language/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "ae87dc8a3830f37d575e2cff577c9b5a4737176b",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -633,27 +633,27 @@
     },
     {
       "id": "google/cloud/lifesciences/v2beta",
-      "lastGeneratedCommit": "6eb56cdf5f54f70d0dbfce051add28a35c1203ce",
+      "lastGeneratedCommit": "6fb68312dc1372cbc497f0e5294c94945879736c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/location",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "8a5dedc9b6c33394633a4ab8cdd7b4d42d460139",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/logging/type",
-      "lastGeneratedCommit": "95da686e8840cf3edf872ce3d095967e24e41bf6",
+      "lastGeneratedCommit": "bb7263d2e6f9f51630852e2e6bf7aaa8fb5bae06",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/logging/v2",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "8a3158a2deb927097d01f617116229018bc14771",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/managedidentities/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -663,12 +663,12 @@
     },
     {
       "id": "google/cloud/mediatranslation/v1beta1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "6fb68312dc1372cbc497f0e5294c94945879736c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/memcache/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -678,22 +678,22 @@
     },
     {
       "id": "google/cloud/metastore/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "0ba620b9973ca9da13dd4c96897819d424656595",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/metastore/v1alpha",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "43b523f8844cee4ac0fd9b7adec472f15141c5df",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/metastore/v1beta",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "43b523f8844cee4ac0fd9b7adec472f15141c5df",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/migrationcenter/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "3b84c01b5b0b38ef6bc1bf82ce43901be8c927e1",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -713,7 +713,7 @@
     },
     {
       "id": "google/cloud/networkconnectivity/v1alpha1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "59254b411ac63bbb9bcd4a54cec10540ceaa5154",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -743,7 +743,7 @@
     },
     {
       "id": "google/cloud/optimization/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "a72f10c2674ff0e7c14763dbc57d5761c03bf6c9",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -758,7 +758,7 @@
     },
     {
       "id": "google/cloud/orgpolicy/v1",
-      "lastGeneratedCommit": "d02e58244db5d01607ec2ad52a47e7edce8612f0",
+      "lastGeneratedCommit": "651af4b02f16b5c04c7c4f721d3533ca6869e7c8",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -768,7 +768,7 @@
     },
     {
       "id": "google/cloud/osconfig/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -778,7 +778,7 @@
     },
     {
       "id": "google/cloud/oslogin/v1",
-      "lastGeneratedCommit": "0842829df747446019e4dcf53030ef84bfc0ad21",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -798,7 +798,7 @@
     },
     {
       "id": "google/cloud/phishingprotection/v1beta1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "06719db0111829b0d350a0323c00e2976d74df19",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -813,12 +813,12 @@
     },
     {
       "id": "google/cloud/policytroubleshooter/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/privatecatalog/v1beta1",
-      "lastGeneratedCommit": "e1b13abbbbec18998ad0bfe39a32ad2b061d4eda",
+      "lastGeneratedCommit": "6fb68312dc1372cbc497f0e5294c94945879736c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -828,7 +828,7 @@
     },
     {
       "id": "google/devtools/cloudprofiler/v2",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -843,7 +843,7 @@
     },
     {
       "id": "google/cloud/recaptchaenterprise/v1",
-      "lastGeneratedCommit": "3cef095370b3176f67542e527ffde81e019df091",
+      "lastGeneratedCommit": "2dee81b474957f04a0c277f6bf91cfeb13f12f55",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -853,12 +853,12 @@
     },
     {
       "id": "google/cloud/recommendationengine/v1beta1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "6fb68312dc1372cbc497f0e5294c94945879736c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/recommender/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -868,7 +868,7 @@
     },
     {
       "id": "google/cloud/redis/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -878,7 +878,7 @@
     },
     {
       "id": "google/cloud/resourcemanager/v3",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "b5cd5b2517482f1f3d09b89b901accd4f15cb265",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -918,12 +918,12 @@
     },
     {
       "id": "google/cloud/security/privateca/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "bc2c0db12bf27fcccd0da86f6eb28be730b9f1fe",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/security/publicca/v1beta1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "25a1a57957d9e4bf431897d280b2569b26dc9165",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -933,7 +933,7 @@
     },
     {
       "id": "google/cloud/securitycenter/v1",
-      "lastGeneratedCommit": "ae593946b7cd10df5535b910b7a2ce2b64ff4098",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -943,7 +943,7 @@
     },
     {
       "id": "google/cloud/securitycenter/v2",
-      "lastGeneratedCommit": "c37b7f00ae5b9ce0d33ae28473d993cdaa5550cb",
+      "lastGeneratedCommit": "a14447dd79a8e21b9199ab654cb9c1b5a20eb35a",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -953,7 +953,7 @@
     },
     {
       "id": "google/api/servicecontrol/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -973,17 +973,17 @@
     },
     {
       "id": "google/api/servicemanagement/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/api/serviceusage/v1",
-      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/shell/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1003,22 +1003,22 @@
     },
     {
       "id": "google/cloud/speech/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
-      "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
-    },
-    {
-      "id": "google/cloud/speech/v1p1beta1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
-      "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
-    },
-    {
-      "id": "google/cloud/speech/v2",
       "lastGeneratedCommit": "bf2a7ca1d46894df9ebccf5ad6338cbe9e21d9a8",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
+      "id": "google/cloud/speech/v1p1beta1",
+      "lastGeneratedCommit": "bf2a7ca1d46894df9ebccf5ad6338cbe9e21d9a8",
+      "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
+    },
+    {
+      "id": "google/cloud/speech/v2",
+      "lastGeneratedCommit": "ae87dc8a3830f37d575e2cff577c9b5a4737176b",
+      "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
+    },
+    {
       "id": "google/storage/control/v2",
-      "lastGeneratedCommit": "ee990e98a7422ad7928447c2f225714757525c91",
+      "lastGeneratedCommit": "3b9311b65c8224502ba67af7588167e7eb10a325",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1028,7 +1028,7 @@
     },
     {
       "id": "google/cloud/storageinsights/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "740a723d67541a7917db5e2b017e4fd0e8d059fd",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1053,7 +1053,7 @@
     },
     {
       "id": "google/cloud/tasks/v2",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "2dee81b474957f04a0c277f6bf91cfeb13f12f55",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1063,12 +1063,12 @@
     },
     {
       "id": "google/cloud/telcoautomation/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "02ff451735116e113ded13f6dcbf1c8fb03ba3c8",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/texttospeech/v1",
-      "lastGeneratedCommit": "bd72915b189052e76f6a15953941cc56bbc635f6",
+      "lastGeneratedCommit": "2dee81b474957f04a0c277f6bf91cfeb13f12f55",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1093,12 +1093,12 @@
     },
     {
       "id": "google/cloud/translate/v3",
-      "lastGeneratedCommit": "456a812fbc03ef50e253dc85f2b2c22a8af96d36",
+      "lastGeneratedCommit": "ae87dc8a3830f37d575e2cff577c9b5a4737176b",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/vmmigration/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "a7f393252475ff3ffe53850e5a6eebe8ead3d5d6",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1108,22 +1108,22 @@
     },
     {
       "id": "google/cloud/video/stitcher/v1",
-      "lastGeneratedCommit": "30717c0b0c9966906880703208a4c820411565c4",
+      "lastGeneratedCommit": "740a723d67541a7917db5e2b017e4fd0e8d059fd",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/video/transcoder/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "1b4bd4d3eb47ab9cb94f03a6e096f2e93c9c09a2",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/videointelligence/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/vision/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "ae87dc8a3830f37d575e2cff577c9b5a4737176b",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1133,12 +1133,12 @@
     },
     {
       "id": "google/cloud/vpcaccess/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "0a250ef2318e97b1b3153423e7af0fdbe5731741",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/webrisk/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "76ffdb2287ad9fc2bf2932169e3542ca82d6669f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1173,22 +1173,22 @@
     },
     {
       "id": "google/cloud/workstations/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "7f27ba9f1430814e1744b1c8b8161ae6dd09d8b6",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/identity/accesscontextmanager/type",
-      "lastGeneratedCommit": "e7d77d65f0e05ce584c1a824c7ecab53b411498b",
+      "lastGeneratedCommit": "9148cf28f640e6a9d4e72b1f9a34e4d9cfa19244",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/identity/accesscontextmanager/v1",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "af75aa920034a998c4c935d8c8693ae6959f5f64",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/longrunning",
-      "lastGeneratedCommit": "0c5b3eb0f7cca9630c4f160ed3e22a48eb7a36bb",
+      "lastGeneratedCommit": "42f85a600ad8c8610f2849c7bfd8fb4e27978083",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1198,12 +1198,12 @@
     },
     {
       "id": "google/maps/fleetengine/delivery/v1",
-      "lastGeneratedCommit": "d3029316f8793ac5178dfbd1ebd366b80e32dd6c",
+      "lastGeneratedCommit": "e9a4c38a81933108eaa6ac96c7ead31e253c8c64",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/maps/fleetengine/v1",
-      "lastGeneratedCommit": "4e78e682efabbe91a3bc62d3ce0213f02524929d",
+      "lastGeneratedCommit": "e9a4c38a81933108eaa6ac96c7ead31e253c8c64",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1218,7 +1218,7 @@
     },
     {
       "id": "google/maps/routeoptimization/v1",
-      "lastGeneratedCommit": "534e49c0ca0b9297f4ede6f119a0db054b35dd1e",
+      "lastGeneratedCommit": "82d07c3ee426bcea98c16d1c40ab5b556b2a01f4",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1258,7 +1258,7 @@
     },
     {
       "id": "google/shopping/merchant/notifications/v1beta",
-      "lastGeneratedCommit": "3d50414a7ff3f0b8ffe8ad7858257396e4f18131",
+      "lastGeneratedCommit": "09848563c56a70af398ee6a1877f36cc65cb41a2",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1278,12 +1278,12 @@
     },
     {
       "id": "google/shopping/merchant/reviews/v1beta",
-      "lastGeneratedCommit": "020c281c3fb4efb3623b060bdbc16535898fb573",
+      "lastGeneratedCommit": "44c31c613b359211918a2ddb677e20b23da5a282",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/shopping/type",
-      "lastGeneratedCommit": "a3a2dc62816053b6e9dc2b67d52048133794b178",
+      "lastGeneratedCommit": "3597f7db2191c00b100400991ef96e52d62f5841",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
