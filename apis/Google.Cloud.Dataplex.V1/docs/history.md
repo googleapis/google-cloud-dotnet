@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.6.0, released 2025-02-10
+
+### New features
+
+- Added value `NONE` to  the `SyncMode` enum ([commit e7d4c50](https://github.com/googleapis/google-cloud-dotnet/commit/e7d4c509db3d64a8dfa007aecc7bafb1832f9609))
+
+### Documentation improvements
+
+- Modified various comments ([commit e7d4c50](https://github.com/googleapis/google-cloud-dotnet/commit/e7d4c509db3d64a8dfa007aecc7bafb1832f9609))
+
 ## Version 3.5.0, released 2025-01-06
 
 ### New features
