@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.18.0, released 2025-02-10
+
+### New features
+
+- Add additional Probe options to v1 model.proto ([commit 4549842](https://github.com/googleapis/google-cloud-dotnet/commit/454984226dc7e5a6c2cab2e180485c87a042475b))
+- Add Notebooks Runtime Software Configuration ([commit a2ea7f4](https://github.com/googleapis/google-cloud-dotnet/commit/a2ea7f4977c825b1c8c7731d541909a9f8e01c67))
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.cloud.aiplatform.v1.ListNotebookRuntimeTemplatesRequest` is changed ([commit a2ea7f4](https://github.com/googleapis/google-cloud-dotnet/commit/a2ea7f4977c825b1c8c7731d541909a9f8e01c67))
+- A comment for field `filter` in message `.google.cloud.aiplatform.v1.ListNotebookRuntimesRequest` is changed ([commit a2ea7f4](https://github.com/googleapis/google-cloud-dotnet/commit/a2ea7f4977c825b1c8c7731d541909a9f8e01c67))
+
 ## Version 3.17.0, released 2025-02-06
 
 No API surface changes; just product renaming.
