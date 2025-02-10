@@ -30,6 +30,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Null(request.Prefix);
             Assert.Null(request.MaxResults);
             Assert.Null(request.PageToken);
+            Assert.Null(request.SoftDeleted);
         }
 
         [Fact]
@@ -42,7 +43,8 @@ namespace Google.Cloud.Storage.V1.Tests
                 Prefix = "prefix",
                 Projection = Projection.Full,
                 PageToken = "nextpage",
-                Fields = "items(name),nextPageToken"
+                Fields = "items(name),nextPageToken",
+                SoftDeletedOnly = true,
             };
             options.ModifyRequest(request);
             Assert.Equal(10, request.MaxResults);
@@ -50,6 +52,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.Equal("nextpage", request.PageToken);
             Assert.Equal("items(name),nextPageToken", request.Fields);
+            Assert.Equal(true, request.SoftDeleted);
         }
     }
 }

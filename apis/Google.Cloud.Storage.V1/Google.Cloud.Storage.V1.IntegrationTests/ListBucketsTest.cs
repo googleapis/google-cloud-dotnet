@@ -75,6 +75,27 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             }
         }
 
+        [Fact]
+        public async Task SoftDeletedOnly()
+        {
+            var bucketName = _fixture.GenerateBucketName();
+            var softDeleteBucket = _fixture.CreateBucket(bucketName, false, true);
+            await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
+            var actualBuckets = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, new ListBucketsOptions { SoftDeletedOnly = true }).ToListAsync();
+
+            foreach (var bucket in actualBuckets)
+            {   // Verify if the bucket is soft-deleted only 
+                Assert.NotNull(bucket.Generation);
+                Assert.NotNull(bucket.SoftDeleteTimeDateTimeOffset);
+                Assert.NotNull(bucket.HardDeleteTimeDateTimeOffset);
+
+                if (bucket.Name == softDeleteBucket.Name)
+                {   // Compare the generation number
+                    Assert.Equal(bucket.Generation, softDeleteBucket.Generation);
+                }
+            }
+        }
+
         // Fetches buckets using the given options in each possible way, validating that the expected bucket names are returned.
         private async Task AssertBuckets(ListBucketsOptions options, params string[] expectedBucketNames)
         {
