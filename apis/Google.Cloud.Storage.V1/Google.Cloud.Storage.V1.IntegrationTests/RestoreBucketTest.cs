@@ -32,7 +32,7 @@ public class RestoreBucketTest
     public async Task RestoreSoftDeletedBucket()
     {
         var bucketName = _fixture.GenerateBucketName();
-        var softDeleteBucket = _fixture.CreateBucket(bucketName, false, true);
+        var softDeleteBucket = _fixture.CreateBucket(bucketName, multiVersion: false, softDelete: true);
         await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
 
         var restoredBucket = await _fixture.Client.RestoreBucketAsync(softDeleteBucket.Name, softDeleteBucket.Generation.Value);
