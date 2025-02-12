@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Console;
 
 namespace Google.Cloud.Logging.Console;
@@ -40,4 +41,24 @@ public class GoogleCloudConsoleFormatterOptions : ConsoleFormatterOptions
     /// Note that when running your code in Google Cloud, for instance in Google Cloud Run, trace information is automatically collected and exported by the runtime.
     /// </remarks>
     public string TraceGoogleCloudProjectId { get; set; }
+
+
+    /// <summary>
+    /// The service identifier that will be used to annotate the logs. Recommended.
+    /// Should be set to the service name plus optionally the environment name.
+    /// <see href="https://cloud.google.com/error-reporting/reference/rest/v1beta1/ServiceContext"/>
+    /// </summary>
+    public string ServiceIdentifier { get; set; }
+
+    /// <summary>
+    /// The version of the service that is being logged. Optional.
+    /// <see href="https://cloud.google.com/error-reporting/reference/rest/v1beta1/ServiceContext"/>
+    /// </summary>
+    public string ServiceVersion { get; set; }
+
+    /// <summary>
+    /// The minimum severity level that should trigger Google Cloud Error Reporting.
+    /// <see href="https://cloud.google.com/error-reporting/docs/formatting-error-messages#log-text"/>
+    /// </summary>
+    public LogLevel ErrorReportingLogLevel { get; set; } = LogLevel.Error;
 }

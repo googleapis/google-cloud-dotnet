@@ -46,9 +46,12 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
 
     private static readonly JsonEncodedText s_messagePropertyName = JsonEncodedText.Encode("message");
     private static readonly JsonEncodedText s_exceptionPropertyName = JsonEncodedText.Encode("exception");
+    private static readonly JsonEncodedText s_stackTracePropertyName = JsonEncodedText.Encode("stack_trace");
     private static readonly JsonEncodedText s_severityPropertyName = JsonEncodedText.Encode("severity");
     private static readonly JsonEncodedText s_categoryPropertyName = JsonEncodedText.Encode("category");
     private static readonly JsonEncodedText s_scopesPropertyName = JsonEncodedText.Encode("scopes");
+    private static readonly JsonEncodedText s_jsonPayloadTypePropertyName = JsonEncodedText.Encode("@type");
+    private static readonly JsonEncodedText s_jsonPayloadTypePropertyValue = JsonEncodedText.Encode("type.googleapis.com/google.devtools.clouderrorreporting.v1beta1.ReportedErrorEvent");
     private static readonly JsonEncodedText s_formatParametersPropertyName = JsonEncodedText.Encode("format_parameters");
 
     // `trace`, `spanId` and `trace_sampled` are special JSON log fields used for log trace correlation.
@@ -102,23 +105,41 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
                 writer.WriteString(s_messagePropertyName, message);
                 writer.WriteString(s_categoryPropertyName, logEntry.Category);
                 writer.WriteString(s_severityPropertyName, GetSeverity(logEntry.LogLevel));
-                if (logEntry.Exception is object)
+                if (logEntry.Exception is not null)
                 {
-                    writer.WriteString(s_exceptionPropertyName, ToInvariantString(logEntry.Exception));
+                    writer.WriteString(s_exceptionPropertyName, ToInvariantString(logEntry.Exception.Message));
+                    writer.WriteString(s_stackTracePropertyName, ToInvariantString(logEntry.Exception));
                 }
 
+                MaybeWriteServiceContext(writer);
                 MaybeWriteFormatParameters(writer, logEntry.State);
                 MaybeWriteScopeInformation(writer, scopeProvider);
                 MaybeWriteTraceInformation(writer);
+                MaybeWriteErrorReportingTag(writer, logEntry.LogLevel);
                 writer.WriteEndObject();
                 writer.Flush();
             }
             // TODO: It would be lovely to have a more efficient way of writing the JSON to the console
             // than writing bytes and converting those bytes back into a string - but for the moment,
             // this is what we've got.
-            textWriter.WriteLine(Encoding.UTF8.GetString(output.GetBuffer(), 0, (int) output.Position));
+            textWriter.WriteLine(Encoding.UTF8.GetString(output.GetBuffer(), 0, (int)output.Position));
         }
     }
+
+    private void MaybeWriteServiceContext(Utf8JsonWriter writer)
+    {
+        if (_options.ServiceIdentifier == null && _options.ServiceVersion == null)
+        {
+            return;
+        }
+        // in case of an error, we need to let GCP logging know and provide information about the context
+        // <see href=https://cloud.google.com/error-reporting/reference/rest/v1beta1/projects.events/report#ReportedErrorEvent"/>
+        writer.WriteStartObject("serviceContext");
+        if (_options.ServiceIdentifier != null) { writer.WriteString("service", _options.ServiceIdentifier); }
+        if (_options.ServiceVersion != null) { writer.WriteString("version", _options.ServiceVersion); }
+        writer.WriteEndObject();
+    }
+
 
     private void MaybeWriteFormatParameters<TState>(Utf8JsonWriter writer, TState state)
     {
@@ -207,6 +228,14 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
         writer.WriteString(s_tracePropertyName, trace);
         writer.WriteString(s_spanIdPropertyName, activity.SpanId.ToString());
         writer.WriteBoolean(s_traceSampledPropertyName, activity.Recorded);
+    }
+
+    private void MaybeWriteErrorReportingTag(Utf8JsonWriter writer, LogLevel logLevel)
+    {
+        if (logLevel >= _options.ErrorReportingLogLevel)
+        {
+            writer.WriteString(s_jsonPayloadTypePropertyName, s_jsonPayloadTypePropertyValue);
+        }
     }
 
     private static JsonEncodedText GetSeverity(LogLevel logLevel) =>
