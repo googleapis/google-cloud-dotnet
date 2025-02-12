@@ -79,7 +79,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public async Task SoftDeletedOnly()
         {
             var bucketName = _fixture.GenerateBucketName();
-            var softDeleteBucket = _fixture.CreateBucket(bucketName, false, true);
+            var softDeleteBucket = _fixture.CreateBucket(bucketName, multiVersion: false, softDelete: true);
             await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
             var actualBuckets = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, new ListBucketsOptions { SoftDeletedOnly = true }).ToListAsync();
 
