@@ -491,4 +491,17 @@ namespace Google.Cloud.Spanner.Admin.Database.V1
             get => new gax::ResourceNameList<CryptoKeyName>(KmsKeyNames, s => string.IsNullOrEmpty(s) ? null : CryptoKeyName.Parse(s, allowUnparsed: true));
         }
     }
+
+    public partial class BackupInstancePartition
+    {
+        /// <summary>
+        /// <see cref="InstancePartitionName"/>-typed view over the <see cref="InstancePartition"/> resource name
+        /// property.
+        /// </summary>
+        public InstancePartitionName InstancePartitionAsInstancePartitionName
+        {
+            get => string.IsNullOrEmpty(InstancePartition) ? null : InstancePartitionName.Parse(InstancePartition, allowUnparsed: true);
+            set => InstancePartition = value?.ToString() ?? "";
+        }
+    }
 }
