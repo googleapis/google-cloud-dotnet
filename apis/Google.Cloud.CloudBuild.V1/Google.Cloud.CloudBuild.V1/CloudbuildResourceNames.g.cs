@@ -3292,6 +3292,286 @@ namespace Google.Cloud.CloudBuild.V1
         public static bool operator !=(NetworkAttachmentName a, NetworkAttachmentName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>GitRepositoryLink</c> resource.</summary>
+    public sealed partial class GitRepositoryLinkName : gax::IResourceName, sys::IEquatable<GitRepositoryLinkName>
+    {
+        /// <summary>The possible contents of <see cref="GitRepositoryLinkName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+            /// .
+            /// </summary>
+            ProjectLocationConnectionGitRepositoryLink = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationConnectionGitRepositoryLink = new gax::PathTemplate("projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}");
+
+        /// <summary>Creates a <see cref="GitRepositoryLinkName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="GitRepositoryLinkName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static GitRepositoryLinkName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new GitRepositoryLinkName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="GitRepositoryLinkName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="gitRepositoryLinkId">The <c>GitRepositoryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="GitRepositoryLinkName"/> constructed from the provided ids.</returns>
+        public static GitRepositoryLinkName FromProjectLocationConnectionGitRepositoryLink(string projectId, string locationId, string connectionId, string gitRepositoryLinkId) =>
+            new GitRepositoryLinkName(ResourceNameType.ProjectLocationConnectionGitRepositoryLink, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), connectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)), gitRepositoryLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(gitRepositoryLinkId, nameof(gitRepositoryLinkId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GitRepositoryLinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="gitRepositoryLinkId">The <c>GitRepositoryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GitRepositoryLinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string connectionId, string gitRepositoryLinkId) =>
+            FormatProjectLocationConnectionGitRepositoryLink(projectId, locationId, connectionId, gitRepositoryLinkId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="GitRepositoryLinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="gitRepositoryLinkId">The <c>GitRepositoryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="GitRepositoryLinkName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationConnectionGitRepositoryLink(string projectId, string locationId, string connectionId, string gitRepositoryLinkId) =>
+            s_projectLocationConnectionGitRepositoryLink.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(gitRepositoryLinkId, nameof(gitRepositoryLinkId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GitRepositoryLinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="gitRepositoryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="GitRepositoryLinkName"/> if successful.</returns>
+        public static GitRepositoryLinkName Parse(string gitRepositoryLinkName) => Parse(gitRepositoryLinkName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="GitRepositoryLinkName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="gitRepositoryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="GitRepositoryLinkName"/> if successful.</returns>
+        public static GitRepositoryLinkName Parse(string gitRepositoryLinkName, bool allowUnparsed) =>
+            TryParse(gitRepositoryLinkName, allowUnparsed, out GitRepositoryLinkName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GitRepositoryLinkName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="gitRepositoryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GitRepositoryLinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string gitRepositoryLinkName, out GitRepositoryLinkName result) =>
+            TryParse(gitRepositoryLinkName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="GitRepositoryLinkName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="gitRepositoryLinkName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="GitRepositoryLinkName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string gitRepositoryLinkName, bool allowUnparsed, out GitRepositoryLinkName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(gitRepositoryLinkName, nameof(gitRepositoryLinkName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationConnectionGitRepositoryLink.TryParseName(gitRepositoryLinkName, out resourceName))
+            {
+                result = FromProjectLocationConnectionGitRepositoryLink(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(gitRepositoryLinkName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private GitRepositoryLinkName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string connectionId = null, string gitRepositoryLinkId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ConnectionId = connectionId;
+            GitRepositoryLinkId = gitRepositoryLinkId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="GitRepositoryLinkName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/connections/{connection}/gitRepositoryLinks/{git_repository_link}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="connectionId">The <c>Connection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="gitRepositoryLinkId">The <c>GitRepositoryLink</c> ID. Must not be <c>null</c> or empty.</param>
+        public GitRepositoryLinkName(string projectId, string locationId, string connectionId, string gitRepositoryLinkId) : this(ResourceNameType.ProjectLocationConnectionGitRepositoryLink, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), connectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(connectionId, nameof(connectionId)), gitRepositoryLinkId: gax::GaxPreconditions.CheckNotNullOrEmpty(gitRepositoryLinkId, nameof(gitRepositoryLinkId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Connection</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ConnectionId { get; }
+
+        /// <summary>
+        /// The <c>GitRepositoryLink</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string GitRepositoryLinkId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationConnectionGitRepositoryLink: return s_projectLocationConnectionGitRepositoryLink.Expand(ProjectId, LocationId, ConnectionId, GitRepositoryLinkId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as GitRepositoryLinkName);
+
+        /// <inheritdoc/>
+        public bool Equals(GitRepositoryLinkName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(GitRepositoryLinkName a, GitRepositoryLinkName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(GitRepositoryLinkName a, GitRepositoryLinkName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Repository</c> resource.</summary>
     public sealed partial class RepositoryName : gax::IResourceName, sys::IEquatable<RepositoryName>
     {
@@ -3604,6 +3884,25 @@ namespace Google.Cloud.CloudBuild.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gccv::BuildName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class Dependency
+    {
+        public partial class Types
+        {
+            public partial class GitSourceRepository
+            {
+                /// <summary>
+                /// <see cref="GitRepositoryLinkName"/>-typed view over the <see cref="DeveloperConnect"/> resource name
+                /// property.
+                /// </summary>
+                public GitRepositoryLinkName DeveloperConnectAsGitRepositoryLinkName
+                {
+                    get => string.IsNullOrEmpty(DeveloperConnect) ? null : GitRepositoryLinkName.Parse(DeveloperConnect, allowUnparsed: true);
+                    set => DeveloperConnect = value?.ToString() ?? "";
+                }
+            }
         }
     }
 
