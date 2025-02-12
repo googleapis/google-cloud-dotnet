@@ -59,7 +59,7 @@ namespace Google.Cloud.Storage.V1
 
         /// <summary>
         /// If true, the soft-deleted version of the bucket will be retrieved.
-        /// If true, <see ref="Generation"  /> must be set.
+        /// If true, <see ref="Generation" /> must be set.
         /// </summary>
         public bool? SoftDeleted { get; set; }
 
