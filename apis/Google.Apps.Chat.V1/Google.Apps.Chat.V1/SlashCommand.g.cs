@@ -42,7 +42,7 @@ namespace Google.Apps.Chat.V1 {
   #region Messages
   /// <summary>
   /// A [slash
-  /// command](https://developers.google.com/workspace/chat/slash-commands) in
+  /// command](https://developers.google.com/workspace/chat/commands) in
   /// Google Chat.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
