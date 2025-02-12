@@ -33,7 +33,7 @@
     <PackageVersion Include="SharpCompress" Version="0.39.0" />
     <PackageVersion Include="NodaTime" Version="3.2.1" />
     <PackageVersion Include="LibGit2Sharp" Version="0.30.0" />
-    <PackageVersion Include="NuGet.Protocol" Version="6.12.1" />
+    <PackageVersion Include="NuGet.Protocol" Version="6.13.1" />
     <PackageVersion Include="Octokit" Version="14.0.0" />
     <PackageVersion Include="GitHubJwt" Version="0.0.6" />
     <PackageVersion Include="Mono.Cecil" Version="0.11.6" />
