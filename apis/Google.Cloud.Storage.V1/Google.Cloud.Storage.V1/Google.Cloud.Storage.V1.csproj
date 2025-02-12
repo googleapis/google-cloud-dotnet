@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Rest"/>
+    <PackageReference Include="Google.Api.Gax.Rest" />
     <PackageReference Include="Google.Apis.Storage.v1" VersionOverride="[1.68.0.3604, 2.0.0.0)" />
   </ItemGroup>
   <ItemGroup>
