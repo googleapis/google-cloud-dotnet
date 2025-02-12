@@ -52,7 +52,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.Equal("nextpage", request.PageToken);
             Assert.Equal("items(name),nextPageToken", request.Fields);
-            Assert.Equal(true, request.SoftDeleted);
+            Assert.True(request.SoftDeleted);
         }
     }
 }
