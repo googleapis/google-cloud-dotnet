@@ -31,7 +31,7 @@ public class GetBucketTest
     public async Task SoftDeleted()
     {
         var bucketName = _fixture.GenerateBucketName();
-        var softDeleteBucket = _fixture.CreateBucket(bucketName, false, true);
+        var softDeleteBucket = _fixture.CreateBucket(bucketName, multiVersion: false, softDelete: true);
         await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
 
         var softDeleted = await _fixture.Client.GetBucketAsync(softDeleteBucket.Name, new GetBucketOptions { SoftDeleted = true, Generation = softDeleteBucket.Generation });
