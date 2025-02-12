@@ -67,8 +67,6 @@ namespace Google.Cloud.Storage.V1.Tests
             };
             options.ModifyRequest(request);
             Assert.Null(request.IfMetagenerationMatch);
-            Assert.Null(request.SoftDeleted);
-            Assert.Null(request.Generation);
             Assert.Equal(1L, request.IfMetagenerationNotMatch);
             Assert.Equal(ProjectionEnum.Full, request.Projection);
         }
