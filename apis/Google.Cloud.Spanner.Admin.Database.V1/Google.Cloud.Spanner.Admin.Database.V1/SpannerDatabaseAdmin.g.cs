@@ -301,7 +301,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "cy8qL2luc3RhbmNlcy8qL2RhdGFiYXNlcy8qfS9iYWNrdXBTY2hlZHVsZXMa",
             "eMpBFnNwYW5uZXIuZ29vZ2xlYXBpcy5jb23SQVxodHRwczovL3d3dy5nb29n",
             "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdv",
-            "b2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5hZG1pbkLYAgokY29tLmdvb2ds",
+            "b2dsZWFwaXMuY29tL2F1dGgvc3Bhbm5lci5hZG1pbkLWAwokY29tLmdvb2ds",
             "ZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxQhlTcGFubmVyRGF0YWJhc2VB",
             "ZG1pblByb3RvUAFaRmNsb3VkLmdvb2dsZS5jb20vZ28vc3Bhbm5lci9hZG1p",
             "bi9kYXRhYmFzZS9hcGl2MS9kYXRhYmFzZXBiO2RhdGFiYXNlcGKqAiZHb29n",
@@ -309,7 +309,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "bG91ZFxTcGFubmVyXEFkbWluXERhdGFiYXNlXFYx6gIrR29vZ2xlOjpDbG91",
             "ZDo6U3Bhbm5lcjo6QWRtaW46OkRhdGFiYXNlOjpWMepBSgofc3Bhbm5lci5n",
             "b29nbGVhcGlzLmNvbS9JbnN0YW5jZRIncHJvamVjdHMve3Byb2plY3R9L2lu",
-            "c3RhbmNlcy97aW5zdGFuY2V9YgZwcm90bzM="));
+            "c3RhbmNlcy97aW5zdGFuY2V96kF7CihzcGFubmVyLmdvb2dsZWFwaXMuY29t",
+            "L0luc3RhbmNlUGFydGl0aW9uEk9wcm9qZWN0cy97cHJvamVjdH0vaW5zdGFu",
+            "Y2VzL3tpbnN0YW5jZX0vaW5zdGFuY2VQYXJ0aXRpb25zL3tpbnN0YW5jZV9w",
+            "YXJ0aXRpb259YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.BackupReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.BackupScheduleReflection.Descriptor, global::Google.Cloud.Spanner.Admin.Database.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Database.V1.RestoreSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
