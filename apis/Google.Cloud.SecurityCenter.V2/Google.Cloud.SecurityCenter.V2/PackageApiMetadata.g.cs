@@ -68,7 +68,11 @@ namespace Google.Cloud.SecurityCenter.V2
             yield return ConnectionReflection.Descriptor;
             yield return ContactDetailsReflection.Descriptor;
             yield return ContainerReflection.Descriptor;
+            yield return DataAccessEventReflection.Descriptor;
+            yield return DataFlowEventReflection.Descriptor;
+            yield return DataRetentionDeletionEventReflection.Descriptor;
             yield return DatabaseReflection.Descriptor;
+            yield return DiskReflection.Descriptor;
             yield return ExfiltrationReflection.Descriptor;
             yield return ExternalSystemReflection.Descriptor;
             yield return FileReflection.Descriptor;
