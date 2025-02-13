@@ -51,36 +51,39 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "b3VkLnNlY3VyaXR5Y2VudGVyLnYyLkF3c01ldGFkYXRhLkF3c0FjY291bnQa",
             "HQoPQXdzT3JnYW5pemF0aW9uEgoKAmlkGAEgASgJGjEKFUF3c09yZ2FuaXph",
             "dGlvbmFsVW5pdBIKCgJpZBgBIAEoCRIMCgRuYW1lGAIgASgJGiYKCkF3c0Fj",
-            "Y291bnQSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCSK0AwoNQXp1cmVNZXRh",
+            "Y291bnQSCgoCaWQYASABKAkSDAoEbmFtZRgCIAEoCSK8BAoNQXp1cmVNZXRh",
             "ZGF0YRJdChFtYW5hZ2VtZW50X2dyb3VwcxgBIAMoCzJCLmdvb2dsZS5jbG91",
             "ZC5zZWN1cml0eWNlbnRlci52Mi5BenVyZU1ldGFkYXRhLkF6dXJlTWFuYWdl",
             "bWVudEdyb3VwElUKDHN1YnNjcmlwdGlvbhgCIAEoCzI/Lmdvb2dsZS5jbG91",
             "ZC5zZWN1cml0eWNlbnRlci52Mi5BenVyZU1ldGFkYXRhLkF6dXJlU3Vic2Ny",
             "aXB0aW9uElgKDnJlc291cmNlX2dyb3VwGAMgASgLMkAuZ29vZ2xlLmNsb3Vk",
             "LnNlY3VyaXR5Y2VudGVyLnYyLkF6dXJlTWV0YWRhdGEuQXp1cmVSZXNvdXJj",
-            "ZUdyb3VwGjgKFEF6dXJlTWFuYWdlbWVudEdyb3VwEgoKAmlkGAEgASgJEhQK",
-            "DGRpc3BsYXlfbmFtZRgCIAEoCRo1ChFBenVyZVN1YnNjcmlwdGlvbhIKCgJp",
-            "ZBgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiABKAkaIgoSQXp1cmVSZXNvdXJj",
-            "ZUdyb3VwEgwKBG5hbWUYASABKAki9AMKDFJlc291cmNlUGF0aBJMCgVub2Rl",
-            "cxgBIAMoCzI9Lmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52Mi5SZXNv",
-            "dXJjZVBhdGguUmVzb3VyY2VQYXRoTm9kZRqKAQoQUmVzb3VyY2VQYXRoTm9k",
-            "ZRJUCglub2RlX3R5cGUYASABKA4yQS5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
-            "ZW50ZXIudjIuUmVzb3VyY2VQYXRoLlJlc291cmNlUGF0aE5vZGVUeXBlEgoK",
-            "AmlkGAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCSKIAgoUUmVzb3VyY2VQ",
-            "YXRoTm9kZVR5cGUSJwojUkVTT1VSQ0VfUEFUSF9OT0RFX1RZUEVfVU5TUEVD",
-            "SUZJRUQQABIUChBHQ1BfT1JHQU5JWkFUSU9OEAESDgoKR0NQX0ZPTERFUhAC",
-            "Eg8KC0dDUF9QUk9KRUNUEAMSFAoQQVdTX09SR0FOSVpBVElPThAEEhsKF0FX",
-            "U19PUkdBTklaQVRJT05BTF9VTklUEAUSDwoLQVdTX0FDQ09VTlQQBhIaChZB",
-            "WlVSRV9NQU5BR0VNRU5UX0dST1VQEAcSFgoSQVpVUkVfU1VCU0NSSVBUSU9O",
-            "EAgSGAoUQVpVUkVfUkVTT1VSQ0VfR1JPVVAQCSp4Cg1DbG91ZFByb3ZpZGVy",
-            "Eh4KGkNMT1VEX1BST1ZJREVSX1VOU1BFQ0lGSUVEEAASGQoVR09PR0xFX0NM",
-            "T1VEX1BMQVRGT1JNEAESFwoTQU1BWk9OX1dFQl9TRVJWSUNFUxACEhMKD01J",
-            "Q1JPU09GVF9BWlVSRRADQucBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5",
-            "Y2VudGVyLnYyQg1SZXNvdXJjZVByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20v",
-            "Z28vc2VjdXJpdHljZW50ZXIvYXBpdjIvc2VjdXJpdHljZW50ZXJwYjtzZWN1",
-            "cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5Q2VudGVyLlYy",
-            "ygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYy6gIhR29vZ2xlOjpD",
-            "bG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYyYgZwcm90bzM="));
+            "ZUdyb3VwEkkKBnRlbmFudBgHIAEoCzI5Lmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52Mi5BenVyZU1ldGFkYXRhLkF6dXJlVGVuYW50GjgKFEF6dXJl",
+            "TWFuYWdlbWVudEdyb3VwEgoKAmlkGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgC",
+            "IAEoCRo1ChFBenVyZVN1YnNjcmlwdGlvbhIKCgJpZBgBIAEoCRIUCgxkaXNw",
+            "bGF5X25hbWUYAiABKAkaLgoSQXp1cmVSZXNvdXJjZUdyb3VwEgoKAmlkGAIg",
+            "ASgJEgwKBG5hbWUYASABKAkaLwoLQXp1cmVUZW5hbnQSCgoCaWQYASABKAkS",
+            "FAoMZGlzcGxheV9uYW1lGAIgASgJIvQDCgxSZXNvdXJjZVBhdGgSTAoFbm9k",
+            "ZXMYASADKAsyPS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIuUmVz",
+            "b3VyY2VQYXRoLlJlc291cmNlUGF0aE5vZGUaigEKEFJlc291cmNlUGF0aE5v",
+            "ZGUSVAoJbm9kZV90eXBlGAEgASgOMkEuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5",
+            "Y2VudGVyLnYyLlJlc291cmNlUGF0aC5SZXNvdXJjZVBhdGhOb2RlVHlwZRIK",
+            "CgJpZBgCIAEoCRIUCgxkaXNwbGF5X25hbWUYAyABKAkiiAIKFFJlc291cmNl",
+            "UGF0aE5vZGVUeXBlEicKI1JFU09VUkNFX1BBVEhfTk9ERV9UWVBFX1VOU1BF",
+            "Q0lGSUVEEAASFAoQR0NQX09SR0FOSVpBVElPThABEg4KCkdDUF9GT0xERVIQ",
+            "AhIPCgtHQ1BfUFJPSkVDVBADEhQKEEFXU19PUkdBTklaQVRJT04QBBIbChdB",
+            "V1NfT1JHQU5JWkFUSU9OQUxfVU5JVBAFEg8KC0FXU19BQ0NPVU5UEAYSGgoW",
+            "QVpVUkVfTUFOQUdFTUVOVF9HUk9VUBAHEhYKEkFaVVJFX1NVQlNDUklQVElP",
+            "ThAIEhgKFEFaVVJFX1JFU09VUkNFX0dST1VQEAkqeAoNQ2xvdWRQcm92aWRl",
+            "chIeChpDTE9VRF9QUk9WSURFUl9VTlNQRUNJRklFRBAAEhkKFUdPT0dMRV9D",
+            "TE9VRF9QTEFURk9STRABEhcKE0FNQVpPTl9XRUJfU0VSVklDRVMQAhITCg9N",
+            "SUNST1NPRlRfQVpVUkUQA0LnAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0",
+            "eWNlbnRlci52MkINUmVzb3VyY2VQcm90b1ABWkpjbG91ZC5nb29nbGUuY29t",
+            "L2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYyL3NlY3VyaXR5Y2VudGVycGI7c2Vj",
+            "dXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
+            "MsoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMuoCIUdvb2dsZTo6",
+            "Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V2.FolderReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.SecurityCenter.V2.CloudProvider), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -89,9 +92,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AwsMetadata), global::Google.Cloud.SecurityCenter.V2.AwsMetadata.Parser, new[]{ "Organization", "OrganizationalUnits", "Account" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AwsMetadata.Types.AwsOrganization), global::Google.Cloud.SecurityCenter.V2.AwsMetadata.Types.AwsOrganization.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AwsMetadata.Types.AwsOrganizationalUnit), global::Google.Cloud.SecurityCenter.V2.AwsMetadata.Types.AwsOrganizationalUnit.Parser, new[]{ "Id", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AwsMetadata.Types.AwsAccount), global::Google.Cloud.SecurityCenter.V2.AwsMetadata.Types.AwsAccount.Parser, new[]{ "Id", "Name" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AzureMetadata), global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Parser, new[]{ "ManagementGroups", "Subscription", "ResourceGroup" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureManagementGroup), global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureManagementGroup.Parser, new[]{ "Id", "DisplayName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AzureMetadata), global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Parser, new[]{ "ManagementGroups", "Subscription", "ResourceGroup", "Tenant" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureManagementGroup), global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureManagementGroup.Parser, new[]{ "Id", "DisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureSubscription), global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureSubscription.Parser, new[]{ "Id", "DisplayName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureResourceGroup), global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureResourceGroup.Parser, new[]{ "Name" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureResourceGroup), global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureResourceGroup.Parser, new[]{ "Id", "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureTenant), global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureTenant.Parser, new[]{ "Id", "DisplayName" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.ResourcePath), global::Google.Cloud.SecurityCenter.V2.ResourcePath.Parser, new[]{ "Nodes" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V2.ResourcePath.Types.ResourcePathNodeType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.ResourcePath.Types.ResourcePathNode), global::Google.Cloud.SecurityCenter.V2.ResourcePath.Types.ResourcePathNode.Parser, new[]{ "NodeType", "Id", "DisplayName" }, null, null, null, null)})
           }));
     }
@@ -2215,6 +2219,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       managementGroups_ = other.managementGroups_.Clone();
       subscription_ = other.subscription_ != null ? other.subscription_.Clone() : null;
       resourceGroup_ = other.resourceGroup_ != null ? other.resourceGroup_.Clone() : null;
+      tenant_ = other.tenant_ != null ? other.tenant_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2269,6 +2274,21 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
     }
 
+    /// <summary>Field number for the "tenant" field.</summary>
+    public const int TenantFieldNumber = 7;
+    private global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureTenant tenant_;
+    /// <summary>
+    /// The Azure Entra tenant associated with the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureTenant Tenant {
+      get { return tenant_; }
+      set {
+        tenant_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2287,6 +2307,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if(!managementGroups_.Equals(other.managementGroups_)) return false;
       if (!object.Equals(Subscription, other.Subscription)) return false;
       if (!object.Equals(ResourceGroup, other.ResourceGroup)) return false;
+      if (!object.Equals(Tenant, other.Tenant)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2297,6 +2318,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       hash ^= managementGroups_.GetHashCode();
       if (subscription_ != null) hash ^= Subscription.GetHashCode();
       if (resourceGroup_ != null) hash ^= ResourceGroup.GetHashCode();
+      if (tenant_ != null) hash ^= Tenant.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2324,6 +2346,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(ResourceGroup);
       }
+      if (tenant_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Tenant);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2343,6 +2369,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(26);
         output.WriteMessage(ResourceGroup);
       }
+      if (tenant_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Tenant);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2359,6 +2389,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
       if (resourceGroup_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceGroup);
+      }
+      if (tenant_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Tenant);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2384,6 +2417,12 @@ namespace Google.Cloud.SecurityCenter.V2 {
           ResourceGroup = new global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureResourceGroup();
         }
         ResourceGroup.MergeFrom(other.ResourceGroup);
+      }
+      if (other.tenant_ != null) {
+        if (tenant_ == null) {
+          Tenant = new global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureTenant();
+        }
+        Tenant.MergeFrom(other.Tenant);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2418,6 +2457,13 @@ namespace Google.Cloud.SecurityCenter.V2 {
             input.ReadMessage(ResourceGroup);
             break;
           }
+          case 58: {
+            if (tenant_ == null) {
+              Tenant = new global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureTenant();
+            }
+            input.ReadMessage(Tenant);
+            break;
+          }
         }
       }
     #endif
@@ -2449,6 +2495,13 @@ namespace Google.Cloud.SecurityCenter.V2 {
               ResourceGroup = new global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureResourceGroup();
             }
             input.ReadMessage(ResourceGroup);
+            break;
+          }
+          case 58: {
+            if (tenant_ == null) {
+              Tenant = new global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Types.AzureTenant();
+            }
+            input.ReadMessage(Tenant);
             break;
           }
         }
@@ -2973,6 +3026,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AzureResourceGroup(AzureResourceGroup other) : this() {
+          id_ = other.id_;
           name_ = other.name_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -2981,6 +3035,21 @@ namespace Google.Cloud.SecurityCenter.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AzureResourceGroup Clone() {
           return new AzureResourceGroup(this);
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 2;
+        private string id_ = "";
+        /// <summary>
+        /// The ID of the Azure resource group.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
         }
 
         /// <summary>Field number for the "name" field.</summary>
@@ -3013,6 +3082,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
           if (ReferenceEquals(other, this)) {
             return true;
           }
+          if (Id != other.Id) return false;
           if (Name != other.Name) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -3021,6 +3091,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
           if (Name.Length != 0) hash ^= Name.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -3044,6 +3115,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
+          if (Id.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Id);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3058,6 +3133,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
             output.WriteRawTag(10);
             output.WriteString(Name);
           }
+          if (Id.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Id);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3068,6 +3147,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
           if (Name.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
           }
@@ -3082,6 +3164,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
         public void MergeFrom(AzureResourceGroup other) {
           if (other == null) {
             return;
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
           }
           if (other.Name.Length != 0) {
             Name = other.Name;
@@ -3105,6 +3190,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
                 Name = input.ReadString();
                 break;
               }
+              case 18: {
+                Id = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -3122,6 +3211,247 @@ namespace Google.Cloud.SecurityCenter.V2 {
                 break;
               case 10: {
                 Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Id = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Represents a Microsoft Entra tenant.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AzureTenant : pb::IMessage<AzureTenant>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AzureTenant> _parser = new pb::MessageParser<AzureTenant>(() => new AzureTenant());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AzureTenant> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecurityCenter.V2.AzureMetadata.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AzureTenant() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AzureTenant(AzureTenant other) : this() {
+          id_ = other.id_;
+          displayName_ = other.displayName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AzureTenant Clone() {
+          return new AzureTenant(this);
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 1;
+        private string id_ = "";
+        /// <summary>
+        /// The ID of the Microsoft Entra tenant, for example,
+        /// "a11aaa11-aa11-1aa1-11aa-1aaa11a".
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "display_name" field.</summary>
+        public const int DisplayNameFieldNumber = 2;
+        private string displayName_ = "";
+        /// <summary>
+        /// The display name of the Azure tenant.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DisplayName {
+          get { return displayName_; }
+          set {
+            displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AzureTenant);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AzureTenant other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Id != other.Id) return false;
+          if (DisplayName != other.DisplayName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
+          if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Id.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Id);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Id.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Id);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
+          if (DisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AzureTenant other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
+          }
+          if (other.DisplayName.Length != 0) {
+            DisplayName = other.DisplayName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Id = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Id = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayName = input.ReadString();
                 break;
               }
             }

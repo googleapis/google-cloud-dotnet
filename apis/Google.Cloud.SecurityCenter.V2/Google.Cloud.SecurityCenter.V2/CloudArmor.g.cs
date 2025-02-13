@@ -39,14 +39,15 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "dHMSDQoFcmF0aW8YASABKAESGgoSc2hvcnRfdGVybV9hbGxvd2VkGAIgASgF",
             "EhkKEWxvbmdfdGVybV9hbGxvd2VkGAMgASgFEhgKEGxvbmdfdGVybV9kZW5p",
             "ZWQYBCABKAUiKAoSQWRhcHRpdmVQcm90ZWN0aW9uEhIKCmNvbmZpZGVuY2UY",
-            "ASABKAEiSAoGQXR0YWNrEhIKCnZvbHVtZV9wcHMYASABKAUSEgoKdm9sdW1l",
-            "X2JwcxgCIAEoBRIWCg5jbGFzc2lmaWNhdGlvbhgDIAEoCULpAQoiY29tLmdv",
-            "b2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MkIPQ2xvdWRBcm1vclByb3Rv",
-            "UAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjIv",
-            "c2VjdXJpdHljZW50ZXJwYjtzZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNs",
-            "b3VkLlNlY3VyaXR5Q2VudGVyLlYyygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5",
-            "Q2VudGVyXFYy6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYy",
-            "YgZwcm90bzM="));
+            "ASABKAEiggEKBkF0dGFjaxIXCg92b2x1bWVfcHBzX2xvbmcYBCABKAMSFwoP",
+            "dm9sdW1lX2Jwc19sb25nGAUgASgDEhYKDmNsYXNzaWZpY2F0aW9uGAMgASgJ",
+            "EhYKCnZvbHVtZV9wcHMYASABKAVCAhgBEhYKCnZvbHVtZV9icHMYAiABKAVC",
+            "AhgBQukBCiJjb20uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYyQg9D",
+            "bG91ZEFybW9yUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWN1cml0",
+            "eWNlbnRlci9hcGl2Mi9zZWN1cml0eWNlbnRlcnBiO3NlY3VyaXR5Y2VudGVy",
+            "cGKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjLKAh5Hb29nbGVc",
+            "Q2xvdWRcU2VjdXJpdHlDZW50ZXJcVjLqAiFHb29nbGU6OkNsb3VkOjpTZWN1",
+            "cml0eUNlbnRlcjo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -54,7 +55,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.SecurityPolicy), global::Google.Cloud.SecurityCenter.V2.SecurityPolicy.Parser, new[]{ "Name", "Type", "Preview" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.Requests), global::Google.Cloud.SecurityCenter.V2.Requests.Parser, new[]{ "Ratio", "ShortTermAllowed", "LongTermAllowed", "LongTermDenied" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.AdaptiveProtection), global::Google.Cloud.SecurityCenter.V2.AdaptiveProtection.Parser, new[]{ "Confidence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.Attack), global::Google.Cloud.SecurityCenter.V2.Attack.Parser, new[]{ "VolumePps", "VolumeBps", "Classification" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V2.Attack), global::Google.Cloud.SecurityCenter.V2.Attack.Parser, new[]{ "VolumePpsLong", "VolumeBpsLong", "Classification", "VolumePps", "VolumeBps" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1349,9 +1350,11 @@ namespace Google.Cloud.SecurityCenter.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Attack(Attack other) : this() {
+      volumePpsLong_ = other.volumePpsLong_;
+      volumeBpsLong_ = other.volumeBpsLong_;
+      classification_ = other.classification_;
       volumePps_ = other.volumePps_;
       volumeBps_ = other.volumeBps_;
-      classification_ = other.classification_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1361,33 +1364,33 @@ namespace Google.Cloud.SecurityCenter.V2 {
       return new Attack(this);
     }
 
-    /// <summary>Field number for the "volume_pps" field.</summary>
-    public const int VolumePpsFieldNumber = 1;
-    private int volumePps_;
+    /// <summary>Field number for the "volume_pps_long" field.</summary>
+    public const int VolumePpsLongFieldNumber = 4;
+    private long volumePpsLong_;
     /// <summary>
     /// Total PPS (packets per second) volume of attack.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int VolumePps {
-      get { return volumePps_; }
+    public long VolumePpsLong {
+      get { return volumePpsLong_; }
       set {
-        volumePps_ = value;
+        volumePpsLong_ = value;
       }
     }
 
-    /// <summary>Field number for the "volume_bps" field.</summary>
-    public const int VolumeBpsFieldNumber = 2;
-    private int volumeBps_;
+    /// <summary>Field number for the "volume_bps_long" field.</summary>
+    public const int VolumeBpsLongFieldNumber = 5;
+    private long volumeBpsLong_;
     /// <summary>
     /// Total BPS (bytes per second) volume of attack.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int VolumeBps {
-      get { return volumeBps_; }
+    public long VolumeBpsLong {
+      get { return volumeBpsLong_; }
       set {
-        volumeBps_ = value;
+        volumeBpsLong_ = value;
       }
     }
 
@@ -1406,6 +1409,40 @@ namespace Google.Cloud.SecurityCenter.V2 {
       }
     }
 
+    /// <summary>Field number for the "volume_pps" field.</summary>
+    public const int VolumePpsFieldNumber = 1;
+    private int volumePps_;
+    /// <summary>
+    /// Total PPS (packets per second) volume of attack. Deprecated - refer to
+    /// volume_pps_long instead.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int VolumePps {
+      get { return volumePps_; }
+      set {
+        volumePps_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "volume_bps" field.</summary>
+    public const int VolumeBpsFieldNumber = 2;
+    private int volumeBps_;
+    /// <summary>
+    /// Total BPS (bytes per second) volume of attack. Deprecated - refer to
+    /// volume_bps_long instead.
+    /// </summary>
+    [global::System.ObsoleteAttribute]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int VolumeBps {
+      get { return volumeBps_; }
+      set {
+        volumeBps_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1421,9 +1458,11 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (VolumePpsLong != other.VolumePpsLong) return false;
+      if (VolumeBpsLong != other.VolumeBpsLong) return false;
+      if (Classification != other.Classification) return false;
       if (VolumePps != other.VolumePps) return false;
       if (VolumeBps != other.VolumeBps) return false;
-      if (Classification != other.Classification) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1431,9 +1470,11 @@ namespace Google.Cloud.SecurityCenter.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (VolumePpsLong != 0L) hash ^= VolumePpsLong.GetHashCode();
+      if (VolumeBpsLong != 0L) hash ^= VolumeBpsLong.GetHashCode();
+      if (Classification.Length != 0) hash ^= Classification.GetHashCode();
       if (VolumePps != 0) hash ^= VolumePps.GetHashCode();
       if (VolumeBps != 0) hash ^= VolumeBps.GetHashCode();
-      if (Classification.Length != 0) hash ^= Classification.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1464,6 +1505,14 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(26);
         output.WriteString(Classification);
       }
+      if (VolumePpsLong != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(VolumePpsLong);
+      }
+      if (VolumeBpsLong != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(VolumeBpsLong);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1486,6 +1535,14 @@ namespace Google.Cloud.SecurityCenter.V2 {
         output.WriteRawTag(26);
         output.WriteString(Classification);
       }
+      if (VolumePpsLong != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(VolumePpsLong);
+      }
+      if (VolumeBpsLong != 0L) {
+        output.WriteRawTag(40);
+        output.WriteInt64(VolumeBpsLong);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1496,14 +1553,20 @@ namespace Google.Cloud.SecurityCenter.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (VolumePpsLong != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(VolumePpsLong);
+      }
+      if (VolumeBpsLong != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(VolumeBpsLong);
+      }
+      if (Classification.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Classification);
+      }
       if (VolumePps != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(VolumePps);
       }
       if (VolumeBps != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(VolumeBps);
-      }
-      if (Classification.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Classification);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1517,14 +1580,20 @@ namespace Google.Cloud.SecurityCenter.V2 {
       if (other == null) {
         return;
       }
+      if (other.VolumePpsLong != 0L) {
+        VolumePpsLong = other.VolumePpsLong;
+      }
+      if (other.VolumeBpsLong != 0L) {
+        VolumeBpsLong = other.VolumeBpsLong;
+      }
+      if (other.Classification.Length != 0) {
+        Classification = other.Classification;
+      }
       if (other.VolumePps != 0) {
         VolumePps = other.VolumePps;
       }
       if (other.VolumeBps != 0) {
         VolumeBps = other.VolumeBps;
-      }
-      if (other.Classification.Length != 0) {
-        Classification = other.Classification;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1553,6 +1622,14 @@ namespace Google.Cloud.SecurityCenter.V2 {
             Classification = input.ReadString();
             break;
           }
+          case 32: {
+            VolumePpsLong = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            VolumeBpsLong = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -1578,6 +1655,14 @@ namespace Google.Cloud.SecurityCenter.V2 {
           }
           case 26: {
             Classification = input.ReadString();
+            break;
+          }
+          case 32: {
+            VolumePpsLong = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            VolumeBpsLong = input.ReadInt64();
             break;
           }
         }

@@ -201,8 +201,9 @@ namespace Google.Cloud.SecurityCenter.V2 {
     private readonly pbc::RepeatedField<string> tagValues_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Tag values combined with `AND` to check against.
-    /// Values in the form "tagValues/123"
-    /// Example: `[ "tagValues/123", "tagValues/456", "tagValues/789" ]`
+    /// For Google Cloud resources, they are tag value IDs in the form of
+    /// "tagValues/123". Example: `[ "tagValues/123", "tagValues/456",
+    /// "tagValues/789" ]`
     /// https://cloud.google.com/resource-manager/docs/tags/tags-creating-and-managing
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

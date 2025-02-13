@@ -25,7 +25,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjIvbWl0cmVfYXR0YWNr",
-            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIivBMKC01p",
+            "LnByb3RvEh5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjIi8RMKC01p",
             "dHJlQXR0YWNrEkoKDnByaW1hcnlfdGFjdGljGAEgASgOMjIuZ29vZ2xlLmNs",
             "b3VkLnNlY3VyaXR5Y2VudGVyLnYyLk1pdHJlQXR0YWNrLlRhY3RpYxJRChJw",
             "cmltYXJ5X3RlY2huaXF1ZXMYAiADKA4yNS5nb29nbGUuY2xvdWQuc2VjdXJp",
@@ -40,7 +40,7 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "R0VfRVNDQUxBVElPThAIEhMKD0RFRkVOU0VfRVZBU0lPThAHEhUKEUNSRURF",
             "TlRJQUxfQUNDRVNTEAkSDQoJRElTQ09WRVJZEAoSFAoQTEFURVJBTF9NT1ZF",
             "TUVOVBALEg4KCkNPTExFQ1RJT04QDBIXChNDT01NQU5EX0FORF9DT05UUk9M",
-            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4inw4KCVRlY2huaXF1",
+            "EAQSEAoMRVhGSUxUUkFUSU9OEA0SCgoGSU1QQUNUEA4i1A4KCVRlY2huaXF1",
             "ZRIZChVURUNITklRVUVfVU5TUEVDSUZJRUQQABIQCgxNQVNRVUVSQURJTkcQ",
             "MRIlCiFNQVRDSF9MRUdJVElNQVRFX05BTUVfT1JfTE9DQVRJT04QMhIoCiRC",
             "T09UX09SX0xPR09OX0lOSVRJQUxJWkFUSU9OX1NDUklQVFMQJRIRCg1TVEFS",
@@ -68,25 +68,26 @@ namespace Google.Cloud.SecurityCenter.V2 {
             "RVJWSUNFX0RJU0NPVkVSWRAwEiIKHlNURUFMX0FQUExJQ0FUSU9OX0FDQ0VT",
             "U19UT0tFThAqEhoKFkFDQ09VTlRfQUNDRVNTX1JFTU9WQUwQMxIcChhTVEVB",
             "TF9XRUJfU0VTU0lPTl9DT09LSUUQGRIjCh9DUkVBVEVfT1JfTU9ESUZZX1NZ",
-            "U1RFTV9QUk9DRVNTEBgSJQohQUJVU0VfRUxFVkFUSU9OX0NPTlRST0xfTUVD",
-            "SEFOSVNNECISGQoVVU5TRUNVUkVEX0NSRURFTlRJQUxTEA0SIQodTU9ESUZZ",
-            "X0FVVEhFTlRJQ0FUSU9OX1BST0NFU1MQHBITCg9JTVBBSVJfREVGRU5TRVMQ",
-            "HxIbChdESVNBQkxFX09SX01PRElGWV9UT09MUxA3EiEKHUVYRklMVFJBVElP",
-            "Tl9PVkVSX1dFQl9TRVJWSUNFEBQSIQodRVhGSUxUUkFUSU9OX1RPX0NMT1VE",
-            "X1NUT1JBR0UQFRIWChJEWU5BTUlDX1JFU09MVVRJT04QDBIZChVMQVRFUkFM",
-            "X1RPT0xfVFJBTlNGRVIQKRInCiNNT0RJRllfQ0xPVURfQ09NUFVURV9JTkZS",
-            "QVNUUlVDVFVSRRAaEhMKD0NSRUFURV9TTkFQU0hPVBA2EiIKHkNMT1VEX0lO",
-            "RlJBU1RSVUNUVVJFX0RJU0NPVkVSWRA1EhcKE09CVEFJTl9DQVBBQklMSVRJ",
-            "RVMQKxITCg9BQ1RJVkVfU0NBTk5JTkcQARIWChJTQ0FOTklOR19JUF9CTE9D",
-            "S1MQAhIkCiBDT05UQUlORVJfQURNSU5JU1RSQVRJT05fQ09NTUFORBA8EhIK",
-            "DkVTQ0FQRV9UT19IT1NUED0SJAogQ09OVEFJTkVSX0FORF9SRVNPVVJDRV9E",
-            "SVNDT1ZFUlkQORIuCipTVEVBTF9PUl9GT1JHRV9BVVRIRU5USUNBVElPTl9D",
-            "RVJUSUZJQ0FURVMQPkLqAQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNl",
-            "bnRlci52MkIQTWl0cmVBdHRhY2tQcm90b1ABWkpjbG91ZC5nb29nbGUuY29t",
-            "L2dvL3NlY3VyaXR5Y2VudGVyL2FwaXYyL3NlY3VyaXR5Y2VudGVycGI7c2Vj",
-            "dXJpdHljZW50ZXJwYqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5W",
-            "MsoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMuoCIUdvb2dsZTo6",
-            "Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMmIGcHJvdG8z"));
+            "U1RFTV9QUk9DRVNTEBgSHQoZRVZFTlRfVFJJR0dFUkVEX0VYRUNVVElPThBB",
+            "EiUKIUFCVVNFX0VMRVZBVElPTl9DT05UUk9MX01FQ0hBTklTTRAiEhkKFVVO",
+            "U0VDVVJFRF9DUkVERU5USUFMUxANEiEKHU1PRElGWV9BVVRIRU5USUNBVElP",
+            "Tl9QUk9DRVNTEBwSEwoPSU1QQUlSX0RFRkVOU0VTEB8SGwoXRElTQUJMRV9P",
+            "Ul9NT0RJRllfVE9PTFMQNxIhCh1FWEZJTFRSQVRJT05fT1ZFUl9XRUJfU0VS",
+            "VklDRRAUEiEKHUVYRklMVFJBVElPTl9UT19DTE9VRF9TVE9SQUdFEBUSFgoS",
+            "RFlOQU1JQ19SRVNPTFVUSU9OEAwSGQoVTEFURVJBTF9UT09MX1RSQU5TRkVS",
+            "ECkSJwojTU9ESUZZX0NMT1VEX0NPTVBVVEVfSU5GUkFTVFJVQ1RVUkUQGhIT",
+            "Cg9DUkVBVEVfU05BUFNIT1QQNhIiCh5DTE9VRF9JTkZSQVNUUlVDVFVSRV9E",
+            "SVNDT1ZFUlkQNRIXChNPQlRBSU5fQ0FQQUJJTElUSUVTECsSEwoPQUNUSVZF",
+            "X1NDQU5OSU5HEAESFgoSU0NBTk5JTkdfSVBfQkxPQ0tTEAISJAogQ09OVEFJ",
+            "TkVSX0FETUlOSVNUUkFUSU9OX0NPTU1BTkQQPBIUChBERVBMT1lfQ09OVEFJ",
+            "TkVSEEISEgoORVNDQVBFX1RPX0hPU1QQPRIkCiBDT05UQUlORVJfQU5EX1JF",
+            "U09VUkNFX0RJU0NPVkVSWRA5Ei4KKlNURUFMX09SX0ZPUkdFX0FVVEhFTlRJ",
+            "Q0FUSU9OX0NFUlRJRklDQVRFUxA+QuoBCiJjb20uZ29vZ2xlLmNsb3VkLnNl",
+            "Y3VyaXR5Y2VudGVyLnYyQhBNaXRyZUF0dGFja1Byb3RvUAFaSmNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vc2VjdXJpdHljZW50ZXIvYXBpdjIvc2VjdXJpdHljZW50",
+            "ZXJwYjtzZWN1cml0eWNlbnRlcnBiqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5",
+            "Q2VudGVyLlYyygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYy6gIh",
+            "R29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -506,7 +507,6 @@ namespace Google.Cloud.SecurityCenter.V2 {
       /// <summary>
       /// MITRE ATT&amp;CK techniques that can be referenced by SCC findings.
       /// See: https://attack.mitre.org/techniques/enterprise/
-      /// Next ID: 65
       /// </summary>
       public enum Technique {
         /// <summary>
@@ -694,6 +694,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// </summary>
         [pbr::OriginalName("CREATE_OR_MODIFY_SYSTEM_PROCESS")] CreateOrModifySystemProcess = 24,
         /// <summary>
+        /// T1546
+        /// </summary>
+        [pbr::OriginalName("EVENT_TRIGGERED_EXECUTION")] EventTriggeredExecution = 65,
+        /// <summary>
         /// T1548
         /// </summary>
         [pbr::OriginalName("ABUSE_ELEVATION_CONTROL_MECHANISM")] AbuseElevationControlMechanism = 34,
@@ -757,6 +761,10 @@ namespace Google.Cloud.SecurityCenter.V2 {
         /// T1609
         /// </summary>
         [pbr::OriginalName("CONTAINER_ADMINISTRATION_COMMAND")] ContainerAdministrationCommand = 60,
+        /// <summary>
+        /// T1610
+        /// </summary>
+        [pbr::OriginalName("DEPLOY_CONTAINER")] DeployContainer = 66,
         /// <summary>
         /// T1611
         /// </summary>
