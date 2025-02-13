@@ -293,7 +293,7 @@
     },
     {
       "id": "google/devtools/cloudbuild/v1",
-      "lastGeneratedCommit": "fd5b486367b0cf4ecf616ea2677dfa14f83a71c6",
+      "lastGeneratedCommit": "da30f52583f070f676ed886ed9e33d84a646f74c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
