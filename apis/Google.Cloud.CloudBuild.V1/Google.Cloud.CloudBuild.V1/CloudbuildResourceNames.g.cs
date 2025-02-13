@@ -3906,6 +3906,25 @@ namespace Google.Cloud.CloudBuild.V1
         }
     }
 
+    public partial class GitConfig
+    {
+        public partial class Types
+        {
+            public partial class HttpConfig
+            {
+                /// <summary>
+                /// <see cref="SecretVersionName"/>-typed view over the <see cref="ProxySecretVersionName"/> resource
+                /// name property.
+                /// </summary>
+                public SecretVersionName ProxySecretVersionNameAsSecretVersionName
+                {
+                    get => string.IsNullOrEmpty(ProxySecretVersionName) ? null : SecretVersionName.Parse(ProxySecretVersionName, allowUnparsed: true);
+                    set => ProxySecretVersionName = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class InlineSecret
     {
         /// <summary>
