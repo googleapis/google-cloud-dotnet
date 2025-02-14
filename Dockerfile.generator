@@ -46,13 +46,15 @@ ENV PROTOC=/app/protobuf/tools/linux_x64/protoc
 ENV GRPC_PLUGIN=/app/grpc/tools/linux_x64/grpc_csharp_plugin
 ENV GAPIC_PLUGIN=/app/gapic/Google.Api.Generator
 
-# Required for dotnet tools to run as an arbitrary user (so we can
-# create files in mounted volumes more appropriately)
-chmod a+rwx -R /root
 ENV HOME=/root
 
 # Create a really minimal generator-input in the container, for
 # "unconfigured" generation.
 COPY generator-input/CommonResourcesConfig.json generator-input/
+
+# Required for dotnet tools to run as an arbitrary user (so we can
+# create files in mounted volumes more appropriately)
+RUN chmod a+rwx -R /root
+RUN chmod a+rwx -R /app
 
 ENTRYPOINT ["dotnet", "ReleaseManager/Google.Cloud.Tools.ReleaseManager.dll", "container"]
