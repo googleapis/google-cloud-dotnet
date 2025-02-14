@@ -130,7 +130,7 @@ Releasing consists of these steps:
 - Creating a release tag and GitHub release
 - Building and testing
 - Pushing the package to nuget.org
-- Updating the documentation in GitHub (in the `gh-pages` branch)
+- Updating the documentation (by pushing docfx results to GCS)
 
 The last three of these are typically performed by a Kokoro release
 job.

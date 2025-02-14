@@ -3,7 +3,6 @@
 # Environment variables:
 # - COMMITTISH_OVERRIDE: The commit to actually build the release from, if not the one that has been checked out
 # - SKIP_NUGET_PUSH: If non-empty, the push to nuget.org is skipped
-# - SKIP_PAGES_UPLOAD: If non-empty, the push to gh-pages is skipped
 # - SKIP_GOOGLEAPISDEV_UPLOAD: If non-empty, the push to googleapis.dev is skipped
 
 set -e
