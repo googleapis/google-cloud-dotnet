@@ -50,6 +50,8 @@ namespace Google.Cloud.Compute.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AddAssociationSettings = existing.AddAssociationSettings;
             AddAssociationOperationsSettings = existing.AddAssociationOperationsSettings.Clone();
+            AddPacketMirroringRuleSettings = existing.AddPacketMirroringRuleSettings;
+            AddPacketMirroringRuleOperationsSettings = existing.AddPacketMirroringRuleOperationsSettings.Clone();
             AddRuleSettings = existing.AddRuleSettings;
             AddRuleOperationsSettings = existing.AddRuleOperationsSettings.Clone();
             AggregatedListSettings = existing.AggregatedListSettings;
@@ -60,16 +62,21 @@ namespace Google.Cloud.Compute.V1
             GetSettings = existing.GetSettings;
             GetAssociationSettings = existing.GetAssociationSettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
+            GetPacketMirroringRuleSettings = existing.GetPacketMirroringRuleSettings;
             GetRuleSettings = existing.GetRuleSettings;
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            PatchPacketMirroringRuleSettings = existing.PatchPacketMirroringRuleSettings;
+            PatchPacketMirroringRuleOperationsSettings = existing.PatchPacketMirroringRuleOperationsSettings.Clone();
             PatchRuleSettings = existing.PatchRuleSettings;
             PatchRuleOperationsSettings = existing.PatchRuleOperationsSettings.Clone();
             RemoveAssociationSettings = existing.RemoveAssociationSettings;
             RemoveAssociationOperationsSettings = existing.RemoveAssociationOperationsSettings.Clone();
+            RemovePacketMirroringRuleSettings = existing.RemovePacketMirroringRuleSettings;
+            RemovePacketMirroringRuleOperationsSettings = existing.RemovePacketMirroringRuleOperationsSettings.Clone();
             RemoveRuleSettings = existing.RemoveRuleSettings;
             RemoveRuleOperationsSettings = existing.RemoveRuleOperationsSettings.Clone();
             SetIamPolicySettings = existing.SetIamPolicySettings;
@@ -106,6 +113,37 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings AddAssociationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkFirewallPoliciesClient.AddPacketMirroringRule</c> and
+        /// <c>NetworkFirewallPoliciesClient.AddPacketMirroringRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddPacketMirroringRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkFirewallPoliciesClient.AddPacketMirroringRule</c> and
+        /// <c>NetworkFirewallPoliciesClient.AddPacketMirroringRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddPacketMirroringRuleOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -289,6 +327,28 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkFirewallPoliciesClient.GetPacketMirroringRule</c> and
+        /// <c>NetworkFirewallPoliciesClient.GetPacketMirroringRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPacketMirroringRuleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NetworkFirewallPoliciesClient.GetRule</c> and <c>NetworkFirewallPoliciesClient.GetRuleAsync</c>.
         /// </summary>
         /// <remarks>
@@ -391,6 +451,37 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkFirewallPoliciesClient.PatchPacketMirroringRule</c> and
+        /// <c>NetworkFirewallPoliciesClient.PatchPacketMirroringRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PatchPacketMirroringRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkFirewallPoliciesClient.PatchPacketMirroringRule</c>
+        /// and <c>NetworkFirewallPoliciesClient.PatchPacketMirroringRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PatchPacketMirroringRuleOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>NetworkFirewallPoliciesClient.PatchRule</c> and <c>NetworkFirewallPoliciesClient.PatchRuleAsync</c>.
         /// </summary>
         /// <remarks>
@@ -446,6 +537,37 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RemoveAssociationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkFirewallPoliciesClient.RemovePacketMirroringRule</c> and
+        /// <c>NetworkFirewallPoliciesClient.RemovePacketMirroringRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemovePacketMirroringRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkFirewallPoliciesClient.RemovePacketMirroringRule</c>
+        /// and <c>NetworkFirewallPoliciesClient.RemovePacketMirroringRuleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RemovePacketMirroringRuleOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -765,6 +887,121 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> AddAssociationAsync(string project, string firewallPolicy, FirewallPolicyAssociation firewallPolicyAssociationResource, st::CancellationToken cancellationToken) =>
             AddAssociationAsync(project, firewallPolicy, firewallPolicyAssociationResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Inserts a packet mirroring rule into a firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> AddPacketMirroringRule(AddPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Inserts a packet mirroring rule into a firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddPacketMirroringRuleAsync(AddPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Inserts a packet mirroring rule into a firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddPacketMirroringRuleAsync(AddPacketMirroringRuleNetworkFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            AddPacketMirroringRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddPacketMirroringRule</c>.</summary>
+        public virtual lro::OperationsClient AddPacketMirroringRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddPacketMirroringRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAddPacketMirroringRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddPacketMirroringRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddPacketMirroringRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAddPacketMirroringRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddPacketMirroringRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Inserts a packet mirroring rule into a firewall policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> AddPacketMirroringRule(string project, string firewallPolicy, FirewallPolicyRule firewallPolicyRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+            AddPacketMirroringRule(new AddPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                FirewallPolicyRuleResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyRuleResource, nameof(firewallPolicyRuleResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Inserts a packet mirroring rule into a firewall policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddPacketMirroringRuleAsync(string project, string firewallPolicy, FirewallPolicyRule firewallPolicyRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+            AddPacketMirroringRuleAsync(new AddPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                FirewallPolicyRuleResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyRuleResource, nameof(firewallPolicyRuleResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Inserts a packet mirroring rule into a firewall policy.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AddPacketMirroringRuleAsync(string project, string firewallPolicy, FirewallPolicyRule firewallPolicyRuleResource, st::CancellationToken cancellationToken) =>
+            AddPacketMirroringRuleAsync(project, firewallPolicy, firewallPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Inserts a rule into a firewall policy.
@@ -1406,6 +1643,83 @@ namespace Google.Cloud.Compute.V1
             GetIamPolicyAsync(project, resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicyRule GetPacketMirroringRule(GetPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicyRule> GetPacketMirroringRuleAsync(GetPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicyRule> GetPacketMirroringRuleAsync(GetPacketMirroringRuleNetworkFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            GetPacketMirroringRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to which the queried rule belongs.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual FirewallPolicyRule GetPacketMirroringRule(string project, string firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            GetPacketMirroringRule(new GetPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to which the queried rule belongs.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicyRule> GetPacketMirroringRuleAsync(string project, string firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            GetPacketMirroringRuleAsync(new GetPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to which the queried rule belongs.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<FirewallPolicyRule> GetPacketMirroringRuleAsync(string project, string firewallPolicy, st::CancellationToken cancellationToken) =>
+            GetPacketMirroringRuleAsync(project, firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets a rule of the specified priority.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1784,6 +2098,121 @@ namespace Google.Cloud.Compute.V1
             PatchAsync(project, firewallPolicy, firewallPolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Patches a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchPacketMirroringRule(PatchPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchPacketMirroringRuleAsync(PatchPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchPacketMirroringRuleAsync(PatchPacketMirroringRuleNetworkFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            PatchPacketMirroringRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PatchPacketMirroringRule</c>.</summary>
+        public virtual lro::OperationsClient PatchPacketMirroringRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PatchPacketMirroringRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePatchPacketMirroringRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchPacketMirroringRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PatchPacketMirroringRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePatchPacketMirroringRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchPacketMirroringRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Patches a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchPacketMirroringRule(string project, string firewallPolicy, FirewallPolicyRule firewallPolicyRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchPacketMirroringRule(new PatchPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                FirewallPolicyRuleResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyRuleResource, nameof(firewallPolicyRuleResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchPacketMirroringRuleAsync(string project, string firewallPolicy, FirewallPolicyRule firewallPolicyRuleResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchPacketMirroringRuleAsync(new PatchPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                FirewallPolicyRuleResource = gax::GaxPreconditions.CheckNotNull(firewallPolicyRuleResource, nameof(firewallPolicyRuleResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="firewallPolicyRuleResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchPacketMirroringRuleAsync(string project, string firewallPolicy, FirewallPolicyRule firewallPolicyRuleResource, st::CancellationToken cancellationToken) =>
+            PatchPacketMirroringRuleAsync(project, firewallPolicy, firewallPolicyRuleResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Patches a rule of the specified priority.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2000,6 +2429,110 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveAssociationAsync(string project, string firewallPolicy, st::CancellationToken cancellationToken) =>
             RemoveAssociationAsync(project, firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> RemovePacketMirroringRule(RemovePacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemovePacketMirroringRuleAsync(RemovePacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemovePacketMirroringRuleAsync(RemovePacketMirroringRuleNetworkFirewallPolicyRequest request, st::CancellationToken cancellationToken) =>
+            RemovePacketMirroringRuleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RemovePacketMirroringRule</c>.</summary>
+        public virtual lro::OperationsClient RemovePacketMirroringRuleOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RemovePacketMirroringRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceRemovePacketMirroringRule(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemovePacketMirroringRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RemovePacketMirroringRule</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceRemovePacketMirroringRuleAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RemovePacketMirroringRuleOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> RemovePacketMirroringRule(string project, string firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            RemovePacketMirroringRule(new RemovePacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemovePacketMirroringRuleAsync(string project, string firewallPolicy, gaxgrpc::CallSettings callSettings = null) =>
+            RemovePacketMirroringRuleAsync(new RemovePacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                FirewallPolicy = gax::GaxPreconditions.CheckNotNullOrEmpty(firewallPolicy, nameof(firewallPolicy)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="firewallPolicy">
+        /// Name of the firewall policy to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> RemovePacketMirroringRuleAsync(string project, string firewallPolicy, st::CancellationToken cancellationToken) =>
+            RemovePacketMirroringRuleAsync(project, firewallPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a rule of the specified priority.
@@ -2289,6 +2822,8 @@ namespace Google.Cloud.Compute.V1
     {
         private readonly gaxgrpc::ApiCall<AddAssociationNetworkFirewallPolicyRequest, Operation> _callAddAssociation;
 
+        private readonly gaxgrpc::ApiCall<AddPacketMirroringRuleNetworkFirewallPolicyRequest, Operation> _callAddPacketMirroringRule;
+
         private readonly gaxgrpc::ApiCall<AddRuleNetworkFirewallPolicyRequest, Operation> _callAddRule;
 
         private readonly gaxgrpc::ApiCall<AggregatedListNetworkFirewallPoliciesRequest, NetworkFirewallPolicyAggregatedList> _callAggregatedList;
@@ -2303,6 +2838,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<GetIamPolicyNetworkFirewallPolicyRequest, Policy> _callGetIamPolicy;
 
+        private readonly gaxgrpc::ApiCall<GetPacketMirroringRuleNetworkFirewallPolicyRequest, FirewallPolicyRule> _callGetPacketMirroringRule;
+
         private readonly gaxgrpc::ApiCall<GetRuleNetworkFirewallPolicyRequest, FirewallPolicyRule> _callGetRule;
 
         private readonly gaxgrpc::ApiCall<InsertNetworkFirewallPolicyRequest, Operation> _callInsert;
@@ -2311,9 +2848,13 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<PatchNetworkFirewallPolicyRequest, Operation> _callPatch;
 
+        private readonly gaxgrpc::ApiCall<PatchPacketMirroringRuleNetworkFirewallPolicyRequest, Operation> _callPatchPacketMirroringRule;
+
         private readonly gaxgrpc::ApiCall<PatchRuleNetworkFirewallPolicyRequest, Operation> _callPatchRule;
 
         private readonly gaxgrpc::ApiCall<RemoveAssociationNetworkFirewallPolicyRequest, Operation> _callRemoveAssociation;
+
+        private readonly gaxgrpc::ApiCall<RemovePacketMirroringRuleNetworkFirewallPolicyRequest, Operation> _callRemovePacketMirroringRule;
 
         private readonly gaxgrpc::ApiCall<RemoveRuleNetworkFirewallPolicyRequest, Operation> _callRemoveRule;
 
@@ -2340,17 +2881,23 @@ namespace Google.Cloud.Compute.V1
                 Logger = logger,
             });
             AddAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddAssociationOperationsSettings, logger);
+            AddPacketMirroringRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddPacketMirroringRuleOperationsSettings, logger);
             AddRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AddRuleOperationsSettings, logger);
             CloneRulesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.CloneRulesOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchPacketMirroringRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchPacketMirroringRuleOperationsSettings, logger);
             PatchRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PatchRuleOperationsSettings, logger);
             RemoveAssociationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveAssociationOperationsSettings, logger);
+            RemovePacketMirroringRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemovePacketMirroringRuleOperationsSettings, logger);
             RemoveRuleOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.RemoveRuleOperationsSettings, logger);
             _callAddAssociation = clientHelper.BuildApiCall<AddAssociationNetworkFirewallPolicyRequest, Operation>("AddAssociation", grpcClient.AddAssociationAsync, grpcClient.AddAssociation, effectiveSettings.AddAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callAddAssociation);
             Modify_AddAssociationApiCall(ref _callAddAssociation);
+            _callAddPacketMirroringRule = clientHelper.BuildApiCall<AddPacketMirroringRuleNetworkFirewallPolicyRequest, Operation>("AddPacketMirroringRule", grpcClient.AddPacketMirroringRuleAsync, grpcClient.AddPacketMirroringRule, effectiveSettings.AddPacketMirroringRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            Modify_ApiCall(ref _callAddPacketMirroringRule);
+            Modify_AddPacketMirroringRuleApiCall(ref _callAddPacketMirroringRule);
             _callAddRule = clientHelper.BuildApiCall<AddRuleNetworkFirewallPolicyRequest, Operation>("AddRule", grpcClient.AddRuleAsync, grpcClient.AddRule, effectiveSettings.AddRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callAddRule);
             Modify_AddRuleApiCall(ref _callAddRule);
@@ -2372,6 +2919,9 @@ namespace Google.Cloud.Compute.V1
             _callGetIamPolicy = clientHelper.BuildApiCall<GetIamPolicyNetworkFirewallPolicyRequest, Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+            _callGetPacketMirroringRule = clientHelper.BuildApiCall<GetPacketMirroringRuleNetworkFirewallPolicyRequest, FirewallPolicyRule>("GetPacketMirroringRule", grpcClient.GetPacketMirroringRuleAsync, grpcClient.GetPacketMirroringRule, effectiveSettings.GetPacketMirroringRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            Modify_ApiCall(ref _callGetPacketMirroringRule);
+            Modify_GetPacketMirroringRuleApiCall(ref _callGetPacketMirroringRule);
             _callGetRule = clientHelper.BuildApiCall<GetRuleNetworkFirewallPolicyRequest, FirewallPolicyRule>("GetRule", grpcClient.GetRuleAsync, grpcClient.GetRule, effectiveSettings.GetRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callGetRule);
             Modify_GetRuleApiCall(ref _callGetRule);
@@ -2384,12 +2934,18 @@ namespace Google.Cloud.Compute.V1
             _callPatch = clientHelper.BuildApiCall<PatchNetworkFirewallPolicyRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callPatchPacketMirroringRule = clientHelper.BuildApiCall<PatchPacketMirroringRuleNetworkFirewallPolicyRequest, Operation>("PatchPacketMirroringRule", grpcClient.PatchPacketMirroringRuleAsync, grpcClient.PatchPacketMirroringRule, effectiveSettings.PatchPacketMirroringRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            Modify_ApiCall(ref _callPatchPacketMirroringRule);
+            Modify_PatchPacketMirroringRuleApiCall(ref _callPatchPacketMirroringRule);
             _callPatchRule = clientHelper.BuildApiCall<PatchRuleNetworkFirewallPolicyRequest, Operation>("PatchRule", grpcClient.PatchRuleAsync, grpcClient.PatchRule, effectiveSettings.PatchRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callPatchRule);
             Modify_PatchRuleApiCall(ref _callPatchRule);
             _callRemoveAssociation = clientHelper.BuildApiCall<RemoveAssociationNetworkFirewallPolicyRequest, Operation>("RemoveAssociation", grpcClient.RemoveAssociationAsync, grpcClient.RemoveAssociation, effectiveSettings.RemoveAssociationSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callRemoveAssociation);
             Modify_RemoveAssociationApiCall(ref _callRemoveAssociation);
+            _callRemovePacketMirroringRule = clientHelper.BuildApiCall<RemovePacketMirroringRuleNetworkFirewallPolicyRequest, Operation>("RemovePacketMirroringRule", grpcClient.RemovePacketMirroringRuleAsync, grpcClient.RemovePacketMirroringRule, effectiveSettings.RemovePacketMirroringRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
+            Modify_ApiCall(ref _callRemovePacketMirroringRule);
+            Modify_RemovePacketMirroringRuleApiCall(ref _callRemovePacketMirroringRule);
             _callRemoveRule = clientHelper.BuildApiCall<RemoveRuleNetworkFirewallPolicyRequest, Operation>("RemoveRule", grpcClient.RemoveRuleAsync, grpcClient.RemoveRule, effectiveSettings.RemoveRuleSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("firewall_policy", request => request.FirewallPolicy);
             Modify_ApiCall(ref _callRemoveRule);
             Modify_RemoveRuleApiCall(ref _callRemoveRule);
@@ -2406,6 +2962,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_AddAssociationApiCall(ref gaxgrpc::ApiCall<AddAssociationNetworkFirewallPolicyRequest, Operation> call);
 
+        partial void Modify_AddPacketMirroringRuleApiCall(ref gaxgrpc::ApiCall<AddPacketMirroringRuleNetworkFirewallPolicyRequest, Operation> call);
+
         partial void Modify_AddRuleApiCall(ref gaxgrpc::ApiCall<AddRuleNetworkFirewallPolicyRequest, Operation> call);
 
         partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListNetworkFirewallPoliciesRequest, NetworkFirewallPolicyAggregatedList> call);
@@ -2420,6 +2978,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<GetIamPolicyNetworkFirewallPolicyRequest, Policy> call);
 
+        partial void Modify_GetPacketMirroringRuleApiCall(ref gaxgrpc::ApiCall<GetPacketMirroringRuleNetworkFirewallPolicyRequest, FirewallPolicyRule> call);
+
         partial void Modify_GetRuleApiCall(ref gaxgrpc::ApiCall<GetRuleNetworkFirewallPolicyRequest, FirewallPolicyRule> call);
 
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<InsertNetworkFirewallPolicyRequest, Operation> call);
@@ -2428,9 +2988,13 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchNetworkFirewallPolicyRequest, Operation> call);
 
+        partial void Modify_PatchPacketMirroringRuleApiCall(ref gaxgrpc::ApiCall<PatchPacketMirroringRuleNetworkFirewallPolicyRequest, Operation> call);
+
         partial void Modify_PatchRuleApiCall(ref gaxgrpc::ApiCall<PatchRuleNetworkFirewallPolicyRequest, Operation> call);
 
         partial void Modify_RemoveAssociationApiCall(ref gaxgrpc::ApiCall<RemoveAssociationNetworkFirewallPolicyRequest, Operation> call);
+
+        partial void Modify_RemovePacketMirroringRuleApiCall(ref gaxgrpc::ApiCall<RemovePacketMirroringRuleNetworkFirewallPolicyRequest, Operation> call);
 
         partial void Modify_RemoveRuleApiCall(ref gaxgrpc::ApiCall<RemoveRuleNetworkFirewallPolicyRequest, Operation> call);
 
@@ -2444,6 +3008,8 @@ namespace Google.Cloud.Compute.V1
         public override NetworkFirewallPolicies.NetworkFirewallPoliciesClient GrpcClient { get; }
 
         partial void Modify_AddAssociationNetworkFirewallPolicyRequest(ref AddAssociationNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddPacketMirroringRuleNetworkFirewallPolicyRequest(ref AddPacketMirroringRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AddRuleNetworkFirewallPolicyRequest(ref AddRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2459,6 +3025,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetIamPolicyNetworkFirewallPolicyRequest(ref GetIamPolicyNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_GetPacketMirroringRuleNetworkFirewallPolicyRequest(ref GetPacketMirroringRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetRuleNetworkFirewallPolicyRequest(ref GetRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_InsertNetworkFirewallPolicyRequest(ref InsertNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
@@ -2467,9 +3035,13 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_PatchNetworkFirewallPolicyRequest(ref PatchNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_PatchPacketMirroringRuleNetworkFirewallPolicyRequest(ref PatchPacketMirroringRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_PatchRuleNetworkFirewallPolicyRequest(ref PatchRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RemoveAssociationNetworkFirewallPolicyRequest(ref RemoveAssociationNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemovePacketMirroringRuleNetworkFirewallPolicyRequest(ref RemovePacketMirroringRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RemoveRuleNetworkFirewallPolicyRequest(ref RemoveRuleNetworkFirewallPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2508,6 +3080,39 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddAssociationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>AddPacketMirroringRule</c>.</summary>
+        public override lro::OperationsClient AddPacketMirroringRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Inserts a packet mirroring rule into a firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> AddPacketMirroringRule(AddPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddPacketMirroringRuleNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            Operation response = _callAddPacketMirroringRule.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddPacketMirroringRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Inserts a packet mirroring rule into a firewall policy.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> AddPacketMirroringRuleAsync(AddPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddPacketMirroringRuleNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            Operation response = await _callAddPacketMirroringRule.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddPacketMirroringRuleOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>AddRule</c>.</summary>
@@ -2708,6 +3313,30 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Gets a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override FirewallPolicyRule GetPacketMirroringRule(GetPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPacketMirroringRuleNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            return _callGetPacketMirroringRule.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<FirewallPolicyRule> GetPacketMirroringRuleAsync(GetPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPacketMirroringRuleNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            return _callGetPacketMirroringRule.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Gets a rule of the specified priority.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2821,6 +3450,39 @@ namespace Google.Cloud.Compute.V1
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>PatchPacketMirroringRule</c>.</summary>
+        public override lro::OperationsClient PatchPacketMirroringRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Patches a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> PatchPacketMirroringRule(PatchPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchPacketMirroringRuleNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            Operation response = _callPatchPacketMirroringRule.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchPacketMirroringRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Patches a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PatchPacketMirroringRuleAsync(PatchPacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchPacketMirroringRuleNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            Operation response = await _callPatchPacketMirroringRule.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchPacketMirroringRuleOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>PatchRule</c>.</summary>
         public override lro::OperationsClient PatchRuleOperationsClient { get; }
 
@@ -2885,6 +3547,39 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveAssociationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RemovePacketMirroringRule</c>.</summary>
+        public override lro::OperationsClient RemovePacketMirroringRuleOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> RemovePacketMirroringRule(RemovePacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemovePacketMirroringRuleNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            Operation response = _callRemovePacketMirroringRule.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemovePacketMirroringRuleOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a packet mirroring rule of the specified priority.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> RemovePacketMirroringRuleAsync(RemovePacketMirroringRuleNetworkFirewallPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemovePacketMirroringRuleNetworkFirewallPolicyRequest(ref request, ref callSettings);
+            Operation response = await _callRemovePacketMirroringRule.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemovePacketMirroringRuleOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>RemoveRule</c>.</summary>

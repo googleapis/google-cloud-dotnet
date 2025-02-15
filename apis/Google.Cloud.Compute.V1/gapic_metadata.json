@@ -2290,6 +2290,12 @@
                 "AddAssociationAsync"
               ]
             },
+            "AddPacketMirroringRule": {
+              "methods": [
+                "AddPacketMirroringRule",
+                "AddPacketMirroringRuleAsync"
+              ]
+            },
             "AddRule": {
               "methods": [
                 "AddRule",
@@ -2332,6 +2338,12 @@
                 "GetIamPolicyAsync"
               ]
             },
+            "GetPacketMirroringRule": {
+              "methods": [
+                "GetPacketMirroringRule",
+                "GetPacketMirroringRuleAsync"
+              ]
+            },
             "GetRule": {
               "methods": [
                 "GetRule",
@@ -2356,6 +2368,12 @@
                 "PatchAsync"
               ]
             },
+            "PatchPacketMirroringRule": {
+              "methods": [
+                "PatchPacketMirroringRule",
+                "PatchPacketMirroringRuleAsync"
+              ]
+            },
             "PatchRule": {
               "methods": [
                 "PatchRule",
@@ -2366,6 +2384,12 @@
               "methods": [
                 "RemoveAssociation",
                 "RemoveAssociationAsync"
+              ]
+            },
+            "RemovePacketMirroringRule": {
+              "methods": [
+                "RemovePacketMirroringRule",
+                "RemovePacketMirroringRuleAsync"
               ]
             },
             "RemoveRule": {
