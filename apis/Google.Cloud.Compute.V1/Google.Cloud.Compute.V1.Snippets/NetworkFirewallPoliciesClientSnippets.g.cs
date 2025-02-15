@@ -165,6 +165,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for AddPacketMirroringRule</summary>
+        public void AddPacketMirroringRuleRequestObject()
+        {
+            // Snippet: AddPacketMirroringRule(AddPacketMirroringRuleNetworkFirewallPolicyRequest, CallSettings)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = NetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            AddPacketMirroringRuleNetworkFirewallPolicyRequest request = new AddPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                RequestId = "",
+                Project = "",
+                FirewallPolicyRuleResource = new FirewallPolicyRule(),
+                MinPriority = 0,
+                MaxPriority = 0,
+                FirewallPolicy = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = networkFirewallPoliciesClient.AddPacketMirroringRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networkFirewallPoliciesClient.PollOnceAddPacketMirroringRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddPacketMirroringRuleAsync</summary>
+        public async Task AddPacketMirroringRuleRequestObjectAsync()
+        {
+            // Snippet: AddPacketMirroringRuleAsync(AddPacketMirroringRuleNetworkFirewallPolicyRequest, CallSettings)
+            // Additional: AddPacketMirroringRuleAsync(AddPacketMirroringRuleNetworkFirewallPolicyRequest, CancellationToken)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = await NetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            AddPacketMirroringRuleNetworkFirewallPolicyRequest request = new AddPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                RequestId = "",
+                Project = "",
+                FirewallPolicyRuleResource = new FirewallPolicyRule(),
+                MinPriority = 0,
+                MaxPriority = 0,
+                FirewallPolicy = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networkFirewallPoliciesClient.AddPacketMirroringRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networkFirewallPoliciesClient.PollOnceAddPacketMirroringRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddPacketMirroringRule</summary>
+        public void AddPacketMirroringRule()
+        {
+            // Snippet: AddPacketMirroringRule(string, string, FirewallPolicyRule, CallSettings)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = NetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string firewallPolicy = "";
+            FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
+            // Make the request
+            lro::Operation<Operation, Operation> response = networkFirewallPoliciesClient.AddPacketMirroringRule(project, firewallPolicy, firewallPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networkFirewallPoliciesClient.PollOnceAddPacketMirroringRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AddPacketMirroringRuleAsync</summary>
+        public async Task AddPacketMirroringRuleAsync()
+        {
+            // Snippet: AddPacketMirroringRuleAsync(string, string, FirewallPolicyRule, CallSettings)
+            // Additional: AddPacketMirroringRuleAsync(string, string, FirewallPolicyRule, CancellationToken)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = await NetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string firewallPolicy = "";
+            FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networkFirewallPoliciesClient.AddPacketMirroringRuleAsync(project, firewallPolicy, firewallPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networkFirewallPoliciesClient.PollOnceAddPacketMirroringRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for AddRule</summary>
         public void AddRuleRequestObject()
         {
@@ -957,6 +1095,72 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetPacketMirroringRule</summary>
+        public void GetPacketMirroringRuleRequestObject()
+        {
+            // Snippet: GetPacketMirroringRule(GetPacketMirroringRuleNetworkFirewallPolicyRequest, CallSettings)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = NetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            GetPacketMirroringRuleNetworkFirewallPolicyRequest request = new GetPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                Project = "",
+                Priority = 0,
+                FirewallPolicy = "",
+            };
+            // Make the request
+            FirewallPolicyRule response = networkFirewallPoliciesClient.GetPacketMirroringRule(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPacketMirroringRuleAsync</summary>
+        public async Task GetPacketMirroringRuleRequestObjectAsync()
+        {
+            // Snippet: GetPacketMirroringRuleAsync(GetPacketMirroringRuleNetworkFirewallPolicyRequest, CallSettings)
+            // Additional: GetPacketMirroringRuleAsync(GetPacketMirroringRuleNetworkFirewallPolicyRequest, CancellationToken)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = await NetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPacketMirroringRuleNetworkFirewallPolicyRequest request = new GetPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                Project = "",
+                Priority = 0,
+                FirewallPolicy = "",
+            };
+            // Make the request
+            FirewallPolicyRule response = await networkFirewallPoliciesClient.GetPacketMirroringRuleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPacketMirroringRule</summary>
+        public void GetPacketMirroringRule()
+        {
+            // Snippet: GetPacketMirroringRule(string, string, CallSettings)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = NetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string firewallPolicy = "";
+            // Make the request
+            FirewallPolicyRule response = networkFirewallPoliciesClient.GetPacketMirroringRule(project, firewallPolicy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPacketMirroringRuleAsync</summary>
+        public async Task GetPacketMirroringRuleAsync()
+        {
+            // Snippet: GetPacketMirroringRuleAsync(string, string, CallSettings)
+            // Additional: GetPacketMirroringRuleAsync(string, string, CancellationToken)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = await NetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string firewallPolicy = "";
+            // Make the request
+            FirewallPolicyRule response = await networkFirewallPoliciesClient.GetPacketMirroringRuleAsync(project, firewallPolicy);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetRule</summary>
         public void GetRuleRequestObject()
         {
@@ -1479,6 +1683,142 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for PatchPacketMirroringRule</summary>
+        public void PatchPacketMirroringRuleRequestObject()
+        {
+            // Snippet: PatchPacketMirroringRule(PatchPacketMirroringRuleNetworkFirewallPolicyRequest, CallSettings)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = NetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            PatchPacketMirroringRuleNetworkFirewallPolicyRequest request = new PatchPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                RequestId = "",
+                Project = "",
+                FirewallPolicyRuleResource = new FirewallPolicyRule(),
+                Priority = 0,
+                FirewallPolicy = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = networkFirewallPoliciesClient.PatchPacketMirroringRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networkFirewallPoliciesClient.PollOncePatchPacketMirroringRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchPacketMirroringRuleAsync</summary>
+        public async Task PatchPacketMirroringRuleRequestObjectAsync()
+        {
+            // Snippet: PatchPacketMirroringRuleAsync(PatchPacketMirroringRuleNetworkFirewallPolicyRequest, CallSettings)
+            // Additional: PatchPacketMirroringRuleAsync(PatchPacketMirroringRuleNetworkFirewallPolicyRequest, CancellationToken)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = await NetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchPacketMirroringRuleNetworkFirewallPolicyRequest request = new PatchPacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                RequestId = "",
+                Project = "",
+                FirewallPolicyRuleResource = new FirewallPolicyRule(),
+                Priority = 0,
+                FirewallPolicy = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networkFirewallPoliciesClient.PatchPacketMirroringRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networkFirewallPoliciesClient.PollOncePatchPacketMirroringRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchPacketMirroringRule</summary>
+        public void PatchPacketMirroringRule()
+        {
+            // Snippet: PatchPacketMirroringRule(string, string, FirewallPolicyRule, CallSettings)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = NetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string firewallPolicy = "";
+            FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
+            // Make the request
+            lro::Operation<Operation, Operation> response = networkFirewallPoliciesClient.PatchPacketMirroringRule(project, firewallPolicy, firewallPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networkFirewallPoliciesClient.PollOncePatchPacketMirroringRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchPacketMirroringRuleAsync</summary>
+        public async Task PatchPacketMirroringRuleAsync()
+        {
+            // Snippet: PatchPacketMirroringRuleAsync(string, string, FirewallPolicyRule, CallSettings)
+            // Additional: PatchPacketMirroringRuleAsync(string, string, FirewallPolicyRule, CancellationToken)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = await NetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string firewallPolicy = "";
+            FirewallPolicyRule firewallPolicyRuleResource = new FirewallPolicyRule();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networkFirewallPoliciesClient.PatchPacketMirroringRuleAsync(project, firewallPolicy, firewallPolicyRuleResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networkFirewallPoliciesClient.PollOncePatchPacketMirroringRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for PatchRule</summary>
         public void PatchRuleRequestObject()
         {
@@ -1738,6 +2078,138 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await networkFirewallPoliciesClient.PollOnceRemoveAssociationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemovePacketMirroringRule</summary>
+        public void RemovePacketMirroringRuleRequestObject()
+        {
+            // Snippet: RemovePacketMirroringRule(RemovePacketMirroringRuleNetworkFirewallPolicyRequest, CallSettings)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = NetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            RemovePacketMirroringRuleNetworkFirewallPolicyRequest request = new RemovePacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                RequestId = "",
+                Project = "",
+                Priority = 0,
+                FirewallPolicy = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = networkFirewallPoliciesClient.RemovePacketMirroringRule(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networkFirewallPoliciesClient.PollOnceRemovePacketMirroringRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemovePacketMirroringRuleAsync</summary>
+        public async Task RemovePacketMirroringRuleRequestObjectAsync()
+        {
+            // Snippet: RemovePacketMirroringRuleAsync(RemovePacketMirroringRuleNetworkFirewallPolicyRequest, CallSettings)
+            // Additional: RemovePacketMirroringRuleAsync(RemovePacketMirroringRuleNetworkFirewallPolicyRequest, CancellationToken)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = await NetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            RemovePacketMirroringRuleNetworkFirewallPolicyRequest request = new RemovePacketMirroringRuleNetworkFirewallPolicyRequest
+            {
+                RequestId = "",
+                Project = "",
+                Priority = 0,
+                FirewallPolicy = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networkFirewallPoliciesClient.RemovePacketMirroringRuleAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networkFirewallPoliciesClient.PollOnceRemovePacketMirroringRuleAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemovePacketMirroringRule</summary>
+        public void RemovePacketMirroringRule()
+        {
+            // Snippet: RemovePacketMirroringRule(string, string, CallSettings)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = NetworkFirewallPoliciesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string firewallPolicy = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = networkFirewallPoliciesClient.RemovePacketMirroringRule(project, firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = networkFirewallPoliciesClient.PollOnceRemovePacketMirroringRule(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemovePacketMirroringRuleAsync</summary>
+        public async Task RemovePacketMirroringRuleAsync()
+        {
+            // Snippet: RemovePacketMirroringRuleAsync(string, string, CallSettings)
+            // Additional: RemovePacketMirroringRuleAsync(string, string, CancellationToken)
+            // Create client
+            NetworkFirewallPoliciesClient networkFirewallPoliciesClient = await NetworkFirewallPoliciesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string firewallPolicy = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await networkFirewallPoliciesClient.RemovePacketMirroringRuleAsync(project, firewallPolicy);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await networkFirewallPoliciesClient.PollOnceRemovePacketMirroringRuleAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
