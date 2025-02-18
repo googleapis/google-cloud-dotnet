@@ -79,21 +79,52 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public async Task SoftDeletedOnly()
         {
             var bucketName = _fixture.GenerateBucketName();
-            var softDeleteBucket = _fixture.CreateBucket(bucketName, multiVersion: false, softDelete: true);
-            await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
-            var actualBuckets = await _fixture.Client.ListBucketsAsync(_fixture.ProjectId, new ListBucketsOptions { SoftDeletedOnly = true }).ToListAsync();
+            var softDeleteBucket = _fixture.CreateBucket(
+                bucketName,
+                multiVersion: false,
+                softDelete: true
+            );
+            await _fixture.Client.DeleteBucketAsync(
+                softDeleteBucket.Name,
+                new DeleteBucketOptions { DeleteObjects = true }
+            );
+            var actualBuckets = await _fixture
+                .Client.ListBucketsAsync(
+                    _fixture.ProjectId,
+                    new ListBucketsOptions { SoftDeletedOnly = true }
+                )
+                .ToListAsync();
 
-            foreach (var bucket in actualBuckets)
-            {   // Verify if the bucket is soft-deleted only 
-                Assert.NotNull(bucket.Generation);
-                Assert.NotNull(bucket.SoftDeleteTimeDateTimeOffset);
-                Assert.NotNull(bucket.HardDeleteTimeDateTimeOffset);
+            var recentlyCreatedSoftDeleteBucket = actualBuckets
+                 .Where(b => b.Name == softDeleteBucket.Name)
+                 .ToList();
+            Assert.Contains(
+                recentlyCreatedSoftDeleteBucket.First().Name.ToString(),
+                softDeleteBucket.Name.ToString()
+            );
+            Assert.Contains(
+                recentlyCreatedSoftDeleteBucket.First().Generation.ToString(),
+                softDeleteBucket.Generation.ToString()
+            );
+            Assert.NotNull(recentlyCreatedSoftDeleteBucket.First().SoftDeleteTimeDateTimeOffset);
+            Assert.NotNull(recentlyCreatedSoftDeleteBucket.First().HardDeleteTimeDateTimeOffset);
 
-                if (bucket.Name == softDeleteBucket.Name)
-                {   // Compare the generation number
-                    Assert.Equal(bucket.Generation, softDeleteBucket.Generation);
-                }
+            if (actualBuckets.Count == 0)
+            {
+                Assert.Fail("Soft deleted bucket list is empty");
             }
+            else
+            {
+                Assert.All(actualBuckets, AssertSoftDeletedBucket);
+            }
+        }
+
+        // Validating whether all buckets are soft-deleted only.
+        private void AssertSoftDeletedBucket(Bucket b)
+        {
+            Assert.NotNull(b.Generation);
+            Assert.NotNull(b.HardDeleteTimeDateTimeOffset);
+            Assert.NotNull(b.SoftDeleteTimeDateTimeOffset);
         }
 
         // Fetches buckets using the given options in each possible way, validating that the expected bucket names are returned.
