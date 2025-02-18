@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta22, released 2025-02-18
+
+### New features
+
+- Add PhoneNumbers API ([commit 44acfea](https://github.com/googleapis/google-cloud-dotnet/commit/44acfeaef2a4e95dfc713b7f640576ecbaf157e5))
+- Add TelephonyConnectInfo of phone call-related info about the conversation ([commit 44acfea](https://github.com/googleapis/google-cloud-dotnet/commit/44acfeaef2a4e95dfc713b7f640576ecbaf157e5))
 ## Version 1.0.0-beta21, released 2024-12-16
 
 ### New features

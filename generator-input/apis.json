@@ -2194,7 +2194,7 @@
     },
     {
       "id": "Google.Cloud.Dialogflow.V2Beta1",
-      "version": "1.0.0-beta21",
+      "version": "1.0.0-beta22",
       "type": "grpc",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
