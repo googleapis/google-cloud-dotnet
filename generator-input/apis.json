@@ -790,7 +790,7 @@
     },
     {
       "id": "Google.Cloud.Batch.V1",
-      "version": "2.12.0",
+      "version": "2.13.0",
       "type": "grpc",
       "productName": "Batch",
       "productUrl": "https://cloud.google.com/batch/docs/",
@@ -799,7 +799,7 @@
         "batch"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.Cloud.Location": "2.3.0",
         "Google.LongRunning": "3.3.0"
       },

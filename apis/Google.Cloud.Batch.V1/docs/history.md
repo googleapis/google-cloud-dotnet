@@ -1,5 +1,21 @@
 # Version history
 
+## Version 2.13.0, released 2025-02-18
+
+### New features
+
+- Promote cancel job API to GA ([commit 5f94220](https://github.com/googleapis/google-cloud-dotnet/commit/5f9422098afd09e3a380f87da95015dad6685734))
+
+### Documentation improvements
+
+- Fix broken references in comments ([commit 945b0e2](https://github.com/googleapis/google-cloud-dotnet/commit/945b0e287dffcf7e6c623de90ac7853c0c860181))
+- Clarify options for logs ([commit e86bb14](https://github.com/googleapis/google-cloud-dotnet/commit/e86bb14daa6647f1feae65c4aca5b82fcaa2240a))
+- Clarify the custom instance template needs to be in the same project ([commit e86bb14](https://github.com/googleapis/google-cloud-dotnet/commit/e86bb14daa6647f1feae65c4aca5b82fcaa2240a))
+- Rephrase reservation field doc ([commit 1d9b15d](https://github.com/googleapis/google-cloud-dotnet/commit/1d9b15d706a0579dd249d1d7076f2befe3b188ef))
+- Update reservation field to include NO_RESERVATION ([commit 1735012](https://github.com/googleapis/google-cloud-dotnet/commit/17350123570a6aaf13df90421c804a2361eb1336))
+- Clarify that user provided labels will also be applied to Cloud Logging ([commit 1735012](https://github.com/googleapis/google-cloud-dotnet/commit/17350123570a6aaf13df90421c804a2361eb1336))
+- Clarify Batch only supports global custom instance template now ([commit a8f24e4](https://github.com/googleapis/google-cloud-dotnet/commit/a8f24e494bc361e2548ab5876b9f5acd25847459))
+
 ## Version 2.12.0, released 2024-09-09
 
 ### New features
