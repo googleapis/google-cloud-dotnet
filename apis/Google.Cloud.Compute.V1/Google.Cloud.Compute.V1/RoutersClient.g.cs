@@ -49,18 +49,27 @@ namespace Google.Cloud.Compute.V1
             AggregatedListSettings = existing.AggregatedListSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
+            DeleteRoutePolicySettings = existing.DeleteRoutePolicySettings;
+            DeleteRoutePolicyOperationsSettings = existing.DeleteRoutePolicyOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
             GetNatIpInfoSettings = existing.GetNatIpInfoSettings;
             GetNatMappingInfoSettings = existing.GetNatMappingInfoSettings;
+            GetRoutePolicySettings = existing.GetRoutePolicySettings;
             GetRouterStatusSettings = existing.GetRouterStatusSettings;
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
+            ListBgpRoutesSettings = existing.ListBgpRoutesSettings;
+            ListRoutePoliciesSettings = existing.ListRoutePoliciesSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            PatchRoutePolicySettings = existing.PatchRoutePolicySettings;
+            PatchRoutePolicyOperationsSettings = existing.PatchRoutePolicyOperationsSettings.Clone();
             PreviewSettings = existing.PreviewSettings;
             UpdateSettings = existing.UpdateSettings;
             UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
+            UpdateRoutePolicySettings = existing.UpdateRoutePolicySettings;
+            UpdateRoutePolicyOperationsSettings = existing.UpdateRoutePolicyOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -113,6 +122,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RoutersClient.DeleteRoutePolicy</c> and <c>RoutersClient.DeleteRoutePolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRoutePolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RoutersClient.DeleteRoutePolicy</c> and
+        /// <c>RoutersClient.DeleteRoutePolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteRoutePolicyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -179,6 +218,27 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetNatMappingInfoSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RoutersClient.GetRoutePolicy</c> and <c>RoutersClient.GetRoutePolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetRoutePolicySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -253,6 +313,48 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RoutersClient.ListBgpRoutes</c>
+        ///  and <c>RoutersClient.ListBgpRoutesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBgpRoutesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RoutersClient.ListRoutePolicies</c> and <c>RoutersClient.ListRoutePoliciesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRoutePoliciesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RoutersClient.Patch</c> and
         /// <c>RoutersClient.PatchAsync</c>.
         /// </summary>
@@ -277,6 +379,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PatchOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RoutersClient.PatchRoutePolicy</c> and <c>RoutersClient.PatchRoutePolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PatchRoutePolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RoutersClient.PatchRoutePolicy</c> and
+        /// <c>RoutersClient.PatchRoutePolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PatchRoutePolicyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -319,6 +451,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RoutersClient.UpdateRoutePolicy</c> and <c>RoutersClient.UpdateRoutePolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateRoutePolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RoutersClient.UpdateRoutePolicy</c> and
+        /// <c>RoutersClient.UpdateRoutePolicyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateRoutePolicyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -667,6 +829,121 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, region, router, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> DeleteRoutePolicy(DeleteRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteRoutePolicyAsync(DeleteRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteRoutePolicyAsync(DeleteRoutePolicyRouterRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRoutePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteRoutePolicy</c>.</summary>
+        public virtual lro::OperationsClient DeleteRoutePolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteRoutePolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDeleteRoutePolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRoutePolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRoutePolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDeleteRoutePolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRoutePolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> DeleteRoutePolicy(string project, string region, string router, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRoutePolicy(new DeleteRoutePolicyRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteRoutePolicyAsync(string project, string region, string router, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRoutePolicyAsync(new DeleteRoutePolicyRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteRoutePolicyAsync(string project, string region, string router, st::CancellationToken cancellationToken) =>
+            DeleteRoutePolicyAsync(project, region, router, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns the specified Router resource.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -941,6 +1218,94 @@ namespace Google.Cloud.Compute.V1
             }
             return GetNatMappingInfoAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Returns specified Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RoutersGetRoutePolicyResponse GetRoutePolicy(GetRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns specified Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RoutersGetRoutePolicyResponse> GetRoutePolicyAsync(GetRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns specified Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RoutersGetRoutePolicyResponse> GetRoutePolicyAsync(GetRoutePolicyRouterRequest request, st::CancellationToken cancellationToken) =>
+            GetRoutePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns specified Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource to query for the route policy. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RoutersGetRoutePolicyResponse GetRoutePolicy(string project, string region, string router, gaxgrpc::CallSettings callSettings = null) =>
+            GetRoutePolicy(new GetRoutePolicyRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns specified Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource to query for the route policy. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RoutersGetRoutePolicyResponse> GetRoutePolicyAsync(string project, string region, string router, gaxgrpc::CallSettings callSettings = null) =>
+            GetRoutePolicyAsync(new GetRoutePolicyRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns specified Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource to query for the route policy. The name should conform to RFC1035.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RoutersGetRoutePolicyResponse> GetRoutePolicyAsync(string project, string region, string router, st::CancellationToken cancellationToken) =>
+            GetRoutePolicyAsync(project, region, router, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves runtime information of the specified router.
@@ -1237,6 +1602,206 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Retrieves a list of router bgp routes available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BgpRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RoutersListBgpRoutes, BgpRoute> ListBgpRoutes(ListBgpRoutesRoutersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of router bgp routes available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BgpRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RoutersListBgpRoutes, BgpRoute> ListBgpRoutesAsync(ListBgpRoutesRoutersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of router bgp routes available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name or id of the resource for this request. Name should conform to RFC1035.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BgpRoute"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RoutersListBgpRoutes, BgpRoute> ListBgpRoutes(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBgpRoutesRoutersRequest request = new ListBgpRoutesRoutersRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBgpRoutes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of router bgp routes available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name or id of the resource for this request. Name should conform to RFC1035.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BgpRoute"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RoutersListBgpRoutes, BgpRoute> ListBgpRoutesAsync(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBgpRoutesRoutersRequest request = new ListBgpRoutesRoutersRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBgpRoutesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RoutePolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RoutersListRoutePolicies, RoutePolicy> ListRoutePolicies(ListRoutePoliciesRoutersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RoutePolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RoutersListRoutePolicies, RoutePolicy> ListRoutePoliciesAsync(ListRoutePoliciesRoutersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name or id of the resource for this request. Name should conform to RFC1035.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RoutePolicy"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RoutersListRoutePolicies, RoutePolicy> ListRoutePolicies(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRoutePoliciesRoutersRequest request = new ListRoutePoliciesRoutersRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRoutePolicies(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name or id of the resource for this request. Name should conform to RFC1035.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RoutePolicy"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RoutersListRoutePolicies, RoutePolicy> ListRoutePoliciesAsync(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListRoutePoliciesRoutersRequest request = new ListRoutePoliciesRoutersRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListRoutePoliciesAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Patches the specified Router resource with the data included in the request. This method supports PATCH semantics and uses JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1360,6 +1925,131 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(string project, string region, string router, Router routerResource, st::CancellationToken cancellationToken) =>
             PatchAsync(project, region, router, routerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Patches Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchRoutePolicy(PatchRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchRoutePolicyAsync(PatchRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchRoutePolicyAsync(PatchRoutePolicyRouterRequest request, st::CancellationToken cancellationToken) =>
+            PatchRoutePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PatchRoutePolicy</c>.</summary>
+        public virtual lro::OperationsClient PatchRoutePolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PatchRoutePolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePatchRoutePolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchRoutePolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PatchRoutePolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePatchRoutePolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchRoutePolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Patches Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="routePolicyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchRoutePolicy(string project, string region, string router, RoutePolicy routePolicyResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchRoutePolicy(new PatchRoutePolicyRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RoutePolicyResource = gax::GaxPreconditions.CheckNotNull(routePolicyResource, nameof(routePolicyResource)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="routePolicyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchRoutePolicyAsync(string project, string region, string router, RoutePolicy routePolicyResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchRoutePolicyAsync(new PatchRoutePolicyRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RoutePolicyResource = gax::GaxPreconditions.CheckNotNull(routePolicyResource, nameof(routePolicyResource)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="routePolicyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchRoutePolicyAsync(string project, string region, string router, RoutePolicy routePolicyResource, st::CancellationToken cancellationToken) =>
+            PatchRoutePolicyAsync(project, region, router, routePolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Preview fields auto-generated during router create and update operations. Calling this method does NOT create or update the router.
@@ -1584,6 +2274,132 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(string project, string region, string router, Router routerResource, st::CancellationToken cancellationToken) =>
             UpdateAsync(project, region, router, routerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates or creates new Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> UpdateRoutePolicy(UpdateRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates or creates new Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateRoutePolicyAsync(UpdateRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates or creates new Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateRoutePolicyAsync(UpdateRoutePolicyRouterRequest request, st::CancellationToken cancellationToken) =>
+            UpdateRoutePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateRoutePolicy</c>.</summary>
+        public virtual lro::OperationsClient UpdateRoutePolicyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateRoutePolicy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdateRoutePolicy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRoutePolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateRoutePolicy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateRoutePolicyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateRoutePolicyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates or creates new Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="routePolicyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> UpdateRoutePolicy(string project, string region, string router, RoutePolicy routePolicyResource, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRoutePolicy(new UpdateRoutePolicyRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RoutePolicyResource = gax::GaxPreconditions.CheckNotNull(routePolicyResource, nameof(routePolicyResource)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates or creates new Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="routePolicyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateRoutePolicyAsync(string project, string region, string router, RoutePolicy routePolicyResource, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateRoutePolicyAsync(new UpdateRoutePolicyRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                RoutePolicyResource = gax::GaxPreconditions.CheckNotNull(routePolicyResource, nameof(routePolicyResource)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates or creates new Route Policy
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Route Policy is defined.
+        /// </param>
+        /// <param name="routePolicyResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateRoutePolicyAsync(string project, string region, string router, RoutePolicy routePolicyResource, st::CancellationToken cancellationToken) =>
+            UpdateRoutePolicyAsync(project, region, router, routePolicyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Routers client wrapper implementation, for convenient use.</summary>
@@ -1596,11 +2412,15 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<DeleteRouterRequest, Operation> _callDelete;
 
+        private readonly gaxgrpc::ApiCall<DeleteRoutePolicyRouterRequest, Operation> _callDeleteRoutePolicy;
+
         private readonly gaxgrpc::ApiCall<GetRouterRequest, Router> _callGet;
 
         private readonly gaxgrpc::ApiCall<GetNatIpInfoRouterRequest, NatIpInfoResponse> _callGetNatIpInfo;
 
         private readonly gaxgrpc::ApiCall<GetNatMappingInfoRoutersRequest, VmEndpointNatMappingsList> _callGetNatMappingInfo;
+
+        private readonly gaxgrpc::ApiCall<GetRoutePolicyRouterRequest, RoutersGetRoutePolicyResponse> _callGetRoutePolicy;
 
         private readonly gaxgrpc::ApiCall<GetRouterStatusRouterRequest, RouterStatusResponse> _callGetRouterStatus;
 
@@ -1608,11 +2428,19 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ListRoutersRequest, RouterList> _callList;
 
+        private readonly gaxgrpc::ApiCall<ListBgpRoutesRoutersRequest, RoutersListBgpRoutes> _callListBgpRoutes;
+
+        private readonly gaxgrpc::ApiCall<ListRoutePoliciesRoutersRequest, RoutersListRoutePolicies> _callListRoutePolicies;
+
         private readonly gaxgrpc::ApiCall<PatchRouterRequest, Operation> _callPatch;
+
+        private readonly gaxgrpc::ApiCall<PatchRoutePolicyRouterRequest, Operation> _callPatchRoutePolicy;
 
         private readonly gaxgrpc::ApiCall<PreviewRouterRequest, RoutersPreviewResponse> _callPreview;
 
         private readonly gaxgrpc::ApiCall<UpdateRouterRequest, Operation> _callUpdate;
+
+        private readonly gaxgrpc::ApiCall<UpdateRoutePolicyRouterRequest, Operation> _callUpdateRoutePolicy;
 
         /// <summary>
         /// Constructs a client wrapper for the Routers service, with the specified gRPC client and settings.
@@ -1630,15 +2458,21 @@ namespace Google.Cloud.Compute.V1
                 Logger = logger,
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            DeleteRoutePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteRoutePolicyOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchRoutePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchRoutePolicyOperationsSettings, logger);
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdateOperationsSettings, logger);
+            UpdateRoutePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdateRoutePolicyOperationsSettings, logger);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListRoutersRequest, RouterAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
             Modify_AggregatedListApiCall(ref _callAggregatedList);
             _callDelete = clientHelper.BuildApiCall<DeleteRouterRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
+            _callDeleteRoutePolicy = clientHelper.BuildApiCall<DeleteRoutePolicyRouterRequest, Operation>("DeleteRoutePolicy", grpcClient.DeleteRoutePolicyAsync, grpcClient.DeleteRoutePolicy, effectiveSettings.DeleteRoutePolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callDeleteRoutePolicy);
+            Modify_DeleteRoutePolicyApiCall(ref _callDeleteRoutePolicy);
             _callGet = clientHelper.BuildApiCall<GetRouterRequest, Router>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
@@ -1648,6 +2482,9 @@ namespace Google.Cloud.Compute.V1
             _callGetNatMappingInfo = clientHelper.BuildApiCall<GetNatMappingInfoRoutersRequest, VmEndpointNatMappingsList>("GetNatMappingInfo", grpcClient.GetNatMappingInfoAsync, grpcClient.GetNatMappingInfo, effectiveSettings.GetNatMappingInfoSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callGetNatMappingInfo);
             Modify_GetNatMappingInfoApiCall(ref _callGetNatMappingInfo);
+            _callGetRoutePolicy = clientHelper.BuildApiCall<GetRoutePolicyRouterRequest, RoutersGetRoutePolicyResponse>("GetRoutePolicy", grpcClient.GetRoutePolicyAsync, grpcClient.GetRoutePolicy, effectiveSettings.GetRoutePolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callGetRoutePolicy);
+            Modify_GetRoutePolicyApiCall(ref _callGetRoutePolicy);
             _callGetRouterStatus = clientHelper.BuildApiCall<GetRouterStatusRouterRequest, RouterStatusResponse>("GetRouterStatus", grpcClient.GetRouterStatusAsync, grpcClient.GetRouterStatus, effectiveSettings.GetRouterStatusSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callGetRouterStatus);
             Modify_GetRouterStatusApiCall(ref _callGetRouterStatus);
@@ -1657,15 +2494,27 @@ namespace Google.Cloud.Compute.V1
             _callList = clientHelper.BuildApiCall<ListRoutersRequest, RouterList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callListBgpRoutes = clientHelper.BuildApiCall<ListBgpRoutesRoutersRequest, RoutersListBgpRoutes>("ListBgpRoutes", grpcClient.ListBgpRoutesAsync, grpcClient.ListBgpRoutes, effectiveSettings.ListBgpRoutesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callListBgpRoutes);
+            Modify_ListBgpRoutesApiCall(ref _callListBgpRoutes);
+            _callListRoutePolicies = clientHelper.BuildApiCall<ListRoutePoliciesRoutersRequest, RoutersListRoutePolicies>("ListRoutePolicies", grpcClient.ListRoutePoliciesAsync, grpcClient.ListRoutePolicies, effectiveSettings.ListRoutePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callListRoutePolicies);
+            Modify_ListRoutePoliciesApiCall(ref _callListRoutePolicies);
             _callPatch = clientHelper.BuildApiCall<PatchRouterRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callPatchRoutePolicy = clientHelper.BuildApiCall<PatchRoutePolicyRouterRequest, Operation>("PatchRoutePolicy", grpcClient.PatchRoutePolicyAsync, grpcClient.PatchRoutePolicy, effectiveSettings.PatchRoutePolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callPatchRoutePolicy);
+            Modify_PatchRoutePolicyApiCall(ref _callPatchRoutePolicy);
             _callPreview = clientHelper.BuildApiCall<PreviewRouterRequest, RoutersPreviewResponse>("Preview", grpcClient.PreviewAsync, grpcClient.Preview, effectiveSettings.PreviewSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callPreview);
             Modify_PreviewApiCall(ref _callPreview);
             _callUpdate = clientHelper.BuildApiCall<UpdateRouterRequest, Operation>("Update", grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callUpdate);
             Modify_UpdateApiCall(ref _callUpdate);
+            _callUpdateRoutePolicy = clientHelper.BuildApiCall<UpdateRoutePolicyRouterRequest, Operation>("UpdateRoutePolicy", grpcClient.UpdateRoutePolicyAsync, grpcClient.UpdateRoutePolicy, effectiveSettings.UpdateRoutePolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callUpdateRoutePolicy);
+            Modify_UpdateRoutePolicyApiCall(ref _callUpdateRoutePolicy);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1675,11 +2524,15 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteRouterRequest, Operation> call);
 
+        partial void Modify_DeleteRoutePolicyApiCall(ref gaxgrpc::ApiCall<DeleteRoutePolicyRouterRequest, Operation> call);
+
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetRouterRequest, Router> call);
 
         partial void Modify_GetNatIpInfoApiCall(ref gaxgrpc::ApiCall<GetNatIpInfoRouterRequest, NatIpInfoResponse> call);
 
         partial void Modify_GetNatMappingInfoApiCall(ref gaxgrpc::ApiCall<GetNatMappingInfoRoutersRequest, VmEndpointNatMappingsList> call);
+
+        partial void Modify_GetRoutePolicyApiCall(ref gaxgrpc::ApiCall<GetRoutePolicyRouterRequest, RoutersGetRoutePolicyResponse> call);
 
         partial void Modify_GetRouterStatusApiCall(ref gaxgrpc::ApiCall<GetRouterStatusRouterRequest, RouterStatusResponse> call);
 
@@ -1687,11 +2540,19 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListRoutersRequest, RouterList> call);
 
+        partial void Modify_ListBgpRoutesApiCall(ref gaxgrpc::ApiCall<ListBgpRoutesRoutersRequest, RoutersListBgpRoutes> call);
+
+        partial void Modify_ListRoutePoliciesApiCall(ref gaxgrpc::ApiCall<ListRoutePoliciesRoutersRequest, RoutersListRoutePolicies> call);
+
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchRouterRequest, Operation> call);
+
+        partial void Modify_PatchRoutePolicyApiCall(ref gaxgrpc::ApiCall<PatchRoutePolicyRouterRequest, Operation> call);
 
         partial void Modify_PreviewApiCall(ref gaxgrpc::ApiCall<PreviewRouterRequest, RoutersPreviewResponse> call);
 
         partial void Modify_UpdateApiCall(ref gaxgrpc::ApiCall<UpdateRouterRequest, Operation> call);
+
+        partial void Modify_UpdateRoutePolicyApiCall(ref gaxgrpc::ApiCall<UpdateRoutePolicyRouterRequest, Operation> call);
 
         partial void OnConstruction(Routers.RoutersClient grpcClient, RoutersSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1702,11 +2563,15 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_DeleteRouterRequest(ref DeleteRouterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteRoutePolicyRouterRequest(ref DeleteRoutePolicyRouterRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetRouterRequest(ref GetRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetNatIpInfoRouterRequest(ref GetNatIpInfoRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetNatMappingInfoRoutersRequest(ref GetNatMappingInfoRoutersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetRoutePolicyRouterRequest(ref GetRoutePolicyRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRouterStatusRouterRequest(ref GetRouterStatusRouterRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1714,11 +2579,19 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListRoutersRequest(ref ListRoutersRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListBgpRoutesRoutersRequest(ref ListBgpRoutesRoutersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRoutePoliciesRoutersRequest(ref ListRoutePoliciesRoutersRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_PatchRouterRequest(ref PatchRouterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PatchRoutePolicyRouterRequest(ref PatchRoutePolicyRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PreviewRouterRequest(ref PreviewRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateRouterRequest(ref UpdateRouterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateRoutePolicyRouterRequest(ref UpdateRoutePolicyRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Retrieves an aggregated list of routers. To prevent failure, Google recommends that you set the `returnPartialSuccess` parameter to `true`.
@@ -1777,6 +2650,39 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteRoutePolicy</c>.</summary>
+        public override lro::OperationsClient DeleteRoutePolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> DeleteRoutePolicy(DeleteRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRoutePolicyRouterRequest(ref request, ref callSettings);
+            Operation response = _callDeleteRoutePolicy.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteRoutePolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> DeleteRoutePolicyAsync(DeleteRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRoutePolicyRouterRequest(ref request, ref callSettings);
+            Operation response = await _callDeleteRoutePolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteRoutePolicyOperationsClient);
         }
 
         /// <summary>
@@ -1849,6 +2755,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetNatMappingInfoRoutersRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<GetNatMappingInfoRoutersRequest, VmEndpointNatMappingsList, VmEndpointNatMappings>(_callGetNatMappingInfo, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns specified Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RoutersGetRoutePolicyResponse GetRoutePolicy(GetRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRoutePolicyRouterRequest(ref request, ref callSettings);
+            return _callGetRoutePolicy.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns specified Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RoutersGetRoutePolicyResponse> GetRoutePolicyAsync(GetRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetRoutePolicyRouterRequest(ref request, ref callSettings);
+            return _callGetRoutePolicy.Async(request, callSettings);
         }
 
         /// <summary>
@@ -1932,6 +2862,54 @@ namespace Google.Cloud.Compute.V1
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRoutersRequest, RouterList, Router>(_callList, request, callSettings);
         }
 
+        /// <summary>
+        /// Retrieves a list of router bgp routes available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BgpRoute"/> resources.</returns>
+        public override gax::PagedEnumerable<RoutersListBgpRoutes, BgpRoute> ListBgpRoutes(ListBgpRoutesRoutersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBgpRoutesRoutersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBgpRoutesRoutersRequest, RoutersListBgpRoutes, BgpRoute>(_callListBgpRoutes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of router bgp routes available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BgpRoute"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<RoutersListBgpRoutes, BgpRoute> ListBgpRoutesAsync(ListBgpRoutesRoutersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBgpRoutesRoutersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBgpRoutesRoutersRequest, RoutersListBgpRoutes, BgpRoute>(_callListBgpRoutes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RoutePolicy"/> resources.</returns>
+        public override gax::PagedEnumerable<RoutersListRoutePolicies, RoutePolicy> ListRoutePolicies(ListRoutePoliciesRoutersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRoutePoliciesRoutersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRoutePoliciesRoutersRequest, RoutersListRoutePolicies, RoutePolicy>(_callListRoutePolicies, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of router route policy subresources available to the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RoutePolicy"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<RoutersListRoutePolicies, RoutePolicy> ListRoutePoliciesAsync(ListRoutePoliciesRoutersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRoutePoliciesRoutersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRoutePoliciesRoutersRequest, RoutersListRoutePolicies, RoutePolicy>(_callListRoutePolicies, request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>Patch</c>.</summary>
         public override lro::OperationsClient PatchOperationsClient { get; }
 
@@ -1963,6 +2941,39 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PatchRoutePolicy</c>.</summary>
+        public override lro::OperationsClient PatchRoutePolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Patches Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> PatchRoutePolicy(PatchRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchRoutePolicyRouterRequest(ref request, ref callSettings);
+            Operation response = _callPatchRoutePolicy.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchRoutePolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Patches Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PatchRoutePolicyAsync(PatchRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchRoutePolicyRouterRequest(ref request, ref callSettings);
+            Operation response = await _callPatchRoutePolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchRoutePolicyOperationsClient);
         }
 
         /// <summary>
@@ -2021,6 +3032,39 @@ namespace Google.Cloud.Compute.V1
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
+
+        /// <summary>The long-running operations client for <c>UpdateRoutePolicy</c>.</summary>
+        public override lro::OperationsClient UpdateRoutePolicyOperationsClient { get; }
+
+        /// <summary>
+        /// Updates or creates new Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> UpdateRoutePolicy(UpdateRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRoutePolicyRouterRequest(ref request, ref callSettings);
+            Operation response = _callUpdateRoutePolicy.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateRoutePolicyOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates or creates new Route Policy
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateRoutePolicyAsync(UpdateRoutePolicyRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateRoutePolicyRouterRequest(ref request, ref callSettings);
+            Operation response = await _callUpdateRoutePolicy.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateRoutePolicyOperationsClient);
+        }
     }
 
     public partial class AggregatedListRoutersRequest : gaxgrpc::IPageRequest
@@ -2053,6 +3097,26 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class ListBgpRoutesRoutersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class ListRoutePoliciesRoutersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class RouterAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, RoutersScopedList>>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -2073,6 +3137,22 @@ namespace Google.Cloud.Compute.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Router> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class RoutersListBgpRoutes : gaxgrpc::IPageResponse<BgpRoute>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BgpRoute> GetEnumerator() => Result.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class RoutersListRoutePolicies : gaxgrpc::IPageResponse<RoutePolicy>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RoutePolicy> GetEnumerator() => Result.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

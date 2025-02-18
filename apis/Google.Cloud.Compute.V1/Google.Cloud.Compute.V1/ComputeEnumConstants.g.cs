@@ -400,6 +400,13 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.VmFamily.CloudTpuLitePodSliceCt6E"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuLitePodSliceCt6E = "VM_FAMILY_CLOUD_TPU_LITE_POD_SLICE_CT6E";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.VmFamily.CloudTpuPodSliceCt3P"/>
                 /// .
                 /// </summary>
@@ -411,6 +418,13 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string CloudTpuPodSliceCt4P = "VM_FAMILY_CLOUD_TPU_POD_SLICE_CT4P";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.AllocationAggregateReservation.Types.VmFamily.CloudTpuPodSliceCt5P"/>
+                /// .
+                /// </summary>
+                public const string CloudTpuPodSliceCt5P = "VM_FAMILY_CLOUD_TPU_POD_SLICE_CT5P";
             }
 
             /// <summary>
@@ -2053,6 +2067,74 @@ namespace Google.Cloud.Compute.V1
                 /// Wire representation of <see cref="global::Google.Cloud.Compute.V1.BfdStatus.Types.LocalState.Up"/>.
                 /// </summary>
                 public const string Up = "UP";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BgpRoute"/> message.
+        /// </summary>
+        public static class BgpRoute
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.BgpRoute.Types.Origin"/> enum.
+            /// </summary>
+            public static class Origin
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BgpRoute.Types.Origin.UndefinedOrigin"/>.
+                /// </summary>
+                public const string UndefinedOrigin = "UNDEFINED_ORIGIN";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BgpRoute.Types.Origin.BgpOriginEgp"/>.
+                /// </summary>
+                public const string BgpOriginEgp = "BGP_ORIGIN_EGP";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BgpRoute.Types.Origin.BgpOriginIgp"/>.
+                /// </summary>
+                public const string BgpOriginIgp = "BGP_ORIGIN_IGP";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BgpRoute.Types.Origin.BgpOriginIncomplete"/>.
+                /// </summary>
+                public const string BgpOriginIncomplete = "BGP_ORIGIN_INCOMPLETE";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BgpRouteAsPath"/> message.
+        /// </summary>
+        public static class BgpRouteAsPath
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.BgpRouteAsPath.Types.Type"/> enum.
+            /// </summary>
+            public static class Type
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BgpRouteAsPath.Types.Type.UndefinedType"/>.
+                /// </summary>
+                public const string UndefinedType = "UNDEFINED_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BgpRouteAsPath.Types.Type.AsPathTypeSequence"/>.
+                /// </summary>
+                public const string AsPathTypeSequence = "AS_PATH_TYPE_SEQUENCE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BgpRouteAsPath.Types.Type.AsPathTypeSet"/>.
+                /// </summary>
+                public const string AsPathTypeSet = "AS_PATH_TYPE_SET";
             }
         }
 
@@ -6082,6 +6164,80 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.LicenseCode.Types.State.Terminated"/>.
                 /// </summary>
                 public const string Terminated = "TERMINATED";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the
+        /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest"/> message.
+        /// </summary>
+        public static class ListBgpRoutesRoutersRequest
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.AddressFamily"/> enum.
+            /// </summary>
+            public static class AddressFamily
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.AddressFamily.UndefinedAddressFamily"/>
+                /// .
+                /// </summary>
+                public const string UndefinedAddressFamily = "UNDEFINED_ADDRESS_FAMILY";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.AddressFamily.Ipv4"/>.
+                /// </summary>
+                public const string Ipv4 = "IPV4";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.AddressFamily.Ipv6"/>.
+                /// </summary>
+                public const string Ipv6 = "IPV6";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.AddressFamily.UnspecifiedIpVersion"/>
+                /// .
+                /// </summary>
+                public const string UnspecifiedIpVersion = "UNSPECIFIED_IP_VERSION";
+            }
+
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.RouteType"/> enum.
+            /// </summary>
+            public static class RouteType
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.RouteType.UndefinedRouteType"/>
+                /// .
+                /// </summary>
+                public const string UndefinedRouteType = "UNDEFINED_ROUTE_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.RouteType.Advertised"/>
+                /// .
+                /// </summary>
+                public const string Advertised = "ADVERTISED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.RouteType.Learned"/>.
+                /// </summary>
+                public const string Learned = "LEARNED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.ListBgpRoutesRoutersRequest.Types.RouteType.UnspecifiedRouteType"/>
+                /// .
+                /// </summary>
+                public const string UnspecifiedRouteType = "UNSPECIFIED_ROUTE_TYPE";
             }
         }
 
@@ -10599,6 +10755,20 @@ namespace Google.Cloud.Compute.V1
 
                 /// <summary>
                 /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy.Types.Type.SystemGlobal"/>
+                /// .
+                /// </summary>
+                public const string SystemGlobal = "SYSTEM_GLOBAL";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy.Types.Type.SystemRegional"/>
+                /// .
+                /// </summary>
+                public const string SystemRegional = "SYSTEM_REGIONAL";
+
+                /// <summary>
+                /// Wire representation of
                 /// <see cref="global::Google.Cloud.Compute.V1.RegionNetworkFirewallPoliciesGetEffectiveFirewallsResponseEffectiveFirewallPolicy.Types.Type.Unspecified"/>
                 /// .
                 /// </summary>
@@ -11095,6 +11265,37 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.RouteAsPath.Types.PathSegmentType.AsSet"/>.
                 /// </summary>
                 public const string AsSet = "AS_SET";
+            }
+        }
+
+        /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.RoutePolicy"/> message.
+        /// </summary>
+        public static class RoutePolicy
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.RoutePolicy.Types.Type"/> enum.
+            /// </summary>
+            public static class Type
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RoutePolicy.Types.Type.UndefinedType"/>.
+                /// </summary>
+                public const string UndefinedType = "UNDEFINED_TYPE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RoutePolicy.Types.Type.RoutePolicyTypeExport"/>.
+                /// </summary>
+                public const string RoutePolicyTypeExport = "ROUTE_POLICY_TYPE_EXPORT";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.RoutePolicy.Types.Type.RoutePolicyTypeImport"/>.
+                /// </summary>
+                public const string RoutePolicyTypeImport = "ROUTE_POLICY_TYPE_IMPORT";
             }
         }
 
@@ -12297,6 +12498,13 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string Advanced = "ADVANCED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.SecurityPolicyDdosProtectionConfig.Types.DdosProtection.AdvancedPreview"/>
+                /// .
+                /// </summary>
+                public const string AdvancedPreview = "ADVANCED_PREVIEW";
 
                 /// <summary>
                 /// Wire representation of

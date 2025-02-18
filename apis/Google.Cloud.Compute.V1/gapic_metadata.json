@@ -4345,6 +4345,12 @@
                 "DeleteAsync"
               ]
             },
+            "DeleteRoutePolicy": {
+              "methods": [
+                "DeleteRoutePolicy",
+                "DeleteRoutePolicyAsync"
+              ]
+            },
             "Get": {
               "methods": [
                 "Get",
@@ -4361,6 +4367,12 @@
               "methods": [
                 "GetNatMappingInfo",
                 "GetNatMappingInfoAsync"
+              ]
+            },
+            "GetRoutePolicy": {
+              "methods": [
+                "GetRoutePolicy",
+                "GetRoutePolicyAsync"
               ]
             },
             "GetRouterStatus": {
@@ -4381,10 +4393,28 @@
                 "ListAsync"
               ]
             },
+            "ListBgpRoutes": {
+              "methods": [
+                "ListBgpRoutes",
+                "ListBgpRoutesAsync"
+              ]
+            },
+            "ListRoutePolicies": {
+              "methods": [
+                "ListRoutePolicies",
+                "ListRoutePoliciesAsync"
+              ]
+            },
             "Patch": {
               "methods": [
                 "Patch",
                 "PatchAsync"
+              ]
+            },
+            "PatchRoutePolicy": {
+              "methods": [
+                "PatchRoutePolicy",
+                "PatchRoutePolicyAsync"
               ]
             },
             "Preview": {
@@ -4397,6 +4427,12 @@
               "methods": [
                 "Update",
                 "UpdateAsync"
+              ]
+            },
+            "UpdateRoutePolicy": {
+              "methods": [
+                "UpdateRoutePolicy",
+                "UpdateRoutePolicyAsync"
               ]
             }
           }

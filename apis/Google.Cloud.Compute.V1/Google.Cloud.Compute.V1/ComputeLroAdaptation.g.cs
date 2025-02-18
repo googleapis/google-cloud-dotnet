@@ -2577,6 +2577,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class DeleteRoutePolicyRouterRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class InsertRouterRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -2595,7 +2604,25 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class PatchRoutePolicyRouterRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class UpdateRouterRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class UpdateRoutePolicyRouterRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
