@@ -25,16 +25,17 @@ namespace Google.Apps.Chat.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2hhdC92MS9kZWxldGlvbl9tZXRhZGF0YS5wcm90bxIOZ29v",
-            "Z2xlLmNoYXQudjEi9wEKEERlbGV0aW9uTWV0YWRhdGESRAoNZGVsZXRpb25f",
+            "Z2xlLmNoYXQudjEiiQIKEERlbGV0aW9uTWV0YWRhdGESRAoNZGVsZXRpb25f",
             "dHlwZRgBIAEoDjItLmdvb2dsZS5jaGF0LnYxLkRlbGV0aW9uTWV0YWRhdGEu",
-            "RGVsZXRpb25UeXBlIpwBCgxEZWxldGlvblR5cGUSHQoZREVMRVRJT05fVFlQ",
+            "RGVsZXRpb25UeXBlIq4BCgxEZWxldGlvblR5cGUSHQoZREVMRVRJT05fVFlQ",
             "RV9VTlNQRUNJRklFRBAAEgsKB0NSRUFUT1IQARIPCgtTUEFDRV9PV05FUhAC",
             "EgkKBUFETUlOEAMSFgoSQVBQX01FU1NBR0VfRVhQSVJZEAQSEwoPQ1JFQVRP",
-            "Ul9WSUFfQVBQEAUSFwoTU1BBQ0VfT1dORVJfVklBX0FQUBAGQq4BChJjb20u",
-            "Z29vZ2xlLmNoYXQudjFCFURlbGV0aW9uTWV0YWRhdGFQcm90b1ABWixjbG91",
-            "ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZ",
-            "TkFQSVByb3RvqgITR29vZ2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBz",
-            "XENoYXRcVjHqAhZHb29nbGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
+            "Ul9WSUFfQVBQEAUSFwoTU1BBQ0VfT1dORVJfVklBX0FQUBAGEhAKDFNQQUNF",
+            "X01FTUJFUhAHQq4BChJjb20uZ29vZ2xlLmNoYXQudjFCFURlbGV0aW9uTWV0",
+            "YWRhdGFQcm90b1ABWixjbG91ZC5nb29nbGUuY29tL2dvL2NoYXQvYXBpdjEv",
+            "Y2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgITR29vZ2xlLkFwcHMuQ2hh",
+            "dC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZHb29nbGU6OkFwcHM6OkNo",
+            "YXQ6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -278,6 +279,11 @@ namespace Google.Apps.Chat.V1 {
         /// A Chat app deleted the message on behalf of the space owner.
         /// </summary>
         [pbr::OriginalName("SPACE_OWNER_VIA_APP")] SpaceOwnerViaApp = 6,
+        /// <summary>
+        /// A member of the space deleted the message. Human users can delete
+        /// messages sent by apps.
+        /// </summary>
+        [pbr::OriginalName("SPACE_MEMBER")] SpaceMember = 7,
       }
 
     }
