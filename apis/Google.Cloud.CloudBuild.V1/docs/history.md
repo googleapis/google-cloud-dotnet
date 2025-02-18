@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.15.0, released 2025-02-18
+
+### New features
+
+- Support for git proxy setup ([commit 377ec77](https://github.com/googleapis/google-cloud-dotnet/commit/377ec7749999ee4d288205056975c1c39bfb3d64))
+- Add option to enable fetching dependencies ([commit f4430c8](https://github.com/googleapis/google-cloud-dotnet/commit/f4430c836be3850d8444a8009d33924b89224dee))
+
+### Documentation improvements
+
+- Updates to proto message comments ([commit 377ec77](https://github.com/googleapis/google-cloud-dotnet/commit/377ec7749999ee4d288205056975c1c39bfb3d64))
+
 ## Version 2.14.0, released 2025-01-13
 
 ### New features
