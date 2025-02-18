@@ -53,7 +53,7 @@ namespace Google.Cloud.Storage.V1.Tests
             Assert.Equal(ProjectionEnum.Full, request.Projection);
             Assert.Equal("proj", request.UserProject);
             Assert.True(request.SoftDeleted);
-            Assert.Equal(long.MaxValue,request.Generation);
+            Assert.Equal(long.MaxValue, request.Generation);
         }
 
         [Fact]
