@@ -18,7 +18,7 @@ using static Google.Apis.Storage.v1.BucketsResource.RestoreRequest;
 
 namespace Google.Cloud.Storage.V1.Tests;
 public class RestoreBucketOptionsTest
-{ 
+{
     [Fact]
     public void ModifyRequest_DefaultOptions()
     {
