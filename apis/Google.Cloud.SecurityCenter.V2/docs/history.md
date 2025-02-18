@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.1.0, released 2025-02-18
+
+### New features
+
+- Added more information about DDoS attack in cloud armor proto ([commit 960927e](https://github.com/googleapis/google-cloud-dotnet/commit/960927e2a7049e69035e761de9246b76de2bd8ac))
+- Added data access event fields to finding proto ([commit 960927e](https://github.com/googleapis/google-cloud-dotnet/commit/960927e2a7049e69035e761de9246b76de2bd8ac))
+
+### Documentation improvements
+
+- Clarified comments for tag_values field in resource_value_config to make it clear that field represents tag value ids, not tag values ([commit 960927e](https://github.com/googleapis/google-cloud-dotnet/commit/960927e2a7049e69035e761de9246b76de2bd8ac))
+
 ## Version 1.0.0, released 2024-12-05
 
 No API surface changes; just dependency updates and promotion to GA.
