@@ -359,6 +359,142 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteRoutePolicy</summary>
+        public void DeleteRoutePolicyRequestObject()
+        {
+            // Snippet: DeleteRoutePolicy(DeleteRoutePolicyRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            DeleteRoutePolicyRouterRequest request = new DeleteRoutePolicyRouterRequest
+            {
+                RequestId = "",
+                Policy = "",
+                Region = "",
+                Router = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.DeleteRoutePolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOnceDeleteRoutePolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRoutePolicyAsync</summary>
+        public async Task DeleteRoutePolicyRequestObjectAsync()
+        {
+            // Snippet: DeleteRoutePolicyAsync(DeleteRoutePolicyRouterRequest, CallSettings)
+            // Additional: DeleteRoutePolicyAsync(DeleteRoutePolicyRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteRoutePolicyRouterRequest request = new DeleteRoutePolicyRouterRequest
+            {
+                RequestId = "",
+                Policy = "",
+                Region = "",
+                Router = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.DeleteRoutePolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceDeleteRoutePolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRoutePolicy</summary>
+        public void DeleteRoutePolicy()
+        {
+            // Snippet: DeleteRoutePolicy(string, string, string, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.DeleteRoutePolicy(project, region, router);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOnceDeleteRoutePolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRoutePolicyAsync</summary>
+        public async Task DeleteRoutePolicyAsync()
+        {
+            // Snippet: DeleteRoutePolicyAsync(string, string, string, CallSettings)
+            // Additional: DeleteRoutePolicyAsync(string, string, string, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.DeleteRoutePolicyAsync(project, region, router);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceDeleteRoutePolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for Get</summary>
         public void GetRequestObject()
         {
@@ -696,6 +832,76 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRoutePolicy</summary>
+        public void GetRoutePolicyRequestObject()
+        {
+            // Snippet: GetRoutePolicy(GetRoutePolicyRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            GetRoutePolicyRouterRequest request = new GetRoutePolicyRouterRequest
+            {
+                Policy = "",
+                Region = "",
+                Router = "",
+                Project = "",
+            };
+            // Make the request
+            RoutersGetRoutePolicyResponse response = routersClient.GetRoutePolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRoutePolicyAsync</summary>
+        public async Task GetRoutePolicyRequestObjectAsync()
+        {
+            // Snippet: GetRoutePolicyAsync(GetRoutePolicyRouterRequest, CallSettings)
+            // Additional: GetRoutePolicyAsync(GetRoutePolicyRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRoutePolicyRouterRequest request = new GetRoutePolicyRouterRequest
+            {
+                Policy = "",
+                Region = "",
+                Router = "",
+                Project = "",
+            };
+            // Make the request
+            RoutersGetRoutePolicyResponse response = await routersClient.GetRoutePolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRoutePolicy</summary>
+        public void GetRoutePolicy()
+        {
+            // Snippet: GetRoutePolicy(string, string, string, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            RoutersGetRoutePolicyResponse response = routersClient.GetRoutePolicy(project, region, router);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRoutePolicyAsync</summary>
+        public async Task GetRoutePolicyAsync()
+        {
+            // Snippet: GetRoutePolicyAsync(string, string, string, CallSettings)
+            // Additional: GetRoutePolicyAsync(string, string, string, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            RoutersGetRoutePolicyResponse response = await routersClient.GetRoutePolicyAsync(project, region, router);
             // End snippet
         }
 
@@ -1097,6 +1303,416 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListBgpRoutes</summary>
+        public void ListBgpRoutesRequestObject()
+        {
+            // Snippet: ListBgpRoutes(ListBgpRoutesRoutersRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            ListBgpRoutesRoutersRequest request = new ListBgpRoutesRoutersRequest
+            {
+                Peer = "",
+                Region = "",
+                Router = "",
+                OrderBy = "",
+                AddressFamily = "",
+                Project = "",
+                DestinationPrefix = "",
+                Filter = "",
+                RouteType = "",
+                PolicyApplied = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<RoutersListBgpRoutes, BgpRoute> response = routersClient.ListBgpRoutes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BgpRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RoutersListBgpRoutes page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BgpRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BgpRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BgpRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBgpRoutesAsync</summary>
+        public async Task ListBgpRoutesRequestObjectAsync()
+        {
+            // Snippet: ListBgpRoutesAsync(ListBgpRoutesRoutersRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            ListBgpRoutesRoutersRequest request = new ListBgpRoutesRoutersRequest
+            {
+                Peer = "",
+                Region = "",
+                Router = "",
+                OrderBy = "",
+                AddressFamily = "",
+                Project = "",
+                DestinationPrefix = "",
+                Filter = "",
+                RouteType = "",
+                PolicyApplied = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<RoutersListBgpRoutes, BgpRoute> response = routersClient.ListBgpRoutesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BgpRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RoutersListBgpRoutes page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BgpRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BgpRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BgpRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBgpRoutes</summary>
+        public void ListBgpRoutes()
+        {
+            // Snippet: ListBgpRoutes(string, string, string, string, int?, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            PagedEnumerable<RoutersListBgpRoutes, BgpRoute> response = routersClient.ListBgpRoutes(project, region, router);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BgpRoute item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RoutersListBgpRoutes page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BgpRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BgpRoute> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BgpRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListBgpRoutesAsync</summary>
+        public async Task ListBgpRoutesAsync()
+        {
+            // Snippet: ListBgpRoutesAsync(string, string, string, string, int?, CallSettings)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            PagedAsyncEnumerable<RoutersListBgpRoutes, BgpRoute> response = routersClient.ListBgpRoutesAsync(project, region, router);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((BgpRoute item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RoutersListBgpRoutes page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BgpRoute item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BgpRoute> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BgpRoute item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRoutePolicies</summary>
+        public void ListRoutePoliciesRequestObject()
+        {
+            // Snippet: ListRoutePolicies(ListRoutePoliciesRoutersRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            ListRoutePoliciesRoutersRequest request = new ListRoutePoliciesRoutersRequest
+            {
+                Region = "",
+                Router = "",
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<RoutersListRoutePolicies, RoutePolicy> response = routersClient.ListRoutePolicies(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RoutePolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RoutersListRoutePolicies page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RoutePolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RoutePolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RoutePolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRoutePoliciesAsync</summary>
+        public async Task ListRoutePoliciesRequestObjectAsync()
+        {
+            // Snippet: ListRoutePoliciesAsync(ListRoutePoliciesRoutersRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            ListRoutePoliciesRoutersRequest request = new ListRoutePoliciesRoutersRequest
+            {
+                Region = "",
+                Router = "",
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<RoutersListRoutePolicies, RoutePolicy> response = routersClient.ListRoutePoliciesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RoutePolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RoutersListRoutePolicies page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RoutePolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RoutePolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RoutePolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRoutePolicies</summary>
+        public void ListRoutePolicies()
+        {
+            // Snippet: ListRoutePolicies(string, string, string, string, int?, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            PagedEnumerable<RoutersListRoutePolicies, RoutePolicy> response = routersClient.ListRoutePolicies(project, region, router);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (RoutePolicy item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RoutersListRoutePolicies page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RoutePolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RoutePolicy> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RoutePolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRoutePoliciesAsync</summary>
+        public async Task ListRoutePoliciesAsync()
+        {
+            // Snippet: ListRoutePoliciesAsync(string, string, string, string, int?, CallSettings)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            PagedAsyncEnumerable<RoutersListRoutePolicies, RoutePolicy> response = routersClient.ListRoutePoliciesAsync(project, region, router);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((RoutePolicy item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((RoutersListRoutePolicies page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (RoutePolicy item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<RoutePolicy> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (RoutePolicy item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for Patch</summary>
         public void PatchRequestObject()
         {
@@ -1226,6 +1842,144 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchRoutePolicy</summary>
+        public void PatchRoutePolicyRequestObject()
+        {
+            // Snippet: PatchRoutePolicy(PatchRoutePolicyRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            PatchRoutePolicyRouterRequest request = new PatchRoutePolicyRouterRequest
+            {
+                RequestId = "",
+                RoutePolicyResource = new RoutePolicy(),
+                Region = "",
+                Router = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.PatchRoutePolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOncePatchRoutePolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchRoutePolicyAsync</summary>
+        public async Task PatchRoutePolicyRequestObjectAsync()
+        {
+            // Snippet: PatchRoutePolicyAsync(PatchRoutePolicyRouterRequest, CallSettings)
+            // Additional: PatchRoutePolicyAsync(PatchRoutePolicyRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchRoutePolicyRouterRequest request = new PatchRoutePolicyRouterRequest
+            {
+                RequestId = "",
+                RoutePolicyResource = new RoutePolicy(),
+                Region = "",
+                Router = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.PatchRoutePolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOncePatchRoutePolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchRoutePolicy</summary>
+        public void PatchRoutePolicy()
+        {
+            // Snippet: PatchRoutePolicy(string, string, string, RoutePolicy, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            RoutePolicy routePolicyResource = new RoutePolicy();
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.PatchRoutePolicy(project, region, router, routePolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOncePatchRoutePolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchRoutePolicyAsync</summary>
+        public async Task PatchRoutePolicyAsync()
+        {
+            // Snippet: PatchRoutePolicyAsync(string, string, string, RoutePolicy, CallSettings)
+            // Additional: PatchRoutePolicyAsync(string, string, string, RoutePolicy, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            RoutePolicy routePolicyResource = new RoutePolicy();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.PatchRoutePolicyAsync(project, region, router, routePolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOncePatchRoutePolicyAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -1436,6 +2190,144 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRoutePolicy</summary>
+        public void UpdateRoutePolicyRequestObject()
+        {
+            // Snippet: UpdateRoutePolicy(UpdateRoutePolicyRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            UpdateRoutePolicyRouterRequest request = new UpdateRoutePolicyRouterRequest
+            {
+                RequestId = "",
+                RoutePolicyResource = new RoutePolicy(),
+                Region = "",
+                Router = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.UpdateRoutePolicy(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOnceUpdateRoutePolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRoutePolicyAsync</summary>
+        public async Task UpdateRoutePolicyRequestObjectAsync()
+        {
+            // Snippet: UpdateRoutePolicyAsync(UpdateRoutePolicyRouterRequest, CallSettings)
+            // Additional: UpdateRoutePolicyAsync(UpdateRoutePolicyRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRoutePolicyRouterRequest request = new UpdateRoutePolicyRouterRequest
+            {
+                RequestId = "",
+                RoutePolicyResource = new RoutePolicy(),
+                Region = "",
+                Router = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.UpdateRoutePolicyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceUpdateRoutePolicyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRoutePolicy</summary>
+        public void UpdateRoutePolicy()
+        {
+            // Snippet: UpdateRoutePolicy(string, string, string, RoutePolicy, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            RoutePolicy routePolicyResource = new RoutePolicy();
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.UpdateRoutePolicy(project, region, router, routePolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOnceUpdateRoutePolicy(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRoutePolicyAsync</summary>
+        public async Task UpdateRoutePolicyAsync()
+        {
+            // Snippet: UpdateRoutePolicyAsync(string, string, string, RoutePolicy, CallSettings)
+            // Additional: UpdateRoutePolicyAsync(string, string, string, RoutePolicy, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            RoutePolicy routePolicyResource = new RoutePolicy();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.UpdateRoutePolicyAsync(project, region, router, routePolicyResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceUpdateRoutePolicyAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
