@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.19.0, released 2025-02-18
+
+### New features
+
+- A new field `response_id` is added to message `.google.cloud.aiplatform.v1.GenerateContentResponse` ([commit 8888750](https://github.com/googleapis/google-cloud-dotnet/commit/88887505d7629bc810b57c255f0ed0133970d0a3))
+- A new field `create_time` is added to message `.google.cloud.aiplatform.v1.GenerateContentResponse` ([commit 8888750](https://github.com/googleapis/google-cloud-dotnet/commit/88887505d7629bc810b57c255f0ed0133970d0a3))
+
 ## Version 3.18.0, released 2025-02-10
 
 ### New features
