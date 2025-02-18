@@ -4695,7 +4695,7 @@
     },
     {
       "id": "Google.Cloud.SecurityCenter.V2",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "type": "grpc",
       "productName": "Security Command Center",
       "productUrl": "https://cloud.google.com/security-command-center/docs/reference/rest",
@@ -4705,7 +4705,7 @@
         "data risk"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
