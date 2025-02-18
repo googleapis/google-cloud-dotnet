@@ -37,6 +37,7 @@ namespace GoogleCSharpSnippets
             GetPublicKeyRequest request = new GetPublicKeyRequest
             {
                 CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                PublicKeyFormat = PublicKey.Types.PublicKeyFormat.Unspecified,
             };
             // Make the request
             PublicKey response = keyManagementServiceClient.GetPublicKey(request);
