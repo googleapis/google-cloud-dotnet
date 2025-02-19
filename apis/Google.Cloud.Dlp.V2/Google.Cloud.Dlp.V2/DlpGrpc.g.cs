@@ -766,7 +766,7 @@ namespace Google.Cloud.Dlp.V2 {
       }
 
       /// <summary>
-      /// Returns a list of the sensitive information types that DLP API
+      /// Returns a list of the sensitive information types that the DLP API
       /// supports. See
       /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
       /// to learn more.
@@ -1824,7 +1824,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_ReidentifyContent, null, options, request);
       }
       /// <summary>
-      /// Returns a list of the sensitive information types that DLP API
+      /// Returns a list of the sensitive information types that the DLP API
       /// supports. See
       /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
       /// to learn more.
@@ -1840,7 +1840,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListInfoTypes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of the sensitive information types that DLP API
+      /// Returns a list of the sensitive information types that the DLP API
       /// supports. See
       /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
       /// to learn more.
@@ -1854,7 +1854,7 @@ namespace Google.Cloud.Dlp.V2 {
         return CallInvoker.BlockingUnaryCall(__Method_ListInfoTypes, null, options, request);
       }
       /// <summary>
-      /// Returns a list of the sensitive information types that DLP API
+      /// Returns a list of the sensitive information types that the DLP API
       /// supports. See
       /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
       /// to learn more.
@@ -1870,7 +1870,7 @@ namespace Google.Cloud.Dlp.V2 {
         return ListInfoTypesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns a list of the sensitive information types that DLP API
+      /// Returns a list of the sensitive information types that the DLP API
       /// supports. See
       /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
       /// to learn more.
