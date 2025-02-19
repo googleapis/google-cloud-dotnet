@@ -9141,7 +9141,7 @@ namespace Google.Cloud.Dlp.V2 {
     public const int ProjectIdFieldNumber = 1;
     private string projectId_ = "";
     /// <summary>
-    /// The Google Cloud Platform project ID of the project containing the table.
+    /// The Google Cloud project ID of the project containing the table.
     /// If omitted, project ID is inferred from the API call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

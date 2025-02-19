@@ -1406,7 +1406,7 @@ namespace Google.Cloud.Dlp.V2
             ReidentifyContentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
         /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
@@ -1418,7 +1418,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
         /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
@@ -1430,7 +1430,7 @@ namespace Google.Cloud.Dlp.V2
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
         /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
@@ -1442,7 +1442,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
         /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
@@ -1460,7 +1460,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypes(new ListInfoTypesRequest { Parent = parent ?? "", }, callSettings);
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
         /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
@@ -1478,7 +1478,7 @@ namespace Google.Cloud.Dlp.V2
             ListInfoTypesAsync(new ListInfoTypesRequest { Parent = parent ?? "", }, callSettings);
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
         /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
@@ -13577,7 +13577,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
         /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
@@ -13592,7 +13592,7 @@ namespace Google.Cloud.Dlp.V2
         }
 
         /// <summary>
-        /// Returns a list of the sensitive information types that DLP API
+        /// Returns a list of the sensitive information types that the DLP API
         /// supports. See
         /// https://cloud.google.com/sensitive-data-protection/docs/infotypes-reference
         /// to learn more.
