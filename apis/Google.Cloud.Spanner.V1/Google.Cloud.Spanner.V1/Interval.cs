@@ -13,141 +13,117 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
     /// Representation of a Time Interval
     /// </summary>
-    public class Interval : IComparable<Interval>
+    public class Interval
     {
-        /// <summary>
-        /// Months contained in the interval
-        /// </summary>
-        public int Months { get; private set; } = 0;
-        /// <summary>
-        /// Days contained in the interval
-        /// </summary>
-        public int Days { get; private set; } = 0;
-        /// <summary>
-        /// Nanoseconds contained in the interval
-        /// </summary>
-        public BigInteger Nanoseconds { get; private set; } = 0;
         private const int Uninitialized = 0;
         private const int ParsingDate = 1;
         private const int ParsingTime = 2;
+        internal const long NanosecondsInASecond = 1000000000L;
+        internal const long NanosecondsInAMinute = NanosecondsInASecond * 60;
+        internal const long NanosecondsInAnHour = NanosecondsInAMinute * 60;
+        internal const long NanosecondsInADay = NanosecondsInAnHour * 24;
+        internal const long NanosecondsInAMonth = NanosecondsInADay * 30;
+        internal const long NanosecondsInAYear = NanosecondsInAMonth * 12;
+        internal const long NanosecondsInAMillisecond = 1000000L;
+        internal const long NanosecondsInAMicrosecond = 1000L;
+
         /// <summary>
-        /// Nanoseconds in one second
+        /// Months contained in the interval
         /// </summary>
-        public const long NanosecondsInASecond = 1000000000L;
+        public int Months { get; set; } = 0;
+
         /// <summary>
-        /// Nanoseconds in one minute
+        /// Days contained in the interval
         /// </summary>
-        public const long NanosecondsInAMinute = NanosecondsInASecond * 60;
+        public int Days { get; set; } = 0;
+
         /// <summary>
-        /// Nanoseconds in one in one hour
+        /// Nanoseconds contained in the interval
         /// </summary>
-        public const long NanosecondsInAnHour = NanosecondsInAMinute * 60;
-        /// <summary>
-        /// Nanoseconds in one day
-        /// </summary>
-        public const long NanosecondsInADay = NanosecondsInAnHour * 24;
-        /// <summary>
-        /// Nanoseconds in one month
-        /// </summary>
-        public const long NanosecondsInAMonth = NanosecondsInADay * 30;
-        /// <summary>
-        /// Nanoseconds in one year
-        /// </summary>
-        public const long NanosecondsInAYear = NanosecondsInAMonth * 12;
+        public BigInteger Nanoseconds { get; set; } = 0;
 
         /// <summary>
         /// Representation of a Time Interval
         /// </summary>
-        public Interval(string interval)
+        private Interval(int months, int days, BigInteger nanoseconds)
         {
-            int state = 0;
-            bool complete = false;
-            string count = "";
+            this.Months = months;
+            this.Days = days;
+            this.Nanoseconds = nanoseconds;
+        }
 
-            foreach (char c in interval) {
-                if (state == Uninitialized) {
-                    if (c != 'P') {
-                        throw new FormatException("Invalid Format");
-                    }
+        /// <summary>
+        /// Constructs
+        /// </summary>
+        public static Interval FromIso8601String(string intervalString)
+        {
+            const int Years = 1, Months = 2, Days = 3, Hours = 5, Minutes = 6, Seconds = 7;
+            HashSet<int> groupNames = new HashSet<int>{Years, Months, Days, Hours, Minutes, Seconds};
+            string isoPattern = @"^P(?!$)(-?\d+Y)?(-?\d+M)?(-?\d+D)?(T(?=-?.?\d)(-?\d+H)?(-?\d+M)?(-?(((\d*)((\.|,)\d{1,9})?)|(\.\d{1,9}))S)?)?$";
 
-                    state = ParsingDate;
-                    continue;
-                }
+            int calculatedMonths = 0;
+            int calculatedDays = 0;
+            BigInteger calculatedNanoseconds = 0;
 
-                if (c == 'T') {
-                    complete = false;
-                    state = ParsingTime;
-                    continue;
-                }
-
-                if (char.IsDigit(c) || c == '-' || c == '.' || c == ',') {
-                    complete = false;
-                    count += c == ',' ? '.' : c;
-                    continue;
-                }
-
-                if (state == ParsingDate) {
-                    if (!this.validateInt(count)) {
-                        throw new FormatException("Invalid Format");
-                    }
-
-                    switch (c) {
-                        case 'Y':
-                            this.Months += this.YearsToMonths(count);
-                            break;
-                        case 'M':
-                            this.Months += int.Parse(count);
-                            break;
-                        case 'D':
-                            this.Days = int.Parse(count);
-                            break;
-                        default:
-                            throw new FormatException("Invalid Format");
-                    }
-
-                    count = "";
-                    complete = true;
-                    continue;
-                }
-
-                if (state == ParsingTime) {
-                    switch (c) {
-                        case 'H':
-                            this.Nanoseconds += this.HoursToNanoseconds(count);
-                            break;
-                        case 'M':
-                            this.Nanoseconds += this.MinutesToNanoseconds(count);
-                            break;
-                        case 'S':
-                            this.Nanoseconds += this.SecondsToNanoseconds(count);
-                            break;
-                        default:
-                            throw new FormatException("Invalid Format");
-                    }
-
-                    count = "";
-                    complete = true;
-                    continue;
-                }
-            }
-
-            if (!complete) {
+            MatchCollection matches = Regex.Matches(intervalString, isoPattern);
+            if (matches.Count != 1) {
                 throw new FormatException("Invalid Format");
             }
+
+            int index = 0;
+            foreach (Group group in matches[0].Groups) {
+                if (!groupNames.Contains(index)) {
+                    index++;
+                    continue;
+                }
+
+                if (group.Value == "") {
+                    index++;
+                    continue;
+                }
+
+                // Stripping the letters out of the match group
+                string numericString = Regex.Replace(group.Value, "[^0-9.,-]", "");
+                switch (index) {
+                    case Years:
+                        calculatedMonths += Interval.YearsToMonths(numericString);
+                        break;
+                    case Months:
+                        calculatedMonths += int.Parse(numericString);
+                        break;
+                    case Days:
+                        calculatedDays = int.Parse(numericString);
+                        break;
+                    case Hours:
+                        calculatedNanoseconds += Interval.HoursToNanoseconds(numericString);
+                        break;
+                    case Minutes:
+                        calculatedNanoseconds += Interval.MinutesToNanoseconds(numericString);
+                        break;
+                    case Seconds:
+                        calculatedNanoseconds += Interval.SecondsToNanoseconds(numericString);
+                        break;
+                }
+                index++;
+            }
+
+            return new Interval(calculatedMonths, calculatedDays, calculatedNanoseconds);
         }
 
         /// <summary>
         /// Converts the current interval into an ISO8601 string
         /// </summary>
-        public string ToIso8601()
+        public override string ToString()
         {
             int years;
             int months;
@@ -167,35 +143,43 @@ namespace Google.Cloud.Spanner.V1
 
             string intervalString = "P";
 
-            if (years != 0) {
+            if (years != 0)
+            {
                 intervalString += $"{years}Y";
             }
 
-            if (months != 0) {
+            if (months != 0)
+            {
                 intervalString += $"{months}M";
             }
 
-            if (days != 0) {
+            if (days != 0)
+            {
                 intervalString += $"{days}D";
             }
 
-            if (hours != 0 || minutes != 0 || seconds != 0) {
+            if (hours != 0 || minutes != 0 || seconds != 0)
+            {
                 intervalString += "T";
 
-                if (hours != 0) {
+                if (hours != 0)
+                {
                     intervalString += $"{hours}H";
                 }
 
-                if (minutes != 0) {
+                if (minutes != 0)
+                {
                     intervalString += $"{minutes}M";
                 }
 
-                if (seconds != 0) {
+                if (seconds != 0)
+                {
                     intervalString += $"{seconds}S";
                 }
             }
 
-            if (intervalString == "P") {
+            if (intervalString == "P")
+            {
                 return "P0Y";
             }
 
@@ -203,108 +187,53 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Compares one interval to another interval
+        /// Creates an interval based on Months, Days and Nanoseconds.
         /// </summary>
-        public int CompareTo(Interval other)
-        {
-            return this.ToNanoseconds().CompareTo(other.ToNanoseconds());
-        }
+        public static Interval FromMonthsDaysNanos(int months, int days, BigInteger nanos) => new Interval(months, days, nanos);
 
         /// <summary>
-        /// Converts the current interval to Nanoseconds
+        /// Creates an interval based on the Months given.
         /// </summary>
-        public BigInteger ToNanoseconds()
-        {
-            BigInteger nanoseconds = 0;
-            nanoseconds += (BigInteger) (this.Months * NanosecondsInAMonth);
-            nanoseconds += this.Days * NanosecondsInADay;
-            nanoseconds += this.Nanoseconds;
-
-            return nanoseconds;
-        }
+        public static Interval FromMonths(int months) => new Interval(months, 0, 0);
 
         /// <summary>
-        /// Creates an interval based on Months, Days and Nanoseconds
+        /// Creates an Interval based on the Days given.
         /// </summary>
-        public static Interval FromMonthsDaysNanos(int months, int days, BigInteger nanos)
-        {
-            Interval interval = new Interval("P0Y");
-            interval.Months = months;
-            interval.Days = days;
-            interval.Nanoseconds = nanos;
-
-            return interval;
-        }
+        public static Interval FromDays(int days) => new Interval(0, days, 0);
 
         /// <summary>
-        /// Creates an interval based on the Months given
+        /// Creates an Interval based on the seconds given.
         /// </summary>
-        public static Interval OfMonths(int months)
-        {
-            return new Interval($"P{months}M");
-        }
+        public static Interval FromSeconds(BigInteger seconds) => new Interval(0, 0, NanosecondsInASecond * seconds);
 
         /// <summary>
-        /// Creates an Interval based on the Days given
+        /// Creates an Interval based on the milliseconds given.
         /// </summary>
-        public static Interval OfDays(int days)
-        {
-            return new Interval($"P{days}D");
-        }
+        public static Interval FromMilliseconds(BigInteger milliseconds) => new Interval(0, 0 , NanosecondsInAMillisecond * milliseconds);
 
         /// <summary>
-        /// Creates an Interval based on the seconds given
+        /// Creates an Interval based on the microseconds given.
         /// </summary>
-        public static Interval ofSeconds(int seconds)
-        {
-            return new Interval($"PT{seconds}S");
-        }
+        public static Interval FromMicroseconds(BigInteger microseconds) => new Interval(0, 0, NanosecondsInAMicrosecond * microseconds);
 
         /// <summary>
-        /// Creates an Interval based on the milliseconds given
+        /// Creates an Interval based on the nanoseconds given.
         /// </summary>
-        public static Interval ofMilliseconds(long milliseconds)
-        {
-            return new Interval($"PT{(decimal) milliseconds / 1000}S");
-        }
-
-        /// <summary>
-        /// Creates an Interval based on the microseconds given
-        /// </summary>
-        public static Interval ofMicroseconds(long microseconds)
-        {
-            return new Interval($"PT{(decimal) microseconds / 1000000}S");
-        }
-
-        /// <summary>
-        /// Creates an Interval based on the nanoseconds given
-        /// </summary>
-        public static Interval ofNanoseconds(ulong nanoseconds)
-        {
-            return new Interval($"PT{(decimal) nanoseconds / 1000000000}S");
-        }
+        public static Interval FromNanoseconds(BigInteger nanoseconds) => new Interval(0, 0, nanoseconds);
 
 
-        private int YearsToMonths(string years)
-        {
-            return int.Parse(years) * 12;
-        }
+        private static int YearsToMonths(string years) => int.Parse(years) * 12;
 
-        private BigInteger HoursToNanoseconds(string hours)
-        {
-            return BigInteger.Parse(hours) * NanosecondsInAnHour;
-        }
+        private static BigInteger HoursToNanoseconds(string hours) => BigInteger.Parse(hours) * NanosecondsInAnHour;
 
-        private BigInteger MinutesToNanoseconds(string minutes)
-        {
-            return BigInteger.Parse(minutes) * NanosecondsInAMinute;
-        }
+        private static BigInteger MinutesToNanoseconds(string minutes) => BigInteger.Parse(minutes) * NanosecondsInAMinute;
 
-        private BigInteger SecondsToNanoseconds(string seconds)
+        private static BigInteger SecondsToNanoseconds(string seconds)
         {
             string[] splitNumber = seconds.Split('.');
 
-            if (splitNumber.Length > 2) {
+            if (splitNumber.Length > 2)
+            {
                 throw new FormatException("Invalid Format");
             }
 
@@ -315,7 +244,8 @@ namespace Google.Cloud.Spanner.V1
 
         private bool validateInt(string number)
         {
-            if (number.Contains('.')) {
+            if (number.Contains('.'))
+            {
                 return false;
             }
 
