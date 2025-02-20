@@ -35,54 +35,13 @@ namespace Google.Cloud.Spanner.V1.Tests
         [InlineData("PT7200H", "PT7200H")]
         [InlineData("PT1H69M72S", "PT2H10M12S")]
         [InlineData("PT1H-5M-2S", "PT54M58S")]
-        [InlineData("PT0,5S", "PT0.5S")]
+        [InlineData("PT0.5S", "PT0.5S")]
         [InlineData("PT0.500S", "PT0.5S")]
         [InlineData("PT.5S", "PT0.5S")]
         public void ParseString(string intervalString, string expectedString)
         {
-            Interval interval = new Interval(intervalString);
-            Assert.Equal(interval.ToIso8601(), expectedString);
-        }
-
-        [Theory]
-        [InlineData("P1Y", Interval.NanosecondsInAYear)]
-        [InlineData("P12M", Interval.NanosecondsInAYear)]
-        [InlineData("P1M", Interval.NanosecondsInAMonth)]
-        [InlineData("PT1H", Interval.NanosecondsInAnHour)]
-        [InlineData("PT60M", Interval.NanosecondsInAnHour)]
-        [InlineData("PT1M", Interval.NanosecondsInAMinute)]
-        [InlineData("PT1S", Interval.NanosecondsInASecond)]
-        [InlineData("PT0.000000001S", 1L)]
-        public void GetNanoseconds(string intervalString, long expectedNanoseconds)
-        {
-            Interval interval = new Interval(intervalString);
-            Assert.Equal(interval.ToNanoseconds(), expectedNanoseconds);
-        }
-
-        [Theory]
-        [InlineData("P10Y", "P1Y", 1)]
-        [InlineData("P10Y", "P10Y", 0)]
-        [InlineData("P1Y", "P10Y", -1)]
-        [InlineData("P1Y", "P1Y1M", -1)]
-        [InlineData("P10M", "P1M", 1)]
-        [InlineData("P10M", "P100M", -1)]
-        [InlineData("P10M", "P10M", 0)]
-        [InlineData("P10M1D", "P10M", 1)]
-        [InlineData("P10MT1H", "P10M", 1)]
-        [InlineData("P10D", "P10D", 0)]
-        [InlineData("P1D", "P10D", -1)]
-        [InlineData("P10D", "P1D", 1)]
-        [InlineData("P1DT1S", "P1D", 1)]
-        [InlineData("PT1H", "PT2H", -1)]
-        [InlineData("PT2H1M", "PT2H", 1)]
-        [InlineData("PT1S", "PT2S", -1)]
-        [InlineData("PT0.000000001S", "PT0.000000002S", -1)]
-        [InlineData("PT1S", "PT-1S", 1)]
-        public void CompareTest(string intervalString1, string intervalString2, int expectedResult)
-        {
-            Interval interval1 = new Interval(intervalString1);
-            Interval interval2 = new Interval(intervalString2);
-            Assert.Equal(interval1.CompareTo(interval2), expectedResult);
+            Interval interval = Interval.FromIso8601String(intervalString);
+            Assert.Equal(interval.ToString(), expectedString);
         }
 
         [Theory]
@@ -106,7 +65,7 @@ namespace Google.Cloud.Spanner.V1.Tests
         [InlineData("PTM")]
         public void InvalidString(string intervalString)
         {
-            Assert.Throws<FormatException>(() => new Interval(intervalString));
+            Assert.Throws<FormatException>(() => Interval.FromIso8601String(intervalString));
         }
     }
 }
