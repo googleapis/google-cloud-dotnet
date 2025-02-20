@@ -40,7 +40,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xl",
             "YXBpcy5jb20vTG9jYXRpb24SSAoJY2hhbGxlbmdlGAIgASgLMjAuZ29vZ2xl",
             "LmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DaGFsbGVuZ2VCA+BB",
-            "AiKIBQoYVmVyaWZ5QXR0ZXN0YXRpb25SZXF1ZXN0ElEKB3RkX2NjZWwYBiAB",
+            "AiKfBQoYVmVyaWZ5QXR0ZXN0YXRpb25SZXF1ZXN0ElEKB3RkX2NjZWwYBiAB",
             "KAsyOS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRk",
             "eENjZWxBdHRlc3RhdGlvbkID4EEBSAASXAoTc2V2X3NucF9hdHRlc3RhdGlv",
             "bhgHIAEoCzI4Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcu",
@@ -54,79 +54,80 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLkNvbmZpZGVudGlhbFNw",
             "YWNlSW5mb0ID4EEBEk8KDXRva2VuX29wdGlvbnMYBSABKAsyMy5nb29nbGUu",
             "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRva2VuT3B0aW9uc0ID",
-            "4EEBQhEKD3RlZV9hdHRlc3RhdGlvbiKDAQoSVGR4Q2NlbEF0dGVzdGF0aW9u",
-            "EhwKD2NjZWxfYWNwaV90YWJsZRgBIAEoDEID4EEBEhYKCWNjZWxfZGF0YRgC",
-            "IAEoDEID4EEBEiAKE2Nhbm9uaWNhbF9ldmVudF9sb2cYAyABKAxCA+BBARIV",
-            "Cgh0ZF9xdW90ZRgEIAEoDEID4EEBIj8KEVNldlNucEF0dGVzdGF0aW9uEhMK",
-            "BnJlcG9ydBgBIAEoDEID4EEBEhUKCGF1eF9ibG9iGAIgASgMQgPgQQEibAoZ",
-            "VmVyaWZ5QXR0ZXN0YXRpb25SZXNwb25zZRIeChFvaWRjX2NsYWltc190b2tl",
-            "bhgCIAEoCUID4EEDEi8KDnBhcnRpYWxfZXJyb3JzGAMgAygLMhIuZ29vZ2xl",
-            "LnJwYy5TdGF0dXNCA+BBAyIzCg5HY3BDcmVkZW50aWFscxIhChlzZXJ2aWNl",
-            "X2FjY291bnRfaWRfdG9rZW5zGAIgAygJIqYFCgxUb2tlbk9wdGlvbnMSdgoa",
-            "YXdzX3ByaW5jaXBhbF90YWdzX29wdGlvbnMYBCABKAsySy5nb29nbGUuY2xv",
-            "dWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRva2VuT3B0aW9ucy5Bd3NQ",
-            "cmluY2lwYWxUYWdzT3B0aW9uc0ID4EEBSAASFQoIYXVkaWVuY2UYASABKAlC",
-            "A+BBARISCgVub25jZRgCIAMoCUID4EEBEkkKCnRva2VuX3R5cGUYAyABKA4y",
-            "MC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlRva2Vu",
-            "VHlwZUID4EEBGpEDChdBd3NQcmluY2lwYWxUYWdzT3B0aW9ucxKFAQoWYWxs",
-            "b3dlZF9wcmluY2lwYWxfdGFncxgBIAEoCzJgLmdvb2dsZS5jbG91ZC5jb25m",
-            "aWRlbnRpYWxjb21wdXRpbmcudjEuVG9rZW5PcHRpb25zLkF3c1ByaW5jaXBh",
-            "bFRhZ3NPcHRpb25zLkFsbG93ZWRQcmluY2lwYWxUYWdzQgPgQQEa7QEKFEFs",
-            "bG93ZWRQcmluY2lwYWxUYWdzEqIBChpjb250YWluZXJfaW1hZ2Vfc2lnbmF0",
-            "dXJlcxgBIAEoCzJ5Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
-            "bmcudjEuVG9rZW5PcHRpb25zLkF3c1ByaW5jaXBhbFRhZ3NPcHRpb25zLkFs",
-            "bG93ZWRQcmluY2lwYWxUYWdzLkNvbnRhaW5lckltYWdlU2lnbmF0dXJlc0ID",
-            "4EEBGjAKGENvbnRhaW5lckltYWdlU2lnbmF0dXJlcxIUCgdrZXlfaWRzGAEg",
-            "AygJQgPgQQFCFAoSdG9rZW5fdHlwZV9vcHRpb25zIo8DCg5UcG1BdHRlc3Rh",
-            "dGlvbhJLCgZxdW90ZXMYASADKAsyOy5nb29nbGUuY2xvdWQuY29uZmlkZW50",
-            "aWFsY29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uLlF1b3RlEhUKDXRjZ19l",
-            "dmVudF9sb2cYAiABKAwSGwoTY2Fub25pY2FsX2V2ZW50X2xvZxgDIAEoDBIP",
-            "Cgdha19jZXJ0GAQgASgMEhIKCmNlcnRfY2hhaW4YBSADKAwa1gEKBVF1b3Rl",
-            "EhEKCWhhc2hfYWxnbxgBIAEoBRJeCgpwY3JfdmFsdWVzGAIgAygLMkouZ29v",
-            "Z2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5UcG1BdHRlc3Rh",
-            "dGlvbi5RdW90ZS5QY3JWYWx1ZXNFbnRyeRIRCglyYXdfcXVvdGUYAyABKAwS",
-            "FQoNcmF3X3NpZ25hdHVyZRgEIAEoDBowCg5QY3JWYWx1ZXNFbnRyeRILCgNr",
-            "ZXkYASABKAUSDQoFdmFsdWUYAiABKAw6AjgBImoKFUNvbmZpZGVudGlhbFNw",
-            "YWNlSW5mbxJRCg9zaWduZWRfZW50aXRpZXMYASADKAsyMy5nb29nbGUuY2xv",
-            "dWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlNpZ25lZEVudGl0eUID4EEB",
-            "IncKDFNpZ25lZEVudGl0eRJnChpjb250YWluZXJfaW1hZ2Vfc2lnbmF0dXJl",
-            "cxgBIAMoCzI+Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcu",
-            "djEuQ29udGFpbmVySW1hZ2VTaWduYXR1cmVCA+BBASKvAQoXQ29udGFpbmVy",
-            "SW1hZ2VTaWduYXR1cmUSFAoHcGF5bG9hZBgBIAEoDEID4EEBEhYKCXNpZ25h",
-            "dHVyZRgCIAEoDEID4EEBEhcKCnB1YmxpY19rZXkYAyABKAxCA+BBARJNCgdz",
-            "aWdfYWxnGAQgASgOMjcuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1",
-            "dGluZy52MS5TaWduaW5nQWxnb3JpdGhtQgPgQQEqfwoQU2lnbmluZ0FsZ29y",
-            "aXRobRIhCh1TSUdOSU5HX0FMR09SSVRITV9VTlNQRUNJRklFRBAAEhUKEVJT",
-            "QVNTQV9QU1NfU0hBMjU2EAESGgoWUlNBU1NBX1BLQ1MxVjE1X1NIQTI1NhAC",
-            "EhUKEUVDRFNBX1AyNTZfU0hBMjU2EAMqjgEKCVRva2VuVHlwZRIaChZUT0tF",
-            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPVE9LRU5fVFlQRV9PSURDEAESEgoO",
-            "VE9LRU5fVFlQRV9QS0kQAhIaChZUT0tFTl9UWVBFX0xJTUlURURfQVdTEAMS",
-            "IAocVE9LRU5fVFlQRV9BV1NfUFJJTkNJUEFMVEFHUxAEMrcEChVDb25maWRl",
-            "bnRpYWxDb21wdXRpbmcS2AEKD0NyZWF0ZUNoYWxsZW5nZRI9Lmdvb2dsZS5j",
-            "bG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuQ3JlYXRlQ2hhbGxlbmdl",
-            "UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcu",
-            "djEuQ2hhbGxlbmdlIlTaQRBwYXJlbnQsY2hhbGxlbmdlgtPkkwI7Ii4vdjEv",
-            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jaGFsbGVuZ2VzOglj",
-            "aGFsbGVuZ2US6AEKEVZlcmlmeUF0dGVzdGF0aW9uEj8uZ29vZ2xlLmNsb3Vk",
-            "LmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5WZXJpZnlBdHRlc3RhdGlvblJl",
-            "cXVlc3QaQC5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYx",
-            "LlZlcmlmeUF0dGVzdGF0aW9uUmVzcG9uc2UiUILT5JMCSiJFL3YxL3tjaGFs",
-            "bGVuZ2U9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jaGFsbGVuZ2VzLyp9OnZl",
-            "cmlmeUF0dGVzdGF0aW9uOgEqGljKQSRjb25maWRlbnRpYWxjb21wdXRpbmcu",
-            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
-            "dXRoL2Nsb3VkLXBsYXRmb3JtQpcCCiljb20uZ29vZ2xlLmNsb3VkLmNvbmZp",
-            "ZGVudGlhbGNvbXB1dGluZy52MUIMU2VydmljZVByb3RvUAFaX2Nsb3VkLmdv",
-            "b2dsZS5jb20vZ28vY29uZmlkZW50aWFsY29tcHV0aW5nL2FwaXYxL2NvbmZp",
-            "ZGVudGlhbGNvbXB1dGluZ3BiO2NvbmZpZGVudGlhbGNvbXB1dGluZ3BiqgIl",
-            "R29vZ2xlLkNsb3VkLkNvbmZpZGVudGlhbENvbXB1dGluZy5WMcoCJUdvb2ds",
-            "ZVxDbG91ZFxDb25maWRlbnRpYWxDb21wdXRpbmdcVjHqAihHb29nbGU6OkNs",
-            "b3VkOjpDb25maWRlbnRpYWxDb21wdXRpbmc6OlYxYgZwcm90bzM="));
+            "4EEBEhUKCGF0dGVzdGVyGAggASgJQgPgQQFCEQoPdGVlX2F0dGVzdGF0aW9u",
+            "IoMBChJUZHhDY2VsQXR0ZXN0YXRpb24SHAoPY2NlbF9hY3BpX3RhYmxlGAEg",
+            "ASgMQgPgQQESFgoJY2NlbF9kYXRhGAIgASgMQgPgQQESIAoTY2Fub25pY2Fs",
+            "X2V2ZW50X2xvZxgDIAEoDEID4EEBEhUKCHRkX3F1b3RlGAQgASgMQgPgQQEi",
+            "PwoRU2V2U25wQXR0ZXN0YXRpb24SEwoGcmVwb3J0GAEgASgMQgPgQQESFQoI",
+            "YXV4X2Jsb2IYAiABKAxCA+BBASJsChlWZXJpZnlBdHRlc3RhdGlvblJlc3Bv",
+            "bnNlEh4KEW9pZGNfY2xhaW1zX3Rva2VuGAIgASgJQgPgQQMSLwoOcGFydGlh",
+            "bF9lcnJvcnMYAyADKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDIjMKDkdj",
+            "cENyZWRlbnRpYWxzEiEKGXNlcnZpY2VfYWNjb3VudF9pZF90b2tlbnMYAiAD",
+            "KAkipgUKDFRva2VuT3B0aW9ucxJ2Chphd3NfcHJpbmNpcGFsX3RhZ3Nfb3B0",
+            "aW9ucxgEIAEoCzJLLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
+            "bmcudjEuVG9rZW5PcHRpb25zLkF3c1ByaW5jaXBhbFRhZ3NPcHRpb25zQgPg",
+            "QQFIABIVCghhdWRpZW5jZRgBIAEoCUID4EEBEhIKBW5vbmNlGAIgAygJQgPg",
+            "QQESSQoKdG9rZW5fdHlwZRgDIAEoDjIwLmdvb2dsZS5jbG91ZC5jb25maWRl",
+            "bnRpYWxjb21wdXRpbmcudjEuVG9rZW5UeXBlQgPgQQEakQMKF0F3c1ByaW5j",
+            "aXBhbFRhZ3NPcHRpb25zEoUBChZhbGxvd2VkX3ByaW5jaXBhbF90YWdzGAEg",
+            "ASgLMmAuZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5U",
+            "b2tlbk9wdGlvbnMuQXdzUHJpbmNpcGFsVGFnc09wdGlvbnMuQWxsb3dlZFBy",
+            "aW5jaXBhbFRhZ3NCA+BBARrtAQoUQWxsb3dlZFByaW5jaXBhbFRhZ3MSogEK",
+            "GmNvbnRhaW5lcl9pbWFnZV9zaWduYXR1cmVzGAEgASgLMnkuZ29vZ2xlLmNs",
+            "b3VkLmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5Ub2tlbk9wdGlvbnMuQXdz",
+            "UHJpbmNpcGFsVGFnc09wdGlvbnMuQWxsb3dlZFByaW5jaXBhbFRhZ3MuQ29u",
+            "dGFpbmVySW1hZ2VTaWduYXR1cmVzQgPgQQEaMAoYQ29udGFpbmVySW1hZ2VT",
+            "aWduYXR1cmVzEhQKB2tleV9pZHMYASADKAlCA+BBAUIUChJ0b2tlbl90eXBl",
+            "X29wdGlvbnMijwMKDlRwbUF0dGVzdGF0aW9uEksKBnF1b3RlcxgBIAMoCzI7",
+            "Lmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRpbmcudjEuVHBtQXR0",
+            "ZXN0YXRpb24uUXVvdGUSFQoNdGNnX2V2ZW50X2xvZxgCIAEoDBIbChNjYW5v",
+            "bmljYWxfZXZlbnRfbG9nGAMgASgMEg8KB2FrX2NlcnQYBCABKAwSEgoKY2Vy",
+            "dF9jaGFpbhgFIAMoDBrWAQoFUXVvdGUSEQoJaGFzaF9hbGdvGAEgASgFEl4K",
+            "CnBjcl92YWx1ZXMYAiADKAsySi5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFs",
+            "Y29tcHV0aW5nLnYxLlRwbUF0dGVzdGF0aW9uLlF1b3RlLlBjclZhbHVlc0Vu",
+            "dHJ5EhEKCXJhd19xdW90ZRgDIAEoDBIVCg1yYXdfc2lnbmF0dXJlGAQgASgM",
+            "GjAKDlBjclZhbHVlc0VudHJ5EgsKA2tleRgBIAEoBRINCgV2YWx1ZRgCIAEo",
+            "DDoCOAEiagoVQ29uZmlkZW50aWFsU3BhY2VJbmZvElEKD3NpZ25lZF9lbnRp",
+            "dGllcxgBIAMoCzIzLmdvb2dsZS5jbG91ZC5jb25maWRlbnRpYWxjb21wdXRp",
+            "bmcudjEuU2lnbmVkRW50aXR5QgPgQQEidwoMU2lnbmVkRW50aXR5EmcKGmNv",
+            "bnRhaW5lcl9pbWFnZV9zaWduYXR1cmVzGAEgAygLMj4uZ29vZ2xlLmNsb3Vk",
+            "LmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5Db250YWluZXJJbWFnZVNpZ25h",
+            "dHVyZUID4EEBIq8BChdDb250YWluZXJJbWFnZVNpZ25hdHVyZRIUCgdwYXls",
+            "b2FkGAEgASgMQgPgQQESFgoJc2lnbmF0dXJlGAIgASgMQgPgQQESFwoKcHVi",
+            "bGljX2tleRgDIAEoDEID4EEBEk0KB3NpZ19hbGcYBCABKA4yNy5nb29nbGUu",
+            "Y2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxLlNpZ25pbmdBbGdvcml0",
+            "aG1CA+BBASp/ChBTaWduaW5nQWxnb3JpdGhtEiEKHVNJR05JTkdfQUxHT1JJ",
+            "VEhNX1VOU1BFQ0lGSUVEEAASFQoRUlNBU1NBX1BTU19TSEEyNTYQARIaChZS",
+            "U0FTU0FfUEtDUzFWMTVfU0hBMjU2EAISFQoRRUNEU0FfUDI1Nl9TSEEyNTYQ",
+            "AyqOAQoJVG9rZW5UeXBlEhoKFlRPS0VOX1RZUEVfVU5TUEVDSUZJRUQQABIT",
+            "Cg9UT0tFTl9UWVBFX09JREMQARISCg5UT0tFTl9UWVBFX1BLSRACEhoKFlRP",
+            "S0VOX1RZUEVfTElNSVRFRF9BV1MQAxIgChxUT0tFTl9UWVBFX0FXU19QUklO",
+            "Q0lQQUxUQUdTEAQytwQKFUNvbmZpZGVudGlhbENvbXB1dGluZxLYAQoPQ3Jl",
+            "YXRlQ2hhbGxlbmdlEj0uZ29vZ2xlLmNsb3VkLmNvbmZpZGVudGlhbGNvbXB1",
+            "dGluZy52MS5DcmVhdGVDaGFsbGVuZ2VSZXF1ZXN0GjAuZ29vZ2xlLmNsb3Vk",
+            "LmNvbmZpZGVudGlhbGNvbXB1dGluZy52MS5DaGFsbGVuZ2UiVNpBEHBhcmVu",
+            "dCxjaGFsbGVuZ2WC0+STAjsiLi92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyp9L2NoYWxsZW5nZXM6CWNoYWxsZW5nZRLoAQoRVmVyaWZ5QXR0",
+            "ZXN0YXRpb24SPy5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5n",
+            "LnYxLlZlcmlmeUF0dGVzdGF0aW9uUmVxdWVzdBpALmdvb2dsZS5jbG91ZC5j",
+            "b25maWRlbnRpYWxjb21wdXRpbmcudjEuVmVyaWZ5QXR0ZXN0YXRpb25SZXNw",
+            "b25zZSJQgtPkkwJKIkUvdjEve2NoYWxsZW5nZT1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2NoYWxsZW5nZXMvKn06dmVyaWZ5QXR0ZXN0YXRpb246ASoaWMpB",
+            "JGNvbmZpZGVudGlhbGNvbXB1dGluZy5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1ClwIK",
+            "KWNvbS5nb29nbGUuY2xvdWQuY29uZmlkZW50aWFsY29tcHV0aW5nLnYxQgxT",
+            "ZXJ2aWNlUHJvdG9QAVpfY2xvdWQuZ29vZ2xlLmNvbS9nby9jb25maWRlbnRp",
+            "YWxjb21wdXRpbmcvYXBpdjEvY29uZmlkZW50aWFsY29tcHV0aW5ncGI7Y29u",
+            "ZmlkZW50aWFsY29tcHV0aW5ncGKqAiVHb29nbGUuQ2xvdWQuQ29uZmlkZW50",
+            "aWFsQ29tcHV0aW5nLlYxygIlR29vZ2xlXENsb3VkXENvbmZpZGVudGlhbENv",
+            "bXB1dGluZ1xWMeoCKEdvb2dsZTo6Q2xvdWQ6OkNvbmZpZGVudGlhbENvbXB1",
+            "dGluZzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.ConfidentialComputing.V1.SigningAlgorithm), typeof(global::Google.Cloud.ConfidentialComputing.V1.TokenType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.Challenge), global::Google.Cloud.ConfidentialComputing.V1.Challenge.Parser, new[]{ "Name", "CreateTime", "ExpireTime", "Used", "TpmNonce" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest), global::Google.Cloud.ConfidentialComputing.V1.CreateChallengeRequest.Parser, new[]{ "Parent", "Challenge" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest.Parser, new[]{ "TdCcel", "SevSnpAttestation", "Challenge", "GcpCredentials", "TpmAttestation", "ConfidentialSpaceInfo", "TokenOptions" }, new[]{ "TeeAttestation" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationRequest.Parser, new[]{ "TdCcel", "SevSnpAttestation", "Challenge", "GcpCredentials", "TpmAttestation", "ConfidentialSpaceInfo", "TokenOptions", "Attester" }, new[]{ "TeeAttestation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation), global::Google.Cloud.ConfidentialComputing.V1.TdxCcelAttestation.Parser, new[]{ "CcelAcpiTable", "CcelData", "CanonicalEventLog", "TdQuote" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.SevSnpAttestation), global::Google.Cloud.ConfidentialComputing.V1.SevSnpAttestation.Parser, new[]{ "Report", "AuxBlob" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse), global::Google.Cloud.ConfidentialComputing.V1.VerifyAttestationResponse.Parser, new[]{ "OidcClaimsToken", "PartialErrors" }, null, null, null, null),
@@ -819,7 +820,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
 
   /// <summary>
   /// A request for an OIDC token, providing all the necessary information needed
-  /// for this service to verify the plaform state of the requestor.
+  /// for this service to verify the platform state of the requestor.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class VerifyAttestationRequest : pb::IMessage<VerifyAttestationRequest>
@@ -861,6 +862,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       tpmAttestation_ = other.tpmAttestation_ != null ? other.tpmAttestation_.Clone() : null;
       confidentialSpaceInfo_ = other.confidentialSpaceInfo_ != null ? other.confidentialSpaceInfo_.Clone() : null;
       tokenOptions_ = other.tokenOptions_ != null ? other.tokenOptions_.Clone() : null;
+      attester_ = other.attester_;
       switch (other.TeeAttestationCase) {
         case TeeAttestationOneofCase.TdCcel:
           TdCcel = other.TdCcel.Clone();
@@ -989,6 +991,22 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
     }
 
+    /// <summary>Field number for the "attester" field.</summary>
+    public const int AttesterFieldNumber = 8;
+    private string attester_ = "";
+    /// <summary>
+    /// Optional. An optional indicator of the attester, only applies to certain
+    /// products.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Attester {
+      get { return attester_; }
+      set {
+        attester_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object teeAttestation_;
     /// <summary>Enum of possible cases for the "tee_attestation" oneof.</summary>
     public enum TeeAttestationOneofCase {
@@ -1032,6 +1050,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (!object.Equals(TpmAttestation, other.TpmAttestation)) return false;
       if (!object.Equals(ConfidentialSpaceInfo, other.ConfidentialSpaceInfo)) return false;
       if (!object.Equals(TokenOptions, other.TokenOptions)) return false;
+      if (Attester != other.Attester) return false;
       if (TeeAttestationCase != other.TeeAttestationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1047,6 +1066,7 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       if (tpmAttestation_ != null) hash ^= TpmAttestation.GetHashCode();
       if (confidentialSpaceInfo_ != null) hash ^= ConfidentialSpaceInfo.GetHashCode();
       if (tokenOptions_ != null) hash ^= TokenOptions.GetHashCode();
+      if (Attester.Length != 0) hash ^= Attester.GetHashCode();
       hash ^= (int) teeAttestationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1094,6 +1114,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(SevSnpAttestation);
       }
+      if (Attester.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Attester);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1132,6 +1156,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(SevSnpAttestation);
       }
+      if (Attester.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Attester);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1162,6 +1190,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
       }
       if (tokenOptions_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TokenOptions);
+      }
+      if (Attester.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Attester);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1201,6 +1232,9 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
           TokenOptions = new global::Google.Cloud.ConfidentialComputing.V1.TokenOptions();
         }
         TokenOptions.MergeFrom(other.TokenOptions);
+      }
+      if (other.Attester.Length != 0) {
+        Attester = other.Attester;
       }
       switch (other.TeeAttestationCase) {
         case TeeAttestationOneofCase.TdCcel:
@@ -1282,6 +1316,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             SevSnpAttestation = subBuilder;
             break;
           }
+          case 66: {
+            Attester = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1345,6 +1383,10 @@ namespace Google.Cloud.ConfidentialComputing.V1 {
             }
             input.ReadMessage(subBuilder);
             SevSnpAttestation = subBuilder;
+            break;
+          }
+          case 66: {
+            Attester = input.ReadString();
             break;
           }
         }
