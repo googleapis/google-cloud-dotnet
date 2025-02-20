@@ -21,7 +21,7 @@ using System.Text.RegularExpressions;
 namespace Google.Cloud.Spanner.V1
 {
     /// <summary>
-    /// Representation of a Time Interval
+    /// Representation of a Time Interval.
     /// </summary>
     public class Interval
     {
@@ -38,22 +38,22 @@ namespace Google.Cloud.Spanner.V1
         internal const long NanosecondsInAMicrosecond = 1000L;
 
         /// <summary>
-        /// Months contained in the interval
+        /// Months contained in the interval.
         /// </summary>
         public int Months { get; set; } = 0;
 
         /// <summary>
-        /// Days contained in the interval
+        /// Days contained in the interval.
         /// </summary>
         public int Days { get; set; } = 0;
 
         /// <summary>
-        /// Nanoseconds contained in the interval
+        /// Nanoseconds contained in the interval.
         /// </summary>
         public BigInteger Nanoseconds { get; set; } = 0;
 
         /// <summary>
-        /// Representation of a Time Interval
+        /// Representation of a Time Interval.
         /// </summary>
         private Interval(int months, int days, BigInteger nanoseconds)
         {
@@ -63,7 +63,7 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
-        /// Constructs
+        /// Constructs an interval based on an Iso8601 duration string.
         /// </summary>
         public static Interval FromIso8601String(string intervalString)
         {
