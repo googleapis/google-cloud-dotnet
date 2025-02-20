@@ -131,6 +131,7 @@ namespace GoogleCSharpSnippets
                 ConfidentialSpaceInfo = new ConfidentialSpaceInfo(),
                 TokenOptions = new TokenOptions(),
                 TdCcel = new TdxCcelAttestation(),
+                Attester = "",
             };
             // Make the request
             VerifyAttestationResponse response = confidentialComputingClient.VerifyAttestation(request);
@@ -153,6 +154,7 @@ namespace GoogleCSharpSnippets
                 ConfidentialSpaceInfo = new ConfidentialSpaceInfo(),
                 TokenOptions = new TokenOptions(),
                 TdCcel = new TdxCcelAttestation(),
+                Attester = "",
             };
             // Make the request
             VerifyAttestationResponse response = await confidentialComputingClient.VerifyAttestationAsync(request);
