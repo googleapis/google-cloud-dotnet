@@ -110,6 +110,7 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
                 MaybeWriteFormatParameters(writer, logEntry.State);
                 MaybeWriteScopeInformation(writer, scopeProvider);
                 MaybeWriteTraceInformation(writer);
+                MaybeWriteLogAugmentation(writer, logEntry);
                 writer.WriteEndObject();
                 writer.Flush();
             }
@@ -208,6 +209,9 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
         writer.WriteString(s_spanIdPropertyName, activity.SpanId.ToString());
         writer.WriteBoolean(s_traceSampledPropertyName, activity.Recorded);
     }
+
+    private void MaybeWriteLogAugmentation<TState>(Utf8JsonWriter writer, LogEntry<TState> logEntry)
+        => _options.LogAugmenter?.AugmentLog(logEntry, writer);
 
     private static JsonEncodedText GetSeverity(LogLevel logLevel) =>
         logLevel switch

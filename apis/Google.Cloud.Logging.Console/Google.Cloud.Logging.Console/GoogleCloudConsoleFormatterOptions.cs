@@ -40,4 +40,16 @@ public class GoogleCloudConsoleFormatterOptions : ConsoleFormatterOptions
     /// Note that when running your code in Google Cloud, for instance in Google Cloud Run, trace information is automatically collected and exported by the runtime.
     /// </remarks>
     public string TraceGoogleCloudProjectId { get; set; }
+
+    /// <summary>
+    /// Optional log augmenter to add additional information to log entry formatting.
+    /// 
+    /// <remarks>
+    /// This property is optional. When set, the log augmenter is called for each log entry to add custom information to the
+    /// top level `jsonPayload` log entry.
+    /// May be used to add application specific information to log entries, e.g. hints to the Google error reporting system
+    /// (see <see href="https://cloud.google.com/error-reporting/docs/formatting-error-messages#log-text">Log a text message</see>).
+    /// </remarks>
+    /// </summary>
+    public IGoogleCloudConsoleLogAugmenter LogAugmenter { get; set; }
 }
