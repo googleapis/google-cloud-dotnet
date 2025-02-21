@@ -27,43 +27,47 @@ namespace Google.Cloud.Spanner.V1 {
             "CiNnb29nbGUvc3Bhbm5lci92MS90cmFuc2FjdGlvbi5wcm90bxIRZ29vZ2xl",
             "LnNwYW5uZXIudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
             "Hmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90byLOBgoSVHJhbnNhY3Rpb25PcHRpb25zEkUK",
+            "YnVmL3RpbWVzdGFtcC5wcm90byL3BwoSVHJhbnNhY3Rpb25PcHRpb25zEkUK",
             "CnJlYWRfd3JpdGUYASABKAsyLy5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2Fj",
             "dGlvbk9wdGlvbnMuUmVhZFdyaXRlSAASTwoPcGFydGl0aW9uZWRfZG1sGAMg",
             "ASgLMjQuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlBh",
             "cnRpdGlvbmVkRG1sSAASQwoJcmVhZF9vbmx5GAIgASgLMi4uZ29vZ2xlLnNw",
             "YW5uZXIudjEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRPbmx5SAASJwofZXhj",
-            "bHVkZV90eG5fZnJvbV9jaGFuZ2Vfc3RyZWFtcxgFIAEoCBrsAQoJUmVhZFdy",
-            "aXRlElQKDnJlYWRfbG9ja19tb2RlGAEgASgOMjwuZ29vZ2xlLnNwYW5uZXIu",
-            "djEuVHJhbnNhY3Rpb25PcHRpb25zLlJlYWRXcml0ZS5SZWFkTG9ja01vZGUS",
-            "OAorbXVsdGlwbGV4ZWRfc2Vzc2lvbl9wcmV2aW91c190cmFuc2FjdGlvbl9p",
-            "ZBgCIAEoDEID4EEBIk8KDFJlYWRMb2NrTW9kZRIeChpSRUFEX0xPQ0tfTU9E",
-            "RV9VTlNQRUNJRklFRBAAEg8KC1BFU1NJTUlTVElDEAESDgoKT1BUSU1JU1RJ",
-            "QxACGhAKDlBhcnRpdGlvbmVkRG1sGqgCCghSZWFkT25seRIQCgZzdHJvbmcY",
-            "ASABKAhIABI4ChJtaW5fcmVhZF90aW1lc3RhbXAYAiABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wSAASMgoNbWF4X3N0YWxlbmVzcxgDIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgAEjQKDnJlYWRfdGltZXN0YW1w",
-            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAEjQKD2V4YWN0",
-            "X3N0YWxlbmVzcxgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkgA",
-            "Eh0KFXJldHVybl9yZWFkX3RpbWVzdGFtcBgGIAEoCEIRCg90aW1lc3RhbXBf",
-            "Ym91bmRCBgoEbW9kZSKbAQoLVHJhbnNhY3Rpb24SCgoCaWQYASABKAwSMgoO",
-            "cmVhZF90aW1lc3RhbXAYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEkwKD3ByZWNvbW1pdF90b2tlbhgDIAEoCzIzLmdvb2dsZS5zcGFubmVy",
-            "LnYxLk11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRva2VuIqQBChNUcmFu",
-            "c2FjdGlvblNlbGVjdG9yEjsKCnNpbmdsZV91c2UYASABKAsyJS5nb29nbGUu",
-            "c3Bhbm5lci52MS5UcmFuc2FjdGlvbk9wdGlvbnNIABIMCgJpZBgCIAEoDEgA",
-            "EjYKBWJlZ2luGAMgASgLMiUuZ29vZ2xlLnNwYW5uZXIudjEuVHJhbnNhY3Rp",
-            "b25PcHRpb25zSABCCgoIc2VsZWN0b3IiTAogTXVsdGlwbGV4ZWRTZXNzaW9u",
-            "UHJlY29tbWl0VG9rZW4SFwoPcHJlY29tbWl0X3Rva2VuGAEgASgMEg8KB3Nl",
-            "cV9udW0YAiABKAVCswEKFWNvbS5nb29nbGUuc3Bhbm5lci52MUIQVHJhbnNh",
-            "Y3Rpb25Qcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3NwYW5uZXIvYXBp",
-            "djEvc3Bhbm5lcnBiO3NwYW5uZXJwYqoCF0dvb2dsZS5DbG91ZC5TcGFubmVy",
-            "LlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6OkNsb3Vk",
-            "OjpTcGFubmVyOjpWMWIGcHJvdG8z"));
+            "bHVkZV90eG5fZnJvbV9jaGFuZ2Vfc3RyZWFtcxgFIAEoCBJNCg9pc29sYXRp",
+            "b25fbGV2ZWwYBiABKA4yNC5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2FjdGlv",
+            "bk9wdGlvbnMuSXNvbGF0aW9uTGV2ZWwa7AEKCVJlYWRXcml0ZRJUCg5yZWFk",
+            "X2xvY2tfbW9kZRgBIAEoDjI8Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0",
+            "aW9uT3B0aW9ucy5SZWFkV3JpdGUuUmVhZExvY2tNb2RlEjgKK211bHRpcGxl",
+            "eGVkX3Nlc3Npb25fcHJldmlvdXNfdHJhbnNhY3Rpb25faWQYAiABKAxCA+BB",
+            "ASJPCgxSZWFkTG9ja01vZGUSHgoaUkVBRF9MT0NLX01PREVfVU5TUEVDSUZJ",
+            "RUQQABIPCgtQRVNTSU1JU1RJQxABEg4KCk9QVElNSVNUSUMQAhoQCg5QYXJ0",
+            "aXRpb25lZERtbBqoAgoIUmVhZE9ubHkSEAoGc3Ryb25nGAEgASgISAASOAoS",
+            "bWluX3JlYWRfdGltZXN0YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEgAEjIKDW1heF9zdGFsZW5lc3MYAyABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25IABI0Cg5yZWFkX3RpbWVzdGFtcBgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIABI0Cg9leGFjdF9zdGFsZW5lc3MY",
+            "BSABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25IABIdChVyZXR1cm5f",
+            "cmVhZF90aW1lc3RhbXAYBiABKAhCEQoPdGltZXN0YW1wX2JvdW5kIlgKDklz",
+            "b2xhdGlvbkxldmVsEh8KG0lTT0xBVElPTl9MRVZFTF9VTlNQRUNJRklFRBAA",
+            "EhAKDFNFUklBTElaQUJMRRABEhMKD1JFUEVBVEFCTEVfUkVBRBACQgYKBG1v",
+            "ZGUimwEKC1RyYW5zYWN0aW9uEgoKAmlkGAEgASgMEjIKDnJlYWRfdGltZXN0",
+            "YW1wGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJMCg9wcmVj",
+            "b21taXRfdG9rZW4YAyABKAsyMy5nb29nbGUuc3Bhbm5lci52MS5NdWx0aXBs",
+            "ZXhlZFNlc3Npb25QcmVjb21taXRUb2tlbiKkAQoTVHJhbnNhY3Rpb25TZWxl",
+            "Y3RvchI7CgpzaW5nbGVfdXNlGAEgASgLMiUuZ29vZ2xlLnNwYW5uZXIudjEu",
+            "VHJhbnNhY3Rpb25PcHRpb25zSAASDAoCaWQYAiABKAxIABI2CgViZWdpbhgD",
+            "IAEoCzIlLmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9uc0gA",
+            "QgoKCHNlbGVjdG9yIkwKIE11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRv",
+            "a2VuEhcKD3ByZWNvbW1pdF90b2tlbhgBIAEoDBIPCgdzZXFfbnVtGAIgASgF",
+            "QrMBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCEFRyYW5zYWN0aW9uUHJvdG9Q",
+            "AVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJw",
+            "YjtzcGFubmVycGKqAhdHb29nbGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2ds",
+            "ZVxDbG91ZFxTcGFubmVyXFYx6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly", "ExcludeTxnFromChangeStreams" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "ReadLockMode", "MultiplexedSessionPreviousTransactionId" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions), global::Google.Cloud.Spanner.V1.TransactionOptions.Parser, new[]{ "ReadWrite", "PartitionedDml", "ReadOnly", "ExcludeTxnFromChangeStreams", "IsolationLevel" }, new[]{ "Mode" }, new[]{ typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "ReadLockMode", "MultiplexedSessionPreviousTransactionId" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.PartitionedDml.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "Strong", "MinReadTimestamp", "MaxStaleness", "ReadTimestamp", "ExactStaleness", "ReturnReadTimestamp" }, new[]{ "TimestampBound" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Transaction), global::Google.Cloud.Spanner.V1.Transaction.Parser, new[]{ "Id", "ReadTimestamp", "PrecommitToken" }, null, null, null, null),
@@ -437,6 +441,7 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransactionOptions(TransactionOptions other) : this() {
       excludeTxnFromChangeStreams_ = other.excludeTxnFromChangeStreams_;
+      isolationLevel_ = other.isolationLevel_;
       switch (other.ModeCase) {
         case ModeOneofCase.ReadWrite:
           ReadWrite = other.ReadWrite.Clone();
@@ -543,6 +548,21 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "isolation_level" field.</summary>
+    public const int IsolationLevelFieldNumber = 6;
+    private global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel isolationLevel_ = global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified;
+    /// <summary>
+    /// Isolation level for the transaction.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel IsolationLevel {
+      get { return isolationLevel_; }
+      set {
+        isolationLevel_ = value;
+      }
+    }
+
     private object mode_;
     /// <summary>Enum of possible cases for the "mode" oneof.</summary>
     public enum ModeOneofCase {
@@ -584,6 +604,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(PartitionedDml, other.PartitionedDml)) return false;
       if (!object.Equals(ReadOnly, other.ReadOnly)) return false;
       if (ExcludeTxnFromChangeStreams != other.ExcludeTxnFromChangeStreams) return false;
+      if (IsolationLevel != other.IsolationLevel) return false;
       if (ModeCase != other.ModeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -596,6 +617,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (modeCase_ == ModeOneofCase.PartitionedDml) hash ^= PartitionedDml.GetHashCode();
       if (modeCase_ == ModeOneofCase.ReadOnly) hash ^= ReadOnly.GetHashCode();
       if (ExcludeTxnFromChangeStreams != false) hash ^= ExcludeTxnFromChangeStreams.GetHashCode();
+      if (IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) hash ^= IsolationLevel.GetHashCode();
       hash ^= (int) modeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -631,6 +653,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(40);
         output.WriteBool(ExcludeTxnFromChangeStreams);
       }
+      if (IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) IsolationLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -657,6 +683,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(40);
         output.WriteBool(ExcludeTxnFromChangeStreams);
       }
+      if (IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) IsolationLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -679,6 +709,9 @@ namespace Google.Cloud.Spanner.V1 {
       if (ExcludeTxnFromChangeStreams != false) {
         size += 1 + 1;
       }
+      if (IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IsolationLevel);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -693,6 +726,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (other.ExcludeTxnFromChangeStreams != false) {
         ExcludeTxnFromChangeStreams = other.ExcludeTxnFromChangeStreams;
+      }
+      if (other.IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) {
+        IsolationLevel = other.IsolationLevel;
       }
       switch (other.ModeCase) {
         case ModeOneofCase.ReadWrite:
@@ -761,6 +797,10 @@ namespace Google.Cloud.Spanner.V1 {
             ExcludeTxnFromChangeStreams = input.ReadBool();
             break;
           }
+          case 48: {
+            IsolationLevel = (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -807,6 +847,10 @@ namespace Google.Cloud.Spanner.V1 {
             ExcludeTxnFromChangeStreams = input.ReadBool();
             break;
           }
+          case 48: {
+            IsolationLevel = (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -817,6 +861,44 @@ namespace Google.Cloud.Spanner.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// `IsolationLevel` is used when setting `isolation_level` for a transaction.
+      /// </summary>
+      public enum IsolationLevel {
+        /// <summary>
+        /// Default value.
+        ///
+        /// If the value is not specified, the `SERIALIZABLE` isolation level is
+        /// used.
+        /// </summary>
+        [pbr::OriginalName("ISOLATION_LEVEL_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// All transactions appear as if they executed in a serial order, even if
+        /// some of the reads, writes, and other operations of distinct transactions
+        /// actually occurred in parallel. Spanner assigns commit timestamps that
+        /// reflect the order of committed transactions to implement this property.
+        /// Spanner offers a stronger guarantee than serializability called external
+        /// consistency. For further details, please refer to
+        /// https://cloud.google.com/spanner/docs/true-time-external-consistency#serializability.
+        /// </summary>
+        [pbr::OriginalName("SERIALIZABLE")] Serializable = 1,
+        /// <summary>
+        /// All reads performed during the transaction observe a consistent snapshot
+        /// of the database, and the transaction will only successfully commit in the
+        /// absence of conflicts between its updates and any concurrent updates that
+        /// have occurred since that snapshot. Consequently, in contrast to
+        /// `SERIALIZABLE` transactions, only write-write conflicts are detected in
+        /// snapshot transactions.
+        ///
+        /// This isolation level does not support Read-only and Partitioned DML
+        /// transactions.
+        ///
+        /// When `REPEATABLE_READ` is specified on a read-write transaction, the
+        /// locking semantics default to `OPTIMISTIC`.
+        /// </summary>
+        [pbr::OriginalName("REPEATABLE_READ")] RepeatableRead = 2,
+      }
+
       /// <summary>
       /// Message type to initiate a read-write transaction. Currently this
       /// transaction type has no options.
@@ -1069,13 +1151,24 @@ namespace Google.Cloud.Spanner.V1 {
             /// <summary>
             /// Default value.
             ///
-            /// If the value is not specified, the pessimistic read lock is used.
+            /// * If isolation level is `REPEATABLE_READ`, then it is an error to
+            ///   specify `read_lock_mode`. Locking semantics default to `OPTIMISTIC`.
+            ///   No validation checks are done for reads, except for:
+            ///     1. reads done as part of queries that use `SELECT FOR UPDATE`
+            ///     2. reads done as part of statements with a `LOCK_SCANNED_RANGES`
+            ///        hint
+            ///     3. reads done as part of DML statements
+            ///   to validate that the data that was served at the snapshot time is
+            ///   unchanged at commit time.
+            /// * At all other isolation levels, if `read_lock_mode` is the default
+            ///   value, then pessimistic read lock is used.
             /// </summary>
             [pbr::OriginalName("READ_LOCK_MODE_UNSPECIFIED")] Unspecified = 0,
             /// <summary>
             /// Pessimistic lock mode.
             ///
             /// Read locks are acquired immediately on read.
+            /// Semantics described only applies to `SERIALIZABLE` isolation.
             /// </summary>
             [pbr::OriginalName("PESSIMISTIC")] Pessimistic = 1,
             /// <summary>
@@ -1084,6 +1177,7 @@ namespace Google.Cloud.Spanner.V1 {
             /// Locks for reads within the transaction are not acquired on read.
             /// Instead the locks are acquired on a commit to validate that
             /// read/queried data has not changed since the transaction started.
+            /// Semantics described only applies to `SERIALIZABLE` isolation.
             /// </summary>
             [pbr::OriginalName("OPTIMISTIC")] Optimistic = 2,
           }
