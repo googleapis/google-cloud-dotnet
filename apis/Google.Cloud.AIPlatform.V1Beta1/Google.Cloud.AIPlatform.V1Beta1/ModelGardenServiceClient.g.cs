@@ -50,6 +50,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetPublisherModelSettings = existing.GetPublisherModelSettings;
             ListPublisherModelsSettings = existing.ListPublisherModelsSettings;
+            DeploySettings = existing.DeploySettings;
+            DeployOperationsSettings = existing.DeployOperationsSettings.Clone();
             DeployPublisherModelSettings = existing.DeployPublisherModelSettings;
             DeployPublisherModelOperationsSettings = existing.DeployPublisherModelOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
@@ -84,6 +86,36 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListPublisherModelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelGardenServiceClient.Deploy</c> and <c>ModelGardenServiceClient.DeployAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeploySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ModelGardenServiceClient.Deploy</c> and
+        /// <c>ModelGardenServiceClient.DeployAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeployOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -480,6 +512,59 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary>
+        /// Deploys a model to a new endpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeployResponse, DeployOperationMetadata> Deploy(DeployRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deploys a model to a new endpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployResponse, DeployOperationMetadata>> DeployAsync(DeployRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deploys a model to a new endpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeployResponse, DeployOperationMetadata>> DeployAsync(DeployRequest request, st::CancellationToken cancellationToken) =>
+            DeployAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Deploy</c>.</summary>
+        public virtual lro::OperationsClient DeployOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Deploy</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeployResponse, DeployOperationMetadata> PollOnceDeploy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeployResponse, DeployOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Deploy</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeployResponse, DeployOperationMetadata>> PollOnceDeployAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeployResponse, DeployOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployOperationsClient, callSettings);
+
+        /// <summary>
         /// Deploys publisher models.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -544,6 +629,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<ListPublisherModelsRequest, ListPublisherModelsResponse> _callListPublisherModels;
 
+        private readonly gaxgrpc::ApiCall<DeployRequest, lro::Operation> _callDeploy;
+
         private readonly gaxgrpc::ApiCall<DeployPublisherModelRequest, lro::Operation> _callDeployPublisherModel;
 
         /// <summary>
@@ -561,6 +648,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            DeployOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployOperationsSettings, logger);
             DeployPublisherModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployPublisherModelOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
@@ -570,6 +658,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callListPublisherModels = clientHelper.BuildApiCall<ListPublisherModelsRequest, ListPublisherModelsResponse>("ListPublisherModels", grpcClient.ListPublisherModelsAsync, grpcClient.ListPublisherModels, effectiveSettings.ListPublisherModelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListPublisherModels);
             Modify_ListPublisherModelsApiCall(ref _callListPublisherModels);
+            _callDeploy = clientHelper.BuildApiCall<DeployRequest, lro::Operation>("Deploy", grpcClient.DeployAsync, grpcClient.Deploy, effectiveSettings.DeploySettings).WithGoogleRequestParam("destination", request => request.Destination);
+            Modify_ApiCall(ref _callDeploy);
+            Modify_DeployApiCall(ref _callDeploy);
             _callDeployPublisherModel = clientHelper.BuildApiCall<DeployPublisherModelRequest, lro::Operation>("DeployPublisherModel", grpcClient.DeployPublisherModelAsync, grpcClient.DeployPublisherModel, effectiveSettings.DeployPublisherModelSettings).WithGoogleRequestParam("destination", request => request.Destination);
             Modify_ApiCall(ref _callDeployPublisherModel);
             Modify_DeployPublisherModelApiCall(ref _callDeployPublisherModel);
@@ -581,6 +672,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetPublisherModelApiCall(ref gaxgrpc::ApiCall<GetPublisherModelRequest, PublisherModel> call);
 
         partial void Modify_ListPublisherModelsApiCall(ref gaxgrpc::ApiCall<ListPublisherModelsRequest, ListPublisherModelsResponse> call);
+
+        partial void Modify_DeployApiCall(ref gaxgrpc::ApiCall<DeployRequest, lro::Operation> call);
 
         partial void Modify_DeployPublisherModelApiCall(ref gaxgrpc::ApiCall<DeployPublisherModelRequest, lro::Operation> call);
 
@@ -598,6 +691,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetPublisherModelRequest(ref GetPublisherModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListPublisherModelsRequest(ref ListPublisherModelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeployRequest(ref DeployRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeployPublisherModelRequest(ref DeployPublisherModelRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -647,6 +742,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_ListPublisherModelsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPublisherModelsRequest, ListPublisherModelsResponse, PublisherModel>(_callListPublisherModels, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>Deploy</c>.</summary>
+        public override lro::OperationsClient DeployOperationsClient { get; }
+
+        /// <summary>
+        /// Deploys a model to a new endpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeployResponse, DeployOperationMetadata> Deploy(DeployRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployRequest(ref request, ref callSettings);
+            return new lro::Operation<DeployResponse, DeployOperationMetadata>(_callDeploy.Sync(request, callSettings), DeployOperationsClient);
+        }
+
+        /// <summary>
+        /// Deploys a model to a new endpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeployResponse, DeployOperationMetadata>> DeployAsync(DeployRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeployRequest(ref request, ref callSettings);
+            return new lro::Operation<DeployResponse, DeployOperationMetadata>(await _callDeploy.Async(request, callSettings).ConfigureAwait(false), DeployOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeployPublisherModel</c>.</summary>
