@@ -33,5 +33,5 @@ public interface IGoogleCloudConsoleLogAugmenter
     /// but <see cref="Utf8JsonWriter.WriteEndObject" /> is yet to be called for the top level JSON object.
     /// Do not call <see cref="Utf8JsonWriter.WriteEndObject" /> for the top level JSON object.
     /// </param>
-    void AugmentLog<T>(LogEntry<T> logEntry, Utf8JsonWriter writer);
+    void AugmentFormattedLogEntry<TState>(in LogEntry<TState> logEntry, Utf8JsonWriter writer);
 }

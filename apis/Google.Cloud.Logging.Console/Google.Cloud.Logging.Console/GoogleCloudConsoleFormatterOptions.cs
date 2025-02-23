@@ -42,14 +42,9 @@ public class GoogleCloudConsoleFormatterOptions : ConsoleFormatterOptions
     public string TraceGoogleCloudProjectId { get; set; }
 
     /// <summary>
-    /// Optional log augmenter to add additional information to log entry formatting.
-    /// 
-    /// <remarks>
-    /// This property is optional. When set, the log augmenter is called for each log entry to add custom information to the
-    /// top level `jsonPayload` log entry.
-    /// May be used to add application specific information to log entries, e.g. hints to the Google error reporting system
-    /// (see <see href="https://cloud.google.com/error-reporting/docs/formatting-error-messages#log-text">Log a text message</see>).
-    /// </remarks>
+    /// Allows augmenting formatted log entries with information not included by
+    /// <see cref="GoogleCloudConsoleFormatter"/>. May be null.
+    /// If set, the <see cref="IGoogleCloudConsoleLogAugmenter.AugmentFormattedLogEntry" /> will be called for each formatted entry.
     /// </summary>
     public IGoogleCloudConsoleLogAugmenter LogAugmenter { get; set; }
 }
