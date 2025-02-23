@@ -17,18 +17,21 @@ using System.Text.Json;
 
 namespace Google.Cloud.Logging.Console;
 
-
 /// <summary>
-/// Interface for augmenting log entry formatting with custom information.
-/// <cref>AugmentLog</cref> is called for each log entry to add custom information to the log entry formatting.
+/// Allows augmenting formatted log entries with information not included by <see cref="GoogleCloudConsoleFormatter"/>.
 /// </summary>
 public interface IGoogleCloudConsoleLogAugmenter
 {
     /// <summary>
-    /// Augments the log entry formatting with custom information.
+    /// Augments the formatted log entry with information not included by <see cref="GoogleCloudConsoleFormatter"/>.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="logEntry"></param>
-    /// <param name="writer"></param>
+    /// <typeparam name="TState">The type of the state information attached to the log entry.</typeparam>
+    /// <param name="logEntry">The log entry that's being formatted.</param>
+    /// <param name="writer">
+    /// The JSON writer containing the start of the formatted log entry, meaning that
+    /// <see cref="Utf8JsonWriter.WriteStartObject" /> has been called for the top level JSON object and some fields have been written
+    /// but <see cref="Utf8JsonWriter.WriteEndObject" /> is yet to be called for the top level JSON object.
+    /// Do not call <see cref="Utf8JsonWriter.WriteEndObject" /> for the top level JSON object.
+    /// </param>
     void AugmentLog<T>(LogEntry<T> logEntry, Utf8JsonWriter writer);
 }
