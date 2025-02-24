@@ -28,7 +28,7 @@
     },
     {
       "id": "google/chat/v1",
-      "lastGeneratedCommit": "60bab918c62a0fbcab7f05318b999751d40019bb",
+      "lastGeneratedCommit": "07f74b10a2d80004bcd1ef56b8498dd6cd3002ee",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "id": "google/cloud/aiplatform/v1",
-      "lastGeneratedCommit": "9a61deddf9bdccd92bc6701f26334f15857e853b",
+      "lastGeneratedCommit": "de1e1c0eef95687b8dc8b81be6417a4b3f7e3924",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -173,7 +173,7 @@
     },
     {
       "id": "google/cloud/batch/v1",
-      "lastGeneratedCommit": "f7314d1e02e7651b33985c65c2d268de7fbacc1e",
+      "lastGeneratedCommit": "d383e2fe6661b29ea0def03c3900080ba953dd26",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -293,7 +293,7 @@
     },
     {
       "id": "google/devtools/cloudbuild/v1",
-      "lastGeneratedCommit": "fd5b486367b0cf4ecf616ea2677dfa14f83a71c6",
+      "lastGeneratedCommit": "da30f52583f070f676ed886ed9e33d84a646f74c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -423,7 +423,7 @@
     },
     {
       "id": "google/cloud/deploy/v1",
-      "lastGeneratedCommit": "99a5e296c891faa79784687422b9d555bcf54a3f",
+      "lastGeneratedCommit": "04132de0b952ee921d91a2583915dbd82d10cd3c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -448,7 +448,7 @@
     },
     {
       "id": "google/cloud/dialogflow/v2beta1",
-      "lastGeneratedCommit": "7dd0554109b347addff64d4bed93903e6ff4e18a",
+      "lastGeneratedCommit": "46d2cb13723e894090b72cc00f2a430543b52d7a",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -898,7 +898,7 @@
     },
     {
       "id": "google/cloud/secretmanager/v1",
-      "lastGeneratedCommit": "8c9639ac76d6f08df5b3c2c0aa759cab126bbba5",
+      "lastGeneratedCommit": "f970e6c4b34b1b2ec778675e0ff94f5508ae23dd",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -988,7 +988,7 @@
     },
     {
       "id": "google/spanner/admin/database/v1",
-      "lastGeneratedCommit": "d57f2c114b2d1d3db7fa71a1333d72129f8fd1ae",
+      "lastGeneratedCommit": "1185fe543e0cd1392ebd6ce6a330139186959a94",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
