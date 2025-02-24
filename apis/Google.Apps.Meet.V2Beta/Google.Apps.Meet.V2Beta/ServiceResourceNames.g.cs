@@ -31,6 +31,18 @@ namespace Google.Apps.Meet.V2Beta
         }
     }
 
+    public partial class ConnectActiveConferenceRequest
+    {
+        /// <summary>
+        /// <see cref="gamv::SpaceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gamv::SpaceName SpaceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gamv::SpaceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class EndActiveConferenceRequest
     {
         /// <summary>

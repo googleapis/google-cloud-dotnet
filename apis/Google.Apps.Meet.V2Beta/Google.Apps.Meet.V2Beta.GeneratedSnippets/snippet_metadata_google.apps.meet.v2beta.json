@@ -4104,6 +4104,293 @@
       ]
     },
     {
+      "regionTag": "meet_v2beta_generated_SpacesService_ConnectActiveConference_sync",
+      "title": "ConnectActiveConferenceRequestObject",
+      "description": "Snippet for ConnectActiveConference",
+      "file": "SpacesServiceClient.ConnectActiveConferenceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConnectActiveConference",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ConnectActiveConference",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ConnectActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ConnectActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ConnectActiveConference_async",
+      "title": "ConnectActiveConferenceRequestObjectAsync",
+      "description": "Snippet for ConnectActiveConferenceAsync",
+      "file": "SpacesServiceClient.ConnectActiveConferenceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConnectActiveConferenceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ConnectActiveConferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ConnectActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ConnectActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ConnectActiveConference_sync_flattened",
+      "title": "ConnectActiveConference",
+      "description": "Snippet for ConnectActiveConference",
+      "file": "SpacesServiceClient.ConnectActiveConferenceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConnectActiveConference",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ConnectActiveConference",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ConnectActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ConnectActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ConnectActiveConference_async_flattened",
+      "title": "ConnectActiveConferenceAsync",
+      "description": "Snippet for ConnectActiveConferenceAsync",
+      "file": "SpacesServiceClient.ConnectActiveConferenceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConnectActiveConferenceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ConnectActiveConferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ConnectActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ConnectActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ConnectActiveConference_sync_flattened_resourceNames",
+      "title": "ConnectActiveConferenceResourceNames",
+      "description": "Snippet for ConnectActiveConference",
+      "file": "SpacesServiceClient.ConnectActiveConferenceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConnectActiveConference",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ConnectActiveConference",
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ConnectActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ConnectActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "meet_v2beta_generated_SpacesService_ConnectActiveConference_async_flattened_resourceNames",
+      "title": "ConnectActiveConferenceResourceNamesAsync",
+      "description": "Snippet for ConnectActiveConferenceAsync",
+      "file": "SpacesServiceClient.ConnectActiveConferenceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ConnectActiveConferenceAsync",
+        "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient.ConnectActiveConferenceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Meet.V2Beta.SpaceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse>",
+        "client": {
+          "shortName": "SpacesServiceClient",
+          "fullName": "Google.Apps.Meet.V2Beta.SpacesServiceClient"
+        },
+        "method": {
+          "shortName": "ConnectActiveConference",
+          "fullName": "google.apps.meet.v2beta.SpacesService.ConnectActiveConference",
+          "service": {
+            "shortName": "SpacesService",
+            "fullName": "google.apps.meet.v2beta.SpacesService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "meet_v2beta_generated_SpacesService_EndActiveConference_sync",
       "title": "EndActiveConferenceRequestObject",
       "description": "Snippet for EndActiveConference",

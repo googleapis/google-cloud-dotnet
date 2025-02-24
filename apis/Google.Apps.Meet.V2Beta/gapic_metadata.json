@@ -91,6 +91,12 @@
         "grpc": {
           "libraryClient": "SpacesServiceClient",
           "rpcs": {
+            "ConnectActiveConference": {
+              "methods": [
+                "ConnectActiveConference",
+                "ConnectActiveConferenceAsync"
+              ]
+            },
             "CreateMember": {
               "methods": [
                 "CreateMember",
