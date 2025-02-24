@@ -49,6 +49,7 @@ namespace Google.Apps.Meet.V2Beta
             CreateSpaceSettings = existing.CreateSpaceSettings;
             GetSpaceSettings = existing.GetSpaceSettings;
             UpdateSpaceSettings = existing.UpdateSpaceSettings;
+            ConnectActiveConferenceSettings = existing.ConnectActiveConferenceSettings;
             EndActiveConferenceSettings = existing.EndActiveConferenceSettings;
             CreateMemberSettings = existing.CreateMemberSettings;
             GetMemberSettings = existing.GetMemberSettings;
@@ -100,6 +101,19 @@ namespace Google.Apps.Meet.V2Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateSpaceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpacesServiceClient.ConnectActiveConference</c> and <c>SpacesServiceClient.ConnectActiveConferenceAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ConnectActiveConferenceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -234,6 +248,13 @@ namespace Google.Apps.Meet.V2Beta
         /// <remarks>
         /// The default SpacesService scopes are:
         /// <list type="bullet">
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/meetings.conference.media.audio.readonly</description>
+        /// </item>
+        /// <item><description>https://www.googleapis.com/auth/meetings.conference.media.readonly</description></item>
+        /// <item>
+        /// <description>https://www.googleapis.com/auth/meetings.conference.media.video.readonly</description>
+        /// </item>
         /// <item><description>https://www.googleapis.com/auth/meetings.space.created</description></item>
         /// <item><description>https://www.googleapis.com/auth/meetings.space.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/meetings.space.settings</description></item>
@@ -241,6 +262,9 @@ namespace Google.Apps.Meet.V2Beta
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/meetings.conference.media.audio.readonly",
+            "https://www.googleapis.com/auth/meetings.conference.media.readonly",
+            "https://www.googleapis.com/auth/meetings.conference.media.video.readonly",
             "https://www.googleapis.com/auth/meetings.space.created",
             "https://www.googleapis.com/auth/meetings.space.readonly",
             "https://www.googleapis.com/auth/meetings.space.settings",
@@ -718,6 +742,198 @@ namespace Google.Apps.Meet.V2Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Space> UpdateSpaceAsync(Space space, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateSpaceAsync(space, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConnectActiveConferenceResponse ConnectActiveConference(ConnectActiveConferenceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(ConnectActiveConferenceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(ConnectActiveConferenceRequest request, st::CancellationToken cancellationToken) =>
+            ConnectActiveConferenceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space.
+        /// Format: spaces/{spaceId}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConnectActiveConferenceResponse ConnectActiveConference(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ConnectActiveConference(new ConnectActiveConferenceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space.
+        /// Format: spaces/{spaceId}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ConnectActiveConferenceAsync(new ConnectActiveConferenceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space.
+        /// Format: spaces/{spaceId}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(string name, st::CancellationToken cancellationToken) =>
+            ConnectActiveConferenceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space.
+        /// Format: spaces/{spaceId}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ConnectActiveConferenceResponse ConnectActiveConference(SpaceName name, gaxgrpc::CallSettings callSettings = null) =>
+            ConnectActiveConference(new ConnectActiveConferenceRequest
+            {
+                SpaceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space.
+        /// Format: spaces/{spaceId}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(SpaceName name, gaxgrpc::CallSettings callSettings = null) =>
+            ConnectActiveConferenceAsync(new ConnectActiveConferenceRequest
+            {
+                SpaceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Resource name of the space.
+        /// Format: spaces/{spaceId}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(SpaceName name, st::CancellationToken cancellationToken) =>
+            ConnectActiveConferenceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Ends an active conference (if there's one).
@@ -1552,6 +1768,8 @@ namespace Google.Apps.Meet.V2Beta
 
         private readonly gaxgrpc::ApiCall<UpdateSpaceRequest, Space> _callUpdateSpace;
 
+        private readonly gaxgrpc::ApiCall<ConnectActiveConferenceRequest, ConnectActiveConferenceResponse> _callConnectActiveConference;
+
         private readonly gaxgrpc::ApiCall<EndActiveConferenceRequest, wkt::Empty> _callEndActiveConference;
 
         private readonly gaxgrpc::ApiCall<CreateMemberRequest, Member> _callCreateMember;
@@ -1586,6 +1804,9 @@ namespace Google.Apps.Meet.V2Beta
             _callUpdateSpace = clientHelper.BuildApiCall<UpdateSpaceRequest, Space>("UpdateSpace", grpcClient.UpdateSpaceAsync, grpcClient.UpdateSpace, effectiveSettings.UpdateSpaceSettings).WithGoogleRequestParam("space.name", request => request.Space?.Name);
             Modify_ApiCall(ref _callUpdateSpace);
             Modify_UpdateSpaceApiCall(ref _callUpdateSpace);
+            _callConnectActiveConference = clientHelper.BuildApiCall<ConnectActiveConferenceRequest, ConnectActiveConferenceResponse>("ConnectActiveConference", grpcClient.ConnectActiveConferenceAsync, grpcClient.ConnectActiveConference, effectiveSettings.ConnectActiveConferenceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callConnectActiveConference);
+            Modify_ConnectActiveConferenceApiCall(ref _callConnectActiveConference);
             _callEndActiveConference = clientHelper.BuildApiCall<EndActiveConferenceRequest, wkt::Empty>("EndActiveConference", grpcClient.EndActiveConferenceAsync, grpcClient.EndActiveConference, effectiveSettings.EndActiveConferenceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callEndActiveConference);
             Modify_EndActiveConferenceApiCall(ref _callEndActiveConference);
@@ -1612,6 +1833,8 @@ namespace Google.Apps.Meet.V2Beta
 
         partial void Modify_UpdateSpaceApiCall(ref gaxgrpc::ApiCall<UpdateSpaceRequest, Space> call);
 
+        partial void Modify_ConnectActiveConferenceApiCall(ref gaxgrpc::ApiCall<ConnectActiveConferenceRequest, ConnectActiveConferenceResponse> call);
+
         partial void Modify_EndActiveConferenceApiCall(ref gaxgrpc::ApiCall<EndActiveConferenceRequest, wkt::Empty> call);
 
         partial void Modify_CreateMemberApiCall(ref gaxgrpc::ApiCall<CreateMemberRequest, Member> call);
@@ -1632,6 +1855,8 @@ namespace Google.Apps.Meet.V2Beta
         partial void Modify_GetSpaceRequest(ref GetSpaceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateSpaceRequest(ref UpdateSpaceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ConnectActiveConferenceRequest(ref ConnectActiveConferenceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_EndActiveConferenceRequest(ref EndActiveConferenceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1725,6 +1950,48 @@ namespace Google.Apps.Meet.V2Beta
         {
             Modify_UpdateSpaceRequest(ref request, ref callSettings);
             return _callUpdateSpace.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ConnectActiveConferenceResponse ConnectActiveConference(ConnectActiveConferenceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ConnectActiveConferenceRequest(ref request, ref callSettings);
+            return _callConnectActiveConference.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// [Developer Preview](https://developers.google.com/workspace/preview):
+        /// Broker a WebRTC connection to the active conference of a space.
+        /// 
+        /// On success, clients must use the resulting SDP (Session Description
+        /// Protocol) answer to establish a WebRTC connection. Once connected,
+        /// additional functionality is available across WebRTC data channels.
+        /// 
+        /// See [Meet Media API
+        /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+        /// more details about this connection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(ConnectActiveConferenceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ConnectActiveConferenceRequest(ref request, ref callSettings);
+            return _callConnectActiveConference.Async(request, callSettings);
         }
 
         /// <summary>

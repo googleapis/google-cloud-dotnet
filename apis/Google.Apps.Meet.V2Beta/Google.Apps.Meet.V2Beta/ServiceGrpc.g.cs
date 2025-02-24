@@ -72,6 +72,10 @@ namespace Google.Apps.Meet.V2Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.UpdateSpaceRequest> __Marshaller_google_apps_meet_v2beta_UpdateSpaceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.UpdateSpaceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest> __Marshaller_google_apps_meet_v2beta_ConnectActiveConferenceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse> __Marshaller_google_apps_meet_v2beta_ConnectActiveConferenceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest> __Marshaller_google_apps_meet_v2beta_EndActiveConferenceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
@@ -111,6 +115,14 @@ namespace Google.Apps.Meet.V2Beta {
         "UpdateSpace",
         __Marshaller_google_apps_meet_v2beta_UpdateSpaceRequest,
         __Marshaller_google_apps_meet_v2beta_Space);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest, global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse> __Method_ConnectActiveConference = new grpc::Method<global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest, global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ConnectActiveConference",
+        __Marshaller_google_apps_meet_v2beta_ConnectActiveConferenceRequest,
+        __Marshaller_google_apps_meet_v2beta_ConnectActiveConferenceResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_EndActiveConference = new grpc::Method<global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -200,6 +212,27 @@ namespace Google.Apps.Meet.V2Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2Beta.Space> UpdateSpace(global::Google.Apps.Meet.V2Beta.UpdateSpaceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Broker a WebRTC connection to the active conference of a space.
+      ///
+      /// On success, clients must use the resulting SDP (Session Description
+      /// Protocol) answer to establish a WebRTC connection. Once connected,
+      /// additional functionality is available across WebRTC data channels.
+      ///
+      /// See [Meet Media API
+      /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+      /// more details about this connection.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse> ConnectActiveConference(global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -482,6 +515,90 @@ namespace Google.Apps.Meet.V2Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.Space> UpdateSpaceAsync(global::Google.Apps.Meet.V2Beta.UpdateSpaceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSpace, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Broker a WebRTC connection to the active conference of a space.
+      ///
+      /// On success, clients must use the resulting SDP (Session Description
+      /// Protocol) answer to establish a WebRTC connection. Once connected,
+      /// additional functionality is available across WebRTC data channels.
+      ///
+      /// See [Meet Media API
+      /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+      /// more details about this connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse ConnectActiveConference(global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ConnectActiveConference(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Broker a WebRTC connection to the active conference of a space.
+      ///
+      /// On success, clients must use the resulting SDP (Session Description
+      /// Protocol) answer to establish a WebRTC connection. Once connected,
+      /// additional functionality is available across WebRTC data channels.
+      ///
+      /// See [Meet Media API
+      /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+      /// more details about this connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse ConnectActiveConference(global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ConnectActiveConference, null, options, request);
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Broker a WebRTC connection to the active conference of a space.
+      ///
+      /// On success, clients must use the resulting SDP (Session Description
+      /// Protocol) answer to establish a WebRTC connection. Once connected,
+      /// additional functionality is available across WebRTC data channels.
+      ///
+      /// See [Meet Media API
+      /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+      /// more details about this connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ConnectActiveConferenceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// [Developer Preview](https://developers.google.com/workspace/preview):
+      /// Broker a WebRTC connection to the active conference of a space.
+      ///
+      /// On success, clients must use the resulting SDP (Session Description
+      /// Protocol) answer to establish a WebRTC connection. Once connected,
+      /// additional functionality is available across WebRTC data channels.
+      ///
+      /// See [Meet Media API
+      /// overview](https://developers.google.com/meet/media-api/guides/overview) for
+      /// more details about this connection.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse> ConnectActiveConferenceAsync(global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ConnectActiveConference, null, options, request);
       }
       /// <summary>
       /// Ends an active conference (if there's one).
@@ -828,6 +945,7 @@ namespace Google.Apps.Meet.V2Beta {
           .AddMethod(__Method_CreateSpace, serviceImpl.CreateSpace)
           .AddMethod(__Method_GetSpace, serviceImpl.GetSpace)
           .AddMethod(__Method_UpdateSpace, serviceImpl.UpdateSpace)
+          .AddMethod(__Method_ConnectActiveConference, serviceImpl.ConnectActiveConference)
           .AddMethod(__Method_EndActiveConference, serviceImpl.EndActiveConference)
           .AddMethod(__Method_CreateMember, serviceImpl.CreateMember)
           .AddMethod(__Method_GetMember, serviceImpl.GetMember)
@@ -845,6 +963,7 @@ namespace Google.Apps.Meet.V2Beta {
       serviceBinder.AddMethod(__Method_CreateSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.CreateSpaceRequest, global::Google.Apps.Meet.V2Beta.Space>(serviceImpl.CreateSpace));
       serviceBinder.AddMethod(__Method_GetSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.GetSpaceRequest, global::Google.Apps.Meet.V2Beta.Space>(serviceImpl.GetSpace));
       serviceBinder.AddMethod(__Method_UpdateSpace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.UpdateSpaceRequest, global::Google.Apps.Meet.V2Beta.Space>(serviceImpl.UpdateSpace));
+      serviceBinder.AddMethod(__Method_ConnectActiveConference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceRequest, global::Google.Apps.Meet.V2Beta.ConnectActiveConferenceResponse>(serviceImpl.ConnectActiveConference));
       serviceBinder.AddMethod(__Method_EndActiveConference, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.EndActiveConferenceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.EndActiveConference));
       serviceBinder.AddMethod(__Method_CreateMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.CreateMemberRequest, global::Google.Apps.Meet.V2Beta.Member>(serviceImpl.CreateMember));
       serviceBinder.AddMethod(__Method_GetMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Meet.V2Beta.GetMemberRequest, global::Google.Apps.Meet.V2Beta.Member>(serviceImpl.GetMember));

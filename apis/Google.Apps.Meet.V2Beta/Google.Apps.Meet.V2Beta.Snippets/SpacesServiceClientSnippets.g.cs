@@ -231,6 +231,95 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ConnectActiveConference</summary>
+        public void ConnectActiveConferenceRequestObject()
+        {
+            // Snippet: ConnectActiveConference(ConnectActiveConferenceRequest, CallSettings)
+            // Create client
+            SpacesServiceClient spacesServiceClient = SpacesServiceClient.Create();
+            // Initialize request argument(s)
+            ConnectActiveConferenceRequest request = new ConnectActiveConferenceRequest
+            {
+                SpaceName = SpaceName.FromSpace("[SPACE]"),
+                Offer = "",
+            };
+            // Make the request
+            ConnectActiveConferenceResponse response = spacesServiceClient.ConnectActiveConference(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConnectActiveConferenceAsync</summary>
+        public async Task ConnectActiveConferenceRequestObjectAsync()
+        {
+            // Snippet: ConnectActiveConferenceAsync(ConnectActiveConferenceRequest, CallSettings)
+            // Additional: ConnectActiveConferenceAsync(ConnectActiveConferenceRequest, CancellationToken)
+            // Create client
+            SpacesServiceClient spacesServiceClient = await SpacesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ConnectActiveConferenceRequest request = new ConnectActiveConferenceRequest
+            {
+                SpaceName = SpaceName.FromSpace("[SPACE]"),
+                Offer = "",
+            };
+            // Make the request
+            ConnectActiveConferenceResponse response = await spacesServiceClient.ConnectActiveConferenceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConnectActiveConference</summary>
+        public void ConnectActiveConference()
+        {
+            // Snippet: ConnectActiveConference(string, CallSettings)
+            // Create client
+            SpacesServiceClient spacesServiceClient = SpacesServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "spaces/[SPACE]";
+            // Make the request
+            ConnectActiveConferenceResponse response = spacesServiceClient.ConnectActiveConference(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConnectActiveConferenceAsync</summary>
+        public async Task ConnectActiveConferenceAsync()
+        {
+            // Snippet: ConnectActiveConferenceAsync(string, CallSettings)
+            // Additional: ConnectActiveConferenceAsync(string, CancellationToken)
+            // Create client
+            SpacesServiceClient spacesServiceClient = await SpacesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "spaces/[SPACE]";
+            // Make the request
+            ConnectActiveConferenceResponse response = await spacesServiceClient.ConnectActiveConferenceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConnectActiveConference</summary>
+        public void ConnectActiveConferenceResourceNames()
+        {
+            // Snippet: ConnectActiveConference(SpaceName, CallSettings)
+            // Create client
+            SpacesServiceClient spacesServiceClient = SpacesServiceClient.Create();
+            // Initialize request argument(s)
+            SpaceName name = SpaceName.FromSpace("[SPACE]");
+            // Make the request
+            ConnectActiveConferenceResponse response = spacesServiceClient.ConnectActiveConference(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConnectActiveConferenceAsync</summary>
+        public async Task ConnectActiveConferenceResourceNamesAsync()
+        {
+            // Snippet: ConnectActiveConferenceAsync(SpaceName, CallSettings)
+            // Additional: ConnectActiveConferenceAsync(SpaceName, CancellationToken)
+            // Create client
+            SpacesServiceClient spacesServiceClient = await SpacesServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpaceName name = SpaceName.FromSpace("[SPACE]");
+            // Make the request
+            ConnectActiveConferenceResponse response = await spacesServiceClient.ConnectActiveConferenceAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for EndActiveConference</summary>
         public void EndActiveConferenceRequestObject()
         {
