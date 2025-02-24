@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System;
 using Google.Api.Gax;
 using Google.Apis.Storage.v1.Data;
-using System;
 
 namespace Google.Cloud.Storage.V1
 {

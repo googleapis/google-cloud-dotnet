@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Collections.Generic;
 using Google.Api.Gax;
 using Google.Api.Gax.Rest;
 using Google.Apis.Storage.v1;
 using Google.Apis.Storage.v1.Data;
-using System.Collections.Generic;
 
 namespace Google.Cloud.Storage.V1
 {
