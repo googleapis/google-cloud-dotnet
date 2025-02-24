@@ -28,6 +28,7 @@ public sealed class AggregateQuerySnapshot : IEquatable<AggregateQuerySnapshot>,
     /// The data within the snapshot. This is a MapField as that provides equality and hashing out of the box.
     /// </summary>
     private readonly MapField<string, Value> _data;
+    private readonly Timestamp? _readTime;
 
     /// <summary>
     /// The query producing this snapshot.
@@ -37,7 +38,7 @@ public sealed class AggregateQuerySnapshot : IEquatable<AggregateQuerySnapshot>,
     /// <summary>
     /// The time at which the snapshot was read.
     /// </summary>
-    public Timestamp ReadTime { get; }
+    public Timestamp ReadTime => _readTime ?? throw new InvalidOperationException("No read time available");
 
     /// <summary>
     /// Number of documents that matches the query. May be null when count aggregation is not applied on the Query.
@@ -47,10 +48,10 @@ public sealed class AggregateQuerySnapshot : IEquatable<AggregateQuerySnapshot>,
         value.ValueTypeCase == Value.ValueTypeOneofCase.IntegerValue
         ? value.IntegerValue : null;
 
-    internal AggregateQuerySnapshot(AggregateQuery query, Timestamp readTime, MapField<string, Value> data)
+    internal AggregateQuerySnapshot(AggregateQuery query, Timestamp? readTime, MapField<string, Value> data)
     {
         Query = query;
-        ReadTime = readTime;
+        _readTime = readTime;
         _data = data;
     }
 
