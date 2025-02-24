@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using Xunit;
 
 namespace Google.Cloud.Storage.V1.IntegrationTests;
+
 [Collection(nameof(StorageFixture))]
 public class GetBucketTest
 {
