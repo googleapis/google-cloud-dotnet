@@ -40,4 +40,11 @@ public class GoogleCloudConsoleFormatterOptions : ConsoleFormatterOptions
     /// Note that when running your code in Google Cloud, for instance in Google Cloud Run, trace information is automatically collected and exported by the runtime.
     /// </remarks>
     public string TraceGoogleCloudProjectId { get; set; }
+
+    /// <summary>
+    /// Allows augmenting formatted log entries with information not included by
+    /// <see cref="GoogleCloudConsoleFormatter"/>. May be null.
+    /// If set, the <see cref="IGoogleCloudConsoleLogAugmenter.AugmentFormattedLogEntry" /> will be called for each formatted entry.
+    /// </summary>
+    public IGoogleCloudConsoleLogAugmenter LogAugmenter { get; set; }
 }
