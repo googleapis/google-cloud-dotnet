@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.16.0, released 2025-02-25
+
+### New features
+
+- Support PQC asymmetric signing algorithms ML_DSA_65 and SLH_DSA_SHA2_128s ([commit 0f261f0](https://github.com/googleapis/google-cloud-dotnet/commit/0f261f0ccd662035e9eabd289b64aeb1271d5c59))
+- Add a PublicKeyFormat enum to allow specifying the format the public is going to be exported in ([commit 0f261f0](https://github.com/googleapis/google-cloud-dotnet/commit/0f261f0ccd662035e9eabd289b64aeb1271d5c59))
+
+### Documentation improvements
+
+- Modify enum comment ([commit 0cf6e5b](https://github.com/googleapis/google-cloud-dotnet/commit/0cf6e5bb7fbbcaffa670bc844b1cd517c92dd01b))
+- Code documentation improvements ([commit 87c4799](https://github.com/googleapis/google-cloud-dotnet/commit/87c479909782d2cc1859dd94652cb8507933c9f2))
+- A comment for enum `CryptoKeyVersionAlgorithm` is changed ([commit d7e6cd5](https://github.com/googleapis/google-cloud-dotnet/commit/d7e6cd5afe2c0b14d09dcd9a41cd5edb676bc741))
+
 ## Version 3.15.0, released 2024-10-30
 
 ### Documentation improvements
