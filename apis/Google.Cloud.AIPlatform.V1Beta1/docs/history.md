@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta18, released 2025-02-25
+
+### New features
+
+- Add Model Garden deploy API ([commit 9c643e2](https://github.com/googleapis/google-cloud-dotnet/commit/9c643e2f174f62596dd09404a4c2e22e1bdfebd1))
+
 ## Version 1.0.0-beta17, released 2025-02-10
 
 ### New features
