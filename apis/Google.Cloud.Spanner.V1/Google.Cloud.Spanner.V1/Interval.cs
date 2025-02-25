@@ -68,7 +68,7 @@ namespace Google.Cloud.Spanner.V1
         public static Interval FromIso8601String(string intervalString)
         {
             const int Years = 1, Months = 2, Days = 3, Hours = 5, Minutes = 6, Seconds = 7;
-            HashSet<int> groupNames = new HashSet<int>{Years, Months, Days, Hours, Minutes, Seconds};
+            HashSet<int> groupNames = new HashSet<int> { Years, Months, Days, Hours, Minutes, Seconds };
             string isoPattern = @"^P(?!$)(-?\d+Y)?(-?\d+M)?(-?\d+D)?(T(?=-?.?\d)(-?\d+H)?(-?\d+M)?(-?(((\d*)((\.|,)\d{1,9})?)|(\.\d{1,9}))S)?)?$";
 
             int calculatedMonths = 0;
@@ -76,25 +76,30 @@ namespace Google.Cloud.Spanner.V1
             BigInteger calculatedNanoseconds = 0;
 
             MatchCollection matches = Regex.Matches(intervalString, isoPattern);
-            if (matches.Count != 1) {
+            if (matches.Count != 1)
+            {
                 throw new FormatException("Invalid Format");
             }
 
             int index = 0;
-            foreach (Group group in matches[0].Groups) {
-                if (!groupNames.Contains(index)) {
+            foreach (Group group in matches[0].Groups)
+            {
+                if (!groupNames.Contains(index))
+                {
                     index++;
                     continue;
                 }
 
-                if (group.Value == "") {
+                if (group.Value == "")
+                {
                     index++;
                     continue;
                 }
 
                 // Stripping the letters out of the match group
                 string numericString = Regex.Replace(group.Value, "[^0-9.,-]", "");
-                switch (index) {
+                switch (index)
+                {
                     case Years:
                         calculatedMonths += Interval.YearsToMonths(numericString);
                         break;
@@ -187,6 +192,42 @@ namespace Google.Cloud.Spanner.V1
         }
 
         /// <summary>
+        /// Compares this instance of Interval with another object.
+        /// The equality is based upon type, number of days, number of months and number of nanoseconds.
+        /// </summary>
+        public override bool Equals(object obj)
+        {
+            if (obj == null || !(obj is Interval))
+            {
+                return false;
+            }
+
+            Interval other = obj as Interval;
+
+            if (this.Months != other.Months)
+            {
+                return false;
+            }
+
+            if (this.Days != other.Days)
+            {
+                return false;
+            }
+
+            if (this.Nanoseconds != other.Nanoseconds)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Gets the object hashcode
+        /// </summary>
+        public override int GetHashCode() => this.Days.GetHashCode() + this.Months.GetHashCode() + this.Nanoseconds.GetHashCode();
+
+        /// <summary>
         /// Creates an interval based on Months, Days and Nanoseconds.
         /// </summary>
         public static Interval FromMonthsDaysNanos(int months, int days, BigInteger nanos) => new Interval(months, days, nanos);
@@ -209,7 +250,7 @@ namespace Google.Cloud.Spanner.V1
         /// <summary>
         /// Creates an Interval based on the milliseconds given.
         /// </summary>
-        public static Interval FromMilliseconds(BigInteger milliseconds) => new Interval(0, 0 , NanosecondsInAMillisecond * milliseconds);
+        public static Interval FromMilliseconds(BigInteger milliseconds) => new Interval(0, 0, NanosecondsInAMillisecond * milliseconds);
 
         /// <summary>
         /// Creates an Interval based on the microseconds given.

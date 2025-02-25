@@ -60,13 +60,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "PgNumericField", SpannerDbType.PgNumeric, PgNumeric.NaN },
             { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" },
             { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" },
-            { "PgOidField", SpannerDbType.PgOid, 3L }
+            { "PgOidField", SpannerDbType.PgOid, 3L },
+            { "IntervalField", SpannerDbType.Interval, Interval.FromIso8601String("P1Y2M3D") }
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
         // specified in the type.
         private static readonly string s_sampleStructSerialized =
-            "[ \"stringValue\", \"2\", \"NaN\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\" ]";
+            "[ \"stringValue\", \"2\", \"NaN\", \"NaN\", true, \"2017-01-31\", \"2017-01-31T03:15:30Z\", \"99999999999999999999999999999.999999999\", \"NaN\", \"{\\\"field\\\": \\\"value\\\"}\", \"{\\\"field1\\\": \\\"value1\\\"}\", \"3\", \"P1Y2M3D\" ]";
 
         private static string Quote(string s) => $"\"{s}\"";
 
@@ -320,6 +321,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "1", SpannerDbType.PgNumeric, Quote("1") };
             yield return new object[] { "1.5", SpannerDbType.PgNumeric, Quote("1.5") };
             yield return new object[] { DBNull.Value, SpannerDbType.PgNumeric, "null" };
+            // Interval tests
+            yield return new object[] { "P0Y", SpannerDbType.Interval, Quote("P0Y") };
+            yield return new object[] { Interval.FromIso8601String("P1Y2M3DT4H5M6S"), SpannerDbType.Interval, Quote("P1Y2M3DT4H5M6S") };
 
             // Note the difference in C# conversions from special floats and doubles.
             yield return new object[] { float.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
