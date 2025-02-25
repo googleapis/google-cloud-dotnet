@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.16.0, released 2025-02-25
+
+### New features
+
+- Discovery of Vertex AI datasets ([commit d7c1df3](https://github.com/googleapis/google-cloud-dotnet/commit/d7c1df3379d980cc822092bc03f069c13a42ee7f))
+
+### Documentation improvements
+
+- Documentation revisions for data profiles ([commit d7c1df3](https://github.com/googleapis/google-cloud-dotnet/commit/d7c1df3379d980cc822092bc03f069c13a42ee7f))
+
 ## Version 4.15.0, released 2024-10-21
 
 ### New features
