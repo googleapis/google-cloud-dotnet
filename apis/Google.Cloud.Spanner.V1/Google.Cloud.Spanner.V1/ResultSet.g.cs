@@ -34,31 +34,31 @@ namespace Google.Cloud.Spanner.V1 {
             "cHJvdG9idWYuTGlzdFZhbHVlEjAKBXN0YXRzGAMgASgLMiEuZ29vZ2xlLnNw",
             "YW5uZXIudjEuUmVzdWx0U2V0U3RhdHMSUQoPcHJlY29tbWl0X3Rva2VuGAUg",
             "ASgLMjMuZ29vZ2xlLnNwYW5uZXIudjEuTXVsdGlwbGV4ZWRTZXNzaW9uUHJl",
-            "Y29tbWl0VG9rZW5CA+BBASKkAgoQUGFydGlhbFJlc3VsdFNldBI2CghtZXRh",
+            "Y29tbWl0VG9rZW5CA+BBASK3AgoQUGFydGlhbFJlc3VsdFNldBI2CghtZXRh",
             "ZGF0YRgBIAEoCzIkLmdvb2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldE1ldGFk",
             "YXRhEiYKBnZhbHVlcxgCIAMoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1ZRIV",
             "Cg1jaHVua2VkX3ZhbHVlGAMgASgIEhQKDHJlc3VtZV90b2tlbhgEIAEoDBIw",
             "CgVzdGF0cxgFIAEoCzIhLmdvb2dsZS5zcGFubmVyLnYxLlJlc3VsdFNldFN0",
             "YXRzElEKD3ByZWNvbW1pdF90b2tlbhgIIAEoCzIzLmdvb2dsZS5zcGFubmVy",
-            "LnYxLk11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRva2VuQgPgQQEitwEK",
-            "EVJlc3VsdFNldE1ldGFkYXRhEi8KCHJvd190eXBlGAEgASgLMh0uZ29vZ2xl",
-            "LnNwYW5uZXIudjEuU3RydWN0VHlwZRIzCgt0cmFuc2FjdGlvbhgCIAEoCzIe",
-            "Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uEjwKFXVuZGVjbGFyZWRf",
-            "cGFyYW1ldGVycxgDIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5",
-            "cGUiuQEKDlJlc3VsdFNldFN0YXRzEjAKCnF1ZXJ5X3BsYW4YASABKAsyHC5n",
-            "b29nbGUuc3Bhbm5lci52MS5RdWVyeVBsYW4SLAoLcXVlcnlfc3RhdHMYAiAB",
-            "KAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0EhkKD3Jvd19jb3VudF9leGFj",
-            "dBgDIAEoA0gAEh8KFXJvd19jb3VudF9sb3dlcl9ib3VuZBgEIAEoA0gAQgsK",
-            "CXJvd19jb3VudEK0AQoVY29tLmdvb2dsZS5zcGFubmVyLnYxQg5SZXN1bHRT",
-            "ZXRQcm90b1ABWjVjbG91ZC5nb29nbGUuY29tL2dvL3NwYW5uZXIvYXBpdjEv",
-            "c3Bhbm5lcnBiO3NwYW5uZXJwYvgBAaoCF0dvb2dsZS5DbG91ZC5TcGFubmVy",
-            "LlYxygIXR29vZ2xlXENsb3VkXFNwYW5uZXJcVjHqAhpHb29nbGU6OkNsb3Vk",
-            "OjpTcGFubmVyOjpWMWIGcHJvdG8z"));
+            "LnYxLk11bHRpcGxleGVkU2Vzc2lvblByZWNvbW1pdFRva2VuQgPgQQESEQoE",
+            "bGFzdBgJIAEoCEID4EEBIrcBChFSZXN1bHRTZXRNZXRhZGF0YRIvCghyb3df",
+            "dHlwZRgBIAEoCzIdLmdvb2dsZS5zcGFubmVyLnYxLlN0cnVjdFR5cGUSMwoL",
+            "dHJhbnNhY3Rpb24YAiABKAsyHi5nb29nbGUuc3Bhbm5lci52MS5UcmFuc2Fj",
+            "dGlvbhI8ChV1bmRlY2xhcmVkX3BhcmFtZXRlcnMYAyABKAsyHS5nb29nbGUu",
+            "c3Bhbm5lci52MS5TdHJ1Y3RUeXBlIrkBCg5SZXN1bHRTZXRTdGF0cxIwCgpx",
+            "dWVyeV9wbGFuGAEgASgLMhwuZ29vZ2xlLnNwYW5uZXIudjEuUXVlcnlQbGFu",
+            "EiwKC3F1ZXJ5X3N0YXRzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVj",
+            "dBIZCg9yb3dfY291bnRfZXhhY3QYAyABKANIABIfChVyb3dfY291bnRfbG93",
+            "ZXJfYm91bmQYBCABKANIAEILCglyb3dfY291bnRCsQEKFWNvbS5nb29nbGUu",
+            "c3Bhbm5lci52MUIOUmVzdWx0U2V0UHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNv",
+            "bS9nby9zcGFubmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdHb29n",
+            "bGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx",
+            "6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Cloud.Spanner.V1.QueryPlanReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, global::Google.Cloud.Spanner.V1.TypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSet), global::Google.Cloud.Spanner.V1.ResultSet.Parser, new[]{ "Metadata", "Rows", "Stats", "PrecommitToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats", "PrecommitToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PartialResultSet), global::Google.Cloud.Spanner.V1.PartialResultSet.Parser, new[]{ "Metadata", "Values", "ChunkedValue", "ResumeToken", "Stats", "PrecommitToken", "Last" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetMetadata), global::Google.Cloud.Spanner.V1.ResultSetMetadata.Parser, new[]{ "RowType", "Transaction", "UndeclaredParameters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.ResultSetStats), global::Google.Cloud.Spanner.V1.ResultSetStats.Parser, new[]{ "QueryPlan", "QueryStats", "RowCountExact", "RowCountLowerBound" }, new[]{ "RowCount" }, null, null, null)
           }));
@@ -141,11 +141,10 @@ namespace Google.Cloud.Spanner.V1 {
     private readonly pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> rows_ = new pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue>();
     /// <summary>
     /// Each element in `rows` is a row whose format is defined by
-    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. The ith element
-    /// in each row matches the ith field in
-    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. Elements are
-    /// encoded based on type as described
-    /// [here][google.spanner.v1.TypeCode].
+    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. The ith
+    /// element in each row matches the ith field in
+    /// [metadata.row_type][google.spanner.v1.ResultSetMetadata.row_type]. Elements
+    /// are encoded based on type as described [here][google.spanner.v1.TypeCode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -162,8 +161,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
     /// DML statements always produce stats containing the number of rows
     /// modified, unless executed using the
-    /// [ExecuteSqlRequest.QueryMode.PLAN][google.spanner.v1.ExecuteSqlRequest.QueryMode.PLAN] [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
-    /// Other fields may or may not be populated, based on the
+    /// [ExecuteSqlRequest.QueryMode.PLAN][google.spanner.v1.ExecuteSqlRequest.QueryMode.PLAN]
+    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
+    /// Other fields might or might not be populated, based on the
     /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -179,13 +179,10 @@ namespace Google.Cloud.Spanner.V1 {
     public const int PrecommitTokenFieldNumber = 5;
     private global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken precommitToken_;
     /// <summary>
-    /// Optional. A precommit token will be included if the read-write transaction
-    /// is on a multiplexed session.
-    /// The precommit token with the highest sequence number from this transaction
-    /// attempt should be passed to the
+    /// Optional. A precommit token is included if the read-write transaction is on
+    /// a multiplexed session. Pass the precommit token with the highest sequence
+    /// number from this transaction attempt to the
     /// [Commit][google.spanner.v1.Spanner.Commit] request for this transaction.
-    /// This feature is not yet supported and will result in an UNIMPLEMENTED
-    /// error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -464,6 +461,7 @@ namespace Google.Cloud.Spanner.V1 {
       resumeToken_ = other.resumeToken_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       precommitToken_ = other.precommitToken_ != null ? other.precommitToken_.Clone() : null;
+      last_ = other.last_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -504,13 +502,14 @@ namespace Google.Cloud.Spanner.V1 {
     /// Most values are encoded based on type as described
     /// [here][google.spanner.v1.TypeCode].
     ///
-    /// It is possible that the last value in values is "chunked",
+    /// It's possible that the last value in values is "chunked",
     /// meaning that the rest of the value is sent in subsequent
-    /// `PartialResultSet`(s). This is denoted by the [chunked_value][google.spanner.v1.PartialResultSet.chunked_value]
-    /// field. Two or more chunked values can be merged to form a
-    /// complete value as follows:
+    /// `PartialResultSet`(s). This is denoted by the
+    /// [chunked_value][google.spanner.v1.PartialResultSet.chunked_value] field.
+    /// Two or more chunked values can be merged to form a complete value as
+    /// follows:
     ///
-    ///   * `bool/number/null`: cannot be chunked
+    ///   * `bool/number/null`: can't be chunked
     ///   * `string`: concatenate the strings
     ///   * `list`: concatenate the lists. If the last element in a list is a
     ///     `string`, `list`, or `object`, merge it with the first element in
@@ -521,28 +520,28 @@ namespace Google.Cloud.Spanner.V1 {
     ///
     /// Some examples of merging:
     ///
-    ///     # Strings are concatenated.
+    ///     Strings are concatenated.
     ///     "foo", "bar" => "foobar"
     ///
-    ///     # Lists of non-strings are concatenated.
+    ///     Lists of non-strings are concatenated.
     ///     [2, 3], [4] => [2, 3, 4]
     ///
-    ///     # Lists are concatenated, but the last and first elements are merged
-    ///     # because they are strings.
+    ///     Lists are concatenated, but the last and first elements are merged
+    ///     because they are strings.
     ///     ["a", "b"], ["c", "d"] => ["a", "bc", "d"]
     ///
-    ///     # Lists are concatenated, but the last and first elements are merged
-    ///     # because they are lists. Recursively, the last and first elements
-    ///     # of the inner lists are merged because they are strings.
+    ///     Lists are concatenated, but the last and first elements are merged
+    ///     because they are lists. Recursively, the last and first elements
+    ///     of the inner lists are merged because they are strings.
     ///     ["a", ["b", "c"]], [["d"], "e"] => ["a", ["b", "cd"], "e"]
     ///
-    ///     # Non-overlapping object fields are combined.
+    ///     Non-overlapping object fields are combined.
     ///     {"a": "1"}, {"b": "2"} => {"a": "1", "b": 2"}
     ///
-    ///     # Overlapping object fields are merged.
+    ///     Overlapping object fields are merged.
     ///     {"a": "1"}, {"a": "2"} => {"a": "12"}
     ///
-    ///     # Examples of merging objects containing lists of strings.
+    ///     Examples of merging objects containing lists of strings.
     ///     {"a": ["1"]}, {"a": ["2"]} => {"a": ["12"]}
     ///
     /// For a more complete example, suppose a streaming SQL query is
@@ -558,7 +557,6 @@ namespace Google.Cloud.Spanner.V1 {
     ///     {
     ///       "values": ["orl"]
     ///       "chunked_value": true
-    ///       "resume_token": "Bqp2..."
     ///     }
     ///     {
     ///       "values": ["d"]
@@ -568,6 +566,11 @@ namespace Google.Cloud.Spanner.V1 {
     /// This sequence of `PartialResultSet`s encodes two rows, one
     /// containing the field value `"Hello"`, and a second containing the
     /// field value `"World" = "W" + "orl" + "d"`.
+    ///
+    /// Not all `PartialResultSet`s contain a `resume_token`. Execution can only be
+    /// resumed from a previously yielded `resume_token`. For the above sequence of
+    /// `PartialResultSet`s, resuming the query with `"resume_token": "Af65..."`
+    /// yields results from the `PartialResultSet` with value "orl".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -579,9 +582,10 @@ namespace Google.Cloud.Spanner.V1 {
     public const int ChunkedValueFieldNumber = 3;
     private bool chunkedValue_;
     /// <summary>
-    /// If true, then the final value in [values][google.spanner.v1.PartialResultSet.values] is chunked, and must
-    /// be combined with more values from subsequent `PartialResultSet`s
-    /// to obtain a complete field value.
+    /// If true, then the final value in
+    /// [values][google.spanner.v1.PartialResultSet.values] is chunked, and must be
+    /// combined with more values from subsequent `PartialResultSet`s to obtain a
+    /// complete field value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -617,10 +621,9 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>
     /// Query plan and execution statistics for the statement that produced this
     /// streaming result set. These can be requested by setting
-    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode] and are sent
-    /// only once with the last response in the stream.
-    /// This field will also be present in the last response for DML
-    /// statements.
+    /// [ExecuteSqlRequest.query_mode][google.spanner.v1.ExecuteSqlRequest.query_mode]
+    /// and are sent only once with the last response in the stream. This field is
+    /// also present in the last response for DML statements.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -635,13 +638,10 @@ namespace Google.Cloud.Spanner.V1 {
     public const int PrecommitTokenFieldNumber = 8;
     private global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken precommitToken_;
     /// <summary>
-    /// Optional. A precommit token will be included if the read-write transaction
-    /// is on a multiplexed session.
-    /// The precommit token with the highest sequence number from this transaction
-    /// attempt should be passed to the
+    /// Optional. A precommit token is included if the read-write transaction
+    /// has multiplexed sessions enabled. Pass the precommit token with the highest
+    /// sequence number from this transaction attempt to the
     /// [Commit][google.spanner.v1.Spanner.Commit] request for this transaction.
-    /// This feature is not yet supported and will result in an UNIMPLEMENTED
-    /// error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -649,6 +649,23 @@ namespace Google.Cloud.Spanner.V1 {
       get { return precommitToken_; }
       set {
         precommitToken_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last" field.</summary>
+    public const int LastFieldNumber = 9;
+    private bool last_;
+    /// <summary>
+    /// Optional. Indicates whether this is the last `PartialResultSet` in the
+    /// stream. The server might optionally set this field. Clients shouldn't rely
+    /// on this field being set in all cases.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Last {
+      get { return last_; }
+      set {
+        last_ = value;
       }
     }
 
@@ -673,6 +690,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (ResumeToken != other.ResumeToken) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (!object.Equals(PrecommitToken, other.PrecommitToken)) return false;
+      if (Last != other.Last) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -686,6 +704,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (ResumeToken.Length != 0) hash ^= ResumeToken.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (precommitToken_ != null) hash ^= PrecommitToken.GetHashCode();
+      if (Last != false) hash ^= Last.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -725,6 +744,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(PrecommitToken);
       }
+      if (Last != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(Last);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -756,6 +779,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(PrecommitToken);
       }
+      if (Last != false) {
+        output.WriteRawTag(72);
+        output.WriteBool(Last);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -781,6 +808,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (precommitToken_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrecommitToken);
+      }
+      if (Last != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -818,6 +848,9 @@ namespace Google.Cloud.Spanner.V1 {
           PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
         }
         PrecommitToken.MergeFrom(other.PrecommitToken);
+      }
+      if (other.Last != false) {
+        Last = other.Last;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -865,6 +898,10 @@ namespace Google.Cloud.Spanner.V1 {
               PrecommitToken = new global::Google.Cloud.Spanner.V1.MultiplexedSessionPrecommitToken();
             }
             input.ReadMessage(PrecommitToken);
+            break;
+          }
+          case 72: {
+            Last = input.ReadBool();
             break;
           }
         }
@@ -915,6 +952,10 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(PrecommitToken);
             break;
           }
+          case 72: {
+            Last = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -923,7 +964,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// Metadata about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
+  /// Metadata about a [ResultSet][google.spanner.v1.ResultSet] or
+  /// [PartialResultSet][google.spanner.v1.PartialResultSet].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResultSetMetadata : pb::IMessage<ResultSetMetadata>
@@ -977,7 +1019,7 @@ namespace Google.Cloud.Spanner.V1 {
     private global::Google.Cloud.Spanner.V1.StructType rowType_;
     /// <summary>
     /// Indicates the field names and types for the rows in the result
-    /// set.  For example, a SQL query like `"SELECT UserId, UserName FROM
+    /// set. For example, a SQL query like `"SELECT UserId, UserName FROM
     /// Users"` could return a `row_type` value like:
     ///
     ///     "fields": [
@@ -1243,7 +1285,8 @@ namespace Google.Cloud.Spanner.V1 {
   }
 
   /// <summary>
-  /// Additional statistics about a [ResultSet][google.spanner.v1.ResultSet] or [PartialResultSet][google.spanner.v1.PartialResultSet].
+  /// Additional statistics about a [ResultSet][google.spanner.v1.ResultSet] or
+  /// [PartialResultSet][google.spanner.v1.PartialResultSet].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResultSetStats : pb::IMessage<ResultSetStats>
@@ -1304,7 +1347,8 @@ namespace Google.Cloud.Spanner.V1 {
     public const int QueryPlanFieldNumber = 1;
     private global::Google.Cloud.Spanner.V1.QueryPlan queryPlan_;
     /// <summary>
-    /// [QueryPlan][google.spanner.v1.QueryPlan] for the query associated with this result.
+    /// [QueryPlan][google.spanner.v1.QueryPlan] for the query associated with this
+    /// result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1370,7 +1414,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// <summary>Field number for the "row_count_lower_bound" field.</summary>
     public const int RowCountLowerBoundFieldNumber = 4;
     /// <summary>
-    /// Partitioned DML does not offer exactly-once semantics, so it
+    /// Partitioned DML doesn't offer exactly-once semantics, so it
     /// returns a lower bound of the rows modified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
