@@ -52,6 +52,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufRectangleValue,
                  {EmptyOnEmulator("ProtobufPersonValue,")/* b/348716298 */}
                  {EmptyOnEmulator("ProtobufValueWrapperValue,")/* b/348716298 */}
+                 {EmptyOnEmulator("UuidValue,")}
                  BoolArrayValue,
                  Int64ArrayValue,
                  {EmptyOnEmulator("Float32ArrayValue,")}
@@ -67,7 +68,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufDurationArrayValue,
                  ProtobufRectangleArrayValue
                  {EmptyOnEmulator(", ProtobufPersonArrayValue")/* b/348716298 */}
-                 {EmptyOnEmulator(", ProtobufValueWrapperArrayValue")/* b/348716298 */}) VALUES(
+                 {EmptyOnEmulator(", ProtobufValueWrapperArrayValue")/* b/348716298 */}
+                 {EmptyOnEmulator(", UuidArrayValue")} VALUES(
                  @K,
                  @BoolValue,
                  @Int64Value,
@@ -84,6 +86,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufRectangleValue,
                  {EmptyOnEmulator("@ProtobufPersonValue,")/* b/348716298 */}
                  {EmptyOnEmulator("@ProtobufValueWrapperValue,")/* b/348716298 */}
+                 {EmptyOnEmulator("@UuidValue,")}
                  @BoolArrayValue,
                  @Int64ArrayValue,
                  {EmptyOnEmulator("@Float32ArrayValue,")}
@@ -100,6 +103,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufRectangleArrayValue
                  {EmptyOnEmulator(", @ProtobufPersonArrayValue")/* b/348716298 */}
                  {EmptyOnEmulator(", @ProtobufValueWrapperArrayValue")/* b/348716298 */}
+                 {EmptyOnEmulator(", @UuidArrayValue")}
                )";
 
         // Note: the emulator doesn't yet support the JSON type.
@@ -121,6 +125,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufRectangleValue                              {Rectangle.Descriptor.FullName},
                             {EmptyOnEmulator($"ProtobufPersonValue              {Person.Descriptor.FullName},")/* b/348716298 */}
                             {EmptyOnEmulator($"ProtobufValueWrapperValue        {ValueWrapper.Descriptor.FullName},")/* b/348716298 */}
+                            {EmptyOnEmulator("UuidValue                         UUID,")}
                             BoolArrayValue                                      ARRAY<BOOL>,
                             Int64ArrayValue                                     ARRAY<INT64>,
                             {EmptyOnEmulator("Float32ArrayValue                 ARRAY<FLOAT32>,")}
@@ -137,6 +142,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufRectangleArrayValue                         ARRAY<{Rectangle.Descriptor.FullName}>
                             {EmptyOnEmulator($", ProtobufPersonArrayValue         ARRAY<{Person.Descriptor.FullName}>")/* b/348716298 */}
                             {EmptyOnEmulator($", ProtobufValueWrapperArrayValue   ARRAY<{ValueWrapper.Descriptor.FullName}>")/* b/348716298 */}
+                            {EmptyOnEmulator($", UuidArrayValue                 ARRAY<UUID>")}
                           ) PRIMARY KEY(K)");
 
         private string EmptyOnEmulator(string text) => RunningOnEmulator ? "" : text;
