@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2025-02-25
+
+### New features
+
+- Add DeletionType.SPACE_MEMBER. This is returned when a message sent by an app is deleted by a human in a space ([commit b729eb0](https://github.com/googleapis/google-cloud-dotnet/commit/b729eb04fba00bc1013ba4e534537354c25e1698))
+
+### Documentation improvements
+
+- Update Google chat app command documentation ([commit 43e29cc](https://github.com/googleapis/google-cloud-dotnet/commit/43e29cc276ad371ab5446e6f8f30be819e34c357))
+
 ## Version 1.0.0-beta11, released 2025-02-03
 
 ### New features
