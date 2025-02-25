@@ -35,7 +35,7 @@ namespace Google.Maps.Places.V1 {
             "YXZhaWxhYmxlX2NvdW50GAQgASgFSACIAQESIQoUb3V0X29mX3NlcnZpY2Vf",
             "Y291bnQYBSABKAVIAYgBARJBCh1hdmFpbGFiaWxpdHlfbGFzdF91cGRhdGVf",
             "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCEgoQX2F2",
-            "YWlsYWJsZV9jb3VudEIXChVfb3V0X29mX3NlcnZpY2VfY291bnQq5QIKD0VW",
+            "YWlsYWJsZV9jb3VudEIXChVfb3V0X29mX3NlcnZpY2VfY291bnQqgQMKD0VW",
             "Q29ubmVjdG9yVHlwZRIhCh1FVl9DT05ORUNUT1JfVFlQRV9VTlNQRUNJRklF",
             "RBAAEhsKF0VWX0NPTk5FQ1RPUl9UWVBFX09USEVSEAESGwoXRVZfQ09OTkVD",
             "VE9SX1RZUEVfSjE3NzIQAhIcChhFVl9DT05ORUNUT1JfVFlQRV9UWVBFXzIQ",
@@ -43,11 +43,12 @@ namespace Google.Maps.Places.V1 {
             "VE9SX1RZUEVfQ0NTX0NPTUJPXzEQBRIhCh1FVl9DT05ORUNUT1JfVFlQRV9D",
             "Q1NfQ09NQk9fMhAGEhsKF0VWX0NPTk5FQ1RPUl9UWVBFX1RFU0xBEAcSJgoi",
             "RVZfQ09OTkVDVE9SX1RZUEVfVU5TUEVDSUZJRURfR0JfVBAIEi0KKUVWX0NP",
-            "Tk5FQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEX1dBTExfT1VUTEVUEAlCoAEKGWNv",
-            "bS5nb29nbGUubWFwcy5wbGFjZXMudjFCD0V2Q2hhcmdpbmdQcm90b1ABWjdj",
-            "bG91ZC5nb29nbGUuY29tL2dvL21hcHMvcGxhY2VzL2FwaXYxL3BsYWNlc3Bi",
-            "O3BsYWNlc3BiogIGR01QU1YxqgIVR29vZ2xlLk1hcHMuUGxhY2VzLlYxygIV",
-            "R29vZ2xlXE1hcHNcUGxhY2VzXFYxYgZwcm90bzM="));
+            "Tk5FQ1RPUl9UWVBFX1VOU1BFQ0lGSUVEX1dBTExfT1VUTEVUEAkSGgoWRVZf",
+            "Q09OTkVDVE9SX1RZUEVfTkFDUxAKQqABChljb20uZ29vZ2xlLm1hcHMucGxh",
+            "Y2VzLnYxQg9FdkNoYXJnaW5nUHJvdG9QAVo3Y2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9tYXBzL3BsYWNlcy9hcGl2MS9wbGFjZXNwYjtwbGFjZXNwYqICBkdNUFNW",
+            "MaoCFUdvb2dsZS5NYXBzLlBsYWNlcy5WMcoCFUdvb2dsZVxNYXBzXFBsYWNl",
+            "c1xWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.Places.V1.EVConnectorType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -110,6 +111,10 @@ namespace Google.Maps.Places.V1 {
     /// Unspecified wall outlet.
     /// </summary>
     [pbr::OriginalName("EV_CONNECTOR_TYPE_UNSPECIFIED_WALL_OUTLET")] UnspecifiedWallOutlet = 9,
+    /// <summary>
+    /// The North American Charging System (NACS), standardized as SAE J3400.
+    /// </summary>
+    [pbr::OriginalName("EV_CONNECTOR_TYPE_NACS")] Nacs = 10,
   }
 
   #endregion
