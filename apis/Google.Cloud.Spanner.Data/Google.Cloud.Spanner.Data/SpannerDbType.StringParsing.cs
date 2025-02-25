@@ -1,11 +1,11 @@
 // Copyright 2017 Google Inc. All Rights Reserved.
-// 
+//
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
-// 
+//
 //     http://www.apache.org/licenses/LICENSE-2.0
-// 
+//
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -107,6 +107,9 @@ namespace Google.Cloud.Spanner.Data
                     }
                     spannerDbType = new SpannerDbType(fields);
                     return true;
+                case TypeCode.Interval:
+                    spannerDbType = new SpannerDbType(type.Code);
+                    return true;
                 case TypeCode.Proto:
                     if (string.IsNullOrEmpty(remainder))
                     {
@@ -169,6 +172,11 @@ namespace Google.Cloud.Spanner.Data
             {
                 type.Code = TypeCode.Int64;
                 type.TypeAnnotation = TypeAnnotationCode.PgOid;
+                return true;
+            }
+            else if (string.Equals(trimmedComplexName, "INTERVAL", StringComparison.OrdinalIgnoreCase))
+            {
+                type.Code = TypeCode.Interval;
                 return true;
             }
 

@@ -83,6 +83,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "TIMESTAMP", SpannerDbType.Timestamp };
             yield return new object[] { "NUMERIC", SpannerDbType.Numeric };
             yield return new object[] { "NUMERIC{PG}", SpannerDbType.PgNumeric };
+            yield return new object[] { "INTERVAL", SpannerDbType.Interval };
 
             yield return new object[] { " STRING  ", SpannerDbType.String };
             yield return new object[] { "  BOOL  ", SpannerDbType.Bool };

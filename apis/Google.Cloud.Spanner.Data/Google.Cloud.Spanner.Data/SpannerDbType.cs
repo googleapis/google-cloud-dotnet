@@ -14,7 +14,6 @@
 
 using Google.Api.Gax;
 using Google.Cloud.Spanner.V1;
-using Google.Protobuf;
 using Google.Protobuf.Collections;
 using Google.Protobuf.Reflection;
 using Google.Protobuf.WellKnownTypes;
@@ -22,7 +21,6 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Reflection;
 using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
@@ -103,6 +101,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType PgOid { get; } = new SpannerDbType(TypeCode.Int64, TypeAnnotationCode.PgOid);
 
+        /// <summary>
+        /// Representation of PostgreSQL Interval type.
+        /// </summary>
+        public static SpannerDbType Interval { get; } = new SpannerDbType(TypeCode.Interval);
+
         private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
             = new Dictionary<V1.Type, SpannerDbType>
             {
@@ -119,7 +122,8 @@ namespace Google.Cloud.Spanner.Data
                 { new V1.Type { Code = TypeCode.Json, TypeAnnotation = TypeAnnotationCode.PgJsonb }, PgJsonb },
                 { new V1.Type { Code = TypeCode.Numeric }, Numeric },
                 { new V1.Type { Code = TypeCode.Numeric, TypeAnnotation = TypeAnnotationCode.PgNumeric }, PgNumeric },
-                { new V1.Type { Code = TypeCode.Int64, TypeAnnotation = TypeAnnotationCode.PgOid }, PgOid }
+                { new V1.Type { Code = TypeCode.Int64, TypeAnnotation = TypeAnnotationCode.PgOid }, PgOid },
+                { new V1.Type { Code = TypeCode.Interval }, Interval }
             };
 
         internal static SpannerDbType FromType(V1.Type type) =>
@@ -256,6 +260,8 @@ namespace Google.Cloud.Spanner.Data
                     return typeof(SpannerNumeric);
                 case TypeCode.Json:
                     return typeof(string);
+                case TypeCode.Interval:
+                    return typeof(Interval);
                 default:
                     // If we don't recognize it, we use the protobuf Value well-known type.
                     // But since, as of June 2024, we support protobuf, we need to handle Value
