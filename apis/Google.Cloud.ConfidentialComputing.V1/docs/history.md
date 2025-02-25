@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.8.0, released 2025-02-25
+
+### New features
+
+- A new field `attester` is added to message `.google.cloud.confidentialcomputing.v1.VerifyAttestationRequest` ([commit 99aef8d](https://github.com/googleapis/google-cloud-dotnet/commit/99aef8d372669dc95bb063459f0aeb9fb8621f86))
+
+### Documentation improvements
+
+- Fixed a typo in `VerifyAttestationRequest` comment ([commit 99aef8d](https://github.com/googleapis/google-cloud-dotnet/commit/99aef8d372669dc95bb063459f0aeb9fb8621f86))
+
 ## Version 1.7.0, released 2024-12-06
 
 ### New features
