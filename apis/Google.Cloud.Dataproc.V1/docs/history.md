@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.17.0, released 2025-02-25
+
+### New features
+
+- Added support for the AuthenticationConfig field to Dataproc serverless workload configurations, allowing specification of the user workload identity as either the end user or a service account ([commit e67b038](https://github.com/googleapis/google-cloud-dotnet/commit/e67b038e604c9f21b531f5f1bf779297a31620c8))
+
 ## Version 5.16.0, released 2024-10-21
 
 ### New features
