@@ -16,6 +16,7 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Firestore.IntegrationTests.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -165,6 +166,30 @@ namespace Google.Cloud.Firestore.IntegrationTests
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").StartAfter(20);
             var snapshot = await query.GetSnapshotAsync();
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
+            Assert.Equal(HighScore.Data.Where(x => x.Level > 20).OrderBy(x => x.Level), items);
+        }
+
+        [Fact]
+        public async Task StartAfter_Explain()
+        {
+            var query = _fixture.HighScoreCollection.OrderBy("Level").StartAfter(20);
+            var plan = await query.ExplainAsync();
+            Assert.NotNull(plan);
+        }
+
+        [Fact]
+        public async Task StartAfter_ExplainAnalyze()
+        {
+            var query = _fixture.HighScoreCollection.OrderBy("Level").StartAfter(20);
+            var queryProfileInfo = await query.ExplainAnalyzeAsync();
+            var snapshot = queryProfileInfo.Snapshot;
+            var plan = queryProfileInfo.Plan;
+            var stats = queryProfileInfo.Stats;
+            Assert.NotNull(plan);
+            Assert.NotNull(stats);
+            Assert.Equal(snapshot.Documents.Count, stats.ResultsReturned);
+            Assert.NotEqual(0, stats.ReadOperations);
             var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
             Assert.Equal(HighScore.Data.Where(x => x.Level > 20).OrderBy(x => x.Level), items);
         }
