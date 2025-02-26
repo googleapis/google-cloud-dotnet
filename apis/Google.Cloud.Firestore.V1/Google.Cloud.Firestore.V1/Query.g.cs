@@ -138,6 +138,7 @@ namespace Google.Cloud.Firestore.V1 {
   /// 4. order_by + start_at + end_at
   /// 5. offset
   /// 6. limit
+  /// 7. find_nearest
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class StructuredQuery : pb::IMessage<StructuredQuery>
@@ -3129,8 +3130,8 @@ namespace Google.Cloud.Firestore.V1 {
         /// Since DOT_PRODUCT distances increase when the vectors are more similar,
         /// the comparison is inverted.
         ///
-        /// For EUCLIDEAN, COSINE: WHERE distance &lt;= distance_threshold
-        /// For DOT_PRODUCT:       WHERE distance >= distance_threshold
+        /// * For EUCLIDEAN, COSINE: WHERE distance &lt;= distance_threshold
+        /// * For DOT_PRODUCT:       WHERE distance >= distance_threshold
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
