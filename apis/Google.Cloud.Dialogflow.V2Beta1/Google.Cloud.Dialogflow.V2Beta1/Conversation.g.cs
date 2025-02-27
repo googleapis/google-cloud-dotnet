@@ -7828,6 +7828,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SearchKnowledgeRequest.Types.SearchConfig.Types.FilterSpecs> filterSpecs_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SearchKnowledgeRequest.Types.SearchConfig.Types.FilterSpecs>();
         /// <summary>
         /// Optional. Filter specification for data store queries.
+        ///
+        /// Maps from datastore name to the filter expression for that datastore. Do
+        /// not specify more than one FilterSpecs for each datastore name. If
+        /// multiple FilterSpecs are provided for the same datastore name, the
+        /// behavior is undefined.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7977,6 +7982,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         public static partial class Types {
           /// <summary>
           /// Boost specifications for data stores.
+          ///
+          /// Maps from datastore name to their boost configuration. Do not specify
+          /// more than one BoostSpecs for each datastore name. If multiple BoostSpecs
+          /// are provided for the same datastore name, the behavior is undefined.
           /// </summary>
           [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
           public sealed partial class BoostSpecs : pb::IMessage<BoostSpecs>
@@ -8253,7 +8262,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
                 private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SearchKnowledgeRequest.Types.SearchConfig.Types.BoostSpecs.Types.BoostSpec.Types.ConditionBoostSpec> conditionBoostSpecs_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SearchKnowledgeRequest.Types.SearchConfig.Types.BoostSpecs.Types.BoostSpec.Types.ConditionBoostSpec>();
                 /// <summary>
                 /// Optional. Condition boost specifications. If a document matches
-                /// multiple conditions in the specifictions, boost scores from these
+                /// multiple conditions in the specifications, boost scores from these
                 /// specifications are all applied and combined in a non-linear way.
                 /// Maximum number of specifications is 20.
                 /// </summary>
