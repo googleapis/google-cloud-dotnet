@@ -26,10 +26,12 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "Cjlnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9kYXRhX3N0b3JlX2Nv",
             "bm5lY3Rpb24ucHJvdG8SHWdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYz",
-            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvInAKE0RhdGFTdG9y",
-            "ZUNvbm5lY3Rpb24SRQoPZGF0YV9zdG9yZV90eXBlGAEgASgOMiwuZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMuRGF0YVN0b3JlVHlwZRISCgpkYXRh",
-            "X3N0b3JlGAIgASgJIqISChpEYXRhU3RvcmVDb25uZWN0aW9uU2lnbmFscxJ8",
+            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvIskBChNEYXRhU3Rv",
+            "cmVDb25uZWN0aW9uEkUKD2RhdGFfc3RvcmVfdHlwZRgBIAEoDjIsLmdvb2ds",
+            "ZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzLkRhdGFTdG9yZVR5cGUSEgoKZGF0",
+            "YV9zdG9yZRgCIAEoCRJXChhkb2N1bWVudF9wcm9jZXNzaW5nX21vZGUYBCAB",
+            "KA4yNS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52My5Eb2N1bWVudFBy",
+            "b2Nlc3NpbmdNb2RlIqISChpEYXRhU3RvcmVDb25uZWN0aW9uU2lnbmFscxJ8",
             "ChtyZXdyaXRlcl9tb2RlbF9jYWxsX3NpZ25hbHMYASABKAsyUi5nb29nbGUu",
             "Y2xvdWQuZGlhbG9nZmxvdy5jeC52My5EYXRhU3RvcmVDb25uZWN0aW9uU2ln",
             "bmFscy5SZXdyaXRlck1vZGVsQ2FsbFNpZ25hbHNCA+BBARIcCg9yZXdyaXR0",
@@ -83,15 +85,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "TkVEX1BIUkFTRV9NQVRDSF9RVUVSWRACEiAKHEJBTk5FRF9QSFJBU0VfTUFU",
             "Q0hfUkVTUE9OU0UQAypiCg1EYXRhU3RvcmVUeXBlEh8KG0RBVEFfU1RPUkVf",
             "VFlQRV9VTlNQRUNJRklFRBAAEg4KClBVQkxJQ19XRUIQARIQCgxVTlNUUlVD",
-            "VFVSRUQQAhIOCgpTVFJVQ1RVUkVEEANCuwEKIWNvbS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy5jeC52M0IYRGF0YVN0b3JlQ29ubmVjdGlvblByb3RvUAFa",
-            "MWNsb3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9jeC9hcGl2My9jeHBi",
-            "O2N4cGKiAgJERqoCHUdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LkN4LlYz6gIh",
-            "R29vZ2xlOjpDbG91ZDo6RGlhbG9nZmxvdzo6Q1g6OlYzYgZwcm90bzM="));
+            "VFVSRUQQAhIOCgpTVFJVQ1RVUkVEEAMqXQoWRG9jdW1lbnRQcm9jZXNzaW5n",
+            "TW9kZRIoCiRET0NVTUVOVF9QUk9DRVNTSU5HX01PREVfVU5TUEVDSUZJRUQQ",
+            "ABINCglET0NVTUVOVFMQARIKCgZDSFVOS1MQAkK7AQohY29tLmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LmN4LnYzQhhEYXRhU3RvcmVDb25uZWN0aW9uUHJv",
+            "dG9QAVoxY2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2N4L2FwaXYz",
+            "L2N4cGI7Y3hwYqICAkRGqgIdR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuQ3gu",
+            "VjPqAiFHb29nbGU6OkNsb3VkOjpEaWFsb2dmbG93OjpDWDo6VjNiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataStoreType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnection), global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnection.Parser, new[]{ "DataStoreType", "DataStore" }, null, null, null, null),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataStoreType), typeof(global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnection), global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnection.Parser, new[]{ "DataStoreType", "DataStore", "DocumentProcessingMode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionSignals), global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionSignals.Parser, new[]{ "RewriterModelCallSignals", "RewrittenQuery", "SearchSnippets", "AnswerGenerationModelCallSignals", "Answer", "AnswerParts", "CitedSnippets", "GroundingSignals", "SafetySignals" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionSignals.Types.RewriterModelCallSignals), global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionSignals.Types.RewriterModelCallSignals.Parser, new[]{ "RenderedPrompt", "ModelOutput", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionSignals.Types.SearchSnippet), global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionSignals.Types.SearchSnippet.Parser, new[]{ "DocumentTitle", "DocumentUri", "Text" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionSignals.Types.AnswerGenerationModelCallSignals), global::Google.Cloud.Dialogflow.Cx.V3.DataStoreConnectionSignals.Types.AnswerGenerationModelCallSignals.Parser, new[]{ "RenderedPrompt", "ModelOutput", "Model" }, null, null, null, null),
@@ -127,6 +132,26 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     /// A data store that contains structured data (for example FAQ).
     /// </summary>
     [pbr::OriginalName("STRUCTURED")] Structured = 3,
+  }
+
+  /// <summary>
+  /// The document processing mode of the data store.
+  /// </summary>
+  public enum DocumentProcessingMode {
+    /// <summary>
+    /// Not specified. This should be set for STRUCTURED type data stores. Due to
+    /// legacy reasons this is considered as DOCUMENTS for STRUCTURED and
+    /// PUBLIC_WEB data stores.
+    /// </summary>
+    [pbr::OriginalName("DOCUMENT_PROCESSING_MODE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Documents are processed as documents.
+    /// </summary>
+    [pbr::OriginalName("DOCUMENTS")] Documents = 1,
+    /// <summary>
+    /// Documents are converted to chunks.
+    /// </summary>
+    [pbr::OriginalName("CHUNKS")] Chunks = 2,
   }
 
   #endregion
@@ -173,6 +198,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public DataStoreConnection(DataStoreConnection other) : this() {
       dataStoreType_ = other.dataStoreType_;
       dataStore_ = other.dataStore_;
+      documentProcessingMode_ = other.documentProcessingMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -215,6 +241,23 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
     }
 
+    /// <summary>Field number for the "document_processing_mode" field.</summary>
+    public const int DocumentProcessingModeFieldNumber = 4;
+    private global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode documentProcessingMode_ = global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode.Unspecified;
+    /// <summary>
+    /// The document processing mode for the data store connection. Should only be
+    /// set for PUBLIC_WEB and UNSTRUCTURED data stores. If not set it is
+    /// considered as DOCUMENTS, as this is the legacy mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode DocumentProcessingMode {
+      get { return documentProcessingMode_; }
+      set {
+        documentProcessingMode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -232,6 +275,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (DataStoreType != other.DataStoreType) return false;
       if (DataStore != other.DataStore) return false;
+      if (DocumentProcessingMode != other.DocumentProcessingMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -241,6 +285,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       int hash = 1;
       if (DataStoreType != global::Google.Cloud.Dialogflow.Cx.V3.DataStoreType.Unspecified) hash ^= DataStoreType.GetHashCode();
       if (DataStore.Length != 0) hash ^= DataStore.GetHashCode();
+      if (DocumentProcessingMode != global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode.Unspecified) hash ^= DocumentProcessingMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -267,6 +312,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(18);
         output.WriteString(DataStore);
       }
+      if (DocumentProcessingMode != global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) DocumentProcessingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -285,6 +334,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         output.WriteRawTag(18);
         output.WriteString(DataStore);
       }
+      if (DocumentProcessingMode != global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) DocumentProcessingMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -300,6 +353,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (DataStore.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataStore);
+      }
+      if (DocumentProcessingMode != global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DocumentProcessingMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -318,6 +374,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
       if (other.DataStore.Length != 0) {
         DataStore = other.DataStore;
+      }
+      if (other.DocumentProcessingMode != global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode.Unspecified) {
+        DocumentProcessingMode = other.DocumentProcessingMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -342,6 +401,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             DataStore = input.ReadString();
             break;
           }
+          case 32: {
+            DocumentProcessingMode = (global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -363,6 +426,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           }
           case 18: {
             DataStore = input.ReadString();
+            break;
+          }
+          case 32: {
+            DocumentProcessingMode = (global::Google.Cloud.Dialogflow.Cx.V3.DocumentProcessingMode) input.ReadEnum();
             break;
           }
         }

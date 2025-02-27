@@ -803,8 +803,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
         private readonly pbc::MapField<string, string> requestHeaders_ = new pbc::MapField<string, string>();
         /// <summary>
-        /// The HTTP request headers to send together with webhook
-        /// requests.
+        /// The HTTP request headers to send together with webhook requests.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
