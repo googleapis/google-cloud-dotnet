@@ -536,7 +536,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         public const int UseTimeoutBasedEndpointingFieldNumber = 3;
         private bool useTimeoutBasedEndpointing_;
         /// <summary>
-        /// Use timeout based endpointing, interpreting endpointer sensitivy as
+        /// Use timeout based endpointing, interpreting endpointer sensitivity as
         /// seconds of timeout value.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
