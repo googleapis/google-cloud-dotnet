@@ -28,6 +28,18 @@
                 "CreateTaskAsync"
               ]
             },
+            "DeleteDeliveryVehicle": {
+              "methods": [
+                "DeleteDeliveryVehicle",
+                "DeleteDeliveryVehicleAsync"
+              ]
+            },
+            "DeleteTask": {
+              "methods": [
+                "DeleteTask",
+                "DeleteTaskAsync"
+              ]
+            },
             "GetDeliveryVehicle": {
               "methods": [
                 "GetDeliveryVehicle",

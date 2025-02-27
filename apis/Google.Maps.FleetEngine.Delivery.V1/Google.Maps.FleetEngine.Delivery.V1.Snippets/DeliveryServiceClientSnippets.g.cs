@@ -188,6 +188,95 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteDeliveryVehicle</summary>
+        public void DeleteDeliveryVehicleRequestObject()
+        {
+            // Snippet: DeleteDeliveryVehicle(DeleteDeliveryVehicleRequest, CallSettings)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = gmfdv::DeliveryServiceClient.Create();
+            // Initialize request argument(s)
+            gmfdv::DeleteDeliveryVehicleRequest request = new gmfdv::DeleteDeliveryVehicleRequest
+            {
+                Header = new gmfdv::DeliveryRequestHeader(),
+                DeliveryVehicleName = gmfdv::DeliveryVehicleName.FromProviderVehicle("[PROVIDER]", "[VEHICLE]"),
+            };
+            // Make the request
+            deliveryServiceClient.DeleteDeliveryVehicle(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeliveryVehicleAsync</summary>
+        public async Task DeleteDeliveryVehicleRequestObjectAsync()
+        {
+            // Snippet: DeleteDeliveryVehicleAsync(DeleteDeliveryVehicleRequest, CallSettings)
+            // Additional: DeleteDeliveryVehicleAsync(DeleteDeliveryVehicleRequest, CancellationToken)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = await gmfdv::DeliveryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gmfdv::DeleteDeliveryVehicleRequest request = new gmfdv::DeleteDeliveryVehicleRequest
+            {
+                Header = new gmfdv::DeliveryRequestHeader(),
+                DeliveryVehicleName = gmfdv::DeliveryVehicleName.FromProviderVehicle("[PROVIDER]", "[VEHICLE]"),
+            };
+            // Make the request
+            await deliveryServiceClient.DeleteDeliveryVehicleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeliveryVehicle</summary>
+        public void DeleteDeliveryVehicle()
+        {
+            // Snippet: DeleteDeliveryVehicle(string, CallSettings)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = gmfdv::DeliveryServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "providers/[PROVIDER]/deliveryVehicles/[VEHICLE]";
+            // Make the request
+            deliveryServiceClient.DeleteDeliveryVehicle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeliveryVehicleAsync</summary>
+        public async Task DeleteDeliveryVehicleAsync()
+        {
+            // Snippet: DeleteDeliveryVehicleAsync(string, CallSettings)
+            // Additional: DeleteDeliveryVehicleAsync(string, CancellationToken)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = await gmfdv::DeliveryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "providers/[PROVIDER]/deliveryVehicles/[VEHICLE]";
+            // Make the request
+            await deliveryServiceClient.DeleteDeliveryVehicleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeliveryVehicle</summary>
+        public void DeleteDeliveryVehicleResourceNames()
+        {
+            // Snippet: DeleteDeliveryVehicle(DeliveryVehicleName, CallSettings)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = gmfdv::DeliveryServiceClient.Create();
+            // Initialize request argument(s)
+            gmfdv::DeliveryVehicleName name = gmfdv::DeliveryVehicleName.FromProviderVehicle("[PROVIDER]", "[VEHICLE]");
+            // Make the request
+            deliveryServiceClient.DeleteDeliveryVehicle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteDeliveryVehicleAsync</summary>
+        public async Task DeleteDeliveryVehicleResourceNamesAsync()
+        {
+            // Snippet: DeleteDeliveryVehicleAsync(DeliveryVehicleName, CallSettings)
+            // Additional: DeleteDeliveryVehicleAsync(DeliveryVehicleName, CancellationToken)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = await gmfdv::DeliveryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gmfdv::DeliveryVehicleName name = gmfdv::DeliveryVehicleName.FromProviderVehicle("[PROVIDER]", "[VEHICLE]");
+            // Make the request
+            await deliveryServiceClient.DeleteDeliveryVehicleAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateDeliveryVehicle</summary>
         public void UpdateDeliveryVehicleRequestObject()
         {
@@ -453,6 +542,95 @@ namespace GoogleCSharpSnippets
             gmfdv::TaskName name = gmfdv::TaskName.FromProviderTask("[PROVIDER]", "[TASK]");
             // Make the request
             gmfdv::Task response = await deliveryServiceClient.GetTaskAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTask</summary>
+        public void DeleteTaskRequestObject()
+        {
+            // Snippet: DeleteTask(DeleteTaskRequest, CallSettings)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = gmfdv::DeliveryServiceClient.Create();
+            // Initialize request argument(s)
+            gmfdv::DeleteTaskRequest request = new gmfdv::DeleteTaskRequest
+            {
+                Header = new gmfdv::DeliveryRequestHeader(),
+                TaskName = gmfdv::TaskName.FromProviderTask("[PROVIDER]", "[TASK]"),
+            };
+            // Make the request
+            deliveryServiceClient.DeleteTask(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTaskAsync</summary>
+        public async Task DeleteTaskRequestObjectAsync()
+        {
+            // Snippet: DeleteTaskAsync(DeleteTaskRequest, CallSettings)
+            // Additional: DeleteTaskAsync(DeleteTaskRequest, CancellationToken)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = await gmfdv::DeliveryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gmfdv::DeleteTaskRequest request = new gmfdv::DeleteTaskRequest
+            {
+                Header = new gmfdv::DeliveryRequestHeader(),
+                TaskName = gmfdv::TaskName.FromProviderTask("[PROVIDER]", "[TASK]"),
+            };
+            // Make the request
+            await deliveryServiceClient.DeleteTaskAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTask</summary>
+        public void DeleteTask()
+        {
+            // Snippet: DeleteTask(string, CallSettings)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = gmfdv::DeliveryServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "providers/[PROVIDER]/tasks/[TASK]";
+            // Make the request
+            deliveryServiceClient.DeleteTask(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTaskAsync</summary>
+        public async Task DeleteTaskAsync()
+        {
+            // Snippet: DeleteTaskAsync(string, CallSettings)
+            // Additional: DeleteTaskAsync(string, CancellationToken)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = await gmfdv::DeliveryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "providers/[PROVIDER]/tasks/[TASK]";
+            // Make the request
+            await deliveryServiceClient.DeleteTaskAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTask</summary>
+        public void DeleteTaskResourceNames()
+        {
+            // Snippet: DeleteTask(TaskName, CallSettings)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = gmfdv::DeliveryServiceClient.Create();
+            // Initialize request argument(s)
+            gmfdv::TaskName name = gmfdv::TaskName.FromProviderTask("[PROVIDER]", "[TASK]");
+            // Make the request
+            deliveryServiceClient.DeleteTask(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTaskAsync</summary>
+        public async Task DeleteTaskResourceNamesAsync()
+        {
+            // Snippet: DeleteTaskAsync(TaskName, CallSettings)
+            // Additional: DeleteTaskAsync(TaskName, CancellationToken)
+            // Create client
+            gmfdv::DeliveryServiceClient deliveryServiceClient = await gmfdv::DeliveryServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gmfdv::TaskName name = gmfdv::TaskName.FromProviderTask("[PROVIDER]", "[TASK]");
+            // Make the request
+            await deliveryServiceClient.DeleteTaskAsync(name);
             // End snippet
         }
 

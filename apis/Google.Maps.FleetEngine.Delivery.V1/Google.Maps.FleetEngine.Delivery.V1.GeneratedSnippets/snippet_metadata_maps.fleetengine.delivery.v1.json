@@ -506,6 +506,290 @@
       ]
     },
     {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteDeliveryVehicle_sync",
+      "title": "DeleteDeliveryVehicleRequestObject",
+      "description": "Snippet for DeleteDeliveryVehicle",
+      "file": "DeliveryServiceClient.DeleteDeliveryVehicleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeliveryVehicle",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteDeliveryVehicle",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.Delivery.V1.DeleteDeliveryVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDeliveryVehicle",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteDeliveryVehicle",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteDeliveryVehicle_async",
+      "title": "DeleteDeliveryVehicleRequestObjectAsync",
+      "description": "Snippet for DeleteDeliveryVehicleAsync",
+      "file": "DeliveryServiceClient.DeleteDeliveryVehicleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeliveryVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteDeliveryVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.Delivery.V1.DeleteDeliveryVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDeliveryVehicle",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteDeliveryVehicle",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteDeliveryVehicle_sync_flattened",
+      "title": "DeleteDeliveryVehicle",
+      "description": "Snippet for DeleteDeliveryVehicle",
+      "file": "DeliveryServiceClient.DeleteDeliveryVehicleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeliveryVehicle",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteDeliveryVehicle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDeliveryVehicle",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteDeliveryVehicle",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteDeliveryVehicle_async_flattened",
+      "title": "DeleteDeliveryVehicleAsync",
+      "description": "Snippet for DeleteDeliveryVehicleAsync",
+      "file": "DeliveryServiceClient.DeleteDeliveryVehicleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeliveryVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteDeliveryVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDeliveryVehicle",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteDeliveryVehicle",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteDeliveryVehicle_sync_flattened_resourceNames",
+      "title": "DeleteDeliveryVehicleResourceNames",
+      "description": "Snippet for DeleteDeliveryVehicle",
+      "file": "DeliveryServiceClient.DeleteDeliveryVehicleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeliveryVehicle",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteDeliveryVehicle",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDeliveryVehicle",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteDeliveryVehicle",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteDeliveryVehicle_async_flattened_resourceNames",
+      "title": "DeleteDeliveryVehicleResourceNamesAsync",
+      "description": "Snippet for DeleteDeliveryVehicleAsync",
+      "file": "DeliveryServiceClient.DeleteDeliveryVehicleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteDeliveryVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteDeliveryVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteDeliveryVehicle",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteDeliveryVehicle",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "fleetengine_v1_generated_DeliveryService_UpdateDeliveryVehicle_sync",
       "title": "UpdateDeliveryVehicleRequestObject",
       "description": "Snippet for UpdateDeliveryVehicle",
@@ -1277,6 +1561,290 @@
         "method": {
           "shortName": "GetTask",
           "fullName": "maps.fleetengine.delivery.v1.DeliveryService.GetTask",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteTask_sync",
+      "title": "DeleteTaskRequestObject",
+      "description": "Snippet for DeleteTask",
+      "file": "DeliveryServiceClient.DeleteTaskRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTask",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.Delivery.V1.DeleteTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteTask",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteTask_async",
+      "title": "DeleteTaskRequestObjectAsync",
+      "description": "Snippet for DeleteTaskAsync",
+      "file": "DeliveryServiceClient.DeleteTaskRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTaskAsync",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.Delivery.V1.DeleteTaskRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteTask",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteTask_sync_flattened",
+      "title": "DeleteTask",
+      "description": "Snippet for DeleteTask",
+      "file": "DeliveryServiceClient.DeleteTaskSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTask",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteTask",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteTask_async_flattened",
+      "title": "DeleteTaskAsync",
+      "description": "Snippet for DeleteTaskAsync",
+      "file": "DeliveryServiceClient.DeleteTaskAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTaskAsync",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteTask",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteTask_sync_flattened_resourceNames",
+      "title": "DeleteTaskResourceNames",
+      "description": "Snippet for DeleteTask",
+      "file": "DeliveryServiceClient.DeleteTaskResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTask",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteTask",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.Delivery.V1.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteTask",
+          "service": {
+            "shortName": "DeliveryService",
+            "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_DeliveryService_DeleteTask_async_flattened_resourceNames",
+      "title": "DeleteTaskResourceNamesAsync",
+      "description": "Snippet for DeleteTaskAsync",
+      "file": "DeliveryServiceClient.DeleteTaskResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTaskAsync",
+        "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient.DeleteTaskAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.Delivery.V1.TaskName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DeliveryServiceClient",
+          "fullName": "Google.Maps.FleetEngine.Delivery.V1.DeliveryServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTask",
+          "fullName": "maps.fleetengine.delivery.v1.DeliveryService.DeleteTask",
           "service": {
             "shortName": "DeliveryService",
             "fullName": "maps.fleetengine.delivery.v1.DeliveryService"
