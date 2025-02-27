@@ -847,6 +847,12 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// * `planned_location` (optional for `UNAVAILABLE` tasks)
         /// * `task_duration`
         /// 
+        /// The following fields can be optionally set:
+        /// 
+        /// * `target_time_window`
+        /// * `task_tracking_view_config`
+        /// * `attributes`
+        /// 
         /// Note: The Task's `name` field is ignored. All other Task fields must not be
         /// set; otherwise, an error is returned.
         /// </param>
@@ -891,6 +897,12 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// * `planned_location` (optional for `UNAVAILABLE` tasks)
         /// * `task_duration`
         /// 
+        /// The following fields can be optionally set:
+        /// 
+        /// * `target_time_window`
+        /// * `task_tracking_view_config`
+        /// * `attributes`
+        /// 
         /// Note: The Task's `name` field is ignored. All other Task fields must not be
         /// set; otherwise, an error is returned.
         /// </param>
@@ -934,6 +946,12 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// tasks, but required for all other task types)
         /// * `planned_location` (optional for `UNAVAILABLE` tasks)
         /// * `task_duration`
+        /// 
+        /// The following fields can be optionally set:
+        /// 
+        /// * `target_time_window`
+        /// * `task_tracking_view_config`
+        /// * `attributes`
         /// 
         /// Note: The Task's `name` field is ignored. All other Task fields must not be
         /// set; otherwise, an error is returned.

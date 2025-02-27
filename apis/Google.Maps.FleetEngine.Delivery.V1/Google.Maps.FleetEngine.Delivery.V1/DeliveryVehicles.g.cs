@@ -30,53 +30,55 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             "aS9yZXNvdXJjZS5wcm90bxowZ29vZ2xlL21hcHMvZmxlZXRlbmdpbmUvZGVs",
             "aXZlcnkvdjEvY29tbW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRp",
             "b24ucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoYZ29v",
-            "Z2xlL3R5cGUvbGF0bG5nLnByb3RvIvEGCg9EZWxpdmVyeVZlaGljbGUSDAoE",
+            "Z2xlL3R5cGUvbGF0bG5nLnByb3RvIsUHCg9EZWxpdmVyeVZlaGljbGUSDAoE",
             "bmFtZRgBIAEoCRJMCg1sYXN0X2xvY2F0aW9uGAIgASgLMjUubWFwcy5mbGVl",
-            "dGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGVMb2NhdGlvbhJY",
-            "ChFuYXZpZ2F0aW9uX3N0YXR1cxgDIAEoDjI9Lm1hcHMuZmxlZXRlbmdpbmUu",
-            "ZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlTmF2aWdhdGlvblN0YXR1cxId",
-            "ChVjdXJyZW50X3JvdXRlX3NlZ21lbnQYBCABKAwSPAofY3VycmVudF9yb3V0",
-            "ZV9zZWdtZW50X2VuZF9wb2ludBgFIAEoCzITLmdvb2dsZS50eXBlLkxhdExu",
-            "ZxI+ChlyZW1haW5pbmdfZGlzdGFuY2VfbWV0ZXJzGAYgASgLMhsuZ29vZ2xl",
-            "LnByb3RvYnVmLkludDMyVmFsdWUSNQoScmVtYWluaW5nX2R1cmF0aW9uGAcg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEl8KInJlbWFpbmluZ192",
-            "ZWhpY2xlX2pvdXJuZXlfc2VnbWVudHMYCCADKAsyMy5tYXBzLmZsZWV0ZW5n",
-            "aW5lLmRlbGl2ZXJ5LnYxLlZlaGljbGVKb3VybmV5U2VnbWVudBJKCgphdHRy",
-            "aWJ1dGVzGAkgAygLMjYubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5E",
-            "ZWxpdmVyeVZlaGljbGVBdHRyaWJ1dGUSTwoEdHlwZRgKIAEoDjJBLm1hcHMu",
-            "ZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlLkRlbGl2",
-            "ZXJ5VmVoaWNsZVR5cGUidAoTRGVsaXZlcnlWZWhpY2xlVHlwZRIlCiFERUxJ",
-            "VkVSWV9WRUhJQ0xFX1RZUEVfVU5TUEVDSUZJRUQQABIICgRBVVRPEAESDwoL",
-            "VFdPX1dIRUVMRVIQAhILCgdCSUNZQ0xFEAMSDgoKUEVERVNUUklBThAEOmDq",
-            "QV0KKmZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RlbGl2ZXJ5VmVoaWNs",
-            "ZRIvcHJvdmlkZXJzL3twcm92aWRlcn0vZGVsaXZlcnlWZWhpY2xlcy97dmVo",
-            "aWNsZX0iMgoMTG9jYXRpb25JbmZvEiIKBXBvaW50GAEgASgLMhMuZ29vZ2xl",
-            "LnR5cGUuTGF0TG5nIvUBChVWZWhpY2xlSm91cm5leVNlZ21lbnQSNwoEc3Rv",
-            "cBgBIAEoCzIpLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVmVoaWNs",
-            "ZVN0b3ASQQoXZHJpdmluZ19kaXN0YW5jZV9tZXRlcnMYAiABKAsyGy5nb29n",
-            "bGUucHJvdG9idWYuSW50MzJWYWx1ZUID4EEDEjgKEGRyaXZpbmdfZHVyYXRp",
-            "b24YAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAxImCgRw",
-            "YXRoGAUgAygLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQMivgMKC1ZlaGlj",
-            "bGVTdG9wEkkKEHBsYW5uZWRfbG9jYXRpb24YASABKAsyKi5tYXBzLmZsZWV0",
-            "ZW5naW5lLmRlbGl2ZXJ5LnYxLkxvY2F0aW9uSW5mb0ID4EECEkEKBXRhc2tz",
-            "GAIgAygLMjIubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5WZWhpY2xl",
-            "U3RvcC5UYXNrSW5mbxI+CgVzdGF0ZRgDIAEoDjIvLm1hcHMuZmxlZXRlbmdp",
-            "bmUuZGVsaXZlcnkudjEuVmVoaWNsZVN0b3AuU3RhdGUanQEKCFRhc2tJbmZv",
-            "Eg8KB3Rhc2tfaWQYASABKAkSNQoNdGFza19kdXJhdGlvbhgCIAEoCzIZLmdv",
-            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDEkkKEnRhcmdldF90aW1lX3dp",
-            "bmRvdxgDIAEoCzIoLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGlt",
-            "ZVdpbmRvd0ID4EEDIkEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "BwoDTkVXEAESCwoHRU5ST1VURRACEgsKB0FSUklWRUQQA0KFAgonY29tLmdv",
-            "b2dsZS5tYXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxQhBEZWxpdmVyeVZl",
-            "aGljbGVzUAFaSWNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9mbGVldGVuZ2lu",
-            "ZS9kZWxpdmVyeS9hcGl2MS9kZWxpdmVyeXBiO2RlbGl2ZXJ5cGKiAgRDRkVE",
-            "qgIjR29vZ2xlLk1hcHMuRmxlZXRFbmdpbmUuRGVsaXZlcnkuVjHKAiNHb29n",
-            "bGVcTWFwc1xGbGVldEVuZ2luZVxEZWxpdmVyeVxWMeoCJ0dvb2dsZTo6TWFw",
-            "czo6RmxlZXRFbmdpbmU6OkRlbGl2ZXJ5OjpWMWIGcHJvdG8z"));
+            "dGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVyeVZlaGljbGVMb2NhdGlvbhJS",
+            "Cg5wYXN0X2xvY2F0aW9ucxgMIAMoCzI1Lm1hcHMuZmxlZXRlbmdpbmUuZGVs",
+            "aXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlTG9jYXRpb25CA+BBBBJYChFuYXZp",
+            "Z2F0aW9uX3N0YXR1cxgDIAEoDjI9Lm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZl",
+            "cnkudjEuRGVsaXZlcnlWZWhpY2xlTmF2aWdhdGlvblN0YXR1cxIdChVjdXJy",
+            "ZW50X3JvdXRlX3NlZ21lbnQYBCABKAwSPAofY3VycmVudF9yb3V0ZV9zZWdt",
+            "ZW50X2VuZF9wb2ludBgFIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZxI+Chly",
+            "ZW1haW5pbmdfZGlzdGFuY2VfbWV0ZXJzGAYgASgLMhsuZ29vZ2xlLnByb3Rv",
+            "YnVmLkludDMyVmFsdWUSNQoScmVtYWluaW5nX2R1cmF0aW9uGAcgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEl8KInJlbWFpbmluZ192ZWhpY2xl",
+            "X2pvdXJuZXlfc2VnbWVudHMYCCADKAsyMy5tYXBzLmZsZWV0ZW5naW5lLmRl",
+            "bGl2ZXJ5LnYxLlZlaGljbGVKb3VybmV5U2VnbWVudBJKCgphdHRyaWJ1dGVz",
+            "GAkgAygLMjYubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5EZWxpdmVy",
+            "eVZlaGljbGVBdHRyaWJ1dGUSTwoEdHlwZRgKIAEoDjJBLm1hcHMuZmxlZXRl",
+            "bmdpbmUuZGVsaXZlcnkudjEuRGVsaXZlcnlWZWhpY2xlLkRlbGl2ZXJ5VmVo",
+            "aWNsZVR5cGUidAoTRGVsaXZlcnlWZWhpY2xlVHlwZRIlCiFERUxJVkVSWV9W",
+            "RUhJQ0xFX1RZUEVfVU5TUEVDSUZJRUQQABIICgRBVVRPEAESDwoLVFdPX1dI",
+            "RUVMRVIQAhILCgdCSUNZQ0xFEAMSDgoKUEVERVNUUklBThAEOmDqQV0KKmZs",
+            "ZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RlbGl2ZXJ5VmVoaWNsZRIvcHJv",
+            "dmlkZXJzL3twcm92aWRlcn0vZGVsaXZlcnlWZWhpY2xlcy97dmVoaWNsZX0i",
+            "MgoMTG9jYXRpb25JbmZvEiIKBXBvaW50GAEgASgLMhMuZ29vZ2xlLnR5cGUu",
+            "TGF0TG5nIvUBChVWZWhpY2xlSm91cm5leVNlZ21lbnQSNwoEc3RvcBgBIAEo",
+            "CzIpLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVmVoaWNsZVN0b3AS",
+            "QQoXZHJpdmluZ19kaXN0YW5jZV9tZXRlcnMYAiABKAsyGy5nb29nbGUucHJv",
+            "dG9idWYuSW50MzJWYWx1ZUID4EEDEjgKEGRyaXZpbmdfZHVyYXRpb24YAyAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAxImCgRwYXRoGAUg",
+            "AygLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nQgPgQQMivgMKC1ZlaGljbGVTdG9w",
+            "EkkKEHBsYW5uZWRfbG9jYXRpb24YASABKAsyKi5tYXBzLmZsZWV0ZW5naW5l",
+            "LmRlbGl2ZXJ5LnYxLkxvY2F0aW9uSW5mb0ID4EECEkEKBXRhc2tzGAIgAygL",
+            "MjIubWFwcy5mbGVldGVuZ2luZS5kZWxpdmVyeS52MS5WZWhpY2xlU3RvcC5U",
+            "YXNrSW5mbxI+CgVzdGF0ZRgDIAEoDjIvLm1hcHMuZmxlZXRlbmdpbmUuZGVs",
+            "aXZlcnkudjEuVmVoaWNsZVN0b3AuU3RhdGUanQEKCFRhc2tJbmZvEg8KB3Rh",
+            "c2tfaWQYASABKAkSNQoNdGFza19kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5w",
+            "cm90b2J1Zi5EdXJhdGlvbkID4EEDEkkKEnRhcmdldF90aW1lX3dpbmRvdxgD",
+            "IAEoCzIoLm1hcHMuZmxlZXRlbmdpbmUuZGVsaXZlcnkudjEuVGltZVdpbmRv",
+            "d0ID4EEDIkEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASBwoDTkVX",
+            "EAESCwoHRU5ST1VURRACEgsKB0FSUklWRUQQA0KFAgonY29tLmdvb2dsZS5t",
+            "YXBzLmZsZWV0ZW5naW5lLmRlbGl2ZXJ5LnYxQhBEZWxpdmVyeVZlaGljbGVz",
+            "UAFaSWNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9mbGVldGVuZ2luZS9kZWxp",
+            "dmVyeS9hcGl2MS9kZWxpdmVyeXBiO2RlbGl2ZXJ5cGKiAgRDRkVEqgIjR29v",
+            "Z2xlLk1hcHMuRmxlZXRFbmdpbmUuRGVsaXZlcnkuVjHKAiNHb29nbGVcTWFw",
+            "c1xGbGVldEVuZ2luZVxEZWxpdmVyeVxWMeoCJ0dvb2dsZTo6TWFwczo6Rmxl",
+            "ZXRFbmdpbmU6OkRlbGl2ZXJ5OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.FleetEngine.Delivery.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicle), global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicle.Parser, new[]{ "Name", "LastLocation", "NavigationStatus", "CurrentRouteSegment", "CurrentRouteSegmentEndPoint", "RemainingDistanceMeters", "RemainingDuration", "RemainingVehicleJourneySegments", "Attributes", "Type" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicle.Types.DeliveryVehicleType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicle), global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicle.Parser, new[]{ "Name", "LastLocation", "PastLocations", "NavigationStatus", "CurrentRouteSegment", "CurrentRouteSegmentEndPoint", "RemainingDistanceMeters", "RemainingDuration", "RemainingVehicleJourneySegments", "Attributes", "Type" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicle.Types.DeliveryVehicleType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.LocationInfo), global::Google.Maps.FleetEngine.Delivery.V1.LocationInfo.Parser, new[]{ "Point" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.VehicleJourneySegment), global::Google.Maps.FleetEngine.Delivery.V1.VehicleJourneySegment.Parser, new[]{ "Stop", "DrivingDistanceMeters", "DrivingDuration", "Path" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop), global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop.Parser, new[]{ "PlannedLocation", "Tasks", "State" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop.Types.TaskInfo), global::Google.Maps.FleetEngine.Delivery.V1.VehicleStop.Types.TaskInfo.Parser, new[]{ "TaskId", "TaskDuration", "TargetTimeWindow" }, null, null, null, null)})
@@ -134,6 +136,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
     public DeliveryVehicle(DeliveryVehicle other) : this() {
       name_ = other.name_;
       lastLocation_ = other.lastLocation_ != null ? other.lastLocation_.Clone() : null;
+      pastLocations_ = other.pastLocations_.Clone();
       navigationStatus_ = other.navigationStatus_;
       currentRouteSegment_ = other.currentRouteSegment_;
       currentRouteSegmentEndPoint_ = other.currentRouteSegmentEndPoint_ != null ? other.currentRouteSegmentEndPoint_.Clone() : null;
@@ -180,6 +183,24 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       set {
         lastLocation_ = value;
       }
+    }
+
+    /// <summary>Field number for the "past_locations" field.</summary>
+    public const int PastLocationsFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation> _repeated_pastLocations_codec
+        = pb::FieldCodec.ForMessage(98, global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation> pastLocations_ = new pbc::RepeatedField<global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation>();
+    /// <summary>
+    /// Input only. Locations where this Delivery Vehicle has been in the past that
+    /// haven't yet been reported to Fleet Engine. This is used in
+    /// `UpdateDeliveryVehicleRequest` to record locations which were previously
+    /// unable to be sent to the server. Typically this happens when the Delivery
+    /// Vehicle does not have internet connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleLocation> PastLocations {
+      get { return pastLocations_; }
     }
 
     /// <summary>Field number for the "navigation_status" field.</summary>
@@ -377,6 +398,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       }
       if (Name != other.Name) return false;
       if (!object.Equals(LastLocation, other.LastLocation)) return false;
+      if(!pastLocations_.Equals(other.pastLocations_)) return false;
       if (NavigationStatus != other.NavigationStatus) return false;
       if (CurrentRouteSegment != other.CurrentRouteSegment) return false;
       if (!object.Equals(CurrentRouteSegmentEndPoint, other.CurrentRouteSegmentEndPoint)) return false;
@@ -394,6 +416,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (lastLocation_ != null) hash ^= LastLocation.GetHashCode();
+      hash ^= pastLocations_.GetHashCode();
       if (NavigationStatus != global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleNavigationStatus.UnknownNavigationStatus) hash ^= NavigationStatus.GetHashCode();
       if (CurrentRouteSegment.Length != 0) hash ^= CurrentRouteSegment.GetHashCode();
       if (currentRouteSegmentEndPoint_ != null) hash ^= CurrentRouteSegmentEndPoint.GetHashCode();
@@ -453,6 +476,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         output.WriteRawTag(80);
         output.WriteEnum((int) Type);
       }
+      pastLocations_.WriteTo(output, _repeated_pastLocations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -496,6 +520,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         output.WriteRawTag(80);
         output.WriteEnum((int) Type);
       }
+      pastLocations_.WriteTo(ref output, _repeated_pastLocations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -512,6 +537,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
       if (lastLocation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastLocation);
       }
+      size += pastLocations_.CalculateSize(_repeated_pastLocations_codec);
       if (NavigationStatus != global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleNavigationStatus.UnknownNavigationStatus) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NavigationStatus);
       }
@@ -553,6 +579,7 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
         }
         LastLocation.MergeFrom(other.LastLocation);
       }
+      pastLocations_.Add(other.pastLocations_);
       if (other.NavigationStatus != global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicleNavigationStatus.UnknownNavigationStatus) {
         NavigationStatus = other.NavigationStatus;
       }
@@ -648,6 +675,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
             Type = (global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicle.Types.DeliveryVehicleType) input.ReadEnum();
             break;
           }
+          case 98: {
+            pastLocations_.AddEntriesFrom(input, _repeated_pastLocations_codec);
+            break;
+          }
         }
       }
     #endif
@@ -713,6 +744,10 @@ namespace Google.Maps.FleetEngine.Delivery.V1 {
           }
           case 80: {
             Type = (global::Google.Maps.FleetEngine.Delivery.V1.DeliveryVehicle.Types.DeliveryVehicleType) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            pastLocations_.AddEntriesFrom(ref input, _repeated_pastLocations_codec);
             break;
           }
         }
