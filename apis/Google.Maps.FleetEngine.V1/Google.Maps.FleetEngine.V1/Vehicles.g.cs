@@ -29,85 +29,86 @@ namespace Google.Maps.FleetEngine.V1 {
             "ci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxosZ29vZ2xlL21h",
             "cHMvZmxlZXRlbmdpbmUvdjEvZmxlZXRlbmdpbmUucHJvdG8aH2dvb2dsZS9w",
             "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFw",
-            "cGVycy5wcm90byLiCwoHVmVoaWNsZRIRCgRuYW1lGAEgASgJQgPgQQMSOAoN",
+            "cGVycy5wcm90byKlDAoHVmVoaWNsZRIRCgRuYW1lGAEgASgJQgPgQQMSOAoN",
             "dmVoaWNsZV9zdGF0ZRgCIAEoDjIhLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVo",
             "aWNsZVN0YXRlEjsKFHN1cHBvcnRlZF90cmlwX3R5cGVzGAMgAygOMh0ubWFw",
             "cy5mbGVldGVuZ2luZS52MS5UcmlwVHlwZRIaCg1jdXJyZW50X3RyaXBzGAQg",
             "AygJQgPgQQMSOwoNbGFzdF9sb2NhdGlvbhgFIAEoCzIkLm1hcHMuZmxlZXRl",
-            "bmdpbmUudjEuVmVoaWNsZUxvY2F0aW9uEhgKEG1heGltdW1fY2FwYWNpdHkY",
-            "BiABKAUSOQoKYXR0cmlidXRlcxgIIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUu",
-            "djEuVmVoaWNsZUF0dHJpYnV0ZRJDCgx2ZWhpY2xlX3R5cGUYCSABKAsyKC5t",
-            "YXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGUuVmVoaWNsZVR5cGVCA+BBAhI4",
-            "Cg1saWNlbnNlX3BsYXRlGAogASgLMiEubWFwcy5mbGVldGVuZ2luZS52MS5M",
-            "aWNlbnNlUGxhdGUSOAoFcm91dGUYDCADKAsyJS5tYXBzLmZsZWV0ZW5naW5l",
-            "LnYxLlRlcm1pbmFsTG9jYXRpb25CAhgBEh0KFWN1cnJlbnRfcm91dGVfc2Vn",
-            "bWVudBgUIAEoCRJUCh1jdXJyZW50X3JvdXRlX3NlZ21lbnRfdHJhZmZpYxgc",
-            "IAEoCzIoLm1hcHMuZmxlZXRlbmdpbmUudjEuVHJhZmZpY1BvbHlsaW5lRGF0",
-            "YUID4EEEEkYKHWN1cnJlbnRfcm91dGVfc2VnbWVudF92ZXJzaW9uGA8gASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkoKH2N1cnJlbnRf",
-            "cm91dGVfc2VnbWVudF9lbmRfcG9pbnQYGCABKAsyIS5tYXBzLmZsZWV0ZW5n",
-            "aW5lLnYxLlRyaXBXYXlwb2ludBI+ChlyZW1haW5pbmdfZGlzdGFuY2VfbWV0",
-            "ZXJzGBIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSOQoVZXRh",
-            "X3RvX2ZpcnN0X3dheXBvaW50GBMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcBJAChZyZW1haW5pbmdfdGltZV9zZWNvbmRzGBkgASgLMhsuZ29v",
-            "Z2xlLnByb3RvYnVmLkludDMyVmFsdWVCA+BBBBI0Cgl3YXlwb2ludHMYFiAD",
-            "KAsyIS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBXYXlwb2ludBI6ChF3YXlw",
-            "b2ludHNfdmVyc2lvbhgQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxIcChRiYWNrX3RvX2JhY2tfZW5hYmxlZBgXIAEoCBJAChFuYXZp",
-            "Z2F0aW9uX3N0YXR1cxgaIAEoDjIlLm1hcHMuZmxlZXRlbmdpbmUudjEuTmF2",
-            "aWdhdGlvblN0YXR1cxJBCg9kZXZpY2Vfc2V0dGluZ3MYGyABKAsyIy5tYXBz",
-            "LmZsZWV0ZW5naW5lLnYxLkRldmljZVNldHRpbmdzQgPgQQQauAEKC1ZlaGlj",
-            "bGVUeXBlEkMKCGNhdGVnb3J5GAEgASgOMjEubWFwcy5mbGVldGVuZ2luZS52",
-            "MS5WZWhpY2xlLlZlaGljbGVUeXBlLkNhdGVnb3J5ImQKCENhdGVnb3J5EgsK",
-            "B1VOS05PV04QABIICgRBVVRPEAESCAoEVEFYSRACEgkKBVRSVUNLEAMSDwoL",
-            "VFdPX1dIRUVMRVIQBBILCgdCSUNZQ0xFEAUSDgoKUEVERVNUUklBThAGOlDq",
-            "QU0KImZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29tL1ZlaGljbGUSJ3Byb3Zp",
-            "ZGVycy97cHJvdmlkZXJ9L3ZlaGljbGVzL3t2ZWhpY2xlfSKdAQoLQmF0dGVy",
-            "eUluZm8SOgoOYmF0dGVyeV9zdGF0dXMYASABKA4yIi5tYXBzLmZsZWV0ZW5n",
-            "aW5lLnYxLkJhdHRlcnlTdGF0dXMSNgoMcG93ZXJfc291cmNlGAIgASgOMiAu",
-            "bWFwcy5mbGVldGVuZ2luZS52MS5Qb3dlclNvdXJjZRIaChJiYXR0ZXJ5X3Bl",
-            "cmNlbnRhZ2UYAyABKAIiygEKDkRldmljZVNldHRpbmdzEkwKGGxvY2F0aW9u",
-            "X3Bvd2VyX3NhdmVfbW9kZRgBIAEoDjIqLm1hcHMuZmxlZXRlbmdpbmUudjEu",
-            "TG9jYXRpb25Qb3dlclNhdmVNb2RlEhoKEmlzX3Bvd2VyX3NhdmVfbW9kZRgC",
-            "IAEoCBIWCg5pc19pbnRlcmFjdGl2ZRgDIAEoCBI2CgxiYXR0ZXJ5X2luZm8Y",
-            "BCABKAsyIC5tYXBzLmZsZWV0ZW5naW5lLnYxLkJhdHRlcnlJbmZvIkEKDExp",
-            "Y2Vuc2VQbGF0ZRIZCgxjb3VudHJ5X2NvZGUYASABKAlCA+BBAhIWCg5sYXN0",
-            "X2NoYXJhY3RlchgCIAEoCSL2AgokVmlzdWFsVHJhZmZpY1JlcG9ydFBvbHls",
-            "aW5lUmVuZGVyaW5nEmAKDHJvYWRfc3RyZXRjaBgBIAMoCzJFLm1hcHMuZmxl",
-            "ZXRlbmdpbmUudjEuVmlzdWFsVHJhZmZpY1JlcG9ydFBvbHlsaW5lUmVuZGVy",
-            "aW5nLlJvYWRTdHJldGNoQgPgQQEa6wEKC1JvYWRTdHJldGNoEl8KBXN0eWxl",
-            "GAEgASgOMksubWFwcy5mbGVldGVuZ2luZS52MS5WaXN1YWxUcmFmZmljUmVw",
-            "b3J0UG9seWxpbmVSZW5kZXJpbmcuUm9hZFN0cmV0Y2guU3R5bGVCA+BBAhIa",
-            "Cg1vZmZzZXRfbWV0ZXJzGAIgASgFQgPgQQISGgoNbGVuZ3RoX21ldGVycxgD",
-            "IAEoBUID4EECIkMKBVN0eWxlEhUKEVNUWUxFX1VOU1BFQ0lGSUVEEAASEgoO",
-            "U0xPV0VSX1RSQUZGSUMQARIPCgtUUkFGRklDX0pBTRACImsKE1RyYWZmaWNQ",
-            "b2x5bGluZURhdGESVAoRdHJhZmZpY19yZW5kZXJpbmcYASABKAsyOS5tYXBz",
-            "LmZsZWV0ZW5naW5lLnYxLlZpc3VhbFRyYWZmaWNSZXBvcnRQb2x5bGluZVJl",
-            "bmRlcmluZypCCgxWZWhpY2xlU3RhdGUSGQoVVU5LTk9XTl9WRUhJQ0xFX1NU",
-            "QVRFEAASCwoHT0ZGTElORRABEgoKBk9OTElORRACKpICChVMb2NhdGlvblBv",
-            "d2VyU2F2ZU1vZGUSJAogVU5LTk9XTl9MT0NBVElPTl9QT1dFUl9TQVZFX01P",
-            "REUQABIbChdMT0NBVElPTl9NT0RFX05PX0NIQU5HRRABEi4KKkxPQ0FUSU9O",
-            "X01PREVfR1BTX0RJU0FCTEVEX1dIRU5fU0NSRUVOX09GRhACEi4KKkxPQ0FU",
-            "SU9OX01PREVfQUxMX0RJU0FCTEVEX1dIRU5fU0NSRUVOX09GRhADEiEKHUxP",
-            "Q0FUSU9OX01PREVfRk9SRUdST1VORF9PTkxZEAQSMwovTE9DQVRJT05fTU9E",
-            "RV9USFJPVFRMRV9SRVFVRVNUU19XSEVOX1NDUkVFTl9PRkYQBSrAAQoNQmF0",
-            "dGVyeVN0YXR1cxIaChZVTktOT1dOX0JBVFRFUllfU1RBVFVTEAASGwoXQkFU",
-            "VEVSWV9TVEFUVVNfQ0hBUkdJTkcQARIeChpCQVRURVJZX1NUQVRVU19ESVND",
-            "SEFSR0lORxACEhcKE0JBVFRFUllfU1RBVFVTX0ZVTEwQAxIfChtCQVRURVJZ",
-            "X1NUQVRVU19OT1RfQ0hBUkdJTkcQBBIcChhCQVRURVJZX1NUQVRVU19QT1dF",
-            "Ul9MT1cQBSqJAQoLUG93ZXJTb3VyY2USGAoUVU5LTk9XTl9QT1dFUl9TT1VS",
-            "Q0UQABITCg9QT1dFUl9TT1VSQ0VfQUMQARIUChBQT1dFUl9TT1VSQ0VfVVNC",
-            "EAISGQoVUE9XRVJfU09VUkNFX1dJUkVMRVNTEAMSGgoWUE9XRVJfU09VUkNF",
-            "X1VOUExVR0dFRBAEQtQBCh5jb20uZ29vZ2xlLm1hcHMuZmxlZXRlbmdpbmUu",
-            "djFCCFZlaGljbGVzUAFaRmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9mbGVl",
-            "dGVuZ2luZS9hcGl2MS9mbGVldGVuZ2luZXBiO2ZsZWV0ZW5naW5lcGKiAgND",
-            "RkWqAhpHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5WMcoCGkdvb2dsZVxNYXBz",
-            "XEZsZWV0RW5naW5lXFYx6gIdR29vZ2xlOjpNYXBzOjpGbGVldEVuZ2luZTo6",
-            "VjFiBnByb3RvMw=="));
+            "bmdpbmUudjEuVmVoaWNsZUxvY2F0aW9uEkEKDnBhc3RfbG9jYXRpb25zGB4g",
+            "AygLMiQubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlTG9jYXRpb25CA+BB",
+            "BBIYChBtYXhpbXVtX2NhcGFjaXR5GAYgASgFEjkKCmF0dHJpYnV0ZXMYCCAD",
+            "KAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVBdHRyaWJ1dGUSQwoM",
+            "dmVoaWNsZV90eXBlGAkgASgLMigubWFwcy5mbGVldGVuZ2luZS52MS5WZWhp",
+            "Y2xlLlZlaGljbGVUeXBlQgPgQQISOAoNbGljZW5zZV9wbGF0ZRgKIAEoCzIh",
+            "Lm1hcHMuZmxlZXRlbmdpbmUudjEuTGljZW5zZVBsYXRlEjgKBXJvdXRlGAwg",
+            "AygLMiUubWFwcy5mbGVldGVuZ2luZS52MS5UZXJtaW5hbExvY2F0aW9uQgIY",
+            "ARIdChVjdXJyZW50X3JvdXRlX3NlZ21lbnQYFCABKAkSVAodY3VycmVudF9y",
+            "b3V0ZV9zZWdtZW50X3RyYWZmaWMYHCABKAsyKC5tYXBzLmZsZWV0ZW5naW5l",
+            "LnYxLlRyYWZmaWNQb2x5bGluZURhdGFCA+BBBBJGCh1jdXJyZW50X3JvdXRl",
+            "X3NlZ21lbnRfdmVyc2lvbhgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxJKCh9jdXJyZW50X3JvdXRlX3NlZ21lbnRfZW5kX3BvaW50",
+            "GBggASgLMiEubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwV2F5cG9pbnQSPgoZ",
+            "cmVtYWluaW5nX2Rpc3RhbmNlX21ldGVycxgSIAEoCzIbLmdvb2dsZS5wcm90",
+            "b2J1Zi5JbnQzMlZhbHVlEjkKFWV0YV90b19maXJzdF93YXlwb2ludBgTIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASQAoWcmVtYWluaW5nX3Rp",
+            "bWVfc2Vjb25kcxgZIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVl",
+            "QgPgQQQSNAoJd2F5cG9pbnRzGBYgAygLMiEubWFwcy5mbGVldGVuZ2luZS52",
+            "MS5UcmlwV2F5cG9pbnQSOgoRd2F5cG9pbnRzX3ZlcnNpb24YECABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSHAoUYmFja190b19iYWNr",
+            "X2VuYWJsZWQYFyABKAgSQAoRbmF2aWdhdGlvbl9zdGF0dXMYGiABKA4yJS5t",
+            "YXBzLmZsZWV0ZW5naW5lLnYxLk5hdmlnYXRpb25TdGF0dXMSQQoPZGV2aWNl",
+            "X3NldHRpbmdzGBsgASgLMiMubWFwcy5mbGVldGVuZ2luZS52MS5EZXZpY2VT",
+            "ZXR0aW5nc0ID4EEEGrgBCgtWZWhpY2xlVHlwZRJDCghjYXRlZ29yeRgBIAEo",
+            "DjIxLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZS5WZWhpY2xlVHlwZS5D",
+            "YXRlZ29yeSJkCghDYXRlZ29yeRILCgdVTktOT1dOEAASCAoEQVVUTxABEggK",
+            "BFRBWEkQAhIJCgVUUlVDSxADEg8KC1RXT19XSEVFTEVSEAQSCwoHQklDWUNM",
+            "RRAFEg4KClBFREVTVFJJQU4QBjpQ6kFNCiJmbGVldGVuZ2luZS5nb29nbGVh",
+            "cGlzLmNvbS9WZWhpY2xlEidwcm92aWRlcnMve3Byb3ZpZGVyfS92ZWhpY2xl",
+            "cy97dmVoaWNsZX0inQEKC0JhdHRlcnlJbmZvEjoKDmJhdHRlcnlfc3RhdHVz",
+            "GAEgASgOMiIubWFwcy5mbGVldGVuZ2luZS52MS5CYXR0ZXJ5U3RhdHVzEjYK",
+            "DHBvd2VyX3NvdXJjZRgCIAEoDjIgLm1hcHMuZmxlZXRlbmdpbmUudjEuUG93",
+            "ZXJTb3VyY2USGgoSYmF0dGVyeV9wZXJjZW50YWdlGAMgASgCIsoBCg5EZXZp",
+            "Y2VTZXR0aW5ncxJMChhsb2NhdGlvbl9wb3dlcl9zYXZlX21vZGUYASABKA4y",
+            "Ki5tYXBzLmZsZWV0ZW5naW5lLnYxLkxvY2F0aW9uUG93ZXJTYXZlTW9kZRIa",
+            "ChJpc19wb3dlcl9zYXZlX21vZGUYAiABKAgSFgoOaXNfaW50ZXJhY3RpdmUY",
+            "AyABKAgSNgoMYmF0dGVyeV9pbmZvGAQgASgLMiAubWFwcy5mbGVldGVuZ2lu",
+            "ZS52MS5CYXR0ZXJ5SW5mbyJBCgxMaWNlbnNlUGxhdGUSGQoMY291bnRyeV9j",
+            "b2RlGAEgASgJQgPgQQISFgoObGFzdF9jaGFyYWN0ZXIYAiABKAki9gIKJFZp",
+            "c3VhbFRyYWZmaWNSZXBvcnRQb2x5bGluZVJlbmRlcmluZxJgCgxyb2FkX3N0",
+            "cmV0Y2gYASADKAsyRS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZpc3VhbFRyYWZm",
+            "aWNSZXBvcnRQb2x5bGluZVJlbmRlcmluZy5Sb2FkU3RyZXRjaEID4EEBGusB",
+            "CgtSb2FkU3RyZXRjaBJfCgVzdHlsZRgBIAEoDjJLLm1hcHMuZmxlZXRlbmdp",
+            "bmUudjEuVmlzdWFsVHJhZmZpY1JlcG9ydFBvbHlsaW5lUmVuZGVyaW5nLlJv",
+            "YWRTdHJldGNoLlN0eWxlQgPgQQISGgoNb2Zmc2V0X21ldGVycxgCIAEoBUID",
+            "4EECEhoKDWxlbmd0aF9tZXRlcnMYAyABKAVCA+BBAiJDCgVTdHlsZRIVChFT",
+            "VFlMRV9VTlNQRUNJRklFRBAAEhIKDlNMT1dFUl9UUkFGRklDEAESDwoLVFJB",
+            "RkZJQ19KQU0QAiJrChNUcmFmZmljUG9seWxpbmVEYXRhElQKEXRyYWZmaWNf",
+            "cmVuZGVyaW5nGAEgASgLMjkubWFwcy5mbGVldGVuZ2luZS52MS5WaXN1YWxU",
+            "cmFmZmljUmVwb3J0UG9seWxpbmVSZW5kZXJpbmcqQgoMVmVoaWNsZVN0YXRl",
+            "EhkKFVVOS05PV05fVkVISUNMRV9TVEFURRAAEgsKB09GRkxJTkUQARIKCgZP",
+            "TkxJTkUQAiqSAgoVTG9jYXRpb25Qb3dlclNhdmVNb2RlEiQKIFVOS05PV05f",
+            "TE9DQVRJT05fUE9XRVJfU0FWRV9NT0RFEAASGwoXTE9DQVRJT05fTU9ERV9O",
+            "T19DSEFOR0UQARIuCipMT0NBVElPTl9NT0RFX0dQU19ESVNBQkxFRF9XSEVO",
+            "X1NDUkVFTl9PRkYQAhIuCipMT0NBVElPTl9NT0RFX0FMTF9ESVNBQkxFRF9X",
+            "SEVOX1NDUkVFTl9PRkYQAxIhCh1MT0NBVElPTl9NT0RFX0ZPUkVHUk9VTkRf",
+            "T05MWRAEEjMKL0xPQ0FUSU9OX01PREVfVEhST1RUTEVfUkVRVUVTVFNfV0hF",
+            "Tl9TQ1JFRU5fT0ZGEAUqwAEKDUJhdHRlcnlTdGF0dXMSGgoWVU5LTk9XTl9C",
+            "QVRURVJZX1NUQVRVUxAAEhsKF0JBVFRFUllfU1RBVFVTX0NIQVJHSU5HEAES",
+            "HgoaQkFUVEVSWV9TVEFUVVNfRElTQ0hBUkdJTkcQAhIXChNCQVRURVJZX1NU",
+            "QVRVU19GVUxMEAMSHwobQkFUVEVSWV9TVEFUVVNfTk9UX0NIQVJHSU5HEAQS",
+            "HAoYQkFUVEVSWV9TVEFUVVNfUE9XRVJfTE9XEAUqiQEKC1Bvd2VyU291cmNl",
+            "EhgKFFVOS05PV05fUE9XRVJfU09VUkNFEAASEwoPUE9XRVJfU09VUkNFX0FD",
+            "EAESFAoQUE9XRVJfU09VUkNFX1VTQhACEhkKFVBPV0VSX1NPVVJDRV9XSVJF",
+            "TEVTUxADEhoKFlBPV0VSX1NPVVJDRV9VTlBMVUdHRUQQBELUAQoeY29tLmdv",
+            "b2dsZS5tYXBzLmZsZWV0ZW5naW5lLnYxQghWZWhpY2xlc1ABWkZjbG91ZC5n",
+            "b29nbGUuY29tL2dvL21hcHMvZmxlZXRlbmdpbmUvYXBpdjEvZmxlZXRlbmdp",
+            "bmVwYjtmbGVldGVuZ2luZXBiogIDQ0ZFqgIaR29vZ2xlLk1hcHMuRmxlZXRF",
+            "bmdpbmUuVjHKAhpHb29nbGVcTWFwc1xGbGVldEVuZ2luZVxWMeoCHUdvb2ds",
+            "ZTo6TWFwczo6RmxlZXRFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Maps.FleetEngine.V1.FleetengineReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Maps.FleetEngine.V1.VehicleState), typeof(global::Google.Maps.FleetEngine.V1.LocationPowerSaveMode), typeof(global::Google.Maps.FleetEngine.V1.BatteryStatus), typeof(global::Google.Maps.FleetEngine.V1.PowerSource), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.Vehicle), global::Google.Maps.FleetEngine.V1.Vehicle.Parser, new[]{ "Name", "VehicleState", "SupportedTripTypes", "CurrentTrips", "LastLocation", "MaximumCapacity", "Attributes", "VehicleType", "LicensePlate", "Route", "CurrentRouteSegment", "CurrentRouteSegmentTraffic", "CurrentRouteSegmentVersion", "CurrentRouteSegmentEndPoint", "RemainingDistanceMeters", "EtaToFirstWaypoint", "RemainingTimeSeconds", "Waypoints", "WaypointsVersion", "BackToBackEnabled", "NavigationStatus", "DeviceSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.Vehicle.Types.VehicleType), global::Google.Maps.FleetEngine.V1.Vehicle.Types.VehicleType.Parser, new[]{ "Category" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.V1.Vehicle.Types.VehicleType.Types.Category) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.Vehicle), global::Google.Maps.FleetEngine.V1.Vehicle.Parser, new[]{ "Name", "VehicleState", "SupportedTripTypes", "CurrentTrips", "LastLocation", "PastLocations", "MaximumCapacity", "Attributes", "VehicleType", "LicensePlate", "Route", "CurrentRouteSegment", "CurrentRouteSegmentTraffic", "CurrentRouteSegmentVersion", "CurrentRouteSegmentEndPoint", "RemainingDistanceMeters", "EtaToFirstWaypoint", "RemainingTimeSeconds", "Waypoints", "WaypointsVersion", "BackToBackEnabled", "NavigationStatus", "DeviceSettings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.Vehicle.Types.VehicleType), global::Google.Maps.FleetEngine.V1.Vehicle.Types.VehicleType.Parser, new[]{ "Category" }, null, new[]{ typeof(global::Google.Maps.FleetEngine.V1.Vehicle.Types.VehicleType.Types.Category) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.BatteryInfo), global::Google.Maps.FleetEngine.V1.BatteryInfo.Parser, new[]{ "BatteryStatus", "PowerSource", "BatteryPercentage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.DeviceSettings), global::Google.Maps.FleetEngine.V1.DeviceSettings.Parser, new[]{ "LocationPowerSaveMode", "IsPowerSaveMode", "IsInteractive", "BatteryInfo" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.LicensePlate), global::Google.Maps.FleetEngine.V1.LicensePlate.Parser, new[]{ "CountryCode", "LastCharacter" }, null, null, null, null),
@@ -277,6 +278,7 @@ namespace Google.Maps.FleetEngine.V1 {
       supportedTripTypes_ = other.supportedTripTypes_.Clone();
       currentTrips_ = other.currentTrips_.Clone();
       lastLocation_ = other.lastLocation_ != null ? other.lastLocation_.Clone() : null;
+      pastLocations_ = other.pastLocations_.Clone();
       maximumCapacity_ = other.maximumCapacity_;
       attributes_ = other.attributes_.Clone();
       vehicleType_ = other.vehicleType_ != null ? other.vehicleType_.Clone() : null;
@@ -376,6 +378,24 @@ namespace Google.Maps.FleetEngine.V1 {
       set {
         lastLocation_ = value;
       }
+    }
+
+    /// <summary>Field number for the "past_locations" field.</summary>
+    public const int PastLocationsFieldNumber = 30;
+    private static readonly pb::FieldCodec<global::Google.Maps.FleetEngine.V1.VehicleLocation> _repeated_pastLocations_codec
+        = pb::FieldCodec.ForMessage(242, global::Google.Maps.FleetEngine.V1.VehicleLocation.Parser);
+    private readonly pbc::RepeatedField<global::Google.Maps.FleetEngine.V1.VehicleLocation> pastLocations_ = new pbc::RepeatedField<global::Google.Maps.FleetEngine.V1.VehicleLocation>();
+    /// <summary>
+    /// Input only. Locations where this vehicle has been in the past that haven't
+    /// yet been reported to Fleet Engine. This is used in `UpdateVehicleRequest`
+    /// to record locations which were previously unable to be sent to the server.
+    /// Typically this happens when the vehicle does not have internet
+    /// connectivity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Maps.FleetEngine.V1.VehicleLocation> PastLocations {
+      get { return pastLocations_; }
     }
 
     /// <summary>Field number for the "maximum_capacity" field.</summary>
@@ -691,6 +711,7 @@ namespace Google.Maps.FleetEngine.V1 {
       if(!supportedTripTypes_.Equals(other.supportedTripTypes_)) return false;
       if(!currentTrips_.Equals(other.currentTrips_)) return false;
       if (!object.Equals(LastLocation, other.LastLocation)) return false;
+      if(!pastLocations_.Equals(other.pastLocations_)) return false;
       if (MaximumCapacity != other.MaximumCapacity) return false;
       if(!attributes_.Equals(other.attributes_)) return false;
       if (!object.Equals(VehicleType, other.VehicleType)) return false;
@@ -720,6 +741,7 @@ namespace Google.Maps.FleetEngine.V1 {
       hash ^= supportedTripTypes_.GetHashCode();
       hash ^= currentTrips_.GetHashCode();
       if (lastLocation_ != null) hash ^= LastLocation.GetHashCode();
+      hash ^= pastLocations_.GetHashCode();
       if (MaximumCapacity != 0) hash ^= MaximumCapacity.GetHashCode();
       hash ^= attributes_.GetHashCode();
       if (vehicleType_ != null) hash ^= VehicleType.GetHashCode();
@@ -826,6 +848,7 @@ namespace Google.Maps.FleetEngine.V1 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(CurrentRouteSegmentTraffic);
       }
+      pastLocations_.WriteTo(output, _repeated_pastLocations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -907,6 +930,7 @@ namespace Google.Maps.FleetEngine.V1 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(CurrentRouteSegmentTraffic);
       }
+      pastLocations_.WriteTo(ref output, _repeated_pastLocations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -928,6 +952,7 @@ namespace Google.Maps.FleetEngine.V1 {
       if (lastLocation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastLocation);
       }
+      size += pastLocations_.CalculateSize(_repeated_pastLocations_codec);
       if (MaximumCapacity != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaximumCapacity);
       }
@@ -999,6 +1024,7 @@ namespace Google.Maps.FleetEngine.V1 {
         }
         LastLocation.MergeFrom(other.LastLocation);
       }
+      pastLocations_.Add(other.pastLocations_);
       if (other.MaximumCapacity != 0) {
         MaximumCapacity = other.MaximumCapacity;
       }
@@ -1209,6 +1235,10 @@ namespace Google.Maps.FleetEngine.V1 {
             input.ReadMessage(CurrentRouteSegmentTraffic);
             break;
           }
+          case 242: {
+            pastLocations_.AddEntriesFrom(input, _repeated_pastLocations_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1344,6 +1374,10 @@ namespace Google.Maps.FleetEngine.V1 {
               CurrentRouteSegmentTraffic = new global::Google.Maps.FleetEngine.V1.TrafficPolylineData();
             }
             input.ReadMessage(CurrentRouteSegmentTraffic);
+            break;
+          }
+          case 242: {
+            pastLocations_.AddEntriesFrom(ref input, _repeated_pastLocations_codec);
             break;
           }
         }
