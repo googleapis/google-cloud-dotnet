@@ -40,4 +40,16 @@ namespace Google.Maps.FleetEngine.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class DeleteTripRequest
+    {
+        /// <summary>
+        /// <see cref="gmfv::TripName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gmfv::TripName TripName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gmfv::TripName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

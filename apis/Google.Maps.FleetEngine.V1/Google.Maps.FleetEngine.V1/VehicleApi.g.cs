@@ -32,138 +32,147 @@ namespace Google.Maps.FleetEngine.V1 {
             "L3ZpZXdwb3J0LnByb3RvGixnb29nbGUvbWFwcy9mbGVldGVuZ2luZS92MS9m",
             "bGVldGVuZ2luZS5wcm90bxonZ29vZ2xlL21hcHMvZmxlZXRlbmdpbmUvdjEv",
             "aGVhZGVyLnByb3RvGilnb29nbGUvbWFwcy9mbGVldGVuZ2luZS92MS92ZWhp",
-            "Y2xlcy5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGiBn",
-            "b29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL3dyYXBwZXJz",
-            "LnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8irAEKFENyZWF0ZVZl",
-            "aGljbGVSZXF1ZXN0EjIKBmhlYWRlchgBIAEoCzIiLm1hcHMuZmxlZXRlbmdp",
-            "bmUudjEuUmVxdWVzdEhlYWRlchITCgZwYXJlbnQYAyABKAlCA+BBAhIXCgp2",
-            "ZWhpY2xlX2lkGAQgASgJQgPgQQISMgoHdmVoaWNsZRgFIAEoCzIcLm1hcHMu",
-            "ZmxlZXRlbmdpbmUudjEuVmVoaWNsZUID4EECIvsBChFHZXRWZWhpY2xlUmVx",
-            "dWVzdBIyCgZoZWFkZXIYASABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLnYxLlJl",
-            "cXVlc3RIZWFkZXISOAoEbmFtZRgDIAEoCUIq4EEC+kEkCiJmbGVldGVuZ2lu",
-            "ZS5nb29nbGVhcGlzLmNvbS9WZWhpY2xlEkEKHWN1cnJlbnRfcm91dGVfc2Vn",
-            "bWVudF92ZXJzaW9uGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cBI1ChF3YXlwb2ludHNfdmVyc2lvbhgFIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXAixwEKFFVwZGF0ZVZlaGljbGVSZXF1ZXN0EjIKBmhlYWRl",
-            "chgBIAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUudjEuUmVxdWVzdEhlYWRlchIR",
-            "CgRuYW1lGAMgASgJQgPgQQISMgoHdmVoaWNsZRgEIAEoCzIcLm1hcHMuZmxl",
-            "ZXRlbmdpbmUudjEuVmVoaWNsZUID4EECEjQKC3VwZGF0ZV9tYXNrGAUgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECIqcBCh5VcGRhdGVW",
-            "ZWhpY2xlQXR0cmlidXRlc1JlcXVlc3QSMgoGaGVhZGVyGAEgASgLMiIubWFw",
-            "cy5mbGVldGVuZ2luZS52MS5SZXF1ZXN0SGVhZGVyEhEKBG5hbWUYAyABKAlC",
-            "A+BBAhI+CgphdHRyaWJ1dGVzGAQgAygLMiUubWFwcy5mbGVldGVuZ2luZS52",
-            "MS5WZWhpY2xlQXR0cmlidXRlQgPgQQIiYQofVXBkYXRlVmVoaWNsZUF0dHJp",
-            "YnV0ZXNSZXNwb25zZRI+CgphdHRyaWJ1dGVzGAEgAygLMiUubWFwcy5mbGVl",
-            "dGVuZ2luZS52MS5WZWhpY2xlQXR0cmlidXRlQgPgQQIixgkKFVNlYXJjaFZl",
-            "aGljbGVzUmVxdWVzdBIyCgZoZWFkZXIYASABKAsyIi5tYXBzLmZsZWV0ZW5n",
-            "aW5lLnYxLlJlcXVlc3RIZWFkZXISEwoGcGFyZW50GAMgASgJQgPgQQISQAoM",
-            "cGlja3VwX3BvaW50GAQgASgLMiUubWFwcy5mbGVldGVuZ2luZS52MS5UZXJt",
-            "aW5hbExvY2F0aW9uQgPgQQISPAoNZHJvcG9mZl9wb2ludBgFIAEoCzIlLm1h",
-            "cHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxMb2NhdGlvbhIhChRwaWNrdXBf",
-            "cmFkaXVzX21ldGVycxgGIAEoBUID4EECEhIKBWNvdW50GAcgASgFQgPgQQIS",
-            "HQoQbWluaW11bV9jYXBhY2l0eRgIIAEoBUID4EECEjYKCnRyaXBfdHlwZXMY",
-            "CSADKA4yHS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBUeXBlQgPgQQISNAoR",
-            "bWF4aW11bV9zdGFsZW5lc3MYCiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVy",
-            "YXRpb24SRAoNdmVoaWNsZV90eXBlcxgOIAMoCzIoLm1hcHMuZmxlZXRlbmdp",
-            "bmUudjEuVmVoaWNsZS5WZWhpY2xlVHlwZUID4EECEkIKE3JlcXVpcmVkX2F0",
-            "dHJpYnV0ZXMYDCADKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVB",
-            "dHRyaWJ1dGUSTQoacmVxdWlyZWRfb25lX29mX2F0dHJpYnV0ZXMYDyADKAsy",
-            "KS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVBdHRyaWJ1dGVMaXN0ElEK",
-            "HnJlcXVpcmVkX29uZV9vZl9hdHRyaWJ1dGVfc2V0cxgUIAMoCzIpLm1hcHMu",
-            "ZmxlZXRlbmdpbmUudjEuVmVoaWNsZUF0dHJpYnV0ZUxpc3QSUwoIb3JkZXJf",
-            "YnkYDSABKA4yPC5tYXBzLmZsZWV0ZW5naW5lLnYxLlNlYXJjaFZlaGljbGVz",
-            "UmVxdWVzdC5WZWhpY2xlTWF0Y2hPcmRlckID4EECEhwKFGluY2x1ZGVfYmFj",
-            "a190b19iYWNrGBIgASgIEg8KB3RyaXBfaWQYEyABKAkSXQoVY3VycmVudF90",
-            "cmlwc19wcmVzZW50GBUgASgOMj4ubWFwcy5mbGVldGVuZ2luZS52MS5TZWFy",
-            "Y2hWZWhpY2xlc1JlcXVlc3QuQ3VycmVudFRyaXBzUHJlc2VudBITCgZmaWx0",
-            "ZXIYFiABKAlCA+BBASKqAQoRVmVoaWNsZU1hdGNoT3JkZXISHwobVU5LTk9X",
-            "Tl9WRUhJQ0xFX01BVENIX09SREVSEAASFAoQUElDS1VQX1BPSU5UX0VUQRAB",
-            "EhkKFVBJQ0tVUF9QT0lOVF9ESVNUQU5DRRACEhUKEURST1BPRkZfUE9JTlRf",
-            "RVRBEAMSIgoeUElDS1VQX1BPSU5UX1NUUkFJR0hUX0RJU1RBTkNFEAQSCAoE",
-            "Q09TVBAFIk8KE0N1cnJlbnRUcmlwc1ByZXNlbnQSJQohQ1VSUkVOVF9UUklQ",
-            "U19QUkVTRU5UX1VOU1BFQ0lGSUVEEAASCAoETk9ORRABEgcKA0FOWRACIkwK",
-            "FlNlYXJjaFZlaGljbGVzUmVzcG9uc2USMgoHbWF0Y2hlcxgBIAMoCzIhLm1h",
-            "cHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZU1hdGNoIv4EChNMaXN0VmVoaWNs",
-            "ZXNSZXF1ZXN0EjIKBmhlYWRlchgMIAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUu",
-            "djEuUmVxdWVzdEhlYWRlchITCgZwYXJlbnQYASABKAlCA+BBAhIRCglwYWdl",
-            "X3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCRI1ChBtaW5pbXVtX2Nh",
-            "cGFjaXR5GAYgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSMQoK",
-            "dHJpcF90eXBlcxgHIAMoDjIdLm1hcHMuZmxlZXRlbmdpbmUudjEuVHJpcFR5",
-            "cGUSNAoRbWF4aW11bV9zdGFsZW5lc3MYCCABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb24SVwoXdmVoaWNsZV90eXBlX2NhdGVnb3JpZXMYCSADKA4y",
-            "MS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGUuVmVoaWNsZVR5cGUuQ2F0",
-            "ZWdvcnlCA+BBAhIbChNyZXF1aXJlZF9hdHRyaWJ1dGVzGAogAygJEiIKGnJl",
-            "cXVpcmVkX29uZV9vZl9hdHRyaWJ1dGVzGA0gAygJEiYKHnJlcXVpcmVkX29u",
-            "ZV9vZl9hdHRyaWJ1dGVfc2V0cxgPIAMoCRI4Cg12ZWhpY2xlX3N0YXRlGAsg",
-            "ASgOMiEubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlU3RhdGUSFAoMb25f",
-            "dHJpcF9vbmx5GA4gASgIEhMKBmZpbHRlchgQIAEoCUID4EEBEjAKCHZpZXdw",
-            "b3J0GBEgASgLMhkuZ29vZ2xlLmdlby50eXBlLlZpZXdwb3J0QgPgQQEieAoU",
-            "TGlzdFZlaGljbGVzUmVzcG9uc2USLgoIdmVoaWNsZXMYASADKAsyHC5tYXBz",
-            "LmZsZWV0ZW5naW5lLnYxLlZlaGljbGUSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJEhcKCnRvdGFsX3NpemUYAyABKANCA+BBAiJZCghXYXlwb2ludBIkCgds",
-            "YXRfbG5nGAEgASgLMhMuZ29vZ2xlLnR5cGUuTGF0TG5nEicKA2V0YRgCIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAi/gYKDFZlaGljbGVNYXRj",
-            "aBIyCgd2ZWhpY2xlGAEgASgLMhwubWFwcy5mbGVldGVuZ2luZS52MS5WZWhp",
-            "Y2xlQgPgQQISNgoSdmVoaWNsZV9waWNrdXBfZXRhGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBJDCh52ZWhpY2xlX3BpY2t1cF9kaXN0YW5j",
-            "ZV9tZXRlcnMYAyABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZRJW",
-            "Cix2ZWhpY2xlX3BpY2t1cF9zdHJhaWdodF9saW5lX2Rpc3RhbmNlX21ldGVy",
-            "cxgLIAEoCzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlQgPgQQISNwoT",
-            "dmVoaWNsZV9kcm9wb2ZmX2V0YRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXASTgopdmVoaWNsZV9waWNrdXBfdG9fZHJvcG9mZl9kaXN0YW5j",
-            "ZV9tZXRlcnMYBSABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZRI1",
-            "Cgl0cmlwX3R5cGUYBiABKA4yHS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBU",
-            "eXBlQgPgQQISPgoXdmVoaWNsZV90cmlwc193YXlwb2ludHMYByADKAsyHS5t",
-            "YXBzLmZsZWV0ZW5naW5lLnYxLldheXBvaW50Ek4KEnZlaGljbGVfbWF0Y2hf",
-            "dHlwZRgIIAEoDjIyLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZU1hdGNo",
-            "LlZlaGljbGVNYXRjaFR5cGUSWgoUcmVxdWVzdGVkX29yZGVyZWRfYnkYCSAB",
-            "KA4yPC5tYXBzLmZsZWV0ZW5naW5lLnYxLlNlYXJjaFZlaGljbGVzUmVxdWVz",
-            "dC5WZWhpY2xlTWF0Y2hPcmRlchJQCgpvcmRlcmVkX2J5GAogASgOMjwubWFw",
-            "cy5mbGVldGVuZ2luZS52MS5TZWFyY2hWZWhpY2xlc1JlcXVlc3QuVmVoaWNs",
-            "ZU1hdGNoT3JkZXIiZwoQVmVoaWNsZU1hdGNoVHlwZRILCgdVTktOT1dOEAAS",
-            "DQoJRVhDTFVTSVZFEAESEAoMQkFDS19UT19CQUNLEAISCwoHQ0FSUE9PTBAD",
-            "EhgKFENBUlBPT0xfQkFDS19UT19CQUNLEAQiUQoUVmVoaWNsZUF0dHJpYnV0",
-            "ZUxpc3QSOQoKYXR0cmlidXRlcxgBIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUu",
-            "djEuVmVoaWNsZUF0dHJpYnV0ZTLyCQoOVmVoaWNsZVNlcnZpY2UStwEKDUNy",
-            "ZWF0ZVZlaGljbGUSKS5tYXBzLmZsZWV0ZW5naW5lLnYxLkNyZWF0ZVZlaGlj",
-            "bGVSZXF1ZXN0GhwubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlIl2C0+ST",
-            "AiwiIS92MS97cGFyZW50PXByb3ZpZGVycy8qfS92ZWhpY2xlczoHdmVoaWNs",
-            "ZYrT5JMCJRIjCgZwYXJlbnQSGXtwcm92aWRlcl9pZD1wcm92aWRlcnMvKn0S",
-            "pgEKCkdldFZlaGljbGUSJi5tYXBzLmZsZWV0ZW5naW5lLnYxLkdldFZlaGlj",
-            "bGVSZXF1ZXN0GhwubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlIlKC0+ST",
-            "AiMSIS92MS97bmFtZT1wcm92aWRlcnMvKi92ZWhpY2xlcy8qfYrT5JMCIxIh",
-            "CgRuYW1lEhl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9ErUBCg1VcGRhdGVW",
-            "ZWhpY2xlEikubWFwcy5mbGVldGVuZ2luZS52MS5VcGRhdGVWZWhpY2xlUmVx",
-            "dWVzdBocLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZSJbgtPkkwIsGiEv",
-            "djEve25hbWU9cHJvdmlkZXJzLyovdmVoaWNsZXMvKn06B3ZlaGljbGWK0+ST",
-            "AiMSIQoEbmFtZRIZe3Byb3ZpZGVyX2lkPXByb3ZpZGVycy8qfRLsAQoXVXBk",
-            "YXRlVmVoaWNsZUF0dHJpYnV0ZXMSMy5tYXBzLmZsZWV0ZW5naW5lLnYxLlVw",
-            "ZGF0ZVZlaGljbGVBdHRyaWJ1dGVzUmVxdWVzdBo0Lm1hcHMuZmxlZXRlbmdp",
-            "bmUudjEuVXBkYXRlVmVoaWNsZUF0dHJpYnV0ZXNSZXNwb25zZSJmgtPkkwI3",
-            "IjIvdjEve25hbWU9cHJvdmlkZXJzLyovdmVoaWNsZXMvKn06dXBkYXRlQXR0",
-            "cmlidXRlczoBKorT5JMCIxIhCgRuYW1lEhl7cHJvdmlkZXJfaWQ9cHJvdmlk",
-            "ZXJzLyp9ErkBCgxMaXN0VmVoaWNsZXMSKC5tYXBzLmZsZWV0ZW5naW5lLnYx",
-            "Lkxpc3RWZWhpY2xlc1JlcXVlc3QaKS5tYXBzLmZsZWV0ZW5naW5lLnYxLkxp",
-            "c3RWZWhpY2xlc1Jlc3BvbnNlIlSC0+STAiMSIS92MS97cGFyZW50PXByb3Zp",
-            "ZGVycy8qfS92ZWhpY2xlc4rT5JMCJRIjCgZwYXJlbnQSGXtwcm92aWRlcl9p",
-            "ZD1wcm92aWRlcnMvKn0SyQEKDlNlYXJjaFZlaGljbGVzEioubWFwcy5mbGVl",
-            "dGVuZ2luZS52MS5TZWFyY2hWZWhpY2xlc1JlcXVlc3QaKy5tYXBzLmZsZWV0",
-            "ZW5naW5lLnYxLlNlYXJjaFZlaGljbGVzUmVzcG9uc2UiXoLT5JMCLSIoL3Yx",
-            "L3twYXJlbnQ9cHJvdmlkZXJzLyp9L3ZlaGljbGVzOnNlYXJjaDoBKorT5JMC",
-            "JRIjCgZwYXJlbnQSGXtwcm92aWRlcl9pZD1wcm92aWRlcnMvKn0aTspBGmZs",
-            "ZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xl",
-            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULWAQoeY29tLmdvb2dsZS5t",
-            "YXBzLmZsZWV0ZW5naW5lLnYxQgpWZWhpY2xlQXBpUAFaRmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vbWFwcy9mbGVldGVuZ2luZS9hcGl2MS9mbGVldGVuZ2luZXBi",
-            "O2ZsZWV0ZW5naW5lcGKiAgNDRkWqAhpHb29nbGUuTWFwcy5GbGVldEVuZ2lu",
-            "ZS5WMcoCGkdvb2dsZVxNYXBzXEZsZWV0RW5naW5lXFYx6gIdR29vZ2xlOjpN",
-            "YXBzOjpGbGVldEVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "Y2xlcy5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhtn",
+            "b29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9m",
+            "aWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
+            "b3RvGh5nb29nbGUvcHJvdG9idWYvd3JhcHBlcnMucHJvdG8aGGdvb2dsZS90",
+            "eXBlL2xhdGxuZy5wcm90byKsAQoUQ3JlYXRlVmVoaWNsZVJlcXVlc3QSMgoG",
+            "aGVhZGVyGAEgASgLMiIubWFwcy5mbGVldGVuZ2luZS52MS5SZXF1ZXN0SGVh",
+            "ZGVyEhMKBnBhcmVudBgDIAEoCUID4EECEhcKCnZlaGljbGVfaWQYBCABKAlC",
+            "A+BBAhIyCgd2ZWhpY2xlGAUgASgLMhwubWFwcy5mbGVldGVuZ2luZS52MS5W",
+            "ZWhpY2xlQgPgQQIi+wEKEUdldFZlaGljbGVSZXF1ZXN0EjIKBmhlYWRlchgB",
+            "IAEoCzIiLm1hcHMuZmxlZXRlbmdpbmUudjEuUmVxdWVzdEhlYWRlchI4CgRu",
+            "YW1lGAMgASgJQirgQQL6QSQKImZsZWV0ZW5naW5lLmdvb2dsZWFwaXMuY29t",
+            "L1ZlaGljbGUSQQodY3VycmVudF9yb3V0ZV9zZWdtZW50X3ZlcnNpb24YBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjUKEXdheXBvaW50c192",
+            "ZXJzaW9uGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCKJAQoU",
+            "RGVsZXRlVmVoaWNsZVJlcXVlc3QSNwoGaGVhZGVyGAEgASgLMiIubWFwcy5m",
+            "bGVldGVuZ2luZS52MS5SZXF1ZXN0SGVhZGVyQgPgQQESOAoEbmFtZRgCIAEo",
+            "CUIq4EEC+kEkCiJmbGVldGVuZ2luZS5nb29nbGVhcGlzLmNvbS9WZWhpY2xl",
+            "IscBChRVcGRhdGVWZWhpY2xlUmVxdWVzdBIyCgZoZWFkZXIYASABKAsyIi5t",
+            "YXBzLmZsZWV0ZW5naW5lLnYxLlJlcXVlc3RIZWFkZXISEQoEbmFtZRgDIAEo",
+            "CUID4EECEjIKB3ZlaGljbGUYBCABKAsyHC5tYXBzLmZsZWV0ZW5naW5lLnYx",
+            "LlZlaGljbGVCA+BBAhI0Cgt1cGRhdGVfbWFzaxgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5GaWVsZE1hc2tCA+BBAiKnAQoeVXBkYXRlVmVoaWNsZUF0dHJp",
+            "YnV0ZXNSZXF1ZXN0EjIKBmhlYWRlchgBIAEoCzIiLm1hcHMuZmxlZXRlbmdp",
+            "bmUudjEuUmVxdWVzdEhlYWRlchIRCgRuYW1lGAMgASgJQgPgQQISPgoKYXR0",
+            "cmlidXRlcxgEIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZUF0",
+            "dHJpYnV0ZUID4EECImEKH1VwZGF0ZVZlaGljbGVBdHRyaWJ1dGVzUmVzcG9u",
+            "c2USPgoKYXR0cmlidXRlcxgBIAMoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEu",
+            "VmVoaWNsZUF0dHJpYnV0ZUID4EECIsYJChVTZWFyY2hWZWhpY2xlc1JlcXVl",
+            "c3QSMgoGaGVhZGVyGAEgASgLMiIubWFwcy5mbGVldGVuZ2luZS52MS5SZXF1",
+            "ZXN0SGVhZGVyEhMKBnBhcmVudBgDIAEoCUID4EECEkAKDHBpY2t1cF9wb2lu",
+            "dBgEIAEoCzIlLm1hcHMuZmxlZXRlbmdpbmUudjEuVGVybWluYWxMb2NhdGlv",
+            "bkID4EECEjwKDWRyb3BvZmZfcG9pbnQYBSABKAsyJS5tYXBzLmZsZWV0ZW5n",
+            "aW5lLnYxLlRlcm1pbmFsTG9jYXRpb24SIQoUcGlja3VwX3JhZGl1c19tZXRl",
+            "cnMYBiABKAVCA+BBAhISCgVjb3VudBgHIAEoBUID4EECEh0KEG1pbmltdW1f",
+            "Y2FwYWNpdHkYCCABKAVCA+BBAhI2Cgp0cmlwX3R5cGVzGAkgAygOMh0ubWFw",
+            "cy5mbGVldGVuZ2luZS52MS5UcmlwVHlwZUID4EECEjQKEW1heGltdW1fc3Rh",
+            "bGVuZXNzGAogASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkQKDXZl",
+            "aGljbGVfdHlwZXMYDiADKAsyKC5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGlj",
+            "bGUuVmVoaWNsZVR5cGVCA+BBAhJCChNyZXF1aXJlZF9hdHRyaWJ1dGVzGAwg",
+            "AygLMiUubWFwcy5mbGVldGVuZ2luZS52MS5WZWhpY2xlQXR0cmlidXRlEk0K",
+            "GnJlcXVpcmVkX29uZV9vZl9hdHRyaWJ1dGVzGA8gAygLMikubWFwcy5mbGVl",
+            "dGVuZ2luZS52MS5WZWhpY2xlQXR0cmlidXRlTGlzdBJRCh5yZXF1aXJlZF9v",
+            "bmVfb2ZfYXR0cmlidXRlX3NldHMYFCADKAsyKS5tYXBzLmZsZWV0ZW5naW5l",
+            "LnYxLlZlaGljbGVBdHRyaWJ1dGVMaXN0ElMKCG9yZGVyX2J5GA0gASgOMjwu",
+            "bWFwcy5mbGVldGVuZ2luZS52MS5TZWFyY2hWZWhpY2xlc1JlcXVlc3QuVmVo",
+            "aWNsZU1hdGNoT3JkZXJCA+BBAhIcChRpbmNsdWRlX2JhY2tfdG9fYmFjaxgS",
+            "IAEoCBIPCgd0cmlwX2lkGBMgASgJEl0KFWN1cnJlbnRfdHJpcHNfcHJlc2Vu",
+            "dBgVIAEoDjI+Lm1hcHMuZmxlZXRlbmdpbmUudjEuU2VhcmNoVmVoaWNsZXNS",
+            "ZXF1ZXN0LkN1cnJlbnRUcmlwc1ByZXNlbnQSEwoGZmlsdGVyGBYgASgJQgPg",
+            "QQEiqgEKEVZlaGljbGVNYXRjaE9yZGVyEh8KG1VOS05PV05fVkVISUNMRV9N",
+            "QVRDSF9PUkRFUhAAEhQKEFBJQ0tVUF9QT0lOVF9FVEEQARIZChVQSUNLVVBf",
+            "UE9JTlRfRElTVEFOQ0UQAhIVChFEUk9QT0ZGX1BPSU5UX0VUQRADEiIKHlBJ",
+            "Q0tVUF9QT0lOVF9TVFJBSUdIVF9ESVNUQU5DRRAEEggKBENPU1QQBSJPChND",
+            "dXJyZW50VHJpcHNQcmVzZW50EiUKIUNVUlJFTlRfVFJJUFNfUFJFU0VOVF9V",
+            "TlNQRUNJRklFRBAAEggKBE5PTkUQARIHCgNBTlkQAiJMChZTZWFyY2hWZWhp",
+            "Y2xlc1Jlc3BvbnNlEjIKB21hdGNoZXMYASADKAsyIS5tYXBzLmZsZWV0ZW5n",
+            "aW5lLnYxLlZlaGljbGVNYXRjaCL+BAoTTGlzdFZlaGljbGVzUmVxdWVzdBIy",
+            "CgZoZWFkZXIYDCABKAsyIi5tYXBzLmZsZWV0ZW5naW5lLnYxLlJlcXVlc3RI",
+            "ZWFkZXISEwoGcGFyZW50GAEgASgJQgPgQQISEQoJcGFnZV9zaXplGAMgASgF",
+            "EhIKCnBhZ2VfdG9rZW4YBCABKAkSNQoQbWluaW11bV9jYXBhY2l0eRgGIAEo",
+            "CzIbLmdvb2dsZS5wcm90b2J1Zi5JbnQzMlZhbHVlEjEKCnRyaXBfdHlwZXMY",
+            "ByADKA4yHS5tYXBzLmZsZWV0ZW5naW5lLnYxLlRyaXBUeXBlEjQKEW1heGlt",
+            "dW1fc3RhbGVuZXNzGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "ElcKF3ZlaGljbGVfdHlwZV9jYXRlZ29yaWVzGAkgAygOMjEubWFwcy5mbGVl",
+            "dGVuZ2luZS52MS5WZWhpY2xlLlZlaGljbGVUeXBlLkNhdGVnb3J5QgPgQQIS",
+            "GwoTcmVxdWlyZWRfYXR0cmlidXRlcxgKIAMoCRIiChpyZXF1aXJlZF9vbmVf",
+            "b2ZfYXR0cmlidXRlcxgNIAMoCRImCh5yZXF1aXJlZF9vbmVfb2ZfYXR0cmli",
+            "dXRlX3NldHMYDyADKAkSOAoNdmVoaWNsZV9zdGF0ZRgLIAEoDjIhLm1hcHMu",
+            "ZmxlZXRlbmdpbmUudjEuVmVoaWNsZVN0YXRlEhQKDG9uX3RyaXBfb25seRgO",
+            "IAEoCBITCgZmaWx0ZXIYECABKAlCA+BBARIwCgh2aWV3cG9ydBgRIAEoCzIZ",
+            "Lmdvb2dsZS5nZW8udHlwZS5WaWV3cG9ydEID4EEBIngKFExpc3RWZWhpY2xl",
+            "c1Jlc3BvbnNlEi4KCHZlaGljbGVzGAEgAygLMhwubWFwcy5mbGVldGVuZ2lu",
+            "ZS52MS5WZWhpY2xlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIXCgp0b3Rh",
+            "bF9zaXplGAMgASgDQgPgQQIiWQoIV2F5cG9pbnQSJAoHbGF0X2xuZxgBIAEo",
+            "CzITLmdvb2dsZS50eXBlLkxhdExuZxInCgNldGEYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wIv4GCgxWZWhpY2xlTWF0Y2gSMgoHdmVoaWNs",
+            "ZRgBIAEoCzIcLm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZUID4EECEjYK",
+            "EnZlaGljbGVfcGlja3VwX2V0YRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXASQwoedmVoaWNsZV9waWNrdXBfZGlzdGFuY2VfbWV0ZXJzGAMg",
+            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSVgosdmVoaWNsZV9w",
+            "aWNrdXBfc3RyYWlnaHRfbGluZV9kaXN0YW5jZV9tZXRlcnMYCyABKAsyGy5n",
+            "b29nbGUucHJvdG9idWYuSW50MzJWYWx1ZUID4EECEjcKE3ZlaGljbGVfZHJv",
+            "cG9mZl9ldGEYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEk4K",
+            "KXZlaGljbGVfcGlja3VwX3RvX2Ryb3BvZmZfZGlzdGFuY2VfbWV0ZXJzGAUg",
+            "ASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDMyVmFsdWUSNQoJdHJpcF90eXBl",
+            "GAYgASgOMh0ubWFwcy5mbGVldGVuZ2luZS52MS5UcmlwVHlwZUID4EECEj4K",
+            "F3ZlaGljbGVfdHJpcHNfd2F5cG9pbnRzGAcgAygLMh0ubWFwcy5mbGVldGVu",
+            "Z2luZS52MS5XYXlwb2ludBJOChJ2ZWhpY2xlX21hdGNoX3R5cGUYCCABKA4y",
+            "Mi5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVNYXRjaC5WZWhpY2xlTWF0",
+            "Y2hUeXBlEloKFHJlcXVlc3RlZF9vcmRlcmVkX2J5GAkgASgOMjwubWFwcy5m",
+            "bGVldGVuZ2luZS52MS5TZWFyY2hWZWhpY2xlc1JlcXVlc3QuVmVoaWNsZU1h",
+            "dGNoT3JkZXISUAoKb3JkZXJlZF9ieRgKIAEoDjI8Lm1hcHMuZmxlZXRlbmdp",
+            "bmUudjEuU2VhcmNoVmVoaWNsZXNSZXF1ZXN0LlZlaGljbGVNYXRjaE9yZGVy",
+            "ImcKEFZlaGljbGVNYXRjaFR5cGUSCwoHVU5LTk9XThAAEg0KCUVYQ0xVU0lW",
+            "RRABEhAKDEJBQ0tfVE9fQkFDSxACEgsKB0NBUlBPT0wQAxIYChRDQVJQT09M",
+            "X0JBQ0tfVE9fQkFDSxAEIlEKFFZlaGljbGVBdHRyaWJ1dGVMaXN0EjkKCmF0",
+            "dHJpYnV0ZXMYASADKAsyJS5tYXBzLmZsZWV0ZW5naW5lLnYxLlZlaGljbGVB",
+            "dHRyaWJ1dGUyogsKDlZlaGljbGVTZXJ2aWNlErcBCg1DcmVhdGVWZWhpY2xl",
+            "EikubWFwcy5mbGVldGVuZ2luZS52MS5DcmVhdGVWZWhpY2xlUmVxdWVzdBoc",
+            "Lm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZSJdgtPkkwIsIiEvdjEve3Bh",
+            "cmVudD1wcm92aWRlcnMvKn0vdmVoaWNsZXM6B3ZlaGljbGWK0+STAiUSIwoG",
+            "cGFyZW50Ehl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9EqYBCgpHZXRWZWhp",
+            "Y2xlEiYubWFwcy5mbGVldGVuZ2luZS52MS5HZXRWZWhpY2xlUmVxdWVzdBoc",
+            "Lm1hcHMuZmxlZXRlbmdpbmUudjEuVmVoaWNsZSJSgtPkkwIjEiEvdjEve25h",
+            "bWU9cHJvdmlkZXJzLyovdmVoaWNsZXMvKn2K0+STAiMSIQoEbmFtZRIZe3By",
+            "b3ZpZGVyX2lkPXByb3ZpZGVycy8qfRKtAQoNRGVsZXRlVmVoaWNsZRIpLm1h",
+            "cHMuZmxlZXRlbmdpbmUudjEuRGVsZXRlVmVoaWNsZVJlcXVlc3QaFi5nb29n",
+            "bGUucHJvdG9idWYuRW1wdHkiWdpBBG5hbWWC0+STAiMqIS92MS97bmFtZT1w",
+            "cm92aWRlcnMvKi92ZWhpY2xlcy8qfYrT5JMCIxIhCgRuYW1lEhl7cHJvdmlk",
+            "ZXJfaWQ9cHJvdmlkZXJzLyp9ErUBCg1VcGRhdGVWZWhpY2xlEikubWFwcy5m",
+            "bGVldGVuZ2luZS52MS5VcGRhdGVWZWhpY2xlUmVxdWVzdBocLm1hcHMuZmxl",
+            "ZXRlbmdpbmUudjEuVmVoaWNsZSJbgtPkkwIsGiEvdjEve25hbWU9cHJvdmlk",
+            "ZXJzLyovdmVoaWNsZXMvKn06B3ZlaGljbGWK0+STAiMSIQoEbmFtZRIZe3By",
+            "b3ZpZGVyX2lkPXByb3ZpZGVycy8qfRLsAQoXVXBkYXRlVmVoaWNsZUF0dHJp",
+            "YnV0ZXMSMy5tYXBzLmZsZWV0ZW5naW5lLnYxLlVwZGF0ZVZlaGljbGVBdHRy",
+            "aWJ1dGVzUmVxdWVzdBo0Lm1hcHMuZmxlZXRlbmdpbmUudjEuVXBkYXRlVmVo",
+            "aWNsZUF0dHJpYnV0ZXNSZXNwb25zZSJmgtPkkwI3IjIvdjEve25hbWU9cHJv",
+            "dmlkZXJzLyovdmVoaWNsZXMvKn06dXBkYXRlQXR0cmlidXRlczoBKorT5JMC",
+            "IxIhCgRuYW1lEhl7cHJvdmlkZXJfaWQ9cHJvdmlkZXJzLyp9ErkBCgxMaXN0",
+            "VmVoaWNsZXMSKC5tYXBzLmZsZWV0ZW5naW5lLnYxLkxpc3RWZWhpY2xlc1Jl",
+            "cXVlc3QaKS5tYXBzLmZsZWV0ZW5naW5lLnYxLkxpc3RWZWhpY2xlc1Jlc3Bv",
+            "bnNlIlSC0+STAiMSIS92MS97cGFyZW50PXByb3ZpZGVycy8qfS92ZWhpY2xl",
+            "c4rT5JMCJRIjCgZwYXJlbnQSGXtwcm92aWRlcl9pZD1wcm92aWRlcnMvKn0S",
+            "yQEKDlNlYXJjaFZlaGljbGVzEioubWFwcy5mbGVldGVuZ2luZS52MS5TZWFy",
+            "Y2hWZWhpY2xlc1JlcXVlc3QaKy5tYXBzLmZsZWV0ZW5naW5lLnYxLlNlYXJj",
+            "aFZlaGljbGVzUmVzcG9uc2UiXoLT5JMCLSIoL3YxL3twYXJlbnQ9cHJvdmlk",
+            "ZXJzLyp9L3ZlaGljbGVzOnNlYXJjaDoBKorT5JMCJRIjCgZwYXJlbnQSGXtw",
+            "cm92aWRlcl9pZD1wcm92aWRlcnMvKn0aTspBGmZsZWV0ZW5naW5lLmdvb2ds",
+            "ZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
+            "bG91ZC1wbGF0Zm9ybULWAQoeY29tLmdvb2dsZS5tYXBzLmZsZWV0ZW5naW5l",
+            "LnYxQgpWZWhpY2xlQXBpUAFaRmNsb3VkLmdvb2dsZS5jb20vZ28vbWFwcy9m",
+            "bGVldGVuZ2luZS9hcGl2MS9mbGVldGVuZ2luZXBiO2ZsZWV0ZW5naW5lcGKi",
+            "AgNDRkWqAhpHb29nbGUuTWFwcy5GbGVldEVuZ2luZS5WMcoCGkdvb2dsZVxN",
+            "YXBzXEZsZWV0RW5naW5lXFYx6gIdR29vZ2xlOjpNYXBzOjpGbGVldEVuZ2lu",
+            "ZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.FleetEngine.V1.FleetengineReflection.Descriptor, global::Google.Maps.FleetEngine.V1.HeaderReflection.Descriptor, global::Google.Maps.FleetEngine.V1.VehiclesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.RoutingReflection.Descriptor, global::Google.Geo.Type.ViewportReflection.Descriptor, global::Google.Maps.FleetEngine.V1.FleetengineReflection.Descriptor, global::Google.Maps.FleetEngine.V1.HeaderReflection.Descriptor, global::Google.Maps.FleetEngine.V1.VehiclesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.CreateVehicleRequest), global::Google.Maps.FleetEngine.V1.CreateVehicleRequest.Parser, new[]{ "Header", "Parent", "VehicleId", "Vehicle" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.GetVehicleRequest), global::Google.Maps.FleetEngine.V1.GetVehicleRequest.Parser, new[]{ "Header", "Name", "CurrentRouteSegmentVersion", "WaypointsVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest), global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest.Parser, new[]{ "Header", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.UpdateVehicleRequest), global::Google.Maps.FleetEngine.V1.UpdateVehicleRequest.Parser, new[]{ "Header", "Name", "Vehicle", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.UpdateVehicleAttributesRequest), global::Google.Maps.FleetEngine.V1.UpdateVehicleAttributesRequest.Parser, new[]{ "Header", "Name", "Attributes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Maps.FleetEngine.V1.UpdateVehicleAttributesResponse), global::Google.Maps.FleetEngine.V1.UpdateVehicleAttributesResponse.Parser, new[]{ "Attributes" }, null, null, null, null),
@@ -905,6 +914,255 @@ namespace Google.Maps.FleetEngine.V1 {
   }
 
   /// <summary>
+  /// DeleteVehicle request message.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteVehicleRequest : pb::IMessage<DeleteVehicleRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteVehicleRequest> _parser = new pb::MessageParser<DeleteVehicleRequest>(() => new DeleteVehicleRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteVehicleRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteVehicleRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteVehicleRequest(DeleteVehicleRequest other) : this() {
+      header_ = other.header_ != null ? other.header_.Clone() : null;
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteVehicleRequest Clone() {
+      return new DeleteVehicleRequest(this);
+    }
+
+    /// <summary>Field number for the "header" field.</summary>
+    public const int HeaderFieldNumber = 1;
+    private global::Google.Maps.FleetEngine.V1.RequestHeader header_;
+    /// <summary>
+    /// Optional. The standard Fleet Engine request header.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Maps.FleetEngine.V1.RequestHeader Header {
+      get { return header_; }
+      set {
+        header_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 2;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Must be in the format
+    /// `providers/{provider}/vehicles/{vehicle}`.
+    /// The {provider} must be the Project ID (for example, `sample-cloud-project`)
+    /// of the Google Cloud Project of which the service account making
+    /// this call is a member.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteVehicleRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteVehicleRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Header, other.Header)) return false;
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (header_ != null) hash ^= Header.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (header_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Header);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (header_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Header);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteVehicleRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.header_ != null) {
+        if (header_ == null) {
+          Header = new global::Google.Maps.FleetEngine.V1.RequestHeader();
+        }
+        Header.MergeFrom(other.Header);
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              Header = new global::Google.Maps.FleetEngine.V1.RequestHeader();
+            }
+            input.ReadMessage(Header);
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (header_ == null) {
+              Header = new global::Google.Maps.FleetEngine.V1.RequestHeader();
+            }
+            input.ReadMessage(Header);
+            break;
+          }
+          case 18: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// `UpdateVehicle request message.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -922,7 +1180,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1285,7 +1543,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1563,7 +1821,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1749,7 +2007,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2770,7 +3028,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2956,7 +3214,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3784,7 +4042,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4055,7 +4313,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4310,7 +4568,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5014,7 +5272,7 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Maps.FleetEngine.V1.VehicleApiReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

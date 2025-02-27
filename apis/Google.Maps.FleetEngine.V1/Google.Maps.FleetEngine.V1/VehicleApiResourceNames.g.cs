@@ -30,4 +30,16 @@ namespace Google.Maps.FleetEngine.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class DeleteVehicleRequest
+    {
+        /// <summary>
+        /// <see cref="gmfv::VehicleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gmfv::VehicleName VehicleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gmfv::VehicleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

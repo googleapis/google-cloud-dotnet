@@ -112,6 +112,95 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteTrip</summary>
+        public void DeleteTripRequestObject()
+        {
+            // Snippet: DeleteTrip(DeleteTripRequest, CallSettings)
+            // Create client
+            TripServiceClient tripServiceClient = TripServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteTripRequest request = new DeleteTripRequest
+            {
+                Header = new RequestHeader(),
+                TripName = TripName.FromProviderTrip("[PROVIDER]", "[TRIP]"),
+            };
+            // Make the request
+            tripServiceClient.DeleteTrip(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTripAsync</summary>
+        public async Task DeleteTripRequestObjectAsync()
+        {
+            // Snippet: DeleteTripAsync(DeleteTripRequest, CallSettings)
+            // Additional: DeleteTripAsync(DeleteTripRequest, CancellationToken)
+            // Create client
+            TripServiceClient tripServiceClient = await TripServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteTripRequest request = new DeleteTripRequest
+            {
+                Header = new RequestHeader(),
+                TripName = TripName.FromProviderTrip("[PROVIDER]", "[TRIP]"),
+            };
+            // Make the request
+            await tripServiceClient.DeleteTripAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTrip</summary>
+        public void DeleteTrip()
+        {
+            // Snippet: DeleteTrip(string, CallSettings)
+            // Create client
+            TripServiceClient tripServiceClient = TripServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "providers/[PROVIDER]/trips/[TRIP]";
+            // Make the request
+            tripServiceClient.DeleteTrip(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTripAsync</summary>
+        public async Task DeleteTripAsync()
+        {
+            // Snippet: DeleteTripAsync(string, CallSettings)
+            // Additional: DeleteTripAsync(string, CancellationToken)
+            // Create client
+            TripServiceClient tripServiceClient = await TripServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "providers/[PROVIDER]/trips/[TRIP]";
+            // Make the request
+            await tripServiceClient.DeleteTripAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTrip</summary>
+        public void DeleteTripResourceNames()
+        {
+            // Snippet: DeleteTrip(TripName, CallSettings)
+            // Create client
+            TripServiceClient tripServiceClient = TripServiceClient.Create();
+            // Initialize request argument(s)
+            TripName name = TripName.FromProviderTrip("[PROVIDER]", "[TRIP]");
+            // Make the request
+            tripServiceClient.DeleteTrip(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteTripAsync</summary>
+        public async Task DeleteTripResourceNamesAsync()
+        {
+            // Snippet: DeleteTripAsync(TripName, CallSettings)
+            // Additional: DeleteTripAsync(TripName, CancellationToken)
+            // Create client
+            TripServiceClient tripServiceClient = await TripServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            TripName name = TripName.FromProviderTrip("[PROVIDER]", "[TRIP]");
+            // Make the request
+            await tripServiceClient.DeleteTripAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for ReportBillableTrip</summary>
         public void ReportBillableTripRequestObject()
         {
