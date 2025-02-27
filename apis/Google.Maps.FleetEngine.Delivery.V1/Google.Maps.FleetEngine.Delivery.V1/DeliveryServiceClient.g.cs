@@ -48,10 +48,12 @@ namespace Google.Maps.FleetEngine.Delivery.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateDeliveryVehicleSettings = existing.CreateDeliveryVehicleSettings;
             GetDeliveryVehicleSettings = existing.GetDeliveryVehicleSettings;
+            DeleteDeliveryVehicleSettings = existing.DeleteDeliveryVehicleSettings;
             UpdateDeliveryVehicleSettings = existing.UpdateDeliveryVehicleSettings;
             BatchCreateTasksSettings = existing.BatchCreateTasksSettings;
             CreateTaskSettings = existing.CreateTaskSettings;
             GetTaskSettings = existing.GetTaskSettings;
+            DeleteTaskSettings = existing.DeleteTaskSettings;
             UpdateTaskSettings = existing.UpdateTaskSettings;
             ListTasksSettings = existing.ListTasksSettings;
             GetTaskTrackingInfoSettings = existing.GetTaskTrackingInfoSettings;
@@ -97,6 +99,19 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetDeliveryVehicleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeliveryServiceClient.DeleteDeliveryVehicle</c> and <c>DeliveryServiceClient.DeleteDeliveryVehicleAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteDeliveryVehicleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -170,6 +185,18 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetTaskSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeliveryServiceClient.DeleteTask</c> and <c>DeliveryServiceClient.DeleteTaskAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTaskSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -648,6 +675,156 @@ namespace Google.Maps.FleetEngine.Delivery.V1
             GetDeliveryVehicleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDeliveryVehicle(DeleteDeliveryVehicleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDeliveryVehicleAsync(DeleteDeliveryVehicleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDeliveryVehicleAsync(DeleteDeliveryVehicleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteDeliveryVehicleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/deliveryVehicles/{delivery_vehicle}`.
+        /// The `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDeliveryVehicle(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDeliveryVehicle(new DeleteDeliveryVehicleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/deliveryVehicles/{delivery_vehicle}`.
+        /// The `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDeliveryVehicleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDeliveryVehicleAsync(new DeleteDeliveryVehicleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/deliveryVehicles/{delivery_vehicle}`.
+        /// The `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDeliveryVehicleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteDeliveryVehicleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/deliveryVehicles/{delivery_vehicle}`.
+        /// The `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteDeliveryVehicle(DeliveryVehicleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDeliveryVehicle(new DeleteDeliveryVehicleRequest
+            {
+                DeliveryVehicleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/deliveryVehicles/{delivery_vehicle}`.
+        /// The `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDeliveryVehicleAsync(DeliveryVehicleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteDeliveryVehicleAsync(new DeleteDeliveryVehicleRequest
+            {
+                DeliveryVehicleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/deliveryVehicles/{delivery_vehicle}`.
+        /// The `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteDeliveryVehicleAsync(DeliveryVehicleName name, st::CancellationToken cancellationToken) =>
+            DeleteDeliveryVehicleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Writes updated `DeliveryVehicle` data to Fleet Engine, and assigns
         /// `Tasks` to the `DeliveryVehicle`. You cannot update the name of the
         /// `DeliveryVehicle`. You *can* update `remaining_vehicle_journey_segments`,
@@ -1090,6 +1267,150 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Task> GetTaskAsync(TaskName name, st::CancellationToken cancellationToken) =>
             GetTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTask(DeleteTaskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTaskAsync(DeleteTaskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTaskAsync(DeleteTaskRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTaskAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/tasks/{task}`. The
+        /// `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTask(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTask(new DeleteTaskRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/tasks/{task}`. The
+        /// `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTaskAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTaskAsync(new DeleteTaskRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/tasks/{task}`. The
+        /// `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTaskAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/tasks/{task}`. The
+        /// `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTask(TaskName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTask(new DeleteTaskRequest
+            {
+                TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/tasks/{task}`. The
+        /// `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTaskAsync(TaskName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTaskAsync(new DeleteTaskRequest
+            {
+                TaskName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/tasks/{task}`. The
+        /// `provider` must be the Google Cloud Project ID. For example,
+        /// `sample-cloud-project`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTaskAsync(TaskName name, st::CancellationToken cancellationToken) =>
+            DeleteTaskAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Updates `Task` data.
@@ -1681,6 +2002,8 @@ namespace Google.Maps.FleetEngine.Delivery.V1
 
         private readonly gaxgrpc::ApiCall<GetDeliveryVehicleRequest, DeliveryVehicle> _callGetDeliveryVehicle;
 
+        private readonly gaxgrpc::ApiCall<DeleteDeliveryVehicleRequest, wkt::Empty> _callDeleteDeliveryVehicle;
+
         private readonly gaxgrpc::ApiCall<UpdateDeliveryVehicleRequest, DeliveryVehicle> _callUpdateDeliveryVehicle;
 
         private readonly gaxgrpc::ApiCall<BatchCreateTasksRequest, BatchCreateTasksResponse> _callBatchCreateTasks;
@@ -1688,6 +2011,8 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         private readonly gaxgrpc::ApiCall<CreateTaskRequest, Task> _callCreateTask;
 
         private readonly gaxgrpc::ApiCall<GetTaskRequest, Task> _callGetTask;
+
+        private readonly gaxgrpc::ApiCall<DeleteTaskRequest, wkt::Empty> _callDeleteTask;
 
         private readonly gaxgrpc::ApiCall<UpdateTaskRequest, Task> _callUpdateTask;
 
@@ -1718,6 +2043,9 @@ namespace Google.Maps.FleetEngine.Delivery.V1
             _callGetDeliveryVehicle = clientHelper.BuildApiCall<GetDeliveryVehicleRequest, DeliveryVehicle>("GetDeliveryVehicle", grpcClient.GetDeliveryVehicleAsync, grpcClient.GetDeliveryVehicle, effectiveSettings.GetDeliveryVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetDeliveryVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callGetDeliveryVehicle);
             Modify_GetDeliveryVehicleApiCall(ref _callGetDeliveryVehicle);
+            _callDeleteDeliveryVehicle = clientHelper.BuildApiCall<DeleteDeliveryVehicleRequest, wkt::Empty>("DeleteDeliveryVehicle", grpcClient.DeleteDeliveryVehicleAsync, grpcClient.DeleteDeliveryVehicle, effectiveSettings.DeleteDeliveryVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteDeliveryVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
+            Modify_ApiCall(ref _callDeleteDeliveryVehicle);
+            Modify_DeleteDeliveryVehicleApiCall(ref _callDeleteDeliveryVehicle);
             _callUpdateDeliveryVehicle = clientHelper.BuildApiCall<UpdateDeliveryVehicleRequest, DeliveryVehicle>("UpdateDeliveryVehicle", grpcClient.UpdateDeliveryVehicleAsync, grpcClient.UpdateDeliveryVehicle, effectiveSettings.UpdateDeliveryVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateDeliveryVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.DeliveryVehicle?.Name));
             Modify_ApiCall(ref _callUpdateDeliveryVehicle);
             Modify_UpdateDeliveryVehicleApiCall(ref _callUpdateDeliveryVehicle);
@@ -1730,6 +2058,9 @@ namespace Google.Maps.FleetEngine.Delivery.V1
             _callGetTask = clientHelper.BuildApiCall<GetTaskRequest, Task>("GetTask", grpcClient.GetTaskAsync, grpcClient.GetTask, effectiveSettings.GetTaskSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetTaskRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callGetTask);
             Modify_GetTaskApiCall(ref _callGetTask);
+            _callDeleteTask = clientHelper.BuildApiCall<DeleteTaskRequest, wkt::Empty>("DeleteTask", grpcClient.DeleteTaskAsync, grpcClient.DeleteTask, effectiveSettings.DeleteTaskSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteTaskRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
+            Modify_ApiCall(ref _callDeleteTask);
+            Modify_DeleteTaskApiCall(ref _callDeleteTask);
             _callUpdateTask = clientHelper.BuildApiCall<UpdateTaskRequest, Task>("UpdateTask", grpcClient.UpdateTaskAsync, grpcClient.UpdateTask, effectiveSettings.UpdateTaskSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateTaskRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Task?.Name));
             Modify_ApiCall(ref _callUpdateTask);
             Modify_UpdateTaskApiCall(ref _callUpdateTask);
@@ -1751,6 +2082,8 @@ namespace Google.Maps.FleetEngine.Delivery.V1
 
         partial void Modify_GetDeliveryVehicleApiCall(ref gaxgrpc::ApiCall<GetDeliveryVehicleRequest, DeliveryVehicle> call);
 
+        partial void Modify_DeleteDeliveryVehicleApiCall(ref gaxgrpc::ApiCall<DeleteDeliveryVehicleRequest, wkt::Empty> call);
+
         partial void Modify_UpdateDeliveryVehicleApiCall(ref gaxgrpc::ApiCall<UpdateDeliveryVehicleRequest, DeliveryVehicle> call);
 
         partial void Modify_BatchCreateTasksApiCall(ref gaxgrpc::ApiCall<BatchCreateTasksRequest, BatchCreateTasksResponse> call);
@@ -1758,6 +2091,8 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         partial void Modify_CreateTaskApiCall(ref gaxgrpc::ApiCall<CreateTaskRequest, Task> call);
 
         partial void Modify_GetTaskApiCall(ref gaxgrpc::ApiCall<GetTaskRequest, Task> call);
+
+        partial void Modify_DeleteTaskApiCall(ref gaxgrpc::ApiCall<DeleteTaskRequest, wkt::Empty> call);
 
         partial void Modify_UpdateTaskApiCall(ref gaxgrpc::ApiCall<UpdateTaskRequest, Task> call);
 
@@ -1776,6 +2111,8 @@ namespace Google.Maps.FleetEngine.Delivery.V1
 
         partial void Modify_GetDeliveryVehicleRequest(ref GetDeliveryVehicleRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteDeliveryVehicleRequest(ref DeleteDeliveryVehicleRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_UpdateDeliveryVehicleRequest(ref UpdateDeliveryVehicleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchCreateTasksRequest(ref BatchCreateTasksRequest request, ref gaxgrpc::CallSettings settings);
@@ -1783,6 +2120,8 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         partial void Modify_CreateTaskRequest(ref CreateTaskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTaskRequest(ref GetTaskRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteTaskRequest(ref DeleteTaskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateTaskRequest(ref UpdateTaskRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1838,6 +2177,36 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         {
             Modify_GetDeliveryVehicleRequest(ref request, ref callSettings);
             return _callGetDeliveryVehicle.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteDeliveryVehicle(DeleteDeliveryVehicleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDeliveryVehicleRequest(ref request, ref callSettings);
+            _callDeleteDeliveryVehicle.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a DeliveryVehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the DeliveryVehicle has OPEN Tasks
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteDeliveryVehicleAsync(DeleteDeliveryVehicleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteDeliveryVehicleRequest(ref request, ref callSettings);
+            return _callDeleteDeliveryVehicle.Async(request, callSettings);
         }
 
         /// <summary>
@@ -1946,6 +2315,36 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         {
             Modify_GetTaskRequest(ref request, ref callSettings);
             return _callGetTask.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteTask(DeleteTaskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTaskRequest(ref request, ref callSettings);
+            _callDeleteTask.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single Task.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Task is OPEN and assigned to a
+        /// DeliveryVehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteTaskAsync(DeleteTaskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTaskRequest(ref request, ref callSettings);
+            return _callDeleteTask.Async(request, callSettings);
         }
 
         /// <summary>

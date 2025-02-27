@@ -239,6 +239,18 @@ namespace Google.Maps.FleetEngine.Delivery.V1
         }
     }
 
+    public partial class DeleteDeliveryVehicleRequest
+    {
+        /// <summary>
+        /// <see cref="gmfdv::DeliveryVehicleName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gmfdv::DeliveryVehicleName DeliveryVehicleName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gmfdv::DeliveryVehicleName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListDeliveryVehiclesRequest
     {
         /// <summary>
@@ -264,6 +276,18 @@ namespace Google.Maps.FleetEngine.Delivery.V1
     }
 
     public partial class GetTaskRequest
+    {
+        /// <summary>
+        /// <see cref="gmfdv::TaskName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gmfdv::TaskName TaskName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gmfdv::TaskName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteTaskRequest
     {
         /// <summary>
         /// <see cref="gmfdv::TaskName"/>-typed view over the <see cref="Name"/> resource name property.
