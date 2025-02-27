@@ -70,9 +70,11 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.GetTripRequest> __Marshaller_maps_fleetengine_v1_GetTripRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.GetTripRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.ReportBillableTripRequest> __Marshaller_maps_fleetengine_v1_ReportBillableTripRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.ReportBillableTripRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.DeleteTripRequest> __Marshaller_maps_fleetengine_v1_DeleteTripRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.DeleteTripRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.ReportBillableTripRequest> __Marshaller_maps_fleetengine_v1_ReportBillableTripRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.ReportBillableTripRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.SearchTripsRequest> __Marshaller_maps_fleetengine_v1_SearchTripsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.SearchTripsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -95,6 +97,14 @@ namespace Google.Maps.FleetEngine.V1 {
         "GetTrip",
         __Marshaller_maps_fleetengine_v1_GetTripRequest,
         __Marshaller_maps_fleetengine_v1_Trip);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Maps.FleetEngine.V1.DeleteTripRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTrip = new grpc::Method<global::Google.Maps.FleetEngine.V1.DeleteTripRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTrip",
+        __Marshaller_maps_fleetengine_v1_DeleteTripRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Maps.FleetEngine.V1.ReportBillableTripRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ReportBillableTrip = new grpc::Method<global::Google.Maps.FleetEngine.V1.ReportBillableTripRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -150,6 +160,21 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Maps.FleetEngine.V1.Trip> GetTrip(global::Google.Maps.FleetEngine.V1.GetTripRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single Trip.
+      ///
+      /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+      /// vehicle.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTrip(global::Google.Maps.FleetEngine.V1.DeleteTripRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -316,6 +341,66 @@ namespace Google.Maps.FleetEngine.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetTrip, null, options, request);
       }
       /// <summary>
+      /// Deletes a single Trip.
+      ///
+      /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+      /// vehicle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTrip(global::Google.Maps.FleetEngine.V1.DeleteTripRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTrip(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single Trip.
+      ///
+      /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+      /// vehicle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTrip(global::Google.Maps.FleetEngine.V1.DeleteTripRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTrip, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single Trip.
+      ///
+      /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+      /// vehicle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTripAsync(global::Google.Maps.FleetEngine.V1.DeleteTripRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTripAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single Trip.
+      ///
+      /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+      /// vehicle.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTripAsync(global::Google.Maps.FleetEngine.V1.DeleteTripRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTrip, null, options, request);
+      }
+      /// <summary>
       /// Report billable trip usage.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -475,6 +560,7 @@ namespace Google.Maps.FleetEngine.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateTrip, serviceImpl.CreateTrip)
           .AddMethod(__Method_GetTrip, serviceImpl.GetTrip)
+          .AddMethod(__Method_DeleteTrip, serviceImpl.DeleteTrip)
           .AddMethod(__Method_ReportBillableTrip, serviceImpl.ReportBillableTrip)
           .AddMethod(__Method_SearchTrips, serviceImpl.SearchTrips)
           .AddMethod(__Method_UpdateTrip, serviceImpl.UpdateTrip).Build();
@@ -489,6 +575,7 @@ namespace Google.Maps.FleetEngine.V1 {
     {
       serviceBinder.AddMethod(__Method_CreateTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.CreateTripRequest, global::Google.Maps.FleetEngine.V1.Trip>(serviceImpl.CreateTrip));
       serviceBinder.AddMethod(__Method_GetTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.GetTripRequest, global::Google.Maps.FleetEngine.V1.Trip>(serviceImpl.GetTrip));
+      serviceBinder.AddMethod(__Method_DeleteTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.DeleteTripRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTrip));
       serviceBinder.AddMethod(__Method_ReportBillableTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.ReportBillableTripRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ReportBillableTrip));
       serviceBinder.AddMethod(__Method_SearchTrips, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.SearchTripsRequest, global::Google.Maps.FleetEngine.V1.SearchTripsResponse>(serviceImpl.SearchTrips));
       serviceBinder.AddMethod(__Method_UpdateTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.UpdateTripRequest, global::Google.Maps.FleetEngine.V1.Trip>(serviceImpl.UpdateTrip));

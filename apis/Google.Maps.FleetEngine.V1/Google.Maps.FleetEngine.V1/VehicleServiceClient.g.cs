@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Maps.FleetEngine.V1
 {
@@ -47,6 +48,7 @@ namespace Google.Maps.FleetEngine.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateVehicleSettings = existing.CreateVehicleSettings;
             GetVehicleSettings = existing.GetVehicleSettings;
+            DeleteVehicleSettings = existing.DeleteVehicleSettings;
             UpdateVehicleSettings = existing.UpdateVehicleSettings;
             UpdateVehicleAttributesSettings = existing.UpdateVehicleAttributesSettings;
             ListVehiclesSettings = existing.ListVehiclesSettings;
@@ -91,6 +93,18 @@ namespace Google.Maps.FleetEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetVehicleSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(15000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VehicleServiceClient.DeleteVehicle</c> and <c>VehicleServiceClient.DeleteVehicleAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteVehicleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -436,6 +450,162 @@ namespace Google.Maps.FleetEngine.V1
             GetVehicleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteVehicle(DeleteVehicleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteVehicleAsync(DeleteVehicleRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteVehicleAsync(DeleteVehicleRequest request, st::CancellationToken cancellationToken) =>
+            DeleteVehicleAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/vehicles/{vehicle}`.
+        /// The {provider} must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteVehicle(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteVehicle(new DeleteVehicleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/vehicles/{vehicle}`.
+        /// The {provider} must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteVehicleAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteVehicleAsync(new DeleteVehicleRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/vehicles/{vehicle}`.
+        /// The {provider} must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteVehicleAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteVehicleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/vehicles/{vehicle}`.
+        /// The {provider} must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteVehicle(VehicleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteVehicle(new DeleteVehicleRequest
+            {
+                VehicleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/vehicles/{vehicle}`.
+        /// The {provider} must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteVehicleAsync(VehicleName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteVehicleAsync(new DeleteVehicleRequest
+            {
+                VehicleName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format
+        /// `providers/{provider}/vehicles/{vehicle}`.
+        /// The {provider} must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteVehicleAsync(VehicleName name, st::CancellationToken cancellationToken) =>
+            DeleteVehicleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Writes updated vehicle data to the Fleet Engine.
         /// 
         /// When updating a `Vehicle`, the following fields cannot be updated since
@@ -607,6 +777,8 @@ namespace Google.Maps.FleetEngine.V1
 
         private readonly gaxgrpc::ApiCall<GetVehicleRequest, Vehicle> _callGetVehicle;
 
+        private readonly gaxgrpc::ApiCall<DeleteVehicleRequest, wkt::Empty> _callDeleteVehicle;
+
         private readonly gaxgrpc::ApiCall<UpdateVehicleRequest, Vehicle> _callUpdateVehicle;
 
         private readonly gaxgrpc::ApiCall<UpdateVehicleAttributesRequest, UpdateVehicleAttributesResponse> _callUpdateVehicleAttributes;
@@ -636,6 +808,9 @@ namespace Google.Maps.FleetEngine.V1
             _callGetVehicle = clientHelper.BuildApiCall<GetVehicleRequest, Vehicle>("GetVehicle", grpcClient.GetVehicleAsync, grpcClient.GetVehicle, effectiveSettings.GetVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callGetVehicle);
             Modify_GetVehicleApiCall(ref _callGetVehicle);
+            _callDeleteVehicle = clientHelper.BuildApiCall<DeleteVehicleRequest, wkt::Empty>("DeleteVehicle", grpcClient.DeleteVehicleAsync, grpcClient.DeleteVehicle, effectiveSettings.DeleteVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
+            Modify_ApiCall(ref _callDeleteVehicle);
+            Modify_DeleteVehicleApiCall(ref _callDeleteVehicle);
             _callUpdateVehicle = clientHelper.BuildApiCall<UpdateVehicleRequest, Vehicle>("UpdateVehicle", grpcClient.UpdateVehicleAsync, grpcClient.UpdateVehicle, effectiveSettings.UpdateVehicleSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateVehicleRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callUpdateVehicle);
             Modify_UpdateVehicleApiCall(ref _callUpdateVehicle);
@@ -657,6 +832,8 @@ namespace Google.Maps.FleetEngine.V1
 
         partial void Modify_GetVehicleApiCall(ref gaxgrpc::ApiCall<GetVehicleRequest, Vehicle> call);
 
+        partial void Modify_DeleteVehicleApiCall(ref gaxgrpc::ApiCall<DeleteVehicleRequest, wkt::Empty> call);
+
         partial void Modify_UpdateVehicleApiCall(ref gaxgrpc::ApiCall<UpdateVehicleRequest, Vehicle> call);
 
         partial void Modify_UpdateVehicleAttributesApiCall(ref gaxgrpc::ApiCall<UpdateVehicleAttributesRequest, UpdateVehicleAttributesResponse> call);
@@ -673,6 +850,8 @@ namespace Google.Maps.FleetEngine.V1
         partial void Modify_CreateVehicleRequest(ref CreateVehicleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetVehicleRequest(ref GetVehicleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteVehicleRequest(ref DeleteVehicleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateVehicleRequest(ref UpdateVehicleRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -782,6 +961,36 @@ namespace Google.Maps.FleetEngine.V1
         {
             Modify_GetVehicleRequest(ref request, ref callSettings);
             return _callGetVehicle.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteVehicle(DeleteVehicleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteVehicleRequest(ref request, ref callSettings);
+            _callDeleteVehicle.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a Vehicle from the Fleet Engine.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+        /// assigned to it.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteVehicleAsync(DeleteVehicleRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteVehicleRequest(ref request, ref callSettings);
+            return _callDeleteVehicle.Async(request, callSettings);
         }
 
         /// <summary>

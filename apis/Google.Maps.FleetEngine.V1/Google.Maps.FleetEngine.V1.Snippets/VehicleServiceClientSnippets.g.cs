@@ -105,6 +105,95 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteVehicle</summary>
+        public void DeleteVehicleRequestObject()
+        {
+            // Snippet: DeleteVehicle(DeleteVehicleRequest, CallSettings)
+            // Create client
+            VehicleServiceClient vehicleServiceClient = VehicleServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteVehicleRequest request = new DeleteVehicleRequest
+            {
+                Header = new RequestHeader(),
+                VehicleName = VehicleName.FromProviderVehicle("[PROVIDER]", "[VEHICLE]"),
+            };
+            // Make the request
+            vehicleServiceClient.DeleteVehicle(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVehicleAsync</summary>
+        public async Task DeleteVehicleRequestObjectAsync()
+        {
+            // Snippet: DeleteVehicleAsync(DeleteVehicleRequest, CallSettings)
+            // Additional: DeleteVehicleAsync(DeleteVehicleRequest, CancellationToken)
+            // Create client
+            VehicleServiceClient vehicleServiceClient = await VehicleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteVehicleRequest request = new DeleteVehicleRequest
+            {
+                Header = new RequestHeader(),
+                VehicleName = VehicleName.FromProviderVehicle("[PROVIDER]", "[VEHICLE]"),
+            };
+            // Make the request
+            await vehicleServiceClient.DeleteVehicleAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVehicle</summary>
+        public void DeleteVehicle()
+        {
+            // Snippet: DeleteVehicle(string, CallSettings)
+            // Create client
+            VehicleServiceClient vehicleServiceClient = VehicleServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "providers/[PROVIDER]/vehicles/[VEHICLE]";
+            // Make the request
+            vehicleServiceClient.DeleteVehicle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVehicleAsync</summary>
+        public async Task DeleteVehicleAsync()
+        {
+            // Snippet: DeleteVehicleAsync(string, CallSettings)
+            // Additional: DeleteVehicleAsync(string, CancellationToken)
+            // Create client
+            VehicleServiceClient vehicleServiceClient = await VehicleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "providers/[PROVIDER]/vehicles/[VEHICLE]";
+            // Make the request
+            await vehicleServiceClient.DeleteVehicleAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVehicle</summary>
+        public void DeleteVehicleResourceNames()
+        {
+            // Snippet: DeleteVehicle(VehicleName, CallSettings)
+            // Create client
+            VehicleServiceClient vehicleServiceClient = VehicleServiceClient.Create();
+            // Initialize request argument(s)
+            VehicleName name = VehicleName.FromProviderVehicle("[PROVIDER]", "[VEHICLE]");
+            // Make the request
+            vehicleServiceClient.DeleteVehicle(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteVehicleAsync</summary>
+        public async Task DeleteVehicleResourceNamesAsync()
+        {
+            // Snippet: DeleteVehicleAsync(VehicleName, CallSettings)
+            // Additional: DeleteVehicleAsync(VehicleName, CancellationToken)
+            // Create client
+            VehicleServiceClient vehicleServiceClient = await VehicleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VehicleName name = VehicleName.FromProviderVehicle("[PROVIDER]", "[VEHICLE]");
+            // Make the request
+            await vehicleServiceClient.DeleteVehicleAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateVehicle</summary>
         public void UpdateVehicleRequestObject()
         {

@@ -16,6 +16,12 @@
                 "CreateTripAsync"
               ]
             },
+            "DeleteTrip": {
+              "methods": [
+                "DeleteTrip",
+                "DeleteTripAsync"
+              ]
+            },
             "GetTrip": {
               "methods": [
                 "GetTrip",
@@ -53,6 +59,12 @@
               "methods": [
                 "CreateVehicle",
                 "CreateVehicleAsync"
+              ]
+            },
+            "DeleteVehicle": {
+              "methods": [
+                "DeleteVehicle",
+                "DeleteVehicleAsync"
               ]
             },
             "GetVehicle": {

@@ -70,6 +70,10 @@ namespace Google.Maps.FleetEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.GetVehicleRequest> __Marshaller_maps_fleetengine_v1_GetVehicleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.GetVehicleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest> __Marshaller_maps_fleetengine_v1_DeleteVehicleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.UpdateVehicleRequest> __Marshaller_maps_fleetengine_v1_UpdateVehicleRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.UpdateVehicleRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Maps.FleetEngine.V1.UpdateVehicleAttributesRequest> __Marshaller_maps_fleetengine_v1_UpdateVehicleAttributesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Maps.FleetEngine.V1.UpdateVehicleAttributesRequest.Parser));
@@ -99,6 +103,14 @@ namespace Google.Maps.FleetEngine.V1 {
         "GetVehicle",
         __Marshaller_maps_fleetengine_v1_GetVehicleRequest,
         __Marshaller_maps_fleetengine_v1_Vehicle);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteVehicle = new grpc::Method<global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteVehicle",
+        __Marshaller_maps_fleetengine_v1_DeleteVehicleRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Maps.FleetEngine.V1.UpdateVehicleRequest, global::Google.Maps.FleetEngine.V1.Vehicle> __Method_UpdateVehicle = new grpc::Method<global::Google.Maps.FleetEngine.V1.UpdateVehicleRequest, global::Google.Maps.FleetEngine.V1.Vehicle>(
@@ -189,6 +201,21 @@ namespace Google.Maps.FleetEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Maps.FleetEngine.V1.Vehicle> GetVehicle(global::Google.Maps.FleetEngine.V1.GetVehicleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Vehicle from the Fleet Engine.
+      ///
+      /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+      /// assigned to it.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteVehicle(global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -496,6 +523,66 @@ namespace Google.Maps.FleetEngine.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetVehicle, null, options, request);
       }
       /// <summary>
+      /// Deletes a Vehicle from the Fleet Engine.
+      ///
+      /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+      /// assigned to it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteVehicle(global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteVehicle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Vehicle from the Fleet Engine.
+      ///
+      /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+      /// assigned to it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteVehicle(global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteVehicle, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Vehicle from the Fleet Engine.
+      ///
+      /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+      /// assigned to it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteVehicleAsync(global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteVehicleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Vehicle from the Fleet Engine.
+      ///
+      /// Returns FAILED_PRECONDITION if the Vehicle has active Trips.
+      /// assigned to it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteVehicleAsync(global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteVehicle, null, options, request);
+      }
+      /// <summary>
       /// Writes updated vehicle data to the Fleet Engine.
       ///
       /// When updating a `Vehicle`, the following fields cannot be updated since
@@ -787,6 +874,7 @@ namespace Google.Maps.FleetEngine.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_CreateVehicle, serviceImpl.CreateVehicle)
           .AddMethod(__Method_GetVehicle, serviceImpl.GetVehicle)
+          .AddMethod(__Method_DeleteVehicle, serviceImpl.DeleteVehicle)
           .AddMethod(__Method_UpdateVehicle, serviceImpl.UpdateVehicle)
           .AddMethod(__Method_UpdateVehicleAttributes, serviceImpl.UpdateVehicleAttributes)
           .AddMethod(__Method_ListVehicles, serviceImpl.ListVehicles)
@@ -802,6 +890,7 @@ namespace Google.Maps.FleetEngine.V1 {
     {
       serviceBinder.AddMethod(__Method_CreateVehicle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.CreateVehicleRequest, global::Google.Maps.FleetEngine.V1.Vehicle>(serviceImpl.CreateVehicle));
       serviceBinder.AddMethod(__Method_GetVehicle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.GetVehicleRequest, global::Google.Maps.FleetEngine.V1.Vehicle>(serviceImpl.GetVehicle));
+      serviceBinder.AddMethod(__Method_DeleteVehicle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.DeleteVehicleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteVehicle));
       serviceBinder.AddMethod(__Method_UpdateVehicle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.UpdateVehicleRequest, global::Google.Maps.FleetEngine.V1.Vehicle>(serviceImpl.UpdateVehicle));
       serviceBinder.AddMethod(__Method_UpdateVehicleAttributes, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.UpdateVehicleAttributesRequest, global::Google.Maps.FleetEngine.V1.UpdateVehicleAttributesResponse>(serviceImpl.UpdateVehicleAttributes));
       serviceBinder.AddMethod(__Method_ListVehicles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Maps.FleetEngine.V1.ListVehiclesRequest, global::Google.Maps.FleetEngine.V1.ListVehiclesResponse>(serviceImpl.ListVehicles));

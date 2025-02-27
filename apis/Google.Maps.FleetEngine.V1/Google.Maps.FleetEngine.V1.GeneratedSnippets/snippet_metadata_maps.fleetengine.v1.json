@@ -205,6 +205,290 @@
       ]
     },
     {
+      "regionTag": "fleetengine_v1_generated_TripService_DeleteTrip_sync",
+      "title": "DeleteTripRequestObject",
+      "description": "Snippet for DeleteTrip",
+      "file": "TripServiceClient.DeleteTripRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrip",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.DeleteTrip",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.DeleteTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTrip",
+          "fullName": "maps.fleetengine.v1.TripService.DeleteTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_DeleteTrip_async",
+      "title": "DeleteTripRequestObjectAsync",
+      "description": "Snippet for DeleteTripAsync",
+      "file": "TripServiceClient.DeleteTripRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTripAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.DeleteTripAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.DeleteTripRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTrip",
+          "fullName": "maps.fleetengine.v1.TripService.DeleteTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_DeleteTrip_sync_flattened",
+      "title": "DeleteTrip",
+      "description": "Snippet for DeleteTrip",
+      "file": "TripServiceClient.DeleteTripSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrip",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.DeleteTrip",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTrip",
+          "fullName": "maps.fleetengine.v1.TripService.DeleteTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_DeleteTrip_async_flattened",
+      "title": "DeleteTripAsync",
+      "description": "Snippet for DeleteTripAsync",
+      "file": "TripServiceClient.DeleteTripAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTripAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.DeleteTripAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTrip",
+          "fullName": "maps.fleetengine.v1.TripService.DeleteTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_DeleteTrip_sync_flattened_resourceNames",
+      "title": "DeleteTripResourceNames",
+      "description": "Snippet for DeleteTrip",
+      "file": "TripServiceClient.DeleteTripResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTrip",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.DeleteTrip",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.TripName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTrip",
+          "fullName": "maps.fleetengine.v1.TripService.DeleteTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_TripService_DeleteTrip_async_flattened_resourceNames",
+      "title": "DeleteTripResourceNamesAsync",
+      "description": "Snippet for DeleteTripAsync",
+      "file": "TripServiceClient.DeleteTripResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTripAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient.DeleteTripAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.TripName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "TripServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.TripServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteTrip",
+          "fullName": "maps.fleetengine.v1.TripService.DeleteTrip",
+          "service": {
+            "shortName": "TripService",
+            "fullName": "maps.fleetengine.v1.TripService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "fleetengine_v1_generated_TripService_ReportBillableTrip_sync",
       "title": "ReportBillableTripRequestObject",
       "description": "Snippet for ReportBillableTrip",
@@ -684,6 +968,290 @@
         {
           "start": 36,
           "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_DeleteVehicle_sync",
+      "title": "DeleteVehicleRequestObject",
+      "description": "Snippet for DeleteVehicle",
+      "file": "VehicleServiceClient.DeleteVehicleRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVehicle",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.DeleteVehicle",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.DeleteVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.DeleteVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_DeleteVehicle_async",
+      "title": "DeleteVehicleRequestObjectAsync",
+      "description": "Snippet for DeleteVehicleAsync",
+      "file": "VehicleServiceClient.DeleteVehicleRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.DeleteVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.DeleteVehicleRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.DeleteVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_DeleteVehicle_sync_flattened",
+      "title": "DeleteVehicle",
+      "description": "Snippet for DeleteVehicle",
+      "file": "VehicleServiceClient.DeleteVehicleSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVehicle",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.DeleteVehicle",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.DeleteVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_DeleteVehicle_async_flattened",
+      "title": "DeleteVehicleAsync",
+      "description": "Snippet for DeleteVehicleAsync",
+      "file": "VehicleServiceClient.DeleteVehicleAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.DeleteVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.DeleteVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_DeleteVehicle_sync_flattened_resourceNames",
+      "title": "DeleteVehicleResourceNames",
+      "description": "Snippet for DeleteVehicle",
+      "file": "VehicleServiceClient.DeleteVehicleResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVehicle",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.DeleteVehicle",
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.VehicleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.DeleteVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "fleetengine_v1_generated_VehicleService_DeleteVehicle_async_flattened_resourceNames",
+      "title": "DeleteVehicleResourceNamesAsync",
+      "description": "Snippet for DeleteVehicleAsync",
+      "file": "VehicleServiceClient.DeleteVehicleResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteVehicleAsync",
+        "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient.DeleteVehicleAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.FleetEngine.V1.VehicleName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "VehicleServiceClient",
+          "fullName": "Google.Maps.FleetEngine.V1.VehicleServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteVehicle",
+          "fullName": "maps.fleetengine.v1.VehicleService.DeleteVehicle",
+          "service": {
+            "shortName": "VehicleService",
+            "fullName": "maps.fleetengine.v1.VehicleService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]

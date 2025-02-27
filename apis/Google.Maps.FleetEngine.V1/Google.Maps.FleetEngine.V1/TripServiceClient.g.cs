@@ -48,6 +48,7 @@ namespace Google.Maps.FleetEngine.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             CreateTripSettings = existing.CreateTripSettings;
             GetTripSettings = existing.GetTripSettings;
+            DeleteTripSettings = existing.DeleteTripSettings;
             ReportBillableTripSettings = existing.ReportBillableTripSettings;
             SearchTripsSettings = existing.SearchTripsSettings;
             UpdateTripSettings = existing.UpdateTripSettings;
@@ -91,6 +92,18 @@ namespace Google.Maps.FleetEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetTripSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(15000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TripServiceClient.DeleteTrip</c> and <c>TripServiceClient.DeleteTripAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTripSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -335,6 +348,156 @@ namespace Google.Maps.FleetEngine.V1
             GetTripAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTrip(DeleteTripRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTripAsync(DeleteTripRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTripAsync(DeleteTripRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTripAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/trips/{trip}`.
+        /// The provider must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTrip(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTrip(new DeleteTripRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/trips/{trip}`.
+        /// The provider must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTripAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTripAsync(new DeleteTripRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/trips/{trip}`.
+        /// The provider must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTripAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTripAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/trips/{trip}`.
+        /// The provider must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteTrip(TripName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTrip(new DeleteTripRequest
+            {
+                TripName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/trips/{trip}`.
+        /// The provider must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTripAsync(TripName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTripAsync(new DeleteTripRequest
+            {
+                TripName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Must be in the format `providers/{provider}/trips/{trip}`.
+        /// The provider must be the Project ID (for example, `sample-cloud-project`)
+        /// of the Google Cloud Project of which the service account making
+        /// this call is a member.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteTripAsync(TripName name, st::CancellationToken cancellationToken) =>
+            DeleteTripAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Report billable trip usage.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -417,6 +580,8 @@ namespace Google.Maps.FleetEngine.V1
 
         private readonly gaxgrpc::ApiCall<GetTripRequest, Trip> _callGetTrip;
 
+        private readonly gaxgrpc::ApiCall<DeleteTripRequest, wkt::Empty> _callDeleteTrip;
+
         private readonly gaxgrpc::ApiCall<ReportBillableTripRequest, wkt::Empty> _callReportBillableTrip;
 
         private readonly gaxgrpc::ApiCall<SearchTripsRequest, SearchTripsResponse> _callSearchTrips;
@@ -444,6 +609,9 @@ namespace Google.Maps.FleetEngine.V1
             _callGetTrip = clientHelper.BuildApiCall<GetTripRequest, Trip>("GetTrip", grpcClient.GetTripAsync, grpcClient.GetTrip, effectiveSettings.GetTripSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetTripRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callGetTrip);
             Modify_GetTripApiCall(ref _callGetTrip);
+            _callDeleteTrip = clientHelper.BuildApiCall<DeleteTripRequest, wkt::Empty>("DeleteTrip", grpcClient.DeleteTripAsync, grpcClient.DeleteTrip, effectiveSettings.DeleteTripSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DeleteTripRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
+            Modify_ApiCall(ref _callDeleteTrip);
+            Modify_DeleteTripApiCall(ref _callDeleteTrip);
             _callReportBillableTrip = clientHelper.BuildApiCall<ReportBillableTripRequest, wkt::Empty>("ReportBillableTrip", grpcClient.ReportBillableTripAsync, grpcClient.ReportBillableTrip, effectiveSettings.ReportBillableTripSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ReportBillableTripRequest>().WithExtractedParameter("provider_id", "^(providers/[^/]+)/?$", request => request.Name));
             Modify_ApiCall(ref _callReportBillableTrip);
             Modify_ReportBillableTripApiCall(ref _callReportBillableTrip);
@@ -462,6 +630,8 @@ namespace Google.Maps.FleetEngine.V1
 
         partial void Modify_GetTripApiCall(ref gaxgrpc::ApiCall<GetTripRequest, Trip> call);
 
+        partial void Modify_DeleteTripApiCall(ref gaxgrpc::ApiCall<DeleteTripRequest, wkt::Empty> call);
+
         partial void Modify_ReportBillableTripApiCall(ref gaxgrpc::ApiCall<ReportBillableTripRequest, wkt::Empty> call);
 
         partial void Modify_SearchTripsApiCall(ref gaxgrpc::ApiCall<SearchTripsRequest, SearchTripsResponse> call);
@@ -476,6 +646,8 @@ namespace Google.Maps.FleetEngine.V1
         partial void Modify_CreateTripRequest(ref CreateTripRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetTripRequest(ref GetTripRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteTripRequest(ref DeleteTripRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ReportBillableTripRequest(ref ReportBillableTripRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -529,6 +701,36 @@ namespace Google.Maps.FleetEngine.V1
         {
             Modify_GetTripRequest(ref request, ref callSettings);
             return _callGetTrip.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteTrip(DeleteTripRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTripRequest(ref request, ref callSettings);
+            _callDeleteTrip.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a single Trip.
+        /// 
+        /// Returns FAILED_PRECONDITION if the Trip is active and assigned to a
+        /// vehicle.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteTripAsync(DeleteTripRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTripRequest(ref request, ref callSettings);
+            return _callDeleteTrip.Async(request, callSettings);
         }
 
         /// <summary>
