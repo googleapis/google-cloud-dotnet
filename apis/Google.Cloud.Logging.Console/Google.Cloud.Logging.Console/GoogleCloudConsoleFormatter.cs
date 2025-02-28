@@ -110,6 +110,7 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
                 MaybeWriteFormatParameters(writer, logEntry.State);
                 MaybeWriteScopeInformation(writer, scopeProvider);
                 MaybeWriteTraceInformation(writer);
+                MaybeWriteLogAugmentation(writer, scopeProvider, logEntry);
                 writer.WriteEndObject();
                 writer.Flush();
             }
@@ -207,6 +208,21 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
         writer.WriteString(s_tracePropertyName, trace);
         writer.WriteString(s_spanIdPropertyName, activity.SpanId.ToString());
         writer.WriteBoolean(s_traceSampledPropertyName, activity.Recorded);
+    }
+
+    private void MaybeWriteLogAugmentation<TState>(Utf8JsonWriter writer, IExternalScopeProvider scopeProvider, in LogEntry<TState> logEntry)
+    {
+        if (_options.LogAugmenter is null)
+        {
+            return;
+        }
+
+        var currentDepth = writer.CurrentDepth;
+        _options.LogAugmenter.AugmentFormattedLogEntry(logEntry, scopeProvider, writer);
+        if (writer.CurrentDepth != currentDepth)
+        {
+            throw new InvalidOperationException("The log augmenter must not change the depth of the JSON writer.");
+        }
     }
 
     private static JsonEncodedText GetSeverity(LogLevel logLevel) =>

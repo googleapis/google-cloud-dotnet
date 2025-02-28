@@ -187,6 +187,128 @@ public class GoogleCloudConsoleFormatterTest
         Assert.Equal(expectedJson, actualJson);
     }
 
+    public class SimpleAugmenter : IGoogleCloudConsoleLogAugmenter
+    {
+        /// <summary>
+        /// Augment with a simple key-value pair.
+        /// </summary>
+        public void AugmentFormattedLogEntry<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider scopeProvider, Utf8JsonWriter writer)
+        {
+            writer.WriteString("simple_key", "simple_value");
+        }
+    }
+
+    [Fact]
+    public void ConsoleLoggerOptions_LogAugmenter_SimplestLog()
+    {
+        var expectedAugmentedLogEntryJson = "{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\",\"simple_key\":\"simple_value\"}\n";
+
+        var simpleOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new SimpleAugmenter() };
+        var actualJson = LogSimpleLogEntry(simpleOptions);
+        Assert.Equal(expectedAugmentedLogEntryJson, actualJson);
+    }
+
+    public class ComplexAugmenter : IGoogleCloudConsoleLogAugmenter
+    {
+        /// <summary>
+        /// Augment with a complex object.
+        /// </summary>
+        public void AugmentFormattedLogEntry<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider scopeProvider, Utf8JsonWriter writer)
+        {
+            writer.WriteStartObject("complex_key");
+            writer.WriteString("nested_key", "nested_value");
+            writer.WriteEndObject();
+        }
+    }
+
+    [Fact]
+    public void ConsoleLoggerOptions_LogAugmenter_ComplexLog()
+    {
+        var expectedAugmentedLogEntryJson = "{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\",\"complex_key\":{\"nested_key\":\"nested_value\"}}\n";
+
+        var complexOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new ComplexAugmenter() };
+        var actualJson = LogSimpleLogEntry(complexOptions);
+        Assert.Equal(expectedAugmentedLogEntryJson, actualJson);
+    }
+
+    public class FlatScopeAugmenter : IGoogleCloudConsoleLogAugmenter
+    {
+        /// <summary>
+        /// Augment with scope information.
+        /// </summary>
+        public void AugmentFormattedLogEntry<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider scopeProvider, Utf8JsonWriter writer)
+        {
+            writer.WriteStartArray("augmentedScopes");
+            scopeProvider.ForEachScope((scope, state) =>
+            {
+                state.WriteStringValue(scope.ToString());
+            }, writer);
+            writer.WriteEndArray();
+        }
+    }
+
+    [Fact]
+    public void ConsoleLoggerOptions_LogAugmenter_ScopeInformation()
+    {
+        var scopeProvider = new LoggerExternalScopeProvider();
+        scopeProvider.Push("1 Outer Scope");
+        scopeProvider.Push("2 Inner Scope");
+
+        var expectedAugmentedLogEntryJson = "{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\",\"augmentedScopes\":[\"1 Outer Scope\",\"2 Inner Scope\"]}\n";
+
+        var flatScopeOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new FlatScopeAugmenter() };
+        var actualJson = LogSimpleLogEntry(flatScopeOptions, scopeProvider);
+        Assert.Equal(expectedAugmentedLogEntryJson, actualJson);
+    }
+
+    [Fact]
+    public void ConsoleLoggerOptions_LogAugmenter_DefaultsToNull()
+    {
+        var defaultOptions = new GoogleCloudConsoleFormatterOptions();
+        Assert.Null(defaultOptions.LogAugmenter);
+    }
+
+    public class ExtraEndObjectAugmenter : IGoogleCloudConsoleLogAugmenter
+    {
+        /// <summary>
+        /// Augment with a complex object.
+        /// </summary>
+        public void AugmentFormattedLogEntry<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider scopeProvider, Utf8JsonWriter writer)
+        {
+            writer.WriteStartObject("complex_key");
+            writer.WriteString("nested_key", "nested_value");
+            writer.WriteEndObject();
+            writer.WriteEndObject(); // Extra WriteEndObject
+        }
+    }
+
+    [Fact]
+    public void ConsoleLoggerOptions_LogAugmenter_ExtraEndObjectShouldThrow()
+    {
+        var extraEndOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new ExtraEndObjectAugmenter() };
+        Assert.Throws<InvalidOperationException>(() => LogSimpleLogEntry(extraEndOptions));
+    }
+
+    public class DepthMismatchAugmenter : IGoogleCloudConsoleLogAugmenter
+    {
+        /// <summary>
+        /// Augment with a complex object.
+        /// </summary>
+        public void AugmentFormattedLogEntry<TState>(in LogEntry<TState> logEntry, IExternalScopeProvider scopeProvider, Utf8JsonWriter writer)
+        {
+            writer.WriteStartObject("complex_key");
+            writer.WriteString("nested_key", "nested_value");
+            // Missing WriteEndObject
+        }
+    }
+
+    [Fact]
+    public void ConsoleLoggerOptions_LogAugmenter_DepthMismatchShouldThrow()
+    {
+        var depthMismatchOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new DepthMismatchAugmenter() };
+        Assert.Throws<InvalidOperationException>(() => LogSimpleLogEntry(depthMismatchOptions));
+    }
+
     private static GoogleCloudConsoleFormatter CreateFormatter(GoogleCloudConsoleFormatterOptions options = null)
     {
         options ??= new GoogleCloudConsoleFormatterOptions();
