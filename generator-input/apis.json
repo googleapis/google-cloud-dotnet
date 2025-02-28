@@ -4452,7 +4452,8 @@
         "cron"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0"
+        "Google.Cloud.Location": "2.2.0",
+        "Google.LongRunning": "3.3.0"
       },
       "shortName": "cloudscheduler",
       "serviceConfigFile": "cloudscheduler_v1.yaml",
