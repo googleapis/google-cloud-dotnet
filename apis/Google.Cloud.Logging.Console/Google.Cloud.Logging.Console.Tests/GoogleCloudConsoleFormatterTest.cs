@@ -197,13 +197,13 @@ public class GoogleCloudConsoleFormatterTest
             writer.WriteString("simple_key", "simple_value");
         }
     }
-    private readonly GoogleCloudConsoleFormatterOptions simpleOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new SimpleAugmenter() };
 
     [Fact]
     public void ConsoleLoggerOptions_LogAugmenter_SimplestLog()
     {
         var expectedAugmentedLogEntryJson = "{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\",\"simple_key\":\"simple_value\"}\n";
 
+        var simpleOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new SimpleAugmenter() };
         var actualJson = LogSimpleLogEntry(simpleOptions);
         Assert.Equal(expectedAugmentedLogEntryJson, actualJson);
     }
@@ -220,13 +220,13 @@ public class GoogleCloudConsoleFormatterTest
             writer.WriteEndObject();
         }
     }
-    private readonly GoogleCloudConsoleFormatterOptions complexOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new ComplexAugmenter() };
 
     [Fact]
     public void ConsoleLoggerOptions_LogAugmenter_ComplexLog()
     {
         var expectedAugmentedLogEntryJson = "{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\",\"complex_key\":{\"nested_key\":\"nested_value\"}}\n";
 
+        var complexOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new ComplexAugmenter() };
         var actualJson = LogSimpleLogEntry(complexOptions);
         Assert.Equal(expectedAugmentedLogEntryJson, actualJson);
     }
@@ -246,7 +246,6 @@ public class GoogleCloudConsoleFormatterTest
             writer.WriteEndArray();
         }
     }
-    private readonly GoogleCloudConsoleFormatterOptions flatScopeOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new FlatScopeAugmenter() };
 
     [Fact]
     public void ConsoleLoggerOptions_LogAugmenter_ScopeInformation()
@@ -257,6 +256,7 @@ public class GoogleCloudConsoleFormatterTest
 
         var expectedAugmentedLogEntryJson = "{\"message\":\"test\",\"category\":\"LogCategory\",\"severity\":\"INFO\",\"augmentedScopes\":[\"1 Outer Scope\",\"2 Inner Scope\"]}\n";
 
+        var flatScopeOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new FlatScopeAugmenter() };
         var actualJson = LogSimpleLogEntry(flatScopeOptions, scopeProvider);
         Assert.Equal(expectedAugmentedLogEntryJson, actualJson);
     }
@@ -281,11 +281,11 @@ public class GoogleCloudConsoleFormatterTest
             writer.WriteEndObject(); // Extra WriteEndObject
         }
     }
-    private readonly GoogleCloudConsoleFormatterOptions extraEndOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new ExtraEndObjectAugmenter() };
 
     [Fact]
     public void ConsoleLoggerOptions_LogAugmenter_ExtraEndObjectShouldThrow()
     {
+        var extraEndOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new ExtraEndObjectAugmenter() };
         Assert.Throws<InvalidOperationException>(() => LogSimpleLogEntry(extraEndOptions));
     }
 
@@ -301,11 +301,11 @@ public class GoogleCloudConsoleFormatterTest
             // Missing WriteEndObject
         }
     }
-    private readonly GoogleCloudConsoleFormatterOptions depthMismatchOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new DepthMismatchAugmenter() };
 
     [Fact]
     public void ConsoleLoggerOptions_LogAugmenter_DepthMismatchShouldThrow()
     {
+        var depthMismatchOptions = new GoogleCloudConsoleFormatterOptions { LogAugmenter = new DepthMismatchAugmenter() };
         Assert.Throws<InvalidOperationException>(() => LogSimpleLogEntry(depthMismatchOptions));
     }
 
@@ -320,11 +320,6 @@ public class GoogleCloudConsoleFormatterTest
     {
         // Create a simple log entry and return its Json string based on specified parameters.
         LogEntry<string> logEntry = new LogEntry<string>(LogLevel.Information, "LogCategory", new EventId(1), "test", exception: null, (state, exception) => state);
-        return LogLogEntry(logEntry, options, scopeProvider);
-    }
-
-    private static string LogLogEntry<T>(LogEntry<T> logEntry, GoogleCloudConsoleFormatterOptions options, IExternalScopeProvider scopeProvider = null)
-    {
         var writer = new StringWriter { NewLine = "\n" };
         var formatter = CreateFormatter(options);
         formatter.Write(logEntry, scopeProvider: scopeProvider, writer);
