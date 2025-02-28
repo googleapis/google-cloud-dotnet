@@ -89,7 +89,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "NumericValue", SpannerDbType.Numeric, null },
                 { "ProtobufDurationValue", SpannerDbType.FromClrType(typeof(Duration)), null },
                 { "ProtobufRectangleValue", SpannerDbType.FromClrType(typeof(Rectangle)), null },
-                
+
                 { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null },
                 { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), null },
                 { "Float64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float64), null },

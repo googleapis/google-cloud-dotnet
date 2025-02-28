@@ -52,6 +52,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.PgOid, DbType.Int64, false };
             yield return new object[] { SpannerDbType.FromClrType(typeof(Duration)), DbType.Object, false };
             yield return new object[] { SpannerDbType.FromClrType(typeof(Rectangle)), DbType.Object, false };
+            yield return new object[] { SpannerDbType.Uuid, DbType }
         }
 
         [Theory]
