@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 Table = new Table(),
                 UpdateMask = new FieldMask(),
+                IgnoreWarnings = false,
             };
             // Make the request
             Operation<Table, UpdateTableMetadata> response = await bigtableTableAdminClient.UpdateTableAsync(request);

@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 Table = new Table(),
                 UpdateMask = new FieldMask(),
+                IgnoreWarnings = false,
             };
             // Make the request
             Operation<Table, UpdateTableMetadata> response = bigtableTableAdminClient.UpdateTable(request);
