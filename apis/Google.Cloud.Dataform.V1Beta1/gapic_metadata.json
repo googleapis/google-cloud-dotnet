@@ -136,6 +136,12 @@
                 "GetCompilationResultAsync"
               ]
             },
+            "GetConfig": {
+              "methods": [
+                "GetConfig",
+                "GetConfigAsync"
+              ]
+            },
             "GetReleaseConfig": {
               "methods": [
                 "GetReleaseConfig",
@@ -290,6 +296,18 @@
               "methods": [
                 "ResetWorkspaceChanges",
                 "ResetWorkspaceChangesAsync"
+              ]
+            },
+            "SearchFiles": {
+              "methods": [
+                "SearchFiles",
+                "SearchFilesAsync"
+              ]
+            },
+            "UpdateConfig": {
+              "methods": [
+                "UpdateConfig",
+                "UpdateConfigAsync"
               ]
             },
             "UpdateReleaseConfig": {

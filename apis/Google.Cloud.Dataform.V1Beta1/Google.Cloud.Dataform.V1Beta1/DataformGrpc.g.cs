@@ -3,7 +3,7 @@
 //     source: google/cloud/dataform/v1beta1/dataform.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2024 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -83,6 +83,8 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest> __Marshaller_google_cloud_dataform_v1beta1_CommitRepositoryChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse> __Marshaller_google_cloud_dataform_v1beta1_CommitRepositoryChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileRequest> __Marshaller_google_cloud_dataform_v1beta1_ReadRepositoryFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileResponse> __Marshaller_google_cloud_dataform_v1beta1_ReadRepositoryFileResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileResponse.Parser));
@@ -121,7 +123,11 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest> __Marshaller_google_cloud_dataform_v1beta1_PullGitCommitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse> __Marshaller_google_cloud_dataform_v1beta1_PullGitCommitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest> __Marshaller_google_cloud_dataform_v1beta1_PushGitCommitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse> __Marshaller_google_cloud_dataform_v1beta1_PushGitCommitsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest> __Marshaller_google_cloud_dataform_v1beta1_FetchFileGitStatusesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -133,7 +139,11 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest> __Marshaller_google_cloud_dataform_v1beta1_CommitWorkspaceChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse> __Marshaller_google_cloud_dataform_v1beta1_CommitWorkspaceChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest> __Marshaller_google_cloud_dataform_v1beta1_ResetWorkspaceChangesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse> __Marshaller_google_cloud_dataform_v1beta1_ResetWorkspaceChangesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffRequest> __Marshaller_google_cloud_dataform_v1beta1_FetchFileDiffRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -143,11 +153,17 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsResponse> __Marshaller_google_cloud_dataform_v1beta1_QueryDirectoryContentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest> __Marshaller_google_cloud_dataform_v1beta1_SearchFilesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse> __Marshaller_google_cloud_dataform_v1beta1_SearchFilesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryRequest> __Marshaller_google_cloud_dataform_v1beta1_MakeDirectoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryResponse> __Marshaller_google_cloud_dataform_v1beta1_MakeDirectoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest> __Marshaller_google_cloud_dataform_v1beta1_RemoveDirectoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse> __Marshaller_google_cloud_dataform_v1beta1_RemoveDirectoryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.MoveDirectoryRequest> __Marshaller_google_cloud_dataform_v1beta1_MoveDirectoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.MoveDirectoryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -158,6 +174,8 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.ReadFileResponse> __Marshaller_google_cloud_dataform_v1beta1_ReadFileResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.ReadFileResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest> __Marshaller_google_cloud_dataform_v1beta1_RemoveFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse> __Marshaller_google_cloud_dataform_v1beta1_RemoveFileResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.MoveFileRequest> __Marshaller_google_cloud_dataform_v1beta1_MoveFileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.MoveFileRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -223,9 +241,17 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest> __Marshaller_google_cloud_dataform_v1beta1_CancelWorkflowInvocationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse> __Marshaller_google_cloud_dataform_v1beta1_CancelWorkflowInvocationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsRequest> __Marshaller_google_cloud_dataform_v1beta1_QueryWorkflowInvocationActionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsResponse> __Marshaller_google_cloud_dataform_v1beta1_QueryWorkflowInvocationActionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest> __Marshaller_google_cloud_dataform_v1beta1_GetConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.Config> __Marshaller_google_cloud_dataform_v1beta1_Config = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.Config.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest> __Marshaller_google_cloud_dataform_v1beta1_UpdateConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.ListRepositoriesRequest, global::Google.Cloud.Dataform.V1Beta1.ListRepositoriesResponse> __Method_ListRepositories = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.ListRepositoriesRequest, global::Google.Cloud.Dataform.V1Beta1.ListRepositoriesResponse>(
@@ -268,12 +294,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CommitRepositoryChanges = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse> __Method_CommitRepositoryChanges = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CommitRepositoryChanges",
         __Marshaller_google_cloud_dataform_v1beta1_CommitRepositoryChangesRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_cloud_dataform_v1beta1_CommitRepositoryChangesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileRequest, global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileResponse> __Method_ReadRepositoryFile = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileRequest, global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileResponse>(
@@ -356,20 +382,20 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_cloud_dataform_v1beta1_InstallNpmPackagesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PullGitCommits = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse> __Method_PullGitCommits = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PullGitCommits",
         __Marshaller_google_cloud_dataform_v1beta1_PullGitCommitsRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_cloud_dataform_v1beta1_PullGitCommitsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_PushGitCommits = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse> __Method_PushGitCommits = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "PushGitCommits",
         __Marshaller_google_cloud_dataform_v1beta1_PushGitCommitsRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_cloud_dataform_v1beta1_PushGitCommitsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesResponse> __Method_FetchFileGitStatuses = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesResponse>(
@@ -388,20 +414,20 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_cloud_dataform_v1beta1_FetchGitAheadBehindResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CommitWorkspaceChanges = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse> __Method_CommitWorkspaceChanges = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CommitWorkspaceChanges",
         __Marshaller_google_cloud_dataform_v1beta1_CommitWorkspaceChangesRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_cloud_dataform_v1beta1_CommitWorkspaceChangesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_ResetWorkspaceChanges = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse> __Method_ResetWorkspaceChanges = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ResetWorkspaceChanges",
         __Marshaller_google_cloud_dataform_v1beta1_ResetWorkspaceChangesRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_cloud_dataform_v1beta1_ResetWorkspaceChangesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffResponse> __Method_FetchFileDiff = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffResponse>(
@@ -420,6 +446,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_cloud_dataform_v1beta1_QueryDirectoryContentsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest, global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse> __Method_SearchFiles = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest, global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchFiles",
+        __Marshaller_google_cloud_dataform_v1beta1_SearchFilesRequest,
+        __Marshaller_google_cloud_dataform_v1beta1_SearchFilesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryResponse> __Method_MakeDirectory = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -428,12 +462,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_cloud_dataform_v1beta1_MakeDirectoryResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_RemoveDirectory = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse> __Method_RemoveDirectory = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RemoveDirectory",
         __Marshaller_google_cloud_dataform_v1beta1_RemoveDirectoryRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_cloud_dataform_v1beta1_RemoveDirectoryResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.MoveDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.MoveDirectoryResponse> __Method_MoveDirectory = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.MoveDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.MoveDirectoryResponse>(
@@ -452,12 +486,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_cloud_dataform_v1beta1_ReadFileResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_RemoveFile = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest, global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse> __Method_RemoveFile = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest, global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RemoveFile",
         __Marshaller_google_cloud_dataform_v1beta1_RemoveFileRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_cloud_dataform_v1beta1_RemoveFileResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.MoveFileRequest, global::Google.Cloud.Dataform.V1Beta1.MoveFileResponse> __Method_MoveFile = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.MoveFileRequest, global::Google.Cloud.Dataform.V1Beta1.MoveFileResponse>(
@@ -620,12 +654,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CancelWorkflowInvocation = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest, global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse> __Method_CancelWorkflowInvocation = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest, global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CancelWorkflowInvocation",
         __Marshaller_google_cloud_dataform_v1beta1_CancelWorkflowInvocationRequest,
-        __Marshaller_google_protobuf_Empty);
+        __Marshaller_google_cloud_dataform_v1beta1_CancelWorkflowInvocationResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsResponse> __Method_QueryWorkflowInvocationActions = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsResponse>(
@@ -634,6 +668,22 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         "QueryWorkflowInvocationActions",
         __Marshaller_google_cloud_dataform_v1beta1_QueryWorkflowInvocationActionsRequest,
         __Marshaller_google_cloud_dataform_v1beta1_QueryWorkflowInvocationActionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest, global::Google.Cloud.Dataform.V1Beta1.Config> __Method_GetConfig = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest, global::Google.Cloud.Dataform.V1Beta1.Config>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetConfig",
+        __Marshaller_google_cloud_dataform_v1beta1_GetConfigRequest,
+        __Marshaller_google_cloud_dataform_v1beta1_Config);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest, global::Google.Cloud.Dataform.V1Beta1.Config> __Method_UpdateConfig = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest, global::Google.Cloud.Dataform.V1Beta1.Config>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateConfig",
+        __Marshaller_google_cloud_dataform_v1beta1_UpdateConfigRequest,
+        __Marshaller_google_cloud_dataform_v1beta1_Config);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -683,6 +733,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
 
       /// <summary>
       /// Updates a single Repository.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -713,7 +769,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CommitRepositoryChanges(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse> CommitRepositoryChanges(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -848,7 +904,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PullGitCommits(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse> PullGitCommits(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -860,7 +916,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> PushGitCommits(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse> PushGitCommits(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -896,7 +952,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CommitWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse> CommitWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -908,7 +964,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> ResetWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse> ResetWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -938,6 +994,18 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
 
       /// <summary>
+      /// Finds the contents of a given Workspace directory by filter.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse> SearchFiles(global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a directory inside a Workspace.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -956,7 +1024,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> RemoveDirectory(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse> RemoveDirectory(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -993,7 +1061,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> RemoveFile(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse> RemoveFile(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1060,6 +1128,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
 
       /// <summary>
       /// Updates a single ReleaseConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1168,6 +1242,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
 
       /// <summary>
       /// Updates a single WorkflowConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1245,7 +1325,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> CancelWorkflowInvocation(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse> CancelWorkflowInvocation(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1258,6 +1338,36 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsResponse> QueryWorkflowInvocationActions(global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get default config for a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.Config> GetConfig(global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update default config for a given project and location.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataform.V1Beta1.Config> UpdateConfig(global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1437,6 +1547,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single Repository.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1450,6 +1566,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single Repository.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1461,6 +1583,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single Repository.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1474,6 +1602,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single Repository.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1541,7 +1675,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CommitRepositoryChanges(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse CommitRepositoryChanges(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitRepositoryChanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1553,7 +1687,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CommitRepositoryChanges(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse CommitRepositoryChanges(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CommitRepositoryChanges, null, options, request);
       }
@@ -1567,7 +1701,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CommitRepositoryChangesAsync(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse> CommitRepositoryChangesAsync(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitRepositoryChangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -1579,7 +1713,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CommitRepositoryChangesAsync(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse> CommitRepositoryChangesAsync(global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CommitRepositoryChanges, null, options, request);
       }
@@ -2084,7 +2218,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty PullGitCommits(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse PullGitCommits(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PullGitCommits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2095,7 +2229,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty PullGitCommits(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse PullGitCommits(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PullGitCommits, null, options, request);
       }
@@ -2108,7 +2242,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PullGitCommitsAsync(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse> PullGitCommitsAsync(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PullGitCommitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2119,7 +2253,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PullGitCommitsAsync(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse> PullGitCommitsAsync(global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PullGitCommits, null, options, request);
       }
@@ -2132,7 +2266,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty PushGitCommits(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse PushGitCommits(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PushGitCommits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2143,7 +2277,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty PushGitCommits(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse PushGitCommits(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_PushGitCommits, null, options, request);
       }
@@ -2156,7 +2290,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PushGitCommitsAsync(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse> PushGitCommitsAsync(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return PushGitCommitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2167,7 +2301,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> PushGitCommitsAsync(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse> PushGitCommitsAsync(global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_PushGitCommits, null, options, request);
       }
@@ -2276,7 +2410,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CommitWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse CommitWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitWorkspaceChanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2287,7 +2421,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CommitWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse CommitWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CommitWorkspaceChanges, null, options, request);
       }
@@ -2300,7 +2434,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CommitWorkspaceChangesAsync(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse> CommitWorkspaceChangesAsync(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CommitWorkspaceChangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2311,7 +2445,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CommitWorkspaceChangesAsync(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse> CommitWorkspaceChangesAsync(global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CommitWorkspaceChanges, null, options, request);
       }
@@ -2324,7 +2458,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty ResetWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse ResetWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetWorkspaceChanges(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2335,7 +2469,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty ResetWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse ResetWorkspaceChanges(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ResetWorkspaceChanges, null, options, request);
       }
@@ -2348,7 +2482,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResetWorkspaceChangesAsync(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse> ResetWorkspaceChangesAsync(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ResetWorkspaceChangesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2359,7 +2493,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> ResetWorkspaceChangesAsync(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse> ResetWorkspaceChangesAsync(global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ResetWorkspaceChanges, null, options, request);
       }
@@ -2460,6 +2594,54 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_QueryDirectoryContents, null, options, request);
       }
       /// <summary>
+      /// Finds the contents of a given Workspace directory by filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse SearchFiles(global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchFiles(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finds the contents of a given Workspace directory by filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse SearchFiles(global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchFiles, null, options, request);
+      }
+      /// <summary>
+      /// Finds the contents of a given Workspace directory by filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse> SearchFilesAsync(global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchFilesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finds the contents of a given Workspace directory by filter.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse> SearchFilesAsync(global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchFiles, null, options, request);
+      }
+      /// <summary>
       /// Creates a directory inside a Workspace.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2516,7 +2698,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty RemoveDirectory(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse RemoveDirectory(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveDirectory(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2527,7 +2709,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty RemoveDirectory(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse RemoveDirectory(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RemoveDirectory, null, options, request);
       }
@@ -2540,7 +2722,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RemoveDirectoryAsync(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse> RemoveDirectoryAsync(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveDirectoryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2551,7 +2733,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RemoveDirectoryAsync(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse> RemoveDirectoryAsync(global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RemoveDirectory, null, options, request);
       }
@@ -2664,7 +2846,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty RemoveFile(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse RemoveFile(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveFile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2675,7 +2857,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty RemoveFile(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse RemoveFile(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RemoveFile, null, options, request);
       }
@@ -2688,7 +2870,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RemoveFileAsync(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse> RemoveFileAsync(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveFileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -2699,7 +2881,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> RemoveFileAsync(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse> RemoveFileAsync(global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RemoveFile, null, options, request);
       }
@@ -2945,6 +3127,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single ReleaseConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2958,6 +3146,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single ReleaseConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2969,6 +3163,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single ReleaseConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2982,6 +3182,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single ReleaseConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3377,6 +3583,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single WorkflowConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3390,6 +3602,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single WorkflowConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3401,6 +3619,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single WorkflowConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -3414,6 +3638,12 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
       /// <summary>
       /// Updates a single WorkflowConfig.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -3672,7 +3902,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelWorkflowInvocation(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse CancelWorkflowInvocation(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelWorkflowInvocation(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -3683,7 +3913,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.Empty CancelWorkflowInvocation(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::CallOptions options)
+      public virtual global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse CancelWorkflowInvocation(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CancelWorkflowInvocation, null, options, request);
       }
@@ -3696,7 +3926,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelWorkflowInvocationAsync(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse> CancelWorkflowInvocationAsync(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CancelWorkflowInvocationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -3707,7 +3937,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> CancelWorkflowInvocationAsync(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse> CancelWorkflowInvocationAsync(global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CancelWorkflowInvocation, null, options, request);
       }
@@ -3759,6 +3989,126 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_QueryWorkflowInvocationActions, null, options, request);
       }
+      /// <summary>
+      /// Get default config for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.Config GetConfig(global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get default config for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.Config GetConfig(global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Get default config for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.Config> GetConfigAsync(global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get default config for a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.Config> GetConfigAsync(global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetConfig, null, options, request);
+      }
+      /// <summary>
+      /// Update default config for a given project and location.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.Config UpdateConfig(global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update default config for a given project and location.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataform.V1Beta1.Config UpdateConfig(global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateConfig, null, options, request);
+      }
+      /// <summary>
+      /// Update default config for a given project and location.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.Config> UpdateConfigAsync(global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update default config for a given project and location.
+      ///
+      /// **Note:** This method does not fully implement
+      /// [AIP-134](https://google.aip.dev/134); in particular:
+      /// - The wildcard entry (**\***) is treated as a bad request
+      /// - When the **field_mask** is omitted, instead of only updating the set
+      ///   fields, the request is treated as a full update on all modifiable fields
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataform.V1Beta1.Config> UpdateConfigAsync(global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataformClient NewInstance(ClientBaseConfiguration configuration)
@@ -3797,6 +4147,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           .AddMethod(__Method_ResetWorkspaceChanges, serviceImpl.ResetWorkspaceChanges)
           .AddMethod(__Method_FetchFileDiff, serviceImpl.FetchFileDiff)
           .AddMethod(__Method_QueryDirectoryContents, serviceImpl.QueryDirectoryContents)
+          .AddMethod(__Method_SearchFiles, serviceImpl.SearchFiles)
           .AddMethod(__Method_MakeDirectory, serviceImpl.MakeDirectory)
           .AddMethod(__Method_RemoveDirectory, serviceImpl.RemoveDirectory)
           .AddMethod(__Method_MoveDirectory, serviceImpl.MoveDirectory)
@@ -3823,7 +4174,9 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           .AddMethod(__Method_CreateWorkflowInvocation, serviceImpl.CreateWorkflowInvocation)
           .AddMethod(__Method_DeleteWorkflowInvocation, serviceImpl.DeleteWorkflowInvocation)
           .AddMethod(__Method_CancelWorkflowInvocation, serviceImpl.CancelWorkflowInvocation)
-          .AddMethod(__Method_QueryWorkflowInvocationActions, serviceImpl.QueryWorkflowInvocationActions).Build();
+          .AddMethod(__Method_QueryWorkflowInvocationActions, serviceImpl.QueryWorkflowInvocationActions)
+          .AddMethod(__Method_GetConfig, serviceImpl.GetConfig)
+          .AddMethod(__Method_UpdateConfig, serviceImpl.UpdateConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -3838,7 +4191,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_CreateRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateRepositoryRequest, global::Google.Cloud.Dataform.V1Beta1.Repository>(serviceImpl.CreateRepository));
       serviceBinder.AddMethod(__Method_UpdateRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.UpdateRepositoryRequest, global::Google.Cloud.Dataform.V1Beta1.Repository>(serviceImpl.UpdateRepository));
       serviceBinder.AddMethod(__Method_DeleteRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRepository));
-      serviceBinder.AddMethod(__Method_CommitRepositoryChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CommitRepositoryChanges));
+      serviceBinder.AddMethod(__Method_CommitRepositoryChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse>(serviceImpl.CommitRepositoryChanges));
       serviceBinder.AddMethod(__Method_ReadRepositoryFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileRequest, global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileResponse>(serviceImpl.ReadRepositoryFile));
       serviceBinder.AddMethod(__Method_QueryRepositoryDirectoryContents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.QueryRepositoryDirectoryContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryRepositoryDirectoryContentsResponse>(serviceImpl.QueryRepositoryDirectoryContents));
       serviceBinder.AddMethod(__Method_FetchRepositoryHistory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchRepositoryHistoryRequest, global::Google.Cloud.Dataform.V1Beta1.FetchRepositoryHistoryResponse>(serviceImpl.FetchRepositoryHistory));
@@ -3849,19 +4202,20 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_CreateWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateWorkspaceRequest, global::Google.Cloud.Dataform.V1Beta1.Workspace>(serviceImpl.CreateWorkspace));
       serviceBinder.AddMethod(__Method_DeleteWorkspace, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteWorkspaceRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteWorkspace));
       serviceBinder.AddMethod(__Method_InstallNpmPackages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesRequest, global::Google.Cloud.Dataform.V1Beta1.InstallNpmPackagesResponse>(serviceImpl.InstallNpmPackages));
-      serviceBinder.AddMethod(__Method_PullGitCommits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.PullGitCommits));
-      serviceBinder.AddMethod(__Method_PushGitCommits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.PushGitCommits));
+      serviceBinder.AddMethod(__Method_PullGitCommits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse>(serviceImpl.PullGitCommits));
+      serviceBinder.AddMethod(__Method_PushGitCommits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsRequest, global::Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse>(serviceImpl.PushGitCommits));
       serviceBinder.AddMethod(__Method_FetchFileGitStatuses, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileGitStatusesResponse>(serviceImpl.FetchFileGitStatuses));
       serviceBinder.AddMethod(__Method_FetchGitAheadBehind, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindRequest, global::Google.Cloud.Dataform.V1Beta1.FetchGitAheadBehindResponse>(serviceImpl.FetchGitAheadBehind));
-      serviceBinder.AddMethod(__Method_CommitWorkspaceChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CommitWorkspaceChanges));
-      serviceBinder.AddMethod(__Method_ResetWorkspaceChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.ResetWorkspaceChanges));
+      serviceBinder.AddMethod(__Method_CommitWorkspaceChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse>(serviceImpl.CommitWorkspaceChanges));
+      serviceBinder.AddMethod(__Method_ResetWorkspaceChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesRequest, global::Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse>(serviceImpl.ResetWorkspaceChanges));
       serviceBinder.AddMethod(__Method_FetchFileDiff, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffRequest, global::Google.Cloud.Dataform.V1Beta1.FetchFileDiffResponse>(serviceImpl.FetchFileDiff));
       serviceBinder.AddMethod(__Method_QueryDirectoryContents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryDirectoryContentsResponse>(serviceImpl.QueryDirectoryContents));
+      serviceBinder.AddMethod(__Method_SearchFiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.SearchFilesRequest, global::Google.Cloud.Dataform.V1Beta1.SearchFilesResponse>(serviceImpl.SearchFiles));
       serviceBinder.AddMethod(__Method_MakeDirectory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.MakeDirectoryResponse>(serviceImpl.MakeDirectory));
-      serviceBinder.AddMethod(__Method_RemoveDirectory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RemoveDirectory));
+      serviceBinder.AddMethod(__Method_RemoveDirectory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse>(serviceImpl.RemoveDirectory));
       serviceBinder.AddMethod(__Method_MoveDirectory, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.MoveDirectoryRequest, global::Google.Cloud.Dataform.V1Beta1.MoveDirectoryResponse>(serviceImpl.MoveDirectory));
       serviceBinder.AddMethod(__Method_ReadFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ReadFileRequest, global::Google.Cloud.Dataform.V1Beta1.ReadFileResponse>(serviceImpl.ReadFile));
-      serviceBinder.AddMethod(__Method_RemoveFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RemoveFile));
+      serviceBinder.AddMethod(__Method_RemoveFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.RemoveFileRequest, global::Google.Cloud.Dataform.V1Beta1.RemoveFileResponse>(serviceImpl.RemoveFile));
       serviceBinder.AddMethod(__Method_MoveFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.MoveFileRequest, global::Google.Cloud.Dataform.V1Beta1.MoveFileResponse>(serviceImpl.MoveFile));
       serviceBinder.AddMethod(__Method_WriteFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.WriteFileRequest, global::Google.Cloud.Dataform.V1Beta1.WriteFileResponse>(serviceImpl.WriteFile));
       serviceBinder.AddMethod(__Method_ListReleaseConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ListReleaseConfigsRequest, global::Google.Cloud.Dataform.V1Beta1.ListReleaseConfigsResponse>(serviceImpl.ListReleaseConfigs));
@@ -3882,8 +4236,10 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_GetWorkflowInvocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.GetWorkflowInvocationRequest, global::Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>(serviceImpl.GetWorkflowInvocation));
       serviceBinder.AddMethod(__Method_CreateWorkflowInvocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateWorkflowInvocationRequest, global::Google.Cloud.Dataform.V1Beta1.WorkflowInvocation>(serviceImpl.CreateWorkflowInvocation));
       serviceBinder.AddMethod(__Method_DeleteWorkflowInvocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteWorkflowInvocationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteWorkflowInvocation));
-      serviceBinder.AddMethod(__Method_CancelWorkflowInvocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.CancelWorkflowInvocation));
+      serviceBinder.AddMethod(__Method_CancelWorkflowInvocation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationRequest, global::Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse>(serviceImpl.CancelWorkflowInvocation));
       serviceBinder.AddMethod(__Method_QueryWorkflowInvocationActions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryWorkflowInvocationActionsResponse>(serviceImpl.QueryWorkflowInvocationActions));
+      serviceBinder.AddMethod(__Method_GetConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.GetConfigRequest, global::Google.Cloud.Dataform.V1Beta1.Config>(serviceImpl.GetConfig));
+      serviceBinder.AddMethod(__Method_UpdateConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest, global::Google.Cloud.Dataform.V1Beta1.Config>(serviceImpl.UpdateConfig));
     }
 
   }

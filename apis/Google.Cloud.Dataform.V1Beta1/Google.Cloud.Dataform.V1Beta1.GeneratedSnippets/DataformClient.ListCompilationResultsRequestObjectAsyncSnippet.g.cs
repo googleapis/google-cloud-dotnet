@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
             ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResultsAsync(request);

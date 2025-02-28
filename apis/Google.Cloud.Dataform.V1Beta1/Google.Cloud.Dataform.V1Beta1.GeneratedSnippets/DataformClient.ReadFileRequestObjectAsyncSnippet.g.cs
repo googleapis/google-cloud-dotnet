@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
+                Revision = "",
             };
             // Make the request
             ReadFileResponse response = await dataformClient.ReadFileAsync(request);

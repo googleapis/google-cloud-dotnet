@@ -668,7 +668,7 @@ namespace GoogleCSharpSnippets
                 RequiredHeadCommitSha = "",
             };
             // Make the request
-            dataformClient.CommitRepositoryChanges(request);
+            CommitRepositoryChangesResponse response = dataformClient.CommitRepositoryChanges(request);
             // End snippet
         }
 
@@ -694,7 +694,7 @@ namespace GoogleCSharpSnippets
                 RequiredHeadCommitSha = "",
             };
             // Make the request
-            await dataformClient.CommitRepositoryChangesAsync(request);
+            CommitRepositoryChangesResponse response = await dataformClient.CommitRepositoryChangesAsync(request);
             // End snippet
         }
 
@@ -1597,7 +1597,7 @@ namespace GoogleCSharpSnippets
                 Author = new CommitAuthor(),
             };
             // Make the request
-            dataformClient.PullGitCommits(request);
+            PullGitCommitsResponse response = dataformClient.PullGitCommits(request);
             // End snippet
         }
 
@@ -1616,7 +1616,7 @@ namespace GoogleCSharpSnippets
                 Author = new CommitAuthor(),
             };
             // Make the request
-            await dataformClient.PullGitCommitsAsync(request);
+            PullGitCommitsResponse response = await dataformClient.PullGitCommitsAsync(request);
             // End snippet
         }
 
@@ -1633,7 +1633,7 @@ namespace GoogleCSharpSnippets
                 RemoteBranch = "",
             };
             // Make the request
-            dataformClient.PushGitCommits(request);
+            PushGitCommitsResponse response = dataformClient.PushGitCommits(request);
             // End snippet
         }
 
@@ -1651,7 +1651,7 @@ namespace GoogleCSharpSnippets
                 RemoteBranch = "",
             };
             // Make the request
-            await dataformClient.PushGitCommitsAsync(request);
+            PushGitCommitsResponse response = await dataformClient.PushGitCommitsAsync(request);
             // End snippet
         }
 
@@ -1738,7 +1738,7 @@ namespace GoogleCSharpSnippets
                 Author = new CommitAuthor(),
             };
             // Make the request
-            dataformClient.CommitWorkspaceChanges(request);
+            CommitWorkspaceChangesResponse response = dataformClient.CommitWorkspaceChanges(request);
             // End snippet
         }
 
@@ -1758,7 +1758,7 @@ namespace GoogleCSharpSnippets
                 Author = new CommitAuthor(),
             };
             // Make the request
-            await dataformClient.CommitWorkspaceChangesAsync(request);
+            CommitWorkspaceChangesResponse response = await dataformClient.CommitWorkspaceChangesAsync(request);
             // End snippet
         }
 
@@ -1776,7 +1776,7 @@ namespace GoogleCSharpSnippets
                 Clean = false,
             };
             // Make the request
-            dataformClient.ResetWorkspaceChanges(request);
+            ResetWorkspaceChangesResponse response = dataformClient.ResetWorkspaceChanges(request);
             // End snippet
         }
 
@@ -1795,7 +1795,7 @@ namespace GoogleCSharpSnippets
                 Clean = false,
             };
             // Make the request
-            await dataformClient.ResetWorkspaceChangesAsync(request);
+            ResetWorkspaceChangesResponse response = await dataformClient.ResetWorkspaceChangesAsync(request);
             // End snippet
         }
 
@@ -1932,6 +1932,104 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for SearchFiles</summary>
+        public void SearchFilesRequestObject()
+        {
+            // Snippet: SearchFiles(SearchFilesRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            SearchFilesRequest request = new SearchFilesRequest
+            {
+                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<SearchFilesResponse, SearchResult> response = dataformClient.SearchFiles(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (SearchResult item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (SearchFilesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchResult> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchFilesAsync</summary>
+        public async Task SearchFilesRequestObjectAsync()
+        {
+            // Snippet: SearchFilesAsync(SearchFilesRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            SearchFilesRequest request = new SearchFilesRequest
+            {
+                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<SearchFilesResponse, SearchResult> response = dataformClient.SearchFilesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((SearchResult item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((SearchFilesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (SearchResult item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<SearchResult> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (SearchResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for MakeDirectory</summary>
         public void MakeDirectoryRequestObject()
         {
@@ -1980,7 +2078,7 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            dataformClient.RemoveDirectory(request);
+            RemoveDirectoryResponse response = dataformClient.RemoveDirectory(request);
             // End snippet
         }
 
@@ -1998,7 +2096,7 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            await dataformClient.RemoveDirectoryAsync(request);
+            RemoveDirectoryResponse response = await dataformClient.RemoveDirectoryAsync(request);
             // End snippet
         }
 
@@ -2050,6 +2148,7 @@ namespace GoogleCSharpSnippets
             {
                 WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
+                Revision = "",
             };
             // Make the request
             ReadFileResponse response = dataformClient.ReadFile(request);
@@ -2068,6 +2167,7 @@ namespace GoogleCSharpSnippets
             {
                 WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Path = "",
+                Revision = "",
             };
             // Make the request
             ReadFileResponse response = await dataformClient.ReadFileAsync(request);
@@ -2087,7 +2187,7 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            dataformClient.RemoveFile(request);
+            RemoveFileResponse response = dataformClient.RemoveFile(request);
             // End snippet
         }
 
@@ -2105,7 +2205,7 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            await dataformClient.RemoveFileAsync(request);
+            RemoveFileResponse response = await dataformClient.RemoveFileAsync(request);
             // End snippet
         }
 
@@ -2806,6 +2906,8 @@ namespace GoogleCSharpSnippets
             ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResults(request);
@@ -2854,6 +2956,8 @@ namespace GoogleCSharpSnippets
             ListCompilationResultsRequest request = new ListCompilationResultsRequest
             {
                 ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+                OrderBy = "",
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResultsAsync(request);
@@ -4522,7 +4626,7 @@ namespace GoogleCSharpSnippets
                 WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            dataformClient.CancelWorkflowInvocation(request);
+            CancelWorkflowInvocationResponse response = dataformClient.CancelWorkflowInvocation(request);
             // End snippet
         }
 
@@ -4539,7 +4643,7 @@ namespace GoogleCSharpSnippets
                 WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            await dataformClient.CancelWorkflowInvocationAsync(request);
+            CancelWorkflowInvocationResponse response = await dataformClient.CancelWorkflowInvocationAsync(request);
             // End snippet
         }
 
@@ -4636,6 +4740,157 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConfig</summary>
+        public void GetConfigRequestObject()
+        {
+            // Snippet: GetConfig(GetConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            GetConfigRequest request = new GetConfigRequest
+            {
+                ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            Config response = dataformClient.GetConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConfigAsync</summary>
+        public async Task GetConfigRequestObjectAsync()
+        {
+            // Snippet: GetConfigAsync(GetConfigRequest, CallSettings)
+            // Additional: GetConfigAsync(GetConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            GetConfigRequest request = new GetConfigRequest
+            {
+                ConfigName = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            Config response = await dataformClient.GetConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConfig</summary>
+        public void GetConfig()
+        {
+            // Snippet: GetConfig(string, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/config";
+            // Make the request
+            Config response = dataformClient.GetConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConfigAsync</summary>
+        public async Task GetConfigAsync()
+        {
+            // Snippet: GetConfigAsync(string, CallSettings)
+            // Additional: GetConfigAsync(string, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/config";
+            // Make the request
+            Config response = await dataformClient.GetConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConfig</summary>
+        public void GetConfigResourceNames()
+        {
+            // Snippet: GetConfig(ConfigName, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            ConfigName name = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Config response = dataformClient.GetConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetConfigAsync</summary>
+        public async Task GetConfigResourceNamesAsync()
+        {
+            // Snippet: GetConfigAsync(ConfigName, CallSettings)
+            // Additional: GetConfigAsync(ConfigName, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            ConfigName name = ConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            Config response = await dataformClient.GetConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConfig</summary>
+        public void UpdateConfigRequestObject()
+        {
+            // Snippet: UpdateConfig(UpdateConfigRequest, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            UpdateConfigRequest request = new UpdateConfigRequest
+            {
+                Config = new Config(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Config response = dataformClient.UpdateConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConfigAsync</summary>
+        public async Task UpdateConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateConfigAsync(UpdateConfigRequest, CallSettings)
+            // Additional: UpdateConfigAsync(UpdateConfigRequest, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateConfigRequest request = new UpdateConfigRequest
+            {
+                Config = new Config(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Config response = await dataformClient.UpdateConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConfig</summary>
+        public void UpdateConfig()
+        {
+            // Snippet: UpdateConfig(Config, FieldMask, CallSettings)
+            // Create client
+            DataformClient dataformClient = DataformClient.Create();
+            // Initialize request argument(s)
+            Config config = new Config();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Config response = dataformClient.UpdateConfig(config, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateConfigAsync</summary>
+        public async Task UpdateConfigAsync()
+        {
+            // Snippet: UpdateConfigAsync(Config, FieldMask, CallSettings)
+            // Additional: UpdateConfigAsync(Config, FieldMask, CancellationToken)
+            // Create client
+            DataformClient dataformClient = await DataformClient.CreateAsync();
+            // Initialize request argument(s)
+            Config config = new Config();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Config response = await dataformClient.UpdateConfigAsync(config, updateMask);
             // End snippet
         }
     }

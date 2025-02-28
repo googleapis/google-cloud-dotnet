@@ -43,7 +43,7 @@ namespace GoogleCSharpSnippets
                 Author = new CommitAuthor(),
             };
             // Make the request
-            await dataformClient.CommitWorkspaceChangesAsync(request);
+            CommitWorkspaceChangesResponse response = await dataformClient.CommitWorkspaceChangesAsync(request);
         }
     }
     // [END dataform_v1beta1_generated_Dataform_CommitWorkspaceChanges_async]

@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dataform_v1beta1_generated_Dataform_RemoveFile_async]
+    // [START dataform_v1beta1_generated_Dataform_UpdateConfig_async]
     using Google.Cloud.Dataform.V1Beta1;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataformClientSnippets
     {
-        /// <summary>Snippet for RemoveFileAsync</summary>
+        /// <summary>Snippet for UpdateConfigAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +31,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task RemoveFileRequestObjectAsync()
+        public async Task UpdateConfigRequestObjectAsync()
         {
             // Create client
             DataformClient dataformClient = await DataformClient.CreateAsync();
             // Initialize request argument(s)
-            RemoveFileRequest request = new RemoveFileRequest
+            UpdateConfigRequest request = new UpdateConfigRequest
             {
-                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
-                Path = "",
+                Config = new Config(),
+                UpdateMask = new FieldMask(),
             };
             // Make the request
-            RemoveFileResponse response = await dataformClient.RemoveFileAsync(request);
+            Config response = await dataformClient.UpdateConfigAsync(request);
         }
     }
-    // [END dataform_v1beta1_generated_Dataform_RemoveFile_async]
+    // [END dataform_v1beta1_generated_Dataform_UpdateConfig_async]
 }

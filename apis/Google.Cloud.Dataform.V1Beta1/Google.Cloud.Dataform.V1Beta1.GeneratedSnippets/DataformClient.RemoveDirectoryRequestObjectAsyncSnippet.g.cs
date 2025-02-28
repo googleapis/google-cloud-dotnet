@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            await dataformClient.RemoveDirectoryAsync(request);
+            RemoveDirectoryResponse response = await dataformClient.RemoveDirectoryAsync(request);
         }
     }
     // [END dataform_v1beta1_generated_Dataform_RemoveDirectory_async]

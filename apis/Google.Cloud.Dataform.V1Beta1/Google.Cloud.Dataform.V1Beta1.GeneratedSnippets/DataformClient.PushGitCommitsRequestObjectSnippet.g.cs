@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
                 RemoteBranch = "",
             };
             // Make the request
-            dataformClient.PushGitCommits(request);
+            PushGitCommitsResponse response = dataformClient.PushGitCommits(request);
         }
     }
     // [END dataform_v1beta1_generated_Dataform_PushGitCommits_sync]

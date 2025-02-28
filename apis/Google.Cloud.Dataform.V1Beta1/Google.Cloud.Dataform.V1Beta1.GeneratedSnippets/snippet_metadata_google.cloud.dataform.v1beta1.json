@@ -1438,6 +1438,7 @@
             "name": "callSettings"
           }
         ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -1486,7 +1487,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse>",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3325,6 +3326,7 @@
             "name": "callSettings"
           }
         ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3373,7 +3375,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.PullGitCommitsResponse>",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3421,6 +3423,7 @@
             "name": "callSettings"
           }
         ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3469,7 +3472,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.PushGitCommitsResponse>",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3711,6 +3714,7 @@
             "name": "callSettings"
           }
         ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3759,7 +3763,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CommitWorkspaceChangesResponse>",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3807,6 +3811,7 @@
             "name": "callSettings"
           }
         ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -3855,7 +3860,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.ResetWorkspaceChangesResponse>",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -4079,6 +4084,103 @@
       ]
     },
     {
+      "regionTag": "dataform_v1beta1_generated_Dataform_SearchFiles_sync",
+      "title": "SearchFilesRequestObject",
+      "description": "Snippet for SearchFiles",
+      "file": "DataformClient.SearchFilesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchFiles",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.SearchFiles",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.SearchFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataform.V1Beta1.SearchFilesResponse, Google.Cloud.Dataform.V1Beta1.SearchResult>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "SearchFiles",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.SearchFiles",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_SearchFiles_async",
+      "title": "SearchFilesRequestObjectAsync",
+      "description": "Snippet for SearchFilesAsync",
+      "file": "DataformClient.SearchFilesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchFilesAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.SearchFilesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.SearchFilesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataform.V1Beta1.SearchFilesResponse, Google.Cloud.Dataform.V1Beta1.SearchResult>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "SearchFiles",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.SearchFiles",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataform_v1beta1_generated_Dataform_MakeDirectory_sync",
       "title": "MakeDirectoryRequestObject",
       "description": "Snippet for MakeDirectory",
@@ -4194,6 +4296,7 @@
             "name": "callSettings"
           }
         ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -4242,7 +4345,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.RemoveDirectoryResponse>",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -4406,12 +4509,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -4455,12 +4558,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -4484,6 +4587,7 @@
             "name": "callSettings"
           }
         ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.RemoveFileResponse",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -4532,7 +4636,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.RemoveFileResponse>",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -6202,12 +6306,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 78,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 76,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -6251,12 +6355,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 78,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -9791,6 +9895,7 @@
             "name": "callSettings"
           }
         ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -9839,7 +9944,7 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task",
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.CancelWorkflowInvocationResponse>",
         "client": {
           "shortName": "DataformClient",
           "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
@@ -9961,6 +10066,493 @@
         {
           "start": 38,
           "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetConfig_sync",
+      "title": "GetConfigRequestObject",
+      "description": "Snippet for GetConfig",
+      "file": "DataformClient.GetConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfig",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Config",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetConfig_async",
+      "title": "GetConfigRequestObjectAsync",
+      "description": "Snippet for GetConfigAsync",
+      "file": "DataformClient.GetConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.GetConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Config>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetConfig_sync_flattened",
+      "title": "GetConfig",
+      "description": "Snippet for GetConfig",
+      "file": "DataformClient.GetConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfig",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Config",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetConfig_async_flattened",
+      "title": "GetConfigAsync",
+      "description": "Snippet for GetConfigAsync",
+      "file": "DataformClient.GetConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Config>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetConfig_sync_flattened_resourceNames",
+      "title": "GetConfigResourceNames",
+      "description": "Snippet for GetConfig",
+      "file": "DataformClient.GetConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfig",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Config",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_GetConfig_async_flattened_resourceNames",
+      "title": "GetConfigResourceNamesAsync",
+      "description": "Snippet for GetConfigAsync",
+      "file": "DataformClient.GetConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConfigAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.GetConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.ConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Config>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "GetConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.GetConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateConfig_sync",
+      "title": "UpdateConfigRequestObject",
+      "description": "Snippet for UpdateConfig",
+      "file": "DataformClient.UpdateConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfig",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Config",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateConfig_async",
+      "title": "UpdateConfigRequestObjectAsync",
+      "description": "Snippet for UpdateConfigAsync",
+      "file": "DataformClient.UpdateConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfigAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.UpdateConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Config>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateConfig_sync_flattened",
+      "title": "UpdateConfig",
+      "description": "Snippet for UpdateConfig",
+      "file": "DataformClient.UpdateConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfig",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Config",
+            "name": "config"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataform.V1Beta1.Config",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_UpdateConfig_async_flattened",
+      "title": "UpdateConfigAsync",
+      "description": "Snippet for UpdateConfigAsync",
+      "file": "DataformClient.UpdateConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConfigAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.UpdateConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.Config",
+            "name": "config"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataform.V1Beta1.Config>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "UpdateConfig",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.UpdateConfig",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
           "type": "SHORT"
         }
       ]

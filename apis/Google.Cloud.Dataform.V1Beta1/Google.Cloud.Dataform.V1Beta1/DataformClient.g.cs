@@ -73,6 +73,7 @@ namespace Google.Cloud.Dataform.V1Beta1
             ResetWorkspaceChangesSettings = existing.ResetWorkspaceChangesSettings;
             FetchFileDiffSettings = existing.FetchFileDiffSettings;
             QueryDirectoryContentsSettings = existing.QueryDirectoryContentsSettings;
+            SearchFilesSettings = existing.SearchFilesSettings;
             MakeDirectorySettings = existing.MakeDirectorySettings;
             RemoveDirectorySettings = existing.RemoveDirectorySettings;
             MoveDirectorySettings = existing.MoveDirectorySettings;
@@ -100,6 +101,8 @@ namespace Google.Cloud.Dataform.V1Beta1
             DeleteWorkflowInvocationSettings = existing.DeleteWorkflowInvocationSettings;
             CancelWorkflowInvocationSettings = existing.CancelWorkflowInvocationSettings;
             QueryWorkflowInvocationActionsSettings = existing.QueryWorkflowInvocationActionsSettings;
+            GetConfigSettings = existing.GetConfigSettings;
+            UpdateConfigSettings = existing.UpdateConfigSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -396,6 +399,18 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings QueryDirectoryContentsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.SearchFiles</c>
+        ///  and <c>DataformClient.SearchFilesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchFilesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -724,6 +739,30 @@ namespace Google.Cloud.Dataform.V1Beta1
         public gaxgrpc::CallSettings QueryWorkflowInvocationActionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.GetConfig</c>
+        ///  and <c>DataformClient.GetConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DataformClient.UpdateConfig</c>
+        ///  and <c>DataformClient.UpdateConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -806,11 +845,13 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <remarks>
         /// The default Dataform scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/bigquery</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/bigquery",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -1302,6 +1343,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single Repository.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1311,6 +1358,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single Repository.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1320,6 +1373,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single Repository.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1329,6 +1388,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single Repository.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="repository">
         /// Required. The repository to update.
@@ -1348,6 +1413,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single Repository.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="repository">
         /// Required. The repository to update.
@@ -1367,6 +1438,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single Repository.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="repository">
         /// Required. The repository to update.
@@ -1492,7 +1569,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void CommitRepositoryChanges(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual CommitRepositoryChangesResponse CommitRepositoryChanges(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1502,7 +1579,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<CommitRepositoryChangesResponse> CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1512,7 +1589,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<CommitRepositoryChangesResponse> CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, st::CancellationToken cancellationToken) =>
             CommitRepositoryChangesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2197,7 +2274,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void PullGitCommits(PullGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual PullGitCommitsResponse PullGitCommits(PullGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2206,7 +2283,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task PullGitCommitsAsync(PullGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<PullGitCommitsResponse> PullGitCommitsAsync(PullGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2215,7 +2292,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task PullGitCommitsAsync(PullGitCommitsRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<PullGitCommitsResponse> PullGitCommitsAsync(PullGitCommitsRequest request, st::CancellationToken cancellationToken) =>
             PullGitCommitsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2224,7 +2301,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void PushGitCommits(PushGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual PushGitCommitsResponse PushGitCommits(PushGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2233,7 +2310,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task PushGitCommitsAsync(PushGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<PushGitCommitsResponse> PushGitCommitsAsync(PushGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2242,7 +2319,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task PushGitCommitsAsync(PushGitCommitsRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<PushGitCommitsResponse> PushGitCommitsAsync(PushGitCommitsRequest request, st::CancellationToken cancellationToken) =>
             PushGitCommitsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2305,7 +2382,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void CommitWorkspaceChanges(CommitWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual CommitWorkspaceChangesResponse CommitWorkspaceChanges(CommitWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2314,7 +2391,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task CommitWorkspaceChangesAsync(CommitWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<CommitWorkspaceChangesResponse> CommitWorkspaceChangesAsync(CommitWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2323,7 +2400,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task CommitWorkspaceChangesAsync(CommitWorkspaceChangesRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<CommitWorkspaceChangesResponse> CommitWorkspaceChangesAsync(CommitWorkspaceChangesRequest request, st::CancellationToken cancellationToken) =>
             CommitWorkspaceChangesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2332,7 +2409,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void ResetWorkspaceChanges(ResetWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ResetWorkspaceChangesResponse ResetWorkspaceChanges(ResetWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2341,7 +2418,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task ResetWorkspaceChangesAsync(ResetWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ResetWorkspaceChangesResponse> ResetWorkspaceChangesAsync(ResetWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2350,7 +2427,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task ResetWorkspaceChangesAsync(ResetWorkspaceChangesRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<ResetWorkspaceChangesResponse> ResetWorkspaceChangesAsync(ResetWorkspaceChangesRequest request, st::CancellationToken cancellationToken) =>
             ResetWorkspaceChangesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2399,6 +2476,24 @@ namespace Google.Cloud.Dataform.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Finds the contents of a given Workspace directory by filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchResult"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchFilesResponse, SearchResult> SearchFiles(SearchFilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finds the contents of a given Workspace directory by filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchResult"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SearchFilesResponse, SearchResult> SearchFilesAsync(SearchFilesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Creates a directory inside a Workspace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2431,7 +2526,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void RemoveDirectory(RemoveDirectoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual RemoveDirectoryResponse RemoveDirectory(RemoveDirectoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2440,7 +2535,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task RemoveDirectoryAsync(RemoveDirectoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<RemoveDirectoryResponse> RemoveDirectoryAsync(RemoveDirectoryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2449,7 +2544,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task RemoveDirectoryAsync(RemoveDirectoryRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<RemoveDirectoryResponse> RemoveDirectoryAsync(RemoveDirectoryRequest request, st::CancellationToken cancellationToken) =>
             RemoveDirectoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2515,7 +2610,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void RemoveFile(RemoveFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual RemoveFileResponse RemoveFile(RemoveFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2524,7 +2619,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task RemoveFileAsync(RemoveFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<RemoveFileResponse> RemoveFileAsync(RemoveFileRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2533,7 +2628,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task RemoveFileAsync(RemoveFileRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<RemoveFileResponse> RemoveFileAsync(RemoveFileRequest request, st::CancellationToken cancellationToken) =>
             RemoveFileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -3012,6 +3107,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single ReleaseConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3021,6 +3122,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single ReleaseConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3030,6 +3137,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single ReleaseConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3039,6 +3152,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single ReleaseConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="releaseConfig">
         /// Required. The release config to update.
@@ -3058,6 +3177,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single ReleaseConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="releaseConfig">
         /// Required. The release config to update.
@@ -3077,6 +3202,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single ReleaseConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="releaseConfig">
         /// Required. The release config to update.
@@ -4027,6 +4158,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single WorkflowConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4036,6 +4173,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single WorkflowConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4045,6 +4188,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single WorkflowConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4054,6 +4203,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single WorkflowConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="workflowConfig">
         /// Required. The workflow config to update.
@@ -4073,6 +4228,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single WorkflowConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="workflowConfig">
         /// Required. The workflow config to update.
@@ -4092,6 +4253,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single WorkflowConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="workflowConfig">
         /// Required. The workflow config to update.
@@ -4713,7 +4880,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void CancelWorkflowInvocation(CancelWorkflowInvocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual CancelWorkflowInvocationResponse CancelWorkflowInvocation(CancelWorkflowInvocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4722,7 +4889,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task CancelWorkflowInvocationAsync(CancelWorkflowInvocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<CancelWorkflowInvocationResponse> CancelWorkflowInvocationAsync(CancelWorkflowInvocationRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -4731,7 +4898,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task CancelWorkflowInvocationAsync(CancelWorkflowInvocationRequest request, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<CancelWorkflowInvocationResponse> CancelWorkflowInvocationAsync(CancelWorkflowInvocationRequest request, st::CancellationToken cancellationToken) =>
             CancelWorkflowInvocationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -4751,6 +4918,224 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <returns>A pageable asynchronous sequence of <see cref="WorkflowInvocationAction"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<QueryWorkflowInvocationActionsResponse, WorkflowInvocationAction> QueryWorkflowInvocationActionsAsync(QueryWorkflowInvocationActionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Config GetConfig(GetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> GetConfigAsync(GetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> GetConfigAsync(GetConfigRequest request, st::CancellationToken cancellationToken) =>
+            GetConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Config GetConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConfig(new GetConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> GetConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConfigAsync(new GetConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> GetConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            GetConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Config GetConfig(ConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConfig(new GetConfigRequest
+            {
+                ConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> GetConfigAsync(ConfigName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetConfigAsync(new GetConfigRequest
+            {
+                ConfigName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The config name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> GetConfigAsync(ConfigName name, st::CancellationToken cancellationToken) =>
+            GetConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update default config for a given project and location.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Config UpdateConfig(UpdateConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update default config for a given project and location.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> UpdateConfigAsync(UpdateConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update default config for a given project and location.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> UpdateConfigAsync(UpdateConfigRequest request, st::CancellationToken cancellationToken) =>
+            UpdateConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update default config for a given project and location.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
+        /// </summary>
+        /// <param name="config">
+        /// Required. The config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Config UpdateConfig(Config config, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateConfig(new UpdateConfigRequest
+            {
+                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update default config for a given project and location.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
+        /// </summary>
+        /// <param name="config">
+        /// Required. The config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> UpdateConfigAsync(Config config, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateConfigAsync(new UpdateConfigRequest
+            {
+                Config = gax::GaxPreconditions.CheckNotNull(config, nameof(config)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update default config for a given project and location.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
+        /// </summary>
+        /// <param name="config">
+        /// Required. The config to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Specifies the fields to be updated in the config.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Config> UpdateConfigAsync(Config config, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateConfigAsync(config, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Dataform client wrapper implementation, for convenient use.</summary>
@@ -4770,7 +5155,7 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<DeleteRepositoryRequest, wkt::Empty> _callDeleteRepository;
 
-        private readonly gaxgrpc::ApiCall<CommitRepositoryChangesRequest, wkt::Empty> _callCommitRepositoryChanges;
+        private readonly gaxgrpc::ApiCall<CommitRepositoryChangesRequest, CommitRepositoryChangesResponse> _callCommitRepositoryChanges;
 
         private readonly gaxgrpc::ApiCall<ReadRepositoryFileRequest, ReadRepositoryFileResponse> _callReadRepositoryFile;
 
@@ -4792,31 +5177,33 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<InstallNpmPackagesRequest, InstallNpmPackagesResponse> _callInstallNpmPackages;
 
-        private readonly gaxgrpc::ApiCall<PullGitCommitsRequest, wkt::Empty> _callPullGitCommits;
+        private readonly gaxgrpc::ApiCall<PullGitCommitsRequest, PullGitCommitsResponse> _callPullGitCommits;
 
-        private readonly gaxgrpc::ApiCall<PushGitCommitsRequest, wkt::Empty> _callPushGitCommits;
+        private readonly gaxgrpc::ApiCall<PushGitCommitsRequest, PushGitCommitsResponse> _callPushGitCommits;
 
         private readonly gaxgrpc::ApiCall<FetchFileGitStatusesRequest, FetchFileGitStatusesResponse> _callFetchFileGitStatuses;
 
         private readonly gaxgrpc::ApiCall<FetchGitAheadBehindRequest, FetchGitAheadBehindResponse> _callFetchGitAheadBehind;
 
-        private readonly gaxgrpc::ApiCall<CommitWorkspaceChangesRequest, wkt::Empty> _callCommitWorkspaceChanges;
+        private readonly gaxgrpc::ApiCall<CommitWorkspaceChangesRequest, CommitWorkspaceChangesResponse> _callCommitWorkspaceChanges;
 
-        private readonly gaxgrpc::ApiCall<ResetWorkspaceChangesRequest, wkt::Empty> _callResetWorkspaceChanges;
+        private readonly gaxgrpc::ApiCall<ResetWorkspaceChangesRequest, ResetWorkspaceChangesResponse> _callResetWorkspaceChanges;
 
         private readonly gaxgrpc::ApiCall<FetchFileDiffRequest, FetchFileDiffResponse> _callFetchFileDiff;
 
         private readonly gaxgrpc::ApiCall<QueryDirectoryContentsRequest, QueryDirectoryContentsResponse> _callQueryDirectoryContents;
 
+        private readonly gaxgrpc::ApiCall<SearchFilesRequest, SearchFilesResponse> _callSearchFiles;
+
         private readonly gaxgrpc::ApiCall<MakeDirectoryRequest, MakeDirectoryResponse> _callMakeDirectory;
 
-        private readonly gaxgrpc::ApiCall<RemoveDirectoryRequest, wkt::Empty> _callRemoveDirectory;
+        private readonly gaxgrpc::ApiCall<RemoveDirectoryRequest, RemoveDirectoryResponse> _callRemoveDirectory;
 
         private readonly gaxgrpc::ApiCall<MoveDirectoryRequest, MoveDirectoryResponse> _callMoveDirectory;
 
         private readonly gaxgrpc::ApiCall<ReadFileRequest, ReadFileResponse> _callReadFile;
 
-        private readonly gaxgrpc::ApiCall<RemoveFileRequest, wkt::Empty> _callRemoveFile;
+        private readonly gaxgrpc::ApiCall<RemoveFileRequest, RemoveFileResponse> _callRemoveFile;
 
         private readonly gaxgrpc::ApiCall<MoveFileRequest, MoveFileResponse> _callMoveFile;
 
@@ -4858,9 +5245,13 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<DeleteWorkflowInvocationRequest, wkt::Empty> _callDeleteWorkflowInvocation;
 
-        private readonly gaxgrpc::ApiCall<CancelWorkflowInvocationRequest, wkt::Empty> _callCancelWorkflowInvocation;
+        private readonly gaxgrpc::ApiCall<CancelWorkflowInvocationRequest, CancelWorkflowInvocationResponse> _callCancelWorkflowInvocation;
 
         private readonly gaxgrpc::ApiCall<QueryWorkflowInvocationActionsRequest, QueryWorkflowInvocationActionsResponse> _callQueryWorkflowInvocationActions;
+
+        private readonly gaxgrpc::ApiCall<GetConfigRequest, Config> _callGetConfig;
+
+        private readonly gaxgrpc::ApiCall<UpdateConfigRequest, Config> _callUpdateConfig;
 
         /// <summary>
         /// Constructs a client wrapper for the Dataform service, with the specified gRPC client and settings.
@@ -4894,7 +5285,7 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callDeleteRepository = clientHelper.BuildApiCall<DeleteRepositoryRequest, wkt::Empty>("DeleteRepository", grpcClient.DeleteRepositoryAsync, grpcClient.DeleteRepository, effectiveSettings.DeleteRepositorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRepository);
             Modify_DeleteRepositoryApiCall(ref _callDeleteRepository);
-            _callCommitRepositoryChanges = clientHelper.BuildApiCall<CommitRepositoryChangesRequest, wkt::Empty>("CommitRepositoryChanges", grpcClient.CommitRepositoryChangesAsync, grpcClient.CommitRepositoryChanges, effectiveSettings.CommitRepositoryChangesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCommitRepositoryChanges = clientHelper.BuildApiCall<CommitRepositoryChangesRequest, CommitRepositoryChangesResponse>("CommitRepositoryChanges", grpcClient.CommitRepositoryChangesAsync, grpcClient.CommitRepositoryChanges, effectiveSettings.CommitRepositoryChangesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCommitRepositoryChanges);
             Modify_CommitRepositoryChangesApiCall(ref _callCommitRepositoryChanges);
             _callReadRepositoryFile = clientHelper.BuildApiCall<ReadRepositoryFileRequest, ReadRepositoryFileResponse>("ReadRepositoryFile", grpcClient.ReadRepositoryFileAsync, grpcClient.ReadRepositoryFile, effectiveSettings.ReadRepositoryFileSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -4927,10 +5318,10 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callInstallNpmPackages = clientHelper.BuildApiCall<InstallNpmPackagesRequest, InstallNpmPackagesResponse>("InstallNpmPackages", grpcClient.InstallNpmPackagesAsync, grpcClient.InstallNpmPackages, effectiveSettings.InstallNpmPackagesSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
             Modify_ApiCall(ref _callInstallNpmPackages);
             Modify_InstallNpmPackagesApiCall(ref _callInstallNpmPackages);
-            _callPullGitCommits = clientHelper.BuildApiCall<PullGitCommitsRequest, wkt::Empty>("PullGitCommits", grpcClient.PullGitCommitsAsync, grpcClient.PullGitCommits, effectiveSettings.PullGitCommitsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPullGitCommits = clientHelper.BuildApiCall<PullGitCommitsRequest, PullGitCommitsResponse>("PullGitCommits", grpcClient.PullGitCommitsAsync, grpcClient.PullGitCommits, effectiveSettings.PullGitCommitsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPullGitCommits);
             Modify_PullGitCommitsApiCall(ref _callPullGitCommits);
-            _callPushGitCommits = clientHelper.BuildApiCall<PushGitCommitsRequest, wkt::Empty>("PushGitCommits", grpcClient.PushGitCommitsAsync, grpcClient.PushGitCommits, effectiveSettings.PushGitCommitsSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callPushGitCommits = clientHelper.BuildApiCall<PushGitCommitsRequest, PushGitCommitsResponse>("PushGitCommits", grpcClient.PushGitCommitsAsync, grpcClient.PushGitCommits, effectiveSettings.PushGitCommitsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callPushGitCommits);
             Modify_PushGitCommitsApiCall(ref _callPushGitCommits);
             _callFetchFileGitStatuses = clientHelper.BuildApiCall<FetchFileGitStatusesRequest, FetchFileGitStatusesResponse>("FetchFileGitStatuses", grpcClient.FetchFileGitStatusesAsync, grpcClient.FetchFileGitStatuses, effectiveSettings.FetchFileGitStatusesSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -4939,10 +5330,10 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callFetchGitAheadBehind = clientHelper.BuildApiCall<FetchGitAheadBehindRequest, FetchGitAheadBehindResponse>("FetchGitAheadBehind", grpcClient.FetchGitAheadBehindAsync, grpcClient.FetchGitAheadBehind, effectiveSettings.FetchGitAheadBehindSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFetchGitAheadBehind);
             Modify_FetchGitAheadBehindApiCall(ref _callFetchGitAheadBehind);
-            _callCommitWorkspaceChanges = clientHelper.BuildApiCall<CommitWorkspaceChangesRequest, wkt::Empty>("CommitWorkspaceChanges", grpcClient.CommitWorkspaceChangesAsync, grpcClient.CommitWorkspaceChanges, effectiveSettings.CommitWorkspaceChangesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCommitWorkspaceChanges = clientHelper.BuildApiCall<CommitWorkspaceChangesRequest, CommitWorkspaceChangesResponse>("CommitWorkspaceChanges", grpcClient.CommitWorkspaceChangesAsync, grpcClient.CommitWorkspaceChanges, effectiveSettings.CommitWorkspaceChangesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCommitWorkspaceChanges);
             Modify_CommitWorkspaceChangesApiCall(ref _callCommitWorkspaceChanges);
-            _callResetWorkspaceChanges = clientHelper.BuildApiCall<ResetWorkspaceChangesRequest, wkt::Empty>("ResetWorkspaceChanges", grpcClient.ResetWorkspaceChangesAsync, grpcClient.ResetWorkspaceChanges, effectiveSettings.ResetWorkspaceChangesSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callResetWorkspaceChanges = clientHelper.BuildApiCall<ResetWorkspaceChangesRequest, ResetWorkspaceChangesResponse>("ResetWorkspaceChanges", grpcClient.ResetWorkspaceChangesAsync, grpcClient.ResetWorkspaceChanges, effectiveSettings.ResetWorkspaceChangesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callResetWorkspaceChanges);
             Modify_ResetWorkspaceChangesApiCall(ref _callResetWorkspaceChanges);
             _callFetchFileDiff = clientHelper.BuildApiCall<FetchFileDiffRequest, FetchFileDiffResponse>("FetchFileDiff", grpcClient.FetchFileDiffAsync, grpcClient.FetchFileDiff, effectiveSettings.FetchFileDiffSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
@@ -4951,10 +5342,13 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callQueryDirectoryContents = clientHelper.BuildApiCall<QueryDirectoryContentsRequest, QueryDirectoryContentsResponse>("QueryDirectoryContents", grpcClient.QueryDirectoryContentsAsync, grpcClient.QueryDirectoryContents, effectiveSettings.QueryDirectoryContentsSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
             Modify_ApiCall(ref _callQueryDirectoryContents);
             Modify_QueryDirectoryContentsApiCall(ref _callQueryDirectoryContents);
+            _callSearchFiles = clientHelper.BuildApiCall<SearchFilesRequest, SearchFilesResponse>("SearchFiles", grpcClient.SearchFilesAsync, grpcClient.SearchFiles, effectiveSettings.SearchFilesSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
+            Modify_ApiCall(ref _callSearchFiles);
+            Modify_SearchFilesApiCall(ref _callSearchFiles);
             _callMakeDirectory = clientHelper.BuildApiCall<MakeDirectoryRequest, MakeDirectoryResponse>("MakeDirectory", grpcClient.MakeDirectoryAsync, grpcClient.MakeDirectory, effectiveSettings.MakeDirectorySettings).WithGoogleRequestParam("workspace", request => request.Workspace);
             Modify_ApiCall(ref _callMakeDirectory);
             Modify_MakeDirectoryApiCall(ref _callMakeDirectory);
-            _callRemoveDirectory = clientHelper.BuildApiCall<RemoveDirectoryRequest, wkt::Empty>("RemoveDirectory", grpcClient.RemoveDirectoryAsync, grpcClient.RemoveDirectory, effectiveSettings.RemoveDirectorySettings).WithGoogleRequestParam("workspace", request => request.Workspace);
+            _callRemoveDirectory = clientHelper.BuildApiCall<RemoveDirectoryRequest, RemoveDirectoryResponse>("RemoveDirectory", grpcClient.RemoveDirectoryAsync, grpcClient.RemoveDirectory, effectiveSettings.RemoveDirectorySettings).WithGoogleRequestParam("workspace", request => request.Workspace);
             Modify_ApiCall(ref _callRemoveDirectory);
             Modify_RemoveDirectoryApiCall(ref _callRemoveDirectory);
             _callMoveDirectory = clientHelper.BuildApiCall<MoveDirectoryRequest, MoveDirectoryResponse>("MoveDirectory", grpcClient.MoveDirectoryAsync, grpcClient.MoveDirectory, effectiveSettings.MoveDirectorySettings).WithGoogleRequestParam("workspace", request => request.Workspace);
@@ -4963,7 +5357,7 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callReadFile = clientHelper.BuildApiCall<ReadFileRequest, ReadFileResponse>("ReadFile", grpcClient.ReadFileAsync, grpcClient.ReadFile, effectiveSettings.ReadFileSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
             Modify_ApiCall(ref _callReadFile);
             Modify_ReadFileApiCall(ref _callReadFile);
-            _callRemoveFile = clientHelper.BuildApiCall<RemoveFileRequest, wkt::Empty>("RemoveFile", grpcClient.RemoveFileAsync, grpcClient.RemoveFile, effectiveSettings.RemoveFileSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
+            _callRemoveFile = clientHelper.BuildApiCall<RemoveFileRequest, RemoveFileResponse>("RemoveFile", grpcClient.RemoveFileAsync, grpcClient.RemoveFile, effectiveSettings.RemoveFileSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
             Modify_ApiCall(ref _callRemoveFile);
             Modify_RemoveFileApiCall(ref _callRemoveFile);
             _callMoveFile = clientHelper.BuildApiCall<MoveFileRequest, MoveFileResponse>("MoveFile", grpcClient.MoveFileAsync, grpcClient.MoveFile, effectiveSettings.MoveFileSettings).WithGoogleRequestParam("workspace", request => request.Workspace);
@@ -5026,12 +5420,18 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callDeleteWorkflowInvocation = clientHelper.BuildApiCall<DeleteWorkflowInvocationRequest, wkt::Empty>("DeleteWorkflowInvocation", grpcClient.DeleteWorkflowInvocationAsync, grpcClient.DeleteWorkflowInvocation, effectiveSettings.DeleteWorkflowInvocationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteWorkflowInvocation);
             Modify_DeleteWorkflowInvocationApiCall(ref _callDeleteWorkflowInvocation);
-            _callCancelWorkflowInvocation = clientHelper.BuildApiCall<CancelWorkflowInvocationRequest, wkt::Empty>("CancelWorkflowInvocation", grpcClient.CancelWorkflowInvocationAsync, grpcClient.CancelWorkflowInvocation, effectiveSettings.CancelWorkflowInvocationSettings).WithGoogleRequestParam("name", request => request.Name);
+            _callCancelWorkflowInvocation = clientHelper.BuildApiCall<CancelWorkflowInvocationRequest, CancelWorkflowInvocationResponse>("CancelWorkflowInvocation", grpcClient.CancelWorkflowInvocationAsync, grpcClient.CancelWorkflowInvocation, effectiveSettings.CancelWorkflowInvocationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCancelWorkflowInvocation);
             Modify_CancelWorkflowInvocationApiCall(ref _callCancelWorkflowInvocation);
             _callQueryWorkflowInvocationActions = clientHelper.BuildApiCall<QueryWorkflowInvocationActionsRequest, QueryWorkflowInvocationActionsResponse>("QueryWorkflowInvocationActions", grpcClient.QueryWorkflowInvocationActionsAsync, grpcClient.QueryWorkflowInvocationActions, effectiveSettings.QueryWorkflowInvocationActionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callQueryWorkflowInvocationActions);
             Modify_QueryWorkflowInvocationActionsApiCall(ref _callQueryWorkflowInvocationActions);
+            _callGetConfig = clientHelper.BuildApiCall<GetConfigRequest, Config>("GetConfig", grpcClient.GetConfigAsync, grpcClient.GetConfig, effectiveSettings.GetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetConfig);
+            Modify_GetConfigApiCall(ref _callGetConfig);
+            _callUpdateConfig = clientHelper.BuildApiCall<UpdateConfigRequest, Config>("UpdateConfig", grpcClient.UpdateConfigAsync, grpcClient.UpdateConfig, effectiveSettings.UpdateConfigSettings).WithGoogleRequestParam("config.name", request => request.Config?.Name);
+            Modify_ApiCall(ref _callUpdateConfig);
+            Modify_UpdateConfigApiCall(ref _callUpdateConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -5047,7 +5447,7 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_DeleteRepositoryApiCall(ref gaxgrpc::ApiCall<DeleteRepositoryRequest, wkt::Empty> call);
 
-        partial void Modify_CommitRepositoryChangesApiCall(ref gaxgrpc::ApiCall<CommitRepositoryChangesRequest, wkt::Empty> call);
+        partial void Modify_CommitRepositoryChangesApiCall(ref gaxgrpc::ApiCall<CommitRepositoryChangesRequest, CommitRepositoryChangesResponse> call);
 
         partial void Modify_ReadRepositoryFileApiCall(ref gaxgrpc::ApiCall<ReadRepositoryFileRequest, ReadRepositoryFileResponse> call);
 
@@ -5069,31 +5469,33 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_InstallNpmPackagesApiCall(ref gaxgrpc::ApiCall<InstallNpmPackagesRequest, InstallNpmPackagesResponse> call);
 
-        partial void Modify_PullGitCommitsApiCall(ref gaxgrpc::ApiCall<PullGitCommitsRequest, wkt::Empty> call);
+        partial void Modify_PullGitCommitsApiCall(ref gaxgrpc::ApiCall<PullGitCommitsRequest, PullGitCommitsResponse> call);
 
-        partial void Modify_PushGitCommitsApiCall(ref gaxgrpc::ApiCall<PushGitCommitsRequest, wkt::Empty> call);
+        partial void Modify_PushGitCommitsApiCall(ref gaxgrpc::ApiCall<PushGitCommitsRequest, PushGitCommitsResponse> call);
 
         partial void Modify_FetchFileGitStatusesApiCall(ref gaxgrpc::ApiCall<FetchFileGitStatusesRequest, FetchFileGitStatusesResponse> call);
 
         partial void Modify_FetchGitAheadBehindApiCall(ref gaxgrpc::ApiCall<FetchGitAheadBehindRequest, FetchGitAheadBehindResponse> call);
 
-        partial void Modify_CommitWorkspaceChangesApiCall(ref gaxgrpc::ApiCall<CommitWorkspaceChangesRequest, wkt::Empty> call);
+        partial void Modify_CommitWorkspaceChangesApiCall(ref gaxgrpc::ApiCall<CommitWorkspaceChangesRequest, CommitWorkspaceChangesResponse> call);
 
-        partial void Modify_ResetWorkspaceChangesApiCall(ref gaxgrpc::ApiCall<ResetWorkspaceChangesRequest, wkt::Empty> call);
+        partial void Modify_ResetWorkspaceChangesApiCall(ref gaxgrpc::ApiCall<ResetWorkspaceChangesRequest, ResetWorkspaceChangesResponse> call);
 
         partial void Modify_FetchFileDiffApiCall(ref gaxgrpc::ApiCall<FetchFileDiffRequest, FetchFileDiffResponse> call);
 
         partial void Modify_QueryDirectoryContentsApiCall(ref gaxgrpc::ApiCall<QueryDirectoryContentsRequest, QueryDirectoryContentsResponse> call);
 
+        partial void Modify_SearchFilesApiCall(ref gaxgrpc::ApiCall<SearchFilesRequest, SearchFilesResponse> call);
+
         partial void Modify_MakeDirectoryApiCall(ref gaxgrpc::ApiCall<MakeDirectoryRequest, MakeDirectoryResponse> call);
 
-        partial void Modify_RemoveDirectoryApiCall(ref gaxgrpc::ApiCall<RemoveDirectoryRequest, wkt::Empty> call);
+        partial void Modify_RemoveDirectoryApiCall(ref gaxgrpc::ApiCall<RemoveDirectoryRequest, RemoveDirectoryResponse> call);
 
         partial void Modify_MoveDirectoryApiCall(ref gaxgrpc::ApiCall<MoveDirectoryRequest, MoveDirectoryResponse> call);
 
         partial void Modify_ReadFileApiCall(ref gaxgrpc::ApiCall<ReadFileRequest, ReadFileResponse> call);
 
-        partial void Modify_RemoveFileApiCall(ref gaxgrpc::ApiCall<RemoveFileRequest, wkt::Empty> call);
+        partial void Modify_RemoveFileApiCall(ref gaxgrpc::ApiCall<RemoveFileRequest, RemoveFileResponse> call);
 
         partial void Modify_MoveFileApiCall(ref gaxgrpc::ApiCall<MoveFileRequest, MoveFileResponse> call);
 
@@ -5135,9 +5537,13 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_DeleteWorkflowInvocationApiCall(ref gaxgrpc::ApiCall<DeleteWorkflowInvocationRequest, wkt::Empty> call);
 
-        partial void Modify_CancelWorkflowInvocationApiCall(ref gaxgrpc::ApiCall<CancelWorkflowInvocationRequest, wkt::Empty> call);
+        partial void Modify_CancelWorkflowInvocationApiCall(ref gaxgrpc::ApiCall<CancelWorkflowInvocationRequest, CancelWorkflowInvocationResponse> call);
 
         partial void Modify_QueryWorkflowInvocationActionsApiCall(ref gaxgrpc::ApiCall<QueryWorkflowInvocationActionsRequest, QueryWorkflowInvocationActionsResponse> call);
+
+        partial void Modify_GetConfigApiCall(ref gaxgrpc::ApiCall<GetConfigRequest, Config> call);
+
+        partial void Modify_UpdateConfigApiCall(ref gaxgrpc::ApiCall<UpdateConfigRequest, Config> call);
 
         partial void OnConstruction(Dataform.DataformClient grpcClient, DataformSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -5198,6 +5604,8 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_QueryDirectoryContentsRequest(ref QueryDirectoryContentsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_SearchFilesRequest(ref SearchFilesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_MakeDirectoryRequest(ref MakeDirectoryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RemoveDirectoryRequest(ref RemoveDirectoryRequest request, ref gaxgrpc::CallSettings settings);
@@ -5251,6 +5659,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_CancelWorkflowInvocationRequest(ref CancelWorkflowInvocationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryWorkflowInvocationActionsRequest(ref QueryWorkflowInvocationActionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetConfigRequest(ref GetConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateConfigRequest(ref UpdateConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Repositories in a given project and location.
@@ -5326,6 +5738,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single Repository.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5338,6 +5756,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single Repository.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5379,10 +5803,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void CommitRepositoryChanges(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override CommitRepositoryChangesResponse CommitRepositoryChanges(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitRepositoryChangesRequest(ref request, ref callSettings);
-            _callCommitRepositoryChanges.Sync(request, callSettings);
+            return _callCommitRepositoryChanges.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -5392,7 +5816,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<CommitRepositoryChangesResponse> CommitRepositoryChangesAsync(CommitRepositoryChangesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitRepositoryChangesRequest(ref request, ref callSettings);
             return _callCommitRepositoryChanges.Async(request, callSettings);
@@ -5650,10 +6074,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void PullGitCommits(PullGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override PullGitCommitsResponse PullGitCommits(PullGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PullGitCommitsRequest(ref request, ref callSettings);
-            _callPullGitCommits.Sync(request, callSettings);
+            return _callPullGitCommits.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -5662,7 +6086,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task PullGitCommitsAsync(PullGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<PullGitCommitsResponse> PullGitCommitsAsync(PullGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PullGitCommitsRequest(ref request, ref callSettings);
             return _callPullGitCommits.Async(request, callSettings);
@@ -5674,10 +6098,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void PushGitCommits(PushGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override PushGitCommitsResponse PushGitCommits(PushGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PushGitCommitsRequest(ref request, ref callSettings);
-            _callPushGitCommits.Sync(request, callSettings);
+            return _callPushGitCommits.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -5686,7 +6110,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task PushGitCommitsAsync(PushGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<PushGitCommitsResponse> PushGitCommitsAsync(PushGitCommitsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_PushGitCommitsRequest(ref request, ref callSettings);
             return _callPushGitCommits.Async(request, callSettings);
@@ -5746,10 +6170,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void CommitWorkspaceChanges(CommitWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override CommitWorkspaceChangesResponse CommitWorkspaceChanges(CommitWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitWorkspaceChangesRequest(ref request, ref callSettings);
-            _callCommitWorkspaceChanges.Sync(request, callSettings);
+            return _callCommitWorkspaceChanges.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -5758,7 +6182,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task CommitWorkspaceChangesAsync(CommitWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<CommitWorkspaceChangesResponse> CommitWorkspaceChangesAsync(CommitWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CommitWorkspaceChangesRequest(ref request, ref callSettings);
             return _callCommitWorkspaceChanges.Async(request, callSettings);
@@ -5770,10 +6194,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void ResetWorkspaceChanges(ResetWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override ResetWorkspaceChangesResponse ResetWorkspaceChanges(ResetWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResetWorkspaceChangesRequest(ref request, ref callSettings);
-            _callResetWorkspaceChanges.Sync(request, callSettings);
+            return _callResetWorkspaceChanges.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -5782,7 +6206,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task ResetWorkspaceChangesAsync(ResetWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<ResetWorkspaceChangesResponse> ResetWorkspaceChangesAsync(ResetWorkspaceChangesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ResetWorkspaceChangesRequest(ref request, ref callSettings);
             return _callResetWorkspaceChanges.Async(request, callSettings);
@@ -5837,6 +6261,30 @@ namespace Google.Cloud.Dataform.V1Beta1
         }
 
         /// <summary>
+        /// Finds the contents of a given Workspace directory by filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="SearchResult"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchFilesResponse, SearchResult> SearchFiles(SearchFilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchFilesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchFilesRequest, SearchFilesResponse, SearchResult>(_callSearchFiles, request, callSettings);
+        }
+
+        /// <summary>
+        /// Finds the contents of a given Workspace directory by filter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="SearchResult"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SearchFilesResponse, SearchResult> SearchFilesAsync(SearchFilesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchFilesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchFilesRequest, SearchFilesResponse, SearchResult>(_callSearchFiles, request, callSettings);
+        }
+
+        /// <summary>
         /// Creates a directory inside a Workspace.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5866,10 +6314,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void RemoveDirectory(RemoveDirectoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override RemoveDirectoryResponse RemoveDirectory(RemoveDirectoryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveDirectoryRequest(ref request, ref callSettings);
-            _callRemoveDirectory.Sync(request, callSettings);
+            return _callRemoveDirectory.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -5878,7 +6326,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task RemoveDirectoryAsync(RemoveDirectoryRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<RemoveDirectoryResponse> RemoveDirectoryAsync(RemoveDirectoryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveDirectoryRequest(ref request, ref callSettings);
             return _callRemoveDirectory.Async(request, callSettings);
@@ -5940,10 +6388,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void RemoveFile(RemoveFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override RemoveFileResponse RemoveFile(RemoveFileRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveFileRequest(ref request, ref callSettings);
-            _callRemoveFile.Sync(request, callSettings);
+            return _callRemoveFile.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -5952,7 +6400,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task RemoveFileAsync(RemoveFileRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<RemoveFileResponse> RemoveFileAsync(RemoveFileRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RemoveFileRequest(ref request, ref callSettings);
             return _callRemoveFile.Async(request, callSettings);
@@ -6080,6 +6528,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single ReleaseConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6092,6 +6546,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single ReleaseConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6296,6 +6756,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single WorkflowConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6308,6 +6774,12 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// Updates a single WorkflowConfig.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6444,10 +6916,10 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public override void CancelWorkflowInvocation(CancelWorkflowInvocationRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override CancelWorkflowInvocationResponse CancelWorkflowInvocation(CancelWorkflowInvocationRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelWorkflowInvocationRequest(ref request, ref callSettings);
-            _callCancelWorkflowInvocation.Sync(request, callSettings);
+            return _callCancelWorkflowInvocation.Sync(request, callSettings);
         }
 
         /// <summary>
@@ -6456,7 +6928,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public override stt::Task CancelWorkflowInvocationAsync(CancelWorkflowInvocationRequest request, gaxgrpc::CallSettings callSettings = null)
+        public override stt::Task<CancelWorkflowInvocationResponse> CancelWorkflowInvocationAsync(CancelWorkflowInvocationRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CancelWorkflowInvocationRequest(ref request, ref callSettings);
             return _callCancelWorkflowInvocation.Async(request, callSettings);
@@ -6485,6 +6957,66 @@ namespace Google.Cloud.Dataform.V1Beta1
             Modify_QueryWorkflowInvocationActionsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<QueryWorkflowInvocationActionsRequest, QueryWorkflowInvocationActionsResponse, WorkflowInvocationAction>(_callQueryWorkflowInvocationActions, request, callSettings);
         }
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Config GetConfig(GetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetConfigRequest(ref request, ref callSettings);
+            return _callGetConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get default config for a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Config> GetConfigAsync(GetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetConfigRequest(ref request, ref callSettings);
+            return _callGetConfig.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update default config for a given project and location.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Config UpdateConfig(UpdateConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateConfigRequest(ref request, ref callSettings);
+            return _callUpdateConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update default config for a given project and location.
+        /// 
+        /// **Note:** This method does not fully implement
+        /// [AIP-134](https://google.aip.dev/134); in particular:
+        /// - The wildcard entry (**\***) is treated as a bad request
+        /// - When the **field_mask** is omitted, instead of only updating the set
+        /// fields, the request is treated as a full update on all modifiable fields
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Config> UpdateConfigAsync(UpdateConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateConfigRequest(ref request, ref callSettings);
+            return _callUpdateConfig.Async(request, callSettings);
+        }
     }
 
     public partial class ListRepositoriesRequest : gaxgrpc::IPageRequest
@@ -6504,6 +7036,10 @@ namespace Google.Cloud.Dataform.V1Beta1
     }
 
     public partial class QueryDirectoryContentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SearchFilesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -6567,6 +7103,14 @@ namespace Google.Cloud.Dataform.V1Beta1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DirectoryEntry> GetEnumerator() => DirectoryEntries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchFilesResponse : gaxgrpc::IPageResponse<SearchResult>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<SearchResult> GetEnumerator() => SearchResults.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

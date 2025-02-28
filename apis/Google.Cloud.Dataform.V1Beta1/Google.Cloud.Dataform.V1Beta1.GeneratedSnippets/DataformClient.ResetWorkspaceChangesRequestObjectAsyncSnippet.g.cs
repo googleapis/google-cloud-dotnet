@@ -42,7 +42,7 @@ namespace GoogleCSharpSnippets
                 Clean = false,
             };
             // Make the request
-            await dataformClient.ResetWorkspaceChangesAsync(request);
+            ResetWorkspaceChangesResponse response = await dataformClient.ResetWorkspaceChangesAsync(request);
         }
     }
     // [END dataform_v1beta1_generated_Dataform_ResetWorkspaceChanges_async]

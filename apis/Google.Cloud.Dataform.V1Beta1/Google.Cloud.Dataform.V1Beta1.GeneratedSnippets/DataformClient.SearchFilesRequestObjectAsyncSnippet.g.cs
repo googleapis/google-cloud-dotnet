@@ -16,14 +16,16 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dataform_v1beta1_generated_Dataform_ListCompilationResults_sync]
+    // [START dataform_v1beta1_generated_Dataform_SearchFiles_async]
     using Google.Api.Gax;
     using Google.Cloud.Dataform.V1Beta1;
     using System;
+    using System.Linq;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataformClientSnippets
     {
-        /// <summary>Snippet for ListCompilationResults</summary>
+        /// <summary>Snippet for SearchFilesAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,45 +33,44 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListCompilationResultsRequestObject()
+        public async Task SearchFilesRequestObjectAsync()
         {
             // Create client
-            DataformClient dataformClient = DataformClient.Create();
+            DataformClient dataformClient = await DataformClient.CreateAsync();
             // Initialize request argument(s)
-            ListCompilationResultsRequest request = new ListCompilationResultsRequest
+            SearchFilesRequest request = new SearchFilesRequest
             {
-                ParentAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
-                OrderBy = "",
+                WorkspaceAsWorkspaceName = WorkspaceName.FromProjectLocationRepositoryWorkspace("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKSPACE]"),
                 Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListCompilationResultsResponse, CompilationResult> response = dataformClient.ListCompilationResults(request);
+            PagedAsyncEnumerable<SearchFilesResponse, SearchResult> response = dataformClient.SearchFilesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (CompilationResult item in response)
+            await response.ForEachAsync((SearchResult item) =>
             {
                 // Do something with each item
                 Console.WriteLine(item);
-            }
+            });
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListCompilationResultsResponse page in response.AsRawResponses())
+            await response.AsRawResponses().ForEachAsync((SearchFilesResponse page) =>
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (CompilationResult item in page)
+                foreach (SearchResult item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
                 }
-            }
+            });
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<CompilationResult> singlePage = response.ReadPage(pageSize);
+            Page<SearchResult> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (CompilationResult item in singlePage)
+            foreach (SearchResult item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -78,5 +79,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END dataform_v1beta1_generated_Dataform_ListCompilationResults_sync]
+    // [END dataform_v1beta1_generated_Dataform_SearchFiles_async]
 }

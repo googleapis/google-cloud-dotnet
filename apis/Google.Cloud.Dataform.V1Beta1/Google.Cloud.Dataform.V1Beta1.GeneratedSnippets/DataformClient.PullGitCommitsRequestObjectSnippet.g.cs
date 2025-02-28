@@ -41,7 +41,7 @@ namespace GoogleCSharpSnippets
                 Author = new CommitAuthor(),
             };
             // Make the request
-            dataformClient.PullGitCommits(request);
+            PullGitCommitsResponse response = dataformClient.PullGitCommits(request);
         }
     }
     // [END dataform_v1beta1_generated_Dataform_PullGitCommits_sync]
