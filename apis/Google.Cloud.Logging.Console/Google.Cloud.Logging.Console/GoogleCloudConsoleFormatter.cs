@@ -210,16 +210,16 @@ public sealed class GoogleCloudConsoleFormatter : ConsoleFormatter, IDisposable
         writer.WriteBoolean(s_traceSampledPropertyName, activity.Recorded);
     }
 
-    private void MaybeWriteLogAugmentation<TState>(Utf8JsonWriter writer, IExternalScopeProvider scopeProvider, LogEntry<TState> logEntry)
+    private void MaybeWriteLogAugmentation<TState>(Utf8JsonWriter writer, IExternalScopeProvider scopeProvider, in LogEntry<TState> logEntry)
     {
         if (_options.LogAugmenter is null)
         {
             return;
         }
 
-        var CurrentDepth = writer.CurrentDepth;
+        var currentDepth = writer.CurrentDepth;
         _options.LogAugmenter.AugmentFormattedLogEntry(logEntry, scopeProvider, writer);
-        if (writer.CurrentDepth != CurrentDepth)
+        if (writer.CurrentDepth != currentDepth)
         {
             throw new InvalidOperationException("The log augmenter must not change the depth of the JSON writer.");
         }
