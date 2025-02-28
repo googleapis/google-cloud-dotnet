@@ -40,7 +40,7 @@ namespace GoogleCSharpSnippets
                 Path = "",
             };
             // Make the request
-            dataformClient.RemoveFile(request);
+            RemoveFileResponse response = dataformClient.RemoveFile(request);
         }
     }
     // [END dataform_v1beta1_generated_Dataform_RemoveFile_sync]

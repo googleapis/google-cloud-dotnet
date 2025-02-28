@@ -48,7 +48,7 @@ namespace GoogleCSharpSnippets
                 RequiredHeadCommitSha = "",
             };
             // Make the request
-            dataformClient.CommitRepositoryChanges(request);
+            CommitRepositoryChangesResponse response = dataformClient.CommitRepositoryChanges(request);
         }
     }
     // [END dataform_v1beta1_generated_Dataform_CommitRepositoryChanges_sync]

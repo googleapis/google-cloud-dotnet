@@ -39,7 +39,7 @@ namespace GoogleCSharpSnippets
                 WorkflowInvocationName = WorkflowInvocationName.FromProjectLocationRepositoryWorkflowInvocation("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[WORKFLOW_INVOCATION]"),
             };
             // Make the request
-            dataformClient.CancelWorkflowInvocation(request);
+            CancelWorkflowInvocationResponse response = dataformClient.CancelWorkflowInvocation(request);
         }
     }
     // [END dataform_v1beta1_generated_Dataform_CancelWorkflowInvocation_sync]
