@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 View = PublisherModelView.Unspecified,
                 IsHuggingFaceModel = false,
                 HuggingFaceToken = "",
+                IncludeEquivalentModelGardenModelDeploymentConfigs = false,
             };
             // Make the request
             PublisherModel response = modelGardenServiceClient.GetPublisherModel(request);
@@ -62,6 +63,7 @@ namespace GoogleCSharpSnippets
                 View = PublisherModelView.Unspecified,
                 IsHuggingFaceModel = false,
                 HuggingFaceToken = "",
+                IncludeEquivalentModelGardenModelDeploymentConfigs = false,
             };
             // Make the request
             PublisherModel response = await modelGardenServiceClient.GetPublisherModelAsync(request);
@@ -398,33 +400,36 @@ namespace GoogleCSharpSnippets
             // Create client
             ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
             // Initialize request argument(s)
-            DeployPublisherModelRequest request = new DeployPublisherModelRequest
-            {
-                Model = "",
-                DestinationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                EndpointDisplayName = "",
-                DedicatedResources = new DedicatedResources(),
-                ModelDisplayName = "",
-                HuggingFaceAccessToken = "",
-                AcceptEula = false,
-            };
+#pragma warning disable CS0612
+            DeployPublisherModelRequest request = new DeployPublisherModelRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> response = modelGardenServiceClient.DeployPublisherModel(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             DeployPublisherModelResponse result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> retrievedResponse = modelGardenServiceClient.PollOnceDeployPublisherModel(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 DeployPublisherModelResponse retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }
@@ -437,33 +442,36 @@ namespace GoogleCSharpSnippets
             // Create client
             ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
             // Initialize request argument(s)
-            DeployPublisherModelRequest request = new DeployPublisherModelRequest
-            {
-                Model = "",
-                DestinationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                EndpointDisplayName = "",
-                DedicatedResources = new DedicatedResources(),
-                ModelDisplayName = "",
-                HuggingFaceAccessToken = "",
-                AcceptEula = false,
-            };
+#pragma warning disable CS0612
+            DeployPublisherModelRequest request = new DeployPublisherModelRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> response = await modelGardenServiceClient.DeployPublisherModelAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             DeployPublisherModelResponse result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> retrievedResponse = await modelGardenServiceClient.PollOnceDeployPublisherModelAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 DeployPublisherModelResponse retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
             // End snippet
         }

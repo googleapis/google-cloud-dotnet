@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gagr = Google.Api.Gax.ResourceNames;
 using gcav = Google.Cloud.AIPlatform.V1Beta1;
+using sys = System;
 
 namespace Google.Cloud.AIPlatform.V1Beta1
 {
@@ -59,6 +60,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Destination"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName DestinationAsLocationName
         {
             get => string.IsNullOrEmpty(Destination) ? null : gagr::LocationName.Parse(Destination, allowUnparsed: true);
@@ -99,6 +101,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <summary>
         /// <see cref="PublisherModelName"/>-typed view over the <see cref="PublisherModel"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public PublisherModelName PublisherModelAsPublisherModelName
         {
             get => string.IsNullOrEmpty(PublisherModel) ? null : PublisherModelName.Parse(PublisherModel, allowUnparsed: true);
@@ -108,6 +111,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <summary>
         /// <see cref="EndpointName"/>-typed view over the <see cref="Endpoint"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public EndpointName EndpointAsEndpointName
         {
             get => string.IsNullOrEmpty(Endpoint) ? null : EndpointName.Parse(Endpoint, allowUnparsed: true);
@@ -115,6 +119,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary><see cref="ModelName"/>-typed view over the <see cref="Model"/> resource name property.</summary>
+        [sys::ObsoleteAttribute]
         public ModelName ModelAsModelName
         {
             get => string.IsNullOrEmpty(Model) ? null : ModelName.Parse(Model, allowUnparsed: true);
@@ -148,6 +153,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <summary>
         /// <see cref="PublisherModelName"/>-typed view over the <see cref="PublisherModel"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public PublisherModelName PublisherModelAsPublisherModelName
         {
             get => string.IsNullOrEmpty(PublisherModel) ? null : PublisherModelName.Parse(PublisherModel, allowUnparsed: true);
@@ -157,6 +163,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Destination"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName DestinationAsLocationName
         {
             get => string.IsNullOrEmpty(Destination) ? null : gagr::LocationName.Parse(Destination, allowUnparsed: true);

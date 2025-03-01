@@ -570,7 +570,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> DeployPublisherModel(DeployPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -579,7 +582,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> DeployPublisherModelAsync(DeployPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -588,7 +594,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> DeployPublisherModelAsync(DeployPublisherModelRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             DeployPublisherModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DeployPublisherModel</c>.</summary>
@@ -603,8 +612,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> PollOnceDeployPublisherModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployPublisherModelOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -615,8 +627,11 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> PollOnceDeployPublisherModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployPublisherModelOperationsClient, callSettings);
+#pragma warning restore CS0612
     }
 
     /// <summary>ModelGardenService client wrapper implementation, for convenient use.</summary>
@@ -631,7 +646,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<DeployRequest, lro::Operation> _callDeploy;
 
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<DeployPublisherModelRequest, lro::Operation> _callDeployPublisherModel;
+#pragma warning restore CS0612
 
         /// <summary>
         /// Constructs a client wrapper for the ModelGardenService service, with the specified gRPC client and settings.
@@ -661,7 +678,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callDeploy = clientHelper.BuildApiCall<DeployRequest, lro::Operation>("Deploy", grpcClient.DeployAsync, grpcClient.Deploy, effectiveSettings.DeploySettings).WithGoogleRequestParam("destination", request => request.Destination);
             Modify_ApiCall(ref _callDeploy);
             Modify_DeployApiCall(ref _callDeploy);
+#pragma warning disable CS0612
             _callDeployPublisherModel = clientHelper.BuildApiCall<DeployPublisherModelRequest, lro::Operation>("DeployPublisherModel", grpcClient.DeployPublisherModelAsync, grpcClient.DeployPublisherModel, effectiveSettings.DeployPublisherModelSettings).WithGoogleRequestParam("destination", request => request.Destination);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeployPublisherModel);
             Modify_DeployPublisherModelApiCall(ref _callDeployPublisherModel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -675,7 +694,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         partial void Modify_DeployApiCall(ref gaxgrpc::ApiCall<DeployRequest, lro::Operation> call);
 
+#pragma warning disable CS0612
         partial void Modify_DeployPublisherModelApiCall(ref gaxgrpc::ApiCall<DeployPublisherModelRequest, lro::Operation> call);
+#pragma warning restore CS0612
 
         partial void OnConstruction(ModelGardenService.ModelGardenServiceClient grpcClient, ModelGardenServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -694,7 +715,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         partial void Modify_DeployRequest(ref DeployRequest request, ref gaxgrpc::CallSettings settings);
 
+#pragma warning disable CS0612
         partial void Modify_DeployPublisherModelRequest(ref DeployPublisherModelRequest request, ref gaxgrpc::CallSettings settings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Gets a Model Garden publisher model.
@@ -780,10 +803,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata> DeployPublisherModel(DeployPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_DeployPublisherModelRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>(_callDeployPublisherModel.Sync(request, callSettings), DeployPublisherModelOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -792,10 +820,15 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> DeployPublisherModelAsync(DeployPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_DeployPublisherModelRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>(await _callDeployPublisherModel.Async(request, callSettings).ConfigureAwait(false), DeployPublisherModelOperationsClient);
+#pragma warning restore CS0612
         }
     }
 
