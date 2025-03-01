@@ -84,51 +84,52 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "aQoLUmFnUmVzb3VyY2USPwoKcmFnX2NvcnB1cxgBIAEoCUIr4EEB+kElCiNh",
             "aXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1JhZ0NvcnB1cxIZCgxyYWdfZmls",
             "ZV9pZHMYAiADKAlCA+BBAUITChFfc2ltaWxhcml0eV90b3Bfa0IcChpfdmVj",
-            "dG9yX2Rpc3RhbmNlX3RocmVzaG9sZCIoCg5WZXJ0ZXhBSVNlYXJjaBIWCglk",
-            "YXRhc3RvcmUYASABKAlCA+BBAiJyChVHb29nbGVTZWFyY2hSZXRyaWV2YWwS",
-            "WQoYZHluYW1pY19yZXRyaWV2YWxfY29uZmlnGAIgASgLMjcuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5EeW5hbWljUmV0cmlldmFsQ29uZmln",
-            "IhUKE0VudGVycHJpc2VXZWJTZWFyY2gizwEKFkR5bmFtaWNSZXRyaWV2YWxD",
-            "b25maWcSSgoEbW9kZRgBIAEoDjI8Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuRHluYW1pY1JldHJpZXZhbENvbmZpZy5Nb2RlEiMKEWR5bmFt",
-            "aWNfdGhyZXNob2xkGAIgASgCQgPgQQFIAIgBASIuCgRNb2RlEhQKEE1PREVf",
-            "VU5TUEVDSUZJRUQQABIQCgxNT0RFX0RZTkFNSUMQAUIUChJfZHluYW1pY190",
-            "aHJlc2hvbGQiuwEKClRvb2xDb25maWcSXAoXZnVuY3Rpb25fY2FsbGluZ19j",
-            "b25maWcYASABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "LkZ1bmN0aW9uQ2FsbGluZ0NvbmZpZ0ID4EEBEk8KEHJldHJpZXZhbF9jb25m",
-            "aWcYAiABKAsyMC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJl",
-            "dHJpZXZhbENvbmZpZ0ID4EEBIscBChVGdW5jdGlvbkNhbGxpbmdDb25maWcS",
-            "TgoEbW9kZRgBIAEoDjI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuRnVuY3Rpb25DYWxsaW5nQ29uZmlnLk1vZGVCA+BBARIjChZhbGxvd2Vk",
-            "X2Z1bmN0aW9uX25hbWVzGAIgAygJQgPgQQEiOQoETW9kZRIUChBNT0RFX1VO",
-            "U1BFQ0lGSUVEEAASCAoEQVVUTxABEgcKA0FOWRACEggKBE5PTkUQAyJ2Cg9S",
-            "ZXRyaWV2YWxDb25maWcSKQoHbGF0X2xuZxgBIAEoCzITLmdvb2dsZS50eXBl",
-            "LkxhdExuZ0gAiAEBEhoKDWxhbmd1YWdlX2NvZGUYAiABKAlIAYgBAUIKCghf",
-            "bGF0X2xuZ0IQCg5fbGFuZ3VhZ2VfY29kZSLPBgoSUmFnUmV0cmlldmFsQ29u",
-            "ZmlnEhIKBXRvcF9rGAEgASgFQgPgQQESXAoNaHlicmlkX3NlYXJjaBgCIAEo",
-            "CzJALmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnUmV0cmll",
-            "dmFsQ29uZmlnLkh5YnJpZFNlYXJjaEID4EEBEk8KBmZpbHRlchgDIAEoCzI6",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnUmV0cmlldmFs",
-            "Q29uZmlnLkZpbHRlckID4EEBElEKB3JhbmtpbmcYBCABKAsyOy5nb29nbGUu",
-            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ1JldHJpZXZhbENvbmZpZy5S",
-            "YW5raW5nQgPgQQEaMQoMSHlicmlkU2VhcmNoEhcKBWFscGhhGAEgASgCQgPg",
-            "QQFIAIgBAUIICgZfYWxwaGEakwEKBkZpbHRlchIoChl2ZWN0b3JfZGlzdGFu",
-            "Y2VfdGhyZXNob2xkGAMgASgBQgPgQQFIABIqCht2ZWN0b3Jfc2ltaWxhcml0",
-            "eV90aHJlc2hvbGQYBCABKAFCA+BBAUgAEhwKD21ldGFkYXRhX2ZpbHRlchgC",
-            "IAEoCUID4EEBQhUKE3ZlY3Rvcl9kYl90aHJlc2hvbGQa2QIKB1JhbmtpbmcS",
-            "ZAoMcmFua19zZXJ2aWNlGAEgASgLMkcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5SYWdSZXRyaWV2YWxDb25maWcuUmFua2luZy5SYW5rU2Vy",
-            "dmljZUID4EEBSAASYAoKbGxtX3JhbmtlchgDIAEoCzJFLmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnUmV0cmlldmFsQ29uZmlnLlJhbmtp",
-            "bmcuTGxtUmFua2VyQgPgQQFIABo6CgtSYW5rU2VydmljZRIcCgptb2RlbF9u",
-            "YW1lGAEgASgJQgPgQQFIAIgBAUINCgtfbW9kZWxfbmFtZRo4CglMbG1SYW5r",
-            "ZXISHAoKbW9kZWxfbmFtZRgBIAEoCUID4EEBSACIAQFCDQoLX21vZGVsX25h",
-            "bWVCEAoOcmFua2luZ19jb25maWdC4AEKI2NvbS5nb29nbGUuY2xvdWQuYWlw",
-            "bGF0Zm9ybS52MWJldGExQglUb29sUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxh",
-            "dGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9H",
-            "b29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91",
-            "ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
+            "dG9yX2Rpc3RhbmNlX3RocmVzaG9sZCI9Cg5WZXJ0ZXhBSVNlYXJjaBIWCglk",
+            "YXRhc3RvcmUYASABKAlCA+BBARITCgZlbmdpbmUYAiABKAlCA+BBASJyChVH",
+            "b29nbGVTZWFyY2hSZXRyaWV2YWwSWQoYZHluYW1pY19yZXRyaWV2YWxfY29u",
+            "ZmlnGAIgASgLMjcuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5E",
+            "eW5hbWljUmV0cmlldmFsQ29uZmlnIhUKE0VudGVycHJpc2VXZWJTZWFyY2gi",
+            "zwEKFkR5bmFtaWNSZXRyaWV2YWxDb25maWcSSgoEbW9kZRgBIAEoDjI8Lmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRHluYW1pY1JldHJpZXZh",
+            "bENvbmZpZy5Nb2RlEiMKEWR5bmFtaWNfdGhyZXNob2xkGAIgASgCQgPgQQFI",
+            "AIgBASIuCgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIQCgxNT0RFX0RZ",
+            "TkFNSUMQAUIUChJfZHluYW1pY190aHJlc2hvbGQiuwEKClRvb2xDb25maWcS",
+            "XAoXZnVuY3Rpb25fY2FsbGluZ19jb25maWcYASABKAsyNi5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLkZ1bmN0aW9uQ2FsbGluZ0NvbmZpZ0ID",
+            "4EEBEk8KEHJldHJpZXZhbF9jb25maWcYAiABKAsyMC5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MWJldGExLlJldHJpZXZhbENvbmZpZ0ID4EEBIscBChVG",
+            "dW5jdGlvbkNhbGxpbmdDb25maWcSTgoEbW9kZRgBIAEoDjI7Lmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuRnVuY3Rpb25DYWxsaW5nQ29uZmln",
+            "Lk1vZGVCA+BBARIjChZhbGxvd2VkX2Z1bmN0aW9uX25hbWVzGAIgAygJQgPg",
+            "QQEiOQoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVEEAASCAoEQVVUTxABEgcK",
+            "A0FOWRACEggKBE5PTkUQAyJ2Cg9SZXRyaWV2YWxDb25maWcSKQoHbGF0X2xu",
+            "ZxgBIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ0gAiAEBEhoKDWxhbmd1YWdl",
+            "X2NvZGUYAiABKAlIAYgBAUIKCghfbGF0X2xuZ0IQCg5fbGFuZ3VhZ2VfY29k",
+            "ZSLPBgoSUmFnUmV0cmlldmFsQ29uZmlnEhIKBXRvcF9rGAEgASgFQgPgQQES",
+            "XAoNaHlicmlkX3NlYXJjaBgCIAEoCzJALmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuUmFnUmV0cmlldmFsQ29uZmlnLkh5YnJpZFNlYXJjaEID",
+            "4EEBEk8KBmZpbHRlchgDIAEoCzI6Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuUmFnUmV0cmlldmFsQ29uZmlnLkZpbHRlckID4EEBElEKB3Jh",
+            "bmtpbmcYBCABKAsyOy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
+            "LlJhZ1JldHJpZXZhbENvbmZpZy5SYW5raW5nQgPgQQEaMQoMSHlicmlkU2Vh",
+            "cmNoEhcKBWFscGhhGAEgASgCQgPgQQFIAIgBAUIICgZfYWxwaGEakwEKBkZp",
+            "bHRlchIoChl2ZWN0b3JfZGlzdGFuY2VfdGhyZXNob2xkGAMgASgBQgPgQQFI",
+            "ABIqCht2ZWN0b3Jfc2ltaWxhcml0eV90aHJlc2hvbGQYBCABKAFCA+BBAUgA",
+            "EhwKD21ldGFkYXRhX2ZpbHRlchgCIAEoCUID4EEBQhUKE3ZlY3Rvcl9kYl90",
+            "aHJlc2hvbGQa2QIKB1JhbmtpbmcSZAoMcmFua19zZXJ2aWNlGAEgASgLMkcu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdSZXRyaWV2YWxD",
+            "b25maWcuUmFua2luZy5SYW5rU2VydmljZUID4EEBSAASYAoKbGxtX3Jhbmtl",
+            "chgDIAEoCzJFLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFn",
+            "UmV0cmlldmFsQ29uZmlnLlJhbmtpbmcuTGxtUmFua2VyQgPgQQFIABo6CgtS",
+            "YW5rU2VydmljZRIcCgptb2RlbF9uYW1lGAEgASgJQgPgQQFIAIgBAUINCgtf",
+            "bW9kZWxfbmFtZRo4CglMbG1SYW5rZXISHAoKbW9kZWxfbmFtZRgBIAEoCUID",
+            "4EEBSACIAQFCDQoLX21vZGVsX25hbWVCEAoOcmFua2luZ19jb25maWdC4AEK",
+            "I2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQglUb29sUHJv",
+            "dG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0",
+            "YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5B",
+            "SVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
+            "MWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -142,7 +143,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.CodeExecutionResult), global::Google.Cloud.AIPlatform.V1Beta1.CodeExecutionResult.Parser, new[]{ "Outcome", "Output" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.CodeExecutionResult.Types.Outcome) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.Retrieval), global::Google.Cloud.AIPlatform.V1Beta1.Retrieval.Parser, new[]{ "VertexAiSearch", "VertexRagStore", "DisableAttribution" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexRagStore), global::Google.Cloud.AIPlatform.V1Beta1.VertexRagStore.Parser, new[]{ "RagCorpora", "RagResources", "SimilarityTopK", "VectorDistanceThreshold", "RagRetrievalConfig" }, new[]{ "SimilarityTopK", "VectorDistanceThreshold" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexRagStore.Types.RagResource), global::Google.Cloud.AIPlatform.V1Beta1.VertexRagStore.Types.RagResource.Parser, new[]{ "RagCorpus", "RagFileIds" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch), global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch.Parser, new[]{ "Datastore" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch), global::Google.Cloud.AIPlatform.V1Beta1.VertexAISearch.Parser, new[]{ "Datastore", "Engine" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.GoogleSearchRetrieval), global::Google.Cloud.AIPlatform.V1Beta1.GoogleSearchRetrieval.Parser, new[]{ "DynamicRetrievalConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.EnterpriseWebSearch), global::Google.Cloud.AIPlatform.V1Beta1.EnterpriseWebSearch.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig), global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Parser, new[]{ "Mode", "DynamicThreshold" }, new[]{ "DynamicThreshold" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.DynamicRetrievalConfig.Types.Mode) }, null, null),
@@ -4045,7 +4046,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
   }
 
   /// <summary>
-  /// Retrieve from Vertex AI Search datastore for grounding.
+  /// Retrieve from Vertex AI Search datastore or engine for grounding.
+  /// datastore and engine are mutually exclusive.
   /// See https://cloud.google.com/products/agent-builder
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -4084,6 +4086,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VertexAISearch(VertexAISearch other) : this() {
       datastore_ = other.datastore_;
+      engine_ = other.engine_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4097,7 +4100,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int DatastoreFieldNumber = 1;
     private string datastore_ = "";
     /// <summary>
-    /// Required. Fully-qualified Vertex AI Search data store resource ID.
+    /// Optional. Fully-qualified Vertex AI Search data store resource ID.
     /// Format:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{dataStore}`
     /// </summary>
@@ -4107,6 +4110,23 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return datastore_; }
       set {
         datastore_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "engine" field.</summary>
+    public const int EngineFieldNumber = 2;
+    private string engine_ = "";
+    /// <summary>
+    /// Optional. Fully-qualified Vertex AI Search engine resource ID.
+    /// Format:
+    /// `projects/{project}/locations/{location}/collections/{collection}/engines/{engine}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Engine {
+      get { return engine_; }
+      set {
+        engine_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -4126,6 +4146,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return true;
       }
       if (Datastore != other.Datastore) return false;
+      if (Engine != other.Engine) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4134,6 +4155,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Datastore.Length != 0) hash ^= Datastore.GetHashCode();
+      if (Engine.Length != 0) hash ^= Engine.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4156,6 +4178,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Datastore);
       }
+      if (Engine.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Engine);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4170,6 +4196,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(10);
         output.WriteString(Datastore);
       }
+      if (Engine.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Engine);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4182,6 +4212,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int size = 0;
       if (Datastore.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Datastore);
+      }
+      if (Engine.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Engine);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4197,6 +4230,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.Datastore.Length != 0) {
         Datastore = other.Datastore;
+      }
+      if (other.Engine.Length != 0) {
+        Engine = other.Engine;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4217,6 +4253,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             Datastore = input.ReadString();
             break;
           }
+          case 18: {
+            Engine = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -4234,6 +4274,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             break;
           case 10: {
             Datastore = input.ReadString();
+            break;
+          }
+          case 18: {
+            Engine = input.ReadString();
             break;
           }
         }
