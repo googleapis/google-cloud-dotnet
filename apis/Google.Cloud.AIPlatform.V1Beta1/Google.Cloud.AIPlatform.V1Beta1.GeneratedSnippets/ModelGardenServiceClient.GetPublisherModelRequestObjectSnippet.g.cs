@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 View = PublisherModelView.Unspecified,
                 IsHuggingFaceModel = false,
                 HuggingFaceToken = "",
+                IncludeEquivalentModelGardenModelDeploymentConfigs = false,
             };
             // Make the request
             PublisherModel response = modelGardenServiceClient.GetPublisherModel(request);
