@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.22.0, released 2025-03-03
+
+### New features
+
+- Exposed Zone Separation & Zone Isolation status of an agent ([commit ff7c7ed](https://github.com/googleapis/google-cloud-dotnet/commit/ff7c7ed843331cf6121e8be1eb404032ba5a9b56))
+- Added support for document_processing_mode ([commit ff7c7ed](https://github.com/googleapis/google-cloud-dotnet/commit/ff7c7ed843331cf6121e8be1eb404032ba5a9b56))
+
+### Documentation improvements
+
+- Clarified wording around use_timeout_based_endpointing ([commit ff7c7ed](https://github.com/googleapis/google-cloud-dotnet/commit/ff7c7ed843331cf6121e8be1eb404032ba5a9b56))
+- Clarified wording around StreamingDetectIntentRequest ([commit ff7c7ed](https://github.com/googleapis/google-cloud-dotnet/commit/ff7c7ed843331cf6121e8be1eb404032ba5a9b56))
+
 ## Version 2.21.0, released 2024-11-18
 
 ### New features
