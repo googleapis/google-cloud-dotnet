@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.20.0, released 2025-03-03
+
+### New features
+
+- Add VertexAISearch.engine option ([commit cffeac2](https://github.com/googleapis/google-cloud-dotnet/commit/cffeac2417604e2cce38884d322b5f40141775b8))
+- Add EnterpriseWebSearch tool option ([commit 1b04726](https://github.com/googleapis/google-cloud-dotnet/commit/1b047263b3b77afdb0ee4f7c3072aaeef6070af1))
+
 ## Version 3.19.0, released 2025-02-18
 
 ### New features
