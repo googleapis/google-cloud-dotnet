@@ -1,5 +1,31 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2025-03-03
+
+### Bug fixes
+
+- **BREAKING CHANGE** Response type of method `CommitRepositoryChanges` is changed from `.google.protobuf.Empty` to `.google.cloud.dataform.v1beta1.CommitRepositoryChangesResponse` in service `Dataform` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- **BREAKING CHANGE** Response type of method `PullGitCommits` is changed from `.google.protobuf.Empty` to `.google.cloud.dataform.v1beta1.PullGitCommitsResponse` in service `Dataform` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- **BREAKING CHANGE** Response type of method `PushGitCommits` is changed from `.google.protobuf.Empty` to `.google.cloud.dataform.v1beta1.PushGitCommitsResponse` in service `Dataform` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- **BREAKING CHANGE** Response type of method `CommitWorkspaceChanges` is changed from `.google.protobuf.Empty` to `.google.cloud.dataform.v1beta1.CommitWorkspaceChangesResponse` in service `Dataform` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- **BREAKING CHANGE** Response type of method `ResetWorkspaceChanges` is changed from `.google.protobuf.Empty` to `.google.cloud.dataform.v1beta1.ResetWorkspaceChangesResponse` in service `Dataform` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- **BREAKING CHANGE** Response type of method `RemoveDirectory` is changed from `.google.protobuf.Empty` to `.google.cloud.dataform.v1beta1.RemoveDirectoryResponse` in service `Dataform` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- **BREAKING CHANGE** Response type of method `RemoveFileRequest` is changed from `.google.protobuf.Empty` to `.google.cloud.dataform.v1beta1.RemoveFileResponse` in service `Dataform` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- **BREAKING CHANGE** Response type of method `CancelWorkflowInvocation` is changed from `.google.protobuf.Empty` to `.google.cloud.dataform.v1beta1.CancelWorkflowInvocationResponse` in service `Dataform` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- **BREAKING CHANGE** An existing field `bigquery_action` is moved in to oneof in message `.google.cloud.dataform.v1beta1.WorkflowInvocationAction` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+
+### New features
+
+- Added new field `internal_metadata` to all resources to export all the metadata information that is used internally to serve the resource ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- Returning `commit_sha` in the response of method `CommitRepositoryChanges` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- Moving existing field `bigquery_action` to oneof in message `.google.cloud.dataform.v1beta1.WorkflowInvocationAction` to allow adding more actions types such as `notebook_action` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+
+### Documentation improvements
+
+- Explained the effect of field `page_token` on the pagination in several messages ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- Adds known limitations on several methods such as `UpdateRepository`, `UpdateReleaseConfig` and `UpdateWorkflowConfig` ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+- Several comments reformatted ([commit 4985789](https://github.com/googleapis/google-cloud-dotnet/commit/4985789a9865a50a2f07e24360b42ea9438a9ca5))
+
 ## Version 1.0.0-beta07, released 2024-06-04
 
 ### New features
