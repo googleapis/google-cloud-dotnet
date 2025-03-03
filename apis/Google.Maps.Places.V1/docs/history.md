@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta13, released 2025-03-03
+
+### New features
+
+- Add NACS EVCS connector type support ([commit ee1cdaa](https://github.com/googleapis/google-cloud-dotnet/commit/ee1cdaaeab2fc6c37738968189ff102aa82447e4))
+
 ## Version 1.0.0-beta12, released 2025-02-03
 
 ### Bug fixes
