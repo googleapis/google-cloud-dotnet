@@ -6132,7 +6132,7 @@
     },
     {
       "id": "Google.Maps.Places.V1",
-      "version": "1.0.0-beta12",
+      "version": "1.0.0-beta13",
       "type": "grpc",
       "productName": "Places API",
       "productUrl": "https://developers.google.com/maps/documentation/places/web-service/",
