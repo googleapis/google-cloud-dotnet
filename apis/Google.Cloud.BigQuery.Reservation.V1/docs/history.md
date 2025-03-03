@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.7.0, released 2025-03-03
+
+### New features
+
+- Add a new field `replication_status` to `.google.cloud.bigquery.reservation.v1.Reservation` to provide visibility into errors that could arise during Disaster Recovery(DR) replication ([commit fecbe42](https://github.com/googleapis/google-cloud-dotnet/commit/fecbe4232c0e63beb0da7ba1ccbb6bc15f00ffb8))
+- Add the CONTINUOUS Job type to `.google.cloud.bigquery.reservation.v1.Assignment.JobType` for continuous SQL jobs ([commit fecbe42](https://github.com/googleapis/google-cloud-dotnet/commit/fecbe4232c0e63beb0da7ba1ccbb6bc15f00ffb8))
+- Add a new field `enable_gemini_in_bigquery` to `.google.cloud.bigquery.reservation.v1.Assignment` that indicates if "Gemini in Bigquery"(https://cloud.google.com/gemini/docs/bigquery/overview) features are enabled for the reservation assignment ([commit fecbe42](https://github.com/googleapis/google-cloud-dotnet/commit/fecbe4232c0e63beb0da7ba1ccbb6bc15f00ffb8))
+
+### Documentation improvements
+
+- Update the `google.api.field_behavior` for the `.google.cloud.bigquery.reservation.v1.Reservation.primary_location` and `.google.cloud.bigquery.reservation.v1.Reservation.original_primary_location` fields to clarify that they are `OUTPUT_ONLY` ([commit fecbe42](https://github.com/googleapis/google-cloud-dotnet/commit/fecbe4232c0e63beb0da7ba1ccbb6bc15f00ffb8))
+- Remove the section about `EDITION_UNSPECIFIED` in the comment for `slot_capacity` in `.google.cloud.bigquery.reservation.v1.Reservation` to clarify that ([commit fecbe42](https://github.com/googleapis/google-cloud-dotnet/commit/fecbe4232c0e63beb0da7ba1ccbb6bc15f00ffb8))
+
 ## Version 2.6.0, released 2024-12-06
 
 ### New features
