@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.23.0, released 2025-03-03
+
+### New features
+
+- Publish row_key_schema fields in table proto and relevant admin APIs to setup a table with a row_key_schema ([commit abd6682](https://github.com/googleapis/google-cloud-dotnet/commit/abd6682f341d1d1a58539f6599a973f724182f1c))
+
 ## Version 3.22.0, released 2025-01-27
 
 ### Bug fixes
