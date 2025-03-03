@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta19, released 2025-03-03
+
+### Bug fixes
+
+- **BREAKING CHANGE** An existing google.api.http annotation `http_uri` is changed for method `DeployPublisherModel` in service `ModelGardenService` ([commit 3da797d](https://github.com/googleapis/google-cloud-dotnet/commit/3da797da48b643f96a3cd4441ea1dba7cd21a08b))
+
+### New features
+
+- A new field `include_equivalent_model_garden_model_deployment_configs` is added to message `.google.cloud.aiplatform.v1beta1.GetPublisherModelRequest` ([commit 3da797d](https://github.com/googleapis/google-cloud-dotnet/commit/3da797da48b643f96a3cd4441ea1dba7cd21a08b))
+- Add VertexAISearch.engine option ([commit 05449f3](https://github.com/googleapis/google-cloud-dotnet/commit/05449f39c675677dc32ef63bc38a865c5d9e8f0a))
+- Add EnterpriseWebSearch tool option ([commit 50d3edf](https://github.com/googleapis/google-cloud-dotnet/commit/50d3edf8b8ab7aeea9f457ed316fe42af5b93a08))
+
+### Documentation improvements
+
+- A comment for field `model` in message `.google.cloud.aiplatform.v1beta1.DeployPublisherModelRequest` is changed ([commit 3da797d](https://github.com/googleapis/google-cloud-dotnet/commit/3da797da48b643f96a3cd4441ea1dba7cd21a08b))
+
 ## Version 1.0.0-beta18, released 2025-02-25
 
 ### New features
