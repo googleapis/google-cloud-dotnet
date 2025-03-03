@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.2.0, released 2025-03-03
+
+### New features
+
+- Added Fleet Engine Delete APIs ([commit 1c59977](https://github.com/googleapis/google-cloud-dotnet/commit/1c5997740c604c9392ecd97faabdfda79acce4fd))
+- A new field `past_locations` is added to message `.maps.fleetengine.delivery.v1.DeliveryVehicle` ([commit be87d8a](https://github.com/googleapis/google-cloud-dotnet/commit/be87d8af68a552a4f4d2efd737114cd9bb3e5486))
+- A new field `past_locations` is added to message `.maps.fleetengine.v1.Vehicle` ([commit be87d8a](https://github.com/googleapis/google-cloud-dotnet/commit/be87d8af68a552a4f4d2efd737114cd9bb3e5486))
+
+### Documentation improvements
+
+- Updated documentation for field `task` in message `.maps.fleetengine.delivery.v1.CreateTaskRequest` to clarify certain fields can be optionally set. ([commit be87d8a](https://github.com/googleapis/google-cloud-dotnet/commit/be87d8af68a552a4f4d2efd737114cd9bb3e5486))
+- Correct SearchVehiclesRequest.ordered_by description ([commit 74de6e8](https://github.com/googleapis/google-cloud-dotnet/commit/74de6e8615055d9941308bd821a1edf5ae282fda))
+
 ## Version 2.1.0, released 2024-06-04
 
 ### Documentation improvements
