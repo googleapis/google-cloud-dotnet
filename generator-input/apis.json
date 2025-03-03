@@ -1819,7 +1819,7 @@
     },
     {
       "id": "Google.Cloud.Dataform.V1Beta1",
-      "version": "1.0.0-beta07",
+      "version": "1.0.0-beta08",
       "type": "grpc",
       "productName": "Dataform",
       "productUrl": "https://cloud.google.com/dataform",
@@ -1831,7 +1831,7 @@
         "dataform"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.Cloud.Location": "2.3.0"
       },
       "generator": "micro",
