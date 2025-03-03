@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2025-03-03
+
+### New features
+
+- Add `ConnectActiveConference` method to `SpacesService` ([commit 3df6acc](https://github.com/googleapis/google-cloud-dotnet/commit/3df6accf01c07cb6414ec4c2d6a882f4f78f24af))
+
 ## Version 1.0.0-beta06, released 2025-02-03
 
 ### New features
