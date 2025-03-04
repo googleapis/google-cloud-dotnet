@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta20, released 2025-03-04
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove VertexAISearch.engine option ([commit 18d4598](https://github.com/googleapis/google-cloud-dotnet/commit/18d4598f4fb71440f1c2b82505a0a79a7bbe3d46))
+
 ## Version 1.0.0-beta19, released 2025-03-03
 
 ### Bug fixes
