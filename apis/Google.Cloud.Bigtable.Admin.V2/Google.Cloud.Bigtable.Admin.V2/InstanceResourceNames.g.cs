@@ -784,6 +784,520 @@ namespace Google.Cloud.Bigtable.Admin.V2
         public static bool operator !=(HotTabletName a, HotTabletName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>LogicalView</c> resource.</summary>
+    public sealed partial class LogicalViewName : gax::IResourceName, sys::IEquatable<LogicalViewName>
+    {
+        /// <summary>The possible contents of <see cref="LogicalViewName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c>.
+            /// </summary>
+            ProjectInstanceLogicalView = 1,
+        }
+
+        private static gax::PathTemplate s_projectInstanceLogicalView = new gax::PathTemplate("projects/{project}/instances/{instance}/logicalViews/{logical_view}");
+
+        /// <summary>Creates a <see cref="LogicalViewName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="LogicalViewName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static LogicalViewName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new LogicalViewName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="LogicalViewName"/> with the pattern
+        /// <c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="logicalViewId">The <c>LogicalView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LogicalViewName"/> constructed from the provided ids.</returns>
+        public static LogicalViewName FromProjectInstanceLogicalView(string projectId, string instanceId, string logicalViewId) =>
+            new LogicalViewName(ResourceNameType.ProjectInstanceLogicalView, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), logicalViewId: gax::GaxPreconditions.CheckNotNullOrEmpty(logicalViewId, nameof(logicalViewId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LogicalViewName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="logicalViewId">The <c>LogicalView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LogicalViewName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c>.
+        /// </returns>
+        public static string Format(string projectId, string instanceId, string logicalViewId) =>
+            FormatProjectInstanceLogicalView(projectId, instanceId, logicalViewId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="LogicalViewName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="logicalViewId">The <c>LogicalView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="LogicalViewName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c>.
+        /// </returns>
+        public static string FormatProjectInstanceLogicalView(string projectId, string instanceId, string logicalViewId) =>
+            s_projectInstanceLogicalView.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(logicalViewId, nameof(logicalViewId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="LogicalViewName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="logicalViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="LogicalViewName"/> if successful.</returns>
+        public static LogicalViewName Parse(string logicalViewName) => Parse(logicalViewName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="LogicalViewName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="logicalViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="LogicalViewName"/> if successful.</returns>
+        public static LogicalViewName Parse(string logicalViewName, bool allowUnparsed) =>
+            TryParse(logicalViewName, allowUnparsed, out LogicalViewName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="LogicalViewName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="logicalViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="LogicalViewName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string logicalViewName, out LogicalViewName result) =>
+            TryParse(logicalViewName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="LogicalViewName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="logicalViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="LogicalViewName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string logicalViewName, bool allowUnparsed, out LogicalViewName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(logicalViewName, nameof(logicalViewName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectInstanceLogicalView.TryParseName(logicalViewName, out resourceName))
+            {
+                result = FromProjectInstanceLogicalView(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(logicalViewName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private LogicalViewName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string instanceId = null, string logicalViewId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            InstanceId = instanceId;
+            LogicalViewId = logicalViewId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="LogicalViewName"/> class from the component parts of pattern
+        /// <c>projects/{project}/instances/{instance}/logicalViews/{logical_view}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="logicalViewId">The <c>LogicalView</c> ID. Must not be <c>null</c> or empty.</param>
+        public LogicalViewName(string projectId, string instanceId, string logicalViewId) : this(ResourceNameType.ProjectInstanceLogicalView, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), logicalViewId: gax::GaxPreconditions.CheckNotNullOrEmpty(logicalViewId, nameof(logicalViewId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Instance</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string InstanceId { get; }
+
+        /// <summary>
+        /// The <c>LogicalView</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LogicalViewId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectInstanceLogicalView: return s_projectInstanceLogicalView.Expand(ProjectId, InstanceId, LogicalViewId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as LogicalViewName);
+
+        /// <inheritdoc/>
+        public bool Equals(LogicalViewName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(LogicalViewName a, LogicalViewName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(LogicalViewName a, LogicalViewName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>MaterializedView</c> resource.</summary>
+    public sealed partial class MaterializedViewName : gax::IResourceName, sys::IEquatable<MaterializedViewName>
+    {
+        /// <summary>The possible contents of <see cref="MaterializedViewName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>.
+            /// </summary>
+            ProjectInstanceMaterializedView = 1,
+        }
+
+        private static gax::PathTemplate s_projectInstanceMaterializedView = new gax::PathTemplate("projects/{project}/instances/{instance}/materializedViews/{materialized_view}");
+
+        /// <summary>Creates a <see cref="MaterializedViewName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="MaterializedViewName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static MaterializedViewName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new MaterializedViewName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="MaterializedViewName"/> with the pattern
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="materializedViewId">The <c>MaterializedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="MaterializedViewName"/> constructed from the provided ids.</returns>
+        public static MaterializedViewName FromProjectInstanceMaterializedView(string projectId, string instanceId, string materializedViewId) =>
+            new MaterializedViewName(ResourceNameType.ProjectInstanceMaterializedView, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), materializedViewId: gax::GaxPreconditions.CheckNotNullOrEmpty(materializedViewId, nameof(materializedViewId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MaterializedViewName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="materializedViewId">The <c>MaterializedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MaterializedViewName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>.
+        /// </returns>
+        public static string Format(string projectId, string instanceId, string materializedViewId) =>
+            FormatProjectInstanceMaterializedView(projectId, instanceId, materializedViewId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="MaterializedViewName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="materializedViewId">The <c>MaterializedView</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="MaterializedViewName"/> with pattern
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>.
+        /// </returns>
+        public static string FormatProjectInstanceMaterializedView(string projectId, string instanceId, string materializedViewId) =>
+            s_projectInstanceMaterializedView.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(materializedViewId, nameof(materializedViewId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MaterializedViewName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="materializedViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="MaterializedViewName"/> if successful.</returns>
+        public static MaterializedViewName Parse(string materializedViewName) => Parse(materializedViewName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="MaterializedViewName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="materializedViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="MaterializedViewName"/> if successful.</returns>
+        public static MaterializedViewName Parse(string materializedViewName, bool allowUnparsed) =>
+            TryParse(materializedViewName, allowUnparsed, out MaterializedViewName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MaterializedViewName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="materializedViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MaterializedViewName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string materializedViewName, out MaterializedViewName result) =>
+            TryParse(materializedViewName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="MaterializedViewName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="materializedViewName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="MaterializedViewName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string materializedViewName, bool allowUnparsed, out MaterializedViewName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(materializedViewName, nameof(materializedViewName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectInstanceMaterializedView.TryParseName(materializedViewName, out resourceName))
+            {
+                result = FromProjectInstanceMaterializedView(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(materializedViewName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private MaterializedViewName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string instanceId = null, string materializedViewId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            InstanceId = instanceId;
+            MaterializedViewId = materializedViewId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="MaterializedViewName"/> class from the component parts of pattern
+        /// <c>projects/{project}/instances/{instance}/materializedViews/{materialized_view}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="materializedViewId">The <c>MaterializedView</c> ID. Must not be <c>null</c> or empty.</param>
+        public MaterializedViewName(string projectId, string instanceId, string materializedViewId) : this(ResourceNameType.ProjectInstanceMaterializedView, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), materializedViewId: gax::GaxPreconditions.CheckNotNullOrEmpty(materializedViewId, nameof(materializedViewId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Instance</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string InstanceId { get; }
+
+        /// <summary>
+        /// The <c>MaterializedView</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string MaterializedViewId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectInstanceMaterializedView: return s_projectInstanceMaterializedView.Expand(ProjectId, InstanceId, MaterializedViewId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as MaterializedViewName);
+
+        /// <inheritdoc/>
+        public bool Equals(MaterializedViewName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(MaterializedViewName a, MaterializedViewName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(MaterializedViewName a, MaterializedViewName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>CryptoKey</c> resource.</summary>
     public sealed partial class CryptoKeyName : gax::IResourceName, sys::IEquatable<CryptoKeyName>
     {
@@ -1131,6 +1645,30 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             get => string.IsNullOrEmpty(TableName) ? null : gcbcv::TableName.Parse(TableName, allowUnparsed: true);
             set => TableName = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class LogicalView
+    {
+        /// <summary>
+        /// <see cref="gcbav::LogicalViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::LogicalViewName LogicalViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::LogicalViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class MaterializedView
+    {
+        /// <summary>
+        /// <see cref="gcbav::MaterializedViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::MaterializedViewName MaterializedViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::MaterializedViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

@@ -16,15 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateInstance_async]
+    // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened1]
     using Google.Cloud.Bigtable.Admin.V2;
-    using Google.Cloud.Bigtable.Common.V2;
-    using Google.Protobuf.WellKnownTypes;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedBigtableInstanceAdminClientSnippets
     {
-        /// <summary>Snippet for UpdateInstanceAsync</summary>
+        /// <summary>Snippet for DeleteAppProfile</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,25 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task UpdateInstanceRequestObjectAsync()
+        public void DeleteAppProfile1()
         {
             // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
             // Initialize request argument(s)
-            Instance request = new Instance
-            {
-                InstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
-                DisplayName = "",
-                State = Instance.Types.State.NotKnown,
-                Type = Instance.Types.Type.Unspecified,
-                Labels = { { "", "" }, },
-                CreateTime = new Timestamp(),
-                SatisfiesPzs = false,
-                SatisfiesPzi = false,
-            };
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/appProfiles/[APP_PROFILE]";
             // Make the request
-            Instance response = await bigtableInstanceAdminClient.UpdateInstanceAsync(request);
+            bigtableInstanceAdminClient.DeleteAppProfile(name);
         }
     }
-    // [END bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateInstance_async]
+    // [END bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened1]
 }

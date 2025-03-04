@@ -176,4 +176,28 @@ namespace Google.Cloud.Bigtable.Admin.V2
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateLogicalViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateMaterializedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

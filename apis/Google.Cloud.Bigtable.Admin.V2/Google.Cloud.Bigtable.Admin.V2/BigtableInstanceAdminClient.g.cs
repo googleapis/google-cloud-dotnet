@@ -828,7 +828,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently, at most four clusters can be specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -871,7 +870,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently, at most four clusters can be specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -914,7 +912,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently, at most four clusters can be specified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -948,7 +945,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently, at most four clusters can be specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -991,7 +987,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently, at most four clusters can be specified.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1034,7 +1029,6 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// cluster ID, e.g., just `mycluster` rather than
         /// `projects/myproject/instances/myinstance/clusters/mycluster`.
         /// Fields marked `OutputOnly` must be left blank.
-        /// Currently, at most four clusters can be specified.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3034,6 +3028,118 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteAppProfileAsync(AppProfileName name, st::CancellationToken cancellationToken) =>
             DeleteAppProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// </param>
+        /// <param name="ignoreWarnings">
+        /// Required. If true, ignore safety checks when deleting the app profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAppProfile(string name, bool ignoreWarnings, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAppProfile(new DeleteAppProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                IgnoreWarnings = ignoreWarnings,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// </param>
+        /// <param name="ignoreWarnings">
+        /// Required. If true, ignore safety checks when deleting the app profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAppProfileAsync(string name, bool ignoreWarnings, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAppProfileAsync(new DeleteAppProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                IgnoreWarnings = ignoreWarnings,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// </param>
+        /// <param name="ignoreWarnings">
+        /// Required. If true, ignore safety checks when deleting the app profile.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAppProfileAsync(string name, bool ignoreWarnings, st::CancellationToken cancellationToken) =>
+            DeleteAppProfileAsync(name, ignoreWarnings, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// </param>
+        /// <param name="ignoreWarnings">
+        /// Required. If true, ignore safety checks when deleting the app profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteAppProfile(AppProfileName name, bool ignoreWarnings, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAppProfile(new DeleteAppProfileRequest
+            {
+                AppProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                IgnoreWarnings = ignoreWarnings,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// </param>
+        /// <param name="ignoreWarnings">
+        /// Required. If true, ignore safety checks when deleting the app profile.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAppProfileAsync(AppProfileName name, bool ignoreWarnings, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAppProfileAsync(new DeleteAppProfileRequest
+            {
+                AppProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                IgnoreWarnings = ignoreWarnings,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes an app profile from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the app profile to be deleted. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/appProfiles/{app_profile}`.
+        /// </param>
+        /// <param name="ignoreWarnings">
+        /// Required. If true, ignore safety checks when deleting the app profile.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteAppProfileAsync(AppProfileName name, bool ignoreWarnings, st::CancellationToken cancellationToken) =>
+            DeleteAppProfileAsync(name, ignoreWarnings, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets the access control policy for an instance resource. Returns an empty

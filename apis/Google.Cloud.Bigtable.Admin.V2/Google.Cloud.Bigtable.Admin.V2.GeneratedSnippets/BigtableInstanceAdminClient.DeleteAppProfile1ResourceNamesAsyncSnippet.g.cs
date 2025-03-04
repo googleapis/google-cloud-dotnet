@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened]
+    // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened1_resourceNames]
     using Google.Cloud.Bigtable.Admin.V2;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedBigtableInstanceAdminClientSnippets
     {
-        /// <summary>Snippet for DeleteAppProfile</summary>
+        /// <summary>Snippet for DeleteAppProfileAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,15 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void DeleteAppProfile()
+        public async Task DeleteAppProfile1ResourceNamesAsync()
         {
             // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "projects/[PROJECT]/instances/[INSTANCE]/appProfiles/[APP_PROFILE]";
+            AppProfileName name = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
             // Make the request
-            bigtableInstanceAdminClient.DeleteAppProfile(name);
+            await bigtableInstanceAdminClient.DeleteAppProfileAsync(name);
         }
     }
-    // [END bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened]
+    // [END bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened1_resourceNames]
 }
