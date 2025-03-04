@@ -87,6 +87,33 @@ public class AggregateQueryTest
     }
 
     [Fact]
+    public async Task Sum_Explain_PlanOnly()
+    {
+        CollectionReference collection = _fixture.StudentCollection;
+        var explainResults = await collection
+            .Aggregate(AggregateField.Sum("Level", "Sum_Of_Levels"), AggregateField.Sum("MathScore"), AggregateField.Sum("EnglishScore"), AggregateField.Sum("Name"))
+            .ExplainAsync(ExplainOptions.PlanOnly);
+        Assert.NotNull(explainResults.Metrics.PlanSummary);
+        Assert.Null(explainResults.Snapshot);
+    }
+
+    [Fact]
+    public async Task Sum_ExplainAnalyze_PlanAndExecute()
+    {
+        CollectionReference collection = _fixture.StudentCollection;
+        var explainResults = await collection.Aggregate(AggregateField.Sum("Level", "Sum_Of_Levels"), AggregateField.Sum("MathScore"), AggregateField.Sum("EnglishScore"), AggregateField.Sum("Name"))
+            .ExplainAsync(ExplainOptions.PlanAndExecute);
+        var plan = explainResults.Metrics.PlanSummary;
+        var stats = explainResults.Metrics.ExecutionStats;
+        Assert.NotNull(plan);
+        Assert.NotNull(stats);
+        var snapshot = explainResults.Snapshot;
+        Assert.Equal(Student.Data.Sum(c => c.Level), snapshot.GetValue<long>("Sum_Of_Levels")); // Long value, Alias check 
+        Assert.Equal(Student.Data.Sum(c => c.MathScore), snapshot.GetValue<double>("Sum_MathScore")); // Double value check
+        Assert.Equal(double.NaN, snapshot.GetValue<double>("Sum_EnglishScore"));  // NaN value check
+    }
+
+    [Fact]
     public async Task Avg()
     {
         CollectionReference collection = _fixture.StudentCollection;

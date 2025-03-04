@@ -58,10 +58,28 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
     public Task<AggregateQuerySnapshot> GetSnapshotAsync(CancellationToken cancellationToken = default) =>
         GetSnapshotAsync(null, cancellationToken);
 
+    /// <summary>
+    /// Returns an explanation for this query, optionally executing it.
+    /// </summary>
+    /// <param name="options">The <see cref="ExplainOptions"/> to use. Must not be null.</param>
+    /// <param name="cancellationToken">A cancellation token for the operation.</param>
+    /// <returns>A <see cref="PlanSummary"/> for this query.</returns>
+    public async Task<ExplainResults<AggregateQuerySnapshot>> ExplainAsync(ExplainOptions options, CancellationToken cancellationToken = default)
+    {
+        GaxPreconditions.CheckNotNull(options, nameof(options));
+        return await ExecuteAggregateQueryAsync(transactionId: null, options.Proto, cancellationToken).ConfigureAwait(false);
+    }
+
     internal async Task<AggregateQuerySnapshot> GetSnapshotAsync(ByteString transactionId, CancellationToken cancellationToken)
     {
+        var results = await ExecuteAggregateQueryAsync(transactionId, explainOptions: null, cancellationToken).ConfigureAwait(false);
+        return results.Snapshot;
+    }
+
+    internal async Task<ExplainResults<AggregateQuerySnapshot>> ExecuteAggregateQueryAsync(ByteString transactionId, V1.ExplainOptions explainOptions, CancellationToken cancellationToken)
+    {
         var query = ToStructuredAggregationQuery();
-        IAsyncEnumerable<RunAggregationQueryResponse> responseStream = GetAggregationQueryResponseStreamAsync(transactionId, cancellationToken);
+        IAsyncEnumerable<RunAggregationQueryResponse> responseStream = GetAggregationQueryResponseStreamAsync(transactionId, explainOptions, cancellationToken);
         Timestamp? readTime = null;
 
         // This is a map from the user-specified alias to the resulting value.
@@ -76,14 +94,18 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
             var aggregate = _aggregateFields[i];
             queryAliasToUserAlias[aggregate.GetAliasForIndex(i)] = aggregate.Alias;
         }
-
+        ExplainMetrics metrics = null;
         await responseStream.ForEachAsync(ProcessResponse, cancellationToken).ConfigureAwait(false);
-        GaxPreconditions.CheckState(readTime != null, "The stream returned from RunAggregationQuery did not provide a read timestamp.");
-        return new AggregateQuerySnapshot(this, readTime.Value, data);
+        bool planOnly = explainOptions?.Analyze == false;
+        GaxPreconditions.CheckState(readTime is not null || planOnly, "The stream returned from RunAggregationQueryQuery did not provide a read timestamp.");
+        GaxPreconditions.CheckState(explainOptions is null || metrics is not null, "The stream returned from RunAggregationQuery did not provide metrics.");
+
+        var snapshot = planOnly ? null : new AggregateQuerySnapshot(this, readTime.Value, data);
+        return new ExplainResults<AggregateQuerySnapshot>(snapshot, metrics);
 
         void ProcessResponse(RunAggregationQueryResponse response)
         {
-            if (response.Result.AggregateFields is { } aggregateFields)
+            if (response.Result?.AggregateFields is { } aggregateFields)
             {
                 foreach (var pair in aggregateFields)
                 {
@@ -94,6 +116,7 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
                 }
             }
             readTime ??= Timestamp.FromProtoOrNull(response.ReadTime);
+            metrics = response.ExplainMetrics;
         }
     }
 
@@ -101,12 +124,13 @@ public sealed class AggregateQuery : IEquatable<AggregateQuery>
     // from GetSnapshotAsync which could ensure it disposes of the response. However, it's simplest
     // to keep this implementation in common with Query.StreamResponsesAsync, which effectively
     // needs to use an iterator block so we can return an IAsyncEnumerable from Query.StreamAsync.
-    private async IAsyncEnumerable<RunAggregationQueryResponse> GetAggregationQueryResponseStreamAsync(ByteString transactionId, [EnumeratorCancellation] CancellationToken cancellationToken)
+    private async IAsyncEnumerable<RunAggregationQueryResponse> GetAggregationQueryResponseStreamAsync(ByteString transactionId, V1.ExplainOptions explainOptions, [EnumeratorCancellation] CancellationToken cancellationToken)
     {
         RunAggregationQueryRequest request = new RunAggregationQueryRequest
         {
             Parent = _query.ParentPath,
-            StructuredAggregationQuery = ToStructuredAggregationQuery()
+            StructuredAggregationQuery = ToStructuredAggregationQuery(),
+            ExplainOptions = explainOptions
         };
         if (transactionId != null)
         {
