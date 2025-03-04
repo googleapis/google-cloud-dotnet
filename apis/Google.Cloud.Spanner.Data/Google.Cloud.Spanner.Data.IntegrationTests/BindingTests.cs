@@ -60,6 +60,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Bytes,
             SpannerDbType.FromClrType(typeof(Duration)),
             SpannerDbType.FromClrType(typeof(Rectangle)),
+            SpannerDbType.Uuid,
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             SpannerDbType.ArrayOf(SpannerDbType.String),
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
@@ -69,7 +70,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
-            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle)))
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),
         };
 
         // These SpannerDbTypes are unsupported on emulator.
@@ -346,7 +347,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.FromClrType(typeof(Rectangle)), testRectangle, r => r.GetFieldValue<Rectangle>(0));
 
         [Fact]
-        public async Task BindProtobufRectanlgeArray() => await TestBindNonNull(
+        public async Task BindProtobufRectangleArray() => await TestBindNonNull(
                 SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),
                 new Rectangle[] { testRectangle, null, new Rectangle() });
 
@@ -388,6 +389,23 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindProtobufValueWrapperEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             new ValueWrapper[] { });
+
+        [Fact]
+        public Task BindUuid() => TestBindNonNull(
+            SpannerDbType.Uuid,
+            Guid.NewGuid(),
+            r => r.GetString(0));
+
+        [Fact]
+        public Task BindUuidArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Uuid),
+            new[] { "d587bc27-90fe-4c23-bb25-2404279e152a", null, "350636fe-9c72-4b3d-ab70-167904974288" });
+
+        [Fact]
+        public Task BindUuidEmptyArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Uuid),
+            new string[] { });
+
 
         private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
             Skip.If(_fixture.RunningOnEmulator && BindUnsupportedNullData.Any<SpannerDbType>(spannerDbType.Equals),
