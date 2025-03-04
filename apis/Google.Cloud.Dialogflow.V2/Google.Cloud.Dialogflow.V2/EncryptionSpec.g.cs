@@ -55,11 +55,11 @@ namespace Google.Cloud.Dialogflow.V2 {
             "bnMvKi9lbmNyeXB0aW9uU3BlY306aW5pdGlhbGl6ZToBKhp4ykEZZGlhbG9n",
             "Zmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
             "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9kaWFsb2dmbG93QpwBCh5jb20uZ29vZ2xlLmNsb3VkLmRp",
+            "cy5jb20vYXV0aC9kaWFsb2dmbG93QpkBCh5jb20uZ29vZ2xlLmNsb3VkLmRp",
             "YWxvZ2Zsb3cudjJCE0VuY3J5cHRpb25TcGVjUHJvdG9QAVo+Y2xvdWQuZ29v",
             "Z2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYyL2RpYWxvZ2Zsb3dwYjtkaWFs",
-            "b2dmbG93cGL4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYy",
-            "YgZwcm90bzM="));
+            "b2dmbG93cGKiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

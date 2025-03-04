@@ -930,4 +930,16 @@ namespace Google.Cloud.Dialogflow.V2
             }
         }
     }
+
+    public partial class SearchKnowledgeAnswer
+    {
+        /// <summary>
+        /// <see cref="AnswerRecordName"/>-typed view over the <see cref="AnswerRecord"/> resource name property.
+        /// </summary>
+        public AnswerRecordName AnswerRecordAsAnswerRecordName
+        {
+            get => string.IsNullOrEmpty(AnswerRecord) ? null : AnswerRecordName.Parse(AnswerRecord, allowUnparsed: true);
+            set => AnswerRecord = value?.ToString() ?? "";
+        }
+    }
 }

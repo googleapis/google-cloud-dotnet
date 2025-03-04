@@ -1215,6 +1215,148 @@ namespace Google.Cloud.Dialogflow.V2
             AnalyzeContentAsync(participant, eventInput, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Adds a text (chat, for example), or audio (phone recording, for example)
+        /// message from a participant into the conversation.
+        /// 
+        /// Note: Always use agent versions for production traffic
+        /// sent to virtual agents. See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// </summary>
+        /// <param name="participant">
+        /// Required. The name of the participant this text comes from.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
+        /// </param>
+        /// <param name="audioInput">
+        /// The natural language speech audio to be processed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalyzeContentResponse AnalyzeContent(string participant, AudioInput audioInput, gaxgrpc::CallSettings callSettings = null) =>
+            AnalyzeContent(new AnalyzeContentRequest
+            {
+                Participant = gax::GaxPreconditions.CheckNotNullOrEmpty(participant, nameof(participant)),
+                AudioInput = audioInput,
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a text (chat, for example), or audio (phone recording, for example)
+        /// message from a participant into the conversation.
+        /// 
+        /// Note: Always use agent versions for production traffic
+        /// sent to virtual agents. See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// </summary>
+        /// <param name="participant">
+        /// Required. The name of the participant this text comes from.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
+        /// </param>
+        /// <param name="audioInput">
+        /// The natural language speech audio to be processed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalyzeContentResponse> AnalyzeContentAsync(string participant, AudioInput audioInput, gaxgrpc::CallSettings callSettings = null) =>
+            AnalyzeContentAsync(new AnalyzeContentRequest
+            {
+                Participant = gax::GaxPreconditions.CheckNotNullOrEmpty(participant, nameof(participant)),
+                AudioInput = audioInput,
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a text (chat, for example), or audio (phone recording, for example)
+        /// message from a participant into the conversation.
+        /// 
+        /// Note: Always use agent versions for production traffic
+        /// sent to virtual agents. See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// </summary>
+        /// <param name="participant">
+        /// Required. The name of the participant this text comes from.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
+        /// </param>
+        /// <param name="audioInput">
+        /// The natural language speech audio to be processed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalyzeContentResponse> AnalyzeContentAsync(string participant, AudioInput audioInput, st::CancellationToken cancellationToken) =>
+            AnalyzeContentAsync(participant, audioInput, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a text (chat, for example), or audio (phone recording, for example)
+        /// message from a participant into the conversation.
+        /// 
+        /// Note: Always use agent versions for production traffic
+        /// sent to virtual agents. See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// </summary>
+        /// <param name="participant">
+        /// Required. The name of the participant this text comes from.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
+        /// </param>
+        /// <param name="audioInput">
+        /// The natural language speech audio to be processed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnalyzeContentResponse AnalyzeContent(ParticipantName participant, AudioInput audioInput, gaxgrpc::CallSettings callSettings = null) =>
+            AnalyzeContent(new AnalyzeContentRequest
+            {
+                ParticipantAsParticipantName = gax::GaxPreconditions.CheckNotNull(participant, nameof(participant)),
+                AudioInput = audioInput,
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a text (chat, for example), or audio (phone recording, for example)
+        /// message from a participant into the conversation.
+        /// 
+        /// Note: Always use agent versions for production traffic
+        /// sent to virtual agents. See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// </summary>
+        /// <param name="participant">
+        /// Required. The name of the participant this text comes from.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
+        /// </param>
+        /// <param name="audioInput">
+        /// The natural language speech audio to be processed.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalyzeContentResponse> AnalyzeContentAsync(ParticipantName participant, AudioInput audioInput, gaxgrpc::CallSettings callSettings = null) =>
+            AnalyzeContentAsync(new AnalyzeContentRequest
+            {
+                ParticipantAsParticipantName = gax::GaxPreconditions.CheckNotNull(participant, nameof(participant)),
+                AudioInput = audioInput,
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a text (chat, for example), or audio (phone recording, for example)
+        /// message from a participant into the conversation.
+        /// 
+        /// Note: Always use agent versions for production traffic
+        /// sent to virtual agents. See [Versions and
+        /// environments](https://cloud.google.com/dialogflow/es/docs/agents-versions).
+        /// </summary>
+        /// <param name="participant">
+        /// Required. The name of the participant this text comes from.
+        /// Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;/participants/&lt;Participant ID&gt;`.
+        /// </param>
+        /// <param name="audioInput">
+        /// The natural language speech audio to be processed.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnalyzeContentResponse> AnalyzeContentAsync(ParticipantName participant, AudioInput audioInput, st::CancellationToken cancellationToken) =>
+            AnalyzeContentAsync(participant, audioInput, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Bidirectional streaming methods for
         /// <see cref="StreamingAnalyzeContent(gaxgrpc::CallSettings,gaxgrpc::BidirectionalStreamingSettings)"/>.
         /// </summary>

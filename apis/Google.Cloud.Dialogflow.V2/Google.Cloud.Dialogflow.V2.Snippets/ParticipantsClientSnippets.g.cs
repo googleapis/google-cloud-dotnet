@@ -709,6 +709,64 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for AnalyzeContent</summary>
+        public void AnalyzeContent3()
+        {
+            // Snippet: AnalyzeContent(string, AudioInput, CallSettings)
+            // Create client
+            ParticipantsClient participantsClient = ParticipantsClient.Create();
+            // Initialize request argument(s)
+            string participant = "projects/[PROJECT]/conversations/[CONVERSATION]/participants/[PARTICIPANT]";
+            AudioInput audioInput = new AudioInput();
+            // Make the request
+            AnalyzeContentResponse response = participantsClient.AnalyzeContent(participant, audioInput);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeContentAsync</summary>
+        public async Task AnalyzeContent3Async()
+        {
+            // Snippet: AnalyzeContentAsync(string, AudioInput, CallSettings)
+            // Additional: AnalyzeContentAsync(string, AudioInput, CancellationToken)
+            // Create client
+            ParticipantsClient participantsClient = await ParticipantsClient.CreateAsync();
+            // Initialize request argument(s)
+            string participant = "projects/[PROJECT]/conversations/[CONVERSATION]/participants/[PARTICIPANT]";
+            AudioInput audioInput = new AudioInput();
+            // Make the request
+            AnalyzeContentResponse response = await participantsClient.AnalyzeContentAsync(participant, audioInput);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeContent</summary>
+        public void AnalyzeContent3ResourceNames()
+        {
+            // Snippet: AnalyzeContent(ParticipantName, AudioInput, CallSettings)
+            // Create client
+            ParticipantsClient participantsClient = ParticipantsClient.Create();
+            // Initialize request argument(s)
+            ParticipantName participant = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]");
+            AudioInput audioInput = new AudioInput();
+            // Make the request
+            AnalyzeContentResponse response = participantsClient.AnalyzeContent(participant, audioInput);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnalyzeContentAsync</summary>
+        public async Task AnalyzeContent3ResourceNamesAsync()
+        {
+            // Snippet: AnalyzeContentAsync(ParticipantName, AudioInput, CallSettings)
+            // Additional: AnalyzeContentAsync(ParticipantName, AudioInput, CancellationToken)
+            // Create client
+            ParticipantsClient participantsClient = await ParticipantsClient.CreateAsync();
+            // Initialize request argument(s)
+            ParticipantName participant = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]");
+            AudioInput audioInput = new AudioInput();
+            // Make the request
+            AnalyzeContentResponse response = await participantsClient.AnalyzeContentAsync(participant, audioInput);
+            // End snippet
+        }
+
         /// <summary>Snippet for StreamingAnalyzeContent</summary>
         public async Task StreamingAnalyzeContent()
         {

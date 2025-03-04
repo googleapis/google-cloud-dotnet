@@ -1106,7 +1106,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     private string rawHumanEvalTemplateCsv_ = "";
     /// <summary>
     /// Output only. Human eval template in csv format.
-    /// It tooks real-world conversations provided through input dataset, generates
+    /// It takes real-world conversations provided through input dataset, generates
     /// example suggestions for customer to verify quality of the model.
     /// For Smart Reply, the generated csv file contains columns of
     /// Context, (Suggestions,Q1,Q2)*3, Actual reply.
@@ -1513,7 +1513,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>Field number for the "smart_reply_config" field.</summary>
     public const int SmartReplyConfigFieldNumber = 2;
     /// <summary>
-    /// Configuration for smart reply model evalution.
+    /// Configuration for smart reply model evaluation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1528,7 +1528,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// <summary>Field number for the "smart_compose_config" field.</summary>
     public const int SmartComposeConfigFieldNumber = 4;
     /// <summary>
-    /// Configuration for smart compose model evalution.
+    /// Configuration for smart compose model evaluation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
