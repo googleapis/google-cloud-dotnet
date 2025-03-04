@@ -182,6 +182,58 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         }
 
         [Fact]
+        public void Explain()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("syncqueries_explain");
+            using (var transaction = db.BeginTransaction())
+            {
+                var entities = Enumerable.Range(0, 5)
+                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
+                    .ToList();
+                transaction.Insert(entities);
+                transaction.Commit();
+            }
+
+            var query = new Query("syncqueries") { Filter = Filter.LessThan("x", 3) };
+            var gql = new GqlQuery { QueryString = "SELECT * FROM syncqueries WHERE x < 3", AllowLiterals = true };
+
+            _fixture.RetryQuery(() =>
+            {
+                var results = db.RunQuery(new AdvancedQuery { GqlQuery = gql, ExplainOptions = new ExplainOptions { Analyze = false } });
+                Assert.NotNull(results.PlanSummary);
+                Assert.Null(results.ExecutionStats);
+                Assert.Empty(results.Entities);
+            });
+        }
+
+        [Fact]
+        public void ExplainAnalyze()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("syncqueries_explain");
+            using (var transaction = db.BeginTransaction())
+            {
+                var entities = Enumerable.Range(0, 5)
+                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
+                    .ToList();
+                transaction.Insert(entities);
+                transaction.Commit();
+            }
+
+            var query = new Query("syncqueries") { Filter = Filter.LessThan("x", 3) };
+            var gql = new GqlQuery { QueryString = "SELECT * FROM syncqueries WHERE x < 3", AllowLiterals = true };
+
+            _fixture.RetryQuery(() =>
+            {
+                var results = db.RunQuery(new AdvancedQuery { GqlQuery = gql, ExplainOptions = new ExplainOptions { Analyze = true } });
+                Assert.NotNull(results.PlanSummary);
+                Assert.NotNull(results.ExecutionStats);
+                Assert.NotEmpty(results.Entities);
+            });
+        }
+
+        [Fact]
         public async Task AsyncQueries()
         {
             var db = _fixture.CreateDatastoreDb();
