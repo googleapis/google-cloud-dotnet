@@ -4769,7 +4769,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// Identifier. The unique name of the logical view.
     /// Format:
-    /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}
+    /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5051,7 +5051,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     /// <summary>
     /// Identifier. The unique name of the materialized view.
     /// Format:
-    /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}
+    /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
