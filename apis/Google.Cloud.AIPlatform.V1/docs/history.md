@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.21.0, released 2025-03-04
+
+Note: the bug fix here is clearly a breaking change due to an API
+publication error. We believe it is less disruptive to publish this
+in a minor version (one day after the now-removed API surface was
+published) than to take a new major version. Apologies if you are
+disrupted by this.
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove VertexAISearch.engine option ([commit 966aaea](https://github.com/googleapis/google-cloud-dotnet/commit/966aaea6a4398972d2ae0ad3df399044c584ac7d))
+
 ## Version 3.20.0, released 2025-03-03
 
 ### New features
