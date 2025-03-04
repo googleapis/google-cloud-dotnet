@@ -170,6 +170,31 @@ namespace Google.Cloud.Firestore.IntegrationTests
         }
 
         [Fact]
+        public async Task StartAfter_Explain_PlanOnly()
+        {
+            var query = _fixture.HighScoreCollection.OrderBy("Level").StartAfter(20);
+            var explainResults = await query.ExplainAsync(ExplainOptions.PlanOnly);
+            Assert.NotNull(explainResults.Metrics.PlanSummary);
+            Assert.Null(explainResults.Snapshot);
+        }
+
+        [Fact]
+        public async Task StartAfter_Explain_PlanAndExecute()
+        {
+            var query = _fixture.HighScoreCollection.OrderBy("Level").StartAfter(20);
+            var queryProfileInfo = await query.ExplainAsync(ExplainOptions.PlanAndExecute);
+            var snapshot = queryProfileInfo.Snapshot;
+            var plan = queryProfileInfo.Metrics.PlanSummary;
+            var stats = queryProfileInfo.Metrics.ExecutionStats;
+            Assert.NotNull(plan);
+            Assert.NotNull(stats);
+            Assert.Equal(snapshot.Documents.Count, stats.ResultsReturned);
+            Assert.NotEqual(0, stats.ReadOperations);
+            var items = snapshot.Documents.Select(doc => doc.ConvertTo<HighScore>()).ToList();
+            Assert.Equal(HighScore.Data.Where(x => x.Level > 20).OrderBy(x => x.Level), items);
+        }
+
+        [Fact]
         public async Task EndAt()
         {
             var query = _fixture.HighScoreCollection.OrderBy("Level").EndAt(20);
