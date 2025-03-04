@@ -103,7 +103,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
     public abstract partial class OnlineReturnPolicyServiceBase
     {
       /// <summary>
-      /// Gets an existing return policy.
+      /// Gets an existing return policy for a given business.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -115,7 +115,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
 
       /// <summary>
-      /// Lists all existing return policies.
+      /// Lists all existing return policies for a given business.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -156,7 +156,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
       }
 
       /// <summary>
-      /// Gets an existing return policy.
+      /// Gets an existing return policy for a given business.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -169,7 +169,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return GetOnlineReturnPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an existing return policy.
+      /// Gets an existing return policy for a given business.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -180,7 +180,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetOnlineReturnPolicy, null, options, request);
       }
       /// <summary>
-      /// Gets an existing return policy.
+      /// Gets an existing return policy for a given business.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -193,7 +193,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return GetOnlineReturnPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets an existing return policy.
+      /// Gets an existing return policy for a given business.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -204,7 +204,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_GetOnlineReturnPolicy, null, options, request);
       }
       /// <summary>
-      /// Lists all existing return policies.
+      /// Lists all existing return policies for a given business.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -217,7 +217,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return ListOnlineReturnPolicies(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all existing return policies.
+      /// Lists all existing return policies for a given business.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -228,7 +228,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ListOnlineReturnPolicies, null, options, request);
       }
       /// <summary>
-      /// Lists all existing return policies.
+      /// Lists all existing return policies for a given business.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -241,7 +241,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta {
         return ListOnlineReturnPoliciesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists all existing return policies.
+      /// Lists all existing return policies for a given business.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

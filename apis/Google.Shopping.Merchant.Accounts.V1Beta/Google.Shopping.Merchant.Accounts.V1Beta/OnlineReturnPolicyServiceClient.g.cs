@@ -239,7 +239,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         public virtual OnlineReturnPolicyService.OnlineReturnPolicyServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -248,7 +248,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -257,7 +257,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -266,7 +266,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             GetOnlineReturnPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -281,7 +281,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -296,7 +296,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -308,7 +308,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             GetOnlineReturnPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -323,7 +323,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -338,7 +338,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             }, callSettings);
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="name">
         /// Required. The name of the return policy to retrieve.
@@ -350,7 +350,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             GetOnlineReturnPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists all existing return policies.
+        /// Lists all existing return policies for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -359,7 +359,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all existing return policies.
+        /// Lists all existing return policies for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -368,10 +368,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists all existing return policies.
+        /// Lists all existing return policies for a given business.
         /// </summary>
         /// <param name="parent">
-        /// Required. The merchant account for which to list return policies.
+        /// Required. The business account for which to list return policies.
         /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
@@ -402,10 +402,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies.
+        /// Lists all existing return policies for a given business.
         /// </summary>
         /// <param name="parent">
-        /// Required. The merchant account for which to list return policies.
+        /// Required. The business account for which to list return policies.
         /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
@@ -436,10 +436,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies.
+        /// Lists all existing return policies for a given business.
         /// </summary>
         /// <param name="parent">
-        /// Required. The merchant account for which to list return policies.
+        /// Required. The business account for which to list return policies.
         /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
@@ -470,10 +470,10 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies.
+        /// Lists all existing return policies for a given business.
         /// </summary>
         /// <param name="parent">
-        /// Required. The merchant account for which to list return policies.
+        /// Required. The business account for which to list return policies.
         /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
@@ -561,7 +561,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         partial void Modify_ListOnlineReturnPoliciesRequest(ref ListOnlineReturnPoliciesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -573,7 +573,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Gets an existing return policy.
+        /// Gets an existing return policy for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -585,7 +585,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies.
+        /// Lists all existing return policies for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -597,7 +597,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
         }
 
         /// <summary>
-        /// Lists all existing return policies.
+        /// Lists all existing return policies for a given business.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
