@@ -957,12 +957,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 52,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 50,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -1006,12 +1006,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 53,
+          "end": 54,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 51,
+          "end": 52,
           "type": "SHORT"
         }
       ]
@@ -4196,10 +4196,10 @@
       ]
     },
     {
-      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened",
-      "title": "DeleteAppProfile",
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened1",
+      "title": "DeleteAppProfile1",
       "description": "Snippet for DeleteAppProfile",
-      "file": "BigtableInstanceAdminClient.DeleteAppProfileSnippet.g.cs",
+      "file": "BigtableInstanceAdminClient.DeleteAppProfile1Snippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "DeleteAppProfile",
@@ -4242,10 +4242,10 @@
       ]
     },
     {
-      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened",
-      "title": "DeleteAppProfileAsync",
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened1",
+      "title": "DeleteAppProfile1Async",
       "description": "Snippet for DeleteAppProfileAsync",
-      "file": "BigtableInstanceAdminClient.DeleteAppProfileAsyncSnippet.g.cs",
+      "file": "BigtableInstanceAdminClient.DeleteAppProfile1AsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "DeleteAppProfileAsync",
@@ -4290,10 +4290,10 @@
       ]
     },
     {
-      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened_resourceNames",
-      "title": "DeleteAppProfileResourceNames",
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened1_resourceNames",
+      "title": "DeleteAppProfile1ResourceNames",
       "description": "Snippet for DeleteAppProfile",
-      "file": "BigtableInstanceAdminClient.DeleteAppProfileResourceNamesSnippet.g.cs",
+      "file": "BigtableInstanceAdminClient.DeleteAppProfile1ResourceNamesSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "DeleteAppProfile",
@@ -4336,10 +4336,10 @@
       ]
     },
     {
-      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened_resourceNames",
-      "title": "DeleteAppProfileResourceNamesAsync",
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened1_resourceNames",
+      "title": "DeleteAppProfile1ResourceNamesAsync",
       "description": "Snippet for DeleteAppProfileAsync",
-      "file": "BigtableInstanceAdminClient.DeleteAppProfileResourceNamesAsyncSnippet.g.cs",
+      "file": "BigtableInstanceAdminClient.DeleteAppProfile1ResourceNamesAsyncSnippet.g.cs",
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "DeleteAppProfileAsync",
@@ -4379,6 +4379,210 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened2",
+      "title": "DeleteAppProfile2",
+      "description": "Snippet for DeleteAppProfile",
+      "file": "BigtableInstanceAdminClient.DeleteAppProfile2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppProfile",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "ignoreWarnings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteAppProfile",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteAppProfile",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened2",
+      "title": "DeleteAppProfile2Async",
+      "description": "Snippet for DeleteAppProfileAsync",
+      "file": "BigtableInstanceAdminClient.DeleteAppProfile2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppProfileAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "ignoreWarnings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteAppProfile",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteAppProfile",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened2_resourceNames",
+      "title": "DeleteAppProfile2ResourceNames",
+      "description": "Snippet for DeleteAppProfile",
+      "file": "BigtableInstanceAdminClient.DeleteAppProfile2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppProfile",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfile",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfileName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "ignoreWarnings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteAppProfile",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteAppProfile",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened2_resourceNames",
+      "title": "DeleteAppProfile2ResourceNamesAsync",
+      "description": "Snippet for DeleteAppProfileAsync",
+      "file": "BigtableInstanceAdminClient.DeleteAppProfile2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAppProfileAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteAppProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.AppProfileName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "ignoreWarnings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteAppProfile",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteAppProfile",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
           "type": "SHORT"
         }
       ]

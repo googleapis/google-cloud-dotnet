@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened_resourceNames]
+    // [START bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened2]
     using Google.Cloud.Bigtable.Admin.V2;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedBigtableInstanceAdminClientSnippets
     {
-        /// <summary>Snippet for DeleteAppProfileAsync</summary>
+        /// <summary>Snippet for DeleteAppProfile</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,15 +29,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task DeleteAppProfileResourceNamesAsync()
+        public void DeleteAppProfile2()
         {
             // Create client
-            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
             // Initialize request argument(s)
-            AppProfileName name = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/appProfiles/[APP_PROFILE]";
+            bool ignoreWarnings = false;
             // Make the request
-            await bigtableInstanceAdminClient.DeleteAppProfileAsync(name);
+            bigtableInstanceAdminClient.DeleteAppProfile(name, ignoreWarnings);
         }
     }
-    // [END bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_async_flattened_resourceNames]
+    // [END bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteAppProfile_sync_flattened2]
 }

@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 Labels = { { "", "" }, },
                 CreateTime = new Timestamp(),
                 SatisfiesPzs = false,
+                SatisfiesPzi = false,
             };
             // Make the request
             Instance response = bigtableInstanceAdminClient.UpdateInstance(request);

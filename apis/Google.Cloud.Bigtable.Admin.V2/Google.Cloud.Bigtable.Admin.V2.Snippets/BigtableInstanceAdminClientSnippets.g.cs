@@ -424,6 +424,7 @@ namespace GoogleCSharpSnippets
                 Labels = { { "", "" }, },
                 CreateTime = new Timestamp(),
                 SatisfiesPzs = false,
+                SatisfiesPzi = false,
             };
             // Make the request
             Instance response = bigtableInstanceAdminClient.UpdateInstance(request);
@@ -447,6 +448,7 @@ namespace GoogleCSharpSnippets
                 Labels = { { "", "" }, },
                 CreateTime = new Timestamp(),
                 SatisfiesPzs = false,
+                SatisfiesPzi = false,
             };
             // Make the request
             Instance response = await bigtableInstanceAdminClient.UpdateInstanceAsync(request);
@@ -1963,7 +1965,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for DeleteAppProfile</summary>
-        public void DeleteAppProfile()
+        public void DeleteAppProfile1()
         {
             // Snippet: DeleteAppProfile(string, CallSettings)
             // Create client
@@ -1976,7 +1978,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for DeleteAppProfileAsync</summary>
-        public async Task DeleteAppProfileAsync()
+        public async Task DeleteAppProfile1Async()
         {
             // Snippet: DeleteAppProfileAsync(string, CallSettings)
             // Additional: DeleteAppProfileAsync(string, CancellationToken)
@@ -1990,7 +1992,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for DeleteAppProfile</summary>
-        public void DeleteAppProfileResourceNames()
+        public void DeleteAppProfile1ResourceNames()
         {
             // Snippet: DeleteAppProfile(AppProfileName, CallSettings)
             // Create client
@@ -2003,7 +2005,7 @@ namespace GoogleCSharpSnippets
         }
 
         /// <summary>Snippet for DeleteAppProfileAsync</summary>
-        public async Task DeleteAppProfileResourceNamesAsync()
+        public async Task DeleteAppProfile1ResourceNamesAsync()
         {
             // Snippet: DeleteAppProfileAsync(AppProfileName, CallSettings)
             // Additional: DeleteAppProfileAsync(AppProfileName, CancellationToken)
@@ -2013,6 +2015,64 @@ namespace GoogleCSharpSnippets
             AppProfileName name = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
             // Make the request
             await bigtableInstanceAdminClient.DeleteAppProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAppProfile</summary>
+        public void DeleteAppProfile2()
+        {
+            // Snippet: DeleteAppProfile(string, bool, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/appProfiles/[APP_PROFILE]";
+            bool ignoreWarnings = false;
+            // Make the request
+            bigtableInstanceAdminClient.DeleteAppProfile(name, ignoreWarnings);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAppProfileAsync</summary>
+        public async Task DeleteAppProfile2Async()
+        {
+            // Snippet: DeleteAppProfileAsync(string, bool, CallSettings)
+            // Additional: DeleteAppProfileAsync(string, bool, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/appProfiles/[APP_PROFILE]";
+            bool ignoreWarnings = false;
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteAppProfileAsync(name, ignoreWarnings);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAppProfile</summary>
+        public void DeleteAppProfile2ResourceNames()
+        {
+            // Snippet: DeleteAppProfile(AppProfileName, bool, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            AppProfileName name = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
+            bool ignoreWarnings = false;
+            // Make the request
+            bigtableInstanceAdminClient.DeleteAppProfile(name, ignoreWarnings);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAppProfileAsync</summary>
+        public async Task DeleteAppProfile2ResourceNamesAsync()
+        {
+            // Snippet: DeleteAppProfileAsync(AppProfileName, bool, CallSettings)
+            // Additional: DeleteAppProfileAsync(AppProfileName, bool, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            AppProfileName name = AppProfileName.FromProjectInstanceAppProfile("[PROJECT]", "[INSTANCE]", "[APP_PROFILE]");
+            bool ignoreWarnings = false;
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteAppProfileAsync(name, ignoreWarnings);
             // End snippet
         }
 
