@@ -5134,7 +5134,7 @@
       "description": "Recommended Google client library to access the Google Cloud Storage API. It wraps the Google.Apis.Storage.v1 client library, making common operations simpler in client code. Google Cloud Storage stores and retrieves potentially large, immutable data objects.",
       "dependencies": {
         "Google.Api.Gax.Rest": "default",
-        "Google.Apis.Storage.v1": "1.68.0.3431"
+        "Google.Apis.Storage.v1": "1.68.0.3604"
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "default",
