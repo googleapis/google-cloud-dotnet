@@ -93,7 +93,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             Assert.All(actualBuckets, AssertSoftDeletedBucket);
         }
 
-        // Validating whether all buckets are soft-deleted only.
+        // Validates that the given bucket is soft-deleted.
         private void AssertSoftDeletedBucket(Bucket b)
         {
             Assert.NotNull(b.Generation);
