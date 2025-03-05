@@ -17,7 +17,7 @@
       - the current Google.Api.CommonProtos version depends on.
       -->
     <PackageVersion Include="Google.Api.CommonProtos" Version="[2.16.0, 3.0.0)" />
-    <PackageVersion Include="Google.Protobuf" Version="3.28.2" />
+    <PackageVersion Include="Google.Protobuf" Version="3.30.0" />
 
     <PackageVersion Include="xunit" Version="2.9.3" />
     <PackageVersion Include="xunit.assert" Version="2.9.3" />
