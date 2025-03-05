@@ -79,44 +79,18 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public async Task SoftDeletedOnly()
         {
             var bucketName = _fixture.GenerateBucketName();
-            var softDeleteBucket = _fixture.CreateBucket(
-                bucketName,
-                multiVersion: false,
-                softDelete: true
-            );
-            await _fixture.Client.DeleteBucketAsync(
-                softDeleteBucket.Name,
-                new DeleteBucketOptions { DeleteObjects = true }
-            );
-            var actualBuckets = await _fixture
-                .Client.ListBucketsAsync(
-                    _fixture.ProjectId,
-                    new ListBucketsOptions { SoftDeletedOnly = true }
-                )
+            var softDeleteBucket = _fixture.CreateBucket(bucketName, multiVersion: false, softDelete: true);
+            
+            await _fixture.Client.DeleteBucketAsync(softDeleteBucket.Name, new DeleteBucketOptions { DeleteObjects = true });
+            
+            var actualBuckets = await _fixture.Client
+                .ListBucketsAsync(_fixture.ProjectId, new ListBucketsOptions { SoftDeletedOnly = true })
                 .ToListAsync();
 
-            var recentlyCreatedSoftDeleteBucket = actualBuckets
-                 .Where(b => b.Name == softDeleteBucket.Name)
-                 .ToList();
-            Assert.Contains(
-                recentlyCreatedSoftDeleteBucket.First().Name.ToString(),
-                softDeleteBucket.Name.ToString()
-            );
-            Assert.Contains(
-                recentlyCreatedSoftDeleteBucket.First().Generation.ToString(),
-                softDeleteBucket.Generation.ToString()
-            );
-            Assert.NotNull(recentlyCreatedSoftDeleteBucket.First().SoftDeleteTimeDateTimeOffset);
-            Assert.NotNull(recentlyCreatedSoftDeleteBucket.First().HardDeleteTimeDateTimeOffset);
-
-            if (actualBuckets.Count == 0)
-            {
-                Assert.Fail("Soft deleted bucket list is empty");
-            }
-            else
-            {
-                Assert.All(actualBuckets, AssertSoftDeletedBucket);
-            }
+            // Check the list cotains the bucket we just soft-deleted.
+            Assert.Contains(actualBuckets, bucket => bucket.Name == softDeleteBucket.Name && bucket.Generation == softDeleteBucket.Generation);
+            // Check all the buckets in the list are soft-deleted buckets.
+            Assert.All(actualBuckets, AssertSoftDeletedBucket);
         }
 
         // Validating whether all buckets are soft-deleted only.
