@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ParentAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 OrderBy = "",
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshots(request);

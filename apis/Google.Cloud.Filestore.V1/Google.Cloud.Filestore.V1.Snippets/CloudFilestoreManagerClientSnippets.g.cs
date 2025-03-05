@@ -1052,6 +1052,7 @@ namespace GoogleCSharpSnippets
                 ParentAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 OrderBy = "",
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshots(request);
@@ -1102,6 +1103,7 @@ namespace GoogleCSharpSnippets
                 ParentAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
                 OrderBy = "",
                 Filter = "",
+                ReturnPartialSuccess = false,
             };
             // Make the request
             PagedAsyncEnumerable<ListSnapshotsResponse, Snapshot> response = cloudFilestoreManagerClient.ListSnapshotsAsync(request);
@@ -2782,6 +2784,73 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 Backup retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PromoteReplica</summary>
+        public void PromoteReplicaRequestObject()
+        {
+            // Snippet: PromoteReplica(PromoteReplicaRequest, CallSettings)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = CloudFilestoreManagerClient.Create();
+            // Initialize request argument(s)
+            PromoteReplicaRequest request = new PromoteReplicaRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                PeerInstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = cloudFilestoreManagerClient.PromoteReplica(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = cloudFilestoreManagerClient.PollOncePromoteReplica(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PromoteReplicaAsync</summary>
+        public async Task PromoteReplicaRequestObjectAsync()
+        {
+            // Snippet: PromoteReplicaAsync(PromoteReplicaRequest, CallSettings)
+            // Additional: PromoteReplicaAsync(PromoteReplicaRequest, CancellationToken)
+            // Create client
+            CloudFilestoreManagerClient cloudFilestoreManagerClient = await CloudFilestoreManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            PromoteReplicaRequest request = new PromoteReplicaRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                PeerInstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await cloudFilestoreManagerClient.PromoteReplicaAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await cloudFilestoreManagerClient.PollOncePromoteReplicaAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
