@@ -94,31 +94,37 @@ namespace Google.Cloud.AIPlatform.V1 {
             "FQoNY2h1bmtfb3ZlcmxhcBgCIAEoBUIRCg9jaHVua2luZ19jb25maWcicgob",
             "UmFnRmlsZVRyYW5zZm9ybWF0aW9uQ29uZmlnElMKGHJhZ19maWxlX2NodW5r",
             "aW5nX2NvbmZpZxgBIAEoCzIxLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
-            "LlJhZ0ZpbGVDaHVua2luZ0NvbmZpZyJ2ChNVcGxvYWRSYWdGaWxlQ29uZmln",
-            "El8KHnJhZ19maWxlX3RyYW5zZm9ybWF0aW9uX2NvbmZpZxgDIAEoCzI3Lmdv",
-            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJhZ0ZpbGVUcmFuc2Zvcm1hdGlv",
-            "bkNvbmZpZyLYBQoUSW1wb3J0UmFnRmlsZXNDb25maWcSOwoKZ2NzX3NvdXJj",
-            "ZRgCIAEoCzIlLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdjc1NvdXJj",
-            "ZUgAEkwKE2dvb2dsZV9kcml2ZV9zb3VyY2UYAyABKAsyLS5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5Hb29nbGVEcml2ZVNvdXJjZUgAEj8KDHNsYWNr",
-            "X3NvdXJjZRgGIAEoCzInLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNs",
-            "YWNrU291cmNlSAASPQoLamlyYV9zb3VyY2UYByABKAsyJi5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5KaXJhU291cmNlSAASTAoTc2hhcmVfcG9pbnRf",
-            "c291cmNlcxgNIAEoCzItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNo",
-            "YXJlUG9pbnRTb3VyY2VzSAASUgoYcGFydGlhbF9mYWlsdXJlX2djc19zaW5r",
-            "GAsgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGlu",
-            "YXRpb25CAhgBSAESXAodcGFydGlhbF9mYWlsdXJlX2JpZ3F1ZXJ5X3NpbmsY",
-            "DCABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5CaWdRdWVyeURl",
-            "c3RpbmF0aW9uQgIYAUgBEl8KHnJhZ19maWxlX3RyYW5zZm9ybWF0aW9uX2Nv",
-            "bmZpZxgQIAEoCzI3Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJhZ0Zp",
-            "bGVUcmFuc2Zvcm1hdGlvbkNvbmZpZxIrCh5tYXhfZW1iZWRkaW5nX3JlcXVl",
-            "c3RzX3Blcl9taW4YBSABKAVCA+BBAUIPCg1pbXBvcnRfc291cmNlQhYKFHBh",
-            "cnRpYWxfZmFpbHVyZV9zaW5rQtABCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFCElZlcnRleFJhZ0RhdGFQcm90b1ABWj5jbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZv",
-            "cm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENs",
-            "b3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3Jt",
-            "OjpWMWIGcHJvdG8z"));
+            "LlJhZ0ZpbGVDaHVua2luZ0NvbmZpZyLGAQoUUmFnRmlsZVBhcnNpbmdDb25m",
+            "aWcSVgoNbGF5b3V0X3BhcnNlchgEIAEoCzI9Lmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxLlJhZ0ZpbGVQYXJzaW5nQ29uZmlnLkxheW91dFBhcnNlckgA",
+            "GkwKDExheW91dFBhcnNlchIWCg5wcm9jZXNzb3JfbmFtZRgBIAEoCRIkChxt",
+            "YXhfcGFyc2luZ19yZXF1ZXN0c19wZXJfbWluGAIgASgFQggKBnBhcnNlciJ2",
+            "ChNVcGxvYWRSYWdGaWxlQ29uZmlnEl8KHnJhZ19maWxlX3RyYW5zZm9ybWF0",
+            "aW9uX2NvbmZpZxgDIAEoCzI3Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LlJhZ0ZpbGVUcmFuc2Zvcm1hdGlvbkNvbmZpZyKwBgoUSW1wb3J0UmFnRmls",
+            "ZXNDb25maWcSOwoKZ2NzX3NvdXJjZRgCIAEoCzIlLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkdjc1NvdXJjZUgAEkwKE2dvb2dsZV9kcml2ZV9zb3Vy",
+            "Y2UYAyABKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hb29nbGVE",
+            "cml2ZVNvdXJjZUgAEj8KDHNsYWNrX3NvdXJjZRgGIAEoCzInLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlNsYWNrU291cmNlSAASPQoLamlyYV9zb3Vy",
+            "Y2UYByABKAsyJi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5KaXJhU291",
+            "cmNlSAASTAoTc2hhcmVfcG9pbnRfc291cmNlcxgNIAEoCzItLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLlNoYXJlUG9pbnRTb3VyY2VzSAASUgoYcGFy",
+            "dGlhbF9mYWlsdXJlX2djc19zaW5rGAsgASgLMiouZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjEuR2NzRGVzdGluYXRpb25CAhgBSAESXAodcGFydGlhbF9m",
+            "YWlsdXJlX2JpZ3F1ZXJ5X3NpbmsYDCABKAsyLy5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5CaWdRdWVyeURlc3RpbmF0aW9uQgIYAUgBEl8KHnJhZ19m",
+            "aWxlX3RyYW5zZm9ybWF0aW9uX2NvbmZpZxgQIAEoCzI3Lmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLlJhZ0ZpbGVUcmFuc2Zvcm1hdGlvbkNvbmZpZxJW",
+            "ChdyYWdfZmlsZV9wYXJzaW5nX2NvbmZpZxgIIAEoCzIwLmdvb2dsZS5jbG91",
+            "ZC5haXBsYXRmb3JtLnYxLlJhZ0ZpbGVQYXJzaW5nQ29uZmlnQgPgQQESKwoe",
+            "bWF4X2VtYmVkZGluZ19yZXF1ZXN0c19wZXJfbWluGAUgASgFQgPgQQFCDwoN",
+            "aW1wb3J0X3NvdXJjZUIWChRwYXJ0aWFsX2ZhaWx1cmVfc2lua0LQAQoeY29t",
+            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhJWZXJ0ZXhSYWdEYXRhUHJv",
+            "dG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxL2Fp",
+            "cGxhdGZvcm1wYjthaXBsYXRmb3JtcGKqAhpHb29nbGUuQ2xvdWQuQUlQbGF0",
+            "Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xl",
+            "OjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ApiAuthReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -132,8 +138,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RagFile), global::Google.Cloud.AIPlatform.V1.RagFile.Parser, new[]{ "GcsSource", "GoogleDriveSource", "DirectUploadSource", "SlackSource", "JiraSource", "SharePointSources", "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "FileStatus" }, new[]{ "RagFileSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RagFileChunkingConfig), global::Google.Cloud.AIPlatform.V1.RagFileChunkingConfig.Parser, new[]{ "FixedLengthChunking" }, new[]{ "ChunkingConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RagFileChunkingConfig.Types.FixedLengthChunking), global::Google.Cloud.AIPlatform.V1.RagFileChunkingConfig.Types.FixedLengthChunking.Parser, new[]{ "ChunkSize", "ChunkOverlap" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RagFileTransformationConfig), global::Google.Cloud.AIPlatform.V1.RagFileTransformationConfig.Parser, new[]{ "RagFileChunkingConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig), global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Parser, new[]{ "LayoutParser" }, new[]{ "Parser" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser), global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser.Parser, new[]{ "ProcessorName", "MaxParsingRequestsPerMin" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.UploadRagFileConfig), global::Google.Cloud.AIPlatform.V1.UploadRagFileConfig.Parser, new[]{ "RagFileTransformationConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "RagFileTransformationConfig", "MaxEmbeddingRequestsPerMin" }, new[]{ "ImportSource", "PartialFailureSink" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "RagFileTransformationConfig", "RagFileParsingConfig", "MaxEmbeddingRequestsPerMin" }, new[]{ "ImportSource", "PartialFailureSink" }, null, null, null)
           }));
     }
     #endregion
@@ -4244,6 +4251,498 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
+  /// Specifies the parsing config for RagFiles.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RagFileParsingConfig : pb::IMessage<RagFileParsingConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RagFileParsingConfig> _parser = new pb::MessageParser<RagFileParsingConfig>(() => new RagFileParsingConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RagFileParsingConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileParsingConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileParsingConfig(RagFileParsingConfig other) : this() {
+      switch (other.ParserCase) {
+        case ParserOneofCase.LayoutParser:
+          LayoutParser = other.LayoutParser.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RagFileParsingConfig Clone() {
+      return new RagFileParsingConfig(this);
+    }
+
+    /// <summary>Field number for the "layout_parser" field.</summary>
+    public const int LayoutParserFieldNumber = 4;
+    /// <summary>
+    /// The Layout Parser to use for RagFiles.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser LayoutParser {
+      get { return parserCase_ == ParserOneofCase.LayoutParser ? (global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser) parser_ : null; }
+      set {
+        parser_ = value;
+        parserCase_ = value == null ? ParserOneofCase.None : ParserOneofCase.LayoutParser;
+      }
+    }
+
+    private object parser_;
+    /// <summary>Enum of possible cases for the "parser" oneof.</summary>
+    public enum ParserOneofCase {
+      None = 0,
+      LayoutParser = 4,
+    }
+    private ParserOneofCase parserCase_ = ParserOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParserOneofCase ParserCase {
+      get { return parserCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearParser() {
+      parserCase_ = ParserOneofCase.None;
+      parser_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RagFileParsingConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RagFileParsingConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(LayoutParser, other.LayoutParser)) return false;
+      if (ParserCase != other.ParserCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (parserCase_ == ParserOneofCase.LayoutParser) hash ^= LayoutParser.GetHashCode();
+      hash ^= (int) parserCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (parserCase_ == ParserOneofCase.LayoutParser) {
+        output.WriteRawTag(34);
+        output.WriteMessage(LayoutParser);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (parserCase_ == ParserOneofCase.LayoutParser) {
+        output.WriteRawTag(34);
+        output.WriteMessage(LayoutParser);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (parserCase_ == ParserOneofCase.LayoutParser) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LayoutParser);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RagFileParsingConfig other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ParserCase) {
+        case ParserOneofCase.LayoutParser:
+          if (LayoutParser == null) {
+            LayoutParser = new global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser();
+          }
+          LayoutParser.MergeFrom(other.LayoutParser);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 34: {
+            global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser subBuilder = new global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser();
+            if (parserCase_ == ParserOneofCase.LayoutParser) {
+              subBuilder.MergeFrom(LayoutParser);
+            }
+            input.ReadMessage(subBuilder);
+            LayoutParser = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 34: {
+            global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser subBuilder = new global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Types.LayoutParser();
+            if (parserCase_ == ParserOneofCase.LayoutParser) {
+              subBuilder.MergeFrom(LayoutParser);
+            }
+            input.ReadMessage(subBuilder);
+            LayoutParser = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the RagFileParsingConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Document AI Layout Parser config.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class LayoutParser : pb::IMessage<LayoutParser>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<LayoutParser> _parser = new pb::MessageParser<LayoutParser>(() => new LayoutParser());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<LayoutParser> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LayoutParser() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LayoutParser(LayoutParser other) : this() {
+          processorName_ = other.processorName_;
+          maxParsingRequestsPerMin_ = other.maxParsingRequestsPerMin_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LayoutParser Clone() {
+          return new LayoutParser(this);
+        }
+
+        /// <summary>Field number for the "processor_name" field.</summary>
+        public const int ProcessorNameFieldNumber = 1;
+        private string processorName_ = "";
+        /// <summary>
+        /// The full resource name of a Document AI processor or processor version.
+        /// The processor must have type `LAYOUT_PARSER_PROCESSOR`. If specified, the
+        /// `additional_config.parse_as_scanned_pdf` field must be false.
+        /// Format:
+        /// * `projects/{project_id}/locations/{location}/processors/{processor_id}`
+        /// * `projects/{project_id}/locations/{location}/processors/{processor_id}/processorVersions/{processor_version_id}`
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ProcessorName {
+          get { return processorName_; }
+          set {
+            processorName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "max_parsing_requests_per_min" field.</summary>
+        public const int MaxParsingRequestsPerMinFieldNumber = 2;
+        private int maxParsingRequestsPerMin_;
+        /// <summary>
+        /// The maximum number of requests the job is allowed to make to the Document
+        /// AI processor per minute. Consult
+        /// https://cloud.google.com/document-ai/quotas and the Quota page for your
+        /// project to set an appropriate value here. If unspecified, a default value
+        /// of 120 QPM would be used.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxParsingRequestsPerMin {
+          get { return maxParsingRequestsPerMin_; }
+          set {
+            maxParsingRequestsPerMin_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as LayoutParser);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(LayoutParser other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ProcessorName != other.ProcessorName) return false;
+          if (MaxParsingRequestsPerMin != other.MaxParsingRequestsPerMin) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ProcessorName.Length != 0) hash ^= ProcessorName.GetHashCode();
+          if (MaxParsingRequestsPerMin != 0) hash ^= MaxParsingRequestsPerMin.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ProcessorName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProcessorName);
+          }
+          if (MaxParsingRequestsPerMin != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MaxParsingRequestsPerMin);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ProcessorName.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ProcessorName);
+          }
+          if (MaxParsingRequestsPerMin != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MaxParsingRequestsPerMin);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ProcessorName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ProcessorName);
+          }
+          if (MaxParsingRequestsPerMin != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxParsingRequestsPerMin);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(LayoutParser other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ProcessorName.Length != 0) {
+            ProcessorName = other.ProcessorName;
+          }
+          if (other.MaxParsingRequestsPerMin != 0) {
+            MaxParsingRequestsPerMin = other.MaxParsingRequestsPerMin;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ProcessorName = input.ReadString();
+                break;
+              }
+              case 16: {
+                MaxParsingRequestsPerMin = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ProcessorName = input.ReadString();
+                break;
+              }
+              case 16: {
+                MaxParsingRequestsPerMin = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Config for uploading RagFile.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -4261,7 +4760,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4466,7 +4965,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4487,6 +4986,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportRagFilesConfig(ImportRagFilesConfig other) : this() {
       ragFileTransformationConfig_ = other.ragFileTransformationConfig_ != null ? other.ragFileTransformationConfig_.Clone() : null;
+      ragFileParsingConfig_ = other.ragFileParsingConfig_ != null ? other.ragFileParsingConfig_.Clone() : null;
       maxEmbeddingRequestsPerMin_ = other.maxEmbeddingRequestsPerMin_;
       switch (other.ImportSourceCase) {
         case ImportSourceOneofCase.GcsSource:
@@ -4657,6 +5157,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "rag_file_parsing_config" field.</summary>
+    public const int RagFileParsingConfigFieldNumber = 8;
+    private global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig ragFileParsingConfig_;
+    /// <summary>
+    /// Optional. Specifies the parsing config for RagFiles.
+    /// RAG will use the default parser if this field is not set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig RagFileParsingConfig {
+      get { return ragFileParsingConfig_; }
+      set {
+        ragFileParsingConfig_ = value;
+      }
+    }
+
     /// <summary>Field number for the "max_embedding_requests_per_min" field.</summary>
     public const int MaxEmbeddingRequestsPerMinFieldNumber = 5;
     private int maxEmbeddingRequestsPerMin_;
@@ -4744,6 +5260,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(PartialFailureGcsSink, other.PartialFailureGcsSink)) return false;
       if (!object.Equals(PartialFailureBigquerySink, other.PartialFailureBigquerySink)) return false;
       if (!object.Equals(RagFileTransformationConfig, other.RagFileTransformationConfig)) return false;
+      if (!object.Equals(RagFileParsingConfig, other.RagFileParsingConfig)) return false;
       if (MaxEmbeddingRequestsPerMin != other.MaxEmbeddingRequestsPerMin) return false;
       if (ImportSourceCase != other.ImportSourceCase) return false;
       if (PartialFailureSinkCase != other.PartialFailureSinkCase) return false;
@@ -4762,6 +5279,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) hash ^= PartialFailureGcsSink.GetHashCode();
       if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureBigquerySink) hash ^= PartialFailureBigquerySink.GetHashCode();
       if (ragFileTransformationConfig_ != null) hash ^= RagFileTransformationConfig.GetHashCode();
+      if (ragFileParsingConfig_ != null) hash ^= RagFileParsingConfig.GetHashCode();
       if (MaxEmbeddingRequestsPerMin != 0) hash ^= MaxEmbeddingRequestsPerMin.GetHashCode();
       hash ^= (int) importSourceCase_;
       hash ^= (int) partialFailureSinkCase_;
@@ -4802,6 +5320,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (importSourceCase_ == ImportSourceOneofCase.JiraSource) {
         output.WriteRawTag(58);
         output.WriteMessage(JiraSource);
+      }
+      if (ragFileParsingConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RagFileParsingConfig);
       }
       if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) {
         output.WriteRawTag(90);
@@ -4848,6 +5370,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (importSourceCase_ == ImportSourceOneofCase.JiraSource) {
         output.WriteRawTag(58);
         output.WriteMessage(JiraSource);
+      }
+      if (ragFileParsingConfig_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(RagFileParsingConfig);
       }
       if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) {
         output.WriteRawTag(90);
@@ -4899,6 +5425,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ragFileTransformationConfig_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(RagFileTransformationConfig);
       }
+      if (ragFileParsingConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RagFileParsingConfig);
+      }
       if (MaxEmbeddingRequestsPerMin != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxEmbeddingRequestsPerMin);
       }
@@ -4919,6 +5448,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1.RagFileTransformationConfig();
         }
         RagFileTransformationConfig.MergeFrom(other.RagFileTransformationConfig);
+      }
+      if (other.ragFileParsingConfig_ != null) {
+        if (ragFileParsingConfig_ == null) {
+          RagFileParsingConfig = new global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig();
+        }
+        RagFileParsingConfig.MergeFrom(other.RagFileParsingConfig);
       }
       if (other.MaxEmbeddingRequestsPerMin != 0) {
         MaxEmbeddingRequestsPerMin = other.MaxEmbeddingRequestsPerMin;
@@ -5026,6 +5561,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             JiraSource = subBuilder;
             break;
           }
+          case 66: {
+            if (ragFileParsingConfig_ == null) {
+              RagFileParsingConfig = new global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig();
+            }
+            input.ReadMessage(RagFileParsingConfig);
+            break;
+          }
           case 90: {
             global::Google.Cloud.AIPlatform.V1.GcsDestination subBuilder = new global::Google.Cloud.AIPlatform.V1.GcsDestination();
             if (partialFailureSinkCase_ == PartialFailureSinkOneofCase.PartialFailureGcsSink) {
@@ -5113,6 +5655,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             JiraSource = subBuilder;
+            break;
+          }
+          case 66: {
+            if (ragFileParsingConfig_ == null) {
+              RagFileParsingConfig = new global::Google.Cloud.AIPlatform.V1.RagFileParsingConfig();
+            }
+            input.ReadMessage(RagFileParsingConfig);
             break;
           }
           case 90: {
