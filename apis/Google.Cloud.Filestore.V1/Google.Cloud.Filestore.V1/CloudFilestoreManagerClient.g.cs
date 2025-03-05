@@ -80,6 +80,8 @@ namespace Google.Cloud.Filestore.V1
             DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
             UpdateBackupSettings = existing.UpdateBackupSettings;
             UpdateBackupOperationsSettings = existing.UpdateBackupOperationsSettings.Clone();
+            PromoteReplicaSettings = existing.PromoteReplicaSettings;
+            PromoteReplicaOperationsSettings = existing.PromoteReplicaOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -516,6 +518,37 @@ namespace Google.Cloud.Filestore.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudFilestoreManagerClient.PromoteReplica</c> and <c>CloudFilestoreManagerClient.PromoteReplicaAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PromoteReplicaSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudFilestoreManagerClient.PromoteReplica</c> and
+        /// <c>CloudFilestoreManagerClient.PromoteReplicaAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PromoteReplicaOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1264,6 +1297,9 @@ namespace Google.Cloud.Filestore.V1
         /// * "description"
         /// * "file_shares"
         /// * "labels"
+        /// * "performance_config"
+        /// * "deletion_protection_enabled"
+        /// * "deletion_protection_reason"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1288,6 +1324,9 @@ namespace Google.Cloud.Filestore.V1
         /// * "description"
         /// * "file_shares"
         /// * "labels"
+        /// * "performance_config"
+        /// * "deletion_protection_enabled"
+        /// * "deletion_protection_reason"
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1312,6 +1351,9 @@ namespace Google.Cloud.Filestore.V1
         /// * "description"
         /// * "file_shares"
         /// * "labels"
+        /// * "performance_config"
+        /// * "deletion_protection_enabled"
+        /// * "deletion_protection_reason"
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3048,6 +3090,59 @@ namespace Google.Cloud.Filestore.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Backup, gcc::OperationMetadata>> UpdateBackupAsync(Backup backup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateBackupAsync(backup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Promote the standby instance (replica).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, gcc::OperationMetadata> PromoteReplica(PromoteReplicaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Promote the standby instance (replica).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, gcc::OperationMetadata>> PromoteReplicaAsync(PromoteReplicaRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Promote the standby instance (replica).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, gcc::OperationMetadata>> PromoteReplicaAsync(PromoteReplicaRequest request, st::CancellationToken cancellationToken) =>
+            PromoteReplicaAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PromoteReplica</c>.</summary>
+        public virtual lro::OperationsClient PromoteReplicaOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PromoteReplica</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, gcc::OperationMetadata> PollOncePromoteReplica(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, gcc::OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PromoteReplicaOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PromoteReplica</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, gcc::OperationMetadata>> PollOncePromoteReplicaAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, gcc::OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PromoteReplicaOperationsClient, callSettings);
     }
 
     /// <summary>CloudFilestoreManager client wrapper implementation, for convenient use.</summary>
@@ -3108,6 +3203,8 @@ namespace Google.Cloud.Filestore.V1
 
         private readonly gaxgrpc::ApiCall<UpdateBackupRequest, lro::Operation> _callUpdateBackup;
 
+        private readonly gaxgrpc::ApiCall<PromoteReplicaRequest, lro::Operation> _callPromoteReplica;
+
         /// <summary>
         /// Constructs a client wrapper for the CloudFilestoreManager service, with the specified gRPC client and
         /// settings.
@@ -3135,6 +3232,7 @@ namespace Google.Cloud.Filestore.V1
             CreateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateBackupOperationsSettings, logger);
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
             UpdateBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateBackupOperationsSettings, logger);
+            PromoteReplicaOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PromoteReplicaOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
@@ -3187,6 +3285,9 @@ namespace Google.Cloud.Filestore.V1
             _callUpdateBackup = clientHelper.BuildApiCall<UpdateBackupRequest, lro::Operation>("UpdateBackup", grpcClient.UpdateBackupAsync, grpcClient.UpdateBackup, effectiveSettings.UpdateBackupSettings).WithGoogleRequestParam("backup.name", request => request.Backup?.Name);
             Modify_ApiCall(ref _callUpdateBackup);
             Modify_UpdateBackupApiCall(ref _callUpdateBackup);
+            _callPromoteReplica = clientHelper.BuildApiCall<PromoteReplicaRequest, lro::Operation>("PromoteReplica", grpcClient.PromoteReplicaAsync, grpcClient.PromoteReplica, effectiveSettings.PromoteReplicaSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callPromoteReplica);
+            Modify_PromoteReplicaApiCall(ref _callPromoteReplica);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3225,6 +3326,8 @@ namespace Google.Cloud.Filestore.V1
         partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> call);
 
         partial void Modify_UpdateBackupApiCall(ref gaxgrpc::ApiCall<UpdateBackupRequest, lro::Operation> call);
+
+        partial void Modify_PromoteReplicaApiCall(ref gaxgrpc::ApiCall<PromoteReplicaRequest, lro::Operation> call);
 
         partial void OnConstruction(CloudFilestoreManager.CloudFilestoreManagerClient grpcClient, CloudFilestoreManagerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3267,6 +3370,8 @@ namespace Google.Cloud.Filestore.V1
         partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateBackupRequest(ref UpdateBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PromoteReplicaRequest(ref PromoteReplicaRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all instances in a project for either a specified location
@@ -3727,6 +3832,33 @@ namespace Google.Cloud.Filestore.V1
         {
             Modify_UpdateBackupRequest(ref request, ref callSettings);
             return new lro::Operation<Backup, gcc::OperationMetadata>(await _callUpdateBackup.Async(request, callSettings).ConfigureAwait(false), UpdateBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PromoteReplica</c>.</summary>
+        public override lro::OperationsClient PromoteReplicaOperationsClient { get; }
+
+        /// <summary>
+        /// Promote the standby instance (replica).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, gcc::OperationMetadata> PromoteReplica(PromoteReplicaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PromoteReplicaRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, gcc::OperationMetadata>(_callPromoteReplica.Sync(request, callSettings), PromoteReplicaOperationsClient);
+        }
+
+        /// <summary>
+        /// Promote the standby instance (replica).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, gcc::OperationMetadata>> PromoteReplicaAsync(PromoteReplicaRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PromoteReplicaRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, gcc::OperationMetadata>(await _callPromoteReplica.Async(request, callSettings).ConfigureAwait(false), PromoteReplicaOperationsClient);
         }
     }
 

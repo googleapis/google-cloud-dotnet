@@ -1654,12 +1654,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 78,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -1703,12 +1703,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 82,
+          "end": 83,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 80,
+          "end": 81,
           "type": "SHORT"
         }
       ]
@@ -4436,6 +4436,103 @@
         {
           "start": 38,
           "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_PromoteReplica_sync",
+      "title": "PromoteReplicaRequestObject",
+      "description": "Snippet for PromoteReplica",
+      "file": "CloudFilestoreManagerClient.PromoteReplicaRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PromoteReplica",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.PromoteReplica",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.PromoteReplicaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Instance, Google.Cloud.Common.OperationMetadata>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "PromoteReplica",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.PromoteReplica",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "file_v1_generated_CloudFilestoreManager_PromoteReplica_async",
+      "title": "PromoteReplicaRequestObjectAsync",
+      "description": "Snippet for PromoteReplicaAsync",
+      "file": "CloudFilestoreManagerClient.PromoteReplicaRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PromoteReplicaAsync",
+        "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient.PromoteReplicaAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Filestore.V1.PromoteReplicaRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Filestore.V1.Instance, Google.Cloud.Common.OperationMetadata>>",
+        "client": {
+          "shortName": "CloudFilestoreManagerClient",
+          "fullName": "Google.Cloud.Filestore.V1.CloudFilestoreManagerClient"
+        },
+        "method": {
+          "shortName": "PromoteReplica",
+          "fullName": "google.cloud.filestore.v1.CloudFilestoreManager.PromoteReplica",
+          "service": {
+            "shortName": "CloudFilestoreManager",
+            "fullName": "google.cloud.filestore.v1.CloudFilestoreManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
           "type": "SHORT"
         }
       ]

@@ -82,6 +82,12 @@
                 "ListSnapshotsAsync"
               ]
             },
+            "PromoteReplica": {
+              "methods": [
+                "PromoteReplica",
+                "PromoteReplicaAsync"
+              ]
+            },
             "RestoreInstance": {
               "methods": [
                 "RestoreInstance",

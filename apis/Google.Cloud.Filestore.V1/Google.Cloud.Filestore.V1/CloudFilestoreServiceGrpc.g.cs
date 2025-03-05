@@ -129,6 +129,8 @@ namespace Google.Cloud.Filestore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.DeleteBackupRequest> __Marshaller_google_cloud_filestore_v1_DeleteBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.DeleteBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.UpdateBackupRequest> __Marshaller_google_cloud_filestore_v1_UpdateBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.UpdateBackupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Filestore.V1.PromoteReplicaRequest> __Marshaller_google_cloud_filestore_v1_PromoteReplicaRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Filestore.V1.PromoteReplicaRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Filestore.V1.ListInstancesRequest, global::Google.Cloud.Filestore.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Filestore.V1.ListInstancesRequest, global::Google.Cloud.Filestore.V1.ListInstancesResponse>(
@@ -264,6 +266,14 @@ namespace Google.Cloud.Filestore.V1 {
         __ServiceName,
         "UpdateBackup",
         __Marshaller_google_cloud_filestore_v1_UpdateBackupRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Filestore.V1.PromoteReplicaRequest, global::Google.LongRunning.Operation> __Method_PromoteReplica = new grpc::Method<global::Google.Cloud.Filestore.V1.PromoteReplicaRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PromoteReplica",
+        __Marshaller_google_cloud_filestore_v1_PromoteReplicaRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -486,6 +496,18 @@ namespace Google.Cloud.Filestore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateBackup(global::Google.Cloud.Filestore.V1.UpdateBackupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Promote the standby instance (replica).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PromoteReplica(global::Google.Cloud.Filestore.V1.PromoteReplicaRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1375,6 +1397,54 @@ namespace Google.Cloud.Filestore.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateBackup, null, options, request);
       }
+      /// <summary>
+      /// Promote the standby instance (replica).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PromoteReplica(global::Google.Cloud.Filestore.V1.PromoteReplicaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PromoteReplica(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Promote the standby instance (replica).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PromoteReplica(global::Google.Cloud.Filestore.V1.PromoteReplicaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PromoteReplica, null, options, request);
+      }
+      /// <summary>
+      /// Promote the standby instance (replica).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PromoteReplicaAsync(global::Google.Cloud.Filestore.V1.PromoteReplicaRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PromoteReplicaAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Promote the standby instance (replica).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PromoteReplicaAsync(global::Google.Cloud.Filestore.V1.PromoteReplicaRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PromoteReplica, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudFilestoreManagerClient NewInstance(ClientBaseConfiguration configuration)
@@ -1405,7 +1475,8 @@ namespace Google.Cloud.Filestore.V1 {
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
           .AddMethod(__Method_CreateBackup, serviceImpl.CreateBackup)
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
-          .AddMethod(__Method_UpdateBackup, serviceImpl.UpdateBackup).Build();
+          .AddMethod(__Method_UpdateBackup, serviceImpl.UpdateBackup)
+          .AddMethod(__Method_PromoteReplica, serviceImpl.PromoteReplica).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1432,6 +1503,7 @@ namespace Google.Cloud.Filestore.V1 {
       serviceBinder.AddMethod(__Method_CreateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.CreateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateBackup));
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.DeleteBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackup));
       serviceBinder.AddMethod(__Method_UpdateBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.UpdateBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateBackup));
+      serviceBinder.AddMethod(__Method_PromoteReplica, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Filestore.V1.PromoteReplicaRequest, global::Google.LongRunning.Operation>(serviceImpl.PromoteReplica));
     }
 
   }

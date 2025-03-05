@@ -786,6 +786,18 @@ namespace Google.Cloud.Filestore.V1
         }
     }
 
+    public partial class ReplicaConfig
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="PeerInstance"/> resource name property.
+        /// </summary>
+        public InstanceName PeerInstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(PeerInstance) ? null : InstanceName.Parse(PeerInstance, allowUnparsed: true);
+            set => PeerInstance = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Instance
     {
         /// <summary>
@@ -981,6 +993,27 @@ namespace Google.Cloud.Filestore.V1
         {
             get => string.IsNullOrEmpty(Name) ? null : gcfv::BackupName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PromoteReplicaRequest
+    {
+        /// <summary>
+        /// <see cref="gcfv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gcfv::InstanceName"/>-typed view over the <see cref="PeerInstance"/> resource name property.
+        /// </summary>
+        public gcfv::InstanceName PeerInstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(PeerInstance) ? null : gcfv::InstanceName.Parse(PeerInstance, allowUnparsed: true);
+            set => PeerInstance = value?.ToString() ?? "";
         }
     }
 
