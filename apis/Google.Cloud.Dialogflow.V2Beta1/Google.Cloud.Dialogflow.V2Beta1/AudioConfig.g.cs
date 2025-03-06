@@ -3262,6 +3262,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     private readonly pbc::RepeatedField<string> phraseSets_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// List of names of Cloud Speech phrase sets that are used for transcription.
+    /// For phrase set limitations, please refer to [Cloud Speech API quotas and
+    /// limits](https://cloud.google.com/speech-to-text/quotas#content).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

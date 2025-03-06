@@ -226,10 +226,22 @@
                 "GenerateStatelessSummaryAsync"
               ]
             },
+            "GenerateSuggestions": {
+              "methods": [
+                "GenerateSuggestions",
+                "GenerateSuggestionsAsync"
+              ]
+            },
             "GetConversation": {
               "methods": [
                 "GetConversation",
                 "GetConversationAsync"
+              ]
+            },
+            "IngestContextReferences": {
+              "methods": [
+                "IngestContextReferences",
+                "IngestContextReferencesAsync"
               ]
             },
             "ListConversations": {
