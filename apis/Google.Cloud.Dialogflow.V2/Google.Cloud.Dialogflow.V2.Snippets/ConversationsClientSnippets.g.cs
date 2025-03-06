@@ -21,6 +21,7 @@ namespace GoogleCSharpSnippets
     using Google.Cloud.Dialogflow.V2;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -693,6 +694,135 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for IngestContextReferences</summary>
+        public void IngestContextReferencesRequestObject()
+        {
+            // Snippet: IngestContextReferences(IngestContextReferencesRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            IngestContextReferencesRequest request = new IngestContextReferencesRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                ContextReferences =
+                {
+                    {
+                        "",
+                        new Conversation.Types.ContextReference()
+                    },
+                },
+            };
+            // Make the request
+            IngestContextReferencesResponse response = conversationsClient.IngestContextReferences(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestContextReferencesAsync</summary>
+        public async Task IngestContextReferencesRequestObjectAsync()
+        {
+            // Snippet: IngestContextReferencesAsync(IngestContextReferencesRequest, CallSettings)
+            // Additional: IngestContextReferencesAsync(IngestContextReferencesRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            IngestContextReferencesRequest request = new IngestContextReferencesRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                ContextReferences =
+                {
+                    {
+                        "",
+                        new Conversation.Types.ContextReference()
+                    },
+                },
+            };
+            // Make the request
+            IngestContextReferencesResponse response = await conversationsClient.IngestContextReferencesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestContextReferences</summary>
+        public void IngestContextReferences()
+        {
+            // Snippet: IngestContextReferences(string, IDictionary<string,Conversation.Types.ContextReference>, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            string conversation = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            IDictionary<string, Conversation.Types.ContextReference> contextReferences = new Dictionary<string, Conversation.Types.ContextReference>
+            {
+                {
+                    "",
+                    new Conversation.Types.ContextReference()
+                },
+            };
+            // Make the request
+            IngestContextReferencesResponse response = conversationsClient.IngestContextReferences(conversation, contextReferences);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestContextReferencesAsync</summary>
+        public async Task IngestContextReferencesAsync()
+        {
+            // Snippet: IngestContextReferencesAsync(string, IDictionary<string,Conversation.Types.ContextReference>, CallSettings)
+            // Additional: IngestContextReferencesAsync(string, IDictionary<string,Conversation.Types.ContextReference>, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string conversation = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            IDictionary<string, Conversation.Types.ContextReference> contextReferences = new Dictionary<string, Conversation.Types.ContextReference>
+            {
+                {
+                    "",
+                    new Conversation.Types.ContextReference()
+                },
+            };
+            // Make the request
+            IngestContextReferencesResponse response = await conversationsClient.IngestContextReferencesAsync(conversation, contextReferences);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestContextReferences</summary>
+        public void IngestContextReferencesResourceNames()
+        {
+            // Snippet: IngestContextReferences(ConversationName, IDictionary<string,Conversation.Types.ContextReference>, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            ConversationName conversation = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            IDictionary<string, Conversation.Types.ContextReference> contextReferences = new Dictionary<string, Conversation.Types.ContextReference>
+            {
+                {
+                    "",
+                    new Conversation.Types.ContextReference()
+                },
+            };
+            // Make the request
+            IngestContextReferencesResponse response = conversationsClient.IngestContextReferences(conversation, contextReferences);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestContextReferencesAsync</summary>
+        public async Task IngestContextReferencesResourceNamesAsync()
+        {
+            // Snippet: IngestContextReferencesAsync(ConversationName, IDictionary<string,Conversation.Types.ContextReference>, CallSettings)
+            // Additional: IngestContextReferencesAsync(ConversationName, IDictionary<string,Conversation.Types.ContextReference>, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversationName conversation = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            IDictionary<string, Conversation.Types.ContextReference> contextReferences = new Dictionary<string, Conversation.Types.ContextReference>
+            {
+                {
+                    "",
+                    new Conversation.Types.ContextReference()
+                },
+            };
+            // Make the request
+            IngestContextReferencesResponse response = await conversationsClient.IngestContextReferencesAsync(conversation, contextReferences);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListMessages</summary>
         public void ListMessagesRequestObject()
         {
@@ -1114,6 +1244,13 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Generator = new Generator(),
+                ContextReferences =
+                {
+                    {
+                        "",
+                        new Conversation.Types.ContextReference()
+                    },
+                },
                 ConversationContext = new ConversationContext(),
                 TriggerEvents =
                 {
@@ -1137,6 +1274,13 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Generator = new Generator(),
+                ContextReferences =
+                {
+                    {
+                        "",
+                        new Conversation.Types.ContextReference()
+                    },
+                },
                 ConversationContext = new ConversationContext(),
                 TriggerEvents =
                 {
@@ -1196,6 +1340,103 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             SearchKnowledgeResponse response = await conversationsClient.SearchKnowledgeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateSuggestions</summary>
+        public void GenerateSuggestionsRequestObject()
+        {
+            // Snippet: GenerateSuggestions(GenerateSuggestionsRequest, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            GenerateSuggestionsRequest request = new GenerateSuggestionsRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                TriggerEvents =
+                {
+                    TriggerEvent.Unspecified,
+                },
+            };
+            // Make the request
+            GenerateSuggestionsResponse response = conversationsClient.GenerateSuggestions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateSuggestionsAsync</summary>
+        public async Task GenerateSuggestionsRequestObjectAsync()
+        {
+            // Snippet: GenerateSuggestionsAsync(GenerateSuggestionsRequest, CallSettings)
+            // Additional: GenerateSuggestionsAsync(GenerateSuggestionsRequest, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            GenerateSuggestionsRequest request = new GenerateSuggestionsRequest
+            {
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                TriggerEvents =
+                {
+                    TriggerEvent.Unspecified,
+                },
+            };
+            // Make the request
+            GenerateSuggestionsResponse response = await conversationsClient.GenerateSuggestionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateSuggestions</summary>
+        public void GenerateSuggestions()
+        {
+            // Snippet: GenerateSuggestions(string, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            string conversation = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            // Make the request
+            GenerateSuggestionsResponse response = conversationsClient.GenerateSuggestions(conversation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateSuggestionsAsync</summary>
+        public async Task GenerateSuggestionsAsync()
+        {
+            // Snippet: GenerateSuggestionsAsync(string, CallSettings)
+            // Additional: GenerateSuggestionsAsync(string, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string conversation = "projects/[PROJECT]/conversations/[CONVERSATION]";
+            // Make the request
+            GenerateSuggestionsResponse response = await conversationsClient.GenerateSuggestionsAsync(conversation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateSuggestions</summary>
+        public void GenerateSuggestionsResourceNames()
+        {
+            // Snippet: GenerateSuggestions(ConversationName, CallSettings)
+            // Create client
+            ConversationsClient conversationsClient = ConversationsClient.Create();
+            // Initialize request argument(s)
+            ConversationName conversation = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            // Make the request
+            GenerateSuggestionsResponse response = conversationsClient.GenerateSuggestions(conversation);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GenerateSuggestionsAsync</summary>
+        public async Task GenerateSuggestionsResourceNamesAsync()
+        {
+            // Snippet: GenerateSuggestionsAsync(ConversationName, CallSettings)
+            // Additional: GenerateSuggestionsAsync(ConversationName, CancellationToken)
+            // Create client
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
+            // Initialize request argument(s)
+            ConversationName conversation = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
+            // Make the request
+            GenerateSuggestionsResponse response = await conversationsClient.GenerateSuggestionsAsync(conversation);
             // End snippet
         }
     }

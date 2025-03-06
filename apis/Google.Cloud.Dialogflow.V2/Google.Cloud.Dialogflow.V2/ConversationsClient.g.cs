@@ -51,11 +51,13 @@ namespace Google.Cloud.Dialogflow.V2
             ListConversationsSettings = existing.ListConversationsSettings;
             GetConversationSettings = existing.GetConversationSettings;
             CompleteConversationSettings = existing.CompleteConversationSettings;
+            IngestContextReferencesSettings = existing.IngestContextReferencesSettings;
             ListMessagesSettings = existing.ListMessagesSettings;
             SuggestConversationSummarySettings = existing.SuggestConversationSummarySettings;
             GenerateStatelessSummarySettings = existing.GenerateStatelessSummarySettings;
             GenerateStatelessSuggestionSettings = existing.GenerateStatelessSuggestionSettings;
             SearchKnowledgeSettings = existing.SearchKnowledgeSettings;
+            GenerateSuggestionsSettings = existing.GenerateSuggestionsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -133,6 +135,25 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings CompleteConversationSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.IngestContextReferences</c> and <c>ConversationsClient.IngestContextReferencesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings IngestContextReferencesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -226,6 +247,24 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SearchKnowledgeSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationsClient.GenerateSuggestions</c> and <c>ConversationsClient.GenerateSuggestionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GenerateSuggestionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1271,6 +1310,184 @@ namespace Google.Cloud.Dialogflow.V2
             CompleteConversationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IngestContextReferencesResponse IngestContextReferences(IngestContextReferencesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IngestContextReferencesResponse> IngestContextReferencesAsync(IngestContextReferencesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IngestContextReferencesResponse> IngestContextReferencesAsync(IngestContextReferencesRequest request, st::CancellationToken cancellationToken) =>
+            IngestContextReferencesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. Resource identifier of the conversation to ingest context
+        /// information for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="contextReferences">
+        /// Required. The context references to ingest. The key is the name of the
+        /// context reference and the value contains the contents of the context
+        /// reference. The key is used to incorporate ingested context references to
+        /// enhance the generator.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IngestContextReferencesResponse IngestContextReferences(string conversation, scg::IDictionary<string, Conversation.Types.ContextReference> contextReferences, gaxgrpc::CallSettings callSettings = null) =>
+            IngestContextReferences(new IngestContextReferencesRequest
+            {
+                Conversation = gax::GaxPreconditions.CheckNotNullOrEmpty(conversation, nameof(conversation)),
+                ContextReferences =
+                {
+                    gax::GaxPreconditions.CheckNotNull(contextReferences, nameof(contextReferences)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. Resource identifier of the conversation to ingest context
+        /// information for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="contextReferences">
+        /// Required. The context references to ingest. The key is the name of the
+        /// context reference and the value contains the contents of the context
+        /// reference. The key is used to incorporate ingested context references to
+        /// enhance the generator.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IngestContextReferencesResponse> IngestContextReferencesAsync(string conversation, scg::IDictionary<string, Conversation.Types.ContextReference> contextReferences, gaxgrpc::CallSettings callSettings = null) =>
+            IngestContextReferencesAsync(new IngestContextReferencesRequest
+            {
+                Conversation = gax::GaxPreconditions.CheckNotNullOrEmpty(conversation, nameof(conversation)),
+                ContextReferences =
+                {
+                    gax::GaxPreconditions.CheckNotNull(contextReferences, nameof(contextReferences)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. Resource identifier of the conversation to ingest context
+        /// information for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="contextReferences">
+        /// Required. The context references to ingest. The key is the name of the
+        /// context reference and the value contains the contents of the context
+        /// reference. The key is used to incorporate ingested context references to
+        /// enhance the generator.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IngestContextReferencesResponse> IngestContextReferencesAsync(string conversation, scg::IDictionary<string, Conversation.Types.ContextReference> contextReferences, st::CancellationToken cancellationToken) =>
+            IngestContextReferencesAsync(conversation, contextReferences, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. Resource identifier of the conversation to ingest context
+        /// information for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="contextReferences">
+        /// Required. The context references to ingest. The key is the name of the
+        /// context reference and the value contains the contents of the context
+        /// reference. The key is used to incorporate ingested context references to
+        /// enhance the generator.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IngestContextReferencesResponse IngestContextReferences(ConversationName conversation, scg::IDictionary<string, Conversation.Types.ContextReference> contextReferences, gaxgrpc::CallSettings callSettings = null) =>
+            IngestContextReferences(new IngestContextReferencesRequest
+            {
+                ConversationAsConversationName = gax::GaxPreconditions.CheckNotNull(conversation, nameof(conversation)),
+                ContextReferences =
+                {
+                    gax::GaxPreconditions.CheckNotNull(contextReferences, nameof(contextReferences)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. Resource identifier of the conversation to ingest context
+        /// information for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="contextReferences">
+        /// Required. The context references to ingest. The key is the name of the
+        /// context reference and the value contains the contents of the context
+        /// reference. The key is used to incorporate ingested context references to
+        /// enhance the generator.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IngestContextReferencesResponse> IngestContextReferencesAsync(ConversationName conversation, scg::IDictionary<string, Conversation.Types.ContextReference> contextReferences, gaxgrpc::CallSettings callSettings = null) =>
+            IngestContextReferencesAsync(new IngestContextReferencesRequest
+            {
+                ConversationAsConversationName = gax::GaxPreconditions.CheckNotNull(conversation, nameof(conversation)),
+                ContextReferences =
+                {
+                    gax::GaxPreconditions.CheckNotNull(contextReferences, nameof(contextReferences)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. Resource identifier of the conversation to ingest context
+        /// information for. Format: `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// </param>
+        /// <param name="contextReferences">
+        /// Required. The context references to ingest. The key is the name of the
+        /// context reference and the value contains the contents of the context
+        /// reference. The key is used to incorporate ingested context references to
+        /// enhance the generator.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IngestContextReferencesResponse> IngestContextReferencesAsync(ConversationName conversation, scg::IDictionary<string, Conversation.Types.ContextReference> contextReferences, st::CancellationToken cancellationToken) =>
+            IngestContextReferencesAsync(conversation, contextReferences, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
@@ -1673,6 +1890,159 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SearchKnowledgeResponse> SearchKnowledgeAsync(SearchKnowledgeRequest request, st::CancellationToken cancellationToken) =>
             SearchKnowledgeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateSuggestionsResponse GenerateSuggestions(GenerateSuggestionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateSuggestionsResponse> GenerateSuggestionsAsync(GenerateSuggestionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateSuggestionsResponse> GenerateSuggestionsAsync(GenerateSuggestionsRequest request, st::CancellationToken cancellationToken) =>
+            GenerateSuggestionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation for which the suggestions are generated. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// 
+        /// The conversation must be created with a conversation profile which has
+        /// generators configured in it to be able to get suggestions.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateSuggestionsResponse GenerateSuggestions(string conversation, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateSuggestions(new GenerateSuggestionsRequest
+            {
+                Conversation = gax::GaxPreconditions.CheckNotNullOrEmpty(conversation, nameof(conversation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation for which the suggestions are generated. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// 
+        /// The conversation must be created with a conversation profile which has
+        /// generators configured in it to be able to get suggestions.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateSuggestionsResponse> GenerateSuggestionsAsync(string conversation, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateSuggestionsAsync(new GenerateSuggestionsRequest
+            {
+                Conversation = gax::GaxPreconditions.CheckNotNullOrEmpty(conversation, nameof(conversation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation for which the suggestions are generated. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// 
+        /// The conversation must be created with a conversation profile which has
+        /// generators configured in it to be able to get suggestions.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateSuggestionsResponse> GenerateSuggestionsAsync(string conversation, st::CancellationToken cancellationToken) =>
+            GenerateSuggestionsAsync(conversation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation for which the suggestions are generated. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// 
+        /// The conversation must be created with a conversation profile which has
+        /// generators configured in it to be able to get suggestions.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GenerateSuggestionsResponse GenerateSuggestions(ConversationName conversation, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateSuggestions(new GenerateSuggestionsRequest
+            {
+                ConversationAsConversationName = gax::GaxPreconditions.CheckNotNull(conversation, nameof(conversation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation for which the suggestions are generated. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// 
+        /// The conversation must be created with a conversation profile which has
+        /// generators configured in it to be able to get suggestions.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateSuggestionsResponse> GenerateSuggestionsAsync(ConversationName conversation, gaxgrpc::CallSettings callSettings = null) =>
+            GenerateSuggestionsAsync(new GenerateSuggestionsRequest
+            {
+                ConversationAsConversationName = gax::GaxPreconditions.CheckNotNull(conversation, nameof(conversation)),
+            }, callSettings);
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="conversation">
+        /// Required. The conversation for which the suggestions are generated. Format:
+        /// `projects/&lt;Project ID&gt;/locations/&lt;Location
+        /// ID&gt;/conversations/&lt;Conversation ID&gt;`.
+        /// 
+        /// The conversation must be created with a conversation profile which has
+        /// generators configured in it to be able to get suggestions.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GenerateSuggestionsResponse> GenerateSuggestionsAsync(ConversationName conversation, st::CancellationToken cancellationToken) =>
+            GenerateSuggestionsAsync(conversation, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Conversations client wrapper implementation, for convenient use.</summary>
@@ -1690,6 +2060,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         private readonly gaxgrpc::ApiCall<CompleteConversationRequest, Conversation> _callCompleteConversation;
 
+        private readonly gaxgrpc::ApiCall<IngestContextReferencesRequest, IngestContextReferencesResponse> _callIngestContextReferences;
+
         private readonly gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> _callListMessages;
 
         private readonly gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> _callSuggestConversationSummary;
@@ -1699,6 +2071,8 @@ namespace Google.Cloud.Dialogflow.V2
         private readonly gaxgrpc::ApiCall<GenerateStatelessSuggestionRequest, GenerateStatelessSuggestionResponse> _callGenerateStatelessSuggestion;
 
         private readonly gaxgrpc::ApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse> _callSearchKnowledge;
+
+        private readonly gaxgrpc::ApiCall<GenerateSuggestionsRequest, GenerateSuggestionsResponse> _callGenerateSuggestions;
 
         /// <summary>
         /// Constructs a client wrapper for the Conversations service, with the specified gRPC client and settings.
@@ -1728,6 +2102,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callCompleteConversation = clientHelper.BuildApiCall<CompleteConversationRequest, Conversation>("CompleteConversation", grpcClient.CompleteConversationAsync, grpcClient.CompleteConversation, effectiveSettings.CompleteConversationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCompleteConversation);
             Modify_CompleteConversationApiCall(ref _callCompleteConversation);
+            _callIngestContextReferences = clientHelper.BuildApiCall<IngestContextReferencesRequest, IngestContextReferencesResponse>("IngestContextReferences", grpcClient.IngestContextReferencesAsync, grpcClient.IngestContextReferences, effectiveSettings.IngestContextReferencesSettings).WithGoogleRequestParam("conversation", request => request.Conversation);
+            Modify_ApiCall(ref _callIngestContextReferences);
+            Modify_IngestContextReferencesApiCall(ref _callIngestContextReferences);
             _callListMessages = clientHelper.BuildApiCall<ListMessagesRequest, ListMessagesResponse>("ListMessages", grpcClient.ListMessagesAsync, grpcClient.ListMessages, effectiveSettings.ListMessagesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMessages);
             Modify_ListMessagesApiCall(ref _callListMessages);
@@ -1743,6 +2120,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callSearchKnowledge = clientHelper.BuildApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse>("SearchKnowledge", grpcClient.SearchKnowledgeAsync, grpcClient.SearchKnowledge, effectiveSettings.SearchKnowledgeSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSearchKnowledge);
             Modify_SearchKnowledgeApiCall(ref _callSearchKnowledge);
+            _callGenerateSuggestions = clientHelper.BuildApiCall<GenerateSuggestionsRequest, GenerateSuggestionsResponse>("GenerateSuggestions", grpcClient.GenerateSuggestionsAsync, grpcClient.GenerateSuggestions, effectiveSettings.GenerateSuggestionsSettings).WithGoogleRequestParam("conversation", request => request.Conversation);
+            Modify_ApiCall(ref _callGenerateSuggestions);
+            Modify_GenerateSuggestionsApiCall(ref _callGenerateSuggestions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1756,6 +2136,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void Modify_CompleteConversationApiCall(ref gaxgrpc::ApiCall<CompleteConversationRequest, Conversation> call);
 
+        partial void Modify_IngestContextReferencesApiCall(ref gaxgrpc::ApiCall<IngestContextReferencesRequest, IngestContextReferencesResponse> call);
+
         partial void Modify_ListMessagesApiCall(ref gaxgrpc::ApiCall<ListMessagesRequest, ListMessagesResponse> call);
 
         partial void Modify_SuggestConversationSummaryApiCall(ref gaxgrpc::ApiCall<SuggestConversationSummaryRequest, SuggestConversationSummaryResponse> call);
@@ -1765,6 +2147,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_GenerateStatelessSuggestionApiCall(ref gaxgrpc::ApiCall<GenerateStatelessSuggestionRequest, GenerateStatelessSuggestionResponse> call);
 
         partial void Modify_SearchKnowledgeApiCall(ref gaxgrpc::ApiCall<SearchKnowledgeRequest, SearchKnowledgeResponse> call);
+
+        partial void Modify_GenerateSuggestionsApiCall(ref gaxgrpc::ApiCall<GenerateSuggestionsRequest, GenerateSuggestionsResponse> call);
 
         partial void OnConstruction(Conversations.ConversationsClient grpcClient, ConversationsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1782,6 +2166,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void Modify_CompleteConversationRequest(ref CompleteConversationRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_IngestContextReferencesRequest(ref IngestContextReferencesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListMessagesRequest(ref ListMessagesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SuggestConversationSummaryRequest(ref SuggestConversationSummaryRequest request, ref gaxgrpc::CallSettings settings);
@@ -1791,6 +2177,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_GenerateStatelessSuggestionRequest(ref GenerateStatelessSuggestionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SearchKnowledgeRequest(ref SearchKnowledgeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GenerateSuggestionsRequest(ref GenerateSuggestionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new conversation. Conversations are auto-completed after 24
@@ -1931,6 +2319,32 @@ namespace Google.Cloud.Dialogflow.V2
         }
 
         /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IngestContextReferencesResponse IngestContextReferences(IngestContextReferencesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IngestContextReferencesRequest(ref request, ref callSettings);
+            return _callIngestContextReferences.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Data ingestion API.
+        /// Ingests context references for an existing conversation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IngestContextReferencesResponse> IngestContextReferencesAsync(IngestContextReferencesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_IngestContextReferencesRequest(ref request, ref callSettings);
+            return _callIngestContextReferences.Async(request, callSettings);
+        }
+
+        /// <summary>
         /// Lists messages that belong to a given conversation.
         /// `messages` are ordered by `create_time` in descending order. To fetch
         /// updates without duplication, send request with filter
@@ -2064,6 +2478,34 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_SearchKnowledgeRequest(ref request, ref callSettings);
             return _callSearchKnowledge.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GenerateSuggestionsResponse GenerateSuggestions(GenerateSuggestionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateSuggestionsRequest(ref request, ref callSettings);
+            return _callGenerateSuggestions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates all the suggestions using generators configured in the
+        /// conversation profile. A generator is used only if its trigger event is
+        /// matched.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GenerateSuggestionsResponse> GenerateSuggestionsAsync(GenerateSuggestionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GenerateSuggestionsRequest(ref request, ref callSettings);
+            return _callGenerateSuggestions.Async(request, callSettings);
         }
     }
 

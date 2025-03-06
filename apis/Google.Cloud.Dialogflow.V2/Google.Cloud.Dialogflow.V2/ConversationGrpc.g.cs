@@ -77,6 +77,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.CompleteConversationRequest> __Marshaller_google_cloud_dialogflow_v2_CompleteConversationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.CompleteConversationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest> __Marshaller_google_cloud_dialogflow_v2_IngestContextReferencesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse> __Marshaller_google_cloud_dialogflow_v2_IngestContextReferencesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListMessagesRequest> __Marshaller_google_cloud_dialogflow_v2_ListMessagesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListMessagesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ListMessagesResponse> __Marshaller_google_cloud_dialogflow_v2_ListMessagesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ListMessagesResponse.Parser));
@@ -96,6 +100,10 @@ namespace Google.Cloud.Dialogflow.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SearchKnowledgeRequest> __Marshaller_google_cloud_dialogflow_v2_SearchKnowledgeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SearchKnowledgeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.SearchKnowledgeResponse> __Marshaller_google_cloud_dialogflow_v2_SearchKnowledgeResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.SearchKnowledgeResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest> __Marshaller_google_cloud_dialogflow_v2_GenerateSuggestionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse> __Marshaller_google_cloud_dialogflow_v2_GenerateSuggestionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.CreateConversationRequest, global::Google.Cloud.Dialogflow.V2.Conversation> __Method_CreateConversation = new grpc::Method<global::Google.Cloud.Dialogflow.V2.CreateConversationRequest, global::Google.Cloud.Dialogflow.V2.Conversation>(
@@ -128,6 +136,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         "CompleteConversation",
         __Marshaller_google_cloud_dialogflow_v2_CompleteConversationRequest,
         __Marshaller_google_cloud_dialogflow_v2_Conversation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest, global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse> __Method_IngestContextReferences = new grpc::Method<global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest, global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "IngestContextReferences",
+        __Marshaller_google_cloud_dialogflow_v2_IngestContextReferencesRequest,
+        __Marshaller_google_cloud_dialogflow_v2_IngestContextReferencesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ListMessagesRequest, global::Google.Cloud.Dialogflow.V2.ListMessagesResponse> __Method_ListMessages = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ListMessagesRequest, global::Google.Cloud.Dialogflow.V2.ListMessagesResponse>(
@@ -168,6 +184,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         "SearchKnowledge",
         __Marshaller_google_cloud_dialogflow_v2_SearchKnowledgeRequest,
         __Marshaller_google_cloud_dialogflow_v2_SearchKnowledgeResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest, global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse> __Method_GenerateSuggestions = new grpc::Method<global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest, global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GenerateSuggestions",
+        __Marshaller_google_cloud_dialogflow_v2_GenerateSuggestionsRequest,
+        __Marshaller_google_cloud_dialogflow_v2_GenerateSuggestionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -249,6 +273,19 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
+      /// Data ingestion API.
+      /// Ingests context references for an existing conversation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse> IngestContextReferences(global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists messages that belong to a given conversation.
       /// `messages` are ordered by `create_time` in descending order. To fetch
       /// updates without duplication, send request with filter
@@ -312,6 +349,20 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.SearchKnowledgeResponse> SearchKnowledge(global::Google.Cloud.Dialogflow.V2.SearchKnowledgeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates all the suggestions using generators configured in the
+      /// conversation profile. A generator is used only if its trigger event is
+      /// matched.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse> GenerateSuggestions(global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -622,6 +673,58 @@ namespace Google.Cloud.Dialogflow.V2 {
         return CallInvoker.AsyncUnaryCall(__Method_CompleteConversation, null, options, request);
       }
       /// <summary>
+      /// Data ingestion API.
+      /// Ingests context references for an existing conversation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse IngestContextReferences(global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IngestContextReferences(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Data ingestion API.
+      /// Ingests context references for an existing conversation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse IngestContextReferences(global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_IngestContextReferences, null, options, request);
+      }
+      /// <summary>
+      /// Data ingestion API.
+      /// Ingests context references for an existing conversation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse> IngestContextReferencesAsync(global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IngestContextReferencesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Data ingestion API.
+      /// Ingests context references for an existing conversation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse> IngestContextReferencesAsync(global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_IngestContextReferences, null, options, request);
+      }
+      /// <summary>
       /// Lists messages that belong to a given conversation.
       /// `messages` are ordered by `create_time` in descending order. To fetch
       /// updates without duplication, send request with filter
@@ -893,6 +996,62 @@ namespace Google.Cloud.Dialogflow.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchKnowledge, null, options, request);
       }
+      /// <summary>
+      /// Generates all the suggestions using generators configured in the
+      /// conversation profile. A generator is used only if its trigger event is
+      /// matched.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse GenerateSuggestions(global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateSuggestions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates all the suggestions using generators configured in the
+      /// conversation profile. A generator is used only if its trigger event is
+      /// matched.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse GenerateSuggestions(global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GenerateSuggestions, null, options, request);
+      }
+      /// <summary>
+      /// Generates all the suggestions using generators configured in the
+      /// conversation profile. A generator is used only if its trigger event is
+      /// matched.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse> GenerateSuggestionsAsync(global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GenerateSuggestionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates all the suggestions using generators configured in the
+      /// conversation profile. A generator is used only if its trigger event is
+      /// matched.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse> GenerateSuggestionsAsync(global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GenerateSuggestions, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ConversationsClient NewInstance(ClientBaseConfiguration configuration)
@@ -911,11 +1070,13 @@ namespace Google.Cloud.Dialogflow.V2 {
           .AddMethod(__Method_ListConversations, serviceImpl.ListConversations)
           .AddMethod(__Method_GetConversation, serviceImpl.GetConversation)
           .AddMethod(__Method_CompleteConversation, serviceImpl.CompleteConversation)
+          .AddMethod(__Method_IngestContextReferences, serviceImpl.IngestContextReferences)
           .AddMethod(__Method_ListMessages, serviceImpl.ListMessages)
           .AddMethod(__Method_SuggestConversationSummary, serviceImpl.SuggestConversationSummary)
           .AddMethod(__Method_GenerateStatelessSummary, serviceImpl.GenerateStatelessSummary)
           .AddMethod(__Method_GenerateStatelessSuggestion, serviceImpl.GenerateStatelessSuggestion)
-          .AddMethod(__Method_SearchKnowledge, serviceImpl.SearchKnowledge).Build();
+          .AddMethod(__Method_SearchKnowledge, serviceImpl.SearchKnowledge)
+          .AddMethod(__Method_GenerateSuggestions, serviceImpl.GenerateSuggestions).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -929,11 +1090,13 @@ namespace Google.Cloud.Dialogflow.V2 {
       serviceBinder.AddMethod(__Method_ListConversations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ListConversationsRequest, global::Google.Cloud.Dialogflow.V2.ListConversationsResponse>(serviceImpl.ListConversations));
       serviceBinder.AddMethod(__Method_GetConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GetConversationRequest, global::Google.Cloud.Dialogflow.V2.Conversation>(serviceImpl.GetConversation));
       serviceBinder.AddMethod(__Method_CompleteConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.CompleteConversationRequest, global::Google.Cloud.Dialogflow.V2.Conversation>(serviceImpl.CompleteConversation));
+      serviceBinder.AddMethod(__Method_IngestContextReferences, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.IngestContextReferencesRequest, global::Google.Cloud.Dialogflow.V2.IngestContextReferencesResponse>(serviceImpl.IngestContextReferences));
       serviceBinder.AddMethod(__Method_ListMessages, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ListMessagesRequest, global::Google.Cloud.Dialogflow.V2.ListMessagesResponse>(serviceImpl.ListMessages));
       serviceBinder.AddMethod(__Method_SuggestConversationSummary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryRequest, global::Google.Cloud.Dialogflow.V2.SuggestConversationSummaryResponse>(serviceImpl.SuggestConversationSummary));
       serviceBinder.AddMethod(__Method_GenerateStatelessSummary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryRequest, global::Google.Cloud.Dialogflow.V2.GenerateStatelessSummaryResponse>(serviceImpl.GenerateStatelessSummary));
       serviceBinder.AddMethod(__Method_GenerateStatelessSuggestion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GenerateStatelessSuggestionRequest, global::Google.Cloud.Dialogflow.V2.GenerateStatelessSuggestionResponse>(serviceImpl.GenerateStatelessSuggestion));
       serviceBinder.AddMethod(__Method_SearchKnowledge, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.SearchKnowledgeRequest, global::Google.Cloud.Dialogflow.V2.SearchKnowledgeResponse>(serviceImpl.SearchKnowledge));
+      serviceBinder.AddMethod(__Method_GenerateSuggestions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsRequest, global::Google.Cloud.Dialogflow.V2.GenerateSuggestionsResponse>(serviceImpl.GenerateSuggestions));
     }
 
   }

@@ -40,6 +40,13 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Generator = new Generator(),
+                ContextReferences =
+                {
+                    {
+                        "",
+                        new Conversation.Types.ContextReference()
+                    },
+                },
                 ConversationContext = new ConversationContext(),
                 TriggerEvents =
                 {

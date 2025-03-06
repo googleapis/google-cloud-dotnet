@@ -779,6 +779,18 @@ namespace Google.Cloud.Dialogflow.V2
         }
     }
 
+    public partial class IngestContextReferencesRequest
+    {
+        /// <summary>
+        /// <see cref="ConversationName"/>-typed view over the <see cref="Conversation"/> resource name property.
+        /// </summary>
+        public ConversationName ConversationAsConversationName
+        {
+            get => string.IsNullOrEmpty(Conversation) ? null : ConversationName.Parse(Conversation, allowUnparsed: true);
+            set => Conversation = value?.ToString() ?? "";
+        }
+    }
+
     public partial class SuggestConversationSummaryRequest
     {
         /// <summary>
@@ -940,6 +952,27 @@ namespace Google.Cloud.Dialogflow.V2
         {
             get => string.IsNullOrEmpty(AnswerRecord) ? null : AnswerRecordName.Parse(AnswerRecord, allowUnparsed: true);
             set => AnswerRecord = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateSuggestionsRequest
+    {
+        /// <summary>
+        /// <see cref="ConversationName"/>-typed view over the <see cref="Conversation"/> resource name property.
+        /// </summary>
+        public ConversationName ConversationAsConversationName
+        {
+            get => string.IsNullOrEmpty(Conversation) ? null : ConversationName.Parse(Conversation, allowUnparsed: true);
+            set => Conversation = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="MessageName"/>-typed view over the <see cref="LatestMessage"/> resource name property.
+        /// </summary>
+        public MessageName LatestMessageAsMessageName
+        {
+            get => string.IsNullOrEmpty(LatestMessage) ? null : MessageName.Parse(LatestMessage, allowUnparsed: true);
+            set => LatestMessage = value?.ToString() ?? "";
         }
     }
 }
