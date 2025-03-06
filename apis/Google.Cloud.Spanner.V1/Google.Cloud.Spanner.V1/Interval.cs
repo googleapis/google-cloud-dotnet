@@ -14,12 +14,10 @@
 
 using Google.Api.Gax;
 using System;
-using System.CodeDom;
-using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Numerics;
 using System.Text;
-using System.Text.RegularExpressions;
 
 namespace Google.Cloud.Spanner.V1;
 
@@ -91,58 +89,135 @@ public class Interval
     /// P[n]Y[n]M[n]DT[n]H[n]M[n[.fraction]]S
     /// where [n] is an int.
     /// </summary>
-    public static Interval Parse(string intervalString)
+    public static Interval Parse(string text)
     {
-        const int years = 2, months = 4, days = 6, hours = 9, minutes = 11, seconds = 14;
-        string isoPattern = @"^P(?!$)((-?\d+)Y)?((-?\d+)M)?((-?\d+)D)?(T(?=-?.?\d)((-?\d+)H)?((-?\d+)M)?(((-?(((\d+)((\.|\,)\d{1,9})?)|((\.|\,)\d{1,9})))S))?)?$";
-
-        int calculatedMonths = 0;
-        int calculatedDays = 0;
-        BigInteger calculatedNanoseconds = 0;
-
-        MatchCollection matches = Regex.Matches(intervalString, isoPattern);
-        if (matches.Count != 1)
+        if (text is null)
         {
-            throw new FormatException("Invalid Format");
+            throw new ArgumentNullException(nameof(text));
         }
 
-        GroupCollection groups = matches[0].Groups;
-
-        if (groups[years].Value != "")
+        var state = new IntervalParsingState();
+        var end = -1;
+        do
         {
-            calculatedMonths += Interval.YearsToMonths(groups[years].Value);
-        }
+            end = text.IndexOfAny(state.NextAllowed, state.Start);
 
-        if (groups[months].Value != "")
-        {
-            // This is for the case that (years to months) + (months) overflow the integer and avoid
-            // bugs for the user.
-            checked {
-                calculatedMonths += int.Parse(groups[months].Value);
+            // We couldn't find any of the allowed characters of which we needed to find one.
+            if (end == -1)
+            {
+                throw new FormatException(text);
             }
-        }
+            // P[n]Y[n]M[n]DT[n]H[n]M[n[.fraction]]S
+            switch (text[end])
+            {
+                case 'P':
+                    state.MayBeTerminal = false;
+                    state.IsTerminal = false;
+                    state.IsTime = false;
+                    state.IsValidResolution = true;
+                    state.NextAllowed = IntervalParsingState.AfterP;
+                    break;
+                case 'Y':
+                    state.MayBeTerminal = true;
+                    state.IsTerminal = false;
+                    state.IsValidResolution = true;
+                    state.Years = ParseInt();
+                    state.NextAllowed = IntervalParsingState.AfterY;
+                    break;
+                case 'M' when !state.IsTime:
+                    state.MayBeTerminal = true;
+                    state.IsTerminal = false;
+                    state.IsValidResolution = true;
+                    state.Months = ParseInt();
+                    state.NextAllowed = IntervalParsingState.AfterMonth;
+                    break;
+                case 'D':
+                    state.MayBeTerminal = true;
+                    state.IsTerminal = false;
+                    state.IsValidResolution = true;
+                    state.Days = ParseInt();
+                    state.NextAllowed = IntervalParsingState.AfterD;
+                    break;
+                case 'T':
+                    state.MayBeTerminal = false;
+                    state.IsTerminal = false;
+                    state.IsTime = true;
+                    state.IsValidResolution = true;
+                    state.NextAllowed = IntervalParsingState.AfterT;
+                    break;
+                case 'H':
+                    state.MayBeTerminal = true;
+                    state.IsTerminal = false;
+                    state.IsValidResolution = true;
+                    state.Hours = ParseInt();
+                    state.NextAllowed = IntervalParsingState.AfterH;
+                    break;
+                case 'M' when state.IsTime:
+                    state.MayBeTerminal = true;
+                    state.IsTerminal = false;
+                    state.IsValidResolution = true;
+                    state.Minutes = ParseLong();
+                    state.NextAllowed = IntervalParsingState.AfterMins;
+                    break;
+                case 'S':
+                    state.MayBeTerminal = true;
+                    state.IsTerminal = true;
+                    state.IsValidResolution = IsValidResolution();
+                    state.Seconds = ParseDecimal();
+                    state.NextAllowed = null;
+                    break;
+                default:
+                    throw new FormatException(text);
+            }
 
-        if (groups[days].Value != "")
+            state.Start = end + 1;
+
+        } while (state.Start < text.Length && !state.IsTerminal);
+
+        // We are at a terminal state but we haven't parsed the whole string yet.
+        if (state.IsTerminal && state.Start < text.Length)
         {
-            calculatedDays = int.Parse(groups[days].Value);
+            throw new FormatException(text);
         }
 
-        if (groups[hours].Value != "")
+        // We parsed the whole string but we ended up at a state that's not terminal.
+        if (!state.MayBeTerminal)
         {
-            calculatedNanoseconds += Interval.HoursToNanoseconds(groups[hours].Value);
+            throw new FormatException(text);
         }
 
-        if (groups[minutes].Value != "")
+        // We do not have a valid precision for the fractional seconds
+        if (!state.IsValidResolution)
         {
-            calculatedNanoseconds += Interval.MinutesToNanoseconds(groups[minutes].Value);
+            throw new ArgumentException(text);
         }
 
-        if (groups[seconds].Value != "")
-        {
-            calculatedNanoseconds += Interval.SecondsToNanoseconds(groups[seconds].Value);
+        int ParseInt() => int.Parse(text.Substring(state.Start, end - state.Start), CultureInfo.InvariantCulture.NumberFormat);
+        long ParseLong() => long.Parse(text.Substring(state.Start, end - state.Start), CultureInfo.InvariantCulture.NumberFormat);
+        decimal ParseDecimal() => decimal.Parse(text.Substring(state.Start, end - state.Start).Replace(',', '.'), CultureInfo.InvariantCulture.NumberFormat);
+
+        bool IsValidResolution() {
+            string[] splitText = text.Substring(state.Start, end - state.Start).Replace(',', '.').Split('.');
+
+            // If we have an int number, it is valid
+            if (splitText.Length < 2)
+            {
+                return true;
+            }
+
+            // If we have more than 9 digits after the decimal, it is not valid
+            if (splitText[1].Length > 9)
+            {
+                return false;
+            }
+
+            return true;
         }
 
-        return new Interval(calculatedMonths, calculatedDays, calculatedNanoseconds);
+        int totalMonths = Interval.YearsToMonths(state.Years) + state.Months;
+        BigInteger totalNanoseconds = Interval.HoursToNanoseconds(state.Hours) + Interval.MinutesToNanoseconds(state.Minutes) + Interval.SecondsToNanoseconds(state.Seconds);
+
+        return new Interval(totalMonths, state.Days, totalNanoseconds);
     }
 
     /// <summary>
@@ -292,23 +367,66 @@ public class Interval
     public static Interval FromNanoseconds(BigInteger nanoseconds) => new Interval(0, 0, nanoseconds);
 
 
-    private static int YearsToMonths(string years) => int.Parse(years) * 12;
+    private static int YearsToMonths(int years) => years * 12;
 
-    private static BigInteger HoursToNanoseconds(string hours) => BigInteger.Parse(hours) * NanosecondsInAnHour;
+    private static BigInteger HoursToNanoseconds(int hours) => hours * NanosecondsInAnHour;
 
-    private static BigInteger MinutesToNanoseconds(string minutes) => BigInteger.Parse(minutes) * NanosecondsInAMinute;
+    private static BigInteger MinutesToNanoseconds(long minutes) => minutes * NanosecondsInAMinute;
 
-    private static BigInteger SecondsToNanoseconds(string seconds)
+    private static BigInteger SecondsToNanoseconds(decimal seconds) => new BigInteger(seconds * NanosecondsInASecond);
+
+    private class IntervalParsingState
     {
-        string[] splitNumber = seconds.Split('.');
+        internal static char[] P = new char[] { 'P' };
 
-        if (splitNumber.Length > 2)
-        {
-            throw new FormatException("Invalid Format");
-        }
+        internal static char[] AfterP = new char[] { 'Y', 'M', 'D', 'T' };
+        internal static char[] AfterY = new char[] { 'M', 'D', 'T' };
+        internal static char[] AfterMonth = new char[] { 'D', 'T' };
+        internal static char[] AfterD = new char[] { 'T' };
 
-        decimal nanoseconds = decimal.Parse(seconds) * NanosecondsInASecond;
+        internal static char[] AfterT = new char[] { 'H', 'M', 'S' };
+        internal static char[] AfterH = new char[] { 'M', 'S' };
+        internal static char[] AfterMins = new char[] { 'S' };
 
-        return new BigInteger(nanoseconds);
+        /// <summary>
+        /// The index where we'll start to parse next.
+        /// </summary>
+        public int Start { get; set; }
+
+        /// <summary>
+        /// True if we are parsing the time part.
+        /// </summary>
+        public bool IsTime { get; set; }
+
+        /// <summary>
+        /// True if we are at a possible terminal state.
+        /// </summary>
+        public bool MayBeTerminal { get; set; }
+
+        /// <summary>
+        /// True if we are a state that must be terminal.
+        /// </summary>
+        public bool IsTerminal { get; set; }
+
+        /// <summary>
+        /// True if the provided fractional digits is less or equal to 9.
+        /// </summary>
+        public bool IsValidResolution { get; set; } = false;
+
+        /// <summary>
+        /// The delimeters that are allowed next.
+        /// </summary>
+        public char[] NextAllowed { get; set; } = P;
+
+        // The values we have parsed so far.
+        public int Years { get; set; }
+        public int Months { get; set; }
+        public int Days { get; set; }
+        public int Hours { get; set; }
+        public long Minutes { get; set; }
+        public decimal Seconds { get; set; }
+
+        public override string ToString() =>
+            $"Years: {Years}, Months: {Months}, Days: {Days}, Hours: {Hours}, Minutes: {Minutes}, Seconds: {Seconds}";
     }
 }
