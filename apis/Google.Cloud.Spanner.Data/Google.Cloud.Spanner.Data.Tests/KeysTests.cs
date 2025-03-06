@@ -37,7 +37,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "", SpannerDbType.PgJsonb, "{\"key1\": \"value1\"}" },
                     { "", SpannerDbType.Numeric, SpannerNumeric.Parse("10.1") },
                     { "", SpannerDbType.PgNumeric, PgNumeric.Parse("20.1") },
-                    { "", SpannerDbType.Interval, Interval.FromIso8601String("P1Y2M3D") },
+                    { "", SpannerDbType.Interval, Interval.Parse("P1Y2M3D") },
                     { "", SpannerDbType.PgOid, 2 },
                     { "", SpannerDbType.String, "test" },
                     { "", SpannerDbType.Timestamp, new DateTime(2021, 9, 10, 9, 37, 10, DateTimeKind.Utc) }

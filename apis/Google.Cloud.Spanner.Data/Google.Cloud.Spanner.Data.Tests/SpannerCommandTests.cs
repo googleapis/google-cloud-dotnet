@@ -1343,7 +1343,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     {"date", SpannerDbType.Date, new DateTime(2021, 9, 8, 0, 0, 0, DateTimeKind.Utc)},
                     {"timestamp", SpannerDbType.Timestamp, new DateTime(2021, 9, 8, 15, 22, 59, DateTimeKind.Utc)},
                     {"bool", SpannerDbType.Bool, true},
-                    {"interval", SpannerDbType.Interval, Interval.FromIso8601String("P1Y2M3D")},
+                    {"interval", SpannerDbType.Interval, Interval.Parse("P1Y2M3D")},
                 }));
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);

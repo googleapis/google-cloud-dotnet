@@ -293,7 +293,7 @@ namespace Google.Cloud.Spanner.Data
                     }
                     if (value is string stringValue)
                     {
-                        return Value.ForString(V1.Interval.FromIso8601String(value.ToString()).ToString());
+                        return Value.ForString(V1.Interval.Parse(value.ToString()).ToString());
                     }
                     throw new ArgumentException("Interval parameters must be on an ISO8601 format");
                 default:
@@ -691,7 +691,7 @@ namespace Google.Cloud.Spanner.Data
                     case Value.KindOneofCase.NullValue:
                         return null;
                     case Value.KindOneofCase.StringValue:
-                        return V1.Interval.FromIso8601String(wireValue.StringValue);
+                        return V1.Interval.Parse(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
