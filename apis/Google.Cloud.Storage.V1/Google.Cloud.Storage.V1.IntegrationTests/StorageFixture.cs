@@ -249,7 +249,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         }
 
-        internal Bucket CreateBucket(string name, bool multiVersion, bool softDelete = false)
+        internal Bucket CreateBucket(string name, bool multiVersion, bool softDelete = false, bool registerForDeletion = true)
         {
             var bucket = Client.CreateBucket(ProjectId,
                 new Bucket
@@ -260,7 +260,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     SoftDeletePolicy = softDelete ? new Bucket.SoftDeletePolicyData { RetentionDurationSeconds = (int) TimeSpan.FromDays(7).TotalSeconds } : null,
                 });
             SleepAfterBucketCreateDelete();
-            RegisterBucketToDelete(name);
+            if (registerForDeletion)
+            {
+                RegisterBucketToDelete(name);
+            }
             return bucket;
         }
 
