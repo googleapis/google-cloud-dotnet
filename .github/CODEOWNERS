@@ -11,6 +11,6 @@
 
 /apis/Google.Cloud.Bigtable*/       @googleapis/api-bigtable @googleapis/cloud-libraries-dotnet
 /apis/Google.Cloud.Datastore*/      @googleapis/api-datastore-sdk @googleapis/cloud-libraries-dotnet
-/apis/Google.Cloud.Storage*/        @googleapis/cloud-storage-dpe @googleapis/cloud-libraries-dotnet
+/apis/Google.Cloud.Storage*/        @googleapis/gcs-sdk-team @googleapis/cloud-libraries-dotnet
 /apis/Google.Cloud.BigQuery*/.      @googleapis/api-bigquery @googleapis/cloud-libraries-dotnet
 /apis/Google.Cloud.PubSub*/.        @googleapis/api-pubsub @googleapis/cloud-libraries-dotnet
