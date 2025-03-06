@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dialogflow_v2_generated_Conversations_GenerateStatelessSuggestion_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START dialogflow_v2_generated_Conversations_GenerateSuggestions_async_flattened_resourceNames]
     using Google.Cloud.Dialogflow.V2;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedConversationsClientSnippets
     {
-        /// <summary>Snippet for GenerateStatelessSuggestion</summary>
+        /// <summary>Snippet for GenerateSuggestionsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,31 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GenerateStatelessSuggestionRequestObject()
+        public async Task GenerateSuggestionsResourceNamesAsync()
         {
             // Create client
-            ConversationsClient conversationsClient = ConversationsClient.Create();
+            ConversationsClient conversationsClient = await ConversationsClient.CreateAsync();
             // Initialize request argument(s)
-            GenerateStatelessSuggestionRequest request = new GenerateStatelessSuggestionRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Generator = new Generator(),
-                ContextReferences =
-                {
-                    {
-                        "",
-                        new Conversation.Types.ContextReference()
-                    },
-                },
-                ConversationContext = new ConversationContext(),
-                TriggerEvents =
-                {
-                    TriggerEvent.Unspecified,
-                },
-            };
+            ConversationName conversation = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]");
             // Make the request
-            GenerateStatelessSuggestionResponse response = conversationsClient.GenerateStatelessSuggestion(request);
+            GenerateSuggestionsResponse response = await conversationsClient.GenerateSuggestionsAsync(conversation);
         }
     }
-    // [END dialogflow_v2_generated_Conversations_GenerateStatelessSuggestion_sync]
+    // [END dialogflow_v2_generated_Conversations_GenerateSuggestions_async_flattened_resourceNames]
 }

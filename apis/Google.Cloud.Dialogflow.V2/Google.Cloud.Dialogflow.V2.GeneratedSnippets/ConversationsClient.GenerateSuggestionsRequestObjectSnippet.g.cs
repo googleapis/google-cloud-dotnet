@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dialogflow_v2_generated_Conversations_GenerateStatelessSuggestion_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START dialogflow_v2_generated_Conversations_GenerateSuggestions_sync]
     using Google.Cloud.Dialogflow.V2;
 
     public sealed partial class GeneratedConversationsClientSnippets
     {
-        /// <summary>Snippet for GenerateStatelessSuggestion</summary>
+        /// <summary>Snippet for GenerateSuggestions</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,31 +29,23 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GenerateStatelessSuggestionRequestObject()
+        public void GenerateSuggestionsRequestObject()
         {
             // Create client
             ConversationsClient conversationsClient = ConversationsClient.Create();
             // Initialize request argument(s)
-            GenerateStatelessSuggestionRequest request = new GenerateStatelessSuggestionRequest
+            GenerateSuggestionsRequest request = new GenerateSuggestionsRequest
             {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Generator = new Generator(),
-                ContextReferences =
-                {
-                    {
-                        "",
-                        new Conversation.Types.ContextReference()
-                    },
-                },
-                ConversationContext = new ConversationContext(),
+                ConversationAsConversationName = ConversationName.FromProjectConversation("[PROJECT]", "[CONVERSATION]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
                 TriggerEvents =
                 {
                     TriggerEvent.Unspecified,
                 },
             };
             // Make the request
-            GenerateStatelessSuggestionResponse response = conversationsClient.GenerateStatelessSuggestion(request);
+            GenerateSuggestionsResponse response = conversationsClient.GenerateSuggestions(request);
         }
     }
-    // [END dialogflow_v2_generated_Conversations_GenerateStatelessSuggestion_sync]
+    // [END dialogflow_v2_generated_Conversations_GenerateSuggestions_sync]
 }
