@@ -61,7 +61,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             { "JsonField", SpannerDbType.Json, "{\"field\": \"value\"}" },
             { "PgJsonbField", SpannerDbType.PgJsonb, "{\"field1\": \"value1\"}" },
             { "PgOidField", SpannerDbType.PgOid, 3L },
-            { "IntervalField", SpannerDbType.Interval, Interval.FromIso8601String("P1Y2M3D") }
+            { "IntervalField", SpannerDbType.Interval, Interval.Parse("P1Y2M3D") }
         };
 
         // Structs are serialized as lists of their values. The field names aren't present, as they're
@@ -323,7 +323,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { DBNull.Value, SpannerDbType.PgNumeric, "null" };
             // Interval tests
             yield return new object[] { "P0Y", SpannerDbType.Interval, Quote("P0Y") };
-            yield return new object[] { Interval.FromIso8601String("P1Y2M3DT4H5M6S"), SpannerDbType.Interval, Quote("P1Y2M3DT4H5M6S") };
+            yield return new object[] { Interval.Parse("P1Y2M3DT4H5M6S"), SpannerDbType.Interval, Quote("P1Y2M3DT4H5M6S") };
 
             // Note the difference in C# conversions from special floats and doubles.
             yield return new object[] { float.NegativeInfinity, SpannerDbType.String, Quote("-Infinity") };
