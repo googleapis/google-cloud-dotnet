@@ -50,52 +50,56 @@ namespace Google.Cloud.Audit {
             "MhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBIgChhzZXJ2aWNlX2FjY291bnRf",
             "a2V5X25hbWUYBSABKAkSWQofc2VydmljZV9hY2NvdW50X2RlbGVnYXRpb25f",
             "aW5mbxgGIAMoCzIwLmdvb2dsZS5jbG91ZC5hdWRpdC5TZXJ2aWNlQWNjb3Vu",
-            "dERlbGVnYXRpb25JbmZvEhkKEXByaW5jaXBhbF9zdWJqZWN0GAggASgJIpYB",
+            "dERlbGVnYXRpb25JbmZvEhkKEXByaW5jaXBhbF9zdWJqZWN0GAggASgJItgC",
             "ChFBdXRob3JpemF0aW9uSW5mbxIQCghyZXNvdXJjZRgBIAEoCRISCgpwZXJt",
             "aXNzaW9uGAIgASgJEg8KB2dyYW50ZWQYAyABKAgSSgoTcmVzb3VyY2VfYXR0",
             "cmlidXRlcxgFIAEoCzItLmdvb2dsZS5ycGMuY29udGV4dC5BdHRyaWJ1dGVD",
-            "b250ZXh0LlJlc291cmNlIvUBCg9SZXF1ZXN0TWV0YWRhdGESEQoJY2FsbGVy",
-            "X2lwGAEgASgJEiIKGmNhbGxlcl9zdXBwbGllZF91c2VyX2FnZW50GAIgASgJ",
-            "EhYKDmNhbGxlcl9uZXR3b3JrGAMgASgJEkgKEnJlcXVlc3RfYXR0cmlidXRl",
-            "cxgHIAEoCzIsLmdvb2dsZS5ycGMuY29udGV4dC5BdHRyaWJ1dGVDb250ZXh0",
-            "LlJlcXVlc3QSSQoWZGVzdGluYXRpb25fYXR0cmlidXRlcxgIIAEoCzIpLmdv",
-            "b2dsZS5ycGMuY29udGV4dC5BdHRyaWJ1dGVDb250ZXh0LlBlZXIiSQoQUmVz",
-            "b3VyY2VMb2NhdGlvbhIZChFjdXJyZW50X2xvY2F0aW9ucxgBIAMoCRIaChJv",
-            "cmlnaW5hbF9sb2NhdGlvbnMYAiADKAkiwwMKHFNlcnZpY2VBY2NvdW50RGVs",
-            "ZWdhdGlvbkluZm8SGQoRcHJpbmNpcGFsX3N1YmplY3QYAyABKAkSZQoVZmly",
-            "c3RfcGFydHlfcHJpbmNpcGFsGAEgASgLMkQuZ29vZ2xlLmNsb3VkLmF1ZGl0",
-            "LlNlcnZpY2VBY2NvdW50RGVsZWdhdGlvbkluZm8uRmlyc3RQYXJ0eVByaW5j",
-            "aXBhbEgAEmUKFXRoaXJkX3BhcnR5X3ByaW5jaXBhbBgCIAEoCzJELmdvb2ds",
-            "ZS5jbG91ZC5hdWRpdC5TZXJ2aWNlQWNjb3VudERlbGVnYXRpb25JbmZvLlRo",
-            "aXJkUGFydHlQcmluY2lwYWxIABphChNGaXJzdFBhcnR5UHJpbmNpcGFsEhcK",
-            "D3ByaW5jaXBhbF9lbWFpbBgBIAEoCRIxChBzZXJ2aWNlX21ldGFkYXRhGAIg",
-            "ASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdBpKChNUaGlyZFBhcnR5UHJp",
-            "bmNpcGFsEjMKEnRoaXJkX3BhcnR5X2NsYWltcxgBIAEoCzIXLmdvb2dsZS5w",
-            "cm90b2J1Zi5TdHJ1Y3RCCwoJQXV0aG9yaXR5ImQKE1BvbGljeVZpb2xhdGlv",
-            "bkluZm8STQoZb3JnX3BvbGljeV92aW9sYXRpb25faW5mbxgBIAEoCzIqLmdv",
-            "b2dsZS5jbG91ZC5hdWRpdC5PcmdQb2xpY3lWaW9sYXRpb25JbmZvIrICChZP",
-            "cmdQb2xpY3lWaW9sYXRpb25JbmZvEi0KB3BheWxvYWQYASABKAsyFy5nb29n",
-            "bGUucHJvdG9idWYuU3RydWN0QgPgQQESGgoNcmVzb3VyY2VfdHlwZRgCIAEo",
-            "CUID4EEBElgKDXJlc291cmNlX3RhZ3MYAyADKAsyPC5nb29nbGUuY2xvdWQu",
-            "YXVkaXQuT3JnUG9saWN5VmlvbGF0aW9uSW5mby5SZXNvdXJjZVRhZ3NFbnRy",
-            "eUID4EEBEj4KDnZpb2xhdGlvbl9pbmZvGAQgAygLMiEuZ29vZ2xlLmNsb3Vk",
-            "LmF1ZGl0LlZpb2xhdGlvbkluZm9CA+BBARozChFSZXNvdXJjZVRhZ3NFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIpcCCg1WaW9sYXRp",
-            "b25JbmZvEhcKCmNvbnN0cmFpbnQYASABKAlCA+BBARIaCg1lcnJvcl9tZXNz",
-            "YWdlGAIgASgJQgPgQQESGgoNY2hlY2tlZF92YWx1ZRgDIAEoCUID4EEBEkYK",
-            "C3BvbGljeV90eXBlGAQgASgOMiwuZ29vZ2xlLmNsb3VkLmF1ZGl0LlZpb2xh",
-            "dGlvbkluZm8uUG9saWN5VHlwZUID4EEBIm0KClBvbGljeVR5cGUSGwoXUE9M",
-            "SUNZX1RZUEVfVU5TUEVDSUZJRUQQABIWChJCT09MRUFOX0NPTlNUUkFJTlQQ",
-            "ARITCg9MSVNUX0NPTlNUUkFJTlQQAhIVChFDVVNUT01fQ09OU1RSQUlOVBAD",
-            "QmUKFmNvbS5nb29nbGUuY2xvdWQuYXVkaXRCDUF1ZGl0TG9nUHJvdG9QAVo3",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9h",
-            "dWRpdDthdWRpdPgBAWIGcHJvdG8z"));
+            "b250ZXh0LlJlc291cmNlEk0KD3Blcm1pc3Npb25fdHlwZRgHIAEoDjI0Lmdv",
+            "b2dsZS5jbG91ZC5hdWRpdC5BdXRob3JpemF0aW9uSW5mby5QZXJtaXNzaW9u",
+            "VHlwZSJxCg5QZXJtaXNzaW9uVHlwZRIfChtQRVJNSVNTSU9OX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIOCgpBRE1JTl9SRUFEEAESDwoLQURNSU5fV1JJVEUQAhIN",
+            "CglEQVRBX1JFQUQQAxIOCgpEQVRBX1dSSVRFEAQi9QEKD1JlcXVlc3RNZXRh",
+            "ZGF0YRIRCgljYWxsZXJfaXAYASABKAkSIgoaY2FsbGVyX3N1cHBsaWVkX3Vz",
+            "ZXJfYWdlbnQYAiABKAkSFgoOY2FsbGVyX25ldHdvcmsYAyABKAkSSAoScmVx",
+            "dWVzdF9hdHRyaWJ1dGVzGAcgASgLMiwuZ29vZ2xlLnJwYy5jb250ZXh0LkF0",
+            "dHJpYnV0ZUNvbnRleHQuUmVxdWVzdBJJChZkZXN0aW5hdGlvbl9hdHRyaWJ1",
+            "dGVzGAggASgLMikuZ29vZ2xlLnJwYy5jb250ZXh0LkF0dHJpYnV0ZUNvbnRl",
+            "eHQuUGVlciJJChBSZXNvdXJjZUxvY2F0aW9uEhkKEWN1cnJlbnRfbG9jYXRp",
+            "b25zGAEgAygJEhoKEm9yaWdpbmFsX2xvY2F0aW9ucxgCIAMoCSLDAwocU2Vy",
+            "dmljZUFjY291bnREZWxlZ2F0aW9uSW5mbxIZChFwcmluY2lwYWxfc3ViamVj",
+            "dBgDIAEoCRJlChVmaXJzdF9wYXJ0eV9wcmluY2lwYWwYASABKAsyRC5nb29n",
+            "bGUuY2xvdWQuYXVkaXQuU2VydmljZUFjY291bnREZWxlZ2F0aW9uSW5mby5G",
+            "aXJzdFBhcnR5UHJpbmNpcGFsSAASZQoVdGhpcmRfcGFydHlfcHJpbmNpcGFs",
+            "GAIgASgLMkQuZ29vZ2xlLmNsb3VkLmF1ZGl0LlNlcnZpY2VBY2NvdW50RGVs",
+            "ZWdhdGlvbkluZm8uVGhpcmRQYXJ0eVByaW5jaXBhbEgAGmEKE0ZpcnN0UGFy",
+            "dHlQcmluY2lwYWwSFwoPcHJpbmNpcGFsX2VtYWlsGAEgASgJEjEKEHNlcnZp",
+            "Y2VfbWV0YWRhdGEYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0GkoK",
+            "E1RoaXJkUGFydHlQcmluY2lwYWwSMwoSdGhpcmRfcGFydHlfY2xhaW1zGAEg",
+            "ASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEILCglBdXRob3JpdHkiZAoT",
+            "UG9saWN5VmlvbGF0aW9uSW5mbxJNChlvcmdfcG9saWN5X3Zpb2xhdGlvbl9p",
+            "bmZvGAEgASgLMiouZ29vZ2xlLmNsb3VkLmF1ZGl0Lk9yZ1BvbGljeVZpb2xh",
+            "dGlvbkluZm8isgIKFk9yZ1BvbGljeVZpb2xhdGlvbkluZm8SLQoHcGF5bG9h",
+            "ZBgBIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARIaCg1yZXNv",
+            "dXJjZV90eXBlGAIgASgJQgPgQQESWAoNcmVzb3VyY2VfdGFncxgDIAMoCzI8",
+            "Lmdvb2dsZS5jbG91ZC5hdWRpdC5PcmdQb2xpY3lWaW9sYXRpb25JbmZvLlJl",
+            "c291cmNlVGFnc0VudHJ5QgPgQQESPgoOdmlvbGF0aW9uX2luZm8YBCADKAsy",
+            "IS5nb29nbGUuY2xvdWQuYXVkaXQuVmlvbGF0aW9uSW5mb0ID4EEBGjMKEVJl",
+            "c291cmNlVGFnc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEilwIKDVZpb2xhdGlvbkluZm8SFwoKY29uc3RyYWludBgBIAEoCUID4EEB",
+            "EhoKDWVycm9yX21lc3NhZ2UYAiABKAlCA+BBARIaCg1jaGVja2VkX3ZhbHVl",
+            "GAMgASgJQgPgQQESRgoLcG9saWN5X3R5cGUYBCABKA4yLC5nb29nbGUuY2xv",
+            "dWQuYXVkaXQuVmlvbGF0aW9uSW5mby5Qb2xpY3lUeXBlQgPgQQEibQoKUG9s",
+            "aWN5VHlwZRIbChdQT0xJQ1lfVFlQRV9VTlNQRUNJRklFRBAAEhYKEkJPT0xF",
+            "QU5fQ09OU1RSQUlOVBABEhMKD0xJU1RfQ09OU1RSQUlOVBACEhUKEUNVU1RP",
+            "TV9DT05TVFJBSU5UEANCZQoWY29tLmdvb2dsZS5jbG91ZC5hdWRpdEINQXVk",
+            "aXRMb2dQcm90b1ABWjdnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Nsb3VkL2F1ZGl0O2F1ZGl0+AEBYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.Context.AttributeContextReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Audit.AuditLog), global::Google.Cloud.Audit.AuditLog.Parser, new[]{ "ServiceName", "MethodName", "ResourceName", "ResourceLocation", "ResourceOriginalState", "NumResponseItems", "Status", "AuthenticationInfo", "AuthorizationInfo", "PolicyViolationInfo", "RequestMetadata", "Request", "Response", "Metadata", "ServiceData" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Audit.AuthenticationInfo), global::Google.Cloud.Audit.AuthenticationInfo.Parser, new[]{ "PrincipalEmail", "AuthoritySelector", "ThirdPartyPrincipal", "ServiceAccountKeyName", "ServiceAccountDelegationInfo", "PrincipalSubject" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Audit.AuthorizationInfo), global::Google.Cloud.Audit.AuthorizationInfo.Parser, new[]{ "Resource", "Permission", "Granted", "ResourceAttributes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Audit.AuthorizationInfo), global::Google.Cloud.Audit.AuthorizationInfo.Parser, new[]{ "Resource", "Permission", "Granted", "ResourceAttributes", "PermissionType" }, null, new[]{ typeof(global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Audit.RequestMetadata), global::Google.Cloud.Audit.RequestMetadata.Parser, new[]{ "CallerIp", "CallerSuppliedUserAgent", "CallerNetwork", "RequestAttributes", "DestinationAttributes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Audit.ResourceLocation), global::Google.Cloud.Audit.ResourceLocation.Parser, new[]{ "CurrentLocations", "OriginalLocations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Audit.ServiceAccountDelegationInfo), global::Google.Cloud.Audit.ServiceAccountDelegationInfo.Parser, new[]{ "PrincipalSubject", "FirstPartyPrincipal", "ThirdPartyPrincipal" }, new[]{ "Authority" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Audit.ServiceAccountDelegationInfo.Types.FirstPartyPrincipal), global::Google.Cloud.Audit.ServiceAccountDelegationInfo.Types.FirstPartyPrincipal.Parser, new[]{ "PrincipalEmail", "ServiceMetadata" }, null, null, null, null),
@@ -1434,6 +1438,7 @@ namespace Google.Cloud.Audit {
       permission_ = other.permission_;
       granted_ = other.granted_;
       resourceAttributes_ = other.resourceAttributes_ != null ? other.resourceAttributes_.Clone() : null;
+      permissionType_ = other.permissionType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1514,6 +1519,23 @@ namespace Google.Cloud.Audit {
       }
     }
 
+    /// <summary>Field number for the "permission_type" field.</summary>
+    public const int PermissionTypeFieldNumber = 7;
+    private global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType permissionType_ = global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType.Unspecified;
+    /// <summary>
+    /// The type of the permission that was checked. For data access audit logs
+    /// this corresponds with the permission type that must be enabled in the
+    /// project/folder/organization IAM policy in order for the log to be written.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType PermissionType {
+      get { return permissionType_; }
+      set {
+        permissionType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1533,6 +1555,7 @@ namespace Google.Cloud.Audit {
       if (Permission != other.Permission) return false;
       if (Granted != other.Granted) return false;
       if (!object.Equals(ResourceAttributes, other.ResourceAttributes)) return false;
+      if (PermissionType != other.PermissionType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1544,6 +1567,7 @@ namespace Google.Cloud.Audit {
       if (Permission.Length != 0) hash ^= Permission.GetHashCode();
       if (Granted != false) hash ^= Granted.GetHashCode();
       if (resourceAttributes_ != null) hash ^= ResourceAttributes.GetHashCode();
+      if (PermissionType != global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType.Unspecified) hash ^= PermissionType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1578,6 +1602,10 @@ namespace Google.Cloud.Audit {
         output.WriteRawTag(42);
         output.WriteMessage(ResourceAttributes);
       }
+      if (PermissionType != global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) PermissionType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1604,6 +1632,10 @@ namespace Google.Cloud.Audit {
         output.WriteRawTag(42);
         output.WriteMessage(ResourceAttributes);
       }
+      if (PermissionType != global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) PermissionType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1625,6 +1657,9 @@ namespace Google.Cloud.Audit {
       }
       if (resourceAttributes_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceAttributes);
+      }
+      if (PermissionType != global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PermissionType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1652,6 +1687,9 @@ namespace Google.Cloud.Audit {
           ResourceAttributes = new global::Google.Rpc.Context.AttributeContext.Types.Resource();
         }
         ResourceAttributes.MergeFrom(other.ResourceAttributes);
+      }
+      if (other.PermissionType != global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType.Unspecified) {
+        PermissionType = other.PermissionType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1685,6 +1723,10 @@ namespace Google.Cloud.Audit {
               ResourceAttributes = new global::Google.Rpc.Context.AttributeContext.Types.Resource();
             }
             input.ReadMessage(ResourceAttributes);
+            break;
+          }
+          case 56: {
+            PermissionType = (global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType) input.ReadEnum();
             break;
           }
         }
@@ -1721,10 +1763,48 @@ namespace Google.Cloud.Audit {
             input.ReadMessage(ResourceAttributes);
             break;
           }
+          case 56: {
+            PermissionType = (global::Google.Cloud.Audit.AuthorizationInfo.Types.PermissionType) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AuthorizationInfo message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The list of valid permission types that can be checked.
+      /// </summary>
+      public enum PermissionType {
+        /// <summary>
+        /// Default. Should not be used.
+        /// </summary>
+        [pbr::OriginalName("PERMISSION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Permissions that gate reading resource configuration or metadata.
+        /// </summary>
+        [pbr::OriginalName("ADMIN_READ")] AdminRead = 1,
+        /// <summary>
+        /// Permissions that gate modification of resource configuration or metadata.
+        /// </summary>
+        [pbr::OriginalName("ADMIN_WRITE")] AdminWrite = 2,
+        /// <summary>
+        /// Permissions that gate reading user-provided data.
+        /// </summary>
+        [pbr::OriginalName("DATA_READ")] DataRead = 3,
+        /// <summary>
+        /// Permissions that gate writing user-provided data.
+        /// </summary>
+        [pbr::OriginalName("DATA_WRITE")] DataWrite = 4,
+      }
+
+    }
+    #endregion
 
   }
 
