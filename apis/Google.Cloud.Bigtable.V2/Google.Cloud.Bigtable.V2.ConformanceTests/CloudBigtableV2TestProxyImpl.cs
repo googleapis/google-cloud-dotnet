@@ -242,6 +242,28 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         }
     }
 
+    public override async Task<CheckAndMutateRowResult> CheckAndMutateRow(CheckAndMutateRowRequest request, ServerCallContext context)
+    {
+        CbtClient cbtClient = GetClient(request.ClientId, context);
+        try
+        {
+            CheckAndMutateRowResponse response = await cbtClient.Client.CheckAndMutateRowAsync(request.Request);
+            string message = "CheckAndMutateRow succeeded";
+            return new CheckAndMutateRowResult
+            {
+                Result = response,
+                Status = SetSuccessStatus(message, context)
+            };
+        }
+        catch (Exception e)
+        {
+            return new CheckAndMutateRowResult
+            {
+                Status = SetExceptionStatus(e, context)
+            };
+        }
+    }
+
     public static CloudBigtableV2TestProxyImpl Create() => new();
 
     private CloudBigtableV2TestProxyImpl() => _idClientMap = new();
