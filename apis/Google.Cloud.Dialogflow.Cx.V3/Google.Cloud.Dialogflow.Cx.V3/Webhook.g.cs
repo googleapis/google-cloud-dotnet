@@ -57,7 +57,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "LmRpYWxvZ2Zsb3cuY3gudjMuV2ViaG9vay5HZW5lcmljV2ViU2VydmljZS5Q",
             "YXJhbWV0ZXJNYXBwaW5nRW50cnlCA+BBARpzCgtPQXV0aENvbmZpZxIWCglj",
             "bGllbnRfaWQYASABKAlCA+BBAhIaCg1jbGllbnRfc2VjcmV0GAIgASgJQgPg",
-            "QQISGwoOdG9rZW5fZW5kcG9pbnQYAyABKAlCA+BBAhITCgZzY29wZXMYBCAD",
+            "QQESGwoOdG9rZW5fZW5kcG9pbnQYAyABKAlCA+BBAhITCgZzY29wZXMYBCAD",
             "KAlCA+BBARo1ChNSZXF1ZXN0SGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRIN",
             "CgV2YWx1ZRgCIAEoCToCOAEaNwoVUGFyYW1ldGVyTWFwcGluZ0VudHJ5EgsK",
             "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiYAoQU2VydmljZUFnZW50",
@@ -1448,7 +1448,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             public const int ClientSecretFieldNumber = 2;
             private string clientSecret_ = "";
             /// <summary>
-            /// Required. The client secret provided by the 3rd party platform.
+            /// Optional. The client secret provided by the 3rd party platform.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
