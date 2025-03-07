@@ -219,6 +219,29 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         }
     }
 
+    public override async Task<MutateRowsResult> BulkMutateRows(MutateRowsRequest request, ServerCallContext context)
+    {
+        CbtClient cbtClient = GetClient(request.ClientId, context);
+        try
+        {
+            MutateRowsResponse response = await cbtClient.Client.MutateRowsAsync(request.Request);
+            string message = "MutateRows succeeded";
+            MutateRowsResult result = new MutateRowsResult
+            {
+                Status = SetSuccessStatus(message, context)
+            };
+            result.Entries.Add(response.Entries);
+            return result;
+        }
+        catch (Exception e)
+        {
+            return new MutateRowsResult
+            {
+                Status = SetExceptionStatus(e, context)
+            };
+        }
+    }
+
     public static CloudBigtableV2TestProxyImpl Create() => new();
 
     private CloudBigtableV2TestProxyImpl() => _idClientMap = new();
