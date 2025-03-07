@@ -75,6 +75,8 @@ namespace Google.Apps.Chat.V1
             GetThreadReadStateSettings = existing.GetThreadReadStateSettings;
             GetSpaceEventSettings = existing.GetSpaceEventSettings;
             ListSpaceEventsSettings = existing.ListSpaceEventsSettings;
+            GetSpaceNotificationSettingSettings = existing.GetSpaceNotificationSettingSettings;
+            UpdateSpaceNotificationSettingSettings = existing.UpdateSpaceNotificationSettingSettings;
             OnCopy(existing);
         }
 
@@ -602,6 +604,44 @@ namespace Google.Apps.Chat.V1
         /// </remarks>
         public gaxgrpc::CallSettings ListSpaceEventsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.GetSpaceNotificationSetting</c> and
+        /// <c>ChatServiceClient.GetSpaceNotificationSettingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetSpaceNotificationSettingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.UpdateSpaceNotificationSetting</c> and
+        /// <c>ChatServiceClient.UpdateSpaceNotificationSettingAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSpaceNotificationSettingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ChatServiceSettings"/> object.</returns>
         public ChatServiceSettings Clone() => new ChatServiceSettings(this);
@@ -697,6 +737,7 @@ namespace Google.Apps.Chat.V1
         /// <item><description>https://www.googleapis.com/auth/chat.spaces.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.users.readstate</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.users.readstate.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.users.spacesettings</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
@@ -723,6 +764,7 @@ namespace Google.Apps.Chat.V1
             "https://www.googleapis.com/auth/chat.spaces.readonly",
             "https://www.googleapis.com/auth/chat.users.readstate",
             "https://www.googleapis.com/auth/chat.users.readstate.readonly",
+            "https://www.googleapis.com/auth/chat.users.spacesettings",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -7799,6 +7841,314 @@ namespace Google.Apps.Chat.V1
             }
             return ListSpaceEventsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceNotificationSetting GetSpaceNotificationSetting(GetSpaceNotificationSettingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> GetSpaceNotificationSettingAsync(GetSpaceNotificationSettingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> GetSpaceNotificationSettingAsync(GetSpaceNotificationSettingRequest request, st::CancellationToken cancellationToken) =>
+            GetSpaceNotificationSettingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
+        /// 
+        /// - `users/me/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/user@example.com/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/123456789/spaces/{space}/spaceNotificationSetting`.
+        /// Note: Only the caller's user id or email is allowed in the path.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceNotificationSetting GetSpaceNotificationSetting(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceNotificationSetting(new GetSpaceNotificationSettingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
+        /// 
+        /// - `users/me/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/user@example.com/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/123456789/spaces/{space}/spaceNotificationSetting`.
+        /// Note: Only the caller's user id or email is allowed in the path.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> GetSpaceNotificationSettingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceNotificationSettingAsync(new GetSpaceNotificationSettingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
+        /// 
+        /// - `users/me/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/user@example.com/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/123456789/spaces/{space}/spaceNotificationSetting`.
+        /// Note: Only the caller's user id or email is allowed in the path.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> GetSpaceNotificationSettingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetSpaceNotificationSettingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
+        /// 
+        /// - `users/me/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/user@example.com/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/123456789/spaces/{space}/spaceNotificationSetting`.
+        /// Note: Only the caller's user id or email is allowed in the path.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceNotificationSetting GetSpaceNotificationSetting(SpaceNotificationSettingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceNotificationSetting(new GetSpaceNotificationSettingRequest
+            {
+                SpaceNotificationSettingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
+        /// 
+        /// - `users/me/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/user@example.com/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/123456789/spaces/{space}/spaceNotificationSetting`.
+        /// Note: Only the caller's user id or email is allowed in the path.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> GetSpaceNotificationSettingAsync(SpaceNotificationSettingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetSpaceNotificationSettingAsync(new GetSpaceNotificationSettingRequest
+            {
+                SpaceNotificationSettingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="name">
+        /// Required. Format: users/{user}/spaces/{space}/spaceNotificationSetting
+        /// 
+        /// - `users/me/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/user@example.com/spaces/{space}/spaceNotificationSetting`, OR
+        /// - `users/123456789/spaces/{space}/spaceNotificationSetting`.
+        /// Note: Only the caller's user id or email is allowed in the path.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> GetSpaceNotificationSettingAsync(SpaceNotificationSettingName name, st::CancellationToken cancellationToken) =>
+            GetSpaceNotificationSettingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the space notification setting. For an example, see [Update
+        /// the caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceNotificationSetting UpdateSpaceNotificationSetting(UpdateSpaceNotificationSettingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the space notification setting. For an example, see [Update
+        /// the caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> UpdateSpaceNotificationSettingAsync(UpdateSpaceNotificationSettingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the space notification setting. For an example, see [Update
+        /// the caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> UpdateSpaceNotificationSettingAsync(UpdateSpaceNotificationSettingRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSpaceNotificationSettingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the space notification setting. For an example, see [Update
+        /// the caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="spaceNotificationSetting">
+        /// Required. The resource name for the space notification settings must be
+        /// populated in the form of
+        /// `users/{user}/spaces/{space}/spaceNotificationSetting`. Only fields
+        /// specified by `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Supported field paths:
+        /// 
+        /// - `notification_setting`
+        /// 
+        /// - `mute_setting`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SpaceNotificationSetting UpdateSpaceNotificationSetting(SpaceNotificationSetting spaceNotificationSetting, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSpaceNotificationSetting(new UpdateSpaceNotificationSettingRequest
+            {
+                SpaceNotificationSetting = gax::GaxPreconditions.CheckNotNull(spaceNotificationSetting, nameof(spaceNotificationSetting)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the space notification setting. For an example, see [Update
+        /// the caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="spaceNotificationSetting">
+        /// Required. The resource name for the space notification settings must be
+        /// populated in the form of
+        /// `users/{user}/spaces/{space}/spaceNotificationSetting`. Only fields
+        /// specified by `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Supported field paths:
+        /// 
+        /// - `notification_setting`
+        /// 
+        /// - `mute_setting`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> UpdateSpaceNotificationSettingAsync(SpaceNotificationSetting spaceNotificationSetting, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSpaceNotificationSettingAsync(new UpdateSpaceNotificationSettingRequest
+            {
+                SpaceNotificationSetting = gax::GaxPreconditions.CheckNotNull(spaceNotificationSetting, nameof(spaceNotificationSetting)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the space notification setting. For an example, see [Update
+        /// the caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="spaceNotificationSetting">
+        /// Required. The resource name for the space notification settings must be
+        /// populated in the form of
+        /// `users/{user}/spaces/{space}/spaceNotificationSetting`. Only fields
+        /// specified by `update_mask` are updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Supported field paths:
+        /// 
+        /// - `notification_setting`
+        /// 
+        /// - `mute_setting`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SpaceNotificationSetting> UpdateSpaceNotificationSettingAsync(SpaceNotificationSetting spaceNotificationSetting, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSpaceNotificationSettingAsync(spaceNotificationSetting, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ChatService client wrapper implementation, for convenient use.</summary>
@@ -7865,6 +8215,10 @@ namespace Google.Apps.Chat.V1
         private readonly gaxgrpc::ApiCall<GetSpaceEventRequest, SpaceEvent> _callGetSpaceEvent;
 
         private readonly gaxgrpc::ApiCall<ListSpaceEventsRequest, ListSpaceEventsResponse> _callListSpaceEvents;
+
+        private readonly gaxgrpc::ApiCall<GetSpaceNotificationSettingRequest, SpaceNotificationSetting> _callGetSpaceNotificationSetting;
+
+        private readonly gaxgrpc::ApiCall<UpdateSpaceNotificationSettingRequest, SpaceNotificationSetting> _callUpdateSpaceNotificationSetting;
 
         /// <summary>
         /// Constructs a client wrapper for the ChatService service, with the specified gRPC client and settings.
@@ -7968,6 +8322,12 @@ namespace Google.Apps.Chat.V1
             _callListSpaceEvents = clientHelper.BuildApiCall<ListSpaceEventsRequest, ListSpaceEventsResponse>("ListSpaceEvents", grpcClient.ListSpaceEventsAsync, grpcClient.ListSpaceEvents, effectiveSettings.ListSpaceEventsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListSpaceEvents);
             Modify_ListSpaceEventsApiCall(ref _callListSpaceEvents);
+            _callGetSpaceNotificationSetting = clientHelper.BuildApiCall<GetSpaceNotificationSettingRequest, SpaceNotificationSetting>("GetSpaceNotificationSetting", grpcClient.GetSpaceNotificationSettingAsync, grpcClient.GetSpaceNotificationSetting, effectiveSettings.GetSpaceNotificationSettingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetSpaceNotificationSetting);
+            Modify_GetSpaceNotificationSettingApiCall(ref _callGetSpaceNotificationSetting);
+            _callUpdateSpaceNotificationSetting = clientHelper.BuildApiCall<UpdateSpaceNotificationSettingRequest, SpaceNotificationSetting>("UpdateSpaceNotificationSetting", grpcClient.UpdateSpaceNotificationSettingAsync, grpcClient.UpdateSpaceNotificationSetting, effectiveSettings.UpdateSpaceNotificationSettingSettings).WithGoogleRequestParam("space_notification_setting.name", request => request.SpaceNotificationSetting?.Name);
+            Modify_ApiCall(ref _callUpdateSpaceNotificationSetting);
+            Modify_UpdateSpaceNotificationSettingApiCall(ref _callUpdateSpaceNotificationSetting);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -8031,6 +8391,10 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_ListSpaceEventsApiCall(ref gaxgrpc::ApiCall<ListSpaceEventsRequest, ListSpaceEventsResponse> call);
 
+        partial void Modify_GetSpaceNotificationSettingApiCall(ref gaxgrpc::ApiCall<GetSpaceNotificationSettingRequest, SpaceNotificationSetting> call);
+
+        partial void Modify_UpdateSpaceNotificationSettingApiCall(ref gaxgrpc::ApiCall<UpdateSpaceNotificationSettingRequest, SpaceNotificationSetting> call);
+
         partial void OnConstruction(ChatService.ChatServiceClient grpcClient, ChatServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ChatService client</summary>
@@ -8093,6 +8457,10 @@ namespace Google.Apps.Chat.V1
         partial void Modify_GetSpaceEventRequest(ref GetSpaceEventRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListSpaceEventsRequest(ref ListSpaceEventsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetSpaceNotificationSettingRequest(ref GetSpaceNotificationSettingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSpaceNotificationSettingRequest(ref UpdateSpaceNotificationSettingRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a message in a Google Chat space. For an example, see [Send a
@@ -9640,6 +10008,74 @@ namespace Google.Apps.Chat.V1
         {
             Modify_ListSpaceEventsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSpaceEventsRequest, ListSpaceEventsResponse, SpaceEvent>(_callListSpaceEvents, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SpaceNotificationSetting GetSpaceNotificationSetting(GetSpaceNotificationSettingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSpaceNotificationSettingRequest(ref request, ref callSettings);
+            return _callGetSpaceNotificationSetting.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the space notification setting. For an example, see [Get the
+        /// caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SpaceNotificationSetting> GetSpaceNotificationSettingAsync(GetSpaceNotificationSettingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetSpaceNotificationSettingRequest(ref request, ref callSettings);
+            return _callGetSpaceNotificationSetting.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the space notification setting. For an example, see [Update
+        /// the caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SpaceNotificationSetting UpdateSpaceNotificationSetting(UpdateSpaceNotificationSettingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSpaceNotificationSettingRequest(ref request, ref callSettings);
+            return _callUpdateSpaceNotificationSetting.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the space notification setting. For an example, see [Update
+        /// the caller's space notification
+        /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SpaceNotificationSetting> UpdateSpaceNotificationSettingAsync(UpdateSpaceNotificationSettingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSpaceNotificationSettingRequest(ref request, ref callSettings);
+            return _callUpdateSpaceNotificationSetting.Async(request, callSettings);
         }
     }
 

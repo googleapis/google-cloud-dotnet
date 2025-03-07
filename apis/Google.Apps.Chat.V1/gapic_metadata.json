@@ -100,6 +100,12 @@
                 "GetSpaceEventAsync"
               ]
             },
+            "GetSpaceNotificationSetting": {
+              "methods": [
+                "GetSpaceNotificationSetting",
+                "GetSpaceNotificationSettingAsync"
+              ]
+            },
             "GetSpaceReadState": {
               "methods": [
                 "GetSpaceReadState",
@@ -170,6 +176,12 @@
               "methods": [
                 "UpdateSpace",
                 "UpdateSpaceAsync"
+              ]
+            },
+            "UpdateSpaceNotificationSetting": {
+              "methods": [
+                "UpdateSpaceNotificationSetting",
+                "UpdateSpaceNotificationSettingAsync"
               ]
             },
             "UpdateSpaceReadState": {
