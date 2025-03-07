@@ -264,6 +264,27 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         }
     }
 
+    public override async Task<SampleRowKeysResult> SampleRowKeys(SampleRowKeysRequest request, ServerCallContext context)
+    {
+        CbtClient cbtClient = GetClient(request.ClientId, context);
+        try
+        {
+            BigtableServiceApiClient.SampleRowKeysStream stream = cbtClient.Client.SampleRowKeys(request.Request);
+            SampleRowKeysResult result = new SampleRowKeysResult();
+            result.Samples.Add(await stream.ToListAsync());
+            string message = result.Samples.Count == 0 ? "SampleRowKeys did not find sample" : "SampleRowKeys succeeded";
+            result.Status = SetSuccessStatus(message, context);
+            return result;
+        }
+        catch (Exception e)
+        {
+            return new SampleRowKeysResult
+            {
+                Status = SetExceptionStatus(e, context)
+            };
+        }
+    }
+
     public static CloudBigtableV2TestProxyImpl Create() => new();
 
     private CloudBigtableV2TestProxyImpl() => _idClientMap = new();
