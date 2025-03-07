@@ -172,7 +172,32 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             };
         }
     }
+    public override async Task<RowsResult> ReadRows(ReadRowsRequest request, ServerCallContext context)
+    {
+        CbtClient cbtClient = GetClient(request.ClientId, context);
 
+        try
+        {
+            ReadRowsStream stream = cbtClient.Client.ReadRows(request.Request);
+            IAsyncEnumerator<Row> enumerator = stream.GetAsyncEnumerator(new System.Threading.CancellationToken(false));
+            RowsResult rowsResult = new RowsResult();
+            while (await enumerator.MoveNextAsync())
+            {
+                rowsResult.Rows.Add(enumerator.Current);
+            }
+            string message = rowsResult.Rows.Count == 0 ? $"ReadRows didn't find rows" : "ReadRows succeeded";
+            rowsResult.Status = SetSuccessStatus(message, context);
+            return rowsResult;
+        }
+        catch (Exception e)
+        {
+            return new RowsResult
+            {
+                Status = SetExceptionStatus(e, context)
+            };
+        }
+    }
+    
     public static CloudBigtableV2TestProxyImpl Create() => new();
 
     private CloudBigtableV2TestProxyImpl() => _idClientMap = new();
