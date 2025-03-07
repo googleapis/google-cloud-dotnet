@@ -734,16 +734,34 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
         /// </summary>
-        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ExecuteQueryRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="PrepareQueryRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The server stream.</returns>
-        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(ExecuteQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+        /// <returns>The RPC response.</returns>
+        public virtual PrepareQueryResponse PrepareQuery(PrepareQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="PrepareQueryRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(PrepareQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="PrepareQueryRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(PrepareQueryRequest request, st::CancellationToken cancellationToken) =>
+            PrepareQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
         /// </summary>
         /// <param name="instanceName">
         /// Required. The unique name of the instance against which the query should be
@@ -754,16 +772,16 @@ namespace Google.Cloud.Bigtable.V2
         /// Required. The query string.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The server stream.</returns>
-        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(string instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
-            ExecuteQuery(new ExecuteQueryRequest
+        /// <returns>The RPC response.</returns>
+        public virtual PrepareQueryResponse PrepareQuery(string instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            PrepareQuery(new PrepareQueryRequest
             {
                 InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
             }, callSettings);
 
         /// <summary>
-        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
         /// </summary>
         /// <param name="instanceName">
         /// Required. The unique name of the instance against which the query should be
@@ -774,16 +792,88 @@ namespace Google.Cloud.Bigtable.V2
         /// Required. The query string.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
-        /// <returns>The server stream.</returns>
-        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(gcbcv::InstanceName instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
-            ExecuteQuery(new ExecuteQueryRequest
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(string instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            PrepareQueryAsync(new PrepareQueryRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(string instanceName, string query, st::CancellationToken cancellationToken) =>
+            PrepareQueryAsync(instanceName, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrepareQueryResponse PrepareQuery(gcbcv::InstanceName instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            PrepareQuery(new PrepareQueryRequest
             {
                 InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
                 Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
             }, callSettings);
 
         /// <summary>
-        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(gcbcv::InstanceName instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            PrepareQueryAsync(new PrepareQueryRequest
+            {
+                InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(gcbcv::InstanceName instanceName, string query, st::CancellationToken cancellationToken) =>
+            PrepareQueryAsync(instanceName, query, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
         /// </summary>
         /// <param name="instanceName">
         /// Required. The unique name of the instance against which the query should be
@@ -794,11 +884,230 @@ namespace Google.Cloud.Bigtable.V2
         /// Required. The query string.
         /// </param>
         /// <param name="appProfileId">
+        /// Optional. This value specifies routing for preparing the query. Note that
+        /// this `app_profile_id` is only used for preparing the query. The actual
+        /// query execution will use the app profile specified in the
+        /// `ExecuteQueryRequest`. If not specified, the `default` application profile
+        /// will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrepareQueryResponse PrepareQuery(string instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            PrepareQuery(new PrepareQueryRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
+                AppProfileId = appProfileId ?? "",
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for preparing the query. Note that
+        /// this `app_profile_id` is only used for preparing the query. The actual
+        /// query execution will use the app profile specified in the
+        /// `ExecuteQueryRequest`. If not specified, the `default` application profile
+        /// will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(string instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            PrepareQueryAsync(new PrepareQueryRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
+                AppProfileId = appProfileId ?? "",
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for preparing the query. Note that
+        /// this `app_profile_id` is only used for preparing the query. The actual
+        /// query execution will use the app profile specified in the
+        /// `ExecuteQueryRequest`. If not specified, the `default` application profile
+        /// will be used.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(string instanceName, string query, string appProfileId, st::CancellationToken cancellationToken) =>
+            PrepareQueryAsync(instanceName, query, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for preparing the query. Note that
+        /// this `app_profile_id` is only used for preparing the query. The actual
+        /// query execution will use the app profile specified in the
+        /// `ExecuteQueryRequest`. If not specified, the `default` application profile
+        /// will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PrepareQueryResponse PrepareQuery(gcbcv::InstanceName instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            PrepareQuery(new PrepareQueryRequest
+            {
+                InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
+                AppProfileId = appProfileId ?? "",
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for preparing the query. Note that
+        /// this `app_profile_id` is only used for preparing the query. The actual
+        /// query execution will use the app profile specified in the
+        /// `ExecuteQueryRequest`. If not specified, the `default` application profile
+        /// will be used.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(gcbcv::InstanceName instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+            PrepareQueryAsync(new PrepareQueryRequest
+            {
+                InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
+                AppProfileId = appProfileId ?? "",
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// </param>
+        /// <param name="appProfileId">
+        /// Optional. This value specifies routing for preparing the query. Note that
+        /// this `app_profile_id` is only used for preparing the query. The actual
+        /// query execution will use the app profile specified in the
+        /// `ExecuteQueryRequest`. If not specified, the `default` application profile
+        /// will be used.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PrepareQueryResponse> PrepareQueryAsync(gcbcv::InstanceName instanceName, string query, string appProfileId, st::CancellationToken cancellationToken) =>
+            PrepareQueryAsync(instanceName, query, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Executes a SQL query against a particular Bigtable instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call. If the <see cref="ExecuteQueryRequest.AppProfileId"/> has not been specified, it will be initialized from the value stored in the client.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(ExecuteQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Executes a SQL query against a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// 
+        /// Exactly one of `query` and `prepared_query` is required. Setting both
+        /// or neither is an `INVALID_ARGUMENT`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(string instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceName, nameof(instanceName)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL query against a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// 
+        /// Exactly one of `query` and `prepared_query` is required. Setting both
+        /// or neither is an `INVALID_ARGUMENT`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        [sys::ObsoleteAttribute]
+        public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(gcbcv::InstanceName instanceName, string query, gaxgrpc::CallSettings callSettings = null) =>
+            ExecuteQuery(new ExecuteQueryRequest
+            {
+                InstanceNameAsInstanceName = gax::GaxPreconditions.CheckNotNull(instanceName, nameof(instanceName)),
+                Query = gax::GaxPreconditions.CheckNotNullOrEmpty(query, nameof(query)),
+            }, callSettings);
+
+        /// <summary>
+        /// Executes a SQL query against a particular Bigtable instance.
+        /// </summary>
+        /// <param name="instanceName">
+        /// Required. The unique name of the instance against which the query should be
+        /// executed.
+        /// Values are of the form `projects/&lt;project&gt;/instances/&lt;instance&gt;`
+        /// </param>
+        /// <param name="query">
+        /// Required. The query string.
+        /// 
+        /// Exactly one of `query` and `prepared_query` is required. Setting both
+        /// or neither is an `INVALID_ARGUMENT`.
+        /// </param>
+        /// <param name="appProfileId">
         /// Optional. This value specifies routing for replication. If not specified,
         /// the `default` application profile will be used.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
+        [sys::ObsoleteAttribute]
         public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(string instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ExecuteQuery(new ExecuteQueryRequest
             {
@@ -808,7 +1117,7 @@ namespace Google.Cloud.Bigtable.V2
             }, callSettings);
 
         /// <summary>
-        /// Executes a BTQL query against a particular Cloud Bigtable instance.
+        /// Executes a SQL query against a particular Bigtable instance.
         /// </summary>
         /// <param name="instanceName">
         /// Required. The unique name of the instance against which the query should be
@@ -817,6 +1126,9 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="query">
         /// Required. The query string.
+        /// 
+        /// Exactly one of `query` and `prepared_query` is required. Setting both
+        /// or neither is an `INVALID_ARGUMENT`.
         /// </param>
         /// <param name="appProfileId">
         /// Optional. This value specifies routing for replication. If not specified,
@@ -824,6 +1136,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
+        [sys::ObsoleteAttribute]
         public virtual BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(gcbcv::InstanceName instanceName, string query, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ExecuteQuery(new ExecuteQueryRequest
             {
@@ -880,6 +1193,12 @@ namespace Google.Cloud.Bigtable.V2
 
         /// <inheritdoc/>
         public override BigtableServiceApiClient.ReadChangeStreamStream ReadChangeStream(ReadChangeStreamRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ReadChangeStream(request, callSettings);
+
+        /// <inheritdoc/>
+        public override PrepareQueryResponse PrepareQuery(PrepareQueryRequest request, gaxgrpc::CallSettings callSettings = null) => _client.PrepareQuery(request, callSettings);
+
+        /// <inheritdoc/>
+        public override stt::Task<PrepareQueryResponse> PrepareQueryAsync(PrepareQueryRequest request, gaxgrpc::CallSettings callSettings = null) => _client.PrepareQueryAsync(request, callSettings);
 
         /// <inheritdoc/>
         public override BigtableServiceApiClient.ExecuteQueryStream ExecuteQuery(ExecuteQueryRequest request, gaxgrpc::CallSettings callSettings = null) => _client.ExecuteQuery(request, callSettings);

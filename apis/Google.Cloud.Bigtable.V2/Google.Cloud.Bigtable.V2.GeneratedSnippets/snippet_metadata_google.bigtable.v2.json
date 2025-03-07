@@ -3475,6 +3475,531 @@
       ]
     },
     {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_sync",
+      "title": "PrepareQueryRequestObject",
+      "description": "Snippet for PrepareQuery",
+      "file": "BigtableServiceApiClient.PrepareQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.PrepareQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.PrepareQueryResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_async",
+      "title": "PrepareQueryRequestObjectAsync",
+      "description": "Snippet for PrepareQueryAsync",
+      "file": "BigtableServiceApiClient.PrepareQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQueryAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.V2.PrepareQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PrepareQueryResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 50,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_sync_flattened1",
+      "title": "PrepareQuery1",
+      "description": "Snippet for PrepareQuery",
+      "file": "BigtableServiceApiClient.PrepareQuery1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.PrepareQueryResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_async_flattened1",
+      "title": "PrepareQuery1Async",
+      "description": "Snippet for PrepareQueryAsync",
+      "file": "BigtableServiceApiClient.PrepareQuery1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQueryAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PrepareQueryResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_sync_flattened1_resourceNames",
+      "title": "PrepareQuery1ResourceNames",
+      "description": "Snippet for PrepareQuery",
+      "file": "BigtableServiceApiClient.PrepareQuery1ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.PrepareQueryResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_async_flattened1_resourceNames",
+      "title": "PrepareQuery1ResourceNamesAsync",
+      "description": "Snippet for PrepareQueryAsync",
+      "file": "BigtableServiceApiClient.PrepareQuery1ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQueryAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PrepareQueryResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_sync_flattened2",
+      "title": "PrepareQuery2",
+      "description": "Snippet for PrepareQuery",
+      "file": "BigtableServiceApiClient.PrepareQuery2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQuery",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.PrepareQueryResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_async_flattened2",
+      "title": "PrepareQuery2Async",
+      "description": "Snippet for PrepareQueryAsync",
+      "file": "BigtableServiceApiClient.PrepareQuery2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQueryAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PrepareQueryResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_sync_flattened2_resourceNames",
+      "title": "PrepareQuery2ResourceNames",
+      "description": "Snippet for PrepareQuery",
+      "file": "BigtableServiceApiClient.PrepareQuery2ResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQuery",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.V2.PrepareQueryResponse",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtable_v2_generated_Bigtable_PrepareQuery_async_flattened2_resourceNames",
+      "title": "PrepareQuery2ResourceNamesAsync",
+      "description": "Snippet for PrepareQueryAsync",
+      "file": "BigtableServiceApiClient.PrepareQuery2ResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PrepareQueryAsync",
+        "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient.PrepareQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "instanceName"
+          },
+          {
+            "type": "System.String",
+            "name": "query"
+          },
+          {
+            "type": "System.String",
+            "name": "appProfileId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.V2.PrepareQueryResponse>",
+        "client": {
+          "shortName": "BigtableServiceApiClient",
+          "fullName": "Google.Cloud.Bigtable.V2.BigtableServiceApiClient"
+        },
+        "method": {
+          "shortName": "PrepareQuery",
+          "fullName": "google.bigtable.v2.Bigtable.PrepareQuery",
+          "service": {
+            "shortName": "Bigtable",
+            "fullName": "google.bigtable.v2.Bigtable"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "bigtable_v2_generated_Bigtable_ExecuteQuery_sync",
       "title": "ExecuteQueryRequestObject",
       "description": "Snippet for ExecuteQuery",
@@ -3512,12 +4037,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 63,
+          "end": 62,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 61,
+          "end": 60,
           "type": "SHORT"
         }
       ]
@@ -3563,12 +4088,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 54,
+          "end": 56,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 52,
+          "end": 54,
           "type": "SHORT"
         }
       ]
@@ -3614,12 +4139,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 55,
+          "end": 57,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 53,
+          "end": 55,
           "type": "SHORT"
         }
       ]
@@ -3669,12 +4194,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 55,
+          "end": 57,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 53,
+          "end": 55,
           "type": "SHORT"
         }
       ]
@@ -3724,12 +4249,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 56,
+          "end": 58,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 54,
+          "end": 56,
           "type": "SHORT"
         }
       ]

@@ -46,6 +46,12 @@
                 "PingAndWarmAsync"
               ]
             },
+            "PrepareQuery": {
+              "methods": [
+                "PrepareQuery",
+                "PrepareQueryAsync"
+              ]
+            },
             "ReadChangeStream": {
               "methods": [
                 "ReadChangeStream",

@@ -41,7 +41,9 @@ namespace GoogleCSharpSnippets
             string query = "";
             string appProfileId = "";
             // Make the request, returning a streaming response
+#pragma warning disable CS0612
             using BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query, appProfileId);
+#pragma warning restore CS0612
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

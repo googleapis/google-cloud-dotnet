@@ -474,4 +474,16 @@ namespace Google.Cloud.Bigtable.V2
             set => InstanceName = value?.ToString() ?? "";
         }
     }
+
+    public partial class PrepareQueryRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="InstanceName"/> resource name property.
+        /// </summary>
+        public gcbcv::InstanceName InstanceNameAsInstanceName
+        {
+            get => string.IsNullOrEmpty(InstanceName) ? null : gcbcv::InstanceName.Parse(InstanceName, allowUnparsed: true);
+            set => InstanceName = value?.ToString() ?? "";
+        }
+    }
 }
