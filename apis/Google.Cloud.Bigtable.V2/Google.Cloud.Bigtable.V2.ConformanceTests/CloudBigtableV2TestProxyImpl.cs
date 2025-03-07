@@ -285,6 +285,28 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         }
     }
 
+    public override async Task<RowResult> ReadModifyWriteRow(ReadModifyWriteRowRequest request, ServerCallContext context)
+    {
+        CbtClient cbtClient = GetClient(request.ClientId, context);
+        try
+        {
+            Row row = (await cbtClient.Client.ReadModifyWriteRowAsync(request.Request)).Row;
+            string message = row is null ? "ReadModifyRow didn't find row" : "ReadModifyRow succeeded";
+            return new RowResult
+            {
+                Row = row,
+                Status = SetSuccessStatus(message, context)
+            };
+        }
+        catch (Exception e)
+        {
+            return new RowResult
+            {
+                Status = SetExceptionStatus(e, context)
+            };
+        }
+    }
+
     public static CloudBigtableV2TestProxyImpl Create() => new();
 
     private CloudBigtableV2TestProxyImpl() => _idClientMap = new();
