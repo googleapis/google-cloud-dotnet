@@ -39,7 +39,9 @@ namespace GoogleCSharpSnippets
             string instanceName = "projects/[PROJECT]/instances/[INSTANCE]";
             string query = "";
             // Make the request, returning a streaming response
+#pragma warning disable CS0612
             using BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query);
+#pragma warning restore CS0612
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach

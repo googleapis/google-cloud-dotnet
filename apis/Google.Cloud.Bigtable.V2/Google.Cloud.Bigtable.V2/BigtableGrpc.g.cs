@@ -100,6 +100,10 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse> __Marshaller_google_bigtable_v2_ReadChangeStreamResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.PrepareQueryRequest> __Marshaller_google_bigtable_v2_PrepareQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.PrepareQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.PrepareQueryResponse> __Marshaller_google_bigtable_v2_PrepareQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.PrepareQueryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest> __Marshaller_google_bigtable_v2_ExecuteQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse> __Marshaller_google_bigtable_v2_ExecuteQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse.Parser));
@@ -175,6 +179,14 @@ namespace Google.Cloud.Bigtable.V2 {
         "ReadChangeStream",
         __Marshaller_google_bigtable_v2_ReadChangeStreamRequest,
         __Marshaller_google_bigtable_v2_ReadChangeStreamResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.PrepareQueryRequest, global::Google.Cloud.Bigtable.V2.PrepareQueryResponse> __Method_PrepareQuery = new grpc::Method<global::Google.Cloud.Bigtable.V2.PrepareQueryRequest, global::Google.Cloud.Bigtable.V2.PrepareQueryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PrepareQuery",
+        __Marshaller_google_bigtable_v2_PrepareQueryRequest,
+        __Marshaller_google_bigtable_v2_PrepareQueryResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest, global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse> __Method_ExecuteQuery = new grpc::Method<global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest, global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse>(
@@ -329,7 +341,19 @@ namespace Google.Cloud.Bigtable.V2 {
       }
 
       /// <summary>
-      /// Executes a BTQL query against a particular Cloud Bigtable instance.
+      /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.PrepareQueryResponse> PrepareQuery(global::Google.Cloud.Bigtable.V2.PrepareQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Executes a SQL query against a particular Bigtable instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -737,7 +761,55 @@ namespace Google.Cloud.Bigtable.V2 {
         return CallInvoker.AsyncServerStreamingCall(__Method_ReadChangeStream, null, options, request);
       }
       /// <summary>
-      /// Executes a BTQL query against a particular Cloud Bigtable instance.
+      /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.V2.PrepareQueryResponse PrepareQuery(global::Google.Cloud.Bigtable.V2.PrepareQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PrepareQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Bigtable.V2.PrepareQueryResponse PrepareQuery(global::Google.Cloud.Bigtable.V2.PrepareQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PrepareQuery, null, options, request);
+      }
+      /// <summary>
+      /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.PrepareQueryResponse> PrepareQueryAsync(global::Google.Cloud.Bigtable.V2.PrepareQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PrepareQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Prepares a GoogleSQL query for execution on a particular Bigtable instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.PrepareQueryResponse> PrepareQueryAsync(global::Google.Cloud.Bigtable.V2.PrepareQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PrepareQuery, null, options, request);
+      }
+      /// <summary>
+      /// Executes a SQL query against a particular Bigtable instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -750,7 +822,7 @@ namespace Google.Cloud.Bigtable.V2 {
         return ExecuteQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Executes a BTQL query against a particular Cloud Bigtable instance.
+      /// Executes a SQL query against a particular Bigtable instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -783,6 +855,7 @@ namespace Google.Cloud.Bigtable.V2 {
           .AddMethod(__Method_ReadModifyWriteRow, serviceImpl.ReadModifyWriteRow)
           .AddMethod(__Method_GenerateInitialChangeStreamPartitions, serviceImpl.GenerateInitialChangeStreamPartitions)
           .AddMethod(__Method_ReadChangeStream, serviceImpl.ReadChangeStream)
+          .AddMethod(__Method_PrepareQuery, serviceImpl.PrepareQuery)
           .AddMethod(__Method_ExecuteQuery, serviceImpl.ExecuteQuery).Build();
     }
 
@@ -802,6 +875,7 @@ namespace Google.Cloud.Bigtable.V2 {
       serviceBinder.AddMethod(__Method_ReadModifyWriteRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ReadModifyWriteRowResponse>(serviceImpl.ReadModifyWriteRow));
       serviceBinder.AddMethod(__Method_GenerateInitialChangeStreamPartitions, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsRequest, global::Google.Cloud.Bigtable.V2.GenerateInitialChangeStreamPartitionsResponse>(serviceImpl.GenerateInitialChangeStreamPartitions));
       serviceBinder.AddMethod(__Method_ReadChangeStream, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.ReadChangeStreamRequest, global::Google.Cloud.Bigtable.V2.ReadChangeStreamResponse>(serviceImpl.ReadChangeStream));
+      serviceBinder.AddMethod(__Method_PrepareQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.PrepareQueryRequest, global::Google.Cloud.Bigtable.V2.PrepareQueryResponse>(serviceImpl.PrepareQuery));
       serviceBinder.AddMethod(__Method_ExecuteQuery, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Bigtable.V2.ExecuteQueryRequest, global::Google.Cloud.Bigtable.V2.ExecuteQueryResponse>(serviceImpl.ExecuteQuery));
     }
 

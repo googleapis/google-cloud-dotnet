@@ -1460,6 +1460,179 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for PrepareQuery</summary>
+        public void PrepareQueryRequestObject()
+        {
+            // Snippet: PrepareQuery(PrepareQueryRequest, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            gcbv::PrepareQueryRequest request = new gcbv::PrepareQueryRequest
+            {
+                InstanceNameAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+                Query = "",
+                ProtoFormat = new gcbv::ProtoFormat(),
+                ParamTypes =
+                {
+                    {
+                        "",
+                        new gcbv::Type()
+                    },
+                },
+            };
+            // Make the request
+            gcbv::PrepareQueryResponse response = bigtableServiceApiClient.PrepareQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQueryAsync</summary>
+        public async Task PrepareQueryRequestObjectAsync()
+        {
+            // Snippet: PrepareQueryAsync(PrepareQueryRequest, CallSettings)
+            // Additional: PrepareQueryAsync(PrepareQueryRequest, CancellationToken)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            gcbv::PrepareQueryRequest request = new gcbv::PrepareQueryRequest
+            {
+                InstanceNameAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                AppProfileId = "",
+                Query = "",
+                ProtoFormat = new gcbv::ProtoFormat(),
+                ParamTypes =
+                {
+                    {
+                        "",
+                        new gcbv::Type()
+                    },
+                },
+            };
+            // Make the request
+            gcbv::PrepareQueryResponse response = await bigtableServiceApiClient.PrepareQueryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQuery</summary>
+        public void PrepareQuery1()
+        {
+            // Snippet: PrepareQuery(string, string, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string instanceName = "projects/[PROJECT]/instances/[INSTANCE]";
+            string query = "";
+            // Make the request
+            gcbv::PrepareQueryResponse response = bigtableServiceApiClient.PrepareQuery(instanceName, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQueryAsync</summary>
+        public async Task PrepareQuery1Async()
+        {
+            // Snippet: PrepareQueryAsync(string, string, CallSettings)
+            // Additional: PrepareQueryAsync(string, string, CancellationToken)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            string instanceName = "projects/[PROJECT]/instances/[INSTANCE]";
+            string query = "";
+            // Make the request
+            gcbv::PrepareQueryResponse response = await bigtableServiceApiClient.PrepareQueryAsync(instanceName, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQuery</summary>
+        public void PrepareQuery1ResourceNames()
+        {
+            // Snippet: PrepareQuery(InstanceName, string, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            InstanceName instanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string query = "";
+            // Make the request
+            gcbv::PrepareQueryResponse response = bigtableServiceApiClient.PrepareQuery(instanceName, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQueryAsync</summary>
+        public async Task PrepareQuery1ResourceNamesAsync()
+        {
+            // Snippet: PrepareQueryAsync(InstanceName, string, CallSettings)
+            // Additional: PrepareQueryAsync(InstanceName, string, CancellationToken)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName instanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string query = "";
+            // Make the request
+            gcbv::PrepareQueryResponse response = await bigtableServiceApiClient.PrepareQueryAsync(instanceName, query);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQuery</summary>
+        public void PrepareQuery2()
+        {
+            // Snippet: PrepareQuery(string, string, string, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            string instanceName = "projects/[PROJECT]/instances/[INSTANCE]";
+            string query = "";
+            string appProfileId = "";
+            // Make the request
+            gcbv::PrepareQueryResponse response = bigtableServiceApiClient.PrepareQuery(instanceName, query, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQueryAsync</summary>
+        public async Task PrepareQuery2Async()
+        {
+            // Snippet: PrepareQueryAsync(string, string, string, CallSettings)
+            // Additional: PrepareQueryAsync(string, string, string, CancellationToken)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            string instanceName = "projects/[PROJECT]/instances/[INSTANCE]";
+            string query = "";
+            string appProfileId = "";
+            // Make the request
+            gcbv::PrepareQueryResponse response = await bigtableServiceApiClient.PrepareQueryAsync(instanceName, query, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQuery</summary>
+        public void PrepareQuery2ResourceNames()
+        {
+            // Snippet: PrepareQuery(InstanceName, string, string, CallSettings)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = gcbv::BigtableServiceApiClient.Create();
+            // Initialize request argument(s)
+            InstanceName instanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string query = "";
+            string appProfileId = "";
+            // Make the request
+            gcbv::PrepareQueryResponse response = bigtableServiceApiClient.PrepareQuery(instanceName, query, appProfileId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PrepareQueryAsync</summary>
+        public async Task PrepareQuery2ResourceNamesAsync()
+        {
+            // Snippet: PrepareQueryAsync(InstanceName, string, string, CallSettings)
+            // Additional: PrepareQueryAsync(InstanceName, string, string, CancellationToken)
+            // Create client
+            gcbv::BigtableServiceApiClient bigtableServiceApiClient = await gcbv::BigtableServiceApiClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName instanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            string query = "";
+            string appProfileId = "";
+            // Make the request
+            gcbv::PrepareQueryResponse response = await bigtableServiceApiClient.PrepareQueryAsync(instanceName, query, appProfileId);
+            // End snippet
+        }
+
         /// <summary>Snippet for ExecuteQuery</summary>
         public async Task ExecuteQueryRequestObject()
         {
@@ -1471,8 +1644,6 @@ namespace GoogleCSharpSnippets
             {
                 InstanceNameAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
                 AppProfileId = "",
-                Query = "",
-                ProtoFormat = new gcbv::ProtoFormat(),
                 Params =
                 {
                     {
@@ -1481,6 +1652,7 @@ namespace GoogleCSharpSnippets
                     },
                 },
                 ResumeToken = ByteString.Empty,
+                PreparedQuery = ByteString.Empty,
             };
             // Make the request, returning a streaming response
             using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(request);
@@ -1507,7 +1679,9 @@ namespace GoogleCSharpSnippets
             string instanceName = "projects/[PROJECT]/instances/[INSTANCE]";
             string query = "";
             // Make the request, returning a streaming response
+#pragma warning disable CS0612
             using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query);
+#pragma warning restore CS0612
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1531,7 +1705,9 @@ namespace GoogleCSharpSnippets
             InstanceName instanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
             string query = "";
             // Make the request, returning a streaming response
+#pragma warning disable CS0612
             using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query);
+#pragma warning restore CS0612
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1556,7 +1732,9 @@ namespace GoogleCSharpSnippets
             string query = "";
             string appProfileId = "";
             // Make the request, returning a streaming response
+#pragma warning disable CS0612
             using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query, appProfileId);
+#pragma warning restore CS0612
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
@@ -1581,7 +1759,9 @@ namespace GoogleCSharpSnippets
             string query = "";
             string appProfileId = "";
             // Make the request, returning a streaming response
+#pragma warning disable CS0612
             using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(instanceName, query, appProfileId);
+#pragma warning restore CS0612
 
             // Read streaming responses from server until complete
             // Note that C# 8 code can use await foreach
