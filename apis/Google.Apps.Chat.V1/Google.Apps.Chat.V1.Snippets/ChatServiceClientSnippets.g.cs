@@ -3227,5 +3227,156 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for GetSpaceNotificationSetting</summary>
+        public void GetSpaceNotificationSettingRequestObject()
+        {
+            // Snippet: GetSpaceNotificationSetting(GetSpaceNotificationSettingRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            GetSpaceNotificationSettingRequest request = new GetSpaceNotificationSettingRequest
+            {
+                SpaceNotificationSettingName = SpaceNotificationSettingName.FromUserSpace("[USER]", "[SPACE]"),
+            };
+            // Make the request
+            SpaceNotificationSetting response = chatServiceClient.GetSpaceNotificationSetting(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceNotificationSettingAsync</summary>
+        public async Task GetSpaceNotificationSettingRequestObjectAsync()
+        {
+            // Snippet: GetSpaceNotificationSettingAsync(GetSpaceNotificationSettingRequest, CallSettings)
+            // Additional: GetSpaceNotificationSettingAsync(GetSpaceNotificationSettingRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetSpaceNotificationSettingRequest request = new GetSpaceNotificationSettingRequest
+            {
+                SpaceNotificationSettingName = SpaceNotificationSettingName.FromUserSpace("[USER]", "[SPACE]"),
+            };
+            // Make the request
+            SpaceNotificationSetting response = await chatServiceClient.GetSpaceNotificationSettingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceNotificationSetting</summary>
+        public void GetSpaceNotificationSetting()
+        {
+            // Snippet: GetSpaceNotificationSetting(string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/spaces/[SPACE]/spaceNotificationSetting";
+            // Make the request
+            SpaceNotificationSetting response = chatServiceClient.GetSpaceNotificationSetting(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceNotificationSettingAsync</summary>
+        public async Task GetSpaceNotificationSettingAsync()
+        {
+            // Snippet: GetSpaceNotificationSettingAsync(string, CallSettings)
+            // Additional: GetSpaceNotificationSettingAsync(string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/spaces/[SPACE]/spaceNotificationSetting";
+            // Make the request
+            SpaceNotificationSetting response = await chatServiceClient.GetSpaceNotificationSettingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceNotificationSetting</summary>
+        public void GetSpaceNotificationSettingResourceNames()
+        {
+            // Snippet: GetSpaceNotificationSetting(SpaceNotificationSettingName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SpaceNotificationSettingName name = SpaceNotificationSettingName.FromUserSpace("[USER]", "[SPACE]");
+            // Make the request
+            SpaceNotificationSetting response = chatServiceClient.GetSpaceNotificationSetting(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetSpaceNotificationSettingAsync</summary>
+        public async Task GetSpaceNotificationSettingResourceNamesAsync()
+        {
+            // Snippet: GetSpaceNotificationSettingAsync(SpaceNotificationSettingName, CallSettings)
+            // Additional: GetSpaceNotificationSettingAsync(SpaceNotificationSettingName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpaceNotificationSettingName name = SpaceNotificationSettingName.FromUserSpace("[USER]", "[SPACE]");
+            // Make the request
+            SpaceNotificationSetting response = await chatServiceClient.GetSpaceNotificationSettingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSpaceNotificationSetting</summary>
+        public void UpdateSpaceNotificationSettingRequestObject()
+        {
+            // Snippet: UpdateSpaceNotificationSetting(UpdateSpaceNotificationSettingRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSpaceNotificationSettingRequest request = new UpdateSpaceNotificationSettingRequest
+            {
+                SpaceNotificationSetting = new SpaceNotificationSetting(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SpaceNotificationSetting response = chatServiceClient.UpdateSpaceNotificationSetting(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSpaceNotificationSettingAsync</summary>
+        public async Task UpdateSpaceNotificationSettingRequestObjectAsync()
+        {
+            // Snippet: UpdateSpaceNotificationSettingAsync(UpdateSpaceNotificationSettingRequest, CallSettings)
+            // Additional: UpdateSpaceNotificationSettingAsync(UpdateSpaceNotificationSettingRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSpaceNotificationSettingRequest request = new UpdateSpaceNotificationSettingRequest
+            {
+                SpaceNotificationSetting = new SpaceNotificationSetting(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            SpaceNotificationSetting response = await chatServiceClient.UpdateSpaceNotificationSettingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSpaceNotificationSetting</summary>
+        public void UpdateSpaceNotificationSetting()
+        {
+            // Snippet: UpdateSpaceNotificationSetting(SpaceNotificationSetting, FieldMask, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            SpaceNotificationSetting spaceNotificationSetting = new SpaceNotificationSetting();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SpaceNotificationSetting response = chatServiceClient.UpdateSpaceNotificationSetting(spaceNotificationSetting, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSpaceNotificationSettingAsync</summary>
+        public async Task UpdateSpaceNotificationSettingAsync()
+        {
+            // Snippet: UpdateSpaceNotificationSettingAsync(SpaceNotificationSetting, FieldMask, CallSettings)
+            // Additional: UpdateSpaceNotificationSettingAsync(SpaceNotificationSetting, FieldMask, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SpaceNotificationSetting spaceNotificationSetting = new SpaceNotificationSetting();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            SpaceNotificationSetting response = await chatServiceClient.UpdateSpaceNotificationSettingAsync(spaceNotificationSetting, updateMask);
+            // End snippet
+        }
     }
 }

@@ -156,6 +156,12 @@ namespace Google.Apps.Chat.V1 {
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ListSpaceEventsRequest> __Marshaller_google_chat_v1_ListSpaceEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ListSpaceEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ListSpaceEventsResponse> __Marshaller_google_chat_v1_ListSpaceEventsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ListSpaceEventsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest> __Marshaller_google_chat_v1_GetSpaceNotificationSettingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SpaceNotificationSetting> __Marshaller_google_chat_v1_SpaceNotificationSetting = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SpaceNotificationSetting.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest> __Marshaller_google_chat_v1_UpdateSpaceNotificationSettingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Chat.V1.CreateMessageRequest, global::Google.Apps.Chat.V1.Message> __Method_CreateMessage = new grpc::Method<global::Google.Apps.Chat.V1.CreateMessageRequest, global::Google.Apps.Chat.V1.Message>(
@@ -388,6 +394,22 @@ namespace Google.Apps.Chat.V1 {
         "ListSpaceEvents",
         __Marshaller_google_chat_v1_ListSpaceEventsRequest,
         __Marshaller_google_chat_v1_ListSpaceEventsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest, global::Google.Apps.Chat.V1.SpaceNotificationSetting> __Method_GetSpaceNotificationSetting = new grpc::Method<global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest, global::Google.Apps.Chat.V1.SpaceNotificationSetting>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetSpaceNotificationSetting",
+        __Marshaller_google_chat_v1_GetSpaceNotificationSettingRequest,
+        __Marshaller_google_chat_v1_SpaceNotificationSetting);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest, global::Google.Apps.Chat.V1.SpaceNotificationSetting> __Method_UpdateSpaceNotificationSetting = new grpc::Method<global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest, global::Google.Apps.Chat.V1.SpaceNotificationSetting>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSpaceNotificationSetting",
+        __Marshaller_google_chat_v1_UpdateSpaceNotificationSettingRequest,
+        __Marshaller_google_chat_v1_SpaceNotificationSetting);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1169,6 +1191,40 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.ListSpaceEventsResponse> ListSpaceEvents(global::Google.Apps.Chat.V1.ListSpaceEventsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the space notification setting. For an example, see [Get the
+      /// caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.SpaceNotificationSetting> GetSpaceNotificationSetting(global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the space notification setting. For an example, see [Update
+      /// the caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.SpaceNotificationSetting> UpdateSpaceNotificationSetting(global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4298,6 +4354,142 @@ namespace Google.Apps.Chat.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListSpaceEvents, null, options, request);
       }
+      /// <summary>
+      /// Gets the space notification setting. For an example, see [Get the
+      /// caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceNotificationSetting GetSpaceNotificationSetting(global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSpaceNotificationSetting(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the space notification setting. For an example, see [Get the
+      /// caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceNotificationSetting GetSpaceNotificationSetting(global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetSpaceNotificationSetting, null, options, request);
+      }
+      /// <summary>
+      /// Gets the space notification setting. For an example, see [Get the
+      /// caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceNotificationSetting> GetSpaceNotificationSettingAsync(global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetSpaceNotificationSettingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the space notification setting. For an example, see [Get the
+      /// caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/get-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceNotificationSetting> GetSpaceNotificationSettingAsync(global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetSpaceNotificationSetting, null, options, request);
+      }
+      /// <summary>
+      /// Updates the space notification setting. For an example, see [Update
+      /// the caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceNotificationSetting UpdateSpaceNotificationSetting(global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSpaceNotificationSetting(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the space notification setting. For an example, see [Update
+      /// the caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.SpaceNotificationSetting UpdateSpaceNotificationSetting(global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSpaceNotificationSetting, null, options, request);
+      }
+      /// <summary>
+      /// Updates the space notification setting. For an example, see [Update
+      /// the caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceNotificationSetting> UpdateSpaceNotificationSettingAsync(global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSpaceNotificationSettingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the space notification setting. For an example, see [Update
+      /// the caller's space notification
+      /// setting](https://developers.google.com/workspace/chat/update-space-notification-setting).
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.SpaceNotificationSetting> UpdateSpaceNotificationSettingAsync(global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSpaceNotificationSetting, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ChatServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -4340,7 +4532,9 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_UpdateSpaceReadState, serviceImpl.UpdateSpaceReadState)
           .AddMethod(__Method_GetThreadReadState, serviceImpl.GetThreadReadState)
           .AddMethod(__Method_GetSpaceEvent, serviceImpl.GetSpaceEvent)
-          .AddMethod(__Method_ListSpaceEvents, serviceImpl.ListSpaceEvents).Build();
+          .AddMethod(__Method_ListSpaceEvents, serviceImpl.ListSpaceEvents)
+          .AddMethod(__Method_GetSpaceNotificationSetting, serviceImpl.GetSpaceNotificationSetting)
+          .AddMethod(__Method_UpdateSpaceNotificationSetting, serviceImpl.UpdateSpaceNotificationSetting).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -4379,6 +4573,8 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_GetThreadReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetThreadReadStateRequest, global::Google.Apps.Chat.V1.ThreadReadState>(serviceImpl.GetThreadReadState));
       serviceBinder.AddMethod(__Method_GetSpaceEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceEventRequest, global::Google.Apps.Chat.V1.SpaceEvent>(serviceImpl.GetSpaceEvent));
       serviceBinder.AddMethod(__Method_ListSpaceEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListSpaceEventsRequest, global::Google.Apps.Chat.V1.ListSpaceEventsResponse>(serviceImpl.ListSpaceEvents));
+      serviceBinder.AddMethod(__Method_GetSpaceNotificationSetting, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest, global::Google.Apps.Chat.V1.SpaceNotificationSetting>(serviceImpl.GetSpaceNotificationSetting));
+      serviceBinder.AddMethod(__Method_UpdateSpaceNotificationSetting, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest, global::Google.Apps.Chat.V1.SpaceNotificationSetting>(serviceImpl.UpdateSpaceNotificationSetting));
     }
 
   }

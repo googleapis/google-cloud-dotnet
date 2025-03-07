@@ -7154,6 +7154,493 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceNotificationSetting_sync",
+      "title": "GetSpaceNotificationSettingRequestObject",
+      "description": "Snippet for GetSpaceNotificationSetting",
+      "file": "ChatServiceClient.GetSpaceNotificationSettingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceNotificationSetting",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceNotificationSetting",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceNotificationSetting",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.GetSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceNotificationSetting_async",
+      "title": "GetSpaceNotificationSettingRequestObjectAsync",
+      "description": "Snippet for GetSpaceNotificationSettingAsync",
+      "file": "ChatServiceClient.GetSpaceNotificationSettingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceNotificationSettingAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceNotificationSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceNotificationSetting>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.GetSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceNotificationSetting_sync_flattened",
+      "title": "GetSpaceNotificationSetting",
+      "description": "Snippet for GetSpaceNotificationSetting",
+      "file": "ChatServiceClient.GetSpaceNotificationSettingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceNotificationSetting",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceNotificationSetting",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceNotificationSetting",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.GetSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceNotificationSetting_async_flattened",
+      "title": "GetSpaceNotificationSettingAsync",
+      "description": "Snippet for GetSpaceNotificationSettingAsync",
+      "file": "ChatServiceClient.GetSpaceNotificationSettingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceNotificationSettingAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceNotificationSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceNotificationSetting>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.GetSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceNotificationSetting_sync_flattened_resourceNames",
+      "title": "GetSpaceNotificationSettingResourceNames",
+      "description": "Snippet for GetSpaceNotificationSetting",
+      "file": "ChatServiceClient.GetSpaceNotificationSettingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceNotificationSetting",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceNotificationSetting",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceNotificationSettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceNotificationSetting",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.GetSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetSpaceNotificationSetting_async_flattened_resourceNames",
+      "title": "GetSpaceNotificationSettingResourceNamesAsync",
+      "description": "Snippet for GetSpaceNotificationSettingAsync",
+      "file": "ChatServiceClient.GetSpaceNotificationSettingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSpaceNotificationSettingAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetSpaceNotificationSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceNotificationSettingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceNotificationSetting>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.GetSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSpaceNotificationSetting_sync",
+      "title": "UpdateSpaceNotificationSettingRequestObject",
+      "description": "Snippet for UpdateSpaceNotificationSetting",
+      "file": "ChatServiceClient.UpdateSpaceNotificationSettingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceNotificationSetting",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSpaceNotificationSetting",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceNotificationSetting",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.UpdateSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSpaceNotificationSetting_async",
+      "title": "UpdateSpaceNotificationSettingRequestObjectAsync",
+      "description": "Snippet for UpdateSpaceNotificationSettingAsync",
+      "file": "ChatServiceClient.UpdateSpaceNotificationSettingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceNotificationSettingAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSpaceNotificationSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateSpaceNotificationSettingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceNotificationSetting>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.UpdateSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSpaceNotificationSetting_sync_flattened",
+      "title": "UpdateSpaceNotificationSetting",
+      "description": "Snippet for UpdateSpaceNotificationSetting",
+      "file": "ChatServiceClient.UpdateSpaceNotificationSettingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceNotificationSetting",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSpaceNotificationSetting",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceNotificationSetting",
+            "name": "spaceNotificationSetting"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.SpaceNotificationSetting",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.UpdateSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateSpaceNotificationSetting_async_flattened",
+      "title": "UpdateSpaceNotificationSettingAsync",
+      "description": "Snippet for UpdateSpaceNotificationSettingAsync",
+      "file": "ChatServiceClient.UpdateSpaceNotificationSettingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSpaceNotificationSettingAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateSpaceNotificationSettingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.SpaceNotificationSetting",
+            "name": "spaceNotificationSetting"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.SpaceNotificationSetting>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSpaceNotificationSetting",
+          "fullName": "google.chat.v1.ChatService.UpdateSpaceNotificationSetting",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
