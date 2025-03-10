@@ -1,5 +1,25 @@
 # Version history
 
+## Version 4.26.0, released 2025-03-10
+
+### New features
+
+- Add new RPC IngestContextReferences, GenerateSuggestions ([commit 449b11f](https://github.com/googleapis/google-cloud-dotnet/commit/449b11fdbf523e78cecdb8d1798393aab03c1c50))
+- Added support for TelephonyConnectionInfo, country_code and ControlPoint ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+- Added support for CONVERSATION_SUMMARIZATION ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+- Added ConversatioalTrainingAssignments, ConversationalTrainingMembers, ConversationalTrainingModules,ConversationalTrainingTeams API ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+- Added support for audio_input and speech_model ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+- Changed enablle_partial_automated_agent_reply to optional ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+
+### Documentation improvements
+
+- Clarified wording around phrase_sets ([commit 449b11f](https://github.com/googleapis/google-cloud-dotnet/commit/449b11fdbf523e78cecdb8d1798393aab03c1c50))
+- Clarified wording around filter and document_correctness ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+- Clarified wording around use_timeout_based_endpointing ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+- Changed reference link around ConversationStage ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+- Clarified wording around boost_specs and filter_specs ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+- Clarified wording around send_time ([commit 57d2148](https://github.com/googleapis/google-cloud-dotnet/commit/57d2148d5f3f797ff8524588a5c90ff2ef121565))
+
 ## Version 4.25.0, released 2024-12-16
 
 ### New features
