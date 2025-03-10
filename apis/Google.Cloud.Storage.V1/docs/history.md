@@ -1,5 +1,13 @@
 # Version history
 
+## Version 4.11.0, released 2025-03-10
+
+### New features
+
+- Allowing users to specify the version id of the Model Garden model ([commit 33f9df1](https://github.com/googleapis/google-cloud-dotnet/commit/33f9df1a2607447629d6edc3241b67717d3ccc91))
+- Allowing users to choose whether to use the hf model cache ([commit 33f9df1](https://github.com/googleapis/google-cloud-dotnet/commit/33f9df1a2607447629d6edc3241b67717d3ccc91))
+- Bucket soft delete ([commit f773cad](https://github.com/googleapis/google-cloud-dotnet/commit/f773cadaa1bc5c2e32402c6a8ea2e7e2d287ecb9))
+
 ## Version 4.10.0, released 2024-03-26
 
 ### New features
