@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.16.0, released 2025-03-10
+
+### New features
+
+- Add PrepareQuery api and update ExecuteQuery to support it ([commit f222067](https://github.com/googleapis/google-cloud-dotnet/commit/f2220677139a51d4304c872292aad1b7c353831b))
+
+### Documentation improvements
+
+- Update ExecuteQuery API docs to reflect changes ([commit f222067](https://github.com/googleapis/google-cloud-dotnet/commit/f2220677139a51d4304c872292aad1b7c353831b))
+
 ## Version 3.15.0, released 2024-10-29
 
 ### New features
