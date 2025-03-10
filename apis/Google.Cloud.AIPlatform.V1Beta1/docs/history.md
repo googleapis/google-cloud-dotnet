@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta21, released 2025-03-10
+
+### New features
+
+- Add multihost_gpu_node_count to Vertex SDK for multihost GPU support ([commit a99144f](https://github.com/googleapis/google-cloud-dotnet/commit/a99144f288e5d8c6dfafdba72c2c8cc629b73484))
+- Allowing users to specify the version id of the Model Garden model ([commit 33f9df1](https://github.com/googleapis/google-cloud-dotnet/commit/33f9df1a2607447629d6edc3241b67717d3ccc91))
+- Allowing users to choose whether to use the hf model cache ([commit 33f9df1](https://github.com/googleapis/google-cloud-dotnet/commit/33f9df1a2607447629d6edc3241b67717d3ccc91))
+
 ## Version 1.0.0-beta20, released 2025-03-04
 
 ### Bug fixes
