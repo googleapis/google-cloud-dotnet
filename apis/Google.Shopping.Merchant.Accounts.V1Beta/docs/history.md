@@ -1,5 +1,29 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-03-10
+
+### Bug fixes
+
+- **BREAKING CHANGE** An existing optional field `type` is converted to required field in message .google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- **BREAKING CHANGE** An existing optional field `label` is converted to required field in message .google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- **BREAKING CHANGE** An existing optional field `countries` is converted to required field in message .google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- **BREAKING CHANGE** An existing optional field `return_policy_uri` is converted to required field in message .google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+
+### New features
+
+- A new message `SeasonalOverride` is added ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- A new field `seasonal_overrides` is added to message .google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+
+### Documentation improvements
+
+- The documentation for method `GetOnlineReturnPolicy` in service `OnlineReturnPolicyService` is improved ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- The documentation for method `ListOnlineReturnPolicies` in service `OnlineReturnPolicyService` is improved ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- The documentation for field `parent` in message `.google.shopping.merchant.accounts.v1beta.ListOnlineReturnPoliciesRequest` is improved ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- The documentation for field `type` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is improved ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- The documentation for field `label` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is improved ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- The documentation for field `countries` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is improved ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+- The documentation for field `return_policy_uri` in message `.google.shopping.merchant.accounts.v1beta.OnlineReturnPolicy` is improved ([commit 0ce5f8b](https://github.com/googleapis/google-cloud-dotnet/commit/0ce5f8bd4f7da0218f84246e78573332265feb80))
+
 ## Version 1.0.0-beta03, released 2024-09-30
 
 ### New features
