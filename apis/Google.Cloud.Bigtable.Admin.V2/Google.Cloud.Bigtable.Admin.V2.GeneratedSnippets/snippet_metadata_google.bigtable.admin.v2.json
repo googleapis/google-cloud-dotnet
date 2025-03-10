@@ -5800,6 +5800,2824 @@
       ]
     },
     {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateLogicalView_sync",
+      "title": "CreateLogicalViewRequestObject",
+      "description": "Snippet for CreateLogicalView",
+      "file": "BigtableInstanceAdminClient.CreateLogicalViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateLogicalView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateLogicalViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.CreateLogicalViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateLogicalView_async",
+      "title": "CreateLogicalViewRequestObjectAsync",
+      "description": "Snippet for CreateLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.CreateLogicalViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateLogicalViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.CreateLogicalViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateLogicalView_sync_flattened",
+      "title": "CreateLogicalView",
+      "description": "Snippet for CreateLogicalView",
+      "file": "BigtableInstanceAdminClient.CreateLogicalViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateLogicalView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+            "name": "logicalView"
+          },
+          {
+            "type": "System.String",
+            "name": "logicalViewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.CreateLogicalViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateLogicalView_async_flattened",
+      "title": "CreateLogicalViewAsync",
+      "description": "Snippet for CreateLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.CreateLogicalViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+            "name": "logicalView"
+          },
+          {
+            "type": "System.String",
+            "name": "logicalViewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.CreateLogicalViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateLogicalView_sync_flattened_resourceNames",
+      "title": "CreateLogicalViewResourceNames",
+      "description": "Snippet for CreateLogicalView",
+      "file": "BigtableInstanceAdminClient.CreateLogicalViewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateLogicalView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+            "name": "logicalView"
+          },
+          {
+            "type": "System.String",
+            "name": "logicalViewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.CreateLogicalViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateLogicalView_async_flattened_resourceNames",
+      "title": "CreateLogicalViewResourceNamesAsync",
+      "description": "Snippet for CreateLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.CreateLogicalViewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+            "name": "logicalView"
+          },
+          {
+            "type": "System.String",
+            "name": "logicalViewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.CreateLogicalViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetLogicalView_sync",
+      "title": "GetLogicalViewRequestObject",
+      "description": "Snippet for GetLogicalView",
+      "file": "BigtableInstanceAdminClient.GetLogicalViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetLogicalView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetLogicalViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetLogicalView_async",
+      "title": "GetLogicalViewRequestObjectAsync",
+      "description": "Snippet for GetLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.GetLogicalViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetLogicalViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetLogicalView_sync_flattened",
+      "title": "GetLogicalView",
+      "description": "Snippet for GetLogicalView",
+      "file": "BigtableInstanceAdminClient.GetLogicalViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetLogicalView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetLogicalView_async_flattened",
+      "title": "GetLogicalViewAsync",
+      "description": "Snippet for GetLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.GetLogicalViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetLogicalView_sync_flattened_resourceNames",
+      "title": "GetLogicalViewResourceNames",
+      "description": "Snippet for GetLogicalView",
+      "file": "BigtableInstanceAdminClient.GetLogicalViewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetLogicalView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetLogicalView_async_flattened_resourceNames",
+      "title": "GetLogicalViewResourceNamesAsync",
+      "description": "Snippet for GetLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.GetLogicalViewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListLogicalViews_sync",
+      "title": "ListLogicalViewsRequestObject",
+      "description": "Snippet for ListLogicalViews",
+      "file": "BigtableInstanceAdminClient.ListLogicalViewsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalViews",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListLogicalViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListLogicalViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListLogicalViewsResponse, Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListLogicalViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListLogicalViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListLogicalViews_async",
+      "title": "ListLogicalViewsRequestObjectAsync",
+      "description": "Snippet for ListLogicalViewsAsync",
+      "file": "BigtableInstanceAdminClient.ListLogicalViewsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalViewsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListLogicalViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListLogicalViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListLogicalViewsResponse, Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListLogicalViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListLogicalViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListLogicalViews_sync_flattened",
+      "title": "ListLogicalViews",
+      "description": "Snippet for ListLogicalViews",
+      "file": "BigtableInstanceAdminClient.ListLogicalViewsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalViews",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListLogicalViews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListLogicalViewsResponse, Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListLogicalViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListLogicalViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListLogicalViews_async_flattened",
+      "title": "ListLogicalViewsAsync",
+      "description": "Snippet for ListLogicalViewsAsync",
+      "file": "BigtableInstanceAdminClient.ListLogicalViewsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalViewsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListLogicalViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListLogicalViewsResponse, Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListLogicalViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListLogicalViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListLogicalViews_sync_flattened_resourceNames",
+      "title": "ListLogicalViewsResourceNames",
+      "description": "Snippet for ListLogicalViews",
+      "file": "BigtableInstanceAdminClient.ListLogicalViewsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalViews",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListLogicalViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListLogicalViewsResponse, Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListLogicalViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListLogicalViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListLogicalViews_async_flattened_resourceNames",
+      "title": "ListLogicalViewsResourceNamesAsync",
+      "description": "Snippet for ListLogicalViewsAsync",
+      "file": "BigtableInstanceAdminClient.ListLogicalViewsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalViewsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListLogicalViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListLogicalViewsResponse, Google.Cloud.Bigtable.Admin.V2.LogicalView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListLogicalViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListLogicalViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateLogicalView_sync",
+      "title": "UpdateLogicalViewRequestObject",
+      "description": "Snippet for UpdateLogicalView",
+      "file": "BigtableInstanceAdminClient.UpdateLogicalViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateLogicalView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateLogicalViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.UpdateLogicalViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateLogicalView_async",
+      "title": "UpdateLogicalViewRequestObjectAsync",
+      "description": "Snippet for UpdateLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.UpdateLogicalViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateLogicalViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.UpdateLogicalViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateLogicalView_sync_flattened",
+      "title": "UpdateLogicalView",
+      "description": "Snippet for UpdateLogicalView",
+      "file": "BigtableInstanceAdminClient.UpdateLogicalViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateLogicalView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+            "name": "logicalView"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.UpdateLogicalViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateLogicalView_async_flattened",
+      "title": "UpdateLogicalViewAsync",
+      "description": "Snippet for UpdateLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.UpdateLogicalViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalView",
+            "name": "logicalView"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.LogicalView, Google.Cloud.Bigtable.Admin.V2.UpdateLogicalViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteLogicalView_sync",
+      "title": "DeleteLogicalViewRequestObject",
+      "description": "Snippet for DeleteLogicalView",
+      "file": "BigtableInstanceAdminClient.DeleteLogicalViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteLogicalView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteLogicalViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteLogicalView_async",
+      "title": "DeleteLogicalViewRequestObjectAsync",
+      "description": "Snippet for DeleteLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.DeleteLogicalViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteLogicalViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteLogicalView_sync_flattened",
+      "title": "DeleteLogicalView",
+      "description": "Snippet for DeleteLogicalView",
+      "file": "BigtableInstanceAdminClient.DeleteLogicalViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteLogicalView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteLogicalView_async_flattened",
+      "title": "DeleteLogicalViewAsync",
+      "description": "Snippet for DeleteLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.DeleteLogicalViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteLogicalView_sync_flattened_resourceNames",
+      "title": "DeleteLogicalViewResourceNames",
+      "description": "Snippet for DeleteLogicalView",
+      "file": "BigtableInstanceAdminClient.DeleteLogicalViewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogicalView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteLogicalView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteLogicalView_async_flattened_resourceNames",
+      "title": "DeleteLogicalViewResourceNamesAsync",
+      "description": "Snippet for DeleteLogicalViewAsync",
+      "file": "BigtableInstanceAdminClient.DeleteLogicalViewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteLogicalViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteLogicalViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.LogicalViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteLogicalView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteLogicalView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateMaterializedView_sync",
+      "title": "CreateMaterializedViewRequestObject",
+      "description": "Snippet for CreateMaterializedView",
+      "file": "BigtableInstanceAdminClient.CreateMaterializedViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateMaterializedViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.CreateMaterializedViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateMaterializedView_async",
+      "title": "CreateMaterializedViewRequestObjectAsync",
+      "description": "Snippet for CreateMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.CreateMaterializedViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.CreateMaterializedViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.CreateMaterializedViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateMaterializedView_sync_flattened",
+      "title": "CreateMaterializedView",
+      "description": "Snippet for CreateMaterializedView",
+      "file": "BigtableInstanceAdminClient.CreateMaterializedViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateMaterializedView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+            "name": "materializedView"
+          },
+          {
+            "type": "System.String",
+            "name": "materializedViewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.CreateMaterializedViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateMaterializedView_async_flattened",
+      "title": "CreateMaterializedViewAsync",
+      "description": "Snippet for CreateMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.CreateMaterializedViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+            "name": "materializedView"
+          },
+          {
+            "type": "System.String",
+            "name": "materializedViewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.CreateMaterializedViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateMaterializedView_sync_flattened_resourceNames",
+      "title": "CreateMaterializedViewResourceNames",
+      "description": "Snippet for CreateMaterializedView",
+      "file": "BigtableInstanceAdminClient.CreateMaterializedViewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+            "name": "materializedView"
+          },
+          {
+            "type": "System.String",
+            "name": "materializedViewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.CreateMaterializedViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_CreateMaterializedView_async_flattened_resourceNames",
+      "title": "CreateMaterializedViewResourceNamesAsync",
+      "description": "Snippet for CreateMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.CreateMaterializedViewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.CreateMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+            "name": "materializedView"
+          },
+          {
+            "type": "System.String",
+            "name": "materializedViewId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.CreateMaterializedViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "CreateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.CreateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMaterializedView_sync",
+      "title": "GetMaterializedViewRequestObject",
+      "description": "Snippet for GetMaterializedView",
+      "file": "BigtableInstanceAdminClient.GetMaterializedViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetMaterializedViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMaterializedView_async",
+      "title": "GetMaterializedViewRequestObjectAsync",
+      "description": "Snippet for GetMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.GetMaterializedViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.GetMaterializedViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMaterializedView_sync_flattened",
+      "title": "GetMaterializedView",
+      "description": "Snippet for GetMaterializedView",
+      "file": "BigtableInstanceAdminClient.GetMaterializedViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMaterializedView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMaterializedView_async_flattened",
+      "title": "GetMaterializedViewAsync",
+      "description": "Snippet for GetMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.GetMaterializedViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMaterializedView_sync_flattened_resourceNames",
+      "title": "GetMaterializedViewResourceNames",
+      "description": "Snippet for GetMaterializedView",
+      "file": "BigtableInstanceAdminClient.GetMaterializedViewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_GetMaterializedView_async_flattened_resourceNames",
+      "title": "GetMaterializedViewResourceNamesAsync",
+      "description": "Snippet for GetMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.GetMaterializedViewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.GetMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "GetMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.GetMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMaterializedViews_sync",
+      "title": "ListMaterializedViewsRequestObject",
+      "description": "Snippet for ListMaterializedViews",
+      "file": "BigtableInstanceAdminClient.ListMaterializedViewsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMaterializedViews",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMaterializedViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListMaterializedViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMaterializedViewsResponse, Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMaterializedViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMaterializedViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMaterializedViews_async",
+      "title": "ListMaterializedViewsRequestObjectAsync",
+      "description": "Snippet for ListMaterializedViewsAsync",
+      "file": "BigtableInstanceAdminClient.ListMaterializedViewsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMaterializedViewsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMaterializedViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.ListMaterializedViewsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMaterializedViewsResponse, Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMaterializedViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMaterializedViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMaterializedViews_sync_flattened",
+      "title": "ListMaterializedViews",
+      "description": "Snippet for ListMaterializedViews",
+      "file": "BigtableInstanceAdminClient.ListMaterializedViewsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMaterializedViews",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMaterializedViews",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMaterializedViewsResponse, Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMaterializedViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMaterializedViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMaterializedViews_async_flattened",
+      "title": "ListMaterializedViewsAsync",
+      "description": "Snippet for ListMaterializedViewsAsync",
+      "file": "BigtableInstanceAdminClient.ListMaterializedViewsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMaterializedViewsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMaterializedViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMaterializedViewsResponse, Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMaterializedViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMaterializedViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMaterializedViews_sync_flattened_resourceNames",
+      "title": "ListMaterializedViewsResourceNames",
+      "description": "Snippet for ListMaterializedViews",
+      "file": "BigtableInstanceAdminClient.ListMaterializedViewsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMaterializedViews",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMaterializedViews",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMaterializedViewsResponse, Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMaterializedViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMaterializedViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_ListMaterializedViews_async_flattened_resourceNames",
+      "title": "ListMaterializedViewsResourceNamesAsync",
+      "description": "Snippet for ListMaterializedViewsAsync",
+      "file": "BigtableInstanceAdminClient.ListMaterializedViewsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMaterializedViewsAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.ListMaterializedViewsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Common.V2.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Bigtable.Admin.V2.ListMaterializedViewsResponse, Google.Cloud.Bigtable.Admin.V2.MaterializedView>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "ListMaterializedViews",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.ListMaterializedViews",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateMaterializedView_sync",
+      "title": "UpdateMaterializedViewRequestObject",
+      "description": "Snippet for UpdateMaterializedView",
+      "file": "BigtableInstanceAdminClient.UpdateMaterializedViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateMaterializedViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.UpdateMaterializedViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateMaterializedView_async",
+      "title": "UpdateMaterializedViewRequestObjectAsync",
+      "description": "Snippet for UpdateMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.UpdateMaterializedViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.UpdateMaterializedViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.UpdateMaterializedViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateMaterializedView_sync_flattened",
+      "title": "UpdateMaterializedView",
+      "description": "Snippet for UpdateMaterializedView",
+      "file": "BigtableInstanceAdminClient.UpdateMaterializedViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+            "name": "materializedView"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.UpdateMaterializedViewMetadata>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_UpdateMaterializedView_async_flattened",
+      "title": "UpdateMaterializedViewAsync",
+      "description": "Snippet for UpdateMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.UpdateMaterializedViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.UpdateMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedView",
+            "name": "materializedView"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Bigtable.Admin.V2.MaterializedView, Google.Cloud.Bigtable.Admin.V2.UpdateMaterializedViewMetadata>>",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "UpdateMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.UpdateMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteMaterializedView_sync",
+      "title": "DeleteMaterializedViewRequestObject",
+      "description": "Snippet for DeleteMaterializedView",
+      "file": "BigtableInstanceAdminClient.DeleteMaterializedViewRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteMaterializedViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteMaterializedView_async",
+      "title": "DeleteMaterializedViewRequestObjectAsync",
+      "description": "Snippet for DeleteMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.DeleteMaterializedViewRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.DeleteMaterializedViewRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteMaterializedView_sync_flattened",
+      "title": "DeleteMaterializedView",
+      "description": "Snippet for DeleteMaterializedView",
+      "file": "BigtableInstanceAdminClient.DeleteMaterializedViewSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteMaterializedView",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteMaterializedView_async_flattened",
+      "title": "DeleteMaterializedViewAsync",
+      "description": "Snippet for DeleteMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.DeleteMaterializedViewAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteMaterializedView_sync_flattened_resourceNames",
+      "title": "DeleteMaterializedViewResourceNames",
+      "description": "Snippet for DeleteMaterializedView",
+      "file": "BigtableInstanceAdminClient.DeleteMaterializedViewResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMaterializedView",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteMaterializedView",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "bigtableadmin_v2_generated_BigtableInstanceAdmin_DeleteMaterializedView_async_flattened_resourceNames",
+      "title": "DeleteMaterializedViewResourceNamesAsync",
+      "description": "Snippet for DeleteMaterializedViewAsync",
+      "file": "BigtableInstanceAdminClient.DeleteMaterializedViewResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteMaterializedViewAsync",
+        "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient.DeleteMaterializedViewAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Bigtable.Admin.V2.MaterializedViewName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "BigtableInstanceAdminClient",
+          "fullName": "Google.Cloud.Bigtable.Admin.V2.BigtableInstanceAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteMaterializedView",
+          "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin.DeleteMaterializedView",
+          "service": {
+            "shortName": "BigtableInstanceAdmin",
+            "fullName": "google.bigtable.admin.v2.BigtableInstanceAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "bigtableadmin_v2_generated_BigtableTableAdmin_CreateTable_sync",
       "title": "CreateTableRequestObject",
       "description": "Snippet for CreateTable",

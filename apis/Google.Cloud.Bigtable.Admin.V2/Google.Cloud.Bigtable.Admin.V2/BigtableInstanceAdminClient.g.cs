@@ -79,6 +79,20 @@ namespace Google.Cloud.Bigtable.Admin.V2
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             ListHotTabletsSettings = existing.ListHotTabletsSettings;
+            CreateLogicalViewSettings = existing.CreateLogicalViewSettings;
+            CreateLogicalViewOperationsSettings = existing.CreateLogicalViewOperationsSettings.Clone();
+            GetLogicalViewSettings = existing.GetLogicalViewSettings;
+            ListLogicalViewsSettings = existing.ListLogicalViewsSettings;
+            UpdateLogicalViewSettings = existing.UpdateLogicalViewSettings;
+            UpdateLogicalViewOperationsSettings = existing.UpdateLogicalViewOperationsSettings.Clone();
+            DeleteLogicalViewSettings = existing.DeleteLogicalViewSettings;
+            CreateMaterializedViewSettings = existing.CreateMaterializedViewSettings;
+            CreateMaterializedViewOperationsSettings = existing.CreateMaterializedViewOperationsSettings.Clone();
+            GetMaterializedViewSettings = existing.GetMaterializedViewSettings;
+            ListMaterializedViewsSettings = existing.ListMaterializedViewsSettings;
+            UpdateMaterializedViewSettings = existing.UpdateMaterializedViewSettings;
+            UpdateMaterializedViewOperationsSettings = existing.UpdateMaterializedViewOperationsSettings.Clone();
+            DeleteMaterializedViewSettings = existing.DeleteMaterializedViewSettings;
             OnCopy(existing);
         }
 
@@ -571,6 +585,208 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListHotTabletsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.CreateLogicalView</c> and
+        /// <c>BigtableInstanceAdminClient.CreateLogicalViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateLogicalViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.CreateLogicalView</c> and
+        /// <c>BigtableInstanceAdminClient.CreateLogicalViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateLogicalViewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.GetLogicalView</c> and <c>BigtableInstanceAdminClient.GetLogicalViewAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetLogicalViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.ListLogicalViews</c> and <c>BigtableInstanceAdminClient.ListLogicalViewsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListLogicalViewsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.UpdateLogicalView</c> and
+        /// <c>BigtableInstanceAdminClient.UpdateLogicalViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateLogicalViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.UpdateLogicalView</c> and
+        /// <c>BigtableInstanceAdminClient.UpdateLogicalViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateLogicalViewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.DeleteLogicalView</c> and
+        /// <c>BigtableInstanceAdminClient.DeleteLogicalViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteLogicalViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.CreateMaterializedView</c> and
+        /// <c>BigtableInstanceAdminClient.CreateMaterializedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateMaterializedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.CreateMaterializedView</c> and
+        /// <c>BigtableInstanceAdminClient.CreateMaterializedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateMaterializedViewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.GetMaterializedView</c> and
+        /// <c>BigtableInstanceAdminClient.GetMaterializedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetMaterializedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.ListMaterializedViews</c> and
+        /// <c>BigtableInstanceAdminClient.ListMaterializedViewsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListMaterializedViewsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.UpdateMaterializedView</c> and
+        /// <c>BigtableInstanceAdminClient.UpdateMaterializedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateMaterializedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.UpdateMaterializedView</c> and
+        /// <c>BigtableInstanceAdminClient.UpdateMaterializedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateMaterializedViewOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.DeleteMaterializedView</c> and
+        /// <c>BigtableInstanceAdminClient.DeleteMaterializedViewAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteMaterializedViewSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BigtableInstanceAdminSettings"/> object.</returns>
@@ -3747,6 +3963,1392 @@ namespace Google.Cloud.Bigtable.Admin.V2
             }
             return ListHotTabletsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LogicalView, CreateLogicalViewMetadata> CreateLogicalView(CreateLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, CreateLogicalViewMetadata>> CreateLogicalViewAsync(CreateLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, CreateLogicalViewMetadata>> CreateLogicalViewAsync(CreateLogicalViewRequest request, st::CancellationToken cancellationToken) =>
+            CreateLogicalViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateLogicalView</c>.</summary>
+        public virtual lro::OperationsClient CreateLogicalViewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateLogicalView</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LogicalView, CreateLogicalViewMetadata> PollOnceCreateLogicalView(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogicalView, CreateLogicalViewMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLogicalViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateLogicalView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, CreateLogicalViewMetadata>> PollOnceCreateLogicalViewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogicalView, CreateLogicalViewMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateLogicalViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this logical view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="logicalView">
+        /// Required. The logical view to create.
+        /// </param>
+        /// <param name="logicalViewId">
+        /// Required. The ID to use for the logical view, which will become the final
+        /// component of the logical view's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LogicalView, CreateLogicalViewMetadata> CreateLogicalView(string parent, LogicalView logicalView, string logicalViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLogicalView(new CreateLogicalViewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LogicalViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(logicalViewId, nameof(logicalViewId)),
+                LogicalView = gax::GaxPreconditions.CheckNotNull(logicalView, nameof(logicalView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this logical view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="logicalView">
+        /// Required. The logical view to create.
+        /// </param>
+        /// <param name="logicalViewId">
+        /// Required. The ID to use for the logical view, which will become the final
+        /// component of the logical view's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, CreateLogicalViewMetadata>> CreateLogicalViewAsync(string parent, LogicalView logicalView, string logicalViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLogicalViewAsync(new CreateLogicalViewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                LogicalViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(logicalViewId, nameof(logicalViewId)),
+                LogicalView = gax::GaxPreconditions.CheckNotNull(logicalView, nameof(logicalView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this logical view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="logicalView">
+        /// Required. The logical view to create.
+        /// </param>
+        /// <param name="logicalViewId">
+        /// Required. The ID to use for the logical view, which will become the final
+        /// component of the logical view's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, CreateLogicalViewMetadata>> CreateLogicalViewAsync(string parent, LogicalView logicalView, string logicalViewId, st::CancellationToken cancellationToken) =>
+            CreateLogicalViewAsync(parent, logicalView, logicalViewId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this logical view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="logicalView">
+        /// Required. The logical view to create.
+        /// </param>
+        /// <param name="logicalViewId">
+        /// Required. The ID to use for the logical view, which will become the final
+        /// component of the logical view's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LogicalView, CreateLogicalViewMetadata> CreateLogicalView(gcbcv::InstanceName parent, LogicalView logicalView, string logicalViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLogicalView(new CreateLogicalViewRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LogicalViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(logicalViewId, nameof(logicalViewId)),
+                LogicalView = gax::GaxPreconditions.CheckNotNull(logicalView, nameof(logicalView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this logical view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="logicalView">
+        /// Required. The logical view to create.
+        /// </param>
+        /// <param name="logicalViewId">
+        /// Required. The ID to use for the logical view, which will become the final
+        /// component of the logical view's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, CreateLogicalViewMetadata>> CreateLogicalViewAsync(gcbcv::InstanceName parent, LogicalView logicalView, string logicalViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateLogicalViewAsync(new CreateLogicalViewRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                LogicalViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(logicalViewId, nameof(logicalViewId)),
+                LogicalView = gax::GaxPreconditions.CheckNotNull(logicalView, nameof(logicalView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this logical view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="logicalView">
+        /// Required. The logical view to create.
+        /// </param>
+        /// <param name="logicalViewId">
+        /// Required. The ID to use for the logical view, which will become the final
+        /// component of the logical view's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, CreateLogicalViewMetadata>> CreateLogicalViewAsync(gcbcv::InstanceName parent, LogicalView logicalView, string logicalViewId, st::CancellationToken cancellationToken) =>
+            CreateLogicalViewAsync(parent, logicalView, logicalViewId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LogicalView GetLogicalView(GetLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogicalView> GetLogicalViewAsync(GetLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogicalView> GetLogicalViewAsync(GetLogicalViewRequest request, st::CancellationToken cancellationToken) =>
+            GetLogicalViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested logical view. Values are of the
+        /// form `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LogicalView GetLogicalView(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLogicalView(new GetLogicalViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested logical view. Values are of the
+        /// form `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogicalView> GetLogicalViewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLogicalViewAsync(new GetLogicalViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested logical view. Values are of the
+        /// form `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogicalView> GetLogicalViewAsync(string name, st::CancellationToken cancellationToken) =>
+            GetLogicalViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested logical view. Values are of the
+        /// form `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual LogicalView GetLogicalView(LogicalViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLogicalView(new GetLogicalViewRequest
+            {
+                LogicalViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested logical view. Values are of the
+        /// form `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogicalView> GetLogicalViewAsync(LogicalViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetLogicalViewAsync(new GetLogicalViewRequest
+            {
+                LogicalViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested logical view. Values are of the
+        /// form `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<LogicalView> GetLogicalViewAsync(LogicalViewName name, st::CancellationToken cancellationToken) =>
+            GetLogicalViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists information about logical views in an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogicalView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLogicalViewsResponse, LogicalView> ListLogicalViews(ListLogicalViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about logical views in an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogicalView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLogicalViewsResponse, LogicalView> ListLogicalViewsAsync(ListLogicalViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about logical views in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the instance for which the list of logical
+        /// views is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogicalView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLogicalViewsResponse, LogicalView> ListLogicalViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogicalViewsRequest request = new ListLogicalViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogicalViews(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about logical views in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the instance for which the list of logical
+        /// views is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogicalView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLogicalViewsResponse, LogicalView> ListLogicalViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogicalViewsRequest request = new ListLogicalViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogicalViewsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about logical views in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the instance for which the list of logical
+        /// views is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogicalView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListLogicalViewsResponse, LogicalView> ListLogicalViews(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogicalViewsRequest request = new ListLogicalViewsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogicalViews(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about logical views in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the instance for which the list of logical
+        /// views is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogicalView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListLogicalViewsResponse, LogicalView> ListLogicalViewsAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListLogicalViewsRequest request = new ListLogicalViewsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListLogicalViewsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LogicalView, UpdateLogicalViewMetadata> UpdateLogicalView(UpdateLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, UpdateLogicalViewMetadata>> UpdateLogicalViewAsync(UpdateLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, UpdateLogicalViewMetadata>> UpdateLogicalViewAsync(UpdateLogicalViewRequest request, st::CancellationToken cancellationToken) =>
+            UpdateLogicalViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateLogicalView</c>.</summary>
+        public virtual lro::OperationsClient UpdateLogicalViewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateLogicalView</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<LogicalView, UpdateLogicalViewMetadata> PollOnceUpdateLogicalView(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogicalView, UpdateLogicalViewMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateLogicalViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateLogicalView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, UpdateLogicalViewMetadata>> PollOnceUpdateLogicalViewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<LogicalView, UpdateLogicalViewMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateLogicalViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a logical view within an instance.
+        /// </summary>
+        /// <param name="logicalView">
+        /// Required. The logical view to update.
+        /// 
+        /// The logical view's `name` field is used to identify the view to update.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<LogicalView, UpdateLogicalViewMetadata> UpdateLogicalView(LogicalView logicalView, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateLogicalView(new UpdateLogicalViewRequest
+            {
+                LogicalView = gax::GaxPreconditions.CheckNotNull(logicalView, nameof(logicalView)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a logical view within an instance.
+        /// </summary>
+        /// <param name="logicalView">
+        /// Required. The logical view to update.
+        /// 
+        /// The logical view's `name` field is used to identify the view to update.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, UpdateLogicalViewMetadata>> UpdateLogicalViewAsync(LogicalView logicalView, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateLogicalViewAsync(new UpdateLogicalViewRequest
+            {
+                LogicalView = gax::GaxPreconditions.CheckNotNull(logicalView, nameof(logicalView)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a logical view within an instance.
+        /// </summary>
+        /// <param name="logicalView">
+        /// Required. The logical view to update.
+        /// 
+        /// The logical view's `name` field is used to identify the view to update.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<LogicalView, UpdateLogicalViewMetadata>> UpdateLogicalViewAsync(LogicalView logicalView, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateLogicalViewAsync(logicalView, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteLogicalView(DeleteLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteLogicalViewAsync(DeleteLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteLogicalViewAsync(DeleteLogicalViewRequest request, st::CancellationToken cancellationToken) =>
+            DeleteLogicalViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the logical view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteLogicalView(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLogicalView(new DeleteLogicalViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the logical view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteLogicalViewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLogicalViewAsync(new DeleteLogicalViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the logical view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteLogicalViewAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteLogicalViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the logical view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteLogicalView(LogicalViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLogicalView(new DeleteLogicalViewRequest
+            {
+                LogicalViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the logical view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteLogicalViewAsync(LogicalViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteLogicalViewAsync(new DeleteLogicalViewRequest
+            {
+                LogicalViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the logical view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteLogicalViewAsync(LogicalViewName name, st::CancellationToken cancellationToken) =>
+            DeleteLogicalViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MaterializedView, CreateMaterializedViewMetadata> CreateMaterializedView(CreateMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, CreateMaterializedViewMetadata>> CreateMaterializedViewAsync(CreateMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, CreateMaterializedViewMetadata>> CreateMaterializedViewAsync(CreateMaterializedViewRequest request, st::CancellationToken cancellationToken) =>
+            CreateMaterializedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateMaterializedView</c>.</summary>
+        public virtual lro::OperationsClient CreateMaterializedViewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateMaterializedView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MaterializedView, CreateMaterializedViewMetadata> PollOnceCreateMaterializedView(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MaterializedView, CreateMaterializedViewMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMaterializedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateMaterializedView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, CreateMaterializedViewMetadata>> PollOnceCreateMaterializedViewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MaterializedView, CreateMaterializedViewMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateMaterializedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this materialized view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="materializedView">
+        /// Required. The materialized view to create.
+        /// </param>
+        /// <param name="materializedViewId">
+        /// Required. The ID to use for the materialized view, which will become the
+        /// final component of the materialized view's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MaterializedView, CreateMaterializedViewMetadata> CreateMaterializedView(string parent, MaterializedView materializedView, string materializedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMaterializedView(new CreateMaterializedViewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MaterializedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(materializedViewId, nameof(materializedViewId)),
+                MaterializedView = gax::GaxPreconditions.CheckNotNull(materializedView, nameof(materializedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this materialized view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="materializedView">
+        /// Required. The materialized view to create.
+        /// </param>
+        /// <param name="materializedViewId">
+        /// Required. The ID to use for the materialized view, which will become the
+        /// final component of the materialized view's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, CreateMaterializedViewMetadata>> CreateMaterializedViewAsync(string parent, MaterializedView materializedView, string materializedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMaterializedViewAsync(new CreateMaterializedViewRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                MaterializedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(materializedViewId, nameof(materializedViewId)),
+                MaterializedView = gax::GaxPreconditions.CheckNotNull(materializedView, nameof(materializedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this materialized view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="materializedView">
+        /// Required. The materialized view to create.
+        /// </param>
+        /// <param name="materializedViewId">
+        /// Required. The ID to use for the materialized view, which will become the
+        /// final component of the materialized view's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, CreateMaterializedViewMetadata>> CreateMaterializedViewAsync(string parent, MaterializedView materializedView, string materializedViewId, st::CancellationToken cancellationToken) =>
+            CreateMaterializedViewAsync(parent, materializedView, materializedViewId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this materialized view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="materializedView">
+        /// Required. The materialized view to create.
+        /// </param>
+        /// <param name="materializedViewId">
+        /// Required. The ID to use for the materialized view, which will become the
+        /// final component of the materialized view's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MaterializedView, CreateMaterializedViewMetadata> CreateMaterializedView(gcbcv::InstanceName parent, MaterializedView materializedView, string materializedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMaterializedView(new CreateMaterializedViewRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MaterializedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(materializedViewId, nameof(materializedViewId)),
+                MaterializedView = gax::GaxPreconditions.CheckNotNull(materializedView, nameof(materializedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this materialized view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="materializedView">
+        /// Required. The materialized view to create.
+        /// </param>
+        /// <param name="materializedViewId">
+        /// Required. The ID to use for the materialized view, which will become the
+        /// final component of the materialized view's resource name.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, CreateMaterializedViewMetadata>> CreateMaterializedViewAsync(gcbcv::InstanceName parent, MaterializedView materializedView, string materializedViewId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateMaterializedViewAsync(new CreateMaterializedViewRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                MaterializedViewId = gax::GaxPreconditions.CheckNotNullOrEmpty(materializedViewId, nameof(materializedViewId)),
+                MaterializedView = gax::GaxPreconditions.CheckNotNull(materializedView, nameof(materializedView)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent instance where this materialized view will be created.
+        /// Format: `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="materializedView">
+        /// Required. The materialized view to create.
+        /// </param>
+        /// <param name="materializedViewId">
+        /// Required. The ID to use for the materialized view, which will become the
+        /// final component of the materialized view's resource name.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, CreateMaterializedViewMetadata>> CreateMaterializedViewAsync(gcbcv::InstanceName parent, MaterializedView materializedView, string materializedViewId, st::CancellationToken cancellationToken) =>
+            CreateMaterializedViewAsync(parent, materializedView, materializedViewId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MaterializedView GetMaterializedView(GetMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MaterializedView> GetMaterializedViewAsync(GetMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MaterializedView> GetMaterializedViewAsync(GetMaterializedViewRequest request, st::CancellationToken cancellationToken) =>
+            GetMaterializedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested materialized view. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MaterializedView GetMaterializedView(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMaterializedView(new GetMaterializedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested materialized view. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MaterializedView> GetMaterializedViewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMaterializedViewAsync(new GetMaterializedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested materialized view. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MaterializedView> GetMaterializedViewAsync(string name, st::CancellationToken cancellationToken) =>
+            GetMaterializedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested materialized view. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual MaterializedView GetMaterializedView(MaterializedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMaterializedView(new GetMaterializedViewRequest
+            {
+                MaterializedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested materialized view. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MaterializedView> GetMaterializedViewAsync(MaterializedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetMaterializedViewAsync(new GetMaterializedViewRequest
+            {
+                MaterializedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the requested materialized view. Values are of
+        /// the form
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<MaterializedView> GetMaterializedViewAsync(MaterializedViewName name, st::CancellationToken cancellationToken) =>
+            GetMaterializedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists information about materialized views in an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MaterializedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMaterializedViewsResponse, MaterializedView> ListMaterializedViews(ListMaterializedViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about materialized views in an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MaterializedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMaterializedViewsResponse, MaterializedView> ListMaterializedViewsAsync(ListMaterializedViewsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists information about materialized views in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the instance for which the list of
+        /// materialized views is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MaterializedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMaterializedViewsResponse, MaterializedView> ListMaterializedViews(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMaterializedViewsRequest request = new ListMaterializedViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMaterializedViews(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about materialized views in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the instance for which the list of
+        /// materialized views is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MaterializedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMaterializedViewsResponse, MaterializedView> ListMaterializedViewsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMaterializedViewsRequest request = new ListMaterializedViewsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMaterializedViewsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about materialized views in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the instance for which the list of
+        /// materialized views is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MaterializedView"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListMaterializedViewsResponse, MaterializedView> ListMaterializedViews(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMaterializedViewsRequest request = new ListMaterializedViewsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMaterializedViews(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about materialized views in an instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The unique name of the instance for which the list of
+        /// materialized views is requested. Values are of the form
+        /// `projects/{project}/instances/{instance}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MaterializedView"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListMaterializedViewsResponse, MaterializedView> ListMaterializedViewsAsync(gcbcv::InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListMaterializedViewsRequest request = new ListMaterializedViewsRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListMaterializedViewsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MaterializedView, UpdateMaterializedViewMetadata> UpdateMaterializedView(UpdateMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>> UpdateMaterializedViewAsync(UpdateMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>> UpdateMaterializedViewAsync(UpdateMaterializedViewRequest request, st::CancellationToken cancellationToken) =>
+            UpdateMaterializedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateMaterializedView</c>.</summary>
+        public virtual lro::OperationsClient UpdateMaterializedViewOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateMaterializedView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MaterializedView, UpdateMaterializedViewMetadata> PollOnceUpdateMaterializedView(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMaterializedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateMaterializedView</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>> PollOnceUpdateMaterializedViewAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateMaterializedViewOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates a materialized view within an instance.
+        /// </summary>
+        /// <param name="materializedView">
+        /// Required. The materialized view to update.
+        /// 
+        /// The materialized view's `name` field is used to identify the view to
+        /// update. Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MaterializedView, UpdateMaterializedViewMetadata> UpdateMaterializedView(MaterializedView materializedView, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMaterializedView(new UpdateMaterializedViewRequest
+            {
+                MaterializedView = gax::GaxPreconditions.CheckNotNull(materializedView, nameof(materializedView)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a materialized view within an instance.
+        /// </summary>
+        /// <param name="materializedView">
+        /// Required. The materialized view to update.
+        /// 
+        /// The materialized view's `name` field is used to identify the view to
+        /// update. Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>> UpdateMaterializedViewAsync(MaterializedView materializedView, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMaterializedViewAsync(new UpdateMaterializedViewRequest
+            {
+                MaterializedView = gax::GaxPreconditions.CheckNotNull(materializedView, nameof(materializedView)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a materialized view within an instance.
+        /// </summary>
+        /// <param name="materializedView">
+        /// Required. The materialized view to update.
+        /// 
+        /// The materialized view's `name` field is used to identify the view to
+        /// update. Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>> UpdateMaterializedViewAsync(MaterializedView materializedView, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMaterializedViewAsync(materializedView, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMaterializedView(DeleteMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMaterializedViewAsync(DeleteMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMaterializedViewAsync(DeleteMaterializedViewRequest request, st::CancellationToken cancellationToken) =>
+            DeleteMaterializedViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the materialized view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMaterializedView(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMaterializedView(new DeleteMaterializedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the materialized view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMaterializedViewAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMaterializedViewAsync(new DeleteMaterializedViewRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the materialized view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMaterializedViewAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteMaterializedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the materialized view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteMaterializedView(MaterializedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMaterializedView(new DeleteMaterializedViewRequest
+            {
+                MaterializedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the materialized view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMaterializedViewAsync(MaterializedViewName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteMaterializedViewAsync(new DeleteMaterializedViewRequest
+            {
+                MaterializedViewName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The unique name of the materialized view to be deleted.
+        /// Format:
+        /// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteMaterializedViewAsync(MaterializedViewName name, st::CancellationToken cancellationToken) =>
+            DeleteMaterializedViewAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>BigtableInstanceAdmin client wrapper implementation, for convenient use.</summary>
@@ -3799,6 +5401,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<ListHotTabletsRequest, ListHotTabletsResponse> _callListHotTablets;
 
+        private readonly gaxgrpc::ApiCall<CreateLogicalViewRequest, lro::Operation> _callCreateLogicalView;
+
+        private readonly gaxgrpc::ApiCall<GetLogicalViewRequest, LogicalView> _callGetLogicalView;
+
+        private readonly gaxgrpc::ApiCall<ListLogicalViewsRequest, ListLogicalViewsResponse> _callListLogicalViews;
+
+        private readonly gaxgrpc::ApiCall<UpdateLogicalViewRequest, lro::Operation> _callUpdateLogicalView;
+
+        private readonly gaxgrpc::ApiCall<DeleteLogicalViewRequest, wkt::Empty> _callDeleteLogicalView;
+
+        private readonly gaxgrpc::ApiCall<CreateMaterializedViewRequest, lro::Operation> _callCreateMaterializedView;
+
+        private readonly gaxgrpc::ApiCall<GetMaterializedViewRequest, MaterializedView> _callGetMaterializedView;
+
+        private readonly gaxgrpc::ApiCall<ListMaterializedViewsRequest, ListMaterializedViewsResponse> _callListMaterializedViews;
+
+        private readonly gaxgrpc::ApiCall<UpdateMaterializedViewRequest, lro::Operation> _callUpdateMaterializedView;
+
+        private readonly gaxgrpc::ApiCall<DeleteMaterializedViewRequest, wkt::Empty> _callDeleteMaterializedView;
+
         /// <summary>
         /// Constructs a client wrapper for the BigtableInstanceAdmin service, with the specified gRPC client and
         /// settings.
@@ -3821,6 +5443,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
             PartialUpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateClusterOperationsSettings, logger);
             UpdateAppProfileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppProfileOperationsSettings, logger);
+            CreateLogicalViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateLogicalViewOperationsSettings, logger);
+            UpdateLogicalViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateLogicalViewOperationsSettings, logger);
+            CreateMaterializedViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateMaterializedViewOperationsSettings, logger);
+            UpdateMaterializedViewOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateMaterializedViewOperationsSettings, logger);
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>("CreateInstance", grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInstance);
             Modify_CreateInstanceApiCall(ref _callCreateInstance);
@@ -3884,6 +5510,36 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callListHotTablets = clientHelper.BuildApiCall<ListHotTabletsRequest, ListHotTabletsResponse>("ListHotTablets", grpcClient.ListHotTabletsAsync, grpcClient.ListHotTablets, effectiveSettings.ListHotTabletsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListHotTablets);
             Modify_ListHotTabletsApiCall(ref _callListHotTablets);
+            _callCreateLogicalView = clientHelper.BuildApiCall<CreateLogicalViewRequest, lro::Operation>("CreateLogicalView", grpcClient.CreateLogicalViewAsync, grpcClient.CreateLogicalView, effectiveSettings.CreateLogicalViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateLogicalView);
+            Modify_CreateLogicalViewApiCall(ref _callCreateLogicalView);
+            _callGetLogicalView = clientHelper.BuildApiCall<GetLogicalViewRequest, LogicalView>("GetLogicalView", grpcClient.GetLogicalViewAsync, grpcClient.GetLogicalView, effectiveSettings.GetLogicalViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetLogicalView);
+            Modify_GetLogicalViewApiCall(ref _callGetLogicalView);
+            _callListLogicalViews = clientHelper.BuildApiCall<ListLogicalViewsRequest, ListLogicalViewsResponse>("ListLogicalViews", grpcClient.ListLogicalViewsAsync, grpcClient.ListLogicalViews, effectiveSettings.ListLogicalViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListLogicalViews);
+            Modify_ListLogicalViewsApiCall(ref _callListLogicalViews);
+            _callUpdateLogicalView = clientHelper.BuildApiCall<UpdateLogicalViewRequest, lro::Operation>("UpdateLogicalView", grpcClient.UpdateLogicalViewAsync, grpcClient.UpdateLogicalView, effectiveSettings.UpdateLogicalViewSettings).WithGoogleRequestParam("logical_view.name", request => request.LogicalView?.Name);
+            Modify_ApiCall(ref _callUpdateLogicalView);
+            Modify_UpdateLogicalViewApiCall(ref _callUpdateLogicalView);
+            _callDeleteLogicalView = clientHelper.BuildApiCall<DeleteLogicalViewRequest, wkt::Empty>("DeleteLogicalView", grpcClient.DeleteLogicalViewAsync, grpcClient.DeleteLogicalView, effectiveSettings.DeleteLogicalViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteLogicalView);
+            Modify_DeleteLogicalViewApiCall(ref _callDeleteLogicalView);
+            _callCreateMaterializedView = clientHelper.BuildApiCall<CreateMaterializedViewRequest, lro::Operation>("CreateMaterializedView", grpcClient.CreateMaterializedViewAsync, grpcClient.CreateMaterializedView, effectiveSettings.CreateMaterializedViewSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateMaterializedView);
+            Modify_CreateMaterializedViewApiCall(ref _callCreateMaterializedView);
+            _callGetMaterializedView = clientHelper.BuildApiCall<GetMaterializedViewRequest, MaterializedView>("GetMaterializedView", grpcClient.GetMaterializedViewAsync, grpcClient.GetMaterializedView, effectiveSettings.GetMaterializedViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetMaterializedView);
+            Modify_GetMaterializedViewApiCall(ref _callGetMaterializedView);
+            _callListMaterializedViews = clientHelper.BuildApiCall<ListMaterializedViewsRequest, ListMaterializedViewsResponse>("ListMaterializedViews", grpcClient.ListMaterializedViewsAsync, grpcClient.ListMaterializedViews, effectiveSettings.ListMaterializedViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListMaterializedViews);
+            Modify_ListMaterializedViewsApiCall(ref _callListMaterializedViews);
+            _callUpdateMaterializedView = clientHelper.BuildApiCall<UpdateMaterializedViewRequest, lro::Operation>("UpdateMaterializedView", grpcClient.UpdateMaterializedViewAsync, grpcClient.UpdateMaterializedView, effectiveSettings.UpdateMaterializedViewSettings).WithGoogleRequestParam("materialized_view.name", request => request.MaterializedView?.Name);
+            Modify_ApiCall(ref _callUpdateMaterializedView);
+            Modify_UpdateMaterializedViewApiCall(ref _callUpdateMaterializedView);
+            _callDeleteMaterializedView = clientHelper.BuildApiCall<DeleteMaterializedViewRequest, wkt::Empty>("DeleteMaterializedView", grpcClient.DeleteMaterializedViewAsync, grpcClient.DeleteMaterializedView, effectiveSettings.DeleteMaterializedViewSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteMaterializedView);
+            Modify_DeleteMaterializedViewApiCall(ref _callDeleteMaterializedView);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3931,6 +5587,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_ListHotTabletsApiCall(ref gaxgrpc::ApiCall<ListHotTabletsRequest, ListHotTabletsResponse> call);
 
+        partial void Modify_CreateLogicalViewApiCall(ref gaxgrpc::ApiCall<CreateLogicalViewRequest, lro::Operation> call);
+
+        partial void Modify_GetLogicalViewApiCall(ref gaxgrpc::ApiCall<GetLogicalViewRequest, LogicalView> call);
+
+        partial void Modify_ListLogicalViewsApiCall(ref gaxgrpc::ApiCall<ListLogicalViewsRequest, ListLogicalViewsResponse> call);
+
+        partial void Modify_UpdateLogicalViewApiCall(ref gaxgrpc::ApiCall<UpdateLogicalViewRequest, lro::Operation> call);
+
+        partial void Modify_DeleteLogicalViewApiCall(ref gaxgrpc::ApiCall<DeleteLogicalViewRequest, wkt::Empty> call);
+
+        partial void Modify_CreateMaterializedViewApiCall(ref gaxgrpc::ApiCall<CreateMaterializedViewRequest, lro::Operation> call);
+
+        partial void Modify_GetMaterializedViewApiCall(ref gaxgrpc::ApiCall<GetMaterializedViewRequest, MaterializedView> call);
+
+        partial void Modify_ListMaterializedViewsApiCall(ref gaxgrpc::ApiCall<ListMaterializedViewsRequest, ListMaterializedViewsResponse> call);
+
+        partial void Modify_UpdateMaterializedViewApiCall(ref gaxgrpc::ApiCall<UpdateMaterializedViewRequest, lro::Operation> call);
+
+        partial void Modify_DeleteMaterializedViewApiCall(ref gaxgrpc::ApiCall<DeleteMaterializedViewRequest, wkt::Empty> call);
+
         partial void OnConstruction(BigtableInstanceAdmin.BigtableInstanceAdminClient grpcClient, BigtableInstanceAdminSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC BigtableInstanceAdmin client</summary>
@@ -3977,6 +5653,26 @@ namespace Google.Cloud.Bigtable.Admin.V2
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListHotTabletsRequest(ref ListHotTabletsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateLogicalViewRequest(ref CreateLogicalViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetLogicalViewRequest(ref GetLogicalViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListLogicalViewsRequest(ref ListLogicalViewsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateLogicalViewRequest(ref UpdateLogicalViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteLogicalViewRequest(ref DeleteLogicalViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateMaterializedViewRequest(ref CreateMaterializedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetMaterializedViewRequest(ref GetMaterializedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListMaterializedViewsRequest(ref ListMaterializedViewsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateMaterializedViewRequest(ref UpdateMaterializedViewRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteMaterializedViewRequest(ref DeleteMaterializedViewRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateInstance</c>.</summary>
         public override lro::OperationsClient CreateInstanceOperationsClient { get; }
@@ -4565,6 +6261,258 @@ namespace Google.Cloud.Bigtable.Admin.V2
             Modify_ListHotTabletsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListHotTabletsRequest, ListHotTabletsResponse, HotTablet>(_callListHotTablets, request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreateLogicalView</c>.</summary>
+        public override lro::OperationsClient CreateLogicalViewOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LogicalView, CreateLogicalViewMetadata> CreateLogicalView(CreateLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLogicalViewRequest(ref request, ref callSettings);
+            return new lro::Operation<LogicalView, CreateLogicalViewMetadata>(_callCreateLogicalView.Sync(request, callSettings), CreateLogicalViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LogicalView, CreateLogicalViewMetadata>> CreateLogicalViewAsync(CreateLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateLogicalViewRequest(ref request, ref callSettings);
+            return new lro::Operation<LogicalView, CreateLogicalViewMetadata>(await _callCreateLogicalView.Async(request, callSettings).ConfigureAwait(false), CreateLogicalViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override LogicalView GetLogicalView(GetLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLogicalViewRequest(ref request, ref callSettings);
+            return _callGetLogicalView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a logical view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<LogicalView> GetLogicalViewAsync(GetLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetLogicalViewRequest(ref request, ref callSettings);
+            return _callGetLogicalView.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about logical views in an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="LogicalView"/> resources.</returns>
+        public override gax::PagedEnumerable<ListLogicalViewsResponse, LogicalView> ListLogicalViews(ListLogicalViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLogicalViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListLogicalViewsRequest, ListLogicalViewsResponse, LogicalView>(_callListLogicalViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about logical views in an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="LogicalView"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListLogicalViewsResponse, LogicalView> ListLogicalViewsAsync(ListLogicalViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListLogicalViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListLogicalViewsRequest, ListLogicalViewsResponse, LogicalView>(_callListLogicalViews, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateLogicalView</c>.</summary>
+        public override lro::OperationsClient UpdateLogicalViewOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<LogicalView, UpdateLogicalViewMetadata> UpdateLogicalView(UpdateLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateLogicalViewRequest(ref request, ref callSettings);
+            return new lro::Operation<LogicalView, UpdateLogicalViewMetadata>(_callUpdateLogicalView.Sync(request, callSettings), UpdateLogicalViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a logical view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<LogicalView, UpdateLogicalViewMetadata>> UpdateLogicalViewAsync(UpdateLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateLogicalViewRequest(ref request, ref callSettings);
+            return new lro::Operation<LogicalView, UpdateLogicalViewMetadata>(await _callUpdateLogicalView.Async(request, callSettings).ConfigureAwait(false), UpdateLogicalViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteLogicalView(DeleteLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLogicalViewRequest(ref request, ref callSettings);
+            _callDeleteLogicalView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a logical view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteLogicalViewAsync(DeleteLogicalViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteLogicalViewRequest(ref request, ref callSettings);
+            return _callDeleteLogicalView.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateMaterializedView</c>.</summary>
+        public override lro::OperationsClient CreateMaterializedViewOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MaterializedView, CreateMaterializedViewMetadata> CreateMaterializedView(CreateMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMaterializedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<MaterializedView, CreateMaterializedViewMetadata>(_callCreateMaterializedView.Sync(request, callSettings), CreateMaterializedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MaterializedView, CreateMaterializedViewMetadata>> CreateMaterializedViewAsync(CreateMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateMaterializedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<MaterializedView, CreateMaterializedViewMetadata>(await _callCreateMaterializedView.Async(request, callSettings).ConfigureAwait(false), CreateMaterializedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override MaterializedView GetMaterializedView(GetMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMaterializedViewRequest(ref request, ref callSettings);
+            return _callGetMaterializedView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets information about a materialized view.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<MaterializedView> GetMaterializedViewAsync(GetMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetMaterializedViewRequest(ref request, ref callSettings);
+            return _callGetMaterializedView.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about materialized views in an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="MaterializedView"/> resources.</returns>
+        public override gax::PagedEnumerable<ListMaterializedViewsResponse, MaterializedView> ListMaterializedViews(ListMaterializedViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMaterializedViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListMaterializedViewsRequest, ListMaterializedViewsResponse, MaterializedView>(_callListMaterializedViews, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists information about materialized views in an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="MaterializedView"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListMaterializedViewsResponse, MaterializedView> ListMaterializedViewsAsync(ListMaterializedViewsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListMaterializedViewsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMaterializedViewsRequest, ListMaterializedViewsResponse, MaterializedView>(_callListMaterializedViews, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateMaterializedView</c>.</summary>
+        public override lro::OperationsClient UpdateMaterializedViewOperationsClient { get; }
+
+        /// <summary>
+        /// Updates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MaterializedView, UpdateMaterializedViewMetadata> UpdateMaterializedView(UpdateMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMaterializedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>(_callUpdateMaterializedView.Sync(request, callSettings), UpdateMaterializedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates a materialized view within an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>> UpdateMaterializedViewAsync(UpdateMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateMaterializedViewRequest(ref request, ref callSettings);
+            return new lro::Operation<MaterializedView, UpdateMaterializedViewMetadata>(await _callUpdateMaterializedView.Async(request, callSettings).ConfigureAwait(false), UpdateMaterializedViewOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteMaterializedView(DeleteMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMaterializedViewRequest(ref request, ref callSettings);
+            _callDeleteMaterializedView.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a materialized view from an instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteMaterializedViewAsync(DeleteMaterializedViewRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteMaterializedViewRequest(ref request, ref callSettings);
+            return _callDeleteMaterializedView.Async(request, callSettings);
+        }
     }
 
     public partial class ListAppProfilesRequest : gaxgrpc::IPageRequest
@@ -4572,6 +6520,14 @@ namespace Google.Cloud.Bigtable.Admin.V2
     }
 
     public partial class ListHotTabletsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListLogicalViewsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListMaterializedViewsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -4587,6 +6543,22 @@ namespace Google.Cloud.Bigtable.Admin.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<HotTablet> GetEnumerator() => HotTablets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListLogicalViewsResponse : gaxgrpc::IPageResponse<LogicalView>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<LogicalView> GetEnumerator() => LogicalViews.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListMaterializedViewsResponse : gaxgrpc::IPageResponse<MaterializedView>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<MaterializedView> GetEnumerator() => MaterializedViews.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
