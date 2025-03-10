@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.23.0, released 2025-03-10
+
+### New features
+
+- Change client_secret in OAuthConfig from required to optional ([commit ac2c71f](https://github.com/googleapis/google-cloud-dotnet/commit/ac2c71f1315b87338f62da9752f5ea63e3d1188a))
+
+### Documentation improvements
+
+- A comment for field `client_secret` in message `.google.cloud.dialogflow.cx.v3.Webhook` is changed ([commit ac2c71f](https://github.com/googleapis/google-cloud-dotnet/commit/ac2c71f1315b87338f62da9752f5ea63e3d1188a))
+
 ## Version 2.22.0, released 2025-03-03
 
 ### New features
