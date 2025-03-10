@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta23, released 2025-03-10
+
+### New features
+
+- Add new RPC IngestContextReferences, GenerateSuggestions ([commit fe50c27](https://github.com/googleapis/google-cloud-dotnet/commit/fe50c27239e19b8b75bf0f37c7a90561688f7504))
+
+### Documentation improvements
+
+- Clarified wording around phrase_sets ([commit fe50c27](https://github.com/googleapis/google-cloud-dotnet/commit/fe50c27239e19b8b75bf0f37c7a90561688f7504))
+- Clarified wording around document_correctness ([commit 9e1f4fc](https://github.com/googleapis/google-cloud-dotnet/commit/9e1f4fc09fa22717440d72b6faa0e63a988f851a))
+- Clarified wording around use_timeout_based_endpointing ([commit 9e1f4fc](https://github.com/googleapis/google-cloud-dotnet/commit/9e1f4fc09fa22717440d72b6faa0e63a988f851a))
+- Clarified wording around BoostSpec and filter_specs ([commit 9e1f4fc](https://github.com/googleapis/google-cloud-dotnet/commit/9e1f4fc09fa22717440d72b6faa0e63a988f851a))
+- Clarified wording around send_time ([commit 9e1f4fc](https://github.com/googleapis/google-cloud-dotnet/commit/9e1f4fc09fa22717440d72b6faa0e63a988f851a))
+
 ## Version 1.0.0-beta22, released 2025-02-18
 
 ### New features
