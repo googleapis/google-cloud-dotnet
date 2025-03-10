@@ -46,6 +46,7 @@ namespace GoogleCSharpSnippets
                 RequestStatsView = gcbv::ReadRowsRequest.Types.RequestStatsView.Unspecified,
                 Reversed = false,
                 AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                MaterializedViewNameAsMaterializedViewName = gcbv::MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
             using gcbv::BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
@@ -168,6 +169,7 @@ namespace GoogleCSharpSnippets
                 TableNameAsTableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 AppProfileId = "",
                 AuthorizedViewNameAsAuthorizedViewName = gcbv::AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                MaterializedViewNameAsMaterializedViewName = gcbv::MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
             using gcbv::BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
