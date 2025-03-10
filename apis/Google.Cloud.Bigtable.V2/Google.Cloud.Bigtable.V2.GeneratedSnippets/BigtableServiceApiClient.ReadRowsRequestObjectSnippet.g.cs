@@ -47,6 +47,7 @@ namespace GoogleCSharpSnippets
                 RequestStatsView = ReadRowsRequest.Types.RequestStatsView.Unspecified,
                 Reversed = false,
                 AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
+                MaterializedViewNameAsMaterializedViewName = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]"),
             };
             // Make the request, returning a streaming response
             using BigtableServiceApiClient.ReadRowsStream response = bigtableServiceApiClient.ReadRows(request);
