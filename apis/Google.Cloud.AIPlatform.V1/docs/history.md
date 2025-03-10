@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.22.0, released 2025-03-10
+
+### New features
+
+- Allowing users to specify the version id of the Model Garden model ([commit caed93e](https://github.com/googleapis/google-cloud-dotnet/commit/caed93e21d3b7227caf1f3d93bc213c02435899b))
+- Allowing users to choose whether to use the hf model cache ([commit caed93e](https://github.com/googleapis/google-cloud-dotnet/commit/caed93e21d3b7227caf1f3d93bc213c02435899b))
+- Add Layout Parser to RAG v1 API ([commit d85534f](https://github.com/googleapis/google-cloud-dotnet/commit/d85534fbb08fe54a671822f19c69fd9dca0b1a00))
+
 ## Version 3.21.0, released 2025-03-04
 
 Note: the bug fix here is clearly a breaking change due to an API
