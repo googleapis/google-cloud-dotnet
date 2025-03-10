@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-alpha22, released 2025-03-10
+
+### New features
+
+- Added support for KeyEvents AdminAPI ChangeHistory ([commit 9112be9](https://github.com/googleapis/google-cloud-dotnet/commit/9112be9248c78c11e105d3f47a3776ce64425545))
+
 ## Version 2.0.0-alpha21, released 2025-02-03
 
 ### Bug fixes
