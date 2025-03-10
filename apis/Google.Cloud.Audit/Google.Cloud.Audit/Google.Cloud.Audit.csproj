@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>2.4.0</Version>
+    <Version>2.5.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>Protobuf messages for Google Cloud audit logs.</Description>
@@ -9,7 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.2.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.4.0, 4.0.0)" />
     <PackageReference Include="Google.Protobuf" VersionOverride="[3.25.0, 4.0.0)" />
   </ItemGroup>
 </Project>

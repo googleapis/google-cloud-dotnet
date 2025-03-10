@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.5.0, released 2025-03-10
+
+### New features
+
+- Updates audit_log proto with PermissionType ([commit 47a5d72](https://github.com/googleapis/google-cloud-dotnet/commit/47a5d72fa0f4f266487685b0894003d808c103f6))
+
 ## Version 2.4.0, released 2024-03-26
 
 ### New features
