@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.7.0, released 2025-03-10
+
+### New features
+
+- Added REGIONAL tier support in the v1 API ([commit d93c9d6](https://github.com/googleapis/google-cloud-dotnet/commit/d93c9d676313bb4087cbf1c635f13b9031de066c))
+
 ## Version 2.6.0, released 2024-05-14
 
 ### New features

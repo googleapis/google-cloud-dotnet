@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Version>2.6.0</Version>
+    <Version>2.7.0</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>The Cloud Filestore API is used for creating and managing cloud file servers.</Description>
@@ -11,8 +11,8 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
     <PackageReference Include="Google.Cloud.Common" VersionOverride="[2.2.0, 3.0.0)" />
-    <PackageReference Include="Google.Cloud.Location" VersionOverride="[2.2.0, 3.0.0)" />
-    <PackageReference Include="Google.LongRunning" VersionOverride="[3.2.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Location" VersionOverride="[2.3.0, 3.0.0)" />
+    <PackageReference Include="Google.LongRunning" VersionOverride="[3.3.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>
