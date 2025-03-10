@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.22.0, released 2025-03-10
+
+### New features
+
+- Deprecate `enabled` field for message transforms and add `disabled` field ([commit d75a0b0](https://github.com/googleapis/google-cloud-dotnet/commit/d75a0b0413aef83a015e6f8dcd87f47d9b3530a7))
+
+### Documentation improvements
+
+- Deprecate `enabled` field for message transforms and add `disabled` field ([commit d75a0b0](https://github.com/googleapis/google-cloud-dotnet/commit/d75a0b0413aef83a015e6f8dcd87f47d9b3530a7))
+- A comment for field `code` in message `.google.pubsub.v1.JavaScriptUDF` is changed ([commit e82746a](https://github.com/googleapis/google-cloud-dotnet/commit/e82746acd04df7a91742fd9b77a8b327e6995368))
+
 ## Version 3.21.0, released 2025-02-03
 
 ### New features
