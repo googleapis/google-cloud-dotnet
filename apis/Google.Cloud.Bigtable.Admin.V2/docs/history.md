@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.24.0, released 2025-03-10
+
+### New features
+
+- Add MaterializedViews and LogicalViews APIs ([commit b1837ff](https://github.com/googleapis/google-cloud-dotnet/commit/b1837ff2b5188bbb3f3b7b8960e77cfecf2e717b))
+
+### Documentation improvements
+
+- Fixed formatting of resource path strings ([commit e99d573](https://github.com/googleapis/google-cloud-dotnet/commit/e99d573e9dee6a5e157974ebbc1f0c6ed599a77e))
+
 ## Version 3.23.0, released 2025-03-03
 
 ### New features
