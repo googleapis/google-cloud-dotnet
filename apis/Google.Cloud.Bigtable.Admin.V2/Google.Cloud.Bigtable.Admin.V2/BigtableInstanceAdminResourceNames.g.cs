@@ -189,6 +189,42 @@ namespace Google.Cloud.Bigtable.Admin.V2
         }
     }
 
+    public partial class GetLogicalViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::LogicalViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::LogicalViewName LogicalViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::LogicalViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListLogicalViewsRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteLogicalViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::LogicalViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::LogicalViewName LogicalViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::LogicalViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateMaterializedViewRequest
     {
         /// <summary>
@@ -198,6 +234,42 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetMaterializedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::MaterializedViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::MaterializedViewName MaterializedViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::MaterializedViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListMaterializedViewsRequest
+    {
+        /// <summary>
+        /// <see cref="gcbcv::InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gcbcv::InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gcbcv::InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteMaterializedViewRequest
+    {
+        /// <summary>
+        /// <see cref="gcbav::MaterializedViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbav::MaterializedViewName MaterializedViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbav::MaterializedViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
         }
     }
 }

@@ -2632,5 +2632,1555 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for CreateLogicalView</summary>
+        public void CreateLogicalViewRequestObject()
+        {
+            // Snippet: CreateLogicalView(CreateLogicalViewRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            CreateLogicalViewRequest request = new CreateLogicalViewRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                LogicalViewId = "",
+                LogicalView = new LogicalView(),
+            };
+            // Make the request
+            Operation<LogicalView, CreateLogicalViewMetadata> response = bigtableInstanceAdminClient.CreateLogicalView(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, CreateLogicalViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, CreateLogicalViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceCreateLogicalView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLogicalViewAsync</summary>
+        public async Task CreateLogicalViewRequestObjectAsync()
+        {
+            // Snippet: CreateLogicalViewAsync(CreateLogicalViewRequest, CallSettings)
+            // Additional: CreateLogicalViewAsync(CreateLogicalViewRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateLogicalViewRequest request = new CreateLogicalViewRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                LogicalViewId = "",
+                LogicalView = new LogicalView(),
+            };
+            // Make the request
+            Operation<LogicalView, CreateLogicalViewMetadata> response = await bigtableInstanceAdminClient.CreateLogicalViewAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, CreateLogicalViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, CreateLogicalViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceCreateLogicalViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLogicalView</summary>
+        public void CreateLogicalView()
+        {
+            // Snippet: CreateLogicalView(string, LogicalView, string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            LogicalView logicalView = new LogicalView();
+            string logicalViewId = "";
+            // Make the request
+            Operation<LogicalView, CreateLogicalViewMetadata> response = bigtableInstanceAdminClient.CreateLogicalView(parent, logicalView, logicalViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, CreateLogicalViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, CreateLogicalViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceCreateLogicalView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLogicalViewAsync</summary>
+        public async Task CreateLogicalViewAsync()
+        {
+            // Snippet: CreateLogicalViewAsync(string, LogicalView, string, CallSettings)
+            // Additional: CreateLogicalViewAsync(string, LogicalView, string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            LogicalView logicalView = new LogicalView();
+            string logicalViewId = "";
+            // Make the request
+            Operation<LogicalView, CreateLogicalViewMetadata> response = await bigtableInstanceAdminClient.CreateLogicalViewAsync(parent, logicalView, logicalViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, CreateLogicalViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, CreateLogicalViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceCreateLogicalViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLogicalView</summary>
+        public void CreateLogicalViewResourceNames()
+        {
+            // Snippet: CreateLogicalView(InstanceName, LogicalView, string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            LogicalView logicalView = new LogicalView();
+            string logicalViewId = "";
+            // Make the request
+            Operation<LogicalView, CreateLogicalViewMetadata> response = bigtableInstanceAdminClient.CreateLogicalView(parent, logicalView, logicalViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, CreateLogicalViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, CreateLogicalViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceCreateLogicalView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateLogicalViewAsync</summary>
+        public async Task CreateLogicalViewResourceNamesAsync()
+        {
+            // Snippet: CreateLogicalViewAsync(InstanceName, LogicalView, string, CallSettings)
+            // Additional: CreateLogicalViewAsync(InstanceName, LogicalView, string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            LogicalView logicalView = new LogicalView();
+            string logicalViewId = "";
+            // Make the request
+            Operation<LogicalView, CreateLogicalViewMetadata> response = await bigtableInstanceAdminClient.CreateLogicalViewAsync(parent, logicalView, logicalViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, CreateLogicalViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, CreateLogicalViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceCreateLogicalViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLogicalView</summary>
+        public void GetLogicalViewRequestObject()
+        {
+            // Snippet: GetLogicalView(GetLogicalViewRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            GetLogicalViewRequest request = new GetLogicalViewRequest
+            {
+                LogicalViewName = LogicalViewName.FromProjectInstanceLogicalView("[PROJECT]", "[INSTANCE]", "[LOGICAL_VIEW]"),
+            };
+            // Make the request
+            LogicalView response = bigtableInstanceAdminClient.GetLogicalView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLogicalViewAsync</summary>
+        public async Task GetLogicalViewRequestObjectAsync()
+        {
+            // Snippet: GetLogicalViewAsync(GetLogicalViewRequest, CallSettings)
+            // Additional: GetLogicalViewAsync(GetLogicalViewRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetLogicalViewRequest request = new GetLogicalViewRequest
+            {
+                LogicalViewName = LogicalViewName.FromProjectInstanceLogicalView("[PROJECT]", "[INSTANCE]", "[LOGICAL_VIEW]"),
+            };
+            // Make the request
+            LogicalView response = await bigtableInstanceAdminClient.GetLogicalViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLogicalView</summary>
+        public void GetLogicalView()
+        {
+            // Snippet: GetLogicalView(string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/logicalViews/[LOGICAL_VIEW]";
+            // Make the request
+            LogicalView response = bigtableInstanceAdminClient.GetLogicalView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLogicalViewAsync</summary>
+        public async Task GetLogicalViewAsync()
+        {
+            // Snippet: GetLogicalViewAsync(string, CallSettings)
+            // Additional: GetLogicalViewAsync(string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/logicalViews/[LOGICAL_VIEW]";
+            // Make the request
+            LogicalView response = await bigtableInstanceAdminClient.GetLogicalViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLogicalView</summary>
+        public void GetLogicalViewResourceNames()
+        {
+            // Snippet: GetLogicalView(LogicalViewName, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            LogicalViewName name = LogicalViewName.FromProjectInstanceLogicalView("[PROJECT]", "[INSTANCE]", "[LOGICAL_VIEW]");
+            // Make the request
+            LogicalView response = bigtableInstanceAdminClient.GetLogicalView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetLogicalViewAsync</summary>
+        public async Task GetLogicalViewResourceNamesAsync()
+        {
+            // Snippet: GetLogicalViewAsync(LogicalViewName, CallSettings)
+            // Additional: GetLogicalViewAsync(LogicalViewName, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            LogicalViewName name = LogicalViewName.FromProjectInstanceLogicalView("[PROJECT]", "[INSTANCE]", "[LOGICAL_VIEW]");
+            // Make the request
+            LogicalView response = await bigtableInstanceAdminClient.GetLogicalViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLogicalViews</summary>
+        public void ListLogicalViewsRequestObject()
+        {
+            // Snippet: ListLogicalViews(ListLogicalViewsRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListLogicalViewsRequest request = new ListLogicalViewsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListLogicalViewsResponse, LogicalView> response = bigtableInstanceAdminClient.ListLogicalViews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogicalView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLogicalViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogicalView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogicalView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogicalView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLogicalViewsAsync</summary>
+        public async Task ListLogicalViewsRequestObjectAsync()
+        {
+            // Snippet: ListLogicalViewsAsync(ListLogicalViewsRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListLogicalViewsRequest request = new ListLogicalViewsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListLogicalViewsResponse, LogicalView> response = bigtableInstanceAdminClient.ListLogicalViewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogicalView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLogicalViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogicalView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogicalView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogicalView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLogicalViews</summary>
+        public void ListLogicalViews()
+        {
+            // Snippet: ListLogicalViews(string, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PagedEnumerable<ListLogicalViewsResponse, LogicalView> response = bigtableInstanceAdminClient.ListLogicalViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogicalView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLogicalViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogicalView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogicalView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogicalView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLogicalViewsAsync</summary>
+        public async Task ListLogicalViewsAsync()
+        {
+            // Snippet: ListLogicalViewsAsync(string, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PagedAsyncEnumerable<ListLogicalViewsResponse, LogicalView> response = bigtableInstanceAdminClient.ListLogicalViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogicalView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLogicalViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogicalView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogicalView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogicalView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLogicalViews</summary>
+        public void ListLogicalViewsResourceNames()
+        {
+            // Snippet: ListLogicalViews(InstanceName, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedEnumerable<ListLogicalViewsResponse, LogicalView> response = bigtableInstanceAdminClient.ListLogicalViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (LogicalView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListLogicalViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogicalView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogicalView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogicalView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListLogicalViewsAsync</summary>
+        public async Task ListLogicalViewsResourceNamesAsync()
+        {
+            // Snippet: ListLogicalViewsAsync(InstanceName, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListLogicalViewsResponse, LogicalView> response = bigtableInstanceAdminClient.ListLogicalViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((LogicalView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListLogicalViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (LogicalView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<LogicalView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (LogicalView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLogicalView</summary>
+        public void UpdateLogicalViewRequestObject()
+        {
+            // Snippet: UpdateLogicalView(UpdateLogicalViewRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateLogicalViewRequest request = new UpdateLogicalViewRequest
+            {
+                LogicalView = new LogicalView(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<LogicalView, UpdateLogicalViewMetadata> response = bigtableInstanceAdminClient.UpdateLogicalView(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, UpdateLogicalViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, UpdateLogicalViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceUpdateLogicalView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLogicalViewAsync</summary>
+        public async Task UpdateLogicalViewRequestObjectAsync()
+        {
+            // Snippet: UpdateLogicalViewAsync(UpdateLogicalViewRequest, CallSettings)
+            // Additional: UpdateLogicalViewAsync(UpdateLogicalViewRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateLogicalViewRequest request = new UpdateLogicalViewRequest
+            {
+                LogicalView = new LogicalView(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<LogicalView, UpdateLogicalViewMetadata> response = await bigtableInstanceAdminClient.UpdateLogicalViewAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, UpdateLogicalViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, UpdateLogicalViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceUpdateLogicalViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLogicalView</summary>
+        public void UpdateLogicalView()
+        {
+            // Snippet: UpdateLogicalView(LogicalView, FieldMask, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            LogicalView logicalView = new LogicalView();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<LogicalView, UpdateLogicalViewMetadata> response = bigtableInstanceAdminClient.UpdateLogicalView(logicalView, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, UpdateLogicalViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, UpdateLogicalViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceUpdateLogicalView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateLogicalViewAsync</summary>
+        public async Task UpdateLogicalViewAsync()
+        {
+            // Snippet: UpdateLogicalViewAsync(LogicalView, FieldMask, CallSettings)
+            // Additional: UpdateLogicalViewAsync(LogicalView, FieldMask, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            LogicalView logicalView = new LogicalView();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<LogicalView, UpdateLogicalViewMetadata> response = await bigtableInstanceAdminClient.UpdateLogicalViewAsync(logicalView, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<LogicalView, UpdateLogicalViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            LogicalView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<LogicalView, UpdateLogicalViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceUpdateLogicalViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                LogicalView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLogicalView</summary>
+        public void DeleteLogicalViewRequestObject()
+        {
+            // Snippet: DeleteLogicalView(DeleteLogicalViewRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteLogicalViewRequest request = new DeleteLogicalViewRequest
+            {
+                LogicalViewName = LogicalViewName.FromProjectInstanceLogicalView("[PROJECT]", "[INSTANCE]", "[LOGICAL_VIEW]"),
+                Etag = "",
+            };
+            // Make the request
+            bigtableInstanceAdminClient.DeleteLogicalView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLogicalViewAsync</summary>
+        public async Task DeleteLogicalViewRequestObjectAsync()
+        {
+            // Snippet: DeleteLogicalViewAsync(DeleteLogicalViewRequest, CallSettings)
+            // Additional: DeleteLogicalViewAsync(DeleteLogicalViewRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteLogicalViewRequest request = new DeleteLogicalViewRequest
+            {
+                LogicalViewName = LogicalViewName.FromProjectInstanceLogicalView("[PROJECT]", "[INSTANCE]", "[LOGICAL_VIEW]"),
+                Etag = "",
+            };
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteLogicalViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLogicalView</summary>
+        public void DeleteLogicalView()
+        {
+            // Snippet: DeleteLogicalView(string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/logicalViews/[LOGICAL_VIEW]";
+            // Make the request
+            bigtableInstanceAdminClient.DeleteLogicalView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLogicalViewAsync</summary>
+        public async Task DeleteLogicalViewAsync()
+        {
+            // Snippet: DeleteLogicalViewAsync(string, CallSettings)
+            // Additional: DeleteLogicalViewAsync(string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/logicalViews/[LOGICAL_VIEW]";
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteLogicalViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLogicalView</summary>
+        public void DeleteLogicalViewResourceNames()
+        {
+            // Snippet: DeleteLogicalView(LogicalViewName, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            LogicalViewName name = LogicalViewName.FromProjectInstanceLogicalView("[PROJECT]", "[INSTANCE]", "[LOGICAL_VIEW]");
+            // Make the request
+            bigtableInstanceAdminClient.DeleteLogicalView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteLogicalViewAsync</summary>
+        public async Task DeleteLogicalViewResourceNamesAsync()
+        {
+            // Snippet: DeleteLogicalViewAsync(LogicalViewName, CallSettings)
+            // Additional: DeleteLogicalViewAsync(LogicalViewName, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            LogicalViewName name = LogicalViewName.FromProjectInstanceLogicalView("[PROJECT]", "[INSTANCE]", "[LOGICAL_VIEW]");
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteLogicalViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMaterializedView</summary>
+        public void CreateMaterializedViewRequestObject()
+        {
+            // Snippet: CreateMaterializedView(CreateMaterializedViewRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            CreateMaterializedViewRequest request = new CreateMaterializedViewRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                MaterializedViewId = "",
+                MaterializedView = new MaterializedView(),
+            };
+            // Make the request
+            Operation<MaterializedView, CreateMaterializedViewMetadata> response = bigtableInstanceAdminClient.CreateMaterializedView(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, CreateMaterializedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, CreateMaterializedViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceCreateMaterializedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMaterializedViewAsync</summary>
+        public async Task CreateMaterializedViewRequestObjectAsync()
+        {
+            // Snippet: CreateMaterializedViewAsync(CreateMaterializedViewRequest, CallSettings)
+            // Additional: CreateMaterializedViewAsync(CreateMaterializedViewRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateMaterializedViewRequest request = new CreateMaterializedViewRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+                MaterializedViewId = "",
+                MaterializedView = new MaterializedView(),
+            };
+            // Make the request
+            Operation<MaterializedView, CreateMaterializedViewMetadata> response = await bigtableInstanceAdminClient.CreateMaterializedViewAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, CreateMaterializedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, CreateMaterializedViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceCreateMaterializedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMaterializedView</summary>
+        public void CreateMaterializedView()
+        {
+            // Snippet: CreateMaterializedView(string, MaterializedView, string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            MaterializedView materializedView = new MaterializedView();
+            string materializedViewId = "";
+            // Make the request
+            Operation<MaterializedView, CreateMaterializedViewMetadata> response = bigtableInstanceAdminClient.CreateMaterializedView(parent, materializedView, materializedViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, CreateMaterializedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, CreateMaterializedViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceCreateMaterializedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMaterializedViewAsync</summary>
+        public async Task CreateMaterializedViewAsync()
+        {
+            // Snippet: CreateMaterializedViewAsync(string, MaterializedView, string, CallSettings)
+            // Additional: CreateMaterializedViewAsync(string, MaterializedView, string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            MaterializedView materializedView = new MaterializedView();
+            string materializedViewId = "";
+            // Make the request
+            Operation<MaterializedView, CreateMaterializedViewMetadata> response = await bigtableInstanceAdminClient.CreateMaterializedViewAsync(parent, materializedView, materializedViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, CreateMaterializedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, CreateMaterializedViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceCreateMaterializedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMaterializedView</summary>
+        public void CreateMaterializedViewResourceNames()
+        {
+            // Snippet: CreateMaterializedView(InstanceName, MaterializedView, string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            MaterializedView materializedView = new MaterializedView();
+            string materializedViewId = "";
+            // Make the request
+            Operation<MaterializedView, CreateMaterializedViewMetadata> response = bigtableInstanceAdminClient.CreateMaterializedView(parent, materializedView, materializedViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, CreateMaterializedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, CreateMaterializedViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceCreateMaterializedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMaterializedViewAsync</summary>
+        public async Task CreateMaterializedViewResourceNamesAsync()
+        {
+            // Snippet: CreateMaterializedViewAsync(InstanceName, MaterializedView, string, CallSettings)
+            // Additional: CreateMaterializedViewAsync(InstanceName, MaterializedView, string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            MaterializedView materializedView = new MaterializedView();
+            string materializedViewId = "";
+            // Make the request
+            Operation<MaterializedView, CreateMaterializedViewMetadata> response = await bigtableInstanceAdminClient.CreateMaterializedViewAsync(parent, materializedView, materializedViewId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, CreateMaterializedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, CreateMaterializedViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceCreateMaterializedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMaterializedView</summary>
+        public void GetMaterializedViewRequestObject()
+        {
+            // Snippet: GetMaterializedView(GetMaterializedViewRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            GetMaterializedViewRequest request = new GetMaterializedViewRequest
+            {
+                MaterializedViewName = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]"),
+            };
+            // Make the request
+            MaterializedView response = bigtableInstanceAdminClient.GetMaterializedView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMaterializedViewAsync</summary>
+        public async Task GetMaterializedViewRequestObjectAsync()
+        {
+            // Snippet: GetMaterializedViewAsync(GetMaterializedViewRequest, CallSettings)
+            // Additional: GetMaterializedViewAsync(GetMaterializedViewRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMaterializedViewRequest request = new GetMaterializedViewRequest
+            {
+                MaterializedViewName = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]"),
+            };
+            // Make the request
+            MaterializedView response = await bigtableInstanceAdminClient.GetMaterializedViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMaterializedView</summary>
+        public void GetMaterializedView()
+        {
+            // Snippet: GetMaterializedView(string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/materializedViews/[MATERIALIZED_VIEW]";
+            // Make the request
+            MaterializedView response = bigtableInstanceAdminClient.GetMaterializedView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMaterializedViewAsync</summary>
+        public async Task GetMaterializedViewAsync()
+        {
+            // Snippet: GetMaterializedViewAsync(string, CallSettings)
+            // Additional: GetMaterializedViewAsync(string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/materializedViews/[MATERIALIZED_VIEW]";
+            // Make the request
+            MaterializedView response = await bigtableInstanceAdminClient.GetMaterializedViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMaterializedView</summary>
+        public void GetMaterializedViewResourceNames()
+        {
+            // Snippet: GetMaterializedView(MaterializedViewName, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            MaterializedViewName name = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]");
+            // Make the request
+            MaterializedView response = bigtableInstanceAdminClient.GetMaterializedView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMaterializedViewAsync</summary>
+        public async Task GetMaterializedViewResourceNamesAsync()
+        {
+            // Snippet: GetMaterializedViewAsync(MaterializedViewName, CallSettings)
+            // Additional: GetMaterializedViewAsync(MaterializedViewName, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            MaterializedViewName name = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]");
+            // Make the request
+            MaterializedView response = await bigtableInstanceAdminClient.GetMaterializedViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMaterializedViews</summary>
+        public void ListMaterializedViewsRequestObject()
+        {
+            // Snippet: ListMaterializedViews(ListMaterializedViewsRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            ListMaterializedViewsRequest request = new ListMaterializedViewsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMaterializedViewsResponse, MaterializedView> response = bigtableInstanceAdminClient.ListMaterializedViews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MaterializedView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMaterializedViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MaterializedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MaterializedView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MaterializedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMaterializedViewsAsync</summary>
+        public async Task ListMaterializedViewsRequestObjectAsync()
+        {
+            // Snippet: ListMaterializedViewsAsync(ListMaterializedViewsRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMaterializedViewsRequest request = new ListMaterializedViewsRequest
+            {
+                ParentAsInstanceName = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMaterializedViewsResponse, MaterializedView> response = bigtableInstanceAdminClient.ListMaterializedViewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MaterializedView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMaterializedViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MaterializedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MaterializedView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MaterializedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMaterializedViews</summary>
+        public void ListMaterializedViews()
+        {
+            // Snippet: ListMaterializedViews(string, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PagedEnumerable<ListMaterializedViewsResponse, MaterializedView> response = bigtableInstanceAdminClient.ListMaterializedViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MaterializedView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMaterializedViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MaterializedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MaterializedView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MaterializedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMaterializedViewsAsync</summary>
+        public async Task ListMaterializedViewsAsync()
+        {
+            // Snippet: ListMaterializedViewsAsync(string, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/instances/[INSTANCE]";
+            // Make the request
+            PagedAsyncEnumerable<ListMaterializedViewsResponse, MaterializedView> response = bigtableInstanceAdminClient.ListMaterializedViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MaterializedView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMaterializedViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MaterializedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MaterializedView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MaterializedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMaterializedViews</summary>
+        public void ListMaterializedViewsResourceNames()
+        {
+            // Snippet: ListMaterializedViews(InstanceName, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedEnumerable<ListMaterializedViewsResponse, MaterializedView> response = bigtableInstanceAdminClient.ListMaterializedViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MaterializedView item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMaterializedViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MaterializedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MaterializedView> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MaterializedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMaterializedViewsAsync</summary>
+        public async Task ListMaterializedViewsResourceNamesAsync()
+        {
+            // Snippet: ListMaterializedViewsAsync(InstanceName, string, int?, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName parent = InstanceName.FromProjectInstance("[PROJECT]", "[INSTANCE]");
+            // Make the request
+            PagedAsyncEnumerable<ListMaterializedViewsResponse, MaterializedView> response = bigtableInstanceAdminClient.ListMaterializedViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MaterializedView item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMaterializedViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MaterializedView item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MaterializedView> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MaterializedView item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMaterializedView</summary>
+        public void UpdateMaterializedViewRequestObject()
+        {
+            // Snippet: UpdateMaterializedView(UpdateMaterializedViewRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateMaterializedViewRequest request = new UpdateMaterializedViewRequest
+            {
+                MaterializedView = new MaterializedView(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> response = bigtableInstanceAdminClient.UpdateMaterializedView(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceUpdateMaterializedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMaterializedViewAsync</summary>
+        public async Task UpdateMaterializedViewRequestObjectAsync()
+        {
+            // Snippet: UpdateMaterializedViewAsync(UpdateMaterializedViewRequest, CallSettings)
+            // Additional: UpdateMaterializedViewAsync(UpdateMaterializedViewRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateMaterializedViewRequest request = new UpdateMaterializedViewRequest
+            {
+                MaterializedView = new MaterializedView(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> response = await bigtableInstanceAdminClient.UpdateMaterializedViewAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceUpdateMaterializedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMaterializedView</summary>
+        public void UpdateMaterializedView()
+        {
+            // Snippet: UpdateMaterializedView(MaterializedView, FieldMask, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            MaterializedView materializedView = new MaterializedView();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> response = bigtableInstanceAdminClient.UpdateMaterializedView(materializedView, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> retrievedResponse = bigtableInstanceAdminClient.PollOnceUpdateMaterializedView(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMaterializedViewAsync</summary>
+        public async Task UpdateMaterializedViewAsync()
+        {
+            // Snippet: UpdateMaterializedViewAsync(MaterializedView, FieldMask, CallSettings)
+            // Additional: UpdateMaterializedViewAsync(MaterializedView, FieldMask, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            MaterializedView materializedView = new MaterializedView();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> response = await bigtableInstanceAdminClient.UpdateMaterializedViewAsync(materializedView, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MaterializedView result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MaterializedView, UpdateMaterializedViewMetadata> retrievedResponse = await bigtableInstanceAdminClient.PollOnceUpdateMaterializedViewAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MaterializedView retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMaterializedView</summary>
+        public void DeleteMaterializedViewRequestObject()
+        {
+            // Snippet: DeleteMaterializedView(DeleteMaterializedViewRequest, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            DeleteMaterializedViewRequest request = new DeleteMaterializedViewRequest
+            {
+                MaterializedViewName = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]"),
+                Etag = "",
+            };
+            // Make the request
+            bigtableInstanceAdminClient.DeleteMaterializedView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMaterializedViewAsync</summary>
+        public async Task DeleteMaterializedViewRequestObjectAsync()
+        {
+            // Snippet: DeleteMaterializedViewAsync(DeleteMaterializedViewRequest, CallSettings)
+            // Additional: DeleteMaterializedViewAsync(DeleteMaterializedViewRequest, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteMaterializedViewRequest request = new DeleteMaterializedViewRequest
+            {
+                MaterializedViewName = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]"),
+                Etag = "",
+            };
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteMaterializedViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMaterializedView</summary>
+        public void DeleteMaterializedView()
+        {
+            // Snippet: DeleteMaterializedView(string, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/materializedViews/[MATERIALIZED_VIEW]";
+            // Make the request
+            bigtableInstanceAdminClient.DeleteMaterializedView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMaterializedViewAsync</summary>
+        public async Task DeleteMaterializedViewAsync()
+        {
+            // Snippet: DeleteMaterializedViewAsync(string, CallSettings)
+            // Additional: DeleteMaterializedViewAsync(string, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/instances/[INSTANCE]/materializedViews/[MATERIALIZED_VIEW]";
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteMaterializedViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMaterializedView</summary>
+        public void DeleteMaterializedViewResourceNames()
+        {
+            // Snippet: DeleteMaterializedView(MaterializedViewName, CallSettings)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = BigtableInstanceAdminClient.Create();
+            // Initialize request argument(s)
+            MaterializedViewName name = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]");
+            // Make the request
+            bigtableInstanceAdminClient.DeleteMaterializedView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMaterializedViewAsync</summary>
+        public async Task DeleteMaterializedViewResourceNamesAsync()
+        {
+            // Snippet: DeleteMaterializedViewAsync(MaterializedViewName, CallSettings)
+            // Additional: DeleteMaterializedViewAsync(MaterializedViewName, CancellationToken)
+            // Create client
+            BigtableInstanceAdminClient bigtableInstanceAdminClient = await BigtableInstanceAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            MaterializedViewName name = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]");
+            // Make the request
+            await bigtableInstanceAdminClient.DeleteMaterializedViewAsync(name);
+            // End snippet
+        }
     }
 }
