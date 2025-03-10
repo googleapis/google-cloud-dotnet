@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta13, released 2025-03-10
+
+### New features
+
+- Addition of space notification setting Chat API ([commit 23f70d6](https://github.com/googleapis/google-cloud-dotnet/commit/23f70d6164fbe14f2ea12ceb349f06bfa141a717))
+
 ## Version 1.0.0-beta12, released 2025-02-25
 
 ### New features
