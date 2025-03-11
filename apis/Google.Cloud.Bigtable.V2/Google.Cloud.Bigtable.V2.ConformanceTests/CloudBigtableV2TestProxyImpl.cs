@@ -20,6 +20,7 @@ using Grpc.Auth;
 using Grpc.Core;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Google.Cloud.Bigtable.V2.ConformanceTests;
@@ -301,6 +302,51 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         catch (Exception e)
         {
             return new RowResult
+            {
+                Status = SetExceptionStatus(e, context)
+            };
+        }
+    }
+
+    public override async Task<ExecuteQueryResult> ExecuteQuery(ExecuteQueryRequest request, ServerCallContext context)
+    {
+        CbtClient cbtClient = GetClient(request.ClientId, context);
+        try
+        {
+            BigtableServiceApiClient.ExecuteQueryStream stream = cbtClient.Client.ExecuteQuery(request.Request);
+            AsyncResponseStream<ExecuteQueryResponse> enumerator = stream.GetResponseStream();
+            ExecuteQueryResult result = new ExecuteQueryResult()
+            {
+                Metadata = new ResultSetMetadata()
+            };
+            IEnumerable<byte> bytes = Enumerable.Empty<byte>();
+            while (await enumerator.MoveNextAsync())
+            {
+                ExecuteQueryResponse response = enumerator.Current;
+                if (response.ResponseCase == ExecuteQueryResponse.ResponseOneofCase.Metadata)
+                {
+                    result.ResultSetMetadata = response.Metadata;
+                    result.Metadata.Columns.Add(response.Metadata.ProtoSchema.Columns);
+                }
+                // TODO: confirm this implementation works as intended
+                else if (response.ResponseCase == ExecuteQueryResponse.ResponseOneofCase.Results
+                        && response.Results.PartialRowsCase == PartialResultSet.PartialRowsOneofCase.ProtoRowsBatch)
+                {
+                    SqlRow sqlRow = new SqlRow();
+                    sqlRow.Values.Add(ProtoRows.Parser.ParseFrom(response.Results.ProtoRowsBatch.BatchData).Values);
+                    result.Rows.Add(sqlRow);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            result.Status = SetSuccessStatus("ExecuteQuery succeeded", context);
+            return result;
+        }
+        catch (Exception e)
+        {
+            return new ExecuteQueryResult
             {
                 Status = SetExceptionStatus(e, context)
             };
