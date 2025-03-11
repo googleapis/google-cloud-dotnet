@@ -349,8 +349,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// RPC Method for getting QuotaAdjusterSettings based on the request
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the config. Required to be “settings”, as only a single
-        /// setting per container will be supported initially.
+        /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
+        /// setting per project is supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -364,8 +364,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// RPC Method for getting QuotaAdjusterSettings based on the request
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the config. Required to be “settings”, as only a single
-        /// setting per container will be supported initially.
+        /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
+        /// setting per project is supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -379,8 +379,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// RPC Method for getting QuotaAdjusterSettings based on the request
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the config. Required to be “settings”, as only a single
-        /// setting per container will be supported initially.
+        /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
+        /// setting per project is supported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -391,8 +391,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// RPC Method for getting QuotaAdjusterSettings based on the request
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the config. Required to be “settings”, as only a single
-        /// setting per container will be supported initially.
+        /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
+        /// setting per project is supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -406,8 +406,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// RPC Method for getting QuotaAdjusterSettings based on the request
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the config. Required to be “settings”, as only a single
-        /// setting per container will be supported initially.
+        /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
+        /// setting per project is supported.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -421,8 +421,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta
         /// RPC Method for getting QuotaAdjusterSettings based on the request
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the config. Required to be “settings”, as only a single
-        /// setting per container will be supported initially.
+        /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
+        /// setting per project is supported.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

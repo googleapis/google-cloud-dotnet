@@ -132,8 +132,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the config. Required to be “settings”, as only a single
-    /// setting per container will be supported initially.
+    /// Required. Name of the `quotaAdjusterSettings` configuration. Only a single
+    /// setting per project is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -361,9 +361,9 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public const int ValidateOnlyFieldNumber = 3;
     private bool validateOnly_;
     /// <summary>
-    /// Optional. If set to true, validate the request, but do not actually update.
-    /// Note that a request being valid does not mean that the request is
-    /// guaranteed to be fulfilled.
+    /// Optional. If set to true, checks the syntax of the request but doesn't
+    /// update the quota adjuster settings value. Note that although a request can
+    /// be valid, that doesn't guarantee that the request will be fulfilled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -629,8 +629,9 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. Name of the config would be of the format:
-    ///   projects/12345/locations/global/quotaAdjusterSettings
+    /// Identifier. Name of the configuration, in the following format:
+    ///   `projects/PROJECT_NUMBER/locations/global/quotaAdjusterSettings`.
+    /// Replace PROJECT_NUMBER with the project number for your project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -660,7 +661,8 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public const int UpdateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The timestamp when the QuotaAdjusterSettings was last updated.
+    /// Output only. The timestamp when the QuotaAdjusterSettings resource was last
+    /// updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -675,11 +677,10 @@ namespace Google.Cloud.CloudQuotas.V1Beta {
     public const int EtagFieldNumber = 6;
     private string etag_ = "";
     /// <summary>
-    /// Optional. The current etag of the QuotaAdjusterSettings. If an etag is
-    /// provided on update and does not match the current server's etag of the
-    /// QuotaAdjusterSettings, the request will be blocked and an ABORTED error
-    /// will be returned. See https://google.aip.dev/134#etags for more details on
-    /// etags.
+    /// Optional. The current ETag of the QuotaAdjusterSettings. If an ETag is
+    /// provided on update and does not match the current server's ETag in the
+    /// QuotaAdjusterSettings, the request is blocked and returns an ABORTED error.
+    /// See https://google.aip.dev/134#etags for more details on ETags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
