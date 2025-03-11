@@ -703,7 +703,7 @@
     },
     {
       "id": "Google.Cloud.Audit",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "productName": "Google Cloud Audit",
       "productUrl": "https://cloud.google.com/logging/docs/audit",
       "type": "other",
