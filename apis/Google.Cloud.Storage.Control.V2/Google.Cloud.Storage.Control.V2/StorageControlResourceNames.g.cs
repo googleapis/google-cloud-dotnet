@@ -751,6 +751,260 @@ namespace Google.Cloud.Storage.Control.V2
         public static bool operator !=(ManagedFolderName a, ManagedFolderName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>AnywhereCache</c> resource.</summary>
+    public sealed partial class AnywhereCacheName : gax::IResourceName, sys::IEquatable<AnywhereCacheName>
+    {
+        /// <summary>The possible contents of <see cref="AnywhereCacheName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c>.
+            /// </summary>
+            ProjectBucketAnywhereCache = 1,
+        }
+
+        private static gax::PathTemplate s_projectBucketAnywhereCache = new gax::PathTemplate("projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}");
+
+        /// <summary>Creates a <see cref="AnywhereCacheName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AnywhereCacheName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AnywhereCacheName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AnywhereCacheName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AnywhereCacheName"/> with the pattern
+        /// <c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="anywhereCacheId">The <c>AnywhereCache</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AnywhereCacheName"/> constructed from the provided ids.</returns>
+        public static AnywhereCacheName FromProjectBucketAnywhereCache(string projectId, string bucketId, string anywhereCacheId) =>
+            new AnywhereCacheName(ResourceNameType.ProjectBucketAnywhereCache, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), anywhereCacheId: gax::GaxPreconditions.CheckNotNullOrEmpty(anywhereCacheId, nameof(anywhereCacheId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AnywhereCacheName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="anywhereCacheId">The <c>AnywhereCache</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AnywhereCacheName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c>.
+        /// </returns>
+        public static string Format(string projectId, string bucketId, string anywhereCacheId) =>
+            FormatProjectBucketAnywhereCache(projectId, bucketId, anywhereCacheId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AnywhereCacheName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="anywhereCacheId">The <c>AnywhereCache</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AnywhereCacheName"/> with pattern
+        /// <c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c>.
+        /// </returns>
+        public static string FormatProjectBucketAnywhereCache(string projectId, string bucketId, string anywhereCacheId) =>
+            s_projectBucketAnywhereCache.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), gax::GaxPreconditions.CheckNotNullOrEmpty(anywhereCacheId, nameof(anywhereCacheId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AnywhereCacheName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="anywhereCacheName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AnywhereCacheName"/> if successful.</returns>
+        public static AnywhereCacheName Parse(string anywhereCacheName) => Parse(anywhereCacheName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AnywhereCacheName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="anywhereCacheName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AnywhereCacheName"/> if successful.</returns>
+        public static AnywhereCacheName Parse(string anywhereCacheName, bool allowUnparsed) =>
+            TryParse(anywhereCacheName, allowUnparsed, out AnywhereCacheName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AnywhereCacheName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="anywhereCacheName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AnywhereCacheName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string anywhereCacheName, out AnywhereCacheName result) =>
+            TryParse(anywhereCacheName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AnywhereCacheName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="anywhereCacheName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AnywhereCacheName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string anywhereCacheName, bool allowUnparsed, out AnywhereCacheName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(anywhereCacheName, nameof(anywhereCacheName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectBucketAnywhereCache.TryParseName(anywhereCacheName, out resourceName))
+            {
+                result = FromProjectBucketAnywhereCache(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(anywhereCacheName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AnywhereCacheName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string anywhereCacheId = null, string bucketId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AnywhereCacheId = anywhereCacheId;
+            BucketId = bucketId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AnywhereCacheName"/> class from the component parts of pattern
+        /// <c>projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="bucketId">The <c>Bucket</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="anywhereCacheId">The <c>AnywhereCache</c> ID. Must not be <c>null</c> or empty.</param>
+        public AnywhereCacheName(string projectId, string bucketId, string anywhereCacheId) : this(ResourceNameType.ProjectBucketAnywhereCache, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), bucketId: gax::GaxPreconditions.CheckNotNullOrEmpty(bucketId, nameof(bucketId)), anywhereCacheId: gax::GaxPreconditions.CheckNotNullOrEmpty(anywhereCacheId, nameof(anywhereCacheId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AnywhereCache</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string AnywhereCacheId { get; }
+
+        /// <summary>
+        /// The <c>Bucket</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string BucketId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectBucketAnywhereCache: return s_projectBucketAnywhereCache.Expand(ProjectId, BucketId, AnywhereCacheId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AnywhereCacheName);
+
+        /// <inheritdoc/>
+        public bool Equals(AnywhereCacheName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(AnywhereCacheName a, AnywhereCacheName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(AnywhereCacheName a, AnywhereCacheName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Bucket</c> resource.</summary>
     public sealed partial class BucketName : gax::IResourceName, sys::IEquatable<BucketName>
     {
@@ -1117,6 +1371,86 @@ namespace Google.Cloud.Storage.Control.V2
     }
 
     public partial class ListManagedFoldersRequest
+    {
+        /// <summary><see cref="BucketName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public BucketName ParentAsBucketName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BucketName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AnywhereCache
+    {
+        /// <summary>
+        /// <see cref="gcscv::AnywhereCacheName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::AnywhereCacheName AnywhereCacheName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::AnywhereCacheName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateAnywhereCacheRequest
+    {
+        /// <summary><see cref="BucketName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public BucketName ParentAsBucketName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : BucketName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DisableAnywhereCacheRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::AnywhereCacheName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::AnywhereCacheName AnywhereCacheName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::AnywhereCacheName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class PauseAnywhereCacheRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::AnywhereCacheName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::AnywhereCacheName AnywhereCacheName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::AnywhereCacheName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ResumeAnywhereCacheRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::AnywhereCacheName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::AnywhereCacheName AnywhereCacheName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::AnywhereCacheName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAnywhereCacheRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::AnywhereCacheName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::AnywhereCacheName AnywhereCacheName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::AnywhereCacheName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAnywhereCachesRequest
     {
         /// <summary><see cref="BucketName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
         public BucketName ParentAsBucketName
