@@ -36,6 +36,7 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.Dataplex.V1
 {
     /// <summary>Settings for <see cref="DataTaxonomyServiceClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class DataTaxonomyServiceSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="DataTaxonomyServiceSettings"/>.</summary>
@@ -456,6 +457,7 @@ namespace Google.Cloud.Dataplex.V1
     /// Builder class for <see cref="DataTaxonomyServiceClient"/> to provide simple configuration of credentials,
     /// endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class DataTaxonomyServiceClientBuilder : gaxgrpc::ClientBuilderBase<DataTaxonomyServiceClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -509,6 +511,7 @@ namespace Google.Cloud.Dataplex.V1
     /// DataTaxonomyService enables attribute-based governance. The resources
     /// currently offered include DataTaxonomy and DataAttribute.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class DataTaxonomyServiceClient
     {
         /// <summary>
@@ -604,7 +607,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataTaxonomy, OperationMetadata> CreateDataTaxonomy(CreateDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -613,7 +619,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> CreateDataTaxonomyAsync(CreateDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -622,7 +631,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> CreateDataTaxonomyAsync(CreateDataTaxonomyRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>CreateDataTaxonomy</c>.</summary>
@@ -637,8 +649,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataTaxonomy, OperationMetadata> PollOnceCreateDataTaxonomy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataTaxonomy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDataTaxonomyOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -649,16 +664,16 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> PollOnceCreateDataTaxonomyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataTaxonomy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDataTaxonomyOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Create a DataTaxonomy resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the data taxonomy location, of the form:
-        /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataTaxonomy">
         /// Required. DataTaxonomy resource.
@@ -673,8 +688,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataTaxonomy, OperationMetadata> CreateDataTaxonomy(string parent, DataTaxonomy dataTaxonomy, string dataTaxonomyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateDataTaxonomy(new CreateDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 DataTaxonomyId = gax::GaxPreconditions.CheckNotNullOrEmpty(dataTaxonomyId, nameof(dataTaxonomyId)),
@@ -685,9 +703,6 @@ namespace Google.Cloud.Dataplex.V1
         /// Create a DataTaxonomy resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the data taxonomy location, of the form:
-        /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataTaxonomy">
         /// Required. DataTaxonomy resource.
@@ -702,8 +717,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> CreateDataTaxonomyAsync(string parent, DataTaxonomy dataTaxonomy, string dataTaxonomyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateDataTaxonomyAsync(new CreateDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 DataTaxonomyId = gax::GaxPreconditions.CheckNotNullOrEmpty(dataTaxonomyId, nameof(dataTaxonomyId)),
@@ -714,9 +732,6 @@ namespace Google.Cloud.Dataplex.V1
         /// Create a DataTaxonomy resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the data taxonomy location, of the form:
-        /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataTaxonomy">
         /// Required. DataTaxonomy resource.
@@ -731,16 +746,16 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> CreateDataTaxonomyAsync(string parent, DataTaxonomy dataTaxonomy, string dataTaxonomyId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataTaxonomyAsync(parent, dataTaxonomy, dataTaxonomyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Create a DataTaxonomy resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the data taxonomy location, of the form:
-        /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataTaxonomy">
         /// Required. DataTaxonomy resource.
@@ -755,8 +770,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataTaxonomy, OperationMetadata> CreateDataTaxonomy(gagr::LocationName parent, DataTaxonomy dataTaxonomy, string dataTaxonomyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateDataTaxonomy(new CreateDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 DataTaxonomyId = gax::GaxPreconditions.CheckNotNullOrEmpty(dataTaxonomyId, nameof(dataTaxonomyId)),
@@ -767,9 +785,6 @@ namespace Google.Cloud.Dataplex.V1
         /// Create a DataTaxonomy resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the data taxonomy location, of the form:
-        /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataTaxonomy">
         /// Required. DataTaxonomy resource.
@@ -784,8 +799,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> CreateDataTaxonomyAsync(gagr::LocationName parent, DataTaxonomy dataTaxonomy, string dataTaxonomyId, gaxgrpc::CallSettings callSettings = null) =>
             CreateDataTaxonomyAsync(new CreateDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 DataTaxonomyId = gax::GaxPreconditions.CheckNotNullOrEmpty(dataTaxonomyId, nameof(dataTaxonomyId)),
@@ -796,9 +814,6 @@ namespace Google.Cloud.Dataplex.V1
         /// Create a DataTaxonomy resource.
         /// </summary>
         /// <param name="parent">
-        /// Required. The resource name of the data taxonomy location, of the form:
-        /// projects/{project_number}/locations/{location_id}
-        /// where `location_id` refers to a GCP region.
         /// </param>
         /// <param name="dataTaxonomy">
         /// Required. DataTaxonomy resource.
@@ -813,7 +828,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> CreateDataTaxonomyAsync(gagr::LocationName parent, DataTaxonomy dataTaxonomy, string dataTaxonomyId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataTaxonomyAsync(parent, dataTaxonomy, dataTaxonomyId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -822,7 +840,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataTaxonomy, OperationMetadata> UpdateDataTaxonomy(UpdateDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -831,7 +852,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> UpdateDataTaxonomyAsync(UpdateDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -840,7 +864,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> UpdateDataTaxonomyAsync(UpdateDataTaxonomyRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateDataTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>UpdateDataTaxonomy</c>.</summary>
@@ -855,8 +882,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataTaxonomy, OperationMetadata> PollOnceUpdateDataTaxonomy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataTaxonomy, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDataTaxonomyOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -867,8 +897,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> PollOnceUpdateDataTaxonomyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataTaxonomy, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDataTaxonomyOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Updates a DataTaxonomy resource.
@@ -881,8 +914,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataTaxonomy, OperationMetadata> UpdateDataTaxonomy(DataTaxonomy dataTaxonomy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateDataTaxonomy(new UpdateDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 DataTaxonomy = gax::GaxPreconditions.CheckNotNull(dataTaxonomy, nameof(dataTaxonomy)),
@@ -899,8 +935,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> UpdateDataTaxonomyAsync(DataTaxonomy dataTaxonomy, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateDataTaxonomyAsync(new UpdateDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
                 DataTaxonomy = gax::GaxPreconditions.CheckNotNull(dataTaxonomy, nameof(dataTaxonomy)),
@@ -917,7 +956,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> UpdateDataTaxonomyAsync(DataTaxonomy dataTaxonomy, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateDataTaxonomyAsync(dataTaxonomy, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -927,7 +969,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataTaxonomy(DeleteDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -937,7 +982,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataTaxonomyAsync(DeleteDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -947,7 +995,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataTaxonomyAsync(DeleteDataTaxonomyRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             DeleteDataTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>DeleteDataTaxonomy</c>.</summary>
@@ -962,6 +1013,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteDataTaxonomy(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDataTaxonomyOperationsClient, callSettings);
 
@@ -974,6 +1026,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteDataTaxonomyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDataTaxonomyOperationsClient, callSettings);
 
@@ -987,8 +1040,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataTaxonomy(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteDataTaxonomy(new DeleteDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1003,8 +1059,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataTaxonomyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteDataTaxonomyAsync(new DeleteDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1019,6 +1078,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataTaxonomyAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteDataTaxonomyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1032,8 +1092,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataTaxonomy(DataTaxonomyName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteDataTaxonomy(new DeleteDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 DataTaxonomyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1048,8 +1111,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataTaxonomyAsync(DataTaxonomyName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning disable CS0612
             DeleteDataTaxonomyAsync(new DeleteDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 DataTaxonomyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1064,6 +1130,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataTaxonomyAsync(DataTaxonomyName name, st::CancellationToken cancellationToken) =>
             DeleteDataTaxonomyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1073,7 +1140,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataTaxonomy"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomies(ListDataTaxonomiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1082,7 +1152,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataTaxonomy"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomiesAsync(ListDataTaxonomiesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1103,7 +1176,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataTaxonomy"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomies(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataTaxonomiesRequest request = new ListDataTaxonomiesRequest
             {
@@ -1138,7 +1214,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataTaxonomy"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomiesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataTaxonomiesRequest request = new ListDataTaxonomiesRequest
             {
@@ -1173,7 +1252,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataTaxonomy"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomies(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataTaxonomiesRequest request = new ListDataTaxonomiesRequest
             {
@@ -1208,7 +1290,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataTaxonomy"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomiesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataTaxonomiesRequest request = new ListDataTaxonomiesRequest
             {
@@ -1231,7 +1316,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataTaxonomy GetDataTaxonomy(GetDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1240,7 +1328,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataTaxonomy> GetDataTaxonomyAsync(GetDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1249,20 +1340,24 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataTaxonomy> GetDataTaxonomyAsync(GetDataTaxonomyRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataTaxonomyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a DataTaxonomy resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the DataTaxonomy:
-        /// projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataTaxonomy GetDataTaxonomy(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetDataTaxonomy(new GetDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1271,13 +1366,14 @@ namespace Google.Cloud.Dataplex.V1
         /// Retrieves a DataTaxonomy resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the DataTaxonomy:
-        /// projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataTaxonomy> GetDataTaxonomyAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetDataTaxonomyAsync(new GetDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
             }, callSettings);
@@ -1286,25 +1382,27 @@ namespace Google.Cloud.Dataplex.V1
         /// Retrieves a DataTaxonomy resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the DataTaxonomy:
-        /// projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataTaxonomy> GetDataTaxonomyAsync(string name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataTaxonomyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves a DataTaxonomy resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the DataTaxonomy:
-        /// projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataTaxonomy GetDataTaxonomy(DataTaxonomyName name, gaxgrpc::CallSettings callSettings = null) =>
             GetDataTaxonomy(new GetDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 DataTaxonomyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1313,13 +1411,14 @@ namespace Google.Cloud.Dataplex.V1
         /// Retrieves a DataTaxonomy resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the DataTaxonomy:
-        /// projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataTaxonomy> GetDataTaxonomyAsync(DataTaxonomyName name, gaxgrpc::CallSettings callSettings = null) =>
             GetDataTaxonomyAsync(new GetDataTaxonomyRequest
+#pragma warning restore CS0612
             {
                 DataTaxonomyName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
             }, callSettings);
@@ -1328,12 +1427,13 @@ namespace Google.Cloud.Dataplex.V1
         /// Retrieves a DataTaxonomy resource.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the DataTaxonomy:
-        /// projects/{project_number}/locations/{location_id}/dataTaxonomies/{data_taxonomy_id}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataTaxonomy> GetDataTaxonomyAsync(DataTaxonomyName name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataTaxonomyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1342,7 +1442,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttributeBinding, OperationMetadata> CreateDataAttributeBinding(CreateDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1351,7 +1454,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> CreateDataAttributeBindingAsync(CreateDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1360,7 +1466,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> CreateDataAttributeBindingAsync(CreateDataAttributeBindingRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataAttributeBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>CreateDataAttributeBinding</c>.</summary>
@@ -1375,8 +1484,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttributeBinding, OperationMetadata> PollOnceCreateDataAttributeBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataAttributeBinding, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDataAttributeBindingOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -1387,8 +1499,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> PollOnceCreateDataAttributeBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataAttributeBinding, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDataAttributeBindingOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Create a DataAttributeBinding resource.
@@ -1410,7 +1525,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttributeBinding, OperationMetadata> CreateDataAttributeBinding(string parent, DataAttributeBinding dataAttributeBinding, string dataAttributeBindingId, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             CreateDataAttributeBinding(new CreateDataAttributeBindingRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -1438,7 +1556,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> CreateDataAttributeBindingAsync(string parent, DataAttributeBinding dataAttributeBinding, string dataAttributeBindingId, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             CreateDataAttributeBindingAsync(new CreateDataAttributeBindingRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -1466,7 +1587,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> CreateDataAttributeBindingAsync(string parent, DataAttributeBinding dataAttributeBinding, string dataAttributeBindingId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataAttributeBindingAsync(parent, dataAttributeBinding, dataAttributeBindingId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1489,7 +1613,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttributeBinding, OperationMetadata> CreateDataAttributeBinding(gagr::LocationName parent, DataAttributeBinding dataAttributeBinding, string dataAttributeBindingId, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             CreateDataAttributeBinding(new CreateDataAttributeBindingRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1517,7 +1644,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> CreateDataAttributeBindingAsync(gagr::LocationName parent, DataAttributeBinding dataAttributeBinding, string dataAttributeBindingId, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             CreateDataAttributeBindingAsync(new CreateDataAttributeBindingRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -1545,7 +1675,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> CreateDataAttributeBindingAsync(gagr::LocationName parent, DataAttributeBinding dataAttributeBinding, string dataAttributeBindingId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataAttributeBindingAsync(parent, dataAttributeBinding, dataAttributeBindingId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1554,7 +1687,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttributeBinding, OperationMetadata> UpdateDataAttributeBinding(UpdateDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1563,7 +1699,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> UpdateDataAttributeBindingAsync(UpdateDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1572,7 +1711,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> UpdateDataAttributeBindingAsync(UpdateDataAttributeBindingRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateDataAttributeBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>UpdateDataAttributeBinding</c>.</summary>
@@ -1587,8 +1729,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttributeBinding, OperationMetadata> PollOnceUpdateDataAttributeBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataAttributeBinding, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDataAttributeBindingOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -1599,8 +1744,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> PollOnceUpdateDataAttributeBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataAttributeBinding, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDataAttributeBindingOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Updates a DataAttributeBinding resource.
@@ -1613,7 +1761,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttributeBinding, OperationMetadata> UpdateDataAttributeBinding(DataAttributeBinding dataAttributeBinding, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             UpdateDataAttributeBinding(new UpdateDataAttributeBindingRequest
             {
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
@@ -1631,7 +1782,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> UpdateDataAttributeBindingAsync(DataAttributeBinding dataAttributeBinding, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             UpdateDataAttributeBindingAsync(new UpdateDataAttributeBindingRequest
             {
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
@@ -1649,7 +1803,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> UpdateDataAttributeBindingAsync(DataAttributeBinding dataAttributeBinding, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateDataAttributeBindingAsync(dataAttributeBinding, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1660,6 +1817,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataAttributeBinding(DeleteDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1671,6 +1829,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeBindingAsync(DeleteDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1682,6 +1841,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeBindingAsync(DeleteDataAttributeBindingRequest request, st::CancellationToken cancellationToken) =>
             DeleteDataAttributeBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1697,6 +1857,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteDataAttributeBinding(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDataAttributeBindingOperationsClient, callSettings);
 
@@ -1709,6 +1870,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteDataAttributeBindingAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDataAttributeBindingOperationsClient, callSettings);
 
@@ -1723,6 +1885,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataAttributeBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteDataAttributeBinding(new DeleteDataAttributeBindingRequest
             {
@@ -1740,6 +1903,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteDataAttributeBindingAsync(new DeleteDataAttributeBindingRequest
             {
@@ -1757,6 +1921,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeBindingAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteDataAttributeBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1771,6 +1936,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataAttributeBinding(DataAttributeBindingName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteDataAttributeBinding(new DeleteDataAttributeBindingRequest
             {
@@ -1788,6 +1954,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeBindingAsync(DataAttributeBindingName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteDataAttributeBindingAsync(new DeleteDataAttributeBindingRequest
             {
@@ -1805,6 +1972,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeBindingAsync(DataAttributeBindingName name, st::CancellationToken cancellationToken) =>
             DeleteDataAttributeBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1814,7 +1982,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttributeBinding"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindings(ListDataAttributeBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1823,7 +1994,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttributeBinding"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindingsAsync(ListDataAttributeBindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1843,7 +2017,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttributeBinding"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataAttributeBindingsRequest request = new ListDataAttributeBindingsRequest
             {
@@ -1877,7 +2054,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttributeBinding"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataAttributeBindingsRequest request = new ListDataAttributeBindingsRequest
             {
@@ -1911,7 +2091,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttributeBinding"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataAttributeBindingsRequest request = new ListDataAttributeBindingsRequest
             {
@@ -1945,7 +2128,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttributeBinding"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataAttributeBindingsRequest request = new ListDataAttributeBindingsRequest
             {
@@ -1968,7 +2154,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataAttributeBinding GetDataAttributeBinding(GetDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1977,7 +2166,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttributeBinding> GetDataAttributeBindingAsync(GetDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -1986,7 +2178,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttributeBinding> GetDataAttributeBindingAsync(GetDataAttributeBindingRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataAttributeBindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1998,7 +2193,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataAttributeBinding GetDataAttributeBinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             GetDataAttributeBinding(new GetDataAttributeBindingRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -2013,7 +2211,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttributeBinding> GetDataAttributeBindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             GetDataAttributeBindingAsync(new GetDataAttributeBindingRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -2028,7 +2229,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttributeBinding> GetDataAttributeBindingAsync(string name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataAttributeBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2040,7 +2244,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataAttributeBinding GetDataAttributeBinding(DataAttributeBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             GetDataAttributeBinding(new GetDataAttributeBindingRequest
             {
                 DataAttributeBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2055,7 +2262,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttributeBinding> GetDataAttributeBindingAsync(DataAttributeBindingName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             GetDataAttributeBindingAsync(new GetDataAttributeBindingRequest
             {
                 DataAttributeBindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2070,7 +2280,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttributeBinding> GetDataAttributeBindingAsync(DataAttributeBindingName name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataAttributeBindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2079,7 +2292,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttribute, OperationMetadata> CreateDataAttribute(CreateDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2088,7 +2304,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> CreateDataAttributeAsync(CreateDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2097,7 +2316,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> CreateDataAttributeAsync(CreateDataAttributeRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>CreateDataAttribute</c>.</summary>
@@ -2112,8 +2334,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttribute, OperationMetadata> PollOnceCreateDataAttribute(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataAttribute, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDataAttributeOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -2124,8 +2349,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> PollOnceCreateDataAttributeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataAttribute, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateDataAttributeOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Create a DataAttribute resource.
@@ -2147,7 +2375,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttribute, OperationMetadata> CreateDataAttribute(string parent, DataAttribute dataAttribute, string dataAttributeId, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             CreateDataAttribute(new CreateDataAttributeRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -2175,7 +2406,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> CreateDataAttributeAsync(string parent, DataAttribute dataAttribute, string dataAttributeId, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             CreateDataAttributeAsync(new CreateDataAttributeRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
@@ -2203,7 +2437,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> CreateDataAttributeAsync(string parent, DataAttribute dataAttribute, string dataAttributeId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataAttributeAsync(parent, dataAttribute, dataAttributeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2226,7 +2463,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttribute, OperationMetadata> CreateDataAttribute(DataTaxonomyName parent, DataAttribute dataAttribute, string dataAttributeId, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             CreateDataAttribute(new CreateDataAttributeRequest
             {
                 ParentAsDataTaxonomyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2254,7 +2494,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> CreateDataAttributeAsync(DataTaxonomyName parent, DataAttribute dataAttribute, string dataAttributeId, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             CreateDataAttributeAsync(new CreateDataAttributeRequest
             {
                 ParentAsDataTaxonomyName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
@@ -2282,7 +2525,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> CreateDataAttributeAsync(DataTaxonomyName parent, DataAttribute dataAttribute, string dataAttributeId, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             CreateDataAttributeAsync(parent, dataAttribute, dataAttributeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2291,7 +2537,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttribute, OperationMetadata> UpdateDataAttribute(UpdateDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2300,7 +2549,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> UpdateDataAttributeAsync(UpdateDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2309,7 +2561,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> UpdateDataAttributeAsync(UpdateDataAttributeRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateDataAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>The long-running operations client for <c>UpdateDataAttribute</c>.</summary>
@@ -2324,8 +2579,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttribute, OperationMetadata> PollOnceUpdateDataAttribute(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataAttribute, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDataAttributeOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
@@ -2336,8 +2594,11 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> PollOnceUpdateDataAttributeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DataAttribute, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateDataAttributeOperationsClient, callSettings);
+#pragma warning restore CS0612
 
         /// <summary>
         /// Updates a DataAttribute resource.
@@ -2350,7 +2611,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual lro::Operation<DataAttribute, OperationMetadata> UpdateDataAttribute(DataAttribute dataAttribute, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             UpdateDataAttribute(new UpdateDataAttributeRequest
             {
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
@@ -2368,7 +2632,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> UpdateDataAttributeAsync(DataAttribute dataAttribute, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             UpdateDataAttributeAsync(new UpdateDataAttributeRequest
             {
                 UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
@@ -2386,7 +2653,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<lro::Operation<DataAttribute, OperationMetadata>> UpdateDataAttributeAsync(DataAttribute dataAttribute, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             UpdateDataAttributeAsync(dataAttribute, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2395,6 +2665,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataAttribute(DeleteDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2404,6 +2675,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeAsync(DeleteDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2413,6 +2685,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeAsync(DeleteDataAttributeRequest request, st::CancellationToken cancellationToken) =>
             DeleteDataAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2428,6 +2701,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteDataAttribute(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDataAttributeOperationsClient, callSettings);
 
@@ -2440,6 +2714,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteDataAttributeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteDataAttributeOperationsClient, callSettings);
 
@@ -2452,6 +2727,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataAttribute(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteDataAttribute(new DeleteDataAttributeRequest
             {
@@ -2467,6 +2743,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteDataAttributeAsync(new DeleteDataAttributeRequest
             {
@@ -2482,6 +2759,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteDataAttributeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2494,6 +2772,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteDataAttribute(DataAttributeName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteDataAttribute(new DeleteDataAttributeRequest
             {
@@ -2509,6 +2788,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeAsync(DataAttributeName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteDataAttributeAsync(new DeleteDataAttributeRequest
             {
@@ -2524,6 +2804,7 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeAsync(DataAttributeName name, st::CancellationToken cancellationToken) =>
             DeleteDataAttributeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2533,7 +2814,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttribute"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributes(ListDataAttributesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2542,7 +2826,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttribute"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributesAsync(ListDataAttributesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2562,7 +2849,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttribute"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataAttributesRequest request = new ListDataAttributesRequest
             {
@@ -2596,7 +2886,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttribute"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataAttributesRequest request = new ListDataAttributesRequest
             {
@@ -2630,7 +2923,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttribute"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributes(DataTaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataAttributesRequest request = new ListDataAttributesRequest
             {
@@ -2664,7 +2960,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttribute"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual gax::PagedAsyncEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributesAsync(DataTaxonomyName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             ListDataAttributesRequest request = new ListDataAttributesRequest
             {
@@ -2687,7 +2986,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataAttribute GetDataAttribute(GetDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2696,7 +2998,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttribute> GetDataAttributeAsync(GetDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             throw new sys::NotImplementedException();
 
         /// <summary>
@@ -2705,7 +3010,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttribute> GetDataAttributeAsync(GetDataAttributeRequest request, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataAttributeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2717,7 +3025,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataAttribute GetDataAttribute(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             GetDataAttribute(new GetDataAttributeRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -2732,7 +3043,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttribute> GetDataAttributeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             GetDataAttributeAsync(new GetDataAttributeRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
@@ -2747,7 +3061,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttribute> GetDataAttributeAsync(string name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataAttributeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2759,7 +3076,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual DataAttribute GetDataAttribute(DataAttributeName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             GetDataAttribute(new GetDataAttributeRequest
             {
                 DataAttributeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2774,7 +3094,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttribute> GetDataAttributeAsync(DataAttributeName name, gaxgrpc::CallSettings callSettings = null) =>
+#pragma warning restore CS0612
             GetDataAttributeAsync(new GetDataAttributeRequest
             {
                 DataAttributeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2789,7 +3112,10 @@ namespace Google.Cloud.Dataplex.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public virtual stt::Task<DataAttribute> GetDataAttributeAsync(DataAttributeName name, st::CancellationToken cancellationToken) =>
+#pragma warning restore CS0612
             GetDataAttributeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
@@ -2798,17 +3124,22 @@ namespace Google.Cloud.Dataplex.V1
     /// DataTaxonomyService enables attribute-based governance. The resources
     /// currently offered include DataTaxonomy and DataAttribute.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class DataTaxonomyServiceClientImpl : DataTaxonomyServiceClient
     {
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<CreateDataTaxonomyRequest, lro::Operation> _callCreateDataTaxonomy;
 
         private readonly gaxgrpc::ApiCall<UpdateDataTaxonomyRequest, lro::Operation> _callUpdateDataTaxonomy;
 
         private readonly gaxgrpc::ApiCall<DeleteDataTaxonomyRequest, lro::Operation> _callDeleteDataTaxonomy;
+#pragma warning restore CS0612
 
         private readonly gaxgrpc::ApiCall<ListDataTaxonomiesRequest, ListDataTaxonomiesResponse> _callListDataTaxonomies;
 
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<GetDataTaxonomyRequest, DataTaxonomy> _callGetDataTaxonomy;
+#pragma warning restore CS0612
 
         private readonly gaxgrpc::ApiCall<CreateDataAttributeBindingRequest, lro::Operation> _callCreateDataAttributeBinding;
 
@@ -2818,7 +3149,9 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<ListDataAttributeBindingsRequest, ListDataAttributeBindingsResponse> _callListDataAttributeBindings;
 
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<GetDataAttributeBindingRequest, DataAttributeBinding> _callGetDataAttributeBinding;
+#pragma warning restore CS0612
 
         private readonly gaxgrpc::ApiCall<CreateDataAttributeRequest, lro::Operation> _callCreateDataAttribute;
 
@@ -2828,7 +3161,9 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<ListDataAttributesRequest, ListDataAttributesResponse> _callListDataAttributes;
 
+#pragma warning disable CS0612
         private readonly gaxgrpc::ApiCall<GetDataAttributeRequest, DataAttribute> _callGetDataAttribute;
+#pragma warning restore CS0612
 
         /// <summary>
         /// Constructs a client wrapper for the DataTaxonomyService service, with the specified gRPC client and
@@ -2857,49 +3192,79 @@ namespace Google.Cloud.Dataplex.V1
             DeleteDataAttributeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDataAttributeOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+#pragma warning disable CS0612
             _callCreateDataTaxonomy = clientHelper.BuildApiCall<CreateDataTaxonomyRequest, lro::Operation>("CreateDataTaxonomy", grpcClient.CreateDataTaxonomyAsync, grpcClient.CreateDataTaxonomy, effectiveSettings.CreateDataTaxonomySettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateDataTaxonomy);
             Modify_CreateDataTaxonomyApiCall(ref _callCreateDataTaxonomy);
+#pragma warning disable CS0612
             _callUpdateDataTaxonomy = clientHelper.BuildApiCall<UpdateDataTaxonomyRequest, lro::Operation>("UpdateDataTaxonomy", grpcClient.UpdateDataTaxonomyAsync, grpcClient.UpdateDataTaxonomy, effectiveSettings.UpdateDataTaxonomySettings).WithGoogleRequestParam("data_taxonomy.name", request => request.DataTaxonomy?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateDataTaxonomy);
             Modify_UpdateDataTaxonomyApiCall(ref _callUpdateDataTaxonomy);
+#pragma warning disable CS0612
             _callDeleteDataTaxonomy = clientHelper.BuildApiCall<DeleteDataTaxonomyRequest, lro::Operation>("DeleteDataTaxonomy", grpcClient.DeleteDataTaxonomyAsync, grpcClient.DeleteDataTaxonomy, effectiveSettings.DeleteDataTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteDataTaxonomy);
             Modify_DeleteDataTaxonomyApiCall(ref _callDeleteDataTaxonomy);
+#pragma warning disable CS0612
             _callListDataTaxonomies = clientHelper.BuildApiCall<ListDataTaxonomiesRequest, ListDataTaxonomiesResponse>("ListDataTaxonomies", grpcClient.ListDataTaxonomiesAsync, grpcClient.ListDataTaxonomies, effectiveSettings.ListDataTaxonomiesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListDataTaxonomies);
             Modify_ListDataTaxonomiesApiCall(ref _callListDataTaxonomies);
+#pragma warning disable CS0612
             _callGetDataTaxonomy = clientHelper.BuildApiCall<GetDataTaxonomyRequest, DataTaxonomy>("GetDataTaxonomy", grpcClient.GetDataTaxonomyAsync, grpcClient.GetDataTaxonomy, effectiveSettings.GetDataTaxonomySettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetDataTaxonomy);
             Modify_GetDataTaxonomyApiCall(ref _callGetDataTaxonomy);
+#pragma warning disable CS0612
             _callCreateDataAttributeBinding = clientHelper.BuildApiCall<CreateDataAttributeBindingRequest, lro::Operation>("CreateDataAttributeBinding", grpcClient.CreateDataAttributeBindingAsync, grpcClient.CreateDataAttributeBinding, effectiveSettings.CreateDataAttributeBindingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateDataAttributeBinding);
             Modify_CreateDataAttributeBindingApiCall(ref _callCreateDataAttributeBinding);
+#pragma warning disable CS0612
             _callUpdateDataAttributeBinding = clientHelper.BuildApiCall<UpdateDataAttributeBindingRequest, lro::Operation>("UpdateDataAttributeBinding", grpcClient.UpdateDataAttributeBindingAsync, grpcClient.UpdateDataAttributeBinding, effectiveSettings.UpdateDataAttributeBindingSettings).WithGoogleRequestParam("data_attribute_binding.name", request => request.DataAttributeBinding?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateDataAttributeBinding);
             Modify_UpdateDataAttributeBindingApiCall(ref _callUpdateDataAttributeBinding);
+#pragma warning disable CS0612
             _callDeleteDataAttributeBinding = clientHelper.BuildApiCall<DeleteDataAttributeBindingRequest, lro::Operation>("DeleteDataAttributeBinding", grpcClient.DeleteDataAttributeBindingAsync, grpcClient.DeleteDataAttributeBinding, effectiveSettings.DeleteDataAttributeBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteDataAttributeBinding);
             Modify_DeleteDataAttributeBindingApiCall(ref _callDeleteDataAttributeBinding);
+#pragma warning disable CS0612
             _callListDataAttributeBindings = clientHelper.BuildApiCall<ListDataAttributeBindingsRequest, ListDataAttributeBindingsResponse>("ListDataAttributeBindings", grpcClient.ListDataAttributeBindingsAsync, grpcClient.ListDataAttributeBindings, effectiveSettings.ListDataAttributeBindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListDataAttributeBindings);
             Modify_ListDataAttributeBindingsApiCall(ref _callListDataAttributeBindings);
+#pragma warning disable CS0612
             _callGetDataAttributeBinding = clientHelper.BuildApiCall<GetDataAttributeBindingRequest, DataAttributeBinding>("GetDataAttributeBinding", grpcClient.GetDataAttributeBindingAsync, grpcClient.GetDataAttributeBinding, effectiveSettings.GetDataAttributeBindingSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetDataAttributeBinding);
             Modify_GetDataAttributeBindingApiCall(ref _callGetDataAttributeBinding);
+#pragma warning disable CS0612
             _callCreateDataAttribute = clientHelper.BuildApiCall<CreateDataAttributeRequest, lro::Operation>("CreateDataAttribute", grpcClient.CreateDataAttributeAsync, grpcClient.CreateDataAttribute, effectiveSettings.CreateDataAttributeSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateDataAttribute);
             Modify_CreateDataAttributeApiCall(ref _callCreateDataAttribute);
+#pragma warning disable CS0612
             _callUpdateDataAttribute = clientHelper.BuildApiCall<UpdateDataAttributeRequest, lro::Operation>("UpdateDataAttribute", grpcClient.UpdateDataAttributeAsync, grpcClient.UpdateDataAttribute, effectiveSettings.UpdateDataAttributeSettings).WithGoogleRequestParam("data_attribute.name", request => request.DataAttribute?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateDataAttribute);
             Modify_UpdateDataAttributeApiCall(ref _callUpdateDataAttribute);
+#pragma warning disable CS0612
             _callDeleteDataAttribute = clientHelper.BuildApiCall<DeleteDataAttributeRequest, lro::Operation>("DeleteDataAttribute", grpcClient.DeleteDataAttributeAsync, grpcClient.DeleteDataAttribute, effectiveSettings.DeleteDataAttributeSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteDataAttribute);
             Modify_DeleteDataAttributeApiCall(ref _callDeleteDataAttribute);
+#pragma warning disable CS0612
             _callListDataAttributes = clientHelper.BuildApiCall<ListDataAttributesRequest, ListDataAttributesResponse>("ListDataAttributes", grpcClient.ListDataAttributesAsync, grpcClient.ListDataAttributes, effectiveSettings.ListDataAttributesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListDataAttributes);
             Modify_ListDataAttributesApiCall(ref _callListDataAttributes);
+#pragma warning disable CS0612
             _callGetDataAttribute = clientHelper.BuildApiCall<GetDataAttributeRequest, DataAttribute>("GetDataAttribute", grpcClient.GetDataAttributeAsync, grpcClient.GetDataAttribute, effectiveSettings.GetDataAttributeSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetDataAttribute);
             Modify_GetDataAttributeApiCall(ref _callGetDataAttribute);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -2907,15 +3272,19 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+#pragma warning disable CS0612
         partial void Modify_CreateDataTaxonomyApiCall(ref gaxgrpc::ApiCall<CreateDataTaxonomyRequest, lro::Operation> call);
 
         partial void Modify_UpdateDataTaxonomyApiCall(ref gaxgrpc::ApiCall<UpdateDataTaxonomyRequest, lro::Operation> call);
 
         partial void Modify_DeleteDataTaxonomyApiCall(ref gaxgrpc::ApiCall<DeleteDataTaxonomyRequest, lro::Operation> call);
+#pragma warning restore CS0612
 
         partial void Modify_ListDataTaxonomiesApiCall(ref gaxgrpc::ApiCall<ListDataTaxonomiesRequest, ListDataTaxonomiesResponse> call);
 
+#pragma warning disable CS0612
         partial void Modify_GetDataTaxonomyApiCall(ref gaxgrpc::ApiCall<GetDataTaxonomyRequest, DataTaxonomy> call);
+#pragma warning restore CS0612
 
         partial void Modify_CreateDataAttributeBindingApiCall(ref gaxgrpc::ApiCall<CreateDataAttributeBindingRequest, lro::Operation> call);
 
@@ -2925,7 +3294,9 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_ListDataAttributeBindingsApiCall(ref gaxgrpc::ApiCall<ListDataAttributeBindingsRequest, ListDataAttributeBindingsResponse> call);
 
+#pragma warning disable CS0612
         partial void Modify_GetDataAttributeBindingApiCall(ref gaxgrpc::ApiCall<GetDataAttributeBindingRequest, DataAttributeBinding> call);
+#pragma warning restore CS0612
 
         partial void Modify_CreateDataAttributeApiCall(ref gaxgrpc::ApiCall<CreateDataAttributeRequest, lro::Operation> call);
 
@@ -2935,7 +3306,9 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_ListDataAttributesApiCall(ref gaxgrpc::ApiCall<ListDataAttributesRequest, ListDataAttributesResponse> call);
 
+#pragma warning disable CS0612
         partial void Modify_GetDataAttributeApiCall(ref gaxgrpc::ApiCall<GetDataAttributeRequest, DataAttribute> call);
+#pragma warning restore CS0612
 
         partial void OnConstruction(DataTaxonomyService.DataTaxonomyServiceClient grpcClient, DataTaxonomyServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2948,15 +3321,19 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
         public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
+#pragma warning disable CS0612
         partial void Modify_CreateDataTaxonomyRequest(ref CreateDataTaxonomyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateDataTaxonomyRequest(ref UpdateDataTaxonomyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteDataTaxonomyRequest(ref DeleteDataTaxonomyRequest request, ref gaxgrpc::CallSettings settings);
+#pragma warning restore CS0612
 
         partial void Modify_ListDataTaxonomiesRequest(ref ListDataTaxonomiesRequest request, ref gaxgrpc::CallSettings settings);
 
+#pragma warning disable CS0612
         partial void Modify_GetDataTaxonomyRequest(ref GetDataTaxonomyRequest request, ref gaxgrpc::CallSettings settings);
+#pragma warning restore CS0612
 
         partial void Modify_CreateDataAttributeBindingRequest(ref CreateDataAttributeBindingRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2987,10 +3364,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<DataTaxonomy, OperationMetadata> CreateDataTaxonomy(CreateDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateDataTaxonomyRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataTaxonomy, OperationMetadata>(_callCreateDataTaxonomy.Sync(request, callSettings), CreateDataTaxonomyOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -2999,10 +3381,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> CreateDataTaxonomyAsync(CreateDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateDataTaxonomyRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataTaxonomy, OperationMetadata>(await _callCreateDataTaxonomy.Async(request, callSettings).ConfigureAwait(false), CreateDataTaxonomyOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>UpdateDataTaxonomy</c>.</summary>
@@ -3014,10 +3401,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<DataTaxonomy, OperationMetadata> UpdateDataTaxonomy(UpdateDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateDataTaxonomyRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataTaxonomy, OperationMetadata>(_callUpdateDataTaxonomy.Sync(request, callSettings), UpdateDataTaxonomyOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3026,10 +3418,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<DataTaxonomy, OperationMetadata>> UpdateDataTaxonomyAsync(UpdateDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateDataTaxonomyRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataTaxonomy, OperationMetadata>(await _callUpdateDataTaxonomy.Async(request, callSettings).ConfigureAwait(false), UpdateDataTaxonomyOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>DeleteDataTaxonomy</c>.</summary>
@@ -3042,7 +3439,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<wkt::Empty, OperationMetadata> DeleteDataTaxonomy(DeleteDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_DeleteDataTaxonomyRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteDataTaxonomy.Sync(request, callSettings), DeleteDataTaxonomyOperationsClient);
@@ -3055,7 +3455,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataTaxonomyAsync(DeleteDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_DeleteDataTaxonomyRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteDataTaxonomy.Async(request, callSettings).ConfigureAwait(false), DeleteDataTaxonomyOperationsClient);
@@ -3067,10 +3470,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataTaxonomy"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomies(ListDataTaxonomiesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListDataTaxonomiesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<ListDataTaxonomiesRequest, ListDataTaxonomiesResponse, DataTaxonomy>(_callListDataTaxonomies, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3079,10 +3487,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataTaxonomy"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<ListDataTaxonomiesResponse, DataTaxonomy> ListDataTaxonomiesAsync(ListDataTaxonomiesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListDataTaxonomiesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDataTaxonomiesRequest, ListDataTaxonomiesResponse, DataTaxonomy>(_callListDataTaxonomies, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3091,7 +3504,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override DataTaxonomy GetDataTaxonomy(GetDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetDataTaxonomyRequest(ref request, ref callSettings);
             return _callGetDataTaxonomy.Sync(request, callSettings);
@@ -3103,7 +3519,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<DataTaxonomy> GetDataTaxonomyAsync(GetDataTaxonomyRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetDataTaxonomyRequest(ref request, ref callSettings);
             return _callGetDataTaxonomy.Async(request, callSettings);
@@ -3118,10 +3537,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<DataAttributeBinding, OperationMetadata> CreateDataAttributeBinding(CreateDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateDataAttributeBindingRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataAttributeBinding, OperationMetadata>(_callCreateDataAttributeBinding.Sync(request, callSettings), CreateDataAttributeBindingOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3130,10 +3554,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> CreateDataAttributeBindingAsync(CreateDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateDataAttributeBindingRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataAttributeBinding, OperationMetadata>(await _callCreateDataAttributeBinding.Async(request, callSettings).ConfigureAwait(false), CreateDataAttributeBindingOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>UpdateDataAttributeBinding</c>.</summary>
@@ -3145,10 +3574,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<DataAttributeBinding, OperationMetadata> UpdateDataAttributeBinding(UpdateDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateDataAttributeBindingRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataAttributeBinding, OperationMetadata>(_callUpdateDataAttributeBinding.Sync(request, callSettings), UpdateDataAttributeBindingOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3157,10 +3591,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<DataAttributeBinding, OperationMetadata>> UpdateDataAttributeBindingAsync(UpdateDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateDataAttributeBindingRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataAttributeBinding, OperationMetadata>(await _callUpdateDataAttributeBinding.Async(request, callSettings).ConfigureAwait(false), UpdateDataAttributeBindingOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>DeleteDataAttributeBinding</c>.</summary>
@@ -3174,6 +3613,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<wkt::Empty, OperationMetadata> DeleteDataAttributeBinding(DeleteDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDataAttributeBindingRequest(ref request, ref callSettings);
@@ -3188,6 +3628,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeBindingAsync(DeleteDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDataAttributeBindingRequest(ref request, ref callSettings);
@@ -3200,10 +3641,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttributeBinding"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindings(ListDataAttributeBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListDataAttributeBindingsRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<ListDataAttributeBindingsRequest, ListDataAttributeBindingsResponse, DataAttributeBinding>(_callListDataAttributeBindings, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3212,10 +3658,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttributeBinding"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<ListDataAttributeBindingsResponse, DataAttributeBinding> ListDataAttributeBindingsAsync(ListDataAttributeBindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListDataAttributeBindingsRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDataAttributeBindingsRequest, ListDataAttributeBindingsResponse, DataAttributeBinding>(_callListDataAttributeBindings, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3224,7 +3675,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override DataAttributeBinding GetDataAttributeBinding(GetDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetDataAttributeBindingRequest(ref request, ref callSettings);
             return _callGetDataAttributeBinding.Sync(request, callSettings);
@@ -3236,7 +3690,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<DataAttributeBinding> GetDataAttributeBindingAsync(GetDataAttributeBindingRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetDataAttributeBindingRequest(ref request, ref callSettings);
             return _callGetDataAttributeBinding.Async(request, callSettings);
@@ -3251,10 +3708,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<DataAttribute, OperationMetadata> CreateDataAttribute(CreateDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateDataAttributeRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataAttribute, OperationMetadata>(_callCreateDataAttribute.Sync(request, callSettings), CreateDataAttributeOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3263,10 +3725,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<DataAttribute, OperationMetadata>> CreateDataAttributeAsync(CreateDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_CreateDataAttributeRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataAttribute, OperationMetadata>(await _callCreateDataAttribute.Async(request, callSettings).ConfigureAwait(false), CreateDataAttributeOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>UpdateDataAttribute</c>.</summary>
@@ -3278,10 +3745,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override lro::Operation<DataAttribute, OperationMetadata> UpdateDataAttribute(UpdateDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateDataAttributeRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataAttribute, OperationMetadata>(_callUpdateDataAttribute.Sync(request, callSettings), UpdateDataAttributeOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3290,10 +3762,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override async stt::Task<lro::Operation<DataAttribute, OperationMetadata>> UpdateDataAttributeAsync(UpdateDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_UpdateDataAttributeRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new lro::Operation<DataAttribute, OperationMetadata>(await _callUpdateDataAttribute.Async(request, callSettings).ConfigureAwait(false), UpdateDataAttributeOperationsClient);
+#pragma warning restore CS0612
         }
 
         /// <summary>The long-running operations client for <c>DeleteDataAttribute</c>.</summary>
@@ -3305,6 +3782,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<wkt::Empty, OperationMetadata> DeleteDataAttribute(DeleteDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDataAttributeRequest(ref request, ref callSettings);
@@ -3317,6 +3795,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteDataAttributeAsync(DeleteDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteDataAttributeRequest(ref request, ref callSettings);
@@ -3329,10 +3808,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="DataAttribute"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributes(ListDataAttributesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListDataAttributesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedEnumerable<ListDataAttributesRequest, ListDataAttributesResponse, DataAttribute>(_callListDataAttributes, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3341,10 +3825,15 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="DataAttribute"/> resources.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override gax::PagedAsyncEnumerable<ListDataAttributesResponse, DataAttribute> ListDataAttributesAsync(ListDataAttributesRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_ListDataAttributesRequest(ref request, ref callSettings);
+#pragma warning disable CS0612
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDataAttributesRequest, ListDataAttributesResponse, DataAttribute>(_callListDataAttributes, request, callSettings);
+#pragma warning restore CS0612
         }
 
         /// <summary>
@@ -3353,7 +3842,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override DataAttribute GetDataAttribute(GetDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetDataAttributeRequest(ref request, ref callSettings);
             return _callGetDataAttribute.Sync(request, callSettings);
@@ -3365,7 +3857,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
+#pragma warning disable CS0612
         public override stt::Task<DataAttribute> GetDataAttributeAsync(GetDataAttributeRequest request, gaxgrpc::CallSettings callSettings = null)
+#pragma warning restore CS0612
         {
             Modify_GetDataAttributeRequest(ref request, ref callSettings);
             return _callGetDataAttribute.Async(request, callSettings);
@@ -3384,26 +3879,38 @@ namespace Google.Cloud.Dataplex.V1
     {
     }
 
+#pragma warning disable CS0612
     public partial class ListDataTaxonomiesResponse : gaxgrpc::IPageResponse<DataTaxonomy>
+#pragma warning restore CS0612
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+#pragma warning disable CS0612
         public scg::IEnumerator<DataTaxonomy> GetEnumerator() => DataTaxonomies.GetEnumerator();
+#pragma warning restore CS0612
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+#pragma warning disable CS0612
     public partial class ListDataAttributeBindingsResponse : gaxgrpc::IPageResponse<DataAttributeBinding>
+#pragma warning restore CS0612
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+#pragma warning disable CS0612
         public scg::IEnumerator<DataAttributeBinding> GetEnumerator() => DataAttributeBindings.GetEnumerator();
+#pragma warning restore CS0612
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+#pragma warning disable CS0612
     public partial class ListDataAttributesResponse : gaxgrpc::IPageResponse<DataAttribute>
+#pragma warning restore CS0612
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+#pragma warning disable CS0612
         public scg::IEnumerator<DataAttribute> GetEnumerator() => DataAttributes.GetEnumerator();
+#pragma warning restore CS0612
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

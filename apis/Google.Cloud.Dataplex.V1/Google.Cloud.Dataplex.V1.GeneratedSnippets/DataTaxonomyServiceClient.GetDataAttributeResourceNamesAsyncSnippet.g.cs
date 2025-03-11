@@ -19,6 +19,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataTaxonomyService_GetDataAttribute_async_flattened_resourceNames]
+    using System;
     using System.Threading.Tasks;
     using gcdv = Google.Cloud.Dataplex.V1;
 
@@ -32,6 +33,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task GetDataAttributeResourceNamesAsync()
         {
             // Create client
@@ -39,7 +41,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             gcdv::DataAttributeName name = gcdv::DataAttributeName.FromProjectLocationDataTaxonomyDataAttribute("[PROJECT]", "[LOCATION]", "[DATATAXONOMY]", "[DATA_ATTRIBUTE_ID]");
             // Make the request
+#pragma warning disable CS0612
             gcdv::DataAttribute response = await dataTaxonomyServiceClient.GetDataAttributeAsync(name);
+#pragma warning restore CS0612
         }
     }
     // [END dataplex_v1_generated_DataTaxonomyService_GetDataAttribute_async_flattened_resourceNames]

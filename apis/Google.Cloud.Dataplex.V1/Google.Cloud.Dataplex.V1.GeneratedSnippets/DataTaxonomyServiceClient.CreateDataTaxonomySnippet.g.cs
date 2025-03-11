@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START dataplex_v1_generated_DataTaxonomyService_CreateDataTaxonomy_sync_flattened]
     using Google.Cloud.Dataplex.V1;
     using Google.LongRunning;
+    using System;
 
     public sealed partial class GeneratedDataTaxonomyServiceClientSnippets
     {
@@ -30,31 +31,44 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void CreateDataTaxonomy()
         {
             // Create client
             DataTaxonomyServiceClient dataTaxonomyServiceClient = DataTaxonomyServiceClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
+#pragma warning disable CS0612
             DataTaxonomy dataTaxonomy = new DataTaxonomy();
+#pragma warning restore CS0612
             string dataTaxonomyId = "";
             // Make the request
+#pragma warning disable CS0612
             Operation<DataTaxonomy, OperationMetadata> response = dataTaxonomyServiceClient.CreateDataTaxonomy(parent, dataTaxonomy, dataTaxonomyId);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
+#pragma warning disable CS0612
             Operation<DataTaxonomy, OperationMetadata> completedResponse = response.PollUntilCompleted();
+#pragma warning restore CS0612
             // Retrieve the operation result
+#pragma warning disable CS0612
             DataTaxonomy result = completedResponse.Result;
+#pragma warning restore CS0612
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<DataTaxonomy, OperationMetadata> retrievedResponse = dataTaxonomyServiceClient.PollOnceCreateDataTaxonomy(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
+#pragma warning disable CS0612
                 DataTaxonomy retrievedResult = retrievedResponse.Result;
+#pragma warning restore CS0612
             }
         }
     }

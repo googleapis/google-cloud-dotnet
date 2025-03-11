@@ -27,6 +27,7 @@ namespace Google.Cloud.Dataplex.V1 {
   /// DataTaxonomyService enables attribute-based governance. The resources
   /// currently offered include DataTaxonomy and DataAttribute.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public static partial class DataTaxonomyService
   {
     static readonly string __ServiceName = "google.cloud.dataplex.v1.DataTaxonomyService";
@@ -236,6 +237,7 @@ namespace Google.Cloud.Dataplex.V1 {
     }
 
     /// <summary>Base class for server-side implementations of DataTaxonomyService</summary>
+    [global::System.ObsoleteAttribute]
     [grpc::BindServiceMethod(typeof(DataTaxonomyService), "BindService")]
     public abstract partial class DataTaxonomyServiceBase
     {
@@ -245,6 +247,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDataTaxonomy(global::Google.Cloud.Dataplex.V1.CreateDataTaxonomyRequest request, grpc::ServerCallContext context)
       {
@@ -257,6 +260,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDataTaxonomy(global::Google.Cloud.Dataplex.V1.UpdateDataTaxonomyRequest request, grpc::ServerCallContext context)
       {
@@ -270,6 +274,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDataTaxonomy(global::Google.Cloud.Dataplex.V1.DeleteDataTaxonomyRequest request, grpc::ServerCallContext context)
       {
@@ -282,6 +287,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse> ListDataTaxonomies(global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesRequest request, grpc::ServerCallContext context)
       {
@@ -294,6 +300,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.DataTaxonomy> GetDataTaxonomy(global::Google.Cloud.Dataplex.V1.GetDataTaxonomyRequest request, grpc::ServerCallContext context)
       {
@@ -306,6 +313,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDataAttributeBinding(global::Google.Cloud.Dataplex.V1.CreateDataAttributeBindingRequest request, grpc::ServerCallContext context)
       {
@@ -318,6 +326,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDataAttributeBinding(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeBindingRequest request, grpc::ServerCallContext context)
       {
@@ -332,6 +341,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDataAttributeBinding(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeBindingRequest request, grpc::ServerCallContext context)
       {
@@ -344,6 +354,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse> ListDataAttributeBindings(global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsRequest request, grpc::ServerCallContext context)
       {
@@ -356,6 +367,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.DataAttributeBinding> GetDataAttributeBinding(global::Google.Cloud.Dataplex.V1.GetDataAttributeBindingRequest request, grpc::ServerCallContext context)
       {
@@ -368,6 +380,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDataAttribute(global::Google.Cloud.Dataplex.V1.CreateDataAttributeRequest request, grpc::ServerCallContext context)
       {
@@ -380,6 +393,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDataAttribute(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeRequest request, grpc::ServerCallContext context)
       {
@@ -392,6 +406,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDataAttribute(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeRequest request, grpc::ServerCallContext context)
       {
@@ -404,6 +419,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.ListDataAttributesResponse> ListDataAttributes(global::Google.Cloud.Dataplex.V1.ListDataAttributesRequest request, grpc::ServerCallContext context)
       {
@@ -416,6 +432,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.DataAttribute> GetDataAttribute(global::Google.Cloud.Dataplex.V1.GetDataAttributeRequest request, grpc::ServerCallContext context)
       {
@@ -425,6 +442,7 @@ namespace Google.Cloud.Dataplex.V1 {
     }
 
     /// <summary>Client for DataTaxonomyService</summary>
+    [global::System.ObsoleteAttribute]
     public partial class DataTaxonomyServiceClient : grpc::ClientBase<DataTaxonomyServiceClient>
     {
       /// <summary>Creates a new client for DataTaxonomyService</summary>
@@ -459,6 +477,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDataTaxonomy(global::Google.Cloud.Dataplex.V1.CreateDataTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -470,6 +489,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDataTaxonomy(global::Google.Cloud.Dataplex.V1.CreateDataTaxonomyRequest request, grpc::CallOptions options)
       {
@@ -483,6 +503,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDataTaxonomyAsync(global::Google.Cloud.Dataplex.V1.CreateDataTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -494,6 +515,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDataTaxonomyAsync(global::Google.Cloud.Dataplex.V1.CreateDataTaxonomyRequest request, grpc::CallOptions options)
       {
@@ -507,6 +529,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDataTaxonomy(global::Google.Cloud.Dataplex.V1.UpdateDataTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -518,6 +541,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDataTaxonomy(global::Google.Cloud.Dataplex.V1.UpdateDataTaxonomyRequest request, grpc::CallOptions options)
       {
@@ -531,6 +555,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDataTaxonomyAsync(global::Google.Cloud.Dataplex.V1.UpdateDataTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -542,6 +567,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDataTaxonomyAsync(global::Google.Cloud.Dataplex.V1.UpdateDataTaxonomyRequest request, grpc::CallOptions options)
       {
@@ -556,6 +582,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDataTaxonomy(global::Google.Cloud.Dataplex.V1.DeleteDataTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -568,6 +595,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDataTaxonomy(global::Google.Cloud.Dataplex.V1.DeleteDataTaxonomyRequest request, grpc::CallOptions options)
       {
@@ -582,6 +610,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDataTaxonomyAsync(global::Google.Cloud.Dataplex.V1.DeleteDataTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -594,6 +623,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDataTaxonomyAsync(global::Google.Cloud.Dataplex.V1.DeleteDataTaxonomyRequest request, grpc::CallOptions options)
       {
@@ -607,6 +637,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse ListDataTaxonomies(global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -618,6 +649,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse ListDataTaxonomies(global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesRequest request, grpc::CallOptions options)
       {
@@ -631,6 +663,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse> ListDataTaxonomiesAsync(global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -642,6 +675,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesResponse> ListDataTaxonomiesAsync(global::Google.Cloud.Dataplex.V1.ListDataTaxonomiesRequest request, grpc::CallOptions options)
       {
@@ -655,6 +689,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.DataTaxonomy GetDataTaxonomy(global::Google.Cloud.Dataplex.V1.GetDataTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -666,6 +701,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.DataTaxonomy GetDataTaxonomy(global::Google.Cloud.Dataplex.V1.GetDataTaxonomyRequest request, grpc::CallOptions options)
       {
@@ -679,6 +715,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.DataTaxonomy> GetDataTaxonomyAsync(global::Google.Cloud.Dataplex.V1.GetDataTaxonomyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -690,6 +727,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.DataTaxonomy> GetDataTaxonomyAsync(global::Google.Cloud.Dataplex.V1.GetDataTaxonomyRequest request, grpc::CallOptions options)
       {
@@ -703,6 +741,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDataAttributeBinding(global::Google.Cloud.Dataplex.V1.CreateDataAttributeBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -714,6 +753,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDataAttributeBinding(global::Google.Cloud.Dataplex.V1.CreateDataAttributeBindingRequest request, grpc::CallOptions options)
       {
@@ -727,6 +767,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDataAttributeBindingAsync(global::Google.Cloud.Dataplex.V1.CreateDataAttributeBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -738,6 +779,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDataAttributeBindingAsync(global::Google.Cloud.Dataplex.V1.CreateDataAttributeBindingRequest request, grpc::CallOptions options)
       {
@@ -751,6 +793,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDataAttributeBinding(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -762,6 +805,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDataAttributeBinding(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeBindingRequest request, grpc::CallOptions options)
       {
@@ -775,6 +819,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDataAttributeBindingAsync(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -786,6 +831,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDataAttributeBindingAsync(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeBindingRequest request, grpc::CallOptions options)
       {
@@ -801,6 +847,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDataAttributeBinding(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -814,6 +861,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDataAttributeBinding(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeBindingRequest request, grpc::CallOptions options)
       {
@@ -829,6 +877,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDataAttributeBindingAsync(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -842,6 +891,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDataAttributeBindingAsync(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeBindingRequest request, grpc::CallOptions options)
       {
@@ -855,6 +905,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse ListDataAttributeBindings(global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -866,6 +917,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse ListDataAttributeBindings(global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsRequest request, grpc::CallOptions options)
       {
@@ -879,6 +931,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse> ListDataAttributeBindingsAsync(global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -890,6 +943,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsResponse> ListDataAttributeBindingsAsync(global::Google.Cloud.Dataplex.V1.ListDataAttributeBindingsRequest request, grpc::CallOptions options)
       {
@@ -903,6 +957,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.DataAttributeBinding GetDataAttributeBinding(global::Google.Cloud.Dataplex.V1.GetDataAttributeBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -914,6 +969,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.DataAttributeBinding GetDataAttributeBinding(global::Google.Cloud.Dataplex.V1.GetDataAttributeBindingRequest request, grpc::CallOptions options)
       {
@@ -927,6 +983,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.DataAttributeBinding> GetDataAttributeBindingAsync(global::Google.Cloud.Dataplex.V1.GetDataAttributeBindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -938,6 +995,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.DataAttributeBinding> GetDataAttributeBindingAsync(global::Google.Cloud.Dataplex.V1.GetDataAttributeBindingRequest request, grpc::CallOptions options)
       {
@@ -951,6 +1009,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDataAttribute(global::Google.Cloud.Dataplex.V1.CreateDataAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -962,6 +1021,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation CreateDataAttribute(global::Google.Cloud.Dataplex.V1.CreateDataAttributeRequest request, grpc::CallOptions options)
       {
@@ -975,6 +1035,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDataAttributeAsync(global::Google.Cloud.Dataplex.V1.CreateDataAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -986,6 +1047,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDataAttributeAsync(global::Google.Cloud.Dataplex.V1.CreateDataAttributeRequest request, grpc::CallOptions options)
       {
@@ -999,6 +1061,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDataAttribute(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1010,6 +1073,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation UpdateDataAttribute(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeRequest request, grpc::CallOptions options)
       {
@@ -1023,6 +1087,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDataAttributeAsync(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1034,6 +1099,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDataAttributeAsync(global::Google.Cloud.Dataplex.V1.UpdateDataAttributeRequest request, grpc::CallOptions options)
       {
@@ -1047,6 +1113,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDataAttribute(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1058,6 +1125,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation DeleteDataAttribute(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeRequest request, grpc::CallOptions options)
       {
@@ -1071,6 +1139,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDataAttributeAsync(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1082,6 +1151,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteDataAttributeAsync(global::Google.Cloud.Dataplex.V1.DeleteDataAttributeRequest request, grpc::CallOptions options)
       {
@@ -1095,6 +1165,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.ListDataAttributesResponse ListDataAttributes(global::Google.Cloud.Dataplex.V1.ListDataAttributesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1106,6 +1177,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.ListDataAttributesResponse ListDataAttributes(global::Google.Cloud.Dataplex.V1.ListDataAttributesRequest request, grpc::CallOptions options)
       {
@@ -1119,6 +1191,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.ListDataAttributesResponse> ListDataAttributesAsync(global::Google.Cloud.Dataplex.V1.ListDataAttributesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1130,6 +1203,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.ListDataAttributesResponse> ListDataAttributesAsync(global::Google.Cloud.Dataplex.V1.ListDataAttributesRequest request, grpc::CallOptions options)
       {
@@ -1143,6 +1217,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.DataAttribute GetDataAttribute(global::Google.Cloud.Dataplex.V1.GetDataAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1154,6 +1229,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Dataplex.V1.DataAttribute GetDataAttribute(global::Google.Cloud.Dataplex.V1.GetDataAttributeRequest request, grpc::CallOptions options)
       {
@@ -1167,6 +1243,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.DataAttribute> GetDataAttributeAsync(global::Google.Cloud.Dataplex.V1.GetDataAttributeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1178,6 +1255,7 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.DataAttribute> GetDataAttributeAsync(global::Google.Cloud.Dataplex.V1.GetDataAttributeRequest request, grpc::CallOptions options)
       {

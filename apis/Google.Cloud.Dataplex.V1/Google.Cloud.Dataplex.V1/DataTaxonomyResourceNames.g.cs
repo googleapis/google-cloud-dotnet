@@ -831,6 +831,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>
         /// <see cref="gcdv::DataTaxonomyName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcdv::DataTaxonomyName DataTaxonomyName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::DataTaxonomyName.Parse(Name, allowUnparsed: true);
@@ -843,6 +844,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>
         /// <see cref="gcdv::DataAttributeName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcdv::DataAttributeName DataAttributeName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::DataAttributeName.Parse(Name, allowUnparsed: true);
@@ -852,6 +854,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>
         /// <see cref="gcdv::DataAttributeName"/>-typed view over the <see cref="ParentId"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcdv::DataAttributeName ParentIdAsDataAttributeName
         {
             get => string.IsNullOrEmpty(ParentId) ? null : gcdv::DataAttributeName.Parse(ParentId, allowUnparsed: true);
@@ -864,6 +867,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>
         /// <see cref="gcdv::DataAttributeBindingName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcdv::DataAttributeBindingName DataAttributeBindingName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::DataAttributeBindingName.Parse(Name, allowUnparsed: true);
@@ -873,6 +877,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>
         /// <see cref="DataAttributeName"/>-typed view over the <see cref="Attributes"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gax::ResourceNameList<DataAttributeName> AttributesAsDataAttributeNames
         {
             get => new gax::ResourceNameList<DataAttributeName>(Attributes, s => string.IsNullOrEmpty(s) ? null : DataAttributeName.Parse(s, allowUnparsed: true));
@@ -898,6 +903,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>
         /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gagr::LocationName ParentAsLocationName
         {
             get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
@@ -910,6 +916,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>
         /// <see cref="gcdv::DataTaxonomyName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcdv::DataTaxonomyName DataTaxonomyName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::DataTaxonomyName.Parse(Name, allowUnparsed: true);
@@ -934,6 +941,7 @@ namespace Google.Cloud.Dataplex.V1
         /// <summary>
         /// <see cref="gcdv::DataTaxonomyName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
+        [sys::ObsoleteAttribute]
         public gcdv::DataTaxonomyName DataTaxonomyName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcdv::DataTaxonomyName.Parse(Name, allowUnparsed: true);
