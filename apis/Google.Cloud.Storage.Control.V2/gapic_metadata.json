@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "StorageControlClient",
           "rpcs": {
+            "CreateAnywhereCache": {
+              "methods": [
+                "CreateAnywhereCache",
+                "CreateAnywhereCacheAsync"
+              ]
+            },
             "CreateFolder": {
               "methods": [
                 "CreateFolder",
@@ -34,6 +40,18 @@
                 "DeleteManagedFolderAsync"
               ]
             },
+            "DisableAnywhereCache": {
+              "methods": [
+                "DisableAnywhereCache",
+                "DisableAnywhereCacheAsync"
+              ]
+            },
+            "GetAnywhereCache": {
+              "methods": [
+                "GetAnywhereCache",
+                "GetAnywhereCacheAsync"
+              ]
+            },
             "GetFolder": {
               "methods": [
                 "GetFolder",
@@ -52,6 +70,12 @@
                 "GetStorageLayoutAsync"
               ]
             },
+            "ListAnywhereCaches": {
+              "methods": [
+                "ListAnywhereCaches",
+                "ListAnywhereCachesAsync"
+              ]
+            },
             "ListFolders": {
               "methods": [
                 "ListFolders",
@@ -64,10 +88,28 @@
                 "ListManagedFoldersAsync"
               ]
             },
+            "PauseAnywhereCache": {
+              "methods": [
+                "PauseAnywhereCache",
+                "PauseAnywhereCacheAsync"
+              ]
+            },
             "RenameFolder": {
               "methods": [
                 "RenameFolder",
                 "RenameFolderAsync"
+              ]
+            },
+            "ResumeAnywhereCache": {
+              "methods": [
+                "ResumeAnywhereCache",
+                "ResumeAnywhereCacheAsync"
+              ]
+            },
+            "UpdateAnywhereCache": {
+              "methods": [
+                "UpdateAnywhereCache",
+                "UpdateAnywhereCacheAsync"
               ]
             }
           }

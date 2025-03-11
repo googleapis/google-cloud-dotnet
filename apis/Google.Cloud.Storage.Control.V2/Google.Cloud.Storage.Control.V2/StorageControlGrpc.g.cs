@@ -97,6 +97,24 @@ namespace Google.Cloud.Storage.Control.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest> __Marshaller_google_storage_control_v2_ListManagedFoldersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse> __Marshaller_google_storage_control_v2_ListManagedFoldersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest> __Marshaller_google_storage_control_v2_CreateAnywhereCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest> __Marshaller_google_storage_control_v2_UpdateAnywhereCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest> __Marshaller_google_storage_control_v2_DisableAnywhereCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.AnywhereCache> __Marshaller_google_storage_control_v2_AnywhereCache = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.AnywhereCache.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest> __Marshaller_google_storage_control_v2_PauseAnywhereCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest> __Marshaller_google_storage_control_v2_ResumeAnywhereCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest> __Marshaller_google_storage_control_v2_GetAnywhereCacheRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest> __Marshaller_google_storage_control_v2_ListAnywhereCachesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse> __Marshaller_google_storage_control_v2_ListAnywhereCachesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder> __Method_CreateFolder = new grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder>(
@@ -177,6 +195,62 @@ namespace Google.Cloud.Storage.Control.V2 {
         "ListManagedFolders",
         __Marshaller_google_storage_control_v2_ListManagedFoldersRequest,
         __Marshaller_google_storage_control_v2_ListManagedFoldersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest, global::Google.LongRunning.Operation> __Method_CreateAnywhereCache = new grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAnywhereCache",
+        __Marshaller_google_storage_control_v2_CreateAnywhereCacheRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest, global::Google.LongRunning.Operation> __Method_UpdateAnywhereCache = new grpc::Method<global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAnywhereCache",
+        __Marshaller_google_storage_control_v2_UpdateAnywhereCacheRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache> __Method_DisableAnywhereCache = new grpc::Method<global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DisableAnywhereCache",
+        __Marshaller_google_storage_control_v2_DisableAnywhereCacheRequest,
+        __Marshaller_google_storage_control_v2_AnywhereCache);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache> __Method_PauseAnywhereCache = new grpc::Method<global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PauseAnywhereCache",
+        __Marshaller_google_storage_control_v2_PauseAnywhereCacheRequest,
+        __Marshaller_google_storage_control_v2_AnywhereCache);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache> __Method_ResumeAnywhereCache = new grpc::Method<global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ResumeAnywhereCache",
+        __Marshaller_google_storage_control_v2_ResumeAnywhereCacheRequest,
+        __Marshaller_google_storage_control_v2_AnywhereCache);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache> __Method_GetAnywhereCache = new grpc::Method<global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAnywhereCache",
+        __Marshaller_google_storage_control_v2_GetAnywhereCacheRequest,
+        __Marshaller_google_storage_control_v2_AnywhereCache);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse> __Method_ListAnywhereCaches = new grpc::Method<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAnywhereCaches",
+        __Marshaller_google_storage_control_v2_ListAnywhereCachesRequest,
+        __Marshaller_google_storage_control_v2_ListAnywhereCachesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -311,6 +385,94 @@ namespace Google.Cloud.Storage.Control.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse> ListManagedFolders(global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAnywhereCache(global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+      /// `admission_policy`.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAnywhereCache(global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+      /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+      /// instance will be deleted automatically if it remains in the disabled state
+      /// for at least one hour.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.AnywhereCache> DisableAnywhereCache(global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Pauses an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.AnywhereCache> PauseAnywhereCache(global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Resumes a disabled or paused Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.AnywhereCache> ResumeAnywhereCache(global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.AnywhereCache> GetAnywhereCache(global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists Anywhere Cache instances for a given bucket.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse> ListAnywhereCaches(global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -852,6 +1014,358 @@ namespace Google.Cloud.Storage.Control.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListManagedFolders, null, options, request);
       }
+      /// <summary>
+      /// Creates an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAnywhereCache(global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAnywhereCache(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAnywhereCache(global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Creates an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAnywhereCacheAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+      /// `admission_policy`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAnywhereCache(global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAnywhereCache(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+      /// `admission_policy`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAnywhereCache(global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+      /// `admission_policy`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAnywhereCacheAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+      /// `admission_policy`.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+      /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+      /// instance will be deleted automatically if it remains in the disabled state
+      /// for at least one hour.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.AnywhereCache DisableAnywhereCache(global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableAnywhereCache(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+      /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+      /// instance will be deleted automatically if it remains in the disabled state
+      /// for at least one hour.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.AnywhereCache DisableAnywhereCache(global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DisableAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+      /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+      /// instance will be deleted automatically if it remains in the disabled state
+      /// for at least one hour.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.AnywhereCache> DisableAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableAnywhereCacheAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+      /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+      /// instance will be deleted automatically if it remains in the disabled state
+      /// for at least one hour.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.AnywhereCache> DisableAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DisableAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Pauses an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.AnywhereCache PauseAnywhereCache(global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PauseAnywhereCache(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Pauses an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.AnywhereCache PauseAnywhereCache(global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PauseAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Pauses an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.AnywhereCache> PauseAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PauseAnywhereCacheAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Pauses an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.AnywhereCache> PauseAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PauseAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Resumes a disabled or paused Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.AnywhereCache ResumeAnywhereCache(global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResumeAnywhereCache(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes a disabled or paused Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.AnywhereCache ResumeAnywhereCache(global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ResumeAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Resumes a disabled or paused Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.AnywhereCache> ResumeAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResumeAnywhereCacheAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resumes a disabled or paused Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.AnywhereCache> ResumeAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ResumeAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Gets an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.AnywhereCache GetAnywhereCache(global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAnywhereCache(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.AnywhereCache GetAnywhereCache(global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Gets an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.AnywhereCache> GetAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAnywhereCacheAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets an Anywhere Cache instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.AnywhereCache> GetAnywhereCacheAsync(global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAnywhereCache, null, options, request);
+      }
+      /// <summary>
+      /// Lists Anywhere Cache instances for a given bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse ListAnywhereCaches(global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAnywhereCaches(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Anywhere Cache instances for a given bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse ListAnywhereCaches(global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAnywhereCaches, null, options, request);
+      }
+      /// <summary>
+      /// Lists Anywhere Cache instances for a given bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse> ListAnywhereCachesAsync(global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAnywhereCachesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists Anywhere Cache instances for a given bucket.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse> ListAnywhereCachesAsync(global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAnywhereCaches, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageControlClient NewInstance(ClientBaseConfiguration configuration)
@@ -875,7 +1389,14 @@ namespace Google.Cloud.Storage.Control.V2 {
           .AddMethod(__Method_CreateManagedFolder, serviceImpl.CreateManagedFolder)
           .AddMethod(__Method_DeleteManagedFolder, serviceImpl.DeleteManagedFolder)
           .AddMethod(__Method_GetManagedFolder, serviceImpl.GetManagedFolder)
-          .AddMethod(__Method_ListManagedFolders, serviceImpl.ListManagedFolders).Build();
+          .AddMethod(__Method_ListManagedFolders, serviceImpl.ListManagedFolders)
+          .AddMethod(__Method_CreateAnywhereCache, serviceImpl.CreateAnywhereCache)
+          .AddMethod(__Method_UpdateAnywhereCache, serviceImpl.UpdateAnywhereCache)
+          .AddMethod(__Method_DisableAnywhereCache, serviceImpl.DisableAnywhereCache)
+          .AddMethod(__Method_PauseAnywhereCache, serviceImpl.PauseAnywhereCache)
+          .AddMethod(__Method_ResumeAnywhereCache, serviceImpl.ResumeAnywhereCache)
+          .AddMethod(__Method_GetAnywhereCache, serviceImpl.GetAnywhereCache)
+          .AddMethod(__Method_ListAnywhereCaches, serviceImpl.ListAnywhereCaches).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -895,6 +1416,13 @@ namespace Google.Cloud.Storage.Control.V2 {
       serviceBinder.AddMethod(__Method_DeleteManagedFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.DeleteManagedFolderRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteManagedFolder));
       serviceBinder.AddMethod(__Method_GetManagedFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetManagedFolderRequest, global::Google.Cloud.Storage.Control.V2.ManagedFolder>(serviceImpl.GetManagedFolder));
       serviceBinder.AddMethod(__Method_ListManagedFolders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListManagedFoldersRequest, global::Google.Cloud.Storage.Control.V2.ListManagedFoldersResponse>(serviceImpl.ListManagedFolders));
+      serviceBinder.AddMethod(__Method_CreateAnywhereCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.CreateAnywhereCacheRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAnywhereCache));
+      serviceBinder.AddMethod(__Method_UpdateAnywhereCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.UpdateAnywhereCacheRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAnywhereCache));
+      serviceBinder.AddMethod(__Method_DisableAnywhereCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.DisableAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(serviceImpl.DisableAnywhereCache));
+      serviceBinder.AddMethod(__Method_PauseAnywhereCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.PauseAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(serviceImpl.PauseAnywhereCache));
+      serviceBinder.AddMethod(__Method_ResumeAnywhereCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ResumeAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(serviceImpl.ResumeAnywhereCache));
+      serviceBinder.AddMethod(__Method_GetAnywhereCache, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetAnywhereCacheRequest, global::Google.Cloud.Storage.Control.V2.AnywhereCache>(serviceImpl.GetAnywhereCache));
+      serviceBinder.AddMethod(__Method_ListAnywhereCaches, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesRequest, global::Google.Cloud.Storage.Control.V2.ListAnywhereCachesResponse>(serviceImpl.ListAnywhereCaches));
     }
 
   }

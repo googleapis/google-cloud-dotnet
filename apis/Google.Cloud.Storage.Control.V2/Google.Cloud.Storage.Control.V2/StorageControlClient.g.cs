@@ -58,6 +58,15 @@ namespace Google.Cloud.Storage.Control.V2
             DeleteManagedFolderSettings = existing.DeleteManagedFolderSettings;
             GetManagedFolderSettings = existing.GetManagedFolderSettings;
             ListManagedFoldersSettings = existing.ListManagedFoldersSettings;
+            CreateAnywhereCacheSettings = existing.CreateAnywhereCacheSettings;
+            CreateAnywhereCacheOperationsSettings = existing.CreateAnywhereCacheOperationsSettings.Clone();
+            UpdateAnywhereCacheSettings = existing.UpdateAnywhereCacheSettings;
+            UpdateAnywhereCacheOperationsSettings = existing.UpdateAnywhereCacheOperationsSettings.Clone();
+            DisableAnywhereCacheSettings = existing.DisableAnywhereCacheSettings;
+            PauseAnywhereCacheSettings = existing.PauseAnywhereCacheSettings;
+            ResumeAnywhereCacheSettings = existing.ResumeAnywhereCacheSettings;
+            GetAnywhereCacheSettings = existing.GetAnywhereCacheSettings;
+            ListAnywhereCachesSettings = existing.ListAnywhereCachesSettings;
             OnCopy(existing);
         }
 
@@ -260,6 +269,126 @@ namespace Google.Cloud.Storage.Control.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListManagedFoldersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.CreateAnywhereCache</c> and <c>StorageControlClient.CreateAnywhereCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageControlClient.CreateAnywhereCache</c> and
+        /// <c>StorageControlClient.CreateAnywhereCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAnywhereCacheOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.UpdateAnywhereCache</c> and <c>StorageControlClient.UpdateAnywhereCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>StorageControlClient.UpdateAnywhereCache</c> and
+        /// <c>StorageControlClient.UpdateAnywhereCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAnywhereCacheOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.DisableAnywhereCache</c> and <c>StorageControlClient.DisableAnywhereCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DisableAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.PauseAnywhereCache</c> and <c>StorageControlClient.PauseAnywhereCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PauseAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.ResumeAnywhereCache</c> and <c>StorageControlClient.ResumeAnywhereCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResumeAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetAnywhereCache</c> and <c>StorageControlClient.GetAnywhereCacheAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAnywhereCacheSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.ListAnywhereCaches</c> and <c>StorageControlClient.ListAnywhereCachesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAnywhereCachesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageControlSettings"/> object.</returns>
@@ -1869,6 +1998,961 @@ namespace Google.Cloud.Storage.Control.V2
             }
             return ListManagedFoldersAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata> CreateAnywhereCache(CreateAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>> CreateAnywhereCacheAsync(CreateAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>> CreateAnywhereCacheAsync(CreateAnywhereCacheRequest request, st::CancellationToken cancellationToken) =>
+            CreateAnywhereCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAnywhereCache</c>.</summary>
+        public virtual lro::OperationsClient CreateAnywhereCacheOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAnywhereCache</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata> PollOnceCreateAnywhereCache(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAnywhereCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAnywhereCache</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>> PollOnceCreateAnywhereCacheAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAnywhereCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="anywhereCache">
+        /// Required. Properties of the Anywhere Cache instance being created.
+        /// The parent bucket name is specified in the `parent` field. Server uses the
+        /// default value of `ttl` or `admission_policy` if not specified in
+        /// request.
+        /// </param>
+        /// <param name="anywhereCacheId">
+        /// Required. System generated Anywhere Cache ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata> CreateAnywhereCache(string parent, AnywhereCache anywhereCache, string anywhereCacheId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAnywhereCache(new CreateAnywhereCacheRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AnywhereCacheId = gax::GaxPreconditions.CheckNotNullOrEmpty(anywhereCacheId, nameof(anywhereCacheId)),
+                AnywhereCache = gax::GaxPreconditions.CheckNotNull(anywhereCache, nameof(anywhereCache)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="anywhereCache">
+        /// Required. Properties of the Anywhere Cache instance being created.
+        /// The parent bucket name is specified in the `parent` field. Server uses the
+        /// default value of `ttl` or `admission_policy` if not specified in
+        /// request.
+        /// </param>
+        /// <param name="anywhereCacheId">
+        /// Required. System generated Anywhere Cache ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>> CreateAnywhereCacheAsync(string parent, AnywhereCache anywhereCache, string anywhereCacheId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAnywhereCacheAsync(new CreateAnywhereCacheRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AnywhereCacheId = gax::GaxPreconditions.CheckNotNullOrEmpty(anywhereCacheId, nameof(anywhereCacheId)),
+                AnywhereCache = gax::GaxPreconditions.CheckNotNull(anywhereCache, nameof(anywhereCache)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="anywhereCache">
+        /// Required. Properties of the Anywhere Cache instance being created.
+        /// The parent bucket name is specified in the `parent` field. Server uses the
+        /// default value of `ttl` or `admission_policy` if not specified in
+        /// request.
+        /// </param>
+        /// <param name="anywhereCacheId">
+        /// Required. System generated Anywhere Cache ID.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>> CreateAnywhereCacheAsync(string parent, AnywhereCache anywhereCache, string anywhereCacheId, st::CancellationToken cancellationToken) =>
+            CreateAnywhereCacheAsync(parent, anywhereCache, anywhereCacheId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="anywhereCache">
+        /// Required. Properties of the Anywhere Cache instance being created.
+        /// The parent bucket name is specified in the `parent` field. Server uses the
+        /// default value of `ttl` or `admission_policy` if not specified in
+        /// request.
+        /// </param>
+        /// <param name="anywhereCacheId">
+        /// Required. System generated Anywhere Cache ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata> CreateAnywhereCache(BucketName parent, AnywhereCache anywhereCache, string anywhereCacheId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAnywhereCache(new CreateAnywhereCacheRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AnywhereCacheId = gax::GaxPreconditions.CheckNotNullOrEmpty(anywhereCacheId, nameof(anywhereCacheId)),
+                AnywhereCache = gax::GaxPreconditions.CheckNotNull(anywhereCache, nameof(anywhereCache)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="anywhereCache">
+        /// Required. Properties of the Anywhere Cache instance being created.
+        /// The parent bucket name is specified in the `parent` field. Server uses the
+        /// default value of `ttl` or `admission_policy` if not specified in
+        /// request.
+        /// </param>
+        /// <param name="anywhereCacheId">
+        /// Required. System generated Anywhere Cache ID.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>> CreateAnywhereCacheAsync(BucketName parent, AnywhereCache anywhereCache, string anywhereCacheId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAnywhereCacheAsync(new CreateAnywhereCacheRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AnywhereCacheId = gax::GaxPreconditions.CheckNotNullOrEmpty(anywhereCacheId, nameof(anywhereCacheId)),
+                AnywhereCache = gax::GaxPreconditions.CheckNotNull(anywhereCache, nameof(anywhereCache)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// Format: `projects/{project}/buckets/{bucket}`
+        /// </param>
+        /// <param name="anywhereCache">
+        /// Required. Properties of the Anywhere Cache instance being created.
+        /// The parent bucket name is specified in the `parent` field. Server uses the
+        /// default value of `ttl` or `admission_policy` if not specified in
+        /// request.
+        /// </param>
+        /// <param name="anywhereCacheId">
+        /// Required. System generated Anywhere Cache ID.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>> CreateAnywhereCacheAsync(BucketName parent, AnywhereCache anywhereCache, string anywhereCacheId, st::CancellationToken cancellationToken) =>
+            CreateAnywhereCacheAsync(parent, anywhereCache, anywhereCacheId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+        /// `admission_policy`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata> UpdateAnywhereCache(UpdateAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+        /// `admission_policy`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>> UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+        /// `admission_policy`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>> UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAnywhereCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAnywhereCache</c>.</summary>
+        public virtual lro::OperationsClient UpdateAnywhereCacheOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAnywhereCache</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata> PollOnceUpdateAnywhereCache(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAnywhereCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAnywhereCache</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>> PollOnceUpdateAnywhereCacheAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAnywhereCacheOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+        /// `admission_policy`.
+        /// </summary>
+        /// <param name="anywhereCache">
+        /// Required. The Anywhere Cache instance to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated. Mutable fields of AnywhereCache
+        /// include `ttl` and `admission_policy`.
+        /// 
+        /// To specify ALL fields, specify a single field with the value `*`. Note: We
+        /// recommend against doing this. If a new field is introduced at a later time,
+        /// an older client updating with the `*` may accidentally reset the new
+        /// field's value.
+        /// 
+        /// Not specifying any fields is an error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata> UpdateAnywhereCache(AnywhereCache anywhereCache, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAnywhereCache(new UpdateAnywhereCacheRequest
+            {
+                AnywhereCache = gax::GaxPreconditions.CheckNotNull(anywhereCache, nameof(anywhereCache)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+        /// `admission_policy`.
+        /// </summary>
+        /// <param name="anywhereCache">
+        /// Required. The Anywhere Cache instance to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated. Mutable fields of AnywhereCache
+        /// include `ttl` and `admission_policy`.
+        /// 
+        /// To specify ALL fields, specify a single field with the value `*`. Note: We
+        /// recommend against doing this. If a new field is introduced at a later time,
+        /// an older client updating with the `*` may accidentally reset the new
+        /// field's value.
+        /// 
+        /// Not specifying any fields is an error.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>> UpdateAnywhereCacheAsync(AnywhereCache anywhereCache, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAnywhereCacheAsync(new UpdateAnywhereCacheRequest
+            {
+                AnywhereCache = gax::GaxPreconditions.CheckNotNull(anywhereCache, nameof(anywhereCache)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+        /// `admission_policy`.
+        /// </summary>
+        /// <param name="anywhereCache">
+        /// Required. The Anywhere Cache instance to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. List of fields to be updated. Mutable fields of AnywhereCache
+        /// include `ttl` and `admission_policy`.
+        /// 
+        /// To specify ALL fields, specify a single field with the value `*`. Note: We
+        /// recommend against doing this. If a new field is introduced at a later time,
+        /// an older client updating with the `*` may accidentally reset the new
+        /// field's value.
+        /// 
+        /// Not specifying any fields is an error.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>> UpdateAnywhereCacheAsync(AnywhereCache anywhereCache, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAnywhereCacheAsync(anywhereCache, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache DisableAnywhereCache(DisableAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> DisableAnywhereCacheAsync(DisableAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> DisableAnywhereCacheAsync(DisableAnywhereCacheRequest request, st::CancellationToken cancellationToken) =>
+            DisableAnywhereCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache DisableAnywhereCache(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableAnywhereCache(new DisableAnywhereCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> DisableAnywhereCacheAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableAnywhereCacheAsync(new DisableAnywhereCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> DisableAnywhereCacheAsync(string name, st::CancellationToken cancellationToken) =>
+            DisableAnywhereCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache DisableAnywhereCache(AnywhereCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableAnywhereCache(new DisableAnywhereCacheRequest
+            {
+                AnywhereCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> DisableAnywhereCacheAsync(AnywhereCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableAnywhereCacheAsync(new DisableAnywhereCacheRequest
+            {
+                AnywhereCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> DisableAnywhereCacheAsync(AnywhereCacheName name, st::CancellationToken cancellationToken) =>
+            DisableAnywhereCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache PauseAnywhereCache(PauseAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> PauseAnywhereCacheAsync(PauseAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> PauseAnywhereCacheAsync(PauseAnywhereCacheRequest request, st::CancellationToken cancellationToken) =>
+            PauseAnywhereCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache PauseAnywhereCache(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseAnywhereCache(new PauseAnywhereCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> PauseAnywhereCacheAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseAnywhereCacheAsync(new PauseAnywhereCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> PauseAnywhereCacheAsync(string name, st::CancellationToken cancellationToken) =>
+            PauseAnywhereCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache PauseAnywhereCache(AnywhereCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseAnywhereCache(new PauseAnywhereCacheRequest
+            {
+                AnywhereCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> PauseAnywhereCacheAsync(AnywhereCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            PauseAnywhereCacheAsync(new PauseAnywhereCacheRequest
+            {
+                AnywhereCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> PauseAnywhereCacheAsync(AnywhereCacheName name, st::CancellationToken cancellationToken) =>
+            PauseAnywhereCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache ResumeAnywhereCache(ResumeAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest request, st::CancellationToken cancellationToken) =>
+            ResumeAnywhereCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache ResumeAnywhereCache(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeAnywhereCache(new ResumeAnywhereCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> ResumeAnywhereCacheAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeAnywhereCacheAsync(new ResumeAnywhereCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> ResumeAnywhereCacheAsync(string name, st::CancellationToken cancellationToken) =>
+            ResumeAnywhereCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache ResumeAnywhereCache(AnywhereCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeAnywhereCache(new ResumeAnywhereCacheRequest
+            {
+                AnywhereCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> ResumeAnywhereCacheAsync(AnywhereCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeAnywhereCacheAsync(new ResumeAnywhereCacheRequest
+            {
+                AnywhereCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> ResumeAnywhereCacheAsync(AnywhereCacheName name, st::CancellationToken cancellationToken) =>
+            ResumeAnywhereCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache GetAnywhereCache(GetAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> GetAnywhereCacheAsync(GetAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> GetAnywhereCacheAsync(GetAnywhereCacheRequest request, st::CancellationToken cancellationToken) =>
+            GetAnywhereCacheAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache GetAnywhereCache(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnywhereCache(new GetAnywhereCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> GetAnywhereCacheAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnywhereCacheAsync(new GetAnywhereCacheRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> GetAnywhereCacheAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAnywhereCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnywhereCache GetAnywhereCache(AnywhereCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnywhereCache(new GetAnywhereCacheRequest
+            {
+                AnywhereCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> GetAnywhereCacheAsync(AnywhereCacheName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAnywhereCacheAsync(new GetAnywhereCacheRequest
+            {
+                AnywhereCacheName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name field in the request should be:
+        /// `projects/{project}/buckets/{bucket}/anywhereCaches/{anywhere_cache}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnywhereCache> GetAnywhereCacheAsync(AnywhereCacheName name, st::CancellationToken cancellationToken) =>
+            GetAnywhereCacheAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists Anywhere Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AnywhereCache"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCaches(ListAnywhereCachesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Anywhere Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AnywhereCache"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCachesAsync(ListAnywhereCachesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists Anywhere Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AnywhereCache"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCaches(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnywhereCachesRequest request = new ListAnywhereCachesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnywhereCaches(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Anywhere Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AnywhereCache"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCachesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnywhereCachesRequest request = new ListAnywhereCachesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnywhereCachesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Anywhere Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AnywhereCache"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCaches(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnywhereCachesRequest request = new ListAnywhereCachesRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnywhereCaches(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Anywhere Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The bucket to which this cache belongs.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AnywhereCache"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCachesAsync(BucketName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAnywhereCachesRequest request = new ListAnywhereCachesRequest
+            {
+                ParentAsBucketName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAnywhereCachesAsync(request, callSettings);
+        }
     }
 
     /// <summary>StorageControl client wrapper implementation, for convenient use.</summary>
@@ -1897,6 +2981,20 @@ namespace Google.Cloud.Storage.Control.V2
 
         private readonly gaxgrpc::ApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse> _callListManagedFolders;
 
+        private readonly gaxgrpc::ApiCall<CreateAnywhereCacheRequest, lro::Operation> _callCreateAnywhereCache;
+
+        private readonly gaxgrpc::ApiCall<UpdateAnywhereCacheRequest, lro::Operation> _callUpdateAnywhereCache;
+
+        private readonly gaxgrpc::ApiCall<DisableAnywhereCacheRequest, AnywhereCache> _callDisableAnywhereCache;
+
+        private readonly gaxgrpc::ApiCall<PauseAnywhereCacheRequest, AnywhereCache> _callPauseAnywhereCache;
+
+        private readonly gaxgrpc::ApiCall<ResumeAnywhereCacheRequest, AnywhereCache> _callResumeAnywhereCache;
+
+        private readonly gaxgrpc::ApiCall<GetAnywhereCacheRequest, AnywhereCache> _callGetAnywhereCache;
+
+        private readonly gaxgrpc::ApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse> _callListAnywhereCaches;
+
         /// <summary>
         /// Constructs a client wrapper for the StorageControl service, with the specified gRPC client and settings.
         /// </summary>
@@ -1913,6 +3011,8 @@ namespace Google.Cloud.Storage.Control.V2
                 Logger = logger,
             });
             RenameFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RenameFolderOperationsSettings, logger);
+            CreateAnywhereCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAnywhereCacheOperationsSettings, logger);
+            UpdateAnywhereCacheOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAnywhereCacheOperationsSettings, logger);
             _callCreateFolder = clientHelper.BuildApiCall<CreateFolderRequest, Folder>("CreateFolder", grpcClient.CreateFolderAsync, grpcClient.CreateFolder, effectiveSettings.CreateFolderSettings).WithGoogleRequestParam("bucket", request => request.Parent);
             Modify_ApiCall(ref _callCreateFolder);
             Modify_CreateFolderApiCall(ref _callCreateFolder);
@@ -1943,6 +3043,27 @@ namespace Google.Cloud.Storage.Control.V2
             _callListManagedFolders = clientHelper.BuildApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse>("ListManagedFolders", grpcClient.ListManagedFoldersAsync, grpcClient.ListManagedFolders, effectiveSettings.ListManagedFoldersSettings).WithGoogleRequestParam("bucket", request => request.Parent);
             Modify_ApiCall(ref _callListManagedFolders);
             Modify_ListManagedFoldersApiCall(ref _callListManagedFolders);
+            _callCreateAnywhereCache = clientHelper.BuildApiCall<CreateAnywhereCacheRequest, lro::Operation>("CreateAnywhereCache", grpcClient.CreateAnywhereCacheAsync, grpcClient.CreateAnywhereCache, effectiveSettings.CreateAnywhereCacheSettings).WithGoogleRequestParam("bucket", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAnywhereCache);
+            Modify_CreateAnywhereCacheApiCall(ref _callCreateAnywhereCache);
+            _callUpdateAnywhereCache = clientHelper.BuildApiCall<UpdateAnywhereCacheRequest, lro::Operation>("UpdateAnywhereCache", grpcClient.UpdateAnywhereCacheAsync, grpcClient.UpdateAnywhereCache, effectiveSettings.UpdateAnywhereCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<UpdateAnywhereCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.AnywhereCache?.Name));
+            Modify_ApiCall(ref _callUpdateAnywhereCache);
+            Modify_UpdateAnywhereCacheApiCall(ref _callUpdateAnywhereCache);
+            _callDisableAnywhereCache = clientHelper.BuildApiCall<DisableAnywhereCacheRequest, AnywhereCache>("DisableAnywhereCache", grpcClient.DisableAnywhereCacheAsync, grpcClient.DisableAnywhereCache, effectiveSettings.DisableAnywhereCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<DisableAnywhereCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callDisableAnywhereCache);
+            Modify_DisableAnywhereCacheApiCall(ref _callDisableAnywhereCache);
+            _callPauseAnywhereCache = clientHelper.BuildApiCall<PauseAnywhereCacheRequest, AnywhereCache>("PauseAnywhereCache", grpcClient.PauseAnywhereCacheAsync, grpcClient.PauseAnywhereCache, effectiveSettings.PauseAnywhereCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<PauseAnywhereCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callPauseAnywhereCache);
+            Modify_PauseAnywhereCacheApiCall(ref _callPauseAnywhereCache);
+            _callResumeAnywhereCache = clientHelper.BuildApiCall<ResumeAnywhereCacheRequest, AnywhereCache>("ResumeAnywhereCache", grpcClient.ResumeAnywhereCacheAsync, grpcClient.ResumeAnywhereCache, effectiveSettings.ResumeAnywhereCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<ResumeAnywhereCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callResumeAnywhereCache);
+            Modify_ResumeAnywhereCacheApiCall(ref _callResumeAnywhereCache);
+            _callGetAnywhereCache = clientHelper.BuildApiCall<GetAnywhereCacheRequest, AnywhereCache>("GetAnywhereCache", grpcClient.GetAnywhereCacheAsync, grpcClient.GetAnywhereCache, effectiveSettings.GetAnywhereCacheSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<GetAnywhereCacheRequest>().WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)(?:/.*)?$", request => request.Name));
+            Modify_ApiCall(ref _callGetAnywhereCache);
+            Modify_GetAnywhereCacheApiCall(ref _callGetAnywhereCache);
+            _callListAnywhereCaches = clientHelper.BuildApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse>("ListAnywhereCaches", grpcClient.ListAnywhereCachesAsync, grpcClient.ListAnywhereCaches, effectiveSettings.ListAnywhereCachesSettings).WithGoogleRequestParam("bucket", request => request.Parent);
+            Modify_ApiCall(ref _callListAnywhereCaches);
+            Modify_ListAnywhereCachesApiCall(ref _callListAnywhereCaches);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1968,6 +3089,20 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_ListManagedFoldersApiCall(ref gaxgrpc::ApiCall<ListManagedFoldersRequest, ListManagedFoldersResponse> call);
 
+        partial void Modify_CreateAnywhereCacheApiCall(ref gaxgrpc::ApiCall<CreateAnywhereCacheRequest, lro::Operation> call);
+
+        partial void Modify_UpdateAnywhereCacheApiCall(ref gaxgrpc::ApiCall<UpdateAnywhereCacheRequest, lro::Operation> call);
+
+        partial void Modify_DisableAnywhereCacheApiCall(ref gaxgrpc::ApiCall<DisableAnywhereCacheRequest, AnywhereCache> call);
+
+        partial void Modify_PauseAnywhereCacheApiCall(ref gaxgrpc::ApiCall<PauseAnywhereCacheRequest, AnywhereCache> call);
+
+        partial void Modify_ResumeAnywhereCacheApiCall(ref gaxgrpc::ApiCall<ResumeAnywhereCacheRequest, AnywhereCache> call);
+
+        partial void Modify_GetAnywhereCacheApiCall(ref gaxgrpc::ApiCall<GetAnywhereCacheRequest, AnywhereCache> call);
+
+        partial void Modify_ListAnywhereCachesApiCall(ref gaxgrpc::ApiCall<ListAnywhereCachesRequest, ListAnywhereCachesResponse> call);
+
         partial void OnConstruction(StorageControl.StorageControlClient grpcClient, StorageControlSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC StorageControl client</summary>
@@ -1992,6 +3127,20 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_GetManagedFolderRequest(ref GetManagedFolderRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListManagedFoldersRequest(ref ListManagedFoldersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAnywhereCacheRequest(ref CreateAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAnywhereCacheRequest(ref UpdateAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DisableAnywhereCacheRequest(ref DisableAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PauseAnywhereCacheRequest(ref PauseAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ResumeAnywhereCacheRequest(ref ResumeAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAnywhereCacheRequest(ref GetAnywhereCacheRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAnywhereCachesRequest(ref ListAnywhereCachesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
@@ -2339,6 +3488,188 @@ namespace Google.Cloud.Storage.Control.V2
             Modify_ListManagedFoldersRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListManagedFoldersRequest, ListManagedFoldersResponse, ManagedFolder>(_callListManagedFolders, request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>CreateAnywhereCache</c>.</summary>
+        public override lro::OperationsClient CreateAnywhereCacheOperationsClient { get; }
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata> CreateAnywhereCache(CreateAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAnywhereCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>(_callCreateAnywhereCache.Sync(request, callSettings), CreateAnywhereCacheOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>> CreateAnywhereCacheAsync(CreateAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAnywhereCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<AnywhereCache, CreateAnywhereCacheMetadata>(await _callCreateAnywhereCache.Async(request, callSettings).ConfigureAwait(false), CreateAnywhereCacheOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAnywhereCache</c>.</summary>
+        public override lro::OperationsClient UpdateAnywhereCacheOperationsClient { get; }
+
+        /// <summary>
+        /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+        /// `admission_policy`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata> UpdateAnywhereCache(UpdateAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAnywhereCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>(_callUpdateAnywhereCache.Sync(request, callSettings), UpdateAnywhereCacheOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates an Anywhere Cache instance. Mutable fields include `ttl` and
+        /// `admission_policy`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>> UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAnywhereCacheRequest(ref request, ref callSettings);
+            return new lro::Operation<AnywhereCache, UpdateAnywhereCacheMetadata>(await _callUpdateAnywhereCache.Async(request, callSettings).ConfigureAwait(false), UpdateAnywhereCacheOperationsClient);
+        }
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnywhereCache DisableAnywhereCache(DisableAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableAnywhereCacheRequest(ref request, ref callSettings);
+            return _callDisableAnywhereCache.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Disables an Anywhere Cache instance. A disabled instance is read-only. The
+        /// disablement could be revoked by calling ResumeAnywhereCache. The cache
+        /// instance will be deleted automatically if it remains in the disabled state
+        /// for at least one hour.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnywhereCache> DisableAnywhereCacheAsync(DisableAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableAnywhereCacheRequest(ref request, ref callSettings);
+            return _callDisableAnywhereCache.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnywhereCache PauseAnywhereCache(PauseAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PauseAnywhereCacheRequest(ref request, ref callSettings);
+            return _callPauseAnywhereCache.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Pauses an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnywhereCache> PauseAnywhereCacheAsync(PauseAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PauseAnywhereCacheRequest(ref request, ref callSettings);
+            return _callPauseAnywhereCache.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnywhereCache ResumeAnywhereCache(ResumeAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeAnywhereCacheRequest(ref request, ref callSettings);
+            return _callResumeAnywhereCache.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Resumes a disabled or paused Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnywhereCache> ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeAnywhereCacheRequest(ref request, ref callSettings);
+            return _callResumeAnywhereCache.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnywhereCache GetAnywhereCache(GetAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAnywhereCacheRequest(ref request, ref callSettings);
+            return _callGetAnywhereCache.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets an Anywhere Cache instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnywhereCache> GetAnywhereCacheAsync(GetAnywhereCacheRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAnywhereCacheRequest(ref request, ref callSettings);
+            return _callGetAnywhereCache.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Anywhere Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AnywhereCache"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCaches(ListAnywhereCachesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAnywhereCachesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAnywhereCachesRequest, ListAnywhereCachesResponse, AnywhereCache>(_callListAnywhereCaches, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists Anywhere Cache instances for a given bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AnywhereCache"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> ListAnywhereCachesAsync(ListAnywhereCachesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAnywhereCachesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAnywhereCachesRequest, ListAnywhereCachesResponse, AnywhereCache>(_callListAnywhereCaches, request, callSettings);
+        }
     }
 
     public partial class ListFoldersRequest : gaxgrpc::IPageRequest
@@ -2346,6 +3677,10 @@ namespace Google.Cloud.Storage.Control.V2
     }
 
     public partial class ListManagedFoldersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAnywhereCachesRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -2361,6 +3696,14 @@ namespace Google.Cloud.Storage.Control.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<ManagedFolder> GetEnumerator() => ManagedFolders.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAnywhereCachesResponse : gaxgrpc::IPageResponse<AnywhereCache>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AnywhereCache> GetEnumerator() => AnywhereCaches.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
