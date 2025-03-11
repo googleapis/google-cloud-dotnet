@@ -594,11 +594,6 @@ namespace Google.Cloud.Dataplex.V1 {
 
       /// <summary>
       /// Gets an Entry.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -610,12 +605,7 @@ namespace Google.Cloud.Dataplex.V1 {
       }
 
       /// <summary>
-      /// Looks up a single Entry by name using the permission on the source system.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+      /// Looks up an entry by name using the permission on the source system.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1635,11 +1625,6 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Gets an Entry.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1653,11 +1638,6 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Gets an Entry.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1669,11 +1649,6 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Gets an Entry.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1687,11 +1662,6 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       /// <summary>
       /// Gets an Entry.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1702,12 +1672,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetEntry, null, options, request);
       }
       /// <summary>
-      /// Looks up a single Entry by name using the permission on the source system.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+      /// Looks up an entry by name using the permission on the source system.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1720,12 +1685,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return LookupEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up a single Entry by name using the permission on the source system.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+      /// Looks up an entry by name using the permission on the source system.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1736,12 +1696,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_LookupEntry, null, options, request);
       }
       /// <summary>
-      /// Looks up a single Entry by name using the permission on the source system.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+      /// Looks up an entry by name using the permission on the source system.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1754,12 +1709,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return LookupEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Looks up a single Entry by name using the permission on the source system.
-      ///
-      /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-      /// changing. For more information, see [Changes to BigQuery metadata stored in
-      /// Dataplex
-      /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+      /// Looks up an entry by name using the permission on the source system.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

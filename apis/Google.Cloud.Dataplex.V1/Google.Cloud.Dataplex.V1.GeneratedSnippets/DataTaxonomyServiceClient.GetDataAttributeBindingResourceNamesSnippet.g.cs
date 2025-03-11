@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_sync_flattened_resourceNames]
     using Google.Cloud.Dataplex.V1;
+    using System;
 
     public sealed partial class GeneratedDataTaxonomyServiceClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetDataAttributeBindingResourceNames()
         {
             // Create client
@@ -36,7 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             DataAttributeBindingName name = DataAttributeBindingName.FromProjectLocationDataAttributeBinding("[PROJECT]", "[LOCATION]", "[DATA_ATTRIBUTE_BINDING_ID]");
             // Make the request
+#pragma warning disable CS0612
             DataAttributeBinding response = dataTaxonomyServiceClient.GetDataAttributeBinding(name);
+#pragma warning restore CS0612
         }
     }
     // [END dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_sync_flattened_resourceNames]

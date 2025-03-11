@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataTaxonomyService_GetDataTaxonomy_sync]
     using Google.Cloud.Dataplex.V1;
+    using System;
 
     public sealed partial class GeneratedDataTaxonomyServiceClientSnippets
     {
@@ -29,17 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetDataTaxonomyRequestObject()
         {
             // Create client
             DataTaxonomyServiceClient dataTaxonomyServiceClient = DataTaxonomyServiceClient.Create();
             // Initialize request argument(s)
-            GetDataTaxonomyRequest request = new GetDataTaxonomyRequest
-            {
-                DataTaxonomyName = DataTaxonomyName.FromProjectLocationDataTaxonomy("[PROJECT]", "[LOCATION]", "[DATA_TAXONOMY_ID]"),
-            };
+#pragma warning disable CS0612
+            GetDataTaxonomyRequest request = new GetDataTaxonomyRequest { };
+#pragma warning restore CS0612
             // Make the request
+#pragma warning disable CS0612
             DataTaxonomy response = dataTaxonomyServiceClient.GetDataTaxonomy(request);
+#pragma warning restore CS0612
         }
     }
     // [END dataplex_v1_generated_DataTaxonomyService_GetDataTaxonomy_sync]

@@ -19,6 +19,7 @@
 namespace GoogleCSharpSnippets
 {
     // [START dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_async_flattened]
+    using System;
     using System.Threading.Tasks;
     using gcdv = Google.Cloud.Dataplex.V1;
 
@@ -32,6 +33,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task GetDataAttributeBindingAsync()
         {
             // Create client
@@ -39,7 +41,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/dataAttributeBindings/[DATA_ATTRIBUTE_BINDING_ID]";
             // Make the request
+#pragma warning disable CS0612
             gcdv::DataAttributeBinding response = await dataTaxonomyServiceClient.GetDataAttributeBindingAsync(name);
+#pragma warning restore CS0612
         }
     }
     // [END dataplex_v1_generated_DataTaxonomyService_GetDataAttributeBinding_async_flattened]

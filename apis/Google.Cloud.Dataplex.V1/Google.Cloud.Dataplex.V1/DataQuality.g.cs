@@ -249,8 +249,10 @@ namespace Google.Cloud.Dataplex.V1 {
     private string rowFilter_ = "";
     /// <summary>
     /// Optional. A filter applied to all rows in a single DataScan job.
-    /// The filter needs to be a valid SQL expression for a WHERE clause in
-    /// BigQuery standard SQL syntax.
+    /// The filter needs to be a valid SQL expression for a [WHERE clause in
+    /// GoogleSQL
+    /// syntax](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#where_clause).
+    ///
     /// Example: col1 >= 0 AND col2 &lt; 10
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6408,8 +6410,9 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Evaluates whether each row passes the specified condition.
       ///
-      /// The SQL expression needs to use BigQuery standard SQL syntax and should
-      /// produce a boolean value per row as the result.
+      /// The SQL expression needs to use [GoogleSQL
+      /// syntax](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax)
+      /// and should produce a boolean value per row as the result.
       ///
       /// Example: col1 >= 0 AND col2 &lt; 10
       /// </summary>
@@ -6609,8 +6612,9 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <summary>
       /// Evaluates whether the provided expression is true.
       ///
-      /// The SQL expression needs to use BigQuery standard SQL syntax and should
-      /// produce a scalar boolean result.
+      /// The SQL expression needs to use [GoogleSQL
+      /// syntax](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax)
+      /// and should produce a scalar boolean result.
       ///
       /// Example: MIN(col1) >= 0
       /// </summary>
@@ -6811,8 +6815,9 @@ namespace Google.Cloud.Dataplex.V1 {
       /// A SQL statement that is evaluated to return rows that match an invalid
       /// state. If any rows are are returned, this rule fails.
       ///
-      /// The SQL statement must use BigQuery standard SQL syntax, and must not
-      /// contain any semicolons.
+      /// The SQL statement must use [GoogleSQL
+      /// syntax](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax),
+      /// and must not contain any semicolons.
       ///
       /// You can use the data reference parameter `${data()}` to reference the
       /// source table with all of its precondition filters applied. Examples of

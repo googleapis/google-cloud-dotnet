@@ -3558,11 +3558,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3572,11 +3567,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3586,11 +3576,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3600,11 +3585,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3620,11 +3600,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3640,11 +3615,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3657,11 +3627,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3677,11 +3642,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3697,11 +3657,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Entry:
@@ -3713,12 +3668,7 @@ namespace Google.Cloud.Dataplex.V1
             GetEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Looks up a single Entry by name using the permission on the source system.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+        /// Looks up an entry by name using the permission on the source system.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3727,12 +3677,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Looks up a single Entry by name using the permission on the source system.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+        /// Looks up an entry by name using the permission on the source system.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3741,12 +3686,7 @@ namespace Google.Cloud.Dataplex.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Looks up a single Entry by name using the permission on the source system.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+        /// Looks up an entry by name using the permission on the source system.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5323,11 +5263,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5340,11 +5275,6 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// Gets an Entry.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5356,12 +5286,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Looks up a single Entry by name using the permission on the source system.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+        /// Looks up an entry by name using the permission on the source system.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5373,12 +5298,7 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
-        /// Looks up a single Entry by name using the permission on the source system.
-        /// 
-        /// **Caution**: The BigQuery metadata that is stored in Dataplex Catalog is
-        /// changing. For more information, see [Changes to BigQuery metadata stored in
-        /// Dataplex
-        /// Catalog](https://cloud.google.com/dataplex/docs/biqquery-metadata-changes).
+        /// Looks up an entry by name using the permission on the source system.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
