@@ -108,12 +108,35 @@ namespace Google.Cloud.Datastore.V1
         /// number of results, for example to build a web application which fetches results in pages.
         /// </summary>
         /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>The complete query results.</returns>
+        public virtual DatastoreQueryResults RunQuery(
+            AdvancedQuery query, CallSettings callSettings = null) =>
+            RunQueryLazily(query, callSettings).GetAllResults();
+
+        /// <summary>
+        /// Runs the given query eagerly, retrieving all results in memory and indicating whether more
+        /// results may be available beyond the query's limit. Use this method when your query has a limited
+        /// number of results, for example to build a web application which fetches results in pages.
+        /// </summary>
+        /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>The complete query results.</returns>
         public virtual DatastoreQueryResults RunQuery(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null) =>
             RunQueryLazily(query, readConsistency, callSettings).GetAllResults();
+
+        /// <summary>
+        /// Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
+        /// results may be available beyond the query's limit. Use this method when your query has a limited
+        /// number of results, for example to build a web application which fetches results in pages.
+        /// </summary>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the complete set of query results.</returns>
+        public virtual Task<DatastoreQueryResults> RunQueryAsync(AdvancedQuery query, CallSettings callSettings = null) =>
+            RunQueryLazilyAsync(query, callSettings).GetAllResultsAsync();
 
         /// <summary>
         /// Runs the given query eagerly and asynchronously, retrieving all results in memory and indicating whether more
@@ -185,11 +208,44 @@ namespace Google.Cloud.Datastore.V1
         /// multiple times will execute the query again, potentially returning different results.
         /// </remarks>
         /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the lazy query results.</returns>
+        public virtual LazyDatastoreQuery RunQueryLazily(
+            AdvancedQuery query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lazily executes the given structured query.
+        /// </summary>
+        /// <remarks>
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
+        /// multiple times will execute the query again, potentially returning different results.
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="readConsistency">If not null, overrides the read consistency of the query.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="LazyDatastoreQuery"/> representing the lazy query results.</returns>
         public virtual LazyDatastoreQuery RunQueryLazily(
             Query query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lazily executes the given structured query for asynchronous consumption.
+        /// </summary>
+        /// <remarks>
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
+        /// multiple times will execute the query again, potentially returning different results.
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the lazy query results.</returns>
+        public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(AdvancedQuery query, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
