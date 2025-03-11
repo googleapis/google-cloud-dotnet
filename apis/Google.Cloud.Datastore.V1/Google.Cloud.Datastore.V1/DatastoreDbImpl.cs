@@ -15,9 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using static Google.Cloud.Datastore.V1.CommitRequest.Types;
@@ -88,16 +86,7 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
-            var request = new RunQueryRequest
-            {
-                ProjectId = ProjectId,
-                DatabaseId = DatabaseId,
-                PartitionId = _partitionId,
-                Query = query,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
-            return new LazyDatastoreQuery(streamer.Sync());
+            return RunQueryLazily(new DatastoreQuery { Query = query, ReadConsistency = readConsistency }, callSettings);
         }
 
         /// <inheritdoc/>
@@ -111,31 +100,15 @@ namespace Google.Cloud.Datastore.V1
         /// <inheritdoc/>
         public override AggregationQueryResults RunAggregationQuery(AggregationQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
-            var request = new RunAggregationQueryRequest
-            {
-                AggregationQuery = query,
-                ProjectId = ProjectId,
-                DatabaseId = DatabaseId,
-                PartitionId = _partitionId,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            var runAggregationQueryResponse = Client.RunAggregationQuery(request, callSettings);
-            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            return RunAggregationQuery(new DatastoreQuery { AggregationQuery = query, ReadConsistency = readConsistency }, callSettings);
         }
 
         /// <inheritdoc/>
         public override AggregationQueryResults RunAggregationQuery(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
-            var request = new RunAggregationQueryRequest
-            {
-                GqlQuery = query,
-                ProjectId = ProjectId,
-                DatabaseId = DatabaseId,
-                PartitionId = _partitionId,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            var runAggregationQueryResponse = Client.RunAggregationQuery(request, callSettings);
-            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            return RunAggregationQuery(new DatastoreQuery { GqlQuery = query, ReadConsistency = readConsistency }, callSettings);
         }
 
         /// <inheritdoc/>
@@ -147,33 +120,17 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc/>
-        public override async Task<AggregationQueryResults> RunAggregationQueryAsync(AggregationQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        public override Task<AggregationQueryResults> RunAggregationQueryAsync(AggregationQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
-            var request = new RunAggregationQueryRequest
-            {
-                AggregationQuery = query,
-                ProjectId = ProjectId,
-                DatabaseId = DatabaseId,
-                PartitionId = _partitionId,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            var runAggregationQueryResponse = await Client.RunAggregationQueryAsync(request, callSettings).ConfigureAwait(false);
-            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            return RunAggregationQueryAsync(new DatastoreQuery { AggregationQuery = query, ReadConsistency = readConsistency }, callSettings);
         }
 
         /// <inheritdoc/>
-        public override async Task<AggregationQueryResults> RunAggregationQueryAsync(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
+        public override Task<AggregationQueryResults> RunAggregationQueryAsync(GqlQuery query, ReadConsistency? readConsistency = null, CallSettings callSettings = null)
         {
-            var request = new RunAggregationQueryRequest
-            {
-                GqlQuery = query,
-                ProjectId = ProjectId,
-                DatabaseId = DatabaseId,
-                PartitionId = _partitionId,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            var runAggregationQueryResponse = await Client.RunAggregationQueryAsync(request, callSettings).ConfigureAwait(false);
-            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            return RunAggregationQueryAsync(new DatastoreQuery { GqlQuery = query, ReadConsistency = readConsistency }, callSettings);
         }
 
         /// <inheritdoc/>
@@ -183,16 +140,7 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
-            var request = new RunQueryRequest
-            {
-                ProjectId = ProjectId,
-                DatabaseId = DatabaseId,
-                PartitionId = _partitionId,
-                Query = query,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
-            return new AsyncLazyDatastoreQuery(streamer.Async());
+            return RunQueryLazilyAsync(new DatastoreQuery { Query = query, ReadConsistency = readConsistency }, callSettings);
         }
 
         /// <inheritdoc/>
@@ -202,16 +150,7 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
-            var request = new RunQueryRequest
-            {
-                ProjectId = ProjectId,
-                DatabaseId = DatabaseId,
-                PartitionId = _partitionId,
-                GqlQuery = gqlQuery,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
-            return new LazyDatastoreQuery(streamer.Sync());
+            return RunQueryLazily(new DatastoreQuery { GqlQuery = gqlQuery, ReadConsistency = readConsistency }, callSettings);
         }
 
         /// <inheritdoc/>
@@ -221,16 +160,7 @@ namespace Google.Cloud.Datastore.V1
             CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(gqlQuery, nameof(gqlQuery));
-            var request = new RunQueryRequest
-            {
-                ProjectId = ProjectId,
-                DatabaseId = DatabaseId,
-                PartitionId = _partitionId,
-                GqlQuery = gqlQuery,
-                ReadOptions = GetReadOptions(readConsistency)
-            };
-            var streamer = new QueryStreamer(request, Client.RunQueryApiCall, callSettings);
-            return new AsyncLazyDatastoreQuery(streamer.Async());
+            return RunQueryLazilyAsync(new DatastoreQuery { GqlQuery = gqlQuery, ReadConsistency = readConsistency }, callSettings);
         }
 
         /// <inheritdoc/>
