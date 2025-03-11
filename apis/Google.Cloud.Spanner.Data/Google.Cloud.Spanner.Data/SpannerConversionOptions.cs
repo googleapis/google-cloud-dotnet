@@ -35,7 +35,8 @@ namespace Google.Cloud.Spanner.Data
             DecimalToNumeric,
             DecimalToPgNumeric,
             DateTimeToDate,
-            DateTimeToTimestamp
+            DateTimeToTimestamp,
+            GuidToUuid
         };
 
         /// <summary>
@@ -55,10 +56,12 @@ namespace Google.Cloud.Spanner.Data
         internal const string DecimalToPgNumeric = nameof(DecimalToPgNumeric);
         internal const string DateTimeToDate = nameof(DateTimeToDate);
         internal const string DateTimeToTimestamp = nameof(DateTimeToTimestamp);
+        internal const string GuidToUuid = nameof(GuidToUuid);
 
         // Constants for Spanner To CLR type mappings.
         internal const string DateToSpannerDate = nameof(DateToSpannerDate);
         internal const string DateToDateTime = nameof(DateToDateTime);
+        internal const string UuidToGuid = nameof(UuidToGuid);
 
         // Predefined instances; these will change as the class grows, but hopefully
         // for most cases we can avoid creating new instances.
@@ -84,9 +87,19 @@ namespace Google.Cloud.Spanner.Data
         internal SpannerDbType DateTimeToConfiguredSpannerType { get; private set; }
 
         /// <summary>
+        /// The configured SpannerDbType for the Guid CLR type.
+        /// </summary>
+        internal SpannerDbType GuidToConfiguredSpannerType { get; private set; }
+
+        /// <summary>
         /// The configured CLR type for the Date SpannerDbType.
         /// </summary>
         internal System.Type DateToConfiguredClrType { get; private set; }
+
+        /// <summary>
+        /// The configured CLR type for the Uuid SpannerDbType.
+        /// </summary>
+        internal System.Type GuidToConfiguredClrType { get; private set; }
 
         private SpannerConversionOptions(bool useDBNull)
         {
@@ -112,7 +125,8 @@ namespace Google.Cloud.Spanner.Data
         {
             DateTimeToConfiguredSpannerType = DateTimeToConfiguredSpannerType,
             DecimalToConfiguredSpannerType = DecimalToConfiguredSpannerType,
-            DateToConfiguredClrType = DateToConfiguredClrType
+            DateToConfiguredClrType = DateToConfiguredClrType,
+            GuidToConfiguredClrType = GuidToConfiguredClrType
         };
 
         internal SpannerConversionOptions WithClrDefaultForNullSetting(bool useClrDefaultToNull)
@@ -141,11 +155,13 @@ namespace Google.Cloud.Spanner.Data
             SingleToConfiguredSpannerType = SpannerDbType.Float32;
             DecimalToConfiguredSpannerType = SpannerDbType.Numeric;
             DateTimeToConfiguredSpannerType = SpannerDbType.Timestamp;
+            GuidToConfiguredSpannerType = SpannerDbType.Uuid;
         }
 
         internal void SetSpannerToClrTypeDefaults()
         {
             DateToConfiguredClrType = typeof(DateTime);
+            GuidToConfiguredClrType = typeof(Guid);
         }
 
         private void ValidateAndParseSpannerToClrTypeMappings(string input, SpannerConversionOptions options)
@@ -176,6 +192,10 @@ namespace Google.Cloud.Spanner.Data
                 else if (string.Equals(mapping, DateToSpannerDate, StringComparison.OrdinalIgnoreCase))
                 {
                     options.DateToConfiguredClrType = typeof(SpannerDate);
+                }
+                else if (string.Equals(mapping, GuidToUuid, StringComparison.OrdinalIgnoreCase))
+                {
+                    options.GuidToConfiguredClrType = typeof(Guid);
                 }
             }
         }
@@ -230,6 +250,10 @@ namespace Google.Cloud.Spanner.Data
                 else if (string.Equals(mapping, DateTimeToTimestamp, StringComparison.OrdinalIgnoreCase))
                 {
                     options.DateTimeToConfiguredSpannerType = SpannerDbType.Timestamp;
+                }
+                else if (string.Equals(mapping, GuidToUuid, StringComparison.OrdinalIgnoreCase))
+                {
+                    options.GuidToConfiguredSpannerType = SpannerDbType.Uuid;
                 }
             }
         }

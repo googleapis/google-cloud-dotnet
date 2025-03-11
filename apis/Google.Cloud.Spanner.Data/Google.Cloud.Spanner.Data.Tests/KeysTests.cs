@@ -39,7 +39,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "", SpannerDbType.PgNumeric, PgNumeric.Parse("20.1") },
                     { "", SpannerDbType.PgOid, 2 },
                     { "", SpannerDbType.String, "test" },
-                    { "", SpannerDbType.Timestamp, new DateTime(2021, 9, 10, 9, 37, 10, DateTimeKind.Utc) }
+                    { "", SpannerDbType.Timestamp, new DateTime(2021, 9, 10, 9, 37, 10, DateTimeKind.Utc) },
+                    { "", SpannerDbType.Uuid, Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f") }
                 });
 
             var actual = key.ToProtobuf(SpannerConversionOptions.Default);
@@ -311,6 +312,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k2", Value = 1.71m } }));
             var range2 = KeyRange.ClosedClosed(new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k3", Value = new DateTime(2022, 06, 08) } }),
               new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k4", Value = new DateTime(2024, 06, 08) } }));
+            var range3 = KeyRange.ClosedClosed(new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k5", Value = Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f") } }),
+              new Key(new SpannerParameterCollection { new SpannerParameter { ParameterName = "k6", Value = Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f") } }));
 
             Assert.Equal("[[ \"3.14\" ], [ \"1.71\" ])", range1.ToString(builder));
             Assert.Equal("[[ \"2022-06-08T00:00:00Z\" ], [ \"2024-06-08T00:00:00Z\" ]]", range2.ToString(builder));
@@ -324,6 +327,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             builder.ClrToSpannerTypeDefaultMappings = "";
             Assert.Equal("[[ \"3.14\" ], [ \"1.71\" ])", range1.ToString(builder));
             Assert.Equal("[[ \"2022-06-08T00:00:00Z\" ], [ \"2024-06-08T00:00:00Z\" ]]", range2.ToString(builder));
+            Assert.Equal("[[ \"8f8c4746-17b1-4d9f-a634-58e11942095f\", \"8f8c4746-17b1-4d9f-a634-58e11942095f\" ]]", range3.ToString(builder));
         }
     }
 

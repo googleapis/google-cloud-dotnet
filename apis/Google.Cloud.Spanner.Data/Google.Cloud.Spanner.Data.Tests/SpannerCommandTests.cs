@@ -1328,6 +1328,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     {"date", SpannerDbType.Date, new DateTime(2021, 9, 8, 0, 0, 0, DateTimeKind.Utc)},
                     {"timestamp", SpannerDbType.Timestamp, new DateTime(2021, 9, 8, 15, 22, 59, DateTimeKind.Utc)},
                     {"bool", SpannerDbType.Bool, true},
+                    {"uuid", SpannerDbType.Uuid, new Guid("8f8c4746-17b1-4d9f-a634-58e11942095f")},
                 }));
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);

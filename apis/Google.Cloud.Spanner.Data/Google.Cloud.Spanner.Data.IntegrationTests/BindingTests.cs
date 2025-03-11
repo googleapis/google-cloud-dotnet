@@ -79,6 +79,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float32),
             SpannerDbType.Json,
             SpannerDbType.ArrayOf(SpannerDbType.Json),
+            SpannerDbType.Uuid,
+            SpannerDbType.ArrayOf(SpannerDbType.Uuid),
             // b/348716298
             SpannerDbType.FromClrType(typeof(Person)),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
@@ -388,6 +390,23 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindProtobufValueWrapperEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             new ValueWrapper[] { });
+
+        [Fact]
+        public Task BindUuid() => TestBindNonNull(
+            SpannerDbType.Uuid,
+            Guid.NewGuid(),
+            r => r.GetGuid(0));
+
+        [Fact]
+        public Task BindUuidArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Uuid),
+            new Guid?[] { Guid.NewGuid(), null, Guid.NewGuid() });
+
+        [Fact]
+        public Task BindUuidEmptyArray() => TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Uuid),
+            new Guid[] { });
+
 
         private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
             Skip.If(_fixture.RunningOnEmulator && BindUnsupportedNullData.Any<SpannerDbType>(spannerDbType.Equals),

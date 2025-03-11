@@ -45,6 +45,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.Numeric, DbType.VarNumeric, true };
             yield return new object[] { SpannerDbType.Unspecified, DbType.Object, true };
             yield return new object[] { SpannerDbType.String, DbType.String, true };
+            yield return new object[] { SpannerDbType.Uuid, DbType.Guid, true };
             // There is no DbType that will map automatically to SpannerDbType.Json, SpannerDbType.PgJsonb,
             // SpannerDbType.PgOid, or SpannerDbType protobuf.
             yield return new object[] { SpannerDbType.Json, DbType.String, false };
