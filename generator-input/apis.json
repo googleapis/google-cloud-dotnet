@@ -703,7 +703,7 @@
     },
     {
       "id": "Google.Cloud.Audit",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "productName": "Google Cloud Audit",
       "productUrl": "https://cloud.google.com/logging/docs/audit",
       "type": "other",
@@ -712,8 +712,7 @@
         "audit"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Protobuf": "3.25.0"
+        "Google.Cloud.Iam.V1": "3.4.0"
       },
       "generator": "proto",
       "protoPath": "google/cloud/audit"
