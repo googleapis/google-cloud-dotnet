@@ -191,6 +191,11 @@ namespace Google.Cloud.Spanner.Data
                         StringValue = StripTimePart(
                             XmlConvert.ToString(Convert.ToDateTime(value, InvariantCulture), XmlDateTimeSerializationMode.Utc))
                     };
+                case TypeCode.Uuid:
+                    return new Value
+                    {
+                        StringValue = Convert.ToString(value, InvariantCulture)
+                    };
                 case TypeCode.Array:
                     if (value is IEnumerable enumerable)
                     {
@@ -510,6 +515,20 @@ namespace Google.Cloud.Spanner.Data
                         return null;
                     case Value.KindOneofCase.StringValue:
                         return Protobuf.WellKnownTypes.Timestamp.Parser.ParseJson(wireValue.StringValue);
+                    default:
+                        throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
+                }
+            }
+
+            if (targetClrType == typeof(Guid))
+            {
+                switch (wireValue.KindCase)
+                {
+                    case Value.KindOneofCase.NullValue:
+                        return null;
+                    case Value.KindOneofCase.StringValue:
+                        return Guid.Parse(wireValue.StringValue);
                     default:
                         throw new InvalidOperationException(
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
