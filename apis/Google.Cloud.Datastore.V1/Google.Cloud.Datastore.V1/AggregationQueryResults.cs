@@ -40,15 +40,23 @@ public sealed class AggregationQueryResults
     public MoreResultsType MoreResults { get; }
 
     /// <summary>
-    /// The time at which the snapshot was read.
+    /// The time at which the snapshot was read. This will be null if the query was only
+    /// planned, and not executed.
     /// </summary>
     public Timestamp ReadTime { get; }
 
-    private AggregationQueryResults(MoreResultsType moreResults, Timestamp readTime, Dictionary<string, Value> aggregateProperties)
+    /// <summary>
+    /// The information about planning and execution (if any) of the query. This will
+    /// be null if no analysis was requested.
+    /// </summary>
+    public ExplainMetrics Metrics { get; }
+
+    private AggregationQueryResults(MoreResultsType moreResults, Timestamp readTime, Dictionary<string, Value> aggregateProperties, ExplainMetrics metrics)
     {
         MoreResults = moreResults;
         ReadTime = readTime;
         _aggregateProperties = aggregateProperties;
+        Metrics = metrics;
     }
 
     /// <summary>
@@ -86,9 +94,10 @@ public sealed class AggregationQueryResults
 
     internal static AggregationQueryResults FromRunAggregationQueryResponse(RunAggregationQueryResponse response)
     {
-        var aggregateProperties = response.Batch.AggregationResults.SelectMany(result => result.AggregateProperties)
-                                                                   .ToDictionary(pair => pair.Key, pair => pair.Value);
-        var results = new AggregationQueryResults(response.Batch.MoreResults, response.Batch.ReadTime, aggregateProperties);
-        return results;
+        var batch = response.Batch ?? new AggregationResultBatch();
+        var aggregateProperties = batch.AggregationResults
+            .SelectMany(result => result.AggregateProperties)
+            .ToDictionary(pair => pair.Key, pair => pair.Value);
+        return new AggregationQueryResults(batch.MoreResults, batch.ReadTime, aggregateProperties, response.ExplainMetrics);
     }
 }

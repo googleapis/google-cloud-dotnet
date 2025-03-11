@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -38,18 +38,27 @@ namespace Google.Cloud.Datastore.V1
         public MoreResultsType MoreResults { get; }
 
         /// <summary>
-        /// The cursor at the end of the results. This will never be null.
+        /// The cursor at the end of the results. This will only be null for "explain" queries,
+        /// where the query has not actually been executed.
         /// </summary>
         public ByteString EndCursor { get; }
+
+        /// <summary>
+        /// The information about planning and execution (if any) of the query. This will
+        /// be null if no analysis was requested.
+        /// </summary>
+        public ExplainMetrics Metrics { get; }
 
         internal DatastoreQueryResults(
             IReadOnlyList<Entity> entities,
             MoreResultsType endCondition,
-            ByteString endCursor)
+            ByteString endCursor,
+            ExplainMetrics metrics)
         {
             MoreResults = endCondition;
             Entities = entities;
             EndCursor = endCursor;
+            Metrics = metrics;
         }
     }
 }

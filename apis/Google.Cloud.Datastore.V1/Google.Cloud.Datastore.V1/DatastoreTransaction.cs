@@ -108,8 +108,48 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>The complete query results.</returns>
+        public virtual DatastoreQueryResults RunQuery(DatastoreQuery query, CallSettings callSettings = null) =>
+            RunQueryLazily(query, callSettings).GetAllResults();
+
+        /// <summary>
+        /// Runs the given query eagerly in this transaction, retrieving all results in memory and indicating whether more
+        /// results may be available beyond the query's limit. Use this method when your query has a limited
+        /// number of results, for example to build a web application which fetches results in pages.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Using a transaction ensures that a commit operation will fail if any of the entities returned
+        /// by this query have been modified while the transaction is active. Note that modifications performed
+        /// as part of this operation are not reflected in the query results.
+        /// </para>
+        /// <para>The default implementation of this method delegates to <see cref="RunQueryLazily(Query, CallSettings)"/>
+        /// and calls <see cref="LazyDatastoreQuery.GetAllResults"/> on the return value.</para>
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>The complete query results.</returns>
         public virtual DatastoreQueryResults RunQuery(Query query, CallSettings callSettings = null) =>
             RunQueryLazily(query, callSettings).GetAllResults();
+
+        /// <summary>
+        /// Runs the given query eagerly and asynchronously in this transaction, retrieving all results in memory
+        /// and indicating whether more results may be available beyond the query's limit. Use this method when your query has a limited
+        /// number of results, for example to build a web application which fetches results in pages.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Using a transaction ensures that a commit operation will fail if any of the entities returned
+        /// by this query have been modified while the transaction is active. Note that modifications performed
+        /// as part of this operation are not reflected in the query results.
+        /// </para>
+        /// <para>The default implementation of this method delegates to <see cref="RunQueryLazilyAsync(Query, CallSettings)"/>
+        /// and calls <see cref="AsyncLazyDatastoreQuery.GetAllResultsAsync"/> on the return value.</para>
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the complete set of query results.</returns>
+        public virtual Task<DatastoreQueryResults> RunQueryAsync(DatastoreQuery query, CallSettings callSettings = null) =>
+            RunQueryLazilyAsync(query, callSettings).GetAllResultsAsync();
 
         /// <summary>
         /// Runs the given query eagerly and asynchronously in this transaction, retrieving all results in memory
@@ -132,6 +172,17 @@ namespace Google.Cloud.Datastore.V1
             RunQueryLazilyAsync(query, callSettings).GetAllResultsAsync();
 
         /// <summary>
+        /// Runs the given <see cref="DatastoreQuery"/> in this transaction.
+        /// </summary>
+        /// <param name="query">The <see cref="AggregationQuery"/> to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>The result of aggregation query.</returns>
+        public virtual AggregationQueryResults RunAggregationQuery(DatastoreQuery query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Runs the given <see cref="AggregationQuery"/> in this transaction.
         /// </summary>
         /// <param name="query">The <see cref="AggregationQuery"/> to execute. Must not be null.</param>
@@ -149,6 +200,17 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>The result of aggregation query.</returns>
         public virtual AggregationQueryResults RunAggregationQuery(GqlQuery query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Runs the given <see cref="DatastoreQuery"/> in this transaction.
+        /// </summary>
+        /// <param name="query">The <see cref="AggregationQuery"/> to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A task representing the asynchronous operation. The result of the task is the result of the aggregation query.</returns>
+        public virtual Task<AggregationQueryResults> RunAggregationQueryAsync(DatastoreQuery query, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }
@@ -193,7 +255,53 @@ namespace Google.Cloud.Datastore.V1
         /// <param name="query">The query to execute. Must not be null.</param>
         /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
         /// <returns>A <see cref="LazyDatastoreQuery"/> representing the the lazy query results.</returns>
+        public virtual LazyDatastoreQuery RunQueryLazily(DatastoreQuery query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lazily executes the given structured query in this transaction.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Using a transaction ensures that a commit operation will fail if any of the entities returned
+        /// by this query have been modified while the transaction is active. Note that modifications performed
+        /// as part of this operation are not reflected in the query results.
+        /// </para>
+        /// <para>
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
+        /// multiple times will execute the query again, potentially returning different results.
+        /// </para>
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>A <see cref="LazyDatastoreQuery"/> representing the the lazy query results.</returns>
         public virtual LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Lazily executes the given structured query in this transaction for asynchronous consumption.
+        /// </summary>
+        /// <remarks>
+        /// <para>
+        /// Using a transaction ensures that a commit operation will fail if any of the entities returned
+        /// by this query have been modified while the transaction is active. Note that modifications performed
+        /// as part of this operation are not reflected in the query results.
+        /// </para>
+        /// <para>
+        /// The results are requested lazily: no API calls will be made until the application starts
+        /// iterating over the results. Iterating over the same <see cref="LazyDatastoreQuery"/> object
+        /// multiple times will execute the query again, potentially returning different results.
+        /// </para>
+        /// </remarks>
+        /// <param name="query">The query to execute. Must not be null.</param>
+        /// <param name="callSettings">If not null, applies overrides to RPC calls.</param>
+        /// <returns>An <see cref="AsyncLazyDatastoreQuery"/> representing the result of the query.</returns>
+        public virtual AsyncLazyDatastoreQuery RunQueryLazilyAsync(DatastoreQuery query, CallSettings callSettings = null)
         {
             throw new NotImplementedException();
         }

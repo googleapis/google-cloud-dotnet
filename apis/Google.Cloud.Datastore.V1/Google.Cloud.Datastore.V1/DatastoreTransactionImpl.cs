@@ -84,6 +84,26 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc />
+        public override LazyDatastoreQuery RunQueryLazily(DatastoreQuery query, CallSettings callSettings = null)
+        {
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            var request = query.ToRequest(_projectId, _databaseId, _partitionId);
+            request.ReadOptions = _readOptions;
+            var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
+            return new LazyDatastoreQuery(streamer.Sync());
+        }
+
+        /// <inheritdoc />
+        public override AsyncLazyDatastoreQuery RunQueryLazilyAsync(DatastoreQuery query, CallSettings callSettings = null)
+        {
+            GaxPreconditions.CheckNotNull(query, nameof(query));
+            var request = query.ToRequest(_projectId, _databaseId, _partitionId);
+            request.ReadOptions = _readOptions;
+            var streamer = new QueryStreamer(request, _client.RunQueryApiCall, callSettings);
+            return new AsyncLazyDatastoreQuery(streamer.Async());
+        }
+
+        /// <inheritdoc />
         public override LazyDatastoreQuery RunQueryLazily(Query query, CallSettings callSettings = null)
         {
             GaxPreconditions.CheckNotNull(query, nameof(query));
@@ -148,6 +168,15 @@ namespace Google.Cloud.Datastore.V1
         }
 
         /// <inheritdoc/>
+        public override AggregationQueryResults RunAggregationQuery(DatastoreQuery query, CallSettings callSettings = null)
+        {
+            var request = query.ToAggregationRequest(_projectId, _databaseId, _partitionId);
+            request.ReadOptions = _readOptions;
+            var runAggregationQueryResponse = _client.RunAggregationQuery(request, callSettings);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
         public override AggregationQueryResults RunAggregationQuery(AggregationQuery query, CallSettings callSettings = null)
         {
             var request = new RunAggregationQueryRequest
@@ -174,6 +203,15 @@ namespace Google.Cloud.Datastore.V1
                 ReadOptions = _readOptions
             };
             var runAggregationQueryResponse = _client.RunAggregationQuery(request, callSettings);
+            return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
+        }
+
+        /// <inheritdoc/>
+        public override async Task<AggregationQueryResults> RunAggregationQueryAsync(DatastoreQuery query, CallSettings callSettings = null)
+        {
+            var request = query.ToAggregationRequest(_projectId, _databaseId, _partitionId);
+            request.ReadOptions = _readOptions;
+            var runAggregationQueryResponse = await _client.RunAggregationQueryAsync(request, callSettings).ConfigureAwait(false);
             return AggregationQueryResults.FromRunAggregationQueryResponse(runAggregationQueryResponse);
         }
 
