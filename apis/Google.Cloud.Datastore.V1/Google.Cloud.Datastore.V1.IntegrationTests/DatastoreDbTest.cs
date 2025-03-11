@@ -174,10 +174,66 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
 
             _fixture.RetryQuery(() =>
             {
-                ValidateQueryResults(db.RunQuery(gql).Entities);
-                ValidateQueryResults(db.RunQuery(query).Entities);
+                var results = db.RunQuery(gql);
+                Assert.Null(results.Metrics);
+                ValidateQueryResults(results.Entities);
+                results = db.RunQuery(query);
+                Assert.Null(results.Metrics);
+                ValidateQueryResults(results.Entities);
                 ValidateQueryResults(db.RunQueryLazily(query));
                 ValidateQueryResults(db.RunQueryLazily(gql));
+            });
+        }
+
+        [Fact]
+        public void Explain()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("syncqueries_explain");
+            using (var transaction = db.BeginTransaction())
+            {
+                var entities = Enumerable.Range(0, 5)
+                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
+                    .ToList();
+                transaction.Insert(entities);
+                transaction.Commit();
+            }
+
+            var query = new Query("syncqueries") { Filter = Filter.LessThan("x", 3) };
+            var gql = new GqlQuery { QueryString = "SELECT * FROM syncqueries WHERE x < 3", AllowLiterals = true };
+
+            _fixture.RetryQuery(() =>
+            {
+                var results = db.RunQuery(new DatastoreQuery { GqlQuery = gql, ExplainOptions = new ExplainOptions { Analyze = false } });
+                Assert.NotNull(results.Metrics.PlanSummary);
+                Assert.Null(results.Metrics.ExecutionStats);
+                Assert.Empty(results.Entities);
+            });
+        }
+
+        [Fact]
+        public void ExplainAnalyze()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("syncqueries_explain");
+            using (var transaction = db.BeginTransaction())
+            {
+                var entities = Enumerable.Range(0, 5)
+                    .Select(x => new Entity { Key = keyFactory.CreateIncompleteKey(), ["x"] = x })
+                    .ToList();
+                transaction.Insert(entities);
+                transaction.Commit();
+            }
+
+            var query = new Query("syncqueries") { Filter = Filter.LessThan("x", 3) };
+            var gql = new GqlQuery { QueryString = "SELECT * FROM syncqueries WHERE x < 3", AllowLiterals = true };
+
+            _fixture.RetryQuery(() =>
+            {
+                var results = db.RunQuery(new DatastoreQuery { GqlQuery = gql, ExplainOptions = new ExplainOptions { Analyze = true } });
+                Assert.NotNull(results.Metrics.PlanSummary);
+                Assert.NotNull(results.Metrics.ExecutionStats);
+                Assert.NotEmpty(results.Entities);
             });
         }
 
@@ -487,7 +543,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
         public void Aggregation_WithGqlQuery()
         {
             var db = _fixture.CreateDatastoreDb();
-            var keyFactory = db.CreateKeyFactory("Students");
+            var keyFactory = db.CreateKeyFactory("StudentGql");
             var entities = new[]
             {
                 new Entity { Key = keyFactory.CreateKey("11"), ["age"] = 12, ["height"] = 5  },
@@ -497,17 +553,19 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             };
             db.Insert(entities);
 
-            var gql = new GqlQuery { QueryString = "SELECT sum(height), avg(height) as `avg_height` FROM Students" };
+            var gql = new GqlQuery { QueryString = "SELECT sum(height), avg(height) as `avg_height` FROM StudentGql" };
             AggregationQueryResults results = db.RunAggregationQuery(gql);
             Assert.Equal(18.8, results["property_1"].DoubleValue);
             Assert.Equal(4.7, results["avg_height"].DoubleValue);
+            Assert.NotNull(results.ReadTime);
+            Assert.Null(results.Metrics);
         }
 
         [Fact]
         public void Aggregations_StructuredQuery()
         {
             var db = _fixture.CreateDatastoreDb();
-            var keyFactory = db.CreateKeyFactory("Student");
+            var keyFactory = db.CreateKeyFactory("StudentStructured");
             var entities = new[]
             {
                 new Entity { Key = keyFactory.CreateKey("6"), ["age"] = 12, ["height"] = 5  },
@@ -517,7 +575,7 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             };
             db.Insert(entities);
 
-            var query = new Query("Student");
+            var query = new Query("StudentStructured");
             AggregationQuery aggQuery = new AggregationQuery(query)
             {
                 Aggregations = { Sum("age", "sum_age"), Average("age"), Count("count") }
@@ -526,6 +584,74 @@ namespace Google.Cloud.Datastore.V1.IntegrationTests
             Assert.Equal(49, results["sum_age"].IntegerValue);
             Assert.Equal(12.25, results["property_1"].DoubleValue);
             Assert.Equal(4, results["count"].IntegerValue);
+            Assert.NotNull(results.ReadTime);
+            Assert.Null(results.Metrics);
+        }
+
+        [Fact]
+        public void Aggregation_Explain()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("StudentExplain");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("6"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("7"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("8"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("9"), ["age"] = 11, ["height"] = 5.2  }
+            };
+            db.Insert(entities);
+
+            var query = new Query("StudentExplain");
+            AggregationQuery aggQuery = new AggregationQuery(query)
+            {
+                Aggregations = { Sum("age", "sum_age"), Average("age"), Count("count") }
+            };
+            var datastoreQuery = new DatastoreQuery { AggregationQuery = aggQuery, ExplainOptions = new ExplainOptions { Analyze = false } };
+
+            _fixture.RetryQuery(() =>
+            {
+                AggregationQueryResults results = db.RunAggregationQuery(datastoreQuery);
+                Assert.NotNull(results.Metrics.PlanSummary);
+                Assert.Null(results.Metrics.ExecutionStats);
+                Assert.Null(results.ReadTime);
+                Assert.Null(results["sum_age"]);
+                Assert.Null(results["property_1"]);
+                Assert.Null(results["count"]);
+            });
+        }
+
+        [Fact]
+        public void Aggregation_ExplainAnalyze()
+        {
+            var db = _fixture.CreateDatastoreDb();
+            var keyFactory = db.CreateKeyFactory("StudentExplainAnalyze");
+            var entities = new[]
+            {
+                new Entity { Key = keyFactory.CreateKey("6"), ["age"] = 12, ["height"] = 5  },
+                new Entity { Key = keyFactory.CreateKey("7"), ["age"] = 12, ["height"] = 4.6  },
+                new Entity { Key = keyFactory.CreateKey("8"), ["age"] = 14, ["height"] = 4  },
+                new Entity { Key = keyFactory.CreateKey("9"), ["age"] = 11, ["height"] = 5.2  }
+            };
+            db.Insert(entities);
+
+            var query = new Query("StudentExplainAnalyze");
+            AggregationQuery aggQuery = new AggregationQuery(query)
+            {
+                Aggregations = { Sum("age", "sum_age"), Average("age"), Count("count") }
+            };
+            var datastoreQuery = new DatastoreQuery { AggregationQuery = aggQuery, ExplainOptions = new ExplainOptions { Analyze = true } };
+
+            _fixture.RetryQuery(() =>
+            {
+                AggregationQueryResults results = db.RunAggregationQuery(datastoreQuery);
+                Assert.NotNull(results.Metrics.PlanSummary);
+                Assert.NotNull(results.Metrics.ExecutionStats);
+                Assert.NotNull(results.ReadTime);
+                Assert.Equal(49, results["sum_age"].IntegerValue);
+                Assert.Equal(12.25, results["property_1"].DoubleValue);
+                Assert.Equal(4, results["count"].IntegerValue);
+            });
         }
 
         [Fact]
