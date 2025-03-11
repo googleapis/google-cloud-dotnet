@@ -9,7 +9,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.2.0, 4.0.0)" />
-    <PackageReference Include="Google.Protobuf" VersionOverride="[3.25.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.4.0, 4.0.0)" />
   </ItemGroup>
 </Project>

@@ -712,8 +712,7 @@
         "audit"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.2.0",
-        "Google.Protobuf": "3.25.0"
+        "Google.Cloud.Iam.V1": "3.4.0"
       },
       "generator": "proto",
       "protoPath": "google/cloud/audit"
