@@ -470,7 +470,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -486,7 +486,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Values of the "data" field in the response are cleared.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -501,7 +501,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads Secrets.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -516,7 +516,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -531,7 +531,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -546,7 +546,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -561,7 +561,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Gets an existing user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -576,7 +576,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads ConfigMaps.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -591,7 +591,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -606,7 +606,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1208,7 +1208,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1224,7 +1224,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1238,7 +1238,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1254,7 +1254,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1269,7 +1269,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Values of the "data" field in the response are cleared.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1286,7 +1286,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Values of the "data" field in the response are cleared.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1301,7 +1301,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Values of the "data" field in the response are cleared.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1318,7 +1318,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Values of the "data" field in the response are cleared.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1332,7 +1332,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads Secrets.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1348,7 +1348,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads Secrets.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1362,7 +1362,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads Secrets.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1378,7 +1378,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads Secrets.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1392,7 +1392,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1408,7 +1408,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1422,7 +1422,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1438,7 +1438,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1452,7 +1452,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1468,7 +1468,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1482,7 +1482,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1498,7 +1498,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads Secret.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1512,7 +1512,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1528,7 +1528,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1542,7 +1542,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1558,7 +1558,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Creates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1572,7 +1572,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Gets an existing user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1588,7 +1588,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Gets an existing user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1602,7 +1602,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Gets an existing user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1618,7 +1618,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Gets an existing user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1632,7 +1632,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads ConfigMaps.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1648,7 +1648,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads ConfigMaps.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1662,7 +1662,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads ConfigMaps.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1678,7 +1678,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Lists user workloads ConfigMaps.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1692,7 +1692,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1708,7 +1708,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1722,7 +1722,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1738,7 +1738,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Updates a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1752,7 +1752,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1768,7 +1768,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1782,7 +1782,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1798,7 +1798,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Deletes a user workloads ConfigMap.
       ///
       /// This method is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
