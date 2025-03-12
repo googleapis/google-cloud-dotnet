@@ -1808,7 +1808,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1820,7 +1820,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1832,7 +1832,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1844,7 +1844,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a Secret for, in the form:
@@ -1866,7 +1866,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a Secret for, in the form:
@@ -1888,7 +1888,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a Secret for, in the form:
@@ -1906,7 +1906,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a Secret for, in the form:
@@ -1928,7 +1928,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a Secret for, in the form:
@@ -1950,7 +1950,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a Secret for, in the form:
@@ -1969,7 +1969,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1982,7 +1982,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1995,7 +1995,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2008,7 +2008,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Secret to get, in the form:
@@ -2027,7 +2027,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Secret to get, in the form:
@@ -2046,7 +2046,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Secret to get, in the form:
@@ -2062,7 +2062,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Secret to get, in the form:
@@ -2081,7 +2081,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Secret to get, in the form:
@@ -2100,7 +2100,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Secret to get, in the form:
@@ -2115,7 +2115,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads Secrets.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2127,7 +2127,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads Secrets.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2139,7 +2139,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads Secrets.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. List Secrets in the given environment, in the form:
@@ -2176,7 +2176,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads Secrets.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. List Secrets in the given environment, in the form:
@@ -2213,7 +2213,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads Secrets.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. List Secrets in the given environment, in the form:
@@ -2250,7 +2250,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads Secrets.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. List Secrets in the given environment, in the form:
@@ -2287,7 +2287,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2299,7 +2299,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2311,7 +2311,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2323,7 +2323,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="userWorkloadsSecret">
         /// Optional. User workloads Secret to override.
@@ -2340,7 +2340,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="userWorkloadsSecret">
         /// Optional. User workloads Secret to override.
@@ -2357,7 +2357,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="userWorkloadsSecret">
         /// Optional. User workloads Secret to override.
@@ -2371,7 +2371,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2383,7 +2383,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2395,7 +2395,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2407,7 +2407,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The Secret to delete, in the form:
@@ -2425,7 +2425,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The Secret to delete, in the form:
@@ -2443,7 +2443,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The Secret to delete, in the form:
@@ -2458,7 +2458,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The Secret to delete, in the form:
@@ -2476,7 +2476,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The Secret to delete, in the form:
@@ -2494,7 +2494,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The Secret to delete, in the form:
@@ -2509,7 +2509,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2521,7 +2521,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2533,7 +2533,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2545,7 +2545,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a ConfigMap for, in the form:
@@ -2567,7 +2567,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a ConfigMap for, in the form:
@@ -2589,7 +2589,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a ConfigMap for, in the form:
@@ -2607,7 +2607,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a ConfigMap for, in the form:
@@ -2629,7 +2629,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a ConfigMap for, in the form:
@@ -2651,7 +2651,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. The environment name to create a ConfigMap for, in the form:
@@ -2669,7 +2669,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2681,7 +2681,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2693,7 +2693,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2705,7 +2705,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ConfigMap to get, in the form:
@@ -2723,7 +2723,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ConfigMap to get, in the form:
@@ -2741,7 +2741,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ConfigMap to get, in the form:
@@ -2756,7 +2756,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ConfigMap to get, in the form:
@@ -2774,7 +2774,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ConfigMap to get, in the form:
@@ -2792,7 +2792,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the ConfigMap to get, in the form:
@@ -2807,7 +2807,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads ConfigMaps.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2819,7 +2819,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads ConfigMaps.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2831,7 +2831,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads ConfigMaps.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. List ConfigMaps in the given environment, in the form:
@@ -2868,7 +2868,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads ConfigMaps.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. List ConfigMaps in the given environment, in the form:
@@ -2905,7 +2905,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads ConfigMaps.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. List ConfigMaps in the given environment, in the form:
@@ -2942,7 +2942,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads ConfigMaps.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="parent">
         /// Required. List ConfigMaps in the given environment, in the form:
@@ -2979,7 +2979,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2991,7 +2991,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3003,7 +3003,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3015,7 +3015,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="userWorkloadsConfigMap">
         /// Optional. User workloads ConfigMap to override.
@@ -3032,7 +3032,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="userWorkloadsConfigMap">
         /// Optional. User workloads ConfigMap to override.
@@ -3049,7 +3049,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="userWorkloadsConfigMap">
         /// Optional. User workloads ConfigMap to override.
@@ -3063,7 +3063,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3075,7 +3075,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3087,7 +3087,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3099,7 +3099,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The ConfigMap to delete, in the form:
@@ -3117,7 +3117,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The ConfigMap to delete, in the form:
@@ -3135,7 +3135,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The ConfigMap to delete, in the form:
@@ -3150,7 +3150,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The ConfigMap to delete, in the form:
@@ -3168,7 +3168,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The ConfigMap to delete, in the form:
@@ -3186,7 +3186,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="name">
         /// Required. The ConfigMap to delete, in the form:
@@ -3928,7 +3928,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3943,7 +3943,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3959,7 +3959,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3975,7 +3975,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Values of the "data" field in the response are cleared.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3990,7 +3990,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads Secrets.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4005,7 +4005,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads Secrets.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4020,7 +4020,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4035,7 +4035,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4050,7 +4050,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4065,7 +4065,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads Secret.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4080,7 +4080,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4095,7 +4095,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Creates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4110,7 +4110,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4125,7 +4125,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Gets an existing user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4140,7 +4140,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads ConfigMaps.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4155,7 +4155,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Lists user workloads ConfigMaps.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4170,7 +4170,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4185,7 +4185,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Updates a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4200,7 +4200,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4215,7 +4215,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1
         /// Deletes a user workloads ConfigMap.
         /// 
         /// This method is supported for Cloud Composer environments in versions
-        /// composer-3.*.*-airflow-*.*.* and newer.
+        /// composer-3-airflow-*.*.*-build.* and newer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

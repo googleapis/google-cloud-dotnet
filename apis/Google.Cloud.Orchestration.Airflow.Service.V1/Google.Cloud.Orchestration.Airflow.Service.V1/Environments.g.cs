@@ -13616,7 +13616,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// If unspecified, the field defaults to `PLUGINS_ENABLED`.
     ///
     /// This field is supported for Cloud Composer environments in versions
-    /// composer-3.*.*-airflow-*.*.* and newer.
+    /// composer-3-airflow-*.*.*-build.* and newer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14754,7 +14754,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// projects/{project}/regions/{region}/networkAttachments/{networkAttachment}.
     ///
     /// This field is supported for Cloud Composer environments in versions
-    /// composer-3.*.*-airflow-*.*.* and newer.
+    /// composer-3-airflow-*.*.*-build.* and newer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -14776,7 +14776,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// If not specified, the default value of '100.64.128.0/20' is used.
     ///
     /// This field is supported for Cloud Composer environments in versions
-    /// composer-3.*.*-airflow-*.*.* and newer.
+    /// composer-3-airflow-*.*.*-build.* and newer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -15775,7 +15775,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// internet.
     ///
     /// This field is supported for Cloud Composer environments in versions
-    /// composer-3.*.*-airflow-*.*.* and newer.
+    /// composer-3-airflow-*.*.*-build.* and newer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -16461,7 +16461,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Optional. Resources used by Airflow DAG processors.
     ///
     /// This field is supported for Cloud Composer environments in versions
-    /// composer-3.*.*-airflow-*.*.* and newer.
+    /// composer-3-airflow-*.*.*-build.* and newer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -17982,7 +17982,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
       /// Configuration for resources used by Airflow DAG processors.
       ///
       /// This field is supported for Cloud Composer environments in versions
-      /// composer-3.*.*-airflow-*.*.* and newer.
+      /// composer-3-airflow-*.*.*-build.* and newer.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class DagProcessorResource : pb::IMessage<DagProcessorResource>
