@@ -11,7 +11,7 @@
     <PackageReference Include="Google.Api.Gax.Testing" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.Firestore\Google.Cloud.Firestore.csproj" />
-    <PackageReference Include="Google.Cloud.Firestore.Admin.V1" VersionOverride="[3.11.0, 4.0.0)" />
+    <PackageReference Include="Google.Cloud.Firestore.Admin.V1" VersionOverride="[3.12.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core.Testing" VersionOverride="[2.46.6, 3.0.0)" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
     <PackageReference Include="NSubstitute" />

@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2025-03-12
+
+### New features
+
+- Expose query planning and statistics ([commit 986bc4a](https://github.com/googleapis/google-cloud-dotnet/commit/986bc4a62b5e1c62a8e81453683f11473c0e46a5))
+
 ## Version 3.9.0, released 2024-09-26
 
 No API surface changes; just dependency updates.
