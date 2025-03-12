@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.15.0, released 2025-03-12
+
+### New features
+
+- Introduce DatastoreQuery as a central point for query features, including query profiling ([commit e499bc9](https://github.com/googleapis/google-cloud-dotnet/commit/e499bc91992d6437186707ec161647622ecf9724))
+
 ## Version 4.14.0, released 2024-10-14
 
 ### New features
