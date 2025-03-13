@@ -891,6 +891,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class ReportHostAsFaultyInstanceRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class ResetInstanceRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)

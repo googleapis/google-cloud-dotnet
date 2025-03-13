@@ -2489,6 +2489,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ReportHostAsFaulty</summary>
+        public void ReportHostAsFaultyRequestObject()
+        {
+            // Snippet: ReportHostAsFaulty(ReportHostAsFaultyInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            ReportHostAsFaultyInstanceRequest request = new ReportHostAsFaultyInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                InstancesReportHostAsFaultyRequestResource = new InstancesReportHostAsFaultyRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.ReportHostAsFaulty(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceReportHostAsFaulty(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportHostAsFaultyAsync</summary>
+        public async Task ReportHostAsFaultyRequestObjectAsync()
+        {
+            // Snippet: ReportHostAsFaultyAsync(ReportHostAsFaultyInstanceRequest, CallSettings)
+            // Additional: ReportHostAsFaultyAsync(ReportHostAsFaultyInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportHostAsFaultyInstanceRequest request = new ReportHostAsFaultyInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                RequestId = "",
+                Project = "",
+                InstancesReportHostAsFaultyRequestResource = new InstancesReportHostAsFaultyRequest(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.ReportHostAsFaultyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceReportHostAsFaultyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportHostAsFaulty</summary>
+        public void ReportHostAsFaulty()
+        {
+            // Snippet: ReportHostAsFaulty(string, string, string, InstancesReportHostAsFaultyRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            InstancesReportHostAsFaultyRequest instancesReportHostAsFaultyRequestResource = new InstancesReportHostAsFaultyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = instancesClient.ReportHostAsFaulty(project, zone, instance, instancesReportHostAsFaultyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = instancesClient.PollOnceReportHostAsFaulty(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ReportHostAsFaultyAsync</summary>
+        public async Task ReportHostAsFaultyAsync()
+        {
+            // Snippet: ReportHostAsFaultyAsync(string, string, string, InstancesReportHostAsFaultyRequest, CallSettings)
+            // Additional: ReportHostAsFaultyAsync(string, string, string, InstancesReportHostAsFaultyRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            InstancesReportHostAsFaultyRequest instancesReportHostAsFaultyRequestResource = new InstancesReportHostAsFaultyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await instancesClient.ReportHostAsFaultyAsync(project, zone, instance, instancesReportHostAsFaultyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await instancesClient.PollOnceReportHostAsFaultyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for Reset</summary>
         public void ResetRequestObject()
         {
