@@ -27,47 +27,57 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
             "CkFnb29nbGUvc2hvcHBpbmcvbWVyY2hhbnQvZGF0YXNvdXJjZXMvdjFiZXRh",
             "L2RhdGFzb3VyY2V0eXBlcy5wcm90bxIrZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
             "YW50LmRhdGFzb3VyY2VzLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90byLFBAoYUHJpbWFyeVByb2R1Y3REYXRhU291cmNlEmYKB2No",
-            "YW5uZWwYAyABKA4yTS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuZGF0YXNv",
-            "dXJjZXMudjFiZXRhLlByaW1hcnlQcm9kdWN0RGF0YVNvdXJjZS5DaGFubmVs",
-            "QgbgQQLgQQUSHwoKZmVlZF9sYWJlbBgEIAEoCUIG4EEB4EEFSACIAQESJQoQ",
-            "Y29udGVudF9sYW5ndWFnZRgFIAEoCUIG4EEB4EEFSAGIAQESFgoJY291bnRy",
-            "aWVzGAYgAygJQgPgQQESbAoMZGVmYXVsdF9ydWxlGAcgASgLMlEuZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxYmV0YS5QcmltYXJ5",
-            "UHJvZHVjdERhdGFTb3VyY2UuRGVmYXVsdFJ1bGVCA+BBARp0CgtEZWZhdWx0",
-            "UnVsZRJlChZ0YWtlX2Zyb21fZGF0YV9zb3VyY2VzGAEgAygLMkAuZ29vZ2xl",
-            "LnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxYmV0YS5EYXRhU291",
-            "cmNlUmVmZXJlbmNlQgPgQQIiWQoHQ2hhbm5lbBIXChNDSEFOTkVMX1VOU1BF",
-            "Q0lGSUVEEAASEwoPT05MSU5FX1BST0RVQ1RTEAESEgoOTE9DQUxfUFJPRFVD",
-            "VFMQAhIMCghQUk9EVUNUUxADQg0KC19mZWVkX2xhYmVsQhMKEV9jb250ZW50",
-            "X2xhbmd1YWdlIvwBCh1TdXBwbGVtZW50YWxQcm9kdWN0RGF0YVNvdXJjZRIf",
-            "CgpmZWVkX2xhYmVsGAQgASgJQgbgQQHgQQVIAIgBARIlChBjb250ZW50X2xh",
-            "bmd1YWdlGAUgASgJQgbgQQHgQQVIAYgBARJvCiByZWZlcmVuY2luZ19wcmlt",
-            "YXJ5X2RhdGFfc291cmNlcxgHIAMoCzJALmdvb2dsZS5zaG9wcGluZy5tZXJj",
-            "aGFudC5kYXRhc291cmNlcy52MWJldGEuRGF0YVNvdXJjZVJlZmVyZW5jZUID",
-            "4EEDQg0KC19mZWVkX2xhYmVsQhMKEV9jb250ZW50X2xhbmd1YWdlIlgKGExv",
-            "Y2FsSW52ZW50b3J5RGF0YVNvdXJjZRIaCgpmZWVkX2xhYmVsGAQgASgJQgbg",
-            "QQLgQQUSIAoQY29udGVudF9sYW5ndWFnZRgFIAEoCUIG4EEC4EEFIlsKG1Jl",
-            "Z2lvbmFsSW52ZW50b3J5RGF0YVNvdXJjZRIaCgpmZWVkX2xhYmVsGAQgASgJ",
-            "QgbgQQLgQQUSIAoQY29udGVudF9sYW5ndWFnZRgFIAEoCUIG4EEC4EEFIlcK",
-            "E1Byb21vdGlvbkRhdGFTb3VyY2USHgoOdGFyZ2V0X2NvdW50cnkYASABKAlC",
-            "BuBBAuBBBRIgChBjb250ZW50X2xhbmd1YWdlGAIgASgJQgbgQQLgQQUiGQoX",
-            "UHJvZHVjdFJldmlld0RhdGFTb3VyY2UiGgoYTWVyY2hhbnRSZXZpZXdEYXRh",
-            "U291cmNlIo4BChNEYXRhU291cmNlUmVmZXJlbmNlEg4KBHNlbGYYASABKAhI",
-            "ABInChhwcmltYXJ5X2RhdGFfc291cmNlX25hbWUYAyABKAlCA+BBAUgAEiwK",
-            "HXN1cHBsZW1lbnRhbF9kYXRhX3NvdXJjZV9uYW1lGAIgASgJQgPgQQFIAEIQ",
-            "Cg5kYXRhX3NvdXJjZV9pZEKwAgovY29tLmdvb2dsZS5zaG9wcGluZy5tZXJj",
-            "aGFudC5kYXRhc291cmNlcy52MWJldGFCFERhdGFzb3VyY2V0eXBlc1Byb3Rv",
-            "UAFaV2Nsb3VkLmdvb2dsZS5jb20vZ28vc2hvcHBpbmcvbWVyY2hhbnQvZGF0",
-            "YXNvdXJjZXMvYXBpdjFiZXRhL2RhdGFzb3VyY2VzcGI7ZGF0YXNvdXJjZXNw",
-            "YqoCK0dvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5EYXRhU291cmNlcy5WMUJl",
-            "dGHKAitHb29nbGVcU2hvcHBpbmdcTWVyY2hhbnRcRGF0YVNvdXJjZXNcVjFi",
-            "ZXRh6gIvR29vZ2xlOjpTaG9wcGluZzo6TWVyY2hhbnQ6OkRhdGFTb3VyY2Vz",
-            "OjpWMWJldGFiBnByb3RvMw=="));
+            "dmlvci5wcm90bxogZ29vZ2xlL3Nob3BwaW5nL3R5cGUvdHlwZXMucHJvdG8i",
+            "rgcKGFByaW1hcnlQcm9kdWN0RGF0YVNvdXJjZRJmCgdjaGFubmVsGAMgASgO",
+            "Mk0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxYmV0",
+            "YS5QcmltYXJ5UHJvZHVjdERhdGFTb3VyY2UuQ2hhbm5lbEIG4EEB4EEFEh8K",
+            "CmZlZWRfbGFiZWwYBCABKAlCBuBBAeBBBUgAiAEBEiUKEGNvbnRlbnRfbGFu",
+            "Z3VhZ2UYBSABKAlCBuBBAeBBBUgBiAEBEhYKCWNvdW50cmllcxgGIAMoCUID",
+            "4EEBEmwKDGRlZmF1bHRfcnVsZRgHIAEoCzJRLmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5kYXRhc291cmNlcy52MWJldGEuUHJpbWFyeVByb2R1Y3REYXRh",
+            "U291cmNlLkRlZmF1bHRSdWxlQgPgQQESbAoMZGVzdGluYXRpb25zGAogAygL",
+            "MlEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxYmV0",
+            "YS5QcmltYXJ5UHJvZHVjdERhdGFTb3VyY2UuRGVzdGluYXRpb25CA+BBARp0",
+            "CgtEZWZhdWx0UnVsZRJlChZ0YWtlX2Zyb21fZGF0YV9zb3VyY2VzGAEgAygL",
+            "MkAuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxYmV0",
+            "YS5EYXRhU291cmNlUmVmZXJlbmNlQgPgQQIa+AEKC0Rlc3RpbmF0aW9uEkYK",
+            "C2Rlc3RpbmF0aW9uGAEgASgOMjEuZ29vZ2xlLnNob3BwaW5nLnR5cGUuRGVz",
+            "dGluYXRpb24uRGVzdGluYXRpb25FbnVtEmYKBXN0YXRlGAIgASgOMlcuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFzb3VyY2VzLnYxYmV0YS5Qcmlt",
+            "YXJ5UHJvZHVjdERhdGFTb3VyY2UuRGVzdGluYXRpb24uU3RhdGUiOQoFU3Rh",
+            "dGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElT",
+            "QUJMRUQQAiJZCgdDaGFubmVsEhcKE0NIQU5ORUxfVU5TUEVDSUZJRUQQABIT",
+            "Cg9PTkxJTkVfUFJPRFVDVFMQARISCg5MT0NBTF9QUk9EVUNUUxACEgwKCFBS",
+            "T0RVQ1RTEANCDQoLX2ZlZWRfbGFiZWxCEwoRX2NvbnRlbnRfbGFuZ3VhZ2Ui",
+            "/AEKHVN1cHBsZW1lbnRhbFByb2R1Y3REYXRhU291cmNlEh8KCmZlZWRfbGFi",
+            "ZWwYBCABKAlCBuBBAeBBBUgAiAEBEiUKEGNvbnRlbnRfbGFuZ3VhZ2UYBSAB",
+            "KAlCBuBBAeBBBUgBiAEBEm8KIHJlZmVyZW5jaW5nX3ByaW1hcnlfZGF0YV9z",
+            "b3VyY2VzGAcgAygLMkAuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFz",
+            "b3VyY2VzLnYxYmV0YS5EYXRhU291cmNlUmVmZXJlbmNlQgPgQQNCDQoLX2Zl",
+            "ZWRfbGFiZWxCEwoRX2NvbnRlbnRfbGFuZ3VhZ2UiWAoYTG9jYWxJbnZlbnRv",
+            "cnlEYXRhU291cmNlEhoKCmZlZWRfbGFiZWwYBCABKAlCBuBBAuBBBRIgChBj",
+            "b250ZW50X2xhbmd1YWdlGAUgASgJQgbgQQLgQQUiWwobUmVnaW9uYWxJbnZl",
+            "bnRvcnlEYXRhU291cmNlEhoKCmZlZWRfbGFiZWwYBCABKAlCBuBBAuBBBRIg",
+            "ChBjb250ZW50X2xhbmd1YWdlGAUgASgJQgbgQQLgQQUiVwoTUHJvbW90aW9u",
+            "RGF0YVNvdXJjZRIeCg50YXJnZXRfY291bnRyeRgBIAEoCUIG4EEC4EEFEiAK",
+            "EGNvbnRlbnRfbGFuZ3VhZ2UYAiABKAlCBuBBAuBBBSIZChdQcm9kdWN0UmV2",
+            "aWV3RGF0YVNvdXJjZSIaChhNZXJjaGFudFJldmlld0RhdGFTb3VyY2UijgEK",
+            "E0RhdGFTb3VyY2VSZWZlcmVuY2USDgoEc2VsZhgBIAEoCEgAEicKGHByaW1h",
+            "cnlfZGF0YV9zb3VyY2VfbmFtZRgDIAEoCUID4EEBSAASLAodc3VwcGxlbWVu",
+            "dGFsX2RhdGFfc291cmNlX25hbWUYAiABKAlCA+BBAUgAQhAKDmRhdGFfc291",
+            "cmNlX2lkQrACCi9jb20uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmRhdGFz",
+            "b3VyY2VzLnYxYmV0YUIURGF0YXNvdXJjZXR5cGVzUHJvdG9QAVpXY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9kYXRhc291cmNlcy9h",
+            "cGl2MWJldGEvZGF0YXNvdXJjZXNwYjtkYXRhc291cmNlc3BiqgIrR29vZ2xl",
+            "LlNob3BwaW5nLk1lcmNoYW50LkRhdGFTb3VyY2VzLlYxQmV0YcoCK0dvb2ds",
+            "ZVxTaG9wcGluZ1xNZXJjaGFudFxEYXRhU291cmNlc1xWMWJldGHqAi9Hb29n",
+            "bGU6OlNob3BwaW5nOjpNZXJjaGFudDo6RGF0YVNvdXJjZXM6OlYxYmV0YWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Parser, new[]{ "Channel", "FeedLabel", "ContentLanguage", "Countries", "DefaultRule" }, new[]{ "FeedLabel", "ContentLanguage" }, new[]{ typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Channel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.DefaultRule), global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.DefaultRule.Parser, new[]{ "TakeFromDataSources" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Parser, new[]{ "Channel", "FeedLabel", "ContentLanguage", "Countries", "DefaultRule", "Destinations" }, new[]{ "FeedLabel", "ContentLanguage" }, new[]{ typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Channel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.DefaultRule), global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.DefaultRule.Parser, new[]{ "TakeFromDataSources" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination), global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Parser, new[]{ "Destination_", "State" }, null, new[]{ typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.SupplementalProductDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.SupplementalProductDataSource.Parser, new[]{ "FeedLabel", "ContentLanguage", "ReferencingPrimaryDataSources" }, new[]{ "FeedLabel", "ContentLanguage" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.LocalInventoryDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.LocalInventoryDataSource.Parser, new[]{ "FeedLabel", "ContentLanguage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.DataSources.V1Beta.RegionalInventoryDataSource), global::Google.Shopping.Merchant.DataSources.V1Beta.RegionalInventoryDataSource.Parser, new[]{ "FeedLabel", "ContentLanguage" }, null, null, null, null),
@@ -124,6 +134,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
       contentLanguage_ = other.contentLanguage_;
       countries_ = other.countries_.Clone();
       defaultRule_ = other.defaultRule_ != null ? other.defaultRule_.Clone() : null;
+      destinations_ = other.destinations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -137,7 +148,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
     public const int ChannelFieldNumber = 3;
     private global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Channel channel_ = global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Channel.Unspecified;
     /// <summary>
-    /// Required. Immutable. Specifies the type of data source channel.
+    /// Optional. Immutable. Specifies the type of data source channel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -261,6 +272,36 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "destinations" field.</summary>
+    public const int DestinationsFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination> _repeated_destinations_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination> destinations_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination>();
+    /// <summary>
+    /// Optional. A list of destinations describing where products of the data
+    /// source can be shown.
+    ///
+    /// When retrieving the data source, the list contains all the destinations
+    /// that can be used for the data source, including the ones that are disabled
+    /// for the data source but enabled for the account.
+    ///
+    /// Only destinations that are enabled on the account, for example through
+    /// program participation, can be enabled on the data source.
+    ///
+    /// If unset, during creation, the destinations will be inherited based on the
+    /// account level program participation.
+    ///
+    /// If set, during creation or update, the data source will be set only for the
+    /// specified destinations.
+    ///
+    /// Updating this field requires at least one destination.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination> Destinations {
+      get { return destinations_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -281,6 +322,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
       if (ContentLanguage != other.ContentLanguage) return false;
       if(!countries_.Equals(other.countries_)) return false;
       if (!object.Equals(DefaultRule, other.DefaultRule)) return false;
+      if(!destinations_.Equals(other.destinations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -293,6 +335,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
       if (HasContentLanguage) hash ^= ContentLanguage.GetHashCode();
       hash ^= countries_.GetHashCode();
       if (defaultRule_ != null) hash ^= DefaultRule.GetHashCode();
+      hash ^= destinations_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -328,6 +371,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
         output.WriteRawTag(58);
         output.WriteMessage(DefaultRule);
       }
+      destinations_.WriteTo(output, _repeated_destinations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -355,6 +399,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
         output.WriteRawTag(58);
         output.WriteMessage(DefaultRule);
       }
+      destinations_.WriteTo(ref output, _repeated_destinations_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -378,6 +423,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
       if (defaultRule_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DefaultRule);
       }
+      size += destinations_.CalculateSize(_repeated_destinations_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -406,6 +452,7 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
         }
         DefaultRule.MergeFrom(other.DefaultRule);
       }
+      destinations_.Add(other.destinations_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -444,6 +491,10 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
             input.ReadMessage(DefaultRule);
             break;
           }
+          case 82: {
+            destinations_.AddEntriesFrom(input, _repeated_destinations_codec);
+            break;
+          }
         }
       }
     #endif
@@ -480,6 +531,10 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
               DefaultRule = new global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.DefaultRule();
             }
             input.ReadMessage(DefaultRule);
+            break;
+          }
+          case 82: {
+            destinations_.AddEntriesFrom(ref input, _repeated_destinations_codec);
             break;
           }
         }
@@ -720,6 +775,270 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// Destinations also known as [Marketing
+      /// methods](https://support.google.com/merchants/answer/15130232) selections.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Destination : pb::IMessage<Destination>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Destination> _parser = new pb::MessageParser<Destination>(() => new Destination());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Destination> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Destination() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Destination(Destination other) : this() {
+          destination_ = other.destination_;
+          state_ = other.state_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Destination Clone() {
+          return new Destination(this);
+        }
+
+        /// <summary>Field number for the "destination" field.</summary>
+        public const int Destination_FieldNumber = 1;
+        private global::Google.Shopping.Type.Destination.Types.DestinationEnum destination_ = global::Google.Shopping.Type.Destination.Types.DestinationEnum.Unspecified;
+        /// <summary>
+        /// [Marketing methods](https://support.google.com/merchants/answer/15130232)
+        /// (also known as destination) selections.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Type.Destination.Types.DestinationEnum Destination_ {
+          get { return destination_; }
+          set {
+            destination_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "state" field.</summary>
+        public const int StateFieldNumber = 2;
+        private global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State state_ = global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State.Unspecified;
+        /// <summary>
+        /// The state of the destination.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State State {
+          get { return state_; }
+          set {
+            state_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Destination);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Destination other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Destination_ != other.Destination_) return false;
+          if (State != other.State) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Destination_ != global::Google.Shopping.Type.Destination.Types.DestinationEnum.Unspecified) hash ^= Destination_.GetHashCode();
+          if (State != global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State.Unspecified) hash ^= State.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Destination_ != global::Google.Shopping.Type.Destination.Types.DestinationEnum.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Destination_);
+          }
+          if (State != global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) State);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Destination_ != global::Google.Shopping.Type.Destination.Types.DestinationEnum.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Destination_);
+          }
+          if (State != global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) State);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Destination_ != global::Google.Shopping.Type.Destination.Types.DestinationEnum.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Destination_);
+          }
+          if (State != global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Destination other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Destination_ != global::Google.Shopping.Type.Destination.Types.DestinationEnum.Unspecified) {
+            Destination_ = other.Destination_;
+          }
+          if (other.State != global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State.Unspecified) {
+            State = other.State;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Destination_ = (global::Google.Shopping.Type.Destination.Types.DestinationEnum) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                State = (global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Destination_ = (global::Google.Shopping.Type.Destination.Types.DestinationEnum) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                State = (global::Google.Shopping.Merchant.DataSources.V1Beta.PrimaryProductDataSource.Types.Destination.Types.State) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Destination message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The state of the destination.
+          /// </summary>
+          public enum State {
+            /// <summary>
+            /// Not specified.
+            /// </summary>
+            [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Indicates that the destination is enabled.
+            /// </summary>
+            [pbr::OriginalName("ENABLED")] Enabled = 1,
+            /// <summary>
+            /// Indicates that the destination is disabled.
+            /// </summary>
+            [pbr::OriginalName("DISABLED")] Disabled = 2,
+          }
+
+        }
+        #endregion
 
       }
 

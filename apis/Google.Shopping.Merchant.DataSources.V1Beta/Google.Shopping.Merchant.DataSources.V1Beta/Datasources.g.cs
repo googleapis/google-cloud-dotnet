@@ -287,9 +287,8 @@ namespace Google.Shopping.Merchant.DataSources.V1Beta {
     /// <summary>Field number for the "promotion_data_source" field.</summary>
     public const int PromotionDataSourceFieldNumber = 8;
     /// <summary>
-    /// The
-    /// [promotion](https://support.google.com/merchants/answer/2906014) data
-    /// source.
+    /// The [promotion](https://support.google.com/merchants/answer/2906014)
+    /// data source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
