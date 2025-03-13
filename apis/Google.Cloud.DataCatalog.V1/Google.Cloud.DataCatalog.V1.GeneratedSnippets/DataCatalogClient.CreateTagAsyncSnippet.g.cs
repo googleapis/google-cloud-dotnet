@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_CreateTag_async_flattened]
     using Google.Cloud.DataCatalog.V1;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task CreateTagAsync()
         {
             // Create client
@@ -38,7 +40,9 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             Tag tag = new Tag();
             // Make the request
+#pragma warning disable CS0612
             Tag response = await dataCatalogClient.CreateTagAsync(parent, tag);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_CreateTag_async_flattened]

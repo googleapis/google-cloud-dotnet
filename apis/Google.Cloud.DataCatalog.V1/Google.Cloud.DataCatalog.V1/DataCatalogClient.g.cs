@@ -35,6 +35,7 @@ using wkt = Google.Protobuf.WellKnownTypes;
 namespace Google.Cloud.DataCatalog.V1
 {
     /// <summary>Settings for <see cref="DataCatalogClient"/> instances.</summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class DataCatalogSettings : gaxgrpc::ServiceSettingsBase
     {
         /// <summary>Get a new instance of the default <see cref="DataCatalogSettings"/>.</summary>
@@ -921,6 +922,7 @@ namespace Google.Cloud.DataCatalog.V1
     /// <summary>
     /// Builder class for <see cref="DataCatalogClient"/> to provide simple configuration of credentials, endpoint etc.
     /// </summary>
+    [sys::ObsoleteAttribute]
     public sealed partial class DataCatalogClientBuilder : gaxgrpc::ClientBuilderBase<DataCatalogClient>
     {
         /// <summary>The settings to use for RPCs, or <c>null</c> for the default settings.</summary>
@@ -971,9 +973,12 @@ namespace Google.Cloud.DataCatalog.V1
 
     /// <summary>DataCatalog client wrapper, for convenient use.</summary>
     /// <remarks>
+    /// Deprecated: Please use Dataplex Catalog instead.
+    /// 
     /// Data Catalog API service allows you to discover, understand, and manage
     /// your data.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public abstract partial class DataCatalogClient
     {
         /// <summary>
@@ -1077,6 +1082,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SearchCatalogResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> SearchCatalog(SearchCatalogRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1100,6 +1106,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SearchCatalogResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<SearchCatalogResponse, SearchCatalogResult> SearchCatalogAsync(SearchCatalogRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1151,6 +1158,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SearchCatalogResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> SearchCatalog(SearchCatalogRequest.Types.Scope scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             SearchCatalogRequest request = new SearchCatalogRequest
@@ -1217,6 +1225,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SearchCatalogResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<SearchCatalogResponse, SearchCatalogResult> SearchCatalogAsync(SearchCatalogRequest.Types.Scope scope, string query, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             SearchCatalogRequest request = new SearchCatalogRequest
@@ -1267,6 +1276,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup CreateEntryGroup(CreateEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1302,6 +1312,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> CreateEntryGroupAsync(CreateEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1337,6 +1348,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> CreateEntryGroupAsync(CreateEntryGroupRequest request, st::CancellationToken cancellationToken) =>
             CreateEntryGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1388,6 +1400,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup CreateEntryGroup(string parent, string entryGroupId, EntryGroup entryGroup, gaxgrpc::CallSettings callSettings = null) =>
             CreateEntryGroup(new CreateEntryGroupRequest
             {
@@ -1444,6 +1457,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> CreateEntryGroupAsync(string parent, string entryGroupId, EntryGroup entryGroup, gaxgrpc::CallSettings callSettings = null) =>
             CreateEntryGroupAsync(new CreateEntryGroupRequest
             {
@@ -1500,6 +1514,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> CreateEntryGroupAsync(string parent, string entryGroupId, EntryGroup entryGroup, st::CancellationToken cancellationToken) =>
             CreateEntryGroupAsync(parent, entryGroupId, entryGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1551,6 +1566,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup CreateEntryGroup(gagr::LocationName parent, string entryGroupId, EntryGroup entryGroup, gaxgrpc::CallSettings callSettings = null) =>
             CreateEntryGroup(new CreateEntryGroupRequest
             {
@@ -1607,6 +1623,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> CreateEntryGroupAsync(gagr::LocationName parent, string entryGroupId, EntryGroup entryGroup, gaxgrpc::CallSettings callSettings = null) =>
             CreateEntryGroupAsync(new CreateEntryGroupRequest
             {
@@ -1663,6 +1680,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> CreateEntryGroupAsync(gagr::LocationName parent, string entryGroupId, EntryGroup entryGroup, st::CancellationToken cancellationToken) =>
             CreateEntryGroupAsync(parent, entryGroupId, entryGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1672,6 +1690,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup GetEntryGroup(GetEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1681,6 +1700,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(GetEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1690,6 +1710,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(GetEntryGroupRequest request, st::CancellationToken cancellationToken) =>
             GetEntryGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1701,6 +1722,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup GetEntryGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryGroup(new GetEntryGroupRequest
             {
@@ -1715,6 +1737,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryGroupAsync(new GetEntryGroupRequest
             {
@@ -1729,6 +1752,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(string name, st::CancellationToken cancellationToken) =>
             GetEntryGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1740,6 +1764,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup GetEntryGroup(EntryGroupName name, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryGroup(new GetEntryGroupRequest
             {
@@ -1754,6 +1779,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(EntryGroupName name, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryGroupAsync(new GetEntryGroupRequest
             {
@@ -1768,6 +1794,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(EntryGroupName name, st::CancellationToken cancellationToken) =>
             GetEntryGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1782,6 +1809,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup GetEntryGroup(string name, wkt::FieldMask readMask, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryGroup(new GetEntryGroupRequest
             {
@@ -1800,6 +1828,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(string name, wkt::FieldMask readMask, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryGroupAsync(new GetEntryGroupRequest
             {
@@ -1818,6 +1847,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(string name, wkt::FieldMask readMask, st::CancellationToken cancellationToken) =>
             GetEntryGroupAsync(name, readMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1832,6 +1862,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup GetEntryGroup(EntryGroupName name, wkt::FieldMask readMask, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryGroup(new GetEntryGroupRequest
             {
@@ -1850,6 +1881,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(EntryGroupName name, wkt::FieldMask readMask, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryGroupAsync(new GetEntryGroupRequest
             {
@@ -1868,6 +1900,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> GetEntryGroupAsync(EntryGroupName name, wkt::FieldMask readMask, st::CancellationToken cancellationToken) =>
             GetEntryGroupAsync(name, readMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1882,6 +1915,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup UpdateEntryGroup(UpdateEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1896,6 +1930,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> UpdateEntryGroupAsync(UpdateEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -1910,6 +1945,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> UpdateEntryGroupAsync(UpdateEntryGroupRequest request, st::CancellationToken cancellationToken) =>
             UpdateEntryGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1926,6 +1962,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup UpdateEntryGroup(EntryGroup entryGroup, gaxgrpc::CallSettings callSettings = null) =>
             UpdateEntryGroup(new UpdateEntryGroupRequest
             {
@@ -1945,6 +1982,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> UpdateEntryGroupAsync(EntryGroup entryGroup, gaxgrpc::CallSettings callSettings = null) =>
             UpdateEntryGroupAsync(new UpdateEntryGroupRequest
             {
@@ -1964,6 +2002,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> UpdateEntryGroupAsync(EntryGroup entryGroup, st::CancellationToken cancellationToken) =>
             UpdateEntryGroupAsync(entryGroup, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -1987,6 +2026,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryGroup UpdateEntryGroup(EntryGroup entryGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateEntryGroup(new UpdateEntryGroupRequest
             {
@@ -2014,6 +2054,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> UpdateEntryGroupAsync(EntryGroup entryGroup, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateEntryGroupAsync(new UpdateEntryGroupRequest
             {
@@ -2041,6 +2082,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryGroup> UpdateEntryGroupAsync(EntryGroup entryGroup, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateEntryGroupAsync(entryGroup, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2055,6 +2097,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteEntryGroup(DeleteEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2069,6 +2112,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryGroupAsync(DeleteEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2083,6 +2127,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryGroupAsync(DeleteEntryGroupRequest request, st::CancellationToken cancellationToken) =>
             DeleteEntryGroupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2099,6 +2144,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteEntryGroup(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteEntryGroup(new DeleteEntryGroupRequest
             {
@@ -2118,6 +2164,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryGroupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteEntryGroupAsync(new DeleteEntryGroupRequest
             {
@@ -2137,6 +2184,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryGroupAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteEntryGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2153,6 +2201,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteEntryGroup(EntryGroupName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteEntryGroup(new DeleteEntryGroupRequest
             {
@@ -2172,6 +2221,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryGroupAsync(EntryGroupName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteEntryGroupAsync(new DeleteEntryGroupRequest
             {
@@ -2191,6 +2241,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryGroupAsync(EntryGroupName name, st::CancellationToken cancellationToken) =>
             DeleteEntryGroupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2200,6 +2251,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntryGroup"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroups(ListEntryGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2209,6 +2261,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntryGroup"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroupsAsync(ListEntryGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2230,6 +2283,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntryGroup"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListEntryGroupsRequest request = new ListEntryGroupsRequest
@@ -2265,6 +2319,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntryGroup"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListEntryGroupsRequest request = new ListEntryGroupsRequest
@@ -2300,6 +2355,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntryGroup"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroups(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListEntryGroupsRequest request = new ListEntryGroupsRequest
@@ -2335,6 +2391,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntryGroup"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroupsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListEntryGroupsRequest request = new ListEntryGroupsRequest
@@ -2368,6 +2425,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry CreateEntry(CreateEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2387,6 +2445,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> CreateEntryAsync(CreateEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2406,6 +2465,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> CreateEntryAsync(CreateEntryRequest request, st::CancellationToken cancellationToken) =>
             CreateEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2440,6 +2500,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry CreateEntry(string parent, string entryId, Entry entry, gaxgrpc::CallSettings callSettings = null) =>
             CreateEntry(new CreateEntryRequest
             {
@@ -2479,6 +2540,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> CreateEntryAsync(string parent, string entryId, Entry entry, gaxgrpc::CallSettings callSettings = null) =>
             CreateEntryAsync(new CreateEntryRequest
             {
@@ -2518,6 +2580,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> CreateEntryAsync(string parent, string entryId, Entry entry, st::CancellationToken cancellationToken) =>
             CreateEntryAsync(parent, entryId, entry, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2552,6 +2615,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry CreateEntry(EntryGroupName parent, string entryId, Entry entry, gaxgrpc::CallSettings callSettings = null) =>
             CreateEntry(new CreateEntryRequest
             {
@@ -2591,6 +2655,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> CreateEntryAsync(EntryGroupName parent, string entryId, Entry entry, gaxgrpc::CallSettings callSettings = null) =>
             CreateEntryAsync(new CreateEntryRequest
             {
@@ -2630,6 +2695,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> CreateEntryAsync(EntryGroupName parent, string entryId, Entry entry, st::CancellationToken cancellationToken) =>
             CreateEntryAsync(parent, entryId, entry, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2644,6 +2710,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry UpdateEntry(UpdateEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2658,6 +2725,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> UpdateEntryAsync(UpdateEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2672,6 +2740,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> UpdateEntryAsync(UpdateEntryRequest request, st::CancellationToken cancellationToken) =>
             UpdateEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2688,6 +2757,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry UpdateEntry(Entry entry, gaxgrpc::CallSettings callSettings = null) =>
             UpdateEntry(new UpdateEntryRequest
             {
@@ -2707,6 +2777,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> UpdateEntryAsync(Entry entry, gaxgrpc::CallSettings callSettings = null) =>
             UpdateEntryAsync(new UpdateEntryRequest
             {
@@ -2726,6 +2797,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> UpdateEntryAsync(Entry entry, st::CancellationToken cancellationToken) =>
             UpdateEntryAsync(entry, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2773,6 +2845,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry UpdateEntry(Entry entry, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateEntry(new UpdateEntryRequest
             {
@@ -2824,6 +2897,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> UpdateEntryAsync(Entry entry, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateEntryAsync(new UpdateEntryRequest
             {
@@ -2875,6 +2949,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> UpdateEntryAsync(Entry entry, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateEntryAsync(entry, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2893,6 +2968,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteEntry(DeleteEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2911,6 +2987,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryAsync(DeleteEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -2929,6 +3006,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryAsync(DeleteEntryRequest request, st::CancellationToken cancellationToken) =>
             DeleteEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -2949,6 +3027,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteEntry(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteEntry(new DeleteEntryRequest
             {
@@ -2972,6 +3051,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteEntryAsync(new DeleteEntryRequest
             {
@@ -2995,6 +3075,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3015,6 +3096,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteEntry(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteEntry(new DeleteEntryRequest
             {
@@ -3038,6 +3120,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryAsync(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteEntryAsync(new DeleteEntryRequest
             {
@@ -3061,6 +3144,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteEntryAsync(EntryName name, st::CancellationToken cancellationToken) =>
             DeleteEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3070,6 +3154,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry GetEntry(GetEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3079,6 +3164,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> GetEntryAsync(GetEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3088,6 +3174,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> GetEntryAsync(GetEntryRequest request, st::CancellationToken cancellationToken) =>
             GetEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3099,6 +3186,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry GetEntry(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetEntry(new GetEntryRequest
             {
@@ -3113,6 +3201,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> GetEntryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryAsync(new GetEntryRequest
             {
@@ -3127,6 +3216,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> GetEntryAsync(string name, st::CancellationToken cancellationToken) =>
             GetEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3138,6 +3228,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry GetEntry(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             GetEntry(new GetEntryRequest
             {
@@ -3152,6 +3243,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> GetEntryAsync(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             GetEntryAsync(new GetEntryRequest
             {
@@ -3166,6 +3258,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> GetEntryAsync(EntryName name, st::CancellationToken cancellationToken) =>
             GetEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3177,6 +3270,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Entry LookupEntry(LookupEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3188,6 +3282,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> LookupEntryAsync(LookupEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3199,6 +3294,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Entry> LookupEntryAsync(LookupEntryRequest request, st::CancellationToken cancellationToken) =>
             LookupEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3212,6 +3308,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entry"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListEntriesResponse, Entry> ListEntries(ListEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3225,6 +3322,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entry"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListEntriesResponse, Entry> ListEntriesAsync(ListEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3250,6 +3348,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entry"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListEntriesResponse, Entry> ListEntries(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListEntriesRequest request = new ListEntriesRequest
@@ -3289,6 +3388,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entry"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListEntriesResponse, Entry> ListEntriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListEntriesRequest request = new ListEntriesRequest
@@ -3328,6 +3428,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entry"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListEntriesResponse, Entry> ListEntries(EntryGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListEntriesRequest request = new ListEntriesRequest
@@ -3367,6 +3468,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entry"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListEntriesResponse, Entry> ListEntriesAsync(EntryGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListEntriesRequest request = new ListEntriesRequest
@@ -3394,6 +3496,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual EntryOverview ModifyEntryOverview(ModifyEntryOverviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3407,6 +3510,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryOverview> ModifyEntryOverviewAsync(ModifyEntryOverviewRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3420,6 +3524,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<EntryOverview> ModifyEntryOverviewAsync(ModifyEntryOverviewRequest request, st::CancellationToken cancellationToken) =>
             ModifyEntryOverviewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3433,6 +3538,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Contacts ModifyEntryContacts(ModifyEntryContactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3446,6 +3552,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Contacts> ModifyEntryContactsAsync(ModifyEntryContactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3459,6 +3566,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Contacts> ModifyEntryContactsAsync(ModifyEntryContactsRequest request, st::CancellationToken cancellationToken) =>
             ModifyEntryContactsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3473,6 +3581,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate CreateTagTemplate(CreateTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3487,6 +3596,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> CreateTagTemplateAsync(CreateTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3501,6 +3611,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> CreateTagTemplateAsync(CreateTagTemplateRequest request, st::CancellationToken cancellationToken) =>
             CreateTagTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3528,6 +3639,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate CreateTagTemplate(string parent, string tagTemplateId, TagTemplate tagTemplate, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagTemplate(new CreateTagTemplateRequest
             {
@@ -3560,6 +3672,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> CreateTagTemplateAsync(string parent, string tagTemplateId, TagTemplate tagTemplate, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagTemplateAsync(new CreateTagTemplateRequest
             {
@@ -3592,6 +3705,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> CreateTagTemplateAsync(string parent, string tagTemplateId, TagTemplate tagTemplate, st::CancellationToken cancellationToken) =>
             CreateTagTemplateAsync(parent, tagTemplateId, tagTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3619,6 +3733,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate CreateTagTemplate(gagr::LocationName parent, string tagTemplateId, TagTemplate tagTemplate, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagTemplate(new CreateTagTemplateRequest
             {
@@ -3651,6 +3766,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> CreateTagTemplateAsync(gagr::LocationName parent, string tagTemplateId, TagTemplate tagTemplate, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagTemplateAsync(new CreateTagTemplateRequest
             {
@@ -3683,6 +3799,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> CreateTagTemplateAsync(gagr::LocationName parent, string tagTemplateId, TagTemplate tagTemplate, st::CancellationToken cancellationToken) =>
             CreateTagTemplateAsync(parent, tagTemplateId, tagTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3692,6 +3809,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate GetTagTemplate(GetTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3701,6 +3819,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> GetTagTemplateAsync(GetTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3710,6 +3829,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> GetTagTemplateAsync(GetTagTemplateRequest request, st::CancellationToken cancellationToken) =>
             GetTagTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3721,6 +3841,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate GetTagTemplate(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetTagTemplate(new GetTagTemplateRequest
             {
@@ -3735,6 +3856,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> GetTagTemplateAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             GetTagTemplateAsync(new GetTagTemplateRequest
             {
@@ -3749,6 +3871,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> GetTagTemplateAsync(string name, st::CancellationToken cancellationToken) =>
             GetTagTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3760,6 +3883,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate GetTagTemplate(TagTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
             GetTagTemplate(new GetTagTemplateRequest
             {
@@ -3774,6 +3898,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> GetTagTemplateAsync(TagTemplateName name, gaxgrpc::CallSettings callSettings = null) =>
             GetTagTemplateAsync(new GetTagTemplateRequest
             {
@@ -3788,6 +3913,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> GetTagTemplateAsync(TagTemplateName name, st::CancellationToken cancellationToken) =>
             GetTagTemplateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3805,6 +3931,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate UpdateTagTemplate(UpdateTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3822,6 +3949,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> UpdateTagTemplateAsync(UpdateTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -3839,6 +3967,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> UpdateTagTemplateAsync(UpdateTagTemplateRequest request, st::CancellationToken cancellationToken) =>
             UpdateTagTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3858,6 +3987,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate UpdateTagTemplate(TagTemplate tagTemplate, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplate(new UpdateTagTemplateRequest
             {
@@ -3880,6 +4010,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> UpdateTagTemplateAsync(TagTemplate tagTemplate, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateAsync(new UpdateTagTemplateRequest
             {
@@ -3902,6 +4033,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> UpdateTagTemplateAsync(TagTemplate tagTemplate, st::CancellationToken cancellationToken) =>
             UpdateTagTemplateAsync(tagTemplate, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -3932,6 +4064,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplate UpdateTagTemplate(TagTemplate tagTemplate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplate(new UpdateTagTemplateRequest
             {
@@ -3966,6 +4099,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> UpdateTagTemplateAsync(TagTemplate tagTemplate, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateAsync(new UpdateTagTemplateRequest
             {
@@ -4000,6 +4134,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplate> UpdateTagTemplateAsync(TagTemplate tagTemplate, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateTagTemplateAsync(tagTemplate, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4013,6 +4148,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTagTemplate(DeleteTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4026,6 +4162,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateAsync(DeleteTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4039,6 +4176,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateAsync(DeleteTagTemplateRequest request, st::CancellationToken cancellationToken) =>
             DeleteTagTemplateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4059,6 +4197,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTagTemplate(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagTemplate(new DeleteTagTemplateRequest
             {
@@ -4083,6 +4222,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateAsync(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagTemplateAsync(new DeleteTagTemplateRequest
             {
@@ -4107,6 +4247,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateAsync(string name, bool force, st::CancellationToken cancellationToken) =>
             DeleteTagTemplateAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4127,6 +4268,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTagTemplate(TagTemplateName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagTemplate(new DeleteTagTemplateRequest
             {
@@ -4151,6 +4293,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateAsync(TagTemplateName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagTemplateAsync(new DeleteTagTemplateRequest
             {
@@ -4175,6 +4318,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateAsync(TagTemplateName name, bool force, st::CancellationToken cancellationToken) =>
             DeleteTagTemplateAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4188,6 +4332,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField CreateTagTemplateField(CreateTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4201,6 +4346,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> CreateTagTemplateFieldAsync(CreateTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4214,6 +4360,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> CreateTagTemplateFieldAsync(CreateTagTemplateFieldRequest request, st::CancellationToken cancellationToken) =>
             CreateTagTemplateFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4243,6 +4390,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField CreateTagTemplateField(string parent, string tagTemplateFieldId, TagTemplateField tagTemplateField, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagTemplateField(new CreateTagTemplateFieldRequest
             {
@@ -4277,6 +4425,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> CreateTagTemplateFieldAsync(string parent, string tagTemplateFieldId, TagTemplateField tagTemplateField, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagTemplateFieldAsync(new CreateTagTemplateFieldRequest
             {
@@ -4311,6 +4460,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> CreateTagTemplateFieldAsync(string parent, string tagTemplateFieldId, TagTemplateField tagTemplateField, st::CancellationToken cancellationToken) =>
             CreateTagTemplateFieldAsync(parent, tagTemplateFieldId, tagTemplateField, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4340,6 +4490,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField CreateTagTemplateField(TagTemplateName parent, string tagTemplateFieldId, TagTemplateField tagTemplateField, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagTemplateField(new CreateTagTemplateFieldRequest
             {
@@ -4374,6 +4525,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> CreateTagTemplateFieldAsync(TagTemplateName parent, string tagTemplateFieldId, TagTemplateField tagTemplateField, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagTemplateFieldAsync(new CreateTagTemplateFieldRequest
             {
@@ -4408,6 +4560,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> CreateTagTemplateFieldAsync(TagTemplateName parent, string tagTemplateFieldId, TagTemplateField tagTemplateField, st::CancellationToken cancellationToken) =>
             CreateTagTemplateFieldAsync(parent, tagTemplateFieldId, tagTemplateField, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4424,6 +4577,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField UpdateTagTemplateField(UpdateTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4440,6 +4594,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(UpdateTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4456,6 +4611,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(UpdateTagTemplateFieldRequest request, st::CancellationToken cancellationToken) =>
             UpdateTagTemplateFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4477,6 +4633,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField UpdateTagTemplateField(string name, TagTemplateField tagTemplateField, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateField(new UpdateTagTemplateFieldRequest
             {
@@ -4502,6 +4659,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(string name, TagTemplateField tagTemplateField, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateFieldAsync(new UpdateTagTemplateFieldRequest
             {
@@ -4527,6 +4685,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(string name, TagTemplateField tagTemplateField, st::CancellationToken cancellationToken) =>
             UpdateTagTemplateFieldAsync(name, tagTemplateField, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4548,6 +4707,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField UpdateTagTemplateField(TagTemplateFieldName name, TagTemplateField tagTemplateField, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateField(new UpdateTagTemplateFieldRequest
             {
@@ -4573,6 +4733,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(TagTemplateFieldName name, TagTemplateField tagTemplateField, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateFieldAsync(new UpdateTagTemplateFieldRequest
             {
@@ -4598,6 +4759,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(TagTemplateFieldName name, TagTemplateField tagTemplateField, st::CancellationToken cancellationToken) =>
             UpdateTagTemplateFieldAsync(name, tagTemplateField, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4637,6 +4799,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField UpdateTagTemplateField(string name, TagTemplateField tagTemplateField, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateField(new UpdateTagTemplateFieldRequest
             {
@@ -4681,6 +4844,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(string name, TagTemplateField tagTemplateField, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateFieldAsync(new UpdateTagTemplateFieldRequest
             {
@@ -4725,6 +4889,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(string name, TagTemplateField tagTemplateField, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateTagTemplateFieldAsync(name, tagTemplateField, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4764,6 +4929,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField UpdateTagTemplateField(TagTemplateFieldName name, TagTemplateField tagTemplateField, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateField(new UpdateTagTemplateFieldRequest
             {
@@ -4808,6 +4974,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(TagTemplateFieldName name, TagTemplateField tagTemplateField, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagTemplateFieldAsync(new UpdateTagTemplateFieldRequest
             {
@@ -4852,6 +5019,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(TagTemplateFieldName name, TagTemplateField tagTemplateField, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateTagTemplateFieldAsync(name, tagTemplateField, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4865,6 +5033,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField RenameTagTemplateField(RenameTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4878,6 +5047,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldAsync(RenameTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -4891,6 +5061,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldAsync(RenameTagTemplateFieldRequest request, st::CancellationToken cancellationToken) =>
             RenameTagTemplateFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4910,6 +5081,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField RenameTagTemplateField(string name, string newTagTemplateFieldId, gaxgrpc::CallSettings callSettings = null) =>
             RenameTagTemplateField(new RenameTagTemplateFieldRequest
             {
@@ -4933,6 +5105,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldAsync(string name, string newTagTemplateFieldId, gaxgrpc::CallSettings callSettings = null) =>
             RenameTagTemplateFieldAsync(new RenameTagTemplateFieldRequest
             {
@@ -4956,6 +5129,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldAsync(string name, string newTagTemplateFieldId, st::CancellationToken cancellationToken) =>
             RenameTagTemplateFieldAsync(name, newTagTemplateFieldId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -4975,6 +5149,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField RenameTagTemplateField(TagTemplateFieldName name, string newTagTemplateFieldId, gaxgrpc::CallSettings callSettings = null) =>
             RenameTagTemplateField(new RenameTagTemplateFieldRequest
             {
@@ -4998,6 +5173,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldAsync(TagTemplateFieldName name, string newTagTemplateFieldId, gaxgrpc::CallSettings callSettings = null) =>
             RenameTagTemplateFieldAsync(new RenameTagTemplateFieldRequest
             {
@@ -5021,6 +5197,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldAsync(TagTemplateFieldName name, string newTagTemplateFieldId, st::CancellationToken cancellationToken) =>
             RenameTagTemplateFieldAsync(name, newTagTemplateFieldId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5032,6 +5209,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField RenameTagTemplateFieldEnumValue(RenameTagTemplateFieldEnumValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5043,6 +5221,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(RenameTagTemplateFieldEnumValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5054,6 +5233,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(RenameTagTemplateFieldEnumValueRequest request, st::CancellationToken cancellationToken) =>
             RenameTagTemplateFieldEnumValueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5071,6 +5251,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField RenameTagTemplateFieldEnumValue(string name, string newEnumValueDisplayName, gaxgrpc::CallSettings callSettings = null) =>
             RenameTagTemplateFieldEnumValue(new RenameTagTemplateFieldEnumValueRequest
             {
@@ -5092,6 +5273,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(string name, string newEnumValueDisplayName, gaxgrpc::CallSettings callSettings = null) =>
             RenameTagTemplateFieldEnumValueAsync(new RenameTagTemplateFieldEnumValueRequest
             {
@@ -5113,6 +5295,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(string name, string newEnumValueDisplayName, st::CancellationToken cancellationToken) =>
             RenameTagTemplateFieldEnumValueAsync(name, newEnumValueDisplayName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5130,6 +5313,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual TagTemplateField RenameTagTemplateFieldEnumValue(TagTemplateFieldEnumValueName name, string newEnumValueDisplayName, gaxgrpc::CallSettings callSettings = null) =>
             RenameTagTemplateFieldEnumValue(new RenameTagTemplateFieldEnumValueRequest
             {
@@ -5151,6 +5335,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(TagTemplateFieldEnumValueName name, string newEnumValueDisplayName, gaxgrpc::CallSettings callSettings = null) =>
             RenameTagTemplateFieldEnumValueAsync(new RenameTagTemplateFieldEnumValueRequest
             {
@@ -5172,6 +5357,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(TagTemplateFieldEnumValueName name, string newEnumValueDisplayName, st::CancellationToken cancellationToken) =>
             RenameTagTemplateFieldEnumValueAsync(name, newEnumValueDisplayName, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5186,6 +5372,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTagTemplateField(DeleteTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5200,6 +5387,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateFieldAsync(DeleteTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5214,6 +5402,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateFieldAsync(DeleteTagTemplateFieldRequest request, st::CancellationToken cancellationToken) =>
             DeleteTagTemplateFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5235,6 +5424,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTagTemplateField(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagTemplateField(new DeleteTagTemplateFieldRequest
             {
@@ -5260,6 +5450,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateFieldAsync(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagTemplateFieldAsync(new DeleteTagTemplateFieldRequest
             {
@@ -5285,6 +5476,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateFieldAsync(string name, bool force, st::CancellationToken cancellationToken) =>
             DeleteTagTemplateFieldAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5306,6 +5498,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTagTemplateField(TagTemplateFieldName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagTemplateField(new DeleteTagTemplateFieldRequest
             {
@@ -5331,6 +5524,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateFieldAsync(TagTemplateFieldName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagTemplateFieldAsync(new DeleteTagTemplateFieldRequest
             {
@@ -5356,6 +5550,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagTemplateFieldAsync(TagTemplateFieldName name, bool force, st::CancellationToken cancellationToken) =>
             DeleteTagTemplateFieldAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5376,6 +5571,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Tag CreateTag(CreateTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5396,6 +5592,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> CreateTagAsync(CreateTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5416,6 +5613,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> CreateTagAsync(CreateTagRequest request, st::CancellationToken cancellationToken) =>
             CreateTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5447,6 +5645,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Tag CreateTag(string parent, Tag tag, gaxgrpc::CallSettings callSettings = null) =>
             CreateTag(new CreateTagRequest
             {
@@ -5482,6 +5681,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> CreateTagAsync(string parent, Tag tag, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagAsync(new CreateTagRequest
             {
@@ -5517,6 +5717,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> CreateTagAsync(string parent, Tag tag, st::CancellationToken cancellationToken) =>
             CreateTagAsync(parent, tag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5548,6 +5749,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Tag CreateTag(EntryName parent, Tag tag, gaxgrpc::CallSettings callSettings = null) =>
             CreateTag(new CreateTagRequest
             {
@@ -5583,6 +5785,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> CreateTagAsync(EntryName parent, Tag tag, gaxgrpc::CallSettings callSettings = null) =>
             CreateTagAsync(new CreateTagRequest
             {
@@ -5618,6 +5821,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> CreateTagAsync(EntryName parent, Tag tag, st::CancellationToken cancellationToken) =>
             CreateTagAsync(parent, tag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5627,6 +5831,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Tag UpdateTag(UpdateTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5636,6 +5841,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> UpdateTagAsync(UpdateTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5645,6 +5851,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> UpdateTagAsync(UpdateTagRequest request, st::CancellationToken cancellationToken) =>
             UpdateTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5656,6 +5863,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Tag UpdateTag(Tag tag, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTag(new UpdateTagRequest
             {
@@ -5670,6 +5878,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> UpdateTagAsync(Tag tag, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagAsync(new UpdateTagRequest
             {
@@ -5684,6 +5893,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> UpdateTagAsync(Tag tag, st::CancellationToken cancellationToken) =>
             UpdateTagAsync(tag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5703,6 +5913,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual Tag UpdateTag(Tag tag, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTag(new UpdateTagRequest
             {
@@ -5726,6 +5937,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> UpdateTagAsync(Tag tag, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateTagAsync(new UpdateTagRequest
             {
@@ -5749,6 +5961,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<Tag> UpdateTagAsync(Tag tag, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateTagAsync(tag, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5758,6 +5971,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTag(DeleteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5767,6 +5981,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagAsync(DeleteTagRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5776,6 +5991,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagAsync(DeleteTagRequest request, st::CancellationToken cancellationToken) =>
             DeleteTagAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5787,6 +6003,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTag(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTag(new DeleteTagRequest
             {
@@ -5801,6 +6018,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagAsync(new DeleteTagRequest
             {
@@ -5815,6 +6033,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagAsync(string name, st::CancellationToken cancellationToken) =>
             DeleteTagAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5826,6 +6045,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual void DeleteTag(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTag(new DeleteTagRequest
             {
@@ -5840,6 +6060,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagAsync(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTagAsync(new DeleteTagRequest
             {
@@ -5854,6 +6075,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task DeleteTagAsync(EntryName name, st::CancellationToken cancellationToken) =>
             DeleteTagAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -5865,6 +6087,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tag"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(ListTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5876,6 +6099,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tag"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(ListTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -5901,6 +6125,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tag"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListTagsRequest request = new ListTagsRequest
@@ -5940,6 +6165,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tag"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListTagsRequest request = new ListTagsRequest
@@ -5979,6 +6205,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tag"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(EntryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListTagsRequest request = new ListTagsRequest
@@ -6018,6 +6245,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tag"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(EntryName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
         {
             ListTagsRequest request = new ListTagsRequest
@@ -6053,6 +6281,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata> ReconcileTags(ReconcileTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6074,6 +6303,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>> ReconcileTagsAsync(ReconcileTagsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6095,6 +6325,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>> ReconcileTagsAsync(ReconcileTagsRequest request, st::CancellationToken cancellationToken) =>
             ReconcileTagsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6109,6 +6340,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata> PollOnceReconcileTags(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReconcileTagsOperationsClient, callSettings);
 
@@ -6121,6 +6353,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>> PollOnceReconcileTagsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReconcileTagsOperationsClient, callSettings);
 
@@ -6131,6 +6364,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual StarEntryResponse StarEntry(StarEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6141,6 +6375,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<StarEntryResponse> StarEntryAsync(StarEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6151,6 +6386,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<StarEntryResponse> StarEntryAsync(StarEntryRequest request, st::CancellationToken cancellationToken) =>
             StarEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6163,6 +6399,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual StarEntryResponse StarEntry(string name, gaxgrpc::CallSettings callSettings = null) =>
             StarEntry(new StarEntryRequest
             {
@@ -6178,6 +6415,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<StarEntryResponse> StarEntryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             StarEntryAsync(new StarEntryRequest
             {
@@ -6193,6 +6431,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<StarEntryResponse> StarEntryAsync(string name, st::CancellationToken cancellationToken) =>
             StarEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6205,6 +6444,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual StarEntryResponse StarEntry(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             StarEntry(new StarEntryRequest
             {
@@ -6220,6 +6460,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<StarEntryResponse> StarEntryAsync(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             StarEntryAsync(new StarEntryRequest
             {
@@ -6235,6 +6476,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<StarEntryResponse> StarEntryAsync(EntryName name, st::CancellationToken cancellationToken) =>
             StarEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6245,6 +6487,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual UnstarEntryResponse UnstarEntry(UnstarEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6255,6 +6498,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(UnstarEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6265,6 +6509,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(UnstarEntryRequest request, st::CancellationToken cancellationToken) =>
             UnstarEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6277,6 +6522,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual UnstarEntryResponse UnstarEntry(string name, gaxgrpc::CallSettings callSettings = null) =>
             UnstarEntry(new UnstarEntryRequest
             {
@@ -6292,6 +6538,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
             UnstarEntryAsync(new UnstarEntryRequest
             {
@@ -6307,6 +6554,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(string name, st::CancellationToken cancellationToken) =>
             UnstarEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6319,6 +6567,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual UnstarEntryResponse UnstarEntry(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             UnstarEntry(new UnstarEntryRequest
             {
@@ -6334,6 +6583,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(EntryName name, gaxgrpc::CallSettings callSettings = null) =>
             UnstarEntryAsync(new UnstarEntryRequest
             {
@@ -6349,6 +6599,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<UnstarEntryResponse> UnstarEntryAsync(EntryName name, st::CancellationToken cancellationToken) =>
             UnstarEntryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6374,6 +6625,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6399,6 +6651,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6424,6 +6677,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
             SetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6458,6 +6712,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gciv::Policy SetIamPolicy(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
             SetIamPolicy(new gciv::SetIamPolicyRequest
             {
@@ -6496,6 +6751,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
             SetIamPolicyAsync(new gciv::SetIamPolicyRequest
             {
@@ -6534,6 +6790,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(string resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6568,6 +6825,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gciv::Policy SetIamPolicy(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
             SetIamPolicy(new gciv::SetIamPolicyRequest
             {
@@ -6606,6 +6864,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, gaxgrpc::CallSettings callSettings = null) =>
             SetIamPolicyAsync(new gciv::SetIamPolicyRequest
             {
@@ -6644,6 +6903,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> SetIamPolicyAsync(gax::IResourceName resource, gciv::Policy policy, st::CancellationToken cancellationToken) =>
             SetIamPolicyAsync(resource, policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6673,6 +6933,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6702,6 +6963,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6731,6 +6993,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, st::CancellationToken cancellationToken) =>
             GetIamPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6763,6 +7026,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gciv::Policy GetIamPolicy(string resource, gaxgrpc::CallSettings callSettings = null) =>
             GetIamPolicy(new gciv::GetIamPolicyRequest
             {
@@ -6798,6 +7062,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, gaxgrpc::CallSettings callSettings = null) =>
             GetIamPolicyAsync(new gciv::GetIamPolicyRequest
             {
@@ -6833,6 +7098,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(string resource, st::CancellationToken cancellationToken) =>
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6865,6 +7131,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gciv::Policy GetIamPolicy(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
             GetIamPolicy(new gciv::GetIamPolicyRequest
             {
@@ -6900,6 +7167,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, gaxgrpc::CallSettings callSettings = null) =>
             GetIamPolicyAsync(new gciv::GetIamPolicyRequest
             {
@@ -6935,6 +7203,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::Policy> GetIamPolicyAsync(gax::IResourceName resource, st::CancellationToken cancellationToken) =>
             GetIamPolicyAsync(resource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -6957,6 +7226,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -6979,6 +7249,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7001,6 +7272,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -7027,6 +7299,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<ImportEntriesResponse, ImportEntriesMetadata> ImportEntries(ImportEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7053,6 +7326,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>> ImportEntriesAsync(ImportEntriesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7079,6 +7353,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>> ImportEntriesAsync(ImportEntriesRequest request, st::CancellationToken cancellationToken) =>
             ImportEntriesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -7093,6 +7368,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual lro::Operation<ImportEntriesResponse, ImportEntriesMetadata> PollOnceImportEntries(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportEntriesOperationsClient, callSettings);
 
@@ -7105,6 +7381,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A task representing the result of polling the operation.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>> PollOnceImportEntriesAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportEntriesOperationsClient, callSettings);
 
@@ -7115,6 +7392,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual MigrationConfig SetConfig(SetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7125,6 +7403,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<MigrationConfig> SetConfigAsync(SetConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7135,6 +7414,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<MigrationConfig> SetConfigAsync(SetConfigRequest request, st::CancellationToken cancellationToken) =>
             SetConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -7146,6 +7426,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual OrganizationConfig RetrieveConfig(RetrieveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7157,6 +7438,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<OrganizationConfig> RetrieveConfigAsync(RetrieveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7168,6 +7450,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<OrganizationConfig> RetrieveConfigAsync(RetrieveConfigRequest request, st::CancellationToken cancellationToken) =>
             RetrieveConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
@@ -7181,6 +7464,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual MigrationConfig RetrieveEffectiveConfig(RetrieveEffectiveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7194,6 +7478,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<MigrationConfig> RetrieveEffectiveConfigAsync(RetrieveEffectiveConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
 
@@ -7207,15 +7492,19 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public virtual stt::Task<MigrationConfig> RetrieveEffectiveConfigAsync(RetrieveEffectiveConfigRequest request, st::CancellationToken cancellationToken) =>
             RetrieveEffectiveConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataCatalog client wrapper implementation, for convenient use.</summary>
     /// <remarks>
+    /// Deprecated: Please use Dataplex Catalog instead.
+    /// 
     /// Data Catalog API service allows you to discover, understand, and manage
     /// your data.
     /// </remarks>
+    [sys::ObsoleteAttribute]
     public sealed partial class DataCatalogClientImpl : DataCatalogClient
     {
         private readonly gaxgrpc::ApiCall<SearchCatalogRequest, SearchCatalogResponse> _callSearchCatalog;
@@ -7310,115 +7599,189 @@ namespace Google.Cloud.DataCatalog.V1
             ReconcileTagsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReconcileTagsOperationsSettings, logger);
             ImportEntriesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportEntriesOperationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
+#pragma warning disable CS0612
             _callSearchCatalog = clientHelper.BuildApiCall<SearchCatalogRequest, SearchCatalogResponse>("SearchCatalog", grpcClient.SearchCatalogAsync, grpcClient.SearchCatalog, effectiveSettings.SearchCatalogSettings);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callSearchCatalog);
             Modify_SearchCatalogApiCall(ref _callSearchCatalog);
+#pragma warning disable CS0612
             _callCreateEntryGroup = clientHelper.BuildApiCall<CreateEntryGroupRequest, EntryGroup>("CreateEntryGroup", grpcClient.CreateEntryGroupAsync, grpcClient.CreateEntryGroup, effectiveSettings.CreateEntryGroupSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateEntryGroup);
             Modify_CreateEntryGroupApiCall(ref _callCreateEntryGroup);
+#pragma warning disable CS0612
             _callGetEntryGroup = clientHelper.BuildApiCall<GetEntryGroupRequest, EntryGroup>("GetEntryGroup", grpcClient.GetEntryGroupAsync, grpcClient.GetEntryGroup, effectiveSettings.GetEntryGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetEntryGroup);
             Modify_GetEntryGroupApiCall(ref _callGetEntryGroup);
+#pragma warning disable CS0612
             _callUpdateEntryGroup = clientHelper.BuildApiCall<UpdateEntryGroupRequest, EntryGroup>("UpdateEntryGroup", grpcClient.UpdateEntryGroupAsync, grpcClient.UpdateEntryGroup, effectiveSettings.UpdateEntryGroupSettings).WithGoogleRequestParam("entry_group.name", request => request.EntryGroup?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateEntryGroup);
             Modify_UpdateEntryGroupApiCall(ref _callUpdateEntryGroup);
+#pragma warning disable CS0612
             _callDeleteEntryGroup = clientHelper.BuildApiCall<DeleteEntryGroupRequest, wkt::Empty>("DeleteEntryGroup", grpcClient.DeleteEntryGroupAsync, grpcClient.DeleteEntryGroup, effectiveSettings.DeleteEntryGroupSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteEntryGroup);
             Modify_DeleteEntryGroupApiCall(ref _callDeleteEntryGroup);
+#pragma warning disable CS0612
             _callListEntryGroups = clientHelper.BuildApiCall<ListEntryGroupsRequest, ListEntryGroupsResponse>("ListEntryGroups", grpcClient.ListEntryGroupsAsync, grpcClient.ListEntryGroups, effectiveSettings.ListEntryGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListEntryGroups);
             Modify_ListEntryGroupsApiCall(ref _callListEntryGroups);
+#pragma warning disable CS0612
             _callCreateEntry = clientHelper.BuildApiCall<CreateEntryRequest, Entry>("CreateEntry", grpcClient.CreateEntryAsync, grpcClient.CreateEntry, effectiveSettings.CreateEntrySettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateEntry);
             Modify_CreateEntryApiCall(ref _callCreateEntry);
+#pragma warning disable CS0612
             _callUpdateEntry = clientHelper.BuildApiCall<UpdateEntryRequest, Entry>("UpdateEntry", grpcClient.UpdateEntryAsync, grpcClient.UpdateEntry, effectiveSettings.UpdateEntrySettings).WithGoogleRequestParam("entry.name", request => request.Entry?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateEntry);
             Modify_UpdateEntryApiCall(ref _callUpdateEntry);
+#pragma warning disable CS0612
             _callDeleteEntry = clientHelper.BuildApiCall<DeleteEntryRequest, wkt::Empty>("DeleteEntry", grpcClient.DeleteEntryAsync, grpcClient.DeleteEntry, effectiveSettings.DeleteEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteEntry);
             Modify_DeleteEntryApiCall(ref _callDeleteEntry);
+#pragma warning disable CS0612
             _callGetEntry = clientHelper.BuildApiCall<GetEntryRequest, Entry>("GetEntry", grpcClient.GetEntryAsync, grpcClient.GetEntry, effectiveSettings.GetEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetEntry);
             Modify_GetEntryApiCall(ref _callGetEntry);
+#pragma warning disable CS0612
             _callLookupEntry = clientHelper.BuildApiCall<LookupEntryRequest, Entry>("LookupEntry", grpcClient.LookupEntryAsync, grpcClient.LookupEntry, effectiveSettings.LookupEntrySettings);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callLookupEntry);
             Modify_LookupEntryApiCall(ref _callLookupEntry);
+#pragma warning disable CS0612
             _callListEntries = clientHelper.BuildApiCall<ListEntriesRequest, ListEntriesResponse>("ListEntries", grpcClient.ListEntriesAsync, grpcClient.ListEntries, effectiveSettings.ListEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListEntries);
             Modify_ListEntriesApiCall(ref _callListEntries);
+#pragma warning disable CS0612
             _callModifyEntryOverview = clientHelper.BuildApiCall<ModifyEntryOverviewRequest, EntryOverview>("ModifyEntryOverview", grpcClient.ModifyEntryOverviewAsync, grpcClient.ModifyEntryOverview, effectiveSettings.ModifyEntryOverviewSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callModifyEntryOverview);
             Modify_ModifyEntryOverviewApiCall(ref _callModifyEntryOverview);
+#pragma warning disable CS0612
             _callModifyEntryContacts = clientHelper.BuildApiCall<ModifyEntryContactsRequest, Contacts>("ModifyEntryContacts", grpcClient.ModifyEntryContactsAsync, grpcClient.ModifyEntryContacts, effectiveSettings.ModifyEntryContactsSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callModifyEntryContacts);
             Modify_ModifyEntryContactsApiCall(ref _callModifyEntryContacts);
+#pragma warning disable CS0612
             _callCreateTagTemplate = clientHelper.BuildApiCall<CreateTagTemplateRequest, TagTemplate>("CreateTagTemplate", grpcClient.CreateTagTemplateAsync, grpcClient.CreateTagTemplate, effectiveSettings.CreateTagTemplateSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateTagTemplate);
             Modify_CreateTagTemplateApiCall(ref _callCreateTagTemplate);
+#pragma warning disable CS0612
             _callGetTagTemplate = clientHelper.BuildApiCall<GetTagTemplateRequest, TagTemplate>("GetTagTemplate", grpcClient.GetTagTemplateAsync, grpcClient.GetTagTemplate, effectiveSettings.GetTagTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetTagTemplate);
             Modify_GetTagTemplateApiCall(ref _callGetTagTemplate);
+#pragma warning disable CS0612
             _callUpdateTagTemplate = clientHelper.BuildApiCall<UpdateTagTemplateRequest, TagTemplate>("UpdateTagTemplate", grpcClient.UpdateTagTemplateAsync, grpcClient.UpdateTagTemplate, effectiveSettings.UpdateTagTemplateSettings).WithGoogleRequestParam("tag_template.name", request => request.TagTemplate?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateTagTemplate);
             Modify_UpdateTagTemplateApiCall(ref _callUpdateTagTemplate);
+#pragma warning disable CS0612
             _callDeleteTagTemplate = clientHelper.BuildApiCall<DeleteTagTemplateRequest, wkt::Empty>("DeleteTagTemplate", grpcClient.DeleteTagTemplateAsync, grpcClient.DeleteTagTemplate, effectiveSettings.DeleteTagTemplateSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteTagTemplate);
             Modify_DeleteTagTemplateApiCall(ref _callDeleteTagTemplate);
+#pragma warning disable CS0612
             _callCreateTagTemplateField = clientHelper.BuildApiCall<CreateTagTemplateFieldRequest, TagTemplateField>("CreateTagTemplateField", grpcClient.CreateTagTemplateFieldAsync, grpcClient.CreateTagTemplateField, effectiveSettings.CreateTagTemplateFieldSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateTagTemplateField);
             Modify_CreateTagTemplateFieldApiCall(ref _callCreateTagTemplateField);
+#pragma warning disable CS0612
             _callUpdateTagTemplateField = clientHelper.BuildApiCall<UpdateTagTemplateFieldRequest, TagTemplateField>("UpdateTagTemplateField", grpcClient.UpdateTagTemplateFieldAsync, grpcClient.UpdateTagTemplateField, effectiveSettings.UpdateTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateTagTemplateField);
             Modify_UpdateTagTemplateFieldApiCall(ref _callUpdateTagTemplateField);
+#pragma warning disable CS0612
             _callRenameTagTemplateField = clientHelper.BuildApiCall<RenameTagTemplateFieldRequest, TagTemplateField>("RenameTagTemplateField", grpcClient.RenameTagTemplateFieldAsync, grpcClient.RenameTagTemplateField, effectiveSettings.RenameTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callRenameTagTemplateField);
             Modify_RenameTagTemplateFieldApiCall(ref _callRenameTagTemplateField);
+#pragma warning disable CS0612
             _callRenameTagTemplateFieldEnumValue = clientHelper.BuildApiCall<RenameTagTemplateFieldEnumValueRequest, TagTemplateField>("RenameTagTemplateFieldEnumValue", grpcClient.RenameTagTemplateFieldEnumValueAsync, grpcClient.RenameTagTemplateFieldEnumValue, effectiveSettings.RenameTagTemplateFieldEnumValueSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callRenameTagTemplateFieldEnumValue);
             Modify_RenameTagTemplateFieldEnumValueApiCall(ref _callRenameTagTemplateFieldEnumValue);
+#pragma warning disable CS0612
             _callDeleteTagTemplateField = clientHelper.BuildApiCall<DeleteTagTemplateFieldRequest, wkt::Empty>("DeleteTagTemplateField", grpcClient.DeleteTagTemplateFieldAsync, grpcClient.DeleteTagTemplateField, effectiveSettings.DeleteTagTemplateFieldSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteTagTemplateField);
             Modify_DeleteTagTemplateFieldApiCall(ref _callDeleteTagTemplateField);
+#pragma warning disable CS0612
             _callCreateTag = clientHelper.BuildApiCall<CreateTagRequest, Tag>("CreateTag", grpcClient.CreateTagAsync, grpcClient.CreateTag, effectiveSettings.CreateTagSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callCreateTag);
             Modify_CreateTagApiCall(ref _callCreateTag);
+#pragma warning disable CS0612
             _callUpdateTag = clientHelper.BuildApiCall<UpdateTagRequest, Tag>("UpdateTag", grpcClient.UpdateTagAsync, grpcClient.UpdateTag, effectiveSettings.UpdateTagSettings).WithGoogleRequestParam("tag.name", request => request.Tag?.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUpdateTag);
             Modify_UpdateTagApiCall(ref _callUpdateTag);
+#pragma warning disable CS0612
             _callDeleteTag = clientHelper.BuildApiCall<DeleteTagRequest, wkt::Empty>("DeleteTag", grpcClient.DeleteTagAsync, grpcClient.DeleteTag, effectiveSettings.DeleteTagSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callDeleteTag);
             Modify_DeleteTagApiCall(ref _callDeleteTag);
+#pragma warning disable CS0612
             _callListTags = clientHelper.BuildApiCall<ListTagsRequest, ListTagsResponse>("ListTags", grpcClient.ListTagsAsync, grpcClient.ListTags, effectiveSettings.ListTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callListTags);
             Modify_ListTagsApiCall(ref _callListTags);
+#pragma warning disable CS0612
             _callReconcileTags = clientHelper.BuildApiCall<ReconcileTagsRequest, lro::Operation>("ReconcileTags", grpcClient.ReconcileTagsAsync, grpcClient.ReconcileTags, effectiveSettings.ReconcileTagsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callReconcileTags);
             Modify_ReconcileTagsApiCall(ref _callReconcileTags);
+#pragma warning disable CS0612
             _callStarEntry = clientHelper.BuildApiCall<StarEntryRequest, StarEntryResponse>("StarEntry", grpcClient.StarEntryAsync, grpcClient.StarEntry, effectiveSettings.StarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callStarEntry);
             Modify_StarEntryApiCall(ref _callStarEntry);
+#pragma warning disable CS0612
             _callUnstarEntry = clientHelper.BuildApiCall<UnstarEntryRequest, UnstarEntryResponse>("UnstarEntry", grpcClient.UnstarEntryAsync, grpcClient.UnstarEntry, effectiveSettings.UnstarEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callUnstarEntry);
             Modify_UnstarEntryApiCall(ref _callUnstarEntry);
+#pragma warning disable CS0612
             _callSetIamPolicy = clientHelper.BuildApiCall<gciv::SetIamPolicyRequest, gciv::Policy>("SetIamPolicy", grpcClient.SetIamPolicyAsync, grpcClient.SetIamPolicy, effectiveSettings.SetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callSetIamPolicy);
             Modify_SetIamPolicyApiCall(ref _callSetIamPolicy);
+#pragma warning disable CS0612
             _callGetIamPolicy = clientHelper.BuildApiCall<gciv::GetIamPolicyRequest, gciv::Policy>("GetIamPolicy", grpcClient.GetIamPolicyAsync, grpcClient.GetIamPolicy, effectiveSettings.GetIamPolicySettings).WithGoogleRequestParam("resource", request => request.Resource);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callGetIamPolicy);
             Modify_GetIamPolicyApiCall(ref _callGetIamPolicy);
+#pragma warning disable CS0612
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+#pragma warning disable CS0612
             _callImportEntries = clientHelper.BuildApiCall<ImportEntriesRequest, lro::Operation>("ImportEntries", grpcClient.ImportEntriesAsync, grpcClient.ImportEntries, effectiveSettings.ImportEntriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callImportEntries);
             Modify_ImportEntriesApiCall(ref _callImportEntries);
+#pragma warning disable CS0612
             _callSetConfig = clientHelper.BuildApiCall<SetConfigRequest, MigrationConfig>("SetConfig", grpcClient.SetConfigAsync, grpcClient.SetConfig, effectiveSettings.SetConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callSetConfig);
             Modify_SetConfigApiCall(ref _callSetConfig);
+#pragma warning disable CS0612
             _callRetrieveConfig = clientHelper.BuildApiCall<RetrieveConfigRequest, OrganizationConfig>("RetrieveConfig", grpcClient.RetrieveConfigAsync, grpcClient.RetrieveConfig, effectiveSettings.RetrieveConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callRetrieveConfig);
             Modify_RetrieveConfigApiCall(ref _callRetrieveConfig);
+#pragma warning disable CS0612
             _callRetrieveEffectiveConfig = clientHelper.BuildApiCall<RetrieveEffectiveConfigRequest, MigrationConfig>("RetrieveEffectiveConfig", grpcClient.RetrieveEffectiveConfigAsync, grpcClient.RetrieveEffectiveConfig, effectiveSettings.RetrieveEffectiveConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+#pragma warning restore CS0612
             Modify_ApiCall(ref _callRetrieveEffectiveConfig);
             Modify_RetrieveEffectiveConfigApiCall(ref _callRetrieveEffectiveConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
@@ -7602,6 +7965,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="SearchCatalogResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> SearchCatalog(SearchCatalogRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchCatalogRequest(ref request, ref callSettings);
@@ -7628,6 +7992,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="SearchCatalogResult"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<SearchCatalogResponse, SearchCatalogResult> SearchCatalogAsync(SearchCatalogRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SearchCatalogRequest(ref request, ref callSettings);
@@ -7666,6 +8031,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override EntryGroup CreateEntryGroup(CreateEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateEntryGroupRequest(ref request, ref callSettings);
@@ -7704,6 +8070,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<EntryGroup> CreateEntryGroupAsync(CreateEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateEntryGroupRequest(ref request, ref callSettings);
@@ -7716,6 +8083,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override EntryGroup GetEntryGroup(GetEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetEntryGroupRequest(ref request, ref callSettings);
@@ -7728,6 +8096,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<EntryGroup> GetEntryGroupAsync(GetEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetEntryGroupRequest(ref request, ref callSettings);
@@ -7745,6 +8114,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override EntryGroup UpdateEntryGroup(UpdateEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateEntryGroupRequest(ref request, ref callSettings);
@@ -7762,6 +8132,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<EntryGroup> UpdateEntryGroupAsync(UpdateEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateEntryGroupRequest(ref request, ref callSettings);
@@ -7779,6 +8150,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override void DeleteEntryGroup(DeleteEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteEntryGroupRequest(ref request, ref callSettings);
@@ -7796,6 +8168,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task DeleteEntryGroupAsync(DeleteEntryGroupRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteEntryGroupRequest(ref request, ref callSettings);
@@ -7808,6 +8181,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="EntryGroup"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroups(ListEntryGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListEntryGroupsRequest(ref request, ref callSettings);
@@ -7820,6 +8194,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="EntryGroup"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> ListEntryGroupsAsync(ListEntryGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListEntryGroupsRequest(ref request, ref callSettings);
@@ -7842,6 +8217,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override Entry CreateEntry(CreateEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateEntryRequest(ref request, ref callSettings);
@@ -7864,6 +8240,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<Entry> CreateEntryAsync(CreateEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateEntryRequest(ref request, ref callSettings);
@@ -7881,6 +8258,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override Entry UpdateEntry(UpdateEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateEntryRequest(ref request, ref callSettings);
@@ -7898,6 +8276,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<Entry> UpdateEntryAsync(UpdateEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateEntryRequest(ref request, ref callSettings);
@@ -7919,6 +8298,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override void DeleteEntry(DeleteEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteEntryRequest(ref request, ref callSettings);
@@ -7940,6 +8320,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task DeleteEntryAsync(DeleteEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteEntryRequest(ref request, ref callSettings);
@@ -7952,6 +8333,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override Entry GetEntry(GetEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetEntryRequest(ref request, ref callSettings);
@@ -7964,6 +8346,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<Entry> GetEntryAsync(GetEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetEntryRequest(ref request, ref callSettings);
@@ -7978,6 +8361,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override Entry LookupEntry(LookupEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_LookupEntryRequest(ref request, ref callSettings);
@@ -7992,6 +8376,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<Entry> LookupEntryAsync(LookupEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_LookupEntryRequest(ref request, ref callSettings);
@@ -8008,6 +8393,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Entry"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListEntriesResponse, Entry> ListEntries(ListEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListEntriesRequest(ref request, ref callSettings);
@@ -8024,6 +8410,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Entry"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListEntriesResponse, Entry> ListEntriesAsync(ListEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListEntriesRequest(ref request, ref callSettings);
@@ -8040,6 +8427,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override EntryOverview ModifyEntryOverview(ModifyEntryOverviewRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ModifyEntryOverviewRequest(ref request, ref callSettings);
@@ -8056,6 +8444,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<EntryOverview> ModifyEntryOverviewAsync(ModifyEntryOverviewRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ModifyEntryOverviewRequest(ref request, ref callSettings);
@@ -8072,6 +8461,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override Contacts ModifyEntryContacts(ModifyEntryContactsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ModifyEntryContactsRequest(ref request, ref callSettings);
@@ -8088,6 +8478,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<Contacts> ModifyEntryContactsAsync(ModifyEntryContactsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ModifyEntryContactsRequest(ref request, ref callSettings);
@@ -8105,6 +8496,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override TagTemplate CreateTagTemplate(CreateTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTagTemplateRequest(ref request, ref callSettings);
@@ -8122,6 +8514,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<TagTemplate> CreateTagTemplateAsync(CreateTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTagTemplateRequest(ref request, ref callSettings);
@@ -8134,6 +8527,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override TagTemplate GetTagTemplate(GetTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetTagTemplateRequest(ref request, ref callSettings);
@@ -8146,6 +8540,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<TagTemplate> GetTagTemplateAsync(GetTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetTagTemplateRequest(ref request, ref callSettings);
@@ -8166,6 +8561,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override TagTemplate UpdateTagTemplate(UpdateTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateTagTemplateRequest(ref request, ref callSettings);
@@ -8186,6 +8582,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<TagTemplate> UpdateTagTemplateAsync(UpdateTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateTagTemplateRequest(ref request, ref callSettings);
@@ -8202,6 +8599,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override void DeleteTagTemplate(DeleteTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTagTemplateRequest(ref request, ref callSettings);
@@ -8218,6 +8616,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task DeleteTagTemplateAsync(DeleteTagTemplateRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTagTemplateRequest(ref request, ref callSettings);
@@ -8234,6 +8633,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override TagTemplateField CreateTagTemplateField(CreateTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTagTemplateFieldRequest(ref request, ref callSettings);
@@ -8250,6 +8650,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<TagTemplateField> CreateTagTemplateFieldAsync(CreateTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTagTemplateFieldRequest(ref request, ref callSettings);
@@ -8269,6 +8670,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override TagTemplateField UpdateTagTemplateField(UpdateTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateTagTemplateFieldRequest(ref request, ref callSettings);
@@ -8288,6 +8690,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<TagTemplateField> UpdateTagTemplateFieldAsync(UpdateTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateTagTemplateFieldRequest(ref request, ref callSettings);
@@ -8304,6 +8707,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override TagTemplateField RenameTagTemplateField(RenameTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RenameTagTemplateFieldRequest(ref request, ref callSettings);
@@ -8320,6 +8724,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<TagTemplateField> RenameTagTemplateFieldAsync(RenameTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RenameTagTemplateFieldRequest(ref request, ref callSettings);
@@ -8334,6 +8739,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override TagTemplateField RenameTagTemplateFieldEnumValue(RenameTagTemplateFieldEnumValueRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RenameTagTemplateFieldEnumValueRequest(ref request, ref callSettings);
@@ -8348,6 +8754,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<TagTemplateField> RenameTagTemplateFieldEnumValueAsync(RenameTagTemplateFieldEnumValueRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RenameTagTemplateFieldEnumValueRequest(ref request, ref callSettings);
@@ -8365,6 +8772,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override void DeleteTagTemplateField(DeleteTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTagTemplateFieldRequest(ref request, ref callSettings);
@@ -8382,6 +8790,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task DeleteTagTemplateFieldAsync(DeleteTagTemplateFieldRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTagTemplateFieldRequest(ref request, ref callSettings);
@@ -8405,6 +8814,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override Tag CreateTag(CreateTagRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTagRequest(ref request, ref callSettings);
@@ -8428,6 +8838,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<Tag> CreateTagAsync(CreateTagRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_CreateTagRequest(ref request, ref callSettings);
@@ -8440,6 +8851,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override Tag UpdateTag(UpdateTagRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateTagRequest(ref request, ref callSettings);
@@ -8452,6 +8864,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<Tag> UpdateTagAsync(UpdateTagRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UpdateTagRequest(ref request, ref callSettings);
@@ -8464,6 +8877,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override void DeleteTag(DeleteTagRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTagRequest(ref request, ref callSettings);
@@ -8476,6 +8890,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task DeleteTagAsync(DeleteTagRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_DeleteTagRequest(ref request, ref callSettings);
@@ -8490,6 +8905,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable sequence of <see cref="Tag"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedEnumerable<ListTagsResponse, Tag> ListTags(ListTagsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListTagsRequest(ref request, ref callSettings);
@@ -8504,6 +8920,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A pageable asynchronous sequence of <see cref="Tag"/> resources.</returns>
+        [sys::ObsoleteAttribute]
         public override gax::PagedAsyncEnumerable<ListTagsResponse, Tag> ListTagsAsync(ListTagsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ListTagsRequest(ref request, ref callSettings);
@@ -8531,6 +8948,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata> ReconcileTags(ReconcileTagsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReconcileTagsRequest(ref request, ref callSettings);
@@ -8555,6 +8973,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<ReconcileTagsResponse, ReconcileTagsMetadata>> ReconcileTagsAsync(ReconcileTagsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ReconcileTagsRequest(ref request, ref callSettings);
@@ -8568,6 +8987,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override StarEntryResponse StarEntry(StarEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StarEntryRequest(ref request, ref callSettings);
@@ -8581,6 +9001,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<StarEntryResponse> StarEntryAsync(StarEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_StarEntryRequest(ref request, ref callSettings);
@@ -8594,6 +9015,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override UnstarEntryResponse UnstarEntry(UnstarEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UnstarEntryRequest(ref request, ref callSettings);
@@ -8607,6 +9029,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<UnstarEntryResponse> UnstarEntryAsync(UnstarEntryRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_UnstarEntryRequest(ref request, ref callSettings);
@@ -8635,6 +9058,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override gciv::Policy SetIamPolicy(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
@@ -8663,6 +9087,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<gciv::Policy> SetIamPolicyAsync(gciv::SetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetIamPolicyRequest(ref request, ref callSettings);
@@ -8695,6 +9120,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override gciv::Policy GetIamPolicy(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
@@ -8727,6 +9153,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<gciv::Policy> GetIamPolicyAsync(gciv::GetIamPolicyRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_GetIamPolicyRequest(ref request, ref callSettings);
@@ -8752,6 +9179,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override gciv::TestIamPermissionsResponse TestIamPermissions(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
@@ -8777,6 +9205,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
@@ -8809,6 +9238,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override lro::Operation<ImportEntriesResponse, ImportEntriesMetadata> ImportEntries(ImportEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ImportEntriesRequest(ref request, ref callSettings);
@@ -8838,6 +9268,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override async stt::Task<lro::Operation<ImportEntriesResponse, ImportEntriesMetadata>> ImportEntriesAsync(ImportEntriesRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_ImportEntriesRequest(ref request, ref callSettings);
@@ -8851,6 +9282,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override MigrationConfig SetConfig(SetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetConfigRequest(ref request, ref callSettings);
@@ -8864,6 +9296,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<MigrationConfig> SetConfigAsync(SetConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_SetConfigRequest(ref request, ref callSettings);
@@ -8878,6 +9311,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override OrganizationConfig RetrieveConfig(RetrieveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RetrieveConfigRequest(ref request, ref callSettings);
@@ -8892,6 +9326,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<OrganizationConfig> RetrieveConfigAsync(RetrieveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RetrieveConfigRequest(ref request, ref callSettings);
@@ -8908,6 +9343,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override MigrationConfig RetrieveEffectiveConfig(RetrieveEffectiveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RetrieveEffectiveConfigRequest(ref request, ref callSettings);
@@ -8924,6 +9360,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
+        [sys::ObsoleteAttribute]
         public override stt::Task<MigrationConfig> RetrieveEffectiveConfigAsync(RetrieveEffectiveConfigRequest request, gaxgrpc::CallSettings callSettings = null)
         {
             Modify_RetrieveEffectiveConfigRequest(ref request, ref callSettings);

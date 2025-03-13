@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_RetrieveConfig_async]
     using Google.Cloud.DataCatalog.V1;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task RetrieveConfigRequestObjectAsync()
         {
             // Create client
@@ -37,7 +39,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RetrieveConfigRequest request = new RetrieveConfigRequest { Name = "", };
             // Make the request
+#pragma warning disable CS0612
             OrganizationConfig response = await dataCatalogClient.RetrieveConfigAsync(request);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_RetrieveConfig_async]

@@ -31,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void ListEntryGroups()
         {
             // Create client
@@ -38,7 +39,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (EntryGroup item in response)

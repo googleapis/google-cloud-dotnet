@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_UnstarEntry_sync_flattened_resourceNames]
     using Google.Cloud.DataCatalog.V1;
+    using System;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void UnstarEntryResourceNames()
         {
             // Create client
@@ -36,7 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             UnstarEntryResponse response = dataCatalogClient.UnstarEntry(name);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_UnstarEntry_sync_flattened_resourceNames]

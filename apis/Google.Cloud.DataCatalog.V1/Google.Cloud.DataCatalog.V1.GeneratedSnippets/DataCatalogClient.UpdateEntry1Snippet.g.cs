@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_UpdateEntry_sync_flattened1]
     using Google.Cloud.DataCatalog.V1;
+    using System;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void UpdateEntry1()
         {
             // Create client
@@ -36,7 +38,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             Entry entry = new Entry();
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.UpdateEntry(entry);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_UpdateEntry_sync_flattened1]

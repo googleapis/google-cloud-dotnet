@@ -24,9 +24,12 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.DataCatalog.V1 {
   /// <summary>
+  /// Deprecated: Please use Dataplex Catalog instead.
+  ///
   /// Data Catalog API service allows you to discover, understand, and manage
   /// your data.
   /// </summary>
+  [global::System.ObsoleteAttribute]
   public static partial class DataCatalog
   {
     static readonly string __ServiceName = "google.cloud.datacatalog.v1.DataCatalog";
@@ -480,6 +483,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     /// <summary>Base class for server-side implementations of DataCatalog</summary>
+    [global::System.ObsoleteAttribute]
     [grpc::BindServiceMethod(typeof(DataCatalog), "BindService")]
     public abstract partial class DataCatalogBase
     {
@@ -503,6 +507,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse> SearchCatalog(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest request, grpc::ServerCallContext context)
       {
@@ -541,6 +546,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.EntryGroup> CreateEntryGroup(global::Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest request, grpc::ServerCallContext context)
       {
@@ -553,6 +559,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.EntryGroup> GetEntryGroup(global::Google.Cloud.DataCatalog.V1.GetEntryGroupRequest request, grpc::ServerCallContext context)
       {
@@ -570,6 +577,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.EntryGroup> UpdateEntryGroup(global::Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest request, grpc::ServerCallContext context)
       {
@@ -587,6 +595,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntryGroup(global::Google.Cloud.DataCatalog.V1.DeleteEntryGroupRequest request, grpc::ServerCallContext context)
       {
@@ -599,6 +608,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse> ListEntryGroups(global::Google.Cloud.DataCatalog.V1.ListEntryGroupsRequest request, grpc::ServerCallContext context)
       {
@@ -621,6 +631,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Entry> CreateEntry(global::Google.Cloud.DataCatalog.V1.CreateEntryRequest request, grpc::ServerCallContext context)
       {
@@ -638,6 +649,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Entry> UpdateEntry(global::Google.Cloud.DataCatalog.V1.UpdateEntryRequest request, grpc::ServerCallContext context)
       {
@@ -659,6 +671,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntry(global::Google.Cloud.DataCatalog.V1.DeleteEntryRequest request, grpc::ServerCallContext context)
       {
@@ -671,6 +684,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Entry> GetEntry(global::Google.Cloud.DataCatalog.V1.GetEntryRequest request, grpc::ServerCallContext context)
       {
@@ -685,6 +699,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Entry> LookupEntry(global::Google.Cloud.DataCatalog.V1.LookupEntryRequest request, grpc::ServerCallContext context)
       {
@@ -701,6 +716,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.ListEntriesResponse> ListEntries(global::Google.Cloud.DataCatalog.V1.ListEntriesRequest request, grpc::ServerCallContext context)
       {
@@ -717,6 +733,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.EntryOverview> ModifyEntryOverview(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::ServerCallContext context)
       {
@@ -733,6 +750,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Contacts> ModifyEntryContacts(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::ServerCallContext context)
       {
@@ -750,6 +768,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.TagTemplate> CreateTagTemplate(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest request, grpc::ServerCallContext context)
       {
@@ -762,6 +781,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.TagTemplate> GetTagTemplate(global::Google.Cloud.DataCatalog.V1.GetTagTemplateRequest request, grpc::ServerCallContext context)
       {
@@ -782,6 +802,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.TagTemplate> UpdateTagTemplate(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateRequest request, grpc::ServerCallContext context)
       {
@@ -798,6 +819,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagTemplate(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateRequest request, grpc::ServerCallContext context)
       {
@@ -814,6 +836,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.TagTemplateField> CreateTagTemplateField(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateFieldRequest request, grpc::ServerCallContext context)
       {
@@ -833,6 +856,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.TagTemplateField> UpdateTagTemplateField(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest request, grpc::ServerCallContext context)
       {
@@ -849,6 +873,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateField(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest request, grpc::ServerCallContext context)
       {
@@ -863,6 +888,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateFieldEnumValue(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::ServerCallContext context)
       {
@@ -880,6 +906,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagTemplateField(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest request, grpc::ServerCallContext context)
       {
@@ -903,6 +930,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Tag> CreateTag(global::Google.Cloud.DataCatalog.V1.CreateTagRequest request, grpc::ServerCallContext context)
       {
@@ -915,6 +943,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Tag> UpdateTag(global::Google.Cloud.DataCatalog.V1.UpdateTagRequest request, grpc::ServerCallContext context)
       {
@@ -927,6 +956,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTag(global::Google.Cloud.DataCatalog.V1.DeleteTagRequest request, grpc::ServerCallContext context)
       {
@@ -941,6 +971,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.ListTagsResponse> ListTags(global::Google.Cloud.DataCatalog.V1.ListTagsRequest request, grpc::ServerCallContext context)
       {
@@ -965,6 +996,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReconcileTags(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::ServerCallContext context)
       {
@@ -978,6 +1010,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.StarEntryResponse> StarEntry(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::ServerCallContext context)
       {
@@ -991,6 +1024,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse> UnstarEntry(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::ServerCallContext context)
       {
@@ -1019,6 +1053,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
@@ -1051,6 +1086,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
       {
@@ -1076,6 +1112,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
       {
@@ -1105,6 +1142,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportEntries(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::ServerCallContext context)
       {
@@ -1118,6 +1156,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.MigrationConfig> SetConfig(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::ServerCallContext context)
       {
@@ -1132,6 +1171,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.OrganizationConfig> RetrieveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::ServerCallContext context)
       {
@@ -1148,6 +1188,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.MigrationConfig> RetrieveEffectiveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::ServerCallContext context)
       {
@@ -1157,6 +1198,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     /// <summary>Client for DataCatalog</summary>
+    [global::System.ObsoleteAttribute]
     public partial class DataCatalogClient : grpc::ClientBase<DataCatalogClient>
     {
       /// <summary>Creates a new client for DataCatalog</summary>
@@ -1205,6 +1247,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse SearchCatalog(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1230,6 +1273,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse SearchCatalog(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest request, grpc::CallOptions options)
       {
@@ -1257,6 +1301,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse> SearchCatalogAsync(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1282,6 +1327,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.SearchCatalogResponse> SearchCatalogAsync(global::Google.Cloud.DataCatalog.V1.SearchCatalogRequest request, grpc::CallOptions options)
       {
@@ -1321,6 +1367,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.EntryGroup CreateEntryGroup(global::Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1358,6 +1405,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.EntryGroup CreateEntryGroup(global::Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest request, grpc::CallOptions options)
       {
@@ -1397,6 +1445,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryGroup> CreateEntryGroupAsync(global::Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1434,6 +1483,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryGroup> CreateEntryGroupAsync(global::Google.Cloud.DataCatalog.V1.CreateEntryGroupRequest request, grpc::CallOptions options)
       {
@@ -1447,6 +1497,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.EntryGroup GetEntryGroup(global::Google.Cloud.DataCatalog.V1.GetEntryGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1458,6 +1509,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.EntryGroup GetEntryGroup(global::Google.Cloud.DataCatalog.V1.GetEntryGroupRequest request, grpc::CallOptions options)
       {
@@ -1471,6 +1523,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryGroup> GetEntryGroupAsync(global::Google.Cloud.DataCatalog.V1.GetEntryGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1482,6 +1535,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryGroup> GetEntryGroupAsync(global::Google.Cloud.DataCatalog.V1.GetEntryGroupRequest request, grpc::CallOptions options)
       {
@@ -1500,6 +1554,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.EntryGroup UpdateEntryGroup(global::Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1516,6 +1571,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.EntryGroup UpdateEntryGroup(global::Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest request, grpc::CallOptions options)
       {
@@ -1534,6 +1590,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryGroup> UpdateEntryGroupAsync(global::Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1550,6 +1607,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryGroup> UpdateEntryGroupAsync(global::Google.Cloud.DataCatalog.V1.UpdateEntryGroupRequest request, grpc::CallOptions options)
       {
@@ -1568,6 +1626,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEntryGroup(global::Google.Cloud.DataCatalog.V1.DeleteEntryGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1584,6 +1643,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEntryGroup(global::Google.Cloud.DataCatalog.V1.DeleteEntryGroupRequest request, grpc::CallOptions options)
       {
@@ -1602,6 +1662,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntryGroupAsync(global::Google.Cloud.DataCatalog.V1.DeleteEntryGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1618,6 +1679,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntryGroupAsync(global::Google.Cloud.DataCatalog.V1.DeleteEntryGroupRequest request, grpc::CallOptions options)
       {
@@ -1631,6 +1693,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse ListEntryGroups(global::Google.Cloud.DataCatalog.V1.ListEntryGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1642,6 +1705,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse ListEntryGroups(global::Google.Cloud.DataCatalog.V1.ListEntryGroupsRequest request, grpc::CallOptions options)
       {
@@ -1655,6 +1719,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse> ListEntryGroupsAsync(global::Google.Cloud.DataCatalog.V1.ListEntryGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1666,6 +1731,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.ListEntryGroupsResponse> ListEntryGroupsAsync(global::Google.Cloud.DataCatalog.V1.ListEntryGroupsRequest request, grpc::CallOptions options)
       {
@@ -1689,6 +1755,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Entry CreateEntry(global::Google.Cloud.DataCatalog.V1.CreateEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1710,6 +1777,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Entry CreateEntry(global::Google.Cloud.DataCatalog.V1.CreateEntryRequest request, grpc::CallOptions options)
       {
@@ -1733,6 +1801,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Entry> CreateEntryAsync(global::Google.Cloud.DataCatalog.V1.CreateEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1754,6 +1823,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Entry> CreateEntryAsync(global::Google.Cloud.DataCatalog.V1.CreateEntryRequest request, grpc::CallOptions options)
       {
@@ -1772,6 +1842,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Entry UpdateEntry(global::Google.Cloud.DataCatalog.V1.UpdateEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1788,6 +1859,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Entry UpdateEntry(global::Google.Cloud.DataCatalog.V1.UpdateEntryRequest request, grpc::CallOptions options)
       {
@@ -1806,6 +1878,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Entry> UpdateEntryAsync(global::Google.Cloud.DataCatalog.V1.UpdateEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1822,6 +1895,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Entry> UpdateEntryAsync(global::Google.Cloud.DataCatalog.V1.UpdateEntryRequest request, grpc::CallOptions options)
       {
@@ -1844,6 +1918,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEntry(global::Google.Cloud.DataCatalog.V1.DeleteEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1864,6 +1939,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteEntry(global::Google.Cloud.DataCatalog.V1.DeleteEntryRequest request, grpc::CallOptions options)
       {
@@ -1886,6 +1962,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntryAsync(global::Google.Cloud.DataCatalog.V1.DeleteEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1906,6 +1983,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteEntryAsync(global::Google.Cloud.DataCatalog.V1.DeleteEntryRequest request, grpc::CallOptions options)
       {
@@ -1919,6 +1997,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Entry GetEntry(global::Google.Cloud.DataCatalog.V1.GetEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1930,6 +2009,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Entry GetEntry(global::Google.Cloud.DataCatalog.V1.GetEntryRequest request, grpc::CallOptions options)
       {
@@ -1943,6 +2023,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Entry> GetEntryAsync(global::Google.Cloud.DataCatalog.V1.GetEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1954,6 +2035,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Entry> GetEntryAsync(global::Google.Cloud.DataCatalog.V1.GetEntryRequest request, grpc::CallOptions options)
       {
@@ -1969,6 +2051,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Entry LookupEntry(global::Google.Cloud.DataCatalog.V1.LookupEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -1982,6 +2065,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Entry LookupEntry(global::Google.Cloud.DataCatalog.V1.LookupEntryRequest request, grpc::CallOptions options)
       {
@@ -1997,6 +2081,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Entry> LookupEntryAsync(global::Google.Cloud.DataCatalog.V1.LookupEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2010,6 +2095,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Entry> LookupEntryAsync(global::Google.Cloud.DataCatalog.V1.LookupEntryRequest request, grpc::CallOptions options)
       {
@@ -2027,6 +2113,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.ListEntriesResponse ListEntries(global::Google.Cloud.DataCatalog.V1.ListEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2042,6 +2129,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.ListEntriesResponse ListEntries(global::Google.Cloud.DataCatalog.V1.ListEntriesRequest request, grpc::CallOptions options)
       {
@@ -2059,6 +2147,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.ListEntriesResponse> ListEntriesAsync(global::Google.Cloud.DataCatalog.V1.ListEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2074,6 +2163,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.ListEntriesResponse> ListEntriesAsync(global::Google.Cloud.DataCatalog.V1.ListEntriesRequest request, grpc::CallOptions options)
       {
@@ -2091,6 +2181,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.EntryOverview ModifyEntryOverview(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2106,6 +2197,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.EntryOverview ModifyEntryOverview(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::CallOptions options)
       {
@@ -2123,6 +2215,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryOverview> ModifyEntryOverviewAsync(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2138,6 +2231,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryOverview> ModifyEntryOverviewAsync(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::CallOptions options)
       {
@@ -2155,6 +2249,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Contacts ModifyEntryContacts(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2170,6 +2265,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Contacts ModifyEntryContacts(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::CallOptions options)
       {
@@ -2187,6 +2283,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Contacts> ModifyEntryContactsAsync(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2202,6 +2299,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Contacts> ModifyEntryContactsAsync(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::CallOptions options)
       {
@@ -2220,6 +2318,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplate CreateTagTemplate(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2236,6 +2335,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplate CreateTagTemplate(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest request, grpc::CallOptions options)
       {
@@ -2254,6 +2354,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplate> CreateTagTemplateAsync(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2270,6 +2371,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplate> CreateTagTemplateAsync(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest request, grpc::CallOptions options)
       {
@@ -2283,6 +2385,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplate GetTagTemplate(global::Google.Cloud.DataCatalog.V1.GetTagTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2294,6 +2397,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplate GetTagTemplate(global::Google.Cloud.DataCatalog.V1.GetTagTemplateRequest request, grpc::CallOptions options)
       {
@@ -2307,6 +2411,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplate> GetTagTemplateAsync(global::Google.Cloud.DataCatalog.V1.GetTagTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2318,6 +2423,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplate> GetTagTemplateAsync(global::Google.Cloud.DataCatalog.V1.GetTagTemplateRequest request, grpc::CallOptions options)
       {
@@ -2339,6 +2445,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplate UpdateTagTemplate(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2358,6 +2465,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplate UpdateTagTemplate(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateRequest request, grpc::CallOptions options)
       {
@@ -2379,6 +2487,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplate> UpdateTagTemplateAsync(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2398,6 +2507,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplate> UpdateTagTemplateAsync(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateRequest request, grpc::CallOptions options)
       {
@@ -2415,6 +2525,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTagTemplate(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2430,6 +2541,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTagTemplate(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateRequest request, grpc::CallOptions options)
       {
@@ -2447,6 +2559,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagTemplateAsync(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2462,6 +2575,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagTemplateAsync(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateRequest request, grpc::CallOptions options)
       {
@@ -2479,6 +2593,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField CreateTagTemplateField(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2494,6 +2609,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField CreateTagTemplateField(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateFieldRequest request, grpc::CallOptions options)
       {
@@ -2511,6 +2627,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> CreateTagTemplateFieldAsync(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2526,6 +2643,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> CreateTagTemplateFieldAsync(global::Google.Cloud.DataCatalog.V1.CreateTagTemplateFieldRequest request, grpc::CallOptions options)
       {
@@ -2546,6 +2664,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField UpdateTagTemplateField(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2564,6 +2683,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField UpdateTagTemplateField(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest request, grpc::CallOptions options)
       {
@@ -2584,6 +2704,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> UpdateTagTemplateFieldAsync(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2602,6 +2723,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> UpdateTagTemplateFieldAsync(global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateFieldRequest request, grpc::CallOptions options)
       {
@@ -2619,6 +2741,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField RenameTagTemplateField(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2634,6 +2757,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField RenameTagTemplateField(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest request, grpc::CallOptions options)
       {
@@ -2651,6 +2775,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateFieldAsync(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2666,6 +2791,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateFieldAsync(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldRequest request, grpc::CallOptions options)
       {
@@ -2681,6 +2807,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField RenameTagTemplateFieldEnumValue(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2694,6 +2821,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.TagTemplateField RenameTagTemplateFieldEnumValue(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::CallOptions options)
       {
@@ -2709,6 +2837,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateFieldEnumValueAsync(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2722,6 +2851,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.TagTemplateField> RenameTagTemplateFieldEnumValueAsync(global::Google.Cloud.DataCatalog.V1.RenameTagTemplateFieldEnumValueRequest request, grpc::CallOptions options)
       {
@@ -2740,6 +2870,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTagTemplateField(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2756,6 +2887,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTagTemplateField(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest request, grpc::CallOptions options)
       {
@@ -2774,6 +2906,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagTemplateFieldAsync(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2790,6 +2923,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagTemplateFieldAsync(global::Google.Cloud.DataCatalog.V1.DeleteTagTemplateFieldRequest request, grpc::CallOptions options)
       {
@@ -2814,6 +2948,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Tag CreateTag(global::Google.Cloud.DataCatalog.V1.CreateTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2836,6 +2971,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Tag CreateTag(global::Google.Cloud.DataCatalog.V1.CreateTagRequest request, grpc::CallOptions options)
       {
@@ -2860,6 +2996,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Tag> CreateTagAsync(global::Google.Cloud.DataCatalog.V1.CreateTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2882,6 +3019,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Tag> CreateTagAsync(global::Google.Cloud.DataCatalog.V1.CreateTagRequest request, grpc::CallOptions options)
       {
@@ -2895,6 +3033,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Tag UpdateTag(global::Google.Cloud.DataCatalog.V1.UpdateTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2906,6 +3045,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.Tag UpdateTag(global::Google.Cloud.DataCatalog.V1.UpdateTagRequest request, grpc::CallOptions options)
       {
@@ -2919,6 +3059,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Tag> UpdateTagAsync(global::Google.Cloud.DataCatalog.V1.UpdateTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2930,6 +3071,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Tag> UpdateTagAsync(global::Google.Cloud.DataCatalog.V1.UpdateTagRequest request, grpc::CallOptions options)
       {
@@ -2943,6 +3085,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTag(global::Google.Cloud.DataCatalog.V1.DeleteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2954,6 +3097,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTag(global::Google.Cloud.DataCatalog.V1.DeleteTagRequest request, grpc::CallOptions options)
       {
@@ -2967,6 +3111,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagAsync(global::Google.Cloud.DataCatalog.V1.DeleteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -2978,6 +3123,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagAsync(global::Google.Cloud.DataCatalog.V1.DeleteTagRequest request, grpc::CallOptions options)
       {
@@ -2993,6 +3139,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.ListTagsResponse ListTags(global::Google.Cloud.DataCatalog.V1.ListTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3006,6 +3153,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.ListTagsResponse ListTags(global::Google.Cloud.DataCatalog.V1.ListTagsRequest request, grpc::CallOptions options)
       {
@@ -3021,6 +3169,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.ListTagsResponse> ListTagsAsync(global::Google.Cloud.DataCatalog.V1.ListTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3034,6 +3183,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.ListTagsResponse> ListTagsAsync(global::Google.Cloud.DataCatalog.V1.ListTagsRequest request, grpc::CallOptions options)
       {
@@ -3059,6 +3209,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReconcileTags(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3082,6 +3233,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ReconcileTags(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::CallOptions options)
       {
@@ -3107,6 +3259,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReconcileTagsAsync(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3130,6 +3283,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ReconcileTagsAsync(global::Google.Cloud.DataCatalog.V1.ReconcileTagsRequest request, grpc::CallOptions options)
       {
@@ -3144,6 +3298,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.StarEntryResponse StarEntry(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3156,6 +3311,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.StarEntryResponse StarEntry(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::CallOptions options)
       {
@@ -3170,6 +3326,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.StarEntryResponse> StarEntryAsync(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3182,6 +3339,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.StarEntryResponse> StarEntryAsync(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::CallOptions options)
       {
@@ -3196,6 +3354,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse UnstarEntry(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3208,6 +3367,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse UnstarEntry(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::CallOptions options)
       {
@@ -3222,6 +3382,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse> UnstarEntryAsync(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3234,6 +3395,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse> UnstarEntryAsync(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::CallOptions options)
       {
@@ -3263,6 +3425,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3290,6 +3453,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
@@ -3319,6 +3483,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3346,6 +3511,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
       {
@@ -3379,6 +3545,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3410,6 +3577,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
@@ -3443,6 +3611,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3474,6 +3643,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
@@ -3500,6 +3670,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3524,6 +3695,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.Iam.V1.TestIamPermissionsResponse TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
@@ -3550,6 +3722,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3574,6 +3747,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissionsAsync(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::CallOptions options)
       {
@@ -3604,6 +3778,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportEntries(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3632,6 +3807,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.LongRunning.Operation ImportEntries(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::CallOptions options)
       {
@@ -3662,6 +3838,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportEntriesAsync(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3690,6 +3867,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportEntriesAsync(global::Google.Cloud.DataCatalog.V1.ImportEntriesRequest request, grpc::CallOptions options)
       {
@@ -3704,6 +3882,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.MigrationConfig SetConfig(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3716,6 +3895,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.MigrationConfig SetConfig(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::CallOptions options)
       {
@@ -3730,6 +3910,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.MigrationConfig> SetConfigAsync(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3742,6 +3923,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.MigrationConfig> SetConfigAsync(global::Google.Cloud.DataCatalog.V1.SetConfigRequest request, grpc::CallOptions options)
       {
@@ -3757,6 +3939,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.OrganizationConfig RetrieveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3770,6 +3953,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.OrganizationConfig RetrieveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::CallOptions options)
       {
@@ -3785,6 +3969,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.OrganizationConfig> RetrieveConfigAsync(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3798,6 +3983,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.OrganizationConfig> RetrieveConfigAsync(global::Google.Cloud.DataCatalog.V1.RetrieveConfigRequest request, grpc::CallOptions options)
       {
@@ -3815,6 +4001,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.MigrationConfig RetrieveEffectiveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3830,6 +4017,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Google.Cloud.DataCatalog.V1.MigrationConfig RetrieveEffectiveConfig(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::CallOptions options)
       {
@@ -3847,6 +4035,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.MigrationConfig> RetrieveEffectiveConfigAsync(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
@@ -3862,6 +4051,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
+      [global::System.ObsoleteAttribute]
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.MigrationConfig> RetrieveEffectiveConfigAsync(global::Google.Cloud.DataCatalog.V1.RetrieveEffectiveConfigRequest request, grpc::CallOptions options)
       {

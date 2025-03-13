@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START datacatalog_v1_generated_DataCatalog_UpdateEntryGroup_async]
     using Google.Cloud.DataCatalog.V1;
     using Google.Protobuf.WellKnownTypes;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
@@ -31,6 +32,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task UpdateEntryGroupRequestObjectAsync()
         {
             // Create client
@@ -42,7 +44,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.UpdateEntryGroupAsync(request);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_UpdateEntryGroup_async]
