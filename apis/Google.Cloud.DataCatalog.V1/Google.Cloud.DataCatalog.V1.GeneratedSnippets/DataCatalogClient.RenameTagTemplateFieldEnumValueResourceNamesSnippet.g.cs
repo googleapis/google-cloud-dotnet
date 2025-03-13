@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_RenameTagTemplateFieldEnumValue_sync_flattened_resourceNames]
     using Google.Cloud.DataCatalog.V1;
+    using System;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void RenameTagTemplateFieldEnumValueResourceNames()
         {
             // Create client
@@ -37,7 +39,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldEnumValueName name = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]");
             string newEnumValueDisplayName = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.RenameTagTemplateFieldEnumValue(name, newEnumValueDisplayName);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_RenameTagTemplateFieldEnumValue_sync_flattened_resourceNames]

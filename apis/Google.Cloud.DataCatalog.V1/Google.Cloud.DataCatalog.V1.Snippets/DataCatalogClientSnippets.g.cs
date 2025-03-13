@@ -27,6 +27,7 @@ namespace GoogleCSharpSnippets
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
+    [ObsoleteAttribute]
     public sealed class AllGeneratedDataCatalogClientSnippets
     {
         /// <summary>Snippet for SearchCatalog</summary>
@@ -44,7 +45,9 @@ namespace GoogleCSharpSnippets
                 AdminSearch = false,
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalog(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (SearchCatalogResult item in response)
@@ -95,7 +98,9 @@ namespace GoogleCSharpSnippets
                 AdminSearch = false,
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalogAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((SearchCatalogResult item) =>
@@ -141,7 +146,9 @@ namespace GoogleCSharpSnippets
             SearchCatalogRequest.Types.Scope scope = new SearchCatalogRequest.Types.Scope();
             string query = "";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalog(scope, query);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (SearchCatalogResult item in response)
@@ -187,7 +194,9 @@ namespace GoogleCSharpSnippets
             SearchCatalogRequest.Types.Scope scope = new SearchCatalogRequest.Types.Scope();
             string query = "";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalogAsync(scope, query);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((SearchCatalogResult item) =>
@@ -237,7 +246,9 @@ namespace GoogleCSharpSnippets
                 EntryGroupId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.CreateEntryGroup(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -256,7 +267,9 @@ namespace GoogleCSharpSnippets
                 EntryGroupId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.CreateEntryGroupAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -271,7 +284,9 @@ namespace GoogleCSharpSnippets
             string entryGroupId = "";
             EntryGroup entryGroup = new EntryGroup();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.CreateEntryGroup(parent, entryGroupId, entryGroup);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -287,7 +302,9 @@ namespace GoogleCSharpSnippets
             string entryGroupId = "";
             EntryGroup entryGroup = new EntryGroup();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.CreateEntryGroupAsync(parent, entryGroupId, entryGroup);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -302,7 +319,9 @@ namespace GoogleCSharpSnippets
             string entryGroupId = "";
             EntryGroup entryGroup = new EntryGroup();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.CreateEntryGroup(parent, entryGroupId, entryGroup);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -318,7 +337,9 @@ namespace GoogleCSharpSnippets
             string entryGroupId = "";
             EntryGroup entryGroup = new EntryGroup();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.CreateEntryGroupAsync(parent, entryGroupId, entryGroup);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -335,7 +356,9 @@ namespace GoogleCSharpSnippets
                 ReadMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.GetEntryGroup(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -353,7 +376,9 @@ namespace GoogleCSharpSnippets
                 ReadMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.GetEntryGroupAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -366,7 +391,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.GetEntryGroup(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -380,7 +407,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.GetEntryGroupAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -393,7 +422,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryGroupName name = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.GetEntryGroup(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -407,7 +438,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryGroupName name = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.GetEntryGroupAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -421,7 +454,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             FieldMask readMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.GetEntryGroup(name, readMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -436,7 +471,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             FieldMask readMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.GetEntryGroupAsync(name, readMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -450,7 +487,9 @@ namespace GoogleCSharpSnippets
             EntryGroupName name = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
             FieldMask readMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.GetEntryGroup(name, readMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -465,7 +504,9 @@ namespace GoogleCSharpSnippets
             EntryGroupName name = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
             FieldMask readMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.GetEntryGroupAsync(name, readMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -482,7 +523,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.UpdateEntryGroup(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -500,7 +543,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.UpdateEntryGroupAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -513,7 +558,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryGroup entryGroup = new EntryGroup();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.UpdateEntryGroup(entryGroup);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -527,7 +574,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryGroup entryGroup = new EntryGroup();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.UpdateEntryGroupAsync(entryGroup);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -541,7 +590,9 @@ namespace GoogleCSharpSnippets
             EntryGroup entryGroup = new EntryGroup();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.UpdateEntryGroup(entryGroup, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -556,7 +607,9 @@ namespace GoogleCSharpSnippets
             EntryGroup entryGroup = new EntryGroup();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = await dataCatalogClient.UpdateEntryGroupAsync(entryGroup, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -573,7 +626,9 @@ namespace GoogleCSharpSnippets
                 Force = false,
             };
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteEntryGroup(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -591,7 +646,9 @@ namespace GoogleCSharpSnippets
                 Force = false,
             };
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteEntryGroupAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -604,7 +661,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteEntryGroup(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -618,7 +677,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteEntryGroupAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -631,7 +692,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryGroupName name = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteEntryGroup(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -645,7 +708,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryGroupName name = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteEntryGroupAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -661,7 +726,9 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (EntryGroup item in response)
@@ -709,7 +776,9 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroupsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((EntryGroup item) =>
@@ -754,7 +823,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (EntryGroup item in response)
@@ -799,7 +870,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroupsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((EntryGroup item) =>
@@ -844,7 +917,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroups(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (EntryGroup item in response)
@@ -889,7 +964,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListEntryGroupsResponse, EntryGroup> response = dataCatalogClient.ListEntryGroupsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((EntryGroup item) =>
@@ -939,7 +1016,9 @@ namespace GoogleCSharpSnippets
                 EntryId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.CreateEntry(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -958,7 +1037,9 @@ namespace GoogleCSharpSnippets
                 EntryId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.CreateEntryAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -973,7 +1054,9 @@ namespace GoogleCSharpSnippets
             string entryId = "";
             Entry entry = new Entry();
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.CreateEntry(parent, entryId, entry);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -989,7 +1072,9 @@ namespace GoogleCSharpSnippets
             string entryId = "";
             Entry entry = new Entry();
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.CreateEntryAsync(parent, entryId, entry);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1004,7 +1089,9 @@ namespace GoogleCSharpSnippets
             string entryId = "";
             Entry entry = new Entry();
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.CreateEntry(parent, entryId, entry);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1020,7 +1107,9 @@ namespace GoogleCSharpSnippets
             string entryId = "";
             Entry entry = new Entry();
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.CreateEntryAsync(parent, entryId, entry);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1037,7 +1126,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.UpdateEntry(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1055,7 +1146,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.UpdateEntryAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1068,7 +1161,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             Entry entry = new Entry();
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.UpdateEntry(entry);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1082,7 +1177,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             Entry entry = new Entry();
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.UpdateEntryAsync(entry);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1096,7 +1193,9 @@ namespace GoogleCSharpSnippets
             Entry entry = new Entry();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.UpdateEntry(entry, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1111,7 +1210,9 @@ namespace GoogleCSharpSnippets
             Entry entry = new Entry();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.UpdateEntryAsync(entry, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1127,7 +1228,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteEntry(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1144,7 +1247,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteEntryAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1157,7 +1262,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteEntry(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1171,7 +1278,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteEntryAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1184,7 +1293,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteEntry(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1198,7 +1309,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteEntryAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1214,7 +1327,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.GetEntry(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1231,7 +1346,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.GetEntryAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1244,7 +1361,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.GetEntry(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1258,7 +1377,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.GetEntryAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1271,7 +1392,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.GetEntry(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1285,7 +1408,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.GetEntryAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1303,7 +1428,9 @@ namespace GoogleCSharpSnippets
                 Location = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = dataCatalogClient.LookupEntry(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1322,7 +1449,9 @@ namespace GoogleCSharpSnippets
                 Location = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.LookupEntryAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1339,7 +1468,9 @@ namespace GoogleCSharpSnippets
                 ReadMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListEntriesResponse, Entry> response = dataCatalogClient.ListEntries(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Entry item in response)
@@ -1388,7 +1519,9 @@ namespace GoogleCSharpSnippets
                 ReadMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListEntriesResponse, Entry> response = dataCatalogClient.ListEntriesAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Entry item) =>
@@ -1433,7 +1566,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListEntriesResponse, Entry> response = dataCatalogClient.ListEntries(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Entry item in response)
@@ -1478,7 +1613,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListEntriesResponse, Entry> response = dataCatalogClient.ListEntriesAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Entry item) =>
@@ -1523,7 +1660,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryGroupName parent = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListEntriesResponse, Entry> response = dataCatalogClient.ListEntries(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Entry item in response)
@@ -1568,7 +1707,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryGroupName parent = EntryGroupName.FromProjectLocationEntryGroup("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListEntriesResponse, Entry> response = dataCatalogClient.ListEntriesAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Entry item) =>
@@ -1617,7 +1758,9 @@ namespace GoogleCSharpSnippets
                 EntryOverview = new EntryOverview(),
             };
             // Make the request
+#pragma warning disable CS0612
             EntryOverview response = dataCatalogClient.ModifyEntryOverview(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1635,7 +1778,9 @@ namespace GoogleCSharpSnippets
                 EntryOverview = new EntryOverview(),
             };
             // Make the request
+#pragma warning disable CS0612
             EntryOverview response = await dataCatalogClient.ModifyEntryOverviewAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1652,7 +1797,9 @@ namespace GoogleCSharpSnippets
                 Contacts = new Contacts(),
             };
             // Make the request
+#pragma warning disable CS0612
             Contacts response = dataCatalogClient.ModifyEntryContacts(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1670,7 +1817,9 @@ namespace GoogleCSharpSnippets
                 Contacts = new Contacts(),
             };
             // Make the request
+#pragma warning disable CS0612
             Contacts response = await dataCatalogClient.ModifyEntryContactsAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1688,7 +1837,9 @@ namespace GoogleCSharpSnippets
                 TagTemplateId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.CreateTagTemplate(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1707,7 +1858,9 @@ namespace GoogleCSharpSnippets
                 TagTemplateId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.CreateTagTemplateAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1722,7 +1875,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateId = "";
             TagTemplate tagTemplate = new TagTemplate();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.CreateTagTemplate(parent, tagTemplateId, tagTemplate);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1738,7 +1893,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateId = "";
             TagTemplate tagTemplate = new TagTemplate();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.CreateTagTemplateAsync(parent, tagTemplateId, tagTemplate);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1753,7 +1910,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateId = "";
             TagTemplate tagTemplate = new TagTemplate();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.CreateTagTemplate(parent, tagTemplateId, tagTemplate);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1769,7 +1928,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateId = "";
             TagTemplate tagTemplate = new TagTemplate();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.CreateTagTemplateAsync(parent, tagTemplateId, tagTemplate);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1785,7 +1946,9 @@ namespace GoogleCSharpSnippets
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.GetTagTemplate(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1802,7 +1965,9 @@ namespace GoogleCSharpSnippets
                 TagTemplateName = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]"),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.GetTagTemplateAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1815,7 +1980,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]";
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.GetTagTemplate(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1829,7 +1996,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]";
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.GetTagTemplateAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1842,7 +2011,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             TagTemplateName name = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]");
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.GetTagTemplate(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1856,7 +2027,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             TagTemplateName name = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]");
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.GetTagTemplateAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1873,7 +2046,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.UpdateTagTemplate(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1891,7 +2066,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.UpdateTagTemplateAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1904,7 +2081,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             TagTemplate tagTemplate = new TagTemplate();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.UpdateTagTemplate(tagTemplate);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1918,7 +2097,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             TagTemplate tagTemplate = new TagTemplate();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.UpdateTagTemplateAsync(tagTemplate);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1932,7 +2113,9 @@ namespace GoogleCSharpSnippets
             TagTemplate tagTemplate = new TagTemplate();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.UpdateTagTemplate(tagTemplate, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1947,7 +2130,9 @@ namespace GoogleCSharpSnippets
             TagTemplate tagTemplate = new TagTemplate();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = await dataCatalogClient.UpdateTagTemplateAsync(tagTemplate, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1964,7 +2149,9 @@ namespace GoogleCSharpSnippets
                 Force = false,
             };
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTagTemplate(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1982,7 +2169,9 @@ namespace GoogleCSharpSnippets
                 Force = false,
             };
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagTemplateAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -1996,7 +2185,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]";
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTagTemplate(name, force);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2011,7 +2202,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]";
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagTemplateAsync(name, force);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2025,7 +2218,9 @@ namespace GoogleCSharpSnippets
             TagTemplateName name = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]");
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTagTemplate(name, force);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2040,7 +2235,9 @@ namespace GoogleCSharpSnippets
             TagTemplateName name = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]");
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagTemplateAsync(name, force);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2058,7 +2255,9 @@ namespace GoogleCSharpSnippets
                 TagTemplateField = new TagTemplateField(),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.CreateTagTemplateField(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2077,7 +2276,9 @@ namespace GoogleCSharpSnippets
                 TagTemplateField = new TagTemplateField(),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.CreateTagTemplateFieldAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2092,7 +2293,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateFieldId = "";
             TagTemplateField tagTemplateField = new TagTemplateField();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.CreateTagTemplateField(parent, tagTemplateFieldId, tagTemplateField);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2108,7 +2311,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateFieldId = "";
             TagTemplateField tagTemplateField = new TagTemplateField();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.CreateTagTemplateFieldAsync(parent, tagTemplateFieldId, tagTemplateField);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2123,7 +2328,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateFieldId = "";
             TagTemplateField tagTemplateField = new TagTemplateField();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.CreateTagTemplateField(parent, tagTemplateFieldId, tagTemplateField);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2139,7 +2346,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateFieldId = "";
             TagTemplateField tagTemplateField = new TagTemplateField();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.CreateTagTemplateFieldAsync(parent, tagTemplateFieldId, tagTemplateField);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2157,7 +2366,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.UpdateTagTemplateField(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2176,7 +2387,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.UpdateTagTemplateFieldAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2190,7 +2403,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[FIELD]";
             TagTemplateField tagTemplateField = new TagTemplateField();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.UpdateTagTemplateField(name, tagTemplateField);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2205,7 +2420,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[FIELD]";
             TagTemplateField tagTemplateField = new TagTemplateField();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.UpdateTagTemplateFieldAsync(name, tagTemplateField);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2219,7 +2436,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldName name = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]");
             TagTemplateField tagTemplateField = new TagTemplateField();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.UpdateTagTemplateField(name, tagTemplateField);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2234,7 +2453,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldName name = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]");
             TagTemplateField tagTemplateField = new TagTemplateField();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.UpdateTagTemplateFieldAsync(name, tagTemplateField);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2249,7 +2470,9 @@ namespace GoogleCSharpSnippets
             TagTemplateField tagTemplateField = new TagTemplateField();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.UpdateTagTemplateField(name, tagTemplateField, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2265,7 +2488,9 @@ namespace GoogleCSharpSnippets
             TagTemplateField tagTemplateField = new TagTemplateField();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.UpdateTagTemplateFieldAsync(name, tagTemplateField, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2280,7 +2505,9 @@ namespace GoogleCSharpSnippets
             TagTemplateField tagTemplateField = new TagTemplateField();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.UpdateTagTemplateField(name, tagTemplateField, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2296,7 +2523,9 @@ namespace GoogleCSharpSnippets
             TagTemplateField tagTemplateField = new TagTemplateField();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.UpdateTagTemplateFieldAsync(name, tagTemplateField, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2313,7 +2542,9 @@ namespace GoogleCSharpSnippets
                 NewTagTemplateFieldId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.RenameTagTemplateField(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2331,7 +2562,9 @@ namespace GoogleCSharpSnippets
                 NewTagTemplateFieldId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2345,7 +2578,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[FIELD]";
             string newTagTemplateFieldId = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.RenameTagTemplateField(name, newTagTemplateFieldId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2360,7 +2595,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[FIELD]";
             string newTagTemplateFieldId = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldAsync(name, newTagTemplateFieldId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2374,7 +2611,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldName name = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]");
             string newTagTemplateFieldId = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.RenameTagTemplateField(name, newTagTemplateFieldId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2389,7 +2628,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldName name = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]");
             string newTagTemplateFieldId = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldAsync(name, newTagTemplateFieldId);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2406,7 +2647,9 @@ namespace GoogleCSharpSnippets
                 NewEnumValueDisplayName = "",
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.RenameTagTemplateFieldEnumValue(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2424,7 +2667,9 @@ namespace GoogleCSharpSnippets
                 NewEnumValueDisplayName = "",
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldEnumValueAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2438,7 +2683,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[TAG_TEMPLATE_FIELD_ID]/enumValues/[ENUM_VALUE_DISPLAY_NAME]";
             string newEnumValueDisplayName = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.RenameTagTemplateFieldEnumValue(name, newEnumValueDisplayName);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2453,7 +2700,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[TAG_TEMPLATE_FIELD_ID]/enumValues/[ENUM_VALUE_DISPLAY_NAME]";
             string newEnumValueDisplayName = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldEnumValueAsync(name, newEnumValueDisplayName);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2467,7 +2716,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldEnumValueName name = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]");
             string newEnumValueDisplayName = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = dataCatalogClient.RenameTagTemplateFieldEnumValue(name, newEnumValueDisplayName);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2482,7 +2733,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldEnumValueName name = TagTemplateFieldEnumValueName.FromProjectLocationTagTemplateTagTemplateFieldEnumValueDisplayName("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[TAG_TEMPLATE_FIELD_ID]", "[ENUM_VALUE_DISPLAY_NAME]");
             string newEnumValueDisplayName = "";
             // Make the request
+#pragma warning disable CS0612
             TagTemplateField response = await dataCatalogClient.RenameTagTemplateFieldEnumValueAsync(name, newEnumValueDisplayName);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2499,7 +2752,9 @@ namespace GoogleCSharpSnippets
                 Force = false,
             };
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTagTemplateField(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2517,7 +2772,9 @@ namespace GoogleCSharpSnippets
                 Force = false,
             };
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagTemplateFieldAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2531,7 +2788,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[FIELD]";
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTagTemplateField(name, force);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2546,7 +2805,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]/fields/[FIELD]";
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagTemplateFieldAsync(name, force);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2560,7 +2821,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldName name = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]");
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTagTemplateField(name, force);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2575,7 +2838,9 @@ namespace GoogleCSharpSnippets
             TagTemplateFieldName name = TagTemplateFieldName.FromProjectLocationTagTemplateField("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]", "[FIELD]");
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagTemplateFieldAsync(name, force);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2592,7 +2857,9 @@ namespace GoogleCSharpSnippets
                 Tag = new Tag(),
             };
             // Make the request
+#pragma warning disable CS0612
             Tag response = dataCatalogClient.CreateTag(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2610,7 +2877,9 @@ namespace GoogleCSharpSnippets
                 Tag = new Tag(),
             };
             // Make the request
+#pragma warning disable CS0612
             Tag response = await dataCatalogClient.CreateTagAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2624,7 +2893,9 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             Tag tag = new Tag();
             // Make the request
+#pragma warning disable CS0612
             Tag response = dataCatalogClient.CreateTag(parent, tag);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2639,7 +2910,9 @@ namespace GoogleCSharpSnippets
             string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             Tag tag = new Tag();
             // Make the request
+#pragma warning disable CS0612
             Tag response = await dataCatalogClient.CreateTagAsync(parent, tag);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2653,7 +2926,9 @@ namespace GoogleCSharpSnippets
             EntryName parent = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             Tag tag = new Tag();
             // Make the request
+#pragma warning disable CS0612
             Tag response = dataCatalogClient.CreateTag(parent, tag);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2668,7 +2943,9 @@ namespace GoogleCSharpSnippets
             EntryName parent = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             Tag tag = new Tag();
             // Make the request
+#pragma warning disable CS0612
             Tag response = await dataCatalogClient.CreateTagAsync(parent, tag);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2685,7 +2962,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             Tag response = dataCatalogClient.UpdateTag(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2703,7 +2982,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             Tag response = await dataCatalogClient.UpdateTagAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2716,7 +2997,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             Tag tag = new Tag();
             // Make the request
+#pragma warning disable CS0612
             Tag response = dataCatalogClient.UpdateTag(tag);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2730,7 +3013,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             Tag tag = new Tag();
             // Make the request
+#pragma warning disable CS0612
             Tag response = await dataCatalogClient.UpdateTagAsync(tag);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2744,7 +3029,9 @@ namespace GoogleCSharpSnippets
             Tag tag = new Tag();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Tag response = dataCatalogClient.UpdateTag(tag, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2759,7 +3046,9 @@ namespace GoogleCSharpSnippets
             Tag tag = new Tag();
             FieldMask updateMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             Tag response = await dataCatalogClient.UpdateTagAsync(tag, updateMask);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2775,7 +3064,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTag(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2792,7 +3083,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2805,7 +3098,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTag(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2819,7 +3114,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2832,7 +3129,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTag(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2846,7 +3145,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -2862,7 +3163,9 @@ namespace GoogleCSharpSnippets
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListTagsResponse, Tag> response = dataCatalogClient.ListTags(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Tag item in response)
@@ -2910,7 +3213,9 @@ namespace GoogleCSharpSnippets
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListTagsResponse, Tag> response = dataCatalogClient.ListTagsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Tag item) =>
@@ -2955,7 +3260,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListTagsResponse, Tag> response = dataCatalogClient.ListTags(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Tag item in response)
@@ -3000,7 +3307,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListTagsResponse, Tag> response = dataCatalogClient.ListTagsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Tag item) =>
@@ -3045,7 +3354,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName parent = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<ListTagsResponse, Tag> response = dataCatalogClient.ListTags(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (Tag item in response)
@@ -3090,7 +3401,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName parent = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListTagsResponse, Tag> response = dataCatalogClient.ListTagsAsync(parent);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Tag item) =>
@@ -3141,7 +3454,9 @@ namespace GoogleCSharpSnippets
                 Tags = { new Tag(), },
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<ReconcileTagsResponse, ReconcileTagsMetadata> response = dataCatalogClient.ReconcileTags(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReconcileTagsResponse, ReconcileTagsMetadata> completedResponse = response.PollUntilCompleted();
@@ -3151,7 +3466,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReconcileTagsResponse, ReconcileTagsMetadata> retrievedResponse = dataCatalogClient.PollOnceReconcileTags(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3177,7 +3494,9 @@ namespace GoogleCSharpSnippets
                 Tags = { new Tag(), },
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<ReconcileTagsResponse, ReconcileTagsMetadata> response = await dataCatalogClient.ReconcileTagsAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ReconcileTagsResponse, ReconcileTagsMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -3187,7 +3506,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ReconcileTagsResponse, ReconcileTagsMetadata> retrievedResponse = await dataCatalogClient.PollOnceReconcileTagsAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3209,7 +3530,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             StarEntryResponse response = dataCatalogClient.StarEntry(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3226,7 +3549,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             StarEntryResponse response = await dataCatalogClient.StarEntryAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3239,7 +3564,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             StarEntryResponse response = dataCatalogClient.StarEntry(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3253,7 +3580,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             StarEntryResponse response = await dataCatalogClient.StarEntryAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3266,7 +3595,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             StarEntryResponse response = dataCatalogClient.StarEntry(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3280,7 +3611,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             StarEntryResponse response = await dataCatalogClient.StarEntryAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3296,7 +3629,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             UnstarEntryResponse response = dataCatalogClient.UnstarEntry(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3313,7 +3648,9 @@ namespace GoogleCSharpSnippets
                 EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             UnstarEntryResponse response = await dataCatalogClient.UnstarEntryAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3326,7 +3663,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             UnstarEntryResponse response = dataCatalogClient.UnstarEntry(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3340,7 +3679,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
             // Make the request
+#pragma warning disable CS0612
             UnstarEntryResponse response = await dataCatalogClient.UnstarEntryAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3353,7 +3694,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             UnstarEntryResponse response = dataCatalogClient.UnstarEntry(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3367,7 +3710,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
             // Make the request
+#pragma warning disable CS0612
             UnstarEntryResponse response = await dataCatalogClient.UnstarEntryAsync(name);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3385,7 +3730,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             Policy response = dataCatalogClient.SetIamPolicy(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3404,7 +3751,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             Policy response = await dataCatalogClient.SetIamPolicyAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3418,7 +3767,9 @@ namespace GoogleCSharpSnippets
             string resource = "a/wildcard/resource";
             Policy policy = new Policy();
             // Make the request
+#pragma warning disable CS0612
             Policy response = dataCatalogClient.SetIamPolicy(resource, policy);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3433,7 +3784,9 @@ namespace GoogleCSharpSnippets
             string resource = "a/wildcard/resource";
             Policy policy = new Policy();
             // Make the request
+#pragma warning disable CS0612
             Policy response = await dataCatalogClient.SetIamPolicyAsync(resource, policy);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3447,7 +3800,9 @@ namespace GoogleCSharpSnippets
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
+#pragma warning disable CS0612
             Policy response = dataCatalogClient.SetIamPolicy(resource, policy);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3462,7 +3817,9 @@ namespace GoogleCSharpSnippets
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
             // Make the request
+#pragma warning disable CS0612
             Policy response = await dataCatalogClient.SetIamPolicyAsync(resource, policy);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3479,7 +3836,9 @@ namespace GoogleCSharpSnippets
                 Options = new GetPolicyOptions(),
             };
             // Make the request
+#pragma warning disable CS0612
             Policy response = dataCatalogClient.GetIamPolicy(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3497,7 +3856,9 @@ namespace GoogleCSharpSnippets
                 Options = new GetPolicyOptions(),
             };
             // Make the request
+#pragma warning disable CS0612
             Policy response = await dataCatalogClient.GetIamPolicyAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3510,7 +3871,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             // Make the request
+#pragma warning disable CS0612
             Policy response = dataCatalogClient.GetIamPolicy(resource);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3524,7 +3887,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             // Make the request
+#pragma warning disable CS0612
             Policy response = await dataCatalogClient.GetIamPolicyAsync(resource);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3537,7 +3902,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
+#pragma warning disable CS0612
             Policy response = dataCatalogClient.GetIamPolicy(resource);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3551,7 +3918,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
+#pragma warning disable CS0612
             Policy response = await dataCatalogClient.GetIamPolicyAsync(resource);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3568,7 +3937,9 @@ namespace GoogleCSharpSnippets
                 Permissions = { "", },
             };
             // Make the request
+#pragma warning disable CS0612
             TestIamPermissionsResponse response = dataCatalogClient.TestIamPermissions(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3586,7 +3957,9 @@ namespace GoogleCSharpSnippets
                 Permissions = { "", },
             };
             // Make the request
+#pragma warning disable CS0612
             TestIamPermissionsResponse response = await dataCatalogClient.TestIamPermissionsAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3604,7 +3977,9 @@ namespace GoogleCSharpSnippets
                 JobId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<ImportEntriesResponse, ImportEntriesMetadata> response = dataCatalogClient.ImportEntries(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ImportEntriesResponse, ImportEntriesMetadata> completedResponse = response.PollUntilCompleted();
@@ -3614,7 +3989,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ImportEntriesResponse, ImportEntriesMetadata> retrievedResponse = dataCatalogClient.PollOnceImportEntries(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3639,7 +4016,9 @@ namespace GoogleCSharpSnippets
                 JobId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<ImportEntriesResponse, ImportEntriesMetadata> response = await dataCatalogClient.ImportEntriesAsync(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ImportEntriesResponse, ImportEntriesMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -3649,7 +4028,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ImportEntriesResponse, ImportEntriesMetadata> retrievedResponse = await dataCatalogClient.PollOnceImportEntriesAsync(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -3672,7 +4053,9 @@ namespace GoogleCSharpSnippets
                 TagTemplateMigration = TagTemplateMigration.Unspecified,
             };
             // Make the request
+#pragma warning disable CS0612
             MigrationConfig response = dataCatalogClient.SetConfig(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3690,7 +4073,9 @@ namespace GoogleCSharpSnippets
                 TagTemplateMigration = TagTemplateMigration.Unspecified,
             };
             // Make the request
+#pragma warning disable CS0612
             MigrationConfig response = await dataCatalogClient.SetConfigAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3703,7 +4088,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RetrieveConfigRequest request = new RetrieveConfigRequest { Name = "", };
             // Make the request
+#pragma warning disable CS0612
             OrganizationConfig response = dataCatalogClient.RetrieveConfig(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3717,7 +4104,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RetrieveConfigRequest request = new RetrieveConfigRequest { Name = "", };
             // Make the request
+#pragma warning disable CS0612
             OrganizationConfig response = await dataCatalogClient.RetrieveConfigAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3730,7 +4119,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RetrieveEffectiveConfigRequest request = new RetrieveEffectiveConfigRequest { Name = "", };
             // Make the request
+#pragma warning disable CS0612
             MigrationConfig response = dataCatalogClient.RetrieveEffectiveConfig(request);
+#pragma warning restore CS0612
             // End snippet
         }
 
@@ -3744,7 +4135,9 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             RetrieveEffectiveConfigRequest request = new RetrieveEffectiveConfigRequest { Name = "", };
             // Make the request
+#pragma warning disable CS0612
             MigrationConfig response = await dataCatalogClient.RetrieveEffectiveConfigAsync(request);
+#pragma warning restore CS0612
             // End snippet
         }
     }

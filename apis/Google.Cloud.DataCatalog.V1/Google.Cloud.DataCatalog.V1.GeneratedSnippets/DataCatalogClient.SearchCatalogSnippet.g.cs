@@ -31,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void SearchCatalog()
         {
             // Create client
@@ -39,7 +40,9 @@ namespace GoogleCSharpSnippets
             SearchCatalogRequest.Types.Scope scope = new SearchCatalogRequest.Types.Scope();
             string query = "";
             // Make the request
+#pragma warning disable CS0612
             PagedEnumerable<SearchCatalogResponse, SearchCatalogResult> response = dataCatalogClient.SearchCatalog(scope, query);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             foreach (SearchCatalogResult item in response)

@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START datacatalog_v1_generated_DataCatalog_ImportEntries_sync]
     using Google.Cloud.DataCatalog.V1;
     using Google.LongRunning;
+    using System;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
     {
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void ImportEntriesRequestObject()
         {
             // Create client
@@ -42,7 +44,9 @@ namespace GoogleCSharpSnippets
                 JobId = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Operation<ImportEntriesResponse, ImportEntriesMetadata> response = dataCatalogClient.ImportEntries(request);
+#pragma warning restore CS0612
 
             // Poll until the returned long-running operation is complete
             Operation<ImportEntriesResponse, ImportEntriesMetadata> completedResponse = response.PollUntilCompleted();
@@ -52,7 +56,9 @@ namespace GoogleCSharpSnippets
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
+#pragma warning disable CS0612
             Operation<ImportEntriesResponse, ImportEntriesMetadata> retrievedResponse = dataCatalogClient.PollOnceImportEntries(operationName);
+#pragma warning restore CS0612
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START datacatalog_v1_generated_DataCatalog_CreateTagTemplate_sync_flattened_resourceNames]
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.DataCatalog.V1;
+    using System;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
     {
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void CreateTagTemplateResourceNames()
         {
             // Create client
@@ -39,7 +41,9 @@ namespace GoogleCSharpSnippets
             string tagTemplateId = "";
             TagTemplate tagTemplate = new TagTemplate();
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.CreateTagTemplate(parent, tagTemplateId, tagTemplate);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_CreateTagTemplate_sync_flattened_resourceNames]

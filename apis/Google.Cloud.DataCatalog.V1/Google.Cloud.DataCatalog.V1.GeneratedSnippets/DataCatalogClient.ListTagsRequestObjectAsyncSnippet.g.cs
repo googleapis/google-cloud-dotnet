@@ -33,6 +33,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task ListTagsRequestObjectAsync()
         {
             // Create client
@@ -43,7 +44,9 @@ namespace GoogleCSharpSnippets
                 ParentAsEntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
             };
             // Make the request
+#pragma warning disable CS0612
             PagedAsyncEnumerable<ListTagsResponse, Tag> response = dataCatalogClient.ListTagsAsync(request);
+#pragma warning restore CS0612
 
             // Iterate over all response items, lazily performing RPCs as required
             await response.ForEachAsync((Tag item) =>

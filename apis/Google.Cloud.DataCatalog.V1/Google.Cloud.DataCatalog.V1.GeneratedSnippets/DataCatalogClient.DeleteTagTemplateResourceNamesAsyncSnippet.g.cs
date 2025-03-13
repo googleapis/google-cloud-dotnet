@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_DeleteTagTemplate_async_flattened_resourceNames]
     using Google.Cloud.DataCatalog.V1;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task DeleteTagTemplateResourceNamesAsync()
         {
             // Create client
@@ -38,7 +40,9 @@ namespace GoogleCSharpSnippets
             TagTemplateName name = TagTemplateName.FromProjectLocationTagTemplate("[PROJECT]", "[LOCATION]", "[TAG_TEMPLATE]");
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             await dataCatalogClient.DeleteTagTemplateAsync(name, force);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_DeleteTagTemplate_async_flattened_resourceNames]

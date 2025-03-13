@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START datacatalog_v1_generated_DataCatalog_GetEntryGroup_sync_flattened2]
     using Google.Cloud.DataCatalog.V1;
     using Google.Protobuf.WellKnownTypes;
+    using System;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
     {
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void GetEntryGroup2()
         {
             // Create client
@@ -38,7 +40,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]";
             FieldMask readMask = new FieldMask();
             // Make the request
+#pragma warning disable CS0612
             EntryGroup response = dataCatalogClient.GetEntryGroup(name, readMask);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_GetEntryGroup_sync_flattened2]

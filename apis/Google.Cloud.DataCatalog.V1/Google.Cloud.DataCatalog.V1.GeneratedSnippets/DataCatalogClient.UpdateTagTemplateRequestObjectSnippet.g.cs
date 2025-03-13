@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     // [START datacatalog_v1_generated_DataCatalog_UpdateTagTemplate_sync]
     using Google.Cloud.DataCatalog.V1;
     using Google.Protobuf.WellKnownTypes;
+    using System;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
     {
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void UpdateTagTemplateRequestObject()
         {
             // Create client
@@ -41,7 +43,9 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
             };
             // Make the request
+#pragma warning disable CS0612
             TagTemplate response = dataCatalogClient.UpdateTagTemplate(request);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_UpdateTagTemplate_sync]

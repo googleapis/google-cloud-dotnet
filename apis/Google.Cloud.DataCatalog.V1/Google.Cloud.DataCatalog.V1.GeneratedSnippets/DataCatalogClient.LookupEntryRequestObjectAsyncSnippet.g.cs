@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_LookupEntry_async]
     using Google.Cloud.DataCatalog.V1;
+    using System;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
@@ -30,6 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public async Task LookupEntryRequestObjectAsync()
         {
             // Create client
@@ -42,7 +44,9 @@ namespace GoogleCSharpSnippets
                 Location = "",
             };
             // Make the request
+#pragma warning disable CS0612
             Entry response = await dataCatalogClient.LookupEntryAsync(request);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_LookupEntry_async]

@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START datacatalog_v1_generated_DataCatalog_DeleteTagTemplate_sync_flattened]
     using Google.Cloud.DataCatalog.V1;
+    using System;
 
     public sealed partial class GeneratedDataCatalogClientSnippets
     {
@@ -29,6 +30,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
+        [ObsoleteAttribute]
         public void DeleteTagTemplate()
         {
             // Create client
@@ -37,7 +39,9 @@ namespace GoogleCSharpSnippets
             string name = "projects/[PROJECT]/locations/[LOCATION]/tagTemplates/[TAG_TEMPLATE]";
             bool force = false;
             // Make the request
+#pragma warning disable CS0612
             dataCatalogClient.DeleteTagTemplate(name, force);
+#pragma warning restore CS0612
         }
     }
     // [END datacatalog_v1_generated_DataCatalog_DeleteTagTemplate_sync_flattened]
