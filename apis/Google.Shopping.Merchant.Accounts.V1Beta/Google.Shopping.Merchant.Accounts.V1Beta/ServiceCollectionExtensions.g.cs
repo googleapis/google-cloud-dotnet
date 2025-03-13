@@ -171,6 +171,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gsmav::AutomaticImprovementsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAutomaticImprovementsServiceClient(this IServiceCollection services, sys::Action<gsmav::AutomaticImprovementsServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gsmav::AutomaticImprovementsServiceClientBuilder builder = new gsmav::AutomaticImprovementsServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gsmav::AutomaticImprovementsServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddAutomaticImprovementsServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gsmav::AutomaticImprovementsServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gsmav::AutomaticImprovementsServiceClientBuilder builder = new gsmav::AutomaticImprovementsServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gsmav::BusinessIdentityServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
