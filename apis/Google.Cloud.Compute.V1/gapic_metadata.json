@@ -1579,6 +1579,12 @@
                 "RemoveResourcePoliciesAsync"
               ]
             },
+            "ReportHostAsFaulty": {
+              "methods": [
+                "ReportHostAsFaulty",
+                "ReportHostAsFaultyAsync"
+              ]
+            },
             "Reset": {
               "methods": [
                 "Reset",

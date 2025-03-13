@@ -76,6 +76,8 @@ namespace Google.Cloud.Compute.V1
             PerformMaintenanceOperationsSettings = existing.PerformMaintenanceOperationsSettings.Clone();
             RemoveResourcePoliciesSettings = existing.RemoveResourcePoliciesSettings;
             RemoveResourcePoliciesOperationsSettings = existing.RemoveResourcePoliciesOperationsSettings.Clone();
+            ReportHostAsFaultySettings = existing.ReportHostAsFaultySettings;
+            ReportHostAsFaultyOperationsSettings = existing.ReportHostAsFaultyOperationsSettings.Clone();
             ResetSettings = existing.ResetSettings;
             ResetOperationsSettings = existing.ResetOperationsSettings.Clone();
             ResumeSettings = existing.ResumeSettings;
@@ -641,6 +643,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings RemoveResourcePoliciesOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.ReportHostAsFaulty</c> and <c>InstancesClient.ReportHostAsFaultyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ReportHostAsFaultySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>InstancesClient.ReportHostAsFaulty</c> and
+        /// <c>InstancesClient.ReportHostAsFaultyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ReportHostAsFaultyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -3713,6 +3745,132 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> RemoveResourcePoliciesAsync(string project, string zone, string instance, InstancesRemoveResourcePoliciesRequest instancesRemoveResourcePoliciesRequestResource, st::CancellationToken cancellationToken) =>
             RemoveResourcePoliciesAsync(project, zone, instance, instancesRemoveResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Mark the host as faulty and try to restart the instance on a new host.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> ReportHostAsFaulty(ReportHostAsFaultyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Mark the host as faulty and try to restart the instance on a new host.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ReportHostAsFaultyAsync(ReportHostAsFaultyInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Mark the host as faulty and try to restart the instance on a new host.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ReportHostAsFaultyAsync(ReportHostAsFaultyInstanceRequest request, st::CancellationToken cancellationToken) =>
+            ReportHostAsFaultyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ReportHostAsFaulty</c>.</summary>
+        public virtual lro::OperationsClient ReportHostAsFaultyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ReportHostAsFaulty</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceReportHostAsFaulty(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReportHostAsFaultyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ReportHostAsFaulty</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceReportHostAsFaultyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ReportHostAsFaultyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Mark the host as faulty and try to restart the instance on a new host.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="instancesReportHostAsFaultyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> ReportHostAsFaulty(string project, string zone, string instance, InstancesReportHostAsFaultyRequest instancesReportHostAsFaultyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            ReportHostAsFaulty(new ReportHostAsFaultyInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                InstancesReportHostAsFaultyRequestResource = gax::GaxPreconditions.CheckNotNull(instancesReportHostAsFaultyRequestResource, nameof(instancesReportHostAsFaultyRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Mark the host as faulty and try to restart the instance on a new host.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="instancesReportHostAsFaultyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ReportHostAsFaultyAsync(string project, string zone, string instance, InstancesReportHostAsFaultyRequest instancesReportHostAsFaultyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            ReportHostAsFaultyAsync(new ReportHostAsFaultyInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                InstancesReportHostAsFaultyRequestResource = gax::GaxPreconditions.CheckNotNull(instancesReportHostAsFaultyRequestResource, nameof(instancesReportHostAsFaultyRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Mark the host as faulty and try to restart the instance on a new host.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="instancesReportHostAsFaultyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ReportHostAsFaultyAsync(string project, string zone, string instance, InstancesReportHostAsFaultyRequest instancesReportHostAsFaultyRequestResource, st::CancellationToken cancellationToken) =>
+            ReportHostAsFaultyAsync(project, zone, instance, instancesReportHostAsFaultyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Performs a reset on the instance. This is a hard reset. The VM does not do a graceful shutdown. For more information, see Resetting an instance.
@@ -7141,6 +7299,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<RemoveResourcePoliciesInstanceRequest, Operation> _callRemoveResourcePolicies;
 
+        private readonly gaxgrpc::ApiCall<ReportHostAsFaultyInstanceRequest, Operation> _callReportHostAsFaulty;
+
         private readonly gaxgrpc::ApiCall<ResetInstanceRequest, Operation> _callReset;
 
         private readonly gaxgrpc::ApiCall<ResumeInstanceRequest, Operation> _callResume;
@@ -7222,6 +7382,7 @@ namespace Google.Cloud.Compute.V1
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PerformMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.PerformMaintenanceOperationsSettings, logger);
             RemoveResourcePoliciesOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.RemoveResourcePoliciesOperationsSettings, logger);
+            ReportHostAsFaultyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ReportHostAsFaultyOperationsSettings, logger);
             ResetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResetOperationsSettings, logger);
             ResumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.ResumeOperationsSettings, logger);
             SetDeletionProtectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.SetDeletionProtectionOperationsSettings, logger);
@@ -7307,6 +7468,9 @@ namespace Google.Cloud.Compute.V1
             _callRemoveResourcePolicies = clientHelper.BuildApiCall<RemoveResourcePoliciesInstanceRequest, Operation>("RemoveResourcePolicies", grpcClient.RemoveResourcePoliciesAsync, grpcClient.RemoveResourcePolicies, effectiveSettings.RemoveResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callRemoveResourcePolicies);
             Modify_RemoveResourcePoliciesApiCall(ref _callRemoveResourcePolicies);
+            _callReportHostAsFaulty = clientHelper.BuildApiCall<ReportHostAsFaultyInstanceRequest, Operation>("ReportHostAsFaulty", grpcClient.ReportHostAsFaultyAsync, grpcClient.ReportHostAsFaulty, effectiveSettings.ReportHostAsFaultySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callReportHostAsFaulty);
+            Modify_ReportHostAsFaultyApiCall(ref _callReportHostAsFaulty);
             _callReset = clientHelper.BuildApiCall<ResetInstanceRequest, Operation>("Reset", grpcClient.ResetAsync, grpcClient.Reset, effectiveSettings.ResetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callReset);
             Modify_ResetApiCall(ref _callReset);
@@ -7436,6 +7600,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_RemoveResourcePoliciesApiCall(ref gaxgrpc::ApiCall<RemoveResourcePoliciesInstanceRequest, Operation> call);
 
+        partial void Modify_ReportHostAsFaultyApiCall(ref gaxgrpc::ApiCall<ReportHostAsFaultyInstanceRequest, Operation> call);
+
         partial void Modify_ResetApiCall(ref gaxgrpc::ApiCall<ResetInstanceRequest, Operation> call);
 
         partial void Modify_ResumeApiCall(ref gaxgrpc::ApiCall<ResumeInstanceRequest, Operation> call);
@@ -7536,6 +7702,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_PerformMaintenanceInstanceRequest(ref PerformMaintenanceInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_RemoveResourcePoliciesInstanceRequest(ref RemoveResourcePoliciesInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ReportHostAsFaultyInstanceRequest(ref ReportHostAsFaultyInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ResetInstanceRequest(ref ResetInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8163,6 +8331,39 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), RemoveResourcePoliciesOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ReportHostAsFaulty</c>.</summary>
+        public override lro::OperationsClient ReportHostAsFaultyOperationsClient { get; }
+
+        /// <summary>
+        /// Mark the host as faulty and try to restart the instance on a new host.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> ReportHostAsFaulty(ReportHostAsFaultyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReportHostAsFaultyInstanceRequest(ref request, ref callSettings);
+            Operation response = _callReportHostAsFaulty.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ReportHostAsFaultyOperationsClient);
+        }
+
+        /// <summary>
+        /// Mark the host as faulty and try to restart the instance on a new host.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> ReportHostAsFaultyAsync(ReportHostAsFaultyInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ReportHostAsFaultyInstanceRequest(ref request, ref callSettings);
+            Operation response = await _callReportHostAsFaulty.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ReportHostAsFaultyOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>Reset</c>.</summary>
