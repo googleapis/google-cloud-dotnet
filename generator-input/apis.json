@@ -6271,7 +6271,9 @@
         "sources",
         "datasources"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Shopping.Type": "1.0.0-beta05"
+      },
       "generator": "micro",
       "protoPath": "google/shopping/merchant/datasources/v1beta",
       "includeCommonResourcesProto": true,
