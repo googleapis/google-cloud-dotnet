@@ -3002,6 +3002,493 @@
       ]
     },
     {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_GetAutomaticImprovements_sync",
+      "title": "GetAutomaticImprovementsRequestObject",
+      "description": "Snippet for GetAutomaticImprovements",
+      "file": "AutomaticImprovementsServiceClient.GetAutomaticImprovementsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomaticImprovements",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.GetAutomaticImprovements",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.GetAutomaticImprovementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.GetAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_GetAutomaticImprovements_async",
+      "title": "GetAutomaticImprovementsRequestObjectAsync",
+      "description": "Snippet for GetAutomaticImprovementsAsync",
+      "file": "AutomaticImprovementsServiceClient.GetAutomaticImprovementsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomaticImprovementsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.GetAutomaticImprovementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.GetAutomaticImprovementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements>",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.GetAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_GetAutomaticImprovements_sync_flattened",
+      "title": "GetAutomaticImprovements",
+      "description": "Snippet for GetAutomaticImprovements",
+      "file": "AutomaticImprovementsServiceClient.GetAutomaticImprovementsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomaticImprovements",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.GetAutomaticImprovements",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.GetAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_GetAutomaticImprovements_async_flattened",
+      "title": "GetAutomaticImprovementsAsync",
+      "description": "Snippet for GetAutomaticImprovementsAsync",
+      "file": "AutomaticImprovementsServiceClient.GetAutomaticImprovementsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomaticImprovementsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.GetAutomaticImprovementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements>",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.GetAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_GetAutomaticImprovements_sync_flattened_resourceNames",
+      "title": "GetAutomaticImprovementsResourceNames",
+      "description": "Snippet for GetAutomaticImprovements",
+      "file": "AutomaticImprovementsServiceClient.GetAutomaticImprovementsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomaticImprovements",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.GetAutomaticImprovements",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.GetAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_GetAutomaticImprovements_async_flattened_resourceNames",
+      "title": "GetAutomaticImprovementsResourceNamesAsync",
+      "description": "Snippet for GetAutomaticImprovementsAsync",
+      "file": "AutomaticImprovementsServiceClient.GetAutomaticImprovementsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAutomaticImprovementsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.GetAutomaticImprovementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements>",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "GetAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.GetAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_UpdateAutomaticImprovements_sync",
+      "title": "UpdateAutomaticImprovementsRequestObject",
+      "description": "Snippet for UpdateAutomaticImprovements",
+      "file": "AutomaticImprovementsServiceClient.UpdateAutomaticImprovementsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutomaticImprovements",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.UpdateAutomaticImprovements",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateAutomaticImprovementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.UpdateAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_UpdateAutomaticImprovements_async",
+      "title": "UpdateAutomaticImprovementsRequestObjectAsync",
+      "description": "Snippet for UpdateAutomaticImprovementsAsync",
+      "file": "AutomaticImprovementsServiceClient.UpdateAutomaticImprovementsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutomaticImprovementsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.UpdateAutomaticImprovementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.UpdateAutomaticImprovementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements>",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.UpdateAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_UpdateAutomaticImprovements_sync_flattened",
+      "title": "UpdateAutomaticImprovements",
+      "description": "Snippet for UpdateAutomaticImprovements",
+      "file": "AutomaticImprovementsServiceClient.UpdateAutomaticImprovementsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutomaticImprovements",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.UpdateAutomaticImprovements",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements",
+            "name": "automaticImprovements"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.UpdateAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_AutomaticImprovementsService_UpdateAutomaticImprovements_async_flattened",
+      "title": "UpdateAutomaticImprovementsAsync",
+      "description": "Snippet for UpdateAutomaticImprovementsAsync",
+      "file": "AutomaticImprovementsServiceClient.UpdateAutomaticImprovementsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAutomaticImprovementsAsync",
+        "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient.UpdateAutomaticImprovementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements",
+            "name": "automaticImprovements"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovements>",
+        "client": {
+          "shortName": "AutomaticImprovementsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Accounts.V1Beta.AutomaticImprovementsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAutomaticImprovements",
+          "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService.UpdateAutomaticImprovements",
+          "service": {
+            "shortName": "AutomaticImprovementsService",
+            "fullName": "google.shopping.merchant.accounts.v1beta.AutomaticImprovementsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "merchantapi_v1beta_generated_BusinessIdentityService_GetBusinessIdentity_sync",
       "title": "GetBusinessIdentityRequestObject",
       "description": "Snippet for GetBusinessIdentity",

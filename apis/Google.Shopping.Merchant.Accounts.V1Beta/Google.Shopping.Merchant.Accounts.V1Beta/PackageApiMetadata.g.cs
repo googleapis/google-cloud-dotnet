@@ -36,6 +36,7 @@ namespace Google.Shopping.Merchant.Accounts.V1Beta
             yield return AccountsReflection.Descriptor;
             yield return AccountservicesReflection.Descriptor;
             yield return AutofeedsettingsReflection.Descriptor;
+            yield return AutomaticimprovementsReflection.Descriptor;
             yield return BusinessidentityReflection.Descriptor;
             yield return BusinessinfoReflection.Descriptor;
             yield return CustomerserviceReflection.Descriptor;
