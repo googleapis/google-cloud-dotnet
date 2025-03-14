@@ -209,7 +209,7 @@ public sealed partial class SubscriberClientImpl
             _eventReceiptModAckForExactlyOnceDelivery = new AsyncAutoResetEvent(subscriber._taskHelper);
             _continuationQueue = new AsyncSingleRecvQueue<TaskNextAction>(subscriber._taskHelper);
             _logger = subscriber.Logger;
-            _retryState = new RetryState(clock, _logger, s_defaultPullRetryTiming, TimeSpan.FromSeconds(0.5));
+            _retryState = new RetryState(clock, _logger, s_defaultPullRetryTiming, TimeSpan.FromSeconds(0.5), _clientIndex);
         }
 
         internal async Task StartAsync()
@@ -351,7 +351,7 @@ public sealed partial class SubscriberClientImpl
             }
             else
             {
-                _logger?.LogError(e, "Unrecoverable error in streaming pull; aborting subscriber.");
+                _logger?.LogError(e, "Unrecoverable error in streaming pull for client {index}; aborting subscriber.", _clientIndex);
                 // Unrecoverable error; throw it.
                 throw e.FlattenIfPossible();
             }
@@ -1126,19 +1126,25 @@ public sealed partial class SubscriberClientImpl
             /// We fail after this many consecutive failures, regardless of what the failure was.
             /// With the backoffs involved, this will be after a pretty significant amount of time anyway.
             /// </summary>
-            private const int ConcurrentFailureLimit = 100;
+            private const int ConsecutiveFailureLimit = 100;
+            /// <summary>
+            /// We log the status code of the latest <see cref="ConsecutiveFailureLimit"/> - <see cref="SkipFailuresInLogs"/>
+            /// exceptions.
+            /// </summary>
+            private const int SkipFailuresInLogs = 90;
 
             private readonly IClock _clock;
             private readonly ILogger _logger;
             private readonly RetrySettings _backoffTiming;
             private readonly TimeSpan _disconnectBackoff;
+            private readonly int _clientIndex;
 
             private DateTime _currentStartTimestamp;
             private readonly List<RpcException> _exceptions;
             private DateTime? _firstExceptionTimestamp;
             internal TimeSpan? Backoff { get; private set; }
 
-            internal RetryState(IClock clock, ILogger logger, RetrySettings backoffTiming, TimeSpan disconnectBackoff)
+            internal RetryState(IClock clock, ILogger logger, RetrySettings backoffTiming, TimeSpan disconnectBackoff, int clientIndex)
             {
                 _clock = clock;
                 _logger = logger;
@@ -1146,6 +1152,7 @@ public sealed partial class SubscriberClientImpl
                 _disconnectBackoff = disconnectBackoff;
                 _exceptions = new();
                 _firstExceptionTimestamp = null;
+                _clientIndex = clientIndex;
                 Backoff = null;
             }
 
@@ -1162,14 +1169,23 @@ public sealed partial class SubscriberClientImpl
                 // Don't retry any non-RpcExceptions
                 if (exception.As<RpcException>() is not RpcException rpcEx)
                 {
+                    _logger?.LogDebug(exception, "Can't recover from non-RpcException on stream for client {index}.", _clientIndex);
                     return false;
                 }
 
                 _exceptions.Add(rpcEx);
 
                 // If we've reached our limit, fail regardless.
-                if (_exceptions.Count == ConcurrentFailureLimit)
+                if (_exceptions.Count == ConsecutiveFailureLimit)
                 {
+                    var latestStatuses = _exceptions.
+                        Skip(SkipFailuresInLogs).
+                        GroupBy(ex => ex.StatusCode).
+                        Select(group => $"{group.Count()} errors with status {group.Key}");
+                    _logger?.LogDebug(exception,
+                        "Can't recover after reaching the consecutive error limit on stream for client {index}. " +
+                        "The last errors were {lastErrors}.",
+                        _clientIndex, string.Join(", ", latestStatuses));
                     return false;
                 }
 
@@ -1179,7 +1195,7 @@ public sealed partial class SubscriberClientImpl
                 // deem that to be successful and retry with no backoff.
                 if (code == StatusCode.Unavailable && (now - _currentStartTimestamp) >= s_streamingPullSuccessThreshold)
                 {
-                    _logger?.LogDebug("Pull stream terminated with no messages, but after success assumption threshold time. Retrying with no backoff.");
+                    _logger?.LogDebug("Pull stream for client {index} terminated with no messages, but after success assumption threshold time. Retrying with no backoff.", _clientIndex);
                     OnSuccess();
                     return true;
                 }
@@ -1187,6 +1203,7 @@ public sealed partial class SubscriberClientImpl
                 // If the exception isn't generally recoverable, don't retry.
                 if (!rpcEx.IsRecoverable())
                 {
+                    _logger?.LogDebug(exception, "Can't recover from generally unrecoverable RpcException on stream for client {index}.", _clientIndex);
                     return false;
                 }
 
@@ -1199,7 +1216,7 @@ public sealed partial class SubscriberClientImpl
                     bool retry = count <= MaxAuthExceptionsBeforeFailing;
                     if (!retry)
                     {
-                        _logger?.LogWarning("Failing pull request due to auth-based failures.");
+                        _logger?.LogWarning(exception, "Failing pull stream for client {index} due to auth-based failures.", _clientIndex);
                     }
                     return retry;
                 }
