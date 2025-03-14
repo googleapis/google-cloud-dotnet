@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.23.0, released 2025-03-14
+
+### New features
+
+- Add more logs on subscriber pull stream retries ([commit ff5a39b](https://github.com/googleapis/google-cloud-dotnet/commit/ff5a39b9ccc431059a63aa475b1d4f231cb19752))
+
 ## Version 3.22.0, released 2025-03-10
 
 ### New features
