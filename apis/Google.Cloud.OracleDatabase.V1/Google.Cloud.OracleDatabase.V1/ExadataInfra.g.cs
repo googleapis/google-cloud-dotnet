@@ -2022,8 +2022,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     private global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow.Types.PatchingMode patchingMode_ = global::Google.Cloud.OracleDatabase.V1.MaintenanceWindow.Types.PatchingMode.Unspecified;
     /// <summary>
     /// Optional. Cloud CloudExadataInfrastructure node patching method, either
-    /// "ROLLING"
-    ///  or "NONROLLING". Default value is ROLLING.
+    /// "ROLLING" or "NONROLLING". Default value is ROLLING.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

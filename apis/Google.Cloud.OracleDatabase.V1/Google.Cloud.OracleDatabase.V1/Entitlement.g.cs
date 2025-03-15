@@ -27,28 +27,29 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "CjBnb29nbGUvY2xvdWQvb3JhY2xlZGF0YWJhc2UvdjEvZW50aXRsZW1lbnQu",
             "cHJvdG8SHmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MRofZ29vZ2xl",
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90byLcAwoLRW50aXRsZW1lbnQSEQoEbmFtZRgBIAEoCUID4EEIElIK",
+            "ZS5wcm90byKGBAoLRW50aXRsZW1lbnQSEQoEbmFtZRgBIAEoCUID4EEIElIK",
             "FWNsb3VkX2FjY291bnRfZGV0YWlscxgCIAEoCzIzLmdvb2dsZS5jbG91ZC5v",
             "cmFjbGVkYXRhYmFzZS52MS5DbG91ZEFjY291bnREZXRhaWxzEhsKDmVudGl0",
             "bGVtZW50X2lkGAMgASgJQgPgQQMSRQoFc3RhdGUYBCABKA4yMS5nb29nbGUu",
             "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRW50aXRsZW1lbnQuU3RhdGVCA+BB",
-            "AyJxCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhYKEkFDQ09VTlRf",
-            "Tk9UX0xJTktFRBABEhYKEkFDQ09VTlRfTk9UX0FDVElWRRACEgoKBkFDVElW",
-            "RRADEhUKEUFDQ09VTlRfU1VTUEVOREVEEAQ6jgHqQYoBCilvcmFjbGVkYXRh",
-            "YmFzZS5nb29nbGVhcGlzLmNvbS9FbnRpdGxlbWVudBJCcHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2VudGl0bGVtZW50cy97ZW50",
-            "aXRsZW1lbnR9KgxlbnRpdGxlbWVudHMyC2VudGl0bGVtZW50IuUBChNDbG91",
-            "ZEFjY291bnREZXRhaWxzEhoKDWNsb3VkX2FjY291bnQYASABKAlCA+BBAxIm",
-            "ChljbG91ZF9hY2NvdW50X2hvbWVfcmVnaW9uGAIgASgJQgPgQQMSKwoZbGlu",
-            "a19leGlzdGluZ19hY2NvdW50X3VyaRgDIAEoCUID4EEDSACIAQESJgoUYWNj",
-            "b3VudF9jcmVhdGlvbl91cmkYBCABKAlCA+BBA0gBiAEBQhwKGl9saW5rX2V4",
-            "aXN0aW5nX2FjY291bnRfdXJpQhcKFV9hY2NvdW50X2NyZWF0aW9uX3VyaULq",
-            "AQoiY29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUIQRW50aXRs",
-            "ZW1lbnRQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFi",
-            "YXNlL2FwaXYxL29yYWNsZWRhdGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoC",
-            "Hkdvb2dsZS5DbG91ZC5PcmFjbGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91",
-            "ZFxPcmFjbGVEYXRhYmFzZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURh",
-            "dGFiYXNlOjpWMWIGcHJvdG8z"));
+            "AyKaAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIWChJBQ0NPVU5U",
+            "X05PVF9MSU5LRUQQARIWChJBQ0NPVU5UX05PVF9BQ1RJVkUQAhIKCgZBQ1RJ",
+            "VkUQAxIVChFBQ0NPVU5UX1NVU1BFTkRFRBAEEicKI05PVF9BUFBST1ZFRF9J",
+            "Tl9QUklWQVRFX01BUktFVFBMQUNFEAU6jgHqQYoBCilvcmFjbGVkYXRhYmFz",
+            "ZS5nb29nbGVhcGlzLmNvbS9FbnRpdGxlbWVudBJCcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2VudGl0bGVtZW50cy97ZW50aXRs",
+            "ZW1lbnR9KgxlbnRpdGxlbWVudHMyC2VudGl0bGVtZW50IuUBChNDbG91ZEFj",
+            "Y291bnREZXRhaWxzEhoKDWNsb3VkX2FjY291bnQYASABKAlCA+BBAxImChlj",
+            "bG91ZF9hY2NvdW50X2hvbWVfcmVnaW9uGAIgASgJQgPgQQMSKwoZbGlua19l",
+            "eGlzdGluZ19hY2NvdW50X3VyaRgDIAEoCUID4EEDSACIAQESJgoUYWNjb3Vu",
+            "dF9jcmVhdGlvbl91cmkYBCABKAlCA+BBA0gBiAEBQhwKGl9saW5rX2V4aXN0",
+            "aW5nX2FjY291bnRfdXJpQhcKFV9hY2NvdW50X2NyZWF0aW9uX3VyaULqAQoi",
+            "Y29tLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUIQRW50aXRsZW1l",
+            "bnRQcm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNl",
+            "L2FwaXYxL29yYWNsZWRhdGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdv",
+            "b2dsZS5DbG91ZC5PcmFjbGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxP",
+            "cmFjbGVEYXRhYmFzZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFi",
+            "YXNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -413,6 +414,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         /// Account is suspended.
         /// </summary>
         [pbr::OriginalName("ACCOUNT_SUSPENDED")] AccountSuspended = 4,
+        /// <summary>
+        /// Entitlement is not approved in private marketplace.
+        /// </summary>
+        [pbr::OriginalName("NOT_APPROVED_IN_PRIVATE_MARKETPLACE")] NotApprovedInPrivateMarketplace = 5,
       }
 
     }
