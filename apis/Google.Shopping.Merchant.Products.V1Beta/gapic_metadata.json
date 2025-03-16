@@ -21,6 +21,12 @@
                 "InsertProductInput",
                 "InsertProductInputAsync"
               ]
+            },
+            "UpdateProductInput": {
+              "methods": [
+                "UpdateProductInput",
+                "UpdateProductInputAsync"
+              ]
             }
           }
         }

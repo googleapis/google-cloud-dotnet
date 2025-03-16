@@ -108,6 +108,206 @@
       ]
     },
     {
+      "regionTag": "merchantapi_v1beta_generated_ProductInputsService_UpdateProductInput_sync",
+      "title": "UpdateProductInputRequestObject",
+      "description": "Snippet for UpdateProductInput",
+      "file": "ProductInputsServiceClient.UpdateProductInputRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProductInput",
+        "fullName": "Google.Shopping.Merchant.Products.V1Beta.ProductInputsServiceClient.UpdateProductInput",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Products.V1Beta.ProductInput",
+        "client": {
+          "shortName": "ProductInputsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Products.V1Beta.ProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateProductInput",
+          "fullName": "google.shopping.merchant.products.v1beta.ProductInputsService.UpdateProductInput",
+          "service": {
+            "shortName": "ProductInputsService",
+            "fullName": "google.shopping.merchant.products.v1beta.ProductInputsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ProductInputsService_UpdateProductInput_async",
+      "title": "UpdateProductInputRequestObjectAsync",
+      "description": "Snippet for UpdateProductInputAsync",
+      "file": "ProductInputsServiceClient.UpdateProductInputRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProductInputAsync",
+        "fullName": "Google.Shopping.Merchant.Products.V1Beta.ProductInputsServiceClient.UpdateProductInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Products.V1Beta.ProductInput>",
+        "client": {
+          "shortName": "ProductInputsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Products.V1Beta.ProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateProductInput",
+          "fullName": "google.shopping.merchant.products.v1beta.ProductInputsService.UpdateProductInput",
+          "service": {
+            "shortName": "ProductInputsService",
+            "fullName": "google.shopping.merchant.products.v1beta.ProductInputsService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ProductInputsService_UpdateProductInput_sync_flattened",
+      "title": "UpdateProductInput",
+      "description": "Snippet for UpdateProductInput",
+      "file": "ProductInputsServiceClient.UpdateProductInputSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProductInput",
+        "fullName": "Google.Shopping.Merchant.Products.V1Beta.ProductInputsServiceClient.UpdateProductInput",
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Products.V1Beta.ProductInput",
+            "name": "productInput"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Shopping.Merchant.Products.V1Beta.ProductInput",
+        "client": {
+          "shortName": "ProductInputsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Products.V1Beta.ProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateProductInput",
+          "fullName": "google.shopping.merchant.products.v1beta.ProductInputsService.UpdateProductInput",
+          "service": {
+            "shortName": "ProductInputsService",
+            "fullName": "google.shopping.merchant.products.v1beta.ProductInputsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "merchantapi_v1beta_generated_ProductInputsService_UpdateProductInput_async_flattened",
+      "title": "UpdateProductInputAsync",
+      "description": "Snippet for UpdateProductInputAsync",
+      "file": "ProductInputsServiceClient.UpdateProductInputAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateProductInputAsync",
+        "fullName": "Google.Shopping.Merchant.Products.V1Beta.ProductInputsServiceClient.UpdateProductInputAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Shopping.Merchant.Products.V1Beta.ProductInput",
+            "name": "productInput"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Shopping.Merchant.Products.V1Beta.ProductInput>",
+        "client": {
+          "shortName": "ProductInputsServiceClient",
+          "fullName": "Google.Shopping.Merchant.Products.V1Beta.ProductInputsServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateProductInput",
+          "fullName": "google.shopping.merchant.products.v1beta.ProductInputsService.UpdateProductInput",
+          "service": {
+            "shortName": "ProductInputsService",
+            "fullName": "google.shopping.merchant.products.v1beta.ProductInputsService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "merchantapi_v1beta_generated_ProductInputsService_DeleteProductInput_sync",
       "title": "DeleteProductInputRequestObject",
       "description": "Snippet for DeleteProductInput",

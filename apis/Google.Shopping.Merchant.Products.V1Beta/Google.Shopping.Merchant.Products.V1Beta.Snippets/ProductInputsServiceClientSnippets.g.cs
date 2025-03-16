@@ -16,6 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Protobuf.WellKnownTypes;
     using Google.Shopping.Merchant.Products.V1Beta;
     using System.Threading.Tasks;
 
@@ -56,6 +57,72 @@ namespace GoogleCSharpSnippets
             };
             // Make the request
             ProductInput response = await productInputsServiceClient.InsertProductInputAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProductInput</summary>
+        public void UpdateProductInputRequestObject()
+        {
+            // Snippet: UpdateProductInput(UpdateProductInputRequest, CallSettings)
+            // Create client
+            ProductInputsServiceClient productInputsServiceClient = ProductInputsServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateProductInputRequest request = new UpdateProductInputRequest
+            {
+                ProductInput = new ProductInput(),
+                UpdateMask = new FieldMask(),
+                DataSource = "",
+            };
+            // Make the request
+            ProductInput response = productInputsServiceClient.UpdateProductInput(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProductInputAsync</summary>
+        public async Task UpdateProductInputRequestObjectAsync()
+        {
+            // Snippet: UpdateProductInputAsync(UpdateProductInputRequest, CallSettings)
+            // Additional: UpdateProductInputAsync(UpdateProductInputRequest, CancellationToken)
+            // Create client
+            ProductInputsServiceClient productInputsServiceClient = await ProductInputsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateProductInputRequest request = new UpdateProductInputRequest
+            {
+                ProductInput = new ProductInput(),
+                UpdateMask = new FieldMask(),
+                DataSource = "",
+            };
+            // Make the request
+            ProductInput response = await productInputsServiceClient.UpdateProductInputAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProductInput</summary>
+        public void UpdateProductInput()
+        {
+            // Snippet: UpdateProductInput(ProductInput, FieldMask, CallSettings)
+            // Create client
+            ProductInputsServiceClient productInputsServiceClient = ProductInputsServiceClient.Create();
+            // Initialize request argument(s)
+            ProductInput productInput = new ProductInput();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ProductInput response = productInputsServiceClient.UpdateProductInput(productInput, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProductInputAsync</summary>
+        public async Task UpdateProductInputAsync()
+        {
+            // Snippet: UpdateProductInputAsync(ProductInput, FieldMask, CallSettings)
+            // Additional: UpdateProductInputAsync(ProductInput, FieldMask, CancellationToken)
+            // Create client
+            ProductInputsServiceClient productInputsServiceClient = await ProductInputsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProductInput productInput = new ProductInput();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ProductInput response = await productInputsServiceClient.UpdateProductInputAsync(productInput, updateMask);
             // End snippet
         }
 

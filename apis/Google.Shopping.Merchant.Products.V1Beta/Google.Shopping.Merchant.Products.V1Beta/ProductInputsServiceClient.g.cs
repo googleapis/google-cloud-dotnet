@@ -46,6 +46,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             InsertProductInputSettings = existing.InsertProductInputSettings;
+            UpdateProductInputSettings = existing.UpdateProductInputSettings;
             DeleteProductInputSettings = existing.DeleteProductInputSettings;
             OnCopy(existing);
         }
@@ -70,6 +71,25 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings InsertProductInputSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ProductInputsServiceClient.UpdateProductInput</c> and
+        /// <c>ProductInputsServiceClient.UpdateProductInputAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateProductInputSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -276,6 +296,146 @@ namespace Google.Shopping.Merchant.Products.V1Beta
             InsertProductInputAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the existing product input in your Merchant Center account.
+        /// 
+        /// After inserting, updating, or deleting a product input, it may take several
+        /// minutes before the processed product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProductInput UpdateProductInput(UpdateProductInputRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the existing product input in your Merchant Center account.
+        /// 
+        /// After inserting, updating, or deleting a product input, it may take several
+        /// minutes before the processed product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProductInput> UpdateProductInputAsync(UpdateProductInputRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the existing product input in your Merchant Center account.
+        /// 
+        /// After inserting, updating, or deleting a product input, it may take several
+        /// minutes before the processed product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProductInput> UpdateProductInputAsync(UpdateProductInputRequest request, st::CancellationToken cancellationToken) =>
+            UpdateProductInputAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the existing product input in your Merchant Center account.
+        /// 
+        /// After inserting, updating, or deleting a product input, it may take several
+        /// minutes before the processed product can be retrieved.
+        /// </summary>
+        /// <param name="productInput">
+        /// Required. The product input resource to update. Information you submit will
+        /// be applied to the processed product as well.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of product attributes to be updated.
+        /// 
+        /// If the update mask is omitted, then it is treated as implied field mask
+        /// equivalent to all fields that are populated (have a non-empty value).
+        /// 
+        /// Attributes specified in the update mask without a value specified in the
+        /// body will be deleted from the product.
+        /// 
+        /// Update mask can only be specified for top level fields in
+        /// attributes and custom attributes.
+        /// 
+        /// To specify the update mask for custom attributes you need to add the
+        /// `custom_attribute.` prefix.
+        /// 
+        /// Providing special "*" value for full product replacement is not supported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProductInput UpdateProductInput(ProductInput productInput, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateProductInput(new UpdateProductInputRequest
+            {
+                ProductInput = gax::GaxPreconditions.CheckNotNull(productInput, nameof(productInput)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the existing product input in your Merchant Center account.
+        /// 
+        /// After inserting, updating, or deleting a product input, it may take several
+        /// minutes before the processed product can be retrieved.
+        /// </summary>
+        /// <param name="productInput">
+        /// Required. The product input resource to update. Information you submit will
+        /// be applied to the processed product as well.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of product attributes to be updated.
+        /// 
+        /// If the update mask is omitted, then it is treated as implied field mask
+        /// equivalent to all fields that are populated (have a non-empty value).
+        /// 
+        /// Attributes specified in the update mask without a value specified in the
+        /// body will be deleted from the product.
+        /// 
+        /// Update mask can only be specified for top level fields in
+        /// attributes and custom attributes.
+        /// 
+        /// To specify the update mask for custom attributes you need to add the
+        /// `custom_attribute.` prefix.
+        /// 
+        /// Providing special "*" value for full product replacement is not supported.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProductInput> UpdateProductInputAsync(ProductInput productInput, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateProductInputAsync(new UpdateProductInputRequest
+            {
+                ProductInput = gax::GaxPreconditions.CheckNotNull(productInput, nameof(productInput)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the existing product input in your Merchant Center account.
+        /// 
+        /// After inserting, updating, or deleting a product input, it may take several
+        /// minutes before the processed product can be retrieved.
+        /// </summary>
+        /// <param name="productInput">
+        /// Required. The product input resource to update. Information you submit will
+        /// be applied to the processed product as well.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of product attributes to be updated.
+        /// 
+        /// If the update mask is omitted, then it is treated as implied field mask
+        /// equivalent to all fields that are populated (have a non-empty value).
+        /// 
+        /// Attributes specified in the update mask without a value specified in the
+        /// body will be deleted from the product.
+        /// 
+        /// Update mask can only be specified for top level fields in
+        /// attributes and custom attributes.
+        /// 
+        /// To specify the update mask for custom attributes you need to add the
+        /// `custom_attribute.` prefix.
+        /// 
+        /// Providing special "*" value for full product replacement is not supported.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProductInput> UpdateProductInputAsync(ProductInput productInput, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateProductInputAsync(productInput, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a product input from your Merchant Center account.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
@@ -447,6 +607,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta
     {
         private readonly gaxgrpc::ApiCall<InsertProductInputRequest, ProductInput> _callInsertProductInput;
 
+        private readonly gaxgrpc::ApiCall<UpdateProductInputRequest, ProductInput> _callUpdateProductInput;
+
         private readonly gaxgrpc::ApiCall<DeleteProductInputRequest, wkt::Empty> _callDeleteProductInput;
 
         /// <summary>
@@ -468,6 +630,9 @@ namespace Google.Shopping.Merchant.Products.V1Beta
             _callInsertProductInput = clientHelper.BuildApiCall<InsertProductInputRequest, ProductInput>("InsertProductInput", grpcClient.InsertProductInputAsync, grpcClient.InsertProductInput, effectiveSettings.InsertProductInputSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callInsertProductInput);
             Modify_InsertProductInputApiCall(ref _callInsertProductInput);
+            _callUpdateProductInput = clientHelper.BuildApiCall<UpdateProductInputRequest, ProductInput>("UpdateProductInput", grpcClient.UpdateProductInputAsync, grpcClient.UpdateProductInput, effectiveSettings.UpdateProductInputSettings).WithGoogleRequestParam("product_input.name", request => request.ProductInput?.Name);
+            Modify_ApiCall(ref _callUpdateProductInput);
+            Modify_UpdateProductInputApiCall(ref _callUpdateProductInput);
             _callDeleteProductInput = clientHelper.BuildApiCall<DeleteProductInputRequest, wkt::Empty>("DeleteProductInput", grpcClient.DeleteProductInputAsync, grpcClient.DeleteProductInput, effectiveSettings.DeleteProductInputSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteProductInput);
             Modify_DeleteProductInputApiCall(ref _callDeleteProductInput);
@@ -478,6 +643,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         partial void Modify_InsertProductInputApiCall(ref gaxgrpc::ApiCall<InsertProductInputRequest, ProductInput> call);
 
+        partial void Modify_UpdateProductInputApiCall(ref gaxgrpc::ApiCall<UpdateProductInputRequest, ProductInput> call);
+
         partial void Modify_DeleteProductInputApiCall(ref gaxgrpc::ApiCall<DeleteProductInputRequest, wkt::Empty> call);
 
         partial void OnConstruction(ProductInputsService.ProductInputsServiceClient grpcClient, ProductInputsServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -486,6 +653,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         public override ProductInputsService.ProductInputsServiceClient GrpcClient { get; }
 
         partial void Modify_InsertProductInputRequest(ref InsertProductInputRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateProductInputRequest(ref UpdateProductInputRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteProductInputRequest(ref DeleteProductInputRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -521,6 +690,36 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         {
             Modify_InsertProductInputRequest(ref request, ref callSettings);
             return _callInsertProductInput.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the existing product input in your Merchant Center account.
+        /// 
+        /// After inserting, updating, or deleting a product input, it may take several
+        /// minutes before the processed product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ProductInput UpdateProductInput(UpdateProductInputRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateProductInputRequest(ref request, ref callSettings);
+            return _callUpdateProductInput.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the existing product input in your Merchant Center account.
+        /// 
+        /// After inserting, updating, or deleting a product input, it may take several
+        /// minutes before the processed product can be retrieved.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ProductInput> UpdateProductInputAsync(UpdateProductInputRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateProductInputRequest(ref request, ref callSettings);
+            return _callUpdateProductInput.Async(request, callSettings);
         }
 
         /// <summary>
