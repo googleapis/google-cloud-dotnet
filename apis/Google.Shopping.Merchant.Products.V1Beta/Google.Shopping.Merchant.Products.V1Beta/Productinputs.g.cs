@@ -29,48 +29,60 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             "cm9kdWN0cy52MWJldGEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
             "F2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGhtnb29n",
-            "bGUvcHJvdG9idWYvZW1wdHkucHJvdG8aPmdvb2dsZS9zaG9wcGluZy9tZXJj",
-            "aGFudC9wcm9kdWN0cy92MWJldGEvcHJvZHVjdHNfY29tbW9uLnByb3RvGiBn",
-            "b29nbGUvc2hvcHBpbmcvdHlwZS90eXBlcy5wcm90byKaBAoMUHJvZHVjdElu",
-            "cHV0EhEKBG5hbWUYASABKAlCA+BBCBIUCgdwcm9kdWN0GAIgASgJQgPgQQMS",
-            "QgoHY2hhbm5lbBgDIAEoDjIpLmdvb2dsZS5zaG9wcGluZy50eXBlLkNoYW5u",
-            "ZWwuQ2hhbm5lbEVudW1CBuBBAuBBBRIYCghvZmZlcl9pZBgEIAEoCUIG4EEC",
-            "4EEFEiAKEGNvbnRlbnRfbGFuZ3VhZ2UYBSABKAlCBuBBAuBBBRIaCgpmZWVk",
-            "X2xhYmVsGAYgASgJQgbgQQLgQQUSIAoOdmVyc2lvbl9udW1iZXIYByABKANC",
-            "A+BBAUgAiAEBEk0KCmF0dHJpYnV0ZXMYCCABKAsyNC5nb29nbGUuc2hvcHBp",
-            "bmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLkF0dHJpYnV0ZXNCA+BBARJF",
-            "ChFjdXN0b21fYXR0cmlidXRlcxgJIAMoCzIlLmdvb2dsZS5zaG9wcGluZy50",
-            "eXBlLkN1c3RvbUF0dHJpYnV0ZUID4EEBOnrqQXcKJ21lcmNoYW50YXBpLmdv",
-            "b2dsZWFwaXMuY29tL1Byb2R1Y3RJbnB1dBIvYWNjb3VudHMve2FjY291bnR9",
-            "L3Byb2R1Y3RJbnB1dHMve3Byb2R1Y3RpbnB1dH0qDXByb2R1Y3RJbnB1dHMy",
-            "DHByb2R1Y3RJbnB1dEIRCg9fdmVyc2lvbl9udW1iZXIixQEKGUluc2VydFBy",
-            "b2R1Y3RJbnB1dFJlcXVlc3QSOgoGcGFyZW50GAEgASgJQirgQQL6QSQSIm1l",
-            "cmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL1Byb2R1Y3QSUgoNcHJvZHVjdF9p",
-            "bnB1dBgCIAEoCzI2Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0",
-            "cy52MWJldGEuUHJvZHVjdElucHV0QgPgQQISGAoLZGF0YV9zb3VyY2UYAyAB",
+            "bGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVs",
+            "ZF9tYXNrLnByb3RvGj5nb29nbGUvc2hvcHBpbmcvbWVyY2hhbnQvcHJvZHVj",
+            "dHMvdjFiZXRhL3Byb2R1Y3RzX2NvbW1vbi5wcm90bxogZ29vZ2xlL3Nob3Bw",
+            "aW5nL3R5cGUvdHlwZXMucHJvdG8ilwQKDFByb2R1Y3RJbnB1dBIRCgRuYW1l",
+            "GAEgASgJQgPgQQgSFAoHcHJvZHVjdBgCIAEoCUID4EEDEj8KB2NoYW5uZWwY",
+            "AyABKA4yKS5nb29nbGUuc2hvcHBpbmcudHlwZS5DaGFubmVsLkNoYW5uZWxF",
+            "bnVtQgPgQQUSGAoIb2ZmZXJfaWQYBCABKAlCBuBBAuBBBRIgChBjb250ZW50",
+            "X2xhbmd1YWdlGAUgASgJQgbgQQLgQQUSGgoKZmVlZF9sYWJlbBgGIAEoCUIG",
+            "4EEC4EEFEiAKDnZlcnNpb25fbnVtYmVyGAcgASgDQgPgQQFIAIgBARJNCgph",
+            "dHRyaWJ1dGVzGAggASgLMjQuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnBy",
+            "b2R1Y3RzLnYxYmV0YS5BdHRyaWJ1dGVzQgPgQQESRQoRY3VzdG9tX2F0dHJp",
+            "YnV0ZXMYCSADKAsyJS5nb29nbGUuc2hvcHBpbmcudHlwZS5DdXN0b21BdHRy",
+            "aWJ1dGVCA+BBATp66kF3CidtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9Q",
+            "cm9kdWN0SW5wdXQSL2FjY291bnRzL3thY2NvdW50fS9wcm9kdWN0SW5wdXRz",
+            "L3twcm9kdWN0aW5wdXR9Kg1wcm9kdWN0SW5wdXRzMgxwcm9kdWN0SW5wdXRC",
+            "EQoPX3ZlcnNpb25fbnVtYmVyIsUBChlJbnNlcnRQcm9kdWN0SW5wdXRSZXF1",
+            "ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJtZXJjaGFudGFwaS5nb29n",
+            "bGVhcGlzLmNvbS9Qcm9kdWN0ElIKDXByb2R1Y3RfaW5wdXQYAiABKAsyNi5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLlByb2R1",
+            "Y3RJbnB1dEID4EECEhgKC2RhdGFfc291cmNlGAMgASgJQgPgQQIivwEKGVVw",
+            "ZGF0ZVByb2R1Y3RJbnB1dFJlcXVlc3QSUgoNcHJvZHVjdF9pbnB1dBgBIAEo",
+            "CzI2Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEu",
+            "UHJvZHVjdElucHV0QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQESGAoLZGF0YV9zb3VyY2UYAyAB",
             "KAlCA+BBAiJ0ChlEZWxldGVQcm9kdWN0SW5wdXRSZXF1ZXN0Ej0KBG5hbWUY",
             "ASABKAlCL+BBAvpBKQonbWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vUHJv",
-            "ZHVjdElucHV0EhgKC2RhdGFfc291cmNlGAIgASgJQgPgQQIy/AMKFFByb2R1",
+            "ZHVjdElucHV0EhgKC2RhdGFfc291cmNlGAIgASgJQgPgQQIyhQYKFFByb2R1",
             "Y3RJbnB1dHNTZXJ2aWNlEuMBChJJbnNlcnRQcm9kdWN0SW5wdXQSQy5nb29n",
             "bGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLkluc2VydFBy",
             "b2R1Y3RJbnB1dFJlcXVlc3QaNi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
             "cHJvZHVjdHMudjFiZXRhLlByb2R1Y3RJbnB1dCJQgtPkkwJKIjkvcHJvZHVj",
             "dHMvdjFiZXRhL3twYXJlbnQ9YWNjb3VudHMvKn0vcHJvZHVjdElucHV0czpp",
-            "bnNlcnQ6DXByb2R1Y3RfaW5wdXQStAEKEkRlbGV0ZVByb2R1Y3RJbnB1dBJD",
-            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuRGVs",
-            "ZXRlUHJvZHVjdElucHV0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSJB2kEEbmFtZYLT5JMCNCoyL3Byb2R1Y3RzL3YxYmV0YS97bmFtZT1hY2Nv",
-            "dW50cy8qL3Byb2R1Y3RJbnB1dHMvKn0aR8pBGm1lcmNoYW50YXBpLmdvb2ds",
-            "ZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
-            "b250ZW50QpQBCixjb20uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1",
-            "Y3RzLnYxYmV0YUISUHJvZHVjdElucHV0c1Byb3RvUAFaTmNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vc2hvcHBpbmcvbWVyY2hhbnQvcHJvZHVjdHMvYXBpdjFiZXRh",
-            "L3Byb2R1Y3RzcGI7cHJvZHVjdHNwYmIGcHJvdG8z"));
+            "bnNlcnQ6DXByb2R1Y3RfaW5wdXQShgIKElVwZGF0ZVByb2R1Y3RJbnB1dBJD",
+            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuVXBk",
+            "YXRlUHJvZHVjdElucHV0UmVxdWVzdBo2Lmdvb2dsZS5zaG9wcGluZy5tZXJj",
+            "aGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVjdElucHV0InPaQRlwcm9kdWN0",
+            "X2lucHV0LHVwZGF0ZV9tYXNrgtPkkwJRMkAvcHJvZHVjdHMvdjFiZXRhL3tw",
+            "cm9kdWN0X2lucHV0Lm5hbWU9YWNjb3VudHMvKi9wcm9kdWN0SW5wdXRzLyp9",
+            "Og1wcm9kdWN0X2lucHV0ErQBChJEZWxldGVQcm9kdWN0SW5wdXQSQy5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLkRlbGV0ZVBy",
+            "b2R1Y3RJbnB1dFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiQdpB",
+            "BG5hbWWC0+STAjQqMi9wcm9kdWN0cy92MWJldGEve25hbWU9YWNjb3VudHMv",
+            "Ki9wcm9kdWN0SW5wdXRzLyp9GkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlz",
+            "LmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVu",
+            "dEKUAQosY29tLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
+            "MWJldGFCElByb2R1Y3RJbnB1dHNQcm90b1ABWk5jbG91ZC5nb29nbGUuY29t",
+            "L2dvL3Nob3BwaW5nL21lcmNoYW50L3Byb2R1Y3RzL2FwaXYxYmV0YS9wcm9k",
+            "dWN0c3BiO3Byb2R1Y3RzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Shopping.Merchant.Products.V1Beta.ProductsCommonReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Shopping.Merchant.Products.V1Beta.ProductsCommonReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductInput), global::Google.Shopping.Merchant.Products.V1Beta.ProductInput.Parser, new[]{ "Name", "Product", "Channel", "OfferId", "ContentLanguage", "FeedLabel", "VersionNumber", "Attributes", "CustomAttributes" }, new[]{ "VersionNumber" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.InsertProductInputRequest), global::Google.Shopping.Merchant.Products.V1Beta.InsertProductInputRequest.Parser, new[]{ "Parent", "ProductInput", "DataSource" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest), global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest.Parser, new[]{ "ProductInput", "UpdateMask", "DataSource" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.DeleteProductInputRequest), global::Google.Shopping.Merchant.Products.V1Beta.DeleteProductInputRequest.Parser, new[]{ "Name", "DataSource" }, null, null, null, null)
           }));
     }
@@ -80,26 +92,26 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
   #region Messages
   /// <summary>
   /// This resource represents input data you submit for a product, not the
-  /// processed product that you see in Merchant Center, in Shopping ads, or across
-  /// Google surfaces. Product inputs, rules and supplemental data source data are
-  /// combined to create the processed
-  /// [Product][google.shopping.merchant.products.v1beta.Product].
+  ///  processed product that you see in Merchant Center, in Shopping ads, or
+  ///  across Google surfaces. Product inputs, rules and supplemental data source
+  ///  data are combined to create the processed
+  ///  [Product][google.shopping.merchant.products.v1beta.Product].
   ///
-  /// Required product input attributes to pass data validation checks are
-  /// primarily defined in the [Products Data
-  /// Specification](https://support.google.com/merchants/answer/188494).
+  ///  Required product input attributes to pass data validation checks are
+  ///  primarily defined in the [Products Data
+  ///  Specification](https://support.google.com/merchants/answer/188494).
   ///
-  /// The following attributes are required:
-  /// [feedLabel][google.shopping.merchant.products.v1beta.Product.feed_label],
-  /// [contentLanguage][google.shopping.merchant.products.v1beta.Product.content_language]
-  /// and [offerId][google.shopping.merchant.products.v1beta.Product.offer_id].
+  ///  The following attributes are required:
+  ///  [feedLabel][google.shopping.merchant.products.v1beta.Product.feed_label],
+  ///  [contentLanguage][google.shopping.merchant.products.v1beta.Product.content_language]
+  ///  and [offerId][google.shopping.merchant.products.v1beta.Product.offer_id].
   ///
-  /// After inserting, updating, or deleting a product input, it may take several
-  /// minutes before the processed product can be retrieved.
+  ///  After inserting, updating, or deleting a product input, it may take several
+  ///  minutes before the processed product can be retrieved.
   ///
-  /// All fields in the product input and its sub-messages match the English name
-  /// of their corresponding attribute in the vertical spec with [some
-  /// exceptions](https://support.google.com/merchants/answer/7052112).
+  ///  All fields in the product input and its sub-messages match the English name
+  ///  of their corresponding attribute in the vertical spec with [some
+  ///  exceptions](https://support.google.com/merchants/answer/7052112).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProductInput : pb::IMessage<ProductInput>
@@ -198,7 +210,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     public const int ChannelFieldNumber = 3;
     private global::Google.Shopping.Type.Channel.Types.ChannelEnum channel_ = global::Google.Shopping.Type.Channel.Types.ChannelEnum.Unspecified;
     /// <summary>
-    /// Required. Immutable. The
+    /// Immutable. The
     /// [channel](https://support.google.com/merchants/answer/7361332) of the
     /// product.
     /// </summary>
@@ -757,8 +769,11 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     /// <summary>
     /// Required. The primary or supplemental product data source name. If the
     /// product already exists and data source provided is different, then the
-    /// product will be moved to a new data source. Format:
-    /// `accounts/{account}/dataSources/{datasource}`.
+    /// product will be moved to a new data source.
+    ///
+    /// Only API data sources are supported.
+    ///
+    /// Format: `accounts/{account}/dataSources/{datasource}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -960,6 +975,323 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
   }
 
   /// <summary>
+  /// Request message for the UpdateProductInput method.
+  /// The product (primary input) must exist for the update to succeed.
+  /// If the update is for a primary product input, the existing primary product
+  /// input must be from the same data source.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateProductInputRequest : pb::IMessage<UpdateProductInputRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateProductInputRequest> _parser = new pb::MessageParser<UpdateProductInputRequest>(() => new UpdateProductInputRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateProductInputRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Products.V1Beta.ProductinputsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateProductInputRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateProductInputRequest(UpdateProductInputRequest other) : this() {
+      productInput_ = other.productInput_ != null ? other.productInput_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      dataSource_ = other.dataSource_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateProductInputRequest Clone() {
+      return new UpdateProductInputRequest(this);
+    }
+
+    /// <summary>Field number for the "product_input" field.</summary>
+    public const int ProductInputFieldNumber = 1;
+    private global::Google.Shopping.Merchant.Products.V1Beta.ProductInput productInput_;
+    /// <summary>
+    /// Required. The product input resource to update. Information you submit will
+    /// be applied to the processed product as well.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1Beta.ProductInput ProductInput {
+      get { return productInput_; }
+      set {
+        productInput_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. The list of product attributes to be updated.
+    ///
+    /// If the update mask is omitted, then it is treated as implied field mask
+    /// equivalent to all fields that are populated (have a non-empty value).
+    ///
+    /// Attributes specified in the update mask without a value specified in the
+    /// body will be deleted from the product.
+    ///
+    /// Update mask can only be specified for top level fields in
+    /// attributes and custom attributes.
+    ///
+    /// To specify the update mask for custom attributes you need to add the
+    /// `custom_attribute.` prefix.
+    ///
+    /// Providing special "*" value for full product replacement is not supported.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "data_source" field.</summary>
+    public const int DataSourceFieldNumber = 3;
+    private string dataSource_ = "";
+    /// <summary>
+    /// Required. The primary or supplemental product data source where
+    /// `data_source` name identifies the product input to be updated.
+    ///
+    /// Only API data sources are supported.
+    ///
+    /// Format: `accounts/{account}/dataSources/{datasource}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataSource {
+      get { return dataSource_; }
+      set {
+        dataSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateProductInputRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateProductInputRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(ProductInput, other.ProductInput)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      if (DataSource != other.DataSource) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (productInput_ != null) hash ^= ProductInput.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (DataSource.Length != 0) hash ^= DataSource.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (productInput_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ProductInput);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (DataSource.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DataSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (productInput_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(ProductInput);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (DataSource.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DataSource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (productInput_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProductInput);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (DataSource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataSource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateProductInputRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.productInput_ != null) {
+        if (productInput_ == null) {
+          ProductInput = new global::Google.Shopping.Merchant.Products.V1Beta.ProductInput();
+        }
+        ProductInput.MergeFrom(other.ProductInput);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      if (other.DataSource.Length != 0) {
+        DataSource = other.DataSource;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (productInput_ == null) {
+              ProductInput = new global::Google.Shopping.Merchant.Products.V1Beta.ProductInput();
+            }
+            input.ReadMessage(ProductInput);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            DataSource = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (productInput_ == null) {
+              ProductInput = new global::Google.Shopping.Merchant.Products.V1Beta.ProductInput();
+            }
+            input.ReadMessage(ProductInput);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+          case 26: {
+            DataSource = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request message for the DeleteProductInput method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -977,7 +1309,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Products.V1Beta.ProductinputsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Shopping.Merchant.Products.V1Beta.ProductinputsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

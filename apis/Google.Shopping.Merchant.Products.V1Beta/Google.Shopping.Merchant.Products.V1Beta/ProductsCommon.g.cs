@@ -29,7 +29,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             "LnByb2R1Y3RzLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxogZ29vZ2xl",
             "L3Nob3BwaW5nL3R5cGUvdHlwZXMucHJvdG8aGmdvb2dsZS90eXBlL2ludGVy",
-            "dmFsLnByb3RvIpsnCgpBdHRyaWJ1dGVzEh4KEWlkZW50aWZpZXJfZXhpc3Rz",
+            "dmFsLnByb3RvIokoCgpBdHRyaWJ1dGVzEh4KEWlkZW50aWZpZXJfZXhpc3Rz",
             "GAQgASgISACIAQESFgoJaXNfYnVuZGxlGAUgASgISAGIAQESEgoFdGl0bGUY",
             "BiABKAlIAogBARIYCgtkZXNjcmlwdGlvbhgHIAEoCUgDiAEBEhEKBGxpbmsY",
             "CCABKAlIBIgBARIYCgttb2JpbGVfbGluaxgJIAEoCUgFiAEBEhsKDmNhbm9u",
@@ -119,121 +119,130 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             "MogBARJsChZzdHJ1Y3R1cmVkX2Rlc2NyaXB0aW9uGIUBIAEoCzJGLmdvb2ds",
             "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVjdFN0",
             "cnVjdHVyZWREZXNjcmlwdGlvbkgziAEBEjsKFmF1dG9fcHJpY2luZ19taW5f",
-            "cHJpY2UYfCABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUIUChJf",
-            "aWRlbnRpZmllcl9leGlzdHNCDAoKX2lzX2J1bmRsZUIICgZfdGl0bGVCDgoM",
-            "X2Rlc2NyaXB0aW9uQgcKBV9saW5rQg4KDF9tb2JpbGVfbGlua0IRCg9fY2Fu",
-            "b25pY2FsX2xpbmtCDQoLX2ltYWdlX2xpbmtCCAoGX2FkdWx0QgwKCl9hZ2Vf",
-            "Z3JvdXBCDwoNX2F2YWlsYWJpbGl0eUIICgZfYnJhbmRCCAoGX2NvbG9yQgwK",
-            "Cl9jb25kaXRpb25CCQoHX2dlbmRlckIaChhfZ29vZ2xlX3Byb2R1Y3RfY2F0",
-            "ZWdvcnlCEAoOX2l0ZW1fZ3JvdXBfaWRCCwoJX21hdGVyaWFsQgYKBF9tcG5C",
-            "CgoIX3BhdHRlcm5CGgoYX3NlbGxfb25fZ29vZ2xlX3F1YW50aXR5QhQKEl9t",
-            "YXhfaGFuZGxpbmdfdGltZUIUChJfbWluX2hhbmRsaW5nX3RpbWVCEQoPX3No",
-            "aXBwaW5nX2xhYmVsQhUKE190cmFuc2l0X3RpbWVfbGFiZWxCBwoFX3NpemVC",
-            "DgoMX3NpemVfc3lzdGVtQg8KDV90YXhfY2F0ZWdvcnlCGgoYX2VuZXJneV9l",
-            "ZmZpY2llbmN5X2NsYXNzQh4KHF9taW5fZW5lcmd5X2VmZmljaWVuY3lfY2xh",
-            "c3NCHgocX21heF9lbmVyZ3lfZWZmaWNpZW5jeV9jbGFzc0IMCgpfbXVsdGlw",
-            "YWNrQg8KDV9hZHNfZ3JvdXBpbmdCDwoNX2Fkc19yZWRpcmVjdEIRCg9fZGlz",
-            "cGxheV9hZHNfaWRCFAoSX2Rpc3BsYXlfYWRzX3RpdGxlQhMKEV9kaXNwbGF5",
-            "X2Fkc19saW5rQhQKEl9kaXNwbGF5X2Fkc192YWx1ZUIQCg5fcGlja3VwX21l",
-            "dGhvZEINCgtfcGlja3VwX3NsYUIQCg5fbGlua190ZW1wbGF0ZUIXChVfbW9i",
-            "aWxlX2xpbmtfdGVtcGxhdGVCEQoPX2N1c3RvbV9sYWJlbF8wQhEKD19jdXN0",
-            "b21fbGFiZWxfMUIRCg9fY3VzdG9tX2xhYmVsXzJCEQoPX2N1c3RvbV9sYWJl",
-            "bF8zQhEKD19jdXN0b21fbGFiZWxfNEIVChNfZXh0ZXJuYWxfc2VsbGVyX2lk",
-            "QggKBl9wYXVzZUIVChNfdmlydHVhbF9tb2RlbF9saW5rQhMKEV9zdHJ1Y3R1",
-            "cmVkX3RpdGxlQhkKF19zdHJ1Y3R1cmVkX2Rlc2NyaXB0aW9uInAKA1RheBIM",
-            "CgRyYXRlGAEgASgBEg8KB2NvdW50cnkYAiABKAkSDgoGcmVnaW9uGAMgASgJ",
-            "EhAKCHRheF9zaGlwGAQgASgIEhMKC2xvY2F0aW9uX2lkGAUgASgDEhMKC3Bv",
-            "c3RhbF9jb2RlGAYgASgJIi0KDlNoaXBwaW5nV2VpZ2h0Eg0KBXZhbHVlGAEg",
-            "ASgBEgwKBHVuaXQYAiABKAkiMAoRU2hpcHBpbmdEaW1lbnNpb24SDQoFdmFs",
-            "dWUYASABKAESDAoEdW5pdBgCIAEoCSI1ChZVbml0UHJpY2luZ0Jhc2VNZWFz",
-            "dXJlEg0KBXZhbHVlGAEgASgDEgwKBHVuaXQYAiABKAkiMQoSVW5pdFByaWNp",
-            "bmdNZWFzdXJlEg0KBXZhbHVlGAEgASgBEgwKBHVuaXQYAiABKAkipAEKEFN1",
-            "YnNjcmlwdGlvbkNvc3QSTAoGcGVyaW9kGAEgASgOMjwuZ29vZ2xlLnNob3Bw",
-            "aW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxYmV0YS5TdWJzY3JpcHRpb25QZXJp",
-            "b2QSFQoNcGVyaW9kX2xlbmd0aBgCIAEoAxIrCgZhbW91bnQYAyABKAsyGy5n",
-            "b29nbGUuc2hvcHBpbmcudHlwZS5QcmljZSK7AQoLSW5zdGFsbG1lbnQSDgoG",
-            "bW9udGhzGAEgASgDEisKBmFtb3VudBgCIAEoCzIbLmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlLlByaWNlEjUKC2Rvd25wYXltZW50GAMgASgLMhsuZ29vZ2xlLnNo",
-            "b3BwaW5nLnR5cGUuUHJpY2VIAIgBARIYCgtjcmVkaXRfdHlwZRgEIAEoCUgB",
-            "iAEBQg4KDF9kb3ducGF5bWVudEIOCgxfY3JlZGl0X3R5cGUiQgoNTG95YWx0",
-            "eVBvaW50cxIMCgRuYW1lGAEgASgJEhQKDHBvaW50c192YWx1ZRgCIAEoAxIN",
-            "CgVyYXRpbxgDIAEoASLBAwoOTG95YWx0eVByb2dyYW0SGgoNcHJvZ3JhbV9s",
-            "YWJlbBgBIAEoCUgAiAEBEhcKCnRpZXJfbGFiZWwYAiABKAlIAYgBARIvCgVw",
-            "cmljZRgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAKIAQES",
-            "QQoXY2FzaGJhY2tfZm9yX2Z1dHVyZV91c2UYBCABKAsyGy5nb29nbGUuc2hv",
-            "cHBpbmcudHlwZS5QcmljZUgDiAEBEhsKDmxveWFsdHlfcG9pbnRzGAUgASgD",
-            "SASIAQESPwobbWVtYmVyX3ByaWNlX2VmZmVjdGl2ZV9kYXRlGAYgASgLMhUu",
-            "Z29vZ2xlLnR5cGUuSW50ZXJ2YWxIBYgBARIbCg5zaGlwcGluZ19sYWJlbBgH",
-            "IAEoCUgGiAEBQhAKDl9wcm9ncmFtX2xhYmVsQg0KC190aWVyX2xhYmVsQggK",
-            "Bl9wcmljZUIaChhfY2FzaGJhY2tfZm9yX2Z1dHVyZV91c2VCEQoPX2xveWFs",
-            "dHlfcG9pbnRzQh4KHF9tZW1iZXJfcHJpY2VfZWZmZWN0aXZlX2RhdGVCEQoP",
-            "X3NoaXBwaW5nX2xhYmVsIoMDCghTaGlwcGluZxIqCgVwcmljZRgBIAEoCzIb",
-            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEg8KB2NvdW50cnkYAiABKAkS",
-            "DgoGcmVnaW9uGAMgASgJEg8KB3NlcnZpY2UYBCABKAkSEwoLbG9jYXRpb25f",
-            "aWQYBSABKAMSGwoTbG9jYXRpb25fZ3JvdXBfbmFtZRgGIAEoCRITCgtwb3N0",
-            "YWxfY29kZRgHIAEoCRIeChFtaW5faGFuZGxpbmdfdGltZRgIIAEoA0gAiAEB",
-            "Eh4KEW1heF9oYW5kbGluZ190aW1lGAkgASgDSAGIAQESHQoQbWluX3RyYW5z",
-            "aXRfdGltZRgKIAEoA0gCiAEBEh0KEG1heF90cmFuc2l0X3RpbWUYCyABKANI",
-            "A4gBAUIUChJfbWluX2hhbmRsaW5nX3RpbWVCFAoSX21heF9oYW5kbGluZ190",
-            "aW1lQhMKEV9taW5fdHJhbnNpdF90aW1lQhMKEV9tYXhfdHJhbnNpdF90aW1l",
-            "IogBChVGcmVlU2hpcHBpbmdUaHJlc2hvbGQSFAoHY291bnRyeRgBIAEoCUgA",
-            "iAEBEjkKD3ByaWNlX3RocmVzaG9sZBgCIAEoCzIbLmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlLlByaWNlSAGIAQFCCgoIX2NvdW50cnlCEgoQX3ByaWNlX3RocmVz",
-            "aG9sZCJWCg1Qcm9kdWN0RGV0YWlsEhQKDHNlY3Rpb25fbmFtZRgBIAEoCRIW",
-            "Cg5hdHRyaWJ1dGVfbmFtZRgCIAEoCRIXCg9hdHRyaWJ1dGVfdmFsdWUYAyAB",
-            "KAki+wEKDUNlcnRpZmljYXRpb24SJAoXY2VydGlmaWNhdGlvbl9hdXRob3Jp",
-            "dHkYASABKAlIAIgBARIfChJjZXJ0aWZpY2F0aW9uX25hbWUYAiABKAlIAYgB",
-            "ARIfChJjZXJ0aWZpY2F0aW9uX2NvZGUYAyABKAlIAogBARIgChNjZXJ0aWZp",
-            "Y2F0aW9uX3ZhbHVlGAQgASgJSAOIAQFCGgoYX2NlcnRpZmljYXRpb25fYXV0",
-            "aG9yaXR5QhUKE19jZXJ0aWZpY2F0aW9uX25hbWVCFQoTX2NlcnRpZmljYXRp",
-            "b25fY29kZUIWChRfY2VydGlmaWNhdGlvbl92YWx1ZSJ0ChZQcm9kdWN0U3Ry",
-            "dWN0dXJlZFRpdGxlEiAKE2RpZ2l0YWxfc291cmNlX3R5cGUYASABKAlIAIgB",
-            "ARIUCgdjb250ZW50GAIgASgJSAGIAQFCFgoUX2RpZ2l0YWxfc291cmNlX3R5",
-            "cGVCCgoIX2NvbnRlbnQiegocUHJvZHVjdFN0cnVjdHVyZWREZXNjcmlwdGlv",
-            "bhIgChNkaWdpdGFsX3NvdXJjZV90eXBlGAEgASgJSACIAQESFAoHY29udGVu",
-            "dBgCIAEoCUgBiAEBQhYKFF9kaWdpdGFsX3NvdXJjZV90eXBlQgoKCF9jb250",
-            "ZW50IjkKEFByb2R1Y3REaW1lbnNpb24SEgoFdmFsdWUYASABKAFCA+BBAhIR",
-            "CgR1bml0GAIgASgJQgPgQQIiNgoNUHJvZHVjdFdlaWdodBISCgV2YWx1ZRgB",
-            "IAEoAUID4EECEhEKBHVuaXQYAiABKAlCA+BBAiL3BwoNUHJvZHVjdFN0YXR1",
-            "cxJnChRkZXN0aW5hdGlvbl9zdGF0dXNlcxgDIAMoCzJJLmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVjdFN0YXR1cy5E",
-            "ZXN0aW5hdGlvblN0YXR1cxJhChFpdGVtX2xldmVsX2lzc3VlcxgEIAMoCzJG",
-            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJv",
-            "ZHVjdFN0YXR1cy5JdGVtTGV2ZWxJc3N1ZRIxCg1jcmVhdGlvbl9kYXRlGAUg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0",
-            "ZV9kYXRlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI6ChZn",
-            "b29nbGVfZXhwaXJhdGlvbl9kYXRlGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcBrBAQoRRGVzdGluYXRpb25TdGF0dXMSVgoRcmVwb3J0aW5n",
-            "X2NvbnRleHQYASABKA4yOy5nb29nbGUuc2hvcHBpbmcudHlwZS5SZXBvcnRp",
-            "bmdDb250ZXh0LlJlcG9ydGluZ0NvbnRleHRFbnVtEhoKEmFwcHJvdmVkX2Nv",
-            "dW50cmllcxgCIAMoCRIZChFwZW5kaW5nX2NvdW50cmllcxgDIAMoCRIdChVk",
-            "aXNhcHByb3ZlZF9jb3VudHJpZXMYBCADKAkasAMKDkl0ZW1MZXZlbElzc3Vl",
-            "EgwKBGNvZGUYASABKAkSYQoIc2V2ZXJpdHkYAiABKA4yTy5nb29nbGUuc2hv",
-            "cHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFiZXRhLlByb2R1Y3RTdGF0dXMu",
-            "SXRlbUxldmVsSXNzdWUuU2V2ZXJpdHkSEgoKcmVzb2x1dGlvbhgDIAEoCRIR",
-            "CglhdHRyaWJ1dGUYBCABKAkSVgoRcmVwb3J0aW5nX2NvbnRleHQYBSABKA4y",
-            "Oy5nb29nbGUuc2hvcHBpbmcudHlwZS5SZXBvcnRpbmdDb250ZXh0LlJlcG9y",
-            "dGluZ0NvbnRleHRFbnVtEhMKC2Rlc2NyaXB0aW9uGAYgASgJEg4KBmRldGFp",
-            "bBgHIAEoCRIVCg1kb2N1bWVudGF0aW9uGAggASgJEhwKFGFwcGxpY2FibGVf",
-            "Y291bnRyaWVzGAkgAygJIlQKCFNldmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BF",
-            "Q0lGSUVEEAASEAoMTk9UX0lNUEFDVEVEEAESCwoHREVNT1RFRBACEg8KC0RJ",
-            "U0FQUFJPVkVEEAMipQIKH0Nsb3VkRXhwb3J0QWRkaXRpb25hbFByb3BlcnRp",
-            "ZXMSGgoNcHJvcGVydHlfbmFtZRgBIAEoCUgAiAEBEhIKCnRleHRfdmFsdWUY",
-            "AiADKAkSFwoKYm9vbF92YWx1ZRgDIAEoCEgBiAEBEhEKCWludF92YWx1ZRgE",
-            "IAMoAxITCgtmbG9hdF92YWx1ZRgFIAMoAhIWCgltaW5fdmFsdWUYBiABKAJI",
-            "AogBARIWCgltYXhfdmFsdWUYByABKAJIA4gBARIWCgl1bml0X2NvZGUYCCAB",
-            "KAlIBIgBAUIQCg5fcHJvcGVydHlfbmFtZUINCgtfYm9vbF92YWx1ZUIMCgpf",
-            "bWluX3ZhbHVlQgwKCl9tYXhfdmFsdWVCDAoKX3VuaXRfY29kZSpOChJTdWJz",
-            "Y3JpcHRpb25QZXJpb2QSIwofU1VCU0NSSVBUSU9OX1BFUklPRF9VTlNQRUNJ",
-            "RklFRBAAEgkKBU1PTlRIEAESCAoEWUVBUhACQpUBCixjb20uZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxYmV0YUITUHJvZHVjdHNDb21t",
-            "b25Qcm90b1ABWk5jbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNo",
-            "YW50L3Byb2R1Y3RzL2FwaXYxYmV0YS9wcm9kdWN0c3BiO3Byb2R1Y3RzcGJi",
-            "BnByb3RvMw=="));
+            "cHJpY2UYfCABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRJsChlz",
+            "dXN0YWluYWJpbGl0eV9pbmNlbnRpdmVzGIoBIAMoCzJILmdvb2dsZS5zaG9w",
+            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVjdFN1c3RhaW5h",
+            "YmlsaXR5SW5jZW50aXZlQhQKEl9pZGVudGlmaWVyX2V4aXN0c0IMCgpfaXNf",
+            "YnVuZGxlQggKBl90aXRsZUIOCgxfZGVzY3JpcHRpb25CBwoFX2xpbmtCDgoM",
+            "X21vYmlsZV9saW5rQhEKD19jYW5vbmljYWxfbGlua0INCgtfaW1hZ2VfbGlu",
+            "a0IICgZfYWR1bHRCDAoKX2FnZV9ncm91cEIPCg1fYXZhaWxhYmlsaXR5QggK",
+            "Bl9icmFuZEIICgZfY29sb3JCDAoKX2NvbmRpdGlvbkIJCgdfZ2VuZGVyQhoK",
+            "GF9nb29nbGVfcHJvZHVjdF9jYXRlZ29yeUIQCg5faXRlbV9ncm91cF9pZEIL",
+            "CglfbWF0ZXJpYWxCBgoEX21wbkIKCghfcGF0dGVybkIaChhfc2VsbF9vbl9n",
+            "b29nbGVfcXVhbnRpdHlCFAoSX21heF9oYW5kbGluZ190aW1lQhQKEl9taW5f",
+            "aGFuZGxpbmdfdGltZUIRCg9fc2hpcHBpbmdfbGFiZWxCFQoTX3RyYW5zaXRf",
+            "dGltZV9sYWJlbEIHCgVfc2l6ZUIOCgxfc2l6ZV9zeXN0ZW1CDwoNX3RheF9j",
+            "YXRlZ29yeUIaChhfZW5lcmd5X2VmZmljaWVuY3lfY2xhc3NCHgocX21pbl9l",
+            "bmVyZ3lfZWZmaWNpZW5jeV9jbGFzc0IeChxfbWF4X2VuZXJneV9lZmZpY2ll",
+            "bmN5X2NsYXNzQgwKCl9tdWx0aXBhY2tCDwoNX2Fkc19ncm91cGluZ0IPCg1f",
+            "YWRzX3JlZGlyZWN0QhEKD19kaXNwbGF5X2Fkc19pZEIUChJfZGlzcGxheV9h",
+            "ZHNfdGl0bGVCEwoRX2Rpc3BsYXlfYWRzX2xpbmtCFAoSX2Rpc3BsYXlfYWRz",
+            "X3ZhbHVlQhAKDl9waWNrdXBfbWV0aG9kQg0KC19waWNrdXBfc2xhQhAKDl9s",
+            "aW5rX3RlbXBsYXRlQhcKFV9tb2JpbGVfbGlua190ZW1wbGF0ZUIRCg9fY3Vz",
+            "dG9tX2xhYmVsXzBCEQoPX2N1c3RvbV9sYWJlbF8xQhEKD19jdXN0b21fbGFi",
+            "ZWxfMkIRCg9fY3VzdG9tX2xhYmVsXzNCEQoPX2N1c3RvbV9sYWJlbF80QhUK",
+            "E19leHRlcm5hbF9zZWxsZXJfaWRCCAoGX3BhdXNlQhUKE192aXJ0dWFsX21v",
+            "ZGVsX2xpbmtCEwoRX3N0cnVjdHVyZWRfdGl0bGVCGQoXX3N0cnVjdHVyZWRf",
+            "ZGVzY3JpcHRpb24icAoDVGF4EgwKBHJhdGUYASABKAESDwoHY291bnRyeRgC",
+            "IAEoCRIOCgZyZWdpb24YAyABKAkSEAoIdGF4X3NoaXAYBCABKAgSEwoLbG9j",
+            "YXRpb25faWQYBSABKAMSEwoLcG9zdGFsX2NvZGUYBiABKAkiLQoOU2hpcHBp",
+            "bmdXZWlnaHQSDQoFdmFsdWUYASABKAESDAoEdW5pdBgCIAEoCSIwChFTaGlw",
+            "cGluZ0RpbWVuc2lvbhINCgV2YWx1ZRgBIAEoARIMCgR1bml0GAIgASgJIjUK",
+            "FlVuaXRQcmljaW5nQmFzZU1lYXN1cmUSDQoFdmFsdWUYASABKAMSDAoEdW5p",
+            "dBgCIAEoCSIxChJVbml0UHJpY2luZ01lYXN1cmUSDQoFdmFsdWUYASABKAES",
+            "DAoEdW5pdBgCIAEoCSKkAQoQU3Vic2NyaXB0aW9uQ29zdBJMCgZwZXJpb2QY",
+            "ASABKA4yPC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjFi",
+            "ZXRhLlN1YnNjcmlwdGlvblBlcmlvZBIVCg1wZXJpb2RfbGVuZ3RoGAIgASgD",
+            "EisKBmFtb3VudBgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNl",
+            "IrsBCgtJbnN0YWxsbWVudBIOCgZtb250aHMYASABKAMSKwoGYW1vdW50GAIg",
+            "ASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2USNQoLZG93bnBheW1l",
+            "bnQYAyABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUgAiAEBEhgK",
+            "C2NyZWRpdF90eXBlGAQgASgJSAGIAQFCDgoMX2Rvd25wYXltZW50Qg4KDF9j",
+            "cmVkaXRfdHlwZSJCCg1Mb3lhbHR5UG9pbnRzEgwKBG5hbWUYASABKAkSFAoM",
+            "cG9pbnRzX3ZhbHVlGAIgASgDEg0KBXJhdGlvGAMgASgBIsEDCg5Mb3lhbHR5",
+            "UHJvZ3JhbRIaCg1wcm9ncmFtX2xhYmVsGAEgASgJSACIAQESFwoKdGllcl9s",
+            "YWJlbBgCIAEoCUgBiAEBEi8KBXByaWNlGAMgASgLMhsuZ29vZ2xlLnNob3Bw",
+            "aW5nLnR5cGUuUHJpY2VIAogBARJBChdjYXNoYmFja19mb3JfZnV0dXJlX3Vz",
+            "ZRgEIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAOIAQESGwoO",
+            "bG95YWx0eV9wb2ludHMYBSABKANIBIgBARI/ChttZW1iZXJfcHJpY2VfZWZm",
+            "ZWN0aXZlX2RhdGUYBiABKAsyFS5nb29nbGUudHlwZS5JbnRlcnZhbEgFiAEB",
+            "EhsKDnNoaXBwaW5nX2xhYmVsGAcgASgJSAaIAQFCEAoOX3Byb2dyYW1fbGFi",
+            "ZWxCDQoLX3RpZXJfbGFiZWxCCAoGX3ByaWNlQhoKGF9jYXNoYmFja19mb3Jf",
+            "ZnV0dXJlX3VzZUIRCg9fbG95YWx0eV9wb2ludHNCHgocX21lbWJlcl9wcmlj",
+            "ZV9lZmZlY3RpdmVfZGF0ZUIRCg9fc2hpcHBpbmdfbGFiZWwigwMKCFNoaXBw",
+            "aW5nEioKBXByaWNlGAEgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJp",
+            "Y2USDwoHY291bnRyeRgCIAEoCRIOCgZyZWdpb24YAyABKAkSDwoHc2Vydmlj",
+            "ZRgEIAEoCRITCgtsb2NhdGlvbl9pZBgFIAEoAxIbChNsb2NhdGlvbl9ncm91",
+            "cF9uYW1lGAYgASgJEhMKC3Bvc3RhbF9jb2RlGAcgASgJEh4KEW1pbl9oYW5k",
+            "bGluZ190aW1lGAggASgDSACIAQESHgoRbWF4X2hhbmRsaW5nX3RpbWUYCSAB",
+            "KANIAYgBARIdChBtaW5fdHJhbnNpdF90aW1lGAogASgDSAKIAQESHQoQbWF4",
+            "X3RyYW5zaXRfdGltZRgLIAEoA0gDiAEBQhQKEl9taW5faGFuZGxpbmdfdGlt",
+            "ZUIUChJfbWF4X2hhbmRsaW5nX3RpbWVCEwoRX21pbl90cmFuc2l0X3RpbWVC",
+            "EwoRX21heF90cmFuc2l0X3RpbWUiiAEKFUZyZWVTaGlwcGluZ1RocmVzaG9s",
+            "ZBIUCgdjb3VudHJ5GAEgASgJSACIAQESOQoPcHJpY2VfdGhyZXNob2xkGAIg",
+            "ASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2VIAYgBAUIKCghfY291",
+            "bnRyeUISChBfcHJpY2VfdGhyZXNob2xkIlYKDVByb2R1Y3REZXRhaWwSFAoM",
+            "c2VjdGlvbl9uYW1lGAEgASgJEhYKDmF0dHJpYnV0ZV9uYW1lGAIgASgJEhcK",
+            "D2F0dHJpYnV0ZV92YWx1ZRgDIAEoCSL7AQoNQ2VydGlmaWNhdGlvbhIkChdj",
+            "ZXJ0aWZpY2F0aW9uX2F1dGhvcml0eRgBIAEoCUgAiAEBEh8KEmNlcnRpZmlj",
+            "YXRpb25fbmFtZRgCIAEoCUgBiAEBEh8KEmNlcnRpZmljYXRpb25fY29kZRgD",
+            "IAEoCUgCiAEBEiAKE2NlcnRpZmljYXRpb25fdmFsdWUYBCABKAlIA4gBAUIa",
+            "ChhfY2VydGlmaWNhdGlvbl9hdXRob3JpdHlCFQoTX2NlcnRpZmljYXRpb25f",
+            "bmFtZUIVChNfY2VydGlmaWNhdGlvbl9jb2RlQhYKFF9jZXJ0aWZpY2F0aW9u",
+            "X3ZhbHVlInQKFlByb2R1Y3RTdHJ1Y3R1cmVkVGl0bGUSIAoTZGlnaXRhbF9z",
+            "b3VyY2VfdHlwZRgBIAEoCUgAiAEBEhQKB2NvbnRlbnQYAiABKAlIAYgBAUIW",
+            "ChRfZGlnaXRhbF9zb3VyY2VfdHlwZUIKCghfY29udGVudCJ6ChxQcm9kdWN0",
+            "U3RydWN0dXJlZERlc2NyaXB0aW9uEiAKE2RpZ2l0YWxfc291cmNlX3R5cGUY",
+            "ASABKAlIAIgBARIUCgdjb250ZW50GAIgASgJSAGIAQFCFgoUX2RpZ2l0YWxf",
+            "c291cmNlX3R5cGVCCgoIX2NvbnRlbnQiOQoQUHJvZHVjdERpbWVuc2lvbhIS",
+            "CgV2YWx1ZRgBIAEoAUID4EECEhEKBHVuaXQYAiABKAlCA+BBAiI2Cg1Qcm9k",
+            "dWN0V2VpZ2h0EhIKBXZhbHVlGAEgASgBQgPgQQISEQoEdW5pdBgCIAEoCUID",
+            "4EECIvcHCg1Qcm9kdWN0U3RhdHVzEmcKFGRlc3RpbmF0aW9uX3N0YXR1c2Vz",
+            "GAMgAygLMkkuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYx",
+            "YmV0YS5Qcm9kdWN0U3RhdHVzLkRlc3RpbmF0aW9uU3RhdHVzEmEKEWl0ZW1f",
+            "bGV2ZWxfaXNzdWVzGAQgAygLMkYuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LnByb2R1Y3RzLnYxYmV0YS5Qcm9kdWN0U3RhdHVzLkl0ZW1MZXZlbElzc3Vl",
+            "EjEKDWNyZWF0aW9uX2RhdGUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wEjQKEGxhc3RfdXBkYXRlX2RhdGUYBiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wEjoKFmdvb2dsZV9leHBpcmF0aW9uX2RhdGUYByAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGsEBChFEZXN0aW5hdGlv",
+            "blN0YXR1cxJWChFyZXBvcnRpbmdfY29udGV4dBgBIAEoDjI7Lmdvb2dsZS5z",
+            "aG9wcGluZy50eXBlLlJlcG9ydGluZ0NvbnRleHQuUmVwb3J0aW5nQ29udGV4",
+            "dEVudW0SGgoSYXBwcm92ZWRfY291bnRyaWVzGAIgAygJEhkKEXBlbmRpbmdf",
+            "Y291bnRyaWVzGAMgAygJEh0KFWRpc2FwcHJvdmVkX2NvdW50cmllcxgEIAMo",
+            "CRqwAwoOSXRlbUxldmVsSXNzdWUSDAoEY29kZRgBIAEoCRJhCghzZXZlcml0",
+            "eRgCIAEoDjJPLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
+            "MWJldGEuUHJvZHVjdFN0YXR1cy5JdGVtTGV2ZWxJc3N1ZS5TZXZlcml0eRIS",
+            "CgpyZXNvbHV0aW9uGAMgASgJEhEKCWF0dHJpYnV0ZRgEIAEoCRJWChFyZXBv",
+            "cnRpbmdfY29udGV4dBgFIAEoDjI7Lmdvb2dsZS5zaG9wcGluZy50eXBlLlJl",
+            "cG9ydGluZ0NvbnRleHQuUmVwb3J0aW5nQ29udGV4dEVudW0SEwoLZGVzY3Jp",
+            "cHRpb24YBiABKAkSDgoGZGV0YWlsGAcgASgJEhUKDWRvY3VtZW50YXRpb24Y",
+            "CCABKAkSHAoUYXBwbGljYWJsZV9jb3VudHJpZXMYCSADKAkiVAoIU2V2ZXJp",
+            "dHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIQCgxOT1RfSU1QQUNURUQQ",
+            "ARILCgdERU1PVEVEEAISDwoLRElTQVBQUk9WRUQQAyKlAgofQ2xvdWRFeHBv",
+            "cnRBZGRpdGlvbmFsUHJvcGVydGllcxIaCg1wcm9wZXJ0eV9uYW1lGAEgASgJ",
+            "SACIAQESEgoKdGV4dF92YWx1ZRgCIAMoCRIXCgpib29sX3ZhbHVlGAMgASgI",
+            "SAGIAQESEQoJaW50X3ZhbHVlGAQgAygDEhMKC2Zsb2F0X3ZhbHVlGAUgAygC",
+            "EhYKCW1pbl92YWx1ZRgGIAEoAkgCiAEBEhYKCW1heF92YWx1ZRgHIAEoAkgD",
+            "iAEBEhYKCXVuaXRfY29kZRgIIAEoCUgEiAEBQhAKDl9wcm9wZXJ0eV9uYW1l",
+            "Qg0KC19ib29sX3ZhbHVlQgwKCl9taW5fdmFsdWVCDAoKX21heF92YWx1ZUIM",
+            "CgpfdW5pdF9jb2RlIqECCh5Qcm9kdWN0U3VzdGFpbmFiaWxpdHlJbmNlbnRp",
+            "dmUSLQoGYW1vdW50GAIgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJp",
+            "Y2VIABIUCgpwZXJjZW50YWdlGAMgASgBSAASYAoEdHlwZRgBIAEoDjJNLmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVj",
+            "dFN1c3RhaW5hYmlsaXR5SW5jZW50aXZlLlR5cGVIAYgBASJGCgRUeXBlEhQK",
+            "EFRZUEVfVU5TUEVDSUZJRUQQABIRCg1FVl9UQVhfQ1JFRElUEAESFQoRRVZf",
+            "UFJJQ0VfRElTQ09VTlQQAkIHCgV2YWx1ZUIHCgVfdHlwZSpOChJTdWJzY3Jp",
+            "cHRpb25QZXJpb2QSIwofU1VCU0NSSVBUSU9OX1BFUklPRF9VTlNQRUNJRklF",
+            "RBAAEgkKBU1PTlRIEAESCAoEWUVBUhACQpUBCixjb20uZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxYmV0YUITUHJvZHVjdHNDb21tb25Q",
+            "cm90b1ABWk5jbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50",
+            "L3Byb2R1Y3RzL2FwaXYxYmV0YS9wcm9kdWN0c3BiO3Byb2R1Y3RzcGJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Merchant.Products.V1Beta.SubscriptionPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.Attributes), global::Google.Shopping.Merchant.Products.V1Beta.Attributes.Parser, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "AdditionalImageLinks", "ExpirationDate", "DisclosureDate", "Adult", "AgeGroup", "Availability", "AvailabilityDate", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "Gtin", "ItemGroupId", "Material", "Mpn", "Pattern", "Price", "Installment", "SubscriptionCost", "LoyaltyPoints", "LoyaltyPrograms", "ProductTypes", "SalePrice", "SalePriceEffectiveDate", "SellOnGoogleQuantity", "ProductHeight", "ProductLength", "ProductWidth", "ProductWeight", "Shipping", "FreeShippingThreshold", "ShippingWeight", "ShippingLength", "ShippingWidth", "ShippingHeight", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "TransitTimeLabel", "Size", "SizeSystem", "SizeTypes", "Taxes", "TaxCategory", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "UnitPricingMeasure", "UnitPricingBaseMeasure", "Multipack", "AdsGrouping", "AdsLabels", "AdsRedirect", "CostOfGoodsSold", "ProductDetails", "ProductHighlights", "DisplayAdsId", "DisplayAdsSimilarIds", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PromotionIds", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "IncludedDestinations", "ExcludedDestinations", "ShoppingAdsExcludedCountries", "ExternalSellerId", "Pause", "LifestyleImageLinks", "CloudExportAdditionalProperties", "VirtualModelLink", "Certifications", "StructuredTitle", "StructuredDescription", "AutoPricingMinPrice" }, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "Adult", "AgeGroup", "Availability", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "ItemGroupId", "Material", "Mpn", "Pattern", "SellOnGoogleQuantity", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "TransitTimeLabel", "Size", "SizeSystem", "TaxCategory", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "Multipack", "AdsGrouping", "AdsRedirect", "DisplayAdsId", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "ExternalSellerId", "Pause", "VirtualModelLink", "StructuredTitle", "StructuredDescription" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.Attributes), global::Google.Shopping.Merchant.Products.V1Beta.Attributes.Parser, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "AdditionalImageLinks", "ExpirationDate", "DisclosureDate", "Adult", "AgeGroup", "Availability", "AvailabilityDate", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "Gtin", "ItemGroupId", "Material", "Mpn", "Pattern", "Price", "Installment", "SubscriptionCost", "LoyaltyPoints", "LoyaltyPrograms", "ProductTypes", "SalePrice", "SalePriceEffectiveDate", "SellOnGoogleQuantity", "ProductHeight", "ProductLength", "ProductWidth", "ProductWeight", "Shipping", "FreeShippingThreshold", "ShippingWeight", "ShippingLength", "ShippingWidth", "ShippingHeight", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "TransitTimeLabel", "Size", "SizeSystem", "SizeTypes", "Taxes", "TaxCategory", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "UnitPricingMeasure", "UnitPricingBaseMeasure", "Multipack", "AdsGrouping", "AdsLabels", "AdsRedirect", "CostOfGoodsSold", "ProductDetails", "ProductHighlights", "DisplayAdsId", "DisplayAdsSimilarIds", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PromotionIds", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "IncludedDestinations", "ExcludedDestinations", "ShoppingAdsExcludedCountries", "ExternalSellerId", "Pause", "LifestyleImageLinks", "CloudExportAdditionalProperties", "VirtualModelLink", "Certifications", "StructuredTitle", "StructuredDescription", "AutoPricingMinPrice", "SustainabilityIncentives" }, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "Adult", "AgeGroup", "Availability", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "ItemGroupId", "Material", "Mpn", "Pattern", "SellOnGoogleQuantity", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "TransitTimeLabel", "Size", "SizeSystem", "TaxCategory", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "Multipack", "AdsGrouping", "AdsRedirect", "DisplayAdsId", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "ExternalSellerId", "Pause", "VirtualModelLink", "StructuredTitle", "StructuredDescription" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.Tax), global::Google.Shopping.Merchant.Products.V1Beta.Tax.Parser, new[]{ "Rate", "Country", "Region", "TaxShip", "LocationId", "PostalCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ShippingWeight), global::Google.Shopping.Merchant.Products.V1Beta.ShippingWeight.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ShippingDimension), global::Google.Shopping.Merchant.Products.V1Beta.ShippingDimension.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
@@ -253,7 +262,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductWeight), global::Google.Shopping.Merchant.Products.V1Beta.ProductWeight.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus), global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Parser, new[]{ "DestinationStatuses", "ItemLevelIssues", "CreationDate", "LastUpdateDate", "GoogleExpirationDate" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.DestinationStatus), global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.DestinationStatus.Parser, new[]{ "ReportingContext", "ApprovedCountries", "PendingCountries", "DisapprovedCountries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.ItemLevelIssue), global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.ItemLevelIssue.Parser, new[]{ "Code", "Severity", "Resolution", "Attribute", "ReportingContext", "Description", "Detail", "Documentation", "ApplicableCountries" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.ItemLevelIssue.Types.Severity) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.CloudExportAdditionalProperties), global::Google.Shopping.Merchant.Products.V1Beta.CloudExportAdditionalProperties.Parser, new[]{ "PropertyName", "TextValue", "BoolValue", "IntValue", "FloatValue", "MinValue", "MaxValue", "UnitCode" }, new[]{ "PropertyName", "BoolValue", "MinValue", "MaxValue", "UnitCode" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.CloudExportAdditionalProperties), global::Google.Shopping.Merchant.Products.V1Beta.CloudExportAdditionalProperties.Parser, new[]{ "PropertyName", "TextValue", "BoolValue", "IntValue", "FloatValue", "MinValue", "MaxValue", "UnitCode" }, new[]{ "PropertyName", "BoolValue", "MinValue", "MaxValue", "UnitCode" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive), global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Parser, new[]{ "Amount", "Percentage", "Type" }, new[]{ "Value", "Type" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type) }, null, null)
           }));
     }
     #endregion
@@ -413,6 +423,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       structuredTitle_ = other.structuredTitle_ != null ? other.structuredTitle_.Clone() : null;
       structuredDescription_ = other.structuredDescription_ != null ? other.structuredDescription_.Clone() : null;
       autoPricingMinPrice_ = other.autoPricingMinPrice_ != null ? other.autoPricingMinPrice_.Clone() : null;
+      sustainabilityIncentives_ = other.sustainabilityIncentives_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2558,6 +2569,20 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "sustainability_incentives" field.</summary>
+    public const int SustainabilityIncentivesFieldNumber = 138;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive> _repeated_sustainabilityIncentives_codec
+        = pb::FieldCodec.ForMessage(1106, global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive> sustainabilityIncentives_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive>();
+    /// <summary>
+    /// The list of sustainability incentive programs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive> SustainabilityIncentives {
+      get { return sustainabilityIncentives_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2665,6 +2690,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       if (!object.Equals(StructuredTitle, other.StructuredTitle)) return false;
       if (!object.Equals(StructuredDescription, other.StructuredDescription)) return false;
       if (!object.Equals(AutoPricingMinPrice, other.AutoPricingMinPrice)) return false;
+      if(!sustainabilityIncentives_.Equals(other.sustainabilityIncentives_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2764,6 +2790,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       if (structuredTitle_ != null) hash ^= StructuredTitle.GetHashCode();
       if (structuredDescription_ != null) hash ^= StructuredDescription.GetHashCode();
       if (autoPricingMinPrice_ != null) hash ^= AutoPricingMinPrice.GetHashCode();
+      hash ^= sustainabilityIncentives_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3093,6 +3120,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
       freeShippingThreshold_.WriteTo(output, _repeated_freeShippingThreshold_codec);
       loyaltyPrograms_.WriteTo(output, _repeated_loyaltyPrograms_codec);
+      sustainabilityIncentives_.WriteTo(output, _repeated_sustainabilityIncentives_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3414,6 +3442,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
       freeShippingThreshold_.WriteTo(ref output, _repeated_freeShippingThreshold_codec);
       loyaltyPrograms_.WriteTo(ref output, _repeated_loyaltyPrograms_codec);
+      sustainabilityIncentives_.WriteTo(ref output, _repeated_sustainabilityIncentives_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3662,6 +3691,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       if (autoPricingMinPrice_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(AutoPricingMinPrice);
       }
+      size += sustainabilityIncentives_.CalculateSize(_repeated_sustainabilityIncentives_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3981,6 +4011,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
         }
         AutoPricingMinPrice.MergeFrom(other.AutoPricingMinPrice);
       }
+      sustainabilityIncentives_.Add(other.sustainabilityIncentives_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4433,6 +4464,10 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             loyaltyPrograms_.AddEntriesFrom(input, _repeated_loyaltyPrograms_codec);
             break;
           }
+          case 1106: {
+            sustainabilityIncentives_.AddEntriesFrom(input, _repeated_sustainabilityIncentives_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4883,6 +4918,10 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
           }
           case 1090: {
             loyaltyPrograms_.AddEntriesFrom(ref input, _repeated_loyaltyPrograms_codec);
+            break;
+          }
+          case 1106: {
+            sustainabilityIncentives_.AddEntriesFrom(ref input, _repeated_sustainabilityIncentives_codec);
             break;
           }
         }
@@ -12068,6 +12107,391 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Information regarding sustainability-related incentive programs such as
+  /// rebates or tax relief.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProductSustainabilityIncentive : pb::IMessage<ProductSustainabilityIncentive>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProductSustainabilityIncentive> _parser = new pb::MessageParser<ProductSustainabilityIncentive>(() => new ProductSustainabilityIncentive());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProductSustainabilityIncentive> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Products.V1Beta.ProductsCommonReflection.Descriptor.MessageTypes[20]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductSustainabilityIncentive() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductSustainabilityIncentive(ProductSustainabilityIncentive other) : this() {
+      _hasBits0 = other._hasBits0;
+      type_ = other.type_;
+      switch (other.ValueCase) {
+        case ValueOneofCase.Amount:
+          Amount = other.Amount.Clone();
+          break;
+        case ValueOneofCase.Percentage:
+          Percentage = other.Percentage;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductSustainabilityIncentive Clone() {
+      return new ProductSustainabilityIncentive(this);
+    }
+
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 2;
+    /// <summary>
+    /// The fixed amount of the incentive.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price Amount {
+      get { return valueCase_ == ValueOneofCase.Amount ? (global::Google.Shopping.Type.Price) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.Amount;
+      }
+    }
+
+    /// <summary>Field number for the "percentage" field.</summary>
+    public const int PercentageFieldNumber = 3;
+    /// <summary>
+    /// The percentage of the sale price that the incentive is applied to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Percentage {
+      get { return HasPercentage ? (double) value_ : 0D; }
+      set {
+        value_ = value;
+        valueCase_ = ValueOneofCase.Percentage;
+      }
+    }
+    /// <summary>Gets whether the "percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentage {
+      get { return valueCase_ == ValueOneofCase.Percentage; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "percentage" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentage() {
+      if (HasPercentage) {
+        ClearValue();
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 1;
+    private readonly static global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type TypeDefaultValue = global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type.Unspecified;
+
+    private global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type type_;
+    /// <summary>
+    /// Sustainability incentive program.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type Type {
+      get { if ((_hasBits0 & 1) != 0) { return type_; } else { return TypeDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        type_ = value;
+      }
+    }
+    /// <summary>Gets whether the "type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasType {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearType() {
+      _hasBits0 &= ~1;
+    }
+
+    private object value_;
+    /// <summary>Enum of possible cases for the "value" oneof.</summary>
+    public enum ValueOneofCase {
+      None = 0,
+      Amount = 2,
+      Percentage = 3,
+    }
+    private ValueOneofCase valueCase_ = ValueOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ValueOneofCase ValueCase {
+      get { return valueCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearValue() {
+      valueCase_ = ValueOneofCase.None;
+      value_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProductSustainabilityIncentive);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProductSustainabilityIncentive other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Amount, other.Amount)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Percentage, other.Percentage)) return false;
+      if (Type != other.Type) return false;
+      if (ValueCase != other.ValueCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (valueCase_ == ValueOneofCase.Amount) hash ^= Amount.GetHashCode();
+      if (HasPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Percentage);
+      if (HasType) hash ^= Type.GetHashCode();
+      hash ^= (int) valueCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasType) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (valueCase_ == ValueOneofCase.Amount) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Amount);
+      }
+      if (HasPercentage) {
+        output.WriteRawTag(25);
+        output.WriteDouble(Percentage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasType) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Type);
+      }
+      if (valueCase_ == ValueOneofCase.Amount) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Amount);
+      }
+      if (HasPercentage) {
+        output.WriteRawTag(25);
+        output.WriteDouble(Percentage);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (valueCase_ == ValueOneofCase.Amount) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Amount);
+      }
+      if (HasPercentage) {
+        size += 1 + 8;
+      }
+      if (HasType) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProductSustainabilityIncentive other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasType) {
+        Type = other.Type;
+      }
+      switch (other.ValueCase) {
+        case ValueOneofCase.Amount:
+          if (Amount == null) {
+            Amount = new global::Google.Shopping.Type.Price();
+          }
+          Amount.MergeFrom(other.Amount);
+          break;
+        case ValueOneofCase.Percentage:
+          Percentage = other.Percentage;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Type = (global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Shopping.Type.Price subBuilder = new global::Google.Shopping.Type.Price();
+            if (valueCase_ == ValueOneofCase.Amount) {
+              subBuilder.MergeFrom(Amount);
+            }
+            input.ReadMessage(subBuilder);
+            Amount = subBuilder;
+            break;
+          }
+          case 25: {
+            Percentage = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Type = (global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            global::Google.Shopping.Type.Price subBuilder = new global::Google.Shopping.Type.Price();
+            if (valueCase_ == ValueOneofCase.Amount) {
+              subBuilder.MergeFrom(Amount);
+            }
+            input.ReadMessage(subBuilder);
+            Amount = subBuilder;
+            break;
+          }
+          case 25: {
+            Percentage = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ProductSustainabilityIncentive message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Types of supported sustainability incentive programs.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Unspecified or unknown sustainability incentive type.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Program offering tax liability reductions for electric vehicles and, in
+        /// some countries, plug-in hybrids. These reductions can be based on a
+        /// specific amount or a percentage of the sale price.
+        /// </summary>
+        [pbr::OriginalName("EV_TAX_CREDIT")] EvTaxCredit = 1,
+        /// <summary>
+        /// A subsidy program, often called an environmental bonus, provides a
+        /// purchase grant for electric vehicles and, in some countries, plug-in
+        /// hybrids. The grant amount may be a fixed sum or a percentage of the sale
+        /// price.
+        /// </summary>
+        [pbr::OriginalName("EV_PRICE_DISCOUNT")] EvPriceDiscount = 2,
+      }
+
+    }
+    #endregion
 
   }
 

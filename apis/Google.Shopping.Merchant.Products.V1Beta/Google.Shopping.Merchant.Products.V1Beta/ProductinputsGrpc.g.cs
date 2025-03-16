@@ -69,6 +69,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Products.V1Beta.ProductInput> __Marshaller_google_shopping_merchant_products_v1beta_ProductInput = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Products.V1Beta.ProductInput.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest> __Marshaller_google_shopping_merchant_products_v1beta_UpdateProductInputRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Shopping.Merchant.Products.V1Beta.DeleteProductInputRequest> __Marshaller_google_shopping_merchant_products_v1beta_DeleteProductInputRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Shopping.Merchant.Products.V1Beta.DeleteProductInputRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
@@ -79,6 +81,14 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
         __ServiceName,
         "InsertProductInput",
         __Marshaller_google_shopping_merchant_products_v1beta_InsertProductInputRequest,
+        __Marshaller_google_shopping_merchant_products_v1beta_ProductInput);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest, global::Google.Shopping.Merchant.Products.V1Beta.ProductInput> __Method_UpdateProductInput = new grpc::Method<global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest, global::Google.Shopping.Merchant.Products.V1Beta.ProductInput>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateProductInput",
+        __Marshaller_google_shopping_merchant_products_v1beta_UpdateProductInputRequest,
         __Marshaller_google_shopping_merchant_products_v1beta_ProductInput);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -112,6 +122,21 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Products.V1Beta.ProductInput> InsertProductInput(global::Google.Shopping.Merchant.Products.V1Beta.InsertProductInputRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the existing product input in your Merchant Center account.
+      ///
+      /// After inserting, updating, or deleting a product input, it may take several
+      /// minutes before the processed product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Shopping.Merchant.Products.V1Beta.ProductInput> UpdateProductInput(global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -229,6 +254,66 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_InsertProductInput, null, options, request);
       }
       /// <summary>
+      /// Updates the existing product input in your Merchant Center account.
+      ///
+      /// After inserting, updating, or deleting a product input, it may take several
+      /// minutes before the processed product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Products.V1Beta.ProductInput UpdateProductInput(global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateProductInput(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the existing product input in your Merchant Center account.
+      ///
+      /// After inserting, updating, or deleting a product input, it may take several
+      /// minutes before the processed product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Shopping.Merchant.Products.V1Beta.ProductInput UpdateProductInput(global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateProductInput, null, options, request);
+      }
+      /// <summary>
+      /// Updates the existing product input in your Merchant Center account.
+      ///
+      /// After inserting, updating, or deleting a product input, it may take several
+      /// minutes before the processed product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Products.V1Beta.ProductInput> UpdateProductInputAsync(global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateProductInputAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the existing product input in your Merchant Center account.
+      ///
+      /// After inserting, updating, or deleting a product input, it may take several
+      /// minutes before the processed product can be retrieved.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Shopping.Merchant.Products.V1Beta.ProductInput> UpdateProductInputAsync(global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateProductInput, null, options, request);
+      }
+      /// <summary>
       /// Deletes a product input from your Merchant Center account.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
@@ -303,6 +388,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_InsertProductInput, serviceImpl.InsertProductInput)
+          .AddMethod(__Method_UpdateProductInput, serviceImpl.UpdateProductInput)
           .AddMethod(__Method_DeleteProductInput, serviceImpl.DeleteProductInput).Build();
     }
 
@@ -314,6 +400,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ProductInputsServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_InsertProductInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Products.V1Beta.InsertProductInputRequest, global::Google.Shopping.Merchant.Products.V1Beta.ProductInput>(serviceImpl.InsertProductInput));
+      serviceBinder.AddMethod(__Method_UpdateProductInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Products.V1Beta.UpdateProductInputRequest, global::Google.Shopping.Merchant.Products.V1Beta.ProductInput>(serviceImpl.UpdateProductInput));
       serviceBinder.AddMethod(__Method_DeleteProductInput, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Shopping.Merchant.Products.V1Beta.DeleteProductInputRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteProductInput));
     }
 
