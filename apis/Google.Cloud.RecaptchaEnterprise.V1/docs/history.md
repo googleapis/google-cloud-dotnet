@@ -1,5 +1,18 @@
 # Version history
 
+## Version 2.18.0, released 2025-03-17
+
+### New features
+
+- A new field `ja4` is added to message `Event` ([commit 83141fa](https://github.com/googleapis/google-cloud-dotnet/commit/83141fa2a161ab37c7194aede62e7de7525b007b))
+
+### Documentation improvements
+
+- Update documentation ([commit 83141fa](https://github.com/googleapis/google-cloud-dotnet/commit/83141fa2a161ab37c7194aede62e7de7525b007b))
+- Update docs for FraudPrevention field in CreateAssessment ([commit eda016a](https://github.com/googleapis/google-cloud-dotnet/commit/eda016ac3bddbc77eac351f17335256c37dfa544))
+- Challenge is also returned for INVISIBLE keys ([commit eda016a](https://github.com/googleapis/google-cloud-dotnet/commit/eda016ac3bddbc77eac351f17335256c37dfa544))
+- Challenge is also returned for INVISIBLE keys ([commit d71a32f](https://github.com/googleapis/google-cloud-dotnet/commit/d71a32f41f32ed69ddf2bf51bea37f2b408e09cb))
+
 ## Version 2.17.0, released 2024-11-18
 
 ### New features
