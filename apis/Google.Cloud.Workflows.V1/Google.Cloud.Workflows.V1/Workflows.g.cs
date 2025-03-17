@@ -31,7 +31,7 @@ namespace Google.Cloud.Workflows.V1 {
             "cHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9vcGVyYXRpb25zLnByb3RvGhtn",
             "b29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9m",
             "aWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvIuAJCghXb3JrZmxvdxIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9u",
+            "b3RvIo0NCghXb3JrZmxvdxIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9u",
             "GAIgASgJEj0KBXN0YXRlGAMgASgOMikuZ29vZ2xlLmNsb3VkLndvcmtmbG93",
             "cy52MS5Xb3JrZmxvdy5TdGF0ZUID4EEDEhgKC3JldmlzaW9uX2lkGAQgASgJ",
             "QgPgQQMSNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
@@ -47,86 +47,135 @@ namespace Google.Cloud.Workflows.V1 {
             "dmVsGA0gASgOMjAuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MS5Xb3JrZmxv",
             "dy5DYWxsTG9nTGV2ZWxCA+BBARJQCg11c2VyX2Vudl92YXJzGA4gAygLMjQu",
             "Z29vZ2xlLmNsb3VkLndvcmtmbG93cy52MS5Xb3JrZmxvdy5Vc2VyRW52VmFy",
-            "c0VudHJ5QgPgQQEajQEKClN0YXRlRXJyb3ISDwoHZGV0YWlscxgBIAEoCRJB",
-            "CgR0eXBlGAIgASgOMjMuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MS5Xb3Jr",
-            "Zmxvdy5TdGF0ZUVycm9yLlR5cGUiKwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
-            "SUVEEAASDQoJS01TX0VSUk9SEAEaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBVc2VyRW52VmFyc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiOwoFU3RhdGUSFQoRU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIPCgtVTkFWQUlMQUJMRRAC",
-            "ImQKDENhbGxMb2dMZXZlbBIeChpDQUxMX0xPR19MRVZFTF9VTlNQRUNJRklF",
-            "RBAAEhEKDUxPR19BTExfQ0FMTFMQARITCg9MT0dfRVJST1JTX09OTFkQAhIM",
-            "CghMT0dfTk9ORRADOmTqQWEKIXdvcmtmbG93cy5nb29nbGVhcGlzLmNvbS9X",
-            "b3JrZmxvdxI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3dvcmtmbG93cy97d29ya2Zsb3d9Qg0KC3NvdXJjZV9jb2RlIpoBChRM",
-            "aXN0V29ya2Zsb3dzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwoh",
-            "bG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6",
-            "ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCRIQ",
-            "CghvcmRlcl9ieRgFIAEoCSJ9ChVMaXN0V29ya2Zsb3dzUmVzcG9uc2USNgoJ",
-            "d29ya2Zsb3dzGAEgAygLMiMuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MS5X",
-            "b3JrZmxvdxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFi",
-            "bGUYAyADKAkiZwoSR2V0V29ya2Zsb3dSZXF1ZXN0EjcKBG5hbWUYASABKAlC",
-            "KeBBAvpBIwohd29ya2Zsb3dzLmdvb2dsZWFwaXMuY29tL1dvcmtmbG93EhgK",
-            "C3JldmlzaW9uX2lkGAIgASgJQgPgQQEiqAEKFUNyZWF0ZVdvcmtmbG93UmVx",
-            "dWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2ds",
-            "ZWFwaXMuY29tL0xvY2F0aW9uEjoKCHdvcmtmbG93GAIgASgLMiMuZ29vZ2xl",
-            "LmNsb3VkLndvcmtmbG93cy52MS5Xb3JrZmxvd0ID4EECEhgKC3dvcmtmbG93",
-            "X2lkGAMgASgJQgPgQQIiUAoVRGVsZXRlV29ya2Zsb3dSZXF1ZXN0EjcKBG5h",
-            "bWUYASABKAlCKeBBAvpBIwohd29ya2Zsb3dzLmdvb2dsZWFwaXMuY29tL1dv",
-            "cmtmbG93IoQBChVVcGRhdGVXb3JrZmxvd1JlcXVlc3QSOgoId29ya2Zsb3cY",
-            "ASABKAsyIy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxLldvcmtmbG93QgPg",
-            "QQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmll",
-            "bGRNYXNrIqUBChFPcGVyYXRpb25NZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgB",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUY",
-            "AiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEg4KBnRhcmdldBgD",
-            "IAEoCRIMCgR2ZXJiGAQgASgJEhMKC2FwaV92ZXJzaW9uGAUgASgJMscICglX",
-            "b3JrZmxvd3MSsgEKDUxpc3RXb3JrZmxvd3MSLy5nb29nbGUuY2xvdWQud29y",
-            "a2Zsb3dzLnYxLkxpc3RXb3JrZmxvd3NSZXF1ZXN0GjAuZ29vZ2xlLmNsb3Vk",
-            "LndvcmtmbG93cy52MS5MaXN0V29ya2Zsb3dzUmVzcG9uc2UiPtpBBnBhcmVu",
-            "dILT5JMCLxItL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0v",
-            "d29ya2Zsb3dzEp8BCgtHZXRXb3JrZmxvdxItLmdvb2dsZS5jbG91ZC53b3Jr",
-            "Zmxvd3MudjEuR2V0V29ya2Zsb3dSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLndv",
-            "cmtmbG93cy52MS5Xb3JrZmxvdyI82kEEbmFtZYLT5JMCLxItL3YxL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zsb3dzLyp9EuABCg5DcmVh",
-            "dGVXb3JrZmxvdxIwLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjEuQ3JlYXRl",
-            "V29ya2Zsb3dSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biJ9ykEdCghXb3JrZmxvdxIRT3BlcmF0aW9uTWV0YWRhdGHaQRtwYXJlbnQs",
-            "d29ya2Zsb3csd29ya2Zsb3dfaWSC0+STAjkiLS92MS97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L3dvcmtmbG93czoId29ya2Zsb3cSzAEKDkRl",
-            "bGV0ZVdvcmtmbG93EjAuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MS5EZWxl",
-            "dGVXb3JrZmxvd1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uImnKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0",
-            "YWRhdGHaQQRuYW1lgtPkkwIvKi0vdjEve25hbWU9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi93b3JrZmxvd3MvKn0S4gEKDlVwZGF0ZVdvcmtmbG93EjAuZ29v",
-            "Z2xlLmNsb3VkLndvcmtmbG93cy52MS5VcGRhdGVXb3JrZmxvd1JlcXVlc3Qa",
-            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIn/KQR0KCFdvcmtmbG93",
-            "EhFPcGVyYXRpb25NZXRhZGF0YdpBFHdvcmtmbG93LHVwZGF0ZV9tYXNrgtPk",
-            "kwJCMjYvdjEve3dvcmtmbG93Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
-            "Ki93b3JrZmxvd3MvKn06CHdvcmtmbG93GkzKQRh3b3JrZmxvd3MuZ29vZ2xl",
-            "YXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Ns",
-            "b3VkLXBsYXRmb3JtQucBCh1jb20uZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52",
-            "MUIOV29ya2Zsb3dzUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby93b3Jr",
-            "Zmxvd3MvYXBpdjEvd29ya2Zsb3dzcGI7d29ya2Zsb3dzcGLqQXYKIWNsb3Vk",
-            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJRcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdzL3trZXlSaW5nfS9j",
-            "cnlwdG9LZXlzL3tjcnlwdG9LZXl9YgZwcm90bzM="));
+            "c0VudHJ5QgPgQQESVgoXZXhlY3V0aW9uX2hpc3RvcnlfbGV2ZWwYDyABKA4y",
+            "MC5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxLkV4ZWN1dGlvbkhpc3RvcnlM",
+            "ZXZlbEID4EEBEj8KDGFsbF9rbXNfa2V5cxgQIAMoCUIp4EED+kEjCiFjbG91",
+            "ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSTwoVYWxsX2ttc19rZXlz",
+            "X3ZlcnNpb25zGBEgAygJQjDgQQP6QSoKKGNsb3Vka21zLmdvb2dsZWFwaXMu",
+            "Y29tL0NyeXB0b0tleVZlcnNpb24STAoSY3J5cHRvX2tleV92ZXJzaW9uGBIg",
+            "ASgJQjDgQQP6QSoKKGNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
+            "eVZlcnNpb24SRgoEdGFncxgTIAMoCzItLmdvb2dsZS5jbG91ZC53b3JrZmxv",
+            "d3MudjEuV29ya2Zsb3cuVGFnc0VudHJ5QgngQQTgQQXgQQEajQEKClN0YXRl",
+            "RXJyb3ISDwoHZGV0YWlscxgBIAEoCRJBCgR0eXBlGAIgASgOMjMuZ29vZ2xl",
+            "LmNsb3VkLndvcmtmbG93cy52MS5Xb3JrZmxvdy5TdGF0ZUVycm9yLlR5cGUi",
+            "KwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDQoJS01TX0VSUk9SEAEa",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ARoyChBVc2VyRW52VmFyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEaKwoJVGFnc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
+            "IAEoCToCOAEiOwoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZB",
+            "Q1RJVkUQARIPCgtVTkFWQUlMQUJMRRACImQKDENhbGxMb2dMZXZlbBIeChpD",
+            "QUxMX0xPR19MRVZFTF9VTlNQRUNJRklFRBAAEhEKDUxPR19BTExfQ0FMTFMQ",
+            "ARITCg9MT0dfRVJST1JTX09OTFkQAhIMCghMT0dfTk9ORRADOmTqQWEKIXdv",
+            "cmtmbG93cy5nb29nbGVhcGlzLmNvbS9Xb3JrZmxvdxI8cHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dvcmtmbG93cy97d29ya2Zs",
+            "b3d9Qg0KC3NvdXJjZV9jb2RlIpoBChRMaXN0V29ya2Zsb3dzUmVxdWVzdBI5",
+            "CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMu",
+            "Y29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2Vu",
+            "GAMgASgJEg4KBmZpbHRlchgEIAEoCRIQCghvcmRlcl9ieRgFIAEoCSJ9ChVM",
+            "aXN0V29ya2Zsb3dzUmVzcG9uc2USNgoJd29ya2Zsb3dzGAEgAygLMiMuZ29v",
+            "Z2xlLmNsb3VkLndvcmtmbG93cy52MS5Xb3JrZmxvdxIXCg9uZXh0X3BhZ2Vf",
+            "dG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiZwoSR2V0V29ya2Zs",
+            "b3dSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohd29ya2Zsb3dzLmdv",
+            "b2dsZWFwaXMuY29tL1dvcmtmbG93EhgKC3JldmlzaW9uX2lkGAIgASgJQgPg",
+            "QQEiqAEKFUNyZWF0ZVdvcmtmbG93UmVxdWVzdBI5CgZwYXJlbnQYASABKAlC",
+            "KeBBAvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEjoK",
+            "CHdvcmtmbG93GAIgASgLMiMuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MS5X",
+            "b3JrZmxvd0ID4EECEhgKC3dvcmtmbG93X2lkGAMgASgJQgPgQQIiUAoVRGVs",
+            "ZXRlV29ya2Zsb3dSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohd29y",
+            "a2Zsb3dzLmdvb2dsZWFwaXMuY29tL1dvcmtmbG93IoQBChVVcGRhdGVXb3Jr",
+            "Zmxvd1JlcXVlc3QSOgoId29ya2Zsb3cYASABKAsyIy5nb29nbGUuY2xvdWQu",
+            "d29ya2Zsb3dzLnYxLldvcmtmbG93QgPgQQISLwoLdXBkYXRlX21hc2sYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIqUBChFPcGVyYXRpb25N",
+            "ZXRhZGF0YRIvCgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wEg4KBnRhcmdldBgDIAEoCRIMCgR2ZXJiGAQgASgJEhMK",
+            "C2FwaV92ZXJzaW9uGAUgASgJIn4KHExpc3RXb3JrZmxvd1JldmlzaW9uc1Jl",
+            "cXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiF3b3JrZmxvd3MuZ29vZ2xl",
+            "YXBpcy5jb20vV29ya2Zsb3cSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2Vf",
+            "dG9rZW4YAyABKAkicAodTGlzdFdvcmtmbG93UmV2aXNpb25zUmVzcG9uc2US",
+            "NgoJd29ya2Zsb3dzGAEgAygLMiMuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52",
+            "MS5Xb3JrZmxvdxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkqfQoVRXhlY3V0",
+            "aW9uSGlzdG9yeUxldmVsEicKI0VYRUNVVElPTl9ISVNUT1JZX0xFVkVMX1VO",
+            "U1BFQ0lGSUVEEAASGwoXRVhFQ1VUSU9OX0hJU1RPUllfQkFTSUMQARIeChpF",
+            "WEVDVVRJT05fSElTVE9SWV9ERVRBSUxFRBACMpkKCglXb3JrZmxvd3MSsgEK",
+            "DUxpc3RXb3JrZmxvd3MSLy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxLkxp",
+            "c3RXb3JrZmxvd3NSZXF1ZXN0GjAuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52",
+            "MS5MaXN0V29ya2Zsb3dzUmVzcG9uc2UiPtpBBnBhcmVudILT5JMCLxItL3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vd29ya2Zsb3dzEp8B",
+            "CgtHZXRXb3JrZmxvdxItLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjEuR2V0",
+            "V29ya2Zsb3dSZXF1ZXN0GiMuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MS5X",
+            "b3JrZmxvdyI82kEEbmFtZYLT5JMCLxItL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovd29ya2Zsb3dzLyp9EuABCg5DcmVhdGVXb3JrZmxvdxIw",
+            "Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjEuQ3JlYXRlV29ya2Zsb3dSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiJ9ykEdCghXb3Jr",
+            "ZmxvdxIRT3BlcmF0aW9uTWV0YWRhdGHaQRtwYXJlbnQsd29ya2Zsb3csd29y",
+            "a2Zsb3dfaWSC0+STAjkiLS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyp9L3dvcmtmbG93czoId29ya2Zsb3cSzAEKDkRlbGV0ZVdvcmtmbG93",
+            "EjAuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MS5EZWxldGVXb3JrZmxvd1Jl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImnKQSoKFWdv",
+            "b2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1l",
+            "gtPkkwIvKi0vdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3Jr",
+            "Zmxvd3MvKn0S4gEKDlVwZGF0ZVdvcmtmbG93EjAuZ29vZ2xlLmNsb3VkLndv",
+            "cmtmbG93cy52MS5VcGRhdGVXb3JrZmxvd1JlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIn/KQR0KCFdvcmtmbG93EhFPcGVyYXRpb25N",
+            "ZXRhZGF0YdpBFHdvcmtmbG93LHVwZGF0ZV9tYXNrgtPkkwJCMjYvdjEve3dv",
+            "cmtmbG93Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxvd3Mv",
+            "Kn06CHdvcmtmbG93Es8BChVMaXN0V29ya2Zsb3dSZXZpc2lvbnMSNy5nb29n",
+            "bGUuY2xvdWQud29ya2Zsb3dzLnYxLkxpc3RXb3JrZmxvd1JldmlzaW9uc1Jl",
+            "cXVlc3QaOC5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxLkxpc3RXb3JrZmxv",
+            "d1JldmlzaW9uc1Jlc3BvbnNlIkOC0+STAj0SOy92MS97bmFtZT1wcm9qZWN0",
+            "cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qfTpsaXN0UmV2aXNpb25zGkzK",
+            "QRh3b3JrZmxvd3MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQo0DCh1jb20uZ29vZ2xl",
+            "LmNsb3VkLndvcmtmbG93cy52MUIOV29ya2Zsb3dzUHJvdG9QAVo7Y2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby93b3JrZmxvd3MvYXBpdjEvd29ya2Zsb3dzcGI7d29y",
+            "a2Zsb3dzcGLqQXYKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
+            "eRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tl",
+            "eVJpbmdzL3trZXlSaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9LZXl96kGiAQoo",
+            "Y2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lvbhJ2cHJv",
+            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJpbmdz",
+            "L3trZXlSaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9LZXl9L2NyeXB0b0tleVZl",
+            "cnNpb25zL3tjcnlwdG9LZXlWZXJzaW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.Workflow), global::Google.Cloud.Workflows.V1.Workflow.Parser, new[]{ "Name", "Description", "State", "RevisionId", "CreateTime", "UpdateTime", "RevisionCreateTime", "Labels", "ServiceAccount", "SourceContents", "CryptoKeyName", "StateError", "CallLogLevel", "UserEnvVars" }, new[]{ "SourceCode" }, new[]{ typeof(global::Google.Cloud.Workflows.V1.Workflow.Types.State), typeof(global::Google.Cloud.Workflows.V1.Workflow.Types.CallLogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.Workflow.Types.StateError), global::Google.Cloud.Workflows.V1.Workflow.Types.StateError.Parser, new[]{ "Details", "Type" }, null, new[]{ typeof(global::Google.Cloud.Workflows.V1.Workflow.Types.StateError.Types.Type) }, null, null),
-            null, null, }),
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.Workflow), global::Google.Cloud.Workflows.V1.Workflow.Parser, new[]{ "Name", "Description", "State", "RevisionId", "CreateTime", "UpdateTime", "RevisionCreateTime", "Labels", "ServiceAccount", "SourceContents", "CryptoKeyName", "StateError", "CallLogLevel", "UserEnvVars", "ExecutionHistoryLevel", "AllKmsKeys", "AllKmsKeysVersions", "CryptoKeyVersion", "Tags" }, new[]{ "SourceCode" }, new[]{ typeof(global::Google.Cloud.Workflows.V1.Workflow.Types.State), typeof(global::Google.Cloud.Workflows.V1.Workflow.Types.CallLogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.Workflow.Types.StateError), global::Google.Cloud.Workflows.V1.Workflow.Types.StateError.Parser, new[]{ "Details", "Type" }, null, new[]{ typeof(global::Google.Cloud.Workflows.V1.Workflow.Types.StateError.Types.Type) }, null, null),
+            null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.ListWorkflowsRequest), global::Google.Cloud.Workflows.V1.ListWorkflowsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.ListWorkflowsResponse), global::Google.Cloud.Workflows.V1.ListWorkflowsResponse.Parser, new[]{ "Workflows", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.GetWorkflowRequest), global::Google.Cloud.Workflows.V1.GetWorkflowRequest.Parser, new[]{ "Name", "RevisionId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.CreateWorkflowRequest), global::Google.Cloud.Workflows.V1.CreateWorkflowRequest.Parser, new[]{ "Parent", "Workflow", "WorkflowId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.DeleteWorkflowRequest), global::Google.Cloud.Workflows.V1.DeleteWorkflowRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.UpdateWorkflowRequest), global::Google.Cloud.Workflows.V1.UpdateWorkflowRequest.Parser, new[]{ "Workflow", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.OperationMetadata), global::Google.Cloud.Workflows.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "ApiVersion" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.OperationMetadata), global::Google.Cloud.Workflows.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "ApiVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest), global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest.Parser, new[]{ "Name", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse), global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse.Parser, new[]{ "Workflows", "NextPageToken" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Define possible options for enabling the execution history level.
+  /// </summary>
+  public enum ExecutionHistoryLevel {
+    /// <summary>
+    /// The default/unset value.
+    /// </summary>
+    [pbr::OriginalName("EXECUTION_HISTORY_LEVEL_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Enable execution history basic feature.
+    /// </summary>
+    [pbr::OriginalName("EXECUTION_HISTORY_BASIC")] ExecutionHistoryBasic = 1,
+    /// <summary>
+    /// Enable execution history detailed feature.
+    /// </summary>
+    [pbr::OriginalName("EXECUTION_HISTORY_DETAILED")] ExecutionHistoryDetailed = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Workflow program to be executed by Workflows.
@@ -179,6 +228,11 @@ namespace Google.Cloud.Workflows.V1 {
       stateError_ = other.stateError_ != null ? other.stateError_.Clone() : null;
       callLogLevel_ = other.callLogLevel_;
       userEnvVars_ = other.userEnvVars_.Clone();
+      executionHistoryLevel_ = other.executionHistoryLevel_;
+      allKmsKeys_ = other.allKmsKeys_.Clone();
+      allKmsKeysVersions_ = other.allKmsKeysVersions_.Clone();
+      cryptoKeyVersion_ = other.cryptoKeyVersion_;
+      tags_ = other.tags_.Clone();
       switch (other.SourceCodeCase) {
         case SourceCodeOneofCase.SourceContents:
           SourceContents = other.SourceContents;
@@ -199,7 +253,8 @@ namespace Google.Cloud.Workflows.V1 {
     private string name_ = "";
     /// <summary>
     /// The resource name of the workflow.
-    /// Format: projects/{project}/locations/{location}/workflows/{workflow}
+    /// Format: projects/{project}/locations/{location}/workflows/{workflow}.
+    /// This is a workflow-wide field and is not tied to a specific revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -215,7 +270,8 @@ namespace Google.Cloud.Workflows.V1 {
     private string description_ = "";
     /// <summary>
     /// Description of the workflow provided by the user.
-    /// Must be at most 1000 unicode characters long.
+    /// Must be at most 1000 Unicode characters long.
+    /// This is a workflow-wide field and is not tied to a specific revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -271,6 +327,7 @@ namespace Google.Cloud.Workflows.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
     /// Output only. The timestamp for when the workflow was created.
+    /// This is a workflow-wide field and is not tied to a specific revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -286,6 +343,7 @@ namespace Google.Cloud.Workflows.V1 {
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
     /// Output only. The timestamp for when the workflow was last updated.
+    /// This is a workflow-wide field and is not tied to a specific revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -323,6 +381,7 @@ namespace Google.Cloud.Workflows.V1 {
     /// than 63 characters and can only contain lowercase letters, numeric
     /// characters, underscores, and dashes. Label keys must start with a letter.
     /// International characters are allowed.
+    /// This is a workflow-wide field and is not tied to a specific revision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -453,13 +512,91 @@ namespace Google.Cloud.Workflows.V1 {
     /// <summary>
     /// Optional. User-defined environment variables associated with this workflow
     /// revision. This map has a maximum length of 20. Each string can take up to
-    /// 40KiB. Keys cannot be empty strings and cannot start with “GOOGLE” or
-    /// “WORKFLOWS".
+    /// 4KiB. Keys cannot be empty strings and cannot start with "GOOGLE" or
+    /// "WORKFLOWS".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> UserEnvVars {
       get { return userEnvVars_; }
+    }
+
+    /// <summary>Field number for the "execution_history_level" field.</summary>
+    public const int ExecutionHistoryLevelFieldNumber = 15;
+    private global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel executionHistoryLevel_ = global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel.Unspecified;
+    /// <summary>
+    /// Optional. Describes the execution history level to apply to this workflow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel ExecutionHistoryLevel {
+      get { return executionHistoryLevel_; }
+      set {
+        executionHistoryLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "all_kms_keys" field.</summary>
+    public const int AllKmsKeysFieldNumber = 16;
+    private static readonly pb::FieldCodec<string> _repeated_allKmsKeys_codec
+        = pb::FieldCodec.ForString(130);
+    private readonly pbc::RepeatedField<string> allKmsKeys_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. A list of all KMS crypto keys used to encrypt or decrypt the
+    /// data associated with the workflow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AllKmsKeys {
+      get { return allKmsKeys_; }
+    }
+
+    /// <summary>Field number for the "all_kms_keys_versions" field.</summary>
+    public const int AllKmsKeysVersionsFieldNumber = 17;
+    private static readonly pb::FieldCodec<string> _repeated_allKmsKeysVersions_codec
+        = pb::FieldCodec.ForString(138);
+    private readonly pbc::RepeatedField<string> allKmsKeysVersions_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. A list of all KMS crypto key versions used to encrypt or
+    /// decrypt the data associated with the workflow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> AllKmsKeysVersions {
+      get { return allKmsKeysVersions_; }
+    }
+
+    /// <summary>Field number for the "crypto_key_version" field.</summary>
+    public const int CryptoKeyVersionFieldNumber = 18;
+    private string cryptoKeyVersion_ = "";
+    /// <summary>
+    /// Output only. The resource name of a KMS crypto key version used to encrypt
+    /// or decrypt the data associated with the workflow.
+    ///
+    /// Format:
+    /// projects/{project}/locations/{location}/keyRings/{keyRing}/cryptoKeys/{cryptoKey}/cryptoKeyVersions/{cryptoKeyVersion}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CryptoKeyVersion {
+      get { return cryptoKeyVersion_; }
+      set {
+        cryptoKeyVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tags" field.</summary>
+    public const int TagsFieldNumber = 19;
+    private static readonly pbc::MapField<string, string>.Codec _map_tags_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 154);
+    private readonly pbc::MapField<string, string> tags_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. Input only. Immutable. Tags associated with this workflow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Tags {
+      get { return tags_; }
     }
 
     private object sourceCode_;
@@ -511,6 +648,11 @@ namespace Google.Cloud.Workflows.V1 {
       if (!object.Equals(StateError, other.StateError)) return false;
       if (CallLogLevel != other.CallLogLevel) return false;
       if (!UserEnvVars.Equals(other.UserEnvVars)) return false;
+      if (ExecutionHistoryLevel != other.ExecutionHistoryLevel) return false;
+      if(!allKmsKeys_.Equals(other.allKmsKeys_)) return false;
+      if(!allKmsKeysVersions_.Equals(other.allKmsKeysVersions_)) return false;
+      if (CryptoKeyVersion != other.CryptoKeyVersion) return false;
+      if (!Tags.Equals(other.Tags)) return false;
       if (SourceCodeCase != other.SourceCodeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -533,6 +675,11 @@ namespace Google.Cloud.Workflows.V1 {
       if (stateError_ != null) hash ^= StateError.GetHashCode();
       if (CallLogLevel != global::Google.Cloud.Workflows.V1.Workflow.Types.CallLogLevel.Unspecified) hash ^= CallLogLevel.GetHashCode();
       hash ^= UserEnvVars.GetHashCode();
+      if (ExecutionHistoryLevel != global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel.Unspecified) hash ^= ExecutionHistoryLevel.GetHashCode();
+      hash ^= allKmsKeys_.GetHashCode();
+      hash ^= allKmsKeysVersions_.GetHashCode();
+      if (CryptoKeyVersion.Length != 0) hash ^= CryptoKeyVersion.GetHashCode();
+      hash ^= Tags.GetHashCode();
       hash ^= (int) sourceCodeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -602,6 +749,17 @@ namespace Google.Cloud.Workflows.V1 {
         output.WriteEnum((int) CallLogLevel);
       }
       userEnvVars_.WriteTo(output, _map_userEnvVars_codec);
+      if (ExecutionHistoryLevel != global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ExecutionHistoryLevel);
+      }
+      allKmsKeys_.WriteTo(output, _repeated_allKmsKeys_codec);
+      allKmsKeysVersions_.WriteTo(output, _repeated_allKmsKeysVersions_codec);
+      if (CryptoKeyVersion.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(CryptoKeyVersion);
+      }
+      tags_.WriteTo(output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -662,6 +820,17 @@ namespace Google.Cloud.Workflows.V1 {
         output.WriteEnum((int) CallLogLevel);
       }
       userEnvVars_.WriteTo(ref output, _map_userEnvVars_codec);
+      if (ExecutionHistoryLevel != global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ExecutionHistoryLevel);
+      }
+      allKmsKeys_.WriteTo(ref output, _repeated_allKmsKeys_codec);
+      allKmsKeysVersions_.WriteTo(ref output, _repeated_allKmsKeysVersions_codec);
+      if (CryptoKeyVersion.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(CryptoKeyVersion);
+      }
+      tags_.WriteTo(ref output, _map_tags_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -710,6 +879,15 @@ namespace Google.Cloud.Workflows.V1 {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CallLogLevel);
       }
       size += userEnvVars_.CalculateSize(_map_userEnvVars_codec);
+      if (ExecutionHistoryLevel != global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExecutionHistoryLevel);
+      }
+      size += allKmsKeys_.CalculateSize(_repeated_allKmsKeys_codec);
+      size += allKmsKeysVersions_.CalculateSize(_repeated_allKmsKeysVersions_codec);
+      if (CryptoKeyVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(CryptoKeyVersion);
+      }
+      size += tags_.CalculateSize(_map_tags_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -769,6 +947,15 @@ namespace Google.Cloud.Workflows.V1 {
         CallLogLevel = other.CallLogLevel;
       }
       userEnvVars_.MergeFrom(other.userEnvVars_);
+      if (other.ExecutionHistoryLevel != global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel.Unspecified) {
+        ExecutionHistoryLevel = other.ExecutionHistoryLevel;
+      }
+      allKmsKeys_.Add(other.allKmsKeys_);
+      allKmsKeysVersions_.Add(other.allKmsKeysVersions_);
+      if (other.CryptoKeyVersion.Length != 0) {
+        CryptoKeyVersion = other.CryptoKeyVersion;
+      }
+      tags_.MergeFrom(other.tags_);
       switch (other.SourceCodeCase) {
         case SourceCodeOneofCase.SourceContents:
           SourceContents = other.SourceContents;
@@ -858,6 +1045,26 @@ namespace Google.Cloud.Workflows.V1 {
             userEnvVars_.AddEntriesFrom(input, _map_userEnvVars_codec);
             break;
           }
+          case 120: {
+            ExecutionHistoryLevel = (global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel) input.ReadEnum();
+            break;
+          }
+          case 130: {
+            allKmsKeys_.AddEntriesFrom(input, _repeated_allKmsKeys_codec);
+            break;
+          }
+          case 138: {
+            allKmsKeysVersions_.AddEntriesFrom(input, _repeated_allKmsKeysVersions_codec);
+            break;
+          }
+          case 146: {
+            CryptoKeyVersion = input.ReadString();
+            break;
+          }
+          case 154: {
+            tags_.AddEntriesFrom(input, _map_tags_codec);
+            break;
+          }
         }
       }
     #endif
@@ -939,6 +1146,26 @@ namespace Google.Cloud.Workflows.V1 {
           }
           case 114: {
             userEnvVars_.AddEntriesFrom(ref input, _map_userEnvVars_codec);
+            break;
+          }
+          case 120: {
+            ExecutionHistoryLevel = (global::Google.Cloud.Workflows.V1.ExecutionHistoryLevel) input.ReadEnum();
+            break;
+          }
+          case 130: {
+            allKmsKeys_.AddEntriesFrom(ref input, _repeated_allKmsKeys_codec);
+            break;
+          }
+          case 138: {
+            allKmsKeysVersions_.AddEntriesFrom(ref input, _repeated_allKmsKeysVersions_codec);
+            break;
+          }
+          case 146: {
+            CryptoKeyVersion = input.ReadString();
+            break;
+          }
+          case 154: {
+            tags_.AddEntriesFrom(ref input, _map_tags_codec);
             break;
           }
         }
@@ -1368,6 +1595,16 @@ namespace Google.Cloud.Workflows.V1 {
     private string filter_ = "";
     /// <summary>
     /// Filter to restrict results to specific workflows.
+    /// For details, see &lt;a href="https://google.aip.dev/160"
+    /// class="external">AIP-160&lt;/a>.
+    ///
+    /// For example, if you are using the Google APIs Explorer:
+    ///
+    /// `state="SUCCEEDED"`
+    ///
+    /// or
+    ///
+    /// `createTime>"2023-08-01" AND state="FAILED"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3240,6 +3477,516 @@ namespace Google.Cloud.Workflows.V1 {
           }
           case 42: {
             ApiVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request for the
+  /// [ListWorkflowRevisions][google.cloud.workflows.v1.Workflows.ListWorkflowRevisions]
+  /// method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListWorkflowRevisionsRequest : pb::IMessage<ListWorkflowRevisionsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListWorkflowRevisionsRequest> _parser = new pb::MessageParser<ListWorkflowRevisionsRequest>(() => new ListWorkflowRevisionsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListWorkflowRevisionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Workflows.V1.WorkflowsReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListWorkflowRevisionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListWorkflowRevisionsRequest(ListWorkflowRevisionsRequest other) : this() {
+      name_ = other.name_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListWorkflowRevisionsRequest Clone() {
+      return new ListWorkflowRevisionsRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. Workflow for which the revisions should be listed.
+    /// Format: projects/{project}/locations/{location}/workflows/{workflow}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 2;
+    private int pageSize_;
+    /// <summary>
+    /// The maximum number of revisions to return per page. If a value is not
+    /// specified, a default value of 20 is used. The maximum permitted value is
+    /// 100. Values greater than 100 are coerced down to 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 3;
+    private string pageToken_ = "";
+    /// <summary>
+    /// The page token, received from a previous ListWorkflowRevisions call.
+    /// Provide this to retrieve the subsequent page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListWorkflowRevisionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListWorkflowRevisionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListWorkflowRevisionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 26: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response for the
+  /// [ListWorkflowRevisions][google.cloud.workflows.v1.Workflows.ListWorkflowRevisions]
+  /// method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListWorkflowRevisionsResponse : pb::IMessage<ListWorkflowRevisionsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListWorkflowRevisionsResponse> _parser = new pb::MessageParser<ListWorkflowRevisionsResponse>(() => new ListWorkflowRevisionsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListWorkflowRevisionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Workflows.V1.WorkflowsReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListWorkflowRevisionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListWorkflowRevisionsResponse(ListWorkflowRevisionsResponse other) : this() {
+      workflows_ = other.workflows_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListWorkflowRevisionsResponse Clone() {
+      return new ListWorkflowRevisionsResponse(this);
+    }
+
+    /// <summary>Field number for the "workflows" field.</summary>
+    public const int WorkflowsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Workflows.V1.Workflow> _repeated_workflows_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Workflows.V1.Workflow.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Workflows.V1.Workflow> workflows_ = new pbc::RepeatedField<global::Google.Cloud.Workflows.V1.Workflow>();
+    /// <summary>
+    /// The revisions of the workflow, ordered in reverse chronological order.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Workflows.V1.Workflow> Workflows {
+      get { return workflows_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token, which can be sent as `page_token` to retrieve the next page.
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListWorkflowRevisionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListWorkflowRevisionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!workflows_.Equals(other.workflows_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= workflows_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      workflows_.WriteTo(output, _repeated_workflows_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      workflows_.WriteTo(ref output, _repeated_workflows_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += workflows_.CalculateSize(_repeated_workflows_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListWorkflowRevisionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      workflows_.Add(other.workflows_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            workflows_.AddEntriesFrom(input, _repeated_workflows_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            workflows_.AddEntriesFrom(ref input, _repeated_workflows_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
             break;
           }
         }

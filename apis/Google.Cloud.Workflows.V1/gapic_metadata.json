@@ -28,6 +28,12 @@
                 "GetWorkflowAsync"
               ]
             },
+            "ListWorkflowRevisions": {
+              "methods": [
+                "ListWorkflowRevisions",
+                "ListWorkflowRevisionsAsync"
+              ]
+            },
             "ListWorkflows": {
               "methods": [
                 "ListWorkflows",

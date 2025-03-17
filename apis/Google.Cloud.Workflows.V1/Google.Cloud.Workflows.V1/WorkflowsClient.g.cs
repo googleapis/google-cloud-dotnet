@@ -58,6 +58,7 @@ namespace Google.Cloud.Workflows.V1
             DeleteWorkflowOperationsSettings = existing.DeleteWorkflowOperationsSettings.Clone();
             UpdateWorkflowSettings = existing.UpdateWorkflowSettings;
             UpdateWorkflowOperationsSettings = existing.UpdateWorkflowOperationsSettings.Clone();
+            ListWorkflowRevisionsSettings = existing.ListWorkflowRevisionsSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -177,6 +178,18 @@ namespace Google.Cloud.Workflows.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>WorkflowsClient.ListWorkflowRevisions</c> and <c>WorkflowsClient.ListWorkflowRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListWorkflowRevisionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -1124,6 +1137,24 @@ namespace Google.Cloud.Workflows.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Workflow, OperationMetadata>> UpdateWorkflowAsync(Workflow workflow, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateWorkflowAsync(workflow, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists revisions for a given workflow.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Workflow"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListWorkflowRevisionsResponse, Workflow> ListWorkflowRevisions(ListWorkflowRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists revisions for a given workflow.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Workflow"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListWorkflowRevisionsResponse, Workflow> ListWorkflowRevisionsAsync(ListWorkflowRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>Workflows client wrapper implementation, for convenient use.</summary>
@@ -1143,6 +1174,8 @@ namespace Google.Cloud.Workflows.V1
         private readonly gaxgrpc::ApiCall<DeleteWorkflowRequest, lro::Operation> _callDeleteWorkflow;
 
         private readonly gaxgrpc::ApiCall<UpdateWorkflowRequest, lro::Operation> _callUpdateWorkflow;
+
+        private readonly gaxgrpc::ApiCall<ListWorkflowRevisionsRequest, ListWorkflowRevisionsResponse> _callListWorkflowRevisions;
 
         /// <summary>
         /// Constructs a client wrapper for the Workflows service, with the specified gRPC client and settings.
@@ -1178,6 +1211,9 @@ namespace Google.Cloud.Workflows.V1
             _callUpdateWorkflow = clientHelper.BuildApiCall<UpdateWorkflowRequest, lro::Operation>("UpdateWorkflow", grpcClient.UpdateWorkflowAsync, grpcClient.UpdateWorkflow, effectiveSettings.UpdateWorkflowSettings).WithGoogleRequestParam("workflow.name", request => request.Workflow?.Name);
             Modify_ApiCall(ref _callUpdateWorkflow);
             Modify_UpdateWorkflowApiCall(ref _callUpdateWorkflow);
+            _callListWorkflowRevisions = clientHelper.BuildApiCall<ListWorkflowRevisionsRequest, ListWorkflowRevisionsResponse>("ListWorkflowRevisions", grpcClient.ListWorkflowRevisionsAsync, grpcClient.ListWorkflowRevisions, effectiveSettings.ListWorkflowRevisionsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callListWorkflowRevisions);
+            Modify_ListWorkflowRevisionsApiCall(ref _callListWorkflowRevisions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1192,6 +1228,8 @@ namespace Google.Cloud.Workflows.V1
         partial void Modify_DeleteWorkflowApiCall(ref gaxgrpc::ApiCall<DeleteWorkflowRequest, lro::Operation> call);
 
         partial void Modify_UpdateWorkflowApiCall(ref gaxgrpc::ApiCall<UpdateWorkflowRequest, lro::Operation> call);
+
+        partial void Modify_ListWorkflowRevisionsApiCall(ref gaxgrpc::ApiCall<ListWorkflowRevisionsRequest, ListWorkflowRevisionsResponse> call);
 
         partial void OnConstruction(Workflows.WorkflowsClient grpcClient, WorkflowsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1210,6 +1248,8 @@ namespace Google.Cloud.Workflows.V1
         partial void Modify_DeleteWorkflowRequest(ref DeleteWorkflowRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateWorkflowRequest(ref UpdateWorkflowRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListWorkflowRevisionsRequest(ref ListWorkflowRevisionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists workflows in a given project and location.
@@ -1357,13 +1397,49 @@ namespace Google.Cloud.Workflows.V1
             Modify_UpdateWorkflowRequest(ref request, ref callSettings);
             return new lro::Operation<Workflow, OperationMetadata>(await _callUpdateWorkflow.Async(request, callSettings).ConfigureAwait(false), UpdateWorkflowOperationsClient);
         }
+
+        /// <summary>
+        /// Lists revisions for a given workflow.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Workflow"/> resources.</returns>
+        public override gax::PagedEnumerable<ListWorkflowRevisionsResponse, Workflow> ListWorkflowRevisions(ListWorkflowRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWorkflowRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListWorkflowRevisionsRequest, ListWorkflowRevisionsResponse, Workflow>(_callListWorkflowRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists revisions for a given workflow.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Workflow"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListWorkflowRevisionsResponse, Workflow> ListWorkflowRevisionsAsync(ListWorkflowRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListWorkflowRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListWorkflowRevisionsRequest, ListWorkflowRevisionsResponse, Workflow>(_callListWorkflowRevisions, request, callSettings);
+        }
     }
 
     public partial class ListWorkflowsRequest : gaxgrpc::IPageRequest
     {
     }
 
+    public partial class ListWorkflowRevisionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListWorkflowsResponse : gaxgrpc::IPageResponse<Workflow>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Workflow> GetEnumerator() => Workflows.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListWorkflowRevisionsResponse : gaxgrpc::IPageResponse<Workflow>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Workflow> GetEnumerator() => Workflows.GetEnumerator();
