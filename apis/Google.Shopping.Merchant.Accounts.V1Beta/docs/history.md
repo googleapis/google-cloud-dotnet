@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2025-03-17
+
+### New features
+
+- Add AutomaticImprovements service ([commit b5adb03](https://github.com/googleapis/google-cloud-dotnet/commit/b5adb03d690e0b2ab64c80c2bbc2df993c5ec9a2))
+
 ## Version 1.0.0-beta04, released 2025-03-10
 
 ### Bug fixes
