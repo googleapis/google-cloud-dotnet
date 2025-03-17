@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.7.0, released 2025-03-17
+
+### New features
+
+- Add custom BigQuery dataset location support in Auto Discovery ([commit 964cc9f](https://github.com/googleapis/google-cloud-dotnet/commit/964cc9f1a4da7844d38836cca289f058102a3e6f))
+- DataTaxonomyService is now deprecated ([commit 964cc9f](https://github.com/googleapis/google-cloud-dotnet/commit/964cc9f1a4da7844d38836cca289f058102a3e6f))
+
+### Documentation improvements
+
+- Update the Dataplex Catalog proto to remove the info about schema changes ([commit 964cc9f](https://github.com/googleapis/google-cloud-dotnet/commit/964cc9f1a4da7844d38836cca289f058102a3e6f))
+
 ## Version 3.6.0, released 2025-02-10
 
 ### New features
