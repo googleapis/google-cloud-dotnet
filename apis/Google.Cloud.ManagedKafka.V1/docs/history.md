@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-03-17
+
+### Bug fixes
+
+- An existing google.api.http annotation `http_uri` is changed for method `GetConsumerGroup` in service `ManagedKafka` ([commit 0e666c4](https://github.com/googleapis/google-cloud-dotnet/commit/0e666c4bb8ffa411264e9e2c9d38b9cbeefe5169))
+- An existing google.api.http annotation `http_uri` is changed for method `UpdateConsumerGroup` in service `ManagedKafka` ([commit 0e666c4](https://github.com/googleapis/google-cloud-dotnet/commit/0e666c4bb8ffa411264e9e2c9d38b9cbeefe5169))
+- An existing google.api.http annotation `http_uri` is changed for method `DeleteConsumerGroup` in service `ManagedKafka` ([commit 0e666c4](https://github.com/googleapis/google-cloud-dotnet/commit/0e666c4bb8ffa411264e9e2c9d38b9cbeefe5169))
+
+### Documentation improvements
+
+- A comment for field `subnet` in message `.google.cloud.managedkafka.v1.NetworkConfig` is changed ([commit 0e666c4](https://github.com/googleapis/google-cloud-dotnet/commit/0e666c4bb8ffa411264e9e2c9d38b9cbeefe5169))
+
 ## Version 1.0.0-beta03, released 2025-01-13
 
 ### New features
