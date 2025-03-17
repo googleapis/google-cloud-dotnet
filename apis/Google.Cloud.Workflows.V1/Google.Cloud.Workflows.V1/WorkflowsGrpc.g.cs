@@ -81,6 +81,10 @@ namespace Google.Cloud.Workflows.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Workflows.V1.DeleteWorkflowRequest> __Marshaller_google_cloud_workflows_v1_DeleteWorkflowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.V1.DeleteWorkflowRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Workflows.V1.UpdateWorkflowRequest> __Marshaller_google_cloud_workflows_v1_UpdateWorkflowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.V1.UpdateWorkflowRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest> __Marshaller_google_cloud_workflows_v1_ListWorkflowRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse> __Marshaller_google_cloud_workflows_v1_ListWorkflowRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Workflows.V1.ListWorkflowsRequest, global::Google.Cloud.Workflows.V1.ListWorkflowsResponse> __Method_ListWorkflows = new grpc::Method<global::Google.Cloud.Workflows.V1.ListWorkflowsRequest, global::Google.Cloud.Workflows.V1.ListWorkflowsResponse>(
@@ -121,6 +125,14 @@ namespace Google.Cloud.Workflows.V1 {
         "UpdateWorkflow",
         __Marshaller_google_cloud_workflows_v1_UpdateWorkflowRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest, global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse> __Method_ListWorkflowRevisions = new grpc::Method<global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest, global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListWorkflowRevisions",
+        __Marshaller_google_cloud_workflows_v1_ListWorkflowRevisionsRequest,
+        __Marshaller_google_cloud_workflows_v1_ListWorkflowRevisionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -197,6 +209,18 @@ namespace Google.Cloud.Workflows.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateWorkflow(global::Google.Cloud.Workflows.V1.UpdateWorkflowRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists revisions for a given workflow.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse> ListWorkflowRevisions(global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -506,6 +530,54 @@ namespace Google.Cloud.Workflows.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateWorkflow, null, options, request);
       }
+      /// <summary>
+      /// Lists revisions for a given workflow.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse ListWorkflowRevisions(global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListWorkflowRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists revisions for a given workflow.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse ListWorkflowRevisions(global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListWorkflowRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Lists revisions for a given workflow.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse> ListWorkflowRevisionsAsync(global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListWorkflowRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists revisions for a given workflow.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse> ListWorkflowRevisionsAsync(global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListWorkflowRevisions, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override WorkflowsClient NewInstance(ClientBaseConfiguration configuration)
@@ -524,7 +596,8 @@ namespace Google.Cloud.Workflows.V1 {
           .AddMethod(__Method_GetWorkflow, serviceImpl.GetWorkflow)
           .AddMethod(__Method_CreateWorkflow, serviceImpl.CreateWorkflow)
           .AddMethod(__Method_DeleteWorkflow, serviceImpl.DeleteWorkflow)
-          .AddMethod(__Method_UpdateWorkflow, serviceImpl.UpdateWorkflow).Build();
+          .AddMethod(__Method_UpdateWorkflow, serviceImpl.UpdateWorkflow)
+          .AddMethod(__Method_ListWorkflowRevisions, serviceImpl.ListWorkflowRevisions).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -539,6 +612,7 @@ namespace Google.Cloud.Workflows.V1 {
       serviceBinder.AddMethod(__Method_CreateWorkflow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Workflows.V1.CreateWorkflowRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateWorkflow));
       serviceBinder.AddMethod(__Method_DeleteWorkflow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Workflows.V1.DeleteWorkflowRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteWorkflow));
       serviceBinder.AddMethod(__Method_UpdateWorkflow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Workflows.V1.UpdateWorkflowRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateWorkflow));
+      serviceBinder.AddMethod(__Method_ListWorkflowRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest, global::Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse>(serviceImpl.ListWorkflowRevisions));
     }
 
   }

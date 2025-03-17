@@ -1421,6 +1421,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "workflows_v1_generated_Workflows_ListWorkflowRevisions_sync",
+      "title": "ListWorkflowRevisionsRequestObject",
+      "description": "Snippet for ListWorkflowRevisions",
+      "file": "WorkflowsClient.ListWorkflowRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkflowRevisions",
+        "fullName": "Google.Cloud.Workflows.V1.WorkflowsClient.ListWorkflowRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse, Google.Cloud.Workflows.V1.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "ListWorkflowRevisions",
+          "fullName": "google.cloud.workflows.v1.Workflows.ListWorkflowRevisions",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "workflows_v1_generated_Workflows_ListWorkflowRevisions_async",
+      "title": "ListWorkflowRevisionsRequestObjectAsync",
+      "description": "Snippet for ListWorkflowRevisionsAsync",
+      "file": "WorkflowsClient.ListWorkflowRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListWorkflowRevisionsAsync",
+        "fullName": "Google.Cloud.Workflows.V1.WorkflowsClient.ListWorkflowRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Workflows.V1.ListWorkflowRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Workflows.V1.ListWorkflowRevisionsResponse, Google.Cloud.Workflows.V1.Workflow>",
+        "client": {
+          "shortName": "WorkflowsClient",
+          "fullName": "Google.Cloud.Workflows.V1.WorkflowsClient"
+        },
+        "method": {
+          "shortName": "ListWorkflowRevisions",
+          "fullName": "google.cloud.workflows.v1.Workflows.ListWorkflowRevisions",
+          "service": {
+            "shortName": "Workflows",
+            "fullName": "google.cloud.workflows.v1.Workflows"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

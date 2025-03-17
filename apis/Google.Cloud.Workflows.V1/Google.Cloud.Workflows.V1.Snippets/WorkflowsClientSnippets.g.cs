@@ -903,5 +903,101 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ListWorkflowRevisions</summary>
+        public void ListWorkflowRevisionsRequestObject()
+        {
+            // Snippet: ListWorkflowRevisions(ListWorkflowRevisionsRequest, CallSettings)
+            // Create client
+            WorkflowsClient workflowsClient = WorkflowsClient.Create();
+            // Initialize request argument(s)
+            ListWorkflowRevisionsRequest request = new ListWorkflowRevisionsRequest
+            {
+                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+            };
+            // Make the request
+            PagedEnumerable<ListWorkflowRevisionsResponse, Workflow> response = workflowsClient.ListWorkflowRevisions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Workflow item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListWorkflowRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Workflow item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Workflow> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Workflow item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListWorkflowRevisionsAsync</summary>
+        public async Task ListWorkflowRevisionsRequestObjectAsync()
+        {
+            // Snippet: ListWorkflowRevisionsAsync(ListWorkflowRevisionsRequest, CallSettings)
+            // Create client
+            WorkflowsClient workflowsClient = await WorkflowsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListWorkflowRevisionsRequest request = new ListWorkflowRevisionsRequest
+            {
+                WorkflowName = WorkflowName.FromProjectLocationWorkflow("[PROJECT]", "[LOCATION]", "[WORKFLOW]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListWorkflowRevisionsResponse, Workflow> response = workflowsClient.ListWorkflowRevisionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Workflow item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListWorkflowRevisionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Workflow item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Workflow> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Workflow item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
     }
 }
