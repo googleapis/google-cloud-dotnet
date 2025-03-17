@@ -3749,7 +3749,7 @@
     },
     {
       "id": "Google.Cloud.OracleDatabase.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Oracle Database@Google Cloud",
       "productUrl": "https://cloud.google.com/oracle/database/docs",
