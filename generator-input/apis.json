@@ -6261,7 +6261,7 @@
     },
     {
       "id": "Google.Shopping.Merchant.DataSources.V1Beta",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "productName": "Merchant",
       "productUrl": "https://developers.google.com/merchant/api",
@@ -6272,7 +6272,7 @@
         "datasources"
       ],
       "dependencies": {
-        "Google.Shopping.Type": "1.0.0-beta05"
+        "Google.Shopping.Type": "1.0.0-beta06"
       },
       "generator": "micro",
       "protoPath": "google/shopping/merchant/datasources/v1beta",
