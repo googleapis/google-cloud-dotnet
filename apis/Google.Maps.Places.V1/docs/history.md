@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta14, released 2025-03-17
+
+### New features
+
+- Add postal_address and time_zone to Place ([commit f193143](https://github.com/googleapis/google-cloud-dotnet/commit/f19314303702ff4557302c26a0a5b1a1d9ff313d))
+
+### Documentation improvements
+
+- Change comments in some fields in Places API ([commit f193143](https://github.com/googleapis/google-cloud-dotnet/commit/f19314303702ff4557302c26a0a5b1a1d9ff313d))
+
 ## Version 1.0.0-beta13, released 2025-03-03
 
 ### New features
