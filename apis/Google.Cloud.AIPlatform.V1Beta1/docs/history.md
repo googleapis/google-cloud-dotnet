@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta22, released 2025-03-17
+
+### New features
+
+- Add VertexAISearch.engine option ([commit 93bab4b](https://github.com/googleapis/google-cloud-dotnet/commit/93bab4b9bb801aa91adac8fcf023c4b8eae28de3))
+- Add function_call.id and function_response.id ([commit ee278c3](https://github.com/googleapis/google-cloud-dotnet/commit/ee278c310686bc16f0acfff79bf0a078b6030e66))
+
 ## Version 1.0.0-beta21, released 2025-03-10
 
 ### New features
