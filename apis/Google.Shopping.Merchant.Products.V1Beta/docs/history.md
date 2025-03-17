@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2025-03-17
+
+### New features
+
+- Add an update method ([commit 87c8576](https://github.com/googleapis/google-cloud-dotnet/commit/87c8576ac63970055bd230753bb439bc9dbeeafa))
+
+### Documentation improvements
+
+- A comment for message `ProductInput` is changed ([commit 87c8576](https://github.com/googleapis/google-cloud-dotnet/commit/87c8576ac63970055bd230753bb439bc9dbeeafa))
+- A comment for field `channel` in message `.google.shopping.merchant.products.v1beta.ProductInput` is changed ([commit 87c8576](https://github.com/googleapis/google-cloud-dotnet/commit/87c8576ac63970055bd230753bb439bc9dbeeafa))
+- A comment for field `data_source` in message `.google.shopping.merchant.products.v1beta.InsertProductInputRequest` is changed ([commit 87c8576](https://github.com/googleapis/google-cloud-dotnet/commit/87c8576ac63970055bd230753bb439bc9dbeeafa))
+
 ## Version 1.0.0-beta02, released 2024-12-12
 
 ### Bug fixes
