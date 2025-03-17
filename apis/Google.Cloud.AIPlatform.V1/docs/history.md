@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.23.0, released 2025-03-17
+
+### New features
+
+- Add VertexAISearch.engine option ([commit 1fe1f81](https://github.com/googleapis/google-cloud-dotnet/commit/1fe1f81406fcfa5dcde96c48aed91d6c29b3bb2e))
+- Add reranker config to RAG v1 API ([commit 2e97dd3](https://github.com/googleapis/google-cloud-dotnet/commit/2e97dd3f1fd45a81c0630a08c4e6f5289e97eaac))
+
 ## Version 3.22.0, released 2025-03-10
 
 ### New features
