@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2025-03-17
+
+### New features
+
+- Add a new destinations field ([commit df6846f](https://github.com/googleapis/google-cloud-dotnet/commit/df6846fb9d97e6b764ad5b80f03eeefba75f00fe))
+
+### Documentation improvements
+
+- A comment for field `promotion_data_source` in message `.google.shopping.merchant.datasources.v1beta.DataSource` is changed ([commit df6846f](https://github.com/googleapis/google-cloud-dotnet/commit/df6846fb9d97e6b764ad5b80f03eeefba75f00fe))
+- A comment for field `channel` in message `.google.shopping.merchant.datasources.v1beta.PrimaryProductDataSource` is changed ([commit df6846f](https://github.com/googleapis/google-cloud-dotnet/commit/df6846fb9d97e6b764ad5b80f03eeefba75f00fe))
 ## Version 1.0.0-beta04, released 2025-01-13
 
 ### New features
