@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.2.0, released 2025-03-17
+
+### New features
+
+- Add enum value `State::NOT_APPROVED_IN_PRIVATE_MARKETPLACE` ([commit 662d70f](https://github.com/googleapis/google-cloud-dotnet/commit/662d70f41d8e256ad63071869e26b04557aadae4))
+
+### Documentation improvements
+
+- Update comment for field `MaintenanceWindow.patching_mode` ([commit 662d70f](https://github.com/googleapis/google-cloud-dotnet/commit/662d70f41d8e256ad63071869e26b04557aadae4))
+
 ## Version 1.1.0, released 2025-01-13
 
 ### New features
