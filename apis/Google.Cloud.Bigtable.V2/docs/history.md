@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.17.0, released 2025-03-17
+
+### New features
+
+- Add MaterializedViewName to ReadRows and SampleRowKeys ([commit 2221165](https://github.com/googleapis/google-cloud-dotnet/commit/22211658e798f214adb6b0543c657da06b44ba33))
+
 ## Version 3.16.0, released 2025-03-10
 
 ### New features
