@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.15.0, released 2025-03-17
+
+### New features
+
+- Mark DataCatalog service deprecated, use Dataplex Catalog instead ([commit ae53ed3](https://github.com/googleapis/google-cloud-dotnet/commit/ae53ed3aae077115d47a53bb5ff7b41d03839efc))
+
+### Documentation improvements
+
+- Fix a few typos ([commit ae53ed3](https://github.com/googleapis/google-cloud-dotnet/commit/ae53ed3aae077115d47a53bb5ff7b41d03839efc))
+- Fix markdown reference in `TagTemplate.is_publicly_readable` comment ([commit 8c0fdf1](https://github.com/googleapis/google-cloud-dotnet/commit/8c0fdf1f233f2208e959b9a0e2613426fba4db25))
+
 ## Version 2.14.0, released 2024-12-06
 
 ### New features
