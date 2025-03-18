@@ -3920,6 +3920,3975 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectClusters_sync",
+      "title": "ListConnectClustersRequestObject",
+      "description": "Snippet for ListConnectClusters",
+      "file": "ManagedKafkaConnectClient.ListConnectClustersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectClusters",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectClusters",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ListConnectClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectClustersResponse, Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectClusters",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectClusters",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectClusters_async",
+      "title": "ListConnectClustersRequestObjectAsync",
+      "description": "Snippet for ListConnectClustersAsync",
+      "file": "ManagedKafkaConnectClient.ListConnectClustersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectClustersAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectClustersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ListConnectClustersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectClustersResponse, Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectClusters",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectClusters",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectClusters_sync_flattened",
+      "title": "ListConnectClusters",
+      "description": "Snippet for ListConnectClusters",
+      "file": "ManagedKafkaConnectClient.ListConnectClustersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectClusters",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectClusters",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectClustersResponse, Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectClusters",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectClusters",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectClusters_async_flattened",
+      "title": "ListConnectClustersAsync",
+      "description": "Snippet for ListConnectClustersAsync",
+      "file": "ManagedKafkaConnectClient.ListConnectClustersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectClustersAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectClustersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectClustersResponse, Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectClusters",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectClusters",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectClusters_sync_flattened_resourceNames",
+      "title": "ListConnectClustersResourceNames",
+      "description": "Snippet for ListConnectClusters",
+      "file": "ManagedKafkaConnectClient.ListConnectClustersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectClusters",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectClusters",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectClustersResponse, Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectClusters",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectClusters",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectClusters_async_flattened_resourceNames",
+      "title": "ListConnectClustersResourceNamesAsync",
+      "description": "Snippet for ListConnectClustersAsync",
+      "file": "ManagedKafkaConnectClient.ListConnectClustersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectClustersAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectClustersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectClustersResponse, Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectClusters",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectClusters",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnectCluster_sync",
+      "title": "GetConnectClusterRequestObject",
+      "description": "Snippet for GetConnectCluster",
+      "file": "ManagedKafkaConnectClient.GetConnectClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.GetConnectClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnectCluster_async",
+      "title": "GetConnectClusterRequestObjectAsync",
+      "description": "Snippet for GetConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.GetConnectClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.GetConnectClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnectCluster_sync_flattened",
+      "title": "GetConnectCluster",
+      "description": "Snippet for GetConnectCluster",
+      "file": "ManagedKafkaConnectClient.GetConnectClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnectCluster_async_flattened",
+      "title": "GetConnectClusterAsync",
+      "description": "Snippet for GetConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.GetConnectClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnectCluster_sync_flattened_resourceNames",
+      "title": "GetConnectClusterResourceNames",
+      "description": "Snippet for GetConnectCluster",
+      "file": "ManagedKafkaConnectClient.GetConnectClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnectCluster_async_flattened_resourceNames",
+      "title": "GetConnectClusterResourceNamesAsync",
+      "description": "Snippet for GetConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.GetConnectClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.ConnectCluster>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnectCluster_sync",
+      "title": "CreateConnectClusterRequestObject",
+      "description": "Snippet for CreateConnectCluster",
+      "file": "ManagedKafkaConnectClient.CreateConnectClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.CreateConnectClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnectCluster_async",
+      "title": "CreateConnectClusterRequestObjectAsync",
+      "description": "Snippet for CreateConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.CreateConnectClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.CreateConnectClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnectCluster_sync_flattened",
+      "title": "CreateConnectCluster",
+      "description": "Snippet for CreateConnectCluster",
+      "file": "ManagedKafkaConnectClient.CreateConnectClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+            "name": "connectCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "connectClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnectCluster_async_flattened",
+      "title": "CreateConnectClusterAsync",
+      "description": "Snippet for CreateConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.CreateConnectClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+            "name": "connectCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "connectClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnectCluster_sync_flattened_resourceNames",
+      "title": "CreateConnectClusterResourceNames",
+      "description": "Snippet for CreateConnectCluster",
+      "file": "ManagedKafkaConnectClient.CreateConnectClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectCluster",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+            "name": "connectCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "connectClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnectCluster_async_flattened_resourceNames",
+      "title": "CreateConnectClusterResourceNamesAsync",
+      "description": "Snippet for CreateConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.CreateConnectClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+            "name": "connectCluster"
+          },
+          {
+            "type": "System.String",
+            "name": "connectClusterId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_UpdateConnectCluster_sync",
+      "title": "UpdateConnectClusterRequestObject",
+      "description": "Snippet for UpdateConnectCluster",
+      "file": "ManagedKafkaConnectClient.UpdateConnectClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.UpdateConnectCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.UpdateConnectClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.UpdateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_UpdateConnectCluster_async",
+      "title": "UpdateConnectClusterRequestObjectAsync",
+      "description": "Snippet for UpdateConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.UpdateConnectClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.UpdateConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.UpdateConnectClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.UpdateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_UpdateConnectCluster_sync_flattened",
+      "title": "UpdateConnectCluster",
+      "description": "Snippet for UpdateConnectCluster",
+      "file": "ManagedKafkaConnectClient.UpdateConnectClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.UpdateConnectCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+            "name": "connectCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.UpdateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_UpdateConnectCluster_async_flattened",
+      "title": "UpdateConnectClusterAsync",
+      "description": "Snippet for UpdateConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.UpdateConnectClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.UpdateConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectCluster",
+            "name": "connectCluster"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.ManagedKafka.V1.ConnectCluster, Google.Cloud.ManagedKafka.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.UpdateConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnectCluster_sync",
+      "title": "DeleteConnectClusterRequestObject",
+      "description": "Snippet for DeleteConnectCluster",
+      "file": "ManagedKafkaConnectClient.DeleteConnectClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.DeleteConnectClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedKafka.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnectCluster_async",
+      "title": "DeleteConnectClusterRequestObjectAsync",
+      "description": "Snippet for DeleteConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.DeleteConnectClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.DeleteConnectClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedKafka.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnectCluster_sync_flattened",
+      "title": "DeleteConnectCluster",
+      "description": "Snippet for DeleteConnectCluster",
+      "file": "ManagedKafkaConnectClient.DeleteConnectClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedKafka.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnectCluster_async_flattened",
+      "title": "DeleteConnectClusterAsync",
+      "description": "Snippet for DeleteConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.DeleteConnectClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedKafka.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnectCluster_sync_flattened_resourceNames",
+      "title": "DeleteConnectClusterResourceNames",
+      "description": "Snippet for DeleteConnectCluster",
+      "file": "ManagedKafkaConnectClient.DeleteConnectClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectCluster",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedKafka.V1.OperationMetadata>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnectCluster_async_flattened_resourceNames",
+      "title": "DeleteConnectClusterResourceNamesAsync",
+      "description": "Snippet for DeleteConnectClusterAsync",
+      "file": "ManagedKafkaConnectClient.DeleteConnectClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectClusterAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.ManagedKafka.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnectCluster",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnectCluster",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectors_sync",
+      "title": "ListConnectorsRequestObject",
+      "description": "Snippet for ListConnectors",
+      "file": "ManagedKafkaConnectClient.ListConnectorsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ListConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectorsResponse, Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectors",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectors_async",
+      "title": "ListConnectorsRequestObjectAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "ManagedKafkaConnectClient.ListConnectorsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ListConnectorsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectorsResponse, Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectors",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectors_sync_flattened",
+      "title": "ListConnectors",
+      "description": "Snippet for ListConnectors",
+      "file": "ManagedKafkaConnectClient.ListConnectorsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectorsResponse, Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectors",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectors_async_flattened",
+      "title": "ListConnectorsAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "ManagedKafkaConnectClient.ListConnectorsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectorsResponse, Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectors",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectors_sync_flattened_resourceNames",
+      "title": "ListConnectorsResourceNames",
+      "description": "Snippet for ListConnectors",
+      "file": "ManagedKafkaConnectClient.ListConnectorsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectors",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectors",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectorsResponse, Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectors",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ListConnectors_async_flattened_resourceNames",
+      "title": "ListConnectorsResourceNamesAsync",
+      "description": "Snippet for ListConnectorsAsync",
+      "file": "ManagedKafkaConnectClient.ListConnectorsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListConnectorsAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ListConnectorsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ManagedKafka.V1.ListConnectorsResponse, Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ListConnectors",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ListConnectors",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnector_sync",
+      "title": "GetConnectorRequestObject",
+      "description": "Snippet for GetConnector",
+      "file": "ManagedKafkaConnectClient.GetConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.GetConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Connector",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnector_async",
+      "title": "GetConnectorRequestObjectAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "ManagedKafkaConnectClient.GetConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.GetConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnector_sync_flattened",
+      "title": "GetConnector",
+      "description": "Snippet for GetConnector",
+      "file": "ManagedKafkaConnectClient.GetConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Connector",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnector_async_flattened",
+      "title": "GetConnectorAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "ManagedKafkaConnectClient.GetConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnector_sync_flattened_resourceNames",
+      "title": "GetConnectorResourceNames",
+      "description": "Snippet for GetConnector",
+      "file": "ManagedKafkaConnectClient.GetConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Connector",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_GetConnector_async_flattened_resourceNames",
+      "title": "GetConnectorResourceNamesAsync",
+      "description": "Snippet for GetConnectorAsync",
+      "file": "ManagedKafkaConnectClient.GetConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.GetConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "GetConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.GetConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnector_sync",
+      "title": "CreateConnectorRequestObject",
+      "description": "Snippet for CreateConnector",
+      "file": "ManagedKafkaConnectClient.CreateConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.CreateConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Connector",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnector_async",
+      "title": "CreateConnectorRequestObjectAsync",
+      "description": "Snippet for CreateConnectorAsync",
+      "file": "ManagedKafkaConnectClient.CreateConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.CreateConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnector_sync_flattened",
+      "title": "CreateConnector",
+      "description": "Snippet for CreateConnector",
+      "file": "ManagedKafkaConnectClient.CreateConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "System.String",
+            "name": "connectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Connector",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnector_async_flattened",
+      "title": "CreateConnectorAsync",
+      "description": "Snippet for CreateConnectorAsync",
+      "file": "ManagedKafkaConnectClient.CreateConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "System.String",
+            "name": "connectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnector_sync_flattened_resourceNames",
+      "title": "CreateConnectorResourceNames",
+      "description": "Snippet for CreateConnector",
+      "file": "ManagedKafkaConnectClient.CreateConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "System.String",
+            "name": "connectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Connector",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_CreateConnector_async_flattened_resourceNames",
+      "title": "CreateConnectorResourceNamesAsync",
+      "description": "Snippet for CreateConnectorAsync",
+      "file": "ManagedKafkaConnectClient.CreateConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.CreateConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectClusterName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "System.String",
+            "name": "connectorId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "CreateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.CreateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_UpdateConnector_sync",
+      "title": "UpdateConnectorRequestObject",
+      "description": "Snippet for UpdateConnector",
+      "file": "ManagedKafkaConnectClient.UpdateConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.UpdateConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.UpdateConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Connector",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.UpdateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_UpdateConnector_async",
+      "title": "UpdateConnectorRequestObjectAsync",
+      "description": "Snippet for UpdateConnectorAsync",
+      "file": "ManagedKafkaConnectClient.UpdateConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.UpdateConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.UpdateConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.UpdateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_UpdateConnector_sync_flattened",
+      "title": "UpdateConnector",
+      "description": "Snippet for UpdateConnector",
+      "file": "ManagedKafkaConnectClient.UpdateConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.UpdateConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.Connector",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.UpdateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_UpdateConnector_async_flattened",
+      "title": "UpdateConnectorAsync",
+      "description": "Snippet for UpdateConnectorAsync",
+      "file": "ManagedKafkaConnectClient.UpdateConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.UpdateConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.Connector",
+            "name": "connector"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.Connector>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "UpdateConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.UpdateConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnector_sync",
+      "title": "DeleteConnectorRequestObject",
+      "description": "Snippet for DeleteConnector",
+      "file": "ManagedKafkaConnectClient.DeleteConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.DeleteConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnector_async",
+      "title": "DeleteConnectorRequestObjectAsync",
+      "description": "Snippet for DeleteConnectorAsync",
+      "file": "ManagedKafkaConnectClient.DeleteConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.DeleteConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnector_sync_flattened",
+      "title": "DeleteConnector",
+      "description": "Snippet for DeleteConnector",
+      "file": "ManagedKafkaConnectClient.DeleteConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnector_async_flattened",
+      "title": "DeleteConnectorAsync",
+      "description": "Snippet for DeleteConnectorAsync",
+      "file": "ManagedKafkaConnectClient.DeleteConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnector_sync_flattened_resourceNames",
+      "title": "DeleteConnectorResourceNames",
+      "description": "Snippet for DeleteConnector",
+      "file": "ManagedKafkaConnectClient.DeleteConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_DeleteConnector_async_flattened_resourceNames",
+      "title": "DeleteConnectorResourceNamesAsync",
+      "description": "Snippet for DeleteConnectorAsync",
+      "file": "ManagedKafkaConnectClient.DeleteConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.DeleteConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "DeleteConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.DeleteConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_PauseConnector_sync",
+      "title": "PauseConnectorRequestObject",
+      "description": "Snippet for PauseConnector",
+      "file": "ManagedKafkaConnectClient.PauseConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.PauseConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.PauseConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.PauseConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "PauseConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.PauseConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_PauseConnector_async",
+      "title": "PauseConnectorRequestObjectAsync",
+      "description": "Snippet for PauseConnectorAsync",
+      "file": "ManagedKafkaConnectClient.PauseConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.PauseConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.PauseConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.PauseConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "PauseConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.PauseConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_PauseConnector_sync_flattened",
+      "title": "PauseConnector",
+      "description": "Snippet for PauseConnector",
+      "file": "ManagedKafkaConnectClient.PauseConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.PauseConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.PauseConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "PauseConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.PauseConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_PauseConnector_async_flattened",
+      "title": "PauseConnectorAsync",
+      "description": "Snippet for PauseConnectorAsync",
+      "file": "ManagedKafkaConnectClient.PauseConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.PauseConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.PauseConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "PauseConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.PauseConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_PauseConnector_sync_flattened_resourceNames",
+      "title": "PauseConnectorResourceNames",
+      "description": "Snippet for PauseConnector",
+      "file": "ManagedKafkaConnectClient.PauseConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.PauseConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.PauseConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "PauseConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.PauseConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_PauseConnector_async_flattened_resourceNames",
+      "title": "PauseConnectorResourceNamesAsync",
+      "description": "Snippet for PauseConnectorAsync",
+      "file": "ManagedKafkaConnectClient.PauseConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "PauseConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.PauseConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.PauseConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "PauseConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.PauseConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ResumeConnector_sync",
+      "title": "ResumeConnectorRequestObject",
+      "description": "Snippet for ResumeConnector",
+      "file": "ManagedKafkaConnectClient.ResumeConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ResumeConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ResumeConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.ResumeConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ResumeConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ResumeConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ResumeConnector_async",
+      "title": "ResumeConnectorRequestObjectAsync",
+      "description": "Snippet for ResumeConnectorAsync",
+      "file": "ManagedKafkaConnectClient.ResumeConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ResumeConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ResumeConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.ResumeConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ResumeConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ResumeConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ResumeConnector_sync_flattened",
+      "title": "ResumeConnector",
+      "description": "Snippet for ResumeConnector",
+      "file": "ManagedKafkaConnectClient.ResumeConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ResumeConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.ResumeConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ResumeConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ResumeConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ResumeConnector_async_flattened",
+      "title": "ResumeConnectorAsync",
+      "description": "Snippet for ResumeConnectorAsync",
+      "file": "ManagedKafkaConnectClient.ResumeConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ResumeConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.ResumeConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ResumeConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ResumeConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ResumeConnector_sync_flattened_resourceNames",
+      "title": "ResumeConnectorResourceNames",
+      "description": "Snippet for ResumeConnector",
+      "file": "ManagedKafkaConnectClient.ResumeConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ResumeConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.ResumeConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ResumeConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ResumeConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_ResumeConnector_async_flattened_resourceNames",
+      "title": "ResumeConnectorResourceNamesAsync",
+      "description": "Snippet for ResumeConnectorAsync",
+      "file": "ManagedKafkaConnectClient.ResumeConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResumeConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.ResumeConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.ResumeConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "ResumeConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.ResumeConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_RestartConnector_sync",
+      "title": "RestartConnectorRequestObject",
+      "description": "Snippet for RestartConnector",
+      "file": "ManagedKafkaConnectClient.RestartConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.RestartConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.RestartConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.RestartConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "RestartConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.RestartConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_RestartConnector_async",
+      "title": "RestartConnectorRequestObjectAsync",
+      "description": "Snippet for RestartConnectorAsync",
+      "file": "ManagedKafkaConnectClient.RestartConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.RestartConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.RestartConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.RestartConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "RestartConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.RestartConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_RestartConnector_sync_flattened",
+      "title": "RestartConnector",
+      "description": "Snippet for RestartConnector",
+      "file": "ManagedKafkaConnectClient.RestartConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.RestartConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.RestartConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "RestartConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.RestartConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_RestartConnector_async_flattened",
+      "title": "RestartConnectorAsync",
+      "description": "Snippet for RestartConnectorAsync",
+      "file": "ManagedKafkaConnectClient.RestartConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.RestartConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.RestartConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "RestartConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.RestartConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_RestartConnector_sync_flattened_resourceNames",
+      "title": "RestartConnectorResourceNames",
+      "description": "Snippet for RestartConnector",
+      "file": "ManagedKafkaConnectClient.RestartConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.RestartConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.RestartConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "RestartConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.RestartConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_RestartConnector_async_flattened_resourceNames",
+      "title": "RestartConnectorResourceNamesAsync",
+      "description": "Snippet for RestartConnectorAsync",
+      "file": "ManagedKafkaConnectClient.RestartConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.RestartConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.RestartConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "RestartConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.RestartConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_StopConnector_sync",
+      "title": "StopConnectorRequestObject",
+      "description": "Snippet for StopConnector",
+      "file": "ManagedKafkaConnectClient.StopConnectorRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.StopConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.StopConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.StopConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "StopConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.StopConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_StopConnector_async",
+      "title": "StopConnectorRequestObjectAsync",
+      "description": "Snippet for StopConnectorAsync",
+      "file": "ManagedKafkaConnectClient.StopConnectorRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.StopConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.StopConnectorRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.StopConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "StopConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.StopConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_StopConnector_sync_flattened",
+      "title": "StopConnector",
+      "description": "Snippet for StopConnector",
+      "file": "ManagedKafkaConnectClient.StopConnectorSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.StopConnector",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.StopConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "StopConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.StopConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_StopConnector_async_flattened",
+      "title": "StopConnectorAsync",
+      "description": "Snippet for StopConnectorAsync",
+      "file": "ManagedKafkaConnectClient.StopConnectorAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.StopConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.StopConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "StopConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.StopConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_StopConnector_sync_flattened_resourceNames",
+      "title": "StopConnectorResourceNames",
+      "description": "Snippet for StopConnector",
+      "file": "ManagedKafkaConnectClient.StopConnectorResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopConnector",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.StopConnector",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ManagedKafka.V1.StopConnectorResponse",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "StopConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.StopConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "managedkafka_v1_generated_ManagedKafkaConnect_StopConnector_async_flattened_resourceNames",
+      "title": "StopConnectorResourceNamesAsync",
+      "description": "Snippet for StopConnectorAsync",
+      "file": "ManagedKafkaConnectClient.StopConnectorResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopConnectorAsync",
+        "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient.StopConnectorAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ManagedKafka.V1.ConnectorName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ManagedKafka.V1.StopConnectorResponse>",
+        "client": {
+          "shortName": "ManagedKafkaConnectClient",
+          "fullName": "Google.Cloud.ManagedKafka.V1.ManagedKafkaConnectClient"
+        },
+        "method": {
+          "shortName": "StopConnector",
+          "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect.StopConnector",
+          "service": {
+            "shortName": "ManagedKafkaConnect",
+            "fullName": "google.cloud.managedkafka.v1.ManagedKafkaConnect"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
