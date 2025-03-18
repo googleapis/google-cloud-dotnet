@@ -2,15 +2,7 @@
 
 ## Version 1.2.0, released 2025-03-17
 
-### New features
-
-- Add Anywhere cache control APIs ([commit 3a3d81b](https://github.com/googleapis/google-cloud-dotnet/commit/3a3d81b98367ed8efcb454b9fb2bcdbe9b224848))
-- Add Anywhere cache control APIs ([issue 14427](https://github.com/googleapis/google-cloud-dotnet/issues/14427)) ([commit b7eebeb](https://github.com/googleapis/google-cloud-dotnet/commit/b7eebeb3599ae9fb567b9d36100325a7fc33057b))
-
-### Documentation improvements
-
-- Added comments for Anywhere cache messages ([commit 3a3d81b](https://github.com/googleapis/google-cloud-dotnet/commit/3a3d81b98367ed8efcb454b9fb2bcdbe9b224848))
-- Added comments for Anywhere cache messages ([commit b7eebeb](https://github.com/googleapis/google-cloud-dotnet/commit/b7eebeb3599ae9fb567b9d36100325a7fc33057b))
+No API surface changes; no dependency updates. This is a no-op release.
 
 ## Version 1.1.0, released 2024-07-22
 
