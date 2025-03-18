@@ -97,6 +97,99 @@
           }
         }
       }
+    },
+    "ManagedKafkaConnect": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ManagedKafkaConnectClient",
+          "rpcs": {
+            "CreateConnectCluster": {
+              "methods": [
+                "CreateConnectCluster",
+                "CreateConnectClusterAsync"
+              ]
+            },
+            "CreateConnector": {
+              "methods": [
+                "CreateConnector",
+                "CreateConnectorAsync"
+              ]
+            },
+            "DeleteConnectCluster": {
+              "methods": [
+                "DeleteConnectCluster",
+                "DeleteConnectClusterAsync"
+              ]
+            },
+            "DeleteConnector": {
+              "methods": [
+                "DeleteConnector",
+                "DeleteConnectorAsync"
+              ]
+            },
+            "GetConnectCluster": {
+              "methods": [
+                "GetConnectCluster",
+                "GetConnectClusterAsync"
+              ]
+            },
+            "GetConnector": {
+              "methods": [
+                "GetConnector",
+                "GetConnectorAsync"
+              ]
+            },
+            "ListConnectClusters": {
+              "methods": [
+                "ListConnectClusters",
+                "ListConnectClustersAsync"
+              ]
+            },
+            "ListConnectors": {
+              "methods": [
+                "ListConnectors",
+                "ListConnectorsAsync"
+              ]
+            },
+            "PauseConnector": {
+              "methods": [
+                "PauseConnector",
+                "PauseConnectorAsync"
+              ]
+            },
+            "RestartConnector": {
+              "methods": [
+                "RestartConnector",
+                "RestartConnectorAsync"
+              ]
+            },
+            "ResumeConnector": {
+              "methods": [
+                "ResumeConnector",
+                "ResumeConnectorAsync"
+              ]
+            },
+            "StopConnector": {
+              "methods": [
+                "StopConnector",
+                "StopConnectorAsync"
+              ]
+            },
+            "UpdateConnectCluster": {
+              "methods": [
+                "UpdateConnectCluster",
+                "UpdateConnectClusterAsync"
+              ]
+            },
+            "UpdateConnector": {
+              "methods": [
+                "UpdateConnector",
+                "UpdateConnectorAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

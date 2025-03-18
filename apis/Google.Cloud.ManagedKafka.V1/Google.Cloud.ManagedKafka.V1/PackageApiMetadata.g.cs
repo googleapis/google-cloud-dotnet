@@ -68,6 +68,7 @@ namespace Google.Cloud.ManagedKafka.V1
         {
             yield return gcl::LocationsReflection.Descriptor;
             yield return ManagedKafkaReflection.Descriptor;
+            yield return ManagedKafkaConnectReflection.Descriptor;
             yield return ResourcesReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
