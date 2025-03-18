@@ -27,35 +27,43 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "CjZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MWJldGExL3JlYXNvbmluZ19l",
             "bmdpbmUucHJvdG8SH2dvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEa",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iwgIKE1JlYXNvbmlu",
-            "Z0VuZ2luZVNwZWMSWwoMcGFja2FnZV9zcGVjGAIgASgLMkAuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVTcGVjLlBh",
-            "Y2thZ2VTcGVjQgPgQQISMwoNY2xhc3NfbWV0aG9kcxgDIAMoCzIXLmdvb2ds",
-            "ZS5wcm90b2J1Zi5TdHJ1Y3RCA+BBARqYAQoLUGFja2FnZVNwZWMSIgoVcGlj",
-            "a2xlX29iamVjdF9nY3NfdXJpGAEgASgJQgPgQQESJQoYZGVwZW5kZW5jeV9m",
-            "aWxlc19nY3NfdXJpGAIgASgJQgPgQQESIQoUcmVxdWlyZW1lbnRzX2djc191",
-            "cmkYAyABKAlCA+BBARIbCg5weXRob25fdmVyc2lvbhgEIAEoCUID4EEBIsMD",
-            "Cg9SZWFzb25pbmdFbmdpbmUSEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRpc3Bs",
-            "YXlfbmFtZRgCIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAcgASgJQgPgQQES",
-            "RwoEc3BlYxgDIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
-            "YTEuUmVhc29uaW5nRW5naW5lU3BlY0ID4EECEjQKC2NyZWF0ZV90aW1lGAQg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
-            "ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EhEKBGV0YWcYBiABKAlCA+BBATqfAepBmwEKKWFpcGxhdGZvcm0uZ29vZ2xl",
-            "YXBpcy5jb20vUmVhc29uaW5nRW5naW5lEktwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vcmVhc29uaW5nRW5naW5lcy97cmVhc29u",
-            "aW5nX2VuZ2luZX0qEHJlYXNvbmluZ0VuZ2luZXMyD3JlYXNvbmluZ0VuZ2lu",
-            "ZULrAQojY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTFCFFJl",
-            "YXNvbmluZ0VuZ2luZVByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28vYWlw",
-            "bGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3JtcGKq",
-            "Ah9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xlXENs",
-            "b3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
-            "dGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "cmVzb3VyY2UucHJvdG8aLWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxYmV0",
+            "YTEvZW52X3Zhci5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90",
+            "bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLZBAoTUmVhc29u",
+            "aW5nRW5naW5lU3BlYxJbCgxwYWNrYWdlX3NwZWMYAiABKAsyQC5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2luZVNwZWMu",
+            "UGFja2FnZVNwZWNCA+BBARJhCg9kZXBsb3ltZW50X3NwZWMYBCABKAsyQy5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJlYXNvbmluZ0VuZ2lu",
+            "ZVNwZWMuRGVwbG95bWVudFNwZWNCA+BBARIzCg1jbGFzc19tZXRob2RzGAMg",
+            "AygLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBEhwKD2FnZW50X2Zy",
+            "YW1ld29yaxgFIAEoCUID4EEBGpgBCgtQYWNrYWdlU3BlYxIiChVwaWNrbGVf",
+            "b2JqZWN0X2djc191cmkYASABKAlCA+BBARIlChhkZXBlbmRlbmN5X2ZpbGVz",
+            "X2djc191cmkYAiABKAlCA+BBARIhChRyZXF1aXJlbWVudHNfZ2NzX3VyaRgD",
+            "IAEoCUID4EEBEhsKDnB5dGhvbl92ZXJzaW9uGAQgASgJQgPgQQEakwEKDkRl",
+            "cGxveW1lbnRTcGVjEjkKA2VudhgBIAMoCzInLmdvb2dsZS5jbG91ZC5haXBs",
+            "YXRmb3JtLnYxYmV0YTEuRW52VmFyQgPgQQESRgoKc2VjcmV0X2VudhgCIAMo",
+            "CzItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuU2VjcmV0RW52",
+            "VmFyQgPgQQEiwwMKD1JlYXNvbmluZ0VuZ2luZRIRCgRuYW1lGAEgASgJQgPg",
+            "QQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZGVzY3JpcHRpb24Y",
+            "ByABKAlCA+BBARJHCgRzcGVjGAMgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVTcGVjQgPgQQESNAoLY3Jl",
+            "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSEQoEZXRhZxgGIAEoCUID4EEBOp8B6kGbAQopYWlwbGF0",
+            "Zm9ybS5nb29nbGVhcGlzLmNvbS9SZWFzb25pbmdFbmdpbmUSS3Byb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZWFzb25pbmdFbmdp",
+            "bmVzL3tyZWFzb25pbmdfZW5naW5lfSoQcmVhc29uaW5nRW5naW5lczIPcmVh",
+            "c29uaW5nRW5naW5lQusBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMUIUUmVhc29uaW5nRW5naW5lUHJvdG9QAVpDY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2Fp",
+            "cGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHK",
+            "Ah9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpD",
+            "bG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Parser, new[]{ "PackageSpec", "ClassMethods" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Parser, new[]{ "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag" }, null, null, null, null)
           }));
     }
@@ -102,7 +110,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReasoningEngineSpec(ReasoningEngineSpec other) : this() {
       packageSpec_ = other.packageSpec_ != null ? other.packageSpec_.Clone() : null;
+      deploymentSpec_ = other.deploymentSpec_ != null ? other.deploymentSpec_.Clone() : null;
       classMethods_ = other.classMethods_.Clone();
+      agentFramework_ = other.agentFramework_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -116,7 +126,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int PackageSpecFieldNumber = 2;
     private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.PackageSpec packageSpec_;
     /// <summary>
-    /// Required. User provided package spec of the ReasoningEngine.
+    /// Optional. User provided package spec of the ReasoningEngine.
+    /// Ignored when users directly specify a deployment image through
+    /// `deployment_spec.first_party_image_override`, but keeping the
+    /// field_behavior to avoid introducing breaking changes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -124,6 +137,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return packageSpec_; }
       set {
         packageSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "deployment_spec" field.</summary>
+    public const int DeploymentSpecFieldNumber = 4;
+    private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec deploymentSpec_;
+    /// <summary>
+    /// Optional. The specification of a Reasoning Engine deployment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec DeploymentSpec {
+      get { return deploymentSpec_; }
+      set {
+        deploymentSpec_ = value;
       }
     }
 
@@ -142,6 +170,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return classMethods_; }
     }
 
+    /// <summary>Field number for the "agent_framework" field.</summary>
+    public const int AgentFrameworkFieldNumber = 5;
+    private string agentFramework_ = "";
+    /// <summary>
+    /// Optional. The OSS agent framework used to develop the agent.
+    /// Currently supported values: "langchain", "langgraph", "ag2", "custom".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AgentFramework {
+      get { return agentFramework_; }
+      set {
+        agentFramework_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -158,7 +202,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return true;
       }
       if (!object.Equals(PackageSpec, other.PackageSpec)) return false;
+      if (!object.Equals(DeploymentSpec, other.DeploymentSpec)) return false;
       if(!classMethods_.Equals(other.classMethods_)) return false;
+      if (AgentFramework != other.AgentFramework) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -167,7 +213,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (packageSpec_ != null) hash ^= PackageSpec.GetHashCode();
+      if (deploymentSpec_ != null) hash ^= DeploymentSpec.GetHashCode();
       hash ^= classMethods_.GetHashCode();
+      if (AgentFramework.Length != 0) hash ^= AgentFramework.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -191,6 +239,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(PackageSpec);
       }
       classMethods_.WriteTo(output, _repeated_classMethods_codec);
+      if (deploymentSpec_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DeploymentSpec);
+      }
+      if (AgentFramework.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AgentFramework);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -206,6 +262,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(PackageSpec);
       }
       classMethods_.WriteTo(ref output, _repeated_classMethods_codec);
+      if (deploymentSpec_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(DeploymentSpec);
+      }
+      if (AgentFramework.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(AgentFramework);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -219,7 +283,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (packageSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PackageSpec);
       }
+      if (deploymentSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeploymentSpec);
+      }
       size += classMethods_.CalculateSize(_repeated_classMethods_codec);
+      if (AgentFramework.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentFramework);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -238,7 +308,16 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         }
         PackageSpec.MergeFrom(other.PackageSpec);
       }
+      if (other.deploymentSpec_ != null) {
+        if (deploymentSpec_ == null) {
+          DeploymentSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec();
+        }
+        DeploymentSpec.MergeFrom(other.DeploymentSpec);
+      }
       classMethods_.Add(other.classMethods_);
+      if (other.AgentFramework.Length != 0) {
+        AgentFramework = other.AgentFramework;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -265,6 +344,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             classMethods_.AddEntriesFrom(input, _repeated_classMethods_codec);
             break;
           }
+          case 34: {
+            if (deploymentSpec_ == null) {
+              DeploymentSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec();
+            }
+            input.ReadMessage(DeploymentSpec);
+            break;
+          }
+          case 42: {
+            AgentFramework = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -289,6 +379,17 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 26: {
             classMethods_.AddEntriesFrom(ref input, _repeated_classMethods_codec);
+            break;
+          }
+          case 34: {
+            if (deploymentSpec_ == null) {
+              DeploymentSpec = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.DeploymentSpec();
+            }
+            input.ReadMessage(DeploymentSpec);
+            break;
+          }
+          case 42: {
+            AgentFramework = input.ReadString();
             break;
           }
         }
@@ -618,6 +719,226 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
 
       }
 
+      /// <summary>
+      /// The specification of a Reasoning Engine deployment.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DeploymentSpec : pb::IMessage<DeploymentSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DeploymentSpec> _parser = new pb::MessageParser<DeploymentSpec>(() => new DeploymentSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DeploymentSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeploymentSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeploymentSpec(DeploymentSpec other) : this() {
+          env_ = other.env_.Clone();
+          secretEnv_ = other.secretEnv_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DeploymentSpec Clone() {
+          return new DeploymentSpec(this);
+        }
+
+        /// <summary>Field number for the "env" field.</summary>
+        public const int EnvFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.EnvVar> _repeated_env_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1Beta1.EnvVar.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.EnvVar> env_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.EnvVar>();
+        /// <summary>
+        /// Optional. Environment variables to be set with the Reasoning Engine
+        /// deployment. The environment variables can be updated through the
+        /// UpdateReasoningEngine API.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.EnvVar> Env {
+          get { return env_; }
+        }
+
+        /// <summary>Field number for the "secret_env" field.</summary>
+        public const int SecretEnvFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.SecretEnvVar> _repeated_secretEnv_codec
+            = pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1Beta1.SecretEnvVar.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.SecretEnvVar> secretEnv_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.SecretEnvVar>();
+        /// <summary>
+        /// Optional. Environment variables where the value is a secret in Cloud
+        /// Secret Manager.
+        /// To use this feature, add 'Secret Manager Secret Accessor' role
+        /// (roles/secretmanager.secretAccessor) to AI Platform Reasoning Engine
+        /// Service Agent.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.SecretEnvVar> SecretEnv {
+          get { return secretEnv_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DeploymentSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DeploymentSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!env_.Equals(other.env_)) return false;
+          if(!secretEnv_.Equals(other.secretEnv_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= env_.GetHashCode();
+          hash ^= secretEnv_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          env_.WriteTo(output, _repeated_env_codec);
+          secretEnv_.WriteTo(output, _repeated_secretEnv_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          env_.WriteTo(ref output, _repeated_env_codec);
+          secretEnv_.WriteTo(ref output, _repeated_secretEnv_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += env_.CalculateSize(_repeated_env_codec);
+          size += secretEnv_.CalculateSize(_repeated_secretEnv_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DeploymentSpec other) {
+          if (other == null) {
+            return;
+          }
+          env_.Add(other.env_);
+          secretEnv_.Add(other.secretEnv_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                env_.AddEntriesFrom(input, _repeated_env_codec);
+                break;
+              }
+              case 18: {
+                secretEnv_.AddEntriesFrom(input, _repeated_secretEnv_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                env_.AddEntriesFrom(ref input, _repeated_env_codec);
+                break;
+              }
+              case 18: {
+                secretEnv_.AddEntriesFrom(ref input, _repeated_secretEnv_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -727,7 +1048,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public const int SpecFieldNumber = 3;
     private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec spec_;
     /// <summary>
-    /// Required. Configurations of the ReasoningEngine
+    /// Optional. Configurations of the ReasoningEngine
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
