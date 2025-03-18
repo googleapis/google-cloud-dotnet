@@ -56,6 +56,8 @@ namespace Google.Cloud.AlloyDb.V1Beta
             CreateClusterOperationsSettings = existing.CreateClusterOperationsSettings.Clone();
             UpdateClusterSettings = existing.UpdateClusterSettings;
             UpdateClusterOperationsSettings = existing.UpdateClusterOperationsSettings.Clone();
+            ExportClusterSettings = existing.ExportClusterSettings;
+            ExportClusterOperationsSettings = existing.ExportClusterOperationsSettings.Clone();
             UpgradeClusterSettings = existing.UpgradeClusterSettings;
             UpgradeClusterOperationsSettings = existing.UpgradeClusterOperationsSettings.Clone();
             DeleteClusterSettings = existing.DeleteClusterSettings;
@@ -203,6 +205,36 @@ namespace Google.Cloud.AlloyDb.V1Beta
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AlloyDBAdminClient.ExportCluster</c> and <c>AlloyDBAdminClient.ExportClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportClusterSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>AlloyDBAdminClient.ExportCluster</c> and
+        /// <c>AlloyDBAdminClient.ExportClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1672,6 +1704,258 @@ namespace Google.Cloud.AlloyDb.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Cluster, OperationMetadata>> UpdateClusterAsync(Cluster cluster, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateClusterAsync(cluster, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportClusterResponse, OperationMetadata> ExportCluster(ExportClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportClusterResponse, OperationMetadata>> ExportClusterAsync(ExportClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportClusterResponse, OperationMetadata>> ExportClusterAsync(ExportClusterRequest request, st::CancellationToken cancellationToken) =>
+            ExportClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportCluster</c>.</summary>
+        public virtual lro::OperationsClient ExportClusterOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportClusterResponse, OperationMetadata> PollOnceExportCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportClusterResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportClusterResponse, OperationMetadata>> PollOnceExportClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportClusterResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the cluster.
+        /// </param>
+        /// <param name="gcsDestination">
+        /// Required. Option to export data to cloud storage.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the export command will be executed.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="csvExportOptions">
+        /// Options for exporting data in CSV format. Required field to be set for
+        /// CSV file type.
+        /// </param>
+        /// <param name="sqlExportOptions">
+        /// Options for exporting data in SQL format. Required field to be set for
+        /// SQL file type.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportClusterResponse, OperationMetadata> ExportCluster(string name, GcsDestination gcsDestination, string database, ExportClusterRequest.Types.CsvExportOptions csvExportOptions, ExportClusterRequest.Types.SqlExportOptions sqlExportOptions, gaxgrpc::CallSettings callSettings = null) =>
+            ExportCluster(new ExportClusterRequest
+            {
+                GcsDestination = gax::GaxPreconditions.CheckNotNull(gcsDestination, nameof(gcsDestination)),
+                CsvExportOptions = csvExportOptions,
+                SqlExportOptions = sqlExportOptions,
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the cluster.
+        /// </param>
+        /// <param name="gcsDestination">
+        /// Required. Option to export data to cloud storage.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the export command will be executed.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="csvExportOptions">
+        /// Options for exporting data in CSV format. Required field to be set for
+        /// CSV file type.
+        /// </param>
+        /// <param name="sqlExportOptions">
+        /// Options for exporting data in SQL format. Required field to be set for
+        /// SQL file type.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportClusterResponse, OperationMetadata>> ExportClusterAsync(string name, GcsDestination gcsDestination, string database, ExportClusterRequest.Types.CsvExportOptions csvExportOptions, ExportClusterRequest.Types.SqlExportOptions sqlExportOptions, gaxgrpc::CallSettings callSettings = null) =>
+            ExportClusterAsync(new ExportClusterRequest
+            {
+                GcsDestination = gax::GaxPreconditions.CheckNotNull(gcsDestination, nameof(gcsDestination)),
+                CsvExportOptions = csvExportOptions,
+                SqlExportOptions = sqlExportOptions,
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the cluster.
+        /// </param>
+        /// <param name="gcsDestination">
+        /// Required. Option to export data to cloud storage.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the export command will be executed.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="csvExportOptions">
+        /// Options for exporting data in CSV format. Required field to be set for
+        /// CSV file type.
+        /// </param>
+        /// <param name="sqlExportOptions">
+        /// Options for exporting data in SQL format. Required field to be set for
+        /// SQL file type.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportClusterResponse, OperationMetadata>> ExportClusterAsync(string name, GcsDestination gcsDestination, string database, ExportClusterRequest.Types.CsvExportOptions csvExportOptions, ExportClusterRequest.Types.SqlExportOptions sqlExportOptions, st::CancellationToken cancellationToken) =>
+            ExportClusterAsync(name, gcsDestination, database, csvExportOptions, sqlExportOptions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the cluster.
+        /// </param>
+        /// <param name="gcsDestination">
+        /// Required. Option to export data to cloud storage.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the export command will be executed.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="csvExportOptions">
+        /// Options for exporting data in CSV format. Required field to be set for
+        /// CSV file type.
+        /// </param>
+        /// <param name="sqlExportOptions">
+        /// Options for exporting data in SQL format. Required field to be set for
+        /// SQL file type.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportClusterResponse, OperationMetadata> ExportCluster(ClusterName name, GcsDestination gcsDestination, string database, ExportClusterRequest.Types.CsvExportOptions csvExportOptions, ExportClusterRequest.Types.SqlExportOptions sqlExportOptions, gaxgrpc::CallSettings callSettings = null) =>
+            ExportCluster(new ExportClusterRequest
+            {
+                GcsDestination = gax::GaxPreconditions.CheckNotNull(gcsDestination, nameof(gcsDestination)),
+                CsvExportOptions = csvExportOptions,
+                SqlExportOptions = sqlExportOptions,
+                ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the cluster.
+        /// </param>
+        /// <param name="gcsDestination">
+        /// Required. Option to export data to cloud storage.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the export command will be executed.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="csvExportOptions">
+        /// Options for exporting data in CSV format. Required field to be set for
+        /// CSV file type.
+        /// </param>
+        /// <param name="sqlExportOptions">
+        /// Options for exporting data in SQL format. Required field to be set for
+        /// SQL file type.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportClusterResponse, OperationMetadata>> ExportClusterAsync(ClusterName name, GcsDestination gcsDestination, string database, ExportClusterRequest.Types.CsvExportOptions csvExportOptions, ExportClusterRequest.Types.SqlExportOptions sqlExportOptions, gaxgrpc::CallSettings callSettings = null) =>
+            ExportClusterAsync(new ExportClusterRequest
+            {
+                GcsDestination = gax::GaxPreconditions.CheckNotNull(gcsDestination, nameof(gcsDestination)),
+                CsvExportOptions = csvExportOptions,
+                SqlExportOptions = sqlExportOptions,
+                ClusterName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+            }, callSettings);
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the cluster.
+        /// </param>
+        /// <param name="gcsDestination">
+        /// Required. Option to export data to cloud storage.
+        /// </param>
+        /// <param name="database">
+        /// Required. Name of the database where the export command will be executed.
+        /// Note - Value provided should be the same as expected from
+        /// `SELECT current_database();` and NOT as a resource reference.
+        /// </param>
+        /// <param name="csvExportOptions">
+        /// Options for exporting data in CSV format. Required field to be set for
+        /// CSV file type.
+        /// </param>
+        /// <param name="sqlExportOptions">
+        /// Options for exporting data in SQL format. Required field to be set for
+        /// SQL file type.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportClusterResponse, OperationMetadata>> ExportClusterAsync(ClusterName name, GcsDestination gcsDestination, string database, ExportClusterRequest.Types.CsvExportOptions csvExportOptions, ExportClusterRequest.Types.SqlExportOptions sqlExportOptions, st::CancellationToken cancellationToken) =>
+            ExportClusterAsync(name, gcsDestination, database, csvExportOptions, sqlExportOptions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Upgrades a single Cluster.
@@ -6106,6 +6390,8 @@ namespace Google.Cloud.AlloyDb.V1Beta
 
         private readonly gaxgrpc::ApiCall<UpdateClusterRequest, lro::Operation> _callUpdateCluster;
 
+        private readonly gaxgrpc::ApiCall<ExportClusterRequest, lro::Operation> _callExportCluster;
+
         private readonly gaxgrpc::ApiCall<UpgradeClusterRequest, lro::Operation> _callUpgradeCluster;
 
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> _callDeleteCluster;
@@ -6185,6 +6471,7 @@ namespace Google.Cloud.AlloyDb.V1Beta
             });
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings, logger);
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings, logger);
+            ExportClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportClusterOperationsSettings, logger);
             UpgradeClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpgradeClusterOperationsSettings, logger);
             DeleteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteClusterOperationsSettings, logger);
             PromoteClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PromoteClusterOperationsSettings, logger);
@@ -6216,6 +6503,9 @@ namespace Google.Cloud.AlloyDb.V1Beta
             _callUpdateCluster = clientHelper.BuildApiCall<UpdateClusterRequest, lro::Operation>("UpdateCluster", grpcClient.UpdateClusterAsync, grpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings).WithGoogleRequestParam("cluster.name", request => request.Cluster?.Name);
             Modify_ApiCall(ref _callUpdateCluster);
             Modify_UpdateClusterApiCall(ref _callUpdateCluster);
+            _callExportCluster = clientHelper.BuildApiCall<ExportClusterRequest, lro::Operation>("ExportCluster", grpcClient.ExportClusterAsync, grpcClient.ExportCluster, effectiveSettings.ExportClusterSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportCluster);
+            Modify_ExportClusterApiCall(ref _callExportCluster);
             _callUpgradeCluster = clientHelper.BuildApiCall<UpgradeClusterRequest, lro::Operation>("UpgradeCluster", grpcClient.UpgradeClusterAsync, grpcClient.UpgradeCluster, effectiveSettings.UpgradeClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpgradeCluster);
             Modify_UpgradeClusterApiCall(ref _callUpgradeCluster);
@@ -6322,6 +6612,8 @@ namespace Google.Cloud.AlloyDb.V1Beta
 
         partial void Modify_UpdateClusterApiCall(ref gaxgrpc::ApiCall<UpdateClusterRequest, lro::Operation> call);
 
+        partial void Modify_ExportClusterApiCall(ref gaxgrpc::ApiCall<ExportClusterRequest, lro::Operation> call);
+
         partial void Modify_UpgradeClusterApiCall(ref gaxgrpc::ApiCall<UpgradeClusterRequest, lro::Operation> call);
 
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, lro::Operation> call);
@@ -6402,6 +6694,8 @@ namespace Google.Cloud.AlloyDb.V1Beta
         partial void Modify_CreateClusterRequest(ref CreateClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateClusterRequest(ref UpdateClusterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportClusterRequest(ref ExportClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpgradeClusterRequest(ref UpgradeClusterRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6565,6 +6859,35 @@ namespace Google.Cloud.AlloyDb.V1Beta
         {
             Modify_UpdateClusterRequest(ref request, ref callSettings);
             return new lro::Operation<Cluster, OperationMetadata>(await _callUpdateCluster.Async(request, callSettings).ConfigureAwait(false), UpdateClusterOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportCluster</c>.</summary>
+        public override lro::OperationsClient ExportClusterOperationsClient { get; }
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportClusterResponse, OperationMetadata> ExportCluster(ExportClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportClusterResponse, OperationMetadata>(_callExportCluster.Sync(request, callSettings), ExportClusterOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports data from the cluster.
+        /// Imperative only.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportClusterResponse, OperationMetadata>> ExportClusterAsync(ExportClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportClusterResponse, OperationMetadata>(await _callExportCluster.Async(request, callSettings).ConfigureAwait(false), ExportClusterOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>UpgradeCluster</c>.</summary>

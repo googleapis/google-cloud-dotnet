@@ -82,6 +82,12 @@
                 "ExecuteSqlAsync"
               ]
             },
+            "ExportCluster": {
+              "methods": [
+                "ExportCluster",
+                "ExportClusterAsync"
+              ]
+            },
             "FailoverInstance": {
               "methods": [
                 "FailoverInstance",

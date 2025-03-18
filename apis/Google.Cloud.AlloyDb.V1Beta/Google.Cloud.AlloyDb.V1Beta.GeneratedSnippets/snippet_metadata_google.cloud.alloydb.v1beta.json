@@ -1136,6 +1136,357 @@
       ]
     },
     {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ExportCluster_sync",
+      "title": "ExportClusterRequestObject",
+      "description": "Snippet for ExportCluster",
+      "file": "AlloyDBAdminClient.ExportClusterRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ExportCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1Beta.ExportClusterResponse, Google.Cloud.AlloyDb.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ExportCluster",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ExportCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ExportCluster_async",
+      "title": "ExportClusterRequestObjectAsync",
+      "description": "Snippet for ExportClusterAsync",
+      "file": "AlloyDBAdminClient.ExportClusterRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ExportClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1Beta.ExportClusterResponse, Google.Cloud.AlloyDb.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ExportCluster",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ExportCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ExportCluster_sync_flattened",
+      "title": "ExportCluster",
+      "description": "Snippet for ExportCluster",
+      "file": "AlloyDBAdminClient.ExportClusterSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ExportCluster",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.GcsDestination",
+            "name": "gcsDestination"
+          },
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest+Types+CsvExportOptions",
+            "name": "csvExportOptions"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest+Types+SqlExportOptions",
+            "name": "sqlExportOptions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1Beta.ExportClusterResponse, Google.Cloud.AlloyDb.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ExportCluster",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ExportCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ExportCluster_async_flattened",
+      "title": "ExportClusterAsync",
+      "description": "Snippet for ExportClusterAsync",
+      "file": "AlloyDBAdminClient.ExportClusterAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ExportClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.GcsDestination",
+            "name": "gcsDestination"
+          },
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest+Types+CsvExportOptions",
+            "name": "csvExportOptions"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest+Types+SqlExportOptions",
+            "name": "sqlExportOptions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1Beta.ExportClusterResponse, Google.Cloud.AlloyDb.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ExportCluster",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ExportCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ExportCluster_sync_flattened_resourceNames",
+      "title": "ExportClusterResourceNames",
+      "description": "Snippet for ExportCluster",
+      "file": "AlloyDBAdminClient.ExportClusterResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportCluster",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ExportCluster",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.GcsDestination",
+            "name": "gcsDestination"
+          },
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest+Types+CsvExportOptions",
+            "name": "csvExportOptions"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest+Types+SqlExportOptions",
+            "name": "sqlExportOptions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1Beta.ExportClusterResponse, Google.Cloud.AlloyDb.V1Beta.OperationMetadata>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ExportCluster",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ExportCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_ExportCluster_async_flattened_resourceNames",
+      "title": "ExportClusterResourceNamesAsync",
+      "description": "Snippet for ExportClusterAsync",
+      "file": "AlloyDBAdminClient.ExportClusterResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportClusterAsync",
+        "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient.ExportClusterAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ClusterName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.GcsDestination",
+            "name": "gcsDestination"
+          },
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest+Types+CsvExportOptions",
+            "name": "csvExportOptions"
+          },
+          {
+            "type": "Google.Cloud.AlloyDb.V1Beta.ExportClusterRequest+Types+SqlExportOptions",
+            "name": "sqlExportOptions"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AlloyDb.V1Beta.ExportClusterResponse, Google.Cloud.AlloyDb.V1Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "AlloyDBAdminClient",
+          "fullName": "Google.Cloud.AlloyDb.V1Beta.AlloyDBAdminClient"
+        },
+        "method": {
+          "shortName": "ExportCluster",
+          "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin.ExportCluster",
+          "service": {
+            "shortName": "AlloyDBAdmin",
+            "fullName": "google.cloud.alloydb.v1beta.AlloyDBAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "alloydb_v1beta_generated_AlloyDBAdmin_UpgradeCluster_sync",
       "title": "UpgradeClusterRequestObject",
       "description": "Snippet for UpgradeCluster",
