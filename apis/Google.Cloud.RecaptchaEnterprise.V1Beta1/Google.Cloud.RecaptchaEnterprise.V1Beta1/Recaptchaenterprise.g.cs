@@ -2907,8 +2907,8 @@ namespace Google.Cloud.RecaptchaEnterprise.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("ENABLED")] Enabled = 1,
         /// <summary>
-        /// Disable Fraud Prevention for this assessment, regardless of Google Cloud
-        /// console settings.
+        /// Disable Fraud Prevention for this assessment, regardless of the Google
+        /// Cloud console settings.
         /// </summary>
         [pbr::OriginalName("DISABLED")] Disabled = 2,
       }
