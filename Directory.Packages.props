@@ -43,7 +43,7 @@
     <PackageVersion Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" />
     <PackageVersion Include="BenchmarkDotNet" Version="0.13.12" />
     <PackageVersion Include="Xunit.Combinatorial" Version="1.6.24" />
-    <PackageVersion Include="System.ValueTuple" Version="4.5.0" />
+    <PackageVersion Include="System.ValueTuple" Version="4.6.0" />
     <PackageVersion Include="log4net" Version="2.0.17" />
     <PackageVersion Include="NLog" Version="5.4.0" />
   </ItemGroup>
