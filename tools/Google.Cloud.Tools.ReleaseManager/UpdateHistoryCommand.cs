@@ -53,16 +53,15 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Console.WriteLine($"Skipping version history update for {id}");
                 return;
             }
-            string historyFilePath = HistoryFile.GetPathForPackage(RootLayout, id);
 
             using var repo = new Repository(RootLayout.RepositoryRoot);
             var releases = Release.LoadReleases(repo, catalog, api).ToList();
-            var historyFile = HistoryFile.Load(historyFilePath);
+            var historyFile = HistoryFile.Load(RootLayout, id);
             var sectionsInserted = historyFile.MergeReleases(RootLayout, releases, defaultMessage: null);
             if (sectionsInserted.Count != 0)
             {
-                historyFile.Save(historyFilePath);
-                var relativePath = Path.GetRelativePath(RootLayout.RepositoryRoot, historyFilePath)
+                historyFile.Save();
+                var relativePath = Path.GetRelativePath(RootLayout.RepositoryRoot, historyFile.FilePath)
                     .Replace('\\', '/');
                 Console.WriteLine($"Updated version history file: {relativePath}");
                 Console.WriteLine("New content:");

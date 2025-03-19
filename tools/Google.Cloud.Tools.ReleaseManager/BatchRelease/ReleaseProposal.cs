@@ -66,8 +66,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             var oldVersion = api.StructuredVersion;
             api.Version = newVersion.ToString();
             var releases = Release.LoadReleases(repo, catalog, api).ToList();
-            string historyFilePath = HistoryFile.GetPathForPackage(rootLayout, api.Id);
-            var historyFile = HistoryFile.Load(historyFilePath);
+            var historyFile = HistoryFile.Load(rootLayout, api.Id);
             if (!api.NoVersionHistory)
             {
                 var sectionsInserted = historyFile.MergeReleases(rootLayout, releases, defaultMessage);
@@ -129,7 +128,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             Commands.Checkout(repo, releaseBranch);
 
             new SetVersionCommand().InternalExecute(Id, NewVersion.ToString(), quiet: true);
-            ModifiedHistoryFile.Save(HistoryFile.GetPathForPackage(rootLayout, Id));
+            ModifiedHistoryFile.Save();
             new CommitCommand().InternalExecute();
 
             if (!config.DeferPush)

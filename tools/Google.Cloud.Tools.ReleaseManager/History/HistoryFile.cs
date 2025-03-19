@@ -43,17 +43,22 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// </summary>
         public List<Section> Sections { get; }
 
-        private HistoryFile(List<Section> sections) => Sections = sections;
+        public string FilePath { get; }
 
-        public static string GetPathForPackage(RootLayout rootLayout, string id) => Path.Combine(rootLayout.CreateDocsLayout(id).MarkdownDirectory, MarkdownFile);
+        private HistoryFile(string path, List<Section> sections) => (FilePath, Sections) = (path, sections);
 
-        public static HistoryFile Load(string file)
+        public static HistoryFile Load(RootLayout rootLayout, string id, bool createIfAbsent = true)
         {
+            string file = Path.Combine(rootLayout.CreateDocsLayout(id).MarkdownDirectory, MarkdownFile);
             var sections = new List<Section>();
             if (!File.Exists(file))
             {
+                if (!createIfAbsent)
+                {
+                    throw new UserErrorException($"Expected history file {file} to already exist");
+                }
                 sections.Add(new Section(null, PreambleLines.ToList()));
-                return new HistoryFile(sections);
+                return new HistoryFile(file, sections);
             }
 
             var lines = File.ReadAllLines(file);
@@ -73,14 +78,14 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 currentSectionLines.Add(line);
             }
             sections.Add(new Section(currentVersion, currentSectionLines));
-            return new HistoryFile(sections);
+            return new HistoryFile(file, sections);
         }
 
-        public void Save(string file)
+        public void Save()
         {
             // Make sure the directory exists. (This is a no-op if it already exists.)
-            new FileInfo(file).Directory.Create();
-            File.WriteAllLines(file, Sections.SelectMany(section => section.Lines));
+            new FileInfo(FilePath).Directory.Create();
+            File.WriteAllLines(FilePath, Sections.SelectMany(section => section.Lines));
         }
 
         /// <summary>
