@@ -24,7 +24,7 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// - api-root: effectively the googleapis directory.
 /// - generator-input: required; generator-input directory for the repository
 /// - output: root folder for result; required, must exist
-/// - api-path: (related to api-root) e.g. google/cloud/functions/v2
+/// - api-path: (relative to api-root) e.g. google/cloud/functions/v2
 /// </summary>
 public class ConfigureCommand : IContainerCommand
 {
