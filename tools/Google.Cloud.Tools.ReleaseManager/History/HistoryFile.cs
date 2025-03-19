@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Octokit;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -125,6 +126,9 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         {
             private static readonly StructuredVersion s_expectedInitialReleaseVersion = StructuredVersion.FromString("1.0.0-beta01");
 
+            /// <summary>
+            /// The version represented in this section. May be null, for the preamble.
+            /// </summary>
             public StructuredVersion Version { get; }
 
             /// <summary>
@@ -132,20 +136,36 @@ namespace Google.Cloud.Tools.ReleaseManager.History
             /// </summary>
             public List<string> Lines { get; }
 
+            /// <summary>
+            /// Creates a section with the given version and lines, which are expected to include the section header.
+            /// </summary>
             public Section(StructuredVersion version, List<string> lines)
             {
                 Version = version;
                 Lines = lines;
             }
 
+            public static Section FromReleaseNotes(StructuredVersion version, DateTime date, List<string> releaseNotes)
+            {
+                var sectionHeader = FormatSectionHeader(version, date);
+                var lines = new List<string>()
+                {
+                    sectionHeader, ""
+                };
+                lines.AddRange(releaseNotes);
+                return new Section(version, lines);
+            }
+
             internal Section(RootLayout rootLayout, Release release, string defaultMessage)
             {
                 Version = release.Version;
 
-                Lines = new List<string>();
+                Lines = new List<string>
+                {
+                    FormatSectionHeader(release.Version, release.ReleaseDate),
+                    ""
+                };
 
-                Lines.Add($"## Version {Version}, released {release.ReleaseDate:yyyy-MM-dd}");
-                Lines.Add("");
                 if (Version.Equals(s_expectedInitialReleaseVersion))
                 {
                     Lines.Add("Initial release.");
@@ -163,7 +183,10 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 }
             }
 
-            internal IEnumerable<string> GetNotesFromCommits(RootLayout rootLayout, IReadOnlyList<GitCommit> commits) =>
+            internal static string FormatSectionHeader(StructuredVersion version, DateTime date) =>
+                $"## Version {version}, released {date:yyyy-MM-dd}";
+
+            internal static IEnumerable<string> GetNotesFromCommits(RootLayout rootLayout, IReadOnlyList<GitCommit> commits) =>
                 commits
                     .SelectMany(c => c.GetReleaseNoteElements(rootLayout))
                     .Where(c => c.PublishInReleaseNotes)
@@ -172,7 +195,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                     .Select(GetNotesFromElement)
                     .SelectMany(line => line);
 
-            internal IEnumerable<string> GetNotesFromElement(IGrouping<ReleaseNoteElementType, ReleaseNoteElement> elements)
+            internal static IEnumerable<string> GetNotesFromElement(IGrouping<ReleaseNoteElementType, ReleaseNoteElement> elements)
             {
                 string description = elements.Key switch
                 {
