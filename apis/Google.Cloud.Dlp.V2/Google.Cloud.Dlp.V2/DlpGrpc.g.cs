@@ -720,6 +720,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
+      ///
+      /// Only the first frame of each multiframe image is redacted. Metadata and
+      /// other frames are omitted in the response.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1613,6 +1616,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
+      ///
+      /// Only the first frame of each multiframe image is redacted. Metadata and
+      /// other frames are omitted in the response.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1634,6 +1640,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
+      ///
+      /// Only the first frame of each multiframe image is redacted. Metadata and
+      /// other frames are omitted in the response.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1653,6 +1662,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
+      ///
+      /// Only the first frame of each multiframe image is redacted. Metadata and
+      /// other frames are omitted in the response.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1674,6 +1686,9 @@ namespace Google.Cloud.Dlp.V2 {
       /// When no InfoTypes or CustomInfoTypes are specified in this request, the
       /// system will automatically choose what detectors to run. By default this may
       /// be all types, but may change over time as detectors are updated.
+      ///
+      /// Only the first frame of each multiframe image is redacted. Metadata and
+      /// other frames are omitted in the response.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

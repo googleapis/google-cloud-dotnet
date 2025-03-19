@@ -1277,6 +1277,9 @@ namespace Google.Cloud.Dlp.V2
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
         /// system will automatically choose what detectors to run. By default this may
         /// be all types, but may change over time as detectors are updated.
+        /// 
+        /// Only the first frame of each multiframe image is redacted. Metadata and
+        /// other frames are omitted in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1294,6 +1297,9 @@ namespace Google.Cloud.Dlp.V2
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
         /// system will automatically choose what detectors to run. By default this may
         /// be all types, but may change over time as detectors are updated.
+        /// 
+        /// Only the first frame of each multiframe image is redacted. Metadata and
+        /// other frames are omitted in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1311,6 +1317,9 @@ namespace Google.Cloud.Dlp.V2
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
         /// system will automatically choose what detectors to run. By default this may
         /// be all types, but may change over time as detectors are updated.
+        /// 
+        /// Only the first frame of each multiframe image is redacted. Metadata and
+        /// other frames are omitted in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -13476,6 +13485,9 @@ namespace Google.Cloud.Dlp.V2
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
         /// system will automatically choose what detectors to run. By default this may
         /// be all types, but may change over time as detectors are updated.
+        /// 
+        /// Only the first frame of each multiframe image is redacted. Metadata and
+        /// other frames are omitted in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -13496,6 +13508,9 @@ namespace Google.Cloud.Dlp.V2
         /// When no InfoTypes or CustomInfoTypes are specified in this request, the
         /// system will automatically choose what detectors to run. By default this may
         /// be all types, but may change over time as detectors are updated.
+        /// 
+        /// Only the first frame of each multiframe image is redacted. Metadata and
+        /// other frames are omitted in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
