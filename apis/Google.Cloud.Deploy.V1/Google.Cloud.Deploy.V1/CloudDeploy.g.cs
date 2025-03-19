@@ -5867,8 +5867,8 @@ namespace Google.Cloud.Deploy.V1 {
             /// Optional. Whether to propagate the Kubernetes Service to the route
             /// destination clusters. The Service will always be deployed to the Target
             /// cluster even if the HTTPRoute is not. This option may be used to
-            /// facilitiate successful DNS lookup in the route destination clusters.
-            /// Can only be set to true if destinations are specified.
+            /// facilitate successful DNS lookup in the route destination clusters. Can
+            /// only be set to true if destinations are specified.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -31911,7 +31911,7 @@ namespace Google.Cloud.Deploy.V1 {
         /// </summary>
         [pbr::OriginalName("EXECUTION_FAILED")] ExecutionFailed = 2,
         /// <summary>
-        /// Deployment did not complete within the alloted time.
+        /// Deployment did not complete within the allotted time.
         /// </summary>
         [pbr::OriginalName("DEADLINE_EXCEEDED")] DeadlineExceeded = 3,
         /// <summary>
@@ -36619,7 +36619,7 @@ namespace Google.Cloud.Deploy.V1 {
   }
 
   /// <summary>
-  /// ListRolloutsResponse is the response object reutrned by `ListRollouts`.
+  /// ListRolloutsResponse is the response object returned by `ListRollouts`.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRolloutsResponse : pb::IMessage<ListRolloutsResponse>
@@ -41837,7 +41837,7 @@ namespace Google.Cloud.Deploy.V1 {
         /// </summary>
         [pbr::OriginalName("EXECUTION_FAILED")] ExecutionFailed = 2,
         /// <summary>
-        /// The deploy job run did not complete within the alloted time.
+        /// The deploy job run did not complete within the allotted time.
         /// </summary>
         [pbr::OriginalName("DEADLINE_EXCEEDED")] DeadlineExceeded = 3,
         /// <summary>
@@ -42245,7 +42245,7 @@ namespace Google.Cloud.Deploy.V1 {
         /// </summary>
         [pbr::OriginalName("EXECUTION_FAILED")] ExecutionFailed = 2,
         /// <summary>
-        /// The verify job run did not complete within the alloted time.
+        /// The verify job run did not complete within the allotted time.
         /// </summary>
         [pbr::OriginalName("DEADLINE_EXCEEDED")] DeadlineExceeded = 3,
         /// <summary>
@@ -42567,7 +42567,7 @@ namespace Google.Cloud.Deploy.V1 {
         /// </summary>
         [pbr::OriginalName("EXECUTION_FAILED")] ExecutionFailed = 2,
         /// <summary>
-        /// The predeploy job run did not complete within the alloted time.
+        /// The predeploy job run did not complete within the allotted time.
         /// </summary>
         [pbr::OriginalName("DEADLINE_EXCEEDED")] DeadlineExceeded = 3,
         /// <summary>
@@ -42885,7 +42885,7 @@ namespace Google.Cloud.Deploy.V1 {
         /// </summary>
         [pbr::OriginalName("EXECUTION_FAILED")] ExecutionFailed = 2,
         /// <summary>
-        /// The postdeploy job run did not complete within the alloted time.
+        /// The postdeploy job run did not complete within the allotted time.
         /// </summary>
         [pbr::OriginalName("DEADLINE_EXCEEDED")] DeadlineExceeded = 3,
         /// <summary>
