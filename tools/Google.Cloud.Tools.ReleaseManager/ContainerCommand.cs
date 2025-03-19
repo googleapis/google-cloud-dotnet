@@ -41,6 +41,7 @@ public sealed class ContainerCommand : ICommand
             "clean" => new CleanCommand(),
             "build" => new BuildCommand(),
             "configure" => new ConfigureCommand(),
+            "prepare-library-release" => new PrepareLibraryReleaseCommand(),
             _ => throw new UserErrorException($"Unknown subcommand '{args[0]}'")
         };
 
