@@ -65,6 +65,7 @@ public class BuildCommand : IContainerCommand
             processArguments.Add("--notests");
         }
 
+        List<string> apiIds = new();
         // By default, we build all configured APIs.
         // If an API path is configured, we build just that.
         // While build.sh without any arguments will query the API catalog, we might as well
@@ -74,15 +75,34 @@ public class BuildCommand : IContainerCommand
             var targetApi = catalog.Apis.SingleOrDefault(api => api.ProtoPath == apiPath);
             if (targetApi is null)
             {
-                Console.WriteLine($"API path '{apiPath}' is not configured for any API.");
-                return 1;
+                // Maybe what was passed in wasn't a proto path, but a library ID (as per the pipeline-state.json, so it may be a package group ID)...
+                // This is probably a temporary measure - we'll probably end up with different options for api-path vs library-id.
+                if (catalog.PackageGroups.FirstOrDefault(pg => pg.Id == apiPath) is PackageGroup group)
+                {
+                    apiIds.AddRange(group.PackageIds);
+                }
+                else if (catalog.TryGetApi(apiPath, out targetApi))
+                {
+                    apiIds.Add(targetApi.Id);
+                }
+                else
+                {
+                    // No, we really don't have anything we can identify that way.
+                    Console.WriteLine($"API path '{apiPath}' is not configured for any API.");
+                    return 1;
+                }
             }
-            processArguments.Add(targetApi.Id);
+            else
+            {
+                apiIds.Add(targetApi.Id);
+            }
         }
         else
         {
-            processArguments.AddRange(catalog.Apis.Select(api => api.Id));
+            apiIds.AddRange(catalog.Apis.Select(api => api.Id));
         }
+
+        processArguments.AddRange(apiIds);
 
         var psi = new ProcessStartInfo
         {
