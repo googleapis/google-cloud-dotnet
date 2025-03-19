@@ -89,13 +89,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 }
 
                 // Anything else really should have a history.
-                var historyFilePath = HistoryFile.GetPathForPackage(RootLayout, diff.Id);
-                if (!File.Exists(historyFilePath))
-                {
-                    throw new UserErrorException($"Cannot automate a release commit without a version history file.");
-                }
-
-                var historyFile = HistoryFile.Load(historyFilePath);
+                var historyFile = HistoryFile.Load(RootLayout, diff.Id, createIfAbsent: false);
                 var section = historyFile.Sections.FirstOrDefault(s => s.Version?.ToString() == diff.NewVersion);
                 if (section is null)
                 {

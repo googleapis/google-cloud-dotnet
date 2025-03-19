@@ -57,16 +57,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                 .Where(diff => !catalog[diff.Id].NoVersionHistory)
                 .ToList();
 
-            if (diffsWithHistory.Any(diff => !File.Exists(HistoryFile.GetPathForPackage(RootLayout, diff.Id))))
-            {
-                // Not a great message, but a very rare condition.
-                throw new UserErrorException($"Not all expected history file paths exist.");
-            }
-
             var diffHistoryPairs = diffsWithHistory
-                .Select(diff => (diff, history: HistoryFile.Load(HistoryFile.GetPathForPackage(RootLayout, diff.Id))))
+                .Select(diff => (diff, history: HistoryFile.Load(RootLayout, diff.Id, createIfAbsent: false)))
                 .ToList();
-
 
             // Commit has three sections:
             // - Title generated from the package group
