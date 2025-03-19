@@ -15509,7 +15509,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     public const int ConnectionTypeFieldNumber = 1;
     private global::Google.Cloud.Orchestration.Airflow.Service.V1.NetworkingConfig.Types.ConnectionType connectionType_ = global::Google.Cloud.Orchestration.Airflow.Service.V1.NetworkingConfig.Types.ConnectionType.Unspecified;
     /// <summary>
-    /// Optional. Indicates the user requested specifc connection type between
+    /// Optional. Indicates the user requested specific connection type between
     /// Tenant and Customer projects. You cannot set networking connection type in
     /// public IP environment.
     /// </summary>
