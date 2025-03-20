@@ -72,6 +72,6 @@ public class ContainerOptions
         }
     }
 
-    internal string RequireOption(string option, [CallerArgumentExpression(nameof(option))] string expression = null) =>
+    internal string RequireOption(string option, [CallerArgumentExpression("option")] string expression = null) =>
         option ?? throw new UserErrorException($"Option for {expression} is required");
 }
