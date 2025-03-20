@@ -18,91 +18,102 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 /// <summary>
 /// Builds and optionally tests a library (or multiple libraries). Expected options:
 /// - repo-root: the root of the google-cloud-dotnet repository
-/// - api-path: (related to api-root) e.g. google/cloud/functions/v2
-///   optional; when omitted, all configured APIs are built
-///  - test: whether or not to run tests after building (true/false)
-///    optional; defaults to false  
+/// - generator-output: the directory containing the results of a previous generate command
+/// - test: whether or not to run tests after building (true/false)
+///    optional; defaults to false
+/// - api-path: (relative to api-root) e.g. google/cloud/functions/v2
+/// - library-id: e.g. Google.Cloud.Functions.V2
+///
+/// Exactly one of repo-root or generator-output must be specified. When repo-root is specified,
+/// the library is built including handwritten code etc. When generator-output is specified, this
+/// builds the result of "raw" generation, without any additional configuration etc.
+/// 
+/// Only one of api-path or library-id may be specified. If neither is specified,
+/// all configured libraries are built. If api-path is specified, only the library
+/// related to that API path is built. If library-id is specified, that library is built - but
+/// this may consist of multiple packages, if it identifies a package group. (In other words,
+/// it's the ID of a library in pipeline-state.json, not necessarily an ID in "apis" in the API
+/// catalog.)
+///
+/// The library-id option is only valid when repo-root is specified. The api-path option is
+/// required when repo-root is not specified. (It's invalid to specify just "generator-output".)
 /// </summary>
 public class BuildCommand : IContainerCommand
 {
     public int Execute(Dictionary<string, string> options)
     {
-        var repoRoot = options.GetValueOrDefault("repo-root");
-        var generatorOutput = options.GetValueOrDefault("generator-output");
+        var repoRoot = options.GetValueOrDefault(ContainerOptions.RepoRootOption);
+        var generatorOutput = options.GetValueOrDefault(ContainerOptions.GeneratorOutputOption);
+        var apiPath = options.GetValueOrDefault(ContainerOptions.ApiPathOption);
+        var libraryId = options.GetValueOrDefault(ContainerOptions.LibraryIdOption);
 
         if (repoRoot is null == generatorOutput is null)
         {
-            Console.WriteLine("Exactly one of --repo-root or --generator-output must be specified.");
-            return 1;
+            throw new UserErrorException($"Exactly one of --{ContainerOptions.RepoRootOption} or --{ContainerOptions.GeneratorOutputOption} must be specified.");
         }
 
-        return repoRoot is not null
-            ? BuildConfigured(options, repoRoot)
-            : BuildUnconfigured(options, generatorOutput);
+        if (apiPath is not null && libraryId is not null)
+        {
+            throw new UserErrorException($"At most one of --{ContainerOptions.ApiPathOption} or --{ContainerOptions.LibraryIdOption} must be specified.");
+        }
+
+        // Build unconfigured: there must be an api path
+        if (generatorOutput is not null)
+        {
+            if (apiPath is null)
+            {
+                throw new UserErrorException($"When specifying --{ContainerOptions.GeneratorOutputOption}, --{ContainerOptions.ApiPathOption} must be specified.");
+            }
+            return BuildUnconfigured(generatorOutput, apiPath);
+        }
+        else
+        {
+            var test = options.GetValueOrDefault(ContainerOptions.TestOption) == "true";
+            var apis = DeriveConfiguredApisToBuild(repoRoot, apiPath, libraryId);
+            return BuildConfigured(repoRoot, apis, test);
+        }
+    }
+
+    private static List<ApiMetadata> DeriveConfiguredApisToBuild(string repoRoot, string apiPath, string libraryId)
+    {
+        var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
+        var catalog = ApiCatalog.Load(rootLayout);
+
+        return libraryId is null && apiPath is null ? catalog.Apis
+            : apiPath is not null ? FindApisFromApiPath()
+            : FindApisFromLibraryId();
+
+        List<ApiMetadata> FindApisFromApiPath()
+        {
+            var api = catalog.Apis.SingleOrDefault(api => api.ProtoPath == apiPath)
+                ?? throw new UserErrorException($"API path {apiPath} is not configured");
+            return new() { api };
+        }
+        List<ApiMetadata> FindApisFromLibraryId() =>
+           catalog.PackageGroups.FirstOrDefault(pg => pg.Id == libraryId) is PackageGroup group
+           ? group.PackageIds.Select(id => catalog[id]).ToList()
+           : new() { catalog[libraryId] };
     }
 
     /// <summary>
     /// Build code from the repo root, using our normal build scripts.
     /// </summary>
-    private int BuildConfigured(Dictionary<string, string> options, string repoRoot)
+    private int BuildConfigured(string repoRoot, List<ApiMetadata> apis, bool test)
     {
-        var apiPath = options.GetValueOrDefault("api-path");
-        var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
-        var catalog = ApiCatalog.Load(rootLayout);
-
-        // Note: this (test support) is speculative.
-        var test = options.GetValueOrDefault("test") == "true";
-
         var processArguments = new List<string> { "./build.sh" };
         if (!test)
         {
             processArguments.Add("--notests");
         }
 
-        List<string> apiIds = new();
-        // By default, we build all configured APIs.
-        // If an API path is configured, we build just that.
-        // While build.sh without any arguments will query the API catalog, we might as well
-        // pass them in directly, so we don't need to rebuild ReleaseManager.
-        if (apiPath is not null)
-        {
-            var targetApi = catalog.Apis.SingleOrDefault(api => api.ProtoPath == apiPath);
-            if (targetApi is null)
-            {
-                // Maybe what was passed in wasn't a proto path, but a library ID (as per the pipeline-state.json, so it may be a package group ID)...
-                // This is probably a temporary measure - we'll probably end up with different options for api-path vs library-id.
-                if (catalog.PackageGroups.FirstOrDefault(pg => pg.Id == apiPath) is PackageGroup group)
-                {
-                    apiIds.AddRange(group.PackageIds);
-                }
-                else if (catalog.TryGetApi(apiPath, out targetApi))
-                {
-                    apiIds.Add(targetApi.Id);
-                }
-                else
-                {
-                    // No, we really don't have anything we can identify that way.
-                    Console.WriteLine($"API path '{apiPath}' is not configured for any API.");
-                    return 1;
-                }
-            }
-            else
-            {
-                apiIds.Add(targetApi.Id);
-            }
-        }
-        else
-        {
-            apiIds.AddRange(catalog.Apis.Select(api => api.Id));
-        }
-
-        processArguments.AddRange(apiIds);
+        processArguments.AddRange(apis.Select(api => api.Id));
 
         var psi = new ProcessStartInfo
         {
@@ -116,10 +127,8 @@ public class BuildCommand : IContainerCommand
     /// <summary>
     /// Build code from the repo root, using our normal build scripts.
     /// </summary>
-    private int BuildUnconfigured(Dictionary<string, string> options, string generatorOutput)
+    private int BuildUnconfigured(string generatorOutput, string apiPath)
     {
-        string apiPath = options["api-path"];
-
         var apiRoot = Path.Combine(generatorOutput, apiPath);
         if (!Directory.Exists(apiRoot))
         {
