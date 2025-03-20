@@ -19,6 +19,11 @@ internal static class ContainerOptions
     internal const string ApiPathOption = "api-path";
     internal const string LibraryIdOption = "library-id";
     internal const string RepoRootOption = "repo-root";
+    internal const string ApiRootOptions = "api-root";
+    internal const string GeneratorInputOption = "generator-input";
     internal const string GeneratorOutputOption = "generator-output";
     internal const string TestOption = "test";
+    internal const string OutputOption = "output";
+    internal const string VersionOption = "version";
+    internal const string ReleaseNotesOption = "release-notes";
 }
