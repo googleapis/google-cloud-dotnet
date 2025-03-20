@@ -69,7 +69,15 @@ public sealed class CreatePipelineStateCommand : CommandBase
         {
             AddPackageGroupLibrary(packageGroup);
         }
-
+        // Avoid serializing empty lists. There may be a better way of doing this...
+        foreach (var library in state.LibraryReleaseStates)
+        {
+            if (library.Apis.Count == 0)
+            {
+                library.Apis = null;
+            }
+        }
+        
         string json = JsonConvert.SerializeObject(state,
             new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore, Formatting = Formatting.Indented });
         File.WriteAllText(Path.Combine(RootLayout.GeneratorInput, "pipeline-state.json"), json);
@@ -190,7 +198,7 @@ public sealed class CreatePipelineStateCommand : CommandBase
         [JsonProperty("libraryReleaseStates")]
         public List<LibraryReleaseState> LibraryReleaseStates { get; } = new();
 
-        [JsonProperty("common_library_source_paths")]
+        [JsonProperty("commonLibrarySourcePaths")]
         public List<string> CommonLibrarySourcePaths { get; } = new();
     }
 
@@ -224,7 +232,7 @@ public sealed class CreatePipelineStateCommand : CommandBase
         public string ReleaseTimestamp { get; set; }
 
         [JsonProperty("apis")]
-        public List<LibraryApiMapping> Apis { get; } = new();
+        public List<LibraryApiMapping> Apis { get; set; } = new();
 
         [JsonProperty("sourcePaths")]
         public List<string> SourcePaths { get; } = new();
