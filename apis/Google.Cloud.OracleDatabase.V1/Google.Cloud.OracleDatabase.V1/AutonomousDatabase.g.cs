@@ -38,8 +38,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNl",
             "UHJvcGVydGllc0ID4EEBElMKBmxhYmVscxgIIAMoCzI+Lmdvb2dsZS5jbG91",
             "ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2UuTGFiZWxz",
-            "RW50cnlCA+BBARI3CgduZXR3b3JrGAkgASgJQibgQQL6QSAKHmNvbXB1dGUu",
-            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxIRCgRjaWRyGAogASgJQgPgQQISNAoL",
+            "RW50cnlCA+BBARI3CgduZXR3b3JrGAkgASgJQibgQQH6QSAKHmNvbXB1dGUu",
+            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxIRCgRjaWRyGAogASgJQgPgQQESNAoL",
             "Y3JlYXRlX3RpbWUYDSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "QgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIg",
             "ASgJOgI4ATqyAepBrgEKMG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29t",
@@ -595,7 +595,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int NetworkFieldNumber = 9;
     private string network_ = "";
     /// <summary>
-    /// Required. The name of the VPC network used by the Autonomous Database in
+    /// Optional. The name of the VPC network used by the Autonomous Database in
     /// the following format: projects/{project}/global/networks/{network}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -611,7 +611,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CidrFieldNumber = 10;
     private string cidr_ = "";
     /// <summary>
-    /// Required. The subnet CIDR range for the Autonmous Database.
+    /// Optional. The subnet CIDR range for the Autonmous Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
