@@ -32,10 +32,10 @@ internal class GenerateCommand : IContainerCommand
 {
     public int Execute(Dictionary<string, string> options)
     {
-        string apiRoot = options["api-root"];
-        string output = options["output"];
-        string generatorInput = options.GetValueOrDefault("generator-input");
-        string apiPath = options.GetValueOrDefault("api-path");
+        string apiRoot = options[ContainerOptions.ApiRootOptions];
+        string output = options[ContainerOptions.OutputOption];
+        string generatorInput = options.GetValueOrDefault(ContainerOptions.GeneratorInputOption);
+        string apiPath = options.GetValueOrDefault(ContainerOptions.ApiPathOption);
 
         if (apiPath is null && generatorInput is null)
         {
