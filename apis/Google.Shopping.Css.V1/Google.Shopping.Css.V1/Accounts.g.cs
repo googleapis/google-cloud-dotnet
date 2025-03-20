@@ -1398,6 +1398,9 @@ namespace Google.Shopping.Css.V1 {
     /// The CSS/MC account's parent resource. CSS group for CSS domains; CSS
     /// domain for MC accounts. Returned only if the user has access to the
     /// parent account.
+    /// Note: For MC sub-accounts, this is also the CSS domain that is the parent
+    /// resource of the MCA account, since we are effectively flattening the
+    /// hierarchy."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
