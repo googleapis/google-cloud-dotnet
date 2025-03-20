@@ -43,10 +43,10 @@ public sealed class PrepareLibraryReleaseCommand : IContainerCommand
 {
     public int Execute(Dictionary<string, string> options)
     {
-        string repoRoot = options["repo-root"];
-        string libraryId = options["library-id"];
-        string version = options["version"];
-        var releaseNotes = File.ReadAllLines(options["release-notes"]).ToList();
+        string repoRoot = options[ContainerOptions.RepoRootOption];
+        string libraryId = options[ContainerOptions.LibraryIdOption];
+        string version = options[ContainerOptions.VersionOption];
+        var releaseNotes = File.ReadAllLines(ContainerOptions.ReleaseNotesOption).ToList();
         // Make sure we always have a blank line at the end of the release notes.
         if (releaseNotes.LastOrDefault() != "")
         {
