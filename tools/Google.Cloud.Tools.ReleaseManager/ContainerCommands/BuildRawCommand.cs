@@ -12,7 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -31,20 +30,10 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// </summary>
 public class BuildRawCommand : IContainerCommand
 {
-    public int Execute(Dictionary<string, string> options)
+    public int Execute(ContainerOptions options)
     {
-        var generatorOutput = options.GetValueOrDefault(ContainerOptions.GeneratorOutputOption);
-        var apiPath = options.GetValueOrDefault(ContainerOptions.ApiPathOption);
-
-        if (generatorOutput is null)
-        {
-            throw new UserErrorException($"--{ContainerOptions.GeneratorOutputOption} must be specified.");
-        }
-
-        if (apiPath is null)
-        {
-            throw new UserErrorException($"--{ContainerOptions.ApiPathOption} must be specified.");
-        }
+        var generatorOutput = options.RequireOption(options.GeneratorOutput);
+        var apiPath = options.RequireOption(options.ApiPath);
 
         var apiRoot = Path.Combine(generatorOutput, apiPath);
         if (!Directory.Exists(apiRoot))

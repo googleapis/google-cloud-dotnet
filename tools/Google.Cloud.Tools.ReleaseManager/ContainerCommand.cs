@@ -48,16 +48,7 @@ public sealed class ContainerCommand : ICommand
 
         // All container commands have a very specific format for arguments - every argument is
         // --name=value. This allows us to do parsing just once.
-        var options = new Dictionary<string, string>();
-        foreach (var arg in args.Skip(1))
-        {
-            if (!arg.StartsWith("--") || !arg.Contains('='))
-            {
-                throw new UserErrorException($"Invalid argument '{arg}'");
-            }
-            var nameValue = arg.Split('=', 2);
-            options[nameValue[0].Substring(2)] = nameValue[1];
-        }
+        var options = ContainerOptions.FromArgs(args.Skip(1));
         try
         {
             return subcommand.Execute(options);
