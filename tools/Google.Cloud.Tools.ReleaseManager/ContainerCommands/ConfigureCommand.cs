@@ -14,25 +14,23 @@
 
 using Google.Cloud.Tools.Common;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 /// <summary>
 /// Configures a new library for a specified API. Expected options:
-/// - api-root: effectively the googleapis directory.
+/// - api-root: effectively the googleapis directory; required.
 /// - generator-input: required; generator-input directory for the repository
-/// - output: root folder for result; required, must exist
-/// - api-path: (relative to api-root) e.g. google/cloud/functions/v2
+/// - api-path: (relative to api-root) e.g. google/cloud/functions/v2; required
 /// </summary>
 public class ConfigureCommand : IContainerCommand
 {
-    public int Execute(Dictionary<string, string> options)
+    public int Execute(ContainerOptions options)
     {
-        var apiRoot = options[ContainerOptions.ApiRootOptions];
-        var apiPath = options[ContainerOptions.ApiPathOption];
-        var generatorInput = options[ContainerOptions.GeneratorInputOption];
+        var apiRoot = options.RequireOption(options.ApiRoot);
+        var apiPath = options.RequireOption(options.ApiPath);
+        var generatorInput = options.RequireOption(options.GeneratorInput);
 
         var rootLayout = RootLayout.ForConfiguration(generatorInput, apiRoot);
         var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(rootLayout.Googleapis);

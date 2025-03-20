@@ -12,11 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using System.Collections.Generic;
-
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
-internal interface IContainerCommand
+public interface IContainerCommand
 {
-    int Execute(Dictionary<string, string> options);
+    int Execute(ContainerOptions options);
 }

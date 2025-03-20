@@ -29,10 +29,10 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// </summary>
 internal class CleanCommand : IContainerCommand
 {
-    public int Execute(Dictionary<string, string> options)
+    public int Execute(ContainerOptions options)
     {
-        var repoRoot = options[ContainerOptions.RepoRootOption];
-        var apiPath = options.GetValueOrDefault(ContainerOptions.ApiPathOption);
+        var repoRoot = options.RequireOption(options.RepoRoot);
+        var apiPath = options.ApiPath;
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
 

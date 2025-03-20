@@ -14,14 +14,13 @@
 
 using Google.Cloud.Tools.Common;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 /// <summary>
 /// Generates files for either a single API or all configured APIs. Expected options:
-/// - api-root: effectively the googleapis directory.
+/// - api-root: effectively the googleapis directory; required
 /// - generator-input: optional, when omitted, run "raw generation"
 /// - output: root folder for result; required, must exist
 /// - api-path: (relative to api-root) e.g. google/cloud/functions/v2
@@ -30,12 +29,12 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// </summary>
 internal class GenerateCommand : IContainerCommand
 {
-    public int Execute(Dictionary<string, string> options)
+    public int Execute(ContainerOptions options)
     {
-        string apiRoot = options[ContainerOptions.ApiRootOptions];
-        string output = options[ContainerOptions.OutputOption];
-        string generatorInput = options.GetValueOrDefault(ContainerOptions.GeneratorInputOption);
-        string apiPath = options.GetValueOrDefault(ContainerOptions.ApiPathOption);
+        string apiRoot = options.RequireOption(options.ApiRoot);
+        string output = options.RequireOption(options.Output);
+        string generatorInput = options.GeneratorInput;
+        string apiPath = options.ApiPath;
 
         if (apiPath is null && generatorInput is null)
         {

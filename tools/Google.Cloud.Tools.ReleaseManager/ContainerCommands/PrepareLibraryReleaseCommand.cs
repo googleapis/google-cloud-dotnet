@@ -14,7 +14,6 @@
 using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseManager.History;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
@@ -41,12 +40,12 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// </summary>
 public sealed class PrepareLibraryReleaseCommand : IContainerCommand
 {
-    public int Execute(Dictionary<string, string> options)
+    public int Execute(ContainerOptions options)
     {
-        string repoRoot = options[ContainerOptions.RepoRootOption];
-        string libraryId = options[ContainerOptions.LibraryIdOption];
-        string version = options[ContainerOptions.VersionOption];
-        var releaseNotes = File.ReadAllLines(ContainerOptions.ReleaseNotesOption).ToList();
+        string repoRoot = options.RequireOption(options.RepoRoot);
+        string libraryId = options.RequireOption(options.LibraryId);
+        string version = options.RequireOption(options.Version);
+        var releaseNotes = File.ReadAllLines(options.RequireOption(options.ReleaseNotes)).ToList();
         // Make sure we always have a blank line at the end of the release notes.
         if (releaseNotes.LastOrDefault() != "")
         {

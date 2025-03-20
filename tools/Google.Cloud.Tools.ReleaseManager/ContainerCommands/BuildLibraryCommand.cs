@@ -32,23 +32,17 @@ namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 /// </summary>
 public class BuildLibraryCommand : IContainerCommand
 {
-    public int Execute(Dictionary<string, string> options)
+    public int Execute(ContainerOptions options)
     {
-        var repoRoot = options.GetValueOrDefault(ContainerOptions.RepoRootOption);
-        var libraryId = options.GetValueOrDefault(ContainerOptions.LibraryIdOption);
+        var repoRoot = options.RequireOption(options.RepoRoot);
+        var libraryId = options.LibraryId;
 
-        if (repoRoot is null)
-        {
-            throw new UserErrorException($"--{ContainerOptions.RepoRootOption} must be specified.");
-        }
-
-        var test = options.GetValueOrDefault(ContainerOptions.TestOption) == "true";
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = libraryId is null ? catalog.Apis
             : catalog.PackageGroups.FirstOrDefault(pg => pg.Id == libraryId) is PackageGroup group ? group.PackageIds.Select(id => catalog[id]).ToList()
             : new() { catalog[libraryId] };
-        return BuildConfigured(repoRoot, apis, test);
+        return BuildConfigured(repoRoot, apis, options.Test);
     }
 
     /// <summary>
