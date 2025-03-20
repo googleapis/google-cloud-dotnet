@@ -77,6 +77,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             DeleteSavedQueryOperationsSettings = existing.DeleteSavedQueryOperationsSettings.Clone();
             GetAnnotationSpecSettings = existing.GetAnnotationSpecSettings;
             ListAnnotationsSettings = existing.ListAnnotationsSettings;
+            AssessDataSettings = existing.AssessDataSettings;
+            AssessDataOperationsSettings = existing.AssessDataOperationsSettings.Clone();
+            AssembleDataSettings = existing.AssembleDataSettings;
+            AssembleDataOperationsSettings = existing.AssembleDataOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -456,6 +460,66 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListAnnotationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.AssessData</c> and <c>DatasetServiceClient.AssessDataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AssessDataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatasetServiceClient.AssessData</c> and
+        /// <c>DatasetServiceClient.AssessDataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AssessDataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatasetServiceClient.AssembleData</c> and <c>DatasetServiceClient.AssembleDataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AssembleDataSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DatasetServiceClient.AssembleData</c> and
+        /// <c>DatasetServiceClient.AssembleDataAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AssembleDataOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -3043,7 +3107,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             GetAnnotationSpecAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists Annotations belongs to a dataitem
+        /// Lists Annotations belongs to a dataitem.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3052,7 +3116,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Annotations belongs to a dataitem
+        /// Lists Annotations belongs to a dataitem.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3061,7 +3125,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists Annotations belongs to a dataitem
+        /// Lists Annotations belongs to a dataitem.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the DataItem to list Annotations from.
@@ -3096,7 +3160,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary>
-        /// Lists Annotations belongs to a dataitem
+        /// Lists Annotations belongs to a dataitem.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the DataItem to list Annotations from.
@@ -3131,7 +3195,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary>
-        /// Lists Annotations belongs to a dataitem
+        /// Lists Annotations belongs to a dataitem.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the DataItem to list Annotations from.
@@ -3166,7 +3230,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary>
-        /// Lists Annotations belongs to a dataitem
+        /// Lists Annotations belongs to a dataitem.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the DataItem to list Annotations from.
@@ -3199,6 +3263,118 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             }
             return ListAnnotationsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Assesses the state or validity of the dataset with respect to a given use
+        /// case.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AssessDataResponse, AssessDataOperationMetadata> AssessData(AssessDataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Assesses the state or validity of the dataset with respect to a given use
+        /// case.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AssessDataResponse, AssessDataOperationMetadata>> AssessDataAsync(AssessDataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Assesses the state or validity of the dataset with respect to a given use
+        /// case.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AssessDataResponse, AssessDataOperationMetadata>> AssessDataAsync(AssessDataRequest request, st::CancellationToken cancellationToken) =>
+            AssessDataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AssessData</c>.</summary>
+        public virtual lro::OperationsClient AssessDataOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AssessData</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AssessDataResponse, AssessDataOperationMetadata> PollOnceAssessData(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AssessDataResponse, AssessDataOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AssessDataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AssessData</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AssessDataResponse, AssessDataOperationMetadata>> PollOnceAssessDataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AssessDataResponse, AssessDataOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AssessDataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Assembles each row of a multimodal dataset and writes the result into a
+        /// BigQuery table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata> AssembleData(AssembleDataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Assembles each row of a multimodal dataset and writes the result into a
+        /// BigQuery table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata>> AssembleDataAsync(AssembleDataRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Assembles each row of a multimodal dataset and writes the result into a
+        /// BigQuery table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata>> AssembleDataAsync(AssembleDataRequest request, st::CancellationToken cancellationToken) =>
+            AssembleDataAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AssembleData</c>.</summary>
+        public virtual lro::OperationsClient AssembleDataOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AssembleData</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata> PollOnceAssembleData(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AssembleDataOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AssembleData</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata>> PollOnceAssembleDataAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AssembleDataOperationsClient, callSettings);
     }
 
     /// <summary>DatasetService client wrapper implementation, for convenient use.</summary>
@@ -3245,6 +3421,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<ListAnnotationsRequest, ListAnnotationsResponse> _callListAnnotations;
 
+        private readonly gaxgrpc::ApiCall<AssessDataRequest, lro::Operation> _callAssessData;
+
+        private readonly gaxgrpc::ApiCall<AssembleDataRequest, lro::Operation> _callAssembleData;
+
         /// <summary>
         /// Constructs a client wrapper for the DatasetService service, with the specified gRPC client and settings.
         /// </summary>
@@ -3268,6 +3448,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             DeleteDatasetVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDatasetVersionOperationsSettings, logger);
             RestoreDatasetVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreDatasetVersionOperationsSettings, logger);
             DeleteSavedQueryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSavedQueryOperationsSettings, logger);
+            AssessDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AssessDataOperationsSettings, logger);
+            AssembleDataOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AssembleDataOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateDataset = clientHelper.BuildApiCall<CreateDatasetRequest, lro::Operation>("CreateDataset", grpcClient.CreateDatasetAsync, grpcClient.CreateDataset, effectiveSettings.CreateDatasetSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -3327,6 +3509,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callListAnnotations = clientHelper.BuildApiCall<ListAnnotationsRequest, ListAnnotationsResponse>("ListAnnotations", grpcClient.ListAnnotationsAsync, grpcClient.ListAnnotations, effectiveSettings.ListAnnotationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAnnotations);
             Modify_ListAnnotationsApiCall(ref _callListAnnotations);
+            _callAssessData = clientHelper.BuildApiCall<AssessDataRequest, lro::Operation>("AssessData", grpcClient.AssessDataAsync, grpcClient.AssessData, effectiveSettings.AssessDataSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callAssessData);
+            Modify_AssessDataApiCall(ref _callAssessData);
+            _callAssembleData = clientHelper.BuildApiCall<AssembleDataRequest, lro::Operation>("AssembleData", grpcClient.AssembleDataAsync, grpcClient.AssembleData, effectiveSettings.AssembleDataSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callAssembleData);
+            Modify_AssembleDataApiCall(ref _callAssembleData);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3369,6 +3557,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetAnnotationSpecApiCall(ref gaxgrpc::ApiCall<GetAnnotationSpecRequest, AnnotationSpec> call);
 
         partial void Modify_ListAnnotationsApiCall(ref gaxgrpc::ApiCall<ListAnnotationsRequest, ListAnnotationsResponse> call);
+
+        partial void Modify_AssessDataApiCall(ref gaxgrpc::ApiCall<AssessDataRequest, lro::Operation> call);
+
+        partial void Modify_AssembleDataApiCall(ref gaxgrpc::ApiCall<AssembleDataRequest, lro::Operation> call);
 
         partial void OnConstruction(DatasetService.DatasetServiceClient grpcClient, DatasetServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3418,6 +3610,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_GetAnnotationSpecRequest(ref GetAnnotationSpecRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAnnotationsRequest(ref ListAnnotationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AssessDataRequest(ref AssessDataRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AssembleDataRequest(ref AssembleDataRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateDataset</c>.</summary>
         public override lro::OperationsClient CreateDatasetOperationsClient { get; }
@@ -3876,7 +4072,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary>
-        /// Lists Annotations belongs to a dataitem
+        /// Lists Annotations belongs to a dataitem.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3888,7 +4084,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
 
         /// <summary>
-        /// Lists Annotations belongs to a dataitem
+        /// Lists Annotations belongs to a dataitem.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3897,6 +4093,64 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_ListAnnotationsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAnnotationsRequest, ListAnnotationsResponse, Annotation>(_callListAnnotations, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>AssessData</c>.</summary>
+        public override lro::OperationsClient AssessDataOperationsClient { get; }
+
+        /// <summary>
+        /// Assesses the state or validity of the dataset with respect to a given use
+        /// case.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AssessDataResponse, AssessDataOperationMetadata> AssessData(AssessDataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AssessDataRequest(ref request, ref callSettings);
+            return new lro::Operation<AssessDataResponse, AssessDataOperationMetadata>(_callAssessData.Sync(request, callSettings), AssessDataOperationsClient);
+        }
+
+        /// <summary>
+        /// Assesses the state or validity of the dataset with respect to a given use
+        /// case.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AssessDataResponse, AssessDataOperationMetadata>> AssessDataAsync(AssessDataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AssessDataRequest(ref request, ref callSettings);
+            return new lro::Operation<AssessDataResponse, AssessDataOperationMetadata>(await _callAssessData.Async(request, callSettings).ConfigureAwait(false), AssessDataOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>AssembleData</c>.</summary>
+        public override lro::OperationsClient AssembleDataOperationsClient { get; }
+
+        /// <summary>
+        /// Assembles each row of a multimodal dataset and writes the result into a
+        /// BigQuery table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata> AssembleData(AssembleDataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AssembleDataRequest(ref request, ref callSettings);
+            return new lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata>(_callAssembleData.Sync(request, callSettings), AssembleDataOperationsClient);
+        }
+
+        /// <summary>
+        /// Assembles each row of a multimodal dataset and writes the result into a
+        /// BigQuery table.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata>> AssembleDataAsync(AssembleDataRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AssembleDataRequest(ref request, ref callSettings);
+            return new lro::Operation<AssembleDataResponse, AssembleDataOperationMetadata>(await _callAssembleData.Async(request, callSettings).ConfigureAwait(false), AssembleDataOperationsClient);
         }
     }
 

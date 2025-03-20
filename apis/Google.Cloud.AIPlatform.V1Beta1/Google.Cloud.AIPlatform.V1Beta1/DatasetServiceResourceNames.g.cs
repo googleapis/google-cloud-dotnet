@@ -234,4 +234,49 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class AssessDataRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::DatasetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::DatasetName DatasetName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::DatasetName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GeminiExample
+    {
+        /// <summary>
+        /// <see cref="EndpointName"/>-typed view over the <see cref="Model"/> resource name property.
+        /// </summary>
+        public EndpointName ModelAsEndpointName
+        {
+            get => string.IsNullOrEmpty(Model) ? null : EndpointName.Parse(Model, allowUnparsed: true);
+            set => Model = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CachedContentName"/>-typed view over the <see cref="CachedContent"/> resource name property.
+        /// </summary>
+        public CachedContentName CachedContentAsCachedContentName
+        {
+            get => string.IsNullOrEmpty(CachedContent) ? null : CachedContentName.Parse(CachedContent, allowUnparsed: true);
+            set => CachedContent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AssembleDataRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::DatasetName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::DatasetName DatasetName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::DatasetName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

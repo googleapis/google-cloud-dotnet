@@ -5324,6 +5324,200 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_DatasetService_AssessData_sync",
+      "title": "AssessDataRequestObject",
+      "description": "Snippet for AssessData",
+      "file": "DatasetServiceClient.AssessDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssessData",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.DatasetServiceClient.AssessData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AssessDataResponse, Google.Cloud.AIPlatform.V1Beta1.AssessDataOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "AssessData",
+          "fullName": "google.cloud.aiplatform.v1beta1.DatasetService.AssessData",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1beta1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_DatasetService_AssessData_async",
+      "title": "AssessDataRequestObjectAsync",
+      "description": "Snippet for AssessDataAsync",
+      "file": "DatasetServiceClient.AssessDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssessDataAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.DatasetServiceClient.AssessDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AssessDataResponse, Google.Cloud.AIPlatform.V1Beta1.AssessDataOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "AssessData",
+          "fullName": "google.cloud.aiplatform.v1beta1.DatasetService.AssessData",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1beta1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_DatasetService_AssembleData_sync",
+      "title": "AssembleDataRequestObject",
+      "description": "Snippet for AssembleData",
+      "file": "DatasetServiceClient.AssembleDataRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssembleData",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.DatasetServiceClient.AssembleData",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AssembleDataResponse, Google.Cloud.AIPlatform.V1Beta1.AssembleDataOperationMetadata>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "AssembleData",
+          "fullName": "google.cloud.aiplatform.v1beta1.DatasetService.AssembleData",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1beta1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_DatasetService_AssembleData_async",
+      "title": "AssembleDataRequestObjectAsync",
+      "description": "Snippet for AssembleDataAsync",
+      "file": "DatasetServiceClient.AssembleDataRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AssembleDataAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.DatasetServiceClient.AssembleDataAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.AssembleDataResponse, Google.Cloud.AIPlatform.V1Beta1.AssembleDataOperationMetadata>>",
+        "client": {
+          "shortName": "DatasetServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.DatasetServiceClient"
+        },
+        "method": {
+          "shortName": "AssembleData",
+          "fullName": "google.cloud.aiplatform.v1beta1.DatasetService.AssembleData",
+          "service": {
+            "shortName": "DatasetService",
+            "fullName": "google.cloud.aiplatform.v1beta1.DatasetService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_DeploymentResourcePoolService_CreateDeploymentResourcePool_sync",
       "title": "CreateDeploymentResourcePoolRequestObject",
       "description": "Snippet for CreateDeploymentResourcePool",
