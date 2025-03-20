@@ -93,12 +93,12 @@
     },
     {
       "id": "google/cloud/aiplatform/v1beta1",
-      "lastGeneratedCommit": "2c2a335e10b6b35b02b28dd1004ebdc94790d14d",
+      "lastGeneratedCommit": "e9792d9964be14df57b78d7ff6a3c26e8e06bae2",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/aiplatform/v1",
-      "lastGeneratedCommit": "2c2a335e10b6b35b02b28dd1004ebdc94790d14d",
+      "lastGeneratedCommit": "1a8d81efc15e064d428a9852e2c9c57c260ca456",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -343,7 +343,7 @@
     },
     {
       "id": "google/cloud/compute/v1",
-      "lastGeneratedCommit": "2753fe1683a42442aa7a4b778c416c886a647fe6",
+      "lastGeneratedCommit": "4c4d2b6ad6f52a0b27e9b49d79df1c18ce610e4f",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -433,7 +433,7 @@
     },
     {
       "id": "google/cloud/deploy/v1",
-      "lastGeneratedCommit": "d9b049376b49f7ccf0dc0564c83357dd862f9b01",
+      "lastGeneratedCommit": "732dbc81f7dff6e93c5acb45887561a1dc3018d0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -473,7 +473,7 @@
     },
     {
       "id": "google/privacy/dlp/v2",
-      "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+      "lastGeneratedCommit": "f95ceda21f21d679abd1a030910581fefcb79101",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -483,7 +483,7 @@
     },
     {
       "id": "google/cloud/documentai/v1beta3",
-      "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+      "lastGeneratedCommit": "9b90b04146c2def3ea16715e3ef99e719ca66f9c",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -668,7 +668,7 @@
     },
     {
       "id": "google/cloud/managedkafka/v1",
-      "lastGeneratedCommit": "8f7e301d346ba792a9bd282f8d62db7fad87cb8a",
+      "lastGeneratedCommit": "9eee08a64ae74996275e914db69dec1e022bdce7",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -773,12 +773,12 @@
     },
     {
       "id": "google/cloud/oracledatabase/v1",
-      "lastGeneratedCommit": "e4515ba9ef4f8d75d6d38de3a2b3fe6654705b26",
+      "lastGeneratedCommit": "985a0b98f96b47da45882877259265c2fcb31ff5",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
       "id": "google/cloud/orchestration/airflow/service/v1",
-      "lastGeneratedCommit": "aafb43c2088fae86421aa8e98d19869c4159737d",
+      "lastGeneratedCommit": "1ce903753d854c9ee210dc7e5ac2322d8df7a270",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -823,7 +823,7 @@
     },
     {
       "id": "google/cloud/parametermanager/v1",
-      "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+      "lastGeneratedCommit": "e51fec1d08513b60beb9193935930ed13b94b630",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -878,7 +878,7 @@
     },
     {
       "id": "google/cloud/recaptchaenterprise/v1beta1",
-      "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+      "lastGeneratedCommit": "3ce116857cb29c22c70bd3aef289b7a0019cd52e",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -1273,7 +1273,7 @@
     },
     {
       "id": "google/shopping/css/v1",
-      "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+      "lastGeneratedCommit": "1bd384078ed83ffd744b94e0f7df83489aa80fcf",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC"
     },
     {
@@ -2113,7 +2113,6 @@
       "currentVersion": "3.11.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2025-02-03T17:58:23Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.BigQuery.V2/Google.Cloud.BigQuery.V2"
       ]
@@ -2153,7 +2152,6 @@
       "currentVersion": "3.2.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2024-03-26T19:14:17Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Bigtable.Common.V2/Google.Cloud.Bigtable.Common.V2"
       ]
@@ -2703,7 +2701,6 @@
       "currentVersion": "3.2.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2024-03-27T17:16:22Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.DevTools.Common/Google.Cloud.DevTools.Common"
       ]
@@ -3313,7 +3310,6 @@
       "currentVersion": "4.4.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2024-09-26T08:16:29Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Logging.Log4Net/Google.Cloud.Logging.Log4Net"
       ]
@@ -3323,7 +3319,6 @@
       "currentVersion": "1.4.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2025-03-03T18:14:27Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Logging.Console/Google.Cloud.Logging.Console"
       ]
@@ -3333,7 +3328,6 @@
       "currentVersion": "5.2.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2024-09-26T08:16:33Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Logging.NLog/Google.Cloud.Logging.NLog"
       ]
@@ -4513,7 +4507,6 @@
       "currentVersion": "4.11.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2025-03-10T18:24:32Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Storage.V1/Google.Cloud.Storage.V1"
       ]
@@ -4733,7 +4726,6 @@
       "currentVersion": "3.4.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2024-03-26T19:47:02Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Translation.V2/Google.Cloud.Translation.V2"
       ]
@@ -4908,7 +4900,6 @@
       "currentVersion": "2.4.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2024-03-26T19:52:25Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Workflows.Common.V1/Google.Cloud.Workflows.Common.V1"
       ]
@@ -4918,7 +4909,6 @@
       "currentVersion": "2.0.0-beta04",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2024-03-26T19:52:48Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Workflows.Common.V1Beta/Google.Cloud.Workflows.Common.V1Beta"
       ]
@@ -5405,7 +5395,6 @@
       "currentVersion": "5.2.0",
       "automationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
       "releaseTimestamp": "2024-03-05T19:58:15Z",
-      "apis": [],
       "sourcePaths": [
         "apis/Google.Cloud.Diagnostics.AspNetCore3/Google.Cloud.Diagnostics.AspNetCore3",
         "apis/Google.Cloud.Diagnostics.Common/Google.Cloud.Diagnostics.Common"
@@ -5448,7 +5437,7 @@
       ]
     }
   ],
-  "common_library_source_paths": [
+  "commonLibrarySourcePaths": [
     "Directory.Packages.props"
   ]
 }
