@@ -31,8 +31,8 @@ internal class CleanCommand : IContainerCommand
 {
     public int Execute(Dictionary<string, string> options)
     {
-        var repoRoot = options["repo-root"];
-        var apiPath = options.GetValueOrDefault("api-path");
+        var repoRoot = options[ContainerOptions.RepoRootOption];
+        var apiPath = options.GetValueOrDefault(ContainerOptions.ApiPathOption);
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
 

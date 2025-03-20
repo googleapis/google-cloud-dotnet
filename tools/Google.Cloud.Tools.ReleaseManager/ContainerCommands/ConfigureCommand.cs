@@ -30,9 +30,9 @@ public class ConfigureCommand : IContainerCommand
 {
     public int Execute(Dictionary<string, string> options)
     {
-        var apiRoot = options["api-root"];
-        var apiPath = options["api-path"];
-        var generatorInput = options["generator-input"];
+        var apiRoot = options[ContainerOptions.ApiRootOptions];
+        var apiPath = options[ContainerOptions.ApiPathOption];
+        var generatorInput = options[ContainerOptions.GeneratorInputOption];
 
         var rootLayout = RootLayout.ForConfiguration(generatorInput, apiRoot);
         var apiIndex = ApiIndex.V1.Index.LoadFromGoogleApis(rootLayout.Googleapis);
