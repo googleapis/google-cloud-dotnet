@@ -1408,6 +1408,12 @@
                 "DeployPublisherModelAsync"
               ]
             },
+            "ExportPublisherModel": {
+              "methods": [
+                "ExportPublisherModel",
+                "ExportPublisherModelAsync"
+              ]
+            },
             "GetPublisherModel": {
               "methods": [
                 "GetPublisherModel",

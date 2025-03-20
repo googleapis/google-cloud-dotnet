@@ -58741,6 +58741,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_ExportPublisherModel_sync",
+      "title": "ExportPublisherModelRequestObject",
+      "description": "Snippet for ExportPublisherModel",
+      "file": "ModelGardenServiceClient.ExportPublisherModelRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportPublisherModel",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.ExportPublisherModel",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelResponse, Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelOperationMetadata>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "ExportPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.ExportPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ModelGardenService_ExportPublisherModel_async",
+      "title": "ExportPublisherModelRequestObjectAsync",
+      "description": "Snippet for ExportPublisherModelAsync",
+      "file": "ModelGardenServiceClient.ExportPublisherModelRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportPublisherModelAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient.ExportPublisherModelAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelResponse, Google.Cloud.AIPlatform.V1Beta1.ExportPublisherModelOperationMetadata>>",
+        "client": {
+          "shortName": "ModelGardenServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ModelGardenServiceClient"
+        },
+        "method": {
+          "shortName": "ExportPublisherModel",
+          "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService.ExportPublisherModel",
+          "service": {
+            "shortName": "ModelGardenService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ModelGardenService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_ModelMonitoringService_CreateModelMonitor_sync",
       "title": "CreateModelMonitorRequestObject",
       "description": "Snippet for CreateModelMonitor",
