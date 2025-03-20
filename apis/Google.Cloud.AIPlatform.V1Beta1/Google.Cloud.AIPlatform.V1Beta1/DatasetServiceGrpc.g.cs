@@ -121,6 +121,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsRequest> __Marshaller_google_cloud_aiplatform_v1beta1_ListAnnotationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsResponse> __Marshaller_google_cloud_aiplatform_v1beta1_ListAnnotationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_AssessDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest> __Marshaller_google_cloud_aiplatform_v1beta1_AssembleDataRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateDatasetRequest, global::Google.LongRunning.Operation> __Method_CreateDataset = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateDatasetRequest, global::Google.LongRunning.Operation>(
@@ -273,6 +277,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "ListAnnotations",
         __Marshaller_google_cloud_aiplatform_v1beta1_ListAnnotationsRequest,
         __Marshaller_google_cloud_aiplatform_v1beta1_ListAnnotationsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest, global::Google.LongRunning.Operation> __Method_AssessData = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AssessData",
+        __Marshaller_google_cloud_aiplatform_v1beta1_AssessDataRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest, global::Google.LongRunning.Operation> __Method_AssembleData = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AssembleData",
+        __Marshaller_google_cloud_aiplatform_v1beta1_AssembleDataRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -501,13 +521,39 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
 
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsResponse> ListAnnotations(global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Assesses the state or validity of the dataset with respect to a given use
+      /// case.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AssessData(global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Assembles each row of a multimodal dataset and writes the result into a
+      /// BigQuery table.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AssembleData(global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1406,7 +1452,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetAnnotationSpec, null, options, request);
       }
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1419,7 +1465,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return ListAnnotations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1430,7 +1476,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListAnnotations, null, options, request);
       }
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1443,7 +1489,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return ListAnnotationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists Annotations belongs to a dataitem
+      /// Lists Annotations belongs to a dataitem.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1452,6 +1498,110 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsResponse> ListAnnotationsAsync(global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAnnotations, null, options, request);
+      }
+      /// <summary>
+      /// Assesses the state or validity of the dataset with respect to a given use
+      /// case.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AssessData(global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AssessData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Assesses the state or validity of the dataset with respect to a given use
+      /// case.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AssessData(global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AssessData, null, options, request);
+      }
+      /// <summary>
+      /// Assesses the state or validity of the dataset with respect to a given use
+      /// case.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AssessDataAsync(global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AssessDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Assesses the state or validity of the dataset with respect to a given use
+      /// case.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AssessDataAsync(global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AssessData, null, options, request);
+      }
+      /// <summary>
+      /// Assembles each row of a multimodal dataset and writes the result into a
+      /// BigQuery table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AssembleData(global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AssembleData(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Assembles each row of a multimodal dataset and writes the result into a
+      /// BigQuery table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AssembleData(global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AssembleData, null, options, request);
+      }
+      /// <summary>
+      /// Assembles each row of a multimodal dataset and writes the result into a
+      /// BigQuery table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AssembleDataAsync(global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AssembleDataAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Assembles each row of a multimodal dataset and writes the result into a
+      /// BigQuery table.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AssembleDataAsync(global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AssembleData, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1485,7 +1635,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           .AddMethod(__Method_ListSavedQueries, serviceImpl.ListSavedQueries)
           .AddMethod(__Method_DeleteSavedQuery, serviceImpl.DeleteSavedQuery)
           .AddMethod(__Method_GetAnnotationSpec, serviceImpl.GetAnnotationSpec)
-          .AddMethod(__Method_ListAnnotations, serviceImpl.ListAnnotations).Build();
+          .AddMethod(__Method_ListAnnotations, serviceImpl.ListAnnotations)
+          .AddMethod(__Method_AssessData, serviceImpl.AssessData)
+          .AddMethod(__Method_AssembleData, serviceImpl.AssembleData).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1514,6 +1666,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_DeleteSavedQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeleteSavedQueryRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSavedQuery));
       serviceBinder.AddMethod(__Method_GetAnnotationSpec, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.GetAnnotationSpecRequest, global::Google.Cloud.AIPlatform.V1Beta1.AnnotationSpec>(serviceImpl.GetAnnotationSpec));
       serviceBinder.AddMethod(__Method_ListAnnotations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsRequest, global::Google.Cloud.AIPlatform.V1Beta1.ListAnnotationsResponse>(serviceImpl.ListAnnotations));
+      serviceBinder.AddMethod(__Method_AssessData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.AssessDataRequest, global::Google.LongRunning.Operation>(serviceImpl.AssessData));
+      serviceBinder.AddMethod(__Method_AssembleData, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.AssembleDataRequest, global::Google.LongRunning.Operation>(serviceImpl.AssembleData));
     }
 
   }

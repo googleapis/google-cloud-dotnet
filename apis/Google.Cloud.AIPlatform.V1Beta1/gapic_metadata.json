@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "DatasetServiceClient",
           "rpcs": {
+            "AssembleData": {
+              "methods": [
+                "AssembleData",
+                "AssembleDataAsync"
+              ]
+            },
+            "AssessData": {
+              "methods": [
+                "AssessData",
+                "AssessDataAsync"
+              ]
+            },
             "CreateDataset": {
               "methods": [
                 "CreateDataset",

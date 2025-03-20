@@ -3447,5 +3447,141 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
+
+        /// <summary>Snippet for AssessData</summary>
+        public void AssessDataRequestObject()
+        {
+            // Snippet: AssessData(AssessDataRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            AssessDataRequest request = new AssessDataRequest
+            {
+                DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                TuningValidationAssessmentConfig = new AssessDataRequest.Types.TuningValidationAssessmentConfig(),
+                GeminiTemplateConfig = new GeminiTemplateConfig(),
+            };
+            // Make the request
+            Operation<AssessDataResponse, AssessDataOperationMetadata> response = datasetServiceClient.AssessData(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AssessDataResponse, AssessDataOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AssessDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AssessDataResponse, AssessDataOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceAssessData(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AssessDataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AssessDataAsync</summary>
+        public async Task AssessDataRequestObjectAsync()
+        {
+            // Snippet: AssessDataAsync(AssessDataRequest, CallSettings)
+            // Additional: AssessDataAsync(AssessDataRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AssessDataRequest request = new AssessDataRequest
+            {
+                DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                TuningValidationAssessmentConfig = new AssessDataRequest.Types.TuningValidationAssessmentConfig(),
+                GeminiTemplateConfig = new GeminiTemplateConfig(),
+            };
+            // Make the request
+            Operation<AssessDataResponse, AssessDataOperationMetadata> response = await datasetServiceClient.AssessDataAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AssessDataResponse, AssessDataOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AssessDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AssessDataResponse, AssessDataOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceAssessDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AssessDataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AssembleData</summary>
+        public void AssembleDataRequestObject()
+        {
+            // Snippet: AssembleData(AssembleDataRequest, CallSettings)
+            // Create client
+            DatasetServiceClient datasetServiceClient = DatasetServiceClient.Create();
+            // Initialize request argument(s)
+            AssembleDataRequest request = new AssembleDataRequest
+            {
+                DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                GeminiTemplateConfig = new GeminiTemplateConfig(),
+            };
+            // Make the request
+            Operation<AssembleDataResponse, AssembleDataOperationMetadata> response = datasetServiceClient.AssembleData(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AssembleDataResponse, AssembleDataOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AssembleDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AssembleDataResponse, AssembleDataOperationMetadata> retrievedResponse = datasetServiceClient.PollOnceAssembleData(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AssembleDataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AssembleDataAsync</summary>
+        public async Task AssembleDataRequestObjectAsync()
+        {
+            // Snippet: AssembleDataAsync(AssembleDataRequest, CallSettings)
+            // Additional: AssembleDataAsync(AssembleDataRequest, CancellationToken)
+            // Create client
+            DatasetServiceClient datasetServiceClient = await DatasetServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AssembleDataRequest request = new AssembleDataRequest
+            {
+                DatasetName = DatasetName.FromProjectLocationDataset("[PROJECT]", "[LOCATION]", "[DATASET]"),
+                GeminiTemplateConfig = new GeminiTemplateConfig(),
+            };
+            // Make the request
+            Operation<AssembleDataResponse, AssembleDataOperationMetadata> response = await datasetServiceClient.AssembleDataAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AssembleDataResponse, AssembleDataOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AssembleDataResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AssembleDataResponse, AssembleDataOperationMetadata> retrievedResponse = await datasetServiceClient.PollOnceAssembleDataAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AssembleDataResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }
