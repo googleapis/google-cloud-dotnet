@@ -170,4 +170,16 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Destination = value?.ToString() ?? "";
         }
     }
+
+    public partial class ExportPublisherModelRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }
