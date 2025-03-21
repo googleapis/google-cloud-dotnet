@@ -144,11 +144,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
   #region Messages
   /// <summary>
-  /// Policy Based Routes (PBR) are more powerful routes that allows GCP customers
-  /// to route their L4 network traffic based on not just destination IP, but also
-  /// source IP, protocol and more. A PBR always take precedence when it conflicts
-  /// with other types of routes.
-  /// Next id: 22
+  /// Policy-based routes route L4 network traffic based on not just destination IP
+  /// address, but also source IP address, protocol, and more. If a policy-based
+  /// route conflicts with other types of routes, the policy-based route always
+  /// takes precedence.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PolicyBasedRoute : pb::IMessage<PolicyBasedRoute>
@@ -226,7 +225,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     /// <summary>Field number for the "virtual_machine" field.</summary>
     public const int VirtualMachineFieldNumber = 18;
     /// <summary>
-    /// Optional. VM instances to which this policy based route applies to.
+    /// Optional. VM instances that this policy-based route applies to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -241,7 +240,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     /// <summary>Field number for the "interconnect_attachment" field.</summary>
     public const int InterconnectAttachmentFieldNumber = 9;
     /// <summary>
-    /// Optional. The interconnect attachments to which this route applies to.
+    /// Optional. The interconnect attachments that this policy-based route
+    /// applies to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -256,9 +256,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     /// <summary>Field number for the "next_hop_ilb_ip" field.</summary>
     public const int NextHopIlbIpFieldNumber = 12;
     /// <summary>
-    /// Optional. The IP of a global access enabled L4 ILB that should be the
-    /// next hop to handle matching packets. For this version, only
-    /// next_hop_ilb_ip is supported.
+    /// Optional. The IP address of a global-access-enabled L4 ILB that is the
+    /// next hop for matching packets. For this version, only nextHopIlbIp is
+    /// supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -334,7 +334,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int CreateTimeFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Output only. Time when the PolicyBasedRoute was created.
+    /// Output only. Time when the policy-based route was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -349,7 +349,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int UpdateTimeFieldNumber = 3;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. Time when the PolicyBasedRoute was updated.
+    /// Output only. Time when the policy-based route was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -394,8 +394,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int NetworkFieldNumber = 6;
     private string network_ = "";
     /// <summary>
-    /// Required. Fully-qualified URL of the network that this route applies to.
-    /// e.g. projects/my-project/global/networks/my-network.
+    /// Required. Fully-qualified URL of the network that this route applies to,
+    /// for example: projects/my-project/global/networks/my-network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -425,9 +425,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int PriorityFieldNumber = 11;
     private int priority_;
     /// <summary>
-    /// Optional. The priority of this policy based route. Priority is used to
-    /// break ties in cases where there are more than one matching policy based
-    /// routes found. In cases where multiple policy based routes are matched, the
+    /// Optional. The priority of this policy-based route. Priority is used to
+    /// break ties in cases where there are more than one matching policy-based
+    /// routes found. In cases where multiple policy-based routes are matched, the
     /// one with the lowest-numbered priority value wins. The default value is
     /// 1000. The priority value must be from 1 to 65535, inclusive.
     /// </summary>
@@ -475,7 +475,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private string kind_ = "";
     /// <summary>
     /// Output only. Type of this resource. Always
-    /// networkconnectivity#policyBasedRoute for Policy Based Route resources.
+    /// networkconnectivity#policyBasedRoute for policy-based Route resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1055,15 +1055,15 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         [pbr::OriginalName("OTHER_ROUTES_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Use the routes from the default routing tables (system-generated routes,
-        /// custom routes, peering route) to determine the next hop. This will
-        /// effectively exclude matching packets being applied on other PBRs with a
-        /// lower priority.
+        /// custom routes, peering route) to determine the next hop. This effectively
+        /// excludes matching packets being applied on other PBRs with a lower
+        /// priority.
         /// </summary>
         [pbr::OriginalName("DEFAULT_ROUTING")] DefaultRouting = 1,
       }
 
       /// <summary>
-      /// VM instances to which this policy based route applies to.
+      /// VM instances that this policy-based route applies to.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class VirtualMachine : pb::IMessage<VirtualMachine>
@@ -1116,9 +1116,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             = pb::FieldCodec.ForString(10);
         private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
         /// <summary>
-        /// Optional. A list of VM instance tags to which this policy based route
-        /// applies to. VM instances that have ANY of tags specified here will
-        /// install this PBR.
+        /// Optional. A list of VM instance tags that this policy-based route applies
+        /// to. VM instances that have ANY of tags specified here installs this PBR.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1250,7 +1249,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// InterconnectAttachment to which this route applies to.
+      /// InterconnectAttachment that this route applies to.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class InterconnectAttachment : pb::IMessage<InterconnectAttachment>
@@ -1301,7 +1300,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         public const int RegionFieldNumber = 1;
         private string region_ = "";
         /// <summary>
-        /// Optional. Cloud region to install this policy based route on interconnect
+        /// Optional. Cloud region to install this policy-based route on interconnect
         /// attachment. Use `all` to install it on all interconnect attachments.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1501,7 +1500,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         public const int IpProtocolFieldNumber = 1;
         private string ipProtocol_ = "";
         /// <summary>
-        /// Optional. The IP protocol that this policy based route applies to. Valid
+        /// Optional. The IP protocol that this policy-based route applies to. Valid
         /// values are 'TCP', 'UDP', and 'ALL'. Default is 'ALL'.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1517,7 +1516,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         public const int SrcRangeFieldNumber = 2;
         private string srcRange_ = "";
         /// <summary>
-        /// Optional. The source IP range of outgoing packets that this policy based
+        /// Optional. The source IP range of outgoing packets that this policy-based
         /// route applies to. Default is "0.0.0.0/0" if protocol version is IPv4.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1533,9 +1532,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         public const int DestRangeFieldNumber = 3;
         private string destRange_ = "";
         /// <summary>
-        /// Optional. The destination IP range of outgoing packets that this policy
-        /// based route applies to. Default is "0.0.0.0/0" if protocol version is
-        /// IPv4.
+        /// Optional. The destination IP range of outgoing packets that this
+        /// policy-based route applies to. Default is "0.0.0.0/0" if protocol version
+        /// is IPv4.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1550,8 +1549,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         public const int ProtocolVersionFieldNumber = 6;
         private global::Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute.Types.Filter.Types.ProtocolVersion protocolVersion_ = global::Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute.Types.Filter.Types.ProtocolVersion.Unspecified;
         /// <summary>
-        /// Required. Internet protocol versions this policy based route applies to.
-        /// For this version, only IPV4 is supported.
+        /// Required. Internet protocol versions this policy-based route applies to.
+        /// For this version, only IPV4 is supported. IPV6 is supported in preview.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2063,7 +2062,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
-          /// Warning code for Policy Based Routing. Expect to add values in the
+          /// Warning code for policy-based routing. Expect to add values in the
           /// future.
           /// </summary>
           public enum Code {
@@ -2072,13 +2071,13 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             /// </summary>
             [pbr::OriginalName("WARNING_UNSPECIFIED")] WarningUnspecified = 0,
             /// <summary>
-            /// The policy based route is not active and functioning. Common causes are
-            /// the dependent network was deleted or the resource project was turned
-            /// off.
+            /// The policy-based route is not active and functioning. Common causes are
+            /// that the dependent network was deleted or the resource project was
+            /// turned off.
             /// </summary>
             [pbr::OriginalName("RESOURCE_NOT_ACTIVE")] ResourceNotActive = 1,
             /// <summary>
-            /// The policy based route is being modified (e.g. created/deleted) at this
+            /// The policy-based route is being modified (e.g. created/deleted) at this
             /// time.
             /// </summary>
             [pbr::OriginalName("RESOURCE_BEING_MODIFIED")] ResourceBeingModified = 2,
@@ -2095,7 +2094,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [PolicyBasedRouting.ListPolicyBasedRoutes][] method.
+  /// Request for
+  /// [PolicyBasedRoutingService.ListPolicyBasedRoutes][google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.ListPolicyBasedRoutes]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPolicyBasedRoutesRequest : pb::IMessage<ListPolicyBasedRoutesRequest>
@@ -2451,7 +2452,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Response for [PolicyBasedRouting.ListPolicyBasedRoutes][] method.
+  /// Response for
+  /// [PolicyBasedRoutingService.ListPolicyBasedRoutes][google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.ListPolicyBasedRoutes]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListPolicyBasedRoutesResponse : pb::IMessage<ListPolicyBasedRoutesResponse>
@@ -2506,7 +2509,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute> policyBasedRoutes_ = new pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute>();
     /// <summary>
-    /// Policy based routes to be returned.
+    /// Policy-based routes to be returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2706,7 +2709,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [PolicyBasedRouting.GetPolicyBasedRoute][] method.
+  /// Request for
+  /// [PolicyBasedRoutingService.GetPolicyBasedRoute][google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.GetPolicyBasedRoute]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPolicyBasedRouteRequest : pb::IMessage<GetPolicyBasedRouteRequest>
@@ -2902,7 +2907,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [PolicyBasedRouting.CreatePolicyBasedRoute][] method.
+  /// Request for
+  /// [PolicyBasedRoutingService.CreatePolicyBasedRoute][google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.CreatePolicyBasedRoute]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreatePolicyBasedRouteRequest : pb::IMessage<CreatePolicyBasedRouteRequest>
@@ -2971,7 +2978,14 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int PolicyBasedRouteIdFieldNumber = 2;
     private string policyBasedRouteId_ = "";
     /// <summary>
-    /// Required. Unique id for the Policy Based Route to create.
+    /// Required. Unique id for the policy-based route to create. Provided by the
+    /// client when the resource is created. The name must comply with
+    /// https://google.aip.dev/122#resource-id-segments. Specifically, the name
+    /// must be 1-63 characters long and match the regular expression
+    /// [a-z]([a-z0-9-]*[a-z0-9])?. The first character must be a lowercase letter,
+    /// and all following characters (except for the last character) must be a
+    /// dash, lowercase letter, or digit. The last character must be a lowercase
+    /// letter or digit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2986,7 +3000,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int PolicyBasedRouteFieldNumber = 3;
     private global::Google.Cloud.NetworkConnectivity.V1.PolicyBasedRoute policyBasedRoute_;
     /// <summary>
-    /// Required. Initial values for a new Policy Based Route.
+    /// Required. Initial values for a new policy-based route.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3002,15 +3016,15 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private string requestId_ = "";
     /// <summary>
     /// Optional. An optional request ID to identify requests. Specify a unique
-    /// request ID so that if you must retry your request, the server will know to
-    /// ignore the request if it has already been completed. The server will
-    /// guarantee that for at least 60 minutes since the first request.
+    /// request ID so that if you must retry your request, the server knows to
+    /// ignore the request if it has already been completed. The server guarantees
+    /// that for at least 60 minutes since the first request.
     ///
     /// For example, consider a situation where you make an initial request and
     /// the request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
-    /// was received, and if so, will ignore the second request. This prevents
-    /// clients from accidentally creating duplicate commitments.
+    /// was received, and if so, ignores the second request. This prevents clients
+    /// from accidentally creating duplicate commitments.
     ///
     /// The request ID must be a valid UUID with the exception that zero UUID is
     /// not supported (00000000-0000-0000-0000-000000000000).
@@ -3239,7 +3253,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// Request for [PolicyBasedRouting.DeletePolicyBasedRoute][] method.
+  /// Request for
+  /// [PolicyBasedRoutingService.DeletePolicyBasedRoute][google.cloud.networkconnectivity.v1.PolicyBasedRoutingService.DeletePolicyBasedRoute]
+  /// method.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeletePolicyBasedRouteRequest : pb::IMessage<DeletePolicyBasedRouteRequest>
@@ -3291,7 +3307,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. Name of the PolicyBasedRoute resource to delete.
+    /// Required. Name of the policy-based route resource to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3307,15 +3323,15 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private string requestId_ = "";
     /// <summary>
     /// Optional. An optional request ID to identify requests. Specify a unique
-    /// request ID so that if you must retry your request, the server will know to
-    /// ignore the request if it has already been completed. The server will
-    /// guarantee that for at least 60 minutes after the first request.
+    /// request ID so that if you must retry your request, the server knows to
+    /// ignore the request if it has already been completed. The server guarantees
+    /// that for at least 60 minutes after the first request.
     ///
     /// For example, consider a situation where you make an initial request and
     /// the request times out. If you make the request again with the same request
     /// ID, the server can check if original operation with the same request ID
-    /// was received, and if so, will ignore the second request. This prevents
-    /// clients from accidentally creating duplicate commitments.
+    /// was received, and if so, ignores the second request. This prevents clients
+    /// from accidentally creating duplicate commitments.
     ///
     /// The request ID must be a valid UUID with the exception that zero UUID is
     /// not supported (00000000-0000-0000-0000-000000000000).

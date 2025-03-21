@@ -122,7 +122,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public abstract partial class PolicyBasedRoutingServiceBase
     {
       /// <summary>
-      /// Lists PolicyBasedRoutes in a given project and location.
+      /// Lists policy-based routes in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -134,7 +134,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Gets details of a single PolicyBasedRoute.
+      /// Gets details of a single policy-based route.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -146,7 +146,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Creates a new PolicyBasedRoute in a given project and location.
+      /// Creates a new policy-based route in a given project and location.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -158,7 +158,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Deletes a single PolicyBasedRoute.
+      /// Deletes a single policy-based route.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -199,7 +199,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
 
       /// <summary>
-      /// Lists PolicyBasedRoutes in a given project and location.
+      /// Lists policy-based routes in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -212,7 +212,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return ListPolicyBasedRoutes(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists PolicyBasedRoutes in a given project and location.
+      /// Lists policy-based routes in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -223,7 +223,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListPolicyBasedRoutes, null, options, request);
       }
       /// <summary>
-      /// Lists PolicyBasedRoutes in a given project and location.
+      /// Lists policy-based routes in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -236,7 +236,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return ListPolicyBasedRoutesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists PolicyBasedRoutes in a given project and location.
+      /// Lists policy-based routes in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -247,7 +247,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListPolicyBasedRoutes, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single PolicyBasedRoute.
+      /// Gets details of a single policy-based route.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -260,7 +260,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return GetPolicyBasedRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single PolicyBasedRoute.
+      /// Gets details of a single policy-based route.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -271,7 +271,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetPolicyBasedRoute, null, options, request);
       }
       /// <summary>
-      /// Gets details of a single PolicyBasedRoute.
+      /// Gets details of a single policy-based route.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -284,7 +284,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return GetPolicyBasedRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets details of a single PolicyBasedRoute.
+      /// Gets details of a single policy-based route.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -295,7 +295,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetPolicyBasedRoute, null, options, request);
       }
       /// <summary>
-      /// Creates a new PolicyBasedRoute in a given project and location.
+      /// Creates a new policy-based route in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -308,7 +308,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CreatePolicyBasedRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new PolicyBasedRoute in a given project and location.
+      /// Creates a new policy-based route in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -319,7 +319,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePolicyBasedRoute, null, options, request);
       }
       /// <summary>
-      /// Creates a new PolicyBasedRoute in a given project and location.
+      /// Creates a new policy-based route in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -332,7 +332,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CreatePolicyBasedRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a new PolicyBasedRoute in a given project and location.
+      /// Creates a new policy-based route in a given project and location.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -343,7 +343,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePolicyBasedRoute, null, options, request);
       }
       /// <summary>
-      /// Deletes a single PolicyBasedRoute.
+      /// Deletes a single policy-based route.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -356,7 +356,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return DeletePolicyBasedRoute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single PolicyBasedRoute.
+      /// Deletes a single policy-based route.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -367,7 +367,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeletePolicyBasedRoute, null, options, request);
       }
       /// <summary>
-      /// Deletes a single PolicyBasedRoute.
+      /// Deletes a single policy-based route.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -380,7 +380,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return DeletePolicyBasedRouteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a single PolicyBasedRoute.
+      /// Deletes a single policy-based route.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

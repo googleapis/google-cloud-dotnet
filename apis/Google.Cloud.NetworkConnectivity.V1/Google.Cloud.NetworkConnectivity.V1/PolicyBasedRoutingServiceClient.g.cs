@@ -327,7 +327,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists PolicyBasedRoutes in a given project and location.
+        /// Lists policy-based routes in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -336,7 +336,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists PolicyBasedRoutes in a given project and location.
+        /// Lists policy-based routes in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -345,7 +345,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists PolicyBasedRoutes in a given project and location.
+        /// Lists policy-based routes in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -378,7 +378,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists PolicyBasedRoutes in a given project and location.
+        /// Lists policy-based routes in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -411,7 +411,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists PolicyBasedRoutes in a given project and location.
+        /// Lists policy-based routes in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -444,7 +444,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists PolicyBasedRoutes in a given project and location.
+        /// Lists policy-based routes in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name.
@@ -477,7 +477,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -486,7 +486,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -495,7 +495,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -504,7 +504,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetPolicyBasedRouteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the PolicyBasedRoute resource to get.
@@ -518,7 +518,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the PolicyBasedRoute resource to get.
@@ -532,7 +532,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the PolicyBasedRoute resource to get.
@@ -543,7 +543,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetPolicyBasedRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the PolicyBasedRoute resource to get.
@@ -557,7 +557,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the PolicyBasedRoute resource to get.
@@ -571,7 +571,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="name">
         /// Required. Name of the PolicyBasedRoute resource to get.
@@ -582,7 +582,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             GetPolicyBasedRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -591,7 +591,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -600,7 +600,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -636,16 +636,23 @@ namespace Google.Cloud.NetworkConnectivity.V1
             lro::Operation<PolicyBasedRoute, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreatePolicyBasedRouteOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name of the PolicyBasedRoute.
         /// </param>
         /// <param name="policyBasedRoute">
-        /// Required. Initial values for a new Policy Based Route.
+        /// Required. Initial values for a new policy-based route.
         /// </param>
         /// <param name="policyBasedRouteId">
-        /// Required. Unique id for the Policy Based Route to create.
+        /// Required. Unique id for the policy-based route to create. Provided by the
+        /// client when the resource is created. The name must comply with
+        /// https://google.aip.dev/122#resource-id-segments. Specifically, the name
+        /// must be 1-63 characters long and match the regular expression
+        /// [a-z]([a-z0-9-]*[a-z0-9])?. The first character must be a lowercase letter,
+        /// and all following characters (except for the last character) must be a
+        /// dash, lowercase letter, or digit. The last character must be a lowercase
+        /// letter or digit.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -658,16 +665,23 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name of the PolicyBasedRoute.
         /// </param>
         /// <param name="policyBasedRoute">
-        /// Required. Initial values for a new Policy Based Route.
+        /// Required. Initial values for a new policy-based route.
         /// </param>
         /// <param name="policyBasedRouteId">
-        /// Required. Unique id for the Policy Based Route to create.
+        /// Required. Unique id for the policy-based route to create. Provided by the
+        /// client when the resource is created. The name must comply with
+        /// https://google.aip.dev/122#resource-id-segments. Specifically, the name
+        /// must be 1-63 characters long and match the regular expression
+        /// [a-z]([a-z0-9-]*[a-z0-9])?. The first character must be a lowercase letter,
+        /// and all following characters (except for the last character) must be a
+        /// dash, lowercase letter, or digit. The last character must be a lowercase
+        /// letter or digit.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -680,16 +694,23 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name of the PolicyBasedRoute.
         /// </param>
         /// <param name="policyBasedRoute">
-        /// Required. Initial values for a new Policy Based Route.
+        /// Required. Initial values for a new policy-based route.
         /// </param>
         /// <param name="policyBasedRouteId">
-        /// Required. Unique id for the Policy Based Route to create.
+        /// Required. Unique id for the policy-based route to create. Provided by the
+        /// client when the resource is created. The name must comply with
+        /// https://google.aip.dev/122#resource-id-segments. Specifically, the name
+        /// must be 1-63 characters long and match the regular expression
+        /// [a-z]([a-z0-9-]*[a-z0-9])?. The first character must be a lowercase letter,
+        /// and all following characters (except for the last character) must be a
+        /// dash, lowercase letter, or digit. The last character must be a lowercase
+        /// letter or digit.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -697,16 +718,23 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreatePolicyBasedRouteAsync(parent, policyBasedRoute, policyBasedRouteId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name of the PolicyBasedRoute.
         /// </param>
         /// <param name="policyBasedRoute">
-        /// Required. Initial values for a new Policy Based Route.
+        /// Required. Initial values for a new policy-based route.
         /// </param>
         /// <param name="policyBasedRouteId">
-        /// Required. Unique id for the Policy Based Route to create.
+        /// Required. Unique id for the policy-based route to create. Provided by the
+        /// client when the resource is created. The name must comply with
+        /// https://google.aip.dev/122#resource-id-segments. Specifically, the name
+        /// must be 1-63 characters long and match the regular expression
+        /// [a-z]([a-z0-9-]*[a-z0-9])?. The first character must be a lowercase letter,
+        /// and all following characters (except for the last character) must be a
+        /// dash, lowercase letter, or digit. The last character must be a lowercase
+        /// letter or digit.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -719,16 +747,23 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name of the PolicyBasedRoute.
         /// </param>
         /// <param name="policyBasedRoute">
-        /// Required. Initial values for a new Policy Based Route.
+        /// Required. Initial values for a new policy-based route.
         /// </param>
         /// <param name="policyBasedRouteId">
-        /// Required. Unique id for the Policy Based Route to create.
+        /// Required. Unique id for the policy-based route to create. Provided by the
+        /// client when the resource is created. The name must comply with
+        /// https://google.aip.dev/122#resource-id-segments. Specifically, the name
+        /// must be 1-63 characters long and match the regular expression
+        /// [a-z]([a-z0-9-]*[a-z0-9])?. The first character must be a lowercase letter,
+        /// and all following characters (except for the last character) must be a
+        /// dash, lowercase letter, or digit. The last character must be a lowercase
+        /// letter or digit.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -741,16 +776,23 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource's name of the PolicyBasedRoute.
         /// </param>
         /// <param name="policyBasedRoute">
-        /// Required. Initial values for a new Policy Based Route.
+        /// Required. Initial values for a new policy-based route.
         /// </param>
         /// <param name="policyBasedRouteId">
-        /// Required. Unique id for the Policy Based Route to create.
+        /// Required. Unique id for the policy-based route to create. Provided by the
+        /// client when the resource is created. The name must comply with
+        /// https://google.aip.dev/122#resource-id-segments. Specifically, the name
+        /// must be 1-63 characters long and match the regular expression
+        /// [a-z]([a-z0-9-]*[a-z0-9])?. The first character must be a lowercase letter,
+        /// and all following characters (except for the last character) must be a
+        /// dash, lowercase letter, or digit. The last character must be a lowercase
+        /// letter or digit.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -758,7 +800,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreatePolicyBasedRouteAsync(parent, policyBasedRoute, policyBasedRouteId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -767,7 +809,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -776,7 +818,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -812,10 +854,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
             lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeletePolicyBasedRouteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the PolicyBasedRoute resource to delete.
+        /// Required. Name of the policy-based route resource to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -826,10 +868,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the PolicyBasedRoute resource to delete.
+        /// Required. Name of the policy-based route resource to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -840,10 +882,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the PolicyBasedRoute resource to delete.
+        /// Required. Name of the policy-based route resource to delete.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -851,10 +893,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
             DeletePolicyBasedRouteAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the PolicyBasedRoute resource to delete.
+        /// Required. Name of the policy-based route resource to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -865,10 +907,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the PolicyBasedRoute resource to delete.
+        /// Required. Name of the policy-based route resource to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -879,10 +921,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="name">
-        /// Required. Name of the PolicyBasedRoute resource to delete.
+        /// Required. Name of the policy-based route resource to delete.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -972,7 +1014,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_DeletePolicyBasedRouteRequest(ref DeletePolicyBasedRouteRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists PolicyBasedRoutes in a given project and location.
+        /// Lists policy-based routes in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -984,7 +1026,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Lists PolicyBasedRoutes in a given project and location.
+        /// Lists policy-based routes in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -996,7 +1038,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1008,7 +1050,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Gets details of a single PolicyBasedRoute.
+        /// Gets details of a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1023,7 +1065,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public override lro::OperationsClient CreatePolicyBasedRouteOperationsClient { get; }
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1035,7 +1077,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Creates a new PolicyBasedRoute in a given project and location.
+        /// Creates a new policy-based route in a given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1050,7 +1092,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         public override lro::OperationsClient DeletePolicyBasedRouteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1062,7 +1104,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
 
         /// <summary>
-        /// Deletes a single PolicyBasedRoute.
+        /// Deletes a single policy-based route.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

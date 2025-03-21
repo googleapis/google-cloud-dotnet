@@ -5,6 +5,123 @@
   "protoPackage": "google.cloud.networkconnectivity.v1",
   "libraryPackage": "Google.Cloud.NetworkConnectivity.V1",
   "services": {
+    "CrossNetworkAutomationService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CrossNetworkAutomationServiceClient",
+          "rpcs": {
+            "CreateServiceConnectionMap": {
+              "methods": [
+                "CreateServiceConnectionMap",
+                "CreateServiceConnectionMapAsync"
+              ]
+            },
+            "CreateServiceConnectionPolicy": {
+              "methods": [
+                "CreateServiceConnectionPolicy",
+                "CreateServiceConnectionPolicyAsync"
+              ]
+            },
+            "CreateServiceConnectionToken": {
+              "methods": [
+                "CreateServiceConnectionToken",
+                "CreateServiceConnectionTokenAsync"
+              ]
+            },
+            "DeleteServiceClass": {
+              "methods": [
+                "DeleteServiceClass",
+                "DeleteServiceClassAsync"
+              ]
+            },
+            "DeleteServiceConnectionMap": {
+              "methods": [
+                "DeleteServiceConnectionMap",
+                "DeleteServiceConnectionMapAsync"
+              ]
+            },
+            "DeleteServiceConnectionPolicy": {
+              "methods": [
+                "DeleteServiceConnectionPolicy",
+                "DeleteServiceConnectionPolicyAsync"
+              ]
+            },
+            "DeleteServiceConnectionToken": {
+              "methods": [
+                "DeleteServiceConnectionToken",
+                "DeleteServiceConnectionTokenAsync"
+              ]
+            },
+            "GetServiceClass": {
+              "methods": [
+                "GetServiceClass",
+                "GetServiceClassAsync"
+              ]
+            },
+            "GetServiceConnectionMap": {
+              "methods": [
+                "GetServiceConnectionMap",
+                "GetServiceConnectionMapAsync"
+              ]
+            },
+            "GetServiceConnectionPolicy": {
+              "methods": [
+                "GetServiceConnectionPolicy",
+                "GetServiceConnectionPolicyAsync"
+              ]
+            },
+            "GetServiceConnectionToken": {
+              "methods": [
+                "GetServiceConnectionToken",
+                "GetServiceConnectionTokenAsync"
+              ]
+            },
+            "ListServiceClasses": {
+              "methods": [
+                "ListServiceClasses",
+                "ListServiceClassesAsync"
+              ]
+            },
+            "ListServiceConnectionMaps": {
+              "methods": [
+                "ListServiceConnectionMaps",
+                "ListServiceConnectionMapsAsync"
+              ]
+            },
+            "ListServiceConnectionPolicies": {
+              "methods": [
+                "ListServiceConnectionPolicies",
+                "ListServiceConnectionPoliciesAsync"
+              ]
+            },
+            "ListServiceConnectionTokens": {
+              "methods": [
+                "ListServiceConnectionTokens",
+                "ListServiceConnectionTokensAsync"
+              ]
+            },
+            "UpdateServiceClass": {
+              "methods": [
+                "UpdateServiceClass",
+                "UpdateServiceClassAsync"
+              ]
+            },
+            "UpdateServiceConnectionMap": {
+              "methods": [
+                "UpdateServiceConnectionMap",
+                "UpdateServiceConnectionMapAsync"
+              ]
+            },
+            "UpdateServiceConnectionPolicy": {
+              "methods": [
+                "UpdateServiceConnectionPolicy",
+                "UpdateServiceConnectionPolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "HubService": {
       "clients": {
         "grpc": {
@@ -14,6 +131,12 @@
               "methods": [
                 "AcceptHubSpoke",
                 "AcceptHubSpokeAsync"
+              ]
+            },
+            "AcceptSpokeUpdate": {
+              "methods": [
+                "AcceptSpokeUpdate",
+                "AcceptSpokeUpdateAsync"
               ]
             },
             "CreateHub": {
@@ -116,6 +239,12 @@
               "methods": [
                 "RejectHubSpoke",
                 "RejectHubSpokeAsync"
+              ]
+            },
+            "RejectSpokeUpdate": {
+              "methods": [
+                "RejectSpokeUpdate",
+                "RejectSpokeUpdateAsync"
               ]
             },
             "UpdateGroup": {

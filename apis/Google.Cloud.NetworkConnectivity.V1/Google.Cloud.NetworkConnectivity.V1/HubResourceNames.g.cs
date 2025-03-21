@@ -1995,6 +1995,48 @@ namespace Google.Cloud.NetworkConnectivity.V1
         }
     }
 
+    public partial class AcceptSpokeUpdateRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::HubName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::HubName HubName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::HubName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SpokeName"/>-typed view over the <see cref="SpokeUri"/> resource name property.
+        /// </summary>
+        public SpokeName SpokeUriAsSpokeName
+        {
+            get => string.IsNullOrEmpty(SpokeUri) ? null : SpokeName.Parse(SpokeUri, allowUnparsed: true);
+            set => SpokeUri = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RejectSpokeUpdateRequest
+    {
+        /// <summary>
+        /// <see cref="gcnv::HubName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcnv::HubName HubName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcnv::HubName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SpokeName"/>-typed view over the <see cref="SpokeUri"/> resource name property.
+        /// </summary>
+        public SpokeName SpokeUriAsSpokeName
+        {
+            get => string.IsNullOrEmpty(SpokeUri) ? null : SpokeName.Parse(SpokeUri, allowUnparsed: true);
+            set => SpokeUri = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetRouteTableRequest
     {
         /// <summary>

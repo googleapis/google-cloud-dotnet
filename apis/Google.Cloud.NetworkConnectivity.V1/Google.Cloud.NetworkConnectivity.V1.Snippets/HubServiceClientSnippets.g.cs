@@ -2551,6 +2551,402 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for AcceptSpokeUpdate</summary>
+        public void AcceptSpokeUpdateRequestObject()
+        {
+            // Snippet: AcceptSpokeUpdate(AcceptSpokeUpdateRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            AcceptSpokeUpdateRequest request = new AcceptSpokeUpdateRequest
+            {
+                HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
+                SpokeUriAsSpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
+                SpokeEtag = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> response = hubServiceClient.AcceptSpokeUpdate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AcceptSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceAcceptSpokeUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AcceptSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptSpokeUpdateAsync</summary>
+        public async Task AcceptSpokeUpdateRequestObjectAsync()
+        {
+            // Snippet: AcceptSpokeUpdateAsync(AcceptSpokeUpdateRequest, CallSettings)
+            // Additional: AcceptSpokeUpdateAsync(AcceptSpokeUpdateRequest, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AcceptSpokeUpdateRequest request = new AcceptSpokeUpdateRequest
+            {
+                HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
+                SpokeUriAsSpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
+                SpokeEtag = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> response = await hubServiceClient.AcceptSpokeUpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AcceptSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceAcceptSpokeUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AcceptSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptSpokeUpdate</summary>
+        public void AcceptSpokeUpdate()
+        {
+            // Snippet: AcceptSpokeUpdate(string, string, string, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/global/hubs/[HUB]";
+            string spokeUri = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]";
+            string spokeEtag = "";
+            // Make the request
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> response = hubServiceClient.AcceptSpokeUpdate(name, spokeUri, spokeEtag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AcceptSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceAcceptSpokeUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AcceptSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptSpokeUpdateAsync</summary>
+        public async Task AcceptSpokeUpdateAsync()
+        {
+            // Snippet: AcceptSpokeUpdateAsync(string, string, string, CallSettings)
+            // Additional: AcceptSpokeUpdateAsync(string, string, string, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/global/hubs/[HUB]";
+            string spokeUri = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]";
+            string spokeEtag = "";
+            // Make the request
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> response = await hubServiceClient.AcceptSpokeUpdateAsync(name, spokeUri, spokeEtag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AcceptSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceAcceptSpokeUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AcceptSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptSpokeUpdate</summary>
+        public void AcceptSpokeUpdateResourceNames()
+        {
+            // Snippet: AcceptSpokeUpdate(HubName, SpokeName, string, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            HubName name = HubName.FromProjectHub("[PROJECT]", "[HUB]");
+            SpokeName spokeUri = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]");
+            string spokeEtag = "";
+            // Make the request
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> response = hubServiceClient.AcceptSpokeUpdate(name, spokeUri, spokeEtag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AcceptSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceAcceptSpokeUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AcceptSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AcceptSpokeUpdateAsync</summary>
+        public async Task AcceptSpokeUpdateResourceNamesAsync()
+        {
+            // Snippet: AcceptSpokeUpdateAsync(HubName, SpokeName, string, CallSettings)
+            // Additional: AcceptSpokeUpdateAsync(HubName, SpokeName, string, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            HubName name = HubName.FromProjectHub("[PROJECT]", "[HUB]");
+            SpokeName spokeUri = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]");
+            string spokeEtag = "";
+            // Make the request
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> response = await hubServiceClient.AcceptSpokeUpdateAsync(name, spokeUri, spokeEtag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AcceptSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AcceptSpokeUpdateResponse, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceAcceptSpokeUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AcceptSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RejectSpokeUpdate</summary>
+        public void RejectSpokeUpdateRequestObject()
+        {
+            // Snippet: RejectSpokeUpdate(RejectSpokeUpdateRequest, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            RejectSpokeUpdateRequest request = new RejectSpokeUpdateRequest
+            {
+                HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
+                SpokeUriAsSpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
+                SpokeEtag = "",
+                Details = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> response = hubServiceClient.RejectSpokeUpdate(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RejectSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceRejectSpokeUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RejectSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RejectSpokeUpdateAsync</summary>
+        public async Task RejectSpokeUpdateRequestObjectAsync()
+        {
+            // Snippet: RejectSpokeUpdateAsync(RejectSpokeUpdateRequest, CallSettings)
+            // Additional: RejectSpokeUpdateAsync(RejectSpokeUpdateRequest, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RejectSpokeUpdateRequest request = new RejectSpokeUpdateRequest
+            {
+                HubName = HubName.FromProjectHub("[PROJECT]", "[HUB]"),
+                SpokeUriAsSpokeName = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]"),
+                SpokeEtag = "",
+                Details = "",
+                RequestId = "",
+            };
+            // Make the request
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> response = await hubServiceClient.RejectSpokeUpdateAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RejectSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceRejectSpokeUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RejectSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RejectSpokeUpdate</summary>
+        public void RejectSpokeUpdate()
+        {
+            // Snippet: RejectSpokeUpdate(string, string, string, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/global/hubs/[HUB]";
+            string spokeUri = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]";
+            string spokeEtag = "";
+            // Make the request
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> response = hubServiceClient.RejectSpokeUpdate(name, spokeUri, spokeEtag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RejectSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceRejectSpokeUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RejectSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RejectSpokeUpdateAsync</summary>
+        public async Task RejectSpokeUpdateAsync()
+        {
+            // Snippet: RejectSpokeUpdateAsync(string, string, string, CallSettings)
+            // Additional: RejectSpokeUpdateAsync(string, string, string, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/global/hubs/[HUB]";
+            string spokeUri = "projects/[PROJECT]/locations/[LOCATION]/spokes/[SPOKE]";
+            string spokeEtag = "";
+            // Make the request
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> response = await hubServiceClient.RejectSpokeUpdateAsync(name, spokeUri, spokeEtag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RejectSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceRejectSpokeUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RejectSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RejectSpokeUpdate</summary>
+        public void RejectSpokeUpdateResourceNames()
+        {
+            // Snippet: RejectSpokeUpdate(HubName, SpokeName, string, CallSettings)
+            // Create client
+            HubServiceClient hubServiceClient = HubServiceClient.Create();
+            // Initialize request argument(s)
+            HubName name = HubName.FromProjectHub("[PROJECT]", "[HUB]");
+            SpokeName spokeUri = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]");
+            string spokeEtag = "";
+            // Make the request
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> response = hubServiceClient.RejectSpokeUpdate(name, spokeUri, spokeEtag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RejectSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> retrievedResponse = hubServiceClient.PollOnceRejectSpokeUpdate(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RejectSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RejectSpokeUpdateAsync</summary>
+        public async Task RejectSpokeUpdateResourceNamesAsync()
+        {
+            // Snippet: RejectSpokeUpdateAsync(HubName, SpokeName, string, CallSettings)
+            // Additional: RejectSpokeUpdateAsync(HubName, SpokeName, string, CancellationToken)
+            // Create client
+            HubServiceClient hubServiceClient = await HubServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            HubName name = HubName.FromProjectHub("[PROJECT]", "[HUB]");
+            SpokeName spokeUri = SpokeName.FromProjectLocationSpoke("[PROJECT]", "[LOCATION]", "[SPOKE]");
+            string spokeEtag = "";
+            // Make the request
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> response = await hubServiceClient.RejectSpokeUpdateAsync(name, spokeUri, spokeEtag);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RejectSpokeUpdateResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RejectSpokeUpdateResponse, OperationMetadata> retrievedResponse = await hubServiceClient.PollOnceRejectSpokeUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RejectSpokeUpdateResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteSpoke</summary>
         public void DeleteSpokeRequestObject()
         {
