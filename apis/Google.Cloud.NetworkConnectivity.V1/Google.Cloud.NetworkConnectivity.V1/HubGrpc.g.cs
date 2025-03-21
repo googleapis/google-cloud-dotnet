@@ -106,6 +106,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_AcceptHubSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest> __Marshaller_google_cloud_networkconnectivity_v1_AcceptSpokeUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest> __Marshaller_google_cloud_networkconnectivity_v1_RejectSpokeUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest> __Marshaller_google_cloud_networkconnectivity_v1_DeleteSpokeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest> __Marshaller_google_cloud_networkconnectivity_v1_GetRouteTableRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest.Parser));
@@ -236,6 +240,22 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         __ServiceName,
         "AcceptHubSpoke",
         __Marshaller_google_cloud_networkconnectivity_v1_AcceptHubSpokeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest, global::Google.LongRunning.Operation> __Method_AcceptSpokeUpdate = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AcceptSpokeUpdate",
+        __Marshaller_google_cloud_networkconnectivity_v1_AcceptSpokeUpdateRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest, global::Google.LongRunning.Operation> __Method_RejectSpokeUpdate = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RejectSpokeUpdate",
+        __Marshaller_google_cloud_networkconnectivity_v1_RejectSpokeUpdateRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -473,6 +493,30 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AcceptHubSpoke(global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AcceptSpokeUpdate(global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RejectSpokeUpdate(global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1263,6 +1307,102 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_AcceptHubSpoke, null, options, request);
       }
       /// <summary>
+      /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AcceptSpokeUpdate(global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcceptSpokeUpdate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AcceptSpokeUpdate(global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AcceptSpokeUpdate, null, options, request);
+      }
+      /// <summary>
+      /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AcceptSpokeUpdateAsync(global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcceptSpokeUpdateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AcceptSpokeUpdateAsync(global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AcceptSpokeUpdate, null, options, request);
+      }
+      /// <summary>
+      /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RejectSpokeUpdate(global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RejectSpokeUpdate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RejectSpokeUpdate(global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RejectSpokeUpdate, null, options, request);
+      }
+      /// <summary>
+      /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RejectSpokeUpdateAsync(global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RejectSpokeUpdateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RejectSpokeUpdateAsync(global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RejectSpokeUpdate, null, options, request);
+      }
+      /// <summary>
       /// Deletes a Network Connectivity Center spoke.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1673,6 +1813,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           .AddMethod(__Method_UpdateSpoke, serviceImpl.UpdateSpoke)
           .AddMethod(__Method_RejectHubSpoke, serviceImpl.RejectHubSpoke)
           .AddMethod(__Method_AcceptHubSpoke, serviceImpl.AcceptHubSpoke)
+          .AddMethod(__Method_AcceptSpokeUpdate, serviceImpl.AcceptSpokeUpdate)
+          .AddMethod(__Method_RejectSpokeUpdate, serviceImpl.RejectSpokeUpdate)
           .AddMethod(__Method_DeleteSpoke, serviceImpl.DeleteSpoke)
           .AddMethod(__Method_GetRouteTable, serviceImpl.GetRouteTable)
           .AddMethod(__Method_GetRoute, serviceImpl.GetRoute)
@@ -1703,6 +1845,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       serviceBinder.AddMethod(__Method_UpdateSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.UpdateSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSpoke));
       serviceBinder.AddMethod(__Method_RejectHubSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.RejectHubSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.RejectHubSpoke));
       serviceBinder.AddMethod(__Method_AcceptHubSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.AcceptHubSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.AcceptHubSpoke));
+      serviceBinder.AddMethod(__Method_AcceptSpokeUpdate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.AcceptSpokeUpdateRequest, global::Google.LongRunning.Operation>(serviceImpl.AcceptSpokeUpdate));
+      serviceBinder.AddMethod(__Method_RejectSpokeUpdate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.RejectSpokeUpdateRequest, global::Google.LongRunning.Operation>(serviceImpl.RejectSpokeUpdate));
       serviceBinder.AddMethod(__Method_DeleteSpoke, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.DeleteSpokeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSpoke));
       serviceBinder.AddMethod(__Method_GetRouteTable, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetRouteTableRequest, global::Google.Cloud.NetworkConnectivity.V1.RouteTable>(serviceImpl.GetRouteTable));
       serviceBinder.AddMethod(__Method_GetRoute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1.GetRouteRequest, global::Google.Cloud.NetworkConnectivity.V1.Route>(serviceImpl.GetRoute));

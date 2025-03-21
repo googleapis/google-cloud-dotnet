@@ -70,6 +70,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
             RejectHubSpokeOperationsSettings = existing.RejectHubSpokeOperationsSettings.Clone();
             AcceptHubSpokeSettings = existing.AcceptHubSpokeSettings;
             AcceptHubSpokeOperationsSettings = existing.AcceptHubSpokeOperationsSettings.Clone();
+            AcceptSpokeUpdateSettings = existing.AcceptSpokeUpdateSettings;
+            AcceptSpokeUpdateOperationsSettings = existing.AcceptSpokeUpdateOperationsSettings.Clone();
+            RejectSpokeUpdateSettings = existing.RejectSpokeUpdateSettings;
+            RejectSpokeUpdateOperationsSettings = existing.RejectSpokeUpdateOperationsSettings.Clone();
             DeleteSpokeSettings = existing.DeleteSpokeSettings;
             DeleteSpokeOperationsSettings = existing.DeleteSpokeOperationsSettings.Clone();
             GetRouteTableSettings = existing.GetRouteTableSettings;
@@ -413,6 +417,78 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings AcceptHubSpokeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.AcceptSpokeUpdate</c> and <c>HubServiceClient.AcceptSpokeUpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AcceptSpokeUpdateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>HubServiceClient.AcceptSpokeUpdate</c> and
+        /// <c>HubServiceClient.AcceptSpokeUpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AcceptSpokeUpdateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HubServiceClient.RejectSpokeUpdate</c> and <c>HubServiceClient.RejectSpokeUpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RejectSpokeUpdateSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>HubServiceClient.RejectSpokeUpdate</c> and
+        /// <c>HubServiceClient.RejectSpokeUpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RejectSpokeUpdateOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2643,6 +2719,358 @@ namespace Google.Cloud.NetworkConnectivity.V1
             AcceptHubSpokeAsync(name, spokeUri, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata> AcceptSpokeUpdate(AcceptSpokeUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>> AcceptSpokeUpdateAsync(AcceptSpokeUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>> AcceptSpokeUpdateAsync(AcceptSpokeUpdateRequest request, st::CancellationToken cancellationToken) =>
+            AcceptSpokeUpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AcceptSpokeUpdate</c>.</summary>
+        public virtual lro::OperationsClient AcceptSpokeUpdateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AcceptSpokeUpdate</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata> PollOnceAcceptSpokeUpdate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AcceptSpokeUpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AcceptSpokeUpdate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>> PollOnceAcceptSpokeUpdateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AcceptSpokeUpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to accept spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to accept update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to accept update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata> AcceptSpokeUpdate(string name, string spokeUri, string spokeEtag, gaxgrpc::CallSettings callSettings = null) =>
+            AcceptSpokeUpdate(new AcceptSpokeUpdateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SpokeUri = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeUri, nameof(spokeUri)),
+                SpokeEtag = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeEtag, nameof(spokeEtag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to accept spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to accept update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to accept update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>> AcceptSpokeUpdateAsync(string name, string spokeUri, string spokeEtag, gaxgrpc::CallSettings callSettings = null) =>
+            AcceptSpokeUpdateAsync(new AcceptSpokeUpdateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SpokeUri = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeUri, nameof(spokeUri)),
+                SpokeEtag = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeEtag, nameof(spokeEtag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to accept spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to accept update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to accept update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>> AcceptSpokeUpdateAsync(string name, string spokeUri, string spokeEtag, st::CancellationToken cancellationToken) =>
+            AcceptSpokeUpdateAsync(name, spokeUri, spokeEtag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to accept spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to accept update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to accept update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata> AcceptSpokeUpdate(HubName name, SpokeName spokeUri, string spokeEtag, gaxgrpc::CallSettings callSettings = null) =>
+            AcceptSpokeUpdate(new AcceptSpokeUpdateRequest
+            {
+                HubName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SpokeUriAsSpokeName = gax::GaxPreconditions.CheckNotNull(spokeUri, nameof(spokeUri)),
+                SpokeEtag = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeEtag, nameof(spokeEtag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to accept spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to accept update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to accept update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>> AcceptSpokeUpdateAsync(HubName name, SpokeName spokeUri, string spokeEtag, gaxgrpc::CallSettings callSettings = null) =>
+            AcceptSpokeUpdateAsync(new AcceptSpokeUpdateRequest
+            {
+                HubName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SpokeUriAsSpokeName = gax::GaxPreconditions.CheckNotNull(spokeUri, nameof(spokeUri)),
+                SpokeEtag = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeEtag, nameof(spokeEtag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to accept spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to accept update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to accept update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>> AcceptSpokeUpdateAsync(HubName name, SpokeName spokeUri, string spokeEtag, st::CancellationToken cancellationToken) =>
+            AcceptSpokeUpdateAsync(name, spokeUri, spokeEtag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RejectSpokeUpdateResponse, OperationMetadata> RejectSpokeUpdate(RejectSpokeUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>> RejectSpokeUpdateAsync(RejectSpokeUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>> RejectSpokeUpdateAsync(RejectSpokeUpdateRequest request, st::CancellationToken cancellationToken) =>
+            RejectSpokeUpdateAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RejectSpokeUpdate</c>.</summary>
+        public virtual lro::OperationsClient RejectSpokeUpdateOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RejectSpokeUpdate</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<RejectSpokeUpdateResponse, OperationMetadata> PollOnceRejectSpokeUpdate(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RejectSpokeUpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RejectSpokeUpdate</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>> PollOnceRejectSpokeUpdateAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RejectSpokeUpdateOperationsClient, callSettings);
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to reject spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to reject update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to reject update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RejectSpokeUpdateResponse, OperationMetadata> RejectSpokeUpdate(string name, string spokeUri, string spokeEtag, gaxgrpc::CallSettings callSettings = null) =>
+            RejectSpokeUpdate(new RejectSpokeUpdateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SpokeUri = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeUri, nameof(spokeUri)),
+                SpokeEtag = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeEtag, nameof(spokeEtag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to reject spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to reject update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to reject update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>> RejectSpokeUpdateAsync(string name, string spokeUri, string spokeEtag, gaxgrpc::CallSettings callSettings = null) =>
+            RejectSpokeUpdateAsync(new RejectSpokeUpdateRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                SpokeUri = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeUri, nameof(spokeUri)),
+                SpokeEtag = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeEtag, nameof(spokeEtag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to reject spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to reject update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to reject update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>> RejectSpokeUpdateAsync(string name, string spokeUri, string spokeEtag, st::CancellationToken cancellationToken) =>
+            RejectSpokeUpdateAsync(name, spokeUri, spokeEtag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to reject spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to reject update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to reject update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<RejectSpokeUpdateResponse, OperationMetadata> RejectSpokeUpdate(HubName name, SpokeName spokeUri, string spokeEtag, gaxgrpc::CallSettings callSettings = null) =>
+            RejectSpokeUpdate(new RejectSpokeUpdateRequest
+            {
+                HubName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SpokeUriAsSpokeName = gax::GaxPreconditions.CheckNotNull(spokeUri, nameof(spokeUri)),
+                SpokeEtag = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeEtag, nameof(spokeEtag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to reject spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to reject update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to reject update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>> RejectSpokeUpdateAsync(HubName name, SpokeName spokeUri, string spokeEtag, gaxgrpc::CallSettings callSettings = null) =>
+            RejectSpokeUpdateAsync(new RejectSpokeUpdateRequest
+            {
+                HubName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                SpokeUriAsSpokeName = gax::GaxPreconditions.CheckNotNull(spokeUri, nameof(spokeUri)),
+                SpokeEtag = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeEtag, nameof(spokeEtag)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the hub to reject spoke update.
+        /// </param>
+        /// <param name="spokeUri">
+        /// Required. The URI of the spoke to reject update.
+        /// </param>
+        /// <param name="spokeEtag">
+        /// Required. The etag of the spoke to reject update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>> RejectSpokeUpdateAsync(HubName name, SpokeName spokeUri, string spokeEtag, st::CancellationToken cancellationToken) =>
+            RejectSpokeUpdateAsync(name, spokeUri, spokeEtag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes a Network Connectivity Center spoke.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -3688,6 +4116,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
 
         private readonly gaxgrpc::ApiCall<AcceptHubSpokeRequest, lro::Operation> _callAcceptHubSpoke;
 
+        private readonly gaxgrpc::ApiCall<AcceptSpokeUpdateRequest, lro::Operation> _callAcceptSpokeUpdate;
+
+        private readonly gaxgrpc::ApiCall<RejectSpokeUpdateRequest, lro::Operation> _callRejectSpokeUpdate;
+
         private readonly gaxgrpc::ApiCall<DeleteSpokeRequest, lro::Operation> _callDeleteSpoke;
 
         private readonly gaxgrpc::ApiCall<GetRouteTableRequest, RouteTable> _callGetRouteTable;
@@ -3726,6 +4158,8 @@ namespace Google.Cloud.NetworkConnectivity.V1
             UpdateSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateSpokeOperationsSettings, logger);
             RejectHubSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RejectHubSpokeOperationsSettings, logger);
             AcceptHubSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AcceptHubSpokeOperationsSettings, logger);
+            AcceptSpokeUpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AcceptSpokeUpdateOperationsSettings, logger);
+            RejectSpokeUpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RejectSpokeUpdateOperationsSettings, logger);
             DeleteSpokeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteSpokeOperationsSettings, logger);
             UpdateGroupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateGroupOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
@@ -3769,6 +4203,12 @@ namespace Google.Cloud.NetworkConnectivity.V1
             _callAcceptHubSpoke = clientHelper.BuildApiCall<AcceptHubSpokeRequest, lro::Operation>("AcceptHubSpoke", grpcClient.AcceptHubSpokeAsync, grpcClient.AcceptHubSpoke, effectiveSettings.AcceptHubSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAcceptHubSpoke);
             Modify_AcceptHubSpokeApiCall(ref _callAcceptHubSpoke);
+            _callAcceptSpokeUpdate = clientHelper.BuildApiCall<AcceptSpokeUpdateRequest, lro::Operation>("AcceptSpokeUpdate", grpcClient.AcceptSpokeUpdateAsync, grpcClient.AcceptSpokeUpdate, effectiveSettings.AcceptSpokeUpdateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callAcceptSpokeUpdate);
+            Modify_AcceptSpokeUpdateApiCall(ref _callAcceptSpokeUpdate);
+            _callRejectSpokeUpdate = clientHelper.BuildApiCall<RejectSpokeUpdateRequest, lro::Operation>("RejectSpokeUpdate", grpcClient.RejectSpokeUpdateAsync, grpcClient.RejectSpokeUpdate, effectiveSettings.RejectSpokeUpdateSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRejectSpokeUpdate);
+            Modify_RejectSpokeUpdateApiCall(ref _callRejectSpokeUpdate);
             _callDeleteSpoke = clientHelper.BuildApiCall<DeleteSpokeRequest, lro::Operation>("DeleteSpoke", grpcClient.DeleteSpokeAsync, grpcClient.DeleteSpoke, effectiveSettings.DeleteSpokeSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSpoke);
             Modify_DeleteSpokeApiCall(ref _callDeleteSpoke);
@@ -3824,6 +4264,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
 
         partial void Modify_AcceptHubSpokeApiCall(ref gaxgrpc::ApiCall<AcceptHubSpokeRequest, lro::Operation> call);
 
+        partial void Modify_AcceptSpokeUpdateApiCall(ref gaxgrpc::ApiCall<AcceptSpokeUpdateRequest, lro::Operation> call);
+
+        partial void Modify_RejectSpokeUpdateApiCall(ref gaxgrpc::ApiCall<RejectSpokeUpdateRequest, lro::Operation> call);
+
         partial void Modify_DeleteSpokeApiCall(ref gaxgrpc::ApiCall<DeleteSpokeRequest, lro::Operation> call);
 
         partial void Modify_GetRouteTableApiCall(ref gaxgrpc::ApiCall<GetRouteTableRequest, RouteTable> call);
@@ -3876,6 +4320,10 @@ namespace Google.Cloud.NetworkConnectivity.V1
         partial void Modify_RejectHubSpokeRequest(ref RejectHubSpokeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AcceptHubSpokeRequest(ref AcceptHubSpokeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AcceptSpokeUpdateRequest(ref AcceptSpokeUpdateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RejectSpokeUpdateRequest(ref RejectSpokeUpdateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSpokeRequest(ref DeleteSpokeRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4242,6 +4690,60 @@ namespace Google.Cloud.NetworkConnectivity.V1
         {
             Modify_AcceptHubSpokeRequest(ref request, ref callSettings);
             return new lro::Operation<AcceptHubSpokeResponse, OperationMetadata>(await _callAcceptHubSpoke.Async(request, callSettings).ConfigureAwait(false), AcceptHubSpokeOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>AcceptSpokeUpdate</c>.</summary>
+        public override lro::OperationsClient AcceptSpokeUpdateOperationsClient { get; }
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata> AcceptSpokeUpdate(AcceptSpokeUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AcceptSpokeUpdateRequest(ref request, ref callSettings);
+            return new lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>(_callAcceptSpokeUpdate.Sync(request, callSettings), AcceptSpokeUpdateOperationsClient);
+        }
+
+        /// <summary>
+        /// Accepts a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>> AcceptSpokeUpdateAsync(AcceptSpokeUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AcceptSpokeUpdateRequest(ref request, ref callSettings);
+            return new lro::Operation<AcceptSpokeUpdateResponse, OperationMetadata>(await _callAcceptSpokeUpdate.Async(request, callSettings).ConfigureAwait(false), AcceptSpokeUpdateOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RejectSpokeUpdate</c>.</summary>
+        public override lro::OperationsClient RejectSpokeUpdateOperationsClient { get; }
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<RejectSpokeUpdateResponse, OperationMetadata> RejectSpokeUpdate(RejectSpokeUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RejectSpokeUpdateRequest(ref request, ref callSettings);
+            return new lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>(_callRejectSpokeUpdate.Sync(request, callSettings), RejectSpokeUpdateOperationsClient);
+        }
+
+        /// <summary>
+        /// Rejects a proposal to update a Network Connectivity Center spoke in a hub.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>> RejectSpokeUpdateAsync(RejectSpokeUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RejectSpokeUpdateRequest(ref request, ref callSettings);
+            return new lro::Operation<RejectSpokeUpdateResponse, OperationMetadata>(await _callRejectSpokeUpdate.Async(request, callSettings).ConfigureAwait(false), RejectSpokeUpdateOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteSpoke</c>.</summary>

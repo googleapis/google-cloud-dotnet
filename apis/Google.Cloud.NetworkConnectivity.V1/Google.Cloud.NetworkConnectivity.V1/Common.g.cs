@@ -33,7 +33,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0YXJn",
             "ZXQYAyABKAlCA+BBAxIRCgR2ZXJiGAQgASgJQgPgQQMSGwoOc3RhdHVzX21l",
             "c3NhZ2UYBSABKAlCA+BBAxIjChZyZXF1ZXN0ZWRfY2FuY2VsbGF0aW9uGAYg",
-            "ASgIQgPgQQMSGAoLYXBpX3ZlcnNpb24YByABKAlCA+BBA0LaAwonY29tLmdv",
+            "ASgIQgPgQQMSGAoLYXBpX3ZlcnNpb24YByABKAlCA+BBA0K4BQonY29tLmdv",
             "b2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxQgtDb21tb25Qcm90",
             "b1ABWlljbG91ZC5nb29nbGUuY29tL2dvL25ldHdvcmtjb25uZWN0aXZpdHkv",
             "YXBpdjEvbmV0d29ya2Nvbm5lY3Rpdml0eXBiO25ldHdvcmtjb25uZWN0aXZp",
@@ -44,7 +44,12 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "cy97cHJvamVjdH0vcmVnaW9ucy97cmVnaW9ufS9pbnRlcmNvbm5lY3RBdHRh",
             "Y2htZW50cy97cmVzb3VyY2VfaWR96kFSCh5jb21wdXRlLmdvb2dsZWFwaXMu",
             "Y29tL05ldHdvcmsSMHByb2plY3RzL3twcm9qZWN0fS9nbG9iYWwvbmV0d29y",
-            "a3Mve3Jlc291cmNlX2lkfWIGcHJvdG8z"));
+            "a3Mve3Jlc291cmNlX2lkfepBYQohY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9T",
+            "dWJuZXR3b3JrEjxwcm9qZWN0cy97cHJvamVjdH0vcmVnaW9ucy97cmVnaW9u",
+            "fS9zdWJuZXR3b3Jrcy97c3VibmV0d29ya33qQXcKKGNvbXB1dGUuZ29vZ2xl",
+            "YXBpcy5jb20vU2VydmljZUF0dGFjaG1lbnQSS3Byb2plY3RzL3twcm9qZWN0",
+            "fS9yZWdpb25zL3tyZWdpb259L3NlcnZpY2VBdHRhY2htZW50cy97c2Vydmlj",
+            "ZV9hdHRhY2htZW50fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -190,9 +195,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     /// <summary>
     /// Output only. Identifies whether the user has requested cancellation
     /// of the operation. Operations that have been cancelled successfully
-    /// have [Operation.error][] value with a
-    /// [google.rpc.Status.code][google.rpc.Status.code] of 1, corresponding to
-    /// `Code.CANCELLED`.
+    /// have
+    /// [google.longrunning.Operation.error][google.longrunning.Operation.error]
+    /// value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
+    /// corresponding to `Code.CANCELLED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
