@@ -29,7 +29,7 @@ public sealed partial class StorageClientImpl : StorageClient
         MoveObjectOptions options = null)
     {
         var request = CreateMoveObjectRequest(sourceBucket, sourceObjectName, destinationObjectName, options);
-        var response =  request.Execute();
+        var response = request.Execute();
         return response;
     }
 

@@ -62,6 +62,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public string SoftDeleteBucket => BucketPrefix + "-soft-delete";
 
         /// <summary>
+        /// Name of a bucket with hierarchical namespace enabled
+        /// </summary>
+        public string HnsBucket => BucketPrefix + "hns";
+
+        /// <summary>
         /// A small amount of content. Do not mutate the array.
         /// </summary>
         public byte[] SmallContent { get; } = Encoding.UTF8.GetBytes("hello, world");
@@ -167,6 +172,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             CreateBucket(LabelsTestBucket, multiVersion: false);
             CreateBucket(InitiallyEmptyBucket, multiVersion: false);
             CreateBucket(SoftDeleteBucket, multiVersion: false, softDelete: true);
+            CreateAndPopulateHnsBucket(HnsBucket);
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
@@ -264,6 +270,26 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             {
                 RegisterBucketToDelete(name);
             }
+            return bucket;
+        }
+
+        internal Bucket CreateAndPopulateHnsBucket(string name)
+        {
+            var storage = StorageClient.Create();
+            var bucket = storage.CreateBucket(ProjectId,
+                new Bucket
+                {
+                    Name = name,
+                    IamConfiguration = new Bucket.IamConfigurationData
+                    {
+                        UniformBucketLevelAccess = new Bucket.IamConfigurationData.UniformBucketLevelAccessData { Enabled = true }
+                    },
+                    HierarchicalNamespace = new Bucket.HierarchicalNamespaceData { Enabled = true }
+                });
+            Client.UploadObject(name, SmallThenLargeObject, "text/plain", new MemoryStream(LargeContent));
+
+            SleepAfterBucketCreateDelete();
+            RegisterBucketToDelete(name);
             return bucket;
         }
 
