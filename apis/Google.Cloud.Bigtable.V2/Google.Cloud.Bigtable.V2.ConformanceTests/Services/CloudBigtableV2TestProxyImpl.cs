@@ -18,20 +18,23 @@ using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Bigtable.Common.V2;
 using Grpc.Auth;
 using Grpc.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Google.Cloud.Bigtable.V2.ConformanceTests;
+namespace Google.Cloud.Bigtable.V2.ConformanceTests.Services;
 
 public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.CloudBigtableV2TestProxyBase
 {
     private class CbtClient
     {
-        public BigtableClient Client { get; set; }
-        public ChannelBase LastCreatedChannel { get; set; }
-        public InstanceName InstanceName { get; set; }
+        public BigtableClient Client { get; private set; }
+        public ChannelBase LastCreatedChannel { get; private set; }
+        public InstanceName InstanceName { get; private set; }
+
+        public CbtClient(BigtableClient bigtableClient, ChannelBase channelBase, InstanceName instanceName)
+        {
+            Client = bigtableClient;
+            LastCreatedChannel = channelBase;
+            InstanceName = instanceName;
+        }
     }
 
     private readonly Dictionary<string, CbtClient> _idClientMap;
@@ -52,11 +55,13 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             || (securityOptions.SslRootCertsPem is not ("" or null)), "SecurityOptions",
             "security_options.ssl_root_certs_pem must be provided if security_options.use_ssl is true");
 
+#pragma warning disable CS8604 // Possible null reference argument.
         if (_idClientMap.ContainsKey(clientId))
         {
             context.Status = new Status(StatusCode.AlreadyExists, $"Client {clientId} already exists");
             throw new RpcException(context.Status);
         }
+#pragma warning restore CS8604 // Possible null reference argument.
 
         try
         {
@@ -77,7 +82,9 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             if (dataTarget != "emulator")
             {
                 builder.Endpoint = dataTarget;
+#pragma warning disable CS8604 // Possible null reference argument.
                 builder.ChannelCredentials = GetChannelCredentials(securityOptions.UseSsl, securityOptions.SslRootCertsPem, securityOptions.AccessToken);
+#pragma warning restore CS8604 // Possible null reference argument.
                 builder.GrpcChannelOptions = (securityOptions.UseSsl && securityOptions.SslEndpointOverride is not null)
                     ? GrpcChannelOptions.Empty.WithCustomOption("grpc.ssl_target_name_override", securityOptions.SslEndpointOverride)
                     : GrpcChannelOptions.Empty;
@@ -89,12 +96,7 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             InstanceName instanceName = new InstanceName(projectId, instanceId);
             BigtableServiceApiClient apiClient = await builder.BuildAsync();
 
-            CbtClient cbtClient = new CbtClient
-            {
-                Client = BigtableClient.Create(apiClient),
-                LastCreatedChannel = builder.LastCreatedChannel,
-                InstanceName = instanceName
-            };
+            CbtClient cbtClient = new CbtClient(BigtableClient.Create(apiClient), builder.LastCreatedChannel, instanceName);
             _idClientMap[clientId] = cbtClient;
         }
         catch (Exception e)
@@ -126,7 +128,9 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
     {
         string clientId = request.ClientId;
         GaxPreconditions.CheckArgument(clientId is not ("" or null), "ClientId", "client id must be provided", context);
+#pragma warning disable CS8604 // Possible null reference argument.
         bool removed = _idClientMap.Remove(clientId);
+#pragma warning restore CS8604 // Possible null reference argument.
         if (!removed)
         {
             context.Status = new Status(StatusCode.NotFound, $"Client {clientId} not found.");
@@ -147,7 +151,7 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             {
                 Status = new Rpc.Status()
                 {
-                    Code = (int) Rpc.Code.InvalidArgument,
+                    Code = (int)Rpc.Code.InvalidArgument,
                     Message = "Invalid TableName"
                 }
             };
@@ -355,17 +359,19 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
 
     public static CloudBigtableV2TestProxyImpl Create() => new();
 
-    private CloudBigtableV2TestProxyImpl() => _idClientMap = new();
+    public CloudBigtableV2TestProxyImpl() => _idClientMap = new();
 
     private CbtClient GetClient(string clientId, ServerCallContext context)
     {
         GaxPreconditions.CheckArgument(clientId is not ("" or null), "ClientId", "client id must be provided", context);
 
+#pragma warning disable CS8604 // Possible null reference argument.
         if (!_idClientMap.ContainsKey(clientId))
         {
             context.Status = new Status(StatusCode.NotFound, $"Client {clientId} not found.");
             throw new RpcException(context.Status);
         }
+#pragma warning restore CS8604 // Possible null reference argument.
         return _idClientMap[clientId];
     }
 
@@ -399,7 +405,7 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         context.Status = new Status(StatusCode.Internal, e.Message, e);
         return new Rpc.Status()
         {
-            Code = (int) Rpc.Code.Internal,
+            Code = (int)Rpc.Code.Internal,
             Message = e.Message
         };
     }
@@ -409,7 +415,7 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         context.Status = new Status(StatusCode.OK, message);
         return new Rpc.Status()
         {
-            Code = (int) Rpc.Code.Ok,
+            Code = (int)Rpc.Code.Ok,
             Message = message
         };
     }
