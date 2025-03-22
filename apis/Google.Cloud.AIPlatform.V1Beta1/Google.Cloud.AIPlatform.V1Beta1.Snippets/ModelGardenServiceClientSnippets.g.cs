@@ -475,5 +475,74 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for ExportPublisherModel</summary>
+        public void ExportPublisherModelRequestObject()
+        {
+            // Snippet: ExportPublisherModel(ExportPublisherModelRequest, CallSettings)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = ModelGardenServiceClient.Create();
+            // Initialize request argument(s)
+            ExportPublisherModelRequest request = new ExportPublisherModelRequest
+            {
+                Name = "",
+                Destination = new GcsDestination(),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> response = modelGardenServiceClient.ExportPublisherModel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportPublisherModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> retrievedResponse = modelGardenServiceClient.PollOnceExportPublisherModel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportPublisherModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportPublisherModelAsync</summary>
+        public async Task ExportPublisherModelRequestObjectAsync()
+        {
+            // Snippet: ExportPublisherModelAsync(ExportPublisherModelRequest, CallSettings)
+            // Additional: ExportPublisherModelAsync(ExportPublisherModelRequest, CancellationToken)
+            // Create client
+            ModelGardenServiceClient modelGardenServiceClient = await ModelGardenServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportPublisherModelRequest request = new ExportPublisherModelRequest
+            {
+                Name = "",
+                Destination = new GcsDestination(),
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> response = await modelGardenServiceClient.ExportPublisherModelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportPublisherModelResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> retrievedResponse = await modelGardenServiceClient.PollOnceExportPublisherModelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportPublisherModelResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "DatasetServiceClient",
           "rpcs": {
+            "AssembleData": {
+              "methods": [
+                "AssembleData",
+                "AssembleDataAsync"
+              ]
+            },
+            "AssessData": {
+              "methods": [
+                "AssessData",
+                "AssessDataAsync"
+              ]
+            },
             "CreateDataset": {
               "methods": [
                 "CreateDataset",
@@ -1394,6 +1406,12 @@
               "methods": [
                 "DeployPublisherModel",
                 "DeployPublisherModelAsync"
+              ]
+            },
+            "ExportPublisherModel": {
+              "methods": [
+                "ExportPublisherModel",
+                "ExportPublisherModelAsync"
               ]
             },
             "GetPublisherModel": {

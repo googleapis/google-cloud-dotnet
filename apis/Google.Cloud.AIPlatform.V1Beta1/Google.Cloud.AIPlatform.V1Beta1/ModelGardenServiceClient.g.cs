@@ -54,6 +54,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             DeployOperationsSettings = existing.DeployOperationsSettings.Clone();
             DeployPublisherModelSettings = existing.DeployPublisherModelSettings;
             DeployPublisherModelOperationsSettings = existing.DeployPublisherModelOperationsSettings.Clone();
+            ExportPublisherModelSettings = existing.ExportPublisherModelSettings;
+            ExportPublisherModelOperationsSettings = existing.ExportPublisherModelOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -144,6 +146,37 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeployPublisherModelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ModelGardenServiceClient.ExportPublisherModel</c> and
+        /// <c>ModelGardenServiceClient.ExportPublisherModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportPublisherModelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ModelGardenServiceClient.ExportPublisherModel</c> and
+        /// <c>ModelGardenServiceClient.ExportPublisherModelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportPublisherModelOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -632,6 +665,60 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         public virtual stt::Task<lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>> PollOnceDeployPublisherModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeployPublisherModelOperationsClient, callSettings);
 #pragma warning restore CS0612
+
+        /// <summary>
+        /// Exports a publisher model to a user provided Google Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> ExportPublisherModel(ExportPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports a publisher model to a user provided Google Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>> ExportPublisherModelAsync(ExportPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports a publisher model to a user provided Google Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>> ExportPublisherModelAsync(ExportPublisherModelRequest request, st::CancellationToken cancellationToken) =>
+            ExportPublisherModelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportPublisherModel</c>.</summary>
+        public virtual lro::OperationsClient ExportPublisherModelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportPublisherModel</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> PollOnceExportPublisherModel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportPublisherModelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportPublisherModel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>> PollOnceExportPublisherModelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportPublisherModelOperationsClient, callSettings);
     }
 
     /// <summary>ModelGardenService client wrapper implementation, for convenient use.</summary>
@@ -650,6 +737,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         private readonly gaxgrpc::ApiCall<DeployPublisherModelRequest, lro::Operation> _callDeployPublisherModel;
 #pragma warning restore CS0612
 
+        private readonly gaxgrpc::ApiCall<ExportPublisherModelRequest, lro::Operation> _callExportPublisherModel;
+
         /// <summary>
         /// Constructs a client wrapper for the ModelGardenService service, with the specified gRPC client and settings.
         /// </summary>
@@ -667,6 +756,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             });
             DeployOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployOperationsSettings, logger);
             DeployPublisherModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployPublisherModelOperationsSettings, logger);
+            ExportPublisherModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportPublisherModelOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callGetPublisherModel = clientHelper.BuildApiCall<GetPublisherModelRequest, PublisherModel>("GetPublisherModel", grpcClient.GetPublisherModelAsync, grpcClient.GetPublisherModel, effectiveSettings.GetPublisherModelSettings).WithGoogleRequestParam("name", request => request.Name);
@@ -683,6 +773,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 #pragma warning restore CS0612
             Modify_ApiCall(ref _callDeployPublisherModel);
             Modify_DeployPublisherModelApiCall(ref _callDeployPublisherModel);
+            _callExportPublisherModel = clientHelper.BuildApiCall<ExportPublisherModelRequest, lro::Operation>("ExportPublisherModel", grpcClient.ExportPublisherModelAsync, grpcClient.ExportPublisherModel, effectiveSettings.ExportPublisherModelSettings).WithGoogleRequestParam("parent", request => request.Parent).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportPublisherModel);
+            Modify_ExportPublisherModelApiCall(ref _callExportPublisherModel);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -697,6 +790,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 #pragma warning disable CS0612
         partial void Modify_DeployPublisherModelApiCall(ref gaxgrpc::ApiCall<DeployPublisherModelRequest, lro::Operation> call);
 #pragma warning restore CS0612
+
+        partial void Modify_ExportPublisherModelApiCall(ref gaxgrpc::ApiCall<ExportPublisherModelRequest, lro::Operation> call);
 
         partial void OnConstruction(ModelGardenService.ModelGardenServiceClient grpcClient, ModelGardenServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -718,6 +813,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 #pragma warning disable CS0612
         partial void Modify_DeployPublisherModelRequest(ref DeployPublisherModelRequest request, ref gaxgrpc::CallSettings settings);
 #pragma warning restore CS0612
+
+        partial void Modify_ExportPublisherModelRequest(ref ExportPublisherModelRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a Model Garden publisher model.
@@ -829,6 +926,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 #pragma warning disable CS0612
             return new lro::Operation<DeployPublisherModelResponse, DeployPublisherModelOperationMetadata>(await _callDeployPublisherModel.Async(request, callSettings).ConfigureAwait(false), DeployPublisherModelOperationsClient);
 #pragma warning restore CS0612
+        }
+
+        /// <summary>The long-running operations client for <c>ExportPublisherModel</c>.</summary>
+        public override lro::OperationsClient ExportPublisherModelOperationsClient { get; }
+
+        /// <summary>
+        /// Exports a publisher model to a user provided Google Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata> ExportPublisherModel(ExportPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportPublisherModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>(_callExportPublisherModel.Sync(request, callSettings), ExportPublisherModelOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports a publisher model to a user provided Google Cloud Storage bucket.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>> ExportPublisherModelAsync(ExportPublisherModelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportPublisherModelRequest(ref request, ref callSettings);
+            return new lro::Operation<ExportPublisherModelResponse, ExportPublisherModelOperationMetadata>(await _callExportPublisherModel.Async(request, callSettings).ConfigureAwait(false), ExportPublisherModelOperationsClient);
         }
     }
 
