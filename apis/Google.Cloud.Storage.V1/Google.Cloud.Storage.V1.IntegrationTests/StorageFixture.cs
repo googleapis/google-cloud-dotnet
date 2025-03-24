@@ -172,7 +172,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             CreateBucket(LabelsTestBucket, multiVersion: false);
             CreateBucket(InitiallyEmptyBucket, multiVersion: false);
             CreateBucket(SoftDeleteBucket, multiVersion: false, softDelete: true);
-            CreateAndPopulateHnsBucket(HnsBucket);
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
