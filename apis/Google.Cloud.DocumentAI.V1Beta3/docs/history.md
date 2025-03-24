@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.0.0-beta24, released 2025-03-24
+
+### New features
+
+- Added config options to enable LLM layout parsing ([commit 30a817a](https://github.com/googleapis/google-cloud-dotnet/commit/30a817abf99c3f3bd14dd2e9efc0b80e3c46e05a))
+
+### Documentation improvements
+
+- Mark fields as unused ([commit 25625fc](https://github.com/googleapis/google-cloud-dotnet/commit/25625fcba367b5212f0c7267ca37972be0a0ff73))
+
 ## Version 2.0.0-beta23, released 2024-10-21
 
 ### New features
