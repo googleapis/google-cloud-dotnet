@@ -30,25 +30,46 @@ public class MoveObjectTest
     private string SmallNewObject { get; } = "smallNew.txt";
     private string LargeNewObject { get; } = "largeNew.txt";
     private string SmallThenLargeObject { get; } = "smallThenLargeNew.txt";
+    private Bucket HnsBucket { get; }
 
     public MoveObjectTest(StorageFixture fixture)
     {
         _fixture = fixture;
+        HnsBucket = _fixture.CreateAndPopulateHnsBucket(_fixture.HnsBucket);
         _fixture.Client.UploadObject(_fixture.HnsBucket, SmallNewObject, "text/plain", new MemoryStream(_fixture.SmallContent));
         _fixture.Client.UploadObject(_fixture.HnsBucket, LargeNewObject, "text/plain", new MemoryStream(_fixture.LargeContent));
     }
 
     // Moves the source object to the destination object within a bucket with hierarchical namespace enabled.
     [Fact]
-    public async Task MoveObjectAsync()
+    public async Task MoveObjectDefaultAsync()
     {
         var actual = await _fixture.Client.GetObjectAsync(_fixture.HnsBucket, _fixture.SmallThenLargeObject);
-        await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, _fixture.SmallThenLargeObject, LargeNewObject);
+        var expected = await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, _fixture.SmallThenLargeObject, LargeNewObject);
         using var stream = new MemoryStream();
-        var expected = await _fixture.Client.DownloadObjectAsync(_fixture.HnsBucket, LargeNewObject, stream);
+        await _fixture.Client.DownloadObjectAsync(_fixture.HnsBucket, LargeNewObject, stream);
         Assert.Equal(_fixture.LargeContent, stream.ToArray());
         // Assert that the generation of the destination object is different from the source object indicating a new object at destination is created.
         Assert.NotEqual(actual.Generation, expected.Generation);
+        // Assert that the id of the destination object is different from the source object indicating a new object at destination is created.
+        Assert.NotEqual(actual.Id, expected.Id);
+        Assert.NotEqual(actual.TimeCreatedRaw, expected.TimeCreatedRaw);
+        Assert.NotEqual(actual.TimeFinalizedRaw, expected.TimeFinalizedRaw);
+        Assert.NotEqual(actual.UpdatedRaw, expected.UpdatedRaw);
+        Assert.NotEqual(actual.TimeStorageClassUpdatedRaw, expected.TimeStorageClassUpdatedRaw);
+        if (HnsBucket.Autoclass != null)
+        {
+            if (expected != null)
+            {
+                Assert.Equal(expected.StorageClass, actual.StorageClass);
+                Assert.Equal(expected.StorageClass, StorageClasses.Standard);
+            }
+        }
+        else
+        {
+            Assert.Equal(expected.StorageClass, actual.StorageClass);
+        }
+
         var objects = _fixture.Client.ListObjects(_fixture.HnsBucket).ToList();
         // Assert that the destination object exists after the move.
         Assert.Contains(objects, obj => obj.Name == expected.Name && obj.Generation == expected.Generation);
@@ -61,9 +82,9 @@ public class MoveObjectTest
     public async Task MoveObjectToDirectorySubDirectoryAsync()
     {
         var actual = await _fixture.Client.GetObjectAsync(_fixture.HnsBucket, _fixture.SmallObject);
-        await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, _fixture.SmallObject, $"folder/subfolder/" + SmallNewObject);
+        var expected = await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, _fixture.SmallObject, $"folder/subfolder/" + SmallNewObject);
         using var stream = new MemoryStream();
-        var expected = await _fixture.Client.DownloadObjectAsync(_fixture.HnsBucket, $"folder/subfolder/" + SmallNewObject, stream);
+        await _fixture.Client.DownloadObjectAsync(_fixture.HnsBucket, $"folder/subfolder/" + SmallNewObject, stream);
         Assert.Equal(_fixture.SmallContent, stream.ToArray());
         // Assert that the generation of the destination object is different from the source object indicating a new object at destination is created.
         Assert.NotEqual(actual.Generation, expected.Generation);
