@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             DeleteReasoningEngineRequest request = new DeleteReasoningEngineRequest
             {
                 ReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
+                Force = false,
             };
             // Make the request
             Operation<Empty, DeleteOperationMetadata> response = reasoningEngineServiceClient.DeleteReasoningEngine(request);
