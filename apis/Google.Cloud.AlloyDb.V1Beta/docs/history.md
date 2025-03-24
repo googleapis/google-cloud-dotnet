@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2025-03-24
+
+### New features
+
+- A new method `ExportCluster` is added to service `AlloyDBAdmin` ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+- A new message `GcsDestination` is added ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+- A new message `ExportClusterRequest` is added ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+- A new message `ExportClusterResponse` is added ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+
+### Documentation improvements
+
+- A comment for field `zone_id` in message `.google.cloud.alloydb.v1beta.Instance` is changed ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+- A comment for field `id` in message `.google.cloud.alloydb.v1beta.Instance` is changed ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+- A comment for field `ip` in message `.google.cloud.alloydb.v1beta.Instance` is changed ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+- A comment for field `state` in message `.google.cloud.alloydb.v1beta.Instance` is changed ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+- A comment for field `database_flags` in message `.google.cloud.alloydb.v1beta.Instance` is changed ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+- A comment for field `requested_cancellation` in message `.google.cloud.alloydb.v1beta.OperationMetadata` is changed ([commit 3c466ca](https://github.com/googleapis/google-cloud-dotnet/commit/3c466cae59fa3ecb67105cc46ca10e39cde91192))
+
 ## Version 1.0.0-beta09, released 2024-11-18
 
 ### Bug fixes
