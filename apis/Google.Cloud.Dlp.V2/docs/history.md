@@ -1,5 +1,16 @@
 # Version history
 
+## Version 4.17.0, released 2025-03-24
+
+### New features
+
+- Add sample findings for data profiles ([commit 12adc9a](https://github.com/googleapis/google-cloud-dotnet/commit/12adc9a057697f098ae8d0dd7469c4db88f84378))
+- List tags on resources for data profiles ([commit 12adc9a](https://github.com/googleapis/google-cloud-dotnet/commit/12adc9a057697f098ae8d0dd7469c4db88f84378))
+
+### Documentation improvements
+
+- Updated documentation for various fields and messages ([commit 12adc9a](https://github.com/googleapis/google-cloud-dotnet/commit/12adc9a057697f098ae8d0dd7469c4db88f84378))
+
 ## Version 4.16.0, released 2025-02-25
 
 ### New features
