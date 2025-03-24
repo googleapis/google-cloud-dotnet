@@ -14,7 +14,7 @@
 
 syntax = "proto3";
 
-package google.cloud.bigtable.v2.conformanceTests;
+package google.cloud.bigtable.v2.ConformanceTests;
 
 import "google/api/client.proto";
 import "google/bigtable/v2/bigtable.proto";
