@@ -1,5 +1,18 @@
 # Version history
 
+## Version 3.24.0, released 2025-03-24
+
+### New features
+
+- Add import result gcs sink to the import files API ([commit b313b52](https://github.com/googleapis/google-cloud-dotnet/commit/b313b526fcd2fd8c71aa46904e1bb4ac36a2b351))
+- Add import result bq sink to the import files API ([commit b313b52](https://github.com/googleapis/google-cloud-dotnet/commit/b313b526fcd2fd8c71aa46904e1bb4ac36a2b351))
+- Add env variables and agent framework to ReasoningEngineSpec ([commit 65eb876](https://github.com/googleapis/google-cloud-dotnet/commit/65eb876885c7d19a7af9758f9588b06a93ac1385))
+
+### Documentation improvements
+
+- Update comment for `package_spec` from required to optional in `ReasoningEngineSpec`. ([commit 65eb876](https://github.com/googleapis/google-cloud-dotnet/commit/65eb876885c7d19a7af9758f9588b06a93ac1385))
+- Add `deployment_spec` and `agent_framework` field to `ReasoningEngineSpec`. ([commit 65eb876](https://github.com/googleapis/google-cloud-dotnet/commit/65eb876885c7d19a7af9758f9588b06a93ac1385))
+
 ## Version 3.23.0, released 2025-03-17
 
 ### New features
