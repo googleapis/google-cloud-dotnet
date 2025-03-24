@@ -14,7 +14,7 @@
 
 syntax = "proto3";
 
-package google.cloud.bigtable.v2.conformanceTests;
+package google.bigtable.testproxy;
 
 import "google/api/client.proto";
 import "google/bigtable/v2/bigtable.proto";
@@ -23,8 +23,7 @@ import "google/protobuf/duration.proto";
 import "google/rpc/status.proto";
 
 option go_package = "./testproxypb";
-option java_multiple_files = true;
-option java_package = "com.google.cloud.bigtable.testproxy";
+option csharp_namespace = "google.bigtable.testproxy";
 
 // A config flag that dictates how the optional features should be enabled
 // during the client creation. The optional features customize how the client

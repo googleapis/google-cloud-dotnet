@@ -16,25 +16,29 @@ using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Apis.Auth.OAuth2;
 using Google.Cloud.Bigtable.Common.V2;
+using Google.Cloud.Bigtable.V2;
 using Grpc.Auth;
 using Grpc.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
-namespace Google.Cloud.Bigtable.V2.ConformanceTests;
+namespace google.bigtable.testproxy;
 
 public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.CloudBigtableV2TestProxyBase
 {
     private class CbtClient
     {
-        public BigtableClient Client { get; set; }
-        public ChannelBase LastCreatedChannel { get; set; }
-        public InstanceName InstanceName { get; set; }
+        public BigtableClient Client { get; private set; }
+        public ChannelBase LastCreatedChannel { get; private set; }
+        public InstanceName InstanceName { get; private set; }
+
+        public CbtClient(BigtableClient bigtableClient, ChannelBase channelBase, InstanceName instanceName)
+        {
+            Client = bigtableClient;
+            LastCreatedChannel = channelBase;
+            InstanceName = instanceName;
+        }
     }
 
-    private readonly Dictionary<string, CbtClient> _idClientMap;
+    private static readonly Dictionary<string, CbtClient> _idClientMap = new Dictionary<string, CbtClient>();
 
     public override async Task<CreateClientResponse> CreateClient(CreateClientRequest request, ServerCallContext context)
     {
@@ -48,15 +52,17 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         GaxPreconditions.CheckArgument(projectId is not ("" or null), "ProjectId", "project id must be provided");
         GaxPreconditions.CheckArgument(instanceId is not ("" or null), "InstanceId", "instance id must be provided");
         GaxPreconditions.CheckArgument(dataTarget is not ("" or null), "DataTarget", "data target must be provided");
-        GaxPreconditions.CheckArgument(!securityOptions.UseSsl
-            || (securityOptions.SslRootCertsPem is not ("" or null)), "SecurityOptions",
+        GaxPreconditions.CheckArgument(securityOptions is null || (!securityOptions.UseSsl
+            || (securityOptions.SslRootCertsPem is not ("" or null))), "SecurityOptions",
             "security_options.ssl_root_certs_pem must be provided if security_options.use_ssl is true");
 
+#pragma warning disable CS8604 // Possible null reference argument.
         if (_idClientMap.ContainsKey(clientId))
         {
             context.Status = new Status(StatusCode.AlreadyExists, $"Client {clientId} already exists");
             throw new RpcException(context.Status);
         }
+#pragma warning restore CS8604 // Possible null reference argument.
 
         try
         {
@@ -74,27 +80,25 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             {
                 Settings = settings
             };
-            if (dataTarget != "emulator")
+            if (dataTarget != "emulator" && securityOptions is not null)
             {
                 builder.Endpoint = dataTarget;
+#pragma warning disable CS8604 // Possible null reference argument.
                 builder.ChannelCredentials = GetChannelCredentials(securityOptions.UseSsl, securityOptions.SslRootCertsPem, securityOptions.AccessToken);
+#pragma warning restore CS8604 // Possible null reference argument.
                 builder.GrpcChannelOptions = (securityOptions.UseSsl && securityOptions.SslEndpointOverride is not null)
                     ? GrpcChannelOptions.Empty.WithCustomOption("grpc.ssl_target_name_override", securityOptions.SslEndpointOverride)
                     : GrpcChannelOptions.Empty;
             }
             else
             {
+                Environment.SetEnvironmentVariable("BIGTABLE_EMULATOR_HOST", dataTarget);
                 builder.EmulatorDetection = EmulatorDetection.EmulatorOnly;
             }
             InstanceName instanceName = new InstanceName(projectId, instanceId);
             BigtableServiceApiClient apiClient = await builder.BuildAsync();
 
-            CbtClient cbtClient = new CbtClient
-            {
-                Client = BigtableClient.Create(apiClient),
-                LastCreatedChannel = builder.LastCreatedChannel,
-                InstanceName = instanceName
-            };
+            CbtClient cbtClient = new CbtClient(BigtableClient.Create(apiClient), builder.LastCreatedChannel, instanceName);
             _idClientMap[clientId] = cbtClient;
         }
         catch (Exception e)
@@ -111,7 +115,10 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         CbtClient cbtClient = GetClient(request.ClientId, context);
         try
         {
-            await cbtClient.LastCreatedChannel.ShutdownAsync();
+            if (cbtClient.LastCreatedChannel is not null)
+            {
+                await cbtClient.LastCreatedChannel.ShutdownAsync();
+            }
         }
         catch (Exception e)
         {
@@ -126,7 +133,9 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
     {
         string clientId = request.ClientId;
         GaxPreconditions.CheckArgument(clientId is not ("" or null), "ClientId", "client id must be provided", context);
+#pragma warning disable CS8604 // Possible null reference argument.
         bool removed = _idClientMap.Remove(clientId);
+#pragma warning restore CS8604 // Possible null reference argument.
         if (!removed)
         {
             context.Status = new Status(StatusCode.NotFound, $"Client {clientId} not found.");
@@ -145,9 +154,9 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             context.Status = new Status(StatusCode.InvalidArgument, "Invalid TableName");
             return new RowResult
             {
-                Status = new Rpc.Status()
+                Status = new Google.Rpc.Status()
                 {
-                    Code = (int) Rpc.Code.InvalidArgument,
+                    Code = (int) Google.Rpc.Code.InvalidArgument,
                     Message = "Invalid TableName"
                 }
             };
@@ -182,9 +191,13 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
             ReadRowsStream stream = cbtClient.Client.ReadRows(request.Request);
             IAsyncEnumerator<Row> enumerator = stream.GetAsyncEnumerator(new System.Threading.CancellationToken(false));
             RowsResult rowsResult = new RowsResult();
-            while (await enumerator.MoveNextAsync())
+            while (enumerator.Current is not null)
             {
                 rowsResult.Rows.Add(enumerator.Current);
+                if (!await enumerator.MoveNextAsync())
+                {
+                    break;
+                }
             }
             string message = rowsResult.Rows.Count == 0 ? $"ReadRows didn't find rows" : "ReadRows succeeded";
             rowsResult.Status = SetSuccessStatus(message, context);
@@ -320,7 +333,7 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
                 Metadata = new ResultSetMetadata()
             };
             IEnumerable<byte> bytes = Enumerable.Empty<byte>();
-            while (await enumerator.MoveNextAsync())
+            while (enumerator.Current is not null)
             {
                 ExecuteQueryResponse response = enumerator.Current;
                 if (response.ResponseCase == ExecuteQueryResponse.ResponseOneofCase.Metadata)
@@ -340,6 +353,10 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
                 {
                     break;
                 }
+                if (!await enumerator.MoveNextAsync())
+                {
+                    break;
+                }
             }
             result.Status = SetSuccessStatus("ExecuteQuery succeeded", context);
             return result;
@@ -355,17 +372,17 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
 
     public static CloudBigtableV2TestProxyImpl Create() => new();
 
-    private CloudBigtableV2TestProxyImpl() => _idClientMap = new();
-
     private CbtClient GetClient(string clientId, ServerCallContext context)
     {
         GaxPreconditions.CheckArgument(clientId is not ("" or null), "ClientId", "client id must be provided", context);
 
+#pragma warning disable CS8604 // Possible null reference argument.
         if (!_idClientMap.ContainsKey(clientId))
         {
             context.Status = new Status(StatusCode.NotFound, $"Client {clientId} not found.");
             throw new RpcException(context.Status);
         }
+#pragma warning restore CS8604 // Possible null reference argument.
         return _idClientMap[clientId];
     }
 
@@ -394,22 +411,22 @@ public sealed class CloudBigtableV2TestProxyImpl : CloudBigtableV2TestProxy.Clou
         return encrypted ? new SslCredentials(rootCertsPem) : ChannelCredentials.Insecure;
     }
 
-    private static Rpc.Status SetExceptionStatus(Exception e, ServerCallContext context)
+    private static Google.Rpc.Status SetExceptionStatus(Exception e, ServerCallContext context)
     {
         context.Status = new Status(StatusCode.Internal, e.Message, e);
-        return new Rpc.Status()
+        return new Google.Rpc.Status()
         {
-            Code = (int) Rpc.Code.Internal,
+            Code = (int) Google.Rpc.Code.Internal,
             Message = e.Message
         };
     }
 
-    private static Rpc.Status SetSuccessStatus(string message, ServerCallContext context)
+    private static Google.Rpc.Status SetSuccessStatus(string message, ServerCallContext context)
     {
         context.Status = new Status(StatusCode.OK, message);
-        return new Rpc.Status()
+        return new Google.Rpc.Status()
         {
-            Code = (int) Rpc.Code.Ok,
+            Code = (int) Google.Rpc.Code.Ok,
             Message = message
         };
     }
