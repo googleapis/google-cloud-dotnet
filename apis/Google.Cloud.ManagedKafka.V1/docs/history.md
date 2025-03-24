@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2025-03-24
+
+### New features
+
+- Add Managed Kafka Connect API ([commit fba13dc](https://github.com/googleapis/google-cloud-dotnet/commit/fba13dc09aa7a6619359550c4b13992f63b0cdc9))
+
 ## Version 1.0.0-beta04, released 2025-03-17
 
 ### Bug fixes
