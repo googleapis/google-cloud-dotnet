@@ -1,5 +1,19 @@
 # Version history
 
+## Version 2.6.0, released 2025-03-24
+
+### New features
+
+- Add ListWorkflowRevisions method ([commit 27ae085](https://github.com/googleapis/google-cloud-dotnet/commit/27ae085a5970d2c82ebe93efb31ddbafceafa382))
+- Add ExecutionHistoryLevel to Workflow ([commit 27ae085](https://github.com/googleapis/google-cloud-dotnet/commit/27ae085a5970d2c82ebe93efb31ddbafceafa382))
+- Add crypto key config to Workflow ([commit 27ae085](https://github.com/googleapis/google-cloud-dotnet/commit/27ae085a5970d2c82ebe93efb31ddbafceafa382))
+- Add tags to Workflow ([commit 27ae085](https://github.com/googleapis/google-cloud-dotnet/commit/27ae085a5970d2c82ebe93efb31ddbafceafa382))
+- Add ExecutionHistoryLevel enum ([commit 27ae085](https://github.com/googleapis/google-cloud-dotnet/commit/27ae085a5970d2c82ebe93efb31ddbafceafa382))
+
+### Documentation improvements
+
+- Update Workflow some standard field docs ([commit 27ae085](https://github.com/googleapis/google-cloud-dotnet/commit/27ae085a5970d2c82ebe93efb31ddbafceafa382))
+
 ## Version 2.5.0, released 2024-05-14
 
 ### New features

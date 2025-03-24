@@ -5872,7 +5872,7 @@
     },
     {
       "id": "Google.Cloud.Workflows.V1",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "commonResourcesConfig": "tweaks/Google.Cloud.Workflows.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "productName": "Workflows",
@@ -5882,9 +5882,9 @@
         "workflows"
       ],
       "dependencies": {
-        "Google.Cloud.Location": "2.2.0",
+        "Google.Cloud.Location": "2.3.0",
         "Google.Cloud.Workflows.Common.V1": "2.4.0",
-        "Google.LongRunning": "3.2.0"
+        "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/workflows/v1",
