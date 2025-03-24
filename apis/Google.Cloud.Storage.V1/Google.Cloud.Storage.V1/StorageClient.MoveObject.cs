@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using Object = Google.Apis.Storage.v1.Data.Object;
 
 namespace Google.Cloud.Storage.V1;
+
 public abstract partial class StorageClient
 {
     /// <summary>
