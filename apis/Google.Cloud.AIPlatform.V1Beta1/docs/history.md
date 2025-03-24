@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta23, released 2025-03-24
+
+### New features
+
+- Update multimodal evaluation (content_map_instance), rubric generation (rubric_based_instance, etc) and raw_output(raw_output, custom_output, etc) proto change in online eval API ([commit 8f0bb30](https://github.com/googleapis/google-cloud-dotnet/commit/8f0bb30db5cd989737f0579cb8b3c126e29dc373))
+- Add a ExportPublisherModel API ([commit 364b4aa](https://github.com/googleapis/google-cloud-dotnet/commit/364b4aac349cf5b6191635f32f32db8378f17d6a))
+- Add AssessData and AssembleData RPCs to DatasetService ([commit 82b9306](https://github.com/googleapis/google-cloud-dotnet/commit/82b93069400563e28865fb3a8a2b33e0a1a656ed))
+- Add import result gcs sink to the import files API ([commit f7a477d](https://github.com/googleapis/google-cloud-dotnet/commit/f7a477dfb73f7e38b47457daead53df8ca967179))
+- Add import result bq sink to the import files API ([commit f7a477d](https://github.com/googleapis/google-cloud-dotnet/commit/f7a477dfb73f7e38b47457daead53df8ca967179))
+- Add env variables and agent framework to ReasoningEngineSpec in v1beta1 ([commit ed0a196](https://github.com/googleapis/google-cloud-dotnet/commit/ed0a1961f96c15259d687191ad71300cb8b42364))
+
+### Documentation improvements
+
+- A comment for field `autorater_config` in message `.google.cloud.aiplatform.v1beta1.EvaluateDatasetRequest` is changed ([commit 8f0bb30](https://github.com/googleapis/google-cloud-dotnet/commit/8f0bb30db5cd989737f0579cb8b3c126e29dc373))
+- A comment for field `gcs_source` in message `.google.cloud.aiplatform.v1beta1.EvaluationDataset` is changed ([commit 8f0bb30](https://github.com/googleapis/google-cloud-dotnet/commit/8f0bb30db5cd989737f0579cb8b3c126e29dc373))
+- Update comment for `package_spec` from required to optional in `ReasoningEngineSpec`. ([commit ed0a196](https://github.com/googleapis/google-cloud-dotnet/commit/ed0a1961f96c15259d687191ad71300cb8b42364))
+- Add `deployment_spec` and `agent_framework` field to `ReasoningEngineSpec`. ([commit ed0a196](https://github.com/googleapis/google-cloud-dotnet/commit/ed0a1961f96c15259d687191ad71300cb8b42364))
+
 ## Version 1.0.0-beta22, released 2025-03-17
 
 ### New features
