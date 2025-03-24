@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.10.0, released 2025-03-24
+
+### New features
+
+- Add Network Connectivity Center APIs for PSC service automation ([commit 54430f6](https://github.com/googleapis/google-cloud-dotnet/commit/54430f658a32f62adc8cc08135dbc76f5d5d67d1))
+
+### Documentation improvements
+
+- Update some documentation. ([commit 54430f6](https://github.com/googleapis/google-cloud-dotnet/commit/54430f658a32f62adc8cc08135dbc76f5d5d67d1))
+
 ## Version 2.9.0, released 2024-12-06
 
 ### New features
