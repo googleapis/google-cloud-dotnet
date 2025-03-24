@@ -287,6 +287,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     HierarchicalNamespace = new Bucket.HierarchicalNamespaceData { Enabled = true }
                 });
             Client.UploadObject(name, SmallThenLargeObject, "text/plain", new MemoryStream(LargeContent));
+            Client.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent));
+            foreach (var nameoObjectsInFolder in s_objectsInFolders)
+            {
+                Client.UploadObject(name, nameoObjectsInFolder, "text/plain", new MemoryStream(SmallContent));
+            }
 
             SleepAfterBucketCreateDelete();
             RegisterBucketToDelete(name);
