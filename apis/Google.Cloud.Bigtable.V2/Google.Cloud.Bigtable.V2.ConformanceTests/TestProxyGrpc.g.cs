@@ -22,7 +22,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Google.Cloud.Bigtable.V2.ConformanceTests {
+namespace google.bigtable.testproxy {
   /// <summary>
   /// Note that all RPCs are unary, even when the equivalent client binding call
   /// may be streaming. This is an intentional simplification.
@@ -43,7 +43,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
   /// </summary>
   public static partial class CloudBigtableV2TestProxy
   {
-    static readonly string __ServiceName = "google.cloud.bigtable.v2.conformanceTests.CloudBigtableV2TestProxy";
+    static readonly string __ServiceName = "google.bigtable.testproxy.CloudBigtableV2TestProxy";
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static void __Helper_SerializeMessage(global::Google.Protobuf.IMessage message, grpc::SerializationContext context)
@@ -79,140 +79,140 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_CreateClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.CreateClientRequest> __Marshaller_google_bigtable_testproxy_CreateClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.CreateClientRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse> __Marshaller_google_cloud_bigtable_v2_conformanceTests_CreateClientResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.CreateClientResponse> __Marshaller_google_bigtable_testproxy_CreateClientResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.CreateClientResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_CloseClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.CloseClientRequest> __Marshaller_google_bigtable_testproxy_CloseClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.CloseClientRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse> __Marshaller_google_cloud_bigtable_v2_conformanceTests_CloseClientResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.CloseClientResponse> __Marshaller_google_bigtable_testproxy_CloseClientResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.CloseClientResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_RemoveClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.RemoveClientRequest> __Marshaller_google_bigtable_testproxy_RemoveClientRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.RemoveClientRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse> __Marshaller_google_cloud_bigtable_v2_conformanceTests_RemoveClientResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.RemoveClientResponse> __Marshaller_google_bigtable_testproxy_RemoveClientResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.RemoveClientResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_ReadRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.ReadRowRequest> __Marshaller_google_bigtable_testproxy_ReadRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.ReadRowRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> __Marshaller_google_cloud_bigtable_v2_conformanceTests_RowResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.RowResult> __Marshaller_google_bigtable_testproxy_RowResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.RowResult.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_ReadRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.ReadRowsRequest> __Marshaller_google_bigtable_testproxy_ReadRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.ReadRowsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult> __Marshaller_google_cloud_bigtable_v2_conformanceTests_RowsResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.RowsResult> __Marshaller_google_bigtable_testproxy_RowsResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.RowsResult.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_MutateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.MutateRowRequest> __Marshaller_google_bigtable_testproxy_MutateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.MutateRowRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult> __Marshaller_google_cloud_bigtable_v2_conformanceTests_MutateRowResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.MutateRowResult> __Marshaller_google_bigtable_testproxy_MutateRowResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.MutateRowResult.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_MutateRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.MutateRowsRequest> __Marshaller_google_bigtable_testproxy_MutateRowsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.MutateRowsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult> __Marshaller_google_cloud_bigtable_v2_conformanceTests_MutateRowsResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.MutateRowsResult> __Marshaller_google_bigtable_testproxy_MutateRowsResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.MutateRowsResult.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_CheckAndMutateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.CheckAndMutateRowRequest> __Marshaller_google_bigtable_testproxy_CheckAndMutateRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.CheckAndMutateRowRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult> __Marshaller_google_cloud_bigtable_v2_conformanceTests_CheckAndMutateRowResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.CheckAndMutateRowResult> __Marshaller_google_bigtable_testproxy_CheckAndMutateRowResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.CheckAndMutateRowResult.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_SampleRowKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.SampleRowKeysRequest> __Marshaller_google_bigtable_testproxy_SampleRowKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.SampleRowKeysRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult> __Marshaller_google_cloud_bigtable_v2_conformanceTests_SampleRowKeysResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.SampleRowKeysResult> __Marshaller_google_bigtable_testproxy_SampleRowKeysResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.SampleRowKeysResult.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_ReadModifyWriteRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.ReadModifyWriteRowRequest> __Marshaller_google_bigtable_testproxy_ReadModifyWriteRowRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.ReadModifyWriteRowRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest> __Marshaller_google_cloud_bigtable_v2_conformanceTests_ExecuteQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.ExecuteQueryRequest> __Marshaller_google_bigtable_testproxy_ExecuteQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.ExecuteQueryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult> __Marshaller_google_cloud_bigtable_v2_conformanceTests_ExecuteQueryResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult.Parser));
+    static readonly grpc::Marshaller<global::google.bigtable.testproxy.ExecuteQueryResult> __Marshaller_google_bigtable_testproxy_ExecuteQueryResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::google.bigtable.testproxy.ExecuteQueryResult.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse> __Method_CreateClient = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.CreateClientRequest, global::google.bigtable.testproxy.CreateClientResponse> __Method_CreateClient = new grpc::Method<global::google.bigtable.testproxy.CreateClientRequest, global::google.bigtable.testproxy.CreateClientResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateClient",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_CreateClientRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_CreateClientResponse);
+        __Marshaller_google_bigtable_testproxy_CreateClientRequest,
+        __Marshaller_google_bigtable_testproxy_CreateClientResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse> __Method_CloseClient = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.CloseClientRequest, global::google.bigtable.testproxy.CloseClientResponse> __Method_CloseClient = new grpc::Method<global::google.bigtable.testproxy.CloseClientRequest, global::google.bigtable.testproxy.CloseClientResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CloseClient",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_CloseClientRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_CloseClientResponse);
+        __Marshaller_google_bigtable_testproxy_CloseClientRequest,
+        __Marshaller_google_bigtable_testproxy_CloseClientResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse> __Method_RemoveClient = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.RemoveClientRequest, global::google.bigtable.testproxy.RemoveClientResponse> __Method_RemoveClient = new grpc::Method<global::google.bigtable.testproxy.RemoveClientRequest, global::google.bigtable.testproxy.RemoveClientResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "RemoveClient",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_RemoveClientRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_RemoveClientResponse);
+        __Marshaller_google_bigtable_testproxy_RemoveClientRequest,
+        __Marshaller_google_bigtable_testproxy_RemoveClientResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> __Method_ReadRow = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.ReadRowRequest, global::google.bigtable.testproxy.RowResult> __Method_ReadRow = new grpc::Method<global::google.bigtable.testproxy.ReadRowRequest, global::google.bigtable.testproxy.RowResult>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ReadRow",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_ReadRowRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_RowResult);
+        __Marshaller_google_bigtable_testproxy_ReadRowRequest,
+        __Marshaller_google_bigtable_testproxy_RowResult);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult> __Method_ReadRows = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.ReadRowsRequest, global::google.bigtable.testproxy.RowsResult> __Method_ReadRows = new grpc::Method<global::google.bigtable.testproxy.ReadRowsRequest, global::google.bigtable.testproxy.RowsResult>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ReadRows",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_ReadRowsRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_RowsResult);
+        __Marshaller_google_bigtable_testproxy_ReadRowsRequest,
+        __Marshaller_google_bigtable_testproxy_RowsResult);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult> __Method_MutateRow = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.MutateRowRequest, global::google.bigtable.testproxy.MutateRowResult> __Method_MutateRow = new grpc::Method<global::google.bigtable.testproxy.MutateRowRequest, global::google.bigtable.testproxy.MutateRowResult>(
         grpc::MethodType.Unary,
         __ServiceName,
         "MutateRow",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_MutateRowRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_MutateRowResult);
+        __Marshaller_google_bigtable_testproxy_MutateRowRequest,
+        __Marshaller_google_bigtable_testproxy_MutateRowResult);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult> __Method_BulkMutateRows = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.MutateRowsRequest, global::google.bigtable.testproxy.MutateRowsResult> __Method_BulkMutateRows = new grpc::Method<global::google.bigtable.testproxy.MutateRowsRequest, global::google.bigtable.testproxy.MutateRowsResult>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BulkMutateRows",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_MutateRowsRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_MutateRowsResult);
+        __Marshaller_google_bigtable_testproxy_MutateRowsRequest,
+        __Marshaller_google_bigtable_testproxy_MutateRowsResult);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult> __Method_CheckAndMutateRow = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.CheckAndMutateRowRequest, global::google.bigtable.testproxy.CheckAndMutateRowResult> __Method_CheckAndMutateRow = new grpc::Method<global::google.bigtable.testproxy.CheckAndMutateRowRequest, global::google.bigtable.testproxy.CheckAndMutateRowResult>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CheckAndMutateRow",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_CheckAndMutateRowRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_CheckAndMutateRowResult);
+        __Marshaller_google_bigtable_testproxy_CheckAndMutateRowRequest,
+        __Marshaller_google_bigtable_testproxy_CheckAndMutateRowResult);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult> __Method_SampleRowKeys = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.SampleRowKeysRequest, global::google.bigtable.testproxy.SampleRowKeysResult> __Method_SampleRowKeys = new grpc::Method<global::google.bigtable.testproxy.SampleRowKeysRequest, global::google.bigtable.testproxy.SampleRowKeysResult>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SampleRowKeys",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_SampleRowKeysRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_SampleRowKeysResult);
+        __Marshaller_google_bigtable_testproxy_SampleRowKeysRequest,
+        __Marshaller_google_bigtable_testproxy_SampleRowKeysResult);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> __Method_ReadModifyWriteRow = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.ReadModifyWriteRowRequest, global::google.bigtable.testproxy.RowResult> __Method_ReadModifyWriteRow = new grpc::Method<global::google.bigtable.testproxy.ReadModifyWriteRowRequest, global::google.bigtable.testproxy.RowResult>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ReadModifyWriteRow",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_ReadModifyWriteRowRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_RowResult);
+        __Marshaller_google_bigtable_testproxy_ReadModifyWriteRowRequest,
+        __Marshaller_google_bigtable_testproxy_RowResult);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult> __Method_ExecuteQuery = new grpc::Method<global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult>(
+    static readonly grpc::Method<global::google.bigtable.testproxy.ExecuteQueryRequest, global::google.bigtable.testproxy.ExecuteQueryResult> __Method_ExecuteQuery = new grpc::Method<global::google.bigtable.testproxy.ExecuteQueryRequest, global::google.bigtable.testproxy.ExecuteQueryResult>(
         grpc::MethodType.Unary,
         __ServiceName,
         "ExecuteQuery",
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_ExecuteQueryRequest,
-        __Marshaller_google_cloud_bigtable_v2_conformanceTests_ExecuteQueryResult);
+        __Marshaller_google_bigtable_testproxy_ExecuteQueryRequest,
+        __Marshaller_google_bigtable_testproxy_ExecuteQueryResult);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Cloud.Bigtable.V2.ConformanceTests.TestProxyReflection.Descriptor.Services[0]; }
+      get { return global::google.bigtable.testproxy.TestProxyReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of CloudBigtableV2TestProxy</summary>
@@ -230,7 +230,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse> CreateClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.CreateClientResponse> CreateClient(global::google.bigtable.testproxy.CreateClientRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -242,7 +242,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse> CloseClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.CloseClientResponse> CloseClient(global::google.bigtable.testproxy.CloseClientRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -255,7 +255,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse> RemoveClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.RemoveClientResponse> RemoveClient(global::google.bigtable.testproxy.RemoveClientRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -274,7 +274,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> ReadRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.RowResult> ReadRow(global::google.bigtable.testproxy.ReadRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -286,7 +286,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult> ReadRows(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.RowsResult> ReadRows(global::google.bigtable.testproxy.ReadRowsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -298,7 +298,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult> MutateRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.MutateRowResult> MutateRow(global::google.bigtable.testproxy.MutateRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -310,7 +310,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult> BulkMutateRows(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.MutateRowsResult> BulkMutateRows(global::google.bigtable.testproxy.MutateRowsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -322,7 +322,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult> CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.CheckAndMutateRowResult> CheckAndMutateRow(global::google.bigtable.testproxy.CheckAndMutateRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -334,7 +334,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult> SampleRowKeys(global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.SampleRowKeysResult> SampleRowKeys(global::google.bigtable.testproxy.SampleRowKeysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -346,7 +346,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.RowResult> ReadModifyWriteRow(global::google.bigtable.testproxy.ReadModifyWriteRowRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -358,7 +358,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult> ExecuteQuery(global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::google.bigtable.testproxy.ExecuteQueryResult> ExecuteQuery(global::google.bigtable.testproxy.ExecuteQueryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -405,7 +405,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse CreateClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.CreateClientResponse CreateClient(global::google.bigtable.testproxy.CreateClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -420,7 +420,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse CreateClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.CreateClientResponse CreateClient(global::google.bigtable.testproxy.CreateClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateClient, null, options, request);
       }
@@ -437,7 +437,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse> CreateClientAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.CreateClientResponse> CreateClientAsync(global::google.bigtable.testproxy.CreateClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -452,7 +452,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse> CreateClientAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.CreateClientResponse> CreateClientAsync(global::google.bigtable.testproxy.CreateClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateClient, null, options, request);
       }
@@ -465,7 +465,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse CloseClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.CloseClientResponse CloseClient(global::google.bigtable.testproxy.CloseClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CloseClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -476,7 +476,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse CloseClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.CloseClientResponse CloseClient(global::google.bigtable.testproxy.CloseClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CloseClient, null, options, request);
       }
@@ -489,7 +489,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse> CloseClientAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.CloseClientResponse> CloseClientAsync(global::google.bigtable.testproxy.CloseClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CloseClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -500,7 +500,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse> CloseClientAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.CloseClientResponse> CloseClientAsync(global::google.bigtable.testproxy.CloseClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CloseClient, null, options, request);
       }
@@ -514,7 +514,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse RemoveClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.RemoveClientResponse RemoveClient(global::google.bigtable.testproxy.RemoveClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveClient(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -526,7 +526,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse RemoveClient(global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.RemoveClientResponse RemoveClient(global::google.bigtable.testproxy.RemoveClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_RemoveClient, null, options, request);
       }
@@ -540,7 +540,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse> RemoveClientAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.RemoveClientResponse> RemoveClientAsync(global::google.bigtable.testproxy.RemoveClientRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RemoveClientAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -552,7 +552,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse> RemoveClientAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.RemoveClientResponse> RemoveClientAsync(global::google.bigtable.testproxy.RemoveClientRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_RemoveClient, null, options, request);
       }
@@ -572,7 +572,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult ReadRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.RowResult ReadRow(global::google.bigtable.testproxy.ReadRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -590,7 +590,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult ReadRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.RowResult ReadRow(global::google.bigtable.testproxy.ReadRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReadRow, null, options, request);
       }
@@ -610,7 +610,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> ReadRowAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.RowResult> ReadRowAsync(global::google.bigtable.testproxy.ReadRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -628,7 +628,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> ReadRowAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.RowResult> ReadRowAsync(global::google.bigtable.testproxy.ReadRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReadRow, null, options, request);
       }
@@ -641,7 +641,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult ReadRows(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.RowsResult ReadRows(global::google.bigtable.testproxy.ReadRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -652,7 +652,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult ReadRows(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.RowsResult ReadRows(global::google.bigtable.testproxy.ReadRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReadRows, null, options, request);
       }
@@ -665,7 +665,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult> ReadRowsAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.RowsResult> ReadRowsAsync(global::google.bigtable.testproxy.ReadRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadRowsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -676,7 +676,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult> ReadRowsAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.RowsResult> ReadRowsAsync(global::google.bigtable.testproxy.ReadRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReadRows, null, options, request);
       }
@@ -689,7 +689,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult MutateRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.MutateRowResult MutateRow(global::google.bigtable.testproxy.MutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MutateRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -700,7 +700,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult MutateRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.MutateRowResult MutateRow(global::google.bigtable.testproxy.MutateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_MutateRow, null, options, request);
       }
@@ -713,7 +713,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult> MutateRowAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.MutateRowResult> MutateRowAsync(global::google.bigtable.testproxy.MutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return MutateRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -724,7 +724,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult> MutateRowAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.MutateRowResult> MutateRowAsync(global::google.bigtable.testproxy.MutateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_MutateRow, null, options, request);
       }
@@ -737,7 +737,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult BulkMutateRows(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.MutateRowsResult BulkMutateRows(global::google.bigtable.testproxy.MutateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BulkMutateRows(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -748,7 +748,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult BulkMutateRows(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.MutateRowsResult BulkMutateRows(global::google.bigtable.testproxy.MutateRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BulkMutateRows, null, options, request);
       }
@@ -761,7 +761,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult> BulkMutateRowsAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.MutateRowsResult> BulkMutateRowsAsync(global::google.bigtable.testproxy.MutateRowsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BulkMutateRowsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -772,7 +772,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult> BulkMutateRowsAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.MutateRowsResult> BulkMutateRowsAsync(global::google.bigtable.testproxy.MutateRowsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BulkMutateRows, null, options, request);
       }
@@ -785,7 +785,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.CheckAndMutateRowResult CheckAndMutateRow(global::google.bigtable.testproxy.CheckAndMutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAndMutateRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -796,7 +796,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult CheckAndMutateRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.CheckAndMutateRowResult CheckAndMutateRow(global::google.bigtable.testproxy.CheckAndMutateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CheckAndMutateRow, null, options, request);
       }
@@ -809,7 +809,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult> CheckAndMutateRowAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.CheckAndMutateRowResult> CheckAndMutateRowAsync(global::google.bigtable.testproxy.CheckAndMutateRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CheckAndMutateRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -820,7 +820,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult> CheckAndMutateRowAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.CheckAndMutateRowResult> CheckAndMutateRowAsync(global::google.bigtable.testproxy.CheckAndMutateRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckAndMutateRow, null, options, request);
       }
@@ -833,7 +833,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult SampleRowKeys(global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.SampleRowKeysResult SampleRowKeys(global::google.bigtable.testproxy.SampleRowKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SampleRowKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -844,7 +844,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult SampleRowKeys(global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.SampleRowKeysResult SampleRowKeys(global::google.bigtable.testproxy.SampleRowKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SampleRowKeys, null, options, request);
       }
@@ -857,7 +857,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult> SampleRowKeysAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.SampleRowKeysResult> SampleRowKeysAsync(global::google.bigtable.testproxy.SampleRowKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SampleRowKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -868,7 +868,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult> SampleRowKeysAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.SampleRowKeysResult> SampleRowKeysAsync(global::google.bigtable.testproxy.SampleRowKeysRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SampleRowKeys, null, options, request);
       }
@@ -881,7 +881,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.RowResult ReadModifyWriteRow(global::google.bigtable.testproxy.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadModifyWriteRow(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -892,7 +892,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult ReadModifyWriteRow(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.RowResult ReadModifyWriteRow(global::google.bigtable.testproxy.ReadModifyWriteRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ReadModifyWriteRow, null, options, request);
       }
@@ -905,7 +905,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> ReadModifyWriteRowAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.RowResult> ReadModifyWriteRowAsync(global::google.bigtable.testproxy.ReadModifyWriteRowRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ReadModifyWriteRowAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -916,7 +916,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult> ReadModifyWriteRowAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.RowResult> ReadModifyWriteRowAsync(global::google.bigtable.testproxy.ReadModifyWriteRowRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReadModifyWriteRow, null, options, request);
       }
@@ -929,7 +929,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult ExecuteQuery(global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::google.bigtable.testproxy.ExecuteQueryResult ExecuteQuery(global::google.bigtable.testproxy.ExecuteQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -940,7 +940,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult ExecuteQuery(global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest request, grpc::CallOptions options)
+      public virtual global::google.bigtable.testproxy.ExecuteQueryResult ExecuteQuery(global::google.bigtable.testproxy.ExecuteQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_ExecuteQuery, null, options, request);
       }
@@ -953,7 +953,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult> ExecuteQueryAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.ExecuteQueryResult> ExecuteQueryAsync(global::google.bigtable.testproxy.ExecuteQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return ExecuteQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -964,7 +964,7 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult> ExecuteQueryAsync(global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::google.bigtable.testproxy.ExecuteQueryResult> ExecuteQueryAsync(global::google.bigtable.testproxy.ExecuteQueryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExecuteQuery, null, options, request);
       }
@@ -1002,17 +1002,17 @@ namespace Google.Cloud.Bigtable.V2.ConformanceTests {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CloudBigtableV2TestProxyBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_CreateClient, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CreateClientResponse>(serviceImpl.CreateClient));
-      serviceBinder.AddMethod(__Method_CloseClient, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CloseClientResponse>(serviceImpl.CloseClient));
-      serviceBinder.AddMethod(__Method_RemoveClient, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RemoveClientResponse>(serviceImpl.RemoveClient));
-      serviceBinder.AddMethod(__Method_ReadRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult>(serviceImpl.ReadRow));
-      serviceBinder.AddMethod(__Method_ReadRows, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadRowsRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowsResult>(serviceImpl.ReadRows));
-      serviceBinder.AddMethod(__Method_MutateRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowResult>(serviceImpl.MutateRow));
-      serviceBinder.AddMethod(__Method_BulkMutateRows, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.MutateRowsResult>(serviceImpl.BulkMutateRows));
-      serviceBinder.AddMethod(__Method_CheckAndMutateRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.CheckAndMutateRowResult>(serviceImpl.CheckAndMutateRow));
-      serviceBinder.AddMethod(__Method_SampleRowKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.SampleRowKeysResult>(serviceImpl.SampleRowKeys));
-      serviceBinder.AddMethod(__Method_ReadModifyWriteRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.ReadModifyWriteRowRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.RowResult>(serviceImpl.ReadModifyWriteRow));
-      serviceBinder.AddMethod(__Method_ExecuteQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryRequest, global::Google.Cloud.Bigtable.V2.ConformanceTests.ExecuteQueryResult>(serviceImpl.ExecuteQuery));
+      serviceBinder.AddMethod(__Method_CreateClient, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.CreateClientRequest, global::google.bigtable.testproxy.CreateClientResponse>(serviceImpl.CreateClient));
+      serviceBinder.AddMethod(__Method_CloseClient, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.CloseClientRequest, global::google.bigtable.testproxy.CloseClientResponse>(serviceImpl.CloseClient));
+      serviceBinder.AddMethod(__Method_RemoveClient, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.RemoveClientRequest, global::google.bigtable.testproxy.RemoveClientResponse>(serviceImpl.RemoveClient));
+      serviceBinder.AddMethod(__Method_ReadRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.ReadRowRequest, global::google.bigtable.testproxy.RowResult>(serviceImpl.ReadRow));
+      serviceBinder.AddMethod(__Method_ReadRows, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.ReadRowsRequest, global::google.bigtable.testproxy.RowsResult>(serviceImpl.ReadRows));
+      serviceBinder.AddMethod(__Method_MutateRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.MutateRowRequest, global::google.bigtable.testproxy.MutateRowResult>(serviceImpl.MutateRow));
+      serviceBinder.AddMethod(__Method_BulkMutateRows, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.MutateRowsRequest, global::google.bigtable.testproxy.MutateRowsResult>(serviceImpl.BulkMutateRows));
+      serviceBinder.AddMethod(__Method_CheckAndMutateRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.CheckAndMutateRowRequest, global::google.bigtable.testproxy.CheckAndMutateRowResult>(serviceImpl.CheckAndMutateRow));
+      serviceBinder.AddMethod(__Method_SampleRowKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.SampleRowKeysRequest, global::google.bigtable.testproxy.SampleRowKeysResult>(serviceImpl.SampleRowKeys));
+      serviceBinder.AddMethod(__Method_ReadModifyWriteRow, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.ReadModifyWriteRowRequest, global::google.bigtable.testproxy.RowResult>(serviceImpl.ReadModifyWriteRow));
+      serviceBinder.AddMethod(__Method_ExecuteQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::google.bigtable.testproxy.ExecuteQueryRequest, global::google.bigtable.testproxy.ExecuteQueryResult>(serviceImpl.ExecuteQuery));
     }
 
   }
