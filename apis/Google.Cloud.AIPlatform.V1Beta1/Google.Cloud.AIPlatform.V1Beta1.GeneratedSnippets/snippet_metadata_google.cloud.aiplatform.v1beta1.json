@@ -83702,6 +83702,2238 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_sync",
+      "title": "CreateSessionRequestObject",
+      "description": "Snippet for CreateSession",
+      "file": "SessionServiceClient.CreateSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_async",
+      "title": "CreateSessionRequestObjectAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionServiceClient.CreateSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CreateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened",
+      "title": "CreateSession",
+      "description": "Snippet for CreateSession",
+      "file": "SessionServiceClient.CreateSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened",
+      "title": "CreateSessionAsync",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionServiceClient.CreateSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames1",
+      "title": "CreateSessionResourceNames1",
+      "description": "Snippet for CreateSession",
+      "file": "SessionServiceClient.CreateSessionResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames1",
+      "title": "CreateSessionResourceNames1Async",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionServiceClient.CreateSessionResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_sync_flattened_resourceNames2",
+      "title": "CreateSessionResourceNames2",
+      "description": "Snippet for CreateSession",
+      "file": "SessionServiceClient.CreateSessionResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_CreateSession_async_flattened_resourceNames2",
+      "title": "CreateSessionResourceNames2Async",
+      "description": "Snippet for CreateSessionAsync",
+      "file": "SessionServiceClient.CreateSessionResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.CreateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.Session, Google.Cloud.AIPlatform.V1Beta1.CreateSessionOperationMetadata>>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.CreateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_GetSession_sync",
+      "title": "GetSessionRequestObject",
+      "description": "Snippet for GetSession",
+      "file": "SessionServiceClient.GetSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_GetSession_async",
+      "title": "GetSessionRequestObjectAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionServiceClient.GetSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_GetSession_sync_flattened",
+      "title": "GetSession",
+      "description": "Snippet for GetSession",
+      "file": "SessionServiceClient.GetSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_GetSession_async_flattened",
+      "title": "GetSessionAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionServiceClient.GetSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_GetSession_sync_flattened_resourceNames",
+      "title": "GetSessionResourceNames",
+      "description": "Snippet for GetSession",
+      "file": "SessionServiceClient.GetSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.GetSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_GetSession_async_flattened_resourceNames",
+      "title": "GetSessionResourceNamesAsync",
+      "description": "Snippet for GetSessionAsync",
+      "file": "SessionServiceClient.GetSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.GetSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.GetSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_sync",
+      "title": "ListSessionsRequestObject",
+      "description": "Snippet for ListSessions",
+      "file": "SessionServiceClient.ListSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_async",
+      "title": "ListSessionsRequestObjectAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionServiceClient.ListSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_sync_flattened",
+      "title": "ListSessions",
+      "description": "Snippet for ListSessions",
+      "file": "SessionServiceClient.ListSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_async_flattened",
+      "title": "ListSessionsAsync",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionServiceClient.ListSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_sync_flattened_resourceNames1",
+      "title": "ListSessionsResourceNames1",
+      "description": "Snippet for ListSessions",
+      "file": "SessionServiceClient.ListSessionsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_async_flattened_resourceNames1",
+      "title": "ListSessionsResourceNames1Async",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionServiceClient.ListSessionsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_sync_flattened_resourceNames2",
+      "title": "ListSessionsResourceNames2",
+      "description": "Snippet for ListSessions",
+      "file": "SessionServiceClient.ListSessionsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessions",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListSessions_async_flattened_resourceNames2",
+      "title": "ListSessionsResourceNames2Async",
+      "description": "Snippet for ListSessionsAsync",
+      "file": "SessionServiceClient.ListSessionsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSessionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListSessionsResponse, Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSessions",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListSessions",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_UpdateSession_sync",
+      "title": "UpdateSessionRequestObject",
+      "description": "Snippet for UpdateSession",
+      "file": "SessionServiceClient.UpdateSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.UpdateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.UpdateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_UpdateSession_async",
+      "title": "UpdateSessionRequestObjectAsync",
+      "description": "Snippet for UpdateSessionAsync",
+      "file": "SessionServiceClient.UpdateSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.UpdateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.UpdateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_UpdateSession_sync_flattened",
+      "title": "UpdateSession",
+      "description": "Snippet for UpdateSession",
+      "file": "SessionServiceClient.UpdateSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.UpdateSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.Session",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.UpdateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_UpdateSession_async_flattened",
+      "title": "UpdateSessionAsync",
+      "description": "Snippet for UpdateSessionAsync",
+      "file": "SessionServiceClient.UpdateSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.UpdateSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.Session",
+            "name": "session"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.Session>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.UpdateSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_DeleteSession_sync",
+      "title": "DeleteSessionRequestObject",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionServiceClient.DeleteSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_DeleteSession_async",
+      "title": "DeleteSessionRequestObjectAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionServiceClient.DeleteSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_DeleteSession_sync_flattened",
+      "title": "DeleteSession",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionServiceClient.DeleteSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_DeleteSession_async_flattened",
+      "title": "DeleteSessionAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionServiceClient.DeleteSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_DeleteSession_sync_flattened_resourceNames",
+      "title": "DeleteSessionResourceNames",
+      "description": "Snippet for DeleteSession",
+      "file": "SessionServiceClient.DeleteSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSession",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.DeleteSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOperationMetadata>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_DeleteSession_async_flattened_resourceNames",
+      "title": "DeleteSessionResourceNamesAsync",
+      "description": "Snippet for DeleteSessionAsync",
+      "file": "SessionServiceClient.DeleteSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSessionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.DeleteSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteOperationMetadata>>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSession",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.DeleteSession",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListEvents_sync",
+      "title": "ListEventsRequestObject",
+      "description": "Snippet for ListEvents",
+      "file": "SessionServiceClient.ListEventsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvents",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListEventsResponse, Google.Cloud.AIPlatform.V1Beta1.SessionEvent>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListEvents",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListEvents_async",
+      "title": "ListEventsRequestObjectAsync",
+      "description": "Snippet for ListEventsAsync",
+      "file": "SessionServiceClient.ListEventsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListEventsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListEventsResponse, Google.Cloud.AIPlatform.V1Beta1.SessionEvent>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListEvents",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListEvents_sync_flattened",
+      "title": "ListEvents",
+      "description": "Snippet for ListEvents",
+      "file": "SessionServiceClient.ListEventsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvents",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListEventsResponse, Google.Cloud.AIPlatform.V1Beta1.SessionEvent>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListEvents",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListEvents_async_flattened",
+      "title": "ListEventsAsync",
+      "description": "Snippet for ListEventsAsync",
+      "file": "SessionServiceClient.ListEventsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListEventsResponse, Google.Cloud.AIPlatform.V1Beta1.SessionEvent>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListEvents",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListEvents_sync_flattened_resourceNames",
+      "title": "ListEventsResourceNames",
+      "description": "Snippet for ListEvents",
+      "file": "SessionServiceClient.ListEventsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEvents",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListEvents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListEventsResponse, Google.Cloud.AIPlatform.V1Beta1.SessionEvent>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListEvents",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_ListEvents_async_flattened_resourceNames",
+      "title": "ListEventsResourceNamesAsync",
+      "description": "Snippet for ListEventsAsync",
+      "file": "SessionServiceClient.ListEventsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEventsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.ListEventsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListEventsResponse, Google.Cloud.AIPlatform.V1Beta1.SessionEvent>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "ListEvents",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.ListEvents",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_AppendEvent_sync",
+      "title": "AppendEventRequestObject",
+      "description": "Snippet for AppendEvent",
+      "file": "SessionServiceClient.AppendEventRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AppendEvent",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.AppendEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AppendEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.AppendEventResponse",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "AppendEvent",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.AppendEvent",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_AppendEvent_async",
+      "title": "AppendEventRequestObjectAsync",
+      "description": "Snippet for AppendEventAsync",
+      "file": "SessionServiceClient.AppendEventRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AppendEventAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.AppendEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.AppendEventRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.AppendEventResponse>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "AppendEvent",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.AppendEvent",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_AppendEvent_sync_flattened",
+      "title": "AppendEvent",
+      "description": "Snippet for AppendEvent",
+      "file": "SessionServiceClient.AppendEventSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AppendEvent",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.AppendEvent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.AppendEventResponse",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "AppendEvent",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.AppendEvent",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_AppendEvent_async_flattened",
+      "title": "AppendEventAsync",
+      "description": "Snippet for AppendEventAsync",
+      "file": "SessionServiceClient.AppendEventAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AppendEventAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.AppendEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.AppendEventResponse>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "AppendEvent",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.AppendEvent",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_AppendEvent_sync_flattened_resourceNames",
+      "title": "AppendEventResourceNames",
+      "description": "Snippet for AppendEvent",
+      "file": "SessionServiceClient.AppendEventResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AppendEvent",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.AppendEvent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.AppendEventResponse",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "AppendEvent",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.AppendEvent",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_SessionService_AppendEvent_async_flattened_resourceNames",
+      "title": "AppendEventResourceNamesAsync",
+      "description": "Snippet for AppendEventAsync",
+      "file": "SessionServiceClient.AppendEventResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AppendEventAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient.AppendEventAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SessionEvent",
+            "name": "event"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.AppendEventResponse>",
+        "client": {
+          "shortName": "SessionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.SessionServiceClient"
+        },
+        "method": {
+          "shortName": "AppendEvent",
+          "fullName": "google.cloud.aiplatform.v1beta1.SessionService.AppendEvent",
+          "service": {
+            "shortName": "SessionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.SessionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_SpecialistPoolService_CreateSpecialistPool_sync",
       "title": "CreateSpecialistPoolRequestObject",
       "description": "Snippet for CreateSpecialistPool",
