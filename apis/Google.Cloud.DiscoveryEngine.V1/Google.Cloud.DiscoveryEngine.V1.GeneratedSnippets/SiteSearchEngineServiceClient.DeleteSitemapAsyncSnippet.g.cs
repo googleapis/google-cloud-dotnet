@@ -16,14 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_DocumentService_ImportDocuments_sync]
+    // [START discoveryengine_v1_generated_SiteSearchEngineService_DeleteSitemap_async_flattened]
     using Google.Cloud.DiscoveryEngine.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedDocumentServiceClientSnippets
+    public sealed partial class GeneratedSiteSearchEngineServiceClientSnippets
     {
-        /// <summary>Snippet for ImportDocuments</summary>
+        /// <summary>Snippet for DeleteSitemapAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,41 +32,31 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ImportDocumentsRequestObject()
+        public async Task DeleteSitemapAsync()
         {
             // Create client
-            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ImportDocumentsRequest request = new ImportDocumentsRequest
-            {
-                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
-                InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
-                ErrorConfig = new ImportErrorConfig(),
-                ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
-                UpdateMask = new FieldMask(),
-                AutoGenerateIds = false,
-                IdField = "",
-                ForceRefreshContent = false,
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/siteSearchEngine/sitemaps/[SITEMAP]";
             // Make the request
-            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = documentServiceClient.ImportDocuments(request);
+            Operation<Empty, DeleteSitemapMetadata> response = await siteSearchEngineServiceClient.DeleteSitemapAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, DeleteSitemapMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            ImportDocumentsResponse result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> retrievedResponse = documentServiceClient.PollOnceImportDocuments(operationName);
+            Operation<Empty, DeleteSitemapMetadata> retrievedResponse = await siteSearchEngineServiceClient.PollOnceDeleteSitemapAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END discoveryengine_v1_generated_DocumentService_ImportDocuments_sync]
+    // [END discoveryengine_v1_generated_SiteSearchEngineService_DeleteSitemap_async_flattened]
 }

@@ -16,12 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_ConversationalSearchService_GetSession_sync]
+    // [START discoveryengine_v1_generated_SiteSearchEngineService_FetchSitemaps_sync_flattened_resourceNames]
     using Google.Cloud.DiscoveryEngine.V1;
 
-    public sealed partial class GeneratedConversationalSearchServiceClientSnippets
+    public sealed partial class GeneratedSiteSearchEngineServiceClientSnippets
     {
-        /// <summary>Snippet for GetSession</summary>
+        /// <summary>Snippet for FetchSitemaps</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,19 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetSessionRequestObject()
+        public void FetchSitemapsResourceNames()
         {
             // Create client
-            ConversationalSearchServiceClient conversationalSearchServiceClient = ConversationalSearchServiceClient.Create();
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
             // Initialize request argument(s)
-            GetSessionRequest request = new GetSessionRequest
-            {
-                SessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
-                IncludeAnswerDetails = false,
-            };
+            SiteSearchEngineName parent = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
             // Make the request
-            Session response = conversationalSearchServiceClient.GetSession(request);
+            FetchSitemapsResponse response = siteSearchEngineServiceClient.FetchSitemaps(parent);
         }
     }
-    // [END discoveryengine_v1_generated_ConversationalSearchService_GetSession_sync]
+    // [END discoveryengine_v1_generated_SiteSearchEngineService_FetchSitemaps_sync_flattened_resourceNames]
 }

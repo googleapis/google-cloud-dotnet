@@ -29,7 +29,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
             "LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUv",
             "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5w",
-            "cm90byKABwoIRG9jdW1lbnQSLgoLc3RydWN0X2RhdGEYBCABKAsyFy5nb29n",
+            "cm90byKfBwoIRG9jdW1lbnQSLgoLc3RydWN0X2RhdGEYBCABKAsyFy5nb29n",
             "bGUucHJvdG9idWYuU3RydWN0SAASEwoJanNvbl9kYXRhGAUgASgJSAASEQoE",
             "bmFtZRgBIAEoCUID4EEFEg8KAmlkGAIgASgJQgPgQQUSEQoJc2NoZW1hX2lk",
             "GAMgASgJEkIKB2NvbnRlbnQYCiABKAsyMS5nb29nbGUuY2xvdWQuZGlzY292",
@@ -40,26 +40,27 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "dGF0dXMYDyABKAsyNS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
             "LkRvY3VtZW50LkluZGV4U3RhdHVzQgPgQQMaSwoHQ29udGVudBITCglyYXdf",
             "Ynl0ZXMYAiABKAxIABINCgN1cmkYAyABKAlIABIRCgltaW1lX3R5cGUYASAB",
-            "KAlCCQoHY29udGVudBpoCgtJbmRleFN0YXR1cxIuCgppbmRleF90aW1lGAEg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIpCg1lcnJvcl9zYW1w",
-            "bGVzGAIgAygLMhIuZ29vZ2xlLnJwYy5TdGF0dXM6lgLqQZICCidkaXNjb3Zl",
-            "cnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vRG9jdW1lbnQSZnByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRh",
-            "X3N0b3JlfS9icmFuY2hlcy97YnJhbmNofS9kb2N1bWVudHMve2RvY3VtZW50",
-            "fRJ/cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nv",
-            "bGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3Jl",
-            "fS9icmFuY2hlcy97YnJhbmNofS9kb2N1bWVudHMve2RvY3VtZW50fUIGCgRk",
-            "YXRhQoACCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIN",
-            "RG9jdW1lbnRQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVy",
-            "eWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnllbmdp",
-            "bmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3Zl",
-            "cnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx",
-            "6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
+            "KAlCCQoHY29udGVudBqGAQoLSW5kZXhTdGF0dXMSLgoKaW5kZXhfdGltZRgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKQoNZXJyb3Jfc2Ft",
+            "cGxlcxgCIAMoCzISLmdvb2dsZS5ycGMuU3RhdHVzEhwKD3BlbmRpbmdfbWVz",
+            "c2FnZRgDIAEoCUID4EEFOpYC6kGSAgonZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
+            "ZWFwaXMuY29tL0RvY3VtZW50EmZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vYnJhbmNo",
+            "ZXMve2JyYW5jaH0vZG9jdW1lbnRzL3tkb2N1bWVudH0Sf3Byb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29s",
+            "bGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vYnJhbmNoZXMve2Jy",
+            "YW5jaH0vZG9jdW1lbnRzL3tkb2N1bWVudH1CBgoEZGF0YUKAAgojY29tLmdv",
+            "b2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFCDURvY3VtZW50UHJvdG9Q",
+            "AVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEv",
+            "ZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZF",
+            "UllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIf",
+            "R29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xv",
+            "dWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Document), global::Google.Cloud.DiscoveryEngine.V1.Document.Parser, new[]{ "StructData", "JsonData", "Name", "Id", "SchemaId", "Content", "ParentDocumentId", "DerivedStructData", "IndexTime", "IndexStatus" }, new[]{ "Data" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Document.Types.Content), global::Google.Cloud.DiscoveryEngine.V1.Document.Types.Content.Parser, new[]{ "RawBytes", "Uri", "MimeType" }, new[]{ "Content" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Document.Types.IndexStatus), global::Google.Cloud.DiscoveryEngine.V1.Document.Types.IndexStatus.Parser, new[]{ "IndexTime", "ErrorSamples" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Document.Types.IndexStatus), global::Google.Cloud.DiscoveryEngine.V1.Document.Types.IndexStatus.Parser, new[]{ "IndexTime", "ErrorSamples", "PendingMessage" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -206,7 +207,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// Immutable. The identifier of the document.
     ///
     /// Id should conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-    /// standard with a length limit of 63 characters.
+    /// standard with a length limit of 128 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -312,7 +313,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// * If document is indexed successfully, the index_time field is populated.
     /// * Otherwise, if document is not indexed due to errors, the error_samples
     ///   field is populated.
-    /// * Otherwise, index_status is unset.
+    /// * Otherwise, if document's index is in progress, the pending_message field
+    ///   is populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1144,6 +1146,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public IndexStatus(IndexStatus other) : this() {
           indexTime_ = other.indexTime_ != null ? other.indexTime_.Clone() : null;
           errorSamples_ = other.errorSamples_.Clone();
+          pendingMessage_ = other.pendingMessage_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1184,6 +1187,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           get { return errorSamples_; }
         }
 
+        /// <summary>Field number for the "pending_message" field.</summary>
+        public const int PendingMessageFieldNumber = 3;
+        private string pendingMessage_ = "";
+        /// <summary>
+        /// Immutable. The message indicates the document index is in progress.
+        /// If this field is populated, the document index is pending.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PendingMessage {
+          get { return pendingMessage_; }
+          set {
+            pendingMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1201,6 +1220,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (!object.Equals(IndexTime, other.IndexTime)) return false;
           if(!errorSamples_.Equals(other.errorSamples_)) return false;
+          if (PendingMessage != other.PendingMessage) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1210,6 +1230,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           int hash = 1;
           if (indexTime_ != null) hash ^= IndexTime.GetHashCode();
           hash ^= errorSamples_.GetHashCode();
+          if (PendingMessage.Length != 0) hash ^= PendingMessage.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1233,6 +1254,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteMessage(IndexTime);
           }
           errorSamples_.WriteTo(output, _repeated_errorSamples_codec);
+          if (PendingMessage.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(PendingMessage);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1248,6 +1273,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteMessage(IndexTime);
           }
           errorSamples_.WriteTo(ref output, _repeated_errorSamples_codec);
+          if (PendingMessage.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(PendingMessage);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1262,6 +1291,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(IndexTime);
           }
           size += errorSamples_.CalculateSize(_repeated_errorSamples_codec);
+          if (PendingMessage.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PendingMessage);
+          }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1281,6 +1313,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             IndexTime.MergeFrom(other.IndexTime);
           }
           errorSamples_.Add(other.errorSamples_);
+          if (other.PendingMessage.Length != 0) {
+            PendingMessage = other.PendingMessage;
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1307,6 +1342,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 errorSamples_.AddEntriesFrom(input, _repeated_errorSamples_codec);
                 break;
               }
+              case 26: {
+                PendingMessage = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -1331,6 +1370,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
               case 18: {
                 errorSamples_.AddEntriesFrom(ref input, _repeated_errorSamples_codec);
+                break;
+              }
+              case 26: {
+                PendingMessage = input.ReadString();
                 break;
               }
             }

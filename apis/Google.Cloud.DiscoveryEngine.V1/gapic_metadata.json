@@ -154,6 +154,12 @@
                 "ListSessionsAsync"
               ]
             },
+            "StreamAnswerQuery": {
+              "methods": [
+                "StreamAnswerQuery",
+                "StreamAnswerQueryAsync"
+              ]
+            },
             "UpdateConversation": {
               "methods": [
                 "UpdateConversation",
@@ -475,10 +481,22 @@
                 "BatchVerifyTargetSitesAsync"
               ]
             },
+            "CreateSitemap": {
+              "methods": [
+                "CreateSitemap",
+                "CreateSitemapAsync"
+              ]
+            },
             "CreateTargetSite": {
               "methods": [
                 "CreateTargetSite",
                 "CreateTargetSiteAsync"
+              ]
+            },
+            "DeleteSitemap": {
+              "methods": [
+                "DeleteSitemap",
+                "DeleteSitemapAsync"
               ]
             },
             "DeleteTargetSite": {
@@ -503,6 +521,12 @@
               "methods": [
                 "FetchDomainVerificationStatus",
                 "FetchDomainVerificationStatusAsync"
+              ]
+            },
+            "FetchSitemaps": {
+              "methods": [
+                "FetchSitemaps",
+                "FetchSitemapsAsync"
               ]
             },
             "GetSiteSearchEngine": {

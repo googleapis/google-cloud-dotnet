@@ -29,69 +29,74 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
             "Y2UucHJvdG8aLGdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvY29t",
             "bW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iuggKCVVzZXJFdmVudBIX",
-            "CgpldmVudF90eXBlGAEgASgJQgPgQQISGwoOdXNlcl9wc2V1ZG9faWQYAiAB",
-            "KAlCA+BBAhI6CgZlbmdpbmUYEyABKAlCKvpBJwolZGlzY292ZXJ5ZW5naW5l",
-            "Lmdvb2dsZWFwaXMuY29tL0VuZ2luZRJBCgpkYXRhX3N0b3JlGBQgASgJQi36",
-            "QSoKKGRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9EYXRhU3RvcmUS",
-            "LgoKZXZlbnRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASPAoJdXNlcl9pbmZvGAQgASgLMikuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
-            "eWVuZ2luZS52MS5Vc2VySW5mbxIbChNkaXJlY3RfdXNlcl9yZXF1ZXN0GAUg",
-            "ASgIEhIKCnNlc3Npb25faWQYBiABKAkSPAoJcGFnZV9pbmZvGAcgASgLMiku",
-            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5QYWdlSW5mbxIZChFh",
-            "dHRyaWJ1dGlvbl90b2tlbhgIIAEoCRIOCgZmaWx0ZXIYCSABKAkSQAoJZG9j",
-            "dW1lbnRzGAogAygLMi0uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MS5Eb2N1bWVudEluZm8SOQoFcGFuZWwYCyABKAsyKi5nb29nbGUuY2xvdWQu",
-            "ZGlzY292ZXJ5ZW5naW5lLnYxLlBhbmVsSW5mbxJACgtzZWFyY2hfaW5mbxgM",
-            "IAEoCzIrLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNo",
-            "SW5mbxJICg9jb21wbGV0aW9uX2luZm8YDSABKAsyLy5nb29nbGUuY2xvdWQu",
-            "ZGlzY292ZXJ5ZW5naW5lLnYxLkNvbXBsZXRpb25JbmZvEkoKEHRyYW5zYWN0",
-            "aW9uX2luZm8YDiABKAsyMC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
-            "LnYxLlRyYW5zYWN0aW9uSW5mbxIPCgd0YWdfaWRzGA8gAygJEhUKDXByb21v",
-            "dGlvbl9pZHMYECADKAkSTgoKYXR0cmlidXRlcxgRIAMoCzI6Lmdvb2dsZS5j",
-            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuVXNlckV2ZW50LkF0dHJpYnV0ZXNF",
-            "bnRyeRI+CgptZWRpYV9pbmZvGBIgASgLMiouZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MS5NZWRpYUluZm8aYwoPQXR0cmlidXRlc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRI/CgV2YWx1ZRgCIAEoCzIwLmdvb2dsZS5jbG91ZC5kaXNj",
-            "b3ZlcnllbmdpbmUudjEuQ3VzdG9tQXR0cmlidXRlOgI4ASJZCghQYWdlSW5m",
-            "bxITCgtwYWdldmlld19pZBgBIAEoCRIVCg1wYWdlX2NhdGVnb3J5GAIgASgJ",
-            "EgsKA3VyaRgDIAEoCRIUCgxyZWZlcnJlcl91cmkYBCABKAkiVAoKU2VhcmNo",
-            "SW5mbxIUCgxzZWFyY2hfcXVlcnkYASABKAkSEAoIb3JkZXJfYnkYAiABKAkS",
-            "EwoGb2Zmc2V0GAMgASgFSACIAQFCCQoHX29mZnNldCJICg5Db21wbGV0aW9u",
-            "SW5mbxIbChNzZWxlY3RlZF9zdWdnZXN0aW9uGAEgASgJEhkKEXNlbGVjdGVk",
-            "X3Bvc2l0aW9uGAIgASgFIskBCg9UcmFuc2FjdGlvbkluZm8SFwoFdmFsdWUY",
-            "ASABKAJCA+BBAkgAiAEBEhUKCGN1cnJlbmN5GAIgASgJQgPgQQISFgoOdHJh",
-            "bnNhY3Rpb25faWQYAyABKAkSEAoDdGF4GAQgASgCSAGIAQESEQoEY29zdBgF",
-            "IAEoAkgCiAEBEhsKDmRpc2NvdW50X3ZhbHVlGAYgASgCSAOIAQFCCAoGX3Zh",
-            "bHVlQgYKBF90YXhCBwoFX2Nvc3RCEQoPX2Rpc2NvdW50X3ZhbHVlItABCgxE",
-            "b2N1bWVudEluZm8SDAoCaWQYASABKAlIABI8CgRuYW1lGAIgASgJQiz6QSkK",
-            "J2Rpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudEgAEg0K",
-            "A3VyaRgGIAEoCUgAEhUKCHF1YW50aXR5GAMgASgFSAGIAQESFQoNcHJvbW90",
-            "aW9uX2lkcxgEIAMoCRITCgZqb2luZWQYBSABKAhCA+BBA0IVChNkb2N1bWVu",
-            "dF9kZXNjcmlwdG9yQgsKCV9xdWFudGl0eSKUAQoJUGFuZWxJbmZvEhUKCHBh",
-            "bmVsX2lkGAIgASgJQgPgQQISFAoMZGlzcGxheV9uYW1lGAMgASgJEhsKDnBh",
-            "bmVsX3Bvc2l0aW9uGAQgASgFSACIAQESGQoMdG90YWxfcGFuZWxzGAUgASgF",
-            "SAGIAQFCEQoPX3BhbmVsX3Bvc2l0aW9uQg8KDV90b3RhbF9wYW5lbHMijQEK",
-            "CU1lZGlhSW5mbxI6ChdtZWRpYV9wcm9ncmVzc19kdXJhdGlvbhgBIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhImChltZWRpYV9wcm9ncmVzc19w",
-            "ZXJjZW50YWdlGAIgASgCSACIAQFCHAoaX21lZGlhX3Byb2dyZXNzX3BlcmNl",
-            "bnRhZ2VCgQIKI2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYx",
-            "Qg5Vc2VyRXZlbnRQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL2Rpc2Nv",
-            "dmVyeWVuZ2luZS9hcGl2MS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnll",
-            "bmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCH0dvb2dsZS5DbG91ZC5EaXNj",
-            "b3ZlcnlFbmdpbmUuVjHKAh9Hb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5l",
-            "XFYx6gIiR29vZ2xlOjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJv",
-            "dG8z"));
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8imQkKCVVzZXJFdmVudBIX",
+            "CgpldmVudF90eXBlGAEgASgJQgPgQQISHAoPY29udmVyc2lvbl90eXBlGBUg",
+            "ASgJQgPgQQESGwoOdXNlcl9wc2V1ZG9faWQYAiABKAlCA+BBAhI6CgZlbmdp",
+            "bmUYEyABKAlCKvpBJwolZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29t",
+            "L0VuZ2luZRJBCgpkYXRhX3N0b3JlGBQgASgJQi36QSoKKGRpc2NvdmVyeWVu",
+            "Z2luZS5nb29nbGVhcGlzLmNvbS9EYXRhU3RvcmUSLgoKZXZlbnRfdGltZRgD",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASPAoJdXNlcl9pbmZv",
+            "GAQgASgLMikuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Vc2Vy",
+            "SW5mbxIbChNkaXJlY3RfdXNlcl9yZXF1ZXN0GAUgASgIEhIKCnNlc3Npb25f",
+            "aWQYBiABKAkSPAoJcGFnZV9pbmZvGAcgASgLMikuZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MS5QYWdlSW5mbxIZChFhdHRyaWJ1dGlvbl90b2tl",
+            "bhgIIAEoCRIOCgZmaWx0ZXIYCSABKAkSQAoJZG9jdW1lbnRzGAogAygLMi0u",
+            "Z29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Eb2N1bWVudEluZm8S",
+            "OQoFcGFuZWwYCyABKAsyKi5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxLlBhbmVsSW5mbxJACgtzZWFyY2hfaW5mbxgMIAEoCzIrLmdvb2dsZS5j",
+            "bG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2VhcmNoSW5mbxJICg9jb21wbGV0",
+            "aW9uX2luZm8YDSABKAsyLy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxLkNvbXBsZXRpb25JbmZvEkoKEHRyYW5zYWN0aW9uX2luZm8YDiABKAsy",
+            "MC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlRyYW5zYWN0aW9u",
+            "SW5mbxIPCgd0YWdfaWRzGA8gAygJEhUKDXByb21vdGlvbl9pZHMYECADKAkS",
+            "TgoKYXR0cmlidXRlcxgRIAMoCzI6Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjEuVXNlckV2ZW50LkF0dHJpYnV0ZXNFbnRyeRI+CgptZWRpYV9p",
+            "bmZvGBIgASgLMiouZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5N",
+            "ZWRpYUluZm8SPwoGcGFuZWxzGBYgAygLMiouZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MS5QYW5lbEluZm9CA+BBARpjCg9BdHRyaWJ1dGVzRW50",
+            "cnkSCwoDa2V5GAEgASgJEj8KBXZhbHVlGAIgASgLMjAuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MS5DdXN0b21BdHRyaWJ1dGU6AjgBIlkKCFBh",
+            "Z2VJbmZvEhMKC3BhZ2V2aWV3X2lkGAEgASgJEhUKDXBhZ2VfY2F0ZWdvcnkY",
+            "AiABKAkSCwoDdXJpGAMgASgJEhQKDHJlZmVycmVyX3VyaRgEIAEoCSJUCgpT",
+            "ZWFyY2hJbmZvEhQKDHNlYXJjaF9xdWVyeRgBIAEoCRIQCghvcmRlcl9ieRgC",
+            "IAEoCRITCgZvZmZzZXQYAyABKAVIAIgBAUIJCgdfb2Zmc2V0IkgKDkNvbXBs",
+            "ZXRpb25JbmZvEhsKE3NlbGVjdGVkX3N1Z2dlc3Rpb24YASABKAkSGQoRc2Vs",
+            "ZWN0ZWRfcG9zaXRpb24YAiABKAUiyQEKD1RyYW5zYWN0aW9uSW5mbxIXCgV2",
+            "YWx1ZRgBIAEoAkID4EECSACIAQESFQoIY3VycmVuY3kYAiABKAlCA+BBAhIW",
+            "Cg50cmFuc2FjdGlvbl9pZBgDIAEoCRIQCgN0YXgYBCABKAJIAYgBARIRCgRj",
+            "b3N0GAUgASgCSAKIAQESGwoOZGlzY291bnRfdmFsdWUYBiABKAJIA4gBAUII",
+            "CgZfdmFsdWVCBgoEX3RheEIHCgVfY29zdEIRCg9fZGlzY291bnRfdmFsdWUi",
+            "iQIKDERvY3VtZW50SW5mbxIMCgJpZBgBIAEoCUgAEjwKBG5hbWUYAiABKAlC",
+            "LPpBKQonZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RvY3VtZW50",
+            "SAASDQoDdXJpGAYgASgJSAASFQoIcXVhbnRpdHkYAyABKAVIAYgBARIVCg1w",
+            "cm9tb3Rpb25faWRzGAQgAygJEhMKBmpvaW5lZBgFIAEoCEID4EEDEiIKEGNv",
+            "bnZlcnNpb25fdmFsdWUYByABKAJCA+BBAUgCiAEBQhUKE2RvY3VtZW50X2Rl",
+            "c2NyaXB0b3JCCwoJX3F1YW50aXR5QhMKEV9jb252ZXJzaW9uX3ZhbHVlItsB",
+            "CglQYW5lbEluZm8SFQoIcGFuZWxfaWQYAiABKAlCA+BBAhIUCgxkaXNwbGF5",
+            "X25hbWUYAyABKAkSGwoOcGFuZWxfcG9zaXRpb24YBCABKAVIAIgBARIZCgx0",
+            "b3RhbF9wYW5lbHMYBSABKAVIAYgBARJFCglkb2N1bWVudHMYBiADKAsyLS5n",
+            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkRvY3VtZW50SW5mb0ID",
+            "4EEBQhEKD19wYW5lbF9wb3NpdGlvbkIPCg1fdG90YWxfcGFuZWxzIo0BCglN",
+            "ZWRpYUluZm8SOgoXbWVkaWFfcHJvZ3Jlc3NfZHVyYXRpb24YASABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb24SJgoZbWVkaWFfcHJvZ3Jlc3NfcGVy",
+            "Y2VudGFnZRgCIAEoAkgAiAEBQhwKGl9tZWRpYV9wcm9ncmVzc19wZXJjZW50",
+            "YWdlQoECCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIO",
+            "VXNlckV2ZW50UHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zl",
+            "cnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5n",
+            "aW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292",
+            "ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxW",
+            "MeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.UserEvent), global::Google.Cloud.DiscoveryEngine.V1.UserEvent.Parser, new[]{ "EventType", "UserPseudoId", "Engine", "DataStore", "EventTime", "UserInfo", "DirectUserRequest", "SessionId", "PageInfo", "AttributionToken", "Filter", "Documents", "Panel", "SearchInfo", "CompletionInfo", "TransactionInfo", "TagIds", "PromotionIds", "Attributes", "MediaInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.UserEvent), global::Google.Cloud.DiscoveryEngine.V1.UserEvent.Parser, new[]{ "EventType", "ConversionType", "UserPseudoId", "Engine", "DataStore", "EventTime", "UserInfo", "DirectUserRequest", "SessionId", "PageInfo", "AttributionToken", "Filter", "Documents", "Panel", "SearchInfo", "CompletionInfo", "TransactionInfo", "TagIds", "PromotionIds", "Attributes", "MediaInfo", "Panels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PageInfo), global::Google.Cloud.DiscoveryEngine.V1.PageInfo.Parser, new[]{ "PageviewId", "PageCategory", "Uri", "ReferrerUri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SearchInfo), global::Google.Cloud.DiscoveryEngine.V1.SearchInfo.Parser, new[]{ "SearchQuery", "OrderBy", "Offset" }, new[]{ "Offset" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.CompletionInfo), global::Google.Cloud.DiscoveryEngine.V1.CompletionInfo.Parser, new[]{ "SelectedSuggestion", "SelectedPosition" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.TransactionInfo), global::Google.Cloud.DiscoveryEngine.V1.TransactionInfo.Parser, new[]{ "Value", "Currency", "TransactionId", "Tax", "Cost", "DiscountValue" }, new[]{ "Value", "Tax", "Cost", "DiscountValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo), global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo.Parser, new[]{ "Id", "Name", "Uri", "Quantity", "PromotionIds", "Joined" }, new[]{ "DocumentDescriptor", "Quantity" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PanelInfo), global::Google.Cloud.DiscoveryEngine.V1.PanelInfo.Parser, new[]{ "PanelId", "DisplayName", "PanelPosition", "TotalPanels" }, new[]{ "PanelPosition", "TotalPanels" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo), global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo.Parser, new[]{ "Id", "Name", "Uri", "Quantity", "PromotionIds", "Joined", "ConversionValue" }, new[]{ "DocumentDescriptor", "Quantity", "ConversionValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.PanelInfo), global::Google.Cloud.DiscoveryEngine.V1.PanelInfo.Parser, new[]{ "PanelId", "DisplayName", "PanelPosition", "TotalPanels", "Documents" }, new[]{ "PanelPosition", "TotalPanels" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.MediaInfo), global::Google.Cloud.DiscoveryEngine.V1.MediaInfo.Parser, new[]{ "MediaProgressDuration", "MediaProgressPercentage" }, new[]{ "MediaProgressPercentage" }, null, null, null)
           }));
     }
@@ -139,6 +144,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserEvent(UserEvent other) : this() {
       eventType_ = other.eventType_;
+      conversionType_ = other.conversionType_;
       userPseudoId_ = other.userPseudoId_;
       engine_ = other.engine_;
       dataStore_ = other.dataStore_;
@@ -158,6 +164,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       promotionIds_ = other.promotionIds_.Clone();
       attributes_ = other.attributes_.Clone();
       mediaInfo_ = other.mediaInfo_ != null ? other.mediaInfo_.Clone() : null;
+      panels_ = other.panels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -180,6 +187,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// * `view-item-list`: View of a panel or ordered list of Documents.
     /// * `view-home-page`: View of the home page.
     /// * `view-category-page`: View of a category page, e.g. Home > Men > Jeans
+    /// * `add-feedback`: Add a user feedback.
     ///
     /// Retail-related values:
     ///
@@ -190,6 +198,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     ///
     /// * `media-play`: Start/resume watching a video, playing a song, etc.
     /// * `media-complete`: Finished or stopped midway through a video, song, etc.
+    ///
+    /// Custom conversion value:
+    ///
+    /// * `conversion`: Customer defined conversion event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -197,6 +209,31 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return eventType_; }
       set {
         eventType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "conversion_type" field.</summary>
+    public const int ConversionTypeFieldNumber = 21;
+    private string conversionType_ = "";
+    /// <summary>
+    /// Optional. Conversion type.
+    ///
+    /// Required if
+    /// [UserEvent.event_type][google.cloud.discoveryengine.v1.UserEvent.event_type]
+    /// is `conversion`. This is a customer-defined conversion name in lowercase
+    /// letters or numbers separated by "-", such as "watch", "good-visit" etc.
+    ///
+    /// Do not set the field if
+    /// [UserEvent.event_type][google.cloud.discoveryengine.v1.UserEvent.event_type]
+    /// is not `conversion`. This mixes the custom conversion event with predefined
+    /// events like `search`, `view-item` etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConversionType {
+      get { return conversionType_; }
+      set {
+        conversionType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -624,6 +661,21 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "panels" field.</summary>
+    public const int PanelsFieldNumber = 22;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.PanelInfo> _repeated_panels_codec
+        = pb::FieldCodec.ForMessage(178, global::Google.Cloud.DiscoveryEngine.V1.PanelInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.PanelInfo> panels_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.PanelInfo>();
+    /// <summary>
+    /// Optional. List of panels associated with this event.
+    /// Used for page-level impression data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.PanelInfo> Panels {
+      get { return panels_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -640,6 +692,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return true;
       }
       if (EventType != other.EventType) return false;
+      if (ConversionType != other.ConversionType) return false;
       if (UserPseudoId != other.UserPseudoId) return false;
       if (Engine != other.Engine) return false;
       if (DataStore != other.DataStore) return false;
@@ -659,6 +712,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if(!promotionIds_.Equals(other.promotionIds_)) return false;
       if (!Attributes.Equals(other.Attributes)) return false;
       if (!object.Equals(MediaInfo, other.MediaInfo)) return false;
+      if(!panels_.Equals(other.panels_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -667,6 +721,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (EventType.Length != 0) hash ^= EventType.GetHashCode();
+      if (ConversionType.Length != 0) hash ^= ConversionType.GetHashCode();
       if (UserPseudoId.Length != 0) hash ^= UserPseudoId.GetHashCode();
       if (Engine.Length != 0) hash ^= Engine.GetHashCode();
       if (DataStore.Length != 0) hash ^= DataStore.GetHashCode();
@@ -686,6 +741,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       hash ^= promotionIds_.GetHashCode();
       hash ^= Attributes.GetHashCode();
       if (mediaInfo_ != null) hash ^= MediaInfo.GetHashCode();
+      hash ^= panels_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -772,6 +828,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(162, 1);
         output.WriteString(DataStore);
       }
+      if (ConversionType.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(ConversionType);
+      }
+      panels_.WriteTo(output, _repeated_panels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -850,6 +911,11 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(162, 1);
         output.WriteString(DataStore);
       }
+      if (ConversionType.Length != 0) {
+        output.WriteRawTag(170, 1);
+        output.WriteString(ConversionType);
+      }
+      panels_.WriteTo(ref output, _repeated_panels_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -862,6 +928,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       int size = 0;
       if (EventType.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EventType);
+      }
+      if (ConversionType.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ConversionType);
       }
       if (UserPseudoId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UserPseudoId);
@@ -912,6 +981,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (mediaInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MediaInfo);
       }
+      size += panels_.CalculateSize(_repeated_panels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -926,6 +996,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.EventType.Length != 0) {
         EventType = other.EventType;
+      }
+      if (other.ConversionType.Length != 0) {
+        ConversionType = other.ConversionType;
       }
       if (other.UserPseudoId.Length != 0) {
         UserPseudoId = other.UserPseudoId;
@@ -1000,6 +1073,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         }
         MediaInfo.MergeFrom(other.MediaInfo);
       }
+      panels_.Add(other.panels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1119,6 +1193,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             DataStore = input.ReadString();
             break;
           }
+          case 170: {
+            ConversionType = input.ReadString();
+            break;
+          }
+          case 178: {
+            panels_.AddEntriesFrom(input, _repeated_panels_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1236,6 +1318,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 162: {
             DataStore = input.ReadString();
+            break;
+          }
+          case 170: {
+            ConversionType = input.ReadString();
+            break;
+          }
+          case 178: {
+            panels_.AddEntriesFrom(ref input, _repeated_panels_codec);
             break;
           }
         }
@@ -2683,6 +2773,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       quantity_ = other.quantity_;
       promotionIds_ = other.promotionIds_.Clone();
       joined_ = other.joined_;
+      conversionValue_ = other.conversionValue_;
       switch (other.DocumentDescriptorCase) {
         case DocumentDescriptorOneofCase.Id:
           Id = other.Id;
@@ -2863,6 +2954,42 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "conversion_value" field.</summary>
+    public const int ConversionValueFieldNumber = 7;
+    private readonly static float ConversionValueDefaultValue = 0F;
+
+    private float conversionValue_;
+    /// <summary>
+    /// Optional. The conversion value associated with this Document.
+    /// Must be set if
+    /// [UserEvent.event_type][google.cloud.discoveryengine.v1.UserEvent.event_type]
+    /// is "conversion".
+    ///
+    /// For example, a value of 1000 signifies that 1000 seconds were spent viewing
+    /// a Document for the `watch` conversion type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float ConversionValue {
+      get { if ((_hasBits0 & 2) != 0) { return conversionValue_; } else { return ConversionValueDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        conversionValue_ = value;
+      }
+    }
+    /// <summary>Gets whether the "conversion_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConversionValue {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "conversion_value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConversionValue() {
+      _hasBits0 &= ~2;
+    }
+
     private object documentDescriptor_;
     /// <summary>Enum of possible cases for the "document_descriptor" oneof.</summary>
     public enum DocumentDescriptorOneofCase {
@@ -2906,6 +3033,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Quantity != other.Quantity) return false;
       if(!promotionIds_.Equals(other.promotionIds_)) return false;
       if (Joined != other.Joined) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(ConversionValue, other.ConversionValue)) return false;
       if (DocumentDescriptorCase != other.DocumentDescriptorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2920,6 +3048,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (HasQuantity) hash ^= Quantity.GetHashCode();
       hash ^= promotionIds_.GetHashCode();
       if (Joined != false) hash ^= Joined.GetHashCode();
+      if (HasConversionValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ConversionValue);
       hash ^= (int) documentDescriptorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2960,6 +3089,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(50);
         output.WriteString(Uri);
       }
+      if (HasConversionValue) {
+        output.WriteRawTag(61);
+        output.WriteFloat(ConversionValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2991,6 +3124,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(50);
         output.WriteString(Uri);
       }
+      if (HasConversionValue) {
+        output.WriteRawTag(61);
+        output.WriteFloat(ConversionValue);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3017,6 +3154,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Joined != false) {
         size += 1 + 1;
       }
+      if (HasConversionValue) {
+        size += 1 + 4;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3035,6 +3175,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       promotionIds_.Add(other.promotionIds_);
       if (other.Joined != false) {
         Joined = other.Joined;
+      }
+      if (other.HasConversionValue) {
+        ConversionValue = other.ConversionValue;
       }
       switch (other.DocumentDescriptorCase) {
         case DocumentDescriptorOneofCase.Id:
@@ -3087,6 +3230,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             Uri = input.ReadString();
             break;
           }
+          case 61: {
+            ConversionValue = input.ReadFloat();
+            break;
+          }
         }
       }
     #endif
@@ -3124,6 +3271,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 50: {
             Uri = input.ReadString();
+            break;
+          }
+          case 61: {
+            ConversionValue = input.ReadFloat();
             break;
           }
         }
@@ -3177,6 +3328,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       displayName_ = other.displayName_;
       panelPosition_ = other.panelPosition_;
       totalPanels_ = other.totalPanels_;
+      documents_ = other.documents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3282,6 +3434,20 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "documents" field.</summary>
+    public const int DocumentsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo> _repeated_documents_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo> documents_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo>();
+    /// <summary>
+    /// Optional. The document IDs associated with this panel.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.DocumentInfo> Documents {
+      get { return documents_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3301,6 +3467,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (PanelPosition != other.PanelPosition) return false;
       if (TotalPanels != other.TotalPanels) return false;
+      if(!documents_.Equals(other.documents_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3312,6 +3479,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (HasPanelPosition) hash ^= PanelPosition.GetHashCode();
       if (HasTotalPanels) hash ^= TotalPanels.GetHashCode();
+      hash ^= documents_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3346,6 +3514,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(40);
         output.WriteInt32(TotalPanels);
       }
+      documents_.WriteTo(output, _repeated_documents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3372,6 +3541,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(40);
         output.WriteInt32(TotalPanels);
       }
+      documents_.WriteTo(ref output, _repeated_documents_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3394,6 +3564,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (HasTotalPanels) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TotalPanels);
       }
+      size += documents_.CalculateSize(_repeated_documents_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3418,6 +3589,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (other.HasTotalPanels) {
         TotalPanels = other.TotalPanels;
       }
+      documents_.Add(other.documents_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3449,6 +3621,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             TotalPanels = input.ReadInt32();
             break;
           }
+          case 50: {
+            documents_.AddEntriesFrom(input, _repeated_documents_codec);
+            break;
+          }
         }
       }
     #endif
@@ -3478,6 +3654,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           case 40: {
             TotalPanels = input.ReadInt32();
+            break;
+          }
+          case 50: {
+            documents_.AddEntriesFrom(ref input, _repeated_documents_codec);
             break;
           }
         }

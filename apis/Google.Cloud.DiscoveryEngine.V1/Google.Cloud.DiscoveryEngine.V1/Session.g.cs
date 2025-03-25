@@ -27,36 +27,40 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "Ci1nb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxL3Nlc3Npb24ucHJv",
             "dG8SH2dvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEaH2dvb2dsZS9h",
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8imwYKB1Nl",
-            "c3Npb24SEQoEbmFtZRgBIAEoCUID4EEFEj0KBXN0YXRlGAIgASgOMi4uZ29v",
-            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZXNzaW9uLlN0YXRlEhYK",
-            "DnVzZXJfcHNldWRvX2lkGAMgASgJEjwKBXR1cm5zGAQgAygLMi0uZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZXNzaW9uLlR1cm4SMwoKc3Rh",
-            "cnRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxIxCghlbmRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxp5CgRUdXJuEjUKBXF1ZXJ5GAEgASgLMiYuZ29vZ2xlLmNsb3Vk",
-            "LmRpc2NvdmVyeWVuZ2luZS52MS5RdWVyeRI6CgZhbnN3ZXIYAiABKAlCKvpB",
-            "JwolZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0Fuc3dlciIvCgVT",
-            "dGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEg8KC0lOX1BST0dSRVNTEAE6",
-            "0wLqQc8CCiZkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vU2Vzc2lv",
-            "bhJScHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Rh",
-            "dGFTdG9yZXMve2RhdGFfc3RvcmV9L3Nlc3Npb25zL3tzZXNzaW9ufRJrcHJv",
-            "amVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rp",
-            "b25zL3tjb2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9zZXNz",
-            "aW9ucy97c2Vzc2lvbn0SZHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
-            "e2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZW5naW5lcy97",
-            "ZW5naW5lfS9zZXNzaW9ucy97c2Vzc2lvbn0iNAoFUXVlcnkSDgoEdGV4dBgC",
-            "IAEoCUgAEhAKCHF1ZXJ5X2lkGAEgASgJQgkKB2NvbnRlbnRC/wEKI2NvbS5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxQgxTZXNzaW9uUHJvdG9Q",
-            "AVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjEv",
-            "ZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZF",
-            "UllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxygIf",
-            "R29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdvb2dsZTo6Q2xv",
-            "dWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
+            "cHJvdG8aLGdvb2dsZS9jbG91ZC9kaXNjb3ZlcnllbmdpbmUvdjEvYW5zd2Vy",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpYHCgdT",
+            "ZXNzaW9uEhEKBG5hbWUYASABKAlCA+BBBRIZCgxkaXNwbGF5X25hbWUYByAB",
+            "KAlCA+BBARI9CgVzdGF0ZRgCIAEoDjIuLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
+            "cnllbmdpbmUudjEuU2Vzc2lvbi5TdGF0ZRIWCg51c2VyX3BzZXVkb19pZBgD",
+            "IAEoCRI8CgV0dXJucxgEIAMoCzItLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjEuU2Vzc2lvbi5UdXJuEjMKCnN0YXJ0X3RpbWUYBSABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5kX3RpbWUYBiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFgoJaXNfcGlu",
+            "bmVkGAggASgIQgPgQQEawAEKBFR1cm4SNQoFcXVlcnkYASABKAsyJi5nb29n",
+            "bGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLlF1ZXJ5EjoKBmFuc3dlchgC",
+            "IAEoCUIq+kEnCiVkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vQW5z",
+            "d2VyEkUKD2RldGFpbGVkX2Fuc3dlchgHIAEoCzInLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjEuQW5zd2VyQgPgQQMiLwoFU3RhdGUSFQoRU1RB",
+            "VEVfVU5TUEVDSUZJRUQQABIPCgtJTl9QUk9HUkVTUxABOtMC6kHPAgomZGlz",
+            "Y292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL1Nlc3Npb24SUnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tk",
+            "YXRhX3N0b3JlfS9zZXNzaW9ucy97c2Vzc2lvbn0Sa3Byb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVj",
+            "dGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2Vzc2lvbnMve3Nlc3Np",
+            "b259EmRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "Y29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2VuZ2luZXMve2VuZ2luZX0vc2Vz",
+            "c2lvbnMve3Nlc3Npb259IjQKBVF1ZXJ5Eg4KBHRleHQYAiABKAlIABIQCghx",
+            "dWVyeV9pZBgBIAEoCUIJCgdjb250ZW50Qv8BCiNjb20uZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MUIMU2Vzc2lvblByb3RvUAFaTWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVu",
+            "Z2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIf",
+            "R29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91",
+            "ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3Zl",
+            "cnlFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.AnswerReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session), global::Google.Cloud.DiscoveryEngine.V1.Session.Parser, new[]{ "Name", "State", "UserPseudoId", "Turns", "StartTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn), global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn.Parser, new[]{ "Query", "Answer" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session), global::Google.Cloud.DiscoveryEngine.V1.Session.Parser, new[]{ "Name", "DisplayName", "State", "UserPseudoId", "Turns", "StartTime", "EndTime", "IsPinned" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn), global::Google.Cloud.DiscoveryEngine.V1.Session.Types.Turn.Parser, new[]{ "Query", "Answer", "DetailedAnswer" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Query), global::Google.Cloud.DiscoveryEngine.V1.Query.Parser, new[]{ "Text", "QueryId" }, new[]{ "Content" }, null, null, null)
           }));
     }
@@ -103,11 +107,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Session(Session other) : this() {
       name_ = other.name_;
+      displayName_ = other.displayName_;
       state_ = other.state_;
       userPseudoId_ = other.userPseudoId_;
       turns_ = other.turns_.Clone();
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      isPinned_ = other.isPinned_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -130,6 +136,24 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 7;
+    private string displayName_ = "";
+    /// <summary>
+    /// Optional. The display name of the session.
+    ///
+    /// This field is used to identify the session in the UI.
+    /// By default, the display name is the first turn query text in the session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -207,6 +231,22 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
     }
 
+    /// <summary>Field number for the "is_pinned" field.</summary>
+    public const int IsPinnedFieldNumber = 8;
+    private bool isPinned_;
+    /// <summary>
+    /// Optional. Whether the session is pinned, pinned session will be displayed
+    /// on the top of the session list.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool IsPinned {
+      get { return isPinned_; }
+      set {
+        isPinned_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -223,11 +263,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
       if (State != other.State) return false;
       if (UserPseudoId != other.UserPseudoId) return false;
       if(!turns_.Equals(other.turns_)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if (IsPinned != other.IsPinned) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -236,11 +278,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (State != global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (UserPseudoId.Length != 0) hash ^= UserPseudoId.GetHashCode();
       hash ^= turns_.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      if (IsPinned != false) hash ^= IsPinned.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -280,6 +324,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(EndTime);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(DisplayName);
+      }
+      if (IsPinned != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(IsPinned);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -311,6 +363,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(EndTime);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(DisplayName);
+      }
+      if (IsPinned != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(IsPinned);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -324,6 +384,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
       if (State != global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
       }
@@ -336,6 +399,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+      }
+      if (IsPinned != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -351,6 +417,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
       }
       if (other.State != global::Google.Cloud.DiscoveryEngine.V1.Session.Types.State.Unspecified) {
         State = other.State;
@@ -370,6 +439,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         EndTime.MergeFrom(other.EndTime);
+      }
+      if (other.IsPinned != false) {
+        IsPinned = other.IsPinned;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -416,6 +488,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 58: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 64: {
+            IsPinned = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -459,6 +539,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 58: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 64: {
+            IsPinned = input.ReadBool();
             break;
           }
         }
@@ -526,6 +614,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public Turn(Turn other) : this() {
           query_ = other.query_ != null ? other.query_.Clone() : null;
           answer_ = other.answer_;
+          detailedAnswer_ = other.detailedAnswer_ != null ? other.detailedAnswer_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -568,6 +657,26 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
         }
 
+        /// <summary>Field number for the "detailed_answer" field.</summary>
+        public const int DetailedAnswerFieldNumber = 7;
+        private global::Google.Cloud.DiscoveryEngine.V1.Answer detailedAnswer_;
+        /// <summary>
+        /// Output only. In
+        /// [ConversationalSearchService.GetSession][google.cloud.discoveryengine.v1.ConversationalSearchService.GetSession]
+        /// API, if
+        /// [GetSessionRequest.include_answer_details][google.cloud.discoveryengine.v1.GetSessionRequest.include_answer_details]
+        /// is set to true, this field will be populated when getting answer query
+        /// session.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DiscoveryEngine.V1.Answer DetailedAnswer {
+          get { return detailedAnswer_; }
+          set {
+            detailedAnswer_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -585,6 +694,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (!object.Equals(Query, other.Query)) return false;
           if (Answer != other.Answer) return false;
+          if (!object.Equals(DetailedAnswer, other.DetailedAnswer)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -594,6 +704,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           int hash = 1;
           if (query_ != null) hash ^= Query.GetHashCode();
           if (Answer.Length != 0) hash ^= Answer.GetHashCode();
+          if (detailedAnswer_ != null) hash ^= DetailedAnswer.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -620,6 +731,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(18);
             output.WriteString(Answer);
           }
+          if (detailedAnswer_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(DetailedAnswer);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -638,6 +753,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(18);
             output.WriteString(Answer);
           }
+          if (detailedAnswer_ != null) {
+            output.WriteRawTag(58);
+            output.WriteMessage(DetailedAnswer);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -653,6 +772,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (Answer.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Answer);
+          }
+          if (detailedAnswer_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DetailedAnswer);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -674,6 +796,12 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (other.Answer.Length != 0) {
             Answer = other.Answer;
+          }
+          if (other.detailedAnswer_ != null) {
+            if (detailedAnswer_ == null) {
+              DetailedAnswer = new global::Google.Cloud.DiscoveryEngine.V1.Answer();
+            }
+            DetailedAnswer.MergeFrom(other.DetailedAnswer);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -701,6 +829,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 Answer = input.ReadString();
                 break;
               }
+              case 58: {
+                if (detailedAnswer_ == null) {
+                  DetailedAnswer = new global::Google.Cloud.DiscoveryEngine.V1.Answer();
+                }
+                input.ReadMessage(DetailedAnswer);
+                break;
+              }
             }
           }
         #endif
@@ -725,6 +860,13 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
               case 18: {
                 Answer = input.ReadString();
+                break;
+              }
+              case 58: {
+                if (detailedAnswer_ == null) {
+                  DetailedAnswer = new global::Google.Cloud.DiscoveryEngine.V1.Answer();
+                }
+                input.ReadMessage(DetailedAnswer);
                 break;
               }
             }

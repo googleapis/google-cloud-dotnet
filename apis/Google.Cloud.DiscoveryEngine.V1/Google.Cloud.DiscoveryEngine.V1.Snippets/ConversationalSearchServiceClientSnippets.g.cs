@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
     using Google.Cloud.DiscoveryEngine.V1;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -758,11 +759,13 @@ namespace GoogleCSharpSnippets
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SafetySpec = new AnswerQueryRequest.Types.SafetySpec(),
                 RelatedQuestionsSpec = new AnswerQueryRequest.Types.RelatedQuestionsSpec(),
+                GroundingSpec = new AnswerQueryRequest.Types.GroundingSpec(),
                 AnswerGenerationSpec = new AnswerQueryRequest.Types.AnswerGenerationSpec(),
                 SearchSpec = new AnswerQueryRequest.Types.SearchSpec(),
                 QueryUnderstandingSpec = new AnswerQueryRequest.Types.QueryUnderstandingSpec(),
                 UserPseudoId = "",
                 UserLabels = { { "", "" }, },
+                EndUserSpec = new AnswerQueryRequest.Types.EndUserSpec(),
             };
             // Make the request
             AnswerQueryResponse response = conversationalSearchServiceClient.AnswerQuery(request);
@@ -784,14 +787,53 @@ namespace GoogleCSharpSnippets
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SafetySpec = new AnswerQueryRequest.Types.SafetySpec(),
                 RelatedQuestionsSpec = new AnswerQueryRequest.Types.RelatedQuestionsSpec(),
+                GroundingSpec = new AnswerQueryRequest.Types.GroundingSpec(),
                 AnswerGenerationSpec = new AnswerQueryRequest.Types.AnswerGenerationSpec(),
                 SearchSpec = new AnswerQueryRequest.Types.SearchSpec(),
                 QueryUnderstandingSpec = new AnswerQueryRequest.Types.QueryUnderstandingSpec(),
                 UserPseudoId = "",
                 UserLabels = { { "", "" }, },
+                EndUserSpec = new AnswerQueryRequest.Types.EndUserSpec(),
             };
             // Make the request
             AnswerQueryResponse response = await conversationalSearchServiceClient.AnswerQueryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StreamAnswerQuery</summary>
+        public async Task StreamAnswerQueryRequestObject()
+        {
+            // Snippet: StreamAnswerQuery(AnswerQueryRequest, CallSettings)
+            // Create client
+            ConversationalSearchServiceClient conversationalSearchServiceClient = ConversationalSearchServiceClient.Create();
+            // Initialize request argument(s)
+            AnswerQueryRequest request = new AnswerQueryRequest
+            {
+                ServingConfigAsServingConfigName = ServingConfigName.FromProjectLocationDataStoreServingConfig("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SERVING_CONFIG]"),
+                Query = new Query(),
+                SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                SafetySpec = new AnswerQueryRequest.Types.SafetySpec(),
+                RelatedQuestionsSpec = new AnswerQueryRequest.Types.RelatedQuestionsSpec(),
+                GroundingSpec = new AnswerQueryRequest.Types.GroundingSpec(),
+                AnswerGenerationSpec = new AnswerQueryRequest.Types.AnswerGenerationSpec(),
+                SearchSpec = new AnswerQueryRequest.Types.SearchSpec(),
+                QueryUnderstandingSpec = new AnswerQueryRequest.Types.QueryUnderstandingSpec(),
+                UserPseudoId = "",
+                UserLabels = { { "", "" }, },
+                EndUserSpec = new AnswerQueryRequest.Types.EndUserSpec(),
+            };
+            // Make the request, returning a streaming response
+            using ConversationalSearchServiceClient.StreamAnswerQueryStream response = conversationalSearchServiceClient.StreamAnswerQuery(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<AnswerQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                AnswerQueryResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
             // End snippet
         }
 
@@ -1136,6 +1178,7 @@ namespace GoogleCSharpSnippets
             GetSessionRequest request = new GetSessionRequest
             {
                 SessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                IncludeAnswerDetails = false,
             };
             // Make the request
             Session response = conversationalSearchServiceClient.GetSession(request);
@@ -1153,6 +1196,7 @@ namespace GoogleCSharpSnippets
             GetSessionRequest request = new GetSessionRequest
             {
                 SessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
+                IncludeAnswerDetails = false,
             };
             // Make the request
             Session response = await conversationalSearchServiceClient.GetSessionAsync(request);

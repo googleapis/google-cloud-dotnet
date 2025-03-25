@@ -56,6 +56,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
             GetConversationSettings = existing.GetConversationSettings;
             ListConversationsSettings = existing.ListConversationsSettings;
             AnswerQuerySettings = existing.AnswerQuerySettings;
+            StreamAnswerQuerySettings = existing.StreamAnswerQuerySettings;
             GetAnswerSettings = existing.GetAnswerSettings;
             CreateSessionSettings = existing.CreateSessionSettings;
             DeleteSessionSettings = existing.DeleteSessionSettings;
@@ -200,6 +201,14 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AnswerQuerySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ConversationalSearchServiceClient.StreamAnswerQuery</c> and
+        /// <c>ConversationalSearchServiceClient.StreamAnswerQueryAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 30 seconds.</remarks>
+        public gaxgrpc::CallSettings StreamAnswerQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1346,6 +1355,28 @@ namespace Google.Cloud.DiscoveryEngine.V1
             AnswerQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Server streaming methods for <see cref="StreamAnswerQuery(AnswerQueryRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class StreamAnswerQueryStream : gaxgrpc::ServerStreamingBase<AnswerQueryResponse>
+        {
+        }
+
+        /// <summary>
+        /// Answer query method (streaming).
+        /// 
+        /// It takes one
+        /// [AnswerQueryRequest][google.cloud.discoveryengine.v1.AnswerQueryRequest]
+        /// and returns multiple
+        /// [AnswerQueryResponse][google.cloud.discoveryengine.v1.AnswerQueryResponse]
+        /// messages in a stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual StreamAnswerQueryStream StreamAnswerQuery(AnswerQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// Gets a Answer.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2165,6 +2196,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         private readonly gaxgrpc::ApiCall<AnswerQueryRequest, AnswerQueryResponse> _callAnswerQuery;
 
+        private readonly gaxgrpc::ApiServerStreamingCall<AnswerQueryRequest, AnswerQueryResponse> _callStreamAnswerQuery;
+
         private readonly gaxgrpc::ApiCall<GetAnswerRequest, Answer> _callGetAnswer;
 
         private readonly gaxgrpc::ApiCall<CreateSessionRequest, Session> _callCreateSession;
@@ -2217,6 +2250,9 @@ namespace Google.Cloud.DiscoveryEngine.V1
             _callAnswerQuery = clientHelper.BuildApiCall<AnswerQueryRequest, AnswerQueryResponse>("AnswerQuery", grpcClient.AnswerQueryAsync, grpcClient.AnswerQuery, effectiveSettings.AnswerQuerySettings).WithGoogleRequestParam("serving_config", request => request.ServingConfig);
             Modify_ApiCall(ref _callAnswerQuery);
             Modify_AnswerQueryApiCall(ref _callAnswerQuery);
+            _callStreamAnswerQuery = clientHelper.BuildApiCall<AnswerQueryRequest, AnswerQueryResponse>("StreamAnswerQuery", grpcClient.StreamAnswerQuery, effectiveSettings.StreamAnswerQuerySettings).WithGoogleRequestParam("serving_config", request => request.ServingConfig);
+            Modify_ApiCall(ref _callStreamAnswerQuery);
+            Modify_StreamAnswerQueryApiCall(ref _callStreamAnswerQuery);
             _callGetAnswer = clientHelper.BuildApiCall<GetAnswerRequest, Answer>("GetAnswer", grpcClient.GetAnswerAsync, grpcClient.GetAnswer, effectiveSettings.GetAnswerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetAnswer);
             Modify_GetAnswerApiCall(ref _callGetAnswer);
@@ -2240,6 +2276,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
         partial void Modify_ConverseConversationApiCall(ref gaxgrpc::ApiCall<ConverseConversationRequest, ConverseConversationResponse> call);
 
         partial void Modify_CreateConversationApiCall(ref gaxgrpc::ApiCall<CreateConversationRequest, Conversation> call);
@@ -2253,6 +2291,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
         partial void Modify_ListConversationsApiCall(ref gaxgrpc::ApiCall<ListConversationsRequest, ListConversationsResponse> call);
 
         partial void Modify_AnswerQueryApiCall(ref gaxgrpc::ApiCall<AnswerQueryRequest, AnswerQueryResponse> call);
+
+        partial void Modify_StreamAnswerQueryApiCall(ref gaxgrpc::ApiServerStreamingCall<AnswerQueryRequest, AnswerQueryResponse> call);
 
         partial void Modify_GetAnswerApiCall(ref gaxgrpc::ApiCall<GetAnswerRequest, Answer> call);
 
@@ -2490,6 +2530,33 @@ namespace Google.Cloud.DiscoveryEngine.V1
         {
             Modify_AnswerQueryRequest(ref request, ref callSettings);
             return _callAnswerQuery.Async(request, callSettings);
+        }
+
+        internal sealed partial class StreamAnswerQueryStreamImpl : StreamAnswerQueryStream
+        {
+            /// <summary>Construct the server streaming method for <c>StreamAnswerQuery</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public StreamAnswerQueryStreamImpl(grpccore::AsyncServerStreamingCall<AnswerQueryResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<AnswerQueryResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Answer query method (streaming).
+        /// 
+        /// It takes one
+        /// [AnswerQueryRequest][google.cloud.discoveryengine.v1.AnswerQueryRequest]
+        /// and returns multiple
+        /// [AnswerQueryResponse][google.cloud.discoveryengine.v1.AnswerQueryResponse]
+        /// messages in a stream.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override ConversationalSearchServiceClient.StreamAnswerQueryStream StreamAnswerQuery(AnswerQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnswerQueryRequest(ref request, ref callSettings);
+            return new StreamAnswerQueryStreamImpl(_callStreamAnswerQuery.Call(request, callSettings));
         }
 
         /// <summary>

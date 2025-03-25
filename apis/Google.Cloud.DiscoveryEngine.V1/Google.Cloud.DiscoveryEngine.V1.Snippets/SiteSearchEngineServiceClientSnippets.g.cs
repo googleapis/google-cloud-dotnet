@@ -1046,6 +1046,467 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateSitemap</summary>
+        public void CreateSitemapRequestObject()
+        {
+            // Snippet: CreateSitemap(CreateSitemapRequest, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSitemapRequest request = new CreateSitemapRequest
+            {
+                ParentAsSiteSearchEngineName = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                Sitemap = new Sitemap(),
+            };
+            // Make the request
+            Operation<Sitemap, CreateSitemapMetadata> response = siteSearchEngineServiceClient.CreateSitemap(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Sitemap, CreateSitemapMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Sitemap result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Sitemap, CreateSitemapMetadata> retrievedResponse = siteSearchEngineServiceClient.PollOnceCreateSitemap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Sitemap retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSitemapAsync</summary>
+        public async Task CreateSitemapRequestObjectAsync()
+        {
+            // Snippet: CreateSitemapAsync(CreateSitemapRequest, CallSettings)
+            // Additional: CreateSitemapAsync(CreateSitemapRequest, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSitemapRequest request = new CreateSitemapRequest
+            {
+                ParentAsSiteSearchEngineName = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                Sitemap = new Sitemap(),
+            };
+            // Make the request
+            Operation<Sitemap, CreateSitemapMetadata> response = await siteSearchEngineServiceClient.CreateSitemapAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Sitemap, CreateSitemapMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Sitemap result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Sitemap, CreateSitemapMetadata> retrievedResponse = await siteSearchEngineServiceClient.PollOnceCreateSitemapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Sitemap retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSitemap</summary>
+        public void CreateSitemap()
+        {
+            // Snippet: CreateSitemap(string, Sitemap, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/siteSearchEngine";
+            Sitemap sitemap = new Sitemap();
+            // Make the request
+            Operation<Sitemap, CreateSitemapMetadata> response = siteSearchEngineServiceClient.CreateSitemap(parent, sitemap);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Sitemap, CreateSitemapMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Sitemap result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Sitemap, CreateSitemapMetadata> retrievedResponse = siteSearchEngineServiceClient.PollOnceCreateSitemap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Sitemap retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSitemapAsync</summary>
+        public async Task CreateSitemapAsync()
+        {
+            // Snippet: CreateSitemapAsync(string, Sitemap, CallSettings)
+            // Additional: CreateSitemapAsync(string, Sitemap, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/siteSearchEngine";
+            Sitemap sitemap = new Sitemap();
+            // Make the request
+            Operation<Sitemap, CreateSitemapMetadata> response = await siteSearchEngineServiceClient.CreateSitemapAsync(parent, sitemap);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Sitemap, CreateSitemapMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Sitemap result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Sitemap, CreateSitemapMetadata> retrievedResponse = await siteSearchEngineServiceClient.PollOnceCreateSitemapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Sitemap retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSitemap</summary>
+        public void CreateSitemapResourceNames()
+        {
+            // Snippet: CreateSitemap(SiteSearchEngineName, Sitemap, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            SiteSearchEngineName parent = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
+            Sitemap sitemap = new Sitemap();
+            // Make the request
+            Operation<Sitemap, CreateSitemapMetadata> response = siteSearchEngineServiceClient.CreateSitemap(parent, sitemap);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Sitemap, CreateSitemapMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Sitemap result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Sitemap, CreateSitemapMetadata> retrievedResponse = siteSearchEngineServiceClient.PollOnceCreateSitemap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Sitemap retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSitemapAsync</summary>
+        public async Task CreateSitemapResourceNamesAsync()
+        {
+            // Snippet: CreateSitemapAsync(SiteSearchEngineName, Sitemap, CallSettings)
+            // Additional: CreateSitemapAsync(SiteSearchEngineName, Sitemap, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SiteSearchEngineName parent = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
+            Sitemap sitemap = new Sitemap();
+            // Make the request
+            Operation<Sitemap, CreateSitemapMetadata> response = await siteSearchEngineServiceClient.CreateSitemapAsync(parent, sitemap);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Sitemap, CreateSitemapMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Sitemap result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Sitemap, CreateSitemapMetadata> retrievedResponse = await siteSearchEngineServiceClient.PollOnceCreateSitemapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Sitemap retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSitemap</summary>
+        public void DeleteSitemapRequestObject()
+        {
+            // Snippet: DeleteSitemap(DeleteSitemapRequest, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSitemapRequest request = new DeleteSitemapRequest
+            {
+                SitemapName = SitemapName.FromProjectLocationDataStoreSitemap("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SITEMAP]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteSitemapMetadata> response = siteSearchEngineServiceClient.DeleteSitemap(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSitemapMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSitemapMetadata> retrievedResponse = siteSearchEngineServiceClient.PollOnceDeleteSitemap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSitemapAsync</summary>
+        public async Task DeleteSitemapRequestObjectAsync()
+        {
+            // Snippet: DeleteSitemapAsync(DeleteSitemapRequest, CallSettings)
+            // Additional: DeleteSitemapAsync(DeleteSitemapRequest, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSitemapRequest request = new DeleteSitemapRequest
+            {
+                SitemapName = SitemapName.FromProjectLocationDataStoreSitemap("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SITEMAP]"),
+            };
+            // Make the request
+            Operation<Empty, DeleteSitemapMetadata> response = await siteSearchEngineServiceClient.DeleteSitemapAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSitemapMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSitemapMetadata> retrievedResponse = await siteSearchEngineServiceClient.PollOnceDeleteSitemapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSitemap</summary>
+        public void DeleteSitemap()
+        {
+            // Snippet: DeleteSitemap(string, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/siteSearchEngine/sitemaps/[SITEMAP]";
+            // Make the request
+            Operation<Empty, DeleteSitemapMetadata> response = siteSearchEngineServiceClient.DeleteSitemap(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSitemapMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSitemapMetadata> retrievedResponse = siteSearchEngineServiceClient.PollOnceDeleteSitemap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSitemapAsync</summary>
+        public async Task DeleteSitemapAsync()
+        {
+            // Snippet: DeleteSitemapAsync(string, CallSettings)
+            // Additional: DeleteSitemapAsync(string, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/siteSearchEngine/sitemaps/[SITEMAP]";
+            // Make the request
+            Operation<Empty, DeleteSitemapMetadata> response = await siteSearchEngineServiceClient.DeleteSitemapAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSitemapMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSitemapMetadata> retrievedResponse = await siteSearchEngineServiceClient.PollOnceDeleteSitemapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSitemap</summary>
+        public void DeleteSitemapResourceNames()
+        {
+            // Snippet: DeleteSitemap(SitemapName, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            SitemapName name = SitemapName.FromProjectLocationDataStoreSitemap("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SITEMAP]");
+            // Make the request
+            Operation<Empty, DeleteSitemapMetadata> response = siteSearchEngineServiceClient.DeleteSitemap(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSitemapMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSitemapMetadata> retrievedResponse = siteSearchEngineServiceClient.PollOnceDeleteSitemap(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSitemapAsync</summary>
+        public async Task DeleteSitemapResourceNamesAsync()
+        {
+            // Snippet: DeleteSitemapAsync(SitemapName, CallSettings)
+            // Additional: DeleteSitemapAsync(SitemapName, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SitemapName name = SitemapName.FromProjectLocationDataStoreSitemap("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SITEMAP]");
+            // Make the request
+            Operation<Empty, DeleteSitemapMetadata> response = await siteSearchEngineServiceClient.DeleteSitemapAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSitemapMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSitemapMetadata> retrievedResponse = await siteSearchEngineServiceClient.PollOnceDeleteSitemapAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSitemaps</summary>
+        public void FetchSitemapsRequestObject()
+        {
+            // Snippet: FetchSitemaps(FetchSitemapsRequest, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            FetchSitemapsRequest request = new FetchSitemapsRequest
+            {
+                ParentAsSiteSearchEngineName = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                Matcher = new FetchSitemapsRequest.Types.Matcher(),
+            };
+            // Make the request
+            FetchSitemapsResponse response = siteSearchEngineServiceClient.FetchSitemaps(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSitemapsAsync</summary>
+        public async Task FetchSitemapsRequestObjectAsync()
+        {
+            // Snippet: FetchSitemapsAsync(FetchSitemapsRequest, CallSettings)
+            // Additional: FetchSitemapsAsync(FetchSitemapsRequest, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchSitemapsRequest request = new FetchSitemapsRequest
+            {
+                ParentAsSiteSearchEngineName = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                Matcher = new FetchSitemapsRequest.Types.Matcher(),
+            };
+            // Make the request
+            FetchSitemapsResponse response = await siteSearchEngineServiceClient.FetchSitemapsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSitemaps</summary>
+        public void FetchSitemaps()
+        {
+            // Snippet: FetchSitemaps(string, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/siteSearchEngine";
+            // Make the request
+            FetchSitemapsResponse response = siteSearchEngineServiceClient.FetchSitemaps(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSitemapsAsync</summary>
+        public async Task FetchSitemapsAsync()
+        {
+            // Snippet: FetchSitemapsAsync(string, CallSettings)
+            // Additional: FetchSitemapsAsync(string, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataStores/[DATA_STORE]/siteSearchEngine";
+            // Make the request
+            FetchSitemapsResponse response = await siteSearchEngineServiceClient.FetchSitemapsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSitemaps</summary>
+        public void FetchSitemapsResourceNames()
+        {
+            // Snippet: FetchSitemaps(SiteSearchEngineName, CallSettings)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = SiteSearchEngineServiceClient.Create();
+            // Initialize request argument(s)
+            SiteSearchEngineName parent = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
+            // Make the request
+            FetchSitemapsResponse response = siteSearchEngineServiceClient.FetchSitemaps(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchSitemapsAsync</summary>
+        public async Task FetchSitemapsResourceNamesAsync()
+        {
+            // Snippet: FetchSitemapsAsync(SiteSearchEngineName, CallSettings)
+            // Additional: FetchSitemapsAsync(SiteSearchEngineName, CancellationToken)
+            // Create client
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SiteSearchEngineName parent = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
+            // Make the request
+            FetchSitemapsResponse response = await siteSearchEngineServiceClient.FetchSitemapsAsync(parent);
+            // End snippet
+        }
+
         /// <summary>Snippet for EnableAdvancedSiteSearch</summary>
         public void EnableAdvancedSiteSearchRequestObject()
         {

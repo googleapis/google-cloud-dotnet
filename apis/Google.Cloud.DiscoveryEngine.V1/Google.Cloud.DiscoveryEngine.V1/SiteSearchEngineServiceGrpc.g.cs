@@ -86,6 +86,14 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse> __Marshaller_google_cloud_discoveryengine_v1_ListTargetSitesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest> __Marshaller_google_cloud_discoveryengine_v1_CreateSitemapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest> __Marshaller_google_cloud_discoveryengine_v1_DeleteSitemapRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest> __Marshaller_google_cloud_discoveryengine_v1_FetchSitemapsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse> __Marshaller_google_cloud_discoveryengine_v1_FetchSitemapsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchRequest> __Marshaller_google_cloud_discoveryengine_v1_EnableAdvancedSiteSearchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchRequest> __Marshaller_google_cloud_discoveryengine_v1_DisableAdvancedSiteSearchRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchRequest.Parser));
@@ -153,6 +161,30 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         "ListTargetSites",
         __Marshaller_google_cloud_discoveryengine_v1_ListTargetSitesRequest,
         __Marshaller_google_cloud_discoveryengine_v1_ListTargetSitesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest, global::Google.LongRunning.Operation> __Method_CreateSitemap = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSitemap",
+        __Marshaller_google_cloud_discoveryengine_v1_CreateSitemapRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest, global::Google.LongRunning.Operation> __Method_DeleteSitemap = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSitemap",
+        __Marshaller_google_cloud_discoveryengine_v1_DeleteSitemapRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest, global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse> __Method_FetchSitemaps = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest, global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchSitemaps",
+        __Marshaller_google_cloud_discoveryengine_v1_FetchSitemapsRequest,
+        __Marshaller_google_cloud_discoveryengine_v1_FetchSitemapsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchRequest, global::Google.LongRunning.Operation> __Method_EnableAdvancedSiteSearch = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchRequest, global::Google.LongRunning.Operation>(
@@ -286,6 +318,43 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse> ListTargetSites(global::Google.Cloud.DiscoveryEngine.V1.ListTargetSitesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateSitemap(global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSitemap(global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetch [Sitemap][google.cloud.discoveryengine.v1.Sitemap]s in a
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse> FetchSitemaps(global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -728,6 +797,154 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTargetSites, null, options, request);
       }
       /// <summary>
+      /// Creates a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSitemap(global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSitemap(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateSitemap(global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSitemap, null, options, request);
+      }
+      /// <summary>
+      /// Creates a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSitemapAsync(global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSitemapAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateSitemapAsync(global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSitemap, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSitemap(global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSitemap(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteSitemap(global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSitemap, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSitemapAsync(global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSitemapAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a [Sitemap][google.cloud.discoveryengine.v1.Sitemap].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteSitemapAsync(global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSitemap, null, options, request);
+      }
+      /// <summary>
+      /// Fetch [Sitemap][google.cloud.discoveryengine.v1.Sitemap]s in a
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse FetchSitemaps(global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchSitemaps(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch [Sitemap][google.cloud.discoveryengine.v1.Sitemap]s in a
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse FetchSitemaps(global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchSitemaps, null, options, request);
+      }
+      /// <summary>
+      /// Fetch [Sitemap][google.cloud.discoveryengine.v1.Sitemap]s in a
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse> FetchSitemapsAsync(global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchSitemapsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetch [Sitemap][google.cloud.discoveryengine.v1.Sitemap]s in a
+      /// [DataStore][google.cloud.discoveryengine.v1.DataStore].
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse> FetchSitemapsAsync(global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchSitemaps, null, options, request);
+      }
+      /// <summary>
       /// Upgrade from basic site search to advanced site search.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1004,6 +1221,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           .AddMethod(__Method_UpdateTargetSite, serviceImpl.UpdateTargetSite)
           .AddMethod(__Method_DeleteTargetSite, serviceImpl.DeleteTargetSite)
           .AddMethod(__Method_ListTargetSites, serviceImpl.ListTargetSites)
+          .AddMethod(__Method_CreateSitemap, serviceImpl.CreateSitemap)
+          .AddMethod(__Method_DeleteSitemap, serviceImpl.DeleteSitemap)
+          .AddMethod(__Method_FetchSitemaps, serviceImpl.FetchSitemaps)
           .AddMethod(__Method_EnableAdvancedSiteSearch, serviceImpl.EnableAdvancedSiteSearch)
           .AddMethod(__Method_DisableAdvancedSiteSearch, serviceImpl.DisableAdvancedSiteSearch)
           .AddMethod(__Method_RecrawlUris, serviceImpl.RecrawlUris)
@@ -1025,6 +1245,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
       serviceBinder.AddMethod(__Method_UpdateTargetSite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.UpdateTargetSiteRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateTargetSite));
       serviceBinder.AddMethod(__Method_DeleteTargetSite, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.DeleteTargetSiteRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTargetSite));
       serviceBinder.AddMethod(__Method_ListTargetSites, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.ListTargetSitesRequest, global::Google.Cloud.DiscoveryEngine.V1.ListTargetSitesResponse>(serviceImpl.ListTargetSites));
+      serviceBinder.AddMethod(__Method_CreateSitemap, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateSitemap));
+      serviceBinder.AddMethod(__Method_DeleteSitemap, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSitemap));
+      serviceBinder.AddMethod(__Method_FetchSitemaps, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest, global::Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse>(serviceImpl.FetchSitemaps));
       serviceBinder.AddMethod(__Method_EnableAdvancedSiteSearch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.EnableAdvancedSiteSearchRequest, global::Google.LongRunning.Operation>(serviceImpl.EnableAdvancedSiteSearch));
       serviceBinder.AddMethod(__Method_DisableAdvancedSiteSearch, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.DisableAdvancedSiteSearchRequest, global::Google.LongRunning.Operation>(serviceImpl.DisableAdvancedSiteSearch));
       serviceBinder.AddMethod(__Method_RecrawlUris, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1.RecrawlUrisRequest, global::Google.LongRunning.Operation>(serviceImpl.RecrawlUris));

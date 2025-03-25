@@ -175,6 +175,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     private float score_;
     /// <summary>
     /// The score of this record based on the given query and selected model.
+    /// The score will be rounded to 2 decimal places. If the score is close to 0,
+    /// it will be rounded to 0.0001 to avoid returning unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -467,7 +469,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// <summary>
     /// The identifier of the model to use. It is one of:
     ///
-    /// * `semantic-ranker-512@latest`: Semantic ranking model with maxiumn input
+    /// * `semantic-ranker-512@latest`: Semantic ranking model with maximum input
     /// token size 512.
     ///
     /// It is set to `semantic-ranker-512@latest` by default if unspecified.

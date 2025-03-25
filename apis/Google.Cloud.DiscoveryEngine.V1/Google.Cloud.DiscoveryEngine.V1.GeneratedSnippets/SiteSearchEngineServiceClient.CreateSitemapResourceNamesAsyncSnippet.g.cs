@@ -16,14 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_DocumentService_ImportDocuments_sync]
+    // [START discoveryengine_v1_generated_SiteSearchEngineService_CreateSitemap_async_flattened_resourceNames]
     using Google.Cloud.DiscoveryEngine.V1;
     using Google.LongRunning;
-    using Google.Protobuf.WellKnownTypes;
+    using System.Threading.Tasks;
 
-    public sealed partial class GeneratedDocumentServiceClientSnippets
+    public sealed partial class GeneratedSiteSearchEngineServiceClientSnippets
     {
-        /// <summary>Snippet for ImportDocuments</summary>
+        /// <summary>Snippet for CreateSitemapAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,41 +31,32 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ImportDocumentsRequestObject()
+        public async Task CreateSitemapResourceNamesAsync()
         {
             // Create client
-            DocumentServiceClient documentServiceClient = DocumentServiceClient.Create();
+            SiteSearchEngineServiceClient siteSearchEngineServiceClient = await SiteSearchEngineServiceClient.CreateAsync();
             // Initialize request argument(s)
-            ImportDocumentsRequest request = new ImportDocumentsRequest
-            {
-                ParentAsBranchName = BranchName.FromProjectLocationDataStoreBranch("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[BRANCH]"),
-                InlineSource = new ImportDocumentsRequest.Types.InlineSource(),
-                ErrorConfig = new ImportErrorConfig(),
-                ReconciliationMode = ImportDocumentsRequest.Types.ReconciliationMode.Unspecified,
-                UpdateMask = new FieldMask(),
-                AutoGenerateIds = false,
-                IdField = "",
-                ForceRefreshContent = false,
-            };
+            SiteSearchEngineName parent = SiteSearchEngineName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]");
+            Sitemap sitemap = new Sitemap();
             // Make the request
-            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = documentServiceClient.ImportDocuments(request);
+            Operation<Sitemap, CreateSitemapMetadata> response = await siteSearchEngineServiceClient.CreateSitemapAsync(parent, sitemap);
 
             // Poll until the returned long-running operation is complete
-            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Sitemap, CreateSitemapMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            ImportDocumentsResponse result = completedResponse.Result;
+            Sitemap result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<ImportDocumentsResponse, ImportDocumentsMetadata> retrievedResponse = documentServiceClient.PollOnceImportDocuments(operationName);
+            Operation<Sitemap, CreateSitemapMetadata> retrievedResponse = await siteSearchEngineServiceClient.PollOnceCreateSitemapAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+                Sitemap retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END discoveryengine_v1_generated_DocumentService_ImportDocuments_sync]
+    // [END discoveryengine_v1_generated_SiteSearchEngineService_CreateSitemap_async_flattened_resourceNames]
 }
