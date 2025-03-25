@@ -50,6 +50,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             GetVulnerabilityOccurrencesSummarySettings = existing.GetVulnerabilityOccurrencesSummarySettings;
+            ExportSBOMSettings = existing.ExportSBOMSettings;
             OnCopy(existing);
         }
 
@@ -104,6 +105,18 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetVulnerabilityOccurrencesSummarySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContainerAnalysisClient.ExportSBOM</c> and <c>ContainerAnalysisClient.ExportSBOMAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportSBOMSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ContainerAnalysisSettings"/> object.</returns>
@@ -894,8 +907,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to get a vulnerability summary for in the form of
-        /// `projects/[PROJECT_ID]`.
+        /// Required. The name of the project to get a vulnerability summary for in the
+        /// form of `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
         /// The filter expression.
@@ -913,8 +926,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to get a vulnerability summary for in the form of
-        /// `projects/[PROJECT_ID]`.
+        /// Required. The name of the project to get a vulnerability summary for in the
+        /// form of `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
         /// The filter expression.
@@ -932,8 +945,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to get a vulnerability summary for in the form of
-        /// `projects/[PROJECT_ID]`.
+        /// Required. The name of the project to get a vulnerability summary for in the
+        /// form of `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
         /// The filter expression.
@@ -947,8 +960,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to get a vulnerability summary for in the form of
-        /// `projects/[PROJECT_ID]`.
+        /// Required. The name of the project to get a vulnerability summary for in the
+        /// form of `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
         /// The filter expression.
@@ -966,8 +979,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to get a vulnerability summary for in the form of
-        /// `projects/[PROJECT_ID]`.
+        /// Required. The name of the project to get a vulnerability summary for in the
+        /// form of `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
         /// The filter expression.
@@ -985,8 +998,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// Required. The name of the project to get a vulnerability summary for in the form of
-        /// `projects/[PROJECT_ID]`.
+        /// Required. The name of the project to get a vulnerability summary for in the
+        /// form of `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
         /// The filter expression.
@@ -995,6 +1008,33 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummaryAsync(gagr::ProjectName parent, string filter, st::CancellationToken cancellationToken) =>
             GetVulnerabilityOccurrencesSummaryAsync(parent, filter, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Generates an SBOM for the given resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExportSBOMResponse ExportSBOM(ExportSBOMRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates an SBOM for the given resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExportSBOMResponse> ExportSBOMAsync(ExportSBOMRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Generates an SBOM for the given resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExportSBOMResponse> ExportSBOMAsync(ExportSBOMRequest request, st::CancellationToken cancellationToken) =>
+            ExportSBOMAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ContainerAnalysis client wrapper implementation, for convenient use.</summary>
@@ -1023,6 +1063,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
 
         private readonly gaxgrpc::ApiCall<GetVulnerabilityOccurrencesSummaryRequest, VulnerabilityOccurrencesSummary> _callGetVulnerabilityOccurrencesSummary;
 
+        private readonly gaxgrpc::ApiCall<ExportSBOMRequest, ExportSBOMResponse> _callExportSBOM;
+
         /// <summary>
         /// Constructs a client wrapper for the ContainerAnalysis service, with the specified gRPC client and settings.
         /// </summary>
@@ -1050,6 +1092,9 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
             _callGetVulnerabilityOccurrencesSummary = clientHelper.BuildApiCall<GetVulnerabilityOccurrencesSummaryRequest, VulnerabilityOccurrencesSummary>("GetVulnerabilityOccurrencesSummary", grpcClient.GetVulnerabilityOccurrencesSummaryAsync, grpcClient.GetVulnerabilityOccurrencesSummary, effectiveSettings.GetVulnerabilityOccurrencesSummarySettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callGetVulnerabilityOccurrencesSummary);
             Modify_GetVulnerabilityOccurrencesSummaryApiCall(ref _callGetVulnerabilityOccurrencesSummary);
+            _callExportSBOM = clientHelper.BuildApiCall<ExportSBOMRequest, ExportSBOMResponse>("ExportSBOM", grpcClient.ExportSBOMAsync, grpcClient.ExportSBOM, effectiveSettings.ExportSBOMSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportSBOM);
+            Modify_ExportSBOMApiCall(ref _callExportSBOM);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1063,6 +1108,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
 
         partial void Modify_GetVulnerabilityOccurrencesSummaryApiCall(ref gaxgrpc::ApiCall<GetVulnerabilityOccurrencesSummaryRequest, VulnerabilityOccurrencesSummary> call);
 
+        partial void Modify_ExportSBOMApiCall(ref gaxgrpc::ApiCall<ExportSBOMRequest, ExportSBOMResponse> call);
+
         partial void OnConstruction(ContainerAnalysis.ContainerAnalysisClient grpcClient, ContainerAnalysisSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ContainerAnalysis client</summary>
@@ -1075,6 +1122,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetVulnerabilityOccurrencesSummaryRequest(ref GetVulnerabilityOccurrencesSummaryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportSBOMRequest(ref ExportSBOMRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Sets the access control policy on the specified note or occurrence.
@@ -1210,6 +1259,30 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         {
             Modify_GetVulnerabilityOccurrencesSummaryRequest(ref request, ref callSettings);
             return _callGetVulnerabilityOccurrencesSummary.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates an SBOM for the given resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExportSBOMResponse ExportSBOM(ExportSBOMRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportSBOMRequest(ref request, ref callSettings);
+            return _callExportSBOM.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Generates an SBOM for the given resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExportSBOMResponse> ExportSBOMAsync(ExportSBOMRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportSBOMRequest(ref request, ref callSettings);
+            return _callExportSBOM.Async(request, callSettings);
         }
     }
 }

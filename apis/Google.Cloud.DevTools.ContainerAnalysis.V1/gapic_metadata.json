@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "ContainerAnalysisClient",
           "rpcs": {
+            "ExportSBOM": {
+              "methods": [
+                "ExportSBOM",
+                "ExportSBOMAsync"
+              ]
+            },
             "GetIamPolicy": {
               "methods": [
                 "GetIamPolicy",

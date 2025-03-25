@@ -89,6 +89,10 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DevTools.ContainerAnalysis.V1.GetVulnerabilityOccurrencesSummaryRequest> __Marshaller_google_devtools_containeranalysis_v1_GetVulnerabilityOccurrencesSummaryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DevTools.ContainerAnalysis.V1.GetVulnerabilityOccurrencesSummaryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary> __Marshaller_google_devtools_containeranalysis_v1_VulnerabilityOccurrencesSummary = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest> __Marshaller_google_devtools_containeranalysis_v1_ExportSBOMRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse> __Marshaller_google_devtools_containeranalysis_v1_ExportSBOMResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
@@ -121,6 +125,14 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         "GetVulnerabilityOccurrencesSummary",
         __Marshaller_google_devtools_containeranalysis_v1_GetVulnerabilityOccurrencesSummaryRequest,
         __Marshaller_google_devtools_containeranalysis_v1_VulnerabilityOccurrencesSummary);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest, global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse> __Method_ExportSBOM = new grpc::Method<global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest, global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportSBOM",
+        __Marshaller_google_devtools_containeranalysis_v1_ExportSBOMRequest,
+        __Marshaller_google_devtools_containeranalysis_v1_ExportSBOMResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -196,6 +208,18 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary> GetVulnerabilityOccurrencesSummary(global::Google.Cloud.DevTools.ContainerAnalysis.V1.GetVulnerabilityOccurrencesSummaryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Generates an SBOM for the given resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse> ExportSBOM(global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -501,6 +525,54 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetVulnerabilityOccurrencesSummary, null, options, request);
       }
+      /// <summary>
+      /// Generates an SBOM for the given resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse ExportSBOM(global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportSBOM(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates an SBOM for the given resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse ExportSBOM(global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportSBOM, null, options, request);
+      }
+      /// <summary>
+      /// Generates an SBOM for the given resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse> ExportSBOMAsync(global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportSBOMAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Generates an SBOM for the given resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse> ExportSBOMAsync(global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportSBOM, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ContainerAnalysisClient NewInstance(ClientBaseConfiguration configuration)
@@ -518,7 +590,8 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
-          .AddMethod(__Method_GetVulnerabilityOccurrencesSummary, serviceImpl.GetVulnerabilityOccurrencesSummary).Build();
+          .AddMethod(__Method_GetVulnerabilityOccurrencesSummary, serviceImpl.GetVulnerabilityOccurrencesSummary)
+          .AddMethod(__Method_ExportSBOM, serviceImpl.ExportSBOM).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -532,6 +605,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
       serviceBinder.AddMethod(__Method_GetVulnerabilityOccurrencesSummary, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DevTools.ContainerAnalysis.V1.GetVulnerabilityOccurrencesSummaryRequest, global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary>(serviceImpl.GetVulnerabilityOccurrencesSummary));
+      serviceBinder.AddMethod(__Method_ExportSBOM, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest, global::Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse>(serviceImpl.ExportSBOM));
     }
 
   }

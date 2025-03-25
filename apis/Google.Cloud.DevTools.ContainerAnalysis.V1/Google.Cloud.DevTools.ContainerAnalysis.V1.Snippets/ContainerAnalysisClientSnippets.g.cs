@@ -396,5 +396,40 @@ namespace GoogleCSharpSnippets
             VulnerabilityOccurrencesSummary response = await containerAnalysisClient.GetVulnerabilityOccurrencesSummaryAsync(parent, filter);
             // End snippet
         }
+
+        /// <summary>Snippet for ExportSBOM</summary>
+        public void ExportSBOMRequestObject()
+        {
+            // Snippet: ExportSBOM(ExportSBOMRequest, CallSettings)
+            // Create client
+            ContainerAnalysisClient containerAnalysisClient = ContainerAnalysisClient.Create();
+            // Initialize request argument(s)
+            ExportSBOMRequest request = new ExportSBOMRequest
+            {
+                Name = "",
+                CloudStorageLocation = new ExportSBOMRequest.Types.CloudStorageLocation(),
+            };
+            // Make the request
+            ExportSBOMResponse response = containerAnalysisClient.ExportSBOM(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportSBOMAsync</summary>
+        public async Task ExportSBOMRequestObjectAsync()
+        {
+            // Snippet: ExportSBOMAsync(ExportSBOMRequest, CallSettings)
+            // Additional: ExportSBOMAsync(ExportSBOMRequest, CancellationToken)
+            // Create client
+            ContainerAnalysisClient containerAnalysisClient = await ContainerAnalysisClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportSBOMRequest request = new ExportSBOMRequest
+            {
+                Name = "",
+                CloudStorageLocation = new ExportSBOMRequest.Types.CloudStorageLocation(),
+            };
+            // Make the request
+            ExportSBOMResponse response = await containerAnalysisClient.ExportSBOMAsync(request);
+            // End snippet
+        }
     }
 }
