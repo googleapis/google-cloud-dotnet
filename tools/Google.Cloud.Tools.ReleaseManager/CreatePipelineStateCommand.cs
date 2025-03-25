@@ -62,7 +62,6 @@ public sealed class CreatePipelineStateCommand : CommandBase
 
         foreach (var api in catalog.Apis)
         {
-            MaybeAddApi(api);
             MaybeAddApiLibrary(api);
         }
         foreach (var packageGroup in catalog.PackageGroups)
@@ -70,11 +69,11 @@ public sealed class CreatePipelineStateCommand : CommandBase
             AddPackageGroupLibrary(packageGroup);
         }
         // Avoid serializing empty lists. There may be a better way of doing this...
-        foreach (var library in state.LibraryReleaseStates)
+        foreach (var library in state.Libraries)
         {
-            if (library.Apis.Count == 0)
+            if (library.ApiPaths.Count == 0)
             {
-                library.Apis = null;
+                library.ApiPaths = null;
             }
         }
         
@@ -83,32 +82,6 @@ public sealed class CreatePipelineStateCommand : CommandBase
         File.WriteAllText(Path.Combine(RootLayout.GeneratorInput, "pipeline-state.json"), json);
         return 0;
 
-        void MaybeAddApi(ApiMetadata api)
-        {
-            if (api.ProtoPath is null)
-            {
-                return;
-            }
-            var path = $"apis/{api.Id}";
-            var lastApiCommit = GetCommitForPath(googleApisCommits, path);
-            if (lastApiCommit is null)
-            {
-                Console.WriteLine($"{DateTime.UtcNow:HH:mm:ss}: No googleapis commits found for {api.Id}; skipping.");
-                return;
-            }
-            var message = lastApiCommit.Message;
-            var sourceLinkIndex = message.IndexOf(SourceLinkPrefix);
-            // Commit hashes are always 40 characters long.
-            var hash = message.Substring(sourceLinkIndex + SourceLinkPrefix.Length, 40);
-            state.ApiGenerationStates.Add(new()
-            {
-                Id = api.ProtoPath,
-                LastGeneratedCommit = hash,
-                AutomationLevel = AutomationLevelAutomatic
-            });
-            Console.WriteLine($"{DateTime.UtcNow:HH:mm:ss}: Added {api.Id}");
-        }
-
         void MaybeAddApiLibrary(ApiMetadata api)
         {
             // Package groups are handled later
@@ -116,65 +89,78 @@ public sealed class CreatePipelineStateCommand : CommandBase
             {
                 return;
             }
-            if (api.Version.EndsWith("00"))
-            {
-                return;
-            }
-            var timestamp = GetLastReleaseTimestamp(api);
-            var library = new LibraryReleaseState
+            var library = new LibraryState
             {
                 Id = api.Id,
                 CurrentVersion = api.Version,
-                ReleaseTimestamp = Timestamp.FromDateTimeOffset(timestamp).ToString().Trim('"'),
-                AutomationLevel = api.BlockRelease is not null ? AutomationLevelBlocked : AutomationLevelAutomatic
+                ReleaseTimestamp = FormatTimestamp(GetLastReleaseTimestamp(api)),
+                GenerationAutomationLevel = AutomationLevelAutomatic,
+                ReleaseAutomationLevel = api.BlockRelease is not null || api.Version.EndsWith("00") ? AutomationLevelBlocked : AutomationLevelAutomatic
             };
-            if (MaybeCreateApiMapping(api) is LibraryApiMapping mapping)
+            if (api.ProtoPath is string path)
             {
-                library.Apis.Add(mapping);
+                library.ApiPaths.Add(path);
             }
             library.SourcePaths.Add($"apis/{api.Id}/{api.Id}");
-            state.LibraryReleaseStates.Add(library);
+            PopulateLastGeneratedCommit(library);
+            state.Libraries.Add(library);
         }
 
         void AddPackageGroupLibrary(PackageGroup packageGroup)
         {
             var packages = packageGroup.PackageIds.Select(id => catalog[id]).ToList();
             var timestamp = GetLastReleaseTimestamp(packages[0]);
-            var library = new LibraryReleaseState
+            var library = new LibraryState
             {
                 Id = packageGroup.Id,
                 CurrentVersion = packages[0].Version,
-                ReleaseTimestamp = Timestamp.FromDateTimeOffset(timestamp).ToString().Trim('"'),
-                AutomationLevel = packages.Any(p => p.BlockRelease is not null) ? AutomationLevelBlocked : AutomationLevelAutomatic
+                ReleaseTimestamp = FormatTimestamp(GetLastReleaseTimestamp(packages[0])),
+                GenerationAutomationLevel = AutomationLevelAutomatic,
+                ReleaseAutomationLevel = packages.Any(p => p.BlockRelease is not null) ? AutomationLevelBlocked : AutomationLevelAutomatic
             };
-            library.Apis.AddRange(packages.Select(MaybeCreateApiMapping).OfType<LibraryApiMapping>());
+            library.ApiPaths.AddRange(packages.Select(p => p.ProtoPath).OfType<string>());
             library.SourcePaths.AddRange(packages.Select(p => $"apis/{p.Id}/{p.Id}"));
-            state.LibraryReleaseStates.Add(library);
+            PopulateLastGeneratedCommit(library);
+            state.Libraries.Add(library);
         }
 
-        DateTimeOffset GetLastReleaseTimestamp(ApiMetadata api)
+        void PopulateLastGeneratedCommit(LibraryState library)
+        {
+            var lastGeneratedCommit = library.SourcePaths
+                .Select(p => GetCommitForPath(googleApisCommits, p))
+                .OfType<Commit>()
+                .Select(GetGoogleApisCommit)
+                .Where(pair => pair.hash is not null)
+                .OrderByDescending(pair => pair.dotnetCommitTimestamp)
+                .FirstOrDefault()
+                .hash;
+            // proto-only APIs don't have any OwlBot-generated commits.
+            // Find the last commit 
+            if (lastGeneratedCommit is null && library.ApiPaths.Count == 1)
+            {
+                lastGeneratedCommit = GetCommitForPath(googleapisRepo.Commits, library.ApiPaths[0])?.Sha;
+            }
+            library.LastGeneratedCommit = lastGeneratedCommit ?? "";
+
+            (string hash, DateTimeOffset dotnetCommitTimestamp) GetGoogleApisCommit(Commit commit)
+            {
+                var message = commit.Message;
+                var sourceLinkIndex = message.IndexOf(SourceLinkPrefix);
+                // Commit hashes are always 40 characters long.
+                var hash = message.Substring(sourceLinkIndex + SourceLinkPrefix.Length, 40);
+                return (hash, commit.GetDate());
+            }
+        }
+
+        DateTimeOffset? GetLastReleaseTimestamp(ApiMetadata api)
         {
             var expectedTag = $"{api.Id}-{api.Version}";
-            var tag = tagsByName[expectedTag];
-            return tag.GetDate();
+            var tag = tagsByName.GetValueOrDefault(expectedTag);
+            return tag?.GetDate();
         }
 
-        LibraryApiMapping MaybeCreateApiMapping(ApiMetadata package)
-        {
-            if (package.ProtoPath is null)
-            {
-                return null;
-            }
-            // Assume we were last generated at the last commit affecting the proto path, before the timestamp.
-            // This is only a nice-to-have for now, so we can leave it empty if necessary.
-            var timestamp = GetLastReleaseTimestamp(package);
-            var commit = GetCommitForPath(googleapisRepo.Head.Commits.Where(c => c.GetDate() < timestamp), package.ProtoPath);
-            return new LibraryApiMapping
-            {
-                ApiId = package.ProtoPath,
-                LastReleasedCommit = commit?.Sha ?? ""
-            };
-        }
+        string FormatTimestamp(DateTimeOffset? timestamp) =>
+            timestamp is null ? null : Timestamp.FromDateTimeOffset(timestamp.Value).ToString().Trim('"');
     }
 
     private static Commit GetCommitForPath(IEnumerable<Commit> commits, string path)
@@ -192,29 +178,14 @@ public sealed class CreatePipelineStateCommand : CommandBase
         [JsonProperty("imageTag")]
         public string ImageTag { get; set; }
 
-        [JsonProperty("apiGenerationStates")]
-        public List<ApiGenerationState> ApiGenerationStates { get; } = new();
-
-        [JsonProperty("libraryReleaseStates")]
-        public List<LibraryReleaseState> LibraryReleaseStates { get; } = new();
+        [JsonProperty("libraries")]
+        public List<LibraryState> Libraries { get; } = new();
 
         [JsonProperty("commonLibrarySourcePaths")]
         public List<string> CommonLibrarySourcePaths { get; } = new();
     }
 
-    private class ApiGenerationState
-    {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("lastGeneratedCommit")]
-        public string LastGeneratedCommit { get; set; }
-
-        [JsonProperty("automationLevel")]
-        public string AutomationLevel { get; set; }
-    }
-
-    private class LibraryReleaseState
+    private class LibraryState
     {
         [JsonProperty("id")]
         public string Id { get; set; }
@@ -225,25 +196,25 @@ public sealed class CreatePipelineStateCommand : CommandBase
         [JsonProperty("nextVersion")]
         public string NextVersion { get; set; }
 
-        [JsonProperty("automationLevel")]
-        public string AutomationLevel { get; set; }
+        [JsonProperty("generationAutomationLevel")]
+        public string GenerationAutomationLevel { get; set; }
+
+        [JsonProperty("releaseAutomationLevel")]
+        public string ReleaseAutomationLevel { get; set; }
 
         [JsonProperty("releaseTimestamp")]
         public string ReleaseTimestamp { get; set; }
 
-        [JsonProperty("apis")]
-        public List<LibraryApiMapping> Apis { get; set; } = new();
-
-        [JsonProperty("sourcePaths")]
-        public List<string> SourcePaths { get; } = new();
-    }
-
-    private class LibraryApiMapping
-    {
-        [JsonProperty("apiId")]
-        public string ApiId { get; set; }
+        [JsonProperty("lastGeneratedCommit")]
+        public string LastGeneratedCommit { get; set; }
 
         [JsonProperty("lastReleasedCommit")]
         public string LastReleasedCommit { get; set; }
+
+        [JsonProperty("apiPaths")]
+        public List<string> ApiPaths { get; set; } = new();
+
+        [JsonProperty("sourcePaths")]
+        public List<string> SourcePaths { get; } = new();
     }
 }
