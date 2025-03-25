@@ -61,7 +61,6 @@ public sealed partial class StorageClientImpl : StorageClient
         options?.ModifyRequest(request);
         RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfGenerationMatch);
         MarkAsRetriable(request, retryOptions);
-        request.ModifyRequest += (options?.SourceEncryptionKey ?? EncryptionKey).ModifyRequest;
         return request;
     }
 }
