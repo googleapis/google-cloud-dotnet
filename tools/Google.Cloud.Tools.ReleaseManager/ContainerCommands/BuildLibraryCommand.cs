@@ -35,13 +35,9 @@ public class BuildLibraryCommand : IContainerCommand
     public int Execute(ContainerOptions options)
     {
         var repoRoot = options.RequireOption(options.RepoRoot);
-        var libraryId = options.LibraryId;
-
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
-        var apis = libraryId is null ? catalog.Apis
-            : catalog.PackageGroups.FirstOrDefault(pg => pg.Id == libraryId) is PackageGroup group ? group.PackageIds.Select(id => catalog[id]).ToList()
-            : new() { catalog[libraryId] };
+        var apis = options.GetApisFromLibraryId(catalog);
         return BuildConfigured(repoRoot, apis, options.Test);
     }
 

@@ -15,7 +15,6 @@
 using Google.Cloud.Tools.Common;
 using Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager;
@@ -37,7 +36,8 @@ public sealed class ContainerCommand : ICommand
 
         IContainerCommand subcommand = args[0] switch
         {
-            "generate" => new GenerateCommand(),
+            "generate-raw" => new GenerateRawCommand(),
+            "generate-library" => new GenerateLibraryCommand(),
             "clean" => new CleanCommand(),
             "build-raw" => new BuildRawCommand(),
             "build-library" => new BuildLibraryCommand(),

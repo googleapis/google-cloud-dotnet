@@ -16,14 +16,13 @@ using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
 /// <summary>
 /// Removes generated APIs from a repo clone. Expected options:
 /// - repo-root: path to the root of the clone
-/// - api-path: path to the API to clean generated files from, e.g. google/cloud/functions/v2
+/// - library-id: path to the library to clean generated files from, e.g. Google.Cloud.Functions.V2
 ///   This is optional; when omitted, all configured APIs are cleaned.
 ///   The special value of "none" means "clean non-API-specific files only".
 /// </summary>
@@ -32,33 +31,12 @@ internal class CleanCommand : IContainerCommand
     public int Execute(ContainerOptions options)
     {
         var repoRoot = options.RequireOption(options.RepoRoot);
-        var apiPath = options.ApiPath;
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
 
-        List<ApiMetadata> apis;
-        // No APIs, just clean non-API-specific.
-        if (apiPath == "none")
-        {
-            apis = new();
-        }
-        else if (apiPath is not null)
-        {
-            apis = new List<ApiMetadata>();
-            var targetApi = catalog.Apis.SingleOrDefault(api => api.ProtoPath == apiPath);
-            if (targetApi is null)
-            {
-                Console.WriteLine($"API path '{apiPath}' is not configured for any API. Ignoring.");
-            }
-            else
-            {
-                apis.Add(targetApi);
-            }
-        }
-        else
-        {
-            apis = catalog.Apis.ToList();
-        }
+        // "none" => no APIs, just clean non-API-specific.
+        var apis = options.LibraryId == "none" ? new List<ApiMetadata>()
+            : options.GetApisFromLibraryId(catalog);
 
         var nonSourceGenerator = new NonSourceGenerator(rootLayout);
 
