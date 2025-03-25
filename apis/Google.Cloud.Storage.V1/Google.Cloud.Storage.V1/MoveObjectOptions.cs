@@ -23,7 +23,6 @@ namespace Google.Cloud.Storage.V1;
 /// </summary>
 public sealed class MoveObjectOptions
 {
-
     /// <summary>
     /// Precondition for moving: the object is only moved if the existing destination object's
     /// generation matches the given value.
@@ -78,18 +77,6 @@ public sealed class MoveObjectOptions
     /// object metadata will be used unchanged.
     /// </summary>
     public Object ExtraMetadata { get; set; }
-
-    /// <summary>
-    /// The encryption key to use for this operation. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
-    /// will be used instead. Use <see cref="EncryptionKey.None"/> to remove encryption headers from this request.
-    /// </summary>
-    public EncryptionKey EncryptionKey { get; set; }
-
-    /// <summary>
-    /// The encryption key to use for the source of the copy. If this property is null, the <see cref="StorageClient.EncryptionKey"/>
-    /// will be used instead. Use <see cref="EncryptionKey.None"/> if the source is not encrypted.
-    /// </summary>
-    public EncryptionKey SourceEncryptionKey { get; set; }
 
     /// <summary>
     /// If set, this is the ID of the project which will be billed for the request.
