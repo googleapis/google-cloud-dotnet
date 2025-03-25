@@ -77,8 +77,8 @@ namespace Google.Cloud.AppHub.V1 {
   #region Messages
   /// <summary>
   /// Service is an App Hub data model that contains a discovered service, which
-  /// represents a network/api interface that exposes some functionality to clients
-  /// for consumption over the network.
+  /// represents a network or API interface that exposes some functionality to
+  /// clients for consumption over the network.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Service : pb::IMessage<Service>
@@ -140,7 +140,7 @@ namespace Google.Cloud.AppHub.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of a Service. Format:
-    /// "projects/{host-project-id}/locations/{location}/applications/{application-id}/services/{service-id}"
+    /// `"projects/{host-project-id}/locations/{location}/applications/{application-id}/services/{service-id}"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -810,8 +810,8 @@ namespace Google.Cloud.AppHub.V1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// Output only. The underlying resource URI (For example, URI of Forwarding
-    /// Rule, URL Map, and Backend Service).
+    /// Output only. The underlying resource URI. For example, URI of Forwarding
+    /// Rule, URL Map, and Backend Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1235,9 +1235,9 @@ namespace Google.Cloud.AppHub.V1 {
   }
 
   /// <summary>
-  /// DiscoveredService is a network/api interface that exposes some functionality
-  /// to clients for consumption over the network. A discovered service can be
-  /// registered to a App Hub service.
+  /// DiscoveredService is a network or API interface that exposes some
+  /// functionality to clients for consumption over the network. A discovered
+  /// service can be registered to a App Hub service.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiscoveredService : pb::IMessage<DiscoveredService>
@@ -1291,7 +1291,7 @@ namespace Google.Cloud.AppHub.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the discovered service. Format:
-    /// "projects/{host-project-id}/locations/{location}/discoveredServices/{uuid}""
+    /// `"projects/{host-project-id}/locations/{location}/discoveredServices/{uuid}"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
