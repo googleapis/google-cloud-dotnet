@@ -790,7 +790,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -830,7 +830,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -870,7 +870,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -905,7 +905,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -945,7 +945,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -985,7 +985,7 @@ namespace Google.Cloud.DiscoveryEngine.V1
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

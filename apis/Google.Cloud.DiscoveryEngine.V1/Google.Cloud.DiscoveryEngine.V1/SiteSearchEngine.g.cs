@@ -37,7 +37,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "dGVTZWFyY2hFbmdpbmUilgkKClRhcmdldFNpdGUSEQoEbmFtZRgBIAEoCUID",
             "4EEDEiQKFHByb3ZpZGVkX3VyaV9wYXR0ZXJuGAIgASgJQgbgQQLgQQQSPgoE",
             "dHlwZRgDIAEoDjIwLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEu",
-            "VGFyZ2V0U2l0ZS5UeXBlEhgKC2V4YWN0X21hdGNoGAYgASgIQgPgQQQSIgoV",
+            "VGFyZ2V0U2l0ZS5UeXBlEhgKC2V4YWN0X21hdGNoGAYgASgIQgPgQQUSIgoV",
             "Z2VuZXJhdGVkX3VyaV9wYXR0ZXJuGAQgASgJQgPgQQMSHAoPcm9vdF9kb21h",
             "aW5fdXJpGAogASgJQgPgQQMSWgoWc2l0ZV92ZXJpZmljYXRpb25faW5mbxgH",
             "IAEoCzI1Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuU2l0ZVZl",
@@ -67,19 +67,28 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCJsChVTaXRlVmVyaWZpY2F0aW9u",
             "U3RhdGUSJwojU0lURV9WRVJJRklDQVRJT05fU1RBVEVfVU5TUEVDSUZJRUQQ",
             "ABIMCghWRVJJRklFRBABEg4KClVOVkVSSUZJRUQQAhIMCghFWEVNUFRFRBAD",
-            "QogCCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIVU2l0",
-            "ZVNlYXJjaEVuZ2luZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlz",
-            "Y292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVy",
-            "eWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRp",
-            "c2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdp",
-            "bmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZw",
-            "cm90bzM="));
+            "IvsCCgdTaXRlbWFwEg0KA3VyaRgCIAEoCUgAEhEKBG5hbWUYASABKAlCA+BB",
+            "AxI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAzqPAupBiwIKJmRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlz",
+            "LmNvbS9TaXRlbWFwEmNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2l0ZVNlYXJjaEVu",
+            "Z2luZS9zaXRlbWFwcy97c2l0ZW1hcH0SfHByb2plY3RzL3twcm9qZWN0fS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0v",
+            "ZGF0YVN0b3Jlcy97ZGF0YV9zdG9yZX0vc2l0ZVNlYXJjaEVuZ2luZS9zaXRl",
+            "bWFwcy97c2l0ZW1hcH1CBgoEZmVlZEKIAgojY29tLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjFCFVNpdGVTZWFyY2hFbmdpbmVQcm90b1ABWk1j",
+            "bG91ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MS9kaXNj",
+            "b3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVO",
+            "R0lORaoCH0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjHKAh9Hb29n",
+            "bGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYx6gIiR29vZ2xlOjpDbG91ZDo6",
+            "RGlzY292ZXJ5RW5naW5lOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SiteSearchEngine), global::Google.Cloud.DiscoveryEngine.V1.SiteSearchEngine.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.TargetSite), global::Google.Cloud.DiscoveryEngine.V1.TargetSite.Parser, new[]{ "Name", "ProvidedUriPattern", "Type", "ExactMatch", "GeneratedUriPattern", "RootDomainUri", "SiteVerificationInfo", "IndexingStatus", "UpdateTime", "FailureReason" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.TargetSite.Types.Type), typeof(global::Google.Cloud.DiscoveryEngine.V1.TargetSite.Types.IndexingStatus) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.TargetSite.Types.FailureReason), global::Google.Cloud.DiscoveryEngine.V1.TargetSite.Types.FailureReason.Parser, new[]{ "QuotaFailure" }, new[]{ "Failure" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.TargetSite.Types.FailureReason.Types.QuotaFailure), global::Google.Cloud.DiscoveryEngine.V1.TargetSite.Types.FailureReason.Types.QuotaFailure.Parser, new[]{ "TotalRequiredQuota" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SiteVerificationInfo), global::Google.Cloud.DiscoveryEngine.V1.SiteVerificationInfo.Parser, new[]{ "SiteVerificationState", "VerifyTime" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SiteVerificationInfo.Types.SiteVerificationState) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.SiteVerificationInfo), global::Google.Cloud.DiscoveryEngine.V1.SiteVerificationInfo.Parser, new[]{ "SiteVerificationState", "VerifyTime" }, null, new[]{ typeof(global::Google.Cloud.DiscoveryEngine.V1.SiteVerificationInfo.Types.SiteVerificationState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Sitemap), global::Google.Cloud.DiscoveryEngine.V1.Sitemap.Parser, new[]{ "Uri", "Name", "CreateTime" }, new[]{ "Feed" }, null, null, null)
           }));
     }
     #endregion
@@ -394,8 +403,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int ExactMatchFieldNumber = 6;
     private bool exactMatch_;
     /// <summary>
-    /// Input only. If set to false, a uri_pattern is generated to include all
-    /// pages whose address contains the provided_uri_pattern. If set to true, an
+    /// Immutable. If set to false, a uri_pattern is generated to include all pages
+    /// whose address contains the provided_uri_pattern. If set to true, an
     /// uri_pattern is generated to try to be an exact match of the
     /// provided_uri_pattern or just the specific page if the provided_uri_pattern
     /// is a specific one. provided_uri_pattern is always normalized to
@@ -1649,6 +1658,337 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// A sitemap for the SiteSearchEngine.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Sitemap : pb::IMessage<Sitemap>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Sitemap> _parser = new pb::MessageParser<Sitemap>(() => new Sitemap());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Sitemap> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Sitemap() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Sitemap(Sitemap other) : this() {
+      name_ = other.name_;
+      createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      switch (other.FeedCase) {
+        case FeedOneofCase.Uri:
+          Uri = other.Uri;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Sitemap Clone() {
+      return new Sitemap(this);
+    }
+
+    /// <summary>Field number for the "uri" field.</summary>
+    public const int UriFieldNumber = 2;
+    /// <summary>
+    /// Public URI for the sitemap, e.g. `www.example.com/sitemap.xml`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uri {
+      get { return HasUri ? (string) feed_ : ""; }
+      set {
+        feed_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        feedCase_ = FeedOneofCase.Uri;
+      }
+    }
+    /// <summary>Gets whether the "uri" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUri {
+      get { return feedCase_ == FeedOneofCase.Uri; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "uri" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUri() {
+      if (HasUri) {
+        ClearFeed();
+      }
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Output only. The fully qualified resource name of the sitemap.
+    /// `projects/*/locations/*/collections/*/dataStores/*/siteSearchEngine/sitemaps/*`
+    /// The `sitemap_id` suffix is system-generated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "create_time" field.</summary>
+    public const int CreateTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
+    /// <summary>
+    /// Output only. The sitemap's creation time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
+      get { return createTime_; }
+      set {
+        createTime_ = value;
+      }
+    }
+
+    private object feed_;
+    /// <summary>Enum of possible cases for the "feed" oneof.</summary>
+    public enum FeedOneofCase {
+      None = 0,
+      Uri = 2,
+    }
+    private FeedOneofCase feedCase_ = FeedOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FeedOneofCase FeedCase {
+      get { return feedCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFeed() {
+      feedCase_ = FeedOneofCase.None;
+      feed_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Sitemap);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Sitemap other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Uri != other.Uri) return false;
+      if (Name != other.Name) return false;
+      if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (FeedCase != other.FeedCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasUri) hash ^= Uri.GetHashCode();
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      hash ^= (int) feedCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasUri) {
+        output.WriteRawTag(18);
+        output.WriteString(Uri);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (HasUri) {
+        output.WriteRawTag(18);
+        output.WriteString(Uri);
+      }
+      if (createTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CreateTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasUri) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (createTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Sitemap other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.createTime_ != null) {
+        if (createTime_ == null) {
+          CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        CreateTime.MergeFrom(other.CreateTime);
+      }
+      switch (other.FeedCase) {
+        case FeedOneofCase.Uri:
+          Uri = other.Uri;
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Uri = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (createTime_ == null) {
+              CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(CreateTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

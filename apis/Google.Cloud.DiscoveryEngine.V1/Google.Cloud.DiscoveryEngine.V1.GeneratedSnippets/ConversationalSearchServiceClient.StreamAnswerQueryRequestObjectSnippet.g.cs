@@ -16,12 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START discoveryengine_v1_generated_ConversationalSearchService_AnswerQuery_sync]
+    // [START discoveryengine_v1_generated_ConversationalSearchService_StreamAnswerQuery_sync]
+    using Google.Api.Gax.Grpc;
     using Google.Cloud.DiscoveryEngine.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedConversationalSearchServiceClientSnippets
     {
-        /// <summary>Snippet for AnswerQuery</summary>
+        /// <summary>Snippet for StreamAnswerQuery</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,7 +31,7 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void AnswerQueryRequestObject()
+        public async Task StreamAnswerQueryRequestObject()
         {
             // Create client
             ConversationalSearchServiceClient conversationalSearchServiceClient = ConversationalSearchServiceClient.Create();
@@ -49,9 +51,19 @@ namespace GoogleCSharpSnippets
                 UserLabels = { { "", "" }, },
                 EndUserSpec = new AnswerQueryRequest.Types.EndUserSpec(),
             };
-            // Make the request
-            AnswerQueryResponse response = conversationalSearchServiceClient.AnswerQuery(request);
+            // Make the request, returning a streaming response
+            using ConversationalSearchServiceClient.StreamAnswerQueryStream response = conversationalSearchServiceClient.StreamAnswerQuery(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<AnswerQueryResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                AnswerQueryResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
         }
     }
-    // [END discoveryengine_v1_generated_ConversationalSearchService_AnswerQuery_sync]
+    // [END discoveryengine_v1_generated_ConversationalSearchService_StreamAnswerQuery_sync]
 }

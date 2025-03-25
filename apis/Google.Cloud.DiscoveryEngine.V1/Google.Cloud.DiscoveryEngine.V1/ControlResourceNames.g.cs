@@ -477,6 +477,18 @@ namespace Google.Cloud.DiscoveryEngine.V1
                     set => DataStore = value?.ToString() ?? "";
                 }
             }
+
+            public partial class PromoteAction
+            {
+                /// <summary>
+                /// <see cref="DataStoreName"/>-typed view over the <see cref="DataStore"/> resource name property.
+                /// </summary>
+                public DataStoreName DataStoreAsDataStoreName
+                {
+                    get => string.IsNullOrEmpty(DataStore) ? null : DataStoreName.Parse(DataStore, allowUnparsed: true);
+                    set => DataStore = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

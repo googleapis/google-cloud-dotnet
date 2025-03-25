@@ -28,7 +28,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "bxIfZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxosZ29vZ2xlL2Nsb3VkL2Rpc2NvdmVyeWVuZ2luZS92MS9jb21tb24u",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8igwsKBkVu",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipAsKBkVu",
             "Z2luZRJWChJjaGF0X2VuZ2luZV9jb25maWcYCyABKAsyOC5nb29nbGUuY2xv",
             "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5DaGF0RW5naW5lQ29uZmln",
             "SAASWgoUc2VhcmNoX2VuZ2luZV9jb25maWcYDSABKAsyOi5nb29nbGUuY2xv",
@@ -48,30 +48,30 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "ARqcAQoSU2VhcmNoRW5naW5lQ29uZmlnEkAKC3NlYXJjaF90aWVyGAEgASgO",
             "MisuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5TZWFyY2hUaWVy",
             "EkQKDnNlYXJjaF9hZGRfb25zGAIgAygOMiwuZ29vZ2xlLmNsb3VkLmRpc2Nv",
-            "dmVyeWVuZ2luZS52MS5TZWFyY2hBZGRPbhqTAgoQQ2hhdEVuZ2luZUNvbmZp",
+            "dmVyeWVuZ2luZS52MS5TZWFyY2hBZGRPbhq0AgoQQ2hhdEVuZ2luZUNvbmZp",
             "ZxJrChVhZ2VudF9jcmVhdGlvbl9jb25maWcYASABKAsyTC5nb29nbGUuY2xv",
             "dWQuZGlzY292ZXJ5ZW5naW5lLnYxLkVuZ2luZS5DaGF0RW5naW5lQ29uZmln",
             "LkFnZW50Q3JlYXRpb25Db25maWcSIAoYZGlhbG9nZmxvd19hZ2VudF90b19s",
-            "aW5rGAIgASgJGnAKE0FnZW50Q3JlYXRpb25Db25maWcSEAoIYnVzaW5lc3MY",
-            "ASABKAkSHQoVZGVmYXVsdF9sYW5ndWFnZV9jb2RlGAIgASgJEhYKCXRpbWVf",
-            "em9uZRgDIAEoCUID4EECEhAKCGxvY2F0aW9uGAQgASgJGiQKDENvbW1vbkNv",
-            "bmZpZxIUCgxjb21wYW55X25hbWUYASABKAkaLgoSQ2hhdEVuZ2luZU1ldGFk",
-            "YXRhEhgKEGRpYWxvZ2Zsb3dfYWdlbnQYASABKAk6fepBegolZGlzY292ZXJ5",
-            "ZW5naW5lLmdvb2dsZWFwaXMuY29tL0VuZ2luZRJRcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0",
-            "aW9ufS9lbmdpbmVzL3tlbmdpbmV9Qg8KDWVuZ2luZV9jb25maWdCEQoPZW5n",
-            "aW5lX21ldGFkYXRhQv4BCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVu",
-            "Z2luZS52MUILRW5naW5lUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
-            "aXNjb3ZlcnllbmdpbmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292",
-            "ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQu",
-            "RGlzY292ZXJ5RW5naW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVu",
-            "Z2luZVxWMeoCIkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFi",
-            "BnByb3RvMw=="));
+            "aW5rGAIgASgJEh8KEmFsbG93X2Nyb3NzX3JlZ2lvbhgDIAEoCEID4EEBGnAK",
+            "E0FnZW50Q3JlYXRpb25Db25maWcSEAoIYnVzaW5lc3MYASABKAkSHQoVZGVm",
+            "YXVsdF9sYW5ndWFnZV9jb2RlGAIgASgJEhYKCXRpbWVfem9uZRgDIAEoCUID",
+            "4EECEhAKCGxvY2F0aW9uGAQgASgJGiQKDENvbW1vbkNvbmZpZxIUCgxjb21w",
+            "YW55X25hbWUYASABKAkaLgoSQ2hhdEVuZ2luZU1ldGFkYXRhEhgKEGRpYWxv",
+            "Z2Zsb3dfYWdlbnQYASABKAk6fepBegolZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
+            "ZWFwaXMuY29tL0VuZ2luZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tjb2xsZWN0aW9ufS9lbmdpbmVz",
+            "L3tlbmdpbmV9Qg8KDWVuZ2luZV9jb25maWdCEQoPZW5naW5lX21ldGFkYXRh",
+            "Qv4BCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUILRW5n",
+            "aW5lUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3Zlcnllbmdp",
+            "bmUvYXBpdjEvZGlzY292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKi",
+            "Ag9ESVNDT1ZFUllFTkdJTkWqAh9Hb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5n",
+            "aW5lLlYxygIfR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMeoCIkdv",
+            "b2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine), global::Google.Cloud.DiscoveryEngine.V1.Engine.Parser, new[]{ "ChatEngineConfig", "SearchEngineConfig", "ChatEngineMetadata", "Name", "DisplayName", "CreateTime", "UpdateTime", "DataStoreIds", "SolutionType", "IndustryVertical", "CommonConfig", "DisableAnalytics" }, new[]{ "EngineConfig", "EngineMetadata" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.SearchEngineConfig.Parser, new[]{ "SearchTier", "SearchAddOns" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Parser, new[]{ "AgentCreationConfig", "DialogflowAgentToLink" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig.Parser, new[]{ "Business", "DefaultLanguageCode", "TimeZone", "Location" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Parser, new[]{ "AgentCreationConfig", "DialogflowAgentToLink", "AllowCrossRegion" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineConfig.Types.AgentCreationConfig.Parser, new[]{ "Business", "DefaultLanguageCode", "TimeZone", "Location" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.CommonConfig), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.CommonConfig.Parser, new[]{ "CompanyName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineMetadata), global::Google.Cloud.DiscoveryEngine.V1.Engine.Types.ChatEngineMetadata.Parser, new[]{ "DialogflowAgent" }, null, null, null, null)})
           }));
@@ -325,9 +325,8 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// <summary>
     /// The industry vertical that the engine registers.
     /// The restriction of the Engine industry vertical is based on
-    /// [DataStore][google.cloud.discoveryengine.v1.DataStore]: If unspecified,
-    /// default to `GENERIC`. Vertical on Engine has to match vertical of the
-    /// DataStore linked to the engine.
+    /// [DataStore][google.cloud.discoveryengine.v1.DataStore]: Vertical on Engine
+    /// has to match vertical of the DataStore linked to the engine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1150,6 +1149,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         public ChatEngineConfig(ChatEngineConfig other) : this() {
           agentCreationConfig_ = other.agentCreationConfig_ != null ? other.agentCreationConfig_.Clone() : null;
           dialogflowAgentToLink_ = other.dialogflowAgentToLink_;
+          allowCrossRegion_ = other.allowCrossRegion_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1211,6 +1211,32 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
         }
 
+        /// <summary>Field number for the "allow_cross_region" field.</summary>
+        public const int AllowCrossRegionFieldNumber = 3;
+        private bool allowCrossRegion_;
+        /// <summary>
+        /// Optional. If the flag set to true, we allow the agent and engine are in
+        /// different locations, otherwise the agent and engine are required to be in
+        /// the same location. The flag is set to false by default.
+        ///
+        /// Note that the `allow_cross_region` are one-time consumed by and
+        /// passed to
+        /// [EngineService.CreateEngine][google.cloud.discoveryengine.v1.EngineService.CreateEngine].
+        /// It means they cannot be retrieved using
+        /// [EngineService.GetEngine][google.cloud.discoveryengine.v1.EngineService.GetEngine]
+        /// or
+        /// [EngineService.ListEngines][google.cloud.discoveryengine.v1.EngineService.ListEngines]
+        /// API after engine creation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool AllowCrossRegion {
+          get { return allowCrossRegion_; }
+          set {
+            allowCrossRegion_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1228,6 +1254,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (!object.Equals(AgentCreationConfig, other.AgentCreationConfig)) return false;
           if (DialogflowAgentToLink != other.DialogflowAgentToLink) return false;
+          if (AllowCrossRegion != other.AllowCrossRegion) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1237,6 +1264,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           int hash = 1;
           if (agentCreationConfig_ != null) hash ^= AgentCreationConfig.GetHashCode();
           if (DialogflowAgentToLink.Length != 0) hash ^= DialogflowAgentToLink.GetHashCode();
+          if (AllowCrossRegion != false) hash ^= AllowCrossRegion.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1263,6 +1291,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(18);
             output.WriteString(DialogflowAgentToLink);
           }
+          if (AllowCrossRegion != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(AllowCrossRegion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1281,6 +1313,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             output.WriteRawTag(18);
             output.WriteString(DialogflowAgentToLink);
           }
+          if (AllowCrossRegion != false) {
+            output.WriteRawTag(24);
+            output.WriteBool(AllowCrossRegion);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1296,6 +1332,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (DialogflowAgentToLink.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(DialogflowAgentToLink);
+          }
+          if (AllowCrossRegion != false) {
+            size += 1 + 1;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1317,6 +1356,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
           }
           if (other.DialogflowAgentToLink.Length != 0) {
             DialogflowAgentToLink = other.DialogflowAgentToLink;
+          }
+          if (other.AllowCrossRegion != false) {
+            AllowCrossRegion = other.AllowCrossRegion;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1344,6 +1386,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
                 DialogflowAgentToLink = input.ReadString();
                 break;
               }
+              case 24: {
+                AllowCrossRegion = input.ReadBool();
+                break;
+              }
             }
           }
         #endif
@@ -1368,6 +1414,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
               }
               case 18: {
                 DialogflowAgentToLink = input.ReadString();
+                break;
+              }
+              case 24: {
+                AllowCrossRegion = input.ReadBool();
                 break;
               }
             }

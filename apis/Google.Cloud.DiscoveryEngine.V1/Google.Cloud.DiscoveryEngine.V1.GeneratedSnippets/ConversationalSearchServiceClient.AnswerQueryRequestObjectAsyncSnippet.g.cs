@@ -42,11 +42,13 @@ namespace GoogleCSharpSnippets
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SafetySpec = new AnswerQueryRequest.Types.SafetySpec(),
                 RelatedQuestionsSpec = new AnswerQueryRequest.Types.RelatedQuestionsSpec(),
+                GroundingSpec = new AnswerQueryRequest.Types.GroundingSpec(),
                 AnswerGenerationSpec = new AnswerQueryRequest.Types.AnswerGenerationSpec(),
                 SearchSpec = new AnswerQueryRequest.Types.SearchSpec(),
                 QueryUnderstandingSpec = new AnswerQueryRequest.Types.QueryUnderstandingSpec(),
                 UserPseudoId = "",
                 UserLabels = { { "", "" }, },
+                EndUserSpec = new AnswerQueryRequest.Types.EndUserSpec(),
             };
             // Make the request
             AnswerQueryResponse response = await conversationalSearchServiceClient.AnswerQueryAsync(request);

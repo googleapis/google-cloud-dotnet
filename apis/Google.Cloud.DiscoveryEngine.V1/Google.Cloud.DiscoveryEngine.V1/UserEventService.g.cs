@@ -41,7 +41,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "ChdDb2xsZWN0VXNlckV2ZW50UmVxdWVzdBJACgZwYXJlbnQYASABKAlCMOBB",
             "AvpBKgooZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMuY29tL0RhdGFTdG9y",
             "ZRIXCgp1c2VyX2V2ZW50GAIgASgJQgPgQQISEAoDdXJpGAMgASgJSACIAQES",
-            "EAoDZXRzGAQgASgDSAGIAQFCBgoEX3VyaUIGCgRfZXRzMrAMChBVc2VyRXZl",
+            "EAoDZXRzGAQgASgDSAGIAQFCBgoEX3VyaUIGCgRfZXRzMuwMChBVc2VyRXZl",
             "bnRTZXJ2aWNlEvACCg5Xcml0ZVVzZXJFdmVudBI2Lmdvb2dsZS5jbG91ZC5k",
             "aXNjb3ZlcnllbmdpbmUudjEuV3JpdGVVc2VyRXZlbnRSZXF1ZXN0GiouZ29v",
             "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5Vc2VyRXZlbnQi+QGC0+ST",
@@ -66,24 +66,25 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
             "cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVN0b3Jlcy8qfS91",
             "c2VyRXZlbnRzOnB1cmdlOgEqWlQiTy92MS97cGFyZW50PXByb2plY3RzLyov",
             "bG9jYXRpb25zLyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyp9L3VzZXJF",
-            "dmVudHM6cHVyZ2U6ASoSigMKEEltcG9ydFVzZXJFdmVudHMSOC5nb29nbGUu",
+            "dmVudHM6cHVyZ2U6ASoSxgMKEEltcG9ydFVzZXJFdmVudHMSOC5nb29nbGUu",
             "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxLkltcG9ydFVzZXJFdmVudHNSZXF1",
-            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKcAspBdAo4Z29v",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLYAspBdAo4Z29v",
             "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MS5JbXBvcnRVc2VyRXZlbnRz",
             "UmVzcG9uc2USOGdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjEuSW1w",
-            "b3J0VXNlckV2ZW50c01ldGFkYXRhgtPkkwKeASJCL3YxL3twYXJlbnQ9cHJv",
+            "b3J0VXNlckV2ZW50c01ldGFkYXRhgtPkkwLaASJCL3YxL3twYXJlbnQ9cHJv",
             "amVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyp9L3VzZXJFdmVudHM6",
             "aW1wb3J0OgEqWlUiUC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
             "LyovY29sbGVjdGlvbnMvKi9kYXRhU3RvcmVzLyp9L3VzZXJFdmVudHM6aW1w",
-            "b3J0OgEqGlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQS5o",
-            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3Jt",
-            "QogCCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MUIVVXNl",
-            "ckV2ZW50U2VydmljZVByb3RvUAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vZGlz",
-            "Y292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVy",
-            "eWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIfR29vZ2xlLkNsb3VkLkRp",
-            "c2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdp",
-            "bmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYgZw",
-            "cm90bzM="));
+            "b3J0OgEqWjoiNS92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9",
+            "L3VzZXJFdmVudHM6aW1wb3J0OgEqGlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29v",
+            "Z2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2Nsb3VkLXBsYXRmb3JtQogCCiNjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
+            "eWVuZ2luZS52MUIVVXNlckV2ZW50U2VydmljZVByb3RvUAFaTWNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxL2Rpc2NvdmVyeWVu",
+            "Z2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIf",
+            "R29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMcoCH0dvb2dsZVxDbG91",
+            "ZFxEaXNjb3ZlcnlFbmdpbmVcVjHqAiJHb29nbGU6OkNsb3VkOjpEaXNjb3Zl",
+            "cnlFbmdpbmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.ImportConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.PurgeConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1.UserEventReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -154,9 +155,9 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     /// [DataStore][google.cloud.discoveryengine.v1.DataStore] level, the format
     /// is:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
-    /// If the write user event action is applied in [Location][] level, for
-    /// example, the event with
-    /// [Document][google.cloud.discoveryengine.v1.Document] across multiple
+    /// If the write user event action is applied in
+    /// [Location][google.cloud.location.Location] level, for example, the event
+    /// with [Document][google.cloud.discoveryengine.v1.Document] across multiple
     /// [DataStore][google.cloud.discoveryengine.v1.DataStore], the format is:
     /// `projects/{project}/locations/{location}`.
     /// </summary>
@@ -447,8 +448,16 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent DataStore resource name, such as
+    /// Required. The parent resource name.
+    /// If the collect user event action is applied in
+    /// [DataStore][google.cloud.discoveryengine.v1.DataStore] level, the format
+    /// is:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+    /// If the collect user event action is applied in
+    /// [Location][google.cloud.location.Location] level, for example, the event
+    /// with [Document][google.cloud.discoveryengine.v1.Document] across multiple
+    /// [DataStore][google.cloud.discoveryengine.v1.DataStore], the format is:
+    /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -3860,12 +3860,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 53,
+          "end": 55,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 51,
+          "end": 53,
           "type": "SHORT"
         }
       ]
@@ -3909,12 +3909,60 @@
       "segments": [
         {
           "start": 20,
-          "end": 54,
+          "end": 56,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 52,
+          "end": 54,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_ConversationalSearchService_StreamAnswerQuery_sync",
+      "title": "StreamAnswerQueryRequestObject",
+      "description": "Snippet for StreamAnswerQuery",
+      "file": "ConversationalSearchServiceClient.StreamAnswerQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StreamAnswerQuery",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient.StreamAnswerQuery",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.AnswerQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient+StreamAnswerQueryStream",
+        "client": {
+          "shortName": "ConversationalSearchServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.ConversationalSearchServiceClient"
+        },
+        "method": {
+          "shortName": "StreamAnswerQuery",
+          "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService.StreamAnswerQuery",
+          "service": {
+            "shortName": "ConversationalSearchService",
+            "fullName": "google.cloud.discoveryengine.v1.ConversationalSearchService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 65,
           "type": "SHORT"
         }
       ]
@@ -5031,12 +5079,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 44,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 42,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -5080,12 +5128,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -8458,12 +8506,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 68,
+          "end": 69,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 66,
+          "end": 67,
           "type": "SHORT"
         }
       ]
@@ -8507,12 +8555,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 69,
+          "end": 70,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 67,
+          "end": 68,
           "type": "SHORT"
         }
       ]
@@ -12383,12 +12431,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 108,
+          "end": 111,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 106,
+          "end": 109,
           "type": "SHORT"
         }
       ]
@@ -12432,12 +12480,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 110,
+          "end": 113,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 108,
+          "end": 111,
           "type": "SHORT"
         }
       ]
@@ -12480,12 +12528,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 108,
+          "end": 111,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 106,
+          "end": 109,
           "type": "SHORT"
         }
       ]
@@ -12529,12 +12577,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 110,
+          "end": 113,
           "type": "FULL"
         },
         {
           "start": 39,
-          "end": 108,
+          "end": 111,
           "type": "SHORT"
         }
       ]
@@ -14501,6 +14549,883 @@
         {
           "start": 38,
           "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateSitemap_sync",
+      "title": "CreateSitemapRequestObject",
+      "description": "Snippet for CreateSitemap",
+      "file": "SiteSearchEngineServiceClient.CreateSitemapRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSitemap",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateSitemap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Sitemap, Google.Cloud.DiscoveryEngine.V1.CreateSitemapMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateSitemap_async",
+      "title": "CreateSitemapRequestObjectAsync",
+      "description": "Snippet for CreateSitemapAsync",
+      "file": "SiteSearchEngineServiceClient.CreateSitemapRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSitemapAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateSitemapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.CreateSitemapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Sitemap, Google.Cloud.DiscoveryEngine.V1.CreateSitemapMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateSitemap_sync_flattened",
+      "title": "CreateSitemap",
+      "description": "Snippet for CreateSitemap",
+      "file": "SiteSearchEngineServiceClient.CreateSitemapSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSitemap",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateSitemap",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Sitemap",
+            "name": "sitemap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Sitemap, Google.Cloud.DiscoveryEngine.V1.CreateSitemapMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateSitemap_async_flattened",
+      "title": "CreateSitemapAsync",
+      "description": "Snippet for CreateSitemapAsync",
+      "file": "SiteSearchEngineServiceClient.CreateSitemapAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSitemapAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateSitemapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Sitemap",
+            "name": "sitemap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Sitemap, Google.Cloud.DiscoveryEngine.V1.CreateSitemapMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateSitemap_sync_flattened_resourceNames",
+      "title": "CreateSitemapResourceNames",
+      "description": "Snippet for CreateSitemap",
+      "file": "SiteSearchEngineServiceClient.CreateSitemapResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSitemap",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateSitemap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Sitemap",
+            "name": "sitemap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Sitemap, Google.Cloud.DiscoveryEngine.V1.CreateSitemapMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_CreateSitemap_async_flattened_resourceNames",
+      "title": "CreateSitemapResourceNamesAsync",
+      "description": "Snippet for CreateSitemapAsync",
+      "file": "SiteSearchEngineServiceClient.CreateSitemapResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSitemapAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.CreateSitemapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.Sitemap",
+            "name": "sitemap"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.DiscoveryEngine.V1.Sitemap, Google.Cloud.DiscoveryEngine.V1.CreateSitemapMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.CreateSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteSitemap_sync",
+      "title": "DeleteSitemapRequestObject",
+      "description": "Snippet for DeleteSitemap",
+      "file": "SiteSearchEngineServiceClient.DeleteSitemapRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSitemap",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteSitemap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteSitemapMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteSitemap_async",
+      "title": "DeleteSitemapRequestObjectAsync",
+      "description": "Snippet for DeleteSitemapAsync",
+      "file": "SiteSearchEngineServiceClient.DeleteSitemapRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSitemapAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteSitemapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.DeleteSitemapRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteSitemapMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteSitemap_sync_flattened",
+      "title": "DeleteSitemap",
+      "description": "Snippet for DeleteSitemap",
+      "file": "SiteSearchEngineServiceClient.DeleteSitemapSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSitemap",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteSitemap",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteSitemapMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteSitemap_async_flattened",
+      "title": "DeleteSitemapAsync",
+      "description": "Snippet for DeleteSitemapAsync",
+      "file": "SiteSearchEngineServiceClient.DeleteSitemapAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSitemapAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteSitemapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteSitemapMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteSitemap_sync_flattened_resourceNames",
+      "title": "DeleteSitemapResourceNames",
+      "description": "Snippet for DeleteSitemap",
+      "file": "SiteSearchEngineServiceClient.DeleteSitemapResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSitemap",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteSitemap",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SitemapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteSitemapMetadata>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_DeleteSitemap_async_flattened_resourceNames",
+      "title": "DeleteSitemapResourceNamesAsync",
+      "description": "Snippet for DeleteSitemapAsync",
+      "file": "SiteSearchEngineServiceClient.DeleteSitemapResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSitemapAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.DeleteSitemapAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SitemapName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.DiscoveryEngine.V1.DeleteSitemapMetadata>>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSitemap",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.DeleteSitemap",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_FetchSitemaps_sync",
+      "title": "FetchSitemapsRequestObject",
+      "description": "Snippet for FetchSitemaps",
+      "file": "SiteSearchEngineServiceClient.FetchSitemapsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSitemaps",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.FetchSitemaps",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "FetchSitemaps",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.FetchSitemaps",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_FetchSitemaps_async",
+      "title": "FetchSitemapsRequestObjectAsync",
+      "description": "Snippet for FetchSitemapsAsync",
+      "file": "SiteSearchEngineServiceClient.FetchSitemapsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSitemapsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.FetchSitemapsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.FetchSitemapsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "FetchSitemaps",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.FetchSitemaps",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_FetchSitemaps_sync_flattened",
+      "title": "FetchSitemaps",
+      "description": "Snippet for FetchSitemaps",
+      "file": "SiteSearchEngineServiceClient.FetchSitemapsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSitemaps",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.FetchSitemaps",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "FetchSitemaps",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.FetchSitemaps",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_FetchSitemaps_async_flattened",
+      "title": "FetchSitemapsAsync",
+      "description": "Snippet for FetchSitemapsAsync",
+      "file": "SiteSearchEngineServiceClient.FetchSitemapsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSitemapsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.FetchSitemapsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "FetchSitemaps",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.FetchSitemaps",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_FetchSitemaps_sync_flattened_resourceNames",
+      "title": "FetchSitemapsResourceNames",
+      "description": "Snippet for FetchSitemaps",
+      "file": "SiteSearchEngineServiceClient.FetchSitemapsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSitemaps",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.FetchSitemaps",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "FetchSitemaps",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.FetchSitemaps",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "discoveryengine_v1_generated_SiteSearchEngineService_FetchSitemaps_async_flattened_resourceNames",
+      "title": "FetchSitemapsResourceNamesAsync",
+      "description": "Snippet for FetchSitemapsAsync",
+      "file": "SiteSearchEngineServiceClient.FetchSitemapsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchSitemapsAsync",
+        "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient.FetchSitemapsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DiscoveryEngine.V1.FetchSitemapsResponse>",
+        "client": {
+          "shortName": "SiteSearchEngineServiceClient",
+          "fullName": "Google.Cloud.DiscoveryEngine.V1.SiteSearchEngineServiceClient"
+        },
+        "method": {
+          "shortName": "FetchSitemaps",
+          "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService.FetchSitemaps",
+          "service": {
+            "shortName": "SiteSearchEngineService",
+            "fullName": "google.cloud.discoveryengine.v1.SiteSearchEngineService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
           "type": "SHORT"
         }
       ]
