@@ -197,6 +197,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             yield return ScheduleReflection.Descriptor;
             yield return ScheduleServiceReflection.Descriptor;
             yield return ServiceNetworkingReflection.Descriptor;
+            yield return SessionReflection.Descriptor;
+            yield return SessionServiceReflection.Descriptor;
             yield return SpecialistPoolReflection.Descriptor;
             yield return SpecialistPoolServiceReflection.Descriptor;
             yield return StudyReflection.Descriptor;

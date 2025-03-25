@@ -2069,6 +2069,57 @@
         }
       }
     },
+    "SessionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SessionServiceClient",
+          "rpcs": {
+            "AppendEvent": {
+              "methods": [
+                "AppendEvent",
+                "AppendEventAsync"
+              ]
+            },
+            "CreateSession": {
+              "methods": [
+                "CreateSession",
+                "CreateSessionAsync"
+              ]
+            },
+            "DeleteSession": {
+              "methods": [
+                "DeleteSession",
+                "DeleteSessionAsync"
+              ]
+            },
+            "GetSession": {
+              "methods": [
+                "GetSession",
+                "GetSessionAsync"
+              ]
+            },
+            "ListEvents": {
+              "methods": [
+                "ListEvents",
+                "ListEventsAsync"
+              ]
+            },
+            "ListSessions": {
+              "methods": [
+                "ListSessions",
+                "ListSessionsAsync"
+              ]
+            },
+            "UpdateSession": {
+              "methods": [
+                "UpdateSession",
+                "UpdateSessionAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "SpecialistPoolService": {
       "clients": {
         "grpc": {
