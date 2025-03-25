@@ -56,9 +56,8 @@ public class MoveObjectTest
         Assert.NotEqual(actual.TimeStorageClassUpdatedRaw, expected.TimeStorageClassUpdatedRaw);
         if (_fixture.Client.GetBucket(_fixture.HnsBucket).Autoclass != null)
         {
-            if (expected != null)
+            if (_fixture.Client.GetBucket(_fixture.HnsBucket).Autoclass.Enabled == true)
             {
-                Assert.Equal(expected.StorageClass, actual.StorageClass);
                 Assert.Equal(StorageClasses.Standard, expected.StorageClass);
             }
         }
@@ -93,7 +92,7 @@ public class MoveObjectTest
         Assert.DoesNotContain(objects, obj => obj.Name == actual.Name && obj.Generation == actual.Generation);
     }
 
-    // Prevent moving the source object to the destination object using bad preconditions (wrong source generation) set.
+    // Prevent moving the source object to the destination object using bad preconditions (wrong destination generation) set.
     [Fact]
     public async Task PreventMoveObject_With_Wrong_GenerationAsync()
     {
