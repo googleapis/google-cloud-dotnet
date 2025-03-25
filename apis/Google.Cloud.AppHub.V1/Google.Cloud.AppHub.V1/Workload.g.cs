@@ -142,7 +142,7 @@ namespace Google.Cloud.AppHub.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the Workload. Format:
-    /// "projects/{host-project-id}/locations/{location}/applications/{application-id}/workloads/{workload-id}"
+    /// `"projects/{host-project-id}/locations/{location}/applications/{application-id}/workloads/{workload-id}"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1011,7 +1011,7 @@ namespace Google.Cloud.AppHub.V1 {
     private string gcpProject_ = "";
     /// <summary>
     /// Output only. The service project identifier that the underlying cloud
-    /// resource resides in. Empty for non cloud resources.
+    /// resource resides in. Empty for non-cloud resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1027,7 +1027,7 @@ namespace Google.Cloud.AppHub.V1 {
     private string location_ = "";
     /// <summary>
     /// Output only. The location that the underlying compute resource resides in
-    /// (e.g us-west1).
+    /// (for example, us-west1).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1043,7 +1043,7 @@ namespace Google.Cloud.AppHub.V1 {
     private string zone_ = "";
     /// <summary>
     /// Output only. The location that the underlying compute resource resides in
-    /// if it is zonal (e.g us-west1-a).
+    /// if it is zonal (for example, us-west1-a).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1293,7 +1293,7 @@ namespace Google.Cloud.AppHub.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the discovered workload. Format:
-    /// "projects/{host-project-id}/locations/{location}/discoveredWorkloads/{uuid}"
+    /// `"projects/{host-project-id}/locations/{location}/discoveredWorkloads/{uuid}"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

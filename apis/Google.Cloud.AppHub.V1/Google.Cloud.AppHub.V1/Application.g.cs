@@ -42,14 +42,14 @@ namespace Google.Cloud.AppHub.V1 {
             "EgoKBkFDVElWRRACEgwKCERFTEVUSU5HEAM6hgHqQYIBCiFhcHBodWIuZ29v",
             "Z2xlYXBpcy5jb20vQXBwbGljYXRpb24SQnByb2plY3RzL3twcm9qZWN0fS9s",
             "b2NhdGlvbnMve2xvY2F0aW9ufS9hcHBsaWNhdGlvbnMve2FwcGxpY2F0aW9u",
-            "fSoMYXBwbGljYXRpb25zMgthcHBsaWNhdGlvbiJqCgVTY29wZRI1CgR0eXBl",
+            "fSoMYXBwbGljYXRpb25zMgthcHBsaWNhdGlvbiJ2CgVTY29wZRI1CgR0eXBl",
             "GAEgASgOMiIuZ29vZ2xlLmNsb3VkLmFwcGh1Yi52MS5TY29wZS5UeXBlQgPg",
-            "QQIiKgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDAoIUkVHSU9OQUwQ",
-            "AUKyAQoaY29tLmdvb2dsZS5jbG91ZC5hcHBodWIudjFCEEFwcGxpY2F0aW9u",
-            "UHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9hcHBodWIvYXBpdjEvYXBw",
-            "aHVicGI7YXBwaHVicGKqAhZHb29nbGUuQ2xvdWQuQXBwSHViLlYxygIWR29v",
-            "Z2xlXENsb3VkXEFwcEh1YlxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkFwcEh1Yjo6",
-            "VjFiBnByb3RvMw=="));
+            "QQIiNgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDAoIUkVHSU9OQUwQ",
+            "ARIKCgZHTE9CQUwQAkKyAQoaY29tLmdvb2dsZS5jbG91ZC5hcHBodWIudjFC",
+            "EEFwcGxpY2F0aW9uUHJvdG9QAVoyY2xvdWQuZ29vZ2xlLmNvbS9nby9hcHBo",
+            "dWIvYXBpdjEvYXBwaHVicGI7YXBwaHVicGKqAhZHb29nbGUuQ2xvdWQuQXBw",
+            "SHViLlYxygIWR29vZ2xlXENsb3VkXEFwcEh1YlxWMeoCGUdvb2dsZTo6Q2xv",
+            "dWQ6OkFwcEh1Yjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AppHub.V1.AttributesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -62,7 +62,7 @@ namespace Google.Cloud.AppHub.V1 {
   }
   #region Messages
   /// <summary>
-  /// Application defines the governance boundary for App Hub Entities that
+  /// Application defines the governance boundary for App Hub entities that
   /// perform a logical end-to-end business function.
   /// App Hub supports application level IAM permission to align with governance
   /// requirements.
@@ -125,7 +125,7 @@ namespace Google.Cloud.AppHub.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of an Application. Format:
-    /// "projects/{host-project-id}/locations/{location}/applications/{application-id}"
+    /// `"projects/{host-project-id}/locations/{location}/applications/{application-id}"`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -862,6 +862,10 @@ namespace Google.Cloud.AppHub.V1 {
         /// Regional type.
         /// </summary>
         [pbr::OriginalName("REGIONAL")] Regional = 1,
+        /// <summary>
+        /// Global type.
+        /// </summary>
+        [pbr::OriginalName("GLOBAL")] Global = 2,
       }
 
     }
