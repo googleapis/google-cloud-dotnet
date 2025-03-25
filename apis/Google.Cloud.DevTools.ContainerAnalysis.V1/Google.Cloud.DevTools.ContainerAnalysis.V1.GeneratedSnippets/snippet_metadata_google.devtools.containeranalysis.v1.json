@@ -1205,6 +1205,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "containeranalysis_v1_generated_ContainerAnalysis_ExportSBOM_sync",
+      "title": "ExportSBOMRequestObject",
+      "description": "Snippet for ExportSBOM",
+      "file": "ContainerAnalysisClient.ExportSBOMRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportSBOM",
+        "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.ExportSBOM",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse",
+        "client": {
+          "shortName": "ContainerAnalysisClient",
+          "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient"
+        },
+        "method": {
+          "shortName": "ExportSBOM",
+          "fullName": "google.devtools.containeranalysis.v1.ContainerAnalysis.ExportSBOM",
+          "service": {
+            "shortName": "ContainerAnalysis",
+            "fullName": "google.devtools.containeranalysis.v1.ContainerAnalysis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "containeranalysis_v1_generated_ContainerAnalysis_ExportSBOM_async",
+      "title": "ExportSBOMRequestObjectAsync",
+      "description": "Snippet for ExportSBOMAsync",
+      "file": "ContainerAnalysisClient.ExportSBOMRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportSBOMAsync",
+        "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient.ExportSBOMAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DevTools.ContainerAnalysis.V1.ExportSBOMResponse>",
+        "client": {
+          "shortName": "ContainerAnalysisClient",
+          "fullName": "Google.Cloud.DevTools.ContainerAnalysis.V1.ContainerAnalysisClient"
+        },
+        "method": {
+          "shortName": "ExportSBOM",
+          "fullName": "google.devtools.containeranalysis.v1.ContainerAnalysis.ExportSBOM",
+          "service": {
+            "shortName": "ContainerAnalysis",
+            "fullName": "google.devtools.containeranalysis.v1.ContainerAnalysis"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
