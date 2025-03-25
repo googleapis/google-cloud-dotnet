@@ -30,14 +30,10 @@ public class MoveObjectTest
     private string SmallNewObject { get; } = "smallNew.txt";
     private string LargeNewObject { get; } = "largeNew.txt";
     private string SmallThenLargeObject { get; } = "smallThenLargeNew.txt";
-    private Bucket HnsBucket { get; }
 
     public MoveObjectTest(StorageFixture fixture)
     {
         _fixture = fixture;
-        HnsBucket = _fixture.CreateAndPopulateHnsBucket(_fixture.HnsBucket);
-        _fixture.Client.UploadObject(_fixture.HnsBucket, SmallNewObject, "text/plain", new MemoryStream(_fixture.SmallContent));
-        _fixture.Client.UploadObject(_fixture.HnsBucket, LargeNewObject, "text/plain", new MemoryStream(_fixture.LargeContent));
     }
 
     // Moves the source object to the destination object within a bucket with hierarchical namespace enabled.
@@ -45,6 +41,7 @@ public class MoveObjectTest
     public async Task MoveObjectDefaultAsync()
     {
         var actual = await _fixture.Client.GetObjectAsync(_fixture.HnsBucket, _fixture.SmallThenLargeObject);
+        _fixture.Client.UploadObject(_fixture.HnsBucket, LargeNewObject, "text/plain", new MemoryStream(_fixture.LargeContent));
         var expected = await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, _fixture.SmallThenLargeObject, LargeNewObject);
         using var stream = new MemoryStream();
         await _fixture.Client.DownloadObjectAsync(_fixture.HnsBucket, LargeNewObject, stream);
@@ -57,12 +54,12 @@ public class MoveObjectTest
         Assert.NotEqual(actual.TimeFinalizedRaw, expected.TimeFinalizedRaw);
         Assert.NotEqual(actual.UpdatedRaw, expected.UpdatedRaw);
         Assert.NotEqual(actual.TimeStorageClassUpdatedRaw, expected.TimeStorageClassUpdatedRaw);
-        if (HnsBucket.Autoclass != null)
+        if (_fixture.Client.GetBucket(_fixture.HnsBucket).Autoclass != null)
         {
             if (expected != null)
             {
                 Assert.Equal(expected.StorageClass, actual.StorageClass);
-                Assert.Equal(expected.StorageClass, StorageClasses.Standard);
+                Assert.Equal(StorageClasses.Standard, expected.StorageClass);
             }
         }
         else
@@ -82,6 +79,7 @@ public class MoveObjectTest
     public async Task MoveObjectToDirectorySubDirectoryAsync()
     {
         var actual = await _fixture.Client.GetObjectAsync(_fixture.HnsBucket, _fixture.SmallObject);
+        _fixture.Client.UploadObject(_fixture.HnsBucket, SmallNewObject, "text/plain", new MemoryStream(_fixture.SmallContent));
         var expected = await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, _fixture.SmallObject, $"folder/subfolder/" + SmallNewObject);
         using var stream = new MemoryStream();
         await _fixture.Client.DownloadObjectAsync(_fixture.HnsBucket, $"folder/subfolder/" + SmallNewObject, stream);
@@ -129,6 +127,8 @@ public class MoveObjectTest
     {
         var bucketUploadedObject = _fixture.Client.UploadObject(_fixture.HnsBucket, "sourceTestFile.txt", null, GenerateData(128));
         var actual = await _fixture.Client.GetObjectAsync(_fixture.HnsBucket, bucketUploadedObject.Name);
+        _fixture.Client.UploadObject(_fixture.HnsBucket, SmallThenLargeObject, "text/plain",
+            new MemoryStream(_fixture.LargeContent));
         var expected = _fixture.Client.MoveObject(_fixture.HnsBucket, bucketUploadedObject.Name, SmallThenLargeObject,
             new MoveObjectOptions { IfSourceMetagenerationMatch = actual.Metageneration, IfSourceGenerationMatch = actual.Generation });
         var objects = _fixture.Client.ListObjects(_fixture.HnsBucket).ToList();
