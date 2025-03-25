@@ -1729,6 +1729,39 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.BackendServiceHAPolicy"/>
+        /// message.
+        /// </summary>
+        public static class BackendServiceHAPolicy
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceHAPolicy.Types.FastIPMove"/> enum.
+            /// </summary>
+            public static class FastIPMove
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceHAPolicy.Types.FastIPMove.UndefinedFastIPMove"/>
+                /// .
+                /// </summary>
+                public const string UndefinedFastIPMove = "UNDEFINED_FAST_I_P_MOVE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceHAPolicy.Types.FastIPMove.Disabled"/>.
+                /// </summary>
+                public const string Disabled = "DISABLED";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceHAPolicy.Types.FastIPMove.GarpRa"/>.
+                /// </summary>
+                public const string GarpRa = "GARP_RA";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the
         /// <see cref="global::Google.Cloud.Compute.V1.BackendServiceLocalityLoadBalancingPolicyConfigPolicy"/> message.
         /// </summary>
@@ -5185,6 +5218,12 @@ namespace Google.Cloud.Compute.V1
                 /// <see cref="global::Google.Cloud.Compute.V1.Interconnect.Types.LinkType.Ethernet10GLr"/>.
                 /// </summary>
                 public const string Ethernet10GLr = "LINK_TYPE_ETHERNET_10G_LR";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.Interconnect.Types.LinkType.Ethernet400GLr4"/>.
+                /// </summary>
+                public const string Ethernet400GLr4 = "LINK_TYPE_ETHERNET_400G_LR4";
             }
 
             /// <summary>
@@ -5840,6 +5879,13 @@ namespace Google.Cloud.Compute.V1
                 /// .
                 /// </summary>
                 public const string LinkTypeEthernet10GLr = "LINK_TYPE_ETHERNET_10G_LR";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.InterconnectLocation.Types.AvailableLinkTypes.LinkTypeEthernet400GLr4"/>
+                /// .
+                /// </summary>
+                public const string LinkTypeEthernet400GLr4 = "LINK_TYPE_ETHERNET_400G_LR4";
             }
 
             /// <summary>
