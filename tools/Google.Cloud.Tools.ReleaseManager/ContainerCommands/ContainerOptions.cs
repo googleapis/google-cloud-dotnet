@@ -74,4 +74,8 @@ public class ContainerOptions
 
     internal string RequireOption(string option, [CallerArgumentExpression("option")] string expression = null) =>
         option ?? throw new UserErrorException($"Option for {expression} is required");
+
+    internal List<ApiMetadata> GetApisFromLibraryId(ApiCatalog catalog) => LibraryId is null ? catalog.Apis
+        : catalog.PackageGroups.FirstOrDefault(pg => pg.Id == LibraryId) is PackageGroup group ? group.PackageIds.Select(id => catalog[id]).ToList()
+        : new() { catalog[LibraryId] };
 }
