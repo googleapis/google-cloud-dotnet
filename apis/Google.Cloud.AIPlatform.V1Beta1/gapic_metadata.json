@@ -269,6 +269,69 @@
         }
       }
     },
+    "ExampleStoreService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ExampleStoreServiceClient",
+          "rpcs": {
+            "CreateExampleStore": {
+              "methods": [
+                "CreateExampleStore",
+                "CreateExampleStoreAsync"
+              ]
+            },
+            "DeleteExampleStore": {
+              "methods": [
+                "DeleteExampleStore",
+                "DeleteExampleStoreAsync"
+              ]
+            },
+            "FetchExamples": {
+              "methods": [
+                "FetchExamples",
+                "FetchExamplesAsync"
+              ]
+            },
+            "GetExampleStore": {
+              "methods": [
+                "GetExampleStore",
+                "GetExampleStoreAsync"
+              ]
+            },
+            "ListExampleStores": {
+              "methods": [
+                "ListExampleStores",
+                "ListExampleStoresAsync"
+              ]
+            },
+            "RemoveExamples": {
+              "methods": [
+                "RemoveExamples",
+                "RemoveExamplesAsync"
+              ]
+            },
+            "SearchExamples": {
+              "methods": [
+                "SearchExamples",
+                "SearchExamplesAsync"
+              ]
+            },
+            "UpdateExampleStore": {
+              "methods": [
+                "UpdateExampleStore",
+                "UpdateExampleStoreAsync"
+              ]
+            },
+            "UpsertExamples": {
+              "methods": [
+                "UpsertExamples",
+                "UpsertExamplesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ExtensionExecutionService": {
       "clients": {
         "grpc": {
