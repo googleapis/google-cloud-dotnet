@@ -89,13 +89,14 @@ public sealed class CreatePipelineStateCommand : CommandBase
             {
                 return;
             }
+            var released = !api.Version.EndsWith("00");
             var library = new LibraryState
             {
                 Id = api.Id,
-                CurrentVersion = api.Version,
+                CurrentVersion = released ? api.Version : null,
                 ReleaseTimestamp = FormatTimestamp(GetLastReleaseTimestamp(api)),
                 GenerationAutomationLevel = AutomationLevelAutomatic,
-                ReleaseAutomationLevel = api.BlockRelease is not null || api.Version.EndsWith("00") ? AutomationLevelBlocked : AutomationLevelAutomatic
+                ReleaseAutomationLevel = api.BlockRelease is not null || !released ? AutomationLevelBlocked : AutomationLevelAutomatic
             };
             if (api.ProtoPath is string path)
             {
