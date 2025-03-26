@@ -31,6 +31,7 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AnalyticshubReflection.Descriptor;
+            yield return PubsubReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

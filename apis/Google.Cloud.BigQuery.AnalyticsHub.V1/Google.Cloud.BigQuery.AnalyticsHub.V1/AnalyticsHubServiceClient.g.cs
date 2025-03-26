@@ -2190,8 +2190,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             SubscribeListingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2200,8 +2200,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2210,8 +2210,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2247,8 +2247,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             lro::Operation<SubscribeDataExchangeResponse, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubscribeDataExchangeOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
@@ -2263,8 +2263,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
@@ -2279,8 +2279,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
@@ -2292,8 +2292,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             SubscribeDataExchangeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
@@ -2308,8 +2308,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
@@ -2324,8 +2324,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the Data Exchange.
@@ -3792,8 +3792,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         public override lro::OperationsClient SubscribeDataExchangeOperationsClient { get; }
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3805,8 +3805,8 @@ namespace Google.Cloud.BigQuery.AnalyticsHub.V1
         }
 
         /// <summary>
-        /// Creates a Subscription to a Data Exchange. This is a long-running operation
-        /// as it will create one or more linked datasets.
+        /// Creates a Subscription to a Data Clean Room. This is a long-running
+        /// operation as it will create one or more linked datasets.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
