@@ -1529,6 +1529,7 @@ namespace GoogleCSharpSnippets
                 DestinationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SubscriberContact = "",
                 Subscription = "",
+                DestinationDataset = new DestinationDataset(),
             };
             // Make the request
             Operation<SubscribeDataExchangeResponse, OperationMetadata> response = analyticsHubServiceClient.SubscribeDataExchange(request);
@@ -1565,6 +1566,7 @@ namespace GoogleCSharpSnippets
                 DestinationAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SubscriberContact = "",
                 Subscription = "",
+                DestinationDataset = new DestinationDataset(),
             };
             // Make the request
             Operation<SubscribeDataExchangeResponse, OperationMetadata> response = await analyticsHubServiceClient.SubscribeDataExchangeAsync(request);
