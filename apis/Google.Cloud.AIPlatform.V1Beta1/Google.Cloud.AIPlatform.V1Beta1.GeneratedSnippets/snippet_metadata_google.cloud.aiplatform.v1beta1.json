@@ -10099,6 +10099,1790 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_CreateExampleStore_sync",
+      "title": "CreateExampleStoreRequestObject",
+      "description": "Snippet for CreateExampleStore",
+      "file": "ExampleStoreServiceClient.CreateExampleStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.CreateExampleStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CreateExampleStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.CreateExampleStoreOperationMetadata>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.CreateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_CreateExampleStore_async",
+      "title": "CreateExampleStoreRequestObjectAsync",
+      "description": "Snippet for CreateExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.CreateExampleStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.CreateExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.CreateExampleStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.CreateExampleStoreOperationMetadata>>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.CreateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_CreateExampleStore_sync_flattened",
+      "title": "CreateExampleStore",
+      "description": "Snippet for CreateExampleStore",
+      "file": "ExampleStoreServiceClient.CreateExampleStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.CreateExampleStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+            "name": "exampleStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.CreateExampleStoreOperationMetadata>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.CreateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_CreateExampleStore_async_flattened",
+      "title": "CreateExampleStoreAsync",
+      "description": "Snippet for CreateExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.CreateExampleStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.CreateExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+            "name": "exampleStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.CreateExampleStoreOperationMetadata>>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.CreateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_CreateExampleStore_sync_flattened_resourceNames",
+      "title": "CreateExampleStoreResourceNames",
+      "description": "Snippet for CreateExampleStore",
+      "file": "ExampleStoreServiceClient.CreateExampleStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.CreateExampleStore",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+            "name": "exampleStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.CreateExampleStoreOperationMetadata>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.CreateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_CreateExampleStore_async_flattened_resourceNames",
+      "title": "CreateExampleStoreResourceNamesAsync",
+      "description": "Snippet for CreateExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.CreateExampleStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.CreateExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+            "name": "exampleStore"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.CreateExampleStoreOperationMetadata>>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "CreateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.CreateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_GetExampleStore_sync",
+      "title": "GetExampleStoreRequestObject",
+      "description": "Snippet for GetExampleStore",
+      "file": "ExampleStoreServiceClient.GetExampleStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.GetExampleStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetExampleStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.GetExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_GetExampleStore_async",
+      "title": "GetExampleStoreRequestObjectAsync",
+      "description": "Snippet for GetExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.GetExampleStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.GetExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetExampleStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.GetExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_GetExampleStore_sync_flattened",
+      "title": "GetExampleStore",
+      "description": "Snippet for GetExampleStore",
+      "file": "ExampleStoreServiceClient.GetExampleStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.GetExampleStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.GetExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_GetExampleStore_async_flattened",
+      "title": "GetExampleStoreAsync",
+      "description": "Snippet for GetExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.GetExampleStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.GetExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.GetExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_GetExampleStore_sync_flattened_resourceNames",
+      "title": "GetExampleStoreResourceNames",
+      "description": "Snippet for GetExampleStore",
+      "file": "ExampleStoreServiceClient.GetExampleStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.GetExampleStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.GetExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_GetExampleStore_async_flattened_resourceNames",
+      "title": "GetExampleStoreResourceNamesAsync",
+      "description": "Snippet for GetExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.GetExampleStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.GetExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "GetExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.GetExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_UpdateExampleStore_sync",
+      "title": "UpdateExampleStoreRequestObject",
+      "description": "Snippet for UpdateExampleStore",
+      "file": "ExampleStoreServiceClient.UpdateExampleStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.UpdateExampleStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateExampleStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.UpdateExampleStoreOperationMetadata>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.UpdateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_UpdateExampleStore_async",
+      "title": "UpdateExampleStoreRequestObjectAsync",
+      "description": "Snippet for UpdateExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.UpdateExampleStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.UpdateExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpdateExampleStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.UpdateExampleStoreOperationMetadata>>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.UpdateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_UpdateExampleStore_sync_flattened",
+      "title": "UpdateExampleStore",
+      "description": "Snippet for UpdateExampleStore",
+      "file": "ExampleStoreServiceClient.UpdateExampleStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.UpdateExampleStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+            "name": "exampleStore"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.UpdateExampleStoreOperationMetadata>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.UpdateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_UpdateExampleStore_async_flattened",
+      "title": "UpdateExampleStoreAsync",
+      "description": "Snippet for UpdateExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.UpdateExampleStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.UpdateExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStore",
+            "name": "exampleStore"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.ExampleStore, Google.Cloud.AIPlatform.V1Beta1.UpdateExampleStoreOperationMetadata>>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.UpdateExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_DeleteExampleStore_sync",
+      "title": "DeleteExampleStoreRequestObject",
+      "description": "Snippet for DeleteExampleStore",
+      "file": "ExampleStoreServiceClient.DeleteExampleStoreRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.DeleteExampleStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteExampleStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteExampleStoreOperationMetadata>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.DeleteExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_DeleteExampleStore_async",
+      "title": "DeleteExampleStoreRequestObjectAsync",
+      "description": "Snippet for DeleteExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.DeleteExampleStoreRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.DeleteExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteExampleStoreRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteExampleStoreOperationMetadata>>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.DeleteExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_DeleteExampleStore_sync_flattened",
+      "title": "DeleteExampleStore",
+      "description": "Snippet for DeleteExampleStore",
+      "file": "ExampleStoreServiceClient.DeleteExampleStoreSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.DeleteExampleStore",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteExampleStoreOperationMetadata>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.DeleteExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_DeleteExampleStore_async_flattened",
+      "title": "DeleteExampleStoreAsync",
+      "description": "Snippet for DeleteExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.DeleteExampleStoreAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.DeleteExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteExampleStoreOperationMetadata>>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.DeleteExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_DeleteExampleStore_sync_flattened_resourceNames",
+      "title": "DeleteExampleStoreResourceNames",
+      "description": "Snippet for DeleteExampleStore",
+      "file": "ExampleStoreServiceClient.DeleteExampleStoreResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExampleStore",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.DeleteExampleStore",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteExampleStoreOperationMetadata>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.DeleteExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_DeleteExampleStore_async_flattened_resourceNames",
+      "title": "DeleteExampleStoreResourceNamesAsync",
+      "description": "Snippet for DeleteExampleStoreAsync",
+      "file": "ExampleStoreServiceClient.DeleteExampleStoreResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteExampleStoreAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.DeleteExampleStoreAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteExampleStoreOperationMetadata>>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteExampleStore",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.DeleteExampleStore",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_ListExampleStores_sync",
+      "title": "ListExampleStoresRequestObject",
+      "description": "Snippet for ListExampleStores",
+      "file": "ExampleStoreServiceClient.ListExampleStoresRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExampleStores",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.ListExampleStores",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListExampleStoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListExampleStoresResponse, Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListExampleStores",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.ListExampleStores",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_ListExampleStores_async",
+      "title": "ListExampleStoresRequestObjectAsync",
+      "description": "Snippet for ListExampleStoresAsync",
+      "file": "ExampleStoreServiceClient.ListExampleStoresRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExampleStoresAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.ListExampleStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListExampleStoresRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListExampleStoresResponse, Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListExampleStores",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.ListExampleStores",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_ListExampleStores_sync_flattened",
+      "title": "ListExampleStores",
+      "description": "Snippet for ListExampleStores",
+      "file": "ExampleStoreServiceClient.ListExampleStoresSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExampleStores",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.ListExampleStores",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListExampleStoresResponse, Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListExampleStores",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.ListExampleStores",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_ListExampleStores_async_flattened",
+      "title": "ListExampleStoresAsync",
+      "description": "Snippet for ListExampleStoresAsync",
+      "file": "ExampleStoreServiceClient.ListExampleStoresAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExampleStoresAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.ListExampleStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListExampleStoresResponse, Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListExampleStores",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.ListExampleStores",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_ListExampleStores_sync_flattened_resourceNames",
+      "title": "ListExampleStoresResourceNames",
+      "description": "Snippet for ListExampleStores",
+      "file": "ExampleStoreServiceClient.ListExampleStoresResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExampleStores",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.ListExampleStores",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListExampleStoresResponse, Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListExampleStores",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.ListExampleStores",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_ListExampleStores_async_flattened_resourceNames",
+      "title": "ListExampleStoresResourceNamesAsync",
+      "description": "Snippet for ListExampleStoresAsync",
+      "file": "ExampleStoreServiceClient.ListExampleStoresResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListExampleStoresAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.ListExampleStoresAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListExampleStoresResponse, Google.Cloud.AIPlatform.V1Beta1.ExampleStore>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "ListExampleStores",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.ListExampleStores",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_UpsertExamples_sync",
+      "title": "UpsertExamplesRequestObject",
+      "description": "Snippet for UpsertExamples",
+      "file": "ExampleStoreServiceClient.UpsertExamplesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpsertExamples",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.UpsertExamples",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpsertExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.UpsertExamplesResponse",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpsertExamples",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.UpsertExamples",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_UpsertExamples_async",
+      "title": "UpsertExamplesRequestObjectAsync",
+      "description": "Snippet for UpsertExamplesAsync",
+      "file": "ExampleStoreServiceClient.UpsertExamplesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpsertExamplesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.UpsertExamplesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.UpsertExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.UpsertExamplesResponse>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "UpsertExamples",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.UpsertExamples",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_RemoveExamples_sync",
+      "title": "RemoveExamplesRequestObject",
+      "description": "Snippet for RemoveExamples",
+      "file": "ExampleStoreServiceClient.RemoveExamplesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveExamples",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.RemoveExamples",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RemoveExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.RemoveExamplesResponse",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveExamples",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.RemoveExamples",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_RemoveExamples_async",
+      "title": "RemoveExamplesRequestObjectAsync",
+      "description": "Snippet for RemoveExamplesAsync",
+      "file": "ExampleStoreServiceClient.RemoveExamplesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RemoveExamplesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.RemoveExamplesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.RemoveExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.RemoveExamplesResponse>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "RemoveExamples",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.RemoveExamples",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_SearchExamples_sync",
+      "title": "SearchExamplesRequestObject",
+      "description": "Snippet for SearchExamples",
+      "file": "ExampleStoreServiceClient.SearchExamplesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchExamples",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.SearchExamples",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SearchExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.SearchExamplesResponse",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "SearchExamples",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.SearchExamples",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_SearchExamples_async",
+      "title": "SearchExamplesRequestObjectAsync",
+      "description": "Snippet for SearchExamplesAsync",
+      "file": "ExampleStoreServiceClient.SearchExamplesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchExamplesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.SearchExamplesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SearchExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.SearchExamplesResponse>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "SearchExamples",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.SearchExamples",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_FetchExamples_sync",
+      "title": "FetchExamplesRequestObject",
+      "description": "Snippet for FetchExamples",
+      "file": "ExampleStoreServiceClient.FetchExamplesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchExamples",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.FetchExamples",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.FetchExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.FetchExamplesResponse, Google.Cloud.AIPlatform.V1Beta1.Example>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "FetchExamples",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.FetchExamples",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ExampleStoreService_FetchExamples_async",
+      "title": "FetchExamplesRequestObjectAsync",
+      "description": "Snippet for FetchExamplesAsync",
+      "file": "ExampleStoreServiceClient.FetchExamplesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchExamplesAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient.FetchExamplesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.FetchExamplesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.FetchExamplesResponse, Google.Cloud.AIPlatform.V1Beta1.Example>",
+        "client": {
+          "shortName": "ExampleStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ExampleStoreServiceClient"
+        },
+        "method": {
+          "shortName": "FetchExamples",
+          "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService.FetchExamples",
+          "service": {
+            "shortName": "ExampleStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ExampleStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_ExtensionExecutionService_ExecuteExtension_sync",
       "title": "ExecuteExtensionRequestObject",
       "description": "Snippet for ExecuteExtension",
