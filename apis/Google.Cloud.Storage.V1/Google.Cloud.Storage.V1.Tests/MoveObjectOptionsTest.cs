@@ -17,6 +17,7 @@ using Xunit;
 using static Google.Apis.Storage.v1.ObjectsResource;
 
 namespace Google.Cloud.Storage.V1.Tests;
+
 public class MoveObjectOptionsTest
 {
     [Fact]
