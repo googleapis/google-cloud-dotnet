@@ -12,11 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Apis.Storage.v1.Data;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 using static Google.Cloud.Storage.V1.IntegrationTests.TestHelpers;
@@ -36,7 +34,7 @@ public class MoveObjectTest
         _fixture = fixture;
     }
 
-    // Moves the source object to the destination object within a bucket with hierarchical namespace enabled.
+    // Moves the object within a bucket with hierarchical namespace enabled.
     [Fact]
     public async Task MoveObjectDefaultAsync()
     {
