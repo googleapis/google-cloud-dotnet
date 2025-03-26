@@ -81,6 +81,8 @@ namespace Google.Cloud.DiscoveryEngine.V1
             yield return SchemaServiceReflection.Descriptor;
             yield return SearchServiceReflection.Descriptor;
             yield return SearchTuningServiceReflection.Descriptor;
+            yield return ServingConfigReflection.Descriptor;
+            yield return ServingConfigServiceReflection.Descriptor;
             yield return SessionReflection.Descriptor;
             yield return SiteSearchEngineReflection.Descriptor;
             yield return SiteSearchEngineServiceReflection.Descriptor;

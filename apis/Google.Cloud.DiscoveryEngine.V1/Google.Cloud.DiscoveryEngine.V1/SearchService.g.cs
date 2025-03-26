@@ -533,9 +533,10 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         = pb::FieldCodec.ForMessage(258, global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.DataStoreSpec.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.DataStoreSpec> dataStoreSpecs_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.DataStoreSpec>();
     /// <summary>
-    /// Specifications that define the specific [DataStore]s to be searched, along
-    /// with configurations for those data stores. This is only considered for
-    /// [Engine][google.cloud.discoveryengine.v1.Engine]s with multiple data
+    /// Specifications that define the specific
+    /// [DataStore][google.cloud.discoveryengine.v1.DataStore]s to be searched,
+    /// along with configurations for those data stores. This is only considered
+    /// for [Engine][google.cloud.discoveryengine.v1.Engine]s with multiple data
     /// stores. For engines with a single data store, the specs directly under
     /// [SearchRequest][google.cloud.discoveryengine.v1.SearchRequest] should be
     /// used.
@@ -3257,7 +3258,7 @@ namespace Google.Cloud.DiscoveryEngine.V1 {
         private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec> conditionBoostSpecs_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1.SearchRequest.Types.BoostSpec.Types.ConditionBoostSpec>();
         /// <summary>
         /// Condition boost specifications. If a document matches multiple conditions
-        /// in the specifictions, boost scores from these specifications are all
+        /// in the specifications, boost scores from these specifications are all
         /// applied and combined in a non-linear way. Maximum number of
         /// specifications is 20.
         /// </summary>
