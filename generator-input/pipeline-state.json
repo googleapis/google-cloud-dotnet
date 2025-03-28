@@ -783,7 +783,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-13T17:52:16Z",
-            "lastGeneratedCommit": "12fc2f929e39688aa24ae6fc5e18db3315975a6e",
+            "lastGeneratedCommit": "dfe85eea9a7a14e220563ecbeef0517d592883ac",
             "apiPaths": [
                 "google/cloud/billing/budgets/v1"
             ],
