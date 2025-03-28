@@ -147,7 +147,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-03-26T17:18:20Z",
-            "lastGeneratedCommit": "d606bb4a7852604e4045948d6340e73cb0d1d70b",
+            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
                 "google/apps/script/type"
             ],
