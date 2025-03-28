@@ -3810,7 +3810,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-09T17:14:21Z",
-            "lastGeneratedCommit": "a3a2dc62816053b6e9dc2b67d52048133794b178",
+            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
                 "google/shopping/type"
             ],
