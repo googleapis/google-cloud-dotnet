@@ -42,6 +42,13 @@ namespace Google.Cloud.Tools.ReleaseManager;
 /// </summary>
 internal sealed class NonSourceGenerator
 {
+    /// <summary>
+    /// Allows switching between OwlBot and Librarian. When this is true, OwlBot config files
+    /// are generated, and OwlBot will create PRs. When this is false, any OwlBot config files are
+    /// *deleted* by GenerateProjectsCommand, effectively disabling OwlBot.
+    /// </summary>
+    private static readonly bool GenerateOwlBotConfig = true;
+
     internal const string ProjectVersionValue = "project";
     internal const string DefaultVersionValue = "default";
     internal const string DefaultNetstandardTarget = "netstandard2.0";
@@ -517,6 +524,15 @@ internal sealed class NonSourceGenerator
         var apiLayout = RootLayout.CreateGeneratorApiLayout(api);
         var owlBotConfigFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot.yaml");
         var owlBotForceRegenerationFile = Path.Combine(apiLayout.SourceDirectory, ".OwlBot-ForceRegeneration.txt");
+
+        // If we're not using OwlBot, make sure we don't have any files for it.
+        if (!GenerateOwlBotConfig)
+        {
+            File.Delete(owlBotConfigFile);
+            File.Delete(owlBotForceRegenerationFile);
+            return;
+        }
+
         // We will recreate this if necessary.
         File.Delete(owlBotForceRegenerationFile);
         if (api.Generator == GeneratorType.None)
