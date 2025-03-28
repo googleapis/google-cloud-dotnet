@@ -595,7 +595,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-07-08T16:34:20Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "b64f36a8c04a977e6d6ad3924ee37a3a94b36212",
             "apiPaths": [
                 "google/cloud/bigquery/analyticshub/v1"
             ],
