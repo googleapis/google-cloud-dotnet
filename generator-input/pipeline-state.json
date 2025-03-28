@@ -3516,7 +3516,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T15:44:16Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "2f91d30c7b594bb6693d1306c60590267b54446a",
             "apiPaths": [
                 "google/longrunning"
             ],
