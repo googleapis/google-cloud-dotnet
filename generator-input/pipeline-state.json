@@ -3558,7 +3558,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-03T18:10:29Z",
-            "lastGeneratedCommit": "fc5c0bd8845ea19a288580e246f8a2786f4416cc",
+            "lastGeneratedCommit": "fcd9d6582e9dd821553c4bd93a6d418e87f8a9fe",
             "apiPaths": [
                 "google/maps/fleetengine/delivery/v1"
             ],
