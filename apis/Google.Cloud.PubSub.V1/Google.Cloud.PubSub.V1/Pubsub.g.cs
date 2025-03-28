@@ -7269,7 +7269,7 @@ namespace Google.Cloud.PubSub.V1 {
     ///   *
     ///   * @param  {Object&lt;string, any>} metadata - Pub/Sub message metadata.
     ///   * Keys:
-    ///   *   - (required) 'message_id'  : {string}
+    ///   *   - (optional) 'message_id'  : {string}
     ///   *   - (optional) 'publish_time': {string} YYYY-MM-DDTHH:MM:SSZ format
     ///   *   - (optional) 'ordering_key': {string}
     ///   */
