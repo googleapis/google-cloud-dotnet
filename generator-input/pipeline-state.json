@@ -1885,7 +1885,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-03-26T23:48:18Z",
-            "lastGeneratedCommit": "95da686e8840cf3edf872ce3d095967e24e41bf6",
+            "lastGeneratedCommit": "ada88fe8801a840b197706a8068fee1ca45b0f6f",
             "apiPaths": [
                 "google/logging/type"
             ],
