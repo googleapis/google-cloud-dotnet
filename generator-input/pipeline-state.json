@@ -3488,7 +3488,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-03-27T08:20:20Z",
-            "lastGeneratedCommit": "e7d77d65f0e05ce584c1a824c7ecab53b411498b",
+            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
                 "google/identity/accesscontextmanager/type"
             ],
