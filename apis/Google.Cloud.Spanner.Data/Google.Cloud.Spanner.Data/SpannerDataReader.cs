@@ -237,6 +237,13 @@ namespace Google.Cloud.Spanner.Data
         public PgNumeric GetPgNumeric(int i) => GetFieldValue<PgNumeric>(i);
 
         /// <summary>
+        /// Gets the value of the specified column as type <see cref="Interval"/>.
+        /// </summary>
+        /// <param name="i">The index of the column to retrieve.</param>
+        /// <returns>The value converted to a <see cref="Interval"/>.</returns>
+        public Interval GetInterval(int i) => GetFieldValue<Interval>(i);
+
+        /// <summary>
         /// Gets the value of the specified column as type <see cref="SpannerDate"/>.
         /// </summary>
         /// <param name="i">The index of the column to retrieve.</param>
