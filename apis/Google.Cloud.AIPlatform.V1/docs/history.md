@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.25.0, released 2025-03-31
+
+### New features
+
+- Add page spans in retrieved contexts from Vertex RAG Engine in aiplatform v1 ([commit a14589e](https://github.com/googleapis/google-cloud-dotnet/commit/a14589e0d698d55b0ec3ce487077315b92acf961))
+- Add support for Vertex AI Search engine ([commit 27dd031](https://github.com/googleapis/google-cloud-dotnet/commit/27dd031f9239a8318f57be843f8838c354f275a5))
+- Enable force deletion in ReasoningEngine ([commit e0d55af](https://github.com/googleapis/google-cloud-dotnet/commit/e0d55af4c335ee74cd667b67cc5671cd7d793302))
+
 ## Version 3.24.0, released 2025-03-24
 
 ### New features
