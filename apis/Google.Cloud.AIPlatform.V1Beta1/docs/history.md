@@ -1,5 +1,21 @@
 # Version history
 
+## Version 1.0.0-beta24, released 2025-03-31
+
+### New features
+
+- Add page spans in retrieved contexts from Vertex RAG Engine in aiplatform v1beta1 ([commit e03b1fc](https://github.com/googleapis/google-cloud-dotnet/commit/e03b1fc06676cff9942c71158d7978cc2890cfa0))
+- Add example, example_store, and example_store_service protos ([commit e5da036](https://github.com/googleapis/google-cloud-dotnet/commit/e5da0366dc06127f27d6b24c7ce9a96e020d398f))
+- Add session.proto and session_service.proto ([commit ddc4e6a](https://github.com/googleapis/google-cloud-dotnet/commit/ddc4e6af6cc0544eda61ffcde87ead0702d010a3))
+- Add batch prediction assessments to multimodal dataset RPCs ([commit 6d65548](https://github.com/googleapis/google-cloud-dotnet/commit/6d65548bb5470f20484e03d66b2b4107f7eb94e1))
+- Enable force deletion in ReasoningEngine v1beta1 ([commit 4acec61](https://github.com/googleapis/google-cloud-dotnet/commit/4acec61cba8af321c4872b8adaa70221e2d03944))
+- Add model_config field for model selection preference ([commit 6135f3e](https://github.com/googleapis/google-cloud-dotnet/commit/6135f3e9b176b7abaae76b43b6fa463e642a08e3))
+
+### Documentation improvements
+
+- A comment for field `rag_files_count` in message `.google.cloud.aiplatform.v1beta1.RagCorpus` is changed ([commit e03b1fc](https://github.com/googleapis/google-cloud-dotnet/commit/e03b1fc06676cff9942c71158d7978cc2890cfa0))
+- A comment for field `model_name` in message `.google.cloud.aiplatform.v1beta1.RagFileParsingConfig` is changed ([commit e03b1fc](https://github.com/googleapis/google-cloud-dotnet/commit/e03b1fc06676cff9942c71158d7978cc2890cfa0))
+
 ## Version 1.0.0-beta23, released 2025-03-24
 
 ### New features
