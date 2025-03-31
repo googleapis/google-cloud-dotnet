@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.8.0, released 2025-03-31
+
+### New features
+
+- Support new feature Sharing Cloud Pubsub Streams via AH (GA) and Subscriber Email logging feature ([commit 9ea4972](https://github.com/googleapis/google-cloud-dotnet/commit/9ea4972f40a5e91bd602204c0afacbab980baef4))
+
 ## Version 1.7.0, released 2024-07-08
 
 ### New features
