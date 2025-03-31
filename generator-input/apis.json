@@ -923,7 +923,7 @@
     },
     {
       "id": "Google.Cloud.BigQuery.AnalyticsHub.V1",
-      "version": "1.7.0",
+      "version": "1.8.0",
       "type": "grpc",
       "productName": "Analytics Hub",
       "productUrl": "https://cloud.google.com/analytics-hub",
@@ -933,7 +933,7 @@
         "analytics"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.LongRunning": "3.3.0"
       },
       "generator": "micro",
