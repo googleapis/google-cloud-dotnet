@@ -1,5 +1,10 @@
 # Version history
 
+## Version 3.24.0, released 2025-03-31
+
+### Documentation improvements
+
+- Update documentation for JavaScriptUDF to indicate that the `message_id` metadata field is optional instead of required ([commit 8127313](https://github.com/googleapis/google-cloud-dotnet/commit/8127313c8128619f5526c37b578a17b37bac0f1d))
 ## Version 3.23.0, released 2025-03-14
 
 ### New features
