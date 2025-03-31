@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.10.0, released 2025-03-31
+
+### New features
+
+- A new field `secret_manager_stored_password` is added to multiple messages ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+- A new messages related to `SalesforceProfile` are added ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+- A new message `BlmtConfig` is added ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+- A new field `blmt_config` is added to message `.google.cloud.datastream.v1.BigQueryDestinationConfig` ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+- A new field `satisfies_pzs` is added to multiple messages. ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+- A new field `satisfies_pzi` is added to multiple messages. ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+- A new message `MysqlGtidPosition` is added ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+- A new field `mysql_gtid_position` is added to message `.google.cloud.datastream.v1.CdcStrategy` ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+
+### Documentation improvements
+
+- Documentation improvements and changes for multiple fields ([commit 448570d](https://github.com/googleapis/google-cloud-dotnet/commit/448570daf7dc678a89cfdd889c0db001deba2dfd))
+
 ## Version 2.9.0, released 2025-01-27
 
 ### New features
