@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.1.0, released 2025-03-31
+
+### New features
+
+- Add enum `Type.GLOBAL` ([commit 56e4ccf](https://github.com/googleapis/google-cloud-dotnet/commit/56e4ccf059df7c79f254c454d26bcd8d5d37ffcd))
+
+### Documentation improvements
+
+- Misc comment updates, formatting ([commit 56e4ccf](https://github.com/googleapis/google-cloud-dotnet/commit/56e4ccf059df7c79f254c454d26bcd8d5d37ffcd))
+
 ## Version 1.0.0, released 2024-12-05
 
 No API surface changes; just dependency updates and promotion to GA.
