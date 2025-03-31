@@ -2213,7 +2213,7 @@
     },
     {
       "id": "Google.Cloud.DiscoveryEngine.V1",
-      "version": "1.6.0",
+      "version": "1.7.0",
       "type": "grpc",
       "productName": "Discovery Engine",
       "productUrl": "https://cloud.google.com/discovery-engine/docs",

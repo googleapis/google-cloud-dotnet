@@ -1,5 +1,34 @@
 # Version history
 
+## Version 1.7.0, released 2025-03-31
+
+### New features
+
+- Move serving config update API to GA ([commit 6ab720b](https://github.com/googleapis/google-cloud-dotnet/commit/6ab720b899be56321d4b368fc73bc0a519ac6bad))
+- Add time_zone in user info ([commit 6ab720b](https://github.com/googleapis/google-cloud-dotnet/commit/6ab720b899be56321d4b368fc73bc0a519ac6bad))
+- Add stream answer API ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support query rephraser model for answer API ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support end user spec for answer API ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support grounding and safety rating for answer API ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support relevance threshold in search ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support boosting for blended search ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support auto mode in search as your type ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support model scores in search ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support search highlighting ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support enterprise web retrieval source for grounding ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support images in web search grounding ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Add sitemap APIs ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Add interpolation boost action and promotion action ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Allow FHIR import to use latest predefined schema ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Allow unstructured data import to force refresh all content ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support conversion user event ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+- Support panel aware user event ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+
+### Documentation improvements
+
+- Keep the API doc up-to-date with recent changes ([commit 6ab720b](https://github.com/googleapis/google-cloud-dotnet/commit/6ab720b899be56321d4b368fc73bc0a519ac6bad))
+- Keep the API doc up-to-date with recent changes ([commit 6cc15c4](https://github.com/googleapis/google-cloud-dotnet/commit/6cc15c4ca3085a1d7d002ea1a50140e1e9b1973a))
+
 ## Version 1.6.0, released 2024-10-29
 
 ### New features
