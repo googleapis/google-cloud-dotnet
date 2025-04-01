@@ -37,6 +37,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         private static readonly Dictionary<string, List<string>> s_googleApisCommitMessageCache = new();
 
         private static readonly Regex OwlBotEmailRegex = new Regex(@".*gcf-owl-bot\[bot\]@users\.noreply\.github\.com");
+        private const string LibrarianRobotEmail = "cloud-sdk-librarian-dotnet-robot@google.com";
 
         /// <summary>
         /// A commit line consisting of just "Version history:" indicates that all the lines
@@ -97,6 +98,14 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 messageLines = messageLines
                     .Where(line => !line.StartsWith("Committer: @"))
                     .TakeWhile(line => !line.StartsWith("PiperOrigin-RevId"))
+                    .ToList();
+            }
+            // Librarian includes source link and piper origin revid lines. For now, we'll just skip those 
+            else if (_libGit2Commit.Author.Email == LibrarianRobotEmail)
+            {
+                messageLines = messageLines
+                    .Where(line => !line.StartsWith("Source-Link:"))
+                    .Where(line => !line.StartsWith("PiperOrigin-RevId:"))
                     .ToList();
             }
 
