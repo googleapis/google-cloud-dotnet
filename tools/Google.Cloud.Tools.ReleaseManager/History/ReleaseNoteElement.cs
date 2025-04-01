@@ -25,7 +25,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// Whether or not we should actually include this note in the published
         /// release notes.
         /// </summary>
-        public bool PublishInReleaseNotes => Type != ReleaseNoteElementType.Chore;
+        public bool PublishInReleaseNotes => Type != ReleaseNoteElementType.Chore && Type != ReleaseNoteElementType.Placeholder;
 
         /// <summary>
         /// The commit within google-cloud-dotnet responsible for the change.
@@ -86,6 +86,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 "chore" => ReleaseNoteElementType.Chore,
                 "docs" => ReleaseNoteElementType.Docs,
                 "doc" => ReleaseNoteElementType.Docs,
+                "regen" => ReleaseNoteElementType.Placeholder,
                 "BREAKING CHANGE" => ReleaseNoteElementType.BreakingChange,
                 _ => ReleaseNoteElementType.Unknown
             };
