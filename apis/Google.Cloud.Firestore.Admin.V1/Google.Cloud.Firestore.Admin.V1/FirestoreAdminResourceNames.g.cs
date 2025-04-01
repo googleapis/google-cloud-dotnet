@@ -552,6 +552,90 @@ namespace Google.Cloud.Firestore.Admin.V1
         }
     }
 
+    public partial class CreateUserCredsRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatabaseName ParentAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatabaseName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetUserCredsRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::UserCredsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::UserCredsName UserCredsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::UserCredsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListUserCredsRequest
+    {
+        /// <summary>
+        /// <see cref="DatabaseName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DatabaseName ParentAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DatabaseName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class EnableUserCredsRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::UserCredsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::UserCredsName UserCredsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::UserCredsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DisableUserCredsRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::UserCredsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::UserCredsName UserCredsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::UserCredsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ResetUserPasswordRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::UserCredsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::UserCredsName UserCredsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::UserCredsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteUserCredsRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::UserCredsName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::UserCredsName UserCredsName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::UserCredsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateBackupScheduleRequest
     {
         /// <summary>

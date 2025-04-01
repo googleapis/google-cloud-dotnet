@@ -34,6 +34,12 @@
                 "CreateIndexAsync"
               ]
             },
+            "CreateUserCreds": {
+              "methods": [
+                "CreateUserCreds",
+                "CreateUserCredsAsync"
+              ]
+            },
             "DeleteBackup": {
               "methods": [
                 "DeleteBackup",
@@ -56,6 +62,24 @@
               "methods": [
                 "DeleteIndex",
                 "DeleteIndexAsync"
+              ]
+            },
+            "DeleteUserCreds": {
+              "methods": [
+                "DeleteUserCreds",
+                "DeleteUserCredsAsync"
+              ]
+            },
+            "DisableUserCreds": {
+              "methods": [
+                "DisableUserCreds",
+                "DisableUserCredsAsync"
+              ]
+            },
+            "EnableUserCreds": {
+              "methods": [
+                "EnableUserCreds",
+                "EnableUserCredsAsync"
               ]
             },
             "ExportDocuments": {
@@ -94,6 +118,12 @@
                 "GetIndexAsync"
               ]
             },
+            "GetUserCreds": {
+              "methods": [
+                "GetUserCreds",
+                "GetUserCredsAsync"
+              ]
+            },
             "ImportDocuments": {
               "methods": [
                 "ImportDocuments",
@@ -128,6 +158,18 @@
               "methods": [
                 "ListIndexes",
                 "ListIndexesAsync"
+              ]
+            },
+            "ListUserCreds": {
+              "methods": [
+                "ListUserCreds",
+                "ListUserCredsAsync"
+              ]
+            },
+            "ResetUserPassword": {
+              "methods": [
+                "ResetUserPassword",
+                "ResetUserPasswordAsync"
               ]
             },
             "RestoreDatabase": {

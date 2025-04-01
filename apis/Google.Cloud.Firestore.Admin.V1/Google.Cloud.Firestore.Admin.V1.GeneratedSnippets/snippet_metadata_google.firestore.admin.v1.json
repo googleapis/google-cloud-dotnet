@@ -4243,6 +4243,2044 @@
       ]
     },
     {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateUserCreds_sync",
+      "title": "CreateUserCredsRequestObject",
+      "description": "Snippet for CreateUserCreds",
+      "file": "FirestoreAdminClient.CreateUserCredsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateUserCreds_async",
+      "title": "CreateUserCredsRequestObjectAsync",
+      "description": "Snippet for CreateUserCredsAsync",
+      "file": "FirestoreAdminClient.CreateUserCredsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateUserCreds_sync_flattened",
+      "title": "CreateUserCreds",
+      "description": "Snippet for CreateUserCreds",
+      "file": "FirestoreAdminClient.CreateUserCredsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateUserCreds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+            "name": "userCreds"
+          },
+          {
+            "type": "System.String",
+            "name": "userCredsId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateUserCreds_async_flattened",
+      "title": "CreateUserCredsAsync",
+      "description": "Snippet for CreateUserCredsAsync",
+      "file": "FirestoreAdminClient.CreateUserCredsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+            "name": "userCreds"
+          },
+          {
+            "type": "System.String",
+            "name": "userCredsId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateUserCreds_sync_flattened_resourceNames",
+      "title": "CreateUserCredsResourceNames",
+      "description": "Snippet for CreateUserCreds",
+      "file": "FirestoreAdminClient.CreateUserCredsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+            "name": "userCreds"
+          },
+          {
+            "type": "System.String",
+            "name": "userCredsId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_CreateUserCreds_async_flattened_resourceNames",
+      "title": "CreateUserCredsResourceNamesAsync",
+      "description": "Snippet for CreateUserCredsAsync",
+      "file": "FirestoreAdminClient.CreateUserCredsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.CreateUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+            "name": "userCreds"
+          },
+          {
+            "type": "System.String",
+            "name": "userCredsId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "CreateUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.CreateUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_GetUserCreds_sync",
+      "title": "GetUserCredsRequestObject",
+      "description": "Snippet for GetUserCreds",
+      "file": "FirestoreAdminClient.GetUserCredsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "GetUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.GetUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_GetUserCreds_async",
+      "title": "GetUserCredsRequestObjectAsync",
+      "description": "Snippet for GetUserCredsAsync",
+      "file": "FirestoreAdminClient.GetUserCredsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "GetUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.GetUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_GetUserCreds_sync_flattened",
+      "title": "GetUserCreds",
+      "description": "Snippet for GetUserCreds",
+      "file": "FirestoreAdminClient.GetUserCredsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetUserCreds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "GetUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.GetUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_GetUserCreds_async_flattened",
+      "title": "GetUserCredsAsync",
+      "description": "Snippet for GetUserCredsAsync",
+      "file": "FirestoreAdminClient.GetUserCredsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "GetUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.GetUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_GetUserCreds_sync_flattened_resourceNames",
+      "title": "GetUserCredsResourceNames",
+      "description": "Snippet for GetUserCreds",
+      "file": "FirestoreAdminClient.GetUserCredsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "GetUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.GetUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_GetUserCreds_async_flattened_resourceNames",
+      "title": "GetUserCredsResourceNamesAsync",
+      "description": "Snippet for GetUserCredsAsync",
+      "file": "FirestoreAdminClient.GetUserCredsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.GetUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "GetUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.GetUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ListUserCreds_sync",
+      "title": "ListUserCredsRequestObject",
+      "description": "Snippet for ListUserCreds",
+      "file": "FirestoreAdminClient.ListUserCredsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ListUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ListUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ListUserCreds_async",
+      "title": "ListUserCredsRequestObjectAsync",
+      "description": "Snippet for ListUserCredsAsync",
+      "file": "FirestoreAdminClient.ListUserCredsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ListUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ListUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ListUserCreds_sync_flattened",
+      "title": "ListUserCreds",
+      "description": "Snippet for ListUserCreds",
+      "file": "FirestoreAdminClient.ListUserCredsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListUserCreds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ListUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ListUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ListUserCreds_async_flattened",
+      "title": "ListUserCredsAsync",
+      "description": "Snippet for ListUserCredsAsync",
+      "file": "FirestoreAdminClient.ListUserCredsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ListUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ListUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ListUserCreds_sync_flattened_resourceNames",
+      "title": "ListUserCredsResourceNames",
+      "description": "Snippet for ListUserCreds",
+      "file": "FirestoreAdminClient.ListUserCredsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ListUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ListUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ListUserCreds_async_flattened_resourceNames",
+      "title": "ListUserCredsResourceNamesAsync",
+      "description": "Snippet for ListUserCredsAsync",
+      "file": "FirestoreAdminClient.ListUserCredsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ListUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DatabaseName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ListUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ListUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_EnableUserCreds_sync",
+      "title": "EnableUserCredsRequestObject",
+      "description": "Snippet for EnableUserCreds",
+      "file": "FirestoreAdminClient.EnableUserCredsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.EnableUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "EnableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.EnableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_EnableUserCreds_async",
+      "title": "EnableUserCredsRequestObjectAsync",
+      "description": "Snippet for EnableUserCredsAsync",
+      "file": "FirestoreAdminClient.EnableUserCredsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.EnableUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "EnableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.EnableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_EnableUserCreds_sync_flattened",
+      "title": "EnableUserCreds",
+      "description": "Snippet for EnableUserCreds",
+      "file": "FirestoreAdminClient.EnableUserCredsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.EnableUserCreds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "EnableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.EnableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_EnableUserCreds_async_flattened",
+      "title": "EnableUserCredsAsync",
+      "description": "Snippet for EnableUserCredsAsync",
+      "file": "FirestoreAdminClient.EnableUserCredsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.EnableUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "EnableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.EnableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_EnableUserCreds_sync_flattened_resourceNames",
+      "title": "EnableUserCredsResourceNames",
+      "description": "Snippet for EnableUserCreds",
+      "file": "FirestoreAdminClient.EnableUserCredsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.EnableUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "EnableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.EnableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_EnableUserCreds_async_flattened_resourceNames",
+      "title": "EnableUserCredsResourceNamesAsync",
+      "description": "Snippet for EnableUserCredsAsync",
+      "file": "FirestoreAdminClient.EnableUserCredsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "EnableUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.EnableUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "EnableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.EnableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DisableUserCreds_sync",
+      "title": "DisableUserCredsRequestObject",
+      "description": "Snippet for DisableUserCreds",
+      "file": "FirestoreAdminClient.DisableUserCredsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DisableUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DisableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DisableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DisableUserCreds_async",
+      "title": "DisableUserCredsRequestObjectAsync",
+      "description": "Snippet for DisableUserCredsAsync",
+      "file": "FirestoreAdminClient.DisableUserCredsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DisableUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DisableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DisableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DisableUserCreds_sync_flattened",
+      "title": "DisableUserCreds",
+      "description": "Snippet for DisableUserCreds",
+      "file": "FirestoreAdminClient.DisableUserCredsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DisableUserCreds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DisableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DisableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DisableUserCreds_async_flattened",
+      "title": "DisableUserCredsAsync",
+      "description": "Snippet for DisableUserCredsAsync",
+      "file": "FirestoreAdminClient.DisableUserCredsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DisableUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DisableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DisableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DisableUserCreds_sync_flattened_resourceNames",
+      "title": "DisableUserCredsResourceNames",
+      "description": "Snippet for DisableUserCreds",
+      "file": "FirestoreAdminClient.DisableUserCredsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DisableUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DisableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DisableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DisableUserCreds_async_flattened_resourceNames",
+      "title": "DisableUserCredsResourceNamesAsync",
+      "description": "Snippet for DisableUserCredsAsync",
+      "file": "FirestoreAdminClient.DisableUserCredsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DisableUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DisableUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DisableUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DisableUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ResetUserPassword_sync",
+      "title": "ResetUserPasswordRequestObject",
+      "description": "Snippet for ResetUserPassword",
+      "file": "FirestoreAdminClient.ResetUserPasswordRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResetUserPassword",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ResetUserPassword",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ResetUserPassword",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ResetUserPassword",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ResetUserPassword_async",
+      "title": "ResetUserPasswordRequestObjectAsync",
+      "description": "Snippet for ResetUserPasswordAsync",
+      "file": "FirestoreAdminClient.ResetUserPasswordRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResetUserPasswordAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ResetUserPasswordAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ResetUserPassword",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ResetUserPassword",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ResetUserPassword_sync_flattened",
+      "title": "ResetUserPassword",
+      "description": "Snippet for ResetUserPassword",
+      "file": "FirestoreAdminClient.ResetUserPasswordSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResetUserPassword",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ResetUserPassword",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ResetUserPassword",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ResetUserPassword",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ResetUserPassword_async_flattened",
+      "title": "ResetUserPasswordAsync",
+      "description": "Snippet for ResetUserPasswordAsync",
+      "file": "FirestoreAdminClient.ResetUserPasswordAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResetUserPasswordAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ResetUserPasswordAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ResetUserPassword",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ResetUserPassword",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ResetUserPassword_sync_flattened_resourceNames",
+      "title": "ResetUserPasswordResourceNames",
+      "description": "Snippet for ResetUserPassword",
+      "file": "FirestoreAdminClient.ResetUserPasswordResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResetUserPassword",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ResetUserPassword",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Firestore.Admin.V1.UserCreds",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ResetUserPassword",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ResetUserPassword",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_ResetUserPassword_async_flattened_resourceNames",
+      "title": "ResetUserPasswordResourceNamesAsync",
+      "description": "Snippet for ResetUserPasswordAsync",
+      "file": "FirestoreAdminClient.ResetUserPasswordResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ResetUserPasswordAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.ResetUserPasswordAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Firestore.Admin.V1.UserCreds>",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "ResetUserPassword",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.ResetUserPassword",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteUserCreds_sync",
+      "title": "DeleteUserCredsRequestObject",
+      "description": "Snippet for DeleteUserCreds",
+      "file": "FirestoreAdminClient.DeleteUserCredsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteUserCreds_async",
+      "title": "DeleteUserCredsRequestObjectAsync",
+      "description": "Snippet for DeleteUserCredsAsync",
+      "file": "FirestoreAdminClient.DeleteUserCredsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteUserCreds_sync_flattened",
+      "title": "DeleteUserCreds",
+      "description": "Snippet for DeleteUserCreds",
+      "file": "FirestoreAdminClient.DeleteUserCredsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteUserCreds",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteUserCreds_async_flattened",
+      "title": "DeleteUserCredsAsync",
+      "description": "Snippet for DeleteUserCredsAsync",
+      "file": "FirestoreAdminClient.DeleteUserCredsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteUserCreds_sync_flattened_resourceNames",
+      "title": "DeleteUserCredsResourceNames",
+      "description": "Snippet for DeleteUserCreds",
+      "file": "FirestoreAdminClient.DeleteUserCredsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserCreds",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteUserCreds",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "firestore_v1_generated_FirestoreAdmin_DeleteUserCreds_async_flattened_resourceNames",
+      "title": "DeleteUserCredsResourceNamesAsync",
+      "description": "Snippet for DeleteUserCredsAsync",
+      "file": "FirestoreAdminClient.DeleteUserCredsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteUserCredsAsync",
+        "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient.DeleteUserCredsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Firestore.Admin.V1.UserCredsName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "FirestoreAdminClient",
+          "fullName": "Google.Cloud.Firestore.Admin.V1.FirestoreAdminClient"
+        },
+        "method": {
+          "shortName": "DeleteUserCreds",
+          "fullName": "google.firestore.admin.v1.FirestoreAdmin.DeleteUserCreds",
+          "service": {
+            "shortName": "FirestoreAdmin",
+            "fullName": "google.firestore.admin.v1.FirestoreAdmin"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "firestore_v1_generated_FirestoreAdmin_GetBackup_sync",
       "title": "GetBackupRequestObject",
       "description": "Snippet for GetBackup",
