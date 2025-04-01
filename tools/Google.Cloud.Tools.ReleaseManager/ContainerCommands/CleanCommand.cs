@@ -67,7 +67,7 @@ internal class CleanCommand : IContainerCommand
                     {
                         DeleteAll(Directory.EnumerateFiles(apiLayout.GeneratedSnippetsDirectory, "*.json"));
                     }
-                    File.Delete(Path.Combine(apiLayout.SourceDirectory, "gapic_metadata.json"));
+                    DeleteIfExists(Path.Combine(apiLayout.SourceDirectory, "gapic_metadata.json"));
                     break;
                 default:
                     // We didn't generate any code, so we leave anything that's still there alone.
@@ -97,8 +97,20 @@ internal class CleanCommand : IContainerCommand
         }
     }
 
+    private static void DeleteIfExists(string file)
+    {
+        if (File.Exists(file))
+        {
+            File.Delete(file);
+        }
+    }
+
     private static bool PruneEmptyDirectories(string directory)
     {
+        if (!Directory.Exists(directory))
+        {
+            return true;
+        }
         bool allDirectoriesRemoved = true;
         // We go depth first, so it's easier to see what's left.
         foreach (var nested in Directory.GetDirectories(directory))
