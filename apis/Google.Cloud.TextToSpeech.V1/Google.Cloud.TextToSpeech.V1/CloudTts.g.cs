@@ -82,46 +82,49 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "UlRFRF9VU0FHRV9VTlNQRUNJRklFRBAAEgwKCFJFQUxUSU1FEAESCwoHT0ZG",
             "TElORRACIjIKEFZvaWNlQ2xvbmVQYXJhbXMSHgoRdm9pY2VfY2xvbmluZ19r",
             "ZXkYASABKAlCA+BBAiIxChhTeW50aGVzaXplU3BlZWNoUmVzcG9uc2USFQoN",
-            "YXVkaW9fY29udGVudBgBIAEoDCKAAQoUU3RyZWFtaW5nQXVkaW9Db25maWcS",
+            "YXVkaW9fY29udGVudBgBIAEoDCKfAQoUU3RyZWFtaW5nQXVkaW9Db25maWcS",
             "SAoOYXVkaW9fZW5jb2RpbmcYASABKA4yKy5nb29nbGUuY2xvdWQudGV4dHRv",
             "c3BlZWNoLnYxLkF1ZGlvRW5jb2RpbmdCA+BBAhIeChFzYW1wbGVfcmF0ZV9o",
-            "ZXJ0ehgCIAEoBUID4EEBIrwBChlTdHJlYW1pbmdTeW50aGVzaXplQ29uZmln",
-            "EkYKBXZvaWNlGAEgASgLMjIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52",
-            "MS5Wb2ljZVNlbGVjdGlvblBhcmFtc0ID4EECElcKFnN0cmVhbWluZ19hdWRp",
-            "b19jb25maWcYBCABKAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
-            "LlN0cmVhbWluZ0F1ZGlvQ29uZmlnQgPgQQEiOQoXU3RyZWFtaW5nU3ludGhl",
-            "c2lzSW5wdXQSDgoEdGV4dBgBIAEoCUgAQg4KDGlucHV0X3NvdXJjZSLOAQoa",
-            "U3RyZWFtaW5nU3ludGhlc2l6ZVJlcXVlc3QSUwoQc3RyZWFtaW5nX2NvbmZp",
-            "ZxgBIAEoCzI3Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3RyZWFt",
-            "aW5nU3ludGhlc2l6ZUNvbmZpZ0gAEkYKBWlucHV0GAIgASgLMjUuZ29vZ2xl",
-            "LmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJlYW1pbmdTeW50aGVzaXNJbnB1",
-            "dEgAQhMKEXN0cmVhbWluZ19yZXF1ZXN0IjQKG1N0cmVhbWluZ1N5bnRoZXNp",
-            "emVSZXNwb25zZRIVCg1hdWRpb19jb250ZW50GAEgASgMKlcKD1NzbWxWb2lj",
-            "ZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEggK",
-            "BE1BTEUQARIKCgZGRU1BTEUQAhILCgdORVVUUkFMEAMqcgoNQXVkaW9FbmNv",
-            "ZGluZxIeChpBVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEgwKCExJTkVB",
-            "UjE2EAESBwoDTVAzEAISDAoIT0dHX09QVVMQAxIJCgVNVUxBVxAFEggKBEFM",
-            "QVcQBhIHCgNQQ00QBzLHBAoMVGV4dFRvU3BlZWNoEpMBCgpMaXN0Vm9pY2Vz",
-            "Ei8uZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5MaXN0Vm9pY2VzUmVx",
-            "dWVzdBowLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuTGlzdFZvaWNl",
-            "c1Jlc3BvbnNlIiLaQQ1sYW5ndWFnZV9jb2RlgtPkkwIMEgovdjEvdm9pY2Vz",
-            "ErwBChBTeW50aGVzaXplU3BlZWNoEjUuZ29vZ2xlLmNsb3VkLnRleHR0b3Nw",
-            "ZWVjaC52MS5TeW50aGVzaXplU3BlZWNoUmVxdWVzdBo2Lmdvb2dsZS5jbG91",
-            "ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhlc2l6ZVNwZWVjaFJlc3BvbnNlIjna",
-            "QRhpbnB1dCx2b2ljZSxhdWRpb19jb25maWeC0+STAhgiEy92MS90ZXh0OnN5",
-            "bnRoZXNpemU6ASoSkAEKE1N0cmVhbWluZ1N5bnRoZXNpemUSOC5nb29nbGUu",
-            "Y2xvdWQudGV4dHRvc3BlZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpemVSZXF1",
-            "ZXN0GjkuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJlYW1pbmdT",
-            "eW50aGVzaXplUmVzcG9uc2UiACgBMAEaT8pBG3RleHR0b3NwZWVjaC5nb29n",
-            "bGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Y2xvdWQtcGxhdGZvcm1CvAIKIGNvbS5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
-            "ZWNoLnYxQhFUZXh0VG9TcGVlY2hQcm90b1ABWkRjbG91ZC5nb29nbGUuY29t",
-            "L2dvL3RleHR0b3NwZWVjaC9hcGl2MS90ZXh0dG9zcGVlY2hwYjt0ZXh0dG9z",
-            "cGVlY2hwYqICBENUVFOqAhxHb29nbGUuQ2xvdWQuVGV4dFRvU3BlZWNoLlYx",
-            "ygIcR29vZ2xlXENsb3VkXFRleHRUb1NwZWVjaFxWMeoCH0dvb2dsZTo6Q2xv",
-            "dWQ6OlRleHRUb1NwZWVjaDo6VjHqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNv",
-            "bS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L21vZGVscy97bW9kZWx9YgZwcm90bzM="));
+            "ZXJ0ehgCIAEoBUID4EEBEh0KDXNwZWFraW5nX3JhdGUYAyABKAFCBuBBBOBB",
+            "ASKUAgoZU3RyZWFtaW5nU3ludGhlc2l6ZUNvbmZpZxJGCgV2b2ljZRgBIAEo",
+            "CzIyLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuVm9pY2VTZWxlY3Rp",
+            "b25QYXJhbXNCA+BBAhJXChZzdHJlYW1pbmdfYXVkaW9fY29uZmlnGAQgASgL",
+            "MjIuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJlYW1pbmdBdWRp",
+            "b0NvbmZpZ0ID4EEBElYKFWN1c3RvbV9wcm9udW5jaWF0aW9ucxgFIAEoCzIy",
+            "Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuQ3VzdG9tUHJvbnVuY2lh",
+            "dGlvbnNCA+BBASI5ChdTdHJlYW1pbmdTeW50aGVzaXNJbnB1dBIOCgR0ZXh0",
+            "GAEgASgJSABCDgoMaW5wdXRfc291cmNlIs4BChpTdHJlYW1pbmdTeW50aGVz",
+            "aXplUmVxdWVzdBJTChBzdHJlYW1pbmdfY29uZmlnGAEgASgLMjcuZ29vZ2xl",
+            "LmNsb3VkLnRleHR0b3NwZWVjaC52MS5TdHJlYW1pbmdTeW50aGVzaXplQ29u",
+            "ZmlnSAASRgoFaW5wdXQYAiABKAsyNS5nb29nbGUuY2xvdWQudGV4dHRvc3Bl",
+            "ZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpc0lucHV0SABCEwoRc3RyZWFtaW5n",
+            "X3JlcXVlc3QiNAobU3RyZWFtaW5nU3ludGhlc2l6ZVJlc3BvbnNlEhUKDWF1",
+            "ZGlvX2NvbnRlbnQYASABKAwqVwoPU3NtbFZvaWNlR2VuZGVyEiEKHVNTTUxf",
+            "Vk9JQ0VfR0VOREVSX1VOU1BFQ0lGSUVEEAASCAoETUFMRRABEgoKBkZFTUFM",
+            "RRACEgsKB05FVVRSQUwQAypyCg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VO",
+            "Q09ESU5HX1VOU1BFQ0lGSUVEEAASDAoITElORUFSMTYQARIHCgNNUDMQAhIM",
+            "CghPR0dfT1BVUxADEgkKBU1VTEFXEAUSCAoEQUxBVxAGEgcKA1BDTRAHMscE",
+            "CgxUZXh0VG9TcGVlY2gSkwEKCkxpc3RWb2ljZXMSLy5nb29nbGUuY2xvdWQu",
+            "dGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXF1ZXN0GjAuZ29vZ2xlLmNs",
+            "b3VkLnRleHR0b3NwZWVjaC52MS5MaXN0Vm9pY2VzUmVzcG9uc2UiItpBDWxh",
+            "bmd1YWdlX2NvZGWC0+STAgwSCi92MS92b2ljZXMSvAEKEFN5bnRoZXNpemVT",
+            "cGVlY2gSNS5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlN5bnRoZXNp",
+            "emVTcGVlY2hSZXF1ZXN0GjYuZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52",
+            "MS5TeW50aGVzaXplU3BlZWNoUmVzcG9uc2UiOdpBGGlucHV0LHZvaWNlLGF1",
+            "ZGlvX2NvbmZpZ4LT5JMCGCITL3YxL3RleHQ6c3ludGhlc2l6ZToBKhKQAQoT",
+            "U3RyZWFtaW5nU3ludGhlc2l6ZRI4Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVl",
+            "Y2gudjEuU3RyZWFtaW5nU3ludGhlc2l6ZVJlcXVlc3QaOS5nb29nbGUuY2xv",
+            "dWQudGV4dHRvc3BlZWNoLnYxLlN0cmVhbWluZ1N5bnRoZXNpemVSZXNwb25z",
+            "ZSIAKAEwARpPykEbdGV4dHRvc3BlZWNoLmdvb2dsZWFwaXMuY29t0kEuaHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUK8",
+            "AgogY29tLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjFCEVRleHRUb1Nw",
+            "ZWVjaFByb3RvUAFaRGNsb3VkLmdvb2dsZS5jb20vZ28vdGV4dHRvc3BlZWNo",
+            "L2FwaXYxL3RleHR0b3NwZWVjaHBiO3RleHR0b3NwZWVjaHBiogIEQ1RUU6oC",
+            "HEdvb2dsZS5DbG91ZC5UZXh0VG9TcGVlY2guVjHKAhxHb29nbGVcQ2xvdWRc",
+            "VGV4dFRvU3BlZWNoXFYx6gIfR29vZ2xlOjpDbG91ZDo6VGV4dFRvU3BlZWNo",
+            "OjpWMepBVQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEjZwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbW9kZWxzL3ttb2Rl",
+            "bH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -139,8 +142,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams), global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Parser, new[]{ "Model", "ReportedUsage" }, null, new[]{ typeof(global::Google.Cloud.TextToSpeech.V1.CustomVoiceParams.Types.ReportedUsage) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.VoiceCloneParams), global::Google.Cloud.TextToSpeech.V1.VoiceCloneParams.Parser, new[]{ "VoiceCloningKey" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse), global::Google.Cloud.TextToSpeech.V1.SynthesizeSpeechResponse.Parser, new[]{ "AudioContent" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig), global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeConfig), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeConfig.Parser, new[]{ "Voice", "StreamingAudioConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig), global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "SpeakingRate" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeConfig), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeConfig.Parser, new[]{ "Voice", "StreamingAudioConfig", "CustomPronunciations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesisInput.Parser, new[]{ "Text" }, new[]{ "InputSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeRequest), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeRequest.Parser, new[]{ "StreamingConfig", "Input" }, new[]{ "StreamingRequest" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeResponse), global::Google.Cloud.TextToSpeech.V1.StreamingSynthesizeResponse.Parser, new[]{ "AudioContent" }, null, null, null, null)
@@ -197,7 +200,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// </summary>
     [pbr::OriginalName("MP3")] Mp3 = 2,
     /// <summary>
-    /// Opus encoded audio wrapped in an ogg container. The result will be a
+    /// Opus encoded audio wrapped in an ogg container. The result is a
     /// file which can be played natively on Android, and in browsers (at least
     /// Chrome and Firefox). The quality of the encoding is considerably higher
     /// than MP3 while using approximately the same bitrate.
@@ -215,7 +218,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [pbr::OriginalName("ALAW")] Alaw = 6,
     /// <summary>
     /// Uncompressed 16-bit signed little-endian samples (Linear PCM).
-    /// Note that as opposed to LINEAR16, audio will not be wrapped in a WAV (or
+    /// Note that as opposed to LINEAR16, audio won't be wrapped in a WAV (or
     /// any other) header.
     /// </summary>
     [pbr::OriginalName("PCM")] Pcm = 7,
@@ -975,8 +978,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     private bool lowLatencyJourneySynthesis_;
     /// <summary>
-    /// Only for Journey voices. If false, the synthesis will be context aware
-    /// and have higher latency.
+    /// Only for Journey voices. If false, the synthesis is context aware
+    /// and has a higher latency.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1543,9 +1546,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     private string phrase_;
     /// <summary>
-    /// The phrase to which the customization will be applied.
-    /// The phrase can be multiple words (in the case of proper nouns etc), but
-    /// should not span to a whole sentence.
+    /// The phrase to which the customization is applied.
+    /// The phrase can be multiple words, such as proper nouns, but shouldn't span
+    /// the length of the sentence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1821,12 +1824,12 @@ namespace Google.Cloud.TextToSpeech.V1 {
         /// </summary>
         [pbr::OriginalName("PHONETIC_ENCODING_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// IPA. (e.g. apple -> ˈæpəl )
+        /// IPA, such as apple -> ˈæpəl.
         /// https://en.wikipedia.org/wiki/International_Phonetic_Alphabet
         /// </summary>
         [pbr::OriginalName("PHONETIC_ENCODING_IPA")] Ipa = 1,
         /// <summary>
-        /// X-SAMPA (e.g. apple -> "{p@l" )
+        /// X-SAMPA, such as apple -> "{p@l".
         /// https://en.wikipedia.org/wiki/X-SAMPA
         /// </summary>
         [pbr::OriginalName("PHONETIC_ENCODING_X_SAMPA")] XSampa = 2,
@@ -1891,7 +1894,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams> pronunciations_ = new pbc::RepeatedField<global::Google.Cloud.TextToSpeech.V1.CustomPronunciationParams>();
     /// <summary>
-    /// The pronunciation customizations to be applied.
+    /// The pronunciation customizations are applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2211,7 +2214,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// A Multi-speaker turn.
+      /// A multi-speaker turn.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class Turn : pb::IMessage<Turn>
@@ -2597,18 +2600,16 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int CustomPronunciationsFieldNumber = 3;
     private global::Google.Cloud.TextToSpeech.V1.CustomPronunciations customPronunciations_;
     /// <summary>
-    /// Optional. The pronunciation customizations to be applied to the input. If
-    /// this is set, the input will be synthesized using the given pronunciation
+    /// Optional. The pronunciation customizations are applied to the input. If
+    /// this is set, the input is synthesized using the given pronunciation
     /// customizations.
     ///
-    /// The initial support will be for EFIGS (English, French,
-    /// Italian, German, Spanish) languages, as provided in
-    /// VoiceSelectionParams. Journey and Instant Clone voices are
-    /// not supported yet.
+    /// The initial support is for en-us, with plans to expand to other locales in
+    /// the future. Instant Clone voices aren't supported.
     ///
     /// In order to customize the pronunciation of a phrase, there must be an exact
     /// match of the phrase in the input types. If using SSML, the phrase must not
-    /// be inside a phoneme tag (entirely or partially).
+    /// be inside a phoneme tag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3008,8 +3009,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private global::Google.Cloud.TextToSpeech.V1.VoiceCloneParams voiceClone_;
     /// <summary>
     /// Optional. The configuration for a voice clone. If
-    /// [VoiceCloneParams.voice_clone_key] is set, the service will choose the
-    /// voice clone matching the specified configuration.
+    /// [VoiceCloneParams.voice_clone_key] is set, the service chooses the voice
+    /// clone matching the specified configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3339,10 +3340,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int SpeakingRateFieldNumber = 2;
     private double speakingRate_;
     /// <summary>
-    /// Optional. Input only. Speaking rate/speed, in the range [0.25, 4.0]. 1.0 is
+    /// Optional. Input only. Speaking rate/speed, in the range [0.25, 2.0]. 1.0 is
     /// the normal native speed supported by the specific voice. 2.0 is twice as
     /// fast, and 0.5 is half as fast. If unset(0.0), defaults to the native 1.0
-    /// speed. Any other values &lt; 0.25 or > 4.0 will return an error.
+    /// speed. Any other values &lt; 0.25 or > 2.0 will return an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4378,6 +4379,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public StreamingAudioConfig(StreamingAudioConfig other) : this() {
       audioEncoding_ = other.audioEncoding_;
       sampleRateHertz_ = other.sampleRateHertz_;
+      speakingRate_ = other.speakingRate_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4392,8 +4394,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private global::Google.Cloud.TextToSpeech.V1.AudioEncoding audioEncoding_ = global::Google.Cloud.TextToSpeech.V1.AudioEncoding.Unspecified;
     /// <summary>
     /// Required. The format of the audio byte stream.
-    /// For now, streaming only supports PCM and OGG_OPUS. All other encodings
-    /// will return an error.
+    /// Streaming supports PCM, ALAW, MULAW and OGG_OPUS. All other encodings
+    /// return an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4419,6 +4421,24 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
     }
 
+    /// <summary>Field number for the "speaking_rate" field.</summary>
+    public const int SpeakingRateFieldNumber = 3;
+    private double speakingRate_;
+    /// <summary>
+    /// Optional. Input only. Speaking rate/speed, in the range [0.25, 2.0]. 1.0 is
+    /// the normal native speed supported by the specific voice. 2.0 is twice as
+    /// fast, and 0.5 is half as fast. If unset(0.0), defaults to the native 1.0
+    /// speed. Any other values &lt; 0.25 or > 2.0 will return an error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double SpeakingRate {
+      get { return speakingRate_; }
+      set {
+        speakingRate_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4436,6 +4456,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
       if (AudioEncoding != other.AudioEncoding) return false;
       if (SampleRateHertz != other.SampleRateHertz) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SpeakingRate, other.SpeakingRate)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4445,6 +4466,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       int hash = 1;
       if (AudioEncoding != global::Google.Cloud.TextToSpeech.V1.AudioEncoding.Unspecified) hash ^= AudioEncoding.GetHashCode();
       if (SampleRateHertz != 0) hash ^= SampleRateHertz.GetHashCode();
+      if (SpeakingRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SpeakingRate);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4471,6 +4493,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(SampleRateHertz);
       }
+      if (SpeakingRate != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(SpeakingRate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4489,6 +4515,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(16);
         output.WriteInt32(SampleRateHertz);
       }
+      if (SpeakingRate != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(SpeakingRate);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4504,6 +4534,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
       if (SampleRateHertz != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(SampleRateHertz);
+      }
+      if (SpeakingRate != 0D) {
+        size += 1 + 8;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4522,6 +4555,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
       if (other.SampleRateHertz != 0) {
         SampleRateHertz = other.SampleRateHertz;
+      }
+      if (other.SpeakingRate != 0D) {
+        SpeakingRate = other.SpeakingRate;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4546,6 +4582,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
             SampleRateHertz = input.ReadInt32();
             break;
           }
+          case 25: {
+            SpeakingRate = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -4567,6 +4607,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
           }
           case 16: {
             SampleRateHertz = input.ReadInt32();
+            break;
+          }
+          case 25: {
+            SpeakingRate = input.ReadDouble();
             break;
           }
         }
@@ -4616,6 +4660,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public StreamingSynthesizeConfig(StreamingSynthesizeConfig other) : this() {
       voice_ = other.voice_ != null ? other.voice_.Clone() : null;
       streamingAudioConfig_ = other.streamingAudioConfig_ != null ? other.streamingAudioConfig_.Clone() : null;
+      customPronunciations_ = other.customPronunciations_ != null ? other.customPronunciations_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4655,6 +4700,30 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_pronunciations" field.</summary>
+    public const int CustomPronunciationsFieldNumber = 5;
+    private global::Google.Cloud.TextToSpeech.V1.CustomPronunciations customPronunciations_;
+    /// <summary>
+    /// Optional. The pronunciation customizations are applied to the input. If
+    /// this is set, the input is synthesized using the given pronunciation
+    /// customizations.
+    ///
+    /// The initial support is for en-us, with plans to expand to other locales in
+    /// the future. Instant Clone voices aren't supported.
+    ///
+    /// In order to customize the pronunciation of a phrase, there must be an exact
+    /// match of the phrase in the input types. If using SSML, the phrase must not
+    /// be inside a phoneme tag.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.TextToSpeech.V1.CustomPronunciations CustomPronunciations {
+      get { return customPronunciations_; }
+      set {
+        customPronunciations_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4672,6 +4741,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
       if (!object.Equals(Voice, other.Voice)) return false;
       if (!object.Equals(StreamingAudioConfig, other.StreamingAudioConfig)) return false;
+      if (!object.Equals(CustomPronunciations, other.CustomPronunciations)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4681,6 +4751,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
       int hash = 1;
       if (voice_ != null) hash ^= Voice.GetHashCode();
       if (streamingAudioConfig_ != null) hash ^= StreamingAudioConfig.GetHashCode();
+      if (customPronunciations_ != null) hash ^= CustomPronunciations.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4707,6 +4778,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(StreamingAudioConfig);
       }
+      if (customPronunciations_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CustomPronunciations);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4725,6 +4800,10 @@ namespace Google.Cloud.TextToSpeech.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(StreamingAudioConfig);
       }
+      if (customPronunciations_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(CustomPronunciations);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4740,6 +4819,9 @@ namespace Google.Cloud.TextToSpeech.V1 {
       }
       if (streamingAudioConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StreamingAudioConfig);
+      }
+      if (customPronunciations_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomPronunciations);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4764,6 +4846,12 @@ namespace Google.Cloud.TextToSpeech.V1 {
           StreamingAudioConfig = new global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig();
         }
         StreamingAudioConfig.MergeFrom(other.StreamingAudioConfig);
+      }
+      if (other.customPronunciations_ != null) {
+        if (customPronunciations_ == null) {
+          CustomPronunciations = new global::Google.Cloud.TextToSpeech.V1.CustomPronunciations();
+        }
+        CustomPronunciations.MergeFrom(other.CustomPronunciations);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4794,6 +4882,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
             input.ReadMessage(StreamingAudioConfig);
             break;
           }
+          case 42: {
+            if (customPronunciations_ == null) {
+              CustomPronunciations = new global::Google.Cloud.TextToSpeech.V1.CustomPronunciations();
+            }
+            input.ReadMessage(CustomPronunciations);
+            break;
+          }
         }
       }
     #endif
@@ -4821,6 +4916,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
               StreamingAudioConfig = new global::Google.Cloud.TextToSpeech.V1.StreamingAudioConfig();
             }
             input.ReadMessage(StreamingAudioConfig);
+            break;
+          }
+          case 42: {
+            if (customPronunciations_ == null) {
+              CustomPronunciations = new global::Google.Cloud.TextToSpeech.V1.CustomPronunciations();
+            }
+            input.ReadMessage(CustomPronunciations);
             break;
           }
         }
@@ -4887,9 +4989,8 @@ namespace Google.Cloud.TextToSpeech.V1 {
     public const int TextFieldNumber = 1;
     /// <summary>
     /// The raw text to be synthesized. It is recommended that each input
-    /// contains complete, terminating sentences, as this will likely result in
-    /// better prosody in the output audio. That being said, users are free to
-    /// input text however they please.
+    /// contains complete, terminating sentences, which results in better prosody
+    /// in the output audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
