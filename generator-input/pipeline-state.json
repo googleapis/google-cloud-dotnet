@@ -3120,11 +3120,12 @@
         },
         {
             "id": "Google.Cloud.TextToSpeech.V1",
-            "currentVersion": "3.10.0",
+            "currentVersion": "3.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-13T18:16:33Z",
+            "releaseTimestamp": "2025-04-01T13:13:04.841887588Z",
             "lastGeneratedCommit": "2059f0f65463f8da8cee9faa9c898655198fa3ab",
+            "lastReleasedCommit": "2059f0f65463f8da8cee9faa9c898655198fa3ab",
             "apiPaths": [
                 "google/cloud/texttospeech/v1"
             ],
