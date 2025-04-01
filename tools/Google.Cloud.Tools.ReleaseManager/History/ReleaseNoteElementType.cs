@@ -25,6 +25,9 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         Docs,
         Chore,
         BreakingChange,
+        // Any conventional commit type which is effectively a placeholder for
+        // later "real" elements. (This will be skipped.)
+        Placeholder,
         Unknown,
     }
 }

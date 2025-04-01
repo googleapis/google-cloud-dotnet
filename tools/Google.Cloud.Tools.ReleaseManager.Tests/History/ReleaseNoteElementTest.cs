@@ -26,6 +26,7 @@ public class ReleaseNoteElementTest
     [InlineData("fix: This is a bug fix", ReleaseNoteElementType.Fix, "This is a bug fix")]
     [InlineData("BREAKING CHANGE: This is a breaking change", ReleaseNoteElementType.BreakingChange, "This is a breaking change")]
     [InlineData("build: We don't know what build means", ReleaseNoteElementType.Unknown, "We don't know what build means")]
+    [InlineData("regen: Regenerate Google.Cloud.Functions.V2", ReleaseNoteElementType.Placeholder, "Regenerate Google.Cloud.Functions.V2")]
     public void ElementType(string text, ReleaseNoteElementType expectedType, string expectedText)
     {
         var element = ReleaseNoteElement.Parse("hash", text);
