@@ -6052,6 +6052,27 @@
       "protoPath": "google/geo/type"
     },
     {
+      "id": "Google.Geo.Weather.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Weather",
+      "productUrl": "https://developers.devsite.corp.google.com/maps/documentation/weather",
+      "description": "Recommended Google client library to access the Google Weather API, which provides comprehensive weather information - including temperature, precipitation, wind, cloud cover, and more - for locations across the globe.",
+      "tags": [
+        "maps",
+        "geo",
+        "weather"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/maps/weather/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "weather",
+      "serviceConfigFile": "weather_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Identity.AccessContextManager.Type",
       "packageOwner": "google-cloud",
       "generator": "proto",

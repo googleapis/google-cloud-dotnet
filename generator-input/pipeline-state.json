@@ -3934,6 +3934,17 @@
             "sourcePaths": [
                 "apis/Google.Maps.AerialView.V1/Google.Maps.AerialView.V1"
             ]
+        },
+        {
+            "id": "Google.Geo.Weather.V1",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/maps/weather/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Geo.Weather.V1/Google.Geo.Weather.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
