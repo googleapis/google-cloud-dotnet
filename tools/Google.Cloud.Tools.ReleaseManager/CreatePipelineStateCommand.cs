@@ -76,10 +76,12 @@ public sealed class CreatePipelineStateCommand : CommandBase
                 library.ApiPaths = null;
             }
         }
-        
-        string json = JsonConvert.SerializeObject(state,
-            new JsonSerializerSettings { DefaultValueHandling = DefaultValueHandling.Ignore, Formatting = Formatting.Indented });
-        File.WriteAllText(Path.Combine(RootLayout.GeneratorInput, "pipeline-state.json"), json);
+
+        // Slightly fiddly serialization to mimic the indentation that Librarian uses.
+        var serializer = new JsonSerializer { DefaultValueHandling = DefaultValueHandling.Ignore };
+        using var fileWriter = File.CreateText(Path.Combine(RootLayout.GeneratorInput, "pipeline-state.json"));
+        using var jsonWriter = new JsonTextWriter(fileWriter) { Formatting = Formatting.Indented, Indentation = 4 };
+        serializer.Serialize(jsonWriter, state);
         return 0;
 
         void MaybeAddApiLibrary(ApiMetadata api)
@@ -141,7 +143,7 @@ public sealed class CreatePipelineStateCommand : CommandBase
             {
                 lastGeneratedCommit = GetCommitForPath(googleapisRepo.Commits, library.ApiPaths[0])?.Sha;
             }
-            library.LastGeneratedCommit = lastGeneratedCommit ?? "";
+            library.LastGeneratedCommit = lastGeneratedCommit;
 
             (string hash, DateTimeOffset dotnetCommitTimestamp) GetGoogleApisCommit(Commit commit)
             {
