@@ -6140,12 +6140,33 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Maps.AerialView.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Aerial View",
+      "productUrl": "https://developers.google.com/maps/documentation/aerial-view",
+      "description": "Recommended Google client library to access the Google Maps Aerial View API, which lets you create and display aerial view videos rendered using Google's 3D geospatial imagery.",
+      "tags": [
+        "maps",
+        "images",
+        "videos",
+        "geospatial"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/maps/aerialview/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "aerialview",
+      "serviceConfigFile": "aerialview_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.AreaInsights.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Area Insights",
       "productUrl": "https://developers.google.com/maps/documentation/places-insights",
-      "description": "Recommended Google client library to access the Google Maps Places Insights API, provides an easy way to understand the density and distribution of places in a specific area.",
+      "description": "Recommended Google client library to access the Google Maps Places Insights API, which provides an easy way to understand the density and distribution of places in a specific area.",
       "tags": [
         "maps",
         "insights",

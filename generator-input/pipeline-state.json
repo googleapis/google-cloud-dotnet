@@ -3923,6 +3923,17 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Iam.V3Beta/Google.Cloud.Iam.V3Beta"
             ]
+        },
+        {
+            "id": "Google.Maps.AerialView.V1",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/maps/aerialview/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Maps.AerialView.V1/Google.Maps.AerialView.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
