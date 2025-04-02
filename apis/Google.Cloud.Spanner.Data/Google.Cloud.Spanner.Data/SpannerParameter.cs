@@ -180,6 +180,11 @@ namespace Google.Cloud.Spanner.Data
                 {
                     return options.DateTimeToConfiguredSpannerType;
                 }
+
+                if (Value is Guid)
+                {
+                    return options.GuidToConfiguredSpannerType;
+                }
             }
 
             // If we are here, use defaults.

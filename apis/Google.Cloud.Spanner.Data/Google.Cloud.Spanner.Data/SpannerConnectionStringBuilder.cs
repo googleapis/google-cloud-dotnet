@@ -261,7 +261,7 @@ namespace Google.Cloud.Spanner.Data
             // TODO: Now that ServiceEndpoint has been removed, we don't have separate host/port for the default endpoint.
             // This is currently hardcoded for convenience; it's unlikely to ever change, but ideally we'd parse it from the
             // SpannerClient.DefaultEndpoint;
-            get => GetValueOrDefault(nameof(Host), "spanner.googleapis.com");
+            get => GetValueOrDefault(nameof(Host), "staging-wrenchworks.sandbox.googleapis.com"); // DO NOT SUBMIT -- TESTING ONLY
             set => this[nameof(Host)] = value;
         }
 
