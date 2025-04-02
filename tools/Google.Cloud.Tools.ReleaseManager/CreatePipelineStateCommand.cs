@@ -63,6 +63,7 @@ public sealed class CreatePipelineStateCommand : CommandBase
             .ToList();
         Console.WriteLine($"{DateTime.UtcNow:HH:mm:ss}: Fetched {googleApisCommits.Count} commmits.");
 
+        state.IgnoredApiPaths.AddRange(previousState.IgnoredApiPaths);
         foreach (var api in catalog.Apis)
         {
             MaybeAddApiLibrary(api);
@@ -210,6 +211,9 @@ public sealed class CreatePipelineStateCommand : CommandBase
 
         [JsonProperty("commonLibrarySourcePaths")]
         public List<string> CommonLibrarySourcePaths { get; } = new();
+
+        [JsonProperty("ignoredApiPaths")]
+        public List<string> IgnoredApiPaths { get; } = new();
     }
 
     private class LibraryState
