@@ -25,6 +25,12 @@
 
 set -ex
 
+# Remove these two lines in order to re-enable the OwlBot post-processor
+# doing useful work.
+echo "OwlBot post-processing is currently disabled"
+exit 0
+
+
 TMP=$(mktemp -d)
 
 # Copies one api from the /owl-bot-staging directory into the the /apis dir.
