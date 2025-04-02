@@ -5204,6 +5204,26 @@
       ]
     },
     {
+      "id": "Google.Cloud.StorageBatchOperations.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Storage Batch Operations",
+      "productUrl": "https://cloud.google.com/storage/docs/batch-operations/overview",
+      "description": "<UNKNOWN - NO SERVICE CONFIG DOCUMENTATION SUMMARY>",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/storagebatchoperations/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "storagebatchoperations",
+      "serviceConfigFile": "storagebatchoperations_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.StorageInsights.V1",
       "version": "1.3.0",
       "type": "grpc",
