@@ -64,6 +64,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             yield return LocationReflection.Descriptor;
             yield return OperationReflection.Descriptor;
             yield return ScheduleReflection.Descriptor;
+            yield return UserCredsReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }

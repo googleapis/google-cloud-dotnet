@@ -72,6 +72,13 @@ namespace Google.Cloud.Firestore.Admin.V1
             UpdateDatabaseOperationsSettings = existing.UpdateDatabaseOperationsSettings.Clone();
             DeleteDatabaseSettings = existing.DeleteDatabaseSettings;
             DeleteDatabaseOperationsSettings = existing.DeleteDatabaseOperationsSettings.Clone();
+            CreateUserCredsSettings = existing.CreateUserCredsSettings;
+            GetUserCredsSettings = existing.GetUserCredsSettings;
+            ListUserCredsSettings = existing.ListUserCredsSettings;
+            EnableUserCredsSettings = existing.EnableUserCredsSettings;
+            DisableUserCredsSettings = existing.DisableUserCredsSettings;
+            ResetUserPasswordSettings = existing.ResetUserPasswordSettings;
+            DeleteUserCredsSettings = existing.DeleteUserCredsSettings;
             GetBackupSettings = existing.GetBackupSettings;
             ListBackupsSettings = existing.ListBackupsSettings;
             DeleteBackupSettings = existing.DeleteBackupSettings;
@@ -456,6 +463,90 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.CreateUserCreds</c> and <c>FirestoreAdminClient.CreateUserCredsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateUserCredsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.GetUserCreds</c> and <c>FirestoreAdminClient.GetUserCredsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetUserCredsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.ListUserCreds</c> and <c>FirestoreAdminClient.ListUserCredsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUserCredsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.EnableUserCreds</c> and <c>FirestoreAdminClient.EnableUserCredsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EnableUserCredsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.DisableUserCreds</c> and <c>FirestoreAdminClient.DisableUserCredsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DisableUserCredsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.ResetUserPassword</c> and <c>FirestoreAdminClient.ResetUserPasswordAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResetUserPasswordSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>FirestoreAdminClient.DeleteUserCreds</c> and <c>FirestoreAdminClient.DeleteUserCredsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteUserCredsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3114,6 +3205,875 @@ namespace Google.Cloud.Firestore.Admin.V1
             DeleteDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds CreateUserCreds(CreateUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> CreateUserCredsAsync(CreateUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> CreateUserCredsAsync(CreateUserCredsRequest request, st::CancellationToken cancellationToken) =>
+            CreateUserCredsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="userCreds">
+        /// Required. The user creds to create.
+        /// </param>
+        /// <param name="userCredsId">
+        /// Required. The ID to use for the user creds, which will become the final
+        /// component of the user creds's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds CreateUserCreds(string parent, UserCreds userCreds, string userCredsId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserCreds(new CreateUserCredsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserCreds = gax::GaxPreconditions.CheckNotNull(userCreds, nameof(userCreds)),
+                UserCredsId = gax::GaxPreconditions.CheckNotNullOrEmpty(userCredsId, nameof(userCredsId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="userCreds">
+        /// Required. The user creds to create.
+        /// </param>
+        /// <param name="userCredsId">
+        /// Required. The ID to use for the user creds, which will become the final
+        /// component of the user creds's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> CreateUserCredsAsync(string parent, UserCreds userCreds, string userCredsId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserCredsAsync(new CreateUserCredsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                UserCreds = gax::GaxPreconditions.CheckNotNull(userCreds, nameof(userCreds)),
+                UserCredsId = gax::GaxPreconditions.CheckNotNullOrEmpty(userCredsId, nameof(userCredsId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="userCreds">
+        /// Required. The user creds to create.
+        /// </param>
+        /// <param name="userCredsId">
+        /// Required. The ID to use for the user creds, which will become the final
+        /// component of the user creds's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> CreateUserCredsAsync(string parent, UserCreds userCreds, string userCredsId, st::CancellationToken cancellationToken) =>
+            CreateUserCredsAsync(parent, userCreds, userCredsId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="userCreds">
+        /// Required. The user creds to create.
+        /// </param>
+        /// <param name="userCredsId">
+        /// Required. The ID to use for the user creds, which will become the final
+        /// component of the user creds's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds CreateUserCreds(DatabaseName parent, UserCreds userCreds, string userCredsId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserCreds(new CreateUserCredsRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserCreds = gax::GaxPreconditions.CheckNotNull(userCreds, nameof(userCreds)),
+                UserCredsId = gax::GaxPreconditions.CheckNotNullOrEmpty(userCredsId, nameof(userCredsId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="userCreds">
+        /// Required. The user creds to create.
+        /// </param>
+        /// <param name="userCredsId">
+        /// Required. The ID to use for the user creds, which will become the final
+        /// component of the user creds's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> CreateUserCredsAsync(DatabaseName parent, UserCreds userCreds, string userCredsId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateUserCredsAsync(new CreateUserCredsRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                UserCreds = gax::GaxPreconditions.CheckNotNull(userCreds, nameof(userCreds)),
+                UserCredsId = gax::GaxPreconditions.CheckNotNullOrEmpty(userCredsId, nameof(userCredsId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="userCreds">
+        /// Required. The user creds to create.
+        /// </param>
+        /// <param name="userCredsId">
+        /// Required. The ID to use for the user creds, which will become the final
+        /// component of the user creds's resource name.
+        /// 
+        /// This value should be 4-63 characters. Valid characters are /[a-z][0-9]-/
+        /// with first character a letter and the last a letter or a number. Must not
+        /// be UUID-like /[0-9a-f]{8}(-[0-9a-f]{4}){3}-[0-9a-f]{12}/.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> CreateUserCredsAsync(DatabaseName parent, UserCreds userCreds, string userCredsId, st::CancellationToken cancellationToken) =>
+            CreateUserCredsAsync(parent, userCreds, userCredsId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds GetUserCreds(GetUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> GetUserCredsAsync(GetUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> GetUserCredsAsync(GetUserCredsRequest request, st::CancellationToken cancellationToken) =>
+            GetUserCredsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds GetUserCreds(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserCreds(new GetUserCredsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> GetUserCredsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserCredsAsync(new GetUserCredsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> GetUserCredsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetUserCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds GetUserCreds(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserCreds(new GetUserCredsRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> GetUserCredsAsync(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetUserCredsAsync(new GetUserCredsRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> GetUserCredsAsync(UserCredsName name, st::CancellationToken cancellationToken) =>
+            GetUserCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListUserCredsResponse ListUserCreds(ListUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListUserCredsResponse> ListUserCredsAsync(ListUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListUserCredsResponse> ListUserCredsAsync(ListUserCredsRequest request, st::CancellationToken cancellationToken) =>
+            ListUserCredsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent database name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListUserCredsResponse ListUserCreds(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserCreds(new ListUserCredsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent database name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListUserCredsResponse> ListUserCredsAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserCredsAsync(new ListUserCredsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent database name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListUserCredsResponse> ListUserCredsAsync(string parent, st::CancellationToken cancellationToken) =>
+            ListUserCredsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent database name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ListUserCredsResponse ListUserCreds(DatabaseName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserCreds(new ListUserCredsRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent database name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListUserCredsResponse> ListUserCredsAsync(DatabaseName parent, gaxgrpc::CallSettings callSettings = null) =>
+            ListUserCredsAsync(new ListUserCredsRequest
+            {
+                ParentAsDatabaseName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. A parent database name of the form
+        /// `projects/{project_id}/databases/{database_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ListUserCredsResponse> ListUserCredsAsync(DatabaseName parent, st::CancellationToken cancellationToken) =>
+            ListUserCredsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds EnableUserCreds(EnableUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> EnableUserCredsAsync(EnableUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> EnableUserCredsAsync(EnableUserCredsRequest request, st::CancellationToken cancellationToken) =>
+            EnableUserCredsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds EnableUserCreds(string name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableUserCreds(new EnableUserCredsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> EnableUserCredsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableUserCredsAsync(new EnableUserCredsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> EnableUserCredsAsync(string name, st::CancellationToken cancellationToken) =>
+            EnableUserCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds EnableUserCreds(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableUserCreds(new EnableUserCredsRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> EnableUserCredsAsync(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            EnableUserCredsAsync(new EnableUserCredsRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> EnableUserCredsAsync(UserCredsName name, st::CancellationToken cancellationToken) =>
+            EnableUserCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds DisableUserCreds(DisableUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> DisableUserCredsAsync(DisableUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> DisableUserCredsAsync(DisableUserCredsRequest request, st::CancellationToken cancellationToken) =>
+            DisableUserCredsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds DisableUserCreds(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableUserCreds(new DisableUserCredsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> DisableUserCredsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableUserCredsAsync(new DisableUserCredsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> DisableUserCredsAsync(string name, st::CancellationToken cancellationToken) =>
+            DisableUserCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds DisableUserCreds(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableUserCreds(new DisableUserCredsRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> DisableUserCredsAsync(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            DisableUserCredsAsync(new DisableUserCredsRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> DisableUserCredsAsync(UserCredsName name, st::CancellationToken cancellationToken) =>
+            DisableUserCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds ResetUserPassword(ResetUserPasswordRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> ResetUserPasswordAsync(ResetUserPasswordRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> ResetUserPasswordAsync(ResetUserPasswordRequest request, st::CancellationToken cancellationToken) =>
+            ResetUserPasswordAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds ResetUserPassword(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResetUserPassword(new ResetUserPasswordRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> ResetUserPasswordAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResetUserPasswordAsync(new ResetUserPasswordRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> ResetUserPasswordAsync(string name, st::CancellationToken cancellationToken) =>
+            ResetUserPasswordAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual UserCreds ResetUserPassword(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResetUserPassword(new ResetUserPasswordRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> ResetUserPasswordAsync(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResetUserPasswordAsync(new ResetUserPasswordRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<UserCreds> ResetUserPasswordAsync(UserCredsName name, st::CancellationToken cancellationToken) =>
+            ResetUserPasswordAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserCreds(DeleteUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserCredsAsync(DeleteUserCredsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserCredsAsync(DeleteUserCredsRequest request, st::CancellationToken cancellationToken) =>
+            DeleteUserCredsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserCreds(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserCreds(new DeleteUserCredsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserCredsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserCredsAsync(new DeleteUserCredsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserCredsAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteUserCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteUserCreds(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserCreds(new DeleteUserCredsRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserCredsAsync(UserCredsName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteUserCredsAsync(new DeleteUserCredsRequest
+            {
+                UserCredsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the form
+        /// `projects/{project_id}/databases/{database_id}/userCreds/{user_creds_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteUserCredsAsync(UserCredsName name, st::CancellationToken cancellationToken) =>
+            DeleteUserCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets information about a backup.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -4244,6 +5204,20 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         private readonly gaxgrpc::ApiCall<DeleteDatabaseRequest, lro::Operation> _callDeleteDatabase;
 
+        private readonly gaxgrpc::ApiCall<CreateUserCredsRequest, UserCreds> _callCreateUserCreds;
+
+        private readonly gaxgrpc::ApiCall<GetUserCredsRequest, UserCreds> _callGetUserCreds;
+
+        private readonly gaxgrpc::ApiCall<ListUserCredsRequest, ListUserCredsResponse> _callListUserCreds;
+
+        private readonly gaxgrpc::ApiCall<EnableUserCredsRequest, UserCreds> _callEnableUserCreds;
+
+        private readonly gaxgrpc::ApiCall<DisableUserCredsRequest, UserCreds> _callDisableUserCreds;
+
+        private readonly gaxgrpc::ApiCall<ResetUserPasswordRequest, UserCreds> _callResetUserPassword;
+
+        private readonly gaxgrpc::ApiCall<DeleteUserCredsRequest, wkt::Empty> _callDeleteUserCreds;
+
         private readonly gaxgrpc::ApiCall<GetBackupRequest, Backup> _callGetBackup;
 
         private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
@@ -4332,6 +5306,27 @@ namespace Google.Cloud.Firestore.Admin.V1
             _callDeleteDatabase = clientHelper.BuildApiCall<DeleteDatabaseRequest, lro::Operation>("DeleteDatabase", grpcClient.DeleteDatabaseAsync, grpcClient.DeleteDatabase, effectiveSettings.DeleteDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDatabase);
             Modify_DeleteDatabaseApiCall(ref _callDeleteDatabase);
+            _callCreateUserCreds = clientHelper.BuildApiCall<CreateUserCredsRequest, UserCreds>("CreateUserCreds", grpcClient.CreateUserCredsAsync, grpcClient.CreateUserCreds, effectiveSettings.CreateUserCredsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateUserCreds);
+            Modify_CreateUserCredsApiCall(ref _callCreateUserCreds);
+            _callGetUserCreds = clientHelper.BuildApiCall<GetUserCredsRequest, UserCreds>("GetUserCreds", grpcClient.GetUserCredsAsync, grpcClient.GetUserCreds, effectiveSettings.GetUserCredsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetUserCreds);
+            Modify_GetUserCredsApiCall(ref _callGetUserCreds);
+            _callListUserCreds = clientHelper.BuildApiCall<ListUserCredsRequest, ListUserCredsResponse>("ListUserCreds", grpcClient.ListUserCredsAsync, grpcClient.ListUserCreds, effectiveSettings.ListUserCredsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListUserCreds);
+            Modify_ListUserCredsApiCall(ref _callListUserCreds);
+            _callEnableUserCreds = clientHelper.BuildApiCall<EnableUserCredsRequest, UserCreds>("EnableUserCreds", grpcClient.EnableUserCredsAsync, grpcClient.EnableUserCreds, effectiveSettings.EnableUserCredsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callEnableUserCreds);
+            Modify_EnableUserCredsApiCall(ref _callEnableUserCreds);
+            _callDisableUserCreds = clientHelper.BuildApiCall<DisableUserCredsRequest, UserCreds>("DisableUserCreds", grpcClient.DisableUserCredsAsync, grpcClient.DisableUserCreds, effectiveSettings.DisableUserCredsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDisableUserCreds);
+            Modify_DisableUserCredsApiCall(ref _callDisableUserCreds);
+            _callResetUserPassword = clientHelper.BuildApiCall<ResetUserPasswordRequest, UserCreds>("ResetUserPassword", grpcClient.ResetUserPasswordAsync, grpcClient.ResetUserPassword, effectiveSettings.ResetUserPasswordSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callResetUserPassword);
+            Modify_ResetUserPasswordApiCall(ref _callResetUserPassword);
+            _callDeleteUserCreds = clientHelper.BuildApiCall<DeleteUserCredsRequest, wkt::Empty>("DeleteUserCreds", grpcClient.DeleteUserCredsAsync, grpcClient.DeleteUserCreds, effectiveSettings.DeleteUserCredsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteUserCreds);
+            Modify_DeleteUserCredsApiCall(ref _callDeleteUserCreds);
             _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>("GetBackup", grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetBackup);
             Modify_GetBackupApiCall(ref _callGetBackup);
@@ -4394,6 +5389,20 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         partial void Modify_DeleteDatabaseApiCall(ref gaxgrpc::ApiCall<DeleteDatabaseRequest, lro::Operation> call);
 
+        partial void Modify_CreateUserCredsApiCall(ref gaxgrpc::ApiCall<CreateUserCredsRequest, UserCreds> call);
+
+        partial void Modify_GetUserCredsApiCall(ref gaxgrpc::ApiCall<GetUserCredsRequest, UserCreds> call);
+
+        partial void Modify_ListUserCredsApiCall(ref gaxgrpc::ApiCall<ListUserCredsRequest, ListUserCredsResponse> call);
+
+        partial void Modify_EnableUserCredsApiCall(ref gaxgrpc::ApiCall<EnableUserCredsRequest, UserCreds> call);
+
+        partial void Modify_DisableUserCredsApiCall(ref gaxgrpc::ApiCall<DisableUserCredsRequest, UserCreds> call);
+
+        partial void Modify_ResetUserPasswordApiCall(ref gaxgrpc::ApiCall<ResetUserPasswordRequest, UserCreds> call);
+
+        partial void Modify_DeleteUserCredsApiCall(ref gaxgrpc::ApiCall<DeleteUserCredsRequest, wkt::Empty> call);
+
         partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
 
         partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
@@ -4449,6 +5458,20 @@ namespace Google.Cloud.Firestore.Admin.V1
         partial void Modify_UpdateDatabaseRequest(ref UpdateDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteDatabaseRequest(ref DeleteDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateUserCredsRequest(ref CreateUserCredsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetUserCredsRequest(ref GetUserCredsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListUserCredsRequest(ref ListUserCredsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_EnableUserCredsRequest(ref EnableUserCredsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DisableUserCredsRequest(ref DisableUserCredsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ResetUserPasswordRequest(ref ResetUserPasswordRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteUserCredsRequest(ref DeleteUserCredsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetBackupRequest(ref GetBackupRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4946,6 +5969,178 @@ namespace Google.Cloud.Firestore.Admin.V1
         {
             Modify_DeleteDatabaseRequest(ref request, ref callSettings);
             return new lro::Operation<Database, DeleteDatabaseMetadata>(await _callDeleteDatabase.Async(request, callSettings).ConfigureAwait(false), DeleteDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserCreds CreateUserCreds(CreateUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserCredsRequest(ref request, ref callSettings);
+            return _callCreateUserCreds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Create a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserCreds> CreateUserCredsAsync(CreateUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateUserCredsRequest(ref request, ref callSettings);
+            return _callCreateUserCreds.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserCreds GetUserCreds(GetUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserCredsRequest(ref request, ref callSettings);
+            return _callGetUserCreds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a user creds resource. Note that the returned resource does not
+        /// contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserCreds> GetUserCredsAsync(GetUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetUserCredsRequest(ref request, ref callSettings);
+            return _callGetUserCreds.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ListUserCredsResponse ListUserCreds(ListUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserCredsRequest(ref request, ref callSettings);
+            return _callListUserCreds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// List all user creds in the database. Note that the returned resource
+        /// does not contain the secret value itself.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ListUserCredsResponse> ListUserCredsAsync(ListUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUserCredsRequest(ref request, ref callSettings);
+            return _callListUserCreds.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserCreds EnableUserCreds(EnableUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableUserCredsRequest(ref request, ref callSettings);
+            return _callEnableUserCreds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Enables a user creds. No-op if the user creds are already enabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserCreds> EnableUserCredsAsync(EnableUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableUserCredsRequest(ref request, ref callSettings);
+            return _callEnableUserCreds.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserCreds DisableUserCreds(DisableUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableUserCredsRequest(ref request, ref callSettings);
+            return _callDisableUserCreds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Disables a user creds. No-op if the user creds are already disabled.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserCreds> DisableUserCredsAsync(DisableUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DisableUserCredsRequest(ref request, ref callSettings);
+            return _callDisableUserCreds.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override UserCreds ResetUserPassword(ResetUserPasswordRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResetUserPasswordRequest(ref request, ref callSettings);
+            return _callResetUserPassword.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Resets the password of a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<UserCreds> ResetUserPasswordAsync(ResetUserPasswordRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResetUserPasswordRequest(ref request, ref callSettings);
+            return _callResetUserPassword.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteUserCreds(DeleteUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserCredsRequest(ref request, ref callSettings);
+            _callDeleteUserCreds.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a user creds.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteUserCredsAsync(DeleteUserCredsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteUserCredsRequest(ref request, ref callSettings);
+            return _callDeleteUserCreds.Async(request, callSettings);
         }
 
         /// <summary>

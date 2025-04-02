@@ -137,6 +137,24 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest> __Marshaller_google_firestore_admin_v1_DeleteDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest> __Marshaller_google_firestore_admin_v1_CreateUserCredsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UserCreds> __Marshaller_google_firestore_admin_v1_UserCreds = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.UserCreds.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest> __Marshaller_google_firestore_admin_v1_GetUserCredsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest> __Marshaller_google_firestore_admin_v1_ListUserCredsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse> __Marshaller_google_firestore_admin_v1_ListUserCredsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest> __Marshaller_google_firestore_admin_v1_EnableUserCredsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest> __Marshaller_google_firestore_admin_v1_DisableUserCredsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest> __Marshaller_google_firestore_admin_v1_ResetUserPasswordRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest> __Marshaller_google_firestore_admin_v1_DeleteUserCredsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest> __Marshaller_google_firestore_admin_v1_GetBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Backup> __Marshaller_google_firestore_admin_v1_Backup = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.Backup.Parser));
@@ -282,6 +300,62 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         "DeleteDatabase",
         __Marshaller_google_firestore_admin_v1_DeleteDatabaseRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds> __Method_CreateUserCreds = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateUserCreds",
+        __Marshaller_google_firestore_admin_v1_CreateUserCredsRequest,
+        __Marshaller_google_firestore_admin_v1_UserCreds);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds> __Method_GetUserCreds = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetUserCreds",
+        __Marshaller_google_firestore_admin_v1_GetUserCredsRequest,
+        __Marshaller_google_firestore_admin_v1_UserCreds);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse> __Method_ListUserCreds = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListUserCreds",
+        __Marshaller_google_firestore_admin_v1_ListUserCredsRequest,
+        __Marshaller_google_firestore_admin_v1_ListUserCredsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds> __Method_EnableUserCreds = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EnableUserCreds",
+        __Marshaller_google_firestore_admin_v1_EnableUserCredsRequest,
+        __Marshaller_google_firestore_admin_v1_UserCreds);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds> __Method_DisableUserCreds = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DisableUserCreds",
+        __Marshaller_google_firestore_admin_v1_DisableUserCredsRequest,
+        __Marshaller_google_firestore_admin_v1_UserCreds);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds> __Method_ResetUserPassword = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ResetUserPassword",
+        __Marshaller_google_firestore_admin_v1_ResetUserPasswordRequest,
+        __Marshaller_google_firestore_admin_v1_UserCreds);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteUserCreds = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteUserCreds",
+        __Marshaller_google_firestore_admin_v1_DeleteUserCredsRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest, global::Google.Cloud.Firestore.Admin.V1.Backup> __Method_GetBackup = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest, global::Google.Cloud.Firestore.Admin.V1.Backup>(
@@ -589,6 +663,92 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteDatabase(global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Create a user creds.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.UserCreds> CreateUserCreds(global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a user creds resource. Note that the returned resource does not
+      /// contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.UserCreds> GetUserCreds(global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all user creds in the database. Note that the returned resource
+      /// does not contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse> ListUserCreds(global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Enables a user creds. No-op if the user creds are already enabled.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.UserCreds> EnableUserCreds(global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Disables a user creds. No-op if the user creds are already disabled.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.UserCreds> DisableUserCreds(global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Resets the password of a user creds.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.UserCreds> ResetUserPassword(global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a user creds.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserCreds(global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1661,6 +1821,350 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteDatabase, null, options, request);
       }
       /// <summary>
+      /// Create a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds CreateUserCreds(global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserCreds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds CreateUserCreds(global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Create a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> CreateUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateUserCredsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Create a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> CreateUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Gets a user creds resource. Note that the returned resource does not
+      /// contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds GetUserCreds(global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserCreds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a user creds resource. Note that the returned resource does not
+      /// contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds GetUserCreds(global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Gets a user creds resource. Note that the returned resource does not
+      /// contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> GetUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetUserCredsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a user creds resource. Note that the returned resource does not
+      /// contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> GetUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// List all user creds in the database. Note that the returned resource
+      /// does not contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse ListUserCreds(global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserCreds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all user creds in the database. Note that the returned resource
+      /// does not contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse ListUserCreds(global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// List all user creds in the database. Note that the returned resource
+      /// does not contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse> ListUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListUserCredsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all user creds in the database. Note that the returned resource
+      /// does not contain the secret value itself.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse> ListUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Enables a user creds. No-op if the user creds are already enabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds EnableUserCreds(global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableUserCreds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables a user creds. No-op if the user creds are already enabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds EnableUserCreds(global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EnableUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Enables a user creds. No-op if the user creds are already enabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> EnableUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnableUserCredsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enables a user creds. No-op if the user creds are already enabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> EnableUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EnableUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Disables a user creds. No-op if the user creds are already disabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds DisableUserCreds(global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableUserCreds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables a user creds. No-op if the user creds are already disabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds DisableUserCreds(global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DisableUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Disables a user creds. No-op if the user creds are already disabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> DisableUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DisableUserCredsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Disables a user creds. No-op if the user creds are already disabled.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> DisableUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DisableUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Resets the password of a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds ResetUserPassword(global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResetUserPassword(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resets the password of a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.UserCreds ResetUserPassword(global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ResetUserPassword, null, options, request);
+      }
+      /// <summary>
+      /// Resets the password of a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> ResetUserPasswordAsync(global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResetUserPasswordAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Resets the password of a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.UserCreds> ResetUserPasswordAsync(global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ResetUserPassword, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserCreds(global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserCreds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteUserCreds(global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteUserCreds, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteUserCredsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a user creds.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteUserCredsAsync(global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteUserCreds, null, options, request);
+      }
+      /// <summary>
       /// Gets information about a backup.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2193,6 +2697,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
           .AddMethod(__Method_UpdateDatabase, serviceImpl.UpdateDatabase)
           .AddMethod(__Method_DeleteDatabase, serviceImpl.DeleteDatabase)
+          .AddMethod(__Method_CreateUserCreds, serviceImpl.CreateUserCreds)
+          .AddMethod(__Method_GetUserCreds, serviceImpl.GetUserCreds)
+          .AddMethod(__Method_ListUserCreds, serviceImpl.ListUserCreds)
+          .AddMethod(__Method_EnableUserCreds, serviceImpl.EnableUserCreds)
+          .AddMethod(__Method_DisableUserCreds, serviceImpl.DisableUserCreds)
+          .AddMethod(__Method_ResetUserPassword, serviceImpl.ResetUserPassword)
+          .AddMethod(__Method_DeleteUserCreds, serviceImpl.DeleteUserCreds)
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
           .AddMethod(__Method_ListBackups, serviceImpl.ListBackups)
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
@@ -2226,6 +2737,13 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));
       serviceBinder.AddMethod(__Method_UpdateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabase));
       serviceBinder.AddMethod(__Method_DeleteDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDatabase));
+      serviceBinder.AddMethod(__Method_CreateUserCreds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.CreateUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(serviceImpl.CreateUserCreds));
+      serviceBinder.AddMethod(__Method_GetUserCreds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(serviceImpl.GetUserCreds));
+      serviceBinder.AddMethod(__Method_ListUserCreds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.ListUserCredsResponse>(serviceImpl.ListUserCreds));
+      serviceBinder.AddMethod(__Method_EnableUserCreds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.EnableUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(serviceImpl.EnableUserCreds));
+      serviceBinder.AddMethod(__Method_DisableUserCreds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DisableUserCredsRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(serviceImpl.DisableUserCreds));
+      serviceBinder.AddMethod(__Method_ResetUserPassword, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ResetUserPasswordRequest, global::Google.Cloud.Firestore.Admin.V1.UserCreds>(serviceImpl.ResetUserPassword));
+      serviceBinder.AddMethod(__Method_DeleteUserCreds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteUserCredsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteUserCreds));
       serviceBinder.AddMethod(__Method_GetBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetBackupRequest, global::Google.Cloud.Firestore.Admin.V1.Backup>(serviceImpl.GetBackup));
       serviceBinder.AddMethod(__Method_ListBackups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListBackupsRequest, global::Google.Cloud.Firestore.Admin.V1.ListBackupsResponse>(serviceImpl.ListBackups));
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.DeleteBackupRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteBackup));
