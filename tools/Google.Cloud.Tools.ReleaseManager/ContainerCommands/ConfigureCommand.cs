@@ -13,7 +13,10 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
+using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
@@ -51,6 +54,26 @@ public class ConfigureCommand : IContainerCommand
         api = AddCommand.ConfigureApi(apiRoot, catalog, targetApi);
         AddCommand.AddApiToCatalog(catalog, api);
         catalog.Save(rootLayout);
+
+        // Now add the new library to the 
+        // At some point we might generate the proto for this, but for the moment this will do.
+        var pipelineStateFile = Path.Combine(rootLayout.GeneratorInput, "pipeline-state.json");
+        JObject state = JObject.Parse(File.ReadAllText(pipelineStateFile));
+        JArray libraries = (JArray) state["libraries"];
+        libraries.Add(new JObject()
+        {
+            ["id"] = api.Id,
+            ["generationAutomationLevel"] = "AUTOMATION_LEVEL_AUTOMATIC",
+            ["releaseAutomationLevel"] = "AUTOMATION_LEVEL_BLOCKED",
+            ["apiPaths"] = new JArray(apiPath),
+            ["sourcePaths"] = new JArray($"apis/{api.Id}/{api.Id}")
+        });
+
+        // Slightly fiddly serialization to mimic the indentation that Librarian uses.
+        using var fileWriter = File.CreateText(pipelineStateFile);
+        using var jsonWriter = new JsonTextWriter(fileWriter) { Formatting = Formatting.Indented, Indentation = 4 };
+        state.WriteTo(jsonWriter);
+
         return 0;
     }
 }
