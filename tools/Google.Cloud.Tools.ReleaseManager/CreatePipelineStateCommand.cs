@@ -43,6 +43,9 @@ public sealed class CreatePipelineStateCommand : CommandBase
     protected override int ExecuteImpl(string[] args)
     {
         var catalog = ApiCatalog.Load(RootLayout);
+        var pipelineStateFile = Path.Combine(RootLayout.GeneratorInput, "pipeline-state.json");
+
+        var previousState = JsonConvert.DeserializeObject<PipelineState>(File.ReadAllText(pipelineStateFile));
 
         using var repo = new Repository(RootLayout.RepositoryRoot);
         using var googleapisRepo = new Repository(args[0]);
@@ -79,7 +82,7 @@ public sealed class CreatePipelineStateCommand : CommandBase
 
         // Slightly fiddly serialization to mimic the indentation that Librarian uses.
         var serializer = new JsonSerializer { DefaultValueHandling = DefaultValueHandling.Ignore };
-        using var fileWriter = File.CreateText(Path.Combine(RootLayout.GeneratorInput, "pipeline-state.json"));
+        using var fileWriter = File.CreateText(pipelineStateFile);
         using var jsonWriter = new JsonTextWriter(fileWriter) { Formatting = Formatting.Indented, Indentation = 4 };
         serializer.Serialize(jsonWriter, state);
         return 0;
@@ -143,6 +146,27 @@ public sealed class CreatePipelineStateCommand : CommandBase
             {
                 lastGeneratedCommit = GetCommitForPath(googleapisRepo.Commits, library.ApiPaths[0])?.Sha;
             }
+            // If the same library already exists in the current state,
+            // and if it is later than what we'd populate, keep it. (This happens if Librarian generates
+            // the library due to a new API commit, but the commit doesn't affect the generated library.)
+            var previousLibrary = previousState.Libraries.FirstOrDefault(lib => lib.Id == library.Id);
+            if (previousLibrary?.LastGeneratedCommit is string previousStateCommit && previousStateCommit != lastGeneratedCommit)
+            {
+                if (lastGeneratedCommit is null)
+                {
+                    lastGeneratedCommit = previousStateCommit;
+                }
+                else
+                {
+                    var previousStateCommitObj = googleapisRepo.Lookup<Commit>(previousStateCommit);
+                    var lastGeneratedCommitObj = googleapisRepo.Lookup<Commit>(lastGeneratedCommit);
+                    if (previousStateCommitObj.GetDate() > lastGeneratedCommitObj.GetDate())
+                    {
+                        lastGeneratedCommit = previousStateCommit;
+                    }
+                }
+            }
+
             library.LastGeneratedCommit = lastGeneratedCommit;
 
             (string hash, DateTimeOffset dotnetCommitTimestamp) GetGoogleApisCommit(Commit commit)
