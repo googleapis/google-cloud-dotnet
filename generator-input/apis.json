@@ -6035,6 +6035,23 @@
       "protoPath": "google/geo/type"
     },
     {
+      "id": "Google.Geo.Weather.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Weather",
+      "productUrl": "https://developers.devsite.corp.google.com/maps/documentation/weather",
+      "description": "weather.googleapis.com API.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/maps/weather/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "weather",
+      "serviceConfigFile": "weather_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Identity.AccessContextManager.Type",
       "packageOwner": "google-cloud",
       "generator": "proto",
