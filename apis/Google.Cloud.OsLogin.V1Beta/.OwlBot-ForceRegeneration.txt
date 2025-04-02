@@ -1,1 +1,0 @@
-OsLogin Common proto is generated and copied when it shouldn't be.
