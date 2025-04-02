@@ -1115,7 +1115,7 @@ namespace Google.Cloud.Deploy.V1 {
             "bmFtZYLT5JMCUiJNL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
             "ZGVsaXZlcnlQaXBlbGluZXMvKi9hdXRvbWF0aW9uUnVucy8qfTpjYW5jZWw6",
             "ASoaTspBGmNsb3VkZGVwbG95Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKNBwoaY29t",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULrBwoaY29t",
             "Lmdvb2dsZS5jbG91ZC5kZXBsb3kudjFCEENsb3VkRGVwbG95UHJvdG9QAVoy",
             "Y2xvdWQuZ29vZ2xlLmNvbS9nby9kZXBsb3kvYXBpdjEvZGVwbG95cGI7ZGVw",
             "bG95cGLqQVkKH2Nsb3VkYnVpbGQuZ29vZ2xlYXBpcy5jb20vQnVpbGQSNnBy",
@@ -1136,7 +1136,9 @@ namespace Google.Cloud.Deploy.V1 {
             "Ejpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2Vy",
             "dmljZXMve3NlcnZpY2V96kFMChZydW4uZ29vZ2xlYXBpcy5jb20vSm9iEjJw",
             "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97",
-            "am9ifWIGcHJvdG8z"));
+            "am9ifepBWwobcnVuLmdvb2dsZWFwaXMuY29tL1JldmlzaW9uEjxwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmV2aXNpb25zL3ty",
+            "ZXZpc2lvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Deploy.V1.SkaffoldSupportState), typeof(global::Google.Cloud.Deploy.V1.BackoffMode), typeof(global::Google.Cloud.Deploy.V1.RepairState), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -25137,8 +25139,8 @@ namespace Google.Cloud.Deploy.V1 {
             [pbr::OriginalName("VERIFICATION_CONFIG_NOT_FOUND")] VerificationConfigNotFound = 4,
             /// <summary>
             /// The render operation did not complete successfully because the custom
-            /// action required for predeploy or postdeploy was not found in the
-            /// Skaffold configuration. See failure_message for additional details.
+            /// action(s) required for Rollout jobs were not found in the Skaffold
+            /// configuration. See failure_message for additional details.
             /// </summary>
             [pbr::OriginalName("CUSTOM_ACTION_NOT_FOUND")] CustomActionNotFound = 5,
             /// <summary>
@@ -28245,8 +28247,8 @@ namespace Google.Cloud.Deploy.V1 {
     public const int SkaffoldConfigPathFieldNumber = 2;
     private string skaffoldConfigPath_ = "";
     /// <summary>
-    /// Output only. File path of the resolved Skaffold configuration relative to
-    /// the URI.
+    /// Output only. File path of the resolved Skaffold configuration for the
+    /// stable phase, relative to the URI.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -28261,7 +28263,8 @@ namespace Google.Cloud.Deploy.V1 {
     public const int ManifestPathFieldNumber = 3;
     private string manifestPath_ = "";
     /// <summary>
-    /// Output only. File path of the rendered manifest relative to the URI.
+    /// Output only. File path of the rendered manifest relative to the URI for the
+    /// stable phase.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
