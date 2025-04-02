@@ -2413,6 +2413,627 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateUserCreds</summary>
+        public void CreateUserCredsRequestObject()
+        {
+            // Snippet: CreateUserCreds(CreateUserCredsRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::CreateUserCredsRequest request = new gcfav::CreateUserCredsRequest
+            {
+                ParentAsDatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                UserCreds = new gcfav::UserCreds(),
+                UserCredsId = "",
+            };
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.CreateUserCreds(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUserCredsAsync</summary>
+        public async Task CreateUserCredsRequestObjectAsync()
+        {
+            // Snippet: CreateUserCredsAsync(CreateUserCredsRequest, CallSettings)
+            // Additional: CreateUserCredsAsync(CreateUserCredsRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::CreateUserCredsRequest request = new gcfav::CreateUserCredsRequest
+            {
+                ParentAsDatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                UserCreds = new gcfav::UserCreds(),
+                UserCredsId = "",
+            };
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.CreateUserCredsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUserCreds</summary>
+        public void CreateUserCreds()
+        {
+            // Snippet: CreateUserCreds(string, UserCreds, string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/databases/[DATABASE]";
+            gcfav::UserCreds userCreds = new gcfav::UserCreds();
+            string userCredsId = "";
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.CreateUserCreds(parent, userCreds, userCredsId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUserCredsAsync</summary>
+        public async Task CreateUserCredsAsync()
+        {
+            // Snippet: CreateUserCredsAsync(string, UserCreds, string, CallSettings)
+            // Additional: CreateUserCredsAsync(string, UserCreds, string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/databases/[DATABASE]";
+            gcfav::UserCreds userCreds = new gcfav::UserCreds();
+            string userCredsId = "";
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.CreateUserCredsAsync(parent, userCreds, userCredsId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUserCreds</summary>
+        public void CreateUserCredsResourceNames()
+        {
+            // Snippet: CreateUserCreds(DatabaseName, UserCreds, string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DatabaseName parent = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            gcfav::UserCreds userCreds = new gcfav::UserCreds();
+            string userCredsId = "";
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.CreateUserCreds(parent, userCreds, userCredsId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateUserCredsAsync</summary>
+        public async Task CreateUserCredsResourceNamesAsync()
+        {
+            // Snippet: CreateUserCredsAsync(DatabaseName, UserCreds, string, CallSettings)
+            // Additional: CreateUserCredsAsync(DatabaseName, UserCreds, string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DatabaseName parent = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            gcfav::UserCreds userCreds = new gcfav::UserCreds();
+            string userCredsId = "";
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.CreateUserCredsAsync(parent, userCreds, userCredsId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserCreds</summary>
+        public void GetUserCredsRequestObject()
+        {
+            // Snippet: GetUserCreds(GetUserCredsRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::GetUserCredsRequest request = new gcfav::GetUserCredsRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.GetUserCreds(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserCredsAsync</summary>
+        public async Task GetUserCredsRequestObjectAsync()
+        {
+            // Snippet: GetUserCredsAsync(GetUserCredsRequest, CallSettings)
+            // Additional: GetUserCredsAsync(GetUserCredsRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::GetUserCredsRequest request = new gcfav::GetUserCredsRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.GetUserCredsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserCreds</summary>
+        public void GetUserCreds()
+        {
+            // Snippet: GetUserCreds(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.GetUserCreds(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserCredsAsync</summary>
+        public async Task GetUserCredsAsync()
+        {
+            // Snippet: GetUserCredsAsync(string, CallSettings)
+            // Additional: GetUserCredsAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.GetUserCredsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserCreds</summary>
+        public void GetUserCredsResourceNames()
+        {
+            // Snippet: GetUserCreds(UserCredsName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.GetUserCreds(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetUserCredsAsync</summary>
+        public async Task GetUserCredsResourceNamesAsync()
+        {
+            // Snippet: GetUserCredsAsync(UserCredsName, CallSettings)
+            // Additional: GetUserCredsAsync(UserCredsName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.GetUserCredsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUserCreds</summary>
+        public void ListUserCredsRequestObject()
+        {
+            // Snippet: ListUserCreds(ListUserCredsRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::ListUserCredsRequest request = new gcfav::ListUserCredsRequest
+            {
+                ParentAsDatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            // Make the request
+            gcfav::ListUserCredsResponse response = firestoreAdminClient.ListUserCreds(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUserCredsAsync</summary>
+        public async Task ListUserCredsRequestObjectAsync()
+        {
+            // Snippet: ListUserCredsAsync(ListUserCredsRequest, CallSettings)
+            // Additional: ListUserCredsAsync(ListUserCredsRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::ListUserCredsRequest request = new gcfav::ListUserCredsRequest
+            {
+                ParentAsDatabaseName = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            // Make the request
+            gcfav::ListUserCredsResponse response = await firestoreAdminClient.ListUserCredsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUserCreds</summary>
+        public void ListUserCreds()
+        {
+            // Snippet: ListUserCreds(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            gcfav::ListUserCredsResponse response = firestoreAdminClient.ListUserCreds(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUserCredsAsync</summary>
+        public async Task ListUserCredsAsync()
+        {
+            // Snippet: ListUserCredsAsync(string, CallSettings)
+            // Additional: ListUserCredsAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            gcfav::ListUserCredsResponse response = await firestoreAdminClient.ListUserCredsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUserCreds</summary>
+        public void ListUserCredsResourceNames()
+        {
+            // Snippet: ListUserCreds(DatabaseName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DatabaseName parent = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            gcfav::ListUserCredsResponse response = firestoreAdminClient.ListUserCreds(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUserCredsAsync</summary>
+        public async Task ListUserCredsResourceNamesAsync()
+        {
+            // Snippet: ListUserCredsAsync(DatabaseName, CallSettings)
+            // Additional: ListUserCredsAsync(DatabaseName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DatabaseName parent = gcfav::DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            gcfav::ListUserCredsResponse response = await firestoreAdminClient.ListUserCredsAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableUserCreds</summary>
+        public void EnableUserCredsRequestObject()
+        {
+            // Snippet: EnableUserCreds(EnableUserCredsRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::EnableUserCredsRequest request = new gcfav::EnableUserCredsRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.EnableUserCreds(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableUserCredsAsync</summary>
+        public async Task EnableUserCredsRequestObjectAsync()
+        {
+            // Snippet: EnableUserCredsAsync(EnableUserCredsRequest, CallSettings)
+            // Additional: EnableUserCredsAsync(EnableUserCredsRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::EnableUserCredsRequest request = new gcfav::EnableUserCredsRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.EnableUserCredsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableUserCreds</summary>
+        public void EnableUserCreds()
+        {
+            // Snippet: EnableUserCreds(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.EnableUserCreds(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableUserCredsAsync</summary>
+        public async Task EnableUserCredsAsync()
+        {
+            // Snippet: EnableUserCredsAsync(string, CallSettings)
+            // Additional: EnableUserCredsAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.EnableUserCredsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableUserCreds</summary>
+        public void EnableUserCredsResourceNames()
+        {
+            // Snippet: EnableUserCreds(UserCredsName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.EnableUserCreds(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableUserCredsAsync</summary>
+        public async Task EnableUserCredsResourceNamesAsync()
+        {
+            // Snippet: EnableUserCredsAsync(UserCredsName, CallSettings)
+            // Additional: EnableUserCredsAsync(UserCredsName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.EnableUserCredsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableUserCreds</summary>
+        public void DisableUserCredsRequestObject()
+        {
+            // Snippet: DisableUserCreds(DisableUserCredsRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DisableUserCredsRequest request = new gcfav::DisableUserCredsRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.DisableUserCreds(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableUserCredsAsync</summary>
+        public async Task DisableUserCredsRequestObjectAsync()
+        {
+            // Snippet: DisableUserCredsAsync(DisableUserCredsRequest, CallSettings)
+            // Additional: DisableUserCredsAsync(DisableUserCredsRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DisableUserCredsRequest request = new gcfav::DisableUserCredsRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.DisableUserCredsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableUserCreds</summary>
+        public void DisableUserCreds()
+        {
+            // Snippet: DisableUserCreds(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.DisableUserCreds(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableUserCredsAsync</summary>
+        public async Task DisableUserCredsAsync()
+        {
+            // Snippet: DisableUserCredsAsync(string, CallSettings)
+            // Additional: DisableUserCredsAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.DisableUserCredsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableUserCreds</summary>
+        public void DisableUserCredsResourceNames()
+        {
+            // Snippet: DisableUserCreds(UserCredsName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.DisableUserCreds(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DisableUserCredsAsync</summary>
+        public async Task DisableUserCredsResourceNamesAsync()
+        {
+            // Snippet: DisableUserCredsAsync(UserCredsName, CallSettings)
+            // Additional: DisableUserCredsAsync(UserCredsName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.DisableUserCredsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResetUserPassword</summary>
+        public void ResetUserPasswordRequestObject()
+        {
+            // Snippet: ResetUserPassword(ResetUserPasswordRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::ResetUserPasswordRequest request = new gcfav::ResetUserPasswordRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.ResetUserPassword(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResetUserPasswordAsync</summary>
+        public async Task ResetUserPasswordRequestObjectAsync()
+        {
+            // Snippet: ResetUserPasswordAsync(ResetUserPasswordRequest, CallSettings)
+            // Additional: ResetUserPasswordAsync(ResetUserPasswordRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::ResetUserPasswordRequest request = new gcfav::ResetUserPasswordRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.ResetUserPasswordAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResetUserPassword</summary>
+        public void ResetUserPassword()
+        {
+            // Snippet: ResetUserPassword(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.ResetUserPassword(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResetUserPasswordAsync</summary>
+        public async Task ResetUserPasswordAsync()
+        {
+            // Snippet: ResetUserPasswordAsync(string, CallSettings)
+            // Additional: ResetUserPasswordAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.ResetUserPasswordAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResetUserPassword</summary>
+        public void ResetUserPasswordResourceNames()
+        {
+            // Snippet: ResetUserPassword(UserCredsName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            gcfav::UserCreds response = firestoreAdminClient.ResetUserPassword(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResetUserPasswordAsync</summary>
+        public async Task ResetUserPasswordResourceNamesAsync()
+        {
+            // Snippet: ResetUserPasswordAsync(UserCredsName, CallSettings)
+            // Additional: ResetUserPasswordAsync(UserCredsName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            gcfav::UserCreds response = await firestoreAdminClient.ResetUserPasswordAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserCreds</summary>
+        public void DeleteUserCredsRequestObject()
+        {
+            // Snippet: DeleteUserCreds(DeleteUserCredsRequest, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::DeleteUserCredsRequest request = new gcfav::DeleteUserCredsRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            firestoreAdminClient.DeleteUserCreds(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserCredsAsync</summary>
+        public async Task DeleteUserCredsRequestObjectAsync()
+        {
+            // Snippet: DeleteUserCredsAsync(DeleteUserCredsRequest, CallSettings)
+            // Additional: DeleteUserCredsAsync(DeleteUserCredsRequest, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::DeleteUserCredsRequest request = new gcfav::DeleteUserCredsRequest
+            {
+                UserCredsName = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]"),
+            };
+            // Make the request
+            await firestoreAdminClient.DeleteUserCredsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserCreds</summary>
+        public void DeleteUserCreds()
+        {
+            // Snippet: DeleteUserCreds(string, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            firestoreAdminClient.DeleteUserCreds(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserCredsAsync</summary>
+        public async Task DeleteUserCredsAsync()
+        {
+            // Snippet: DeleteUserCredsAsync(string, CallSettings)
+            // Additional: DeleteUserCredsAsync(string, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]/userCreds/[USER_CREDS]";
+            // Make the request
+            await firestoreAdminClient.DeleteUserCredsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserCreds</summary>
+        public void DeleteUserCredsResourceNames()
+        {
+            // Snippet: DeleteUserCreds(UserCredsName, CallSettings)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = gcfav::FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            firestoreAdminClient.DeleteUserCreds(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteUserCredsAsync</summary>
+        public async Task DeleteUserCredsResourceNamesAsync()
+        {
+            // Snippet: DeleteUserCredsAsync(UserCredsName, CallSettings)
+            // Additional: DeleteUserCredsAsync(UserCredsName, CancellationToken)
+            // Create client
+            gcfav::FirestoreAdminClient firestoreAdminClient = await gcfav::FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            gcfav::UserCredsName name = gcfav::UserCredsName.FromProjectDatabaseUserCreds("[PROJECT]", "[DATABASE]", "[USER_CREDS]");
+            // Make the request
+            await firestoreAdminClient.DeleteUserCredsAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetBackup</summary>
         public void GetBackupRequestObject()
         {
