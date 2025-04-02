@@ -47,7 +47,7 @@ internal sealed class NonSourceGenerator
     /// are generated, and OwlBot will create PRs. When this is false, any OwlBot config files are
     /// *deleted* by GenerateProjectsCommand, effectively disabling OwlBot.
     /// </summary>
-    private static readonly bool GenerateOwlBotConfig = true;
+    private static readonly bool GenerateOwlBotConfig = false;
 
     internal const string ProjectVersionValue = "project";
     internal const string DefaultVersionValue = "default";
