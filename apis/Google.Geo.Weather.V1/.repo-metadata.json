@@ -1,0 +1,8 @@
+{
+  "distribution_name": "Google.Geo.Weather.V1",
+  "release_level": "unreleased",
+  "client_documentation": "https://googleapis.dev/dotnet/Google.Geo.Weather.V1/latest",
+  "library_type": "GAPIC_AUTO",
+  "language": "dotnet",
+  "api_shortname": "weather"
+}
