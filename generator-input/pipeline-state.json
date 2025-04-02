@@ -255,10 +255,10 @@
         },
         {
             "id": "Google.Cloud.AIPlatform.V1Beta1",
-            "currentVersion": "1.0.0-beta23",
+            "currentVersion": "1.0.0-beta24",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-24T16:32:22Z",
+            "releaseTimestamp": "2025-03-31T16:12:28Z",
             "lastGeneratedCommit": "d427057ed9ddf0647a3bbdc6e77bfd9a0cb91216",
             "apiPaths": [
                 "google/cloud/aiplatform/v1beta1"
@@ -269,10 +269,10 @@
         },
         {
             "id": "Google.Cloud.AIPlatform.V1",
-            "currentVersion": "3.24.0",
+            "currentVersion": "3.25.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-24T16:26:31Z",
+            "releaseTimestamp": "2025-03-31T16:10:46Z",
             "lastGeneratedCommit": "5b04a07f729c882611dae80049ab84941fb78fbf",
             "apiPaths": [
                 "google/cloud/aiplatform/v1"
@@ -367,10 +367,10 @@
         },
         {
             "id": "Google.Cloud.AppHub.V1",
-            "currentVersion": "1.0.0",
+            "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-12-05T19:02:21Z",
+            "releaseTimestamp": "2025-03-31T16:14:22Z",
             "lastGeneratedCommit": "f4a56c163276d5b42d3849a57cd7c92b5152a697",
             "apiPaths": [
                 "google/cloud/apphub/v1"
@@ -591,10 +591,10 @@
         },
         {
             "id": "Google.Cloud.BigQuery.AnalyticsHub.V1",
-            "currentVersion": "1.7.0",
+            "currentVersion": "1.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-07-08T16:34:20Z",
+            "releaseTimestamp": "2025-03-31T16:14:26Z",
             "lastGeneratedCommit": "b64f36a8c04a977e6d6ad3924ee37a3a94b36212",
             "apiPaths": [
                 "google/cloud/bigquery/analyticshub/v1"
@@ -1003,10 +1003,10 @@
         },
         {
             "id": "Google.Cloud.Compute.V1",
-            "currentVersion": "3.7.0",
+            "currentVersion": "3.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-24T17:11:08Z",
+            "releaseTimestamp": "2025-03-31T16:10:50Z",
             "lastGeneratedCommit": "8b608579d4530dd0e5e825313aa669091c477bb1",
             "apiPaths": [
                 "google/cloud/compute/v1"
@@ -1227,10 +1227,10 @@
         },
         {
             "id": "Google.Cloud.Datastream.V1",
-            "currentVersion": "2.9.0",
+            "currentVersion": "2.10.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-01-27T18:01:04Z",
+            "releaseTimestamp": "2025-03-31T16:10:54Z",
             "lastGeneratedCommit": "18f8cb5b581d073222006396175cd0a360a72adf",
             "apiPaths": [
                 "google/cloud/datastream/v1"
@@ -1333,10 +1333,10 @@
         },
         {
             "id": "Google.Cloud.DiscoveryEngine.V1",
-            "currentVersion": "1.6.0",
+            "currentVersion": "1.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-10-29T17:02:20Z",
+            "releaseTimestamp": "2025-03-31T16:16:22Z",
             "lastGeneratedCommit": "ebc5e127e8854dd107de7d7a0abee815a5404a68",
             "apiPaths": [
                 "google/cloud/discoveryengine/v1"
@@ -2483,10 +2483,10 @@
         },
         {
             "id": "Google.Cloud.PubSub.V1",
-            "currentVersion": "3.23.0",
+            "currentVersion": "3.24.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-03-14T07:56:22Z",
+            "releaseTimestamp": "2025-03-31T16:12:32Z",
             "lastGeneratedCommit": "c260e248c64f4235a017755f347fcd99120f224f",
             "apiPaths": [
                 "google/pubsub/v1"
