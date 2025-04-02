@@ -6123,6 +6123,22 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Maps.AerialView.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Aerial View",
+      "productUrl": "https://developers.google.com/maps/documentation/aerial-view",
+      "description": "The Maps Aerial View API.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/maps/aerialview/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "aerialview",
+      "serviceConfigFile": "aerialview_v1.yaml",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.AreaInsights.V1",
       "version": "1.0.0-beta01",
       "type": "grpc",
