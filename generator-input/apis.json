@@ -2944,6 +2944,30 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Iam.V3",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Identity and Access Management (IAM)",
+      "productUrl": "https://cloud.google.com/iam/docs/overview",
+      "description": "Recommended Google client library to access the Google Cloud IAM API (v3) which manages identity and access control for Google Cloud Platform resources, including the creation of service accounts, which you can use to authenticate to Google and make API calls.",
+      "tags": [
+        "IAM",
+        "Identity",
+        "Access"
+      ],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/iam/v3",
+      "includeCommonResourcesProto": true,
+      "shortName": "iam",
+      "serviceConfigFile": "iam_v3.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Iap.V1",
       "version": "2.7.0",
       "type": "grpc",
