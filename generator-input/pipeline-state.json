@@ -385,7 +385,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-10-29T16:58:27Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "fec747a9a7ec48fcc01f6a5d4f4236ceb23e5bbb",
             "apiPaths": [
                 "google/devtools/artifactregistry/v1"
             ],

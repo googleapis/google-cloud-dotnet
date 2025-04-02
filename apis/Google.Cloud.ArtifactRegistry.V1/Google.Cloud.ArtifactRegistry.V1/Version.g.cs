@@ -1771,7 +1771,8 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
     private readonly pbc::RepeatedField<string> names_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Required. The names of the versions to delete.
-    /// A maximum of 10000 versions can be deleted in a batch.
+    /// The maximum number of versions deleted per batch is determined by the
+    /// service and is dependent on the available resources in the region.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
