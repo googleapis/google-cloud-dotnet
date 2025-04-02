@@ -1888,9 +1888,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public const int DatasetFieldNumber = 1;
         private string dataset_ = "";
         /// <summary>
-        /// Output only. The BigQuery dataset to publish to. It takes the form
-        /// `projects/{project_id}/datasets/{dataset_id}`.
-        /// If not set, the service creates a default publishing dataset.
+        /// Output only. The BigQuery dataset the discovered tables are published to.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
