@@ -4324,6 +4324,26 @@
       "transport": "grpc+rest"
     },
     {
+      "id": "Google.Cloud.Redis.Cluster.V1Beta1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Google Cloud Memorystore for Redis",
+      "productUrl": "https://cloud.google.com/memorystore/docs/redis",
+      "description": "Creates and manages Redis instances on the Google Cloud Platform.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/redis/cluster/v1beta1",
+      "includeCommonResourcesProto": true,
+      "shortName": "redis",
+      "serviceConfigFile": "redis_v1beta1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Redis.V1",
       "generator": "micro",
       "protoPath": "google/cloud/redis/v1",

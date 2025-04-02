@@ -3879,6 +3879,17 @@
                 "apis/Google.Cloud.Firestore/Google.Cloud.Firestore",
                 "apis/Google.Cloud.Firestore.V1/Google.Cloud.Firestore.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Redis.Cluster.V1Beta1",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/redis/cluster/v1beta1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Redis.Cluster.V1Beta1/Google.Cloud.Redis.Cluster.V1Beta1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
