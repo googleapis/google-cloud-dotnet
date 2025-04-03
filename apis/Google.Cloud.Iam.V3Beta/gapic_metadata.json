@@ -1,0 +1,99 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.iam.v3beta",
+  "libraryPackage": "Google.Cloud.Iam.V3Beta",
+  "services": {
+    "PolicyBindings": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PolicyBindingsClient",
+          "rpcs": {
+            "CreatePolicyBinding": {
+              "methods": [
+                "CreatePolicyBinding",
+                "CreatePolicyBindingAsync"
+              ]
+            },
+            "DeletePolicyBinding": {
+              "methods": [
+                "DeletePolicyBinding",
+                "DeletePolicyBindingAsync"
+              ]
+            },
+            "GetPolicyBinding": {
+              "methods": [
+                "GetPolicyBinding",
+                "GetPolicyBindingAsync"
+              ]
+            },
+            "ListPolicyBindings": {
+              "methods": [
+                "ListPolicyBindings",
+                "ListPolicyBindingsAsync"
+              ]
+            },
+            "SearchTargetPolicyBindings": {
+              "methods": [
+                "SearchTargetPolicyBindings",
+                "SearchTargetPolicyBindingsAsync"
+              ]
+            },
+            "UpdatePolicyBinding": {
+              "methods": [
+                "UpdatePolicyBinding",
+                "UpdatePolicyBindingAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PrincipalAccessBoundaryPolicies": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PrincipalAccessBoundaryPoliciesClient",
+          "rpcs": {
+            "CreatePrincipalAccessBoundaryPolicy": {
+              "methods": [
+                "CreatePrincipalAccessBoundaryPolicy",
+                "CreatePrincipalAccessBoundaryPolicyAsync"
+              ]
+            },
+            "DeletePrincipalAccessBoundaryPolicy": {
+              "methods": [
+                "DeletePrincipalAccessBoundaryPolicy",
+                "DeletePrincipalAccessBoundaryPolicyAsync"
+              ]
+            },
+            "GetPrincipalAccessBoundaryPolicy": {
+              "methods": [
+                "GetPrincipalAccessBoundaryPolicy",
+                "GetPrincipalAccessBoundaryPolicyAsync"
+              ]
+            },
+            "ListPrincipalAccessBoundaryPolicies": {
+              "methods": [
+                "ListPrincipalAccessBoundaryPolicies",
+                "ListPrincipalAccessBoundaryPoliciesAsync"
+              ]
+            },
+            "SearchPrincipalAccessBoundaryPolicyBindings": {
+              "methods": [
+                "SearchPrincipalAccessBoundaryPolicyBindings",
+                "SearchPrincipalAccessBoundaryPolicyBindingsAsync"
+              ]
+            },
+            "UpdatePrincipalAccessBoundaryPolicy": {
+              "methods": [
+                "UpdatePrincipalAccessBoundaryPolicy",
+                "UpdatePrincipalAccessBoundaryPolicyAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
