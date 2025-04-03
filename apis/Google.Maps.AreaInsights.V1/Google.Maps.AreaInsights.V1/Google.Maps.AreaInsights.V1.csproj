@@ -4,7 +4,7 @@
     <Version>1.0.0-beta01</Version>
     <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Recommended Google client library to access the Google Maps Places Insights API, provides an easy way to understand the density and distribution of places in a specific area.</Description>
+    <Description>Recommended Google client library to access the Google Maps Places Insights API, which provides an easy way to understand the density and distribution of places in a specific area.</Description>
     <PackageTags>maps;insights;places;Google;Cloud</PackageTags>
   </PropertyGroup>
   <ItemGroup>
