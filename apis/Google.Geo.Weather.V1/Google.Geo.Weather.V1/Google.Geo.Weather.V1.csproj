@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0-beta00</Version>
+    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Description>Recommended Google client library to access the Google Weather API, which provides comprehensive weather information - including temperature, precipitation, wind, cloud cover, and more - for locations across the globe.</Description>
+    <PackageTags>maps;geo;weather;Google;Cloud</PackageTags>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
+    <PackageReference Include="Google.Api.Gax.Grpc" />
+    <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+  </ItemGroup>
+</Project>
