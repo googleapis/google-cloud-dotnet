@@ -172,7 +172,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             CreateBucket(LabelsTestBucket, multiVersion: false);
             CreateBucket(InitiallyEmptyBucket, multiVersion: false);
             CreateBucket(SoftDeleteBucket, multiVersion: false, softDelete: true);
-            CreateAndPopulateHnsBucket(HnsBucket);
+            CreateAndPopulateHnsBucket();
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
@@ -255,7 +255,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         }
 
-        internal Bucket CreateBucket(string name, bool multiVersion, bool softDelete = false, bool registerForDeletion = true)
+        internal Bucket CreateBucket(string name, bool multiVersion, bool softDelete = false, bool registerForDeletion = true, bool hnsEnabled = false)
         {
             var bucket = Client.CreateBucket(ProjectId,
                 new Bucket
@@ -264,6 +264,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     Versioning = new Bucket.VersioningData { Enabled = multiVersion },
                     // The minimum allowed for soft delete is 7 days.
                     SoftDeletePolicy = softDelete ? new Bucket.SoftDeletePolicyData { RetentionDurationSeconds = (int) TimeSpan.FromDays(7).TotalSeconds } : null,
+                    IamConfiguration = hnsEnabled ? new Bucket.IamConfigurationData
+                    {
+                        UniformBucketLevelAccess = new Bucket.IamConfigurationData.UniformBucketLevelAccessData { Enabled = true }
+                    } : null,
+                    HierarchicalNamespace = hnsEnabled ? new Bucket.HierarchicalNamespaceData { Enabled = true } : null,
                 });
             SleepAfterBucketCreateDelete();
             if (registerForDeletion)
@@ -273,29 +278,15 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             return bucket;
         }
 
-        internal Bucket CreateAndPopulateHnsBucket(string name)
+        private void CreateAndPopulateHnsBucket()
         {
-            var storage = StorageClient.Create();
-            var bucket = storage.CreateBucket(ProjectId,
-                new Bucket
-                {
-                    Name = name,
-                    IamConfiguration = new Bucket.IamConfigurationData
-                    {
-                        UniformBucketLevelAccess = new Bucket.IamConfigurationData.UniformBucketLevelAccessData { Enabled = true }
-                    },
-                    HierarchicalNamespace = new Bucket.HierarchicalNamespaceData { Enabled = true }
-                });
+            CreateBucket(HnsBucket, multiVersion: false, hnsEnabled: true);
             Client.UploadObject(name, SmallThenLargeObject, "text/plain", new MemoryStream(LargeContent));
             Client.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent));
             foreach (var nameoObjectsInFolder in s_objectsInFolders)
             {
                 Client.UploadObject(name, nameoObjectsInFolder, "text/plain", new MemoryStream(SmallContent));
             }
-
-            SleepAfterBucketCreateDelete();
-            RegisterBucketToDelete(name);
-            return bucket;
         }
 
         internal string GenerateBucketName() => IdGenerator.FromGuid(prefix: BucketPrefix, separator: "", maxLength: 63);
