@@ -44,7 +44,7 @@ public abstract partial class StorageClient
     /// Moves an object within a bucket with hierarchical namespace enabled. This method uses the
     /// <c>moveObject</c> underlying API operation for more flexibility and reliability.
     /// </summary>
-    /// <param name="sourceBucket">Name of the bucket containing the object you want to move. Must not be null.</param>
+    /// <param name="sourceBucket">Name of the bucket containing the object to move. Must not be null.</param>
     /// <param name="sourceObjectName">The name of the source object to move within the bucket. Must not be null.</param>
     /// <param name="destinationObjectName">The name of the new object to move within the bucket. Must not be null.</param>
     /// <param name="options">Additional options for the move operation. May be null, in which case appropriate
