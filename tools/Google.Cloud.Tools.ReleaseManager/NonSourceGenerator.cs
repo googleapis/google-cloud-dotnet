@@ -149,11 +149,6 @@ internal sealed class NonSourceGenerator
     /// </summary>
     private static readonly HashSet<string> PermittedPatchDefaultDependencies = new() { ConfigureAwaitAnalyzer };
 
-    private static readonly IReadOnlyList<string> RenovateIgnorePaths = new List<string>
-        {
-            "issues/**"
-        }.AsReadOnly();
-
     public ApiCatalog ApiCatalog { get; }
     public RootLayout RootLayout { get; }
 
@@ -188,6 +183,11 @@ internal sealed class NonSourceGenerator
     /// <param name="api"></param>
     internal void GenerateApiFiles(ApiMetadata api)
     {
+        // If we haven't generated any source code yet, don't generate project files etc either.
+        if (!api.HasSource(RootLayout))
+        {
+            return;
+        }
         HashSet<string> apiNames = ApiCatalog.CreateIdHashSet();
 
         GenerateProjects(api, apiNames);
@@ -663,6 +663,7 @@ api-name: {api.Id}
         };
 
         var ambiguousDescriptions = ApiCatalog.Apis
+            .Where(api => api.HasSource(RootLayout))
             .Select(api => api.EffectiveListingDescription)
             .GroupBy(description => description)
             .Where(g => g.Count() > 1)
@@ -672,7 +673,7 @@ api-name: {api.Id}
         {
             // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
             // We can cross that bridge when we come to it.
-            if (api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00" || api.ReleaseLevelOverride == "unreleased")
+            if (!api.HasSource(RootLayout) || api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00" || api.ReleaseLevelOverride == "unreleased")
             {
                 continue;
             }
@@ -713,7 +714,7 @@ api-name: {api.Id}
         string json = File.ReadAllText(templatePath);
         JObject jobj = JObject.Parse(json);
         JArray ignorePaths = (JArray) jobj["ignorePaths"];
-        foreach (var api in ApiCatalog.Apis)
+        foreach (var api in ApiCatalog.Apis.Where(api => api.HasSource(RootLayout)))
         {
             ignorePaths.Add($"apis/{api.Id}/{api.Id}/**");
         }
