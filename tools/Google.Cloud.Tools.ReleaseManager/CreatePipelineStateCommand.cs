@@ -25,8 +25,9 @@ namespace Google.Cloud.Tools.ReleaseManager;
 
 /// <summary>
 /// Temporary command to create a pipeline-state.json file for the new production pipeline,
-/// based on what's already in the API catalog. This command can be removed when the production pipeline
-/// is up and running, as that will maintain the state itself.
+/// based on what's already in the API catalog and the existing pipeline-state.json.
+/// This command can be removed when the production pipeline is up and running,
+/// as that will maintain the state itself.
 /// </summary>
 public sealed class CreatePipelineStateCommand : CommandBase
 {
@@ -72,6 +73,9 @@ public sealed class CreatePipelineStateCommand : CommandBase
         {
             AddPackageGroupLibrary(packageGroup);
         }
+
+        RespectPreviousOrdering();
+
         // Avoid serializing empty lists. There may be a better way of doing this...
         foreach (var library in state.Libraries)
         {
@@ -189,6 +193,17 @@ public sealed class CreatePipelineStateCommand : CommandBase
 
         string FormatTimestamp(DateTimeOffset? timestamp) =>
             timestamp is null ? null : Timestamp.FromDateTimeOffset(timestamp.Value).ToString().Trim('"');
+
+        void RespectPreviousOrdering()
+        {
+            var previousStateLibraryIds = previousState.Libraries.Select(lib => lib.Id).ToList();
+
+            var libraries = state.Libraries.ToList();
+            state.Libraries.Clear();
+            // The cast to uint turns -1 into uint.MaxValue, so we end up with any libraries not in the previous state
+            // at the end.
+            state.Libraries.AddRange(libraries.OrderBy(lib => (uint) previousStateLibraryIds.IndexOf(lib.Id)));
+        }
     }
 
     private static Commit GetCommitForPath(IEnumerable<Commit> commits, string path)
