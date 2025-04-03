@@ -3944,6 +3944,7 @@
             "id": "Google.Geo.Weather.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "2ed6e92d8ee781ce896b57032160eee04987b1f1",
             "apiPaths": [
                 "google/maps/weather/v1"
             ],

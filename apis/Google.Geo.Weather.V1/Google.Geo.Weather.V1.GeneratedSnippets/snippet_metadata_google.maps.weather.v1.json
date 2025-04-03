@@ -1,0 +1,402 @@
+{
+  "clientLibrary": {
+    "name": "Google.Geo.Weather.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.weather.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupCurrentConditions_sync",
+      "title": "LookupCurrentConditionsRequestObject",
+      "description": "Snippet for LookupCurrentConditions",
+      "file": "WeatherClient.LookupCurrentConditionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupCurrentConditions",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupCurrentConditions",
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupCurrentConditionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Geo.Weather.V1.LookupCurrentConditionsResponse",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupCurrentConditions",
+          "fullName": "google.maps.weather.v1.Weather.LookupCurrentConditions",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupCurrentConditions_async",
+      "title": "LookupCurrentConditionsRequestObjectAsync",
+      "description": "Snippet for LookupCurrentConditionsAsync",
+      "file": "WeatherClient.LookupCurrentConditionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupCurrentConditionsAsync",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupCurrentConditionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupCurrentConditionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Geo.Weather.V1.LookupCurrentConditionsResponse>",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupCurrentConditions",
+          "fullName": "google.maps.weather.v1.Weather.LookupCurrentConditions",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupForecastHours_sync",
+      "title": "LookupForecastHoursRequestObject",
+      "description": "Snippet for LookupForecastHours",
+      "file": "WeatherClient.LookupForecastHoursRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupForecastHours",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupForecastHours",
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupForecastHoursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Geo.Weather.V1.LookupForecastHoursResponse, Google.Geo.Weather.V1.ForecastHour>",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupForecastHours",
+          "fullName": "google.maps.weather.v1.Weather.LookupForecastHours",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupForecastHours_async",
+      "title": "LookupForecastHoursRequestObjectAsync",
+      "description": "Snippet for LookupForecastHoursAsync",
+      "file": "WeatherClient.LookupForecastHoursRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupForecastHoursAsync",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupForecastHoursAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupForecastHoursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Geo.Weather.V1.LookupForecastHoursResponse, Google.Geo.Weather.V1.ForecastHour>",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupForecastHours",
+          "fullName": "google.maps.weather.v1.Weather.LookupForecastHours",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupForecastDays_sync",
+      "title": "LookupForecastDaysRequestObject",
+      "description": "Snippet for LookupForecastDays",
+      "file": "WeatherClient.LookupForecastDaysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupForecastDays",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupForecastDays",
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupForecastDaysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Geo.Weather.V1.LookupForecastDaysResponse, Google.Geo.Weather.V1.ForecastDay>",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupForecastDays",
+          "fullName": "google.maps.weather.v1.Weather.LookupForecastDays",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupForecastDays_async",
+      "title": "LookupForecastDaysRequestObjectAsync",
+      "description": "Snippet for LookupForecastDaysAsync",
+      "file": "WeatherClient.LookupForecastDaysRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupForecastDaysAsync",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupForecastDaysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupForecastDaysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Geo.Weather.V1.LookupForecastDaysResponse, Google.Geo.Weather.V1.ForecastDay>",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupForecastDays",
+          "fullName": "google.maps.weather.v1.Weather.LookupForecastDays",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupHistoryHours_sync",
+      "title": "LookupHistoryHoursRequestObject",
+      "description": "Snippet for LookupHistoryHours",
+      "file": "WeatherClient.LookupHistoryHoursRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupHistoryHours",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupHistoryHours",
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupHistoryHoursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Geo.Weather.V1.LookupHistoryHoursResponse, Google.Geo.Weather.V1.HistoryHour>",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupHistoryHours",
+          "fullName": "google.maps.weather.v1.Weather.LookupHistoryHours",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "weather_v1_generated_Weather_LookupHistoryHours_async",
+      "title": "LookupHistoryHoursRequestObjectAsync",
+      "description": "Snippet for LookupHistoryHoursAsync",
+      "file": "WeatherClient.LookupHistoryHoursRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupHistoryHoursAsync",
+        "fullName": "Google.Geo.Weather.V1.WeatherClient.LookupHistoryHoursAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Geo.Weather.V1.LookupHistoryHoursRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Geo.Weather.V1.LookupHistoryHoursResponse, Google.Geo.Weather.V1.HistoryHour>",
+        "client": {
+          "shortName": "WeatherClient",
+          "fullName": "Google.Geo.Weather.V1.WeatherClient"
+        },
+        "method": {
+          "shortName": "LookupHistoryHours",
+          "fullName": "google.maps.weather.v1.Weather.LookupHistoryHours",
+          "service": {
+            "shortName": "Weather",
+            "fullName": "google.maps.weather.v1.Weather"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
