@@ -1175,7 +1175,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-17T18:48:29Z",
-            "lastGeneratedCommit": "9ce039786e31b32e1e9287bf87d649450d54ec55",
+            "lastGeneratedCommit": "f2b8c48977996c1de45535e1dd4332a233e26177",
             "apiPaths": [
                 "google/cloud/dataplex/v1"
             ],
