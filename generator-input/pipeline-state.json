@@ -3854,7 +3854,7 @@
             "currentVersion": "3.8.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-04-03T08:12:00Z",
+            "releaseTimestamp": "2025-04-03T07:13:23Z",
             "lastGeneratedCommit": "7a92b96c2a981477d3be9fe71d24cbdd5cc5c5d5",
             "apiPaths": [
                 "google/devtools/containeranalysis/v1",
