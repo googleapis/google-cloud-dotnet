@@ -212,22 +212,6 @@ namespace Google.Cloud.Spanner.Data
             Open(GetTransactionEnlister());
         }
 
-        private void Open(Action transactionEnlister)
-        {
-            Func<Task> taskRunner = () => OpenAsyncImpl(transactionEnlister, CancellationToken.None);
-
-            // This is slightly annoying, but hard to get round: most of our timeouts use Expiration, but this is more of
-            // a BCL-oriented timeout.
-            int timeoutSeconds = Builder.Timeout;
-            TimeSpan timeout = Builder.AllowImmediateTimeouts && timeoutSeconds == 0
-                ? TimeSpan.FromMilliseconds(-1)
-                : TimeSpan.FromSeconds(timeoutSeconds);
-            if (!Task.Run(taskRunner).WaitWithUnwrappedExceptions(timeout))
-            {
-                throw new SpannerException(ErrorCode.DeadlineExceeded, "Timed out opening connection");
-            }
-        }
-
         /// <inheritdoc />
         public override Task OpenAsync(CancellationToken cancellationToken) => OpenAsyncImpl(GetTransactionEnlister(), cancellationToken);
 
@@ -336,6 +320,22 @@ namespace Google.Cloud.Spanner.Data
         [Obsolete($"Use the {nameof(OpenAsync)} overload that takes {nameof(SpannerTransactionCreationOptions)} and {nameof(SpannerTransactionOptions)} parameters instead.")]
         public Task OpenAsReadOnlyAsync(TimestampBound timestampBound = null, CancellationToken cancellationToken = default) =>
             OpenAsync(SpannerTransactionCreationOptions.ForTimestampBoundReadOnly(timestampBound), options: null, cancellationToken);
+
+        private void Open(Action transactionEnlister)
+        {
+            Func<Task> taskRunner = () => OpenAsyncImpl(transactionEnlister, CancellationToken.None);
+
+            // This is slightly annoying, but hard to get round: most of our timeouts use Expiration, but this is more of
+            // a BCL-oriented timeout.
+            int timeoutSeconds = Builder.Timeout;
+            TimeSpan timeout = Builder.AllowImmediateTimeouts && timeoutSeconds == 0
+                ? TimeSpan.FromMilliseconds(-1)
+                : TimeSpan.FromSeconds(timeoutSeconds);
+            if (!Task.Run(taskRunner).WaitWithUnwrappedExceptions(timeout))
+            {
+                throw new SpannerException(ErrorCode.DeadlineExceeded, "Timed out opening connection");
+            }
+        }
 
         /// <summary>
         /// Opens the connection, which involves acquiring a SessionPool,
