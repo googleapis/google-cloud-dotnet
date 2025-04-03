@@ -199,10 +199,14 @@ namespace Google.Cloud.Dataplex.V1 {
             "EhwKGEdMT1NTQVJZX0NBVEVHT1JZX0NSRUFURRAEEhwKGEdMT1NTQVJZX0NB",
             "VEVHT1JZX1VQREFURRAFEhwKGEdMT1NTQVJZX0NBVEVHT1JZX0RFTEVURRAG",
             "EhgKFEdMT1NTQVJZX1RFUk1fQ1JFQVRFEAcSGAoUR0xPU1NBUllfVEVSTV9V",
-            "UERBVEUQCBIYChRHTE9TU0FSWV9URVJNX0RFTEVURRAJQmUKHGNvbS5nb29n",
-            "bGUuY2xvdWQuZGF0YXBsZXgudjFCCUxvZ3NQcm90b1ABWjhjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhw",
-            "YmIGcHJvdG8z"));
+            "UERBVEUQCBIYChRHTE9TU0FSWV9URVJNX0RFTEVURRAJItIBCg5FbnRyeUxp",
+            "bmtFdmVudBIPCgdtZXNzYWdlGAEgASgJEkYKCmV2ZW50X3R5cGUYAiABKA4y",
+            "Mi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRW50cnlMaW5rRXZlbnQuRXZl",
+            "bnRUeXBlEhAKCHJlc291cmNlGAMgASgJIlUKCUV2ZW50VHlwZRIaChZFVkVO",
+            "VF9UWVBFX1VOU1BFQ0lGSUVEEAASFQoRRU5UUllfTElOS19DUkVBVEUQARIV",
+            "ChFFTlRSWV9MSU5LX0RFTEVURRACQmUKHGNvbS5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjFCCUxvZ3NQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2Rh",
+            "dGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -220,7 +224,8 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataQualityAppliedConfigs), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.DataQualityAppliedConfigs.Parser, new[]{ "SamplingPercent", "RowFilterApplied" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult.Parser, new[]{ "BigqueryExportResult" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult.Types.BigQueryExportResult), global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult.Types.BigQueryExportResult.Parser, new[]{ "State", "Message" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataScanEvent.Types.PostScanActionsResult.Types.BigQueryExportResult.Types.State) }, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult), global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Parser, new[]{ "JobId", "DataSource", "Column", "RuleName", "RuleType", "EvalutionType", "RuleDimension", "ThresholdPercent", "Result", "EvaluatedRowCount", "PassedRowCount", "NullRowCount", "AssertionRowCount" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.RuleType), typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.EvaluationType), typeof(global::Google.Cloud.Dataplex.V1.DataQualityScanRuleResult.Types.Result) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.BusinessGlossaryEvent), global::Google.Cloud.Dataplex.V1.BusinessGlossaryEvent.Parser, new[]{ "Message", "EventType", "Resource" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.BusinessGlossaryEvent.Types.EventType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.BusinessGlossaryEvent), global::Google.Cloud.Dataplex.V1.BusinessGlossaryEvent.Parser, new[]{ "Message", "EventType", "Resource" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.BusinessGlossaryEvent.Types.EventType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.EntryLinkEvent), global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Parser, new[]{ "Message", "EventType", "Resource" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType) }, null, null)
           }));
     }
     #endregion
@@ -8290,6 +8295,308 @@ namespace Google.Cloud.Dataplex.V1 {
         /// Glossary term delete event.
         /// </summary>
         [pbr::OriginalName("GLOSSARY_TERM_DELETE")] GlossaryTermDelete = 9,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Payload associated with Entry related log events.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EntryLinkEvent : pb::IMessage<EntryLinkEvent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EntryLinkEvent> _parser = new pb::MessageParser<EntryLinkEvent>(() => new EntryLinkEvent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EntryLinkEvent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.LogsReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntryLinkEvent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntryLinkEvent(EntryLinkEvent other) : this() {
+      message_ = other.message_;
+      eventType_ = other.eventType_;
+      resource_ = other.resource_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EntryLinkEvent Clone() {
+      return new EntryLinkEvent(this);
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 1;
+    private string message_ = "";
+    /// <summary>
+    /// The log message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "event_type" field.</summary>
+    public const int EventTypeFieldNumber = 2;
+    private global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType eventType_ = global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType.Unspecified;
+    /// <summary>
+    /// The type of the event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType EventType {
+      get { return eventType_; }
+      set {
+        eventType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "resource" field.</summary>
+    public const int ResourceFieldNumber = 3;
+    private string resource_ = "";
+    /// <summary>
+    /// Name of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Resource {
+      get { return resource_; }
+      set {
+        resource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EntryLinkEvent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EntryLinkEvent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Message != other.Message) return false;
+      if (EventType != other.EventType) return false;
+      if (Resource != other.Resource) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (EventType != global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType.Unspecified) hash ^= EventType.GetHashCode();
+      if (Resource.Length != 0) hash ^= Resource.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (EventType != global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) EventType);
+      }
+      if (Resource.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Resource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Message.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Message);
+      }
+      if (EventType != global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) EventType);
+      }
+      if (Resource.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Resource);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (EventType != global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventType);
+      }
+      if (Resource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Resource);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EntryLinkEvent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      if (other.EventType != global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType.Unspecified) {
+        EventType = other.EventType;
+      }
+      if (other.Resource.Length != 0) {
+        Resource = other.Resource;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+          case 16: {
+            EventType = (global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Resource = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Message = input.ReadString();
+            break;
+          }
+          case 16: {
+            EventType = (global::Google.Cloud.Dataplex.V1.EntryLinkEvent.Types.EventType) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Resource = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the EntryLinkEvent message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Type of entry link log event.
+      /// </summary>
+      public enum EventType {
+        /// <summary>
+        /// An unspecified event type.
+        /// </summary>
+        [pbr::OriginalName("EVENT_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// EntryLink create event.
+        /// </summary>
+        [pbr::OriginalName("ENTRY_LINK_CREATE")] EntryLinkCreate = 1,
+        /// <summary>
+        /// EntryLink delete event.
+        /// </summary>
+        [pbr::OriginalName("ENTRY_LINK_DELETE")] EntryLinkDelete = 2,
       }
 
     }
