@@ -121,7 +121,7 @@ namespace Google.Cloud.WebRisk.V1 {
             "RUVSSU5HEAISFQoRVU5XQU5URURfU09GVFdBUkUQAxIoCiRTT0NJQUxfRU5H",
             "SU5FRVJJTkdfRVhURU5ERURfQ09WRVJBR0UQBCpGCg9Db21wcmVzc2lvblR5",
             "cGUSIAocQ09NUFJFU1NJT05fVFlQRV9VTlNQRUNJRklFRBAAEgcKA1JBVxAB",
-            "EggKBFJJQ0UQAjLNBwoOV2ViUmlza1NlcnZpY2US0wEKFUNvbXB1dGVUaHJl",
+            "EggKBFJJQ0UQAjLhBwoOV2ViUmlza1NlcnZpY2US0wEKFUNvbXB1dGVUaHJl",
             "YXRMaXN0RGlmZhI1Lmdvb2dsZS5jbG91ZC53ZWJyaXNrLnYxLkNvbXB1dGVU",
             "aHJlYXRMaXN0RGlmZlJlcXVlc3QaNi5nb29nbGUuY2xvdWQud2Vicmlzay52",
             "MS5Db21wdXRlVGhyZWF0TGlzdERpZmZSZXNwb25zZSJL2kEldGhyZWF0X3R5",
@@ -137,17 +137,17 @@ namespace Google.Cloud.WebRisk.V1 {
             "LmNsb3VkLndlYnJpc2sudjEuQ3JlYXRlU3VibWlzc2lvblJlcXVlc3QaIy5n",
             "b29nbGUuY2xvdWQud2Vicmlzay52MS5TdWJtaXNzaW9uIkvaQRFwYXJlbnQs",
             "c3VibWlzc2lvboLT5JMCMSIjL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vc3Vi",
-            "bWlzc2lvbnM6CnN1Ym1pc3Npb24SpwEKCVN1Ym1pdFVyaRIpLmdvb2dsZS5j",
+            "bWlzc2lvbnM6CnN1Ym1pc3Npb24SuwEKCVN1Ym1pdFVyaRIpLmdvb2dsZS5j",
             "bG91ZC53ZWJyaXNrLnYxLlN1Ym1pdFVyaVJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIlDKQR8KClN1Ym1pc3Npb24SEVN1Ym1pdFVy",
-            "aU1ldGFkYXRhgtPkkwIoIiMvdjEve3BhcmVudD1wcm9qZWN0cy8qfS91cmlz",
-            "OnN1Ym1pdDoBKhpKykEWd2Vicmlzay5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CtgEK",
-            "FWNvbS5nb29nbGUud2Vicmlzay52MUIMV2ViUmlza1Byb3RvUAFaNWNsb3Vk",
-            "Lmdvb2dsZS5jb20vZ28vd2Vicmlzay9hcGl2MS93ZWJyaXNrcGI7d2Vicmlz",
-            "a3BiogIER0NXUqoCF0dvb2dsZS5DbG91ZC5XZWJSaXNrLlYxygIXR29vZ2xl",
-            "XENsb3VkXFdlYlJpc2tcVjHqAhpHb29nbGU6OkNsb3VkOjpXZWJSaXNrOjpW",
-            "MWIGcHJvdG8z"));
+            "Z3J1bm5pbmcuT3BlcmF0aW9uImTKQR8KClN1Ym1pc3Npb24SEVN1Ym1pdFVy",
+            "aU1ldGFkYXRh2kERcGFyZW50LHN1Ym1pc3Npb26C0+STAigiIy92MS97cGFy",
+            "ZW50PXByb2plY3RzLyp9L3VyaXM6c3VibWl0OgEqGkrKQRZ3ZWJyaXNrLmdv",
+            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jbG91ZC1wbGF0Zm9ybUK2AQoVY29tLmdvb2dsZS53ZWJyaXNrLnYxQgxX",
+            "ZWJSaXNrUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby93ZWJyaXNrL2Fw",
+            "aXYxL3dlYnJpc2twYjt3ZWJyaXNrcGKiAgRHQ1dSqgIXR29vZ2xlLkNsb3Vk",
+            "LldlYlJpc2suVjHKAhdHb29nbGVcQ2xvdWRcV2ViUmlza1xWMeoCGkdvb2ds",
+            "ZTo6Q2xvdWQ6OldlYlJpc2s6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.WebRisk.V1.ThreatType), typeof(global::Google.Cloud.WebRisk.V1.CompressionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -4368,7 +4368,6 @@ namespace Google.Cloud.WebRisk.V1 {
   /// <summary>
   /// Context about the submission including the type of abuse found on the URI and
   /// supporting details.
-  /// option (google.api.message_visibility).restriction = "TRUSTED_TESTER";
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ThreatInfo : pb::IMessage<ThreatInfo>
@@ -6120,7 +6119,6 @@ namespace Google.Cloud.WebRisk.V1 {
 
   /// <summary>
   /// Metadata for the Submit URI long-running operation.
-  /// option (google.api.message_visibility).restriction = "TRUSTED_TESTER";
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SubmitUriMetadata : pb::IMessage<SubmitUriMetadata>
