@@ -1,0 +1,30 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.maps.aerialview.v1",
+  "libraryPackage": "Google.Maps.AerialView.V1",
+  "services": {
+    "AerialView": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AerialViewClient",
+          "rpcs": {
+            "LookupVideo": {
+              "methods": [
+                "LookupVideo",
+                "LookupVideoAsync"
+              ]
+            },
+            "RenderVideo": {
+              "methods": [
+                "RenderVideo",
+                "RenderVideoAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
