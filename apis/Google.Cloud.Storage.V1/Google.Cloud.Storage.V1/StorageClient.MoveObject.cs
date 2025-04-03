@@ -55,7 +55,7 @@ public abstract partial class StorageClient
     public virtual Task<Object> MoveObjectAsync(
         string sourceBucket,
         string sourceObjectName,
-        string destinationObjectName = null,
+        string destinationObjectName,
         MoveObjectOptions options = null,
         CancellationToken cancellationToken = default)
     {
