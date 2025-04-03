@@ -46,7 +46,7 @@ public abstract partial class StorageClient
     /// </summary>
     /// <param name="sourceBucket">Name of the bucket containing the object to move. Must not be null.</param>
     /// <param name="sourceObjectName">The name of the source object to move within the bucket. Must not be null.</param>
-    /// <param name="destinationObjectName">The name of the new object to move within the bucket. Must not be null.</param>
+    /// <param name="destinationObjectName">The name of the new object to move to within the bucket. Must not be null.</param>
     /// <param name="options">Additional options for the move operation. May be null, in which case appropriate
     /// defaults will be used.</param>
     /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
