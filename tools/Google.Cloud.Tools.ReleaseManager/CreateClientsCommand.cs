@@ -42,6 +42,12 @@ public class CreateClientsCommand : CommandBase
             Console.WriteLine($"{id} is not a GAPIC-generated API; skipping client creation test.");
             return 0;
         }
+        var apiLayout = RootLayout.CreateRepositoryApiLayout(id);
+        if (!Directory.Exists(apiLayout.SourceDirectory))
+        {
+            Console.WriteLine($"{id} has no source directory; skipping client creation test.");
+            return 0;
+        }
 
         var assembly = PublishAndLoadAssembly(id);
         CreateClients(assembly, id);
