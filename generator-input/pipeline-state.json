@@ -3884,6 +3884,7 @@
             "id": "Google.Cloud.Redis.Cluster.V1Beta1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
             "apiPaths": [
                 "google/cloud/redis/cluster/v1beta1"
             ],
