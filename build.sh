@@ -77,12 +77,7 @@ then
     do
       if [[ ! "$api" =~ $apiregex ]]
       then
-        if [[ -d "apis/$api" ]]
-        then
-          filteredapis+=($api)
-        else
-          echo "Skipping missing API $api; recently deleted?"
-        fi
+        filteredapis+=($api)
       fi
     done
   else
@@ -90,12 +85,7 @@ then
     do    
       if [[ "$api" =~ $apiregex ]]
       then
-        if [[ -d "apis/$api" ]]
-        then
-          filteredapis+=($api)
-        else
-          echo "Skipping missing API $api; recently deleted?"
-        fi
+        filteredapis+=($api)
       fi
     done
   fi
@@ -128,6 +118,12 @@ for api in ${apis[*]}
 do
   [[ -d "$api" ]] && apidir=$api || apidir=apis/$api
 
+  if [[ ! -d "$apidir" ]]
+  then
+    log_build_action "Skipping missing API $api; may be configured but not generated, or recently deleted"
+    continue
+  fi
+  
   log_build_action "Building $apidir"
   dotnet build -nologo -clp:NoSummary -v quiet -c Release $apidir
   
