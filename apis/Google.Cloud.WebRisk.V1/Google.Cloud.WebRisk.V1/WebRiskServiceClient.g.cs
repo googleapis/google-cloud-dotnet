@@ -936,6 +936,166 @@ namespace Google.Cloud.WebRisk.V1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Submission, SubmitUriMetadata>> PollOnceSubmitUriAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Submission, SubmitUriMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SubmitUriOperationsClient, callSettings);
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="submission">
+        /// Required. The submission that contains the URI to be scanned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Submission, SubmitUriMetadata> SubmitUri(string parent, Submission submission, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitUri(new SubmitUriRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Submission = gax::GaxPreconditions.CheckNotNull(submission, nameof(submission)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="submission">
+        /// Required. The submission that contains the URI to be scanned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Submission, SubmitUriMetadata>> SubmitUriAsync(string parent, Submission submission, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitUriAsync(new SubmitUriRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Submission = gax::GaxPreconditions.CheckNotNull(submission, nameof(submission)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="submission">
+        /// Required. The submission that contains the URI to be scanned.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Submission, SubmitUriMetadata>> SubmitUriAsync(string parent, Submission submission, st::CancellationToken cancellationToken) =>
+            SubmitUriAsync(parent, submission, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="submission">
+        /// Required. The submission that contains the URI to be scanned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Submission, SubmitUriMetadata> SubmitUri(gagr::ProjectName parent, Submission submission, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitUri(new SubmitUriRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Submission = gax::GaxPreconditions.CheckNotNull(submission, nameof(submission)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="submission">
+        /// Required. The submission that contains the URI to be scanned.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Submission, SubmitUriMetadata>> SubmitUriAsync(gagr::ProjectName parent, Submission submission, gaxgrpc::CallSettings callSettings = null) =>
+            SubmitUriAsync(new SubmitUriRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Submission = gax::GaxPreconditions.CheckNotNull(submission, nameof(submission)),
+            }, callSettings);
+
+        /// <summary>
+        /// Submits a URI suspected of containing malicious content to be reviewed.
+        /// Returns a google.longrunning.Operation which, once the review is complete,
+        /// is updated with its result. You can use the [Pub/Sub API]
+        /// (https://cloud.google.com/pubsub) to receive notifications for the returned
+        /// Operation. If the result verifies the existence of malicious content, the
+        /// site will be added to the [Google's Social Engineering lists]
+        /// (https://support.google.com/webmasters/answer/6350487/) in order to
+        /// protect users that could get exposed to this threat in the future. Only
+        /// allowlisted projects can use this method during Early Access. Please reach
+        /// out to Sales or your customer engineer to obtain access.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project that is making the submission. This
+        /// string is in the format "projects/{project_number}".
+        /// </param>
+        /// <param name="submission">
+        /// Required. The submission that contains the URI to be scanned.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Submission, SubmitUriMetadata>> SubmitUriAsync(gagr::ProjectName parent, Submission submission, st::CancellationToken cancellationToken) =>
+            SubmitUriAsync(parent, submission, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>WebRiskService client wrapper implementation, for convenient use.</summary>
