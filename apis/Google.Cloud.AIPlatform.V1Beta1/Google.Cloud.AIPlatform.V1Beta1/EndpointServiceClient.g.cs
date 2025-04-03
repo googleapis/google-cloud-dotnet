@@ -65,6 +65,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             UndeployModelOperationsSettings = existing.UndeployModelOperationsSettings.Clone();
             MutateDeployedModelSettings = existing.MutateDeployedModelSettings;
             MutateDeployedModelOperationsSettings = existing.MutateDeployedModelOperationsSettings.Clone();
+            SetPublisherModelConfigSettings = existing.SetPublisherModelConfigSettings;
+            SetPublisherModelConfigOperationsSettings = existing.SetPublisherModelConfigOperationsSettings.Clone();
+            FetchPublisherModelConfigSettings = existing.FetchPublisherModelConfigSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -288,6 +291,50 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EndpointServiceClient.SetPublisherModelConfig</c> and
+        /// <c>EndpointServiceClient.SetPublisherModelConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SetPublisherModelConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EndpointServiceClient.SetPublisherModelConfig</c> and
+        /// <c>EndpointServiceClient.SetPublisherModelConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings SetPublisherModelConfigOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EndpointServiceClient.FetchPublisherModelConfig</c> and
+        /// <c>EndpointServiceClient.FetchPublisherModelConfigAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchPublisherModelConfigSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2229,6 +2276,286 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>> MutateDeployedModelAsync(EndpointName endpoint, DeployedModel deployedModel, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             MutateDeployedModelAsync(endpoint, deployedModel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> SetPublisherModelConfig(SetPublisherModelConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>> SetPublisherModelConfigAsync(SetPublisherModelConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>> SetPublisherModelConfigAsync(SetPublisherModelConfigRequest request, st::CancellationToken cancellationToken) =>
+            SetPublisherModelConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>SetPublisherModelConfig</c>.</summary>
+        public virtual lro::OperationsClient SetPublisherModelConfigOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetPublisherModelConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> PollOnceSetPublisherModelConfig(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetPublisherModelConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>SetPublisherModelConfig</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>> PollOnceSetPublisherModelConfigAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), SetPublisherModelConfigOperationsClient, callSettings);
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="publisherModelConfig">
+        /// Required. The publisher model config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> SetPublisherModelConfig(string name, PublisherModelConfig publisherModelConfig, gaxgrpc::CallSettings callSettings = null) =>
+            SetPublisherModelConfig(new SetPublisherModelConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PublisherModelConfig = gax::GaxPreconditions.CheckNotNull(publisherModelConfig, nameof(publisherModelConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="publisherModelConfig">
+        /// Required. The publisher model config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>> SetPublisherModelConfigAsync(string name, PublisherModelConfig publisherModelConfig, gaxgrpc::CallSettings callSettings = null) =>
+            SetPublisherModelConfigAsync(new SetPublisherModelConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PublisherModelConfig = gax::GaxPreconditions.CheckNotNull(publisherModelConfig, nameof(publisherModelConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="publisherModelConfig">
+        /// Required. The publisher model config.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>> SetPublisherModelConfigAsync(string name, PublisherModelConfig publisherModelConfig, st::CancellationToken cancellationToken) =>
+            SetPublisherModelConfigAsync(name, publisherModelConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="publisherModelConfig">
+        /// Required. The publisher model config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> SetPublisherModelConfig(EndpointName name, PublisherModelConfig publisherModelConfig, gaxgrpc::CallSettings callSettings = null) =>
+            SetPublisherModelConfig(new SetPublisherModelConfigRequest
+            {
+                EndpointName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PublisherModelConfig = gax::GaxPreconditions.CheckNotNull(publisherModelConfig, nameof(publisherModelConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="publisherModelConfig">
+        /// Required. The publisher model config.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>> SetPublisherModelConfigAsync(EndpointName name, PublisherModelConfig publisherModelConfig, gaxgrpc::CallSettings callSettings = null) =>
+            SetPublisherModelConfigAsync(new SetPublisherModelConfigRequest
+            {
+                EndpointName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PublisherModelConfig = gax::GaxPreconditions.CheckNotNull(publisherModelConfig, nameof(publisherModelConfig)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="publisherModelConfig">
+        /// Required. The publisher model config.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>> SetPublisherModelConfigAsync(EndpointName name, PublisherModelConfig publisherModelConfig, st::CancellationToken cancellationToken) =>
+            SetPublisherModelConfigAsync(name, publisherModelConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelConfig FetchPublisherModelConfig(FetchPublisherModelConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelConfig> FetchPublisherModelConfigAsync(FetchPublisherModelConfigRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelConfig> FetchPublisherModelConfigAsync(FetchPublisherModelConfigRequest request, st::CancellationToken cancellationToken) =>
+            FetchPublisherModelConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelConfig FetchPublisherModelConfig(string name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchPublisherModelConfig(new FetchPublisherModelConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelConfig> FetchPublisherModelConfigAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchPublisherModelConfigAsync(new FetchPublisherModelConfigRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelConfig> FetchPublisherModelConfigAsync(string name, st::CancellationToken cancellationToken) =>
+            FetchPublisherModelConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PublisherModelConfig FetchPublisherModelConfig(EndpointName name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchPublisherModelConfig(new FetchPublisherModelConfigRequest
+            {
+                EndpointName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelConfig> FetchPublisherModelConfigAsync(EndpointName name, gaxgrpc::CallSettings callSettings = null) =>
+            FetchPublisherModelConfigAsync(new FetchPublisherModelConfigRequest
+            {
+                EndpointName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the publisher model, in the format of
+        /// `projects/{project}/locations/{location}/publishers/{publisher}/models/{model}`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PublisherModelConfig> FetchPublisherModelConfigAsync(EndpointName name, st::CancellationToken cancellationToken) =>
+            FetchPublisherModelConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>EndpointService client wrapper implementation, for convenient use.</summary>
@@ -2255,6 +2582,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<MutateDeployedModelRequest, lro::Operation> _callMutateDeployedModel;
 
+        private readonly gaxgrpc::ApiCall<SetPublisherModelConfigRequest, lro::Operation> _callSetPublisherModelConfig;
+
+        private readonly gaxgrpc::ApiCall<FetchPublisherModelConfigRequest, PublisherModelConfig> _callFetchPublisherModelConfig;
+
         /// <summary>
         /// Constructs a client wrapper for the EndpointService service, with the specified gRPC client and settings.
         /// </summary>
@@ -2276,6 +2607,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             DeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployModelOperationsSettings, logger);
             UndeployModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployModelOperationsSettings, logger);
             MutateDeployedModelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MutateDeployedModelOperationsSettings, logger);
+            SetPublisherModelConfigOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.SetPublisherModelConfigOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callCreateEndpoint = clientHelper.BuildApiCall<CreateEndpointRequest, lro::Operation>("CreateEndpoint", grpcClient.CreateEndpointAsync, grpcClient.CreateEndpoint, effectiveSettings.CreateEndpointSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -2305,6 +2637,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callMutateDeployedModel = clientHelper.BuildApiCall<MutateDeployedModelRequest, lro::Operation>("MutateDeployedModel", grpcClient.MutateDeployedModelAsync, grpcClient.MutateDeployedModel, effectiveSettings.MutateDeployedModelSettings).WithGoogleRequestParam("endpoint", request => request.Endpoint);
             Modify_ApiCall(ref _callMutateDeployedModel);
             Modify_MutateDeployedModelApiCall(ref _callMutateDeployedModel);
+            _callSetPublisherModelConfig = clientHelper.BuildApiCall<SetPublisherModelConfigRequest, lro::Operation>("SetPublisherModelConfig", grpcClient.SetPublisherModelConfigAsync, grpcClient.SetPublisherModelConfig, effectiveSettings.SetPublisherModelConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callSetPublisherModelConfig);
+            Modify_SetPublisherModelConfigApiCall(ref _callSetPublisherModelConfig);
+            _callFetchPublisherModelConfig = clientHelper.BuildApiCall<FetchPublisherModelConfigRequest, PublisherModelConfig>("FetchPublisherModelConfig", grpcClient.FetchPublisherModelConfigAsync, grpcClient.FetchPublisherModelConfig, effectiveSettings.FetchPublisherModelConfigSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFetchPublisherModelConfig);
+            Modify_FetchPublisherModelConfigApiCall(ref _callFetchPublisherModelConfig);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2327,6 +2665,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_UndeployModelApiCall(ref gaxgrpc::ApiCall<UndeployModelRequest, lro::Operation> call);
 
         partial void Modify_MutateDeployedModelApiCall(ref gaxgrpc::ApiCall<MutateDeployedModelRequest, lro::Operation> call);
+
+        partial void Modify_SetPublisherModelConfigApiCall(ref gaxgrpc::ApiCall<SetPublisherModelConfigRequest, lro::Operation> call);
+
+        partial void Modify_FetchPublisherModelConfigApiCall(ref gaxgrpc::ApiCall<FetchPublisherModelConfigRequest, PublisherModelConfig> call);
 
         partial void OnConstruction(EndpointService.EndpointServiceClient grpcClient, EndpointServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2356,6 +2698,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_UndeployModelRequest(ref UndeployModelRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MutateDeployedModelRequest(ref MutateDeployedModelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SetPublisherModelConfigRequest(ref SetPublisherModelConfigRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchPublisherModelConfigRequest(ref FetchPublisherModelConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateEndpoint</c>.</summary>
         public override lro::OperationsClient CreateEndpointOperationsClient { get; }
@@ -2597,6 +2943,59 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_MutateDeployedModelRequest(ref request, ref callSettings);
             return new lro::Operation<MutateDeployedModelResponse, MutateDeployedModelOperationMetadata>(await _callMutateDeployedModel.Async(request, callSettings).ConfigureAwait(false), MutateDeployedModelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>SetPublisherModelConfig</c>.</summary>
+        public override lro::OperationsClient SetPublisherModelConfigOperationsClient { get; }
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> SetPublisherModelConfig(SetPublisherModelConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetPublisherModelConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>(_callSetPublisherModelConfig.Sync(request, callSettings), SetPublisherModelConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Sets (creates or updates) configs of publisher models. For example, sets
+        /// the request/response logging config.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>> SetPublisherModelConfigAsync(SetPublisherModelConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SetPublisherModelConfigRequest(ref request, ref callSettings);
+            return new lro::Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata>(await _callSetPublisherModelConfig.Async(request, callSettings).ConfigureAwait(false), SetPublisherModelConfigOperationsClient);
+        }
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PublisherModelConfig FetchPublisherModelConfig(FetchPublisherModelConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchPublisherModelConfigRequest(ref request, ref callSettings);
+            return _callFetchPublisherModelConfig.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Fetches the configs of publisher models.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PublisherModelConfig> FetchPublisherModelConfigAsync(FetchPublisherModelConfigRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchPublisherModelConfigRequest(ref request, ref callSettings);
+            return _callFetchPublisherModelConfig.Async(request, callSettings);
         }
     }
 

@@ -87,6 +87,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.UndeployModelRequest> __Marshaller_google_cloud_aiplatform_v1beta1_UndeployModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.UndeployModelRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.MutateDeployedModelRequest> __Marshaller_google_cloud_aiplatform_v1beta1_MutateDeployedModelRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.MutateDeployedModelRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest> __Marshaller_google_cloud_aiplatform_v1beta1_SetPublisherModelConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest> __Marshaller_google_cloud_aiplatform_v1beta1_FetchPublisherModelConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig> __Marshaller_google_cloud_aiplatform_v1beta1_PublisherModelConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateEndpointRequest, global::Google.LongRunning.Operation> __Method_CreateEndpoint = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.CreateEndpointRequest, global::Google.LongRunning.Operation>(
@@ -159,6 +165,22 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         "MutateDeployedModel",
         __Marshaller_google_cloud_aiplatform_v1beta1_MutateDeployedModelRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest, global::Google.LongRunning.Operation> __Method_SetPublisherModelConfig = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetPublisherModelConfig",
+        __Marshaller_google_cloud_aiplatform_v1beta1_SetPublisherModelConfigRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig> __Method_FetchPublisherModelConfig = new grpc::Method<global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FetchPublisherModelConfig",
+        __Marshaller_google_cloud_aiplatform_v1beta1_FetchPublisherModelConfigRequest,
+        __Marshaller_google_cloud_aiplatform_v1beta1_PublisherModelConfig);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -278,6 +300,31 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> MutateDeployedModel(global::Google.Cloud.AIPlatform.V1Beta1.MutateDeployedModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Sets (creates or updates) configs of publisher models. For example, sets
+      /// the request/response logging config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> SetPublisherModelConfig(global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Fetches the configs of publisher models.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig> FetchPublisherModelConfig(global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -759,6 +806,106 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_MutateDeployedModel, null, options, request);
       }
+      /// <summary>
+      /// Sets (creates or updates) configs of publisher models. For example, sets
+      /// the request/response logging config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SetPublisherModelConfig(global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetPublisherModelConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets (creates or updates) configs of publisher models. For example, sets
+      /// the request/response logging config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation SetPublisherModelConfig(global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetPublisherModelConfig, null, options, request);
+      }
+      /// <summary>
+      /// Sets (creates or updates) configs of publisher models. For example, sets
+      /// the request/response logging config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetPublisherModelConfigAsync(global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetPublisherModelConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets (creates or updates) configs of publisher models. For example, sets
+      /// the request/response logging config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> SetPublisherModelConfigAsync(global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetPublisherModelConfig, null, options, request);
+      }
+      /// <summary>
+      /// Fetches the configs of publisher models.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig FetchPublisherModelConfig(global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchPublisherModelConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches the configs of publisher models.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig FetchPublisherModelConfig(global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FetchPublisherModelConfig, null, options, request);
+      }
+      /// <summary>
+      /// Fetches the configs of publisher models.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig> FetchPublisherModelConfigAsync(global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchPublisherModelConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Fetches the configs of publisher models.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig> FetchPublisherModelConfigAsync(global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FetchPublisherModelConfig, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EndpointServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -781,7 +928,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           .AddMethod(__Method_DeleteEndpoint, serviceImpl.DeleteEndpoint)
           .AddMethod(__Method_DeployModel, serviceImpl.DeployModel)
           .AddMethod(__Method_UndeployModel, serviceImpl.UndeployModel)
-          .AddMethod(__Method_MutateDeployedModel, serviceImpl.MutateDeployedModel).Build();
+          .AddMethod(__Method_MutateDeployedModel, serviceImpl.MutateDeployedModel)
+          .AddMethod(__Method_SetPublisherModelConfig, serviceImpl.SetPublisherModelConfig)
+          .AddMethod(__Method_FetchPublisherModelConfig, serviceImpl.FetchPublisherModelConfig).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -800,6 +949,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       serviceBinder.AddMethod(__Method_DeployModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.DeployModelRequest, global::Google.LongRunning.Operation>(serviceImpl.DeployModel));
       serviceBinder.AddMethod(__Method_UndeployModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.UndeployModelRequest, global::Google.LongRunning.Operation>(serviceImpl.UndeployModel));
       serviceBinder.AddMethod(__Method_MutateDeployedModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.MutateDeployedModelRequest, global::Google.LongRunning.Operation>(serviceImpl.MutateDeployedModel));
+      serviceBinder.AddMethod(__Method_SetPublisherModelConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest, global::Google.LongRunning.Operation>(serviceImpl.SetPublisherModelConfig));
+      serviceBinder.AddMethod(__Method_FetchPublisherModelConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest, global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig>(serviceImpl.FetchPublisherModelConfig));
     }
 
   }

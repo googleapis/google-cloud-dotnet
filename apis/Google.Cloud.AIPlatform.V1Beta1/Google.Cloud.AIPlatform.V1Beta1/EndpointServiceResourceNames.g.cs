@@ -92,6 +92,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         }
     }
 
+    public partial class SetPublisherModelConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::EndpointName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::EndpointName EndpointName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::EndpointName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class FetchPublisherModelConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::EndpointName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::EndpointName EndpointName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::EndpointName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class MutateDeployedModelRequest
     {
         /// <summary>
