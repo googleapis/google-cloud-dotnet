@@ -1,0 +1,4174 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.Iam.V3Beta",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.iam.v3beta",
+        "version": "v3beta"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_sync",
+      "title": "CreatePolicyBindingRequestObject",
+      "description": "Snippet for CreatePolicyBinding",
+      "file": "PolicyBindingsClient.CreatePolicyBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.CreatePolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_async",
+      "title": "CreatePolicyBindingRequestObjectAsync",
+      "description": "Snippet for CreatePolicyBindingAsync",
+      "file": "PolicyBindingsClient.CreatePolicyBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.CreatePolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_sync_flattened",
+      "title": "CreatePolicyBinding",
+      "description": "Snippet for CreatePolicyBinding",
+      "file": "PolicyBindingsClient.CreatePolicyBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "policyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_async_flattened",
+      "title": "CreatePolicyBindingAsync",
+      "description": "Snippet for CreatePolicyBindingAsync",
+      "file": "PolicyBindingsClient.CreatePolicyBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "policyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_sync_flattened_resourceNames1",
+      "title": "CreatePolicyBindingResourceNames1",
+      "description": "Snippet for CreatePolicyBinding",
+      "file": "PolicyBindingsClient.CreatePolicyBindingResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "policyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_async_flattened_resourceNames1",
+      "title": "CreatePolicyBindingResourceNames1Async",
+      "description": "Snippet for CreatePolicyBindingAsync",
+      "file": "PolicyBindingsClient.CreatePolicyBindingResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "policyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_sync_flattened_resourceNames2",
+      "title": "CreatePolicyBindingResourceNames2",
+      "description": "Snippet for CreatePolicyBinding",
+      "file": "PolicyBindingsClient.CreatePolicyBindingResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "policyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_async_flattened_resourceNames2",
+      "title": "CreatePolicyBindingResourceNames2Async",
+      "description": "Snippet for CreatePolicyBindingAsync",
+      "file": "PolicyBindingsClient.CreatePolicyBindingResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "policyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_sync_flattened_resourceNames3",
+      "title": "CreatePolicyBindingResourceNames3",
+      "description": "Snippet for CreatePolicyBinding",
+      "file": "PolicyBindingsClient.CreatePolicyBindingResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "policyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_CreatePolicyBinding_async_flattened_resourceNames3",
+      "title": "CreatePolicyBindingResourceNames3Async",
+      "description": "Snippet for CreatePolicyBindingAsync",
+      "file": "PolicyBindingsClient.CreatePolicyBindingResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.CreatePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "System.String",
+            "name": "policyBindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "CreatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.CreatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_GetPolicyBinding_sync",
+      "title": "GetPolicyBindingRequestObject",
+      "description": "Snippet for GetPolicyBinding",
+      "file": "PolicyBindingsClient.GetPolicyBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.GetPolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.GetPolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.GetPolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_GetPolicyBinding_async",
+      "title": "GetPolicyBindingRequestObjectAsync",
+      "description": "Snippet for GetPolicyBindingAsync",
+      "file": "PolicyBindingsClient.GetPolicyBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.GetPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.GetPolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.GetPolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_GetPolicyBinding_sync_flattened",
+      "title": "GetPolicyBinding",
+      "description": "Snippet for GetPolicyBinding",
+      "file": "PolicyBindingsClient.GetPolicyBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.GetPolicyBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.GetPolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_GetPolicyBinding_async_flattened",
+      "title": "GetPolicyBindingAsync",
+      "description": "Snippet for GetPolicyBindingAsync",
+      "file": "PolicyBindingsClient.GetPolicyBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.GetPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.GetPolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_GetPolicyBinding_sync_flattened_resourceNames",
+      "title": "GetPolicyBindingResourceNames",
+      "description": "Snippet for GetPolicyBinding",
+      "file": "PolicyBindingsClient.GetPolicyBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.GetPolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.GetPolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_GetPolicyBinding_async_flattened_resourceNames",
+      "title": "GetPolicyBindingResourceNamesAsync",
+      "description": "Snippet for GetPolicyBindingAsync",
+      "file": "PolicyBindingsClient.GetPolicyBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.GetPolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "GetPolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.GetPolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_UpdatePolicyBinding_sync",
+      "title": "UpdatePolicyBindingRequestObject",
+      "description": "Snippet for UpdatePolicyBinding",
+      "file": "PolicyBindingsClient.UpdatePolicyBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.UpdatePolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.UpdatePolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.UpdatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_UpdatePolicyBinding_async",
+      "title": "UpdatePolicyBindingRequestObjectAsync",
+      "description": "Snippet for UpdatePolicyBindingAsync",
+      "file": "PolicyBindingsClient.UpdatePolicyBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.UpdatePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.UpdatePolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.UpdatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_UpdatePolicyBinding_sync_flattened",
+      "title": "UpdatePolicyBinding",
+      "description": "Snippet for UpdatePolicyBinding",
+      "file": "PolicyBindingsClient.UpdatePolicyBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.UpdatePolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.UpdatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_UpdatePolicyBinding_async_flattened",
+      "title": "UpdatePolicyBindingAsync",
+      "description": "Snippet for UpdatePolicyBindingAsync",
+      "file": "PolicyBindingsClient.UpdatePolicyBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.UpdatePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBinding",
+            "name": "policyBinding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PolicyBinding, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "UpdatePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.UpdatePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_DeletePolicyBinding_sync",
+      "title": "DeletePolicyBindingRequestObject",
+      "description": "Snippet for DeletePolicyBinding",
+      "file": "PolicyBindingsClient.DeletePolicyBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.DeletePolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.DeletePolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.DeletePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_DeletePolicyBinding_async",
+      "title": "DeletePolicyBindingRequestObjectAsync",
+      "description": "Snippet for DeletePolicyBindingAsync",
+      "file": "PolicyBindingsClient.DeletePolicyBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.DeletePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.DeletePolicyBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.DeletePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_DeletePolicyBinding_sync_flattened",
+      "title": "DeletePolicyBinding",
+      "description": "Snippet for DeletePolicyBinding",
+      "file": "PolicyBindingsClient.DeletePolicyBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.DeletePolicyBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.DeletePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_DeletePolicyBinding_async_flattened",
+      "title": "DeletePolicyBindingAsync",
+      "description": "Snippet for DeletePolicyBindingAsync",
+      "file": "PolicyBindingsClient.DeletePolicyBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.DeletePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.DeletePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_DeletePolicyBinding_sync_flattened_resourceNames",
+      "title": "DeletePolicyBindingResourceNames",
+      "description": "Snippet for DeletePolicyBinding",
+      "file": "PolicyBindingsClient.DeletePolicyBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBinding",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.DeletePolicyBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.DeletePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_DeletePolicyBinding_async_flattened_resourceNames",
+      "title": "DeletePolicyBindingResourceNamesAsync",
+      "description": "Snippet for DeletePolicyBindingAsync",
+      "file": "PolicyBindingsClient.DeletePolicyBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePolicyBindingAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.DeletePolicyBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PolicyBindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "DeletePolicyBinding",
+          "fullName": "google.iam.v3beta.PolicyBindings.DeletePolicyBinding",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_sync",
+      "title": "ListPolicyBindingsRequestObject",
+      "description": "Snippet for ListPolicyBindings",
+      "file": "PolicyBindingsClient.ListPolicyBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.ListPolicyBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_async",
+      "title": "ListPolicyBindingsRequestObjectAsync",
+      "description": "Snippet for ListPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.ListPolicyBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.ListPolicyBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_sync_flattened",
+      "title": "ListPolicyBindings",
+      "description": "Snippet for ListPolicyBindings",
+      "file": "PolicyBindingsClient.ListPolicyBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_async_flattened",
+      "title": "ListPolicyBindingsAsync",
+      "description": "Snippet for ListPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.ListPolicyBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_sync_flattened_resourceNames1",
+      "title": "ListPolicyBindingsResourceNames1",
+      "description": "Snippet for ListPolicyBindings",
+      "file": "PolicyBindingsClient.ListPolicyBindingsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_async_flattened_resourceNames1",
+      "title": "ListPolicyBindingsResourceNames1Async",
+      "description": "Snippet for ListPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.ListPolicyBindingsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_sync_flattened_resourceNames2",
+      "title": "ListPolicyBindingsResourceNames2",
+      "description": "Snippet for ListPolicyBindings",
+      "file": "PolicyBindingsClient.ListPolicyBindingsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_async_flattened_resourceNames2",
+      "title": "ListPolicyBindingsResourceNames2Async",
+      "description": "Snippet for ListPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.ListPolicyBindingsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_sync_flattened_resourceNames3",
+      "title": "ListPolicyBindingsResourceNames3",
+      "description": "Snippet for ListPolicyBindings",
+      "file": "PolicyBindingsClient.ListPolicyBindingsResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_ListPolicyBindings_async_flattened_resourceNames3",
+      "title": "ListPolicyBindingsResourceNames3Async",
+      "description": "Snippet for ListPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.ListPolicyBindingsResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.ListPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.ListPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "ListPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.ListPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_sync",
+      "title": "SearchTargetPolicyBindingsRequestObject",
+      "description": "Snippet for SearchTargetPolicyBindings",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_async",
+      "title": "SearchTargetPolicyBindingsRequestObjectAsync",
+      "description": "Snippet for SearchTargetPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_sync_flattened",
+      "title": "SearchTargetPolicyBindings",
+      "description": "Snippet for SearchTargetPolicyBindings",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_async_flattened",
+      "title": "SearchTargetPolicyBindingsAsync",
+      "description": "Snippet for SearchTargetPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_sync_flattened_resourceNames1",
+      "title": "SearchTargetPolicyBindingsResourceNames1",
+      "description": "Snippet for SearchTargetPolicyBindings",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsResourceNames1Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_async_flattened_resourceNames1",
+      "title": "SearchTargetPolicyBindingsResourceNames1Async",
+      "description": "Snippet for SearchTargetPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsResourceNames1AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_sync_flattened_resourceNames2",
+      "title": "SearchTargetPolicyBindingsResourceNames2",
+      "description": "Snippet for SearchTargetPolicyBindings",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsResourceNames2Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_async_flattened_resourceNames2",
+      "title": "SearchTargetPolicyBindingsResourceNames2Async",
+      "description": "Snippet for SearchTargetPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsResourceNames2AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.FolderLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_sync_flattened_resourceNames3",
+      "title": "SearchTargetPolicyBindingsResourceNames3",
+      "description": "Snippet for SearchTargetPolicyBindings",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsResourceNames3Snippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PolicyBindings_SearchTargetPolicyBindings_async_flattened_resourceNames3",
+      "title": "SearchTargetPolicyBindingsResourceNames3Async",
+      "description": "Snippet for SearchTargetPolicyBindingsAsync",
+      "file": "PolicyBindingsClient.SearchTargetPolicyBindingsResourceNames3AsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchTargetPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient.SearchTargetPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "target"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.SearchTargetPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PolicyBindingsClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PolicyBindingsClient"
+        },
+        "method": {
+          "shortName": "SearchTargetPolicyBindings",
+          "fullName": "google.iam.v3beta.PolicyBindings.SearchTargetPolicyBindings",
+          "service": {
+            "shortName": "PolicyBindings",
+            "fullName": "google.iam.v3beta.PolicyBindings"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_CreatePrincipalAccessBoundaryPolicy_sync",
+      "title": "CreatePrincipalAccessBoundaryPolicyRequestObject",
+      "description": "Snippet for CreatePrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.CreatePrincipalAccessBoundaryPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.CreatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_CreatePrincipalAccessBoundaryPolicy_async",
+      "title": "CreatePrincipalAccessBoundaryPolicyRequestObjectAsync",
+      "description": "Snippet for CreatePrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.CreatePrincipalAccessBoundaryPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.CreatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_CreatePrincipalAccessBoundaryPolicy_sync_flattened",
+      "title": "CreatePrincipalAccessBoundaryPolicy",
+      "description": "Snippet for CreatePrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+            "name": "principalAccessBoundaryPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "principalAccessBoundaryPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.CreatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_CreatePrincipalAccessBoundaryPolicy_async_flattened",
+      "title": "CreatePrincipalAccessBoundaryPolicyAsync",
+      "description": "Snippet for CreatePrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+            "name": "principalAccessBoundaryPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "principalAccessBoundaryPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.CreatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_CreatePrincipalAccessBoundaryPolicy_sync_flattened_resourceNames",
+      "title": "CreatePrincipalAccessBoundaryPolicyResourceNames",
+      "description": "Snippet for CreatePrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+            "name": "principalAccessBoundaryPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "principalAccessBoundaryPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.CreatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_CreatePrincipalAccessBoundaryPolicy_async_flattened_resourceNames",
+      "title": "CreatePrincipalAccessBoundaryPolicyResourceNamesAsync",
+      "description": "Snippet for CreatePrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreatePrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.CreatePrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+            "name": "principalAccessBoundaryPolicy"
+          },
+          {
+            "type": "System.String",
+            "name": "principalAccessBoundaryPolicyId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "CreatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.CreatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_GetPrincipalAccessBoundaryPolicy_sync",
+      "title": "GetPrincipalAccessBoundaryPolicyRequestObject",
+      "description": "Snippet for GetPrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.GetPrincipalAccessBoundaryPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.GetPrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_GetPrincipalAccessBoundaryPolicy_async",
+      "title": "GetPrincipalAccessBoundaryPolicyRequestObjectAsync",
+      "description": "Snippet for GetPrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.GetPrincipalAccessBoundaryPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.GetPrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_GetPrincipalAccessBoundaryPolicy_sync_flattened",
+      "title": "GetPrincipalAccessBoundaryPolicy",
+      "description": "Snippet for GetPrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.GetPrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_GetPrincipalAccessBoundaryPolicy_async_flattened",
+      "title": "GetPrincipalAccessBoundaryPolicyAsync",
+      "description": "Snippet for GetPrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.GetPrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_GetPrincipalAccessBoundaryPolicy_sync_flattened_resourceNames",
+      "title": "GetPrincipalAccessBoundaryPolicyResourceNames",
+      "description": "Snippet for GetPrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.GetPrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_GetPrincipalAccessBoundaryPolicy_async_flattened_resourceNames",
+      "title": "GetPrincipalAccessBoundaryPolicyResourceNamesAsync",
+      "description": "Snippet for GetPrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.GetPrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "GetPrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.GetPrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_UpdatePrincipalAccessBoundaryPolicy_sync",
+      "title": "UpdatePrincipalAccessBoundaryPolicyRequestObject",
+      "description": "Snippet for UpdatePrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.UpdatePrincipalAccessBoundaryPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.UpdatePrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.UpdatePrincipalAccessBoundaryPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "UpdatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.UpdatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_UpdatePrincipalAccessBoundaryPolicy_async",
+      "title": "UpdatePrincipalAccessBoundaryPolicyRequestObjectAsync",
+      "description": "Snippet for UpdatePrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.UpdatePrincipalAccessBoundaryPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.UpdatePrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.UpdatePrincipalAccessBoundaryPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "UpdatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.UpdatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_UpdatePrincipalAccessBoundaryPolicy_sync_flattened",
+      "title": "UpdatePrincipalAccessBoundaryPolicy",
+      "description": "Snippet for UpdatePrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.UpdatePrincipalAccessBoundaryPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.UpdatePrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+            "name": "principalAccessBoundaryPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "UpdatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.UpdatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_UpdatePrincipalAccessBoundaryPolicy_async_flattened",
+      "title": "UpdatePrincipalAccessBoundaryPolicyAsync",
+      "description": "Snippet for UpdatePrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.UpdatePrincipalAccessBoundaryPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdatePrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.UpdatePrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy",
+            "name": "principalAccessBoundaryPolicy"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "UpdatePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.UpdatePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_DeletePrincipalAccessBoundaryPolicy_sync",
+      "title": "DeletePrincipalAccessBoundaryPolicyRequestObject",
+      "description": "Snippet for DeletePrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.DeletePrincipalAccessBoundaryPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.DeletePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_DeletePrincipalAccessBoundaryPolicy_async",
+      "title": "DeletePrincipalAccessBoundaryPolicyRequestObjectAsync",
+      "description": "Snippet for DeletePrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.DeletePrincipalAccessBoundaryPolicyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.DeletePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_DeletePrincipalAccessBoundaryPolicy_sync_flattened",
+      "title": "DeletePrincipalAccessBoundaryPolicy",
+      "description": "Snippet for DeletePrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.DeletePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_DeletePrincipalAccessBoundaryPolicy_async_flattened",
+      "title": "DeletePrincipalAccessBoundaryPolicyAsync",
+      "description": "Snippet for DeletePrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.DeletePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_DeletePrincipalAccessBoundaryPolicy_sync_flattened_resourceNames",
+      "title": "DeletePrincipalAccessBoundaryPolicyResourceNames",
+      "description": "Snippet for DeletePrincipalAccessBoundaryPolicy",
+      "file": "PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrincipalAccessBoundaryPolicy",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicy",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.DeletePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_DeletePrincipalAccessBoundaryPolicy_async_flattened_resourceNames",
+      "title": "DeletePrincipalAccessBoundaryPolicyResourceNamesAsync",
+      "description": "Snippet for DeletePrincipalAccessBoundaryPolicyAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeletePrincipalAccessBoundaryPolicyAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.DeletePrincipalAccessBoundaryPolicyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Iam.V3Beta.OperationMetadata>>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "DeletePrincipalAccessBoundaryPolicy",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.DeletePrincipalAccessBoundaryPolicy",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_ListPrincipalAccessBoundaryPolicies_sync",
+      "title": "ListPrincipalAccessBoundaryPoliciesRequestObject",
+      "description": "Snippet for ListPrincipalAccessBoundaryPolicies",
+      "file": "PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrincipalAccessBoundaryPolicies",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.ListPrincipalAccessBoundaryPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.ListPrincipalAccessBoundaryPoliciesResponse, Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPrincipalAccessBoundaryPolicies",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.ListPrincipalAccessBoundaryPolicies",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_ListPrincipalAccessBoundaryPolicies_async",
+      "title": "ListPrincipalAccessBoundaryPoliciesRequestObjectAsync",
+      "description": "Snippet for ListPrincipalAccessBoundaryPoliciesAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrincipalAccessBoundaryPoliciesAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.ListPrincipalAccessBoundaryPoliciesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.ListPrincipalAccessBoundaryPoliciesResponse, Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPrincipalAccessBoundaryPolicies",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.ListPrincipalAccessBoundaryPolicies",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_ListPrincipalAccessBoundaryPolicies_sync_flattened",
+      "title": "ListPrincipalAccessBoundaryPolicies",
+      "description": "Snippet for ListPrincipalAccessBoundaryPolicies",
+      "file": "PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrincipalAccessBoundaryPolicies",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPolicies",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.ListPrincipalAccessBoundaryPoliciesResponse, Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPrincipalAccessBoundaryPolicies",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.ListPrincipalAccessBoundaryPolicies",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_ListPrincipalAccessBoundaryPolicies_async_flattened",
+      "title": "ListPrincipalAccessBoundaryPoliciesAsync",
+      "description": "Snippet for ListPrincipalAccessBoundaryPoliciesAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrincipalAccessBoundaryPoliciesAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.ListPrincipalAccessBoundaryPoliciesResponse, Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPrincipalAccessBoundaryPolicies",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.ListPrincipalAccessBoundaryPolicies",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_ListPrincipalAccessBoundaryPolicies_sync_flattened_resourceNames",
+      "title": "ListPrincipalAccessBoundaryPoliciesResourceNames",
+      "description": "Snippet for ListPrincipalAccessBoundaryPolicies",
+      "file": "PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrincipalAccessBoundaryPolicies",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPolicies",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.ListPrincipalAccessBoundaryPoliciesResponse, Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPrincipalAccessBoundaryPolicies",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.ListPrincipalAccessBoundaryPolicies",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_ListPrincipalAccessBoundaryPolicies_async_flattened_resourceNames",
+      "title": "ListPrincipalAccessBoundaryPoliciesResourceNamesAsync",
+      "description": "Snippet for ListPrincipalAccessBoundaryPoliciesAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPrincipalAccessBoundaryPoliciesAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.ListPrincipalAccessBoundaryPoliciesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.ListPrincipalAccessBoundaryPoliciesResponse, Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicy>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "ListPrincipalAccessBoundaryPolicies",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.ListPrincipalAccessBoundaryPolicies",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_SearchPrincipalAccessBoundaryPolicyBindings_sync",
+      "title": "SearchPrincipalAccessBoundaryPolicyBindingsRequestObject",
+      "description": "Snippet for SearchPrincipalAccessBoundaryPolicyBindings",
+      "file": "PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.SearchPrincipalAccessBoundaryPolicyBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.SearchPrincipalAccessBoundaryPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.SearchPrincipalAccessBoundaryPolicyBindings",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_SearchPrincipalAccessBoundaryPolicyBindings_async",
+      "title": "SearchPrincipalAccessBoundaryPolicyBindingsRequestObjectAsync",
+      "description": "Snippet for SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.SearchPrincipalAccessBoundaryPolicyBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.SearchPrincipalAccessBoundaryPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.SearchPrincipalAccessBoundaryPolicyBindings",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_SearchPrincipalAccessBoundaryPolicyBindings_sync_flattened",
+      "title": "SearchPrincipalAccessBoundaryPolicyBindings",
+      "description": "Snippet for SearchPrincipalAccessBoundaryPolicyBindings",
+      "file": "PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.SearchPrincipalAccessBoundaryPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.SearchPrincipalAccessBoundaryPolicyBindings",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_SearchPrincipalAccessBoundaryPolicyBindings_async_flattened",
+      "title": "SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+      "description": "Snippet for SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.SearchPrincipalAccessBoundaryPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.SearchPrincipalAccessBoundaryPolicyBindings",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_SearchPrincipalAccessBoundaryPolicyBindings_sync_flattened_resourceNames",
+      "title": "SearchPrincipalAccessBoundaryPolicyBindingsResourceNames",
+      "description": "Snippet for SearchPrincipalAccessBoundaryPolicyBindings",
+      "file": "PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Iam.V3Beta.SearchPrincipalAccessBoundaryPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.SearchPrincipalAccessBoundaryPolicyBindings",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "iam_v3beta_generated_PrincipalAccessBoundaryPolicies_SearchPrincipalAccessBoundaryPolicyBindings_async_flattened_resourceNames",
+      "title": "SearchPrincipalAccessBoundaryPolicyBindingsResourceNamesAsync",
+      "description": "Snippet for SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+      "file": "PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+        "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient.SearchPrincipalAccessBoundaryPolicyBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPolicyName",
+            "name": "name"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Iam.V3Beta.SearchPrincipalAccessBoundaryPolicyBindingsResponse, Google.Cloud.Iam.V3Beta.PolicyBinding>",
+        "client": {
+          "shortName": "PrincipalAccessBoundaryPoliciesClient",
+          "fullName": "Google.Cloud.Iam.V3Beta.PrincipalAccessBoundaryPoliciesClient"
+        },
+        "method": {
+          "shortName": "SearchPrincipalAccessBoundaryPolicyBindings",
+          "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies.SearchPrincipalAccessBoundaryPolicyBindings",
+          "service": {
+            "shortName": "PrincipalAccessBoundaryPolicies",
+            "fullName": "google.iam.v3beta.PrincipalAccessBoundaryPolicies"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
