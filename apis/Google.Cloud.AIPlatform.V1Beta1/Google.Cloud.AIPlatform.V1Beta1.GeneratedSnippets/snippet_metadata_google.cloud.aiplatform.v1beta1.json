@@ -9905,6 +9905,596 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_SetPublisherModelConfig_sync",
+      "title": "SetPublisherModelConfigRequestObject",
+      "description": "Snippet for SetPublisherModelConfig",
+      "file": "EndpointServiceClient.SetPublisherModelConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetPublisherModelConfig",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.SetPublisherModelConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig, Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigOperationMetadata>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "SetPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.SetPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_SetPublisherModelConfig_async",
+      "title": "SetPublisherModelConfigRequestObjectAsync",
+      "description": "Snippet for SetPublisherModelConfigAsync",
+      "file": "EndpointServiceClient.SetPublisherModelConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetPublisherModelConfigAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.SetPublisherModelConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig, Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigOperationMetadata>>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "SetPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.SetPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_SetPublisherModelConfig_sync_flattened",
+      "title": "SetPublisherModelConfig",
+      "description": "Snippet for SetPublisherModelConfig",
+      "file": "EndpointServiceClient.SetPublisherModelConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetPublisherModelConfig",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.SetPublisherModelConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig",
+            "name": "publisherModelConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig, Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigOperationMetadata>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "SetPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.SetPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_SetPublisherModelConfig_async_flattened",
+      "title": "SetPublisherModelConfigAsync",
+      "description": "Snippet for SetPublisherModelConfigAsync",
+      "file": "EndpointServiceClient.SetPublisherModelConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetPublisherModelConfigAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.SetPublisherModelConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig",
+            "name": "publisherModelConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig, Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigOperationMetadata>>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "SetPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.SetPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_SetPublisherModelConfig_sync_flattened_resourceNames",
+      "title": "SetPublisherModelConfigResourceNames",
+      "description": "Snippet for SetPublisherModelConfig",
+      "file": "EndpointServiceClient.SetPublisherModelConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetPublisherModelConfig",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.SetPublisherModelConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig",
+            "name": "publisherModelConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig, Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigOperationMetadata>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "SetPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.SetPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_SetPublisherModelConfig_async_flattened_resourceNames",
+      "title": "SetPublisherModelConfigResourceNamesAsync",
+      "description": "Snippet for SetPublisherModelConfigAsync",
+      "file": "EndpointServiceClient.SetPublisherModelConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SetPublisherModelConfigAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.SetPublisherModelConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig",
+            "name": "publisherModelConfig"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig, Google.Cloud.AIPlatform.V1Beta1.SetPublisherModelConfigOperationMetadata>>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "SetPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.SetPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_FetchPublisherModelConfig_sync",
+      "title": "FetchPublisherModelConfigRequestObject",
+      "description": "Snippet for FetchPublisherModelConfig",
+      "file": "EndpointServiceClient.FetchPublisherModelConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchPublisherModelConfig",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.FetchPublisherModelConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "FetchPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.FetchPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_FetchPublisherModelConfig_async",
+      "title": "FetchPublisherModelConfigRequestObjectAsync",
+      "description": "Snippet for FetchPublisherModelConfigAsync",
+      "file": "EndpointServiceClient.FetchPublisherModelConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchPublisherModelConfigAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.FetchPublisherModelConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.FetchPublisherModelConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "FetchPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.FetchPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_FetchPublisherModelConfig_sync_flattened",
+      "title": "FetchPublisherModelConfig",
+      "description": "Snippet for FetchPublisherModelConfig",
+      "file": "EndpointServiceClient.FetchPublisherModelConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchPublisherModelConfig",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.FetchPublisherModelConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "FetchPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.FetchPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_FetchPublisherModelConfig_async_flattened",
+      "title": "FetchPublisherModelConfigAsync",
+      "description": "Snippet for FetchPublisherModelConfigAsync",
+      "file": "EndpointServiceClient.FetchPublisherModelConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchPublisherModelConfigAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.FetchPublisherModelConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "FetchPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.FetchPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_FetchPublisherModelConfig_sync_flattened_resourceNames",
+      "title": "FetchPublisherModelConfigResourceNames",
+      "description": "Snippet for FetchPublisherModelConfig",
+      "file": "EndpointServiceClient.FetchPublisherModelConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchPublisherModelConfig",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.FetchPublisherModelConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "FetchPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.FetchPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_EndpointService_FetchPublisherModelConfig_async_flattened_resourceNames",
+      "title": "FetchPublisherModelConfigResourceNamesAsync",
+      "description": "Snippet for FetchPublisherModelConfigAsync",
+      "file": "EndpointServiceClient.FetchPublisherModelConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchPublisherModelConfigAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient.FetchPublisherModelConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig>",
+        "client": {
+          "shortName": "EndpointServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.EndpointServiceClient"
+        },
+        "method": {
+          "shortName": "FetchPublisherModelConfig",
+          "fullName": "google.cloud.aiplatform.v1beta1.EndpointService.FetchPublisherModelConfig",
+          "service": {
+            "shortName": "EndpointService",
+            "fullName": "google.cloud.aiplatform.v1beta1.EndpointService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_EvaluationService_EvaluateInstances_sync",
       "title": "EvaluateInstancesRequestObject",
       "description": "Snippet for EvaluateInstances",

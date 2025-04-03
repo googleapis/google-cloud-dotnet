@@ -208,6 +208,12 @@
                 "DeployModelAsync"
               ]
             },
+            "FetchPublisherModelConfig": {
+              "methods": [
+                "FetchPublisherModelConfig",
+                "FetchPublisherModelConfigAsync"
+              ]
+            },
             "GetEndpoint": {
               "methods": [
                 "GetEndpoint",
@@ -224,6 +230,12 @@
               "methods": [
                 "MutateDeployedModel",
                 "MutateDeployedModelAsync"
+              ]
+            },
+            "SetPublisherModelConfig": {
+              "methods": [
+                "SetPublisherModelConfig",
+                "SetPublisherModelConfigAsync"
               ]
             },
             "UndeployModel": {

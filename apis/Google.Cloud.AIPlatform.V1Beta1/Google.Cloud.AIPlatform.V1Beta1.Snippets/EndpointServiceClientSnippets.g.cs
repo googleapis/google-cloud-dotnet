@@ -1668,5 +1668,281 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for SetPublisherModelConfig</summary>
+        public void SetPublisherModelConfigRequestObject()
+        {
+            // Snippet: SetPublisherModelConfig(SetPublisherModelConfigRequest, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            SetPublisherModelConfigRequest request = new SetPublisherModelConfigRequest
+            {
+                EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                PublisherModelConfig = new PublisherModelConfig(),
+            };
+            // Make the request
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> response = endpointServiceClient.SetPublisherModelConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PublisherModelConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceSetPublisherModelConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PublisherModelConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetPublisherModelConfigAsync</summary>
+        public async Task SetPublisherModelConfigRequestObjectAsync()
+        {
+            // Snippet: SetPublisherModelConfigAsync(SetPublisherModelConfigRequest, CallSettings)
+            // Additional: SetPublisherModelConfigAsync(SetPublisherModelConfigRequest, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SetPublisherModelConfigRequest request = new SetPublisherModelConfigRequest
+            {
+                EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+                PublisherModelConfig = new PublisherModelConfig(),
+            };
+            // Make the request
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> response = await endpointServiceClient.SetPublisherModelConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PublisherModelConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceSetPublisherModelConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PublisherModelConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetPublisherModelConfig</summary>
+        public void SetPublisherModelConfig()
+        {
+            // Snippet: SetPublisherModelConfig(string, PublisherModelConfig, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            PublisherModelConfig publisherModelConfig = new PublisherModelConfig();
+            // Make the request
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> response = endpointServiceClient.SetPublisherModelConfig(name, publisherModelConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PublisherModelConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceSetPublisherModelConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PublisherModelConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetPublisherModelConfigAsync</summary>
+        public async Task SetPublisherModelConfigAsync()
+        {
+            // Snippet: SetPublisherModelConfigAsync(string, PublisherModelConfig, CallSettings)
+            // Additional: SetPublisherModelConfigAsync(string, PublisherModelConfig, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            PublisherModelConfig publisherModelConfig = new PublisherModelConfig();
+            // Make the request
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> response = await endpointServiceClient.SetPublisherModelConfigAsync(name, publisherModelConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PublisherModelConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceSetPublisherModelConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PublisherModelConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetPublisherModelConfig</summary>
+        public void SetPublisherModelConfigResourceNames()
+        {
+            // Snippet: SetPublisherModelConfig(EndpointName, PublisherModelConfig, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            EndpointName name = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            PublisherModelConfig publisherModelConfig = new PublisherModelConfig();
+            // Make the request
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> response = endpointServiceClient.SetPublisherModelConfig(name, publisherModelConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            PublisherModelConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceSetPublisherModelConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PublisherModelConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetPublisherModelConfigAsync</summary>
+        public async Task SetPublisherModelConfigResourceNamesAsync()
+        {
+            // Snippet: SetPublisherModelConfigAsync(EndpointName, PublisherModelConfig, CallSettings)
+            // Additional: SetPublisherModelConfigAsync(EndpointName, PublisherModelConfig, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EndpointName name = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            PublisherModelConfig publisherModelConfig = new PublisherModelConfig();
+            // Make the request
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> response = await endpointServiceClient.SetPublisherModelConfigAsync(name, publisherModelConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            PublisherModelConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<PublisherModelConfig, SetPublisherModelConfigOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceSetPublisherModelConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                PublisherModelConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchPublisherModelConfig</summary>
+        public void FetchPublisherModelConfigRequestObject()
+        {
+            // Snippet: FetchPublisherModelConfig(FetchPublisherModelConfigRequest, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            FetchPublisherModelConfigRequest request = new FetchPublisherModelConfigRequest
+            {
+                EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+            };
+            // Make the request
+            PublisherModelConfig response = endpointServiceClient.FetchPublisherModelConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchPublisherModelConfigAsync</summary>
+        public async Task FetchPublisherModelConfigRequestObjectAsync()
+        {
+            // Snippet: FetchPublisherModelConfigAsync(FetchPublisherModelConfigRequest, CallSettings)
+            // Additional: FetchPublisherModelConfigAsync(FetchPublisherModelConfigRequest, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchPublisherModelConfigRequest request = new FetchPublisherModelConfigRequest
+            {
+                EndpointName = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]"),
+            };
+            // Make the request
+            PublisherModelConfig response = await endpointServiceClient.FetchPublisherModelConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchPublisherModelConfig</summary>
+        public void FetchPublisherModelConfig()
+        {
+            // Snippet: FetchPublisherModelConfig(string, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            // Make the request
+            PublisherModelConfig response = endpointServiceClient.FetchPublisherModelConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchPublisherModelConfigAsync</summary>
+        public async Task FetchPublisherModelConfigAsync()
+        {
+            // Snippet: FetchPublisherModelConfigAsync(string, CallSettings)
+            // Additional: FetchPublisherModelConfigAsync(string, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/endpoints/[ENDPOINT]";
+            // Make the request
+            PublisherModelConfig response = await endpointServiceClient.FetchPublisherModelConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchPublisherModelConfig</summary>
+        public void FetchPublisherModelConfigResourceNames()
+        {
+            // Snippet: FetchPublisherModelConfig(EndpointName, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            EndpointName name = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            // Make the request
+            PublisherModelConfig response = endpointServiceClient.FetchPublisherModelConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchPublisherModelConfigAsync</summary>
+        public async Task FetchPublisherModelConfigResourceNamesAsync()
+        {
+            // Snippet: FetchPublisherModelConfigAsync(EndpointName, CallSettings)
+            // Additional: FetchPublisherModelConfigAsync(EndpointName, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EndpointName name = EndpointName.FromProjectLocationEndpoint("[PROJECT]", "[LOCATION]", "[ENDPOINT]");
+            // Make the request
+            PublisherModelConfig response = await endpointServiceClient.FetchPublisherModelConfigAsync(name);
+            // End snippet
+        }
     }
 }

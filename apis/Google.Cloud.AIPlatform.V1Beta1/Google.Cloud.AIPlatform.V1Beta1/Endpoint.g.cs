@@ -97,25 +97,29 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "OgI4AUIWChRwcmVkaWN0aW9uX3Jlc291cmNlcyKPAQoQUHJpdmF0ZUVuZHBv",
             "aW50cxIdChBwcmVkaWN0X2h0dHBfdXJpGAEgASgJQgPgQQMSHQoQZXhwbGFp",
             "bl9odHRwX3VyaRgCIAEoCUID4EEDEhwKD2hlYWx0aF9odHRwX3VyaRgDIAEo",
-            "CUID4EEDEh8KEnNlcnZpY2VfYXR0YWNobWVudBgEIAEoCUID4EEDIqEBCiNQ",
+            "CUID4EEDEh8KEnNlcnZpY2VfYXR0YWNobWVudBgEIAEoCUID4EEDIvQBCiNQ",
             "cmVkaWN0UmVxdWVzdFJlc3BvbnNlTG9nZ2luZ0NvbmZpZxIPCgdlbmFibGVk",
             "GAEgASgIEhUKDXNhbXBsaW5nX3JhdGUYAiABKAESUgoUYmlncXVlcnlfZGVz",
             "dGluYXRpb24YAyABKAsyNC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJl",
-            "dGExLkJpZ1F1ZXJ5RGVzdGluYXRpb24iTgoWQ2xpZW50Q29ubmVjdGlvbkNv",
-            "bmZpZxI0ChFpbmZlcmVuY2VfdGltZW91dBgBIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbiI1ChZGYXN0ZXJEZXBsb3ltZW50Q29uZmlnEhsKE2Zh",
-            "c3RfdHJ5b3V0X2VuYWJsZWQYAiABKAgi9wEKDlJvbGxvdXRPcHRpb25zEiIK",
-            "GG1heF91bmF2YWlsYWJsZV9yZXBsaWNhcxgDIAEoBUgAEiQKGm1heF91bmF2",
-            "YWlsYWJsZV9wZXJjZW50YWdlGAQgASgFSAASHAoSbWF4X3N1cmdlX3JlcGxp",
-            "Y2FzGAUgASgFSAESHgoUbWF4X3N1cmdlX3BlcmNlbnRhZ2UYBiABKAVIARIf",
-            "ChdwcmV2aW91c19kZXBsb3llZF9tb2RlbBgBIAEoCRIcCg9yZXZpc2lvbl9u",
-            "dW1iZXIYAiABKAVCA+BBA0IRCg9tYXhfdW5hdmFpbGFibGVCCwoJbWF4X3N1",
-            "cmdlQuQBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIN",
-            "RW5kcG9pbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZv",
-            "cm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIfR29v",
-            "Z2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxDbG91ZFxB",
-            "SVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBsYXRmb3Jt",
-            "OjpWMWJldGExYgZwcm90bzM="));
+            "dGExLkJpZ1F1ZXJ5RGVzdGluYXRpb24SNAoncmVxdWVzdF9yZXNwb25zZV9s",
+            "b2dnaW5nX3NjaGVtYV92ZXJzaW9uGAQgASgJQgPgQQMSGwoTZW5hYmxlX290",
+            "ZWxfbG9nZ2luZxgGIAEoCCJ0ChRQdWJsaXNoZXJNb2RlbENvbmZpZxJcCg5s",
+            "b2dnaW5nX2NvbmZpZxgDIAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
+            "LnYxYmV0YTEuUHJlZGljdFJlcXVlc3RSZXNwb25zZUxvZ2dpbmdDb25maWci",
+            "TgoWQ2xpZW50Q29ubmVjdGlvbkNvbmZpZxI0ChFpbmZlcmVuY2VfdGltZW91",
+            "dBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiI1ChZGYXN0ZXJE",
+            "ZXBsb3ltZW50Q29uZmlnEhsKE2Zhc3RfdHJ5b3V0X2VuYWJsZWQYAiABKAgi",
+            "9wEKDlJvbGxvdXRPcHRpb25zEiIKGG1heF91bmF2YWlsYWJsZV9yZXBsaWNh",
+            "cxgDIAEoBUgAEiQKGm1heF91bmF2YWlsYWJsZV9wZXJjZW50YWdlGAQgASgF",
+            "SAASHAoSbWF4X3N1cmdlX3JlcGxpY2FzGAUgASgFSAESHgoUbWF4X3N1cmdl",
+            "X3BlcmNlbnRhZ2UYBiABKAVIARIfChdwcmV2aW91c19kZXBsb3llZF9tb2Rl",
+            "bBgBIAEoCRIcCg9yZXZpc2lvbl9udW1iZXIYAiABKAVCA+BBA0IRCg9tYXhf",
+            "dW5hdmFpbGFibGVCCwoJbWF4X3N1cmdlQuQBCiNjb20uZ29vZ2xlLmNsb3Vk",
+            "LmFpcGxhdGZvcm0udjFiZXRhMUINRW5kcG9pbnRQcm90b1ABWkNjbG91ZC5n",
+            "b29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3Jt",
+            "cGI7YWlwbGF0Zm9ybXBiqgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFC",
+            "ZXRhMcoCH0dvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -123,7 +127,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "SharedResources", "Id", "Model", "ModelVersionId", "DisplayName", "CreateTime", "ExplanationSpec", "DisableExplanations", "ServiceAccount", "EnableContainerLogging", "EnableAccessLogging", "PrivateEndpoints", "FasterDeploymentConfig", "RolloutOptions", "Status", "SystemLabels" }, new[]{ "PredictionResources" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status), global::Google.Cloud.AIPlatform.V1Beta1.DeployedModel.Types.Status.Parser, new[]{ "Message", "LastUpdateTime", "AvailableReplicaCount" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination", "RequestResponseLoggingSchemaVersion", "EnableOtelLogging" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig), global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Parser, new[]{ "LoggingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig), global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig.Parser, new[]{ "InferenceTimeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig), global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig.Parser, new[]{ "FastTryoutEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions), global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions.Parser, new[]{ "MaxUnavailableReplicas", "MaxUnavailablePercentage", "MaxSurgeReplicas", "MaxSurgePercentage", "PreviousDeployedModel", "RevisionNumber" }, new[]{ "MaxUnavailable", "MaxSurge" }, null, null, null)
@@ -2879,6 +2884,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       enabled_ = other.enabled_;
       samplingRate_ = other.samplingRate_;
       bigqueryDestination_ = other.bigqueryDestination_ != null ? other.bigqueryDestination_.Clone() : null;
+      requestResponseLoggingSchemaVersion_ = other.requestResponseLoggingSchemaVersion_;
+      enableOtelLogging_ = other.enableOtelLogging_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2939,6 +2946,40 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "request_response_logging_schema_version" field.</summary>
+    public const int RequestResponseLoggingSchemaVersionFieldNumber = 4;
+    private string requestResponseLoggingSchemaVersion_ = "";
+    /// <summary>
+    /// Output only. The schema version used in creating the BigQuery table for the
+    /// request response logging. The versions are "v1" and "v2". The current
+    /// default version is "v1".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestResponseLoggingSchemaVersion {
+      get { return requestResponseLoggingSchemaVersion_; }
+      set {
+        requestResponseLoggingSchemaVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enable_otel_logging" field.</summary>
+    public const int EnableOtelLoggingFieldNumber = 6;
+    private bool enableOtelLogging_;
+    /// <summary>
+    /// This field is used for large models. If true, in addition to the
+    /// original large model logs, logs will be converted in OTel schema format,
+    /// and saved in otel_log column. Default value is false.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableOtelLogging {
+      get { return enableOtelLogging_; }
+      set {
+        enableOtelLogging_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2957,6 +2998,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (Enabled != other.Enabled) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(SamplingRate, other.SamplingRate)) return false;
       if (!object.Equals(BigqueryDestination, other.BigqueryDestination)) return false;
+      if (RequestResponseLoggingSchemaVersion != other.RequestResponseLoggingSchemaVersion) return false;
+      if (EnableOtelLogging != other.EnableOtelLogging) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2967,6 +3010,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (Enabled != false) hash ^= Enabled.GetHashCode();
       if (SamplingRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SamplingRate);
       if (bigqueryDestination_ != null) hash ^= BigqueryDestination.GetHashCode();
+      if (RequestResponseLoggingSchemaVersion.Length != 0) hash ^= RequestResponseLoggingSchemaVersion.GetHashCode();
+      if (EnableOtelLogging != false) hash ^= EnableOtelLogging.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2997,6 +3042,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(BigqueryDestination);
       }
+      if (RequestResponseLoggingSchemaVersion.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestResponseLoggingSchemaVersion);
+      }
+      if (EnableOtelLogging != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(EnableOtelLogging);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3019,6 +3072,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(BigqueryDestination);
       }
+      if (RequestResponseLoggingSchemaVersion.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestResponseLoggingSchemaVersion);
+      }
+      if (EnableOtelLogging != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(EnableOtelLogging);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3037,6 +3098,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (bigqueryDestination_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryDestination);
+      }
+      if (RequestResponseLoggingSchemaVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestResponseLoggingSchemaVersion);
+      }
+      if (EnableOtelLogging != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3061,6 +3128,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           BigqueryDestination = new global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination();
         }
         BigqueryDestination.MergeFrom(other.BigqueryDestination);
+      }
+      if (other.RequestResponseLoggingSchemaVersion.Length != 0) {
+        RequestResponseLoggingSchemaVersion = other.RequestResponseLoggingSchemaVersion;
+      }
+      if (other.EnableOtelLogging != false) {
+        EnableOtelLogging = other.EnableOtelLogging;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3090,6 +3163,14 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               BigqueryDestination = new global::Google.Cloud.AIPlatform.V1Beta1.BigQueryDestination();
             }
             input.ReadMessage(BigqueryDestination);
+            break;
+          }
+          case 34: {
+            RequestResponseLoggingSchemaVersion = input.ReadString();
+            break;
+          }
+          case 48: {
+            EnableOtelLogging = input.ReadBool();
             break;
           }
         }
@@ -3122,6 +3203,219 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(BigqueryDestination);
             break;
           }
+          case 34: {
+            RequestResponseLoggingSchemaVersion = input.ReadString();
+            break;
+          }
+          case 48: {
+            EnableOtelLogging = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// This message contains configs of a publisher model.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PublisherModelConfig : pb::IMessage<PublisherModelConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PublisherModelConfig> _parser = new pb::MessageParser<PublisherModelConfig>(() => new PublisherModelConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PublisherModelConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PublisherModelConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PublisherModelConfig(PublisherModelConfig other) : this() {
+      loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PublisherModelConfig Clone() {
+      return new PublisherModelConfig(this);
+    }
+
+    /// <summary>Field number for the "logging_config" field.</summary>
+    public const int LoggingConfigFieldNumber = 3;
+    private global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig loggingConfig_;
+    /// <summary>
+    /// The prediction request/response logging config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig LoggingConfig {
+      get { return loggingConfig_; }
+      set {
+        loggingConfig_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PublisherModelConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PublisherModelConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(LoggingConfig, other.LoggingConfig)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (loggingConfig_ != null) hash ^= LoggingConfig.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (loggingConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LoggingConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (loggingConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LoggingConfig);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (loggingConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoggingConfig);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PublisherModelConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.loggingConfig_ != null) {
+        if (loggingConfig_ == null) {
+          LoggingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig();
+        }
+        LoggingConfig.MergeFrom(other.LoggingConfig);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 26: {
+            if (loggingConfig_ == null) {
+              LoggingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig();
+            }
+            input.ReadMessage(LoggingConfig);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 26: {
+            if (loggingConfig_ == null) {
+              LoggingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig();
+            }
+            input.ReadMessage(LoggingConfig);
+            break;
+          }
         }
       }
     }
@@ -3147,7 +3441,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3352,7 +3646,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3548,7 +3842,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.AIPlatform.V1Beta1.EndpointReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
