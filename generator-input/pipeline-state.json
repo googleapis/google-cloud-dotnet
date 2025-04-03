@@ -3908,6 +3908,7 @@
             "id": "Google.Cloud.Iam.V3",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "b21c6de0ef28fbb5055af2f4280492007efc473c",
             "apiPaths": [
                 "google/iam/v3"
             ],
