@@ -16,6 +16,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -104,9 +105,9 @@ namespace Google.Cloud.Tools.Common
         /// <summary>
         /// The resolved description to use in listing descriptions, using the first of<see cref="ListingDescription"/>,
         /// <see cref="ProductName"/>, <see cref="Description"/> to be populated.
-        ///Note that NuGet descriptions are usually full sentences, ending in a period.
-        // The product name or brief description is usually a sentence fragment, so if we *do*
-        // use the full description, we trim any trailing periods.
+        /// Note that NuGet descriptions are usually full sentences, ending in a period.
+        /// The product name or brief description is usually a sentence fragment, so if we *do*
+        /// use the full description, we trim any trailing periods.
         /// </summary>
         [JsonIgnore]
         public string EffectiveListingDescription => ListingDescription ?? ProductName ?? Description.TrimEnd('.');
@@ -217,6 +218,23 @@ namespace Google.Cloud.Tools.Common
         /// </summary>
         /// <param name="package">The name of the package, e.g. Google.Cloud.Storage.V1</param>
         public static bool IsCloudPackage(string package) => package.StartsWith("Google.Cloud.") || PseudoCloudPackages.Contains(package);
+
+        /// <summary>
+        /// Indicates whether this API has source code, relative to the given <see cref="RootLayout">.
+        /// This assumes there is a suitable "generator output" directory - which is the case for either
+        /// a generation-specific layout or one for a layout with the whole repository available.
+        /// </summary>
+        public bool HasSource(RootLayout rootLayout) => HasSource(rootLayout.CreateGeneratorApiLayout(this));
+
+        /// <summary>
+        /// Indicates whether this API has source code, relative to the given <see cref="RepositoryApiLayout">.
+        /// </summary>
+        public bool HasSource(RepositoryApiLayout repoLayout) => Directory.Exists(repoLayout.SourceDirectory);
+
+        /// <summary>
+        /// Indicates whether this API has source code, relative to the given <see cref="GeneratorApiLayout">.
+        /// </summary>
+        public bool HasSource(GeneratorApiLayout generatorLayout) => Directory.Exists(generatorLayout.SourceDirectory);
 
         /// <summary>
         /// Whether or not to include the common resources proto when generating. This is true for
