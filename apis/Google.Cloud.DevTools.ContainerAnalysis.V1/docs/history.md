@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.8.0, released 2025-04-03
+
+### New features
+
+- Add ExportSBOM API method for v1 ([commit 8213d4c](https://github.com/googleapis/google-cloud-dotnet/commit/8213d4ce0aec3f7a881da94aa707da9539ca5266))
+
+### Documentation improvements
+
+- Minor formatting changes to proto headers ([commit 8213d4c](https://github.com/googleapis/google-cloud-dotnet/commit/8213d4ce0aec3f7a881da94aa707da9539ca5266))
+
 ## Version 3.7.0, released 2024-11-18
 
 ### New features
