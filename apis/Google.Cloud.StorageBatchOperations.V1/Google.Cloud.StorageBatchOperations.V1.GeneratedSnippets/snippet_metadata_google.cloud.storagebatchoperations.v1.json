@@ -1,0 +1,1510 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.StorageBatchOperations.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.storagebatchoperations.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListJobs_sync",
+      "title": "ListJobsRequestObject",
+      "description": "Snippet for ListJobs",
+      "file": "StorageBatchOperationsClient.ListJobsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobs",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageBatchOperations.V1.ListJobsResponse, Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListJobs",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListJobs_async",
+      "title": "ListJobsRequestObjectAsync",
+      "description": "Snippet for ListJobsAsync",
+      "file": "StorageBatchOperationsClient.ListJobsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobsAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.ListJobsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageBatchOperations.V1.ListJobsResponse, Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListJobs",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 83,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 81,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListJobs_sync_flattened",
+      "title": "ListJobs",
+      "description": "Snippet for ListJobs",
+      "file": "StorageBatchOperationsClient.ListJobsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobs",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListJobs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageBatchOperations.V1.ListJobsResponse, Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListJobs",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListJobs_async_flattened",
+      "title": "ListJobsAsync",
+      "description": "Snippet for ListJobsAsync",
+      "file": "StorageBatchOperationsClient.ListJobsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobsAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageBatchOperations.V1.ListJobsResponse, Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListJobs",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListJobs_sync_flattened_resourceNames",
+      "title": "ListJobsResourceNames",
+      "description": "Snippet for ListJobs",
+      "file": "StorageBatchOperationsClient.ListJobsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobs",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListJobs",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.StorageBatchOperations.V1.ListJobsResponse, Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListJobs",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_ListJobs_async_flattened_resourceNames",
+      "title": "ListJobsResourceNamesAsync",
+      "description": "Snippet for ListJobsAsync",
+      "file": "StorageBatchOperationsClient.ListJobsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListJobsAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.ListJobsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.StorageBatchOperations.V1.ListJobsResponse, Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "ListJobs",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.ListJobs",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetJob_sync",
+      "title": "GetJobRequestObject",
+      "description": "Snippet for GetJob",
+      "file": "StorageBatchOperationsClient.GetJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.Job",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetJob_async",
+      "title": "GetJobRequestObjectAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "StorageBatchOperationsClient.GetJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.GetJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetJob_sync_flattened",
+      "title": "GetJob",
+      "description": "Snippet for GetJob",
+      "file": "StorageBatchOperationsClient.GetJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.Job",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetJob_async_flattened",
+      "title": "GetJobAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "StorageBatchOperationsClient.GetJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetJob_sync_flattened_resourceNames",
+      "title": "GetJobResourceNames",
+      "description": "Snippet for GetJob",
+      "file": "StorageBatchOperationsClient.GetJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.Job",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_GetJob_async_flattened_resourceNames",
+      "title": "GetJobResourceNamesAsync",
+      "description": "Snippet for GetJobAsync",
+      "file": "StorageBatchOperationsClient.GetJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.GetJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.Job>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "GetJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.GetJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CreateJob_sync",
+      "title": "CreateJobRequestObject",
+      "description": "Snippet for CreateJob",
+      "file": "StorageBatchOperationsClient.CreateJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageBatchOperations.V1.Job, Google.Cloud.StorageBatchOperations.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CreateJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CreateJob_async",
+      "title": "CreateJobRequestObjectAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "StorageBatchOperationsClient.CreateJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CreateJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.CreateJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageBatchOperations.V1.Job, Google.Cloud.StorageBatchOperations.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CreateJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CreateJob_sync_flattened",
+      "title": "CreateJob",
+      "description": "Snippet for CreateJob",
+      "file": "StorageBatchOperationsClient.CreateJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CreateJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageBatchOperations.V1.Job, Google.Cloud.StorageBatchOperations.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CreateJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CreateJob_async_flattened",
+      "title": "CreateJobAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "StorageBatchOperationsClient.CreateJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CreateJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageBatchOperations.V1.Job, Google.Cloud.StorageBatchOperations.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CreateJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CreateJob_sync_flattened_resourceNames",
+      "title": "CreateJobResourceNames",
+      "description": "Snippet for CreateJob",
+      "file": "StorageBatchOperationsClient.CreateJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CreateJob",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.StorageBatchOperations.V1.Job, Google.Cloud.StorageBatchOperations.V1.OperationMetadata>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CreateJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CreateJob_async_flattened_resourceNames",
+      "title": "CreateJobResourceNamesAsync",
+      "description": "Snippet for CreateJobAsync",
+      "file": "StorageBatchOperationsClient.CreateJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CreateJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.Job",
+            "name": "job"
+          },
+          {
+            "type": "System.String",
+            "name": "jobId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.StorageBatchOperations.V1.Job, Google.Cloud.StorageBatchOperations.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CreateJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CreateJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_DeleteJob_sync",
+      "title": "DeleteJobRequestObject",
+      "description": "Snippet for DeleteJob",
+      "file": "StorageBatchOperationsClient.DeleteJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.DeleteJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.DeleteJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_DeleteJob_async",
+      "title": "DeleteJobRequestObjectAsync",
+      "description": "Snippet for DeleteJobAsync",
+      "file": "StorageBatchOperationsClient.DeleteJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.DeleteJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.DeleteJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.DeleteJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_DeleteJob_sync_flattened",
+      "title": "DeleteJob",
+      "description": "Snippet for DeleteJob",
+      "file": "StorageBatchOperationsClient.DeleteJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.DeleteJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_DeleteJob_async_flattened",
+      "title": "DeleteJobAsync",
+      "description": "Snippet for DeleteJobAsync",
+      "file": "StorageBatchOperationsClient.DeleteJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.DeleteJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.DeleteJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_DeleteJob_sync_flattened_resourceNames",
+      "title": "DeleteJobResourceNames",
+      "description": "Snippet for DeleteJob",
+      "file": "StorageBatchOperationsClient.DeleteJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.DeleteJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.DeleteJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_DeleteJob_async_flattened_resourceNames",
+      "title": "DeleteJobResourceNamesAsync",
+      "description": "Snippet for DeleteJobAsync",
+      "file": "StorageBatchOperationsClient.DeleteJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.DeleteJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "DeleteJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.DeleteJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CancelJob_sync",
+      "title": "CancelJobRequestObject",
+      "description": "Snippet for CancelJob",
+      "file": "StorageBatchOperationsClient.CancelJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CancelJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.CancelJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.CancelJobResponse",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CancelJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CancelJob_async",
+      "title": "CancelJobRequestObjectAsync",
+      "description": "Snippet for CancelJobAsync",
+      "file": "StorageBatchOperationsClient.CancelJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CancelJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.CancelJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.CancelJobResponse>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CancelJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CancelJob_sync_flattened",
+      "title": "CancelJob",
+      "description": "Snippet for CancelJob",
+      "file": "StorageBatchOperationsClient.CancelJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CancelJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.CancelJobResponse",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CancelJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CancelJob_async_flattened",
+      "title": "CancelJobAsync",
+      "description": "Snippet for CancelJobAsync",
+      "file": "StorageBatchOperationsClient.CancelJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CancelJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.CancelJobResponse>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CancelJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CancelJob_sync_flattened_resourceNames",
+      "title": "CancelJobResourceNames",
+      "description": "Snippet for CancelJob",
+      "file": "StorageBatchOperationsClient.CancelJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJob",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CancelJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.StorageBatchOperations.V1.CancelJobResponse",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CancelJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storagebatchoperations_v1_generated_StorageBatchOperations_CancelJob_async_flattened_resourceNames",
+      "title": "CancelJobResourceNamesAsync",
+      "description": "Snippet for CancelJobAsync",
+      "file": "StorageBatchOperationsClient.CancelJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelJobAsync",
+        "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient.CancelJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.StorageBatchOperations.V1.JobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.StorageBatchOperations.V1.CancelJobResponse>",
+        "client": {
+          "shortName": "StorageBatchOperationsClient",
+          "fullName": "Google.Cloud.StorageBatchOperations.V1.StorageBatchOperationsClient"
+        },
+        "method": {
+          "shortName": "CancelJob",
+          "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations.CancelJob",
+          "service": {
+            "shortName": "StorageBatchOperations",
+            "fullName": "google.cloud.storagebatchoperations.v1.StorageBatchOperations"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
