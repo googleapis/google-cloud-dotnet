@@ -281,11 +281,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         private void CreateAndPopulateHnsBucket()
         {
             CreateBucket(HnsBucket, multiVersion: false, hnsEnabled: true);
-            Client.UploadObject(name, SmallThenLargeObject, "text/plain", new MemoryStream(LargeContent));
-            Client.UploadObject(name, SmallObject, "text/plain", new MemoryStream(SmallContent));
+            Client.UploadObject(HnsBucket, SmallThenLargeObject, "text/plain", new MemoryStream(LargeContent));
+            Client.UploadObject(HnsBucket, SmallObject, "text/plain", new MemoryStream(SmallContent));
             foreach (var nameoObjectsInFolder in s_objectsInFolders)
             {
-                Client.UploadObject(name, nameoObjectsInFolder, "text/plain", new MemoryStream(SmallContent));
+                Client.UploadObject(HnsBucket, nameoObjectsInFolder, "text/plain", new MemoryStream(SmallContent));
             }
         }
 
