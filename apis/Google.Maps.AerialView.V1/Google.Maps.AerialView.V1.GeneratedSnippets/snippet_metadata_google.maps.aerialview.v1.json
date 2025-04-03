@@ -1,0 +1,303 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.AerialView.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.aerialview.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "aerialview_v1_generated_AerialView_RenderVideo_sync",
+      "title": "RenderVideoRequestObject",
+      "description": "Snippet for RenderVideo",
+      "file": "AerialViewClient.RenderVideoRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderVideo",
+        "fullName": "Google.Maps.AerialView.V1.AerialViewClient.RenderVideo",
+        "parameters": [
+          {
+            "type": "Google.Maps.AerialView.V1.RenderVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.AerialView.V1.RenderVideoResponse",
+        "client": {
+          "shortName": "AerialViewClient",
+          "fullName": "Google.Maps.AerialView.V1.AerialViewClient"
+        },
+        "method": {
+          "shortName": "RenderVideo",
+          "fullName": "google.maps.aerialview.v1.AerialView.RenderVideo",
+          "service": {
+            "shortName": "AerialView",
+            "fullName": "google.maps.aerialview.v1.AerialView"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aerialview_v1_generated_AerialView_RenderVideo_async",
+      "title": "RenderVideoRequestObjectAsync",
+      "description": "Snippet for RenderVideoAsync",
+      "file": "AerialViewClient.RenderVideoRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderVideoAsync",
+        "fullName": "Google.Maps.AerialView.V1.AerialViewClient.RenderVideoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.AerialView.V1.RenderVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.AerialView.V1.RenderVideoResponse>",
+        "client": {
+          "shortName": "AerialViewClient",
+          "fullName": "Google.Maps.AerialView.V1.AerialViewClient"
+        },
+        "method": {
+          "shortName": "RenderVideo",
+          "fullName": "google.maps.aerialview.v1.AerialView.RenderVideo",
+          "service": {
+            "shortName": "AerialView",
+            "fullName": "google.maps.aerialview.v1.AerialView"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aerialview_v1_generated_AerialView_RenderVideo_sync_flattened",
+      "title": "RenderVideo",
+      "description": "Snippet for RenderVideo",
+      "file": "AerialViewClient.RenderVideoSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderVideo",
+        "fullName": "Google.Maps.AerialView.V1.AerialViewClient.RenderVideo",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "address"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.AerialView.V1.RenderVideoResponse",
+        "client": {
+          "shortName": "AerialViewClient",
+          "fullName": "Google.Maps.AerialView.V1.AerialViewClient"
+        },
+        "method": {
+          "shortName": "RenderVideo",
+          "fullName": "google.maps.aerialview.v1.AerialView.RenderVideo",
+          "service": {
+            "shortName": "AerialView",
+            "fullName": "google.maps.aerialview.v1.AerialView"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aerialview_v1_generated_AerialView_RenderVideo_async_flattened",
+      "title": "RenderVideoAsync",
+      "description": "Snippet for RenderVideoAsync",
+      "file": "AerialViewClient.RenderVideoAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RenderVideoAsync",
+        "fullName": "Google.Maps.AerialView.V1.AerialViewClient.RenderVideoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "address"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.AerialView.V1.RenderVideoResponse>",
+        "client": {
+          "shortName": "AerialViewClient",
+          "fullName": "Google.Maps.AerialView.V1.AerialViewClient"
+        },
+        "method": {
+          "shortName": "RenderVideo",
+          "fullName": "google.maps.aerialview.v1.AerialView.RenderVideo",
+          "service": {
+            "shortName": "AerialView",
+            "fullName": "google.maps.aerialview.v1.AerialView"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aerialview_v1_generated_AerialView_LookupVideo_sync",
+      "title": "LookupVideoRequestObject",
+      "description": "Snippet for LookupVideo",
+      "file": "AerialViewClient.LookupVideoRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupVideo",
+        "fullName": "Google.Maps.AerialView.V1.AerialViewClient.LookupVideo",
+        "parameters": [
+          {
+            "type": "Google.Maps.AerialView.V1.LookupVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.AerialView.V1.Video",
+        "client": {
+          "shortName": "AerialViewClient",
+          "fullName": "Google.Maps.AerialView.V1.AerialViewClient"
+        },
+        "method": {
+          "shortName": "LookupVideo",
+          "fullName": "google.maps.aerialview.v1.AerialView.LookupVideo",
+          "service": {
+            "shortName": "AerialView",
+            "fullName": "google.maps.aerialview.v1.AerialView"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aerialview_v1_generated_AerialView_LookupVideo_async",
+      "title": "LookupVideoRequestObjectAsync",
+      "description": "Snippet for LookupVideoAsync",
+      "file": "AerialViewClient.LookupVideoRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupVideoAsync",
+        "fullName": "Google.Maps.AerialView.V1.AerialViewClient.LookupVideoAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.AerialView.V1.LookupVideoRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.AerialView.V1.Video>",
+        "client": {
+          "shortName": "AerialViewClient",
+          "fullName": "Google.Maps.AerialView.V1.AerialViewClient"
+        },
+        "method": {
+          "shortName": "LookupVideo",
+          "fullName": "google.maps.aerialview.v1.AerialView.LookupVideo",
+          "service": {
+            "shortName": "AerialView",
+            "fullName": "google.maps.aerialview.v1.AerialView"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
