@@ -72,13 +72,6 @@ public sealed class MoveObjectOptions
     public long? IfSourceMetagenerationNotMatch { get; set; }
 
     /// <summary>
-    /// Additional object metadata for the new object. This can be used to specify the storage
-    /// class of the new object, the content type etc. If this property is not set, the existing
-    /// object metadata will be used unchanged.
-    /// </summary>
-    public Object ExtraMetadata { get; set; }
-
-    /// <summary>
     /// If set, this is the ID of the project which will be billed for the request.
     /// The caller must have suitable permissions for the project being billed.
     /// </summary>
