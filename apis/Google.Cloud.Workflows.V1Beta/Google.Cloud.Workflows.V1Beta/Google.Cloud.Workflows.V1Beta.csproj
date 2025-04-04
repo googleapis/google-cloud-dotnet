@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
+    <PackageReference Include="Google.Cloud.Location" VersionOverride="[2.3.0, 3.0.0)" />
     <PackageReference Include="Google.Cloud.Workflows.Common.V1Beta" VersionOverride="[2.0.0-beta04, 3.0.0)" />
     <PackageReference Include="Google.LongRunning" VersionOverride="[3.2.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />

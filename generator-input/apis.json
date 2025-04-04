@@ -6003,6 +6003,7 @@
         "workflows"
       ],
       "dependencies": {
+        "Google.Cloud.Location": "2.3.0",
         "Google.Cloud.Workflows.Common.V1Beta": "2.0.0-beta04",
         "Google.LongRunning": "3.2.0"
       },
