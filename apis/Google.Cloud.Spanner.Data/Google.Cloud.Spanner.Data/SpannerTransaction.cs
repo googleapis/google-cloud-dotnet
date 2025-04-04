@@ -172,20 +172,19 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        private Priority _commitPriority;
-
         /// <summary>
         /// The RPC priority to use for the commit RPC of this transaction. This can only be set for read/write transactions.
         /// This priority is not used for commands that are executed on this transaction. Use <see cref="SpannerCommand.Priority"/>
         /// to set the priority of commands. The default priority is Unspecified.
         /// </summary>
+        [Obsolete("Use SpannerTransactionOptions.CommitPriority instead.")]
         public Priority CommitPriority
         {
-            get => _commitPriority;
+            get => TransactionOptions.EffectivePriority(Mode);
             set
             {
                 GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "Commit priority cannot be set on a read-only transaction");
-                _commitPriority = value;
+                TransactionOptions.CommitPriority = value;
             }
         }
 
@@ -457,7 +456,7 @@ namespace Google.Cloud.Spanner.Data
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
         private RequestOptions BuildCommitRequestOptions() =>
-            new RequestOptions { Priority = PriorityConverter.ToProto(CommitPriority), TransactionTag = _tag ?? "" };
+            new RequestOptions { Priority = PriorityConverter.ToProto(TransactionOptions.EffectivePriority(Mode)), TransactionTag = _tag ?? "" };
 
         /// <inheritdoc />
         public override void Rollback() => Task.Run(() => RollbackAsync(default)).WaitWithUnwrappedExceptions();

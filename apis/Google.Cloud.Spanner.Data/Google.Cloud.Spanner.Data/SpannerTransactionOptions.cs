@@ -49,8 +49,8 @@ public sealed class SpannerTransactionOptions
 
         _maxCommitDelay = other._maxCommitDelay;
         _commitTimeout = other._commitTimeout;
+        CommitPriority = other.CommitPriority;
     }
-
 
     /// <summary>
     /// The maximum amount of time the commit may be delayed server side for batching with other commits.
@@ -86,4 +86,18 @@ public sealed class SpannerTransactionOptions
 
     internal int EffectiveCommitTimeout(SpannerConnection spannerConnection) =>
         _commitTimeout ?? GaxPreconditions.CheckNotNull(spannerConnection, nameof(spannerConnection)).Builder.Timeout;
+
+    /// <summary>
+    /// The priority to use for the <see cref="SpannerTransaction.Commit()"/> and similar overloads.
+    /// For command execution priority, use <see cref="SpannerCommand.Priority"/>.
+    /// This value will be ignored by read-only transactions.
+    /// </summary>
+    public Priority? CommitPriority { get; set; }
+
+    internal Priority EffectivePriority(TransactionMode transactionMode) => transactionMode switch
+    {
+        TransactionMode.ReadOnly => Priority.Unspecified,
+        _ => CommitPriority ?? Priority.Unspecified
+    };
+        
 }

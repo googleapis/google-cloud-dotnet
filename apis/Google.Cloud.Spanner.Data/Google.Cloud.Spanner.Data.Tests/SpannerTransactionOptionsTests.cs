@@ -24,6 +24,7 @@ public class SpannerTransactionOptionsTests
         var options = new SpannerTransactionOptions();
         Assert.Null(options.MaxCommitDelay);
         Assert.Null(options.CommitTimeout);
+        Assert.Null(options.CommitPriority);
     }
 
     public static TheoryData<TimeSpan?> ValidMaxCommitDelayValues => SpannerTransactionTests.ValidMaxCommitDelayValues;
@@ -90,6 +91,21 @@ public class SpannerTransactionOptionsTests
         Assert.Equal(effectiveTimeout, options.EffectiveCommitTimeout(new SpannerConnection(builder)));
     }
 
+    [Theory]
+    [InlineData(null, TransactionMode.ReadOnly, Priority.Unspecified)]
+    [InlineData(Priority.High, TransactionMode.ReadOnly, Priority.Unspecified)]
+    [InlineData(null, TransactionMode.ReadWrite, Priority.Unspecified)]
+    [InlineData(Priority.High, TransactionMode.ReadWrite, Priority.High)]
+    public void CommitPriority_Effective(Priority? priority, TransactionMode mode, Priority effectivePriority)
+    {
+        var options = new SpannerTransactionOptions
+        {
+            CommitPriority = priority
+        };
+
+        Assert.Equal(effectivePriority, options.EffectivePriority(mode));
+    }
+
     [Fact]
     public void CopyConstructor()
     {
@@ -97,10 +113,12 @@ public class SpannerTransactionOptionsTests
         {
             MaxCommitDelay = TimeSpan.FromSeconds(10),
             CommitTimeout = 10,
+            CommitPriority = Priority.High,
         };
         var optionsCopy = new SpannerTransactionOptions(options);
 
         Assert.Equal(options.MaxCommitDelay, optionsCopy.MaxCommitDelay);
         Assert.Equal(options.CommitTimeout, optionsCopy.CommitTimeout);
+        Assert.Equal(options.CommitPriority, optionsCopy.CommitPriority);
     }
 }

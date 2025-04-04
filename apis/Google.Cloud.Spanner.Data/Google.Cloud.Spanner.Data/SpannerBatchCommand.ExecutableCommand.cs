@@ -56,6 +56,7 @@ namespace Google.Cloud.Spanner.Data
                 Tag = command.Tag;
                 EphemeralTransactionCreationOptions = command.EphemeralTransactionCreationOptions;
                 EphemeralTransactionOptions = new SpannerTransactionOptions(command.EphemeralTransactionOptions);
+                EphemeralTransactionOptions.CommitPriority ??= Priority;
             }
 
             /// <summary>
@@ -84,7 +85,7 @@ namespace Google.Cloud.Spanner.Data
             private async Task<IReadOnlyList<long>> ExecuteBatchDmlAsync(CancellationToken cancellationToken)
             {
                 await Connection.EnsureIsOpenAsync(cancellationToken).ConfigureAwait(false);
-                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, Priority, EphemeralTransactionCreationOptions, EphemeralTransactionOptions);
+                var transaction = Transaction ?? Connection.AmbientTransaction ?? new EphemeralTransaction(Connection, EphemeralTransactionCreationOptions, EphemeralTransactionOptions);
                 ExecuteBatchDmlRequest request = GetExecuteBatchDmlRequest();
                 IEnumerable<long> result = await transaction.ExecuteBatchDmlAsync(request, cancellationToken, CommandTimeout).ConfigureAwait(false);
                 return result.ToList().AsReadOnly();
