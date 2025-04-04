@@ -28,14 +28,12 @@ namespace Google.Cloud.Spanner.Data
     internal sealed class EphemeralTransaction : ISpannerTransaction
     {
         private readonly SpannerConnection _connection;
-        private readonly Priority _commitPriority;
         private readonly SpannerTransactionCreationOptions _creationOptions;
         private readonly SpannerTransactionOptions _transactionOptions;
 
-        internal EphemeralTransaction(SpannerConnection connection, Priority commitPriority, SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions transactionOptions)
+        internal EphemeralTransaction(SpannerConnection connection, SpannerTransactionCreationOptions creationOptions, SpannerTransactionOptions transactionOptions)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            _commitPriority = commitPriority;
             _creationOptions = creationOptions;
             _transactionOptions = transactionOptions;
         }
@@ -48,7 +46,6 @@ namespace Google.Cloud.Spanner.Data
             async Task<long> Impl(SpannerTransaction transaction)
             {
                 transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
-                transaction.CommitPriority = _commitPriority;
 
                 return await ((ISpannerTransaction)transaction)
                     .ExecuteDmlAsync(request, cancellationToken, timeoutSeconds)
@@ -69,7 +66,6 @@ namespace Google.Cloud.Spanner.Data
             async Task<ReliableStreamReader> Impl(SpannerTransaction transaction)
             {
                 transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
-                transaction.CommitPriority = _commitPriority;
 
                 return await ((ISpannerTransaction) transaction)
                     .ExecuteDmlReaderAsync(request, cancellationToken, timeoutSeconds)
@@ -100,7 +96,6 @@ namespace Google.Cloud.Spanner.Data
                 using (var transaction = await _connection.BeginTransactionAsyncImpl(effectiveOptions, _transactionOptions, cancellationToken).ConfigureAwait(false))
                 {
                     transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
-                    transaction.CommitPriority = _commitPriority;
 
                     while (true)
                     {
@@ -133,7 +128,6 @@ namespace Google.Cloud.Spanner.Data
             async Task<IEnumerable<long>> Impl(SpannerTransaction transaction)
             {
                 transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
-                transaction.CommitPriority = _commitPriority;
 
                 return await ((ISpannerTransaction)transaction)
                     .ExecuteBatchDmlAsync(request, cancellationToken, timeoutSeconds)
@@ -162,7 +156,6 @@ namespace Google.Cloud.Spanner.Data
                 // ExecuteMutations on SpannerTransaction doesnt actually hit the network
                 // until you commit or rollback.
                 transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
-                transaction.CommitPriority = _commitPriority;
 
                 return await ((ISpannerTransaction)transaction)
                     .ExecuteMutationsAsync(mutations, cancellationToken, timeoutSeconds)

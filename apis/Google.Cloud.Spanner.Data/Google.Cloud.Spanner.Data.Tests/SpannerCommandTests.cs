@@ -311,14 +311,27 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public void CommitPriorityDefaultsToUnspecified()
+        public async Task CommitPriorityDefaultsToUnspecified()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync();
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql()
+                .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            Assert.Equal(Priority.Unspecified, transaction.CommitPriority);
+
+            var command = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command.Transaction = transaction;
+            using (var reader = command.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+            transaction.Commit();
+
+            await spannerClientMock.Received(1).CommitAsync(
+                Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(Priority.Unspecified)),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -354,7 +367,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.CommitPriority = commitPriority;
+            transaction.TransactionOptions.CommitPriority = commitPriority;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             command.Transaction = transaction;
@@ -393,23 +406,12 @@ namespace Google.Cloud.Spanner.Data.Tests
                 Assert.True(reader.HasRows);
             }
             // Verify that we can set the commit priority after a command has been executed.
-            transaction.CommitPriority = priority;
+            transaction.TransactionOptions.CommitPriority = priority;
             transaction.Commit();
 
             await spannerClientMock.Received(1).CommitAsync(
                 Arg.Is<CommitRequest>(request => request.RequestOptions.Priority == PriorityConverter.ToProto(priority)),
                 Arg.Any<CallSettings>());
-        }
-
-        [Fact]
-        public async Task CommitPriorityCannotBeSetForReadOnlyTransaction()
-        {
-            SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
-            spannerClientMock
-                .SetupBatchCreateSessionsAsync();
-            SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, transactionOptions: null, cancellationToken: default);
-            Assert.Throws<InvalidOperationException>(() => transaction.CommitPriority = Priority.High);
         }
 
         [Fact]
@@ -422,7 +424,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.CommitPriority = Priority.Unspecified;
+            transaction.TransactionOptions.CommitPriority = Priority.Unspecified;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             command.Transaction = transaction;
@@ -456,7 +458,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             await connection.RunWithRetriableTransactionAsync(async tx =>
             {
-                tx.CommitPriority = priority;
+                tx.TransactionOptions.CommitPriority = priority;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
                 using var reader = await command.ExecuteReaderAsync();

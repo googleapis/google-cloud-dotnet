@@ -75,6 +75,7 @@ public class SpannerTransactionTests
     {
         TimeSpan commitDelay = TimeSpan.FromMilliseconds(100);
         int commitTimeout = 10;
+        Priority commitPriority = Priority.High;
 
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
         spannerClientMock.SetupBatchCreateSessionsAsync();
@@ -83,9 +84,11 @@ public class SpannerTransactionTests
         {
             MaxCommitDelay = commitDelay,
             CommitTimeout = commitTimeout,
+            CommitPriority = commitPriority,
         });
 
         Assert.Equal(commitDelay, transaction.TransactionOptions.MaxCommitDelay);
         Assert.Equal(commitTimeout, transaction.TransactionOptions.CommitTimeout);
+        Assert.Equal(commitPriority, transaction.TransactionOptions.CommitPriority);
     }
 }
