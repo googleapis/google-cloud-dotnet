@@ -74,15 +74,18 @@ public class SpannerTransactionTests
     public void SpannerTransactionOptions_FromBeginTransaction()
     {
         TimeSpan commitDelay = TimeSpan.FromMilliseconds(100);
+        int commitTimeout = 10;
 
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
         spannerClientMock.SetupBatchCreateSessionsAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions
         {
-            MaxCommitDelay = commitDelay
+            MaxCommitDelay = commitDelay,
+            CommitTimeout = commitTimeout,
         });
 
         Assert.Equal(commitDelay, transaction.TransactionOptions.MaxCommitDelay);
+        Assert.Equal(commitTimeout, transaction.TransactionOptions.CommitTimeout);
     }
 }

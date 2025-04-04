@@ -31,6 +31,7 @@ namespace Google.Cloud.Spanner.Data;
 public sealed class SpannerTransactionOptions
 {
     private TimeSpan? _maxCommitDelay;
+    private int? _commitTimeout;
 
     /// <summary>
     /// Creates an instance of <see cref="SpannerTransactionOptions"/> with default values.
@@ -47,6 +48,7 @@ public sealed class SpannerTransactionOptions
         GaxPreconditions.CheckNotNull(other, nameof(other));
 
         _maxCommitDelay = other._maxCommitDelay;
+        _commitTimeout = other._commitTimeout;
     }
 
 
@@ -66,4 +68,22 @@ public sealed class SpannerTransactionOptions
     }
 
     internal Duration MaxCommitDelayDuration => MaxCommitDelay is null ? null : Duration.FromTimeSpan(MaxCommitDelay.Value);
+
+    // Note: We use seconds here to follow the convention set by DbCommand.CommandTimeout.
+    /// <summary>
+    /// The wait time, in seconds, before terminating the attempt to <see cref="SpannerTransaction.Commit()"/>
+    /// or <see cref="SpannerTransaction.Rollback"/> and generating an error. May be null, in which case, a transaction
+    /// using these options will default to the commit timeout defined on its connection string.
+    /// A value of '0' normally indicates that no timeout should be used (wait an infinite amount of time).
+    /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout
+    /// that expires immediately. This is normally used only for testing purposes.
+    /// </summary>
+    public int? CommitTimeout
+    {
+        get => _commitTimeout;
+        set => _commitTimeout = value is null ? null : GaxPreconditions.CheckArgumentRange(value, nameof(value), 0, int.MaxValue);
+    }
+
+    internal int EffectiveCommitTimeout(SpannerConnection spannerConnection) =>
+        _commitTimeout ?? GaxPreconditions.CheckNotNull(spannerConnection, nameof(spannerConnection)).Builder.Timeout;
 }

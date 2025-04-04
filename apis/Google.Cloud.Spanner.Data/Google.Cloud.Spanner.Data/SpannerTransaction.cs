@@ -107,8 +107,6 @@ namespace Google.Cloud.Spanner.Data
 
         private readonly PooledSession _session;
 
-        private int _commitTimeout;
-
         /// <summary>
         /// Options to apply to the transaction after creation, usually before committing the transaction
         /// or before executing the first transactional statement. Won't be null.
@@ -132,10 +130,11 @@ namespace Google.Cloud.Spanner.Data
         /// However, if you specify AllowImmediateTimeouts=true in the connection string, '0' will cause a timeout
         /// that expires immediately. This is normally used only for testing purposes.
         /// </summary>
+        [Obsolete("Use SpannerTransactionOptions.CommitTimeout instead.")]
         public int CommitTimeout
         {
-            get => _commitTimeout;
-            set => _commitTimeout = GaxPreconditions.CheckArgumentRange(value, nameof(value), 0, int.MaxValue);
+            get => TransactionOptions.EffectiveCommitTimeout(SpannerConnection);
+            set => TransactionOptions.CommitTimeout = value;
         }
 
         /// <summary>
@@ -215,7 +214,6 @@ namespace Google.Cloud.Spanner.Data
             bool isRetriable)
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            CommitTimeout = SpannerConnection.Builder.Timeout;
             LogCommitStats = SpannerConnection.LogCommitStats;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             _creationOptions = GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
@@ -440,7 +438,8 @@ namespace Google.Cloud.Spanner.Data
 
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
-                var callSettings = SpannerConnection.CreateCallSettings(settings => settings.CommitSettings, CommitTimeout, cancellationToken);
+                var callSettings = SpannerConnection.CreateCallSettings(
+                    settings => settings.CommitSettings, TransactionOptions.EffectiveCommitTimeout(SpannerConnection), cancellationToken);
                 var response = await _session.CommitAsync(request, callSettings).ConfigureAwait(false);
                 Interlocked.Exchange(ref _commited, 1);
                 // We dispose of the SpannerTransaction to inmediately release the session to the pool when possible.
@@ -475,7 +474,8 @@ namespace Google.Cloud.Spanner.Data
         {
             CheckNotDisposed();
             GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "You cannot roll back a readonly transaction.");
-            var callSettings = SpannerConnection.CreateCallSettings(settings => settings.RollbackSettings, CommitTimeout, cancellationToken);
+            var callSettings = SpannerConnection.CreateCallSettings(
+                settings => settings.RollbackSettings, TransactionOptions.EffectiveCommitTimeout(SpannerConnection), cancellationToken);
             await  ExecuteHelper.WithErrorTranslationAndProfiling(
                 () => _session.RollbackAsync(new RollbackRequest(), callSettings),
                 "SpannerTransaction.Rollback", SpannerConnection.Logger).ConfigureAwait(false);
