@@ -47,7 +47,7 @@ namespace Google.Cloud.Spanner.Data
 
             async Task<long> Impl(SpannerTransaction transaction)
             {
-                transaction.CommitTimeout = timeoutSeconds;
+                transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
 
                 return await ((ISpannerTransaction)transaction)
@@ -68,7 +68,7 @@ namespace Google.Cloud.Spanner.Data
 
             async Task<ReliableStreamReader> Impl(SpannerTransaction transaction)
             {
-                transaction.CommitTimeout = timeoutSeconds;
+                transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
 
                 return await ((ISpannerTransaction) transaction)
@@ -99,7 +99,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 using (var transaction = await _connection.BeginTransactionAsyncImpl(effectiveOptions, _transactionOptions, cancellationToken).ConfigureAwait(false))
                 {
-                    transaction.CommitTimeout = timeoutSeconds;
+                    transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
                     transaction.CommitPriority = _commitPriority;
 
                     while (true)
@@ -132,7 +132,7 @@ namespace Google.Cloud.Spanner.Data
 
             async Task<IEnumerable<long>> Impl(SpannerTransaction transaction)
             {
-                transaction.CommitTimeout = timeoutSeconds;
+                transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
 
                 return await ((ISpannerTransaction)transaction)
@@ -161,7 +161,7 @@ namespace Google.Cloud.Spanner.Data
                 // Importantly, we need to set timeout on the transaction, because
                 // ExecuteMutations on SpannerTransaction doesnt actually hit the network
                 // until you commit or rollback.
-                transaction.CommitTimeout = timeoutSeconds;
+                transaction.TransactionOptions.CommitTimeout ??= timeoutSeconds;
                 transaction.CommitPriority = _commitPriority;
 
                 return await ((ISpannerTransaction)transaction)

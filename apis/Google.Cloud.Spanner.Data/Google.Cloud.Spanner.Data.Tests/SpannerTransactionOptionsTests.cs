@@ -23,6 +23,7 @@ public class SpannerTransactionOptionsTests
     {
         var options = new SpannerTransactionOptions();
         Assert.Null(options.MaxCommitDelay);
+        Assert.Null(options.CommitTimeout);
     }
 
     public static TheoryData<TimeSpan?> ValidMaxCommitDelayValues => SpannerTransactionTests.ValidMaxCommitDelayValues;
@@ -47,15 +48,59 @@ public class SpannerTransactionOptionsTests
         Assert.Throws<ArgumentOutOfRangeException>(() => options.MaxCommitDelay = maxCommitDelay);
     }
 
+    [Theory]
+    [InlineData(0)]
+    [InlineData(100)]
+    [InlineData(int.MaxValue)]
+    public void CommitTimeout_Valid(int commitTimeout)
+    {
+        var options = new SpannerTransactionOptions
+        {
+            CommitTimeout = commitTimeout
+        };
+
+        Assert.Equal(commitTimeout, options.CommitTimeout);
+    }    
+
+    [Theory]
+    [InlineData(-1)]
+    [InlineData(-100)]
+    [InlineData(int.MinValue)]
+    public void CommitTimeout_Invalid(int commitTimeout)
+    {
+        var options = new SpannerTransactionOptions();
+        Assert.Throws<ArgumentOutOfRangeException>(() => options.CommitTimeout = commitTimeout);
+    }
+
+    [Theory]
+    [InlineData(null, 90, 90)]
+    [InlineData(10, 90, 10)]
+    public void CommitTimeout_Effective(int? optionsCommitTimeout, int connectionTimeout, int effectiveTimeout)
+    {
+        var options = new SpannerTransactionOptions
+        {
+            CommitTimeout = optionsCommitTimeout
+        };
+
+        SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder
+        {
+            Timeout = connectionTimeout
+        };
+
+        Assert.Equal(effectiveTimeout, options.EffectiveCommitTimeout(new SpannerConnection(builder)));
+    }
+
     [Fact]
     public void CopyConstructor()
     {
         var options = new SpannerTransactionOptions
         {
-            MaxCommitDelay = TimeSpan.FromSeconds(10)
+            MaxCommitDelay = TimeSpan.FromSeconds(10),
+            CommitTimeout = 10,
         };
         var optionsCopy = new SpannerTransactionOptions(options);
 
         Assert.Equal(options.MaxCommitDelay, optionsCopy.MaxCommitDelay);
+        Assert.Equal(options.CommitTimeout, optionsCopy.CommitTimeout);
     }
 }

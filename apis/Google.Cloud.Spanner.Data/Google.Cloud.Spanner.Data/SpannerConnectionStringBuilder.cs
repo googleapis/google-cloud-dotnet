@@ -379,8 +379,8 @@ namespace Google.Cloud.Spanner.Data
 
         /// <summary>
         /// Defines the default values for <see cref="SpannerCommand.CommandTimeout"/> and
-        /// <see cref="SpannerTransaction.CommitTimeout"/> along with all network operations to a Cloud
-        /// Spanner database. Defaults to 60 seconds.
+        /// transaction commits along with all network operations to a Cloud Spanner database.
+        /// Defaults to 60 seconds.
         /// </summary>
         /// <remarks>
         /// Operations sent to the server that take greater than this duration will fail
