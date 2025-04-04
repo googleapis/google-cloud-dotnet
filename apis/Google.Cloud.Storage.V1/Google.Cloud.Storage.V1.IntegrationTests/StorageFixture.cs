@@ -62,6 +62,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public string SoftDeleteBucket => BucketPrefix + "-soft-delete";
 
         /// <summary>
+        /// Name of a bucket with hierarchical namespace enabled
+        /// </summary>
+        public string HnsBucket => BucketPrefix + "hns";
+
+        /// <summary>
         /// A small amount of content. Do not mutate the array.
         /// </summary>
         public byte[] SmallContent { get; } = Encoding.UTF8.GetBytes("hello, world");
@@ -167,6 +172,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             CreateBucket(LabelsTestBucket, multiVersion: false);
             CreateBucket(InitiallyEmptyBucket, multiVersion: false);
             CreateBucket(SoftDeleteBucket, multiVersion: false, softDelete: true);
+            CreateBucket(HnsBucket, multiVersion: false, hnsEnabled: true);
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
@@ -249,7 +255,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         }
 
-        internal Bucket CreateBucket(string name, bool multiVersion, bool softDelete = false, bool registerForDeletion = true)
+        internal Bucket CreateBucket(string name, bool multiVersion, bool softDelete = false, bool registerForDeletion = true, bool hnsEnabled = false)
         {
             var bucket = Client.CreateBucket(ProjectId,
                 new Bucket
@@ -258,6 +264,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                     Versioning = new Bucket.VersioningData { Enabled = multiVersion },
                     // The minimum allowed for soft delete is 7 days.
                     SoftDeletePolicy = softDelete ? new Bucket.SoftDeletePolicyData { RetentionDurationSeconds = (int) TimeSpan.FromDays(7).TotalSeconds } : null,
+                    IamConfiguration = hnsEnabled ? new Bucket.IamConfigurationData
+                    {
+                        UniformBucketLevelAccess = new Bucket.IamConfigurationData.UniformBucketLevelAccessData { Enabled = true }
+                    } : null,
+                    HierarchicalNamespace = hnsEnabled ? new Bucket.HierarchicalNamespaceData { Enabled = true } : null,
                 });
             SleepAfterBucketCreateDelete();
             if (registerForDeletion)
