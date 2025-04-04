@@ -50,16 +50,8 @@ namespace Google.Cloud.Spanner.Data
 
         private Logger Logger => _spannerConnection.Logger;
 
-        private async Task<SpannerTransaction> CreateTransactionAsync()
-        {
-            SpannerTransaction transaction = await _spannerConnection.BeginTransactionAsync(_transactionCreationOptions, cancellationToken: default).ConfigureAwait(false);
-
-            if (_transactionOptions.MaxCommitDelay is not null)
-            {
-                transaction.MaxCommitDelay = _transactionOptions.MaxCommitDelay;
-            }
-            return transaction;
-        }
+        private Task<SpannerTransaction> CreateTransactionAsync() =>
+            _spannerConnection.BeginTransactionAsync(_transactionCreationOptions, _transactionOptions, cancellationToken: default);
 
         public void Dispose()
         {

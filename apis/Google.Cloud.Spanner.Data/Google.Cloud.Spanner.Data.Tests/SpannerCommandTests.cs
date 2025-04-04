@@ -268,7 +268,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupStreamingRead();
 
             var connection = BuildSpannerConnection(spannerClientMock);
-            var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
+            var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), transactionOptions: null, cancellationToken: default);
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
             var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10));
@@ -278,7 +278,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var existingTransactionOptions = SpannerTransactionCreationOptions.FromReadOnlyTransactionId(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
             foreach (var partition in partitions)
             {
-                var tx = await connection.BeginTransactionAsync(existingTransactionOptions, cancellationToken: default);
+                var tx = await connection.BeginTransactionAsync(existingTransactionOptions, transactionOptions: null, cancellationToken: default);
                 var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
                 cmd.DirectedReadOptions = DirectedReadTests.IncludeDirectedReadOptions;
                 using var reader = await cmd.ExecuteReaderAsync();
@@ -408,7 +408,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock
                 .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default);
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, transactionOptions: null, cancellationToken: default);
             Assert.Throws<InvalidOperationException>(() => transaction.CommitPriority = Priority.High);
         }
 
@@ -656,7 +656,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             spannerClientMock
                 .SetupBatchCreateSessionsAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default);
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, transactionOptions: null, cancellationToken: default);
             Assert.Throws<InvalidOperationException>(() => transaction.Tag = "transaction-tag-1");
         }
 
@@ -728,7 +728,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var command = new SpannerCommand();
 
-            Assert.Null(command.MaxCommitDelay);
+            Assert.Null(command.EphemeralTransactionOptions.MaxCommitDelay);
         }
 
         [Theory, MemberData(nameof(ValidMaxCommitDelayValues))]
@@ -736,9 +736,9 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var command = new SpannerCommand();
 
-            command.MaxCommitDelay = maxCommitDelay;
+            command.EphemeralTransactionOptions.MaxCommitDelay = maxCommitDelay;
 
-            Assert.Equal(maxCommitDelay, command.MaxCommitDelay);
+            Assert.Equal(maxCommitDelay, command.EphemeralTransactionOptions.MaxCommitDelay);
         }
 
         [Theory, MemberData(nameof(InvalidMaxCommitDelayValues))]
@@ -746,7 +746,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         {
             var command = new SpannerCommand();
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => command.MaxCommitDelay = maxCommitDelay);
+            Assert.Throws<ArgumentOutOfRangeException>(() => command.EphemeralTransactionOptions.MaxCommitDelay = maxCommitDelay);
         }
 
         [Fact]
@@ -785,7 +785,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.MaxCommitDelay = maxCommitDelay;
+            transaction.TransactionOptions.MaxCommitDelay = maxCommitDelay;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             command.Transaction = transaction;
@@ -819,7 +819,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.True(reader.HasRows);
             }
-            transaction.MaxCommitDelay = maxCommitDelay;
+            transaction.TransactionOptions.MaxCommitDelay = maxCommitDelay;
             transaction.Commit();
 
             await spannerClientMock.Received(1).CommitAsync(
@@ -843,7 +843,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             await connection.RunWithRetriableTransactionAsync(async tx =>
             {
-                tx.MaxCommitDelay = maxCommitDelay;
+                tx.TransactionOptions.MaxCommitDelay = maxCommitDelay;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
                 using var reader = await command.ExecuteReaderAsync();
@@ -886,7 +886,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
 
             var command = connection.CreateInsertCommand("FOO");
-            command.MaxCommitDelay = maxCommitDelay;
+            command.EphemeralTransactionOptions.MaxCommitDelay = maxCommitDelay;
             command.ExecuteNonQuery();
 
             await spannerClientMock.Received(1).CommitAsync(
@@ -907,11 +907,11 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.MaxCommitDelay = transactionMaxCommitDelay;
+            transaction.TransactionOptions.MaxCommitDelay = transactionMaxCommitDelay;
 
             var command = connection.CreateInsertCommand("FOO");
             command.Transaction = transaction;
-            command.MaxCommitDelay = commandMaxCommitDelay;
+            command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
 
             command.ExecuteNonQuery();
 
@@ -937,7 +937,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             var command = connection.CreateInsertCommand("FOO");
             command.Transaction = transaction;
-            command.MaxCommitDelay = commandMaxCommitDelay;
+            command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
 
             command.ExecuteNonQuery();
 
@@ -1015,7 +1015,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay});
                 var command = connection.CreateInsertCommand("FOO");
-                command.MaxCommitDelay = commandMaxCommitDelay;
+                command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
                 command.ExecuteNonQuery();
 
                 scope.Complete();
@@ -1042,7 +1042,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 connection.Open();
                 var command = connection.CreateInsertCommand("FOO");
-                command.MaxCommitDelay = commandMaxCommitDelay;
+                command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
                 command.ExecuteNonQuery();
 
                 scope.Complete();
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupExecuteStreamingSqlForDml(ResultSetStats.RowCountOneofCase.None)
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = await connection.BeginTransactionAsync(transactionCreationOptions, cancellationToken: default);
+            SpannerTransaction transaction = await connection.BeginTransactionAsync(transactionCreationOptions, transactionOptions: null, cancellationToken: default);
 
             var command = connection.CreateDmlCommand("DELETE FROM Foo");
             command.Transaction = transaction;
@@ -1112,7 +1112,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 var command = connection.CreateDmlCommand("DELETE FROM Foo");
                 command.Transaction = tx;
                 await command.ExecuteNonQueryAsync();
-            }, transactionCreationOptions, cancellationToken: default);
+            }, transactionCreationOptions, transactionOptions: null, cancellationToken: default);
 
             spannerClientMock.Received(1).ExecuteStreamingSql(
                 Arg.Is<ExecuteSqlRequest>(request => request.Transaction.Equals(expectedTransactionSelector)),
@@ -1461,7 +1461,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupStreamingRead();
 
             var connection = BuildSpannerConnection(spannerClientMock);
-            var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
+            var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), transactionOptions: null, cancellationToken: default);
             var command = connection.CreateReadCommand("Foo", ReadOptions.FromColumns("Col1", "Col2").WithLimit(10), KeySet.All);
             command.Transaction = transaction;
             var partitions = await command.GetReaderPartitionsAsync(PartitionOptions.Default.WithPartitionSizeBytes(0).WithMaxPartitions(10).WithDataBoostEnabled(dataBoostEnabled));
@@ -1473,7 +1473,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var existingTransactionOptions = SpannerTransactionCreationOptions.FromReadOnlyTransactionId(TransactionId.FromBase64String(transaction.TransactionId.ToBase64String()));
             foreach (var partition in partitions)
             {
-                var tx = await connection.BeginTransactionAsync(existingTransactionOptions, cancellationToken: default);
+                var tx = await connection.BeginTransactionAsync(existingTransactionOptions, transactionOptions: null, cancellationToken: default);
                 var cmd = connection.CreateCommandWithPartition(CommandPartition.FromBase64String(partition.ToBase64String()), tx);
                 var reader = await cmd.ExecuteReaderAsync();
                 Assert.True(reader.HasRows);

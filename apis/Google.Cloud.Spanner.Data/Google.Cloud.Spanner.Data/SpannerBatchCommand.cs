@@ -39,17 +39,18 @@ namespace Google.Cloud.Spanner.Data
     {
         private int _commandTimeout;
         private SpannerBatchCommandType _commandType;
-        private TimeSpan? _maxCommitDelay;
 
         internal SpannerBatchCommand(SpannerConnection connection)
         {
             Connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
+            EphemeralTransactionOptions = new SpannerTransactionOptions();
         }
 
         internal SpannerBatchCommand(SpannerTransaction transaction)
         {
             Transaction = GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
             Connection = transaction.SpannerConnection; // Never null
+            EphemeralTransactionOptions = new SpannerTransactionOptions();
         }
 
         // Visible for testing
@@ -76,7 +77,8 @@ namespace Google.Cloud.Spanner.Data
         public SpannerConnection Connection { get; }
 
         /// <summary>
-        /// The transaction to use when executing this command. If this is null, the command will be executed without a transaction.
+        /// The transaction to use when executing this command. If this is null,
+        /// the command will be executed with no explicit transaction.
         /// </summary>
         public SpannerTransaction Transaction { get; }
 
@@ -110,26 +112,6 @@ namespace Google.Cloud.Spanner.Data
         public Priority Priority { get; set; }
 
         /// <summary>
-        /// The maximum amount of time the commit of the implicit transaction associated with this command, if any,
-        /// may be delayed server side for batching with other commits.
-        /// The bigger the delay, the better the throughput (QPS), but at the expense of commit latency.
-        /// If set to <see cref="TimeSpan.Zero"/>, commit batching is disabled.
-        /// May be null, in which case commits will continue to be batched as they had been before this configuration
-        /// option was made available to Spanner API consumers.
-        /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
-        /// </summary>
-        /// <remarks>
-        /// When a batch command is executed with no explicit or ambient transaction, an implicit transaction is created
-        /// and the command is executed within it. This value will be applied to the commit operation of such transaction,
-        /// if there is any. Otherwise, this value will be ignored.
-        /// </remarks>
-        public TimeSpan? MaxCommitDelay
-        {
-            get => _maxCommitDelay;
-            set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
-        }
-
-        /// <summary>
         /// Options to be used for creating the ephemeral transaction under which this command will be executed
         /// if no explicit or ambient transaction is set.
         /// These options will be ignored if an explicit transaction is set on the command via <see cref="SpannerTransaction.CreateBatchDmlCommand"/>
@@ -138,6 +120,22 @@ namespace Google.Cloud.Spanner.Data
         /// May be null, in which case appropriate defaults will be used when needed.
         /// </summary>
         public SpannerTransactionCreationOptions EphemeralTransactionCreationOptions { get; set; }
+
+        /// <summary>
+        /// Options to be applied to the ephemeral transaction under which this command will be executed
+        /// if no explicit or ambient transaction is set.
+        /// These options will be ignored if an explicit transaction is set on the command via <see cref="SpannerTransaction.CreateBatchDmlCommand"/>
+        /// or an ambient transaction has been started via <see cref="SpannerConnection.OpenAsync(SpannerTransactionCreationOptions, SpannerTransactionOptions, CancellationToken)"/>
+        /// and similar methods. Won't be null.
+        /// </summary>
+        /// <remarks>
+        /// Even though the value of this property cannot be changed, instances of <see cref="SpannerTransactionOptions"/> are mutable.
+        /// This is useful for ORM and similar implementations that depend on ADO.NET for transaction and command
+        /// creation, which does not know about these Spanner specific options. These implementations may still
+        /// access transaction and commands after creation and change these options.
+        /// When an implephemeral transaction is created, this value will be cloned.
+        /// </remarks>
+        public SpannerTransactionOptions EphemeralTransactionOptions { get; }
 
         /// <summary>
         /// Adds a command to the collection of batch commands to be executed by this <see cref="SpannerBatchCommand"/>.

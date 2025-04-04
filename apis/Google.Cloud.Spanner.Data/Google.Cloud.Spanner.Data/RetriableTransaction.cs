@@ -26,9 +26,15 @@ namespace Google.Cloud.Spanner.Data
         private readonly IClock _clock;
         private readonly IScheduler _scheduler;
         private readonly SpannerTransactionCreationOptions _creationOptions;
+        private readonly SpannerTransactionOptions _transactionOptions;
         private readonly RetriableTransactionOptions _retryOptions;
 
-        internal RetriableTransaction(SpannerConnection connection, IClock clock, IScheduler scheduler, SpannerTransactionCreationOptions creationOptions, RetriableTransactionOptions retryOptions)
+        internal RetriableTransaction(
+            SpannerConnection connection,
+            IClock clock, IScheduler scheduler,
+            SpannerTransactionCreationOptions creationOptions,
+            SpannerTransactionOptions transactionOptions,
+            RetriableTransactionOptions retryOptions)
         {
             _connection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
             _clock = GaxPreconditions.CheckNotNull(clock, nameof(clock));
@@ -47,6 +53,7 @@ namespace Google.Cloud.Spanner.Data
                     "Retriable transactions must be read-write and may not be detached or partioned DML transactions.");
                 _creationOptions = creationOptions;
             }
+            _transactionOptions = transactionOptions;
             _retryOptions = retryOptions ?? RetriableTransactionOptions.CreateDefault();
         }
 
@@ -75,7 +82,7 @@ namespace Google.Cloud.Spanner.Data
                         try
                         {
                             session = await (session?.RefreshedOrNewAsync(cancellationToken) ?? _connection.AcquireSessionAsync(_creationOptions, cancellationToken)).ConfigureAwait(false);
-                            transaction = new SpannerTransaction(_connection, session, _creationOptions, isRetriable: true);
+                            transaction = new SpannerTransaction(_connection, session, _creationOptions, _transactionOptions, isRetriable: true);
 
                             TResult result = await asyncWork(transaction).ConfigureAwait(false);
                             await transaction.CommitAsync(cancellationToken).ConfigureAwait(false);

@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
+using Google.Protobuf.WellKnownTypes;
 using System;
 
 namespace Google.Cloud.Spanner.Data;
@@ -61,6 +62,8 @@ public sealed class SpannerTransactionOptions
     public TimeSpan? MaxCommitDelay
     {
         get => _maxCommitDelay;
-        set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
+        set => _maxCommitDelay = value is null ? null : GaxPreconditions.CheckArgumentRange(value, nameof(MaxCommitDelay), TimeSpan.Zero, TimeSpan.MaxValue);
     }
+
+    internal Duration MaxCommitDelayDuration => MaxCommitDelay is null ? null : Duration.FromTimeSpan(MaxCommitDelay.Value);
 }

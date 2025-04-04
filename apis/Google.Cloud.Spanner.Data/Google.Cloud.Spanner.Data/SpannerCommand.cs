@@ -42,7 +42,6 @@ namespace Google.Cloud.Spanner.Data
         private readonly CancellationTokenSource _synchronousCancellationTokenSource = new CancellationTokenSource();
         private int _commandTimeout;
         private SpannerTransaction _transaction;
-        private TimeSpan? _maxCommitDelay;
 
         /// <summary>
         /// Initializes a new instance of <see cref="SpannerCommand"/>, using a default command timeout.
@@ -51,6 +50,7 @@ namespace Google.Cloud.Spanner.Data
         {
             DesignTimeVisible = true;
             _commandTimeout = SpannerConnectionStringBuilder.DefaultTimeout;
+            EphemeralTransactionOptions = new SpannerTransactionOptions();
         }
 
         internal SpannerCommand(SpannerConnection connection)
@@ -61,13 +61,15 @@ namespace Google.Cloud.Spanner.Data
             {
                 _commandTimeout = connection.Builder.Timeout;
             }
+            EphemeralTransactionOptions = new SpannerTransactionOptions();
         }
 
         private SpannerCommand(
             SpannerConnection connection,
             SpannerTransaction transaction,
             SpannerParameterCollection parameters,
-            CommandPartition commandPartition) : this(connection)
+            CommandPartition commandPartition,
+            SpannerTransactionOptions ephemeralTransactionOptions) : this(connection)
         {
             _transaction = transaction;
             Partition = commandPartition;
@@ -75,6 +77,7 @@ namespace Google.Cloud.Spanner.Data
             {
                 Parameters = parameters;
             }
+            EphemeralTransactionOptions = ephemeralTransactionOptions ?? new SpannerTransactionOptions();
         }
 
         /// <summary>
@@ -88,7 +91,7 @@ namespace Google.Cloud.Spanner.Data
         /// <param name="connection">The <see cref="SpannerConnection"/> that is
         /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
         /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
-        /// created through <see cref="SpannerConnection.BeginTransactionAsync(SpannerTransactionCreationOptions, CancellationToken)" />. May be null.</param>
+        /// created through <see cref="SpannerConnection.BeginTransactionAsync(SpannerTransactionCreationOptions, SpannerTransactionOptions, CancellationToken)" />. May be null.</param>
         /// <param name="parameters">An optional collection of <see cref="SpannerParameter"/>
         /// that is used in the command. May be null.</param>
         public SpannerCommand(
@@ -96,7 +99,7 @@ namespace Google.Cloud.Spanner.Data
             SpannerConnection connection,
             SpannerTransaction transaction = null,
             SpannerParameterCollection parameters = null)
-            : this(connection, transaction, parameters, null)
+            : this(connection, transaction, parameters, commandPartition: null, ephemeralTransactionOptions: null)
         {
             GaxPreconditions.CheckNotNull(commandTextBuilder, nameof(commandTextBuilder));
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
@@ -116,13 +119,13 @@ namespace Google.Cloud.Spanner.Data
         /// associated with this <see cref="SpannerCommand"/>. Must not be null.</param>
         /// <param name="keySet">The <see cref="KeySet"/> that is used to select rows. Must not be null.</param>
         /// <param name="transaction">An optional <see cref="SpannerTransaction"/>
-        /// created through <see cref="SpannerConnection.BeginTransactionAsync(SpannerTransactionCreationOptions, CancellationToken)" />. May be null.</param>
+        /// created through <see cref="SpannerConnection.BeginTransactionAsync(SpannerTransactionCreationOptions, SpannerTransactionOptions, CancellationToken)" />. May be null.</param>
         internal SpannerCommand(
             SpannerCommandTextBuilder commandTextBuilder,
             SpannerConnection connection,
             KeySet keySet,
             SpannerTransaction transaction = null)
-            : this(connection, transaction, null, null)
+            : this(connection, transaction, parameters: null, commandPartition: null, ephemeralTransactionOptions: null)
         {
             GaxPreconditions.CheckArgument(commandTextBuilder.SpannerCommandType == SpannerCommandType.Read,
                 nameof(commandTextBuilder.SpannerCommandType), "KeySet is only allowed for Read commands");
@@ -140,13 +143,13 @@ namespace Google.Cloud.Spanner.Data
         /// </param>
         /// <param name="commandPartition">
         /// The partition which this command is restricted to.
-        /// See <see cref="SpannerConnection.BeginReadOnlyTransaction(TransactionId)"/>
+        /// See <see cref="SpannerTransactionCreationOptions.FromReadOnlyTransactionId(TransactionId)"/>
         /// </param>
         public SpannerCommand(
             SpannerConnection connection,
             SpannerTransaction transaction,
             CommandPartition commandPartition)
-            : this(connection, transaction, null, commandPartition)
+            : this(connection, transaction, parameters: null, commandPartition, ephemeralTransactionOptions: null)
         {
             GaxPreconditions.CheckNotNull(connection, nameof(connection));
             GaxPreconditions.CheckNotNull(transaction, nameof(transaction));
@@ -282,26 +285,6 @@ namespace Google.Cloud.Spanner.Data
         /// </remarks>
         public DirectedReadOptions DirectedReadOptions { get; set; }
 
-        /// <summary>
-        /// The maximum amount of time the commit of the implicit transaction associated with this command, if any,
-        /// may be delayed server side for batching with other commits.
-        /// The bigger the delay, the better the throughput (QPS), but at the expense of commit latency.
-        /// If set to <see cref="TimeSpan.Zero"/>, commit batching is disabled.
-        /// May be null, in which case commits will continue to be batched as they had been before this configuration
-        /// option was made available to Spanner API consumers.
-        /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
-        /// </summary>
-        /// <remarks>
-        /// When a DML or mutation command is executed with no explicit or ambient transaction, an implicit transaction is created
-        /// and the command is executed within it. This value will be applied to the commit operation of such transaction,
-        /// if there is any. Otherwise, this value will be ignored.
-        /// </remarks>
-        public TimeSpan? MaxCommitDelay
-        {
-            get => _maxCommitDelay;
-            set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
-        }
-
         /// <inheritdoc />
         protected override DbConnection DbConnection
         {
@@ -342,10 +325,27 @@ namespace Google.Cloud.Spanner.Data
         public SpannerTransactionCreationOptions EphemeralTransactionCreationOptions { get; set; }
 
         /// <summary>
+        /// Options to be applied to the ephemeral transaction under which this command will be executed
+        /// if no explicit or ambient transaction is set.
+        /// These options will be ignored if an explicit transaction is set on the command via <see cref="SpannerTransaction.CreateBatchDmlCommand"/>
+        /// or an ambient transaction has been started via <see cref="SpannerConnection.OpenAsync(SpannerTransactionCreationOptions, SpannerTransactionOptions, CancellationToken)"/>
+        /// and similar methods. Won't be null.
+        /// </summary>
+        /// <remarks>
+        /// Even though the value of this property cannot be changed, instances of <see cref="SpannerTransactionOptions"/> are mutable.
+        /// This is useful for ORM and similar implementations that depend on ADO.NET for transaction and command
+        /// creation, which does not know about these Spanner specific options. These implementations may still
+        /// access transaction and commands after creation and change these options.
+        /// When an implephemeral transaction is created, this value will be cloned.
+        /// </remarks>
+        public SpannerTransactionOptions EphemeralTransactionOptions { get; }
+
+        /// <summary>
         /// Returns a copy of this <see cref="SpannerCommand"/>.
         /// </summary>
         /// <returns>a copy of this <see cref="SpannerCommand"/>.</returns>
-        public object Clone() => new SpannerCommand(SpannerConnection, _transaction, Parameters?.Clone(), Partition?.Clone())
+        public object Clone() => new SpannerCommand(
+            SpannerConnection, _transaction, Parameters?.Clone(), Partition?.Clone(), new SpannerTransactionOptions(EphemeralTransactionOptions))
         {
             DesignTimeVisible = DesignTimeVisible,
             SpannerCommandTextBuilder = SpannerCommandTextBuilder,
@@ -354,7 +354,6 @@ namespace Google.Cloud.Spanner.Data
             Priority = Priority,
             Tag = Tag,
             DirectedReadOptions = DirectedReadOptions?.Clone(),
-            MaxCommitDelay = MaxCommitDelay,
             EphemeralTransactionCreationOptions = EphemeralTransactionCreationOptions,
         };
 

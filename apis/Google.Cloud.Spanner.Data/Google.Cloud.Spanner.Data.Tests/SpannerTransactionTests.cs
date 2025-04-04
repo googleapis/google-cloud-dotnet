@@ -44,7 +44,7 @@ public class SpannerTransactionTests
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
-        Assert.Null(transaction.MaxCommitDelay);
+        Assert.Null(transaction.TransactionOptions.MaxCommitDelay);
     }
 
     [Theory, MemberData(nameof(ValidMaxCommitDelayValues))]
@@ -55,18 +55,34 @@ public class SpannerTransactionTests
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
-        transaction.MaxCommitDelay = maxCommitDelay;
-        Assert.Equal(maxCommitDelay, transaction.MaxCommitDelay);
+        transaction.TransactionOptions.MaxCommitDelay = maxCommitDelay;
+        Assert.Equal(maxCommitDelay, transaction.TransactionOptions.MaxCommitDelay);
     }
 
     [Theory, MemberData(nameof(InvalidMaxCommitDelayValues))]
-    public void MaxCommitDelay_Invalid(TimeSpan? maxCommitdelua)
+    public void MaxCommitDelay_Invalid(TimeSpan? maxCommitdelay)
     {
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
         spannerClientMock.SetupBatchCreateSessionsAsync();
         SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
         SpannerTransaction transaction = connection.BeginTransaction();
 
-        Assert.Throws<ArgumentOutOfRangeException>(() => transaction.MaxCommitDelay = maxCommitdelua);
+        Assert.Throws<ArgumentOutOfRangeException>(() => transaction.TransactionOptions.MaxCommitDelay = maxCommitdelay);
+    }
+
+    [Fact]
+    public void SpannerTransactionOptions_FromBeginTransaction()
+    {
+        TimeSpan commitDelay = TimeSpan.FromMilliseconds(100);
+
+        SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
+        spannerClientMock.SetupBatchCreateSessionsAsync();
+        SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
+        SpannerTransaction transaction = connection.BeginTransaction(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions
+        {
+            MaxCommitDelay = commitDelay
+        });
+
+        Assert.Equal(commitDelay, transaction.TransactionOptions.MaxCommitDelay);
     }
 }

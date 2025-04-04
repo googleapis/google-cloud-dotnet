@@ -108,7 +108,21 @@ namespace Google.Cloud.Spanner.Data
         private readonly PooledSession _session;
 
         private int _commitTimeout;
-        private TimeSpan? _maxCommitDelay;
+
+        /// <summary>
+        /// Options to apply to the transaction after creation, usually before committing the transaction
+        /// or before executing the first transactional statement. Won't be null.
+        /// </summary>
+        /// <remarks>
+        /// Even though the value of this property cannot be changed, instances of <see cref="SpannerTransactionOptions"/> are mutable.
+        /// This is useful for ORM and similar implementations that depend on ADO.NET for transaction and command
+        /// creation, which does not know about these Spanner specific options. These implementations may still
+        /// access transaction and commands after creation and change these options.
+        /// When a <see cref="SpannerTransaction"/> instance is created, the value supplied for <see cref="SpannerTransactionOptions"/>
+        /// will be cloned and assigned to this property, or if none was suplied, a new instance will be created. But accessing this property
+        /// on each <see cref="SpannerTransaction"/> instance will always return the same value.
+        /// </remarks>
+        public SpannerTransactionOptions TransactionOptions { get; }
 
         // Note: We use seconds here to follow the convention set by DbCommand.CommandTimeout.
         /// <summary>
@@ -122,20 +136,6 @@ namespace Google.Cloud.Spanner.Data
         {
             get => _commitTimeout;
             set => _commitTimeout = GaxPreconditions.CheckArgumentRange(value, nameof(value), 0, int.MaxValue);
-        }
-
-        /// <summary>
-        /// The maximum amount of time the commit may be delayed server side for batching with other commits.
-        /// The bigger the delay, the better the throughput (QPS), but at the expense of commit latency.
-        /// If set to <see cref="TimeSpan.Zero"/>, commit batching is disabled.
-        /// May be null, in which case commits will continue to be batched as they had been before this configuration
-        /// option was made available to Spanner API consumers.
-        /// May be set to any value between <see cref="TimeSpan.Zero"/> and 500ms.
-        /// </summary>
-        public TimeSpan? MaxCommitDelay
-        {
-            get => _maxCommitDelay;
-            set => _maxCommitDelay = SpannerTransaction.CheckMaxCommitDelayRange(value);
         }
 
         /// <summary>
@@ -211,6 +211,7 @@ namespace Google.Cloud.Spanner.Data
             SpannerConnection connection,
             PooledSession session,
             SpannerTransactionCreationOptions creationOptions,
+            SpannerTransactionOptions transactionOptions,
             bool isRetriable)
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
@@ -218,6 +219,7 @@ namespace Google.Cloud.Spanner.Data
             LogCommitStats = SpannerConnection.LogCommitStats;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             _creationOptions = GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
+            TransactionOptions = transactionOptions is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(transactionOptions);
             _isRetriable = isRetriable;
         }
 
@@ -433,7 +435,7 @@ namespace Google.Cloud.Spanner.Data
                 Mutations = { _mutations },
                 ReturnCommitStats = LogCommitStats,
                 RequestOptions = BuildCommitRequestOptions(),
-                MaxCommitDelay = MaxCommitDelay is null ? null : Duration.FromTimeSpan(MaxCommitDelay.Value),
+                MaxCommitDelay = TransactionOptions.MaxCommitDelayDuration,
             };
 
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
@@ -561,9 +563,5 @@ namespace Google.Cloud.Spanner.Data
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
             }
         }
-
-        // TODO: Move to SpannerTransactionOptions once all transaction types are using it.
-        internal static TimeSpan? CheckMaxCommitDelayRange(TimeSpan? maxCommitDelay) =>
-            maxCommitDelay is null ? maxCommitDelay : GaxPreconditions.CheckArgumentRange(maxCommitDelay.Value, nameof(MaxCommitDelay), TimeSpan.Zero, TimeSpan.MaxValue);
     }
 }
