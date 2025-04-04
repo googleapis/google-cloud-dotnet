@@ -56,7 +56,6 @@ public sealed partial class StorageClientImpl : StorageClient
         GaxPreconditions.CheckNotNull(sourceBucket, nameof(sourceBucket));
         GaxPreconditions.CheckNotNull(sourceObjectName, nameof(sourceObjectName));
         GaxPreconditions.CheckNotNull(destinationObjectName, nameof(destinationObjectName));
-        Object obj = options?.ExtraMetadata ?? new Object();
         var request = Service.Objects.Move(sourceBucket, sourceObjectName, destinationObjectName);
         options?.ModifyRequest(request);
         RetryOptions retryOptions = options?.RetryOptions ?? RetryOptions.MaybeIdempotent(options?.IfGenerationMatch);
