@@ -225,7 +225,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using (var connection = _fixture.GetConnection())
             {
                 connection.Open();
-                using (var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, cancellationToken: default))
+                using (var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, transactionOptions: null, cancellationToken: default))
                 {
                     string dml = $"DELETE FROM {_fixture.TableName} WHERE DeleteMe AND Key=@key";
                     using (var command = connection.CreateDmlCommand(dml))

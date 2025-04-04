@@ -86,7 +86,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             using var connection = new SpannerConnection(_fixture.ConnectionString);
             await connection.OpenAsync();
 
-            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), cancellationToken: default);
+            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly.WithIsDetached(true), transactionOptions: null, cancellationToken: default);
 
             using var cmd = commandFactory(connection);
             cmd.Transaction = transaction;
@@ -102,7 +102,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
             // Note: we only use state provided by the arguments here.
             using var connection = new SpannerConnection(id.ConnectionString);
-            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(id), cancellationToken: default);
+            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(id), transactionOptions: null, cancellationToken: default);
             using var cmd = connection.CreateCommandWithPartition(readPartition, transaction);
             using (var reader = await cmd.ExecuteReaderAsync())
             while (await reader.ReadAsync())
@@ -119,7 +119,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 return;
             }
             using var connection = new SpannerConnection(transactionId.ConnectionString);
-            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId), cancellationToken: default);
+            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId), transactionOptions: null, cancellationToken: default);
             transaction.DisposeBehavior = DisposeBehavior.CloseResources;
         }
     }

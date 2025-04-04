@@ -54,7 +54,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             var pool = new FakeSessionPool();
             var session = PooledSession.FromSessionName(pool, new SessionName("project", "instance", "database", "session"));
 
-            var transaction = new SpannerTransaction(connection, session, SpannerTransactionCreationOptions.ReadWrite, isRetriable: false);
+            var transaction = new SpannerTransaction(connection, session, SpannerTransactionCreationOptions.ReadWrite, transactionOptions: null, isRetriable: false);
             var command = new SpannerBatchCommand(transaction);
 
             Assert.Empty(command.Commands);
@@ -228,7 +228,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
-            Assert.Null(command.MaxCommitDelay);
+            Assert.Null(command.EphemeralTransactionOptions.MaxCommitDelay);
         }
 
         [Theory, MemberData(nameof(ValidMaxCommitDelayValues))]
@@ -239,9 +239,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
-            command.MaxCommitDelay = maxCommitDelay;
+            command.EphemeralTransactionOptions.MaxCommitDelay = maxCommitDelay;
 
-            Assert.Equal(maxCommitDelay, command.MaxCommitDelay);
+            Assert.Equal(maxCommitDelay, command.EphemeralTransactionOptions.MaxCommitDelay);
         }
 
         [Theory, MemberData(nameof(InvalidMaxCommitDelayValues))]
@@ -252,7 +252,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             var command = connection.CreateBatchDmlCommand();
 
-            Assert.Throws<ArgumentOutOfRangeException>(() => command.MaxCommitDelay = maxCommitDelay);
+            Assert.Throws<ArgumentOutOfRangeException>(() => command.EphemeralTransactionOptions.MaxCommitDelay = maxCommitDelay);
         }
 
         [Fact]
@@ -290,7 +290,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             var command = connection.CreateBatchDmlCommand();
             command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
-            command.MaxCommitDelay = maxCommitDelay;
+            command.EphemeralTransactionOptions.MaxCommitDelay = maxCommitDelay;
             command.ExecuteNonQuery();
 
             await spannerClientMock.Received(1).CommitAsync(
@@ -312,11 +312,11 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.MaxCommitDelay = transactionMaxCommitDelay;
+            transaction.TransactionOptions.MaxCommitDelay = transactionMaxCommitDelay;
 
             var command = transaction.CreateBatchDmlCommand();
             command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
-            command.MaxCommitDelay = commandMaxCommitDelay;
+            command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
             command.ExecuteNonQuery();
 
             transaction.Commit();
@@ -342,7 +342,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             var command = transaction.CreateBatchDmlCommand();
             command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
-            command.MaxCommitDelay = commandMaxCommitDelay;
+            command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
             command.ExecuteNonQuery();
 
             transaction.Commit();
@@ -371,7 +371,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 connection.Open(SpannerTransactionCreationOptions.ReadWrite, new SpannerTransactionOptions { MaxCommitDelay = transactionMaxCommitDelay });
                 var command = connection.CreateBatchDmlCommand();
                 command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
-                command.MaxCommitDelay = commandMaxCommitDelay;
+                command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
                 command.ExecuteNonQuery();
 
                 scope.Complete();
@@ -400,7 +400,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 connection.Open();
                 var command = connection.CreateBatchDmlCommand();
                 command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
-                command.MaxCommitDelay = commandMaxCommitDelay;
+                command.EphemeralTransactionOptions.MaxCommitDelay = commandMaxCommitDelay;
                 command.ExecuteNonQuery();
 
                 scope.Complete();
