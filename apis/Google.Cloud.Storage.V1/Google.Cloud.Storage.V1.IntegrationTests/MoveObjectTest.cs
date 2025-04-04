@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Cloud.ClientTesting;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -25,27 +26,38 @@ namespace Google.Cloud.Storage.V1.IntegrationTests;
 public class MoveObjectTest
 {
     private readonly StorageFixture _fixture;
-    private string SmallNewObject { get; } = "smallNew.txt";
-    private string LargeNewObject { get; } = "largeNew.txt";
-    private string SmallThenLargeObject { get; } = "smallThenLargeNew.txt";
+    private readonly string _bucket;
+    private readonly string _name1;
+    private readonly string _name2;
+    private readonly string _contentType1;
+    private readonly string _contentType2;
+    private readonly MemoryStream _source1;
+    private readonly MemoryStream _source2;
 
     public MoveObjectTest(StorageFixture fixture)
     {
         _fixture = fixture;
+        _bucket = _fixture.HnsBucket;
+        _name1 = IdGenerator.FromGuid();
+        _name2 = IdGenerator.FromGuid();
+        _contentType1 = "application/octet-stream";
+        _contentType2 = "application/x-replaced";
+        _source1 = GenerateData(100);
+        _source2 = GenerateData(50);
     }
 
     // Moves an object within a hierarchical namespace enabled bucket.
     [Fact]
     public async Task MoveObjectAsync()
     {
-        var actual = await _fixture.Client.GetObjectAsync(_fixture.HnsBucket, _fixture.SmallThenLargeObject);
-        _fixture.Client.UploadObject(_fixture.HnsBucket, LargeNewObject, "text/plain", new MemoryStream(_fixture.LargeContent));
-        var expected = await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, _fixture.SmallThenLargeObject, LargeNewObject);
+        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
+        _fixture.Client.UploadObject(_bucket, _name2, _contentType2, _source2);
+        var expected = await _fixture.Client.MoveObjectAsync(_bucket, actual.Name, _name2);
         using var stream = new MemoryStream();
-        await _fixture.Client.DownloadObjectAsync(_fixture.HnsBucket, LargeNewObject, stream);
+        await _fixture.Client.DownloadObjectAsync(_bucket, _name2, stream);
         // Assert that the content of the destination object is the same as the source object.
-        Assert.Equal(_fixture.LargeContent, stream.ToArray());
-        var objects = _fixture.Client.ListObjects(_fixture.HnsBucket).ToList();
+        Assert.Equal(_source1.ToArray(), stream.ToArray());
+        var objects = _fixture.Client.ListObjects(_bucket).ToList();
         // Assert that the destination object exists after the move.
         Assert.Contains(objects, obj => obj.Name == expected.Name && obj.Generation == expected.Generation);
         // Assert that the source object does not exist after the move.
@@ -56,20 +68,20 @@ public class MoveObjectTest
     [Fact]
     public async Task MoveObjectToDirectorySubDirectoryAsync()
     {
-        var actual = await _fixture.Client.GetObjectAsync(_fixture.HnsBucket, _fixture.SmallObject);
-        _fixture.Client.UploadObject(_fixture.HnsBucket, SmallNewObject, "text/plain", new MemoryStream(_fixture.SmallContent));
-        var expected = await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, _fixture.SmallObject, $"folder/subfolder/" + SmallNewObject);
+        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
+        _fixture.Client.UploadObject(_bucket, _name2, _contentType2, _source2);
+        var expected = await _fixture.Client.MoveObjectAsync(_bucket, _name1, $"folder/subfolder/" + _name2);
         using var stream = new MemoryStream();
-        await _fixture.Client.DownloadObjectAsync(_fixture.HnsBucket, $"folder/subfolder/" + SmallNewObject, stream);
+        await _fixture.Client.DownloadObjectAsync(_bucket, $"folder/subfolder/" + _name2, stream);
         // Assert that the content of the destination object is the same as the source object.
-        Assert.Equal(_fixture.SmallContent, stream.ToArray());
+        Assert.Equal(_source1.ToArray(), stream.ToArray());
         // Assert that the generation of the destination object is different from the source object indicating a new object at destination is created.
         Assert.NotEqual(actual.Generation, expected.Generation);
         var options = new ListObjectsOptions
         {
-            MatchGlob = "folder/subfolder/*.txt"
+            MatchGlob = "folder/subfolder/*"
         };
-        var objects = _fixture.Client.ListObjects(_fixture.HnsBucket, null, options).ToList();
+        var objects = _fixture.Client.ListObjects(_bucket, null, options).ToList();
         // Assert that the destination object exists after the move.
         Assert.Contains(objects, obj => obj.Name == expected.Name && obj.Generation == expected.Generation);
         // Assert that the source object does not exist after the move.
@@ -80,11 +92,12 @@ public class MoveObjectTest
     [Fact]
     public async Task PreventMoveObject_With_Wrong_GenerationAsync()
     {
-        var actual = await _fixture.Client.UploadObjectAsync(_fixture.HnsBucket, "file.txt", null, GenerateData(128));
-        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_fixture.HnsBucket, actual.Name, _fixture.SmallObject,
+        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
+        await _fixture.Client.UploadObjectAsync(_bucket, _name2, _contentType2, _source2);
+        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_bucket, actual.Name, _name2,
             new MoveObjectOptions { IfGenerationMatch = 0 }));
         Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
-        var objects = _fixture.Client.ListObjects(_fixture.HnsBucket).ToList();
+        var objects = _fixture.Client.ListObjects(_bucket).ToList();
         // Assert that the source object is not deleted and destination object is not overwritten.
         Assert.Contains(objects, obj => obj.Name == actual.Name && obj.Generation == actual.Generation);
     }
@@ -93,11 +106,11 @@ public class MoveObjectTest
     [Fact]
     public async Task PreventMoveObject_With_Wrong_SourceMetaGenerationAsync()
     {
-        var actual = await _fixture.Client.UploadObjectAsync(_fixture.HnsBucket, "sourceFile.txt", null, GenerateData(128));
-        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_fixture.HnsBucket, actual.Name, _fixture.SmallObject,
+        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
+        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_bucket, actual.Name, _name2,
             new MoveObjectOptions { IfSourceMetagenerationMatch = 0 }));
         Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
-        var objects = _fixture.Client.ListObjects(_fixture.HnsBucket).ToList();
+        var objects = _fixture.Client.ListObjects(_bucket).ToList();
         // Assert that the source object is not deleted and destination object is not overwritten.
         Assert.Contains(objects, obj => obj.Name == actual.Name && obj.Generation == actual.Generation);
     }
@@ -106,12 +119,11 @@ public class MoveObjectTest
     [Fact]
     public async Task MoveObject_With_Correct_PreconditionsAsync()
     {
-        var actual = _fixture.Client.UploadObject(_fixture.HnsBucket, "sourceTestFile.txt", null, GenerateData(128));
-        _fixture.Client.UploadObject(_fixture.HnsBucket, SmallThenLargeObject, "text/plain",
-            new MemoryStream(_fixture.LargeContent));
-        var expected = await _fixture.Client.MoveObjectAsync(_fixture.HnsBucket, actual.Name, SmallThenLargeObject,
+        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
+        _fixture.Client.UploadObject(_bucket, _name2, _contentType2, _source2);
+        var expected = await _fixture.Client.MoveObjectAsync(_bucket, actual.Name, _name2,
             new MoveObjectOptions { IfSourceMetagenerationMatch = actual.Metageneration, IfSourceGenerationMatch = actual.Generation });
-        var objects = _fixture.Client.ListObjects(_fixture.HnsBucket).ToList();
+        var objects = _fixture.Client.ListObjects(_bucket).ToList();
         // Assert that the destination object exists after the move.
         Assert.Contains(objects, obj => obj.Name == expected.Name && obj.Generation == expected.Generation);
         // Assert that the source object does not exist after the move.
@@ -121,10 +133,9 @@ public class MoveObjectTest
     [Fact]
     public async Task MetadataReturned()
     {
-        var actual = await _fixture.Client.UploadObjectAsync(_fixture.HnsBucket, "sourceMeta.txt", "text/plain", GenerateData(128));
-        var destUploadedObject = await _fixture.Client.UploadObjectAsync(_fixture.HnsBucket, "destMeta.txt", "text/plain",
-            new MemoryStream(_fixture.LargeContent));
-        var expected = _fixture.Client.MoveObject(_fixture.HnsBucket, actual.Name, destUploadedObject.Name);
+        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
+        var uploadedObject = await _fixture.Client.UploadObjectAsync(_bucket, _name2, _contentType2, _source2);
+        var expected = _fixture.Client.MoveObject(_bucket, actual.Name, uploadedObject.Name);
 
         // Assert that the generation of the destination object is different from the source object indicating a new object at destination is created.
         Assert.NotEqual(actual.Generation, expected.Generation);
@@ -136,9 +147,9 @@ public class MoveObjectTest
         Assert.NotEqual(actual.UpdatedRaw, expected.UpdatedRaw);
         Assert.NotEqual(actual.TimeStorageClassUpdatedRaw, expected.TimeStorageClassUpdatedRaw);
         // Assert that the storage class of the destination object is set to Standard if Autoclass is enabled otherwise no change in storage class.
-        if (_fixture.Client.GetBucket(_fixture.HnsBucket).Autoclass != null)
+        if (_fixture.Client.GetBucket(_bucket).Autoclass != null)
         {
-            if (_fixture.Client.GetBucket(_fixture.HnsBucket).Autoclass.Enabled == true)
+            if (_fixture.Client.GetBucket(_bucket).Autoclass.Enabled == true)
             {
                 Assert.Equal(StorageClasses.Standard, expected.StorageClass);
             }
@@ -152,14 +163,17 @@ public class MoveObjectTest
     [Fact]
     public void MoveObjectFromInvalidBucket()
     {
-        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject("!!!", _fixture.LargeObject, _fixture.SmallObject));
+        _fixture.Client.UploadObject(_bucket, _name1, _contentType1, _source1);
+        _fixture.Client.UploadObject(_bucket, _name2, _contentType2, _source2);
+        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject("!!!", _name1, _name2));
         Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
     }
 
     [Fact]
     public void MoveObjectWithInvalidSourceObject()
     {
-        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_fixture.HnsBucket, "!!!", _fixture.SmallObject));
+        _fixture.Client.UploadObject(_bucket, _name1, _contentType1, _source1);
+        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_bucket, "!!!", _name1));
         Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
     }
 
@@ -167,7 +181,9 @@ public class MoveObjectTest
     [Fact]
     public void MoveObjectFromNonHnsBucket()
     {
-        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_fixture.ReadBucket, _fixture.LargeObject, _fixture.SmallObject));
+        _fixture.Client.UploadObject(_bucket, _name1, _contentType1, _source1);
+        _fixture.Client.UploadObject(_bucket, _name2, _contentType2, _source2);
+        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_fixture.ReadBucket, _name1, _name2));
         Assert.Equal(HttpStatusCode.Conflict, exception.HttpStatusCode);
     }
 
@@ -175,7 +191,8 @@ public class MoveObjectTest
     [Fact]
     public void MoveObjectWithSameObjectId()
     {
-        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_fixture.HnsBucket, _fixture.SmallObject, _fixture.SmallObject));
+        _fixture.Client.UploadObject(_bucket, _name1, _contentType1, _source1);
+        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_bucket, _name1, _name1));
         Assert.Equal(HttpStatusCode.BadRequest, exception.HttpStatusCode);
     }
 
@@ -183,12 +200,11 @@ public class MoveObjectTest
     [Fact]
     public void MoveObjectWithSoftDeletedObject()
     {
-        var sourceUploadedObject = _fixture.Client.UploadObject(_fixture.HnsBucket, "sourcelive.txt", "text/plain", GenerateData(128));
-        _fixture.Client.DeleteObject(_fixture.HnsBucket, sourceUploadedObject.Name);
-        var actual = _fixture.Client.GetObject(_fixture.HnsBucket, sourceUploadedObject.Name, new GetObjectOptions { SoftDeletedOnly = true, Generation = sourceUploadedObject.Generation });
-        var destUploadedObject = _fixture.Client.UploadObject(_fixture.HnsBucket, "dest.txt", "text/plain",
-            new MemoryStream(_fixture.LargeContent));
-        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_fixture.HnsBucket, actual.Name, destUploadedObject.Name));
+        var sourceUploadedObject = _fixture.Client.UploadObject(_bucket, _name1, _contentType1, _source1);
+        _fixture.Client.DeleteObject(_bucket, sourceUploadedObject.Name);
+        var actual = _fixture.Client.GetObject(_bucket, sourceUploadedObject.Name, new GetObjectOptions { SoftDeletedOnly = true, Generation = sourceUploadedObject.Generation });
+        var destinationUploadedObject = _fixture.Client.UploadObject(_bucket, _name2, _contentType2, _source2);
+        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_bucket, actual.Name, destinationUploadedObject.Name));
         Assert.Equal(HttpStatusCode.NotFound, exception.HttpStatusCode);
     }
 }
