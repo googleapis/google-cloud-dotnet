@@ -172,7 +172,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             CreateBucket(LabelsTestBucket, multiVersion: false);
             CreateBucket(InitiallyEmptyBucket, multiVersion: false);
             CreateBucket(SoftDeleteBucket, multiVersion: false, softDelete: true);
-            CreateAndPopulateHnsBucket();
+            CreateBucket(HnsBucket, multiVersion: false, hnsEnabled: true);
 
             RequesterPaysClient = CreateRequesterPaysClient();
             if (RequesterPaysClient != null)
@@ -276,17 +276,6 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
                 RegisterBucketToDelete(name);
             }
             return bucket;
-        }
-
-        private void CreateAndPopulateHnsBucket()
-        {
-            CreateBucket(HnsBucket, multiVersion: false, hnsEnabled: true);
-            Client.UploadObject(HnsBucket, SmallThenLargeObject, "text/plain", new MemoryStream(LargeContent));
-            Client.UploadObject(HnsBucket, SmallObject, "text/plain", new MemoryStream(SmallContent));
-            foreach (var nameoObjectsInFolder in s_objectsInFolders)
-            {
-                Client.UploadObject(HnsBucket, nameoObjectsInFolder, "text/plain", new MemoryStream(SmallContent));
-            }
         }
 
         internal string GenerateBucketName() => IdGenerator.FromGuid(prefix: BucketPrefix, separator: "", maxLength: 63);
