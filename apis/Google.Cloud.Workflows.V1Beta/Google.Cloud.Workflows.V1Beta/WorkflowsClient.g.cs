@@ -18,6 +18,7 @@
 using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using gcwcv = Google.Cloud.Workflows.Common.V1Beta;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -57,6 +58,7 @@ namespace Google.Cloud.Workflows.V1Beta
             DeleteWorkflowOperationsSettings = existing.DeleteWorkflowOperationsSettings.Clone();
             UpdateWorkflowSettings = existing.UpdateWorkflowSettings;
             UpdateWorkflowOperationsSettings = existing.UpdateWorkflowOperationsSettings.Clone();
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -175,6 +177,11 @@ namespace Google.Cloud.Workflows.V1Beta
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
+        /// </summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="WorkflowsSettings"/> object.</returns>
@@ -317,6 +324,9 @@ namespace Google.Cloud.Workflows.V1Beta
 
         /// <summary>The underlying gRPC Workflows client</summary>
         public virtual Workflows.WorkflowsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Lists Workflows in a given project and location.
@@ -1152,6 +1162,7 @@ namespace Google.Cloud.Workflows.V1Beta
             CreateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateWorkflowOperationsSettings, logger);
             DeleteWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteWorkflowOperationsSettings, logger);
             UpdateWorkflowOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateWorkflowOperationsSettings, logger);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListWorkflows = clientHelper.BuildApiCall<ListWorkflowsRequest, ListWorkflowsResponse>("ListWorkflows", grpcClient.ListWorkflowsAsync, grpcClient.ListWorkflows, effectiveSettings.ListWorkflowsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListWorkflows);
             Modify_ListWorkflowsApiCall(ref _callListWorkflows);
@@ -1186,6 +1197,9 @@ namespace Google.Cloud.Workflows.V1Beta
 
         /// <summary>The underlying gRPC Workflows client</summary>
         public override Workflows.WorkflowsClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gcl::LocationsClient"/> associated with this client.</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListWorkflowsRequest(ref ListWorkflowsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1368,6 +1382,22 @@ namespace Google.Cloud.Workflows.V1Beta
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class Workflows
+    {
+        public partial class WorkflowsClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }

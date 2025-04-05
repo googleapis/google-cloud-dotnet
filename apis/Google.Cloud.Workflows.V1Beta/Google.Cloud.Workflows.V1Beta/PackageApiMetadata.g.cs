@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcl = Google.Cloud.Location;
 using gpr = Google.Protobuf.Reflection;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -31,6 +32,16 @@ namespace Google.Cloud.Workflows.V1Beta
             .WithRequestNumericEnumJsonEncoding(true)
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
+                {
+                    "google.cloud.location.Locations.GetLocation",
+                    // { "get": "/v1beta/{name=projects/*/locations/*}" }
+                    proto::ByteString.FromBase64("EiUvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyp9")
+                },
+                {
+                    "google.cloud.location.Locations.ListLocations",
+                    // { "get": "/v1beta/{name=projects/*}/locations" }
+                    proto::ByteString.FromBase64("EiMvdjFiZXRhL3tuYW1lPXByb2plY3RzLyp9L2xvY2F0aW9ucw==")
+                },
                 {
                     "google.longrunning.Operations.DeleteOperation",
                     // { "delete": "/v1beta/{name=projects/*/locations/*/operations/*}" }
@@ -50,6 +61,7 @@ namespace Google.Cloud.Workflows.V1Beta
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return gcl::LocationsReflection.Descriptor;
             yield return WorkflowsReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
