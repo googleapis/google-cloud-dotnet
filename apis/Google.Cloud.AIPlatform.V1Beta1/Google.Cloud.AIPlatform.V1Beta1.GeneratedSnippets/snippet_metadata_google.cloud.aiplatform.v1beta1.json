@@ -18656,6 +18656,54 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_FeatureOnlineStoreService_FeatureViewDirectWrite_sync",
+      "title": "FeatureViewDirectWrite",
+      "description": "Snippet for FeatureViewDirectWrite",
+      "file": "FeatureOnlineStoreServiceClient.FeatureViewDirectWriteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FeatureViewDirectWrite",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStoreServiceClient.FeatureViewDirectWrite",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStoreServiceClient+FeatureViewDirectWriteStream",
+        "client": {
+          "shortName": "FeatureOnlineStoreServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.FeatureOnlineStoreServiceClient"
+        },
+        "method": {
+          "shortName": "FeatureViewDirectWrite",
+          "fullName": "google.cloud.aiplatform.v1beta1.FeatureOnlineStoreService.FeatureViewDirectWrite",
+          "service": {
+            "shortName": "FeatureOnlineStoreService",
+            "fullName": "google.cloud.aiplatform.v1beta1.FeatureOnlineStoreService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_FeatureRegistryService_CreateFeatureGroup_sync",
       "title": "CreateFeatureGroupRequestObject",
       "description": "Snippet for CreateFeatureGroup",
