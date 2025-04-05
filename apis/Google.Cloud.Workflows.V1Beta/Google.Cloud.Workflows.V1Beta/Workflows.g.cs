@@ -29,73 +29,74 @@ namespace Google.Cloud.Workflows.V1Beta {
             "L2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
             "ZXNvdXJjZS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMu",
-            "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIv4ECghXb3JrZmxvdxIMCgRu",
-            "YW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEkEKBXN0YXRlGAMgASgO",
-            "Mi0uZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MWJldGEuV29ya2Zsb3cuU3Rh",
-            "dGVCA+BBAxIYCgtyZXZpc2lvbl9pZBgEIAEoCUID4EEDEjQKC2NyZWF0ZV90",
-            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQK",
-            "C3VwZGF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEj0KFHJldmlzaW9uX2NyZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkMKBmxhYmVscxgIIAMoCzIzLmdv",
-            "b2dsZS5jbG91ZC53b3JrZmxvd3MudjFiZXRhLldvcmtmbG93LkxhYmVsc0Vu",
-            "dHJ5EhcKD3NlcnZpY2VfYWNjb3VudBgJIAEoCRIZCg9zb3VyY2VfY29udGVu",
-            "dHMYCiABKAlIABotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBIioKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "CgoGQUNUSVZFEAE6ZOpBYQohd29ya2Zsb3dzLmdvb2dsZWFwaXMuY29tL1dv",
-            "cmtmbG93Ejxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
-            "bn0vd29ya2Zsb3dzL3t3b3JrZmxvd31CDQoLc291cmNlX2NvZGUimgEKFExp",
-            "c3RXb3JrZmxvd3NSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFs",
-            "b2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9zaXpl",
-            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJEhAK",
-            "CG9yZGVyX2J5GAUgASgJIoEBChVMaXN0V29ya2Zsb3dzUmVzcG9uc2USOgoJ",
-            "d29ya2Zsb3dzGAEgAygLMicuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MWJl",
-            "dGEuV29ya2Zsb3cSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVh",
-            "Y2hhYmxlGAMgAygJIk0KEkdldFdvcmtmbG93UmVxdWVzdBI3CgRuYW1lGAEg",
-            "ASgJQingQQL6QSMKIXdvcmtmbG93cy5nb29nbGVhcGlzLmNvbS9Xb3JrZmxv",
-            "dyKsAQoVQ3JlYXRlV29ya2Zsb3dSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp",
-            "4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SPgoI",
-            "d29ya2Zsb3cYAiABKAsyJy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxYmV0",
-            "YS5Xb3JrZmxvd0ID4EECEhgKC3dvcmtmbG93X2lkGAMgASgJQgPgQQIiUAoV",
-            "RGVsZXRlV29ya2Zsb3dSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwoh",
-            "d29ya2Zsb3dzLmdvb2dsZWFwaXMuY29tL1dvcmtmbG93IogBChVVcGRhdGVX",
-            "b3JrZmxvd1JlcXVlc3QSPgoId29ya2Zsb3cYASABKAsyJy5nb29nbGUuY2xv",
-            "dWQud29ya2Zsb3dzLnYxYmV0YS5Xb3JrZmxvd0ID4EECEi8KC3VwZGF0ZV9t",
-            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayKlAQoRT3Bl",
-            "cmF0aW9uTWV0YWRhdGESLwoLY3JlYXRlX3RpbWUYASABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBIOCgZ0YXJnZXQYAyABKAkSDAoEdmVyYhgE",
-            "IAEoCRITCgthcGlfdmVyc2lvbhgFIAEoCTL5CAoJV29ya2Zsb3dzEr4BCg1M",
-            "aXN0V29ya2Zsb3dzEjMuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MWJldGEu",
-            "TGlzdFdvcmtmbG93c1JlcXVlc3QaNC5nb29nbGUuY2xvdWQud29ya2Zsb3dz",
-            "LnYxYmV0YS5MaXN0V29ya2Zsb3dzUmVzcG9uc2UiQtpBBnBhcmVudILT5JMC",
-            "MxIxL3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyp9L3dv",
-            "cmtmbG93cxKrAQoLR2V0V29ya2Zsb3cSMS5nb29nbGUuY2xvdWQud29ya2Zs",
-            "b3dzLnYxYmV0YS5HZXRXb3JrZmxvd1JlcXVlc3QaJy5nb29nbGUuY2xvdWQu",
-            "d29ya2Zsb3dzLnYxYmV0YS5Xb3JrZmxvdyJA2kEEbmFtZYLT5JMCMxIxL3Yx",
-            "YmV0YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8q",
-            "fRLpAQoOQ3JlYXRlV29ya2Zsb3cSNC5nb29nbGUuY2xvdWQud29ya2Zsb3dz",
-            "LnYxYmV0YS5DcmVhdGVXb3JrZmxvd1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uIoEBykEdCghXb3JrZmxvdxIRT3BlcmF0aW9uTWV0",
-            "YWRhdGHaQRtwYXJlbnQsd29ya2Zsb3csd29ya2Zsb3dfaWSC0+STAj0iMS92",
-            "MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS93b3JrZmxv",
-            "d3M6CHdvcmtmbG93EtQBCg5EZWxldGVXb3JrZmxvdxI0Lmdvb2dsZS5jbG91",
-            "ZC53b3JrZmxvd3MudjFiZXRhLkRlbGV0ZVdvcmtmbG93UmVxdWVzdBodLmdv",
-            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ibcpBKgoVZ29vZ2xlLnByb3Rv",
-            "YnVmLkVtcHR5EhFPcGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjMqMS92",
-            "MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxvd3Mv",
-            "Kn0S6wEKDlVwZGF0ZVdvcmtmbG93EjQuZ29vZ2xlLmNsb3VkLndvcmtmbG93",
-            "cy52MWJldGEuVXBkYXRlV29ya2Zsb3dSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdy",
-            "dW5uaW5nLk9wZXJhdGlvbiKDAcpBHQoIV29ya2Zsb3cSEU9wZXJhdGlvbk1l",
-            "dGFkYXRh2kEUd29ya2Zsb3csdXBkYXRlX21hc2uC0+STAkYyOi92MWJldGEv",
-            "e3dvcmtmbG93Lm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxv",
-            "d3MvKn06CHdvcmtmbG93GkzKQRh3b3JrZmxvd3MuZ29vZ2xlYXBpcy5jb23S",
-            "QS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
-            "b3JtQnYKIWNvbS5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxYmV0YUIOV29y",
-            "a2Zsb3dzUHJvdG9QAVo/Y2xvdWQuZ29vZ2xlLmNvbS9nby93b3JrZmxvd3Mv",
-            "YXBpdjFiZXRhL3dvcmtmbG93c3BiO3dvcmtmbG93c3BiYgZwcm90bzM="));
+            "cHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3By",
+            "b3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
+            "c3RhbXAucHJvdG8i/gQKCFdvcmtmbG93EgwKBG5hbWUYASABKAkSEwoLZGVz",
+            "Y3JpcHRpb24YAiABKAkSQQoFc3RhdGUYAyABKA4yLS5nb29nbGUuY2xvdWQu",
+            "d29ya2Zsb3dzLnYxYmV0YS5Xb3JrZmxvdy5TdGF0ZUID4EEDEhgKC3Jldmlz",
+            "aW9uX2lkGAQgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPQoUcmV2aXNp",
+            "b25fY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSQwoGbGFiZWxzGAggAygLMjMuZ29vZ2xlLmNsb3VkLndvcmtm",
+            "bG93cy52MWJldGEuV29ya2Zsb3cuTGFiZWxzRW50cnkSFwoPc2VydmljZV9h",
+            "Y2NvdW50GAkgASgJEhkKD3NvdXJjZV9jb250ZW50cxgKIAEoCUgAGi0KC0xh",
+            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiKgoF",
+            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQATpk6kFh",
+            "CiF3b3JrZmxvd3MuZ29vZ2xlYXBpcy5jb20vV29ya2Zsb3cSPHByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS93b3JrZmxvd3Mve3dv",
+            "cmtmbG93fUINCgtzb3VyY2VfY29kZSKaAQoUTGlzdFdvcmtmbG93c1JlcXVl",
+            "c3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVh",
+            "cGlzLmNvbS9Mb2NhdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90",
+            "b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAki",
+            "gQEKFUxpc3RXb3JrZmxvd3NSZXNwb25zZRI6Cgl3b3JrZmxvd3MYASADKAsy",
+            "Jy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxYmV0YS5Xb3JrZmxvdxIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiTQoS",
+            "R2V0V29ya2Zsb3dSZXF1ZXN0EjcKBG5hbWUYASABKAlCKeBBAvpBIwohd29y",
+            "a2Zsb3dzLmdvb2dsZWFwaXMuY29tL1dvcmtmbG93IqwBChVDcmVhdGVXb3Jr",
+            "Zmxvd1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9u",
+            "cy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhI+Cgh3b3JrZmxvdxgCIAEoCzIn",
+            "Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjFiZXRhLldvcmtmbG93QgPgQQIS",
+            "GAoLd29ya2Zsb3dfaWQYAyABKAlCA+BBAiJQChVEZWxldGVXb3JrZmxvd1Jl",
+            "cXVlc3QSNwoEbmFtZRgBIAEoCUIp4EEC+kEjCiF3b3JrZmxvd3MuZ29vZ2xl",
+            "YXBpcy5jb20vV29ya2Zsb3ciiAEKFVVwZGF0ZVdvcmtmbG93UmVxdWVzdBI+",
+            "Cgh3b3JrZmxvdxgBIAEoCzInLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjFi",
+            "ZXRhLldvcmtmbG93QgPgQQISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrIqUBChFPcGVyYXRpb25NZXRhZGF0YRIv",
+            "CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXASLAoIZW5kX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEg4KBnRhcmdldBgDIAEoCRIMCgR2ZXJiGAQgASgJEhMKC2FwaV92ZXJz",
+            "aW9uGAUgASgJMvkICglXb3JrZmxvd3MSvgEKDUxpc3RXb3JrZmxvd3MSMy5n",
+            "b29nbGUuY2xvdWQud29ya2Zsb3dzLnYxYmV0YS5MaXN0V29ya2Zsb3dzUmVx",
+            "dWVzdBo0Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjFiZXRhLkxpc3RXb3Jr",
+            "Zmxvd3NSZXNwb25zZSJC2kEGcGFyZW50gtPkkwIzEjEvdjFiZXRhL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vd29ya2Zsb3dzEqsBCgtHZXRX",
+            "b3JrZmxvdxIxLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjFiZXRhLkdldFdv",
+            "cmtmbG93UmVxdWVzdBonLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjFiZXRh",
+            "LldvcmtmbG93IkDaQQRuYW1lgtPkkwIzEjEvdjFiZXRhL3tuYW1lPXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyovd29ya2Zsb3dzLyp9EukBCg5DcmVhdGVXb3Jr",
+            "ZmxvdxI0Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MudjFiZXRhLkNyZWF0ZVdv",
+            "cmtmbG93UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
+            "gQHKQR0KCFdvcmtmbG93EhFPcGVyYXRpb25NZXRhZGF0YdpBG3BhcmVudCx3",
+            "b3JrZmxvdyx3b3JrZmxvd19pZILT5JMCPSIxL3YxYmV0YS97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L3dvcmtmbG93czoId29ya2Zsb3cS1AEK",
+            "DkRlbGV0ZVdvcmtmbG93EjQuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy52MWJl",
+            "dGEuRGVsZXRlV29ya2Zsb3dSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5n",
+            "Lk9wZXJhdGlvbiJtykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJh",
+            "dGlvbk1ldGFkYXRh2kEEbmFtZYLT5JMCMyoxL3YxYmV0YS97bmFtZT1wcm9q",
+            "ZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qfRLrAQoOVXBkYXRlV29y",
+            "a2Zsb3cSNC5nb29nbGUuY2xvdWQud29ya2Zsb3dzLnYxYmV0YS5VcGRhdGVX",
+            "b3JrZmxvd1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "IoMBykEdCghXb3JrZmxvdxIRT3BlcmF0aW9uTWV0YWRhdGHaQRR3b3JrZmxv",
+            "dyx1cGRhdGVfbWFza4LT5JMCRjI6L3YxYmV0YS97d29ya2Zsb3cubmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qfToId29ya2Zsb3ca",
+            "TMpBGHdvcmtmbG93cy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdv",
+            "b2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CdgohY29tLmdvb2ds",
+            "ZS5jbG91ZC53b3JrZmxvd3MudjFiZXRhQg5Xb3JrZmxvd3NQcm90b1ABWj9j",
+            "bG91ZC5nb29nbGUuY29tL2dvL3dvcmtmbG93cy9hcGl2MWJldGEvd29ya2Zs",
+            "b3dzcGI7d29ya2Zsb3dzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1Beta.Workflow), global::Google.Cloud.Workflows.V1Beta.Workflow.Parser, new[]{ "Name", "Description", "State", "RevisionId", "CreateTime", "UpdateTime", "RevisionCreateTime", "Labels", "ServiceAccount", "SourceContents" }, new[]{ "SourceCode" }, new[]{ typeof(global::Google.Cloud.Workflows.V1Beta.Workflow.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.V1Beta.ListWorkflowsRequest), global::Google.Cloud.Workflows.V1Beta.ListWorkflowsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
@@ -226,9 +227,12 @@ namespace Google.Cloud.Workflows.V1Beta {
     /// <summary>
     /// Output only. The revision of the workflow.
     /// A new revision of a workflow is created as a result of updating the
-    /// following fields of a workflow:
-    /// - `source_code`
-    /// - `service_account`
+    /// following properties of a workflow:
+    ///
+    /// - [Service account][google.cloud.workflows.v1beta.Workflow.service_account]
+    /// - [Workflow code to be
+    /// executed][google.cloud.workflows.v1beta.Workflow.source_contents]
+    ///
     /// The format is "000001-a4d", where the first 6 characters define
     /// the zero-padded revision ordinal number. They are followed by a hyphen and
     /// 3 hexadecimal random characters.
@@ -310,14 +314,14 @@ namespace Google.Cloud.Workflows.V1Beta {
     public const int ServiceAccountFieldNumber = 9;
     private string serviceAccount_ = "";
     /// <summary>
-    /// Name of the service account associated with the latest workflow version.
+    /// The service account associated with the latest workflow version.
     /// This service account represents the identity of the workflow and determines
     /// what permissions the workflow has.
-    /// Format: projects/{project}/serviceAccounts/{account}
+    /// Format: projects/{project}/serviceAccounts/{account} or {account}
     ///
-    /// Using `-` as a wildcard for the `{project}` will infer the project from
-    /// the account. The `{account}` value can be the `email` address or the
-    /// `unique_id` of the service account.
+    /// Using `-` as a wildcard for the `{project}` or not providing one at all
+    /// will infer the project from the account. The `{account}` value can be the
+    /// `email` address or the `unique_id` of the service account.
     ///
     /// If not provided, workflow will use the project's default service account.
     /// Modifying this field for an existing workflow results in a new workflow
@@ -335,7 +339,7 @@ namespace Google.Cloud.Workflows.V1Beta {
     /// <summary>Field number for the "source_contents" field.</summary>
     public const int SourceContentsFieldNumber = 10;
     /// <summary>
-    /// Workflow code to be executed. The size limit is 32KB.
+    /// Workflow code to be executed. The size limit is 128KB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
