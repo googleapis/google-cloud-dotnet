@@ -2947,7 +2947,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-14T08:06:16Z",
-            "lastGeneratedCommit": "9415ba048aa587b1b2df2b96fc00aa009c831597",
+            "lastGeneratedCommit": "3891337781983cdc3acb479651a38550bf65cafc",
             "apiPaths": [
                 "google/cloud/speech/v1p1beta1"
             ],
