@@ -259,7 +259,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-03-31T16:12:28Z",
-            "lastGeneratedCommit": "3b446a9493c41cae27a98ffa8772b6433adf1ab0",
+            "lastGeneratedCommit": "e53d98d874c37991e09c578a12448003552f9bcd",
             "apiPaths": [
                 "google/cloud/aiplatform/v1beta1"
             ],
