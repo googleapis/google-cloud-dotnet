@@ -25,39 +25,76 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvc3BlZWNoL3YxcDFiZXRhMS9yZXNvdXJjZS5wcm90",
-            "bxIdZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEaGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8igwIKC0N1c3RvbUNsYXNzEgwKBG5hbWUYASABKAkS",
-            "FwoPY3VzdG9tX2NsYXNzX2lkGAIgASgJEkMKBWl0ZW1zGAMgAygLMjQuZ29v",
-            "Z2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3MuQ2xhc3NJ",
-            "dGVtGhoKCUNsYXNzSXRlbRINCgV2YWx1ZRgBIAEoCTps6kFpCiFzcGVlY2gu",
+            "bxIdZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEaH2dvb2dsZS9hcGkv",
+            "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i5AYKC0N1c3Rv",
+            "bUNsYXNzEgwKBG5hbWUYASABKAkSFwoPY3VzdG9tX2NsYXNzX2lkGAIgASgJ",
+            "EkMKBWl0ZW1zGAMgAygLMjQuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0",
+            "YTEuQ3VzdG9tQ2xhc3MuQ2xhc3NJdGVtEj8KDGttc19rZXlfbmFtZRgGIAEo",
+            "CUIp4EED+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkS",
+            "TgoUa21zX2tleV92ZXJzaW9uX25hbWUYByABKAlCMOBBA/pBKgooY2xvdWRr",
+            "bXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5VmVyc2lvbhIQCgN1aWQYCCAB",
+            "KAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYCSABKAlCA+BBAxJECgVzdGF0ZRgK",
+            "IAEoDjIwLmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLkN1c3RvbUNs",
+            "YXNzLlN0YXRlQgPgQQMSNAoLZGVsZXRlX3RpbWUYCyABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLZXhwaXJlX3RpbWUYDCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSVQoLYW5ub3RhdGlv",
+            "bnMYDSADKAsyOy5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5DdXN0",
+            "b21DbGFzcy5Bbm5vdGF0aW9uc0VudHJ5QgPgQQMSEQoEZXRhZxgOIAEoCUID",
+            "4EEDEhgKC3JlY29uY2lsaW5nGA8gASgIQgPgQQMaGgoJQ2xhc3NJdGVtEg0K",
+            "BXZhbHVlGAEgASgJGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJ",
+            "Eg0KBXZhbHVlGAIgASgJOgI4ASI3CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEgoKBkFDVElWRRACEgsKB0RFTEVURUQQBDps6kFpCiFzcGVlY2gu",
             "Z29vZ2xlYXBpcy5jb20vQ3VzdG9tQ2xhc3MSRHByb2plY3RzL3twcm9qZWN0",
             "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jdXN0b21DbGFzc2VzL3tjdXN0b21f",
-            "Y2xhc3N9IvkBCglQaHJhc2VTZXQSDAoEbmFtZRgBIAEoCRJACgdwaHJhc2Vz",
+            "Y2xhc3N9ItYGCglQaHJhc2VTZXQSDAoEbmFtZRgBIAEoCRJACgdwaHJhc2Vz",
             "GAIgAygLMi8uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuUGhyYXNl",
-            "U2V0LlBocmFzZRINCgVib29zdBgEIAEoAhomCgZQaHJhc2USDQoFdmFsdWUY",
-            "ASABKAkSDQoFYm9vc3QYAiABKAI6ZepBYgofc3BlZWNoLmdvb2dsZWFwaXMu",
-            "Y29tL1BocmFzZVNldBI/cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L3BocmFzZVNldHMve3BocmFzZV9zZXR9ItICChBTcGVlY2hB",
-            "ZGFwdGF0aW9uEj0KC3BocmFzZV9zZXRzGAEgAygLMiguZ29vZ2xlLmNsb3Vk",
-            "LnNwZWVjaC52MXAxYmV0YTEuUGhyYXNlU2V0EkMKFXBocmFzZV9zZXRfcmVm",
-            "ZXJlbmNlcxgCIAMoCUIk+kEhCh9zcGVlY2guZ29vZ2xlYXBpcy5jb20vUGhy",
-            "YXNlU2V0EkIKDmN1c3RvbV9jbGFzc2VzGAMgAygLMiouZ29vZ2xlLmNsb3Vk",
-            "LnNwZWVjaC52MXAxYmV0YTEuQ3VzdG9tQ2xhc3MSUQoMYWJuZl9ncmFtbWFy",
-            "GAQgASgLMjsuZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTEuU3BlZWNo",
-            "QWRhcHRhdGlvbi5BQk5GR3JhbW1hchojCgtBQk5GR3JhbW1hchIUCgxhYm5m",
-            "X3N0cmluZ3MYASADKAkiqgEKF1RyYW5zY3JpcHROb3JtYWxpemF0aW9uEk0K",
-            "B2VudHJpZXMYASADKAsyPC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRh",
-            "MS5UcmFuc2NyaXB0Tm9ybWFsaXphdGlvbi5FbnRyeRpACgVFbnRyeRIOCgZz",
-            "ZWFyY2gYASABKAkSDwoHcmVwbGFjZRgCIAEoCRIWCg5jYXNlX3NlbnNpdGl2",
-            "ZRgDIAEoCEJ+CiFjb20uZ29vZ2xlLmNsb3VkLnNwZWVjaC52MXAxYmV0YTFC",
-            "E1NwZWVjaFJlc291cmNlUHJvdG9QAVo5Y2xvdWQuZ29vZ2xlLmNvbS9nby9z",
-            "cGVlY2gvYXBpdjFwMWJldGExL3NwZWVjaHBiO3NwZWVjaHBi+AEBogIDR0NT",
-            "YgZwcm90bzM="));
+            "U2V0LlBocmFzZRINCgVib29zdBgEIAEoAhI/CgxrbXNfa2V5X25hbWUYByAB",
+            "KAlCKeBBA/pBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5",
+            "Ek4KFGttc19rZXlfdmVyc2lvbl9uYW1lGAggASgJQjDgQQP6QSoKKGNsb3Vk",
+            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SEAoDdWlkGAkg",
+            "ASgJQgPgQQMSGQoMZGlzcGxheV9uYW1lGAogASgJQgPgQQMSQgoFc3RhdGUY",
+            "CyABKA4yLi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5QaHJhc2VT",
+            "ZXQuU3RhdGVCA+BBAxI0CgtkZWxldGVfdGltZRgMIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtleHBpcmVfdGltZRgNIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJTCgthbm5vdGF0aW9u",
+            "cxgOIAMoCzI5Lmdvb2dsZS5jbG91ZC5zcGVlY2gudjFwMWJldGExLlBocmFz",
+            "ZVNldC5Bbm5vdGF0aW9uc0VudHJ5QgPgQQMSEQoEZXRhZxgPIAEoCUID4EED",
+            "EhgKC3JlY29uY2lsaW5nGBAgASgIQgPgQQMaJgoGUGhyYXNlEg0KBXZhbHVl",
+            "GAEgASgJEg0KBWJvb3N0GAIgASgCGjIKEEFubm90YXRpb25zRW50cnkSCwoD",
+            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASI3CgVTdGF0ZRIVChFTVEFU",
+            "RV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRACEgsKB0RFTEVURUQQBDpl6kFi",
+            "Ch9zcGVlY2guZ29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0Ej9wcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcGhyYXNlU2V0cy97cGhy",
+            "YXNlX3NldH0i0gIKEFNwZWVjaEFkYXB0YXRpb24SPQoLcGhyYXNlX3NldHMY",
+            "ASADKAsyKC5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5QaHJhc2VT",
+            "ZXQSQwoVcGhyYXNlX3NldF9yZWZlcmVuY2VzGAIgAygJQiT6QSEKH3NwZWVj",
+            "aC5nb29nbGVhcGlzLmNvbS9QaHJhc2VTZXQSQgoOY3VzdG9tX2NsYXNzZXMY",
+            "AyADKAsyKi5nb29nbGUuY2xvdWQuc3BlZWNoLnYxcDFiZXRhMS5DdXN0b21D",
+            "bGFzcxJRCgxhYm5mX2dyYW1tYXIYBCABKAsyOy5nb29nbGUuY2xvdWQuc3Bl",
+            "ZWNoLnYxcDFiZXRhMS5TcGVlY2hBZGFwdGF0aW9uLkFCTkZHcmFtbWFyGiMK",
+            "C0FCTkZHcmFtbWFyEhQKDGFibmZfc3RyaW5ncxgBIAMoCSKqAQoXVHJhbnNj",
+            "cmlwdE5vcm1hbGl6YXRpb24STQoHZW50cmllcxgBIAMoCzI8Lmdvb2dsZS5j",
+            "bG91ZC5zcGVlY2gudjFwMWJldGExLlRyYW5zY3JpcHROb3JtYWxpemF0aW9u",
+            "LkVudHJ5GkAKBUVudHJ5Eg4KBnNlYXJjaBgBIAEoCRIPCgdyZXBsYWNlGAIg",
+            "ASgJEhYKDmNhc2Vfc2Vuc2l0aXZlGAMgASgIQqADCiFjb20uZ29vZ2xlLmNs",
+            "b3VkLnNwZWVjaC52MXAxYmV0YTFCE1NwZWVjaFJlc291cmNlUHJvdG9QAVo5",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGVlY2gvYXBpdjFwMWJldGExL3NwZWVj",
+            "aHBiO3NwZWVjaHBiogIDR0NT6kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNv",
+            "bS9DcnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0",
+            "b19rZXl96kGmAQooY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5",
+            "VmVyc2lvbhJ6cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tl",
+            "eX0vY3J5cHRvS2V5VmVyc2lvbnMve2NyeXB0b19rZXlfdmVyc2lvbn1iBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser, new[]{ "Name", "CustomClassId", "Items" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.ClassItem), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.ClassItem.Parser, new[]{ "Value" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Parser, new[]{ "Name", "Phrases", "Boost" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.Phrase), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.Phrase.Parser, new[]{ "Value", "Boost" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Parser, new[]{ "Name", "CustomClassId", "Items", "KmsKeyName", "KmsKeyVersionName", "Uid", "DisplayName", "State", "DeleteTime", "ExpireTime", "Annotations", "Etag", "Reconciling" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.ClassItem), global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.ClassItem.Parser, new[]{ "Value" }, null, null, null, null),
+            null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Parser, new[]{ "Name", "Phrases", "Boost", "KmsKeyName", "KmsKeyVersionName", "Uid", "DisplayName", "State", "DeleteTime", "ExpireTime", "Annotations", "Etag", "Reconciling" }, null, new[]{ typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.Phrase), global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.Phrase.Parser, new[]{ "Value", "Boost" }, null, null, null, null),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation), global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation.Parser, new[]{ "PhraseSets", "PhraseSetReferences", "CustomClasses", "AbnfGrammar" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation.Types.ABNFGrammar), global::Google.Cloud.Speech.V1P1Beta1.SpeechAdaptation.Types.ABNFGrammar.Parser, new[]{ "AbnfStrings" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization), global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Parser, new[]{ "Entries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry), global::Google.Cloud.Speech.V1P1Beta1.TranscriptNormalization.Types.Entry.Parser, new[]{ "Search", "Replace", "CaseSensitive" }, null, null, null, null)})
           }));
@@ -109,6 +146,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       name_ = other.name_;
       customClassId_ = other.customClassId_;
       items_ = other.items_.Clone();
+      kmsKeyName_ = other.kmsKeyName_;
+      kmsKeyVersionName_ = other.kmsKeyVersionName_;
+      uid_ = other.uid_;
+      displayName_ = other.displayName_;
+      state_ = other.state_;
+      deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
+      annotations_ = other.annotations_.Clone();
+      etag_ = other.etag_;
+      reconciling_ = other.reconciling_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -163,6 +210,173 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       get { return items_; }
     }
 
+    /// <summary>Field number for the "kms_key_name" field.</summary>
+    public const int KmsKeyNameFieldNumber = 6;
+    private string kmsKeyName_ = "";
+    /// <summary>
+    /// Output only. The [KMS key
+    /// name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with which
+    /// the content of the ClassItem is encrypted. The expected format is
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKeyName {
+      get { return kmsKeyName_; }
+      set {
+        kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kms_key_version_name" field.</summary>
+    public const int KmsKeyVersionNameFieldNumber = 7;
+    private string kmsKeyVersionName_ = "";
+    /// <summary>
+    /// Output only. The [KMS key version
+    /// name](https://cloud.google.com/kms/docs/resource-hierarchy#key_versions)
+    /// with which content of the ClassItem is encrypted. The expected format is
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKeyVersionName {
+      get { return kmsKeyVersionName_; }
+      set {
+        kmsKeyVersionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 8;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. System-assigned unique identifier for the CustomClass.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 9;
+    private string displayName_ = "";
+    /// <summary>
+    /// Output only. User-settable, human-readable name for the CustomClass. Must
+    /// be 63 characters or less. This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 10;
+    private global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State state_ = global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The CustomClass lifecycle state.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "delete_time" field.</summary>
+    public const int DeleteTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
+    /// <summary>
+    /// Output only. The time at which this resource was requested for deletion.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
+      get { return deleteTime_; }
+      set {
+        deleteTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
+    /// <summary>
+    /// Output only. The time at which this resource will be purged.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expireTime_; }
+      set {
+        expireTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "annotations" field.</summary>
+    public const int AnnotationsFieldNumber = 13;
+    private static readonly pbc::MapField<string, string>.Codec _map_annotations_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 106);
+    private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Output only. Allows users to store small amounts of arbitrary data.
+    /// Both the key and the value must be 63 characters or less each.
+    /// At most 100 annotations.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Annotations {
+      get { return annotations_; }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 14;
+    private string etag_ = "";
+    /// <summary>
+    /// Output only. This checksum is computed by the server based on the value of
+    /// other fields. This may be sent on update, undelete, and delete requests to
+    /// ensure the client has an up-to-date value before proceeding. This field is
+    /// not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reconciling" field.</summary>
+    public const int ReconcilingFieldNumber = 15;
+    private bool reconciling_;
+    /// <summary>
+    /// Output only. Whether or not this CustomClass is in the process of being
+    /// updated. This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Reconciling {
+      get { return reconciling_; }
+      set {
+        reconciling_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -181,6 +395,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (Name != other.Name) return false;
       if (CustomClassId != other.CustomClassId) return false;
       if(!items_.Equals(other.items_)) return false;
+      if (KmsKeyName != other.KmsKeyName) return false;
+      if (KmsKeyVersionName != other.KmsKeyVersionName) return false;
+      if (Uid != other.Uid) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if (!Annotations.Equals(other.Annotations)) return false;
+      if (Etag != other.Etag) return false;
+      if (Reconciling != other.Reconciling) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -191,6 +415,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (CustomClassId.Length != 0) hash ^= CustomClassId.GetHashCode();
       hash ^= items_.GetHashCode();
+      if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      if (KmsKeyVersionName.Length != 0) hash ^= KmsKeyVersionName.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (State != global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
+      hash ^= Annotations.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (Reconciling != false) hash ^= Reconciling.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -218,6 +452,43 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         output.WriteString(CustomClassId);
       }
       items_.WriteTo(output, _repeated_items_codec);
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(KmsKeyVersionName);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Uid);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DisplayName);
+      }
+      if (State != global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) State);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ExpireTime);
+      }
+      annotations_.WriteTo(output, _map_annotations_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Etag);
+      }
+      if (Reconciling != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(Reconciling);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -237,6 +508,43 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         output.WriteString(CustomClassId);
       }
       items_.WriteTo(ref output, _repeated_items_codec);
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(KmsKeyVersionName);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Uid);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(DisplayName);
+      }
+      if (State != global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) State);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(ExpireTime);
+      }
+      annotations_.WriteTo(ref output, _map_annotations_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(Etag);
+      }
+      if (Reconciling != false) {
+        output.WriteRawTag(120);
+        output.WriteBool(Reconciling);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -254,6 +562,34 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomClassId);
       }
       size += items_.CalculateSize(_repeated_items_codec);
+      if (KmsKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyVersionName);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (State != global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (deleteTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      size += annotations_.CalculateSize(_map_annotations_codec);
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (Reconciling != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -273,6 +609,40 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         CustomClassId = other.CustomClassId;
       }
       items_.Add(other.items_);
+      if (other.KmsKeyName.Length != 0) {
+        KmsKeyName = other.KmsKeyName;
+      }
+      if (other.KmsKeyVersionName.Length != 0) {
+        KmsKeyVersionName = other.KmsKeyVersionName;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.State != global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.deleteTime_ != null) {
+        if (deleteTime_ == null) {
+          DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeleteTime.MergeFrom(other.DeleteTime);
+      }
+      if (other.expireTime_ != null) {
+        if (expireTime_ == null) {
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpireTime.MergeFrom(other.ExpireTime);
+      }
+      annotations_.MergeFrom(other.annotations_);
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      if (other.Reconciling != false) {
+        Reconciling = other.Reconciling;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -298,6 +668,52 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
           case 26: {
             items_.AddEntriesFrom(input, _repeated_items_codec);
+            break;
+          }
+          case 50: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
+          case 58: {
+            KmsKeyVersionName = input.ReadString();
+            break;
+          }
+          case 66: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 74: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 80: {
+            State = (global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 98: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 106: {
+            annotations_.AddEntriesFrom(input, _map_annotations_codec);
+            break;
+          }
+          case 114: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 120: {
+            Reconciling = input.ReadBool();
             break;
           }
         }
@@ -327,6 +743,52 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             items_.AddEntriesFrom(ref input, _repeated_items_codec);
             break;
           }
+          case 50: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
+          case 58: {
+            KmsKeyVersionName = input.ReadString();
+            break;
+          }
+          case 66: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 74: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 80: {
+            State = (global::Google.Cloud.Speech.V1P1Beta1.CustomClass.Types.State) input.ReadEnum();
+            break;
+          }
+          case 90: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 98: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 106: {
+            annotations_.AddEntriesFrom(ref input, _map_annotations_codec);
+            break;
+          }
+          case 114: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 120: {
+            Reconciling = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -337,6 +799,25 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Set of states that define the lifecycle of a CustomClass.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Unspecified state.  This is only used/useful for distinguishing
+        /// unset values.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The normal and active state.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 2,
+        /// <summary>
+        /// This CustomClass has been deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETED")] Deleted = 4,
+      }
+
       /// <summary>
       /// An item of the class.
       /// </summary>
@@ -580,6 +1061,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       name_ = other.name_;
       phrases_ = other.phrases_.Clone();
       boost_ = other.boost_;
+      kmsKeyName_ = other.kmsKeyName_;
+      kmsKeyVersionName_ = other.kmsKeyVersionName_;
+      uid_ = other.uid_;
+      displayName_ = other.displayName_;
+      state_ = other.state_;
+      deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
+      expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
+      annotations_ = other.annotations_.Clone();
+      etag_ = other.etag_;
+      reconciling_ = other.reconciling_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -641,6 +1132,173 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "kms_key_name" field.</summary>
+    public const int KmsKeyNameFieldNumber = 7;
+    private string kmsKeyName_ = "";
+    /// <summary>
+    /// Output only. The [KMS key
+    /// name](https://cloud.google.com/kms/docs/resource-hierarchy#keys) with which
+    /// the content of the PhraseSet is encrypted. The expected format is
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKeyName {
+      get { return kmsKeyName_; }
+      set {
+        kmsKeyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "kms_key_version_name" field.</summary>
+    public const int KmsKeyVersionNameFieldNumber = 8;
+    private string kmsKeyVersionName_ = "";
+    /// <summary>
+    /// Output only. The [KMS key version
+    /// name](https://cloud.google.com/kms/docs/resource-hierarchy#key_versions)
+    /// with which content of the PhraseSet is encrypted. The expected format is
+    /// `projects/{project}/locations/{location}/keyRings/{key_ring}/cryptoKeys/{crypto_key}/cryptoKeyVersions/{crypto_key_version}`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKeyVersionName {
+      get { return kmsKeyVersionName_; }
+      set {
+        kmsKeyVersionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "uid" field.</summary>
+    public const int UidFieldNumber = 9;
+    private string uid_ = "";
+    /// <summary>
+    /// Output only. System-assigned unique identifier for the PhraseSet.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Uid {
+      get { return uid_; }
+      set {
+        uid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 10;
+    private string displayName_ = "";
+    /// <summary>
+    /// Output only. User-settable, human-readable name for the PhraseSet. Must be
+    /// 63 characters or less. This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 11;
+    private global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State state_ = global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The CustomClass lifecycle state.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "delete_time" field.</summary>
+    public const int DeleteTimeFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
+    /// <summary>
+    /// Output only. The time at which this resource was requested for deletion.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
+      get { return deleteTime_; }
+      set {
+        deleteTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "expire_time" field.</summary>
+    public const int ExpireTimeFieldNumber = 13;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp expireTime_;
+    /// <summary>
+    /// Output only. The time at which this resource will be purged.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
+      get { return expireTime_; }
+      set {
+        expireTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "annotations" field.</summary>
+    public const int AnnotationsFieldNumber = 14;
+    private static readonly pbc::MapField<string, string>.Codec _map_annotations_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 114);
+    private readonly pbc::MapField<string, string> annotations_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Output only. Allows users to store small amounts of arbitrary data.
+    /// Both the key and the value must be 63 characters or less each.
+    /// At most 100 annotations.
+    /// This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Annotations {
+      get { return annotations_; }
+    }
+
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 15;
+    private string etag_ = "";
+    /// <summary>
+    /// Output only. This checksum is computed by the server based on the value of
+    /// other fields. This may be sent on update, undelete, and delete requests to
+    /// ensure the client has an up-to-date value before proceeding. This field is
+    /// not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reconciling" field.</summary>
+    public const int ReconcilingFieldNumber = 16;
+    private bool reconciling_;
+    /// <summary>
+    /// Output only. Whether or not this PhraseSet is in the process of being
+    /// updated. This field is not used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Reconciling {
+      get { return reconciling_; }
+      set {
+        reconciling_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -659,6 +1317,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (Name != other.Name) return false;
       if(!phrases_.Equals(other.phrases_)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Boost, other.Boost)) return false;
+      if (KmsKeyName != other.KmsKeyName) return false;
+      if (KmsKeyVersionName != other.KmsKeyVersionName) return false;
+      if (Uid != other.Uid) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (State != other.State) return false;
+      if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      if (!object.Equals(ExpireTime, other.ExpireTime)) return false;
+      if (!Annotations.Equals(other.Annotations)) return false;
+      if (Etag != other.Etag) return false;
+      if (Reconciling != other.Reconciling) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -669,6 +1337,16 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= phrases_.GetHashCode();
       if (Boost != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Boost);
+      if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
+      if (KmsKeyVersionName.Length != 0) hash ^= KmsKeyVersionName.GetHashCode();
+      if (Uid.Length != 0) hash ^= Uid.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (State != global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State.Unspecified) hash ^= State.GetHashCode();
+      if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      if (expireTime_ != null) hash ^= ExpireTime.GetHashCode();
+      hash ^= Annotations.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (Reconciling != false) hash ^= Reconciling.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -696,6 +1374,43 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         output.WriteRawTag(37);
         output.WriteFloat(Boost);
       }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(KmsKeyVersionName);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Uid);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DisplayName);
+      }
+      if (State != global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) State);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ExpireTime);
+      }
+      annotations_.WriteTo(output, _map_annotations_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Etag);
+      }
+      if (Reconciling != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(Reconciling);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -715,6 +1430,43 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
         output.WriteRawTag(37);
         output.WriteFloat(Boost);
       }
+      if (KmsKeyName.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(KmsKeyVersionName);
+      }
+      if (Uid.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Uid);
+      }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(DisplayName);
+      }
+      if (State != global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State.Unspecified) {
+        output.WriteRawTag(88);
+        output.WriteEnum((int) State);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ExpireTime);
+      }
+      annotations_.WriteTo(ref output, _map_annotations_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Etag);
+      }
+      if (Reconciling != false) {
+        output.WriteRawTag(128, 1);
+        output.WriteBool(Reconciling);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -731,6 +1483,34 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       size += phrases_.CalculateSize(_repeated_phrases_codec);
       if (Boost != 0F) {
         size += 1 + 4;
+      }
+      if (KmsKeyName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyName);
+      }
+      if (KmsKeyVersionName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKeyVersionName);
+      }
+      if (Uid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Uid);
+      }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (State != global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      if (deleteTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
+      if (expireTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExpireTime);
+      }
+      size += annotations_.CalculateSize(_map_annotations_codec);
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (Reconciling != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -750,6 +1530,40 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
       phrases_.Add(other.phrases_);
       if (other.Boost != 0F) {
         Boost = other.Boost;
+      }
+      if (other.KmsKeyName.Length != 0) {
+        KmsKeyName = other.KmsKeyName;
+      }
+      if (other.KmsKeyVersionName.Length != 0) {
+        KmsKeyVersionName = other.KmsKeyVersionName;
+      }
+      if (other.Uid.Length != 0) {
+        Uid = other.Uid;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.State != global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State.Unspecified) {
+        State = other.State;
+      }
+      if (other.deleteTime_ != null) {
+        if (deleteTime_ == null) {
+          DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeleteTime.MergeFrom(other.DeleteTime);
+      }
+      if (other.expireTime_ != null) {
+        if (expireTime_ == null) {
+          ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ExpireTime.MergeFrom(other.ExpireTime);
+      }
+      annotations_.MergeFrom(other.annotations_);
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
+      }
+      if (other.Reconciling != false) {
+        Reconciling = other.Reconciling;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -776,6 +1590,52 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
           }
           case 37: {
             Boost = input.ReadFloat();
+            break;
+          }
+          case 58: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
+          case 66: {
+            KmsKeyVersionName = input.ReadString();
+            break;
+          }
+          case 74: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 82: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 88: {
+            State = (global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 106: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 114: {
+            annotations_.AddEntriesFrom(input, _map_annotations_codec);
+            break;
+          }
+          case 122: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 128: {
+            Reconciling = input.ReadBool();
             break;
           }
         }
@@ -805,6 +1665,52 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
             Boost = input.ReadFloat();
             break;
           }
+          case 58: {
+            KmsKeyName = input.ReadString();
+            break;
+          }
+          case 66: {
+            KmsKeyVersionName = input.ReadString();
+            break;
+          }
+          case 74: {
+            Uid = input.ReadString();
+            break;
+          }
+          case 82: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 88: {
+            State = (global::Google.Cloud.Speech.V1P1Beta1.PhraseSet.Types.State) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 106: {
+            if (expireTime_ == null) {
+              ExpireTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ExpireTime);
+            break;
+          }
+          case 114: {
+            annotations_.AddEntriesFrom(ref input, _map_annotations_codec);
+            break;
+          }
+          case 122: {
+            Etag = input.ReadString();
+            break;
+          }
+          case 128: {
+            Reconciling = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -815,6 +1721,25 @@ namespace Google.Cloud.Speech.V1P1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Set of states that define the lifecycle of a CustomClass.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Unspecified state.  This is only used/useful for distinguishing
+        /// unset values.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The normal and active state.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 2,
+        /// <summary>
+        /// This CustomClass has been deleted.
+        /// </summary>
+        [pbr::OriginalName("DELETED")] Deleted = 4,
+      }
+
       /// <summary>
       /// A phrases containing words and phrase "hints" so that
       /// the speech recognition is more likely to recognize them. This can be used
