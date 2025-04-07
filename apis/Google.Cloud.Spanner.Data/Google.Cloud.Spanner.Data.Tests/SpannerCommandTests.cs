@@ -579,7 +579,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.Tag = transactionTag;
+            transaction.TransactionOptions.Tag = transactionTag;
 
             var command1 = connection.CreateSelectCommand("SELECT * FROM FOO");
             command1.Transaction = transaction;
@@ -621,7 +621,7 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public async Task TransactionTagCannotBeSetAfterCommandExecution()
+        public async Task TransactionTagChangesIgnoredAfterCommandExecution()
         {
             var transactionTag = "transaction-tag-1";
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
@@ -639,7 +639,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 Assert.True(reader.HasRows);
             }
-            Assert.Throws<InvalidOperationException>(() => transaction.Tag = transactionTag);
+            transaction.TransactionOptions.Tag = transactionTag;
 
             transaction.Commit();
 
@@ -652,14 +652,27 @@ namespace Google.Cloud.Spanner.Data.Tests
         }
 
         [Fact]
-        public async Task TransactionTagCannotBeSetForReadOnlyTransaction()
+        public void TransactionTagIgnoredForReadOnlyTransaction()
         {
             SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
             spannerClientMock
-                .SetupBatchCreateSessionsAsync();
+                .SetupBatchCreateSessionsAsync()
+                .SetupExecuteStreamingSql();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
-            SpannerTransaction transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.ReadOnly, transactionOptions: null, cancellationToken: default);
-            Assert.Throws<InvalidOperationException>(() => transaction.Tag = "transaction-tag-1");
+            SpannerTransaction transaction = connection.BeginTransaction(
+                SpannerTransactionCreationOptions.ReadOnly, new SpannerTransactionOptions { Tag = "transaction-tag-1" });
+
+            // Execute a command on the transaction without a transaction tag.
+            var command1 = connection.CreateSelectCommand("SELECT * FROM FOO");
+            command1.Transaction = transaction;
+            using (var reader = command1.ExecuteReader())
+            {
+                Assert.True(reader.HasRows);
+            }
+
+            spannerClientMock.Received(1).ExecuteStreamingSql(
+                Arg.Is<ExecuteSqlRequest>(request => request.RequestOptions.RequestTag == "" && request.RequestOptions.TransactionTag == ""),
+                Arg.Any<CallSettings>());
         }
 
         [Fact]
@@ -672,7 +685,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.Tag = null;
+            transaction.TransactionOptions.Tag = null;
 
             var command = connection.CreateSelectCommand("SELECT * FROM FOO");
             command.Transaction = transaction;
@@ -706,7 +719,7 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             await connection.RunWithRetriableTransactionAsync(async tx =>
             {
-                tx.Tag = transactionTag;
+                tx.TransactionOptions.Tag = transactionTag;
                 var command = connection.CreateSelectCommand("SELECT * FROM FOO");
                 command.Transaction = tx;
                 command.Tag = null;

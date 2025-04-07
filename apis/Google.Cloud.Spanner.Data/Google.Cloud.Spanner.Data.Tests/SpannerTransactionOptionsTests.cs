@@ -106,6 +106,73 @@ public class SpannerTransactionOptionsTests
         Assert.Equal(effectivePriority, options.EffectivePriority(mode));
     }
 
+    [Theory]
+    [InlineData(null, TransactionMode.ReadOnly, "")]
+    [InlineData(null, TransactionMode.ReadWrite, "")]
+    [InlineData("tag", TransactionMode.ReadOnly, "")] // Ignored for read-only
+    [InlineData("tag", TransactionMode.ReadWrite, "tag")]
+    public void EffectiveTag_BeforeStatements(string tag, TransactionMode mode, string expectedEffectiveTag)
+    {
+        var options = new SpannerTransactionOptions
+        {
+            Tag = tag
+        };
+
+        string effectiveTag = options.EffectiveTag(mode, false);
+        Assert.Equal(expectedEffectiveTag, effectiveTag);
+    }
+
+    [Theory]
+    [InlineData(null, TransactionMode.ReadOnly, "")]
+    [InlineData(null, TransactionMode.ReadWrite, "")]
+    [InlineData("tag", TransactionMode.ReadOnly, "")] // Ignored for read-only
+    [InlineData("tag", TransactionMode.ReadWrite, "tag")]
+    public void EffectiveTag_AfterStatements(string tag, TransactionMode mode, string expectedEffectiveTag)
+    {
+        var options = new SpannerTransactionOptions
+        {
+            Tag = tag
+        };
+
+        string effectiveTag = options.EffectiveTag(mode, true);
+        Assert.Equal(expectedEffectiveTag, effectiveTag);
+    }
+
+    [Theory]
+    [InlineData(null, TransactionMode.ReadOnly, "")]
+    [InlineData(null, TransactionMode.ReadWrite, "")]
+    [InlineData("tag", TransactionMode.ReadOnly, "")] // Ignored for read-only
+    [InlineData("tag", TransactionMode.ReadWrite, "tag")]
+    public void EffectiveTag_ChangesIgnoredAfterStatements(string tag, TransactionMode mode, string expectedEffectiveTag)
+    {
+        var options = new SpannerTransactionOptions
+        {
+            Tag = tag
+        };
+
+        string effectiveTag = options.EffectiveTag(mode, true);
+
+        // Change the tag after statements have been executed.
+        // This change should be ignored by EffectiveTag after statements have been executed.
+        options.Tag += "-1";
+
+        effectiveTag = options.EffectiveTag(mode, true);
+        Assert.Equal(expectedEffectiveTag, effectiveTag);
+    }
+
+    [Fact]
+    public void EffectiveTag_FailsOnStatementExecutionContradiction()
+    {
+        var options = new SpannerTransactionOptions
+        {
+            Tag = "tag"
+        };
+        string _ = options.EffectiveTag(TransactionMode.ReadWrite, true);
+        // Fails because transaction options was already told that statements had been executed.
+        // That can't be undone.
+        Assert.Throws<InvalidOperationException>(() => options.EffectiveTag(TransactionMode.ReadWrite, false));
+    }
+
     [Fact]
     public void CopyConstructor()
     {
@@ -114,11 +181,13 @@ public class SpannerTransactionOptionsTests
             MaxCommitDelay = TimeSpan.FromSeconds(10),
             CommitTimeout = 10,
             CommitPriority = Priority.High,
+            Tag = "tag",
         };
         var optionsCopy = new SpannerTransactionOptions(options);
 
         Assert.Equal(options.MaxCommitDelay, optionsCopy.MaxCommitDelay);
         Assert.Equal(options.CommitTimeout, optionsCopy.CommitTimeout);
         Assert.Equal(options.CommitPriority, optionsCopy.CommitPriority);
+        Assert.Equal(options.Tag, optionsCopy.Tag);
     }
 }

@@ -50,6 +50,7 @@ public sealed class SpannerTransactionOptions
         _maxCommitDelay = other._maxCommitDelay;
         _commitTimeout = other._commitTimeout;
         CommitPriority = other.CommitPriority;
+        Tag = other.Tag;
     }
 
     /// <summary>
@@ -99,5 +100,44 @@ public sealed class SpannerTransactionOptions
         TransactionMode.ReadOnly => Priority.Unspecified,
         _ => CommitPriority ?? Priority.Unspecified
     };
-        
+
+    /// <summary>
+    /// The transaction tag to use for <see cref="SpannerTransaction"/>
+    /// This value will be ignored by read-only transactions.
+    /// Changes to this value will be ignored by the transaction after it has executed statements.
+    /// </summary>
+    public string Tag { get; set; }
+    private string _beforeFirstStatementTag;
+
+    internal string EffectiveTag(TransactionMode transactionMode, bool hasExecutedStatements)
+    {
+        MaybeAfterStatementExecution(hasExecutedStatements, transactionMode);
+        return hasExecutedStatements ? _beforeFirstStatementTag : EffectiveTag(transactionMode);
+    }
+
+    private string EffectiveTag(TransactionMode transactionMode) => transactionMode switch
+    {
+        TransactionMode.ReadOnly => "",
+        _ => Tag ?? ""
+    };
+
+    private bool _hasExecutedStatements = false;
+    private readonly object _statementExecutionLock = new object();
+    private void MaybeAfterStatementExecution(bool hasExecutedStatements, TransactionMode transactionMode)
+    {
+        lock (_statementExecutionLock)
+        {
+            // This should never fail, because once this method is called with hasExecutedStatemens == true,
+            // it will always be called with hasExecutedStatements == true.
+            // Each transaction creates its own instance of transaction options, and although the options themselves can be modified,
+            // the options instance of any given transaction cannot be modified.
+            GaxPreconditions.CheckState(!_hasExecutedStatements || hasExecutedStatements, "Statements were already executed for this transaction.");
+
+            if (!_hasExecutedStatements && hasExecutedStatements)
+            {
+                _hasExecutedStatements = true;
+                _beforeFirstStatementTag = EffectiveTag(transactionMode);
+            }
+        }
+    }
 }
