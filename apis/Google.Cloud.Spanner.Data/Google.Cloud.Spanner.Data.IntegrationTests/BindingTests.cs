@@ -58,6 +58,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Numeric,
             SpannerDbType.Date,
             SpannerDbType.Bytes,
+            SpannerDbType.Float32,
+            SpannerDbType.Json,
             SpannerDbType.FromClrType(typeof(Duration)),
             SpannerDbType.FromClrType(typeof(Rectangle)),
             SpannerDbType.FromClrType(typeof(Person)),
@@ -70,20 +72,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Numeric),
             SpannerDbType.ArrayOf(SpannerDbType.Date),
             SpannerDbType.ArrayOf(SpannerDbType.Bytes),
+            SpannerDbType.ArrayOf(SpannerDbType.Float32),
+            SpannerDbType.ArrayOf(SpannerDbType.Json),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),            
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),            
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
-        };
-
-        // These SpannerDbTypes are unsupported on emulator.
-        public static TheoryData<SpannerDbType> BindEmulatorUnsupportedNullData { get; } = new TheoryData<SpannerDbType>
-        {
-            SpannerDbType.Float32,
-            SpannerDbType.ArrayOf(SpannerDbType.Float32),
-            SpannerDbType.Json,
-            SpannerDbType.ArrayOf(SpannerDbType.Json),
         };
 
         // These SpannerDbTypes are unsupported on production.
@@ -96,11 +91,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         // TODO: xUnit v3 supports traits for DataAttributes. Use that instead of Skip when we migrate.
         [SkippableTheory]
         [MemberData(nameof(BindNullData))]
-        [MemberData(nameof(BindEmulatorUnsupportedNullData))]
         [MemberData(nameof(BindProductionUnsupportedNullData))]
         public async Task BindNull(SpannerDbType parameterType)
         {
-            MaybeSkipIfOnEmulator(parameterType);
             MaybeSkipIfOnProduction(parameterType);
             using var connection = _fixture.GetConnection();
             using var cmd = connection.CreateSelectCommand("SELECT @v");
@@ -204,17 +197,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             new DateTime?[] { });
 
         [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public Task BindFloat32() => TestBindNonNull(SpannerDbType.Float32, 1.0f, r => r.GetFloat(0));
 
         [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public Task BindFloat32Array() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Float32),
             new float?[] { 0.0f, null, 1.0f });
 
         [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public Task BindFloat32EmptyArray() => TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Float32),
             new float[] { });
@@ -294,20 +284,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             new DateTime?[] { });
 
         [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task BindJson() => await TestBindNonNull(
             SpannerDbType.Json,
             "{\"key\":\"value\"}",
             r => r.GetString(0));
 
         [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task BindJsonArray() => await TestBindNonNull(
                 SpannerDbType.ArrayOf(SpannerDbType.Json),
                 new string[] { "{\"key\":\"value\"}", null, "{\"other-key\":\"other-value\"}" });
 
         [Fact]
-        [Trait(Constants.SupportedOnEmulator, Constants.No)]
         public async Task BindJsonEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             new string[] { });
@@ -385,10 +372,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindProtobufValueWrapperEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             new ValueWrapper[] { });
-
-        private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
-            Skip.If(_fixture.RunningOnEmulator && BindEmulatorUnsupportedNullData.Any<SpannerDbType>(spannerDbType.Equals),
-                $"The emulator does not support {spannerDbType}.");
 
         private void MaybeSkipIfOnProduction(SpannerDbType spannerDbType) =>
             Skip.If(!_fixture.RunningOnEmulator && BindProductionUnsupportedNullData.Any<SpannerDbType>(spannerDbType.Equals),

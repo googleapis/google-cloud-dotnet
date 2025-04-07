@@ -39,13 +39,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  K,
                  BoolValue,
                  Int64Value,
-                 {EmptyOnEmulator("Float32Value,")}
+                 Float32Value,
                  Float64Value,
                  StringValue,
                  NumericValue,
                  BytesValue,
                  TimestampValue,
-                 {EmptyOnEmulator("JsonValue,")}
+                 JsonValue,
                  DateValue,
                  {MaybeEmptyOnProduction("ProtobufValueValue,", skipProtobufValue)/* b/348711708 */}
                  ProtobufDurationValue,
@@ -54,14 +54,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufValueWrapperValue,
                  BoolArrayValue,
                  Int64ArrayValue,
-                 {EmptyOnEmulator("Float32ArrayValue,")}
+                 Float32ArrayValue,
                  Float64ArrayValue,
                  NumericArrayValue,
                  StringArrayValue,
                  Base64ArrayValue,
                  BytesArrayValue,
                  TimestampArrayValue,
-                 {EmptyOnEmulator("JsonArrayValue,")}
+                 JsonArrayValue,
                  DateArrayValue,
                  ProtobufValueArrayValue,
                  ProtobufDurationArrayValue,
@@ -71,13 +71,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @K,
                  @BoolValue,
                  @Int64Value,
-                 {EmptyOnEmulator("@Float32Value,")}
+                 @Float32Value,
                  @Float64Value,
                  @StringValue,
                  @NumericValue,
                  @BytesValue,
                  @TimestampValue,
-                 {EmptyOnEmulator("@JsonValue,")}
+                 @JsonValue,
                  @DateValue,
                  {MaybeEmptyOnProduction("@ProtobufValueValue,", skipProtobufValue)/* b/348711708 */}
                  @ProtobufDurationValue,
@@ -86,14 +86,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufValueWrapperValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
-                 {EmptyOnEmulator("@Float32ArrayValue,")}
+                 @Float32ArrayValue,
                  @Float64ArrayValue,
                  @NumericArrayValue,
                  @StringArrayValue,
                  @Base64ArrayValue,
                  @BytesArrayValue,
                  @TimestampArrayValue,
-                 {EmptyOnEmulator("@JsonArrayValue,")}
+                 @JsonArrayValue,
                  @DateArrayValue,
                  @ProtobufValueArrayValue,
                  @ProtobufDurationArrayValue,
@@ -102,44 +102,41 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufValueWrapperArrayValue
                )";
 
-        // Note: the emulator doesn't yet support the JSON type.
         protected override void CreateTable() =>
             ExecuteDdl($@"CREATE TABLE {TableName}(
-                            K                                       STRING(MAX) NOT NULL,
-                            BoolValue                               BOOL,
-                            Int64Value                              INT64,
-                            {EmptyOnEmulator("Float32Value          FLOAT32,")}
-                            Float64Value                            FLOAT64,
-                            StringValue                             STRING(MAX),
-                            NumericValue                            NUMERIC,
-                            BytesValue                              BYTES(MAX),
-                            TimestampValue                          TIMESTAMP,
-                            {EmptyOnEmulator("JsonValue             JSON,")}
-                            DateValue                               DATE,
-                            ProtobufValueValue                      {Value.Descriptor.FullName},
-                            ProtobufDurationValue                   {Duration.Descriptor.FullName},
-                            ProtobufRectangleValue                  {Rectangle.Descriptor.FullName},
-                            ProtobufPersonValue                     {Person.Descriptor.FullName},
-                            ProtobufValueWrapperValue               {ValueWrapper.Descriptor.FullName},
-                            BoolArrayValue                          ARRAY<BOOL>,
-                            Int64ArrayValue                         ARRAY<INT64>,
-                            {EmptyOnEmulator("Float32ArrayValue     ARRAY<FLOAT32>,")}
-                            Float64ArrayValue                       ARRAY<FLOAT64>,
-                            NumericArrayValue                       ARRAY<NUMERIC>,
-                            StringArrayValue                        ARRAY<STRING(MAX)>,
-                            Base64ArrayValue                        ARRAY<BYTES(MAX)>,
-                            BytesArrayValue                         ARRAY<BYTES(MAX)>,
-                            TimestampArrayValue                     ARRAY<TIMESTAMP>,
-                            {EmptyOnEmulator("JsonArrayValue        ARRAY<JSON>,")}
-                            DateArrayValue                          ARRAY<DATE>,
-                            ProtobufValueArrayValue                 ARRAY<{Value.Descriptor.FullName}>,
-                            ProtobufDurationArrayValue              ARRAY<{Duration.Descriptor.FullName}>,
-                            ProtobufRectangleArrayValue             ARRAY<{Rectangle.Descriptor.FullName}>,
-                            ProtobufPersonArrayValue                ARRAY<{Person.Descriptor.FullName}>,
-                            ProtobufValueWrapperArrayValue          ARRAY<{ValueWrapper.Descriptor.FullName}>
+                            K                                   STRING(MAX) NOT NULL,
+                            BoolValue                           BOOL,
+                            Int64Value                          INT64,
+                            Float32Value                        FLOAT32,
+                            Float64Value                        FLOAT64,
+                            StringValue                         STRING(MAX),
+                            NumericValue                        NUMERIC,
+                            BytesValue                          BYTES(MAX),
+                            TimestampValue                      TIMESTAMP,
+                            JsonValue                           JSON,
+                            DateValue                           DATE,
+                            ProtobufValueValue                  {Value.Descriptor.FullName},
+                            ProtobufDurationValue               {Duration.Descriptor.FullName},
+                            ProtobufRectangleValue              {Rectangle.Descriptor.FullName},
+                            ProtobufPersonValue                 {Person.Descriptor.FullName},
+                            ProtobufValueWrapperValue           {ValueWrapper.Descriptor.FullName},
+                            BoolArrayValue                      ARRAY<BOOL>,
+                            Int64ArrayValue                     ARRAY<INT64>,
+                            Float32ArrayValue                   ARRAY<FLOAT32>,
+                            Float64ArrayValue                   ARRAY<FLOAT64>,
+                            NumericArrayValue                   ARRAY<NUMERIC>,
+                            StringArrayValue                    ARRAY<STRING(MAX)>,
+                            Base64ArrayValue                    ARRAY<BYTES(MAX)>,
+                            BytesArrayValue                     ARRAY<BYTES(MAX)>,
+                            TimestampArrayValue                 ARRAY<TIMESTAMP>,
+                            JsonArrayValue                      ARRAY<JSON>,
+                            DateArrayValue                      ARRAY<DATE>,
+                            ProtobufValueArrayValue             ARRAY<{Value.Descriptor.FullName}>,
+                            ProtobufDurationArrayValue          ARRAY<{Duration.Descriptor.FullName}>,
+                            ProtobufRectangleArrayValue         ARRAY<{Rectangle.Descriptor.FullName}>,
+                            ProtobufPersonArrayValue            ARRAY<{Person.Descriptor.FullName}>,
+                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>
                           ) PRIMARY KEY(K)");
-
-        private string EmptyOnEmulator(string text) => RunningOnEmulator ? "" : text;
 
         private string MaybeEmptyOnProduction(string text, bool skip) => skip && !RunningOnEmulator ? "" : text;
     }
