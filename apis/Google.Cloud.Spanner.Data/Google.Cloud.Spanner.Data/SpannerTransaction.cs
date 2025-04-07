@@ -211,7 +211,6 @@ namespace Google.Cloud.Spanner.Data
             bool isRetriable)
         {
             SpannerConnection = GaxPreconditions.CheckNotNull(connection, nameof(connection));
-            LogCommitStats = SpannerConnection.LogCommitStats;
             _session = GaxPreconditions.CheckNotNull(session, nameof(session));
             _creationOptions = GaxPreconditions.CheckNotNull(creationOptions, nameof(creationOptions));
             TransactionOptions = transactionOptions is null ? new SpannerTransactionOptions() : new SpannerTransactionOptions(transactionOptions);
@@ -247,7 +246,12 @@ namespace Google.Cloud.Spanner.Data
         /// and log these. This property is by default equal to the value set on the SpannerConnection
         /// of this transaction, but can be overridden for a specific transaction.
         /// </summary>
-        public bool LogCommitStats { get; set; }
+        [Obsolete("Use SpannerTransactionOptions.DisposeBehavior instead.")]
+        public bool LogCommitStats
+        {
+            get => TransactionOptions.EffectiveLogCommitStats(SpannerConnection);
+            set => TransactionOptions.LogCommitStats = value;
+        }
 
         /// <summary>
         /// Creates a new <see cref="SpannerBatchCommand"/> to execute batched DML statements within this transaction.
@@ -433,7 +437,7 @@ namespace Google.Cloud.Spanner.Data
             var request = new CommitRequest
             {
                 Mutations = { _mutations },
-                ReturnCommitStats = LogCommitStats,
+                ReturnCommitStats = TransactionOptions.EffectiveLogCommitStats(SpannerConnection),
                 RequestOptions = BuildCommitRequestOptions(),
                 MaxCommitDelay = TransactionOptions.MaxCommitDelayDuration,
             };
@@ -450,7 +454,7 @@ namespace Google.Cloud.Spanner.Data
                 {
                     throw new SpannerException(ErrorCode.Internal, "Commit succeeded, but returned a response with no commit timestamp");
                 }
-                if (LogCommitStats)
+                if (TransactionOptions.EffectiveLogCommitStats(SpannerConnection))
                 {
                     SpannerConnection.Logger.LogCommitStats(request, response);
                 }

@@ -53,6 +53,7 @@ public sealed class SpannerTransactionOptions
         CommitPriority = other.CommitPriority;
         Tag = other.Tag;
         DisposeBehavior = other.DisposeBehavior;
+        LogCommitStats = other.LogCommitStats;
     }
 
     /// <summary>
@@ -162,4 +163,14 @@ public sealed class SpannerTransactionOptions
             _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
         }
     }
+
+    /// <summary>
+    /// Specifies whether this transaction should request commit statistics from the backend
+    /// and log these. If unset, the value set on the SpannerConnection
+    /// of this transaction will be used.
+    /// </summary>
+    public bool? LogCommitStats { get; set; }
+
+    internal bool EffectiveLogCommitStats(SpannerConnection spannerConnection) =>
+        LogCommitStats ?? GaxPreconditions.CheckNotNull(spannerConnection, nameof(spannerConnection)).Builder.LogCommitStats;
 }

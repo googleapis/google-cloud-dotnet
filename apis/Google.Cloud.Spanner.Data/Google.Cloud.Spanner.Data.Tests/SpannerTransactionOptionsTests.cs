@@ -160,6 +160,24 @@ public class SpannerTransactionOptionsTests
         Assert.Equal(expectedEffectiveTag, effectiveTag);
     }
 
+    [Theory]
+    [InlineData(null, true, true)]
+    [InlineData(true, false, true)]
+    public void LogCommitStats_Effective(bool? optionsLogCommitStats, bool connectionLogCommitStats, bool effectiveLogCommitStats)
+    {
+        var options = new SpannerTransactionOptions
+        {
+            LogCommitStats = optionsLogCommitStats
+        };
+
+        SpannerConnectionStringBuilder builder = new SpannerConnectionStringBuilder
+        {
+            LogCommitStats = connectionLogCommitStats
+        };
+
+        Assert.Equal(effectiveLogCommitStats, options.EffectiveLogCommitStats(new SpannerConnection(builder)));
+    }
+
     [Fact]
     public void EffectiveTag_FailsOnStatementExecutionContradiction()
     {
@@ -182,6 +200,7 @@ public class SpannerTransactionOptionsTests
             CommitTimeout = 10,
             CommitPriority = Priority.High,
             Tag = "tag",
+            LogCommitStats = true,
         };
         var optionsCopy = new SpannerTransactionOptions(options);
 
@@ -189,5 +208,6 @@ public class SpannerTransactionOptionsTests
         Assert.Equal(options.CommitTimeout, optionsCopy.CommitTimeout);
         Assert.Equal(options.CommitPriority, optionsCopy.CommitPriority);
         Assert.Equal(options.Tag, optionsCopy.Tag);
+        Assert.True(optionsCopy.LogCommitStats);
     }
 }
