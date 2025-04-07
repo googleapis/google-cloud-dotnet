@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.10.0, released 2025-04-07
+
+### New features
+
+- add the GoModule and KfpArtifact resources
+
+### Documentation improvements
+
+- remove the restriction of the maximum numbers of versions that can be deleted in one BatchDeleteVersions call
+
 ## Version 2.9.0, released 2024-10-29
 
 ### New features
