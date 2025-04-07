@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.13.0, released 2025-04-07
+
+### New features
+
+- add the UserCreds API
+
 ## Version 3.12.0, released 2025-01-27
 
 ### Bug fixes
