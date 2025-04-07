@@ -5837,7 +5837,7 @@
       "protoPath": "google/cloud/webrisk/v1",
       "productName": "Google Cloud Web Risk",
       "productUrl": "https://cloud.google.com/web-risk/",
-      "version": "2.6.0",
+      "version": "2.7.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Web Risk API v1, which lets client applications check URLs against Google's constantly updated lists of unsafe web resources.",
       "tags": [
