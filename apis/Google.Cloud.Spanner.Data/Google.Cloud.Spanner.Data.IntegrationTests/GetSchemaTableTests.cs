@@ -29,13 +29,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
     {
         private readonly AllTypesTableFixture _fixture;
 
-        // On emulator, the types defined in SchemaTestUnsupportedData are skipped from tests.
         // The table also contains the `K` column that is the primary key.
-        internal int ExpectedRowCountOnEmulator => SchemaTestData.Count() + 1;
-
-        // On production, the types defined in both SchemaTestUnsupportedData and SchemaTestData are executed.
-        // The table also contains the `K` column that is the primary key.
-        internal int ExpectedRowCountOnProduction => SchemaTestUnsupportedData.Count() + SchemaTestData.Count() + 1;
+        internal int ExpectedRowCount => SchemaTestData.Count() + 1;
 
         public GetSchemaTableTests(AllTypesTableFixture fixture) => _fixture = fixture;
 
@@ -53,25 +48,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         // TODO: xUnit v3 supports traits for DataAttributes. Use that instead of Skip when we migrate.
-        [SkippableTheory]
+        [Theory]
         [MemberData(nameof(SchemaTestData))]
-        [MemberData(nameof(SchemaTestUnsupportedData))]
         public async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema(string columnName, System.Type type, SpannerDbType spannerDbType)
         {
-            MaybeSkipIfOnEmulator(spannerDbType);
             string selectQuery = $"SELECT {columnName} FROM {_fixture.TableName}";
             await GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(columnName, type, spannerDbType, _fixture.ConnectionString, selectQuery);
         }
-
-        // These SpannerDbTypes are not supported on emulator.
-        public static TheoryData<string, System.Type, SpannerDbType> SchemaTestUnsupportedData { get; } =
-            new TheoryData<string, System.Type, SpannerDbType>
-            {
-                { "Float32Value", typeof(float), SpannerDbType.Float32 },
-                { "Float32ArrayValue", typeof(List<float>), SpannerDbType.ArrayOf(SpannerDbType.Float32) },
-                { "JsonValue", typeof(string), SpannerDbType.Json },
-                { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) },
-            };
 
         // These SpannerDbTypes are supported on emulator.
         public static TheoryData<string, System.Type, SpannerDbType> SchemaTestData { get; } =
@@ -80,12 +63,14 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 // Base types.
                 { "BoolValue", typeof(bool), SpannerDbType.Bool },
                 { "Int64Value", typeof(long), SpannerDbType.Int64 },
+                { "Float32Value", typeof(float), SpannerDbType.Float32 },
                 { "Float64Value", typeof(double), SpannerDbType.Float64 },
                 { "NumericValue", typeof(SpannerNumeric), SpannerDbType.Numeric },
                 { "StringValue", typeof(string), SpannerDbType.String },
                 { "BytesValue", typeof(byte[]), SpannerDbType.Bytes },
                 { "TimestampValue", typeof(DateTime), SpannerDbType.Timestamp },
                 { "DateValue", typeof(DateTime), SpannerDbType.Date },
+                { "JsonValue", typeof(string), SpannerDbType.Json },
                 { "ProtobufDurationValue", typeof(Value), SpannerDbType.FromClrType(typeof(Duration)) },
                 { "ProtobufRectangleValue", typeof(Value), SpannerDbType.FromClrType(typeof(Rectangle)) },
                 { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
@@ -95,6 +80,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
                 { "Int64ArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.Int64) },
+                { "Float32ArrayValue", typeof(List<float>), SpannerDbType.ArrayOf(SpannerDbType.Float32) },
                 { "Float64ArrayValue", typeof(List<double>), SpannerDbType.ArrayOf(SpannerDbType.Float64) },
                 { "NumericArrayValue", typeof(List<SpannerNumeric>), SpannerDbType.ArrayOf(SpannerDbType.Numeric) },
                 { "StringArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.String) },
@@ -102,6 +88,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BytesArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "TimestampArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Timestamp) },
                 { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
+                { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) },
                 { "ProtobufDurationArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))) },
                 { "ProtobufRectangleArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))) },
                 { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
@@ -138,7 +125,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 using (var reader = await command.ExecuteReaderAsync())
                 {
                     var table = reader.GetSchemaTable();
-                    var expectedRowCount = _fixture.RunningOnEmulator ? ExpectedRowCountOnEmulator : ExpectedRowCountOnProduction;
+                    var expectedRowCount = ExpectedRowCount;
                     Assert.Equal(expectedRowCount, table.Rows.Count);
                     for (var ordinal = 1; ordinal < expectedRowCount; ordinal++)
                     {
@@ -148,9 +135,5 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 }
             }
         }
-
-        private void MaybeSkipIfOnEmulator(SpannerDbType spannerDbType) =>
-            Skip.If(_fixture.RunningOnEmulator && SchemaTestUnsupportedData.Any(data => spannerDbType.Equals(data[2])),
-                $"The emulator does not support {spannerDbType}.");
     }
 }
