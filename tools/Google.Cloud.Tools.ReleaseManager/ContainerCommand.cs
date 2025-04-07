@@ -43,6 +43,8 @@ public sealed class ContainerCommand : ICommand
             "build-library" => new BuildLibraryCommand(),
             "configure" => new ConfigureCommand(),
             "prepare-library-release" => new PrepareLibraryReleaseCommand(),
+            "integration-test-library" => new IntegrationTestLibraryCommand(),
+            "package-library" => new PackageLibraryCommand(),
             _ => throw new UserErrorException($"Unknown subcommand '{args[0]}'")
         };
 

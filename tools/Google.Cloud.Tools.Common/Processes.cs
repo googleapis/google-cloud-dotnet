@@ -13,8 +13,12 @@
 // limitations under the License.
 
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Google.Cloud.Tools.Common
 {
@@ -47,6 +51,27 @@ namespace Google.Cloud.Tools.Common
                 var output = process.StandardOutput.ReadToEnd();
                 var error = process.StandardError.ReadToEnd();
                 throw new Exception($"dotnet exit code {process.ExitCode}. Directory: {workingDirectory}. Args: {joinedArguments}. Output: {output}. Error: {error}");
+            }
+        }
+
+        public static void RunBashScript(string workingDirectory, string script, params string[] args) =>
+            RunBashScript(workingDirectory, script, (IEnumerable<string>) args);
+
+        public static void RunBashScript(string workingDirectory, string script, IEnumerable<string> args)
+        {
+            var processArguments = args.Prepend($"./{script}").ToList();
+
+            var psi = new ProcessStartInfo
+            {
+                FileName = "/bin/bash",
+                WorkingDirectory = workingDirectory
+            };
+            processArguments.ForEach(psi.ArgumentList.Add);
+            var process = Process.Start(psi)!;
+            process.WaitForExit();
+            if (process.ExitCode != 0)
+            {
+                throw new Exception($"Process terminated with exit code {process.ExitCode}");
             }
         }
 
