@@ -6,14 +6,17 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.BigQuery.Logging.V1", "Google.Cloud.BigQuery.Logging.V1\Google.Cloud.BigQuery.Logging.V1.csproj", "{DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}"
 EndProject
 Global
-    GlobalSection(SolutionConfigurationPlatforms) = preSolution
-        Debug|Any CPU = Debug|Any CPU
-        Release|Any CPU = Release|Any CPU
-    EndGlobalSection
-    GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}.Release|Any CPU.Build.0 = Release|Any CPU
-    EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD233BF2-7A2F-34DC-5E4A-04727C2D2B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 EndGlobal
