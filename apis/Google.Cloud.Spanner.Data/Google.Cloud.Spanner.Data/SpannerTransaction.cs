@@ -188,20 +188,19 @@ namespace Google.Cloud.Spanner.Data
             }
         }
 
-        private string _tag;
-
         /// <summary>
         /// The transaction tag to use for this transaction. This can only be set for read/write transactions,
         /// and must be set before any statements are executed on the transaction.
         /// </summary>
+        [Obsolete("Use SpannerTransactionOptions.Tag instead.")]
         public string Tag
         {
-            get => _tag;
+            get => TransactionOptions.EffectiveTag(Mode, _hasExecutedStatements);
             set
             {
                 GaxPreconditions.CheckState(Mode != TransactionMode.ReadOnly, "Transaction tag cannot be set on a read-only transaction");
                 GaxPreconditions.CheckState(!_hasExecutedStatements, "Transaction tag can only be set before any statements have been executed on the transaction");
-                _tag = value;
+                TransactionOptions.Tag = value;
             }
         }
 
@@ -279,6 +278,8 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckState(IsDetached, "You can only call GetPartitions on a detached transaction.");
             _hasExecutedStatements = true;
 
+            ApplyTransactionTag(request);
+
             var partitionRequest = request.ToPartitionReadOrQueryRequest(partitionSizeBytes, maxPartitions);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
                 {
@@ -320,6 +321,9 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             CheckCompatibleMode(TransactionMode.ReadOnly);
             _hasExecutedStatements = true;
+
+            ApplyTransactionTag(request);
+
             // We're not making any Spanner requests here, so we don't need profiling or error translation.
             var callSettings = SpannerConnection.CreateCallSettings(
                 request.GetCallSettings,
@@ -334,6 +338,7 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
+            ApplyTransactionTag(request.RequestOptions);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 // Note: ExecuteSql would work, but by using a streaming call we enable potential future scenarios
@@ -368,6 +373,7 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
+            ApplyTransactionTag(request.RequestOptions);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteStreamingSqlSettings, timeoutSeconds, cancellationToken);
@@ -384,6 +390,7 @@ namespace Google.Cloud.Spanner.Data
             GaxPreconditions.CheckNotNull(request, nameof(request));
             _hasExecutedStatements = true;
             request.Seqno = Interlocked.Increment(ref _lastDmlSequenceNumber);
+            ApplyTransactionTag(request.RequestOptions);
             return ExecuteHelper.WithErrorTranslationAndProfiling(async () =>
             {
                 var callSettings = SpannerConnection.CreateCallSettings(settings => settings.ExecuteBatchDmlSettings, timeoutSeconds, cancellationToken);
@@ -455,8 +462,26 @@ namespace Google.Cloud.Spanner.Data
             },
             "SpannerTransaction.Commit", SpannerConnection.Logger);
         }
-        private RequestOptions BuildCommitRequestOptions() =>
-            new RequestOptions { Priority = PriorityConverter.ToProto(TransactionOptions.EffectivePriority(Mode)), TransactionTag = _tag ?? "" };
+        private RequestOptions BuildCommitRequestOptions()
+        {
+            var options = new RequestOptions
+            {
+                Priority = PriorityConverter.ToProto(TransactionOptions.EffectivePriority(Mode)),
+            };
+            ApplyTransactionTag(options);
+            return options;
+        }
+
+        private void ApplyTransactionTag(ReadOrQueryRequest readOrQueryRequest)
+        {
+            var options = readOrQueryRequest.IsQuery
+                ? readOrQueryRequest.ExecuteSqlRequest.RequestOptions
+                : readOrQueryRequest.ReadRequest.RequestOptions;
+            ApplyTransactionTag(options);
+        }
+
+        private void ApplyTransactionTag(RequestOptions options) =>
+            options.TransactionTag = TransactionOptions.EffectiveTag(Mode, _hasExecutedStatements);
 
         /// <inheritdoc />
         public override void Rollback() => Task.Run(() => RollbackAsync(default)).WaitWithUnwrappedExceptions();

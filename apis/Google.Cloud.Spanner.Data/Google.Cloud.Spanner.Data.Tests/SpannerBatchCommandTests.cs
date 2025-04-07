@@ -423,7 +423,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                 .SetupCommitAsync();
             SpannerConnection connection = SpannerCommandTests.BuildSpannerConnection(spannerClientMock);
             SpannerTransaction transaction = connection.BeginTransaction();
-            transaction.Tag = transactionTag;
+            transaction.TransactionOptions.Tag = transactionTag;
 
             var command = transaction.CreateBatchDmlCommand();
             command.Add("UPDATE FOO SET BAR=1 WHERE TRUE");
