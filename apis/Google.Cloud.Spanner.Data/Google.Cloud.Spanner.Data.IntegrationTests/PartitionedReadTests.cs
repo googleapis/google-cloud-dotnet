@@ -119,8 +119,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 return;
             }
             using var connection = new SpannerConnection(transactionId.ConnectionString);
-            using var transaction = await connection.BeginTransactionAsync(SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId), transactionOptions: null, cancellationToken: default);
-            transaction.DisposeBehavior = DisposeBehavior.CloseResources;
+            using var transaction = await connection.BeginTransactionAsync(
+                SpannerTransactionCreationOptions.FromReadOnlyTransactionId(transactionId),
+                new SpannerTransactionOptions
+                {
+                    DisposeBehavior = DisposeBehavior.CloseResources
+                },
+                cancellationToken: default);
         }
     }
 }

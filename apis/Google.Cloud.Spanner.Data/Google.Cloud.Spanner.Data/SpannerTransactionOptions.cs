@@ -32,6 +32,7 @@ public sealed class SpannerTransactionOptions
 {
     private TimeSpan? _maxCommitDelay;
     private int? _commitTimeout;
+    private DisposeBehavior _disposeBehavior = DisposeBehavior.Default;
 
     /// <summary>
     /// Creates an instance of <see cref="SpannerTransactionOptions"/> with default values.
@@ -51,6 +52,7 @@ public sealed class SpannerTransactionOptions
         _commitTimeout = other._commitTimeout;
         CommitPriority = other.CommitPriority;
         Tag = other.Tag;
+        DisposeBehavior = other.DisposeBehavior;
     }
 
     /// <summary>
@@ -138,6 +140,26 @@ public sealed class SpannerTransactionOptions
                 _hasExecutedStatements = true;
                 _beforeFirstStatementTag = EffectiveTag(transactionMode);
             }
+        }
+    }
+
+    /// <summary>
+    /// Specifies how resources are treated when <see cref="SpannerTransaction.Dispose"/> is called.
+    /// Defaults to <see cref="DisposeBehavior.Default"/>. For a pooled transaction, 
+    /// <see cref="DisposeBehavior.Default"/> will cause transactional resources
+    /// to be sent back into a shared pool for re-use.
+    /// For a detached transaction the default behaviour is to do nothing with transactional resources.
+    /// If set to <see cref="DisposeBehavior.CloseResources"/> all transactional resource will be closed.
+    /// A detached transaction must have one process choose <see cref="DisposeBehavior.CloseResources"/>
+    /// to avoid leaks of transactional resources.
+    /// Changes to this value will be ignored after the transaction has been disposed.
+    /// </summary>
+    public DisposeBehavior DisposeBehavior
+    {
+        get => _disposeBehavior;
+        set
+        {
+            _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
         }
     }
 }
