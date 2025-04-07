@@ -62,7 +62,6 @@ namespace Google.Cloud.Spanner.Data
         private readonly SpannerTransactionCreationOptions _creationOptions;
         // This value will be true if and only if this transaction was created by RetriableTransaction.
         private readonly bool _isRetriable = false;
-        private DisposeBehavior _disposeBehavior = DisposeBehavior.Default;
         private int _disposed = 0;
         private int _commited = 0;
 
@@ -236,14 +235,11 @@ namespace Google.Cloud.Spanner.Data
         /// A detached transaction must have one process choose <see cref="DisposeBehavior.CloseResources"/>
         /// to avoid leaks of transactional resources.
         /// </summary>
+        [Obsolete("Use SpannerTransactionOptions.DisposeBehavior instead.")]
         public DisposeBehavior DisposeBehavior
         {
-            get => _disposeBehavior;
-            set
-            {
-                CheckNotDisposed();
-                _disposeBehavior = GaxPreconditions.CheckEnumValue(value, nameof(DisposeBehavior));
-            }
+            get => TransactionOptions.DisposeBehavior;
+            set => TransactionOptions.DisposeBehavior = value;
         }
 
         /// <summary>
@@ -549,7 +545,7 @@ namespace Google.Cloud.Spanner.Data
                 return;
             }
 
-            switch (DisposeBehavior)
+            switch (TransactionOptions.DisposeBehavior)
             {
                 case DisposeBehavior.CloseResources:
                     _session.ReleaseToPool(forceDelete: true);

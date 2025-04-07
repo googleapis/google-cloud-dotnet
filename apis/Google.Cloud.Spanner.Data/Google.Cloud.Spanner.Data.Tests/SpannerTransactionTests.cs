@@ -77,6 +77,7 @@ public class SpannerTransactionTests
         int commitTimeout = 10;
         Priority commitPriority = Priority.High;
         string tag = "tag";
+        DisposeBehavior disposeBehavior = DisposeBehavior.CloseResources;
 
         SpannerClient spannerClientMock = SpannerClientHelpers.CreateMockClient(Logger.DefaultLogger);
         spannerClientMock.SetupBatchCreateSessionsAsync();
@@ -87,11 +88,13 @@ public class SpannerTransactionTests
             CommitTimeout = commitTimeout,
             CommitPriority = commitPriority,
             Tag = tag,
+            DisposeBehavior = DisposeBehavior.CloseResources
         });
 
         Assert.Equal(commitDelay, transaction.TransactionOptions.MaxCommitDelay);
         Assert.Equal(commitTimeout, transaction.TransactionOptions.CommitTimeout);
         Assert.Equal(commitPriority, transaction.TransactionOptions.CommitPriority);
         Assert.Equal(tag, transaction.TransactionOptions.Tag);
+        Assert.Equal(disposeBehavior, transaction.TransactionOptions.DisposeBehavior);
     }
 }
