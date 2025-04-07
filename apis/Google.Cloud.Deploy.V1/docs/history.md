@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.5.0, released 2025-04-07
+
+### New features
+
+- Add resource definition for Revision
+
+### Documentation improvements
+
+- Typos fixes and small improvements
+- fix typo in comments
+- Minor documentation improvements
+
 ## Version 3.4.0, released 2024-12-06
 
 ### New features
