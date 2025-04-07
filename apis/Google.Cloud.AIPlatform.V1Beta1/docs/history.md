@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta25, released 2025-04-07
+
+### New features
+
+- add FeatureViewDirectWrite API
+- add Gen AI logging public preview API
+
 ## Version 1.0.0-beta24, released 2025-03-31
 
 ### New features
