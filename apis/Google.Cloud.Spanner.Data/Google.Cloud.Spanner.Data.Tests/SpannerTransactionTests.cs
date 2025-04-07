@@ -88,7 +88,8 @@ public class SpannerTransactionTests
             CommitTimeout = commitTimeout,
             CommitPriority = commitPriority,
             Tag = tag,
-            DisposeBehavior = DisposeBehavior.CloseResources
+            DisposeBehavior = DisposeBehavior.CloseResources,
+            LogCommitStats = true
         });
 
         Assert.Equal(commitDelay, transaction.TransactionOptions.MaxCommitDelay);
@@ -96,5 +97,6 @@ public class SpannerTransactionTests
         Assert.Equal(commitPriority, transaction.TransactionOptions.CommitPriority);
         Assert.Equal(tag, transaction.TransactionOptions.Tag);
         Assert.Equal(disposeBehavior, transaction.TransactionOptions.DisposeBehavior);
+        Assert.True(transaction.TransactionOptions.LogCommitStats);
     }
 }
