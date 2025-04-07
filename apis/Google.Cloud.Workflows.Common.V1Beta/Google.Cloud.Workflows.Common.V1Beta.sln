@@ -6,14 +6,17 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Workflows.Common.V1Beta", "Google.Cloud.Workflows.Common.V1Beta\Google.Cloud.Workflows.Common.V1Beta.csproj", "{B6D09C92-13AB-FA19-5E5E-BD727D596B3B}"
 EndProject
 Global
-    GlobalSection(SolutionConfigurationPlatforms) = preSolution
-        Debug|Any CPU = Debug|Any CPU
-        Release|Any CPU = Release|Any CPU
-    EndGlobalSection
-    GlobalSection(ProjectConfigurationPlatforms) = postSolution
-        {B6D09C92-13AB-FA19-5E5E-BD727D596B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-        {B6D09C92-13AB-FA19-5E5E-BD727D596B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-        {B6D09C92-13AB-FA19-5E5E-BD727D596B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-        {B6D09C92-13AB-FA19-5E5E-BD727D596B3B}.Release|Any CPU.Build.0 = Release|Any CPU
-    EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6D09C92-13AB-FA19-5E5E-BD727D596B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D09C92-13AB-FA19-5E5E-BD727D596B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D09C92-13AB-FA19-5E5E-BD727D596B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D09C92-13AB-FA19-5E5E-BD727D596B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 EndGlobal
