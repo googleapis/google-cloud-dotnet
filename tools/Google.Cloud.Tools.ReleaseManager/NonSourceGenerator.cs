@@ -475,16 +475,19 @@ internal sealed class NonSourceGenerator
         string[] betweenLines =
         {
             "Global",
-            "    GlobalSection(SolutionConfigurationPlatforms) = preSolution",
-            "        Debug|Any CPU = Debug|Any CPU",
-            "        Release|Any CPU = Release|Any CPU",
-            "    EndGlobalSection",
-            "    GlobalSection(ProjectConfigurationPlatforms) = postSolution"
+            "\tGlobalSection(SolutionConfigurationPlatforms) = preSolution",
+            "\t\tDebug|Any CPU = Debug|Any CPU",
+            "\t\tRelease|Any CPU = Release|Any CPU",
+            "\tEndGlobalSection",
+            "\tGlobalSection(ProjectConfigurationPlatforms) = postSolution"
         };
         List<string> postSolutionLines = new();
         string[] suffixLines =
         {
-            "    EndGlobalSection",
+            "\tEndGlobalSection",
+            "\tGlobalSection(SolutionProperties) = preSolution",
+            "\t\tHideSolutionNode = FALSE",
+            "\tEndGlobalSection",
             "EndGlobal"
         };
 
@@ -498,10 +501,10 @@ internal sealed class NonSourceGenerator
             var guid = GenerateGuid(name).ToString().ToUpperInvariant();
             projectLines.Add($"Project(\"{{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}}\") = \"{name}\", \"{directory}\\{name}.csproj\", \"{{{guid}}}\"");
             projectLines.Add("EndProject");
-            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU");
-            postSolutionLines.Add($"        {{{guid}}}.Debug|Any CPU.Build.0 = Debug|Any CPU");
-            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
-            postSolutionLines.Add($"        {{{guid}}}.Release|Any CPU.Build.0 = Release|Any CPU");
+            postSolutionLines.Add($"\t\t{{{guid}}}.Debug|Any CPU.ActiveCfg = Debug|Any CPU");
+            postSolutionLines.Add($"\t\t{{{guid}}}.Debug|Any CPU.Build.0 = Debug|Any CPU");
+            postSolutionLines.Add($"\t\t{{{guid}}}.Release|Any CPU.ActiveCfg = Release|Any CPU");
+            postSolutionLines.Add($"\t\t{{{guid}}}.Release|Any CPU.Build.0 = Release|Any CPU");
 
             static Guid GenerateGuid(string name)
             {
