@@ -71,13 +71,6 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Float32ArrayValue", typeof(List<float>), SpannerDbType.ArrayOf(SpannerDbType.Float32) },
                 { "JsonValue", typeof(string), SpannerDbType.Json },
                 { "JsonArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.Json) },
-                // b/348716298
-                { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
-                { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
-                { "ProtobufPersonValue", typeof(Value), SpannerDbType.FromClrType(typeof(Person)) },
-                { "ProtobufPersonArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))) },
-                { "ProtobufValueWrapperValue", typeof(Value), SpannerDbType.FromClrType(typeof(ValueWrapper)) },
-                { "ProtobufValueWrapperArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))) },
             };
 
         // These SpannerDbTypes are supported on emulator.
@@ -95,6 +88,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateValue", typeof(DateTime), SpannerDbType.Date },
                 { "ProtobufDurationValue", typeof(Value), SpannerDbType.FromClrType(typeof(Duration)) },
                 { "ProtobufRectangleValue", typeof(Value), SpannerDbType.FromClrType(typeof(Rectangle)) },
+                { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
+                { "ProtobufPersonValue", typeof(Value), SpannerDbType.FromClrType(typeof(Person)) },
+                { "ProtobufValueWrapperValue", typeof(Value), SpannerDbType.FromClrType(typeof(ValueWrapper)) },
                 
                 // Array types.
                 { "BoolArrayValue", typeof(List<bool>), SpannerDbType.ArrayOf(SpannerDbType.Bool) },
@@ -108,6 +104,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },
                 { "ProtobufDurationArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))) },
                 { "ProtobufRectangleArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))) },
+                { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
+                { "ProtobufPersonArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))) },
+                { "ProtobufValueWrapperArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))) },
             };
 
         internal static async Task GetSchemaTable_WithFlagEnabled_ReturnsSchema_Impl(string columnName, System.Type type, SpannerDbType spannerDbType, string connectionString, string selectQuery)
