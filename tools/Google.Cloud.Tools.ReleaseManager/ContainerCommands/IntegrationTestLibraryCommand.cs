@@ -1,4 +1,4 @@
-// Copyright 2024 Google LLC
+// Copyright 2025 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License"):
 // you may not use this file except in compliance with the License.
@@ -13,34 +13,35 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
 
-/// <summary>
-/// Builds and optionally tests a library (or multiple libraries). Expected options:
-/// - repo-root: the root of the google-cloud-dotnet repository; required
-/// - test: whether or not to run tests after building (true/false)
-///    optional; defaults to false
-/// - library-id: e.g. Google.Cloud.Functions.V2; when not specified, all configured libraries are built
-///
-/// Note that the "library-id" is a library in the Librarian sense; it may map to multiple NuGet
-/// packages (configured via a package group in the API catalog).
-/// </summary>
-public class BuildLibraryCommand : IContainerCommand
+internal class IntegrationTestLibraryCommand : IContainerCommand
 {
+    private const int MaxAttempts = 3;
+
     public int Execute(ContainerOptions options)
     {
         var repoRoot = options.RequireOption(options.RepoRoot);
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
         var apis = options.GetApisFromLibraryId(catalog);
-        var args = apis.Select(api => api.Id).ToList();
-        if (!options.Test)
+        for (int attempt = 1; true; attempt++)
         {
-            args.Insert(0, "--notests");
+            var args = attempt == 1 ? apis.Select(api => api.Id) : new List<string> { "--retry" };
+            try
+            {
+                Processes.RunBashScript(repoRoot, "runintegrationtests.sh", args);
+                break;
+            }
+            catch (Exception) when (attempt < MaxAttempts)
+            {
+                Console.WriteLine($"Failure running integration tests on attempt {attempt}. (Max attempts = {MaxAttempts})");
+            }
         }
-        Processes.RunBashScript(repoRoot, "build.sh", args);
         return 0;
     }
 }
