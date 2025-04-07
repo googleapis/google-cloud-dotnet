@@ -1,5 +1,19 @@
 # Version history
 
+## Version 3.0.0-beta09, released 2025-04-07
+
+### New features
+
+- expose google.cloud.location.Locations API
+- add new fields to CustomClass and PhraseSet.Phrase messages
+- add ALAW support to RecognitionConfig
+- make transcript_normalization field optional
+- deprecating speaker_tag (int) for speaker_label (string)
+
+### Documentation improvements
+
+- miscellaneous clarifications
+
 ## Version 3.0.0-beta08, released 2024-05-14
 
 ### New features

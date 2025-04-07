@@ -5131,7 +5131,7 @@
       "protoPath": "google/cloud/speech/v1p1beta1",
       "productName": "Google Cloud Speech",
       "productUrl": "https://cloud.google.com/speech",
-      "version": "3.0.0-beta08",
+      "version": "3.0.0-beta09",
       "releaseLevelOverride": "preview",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",

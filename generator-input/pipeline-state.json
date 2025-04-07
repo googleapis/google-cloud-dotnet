@@ -2949,11 +2949,12 @@
         },
         {
             "id": "Google.Cloud.Speech.V1P1Beta1",
-            "currentVersion": "3.0.0-beta08",
+            "currentVersion": "3.0.0-beta09",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T08:06:16Z",
+            "releaseTimestamp": "2025-04-07T11:16:28.119607503Z",
             "lastGeneratedCommit": "3891337781983cdc3acb479651a38550bf65cafc",
+            "lastReleasedCommit": "3891337781983cdc3acb479651a38550bf65cafc",
             "apiPaths": [
                 "google/cloud/speech/v1p1beta1"
             ],
