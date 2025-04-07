@@ -1,5 +1,27 @@
 # Version history
 
+## Version 3.11.0, released 2025-04-07
+
+### New features
+
+- Support HD voice custom pronunciations
+
+### Documentation improvements
+
+- A comment for method `StreamingSynthesize` in service `TextToSpeech` is changed
+- A comment for enum value `OGG_OPUS` in enum `AudioEncoding` is changed
+- A comment for enum value `PCM` in enum `AudioEncoding` is changed
+- A comment for field `low_latency_journey_synthesis` in message `.google.cloud.texttospeech.v1.AdvancedVoiceOptions` is changed
+- A comment for enum value `PHONETIC_ENCODING_IPA` in enum `PhoneticEncoding` is changed
+- A comment for enum value `PHONETIC_ENCODING_X_SAMPA` in enum `PhoneticEncoding` is changed
+- A comment for field `phrase` in message `.google.cloud.texttospeech.v1.CustomPronunciationParams` is changed
+- A comment for field `pronunciations` in message `.google.cloud.texttospeech.v1.CustomPronunciations` is changed
+- A comment for message `MultiSpeakerMarkup` is changed
+- A comment for field `custom_pronunciations` in message `.google.cloud.texttospeech.v1.SynthesisInput` is changed
+- A comment for field `voice_clone` in message `.google.cloud.texttospeech.v1.VoiceSelectionParams` is changed
+- A comment for field `audio_encoding` in message `.google.cloud.texttospeech.v1.StreamingAudioConfig` is changed
+- A comment for field `text` in message `.google.cloud.texttospeech.v1.StreamingSynthesisInput` is changed
+
 ## Version 3.10.0, released 2025-01-13
 
 ### New features
