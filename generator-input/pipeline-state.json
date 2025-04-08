@@ -3338,11 +3338,12 @@
         },
         {
             "id": "Google.Cloud.WebRisk.V1",
-            "currentVersion": "2.6.0",
+            "currentVersion": "2.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2024-05-14T07:42:16Z",
+            "releaseTimestamp": "2025-04-08T20:03:44.714849177Z",
             "lastGeneratedCommit": "49235a9ddf7349f3f22759021d469d0ae99af364",
+            "lastReleasedCommit": "49235a9ddf7349f3f22759021d469d0ae99af364",
             "apiPaths": [
                 "google/cloud/webrisk/v1"
             ],
