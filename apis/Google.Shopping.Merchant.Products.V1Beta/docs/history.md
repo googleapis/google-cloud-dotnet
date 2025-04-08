@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-04-08
+
+### New features
+
+- A new field `automated_discounts` is added to message `google.shopping.merchant.products.v1beta.Product`
+
+### Documentation improvements
+
+- Modified several comments
+
 ## Version 1.0.0-beta03, released 2025-03-17
 
 ### New features
