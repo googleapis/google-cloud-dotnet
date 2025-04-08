@@ -122,7 +122,7 @@ namespace Google.Cloud.Spanner.Data.Snippets
             string connectionString = _fixture.ConnectionString;
 
             // Sample: InsertDataAsync
-            // Additional: RunWithRetriableTransactionAsync(*,*,*)
+            // Additional: RunWithRetriableTransactionAsync(*,*,*,*)
             // Additional: RunWithRetriableTransactionAsync(*,*)
             using (SpannerConnection connection = new SpannerConnection(connectionString))
             {
