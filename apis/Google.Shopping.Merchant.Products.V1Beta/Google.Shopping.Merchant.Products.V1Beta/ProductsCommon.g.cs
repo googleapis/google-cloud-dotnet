@@ -232,13 +232,17 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MWJldGEuUHJvZHVj",
             "dFN1c3RhaW5hYmlsaXR5SW5jZW50aXZlLlR5cGVIAYgBASJGCgRUeXBlEhQK",
             "EFRZUEVfVU5TUEVDSUZJRUQQABIRCg1FVl9UQVhfQ1JFRElUEAESFQoRRVZf",
-            "UFJJQ0VfRElTQ09VTlQQAkIHCgV2YWx1ZUIHCgVfdHlwZSpOChJTdWJzY3Jp",
-            "cHRpb25QZXJpb2QSIwofU1VCU0NSSVBUSU9OX1BFUklPRF9VTlNQRUNJRklF",
-            "RBAAEgkKBU1PTlRIEAESCAoEWUVBUhACQpUBCixjb20uZ29vZ2xlLnNob3Bw",
-            "aW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxYmV0YUITUHJvZHVjdHNDb21tb25Q",
-            "cm90b1ABWk5jbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50",
-            "L3Byb2R1Y3RzL2FwaXYxYmV0YS9wcm9kdWN0c3BiO3Byb2R1Y3RzcGJiBnBy",
-            "b3RvMw=="));
+            "UFJJQ0VfRElTQ09VTlQQAkIHCgV2YWx1ZUIHCgVfdHlwZSK0AQoSQXV0b21h",
+            "dGVkRGlzY291bnRzEjAKC3ByaW9yX3ByaWNlGAEgASgLMhsuZ29vZ2xlLnNo",
+            "b3BwaW5nLnR5cGUuUHJpY2USPAoXcHJpb3JfcHJpY2VfcHJvZ3Jlc3NpdmUY",
+            "AiABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRIuCglnYWRfcHJp",
+            "Y2UYAyABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZSpOChJTdWJz",
+            "Y3JpcHRpb25QZXJpb2QSIwofU1VCU0NSSVBUSU9OX1BFUklPRF9VTlNQRUNJ",
+            "RklFRBAAEgkKBU1PTlRIEAESCAoEWUVBUhACQpUBCixjb20uZ29vZ2xlLnNo",
+            "b3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxYmV0YUITUHJvZHVjdHNDb21t",
+            "b25Qcm90b1ABWk5jbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNo",
+            "YW50L3Byb2R1Y3RzL2FwaXYxYmV0YS9wcm9kdWN0c3BiO3Byb2R1Y3RzcGJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Merchant.Products.V1Beta.SubscriptionPeriod), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -263,7 +267,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus), global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Parser, new[]{ "DestinationStatuses", "ItemLevelIssues", "CreationDate", "LastUpdateDate", "GoogleExpirationDate" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.DestinationStatus), global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.DestinationStatus.Parser, new[]{ "ReportingContext", "ApprovedCountries", "PendingCountries", "DisapprovedCountries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.ItemLevelIssue), global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.ItemLevelIssue.Parser, new[]{ "Code", "Severity", "Resolution", "Attribute", "ReportingContext", "Description", "Detail", "Documentation", "ApplicableCountries" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductStatus.Types.ItemLevelIssue.Types.Severity) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.CloudExportAdditionalProperties), global::Google.Shopping.Merchant.Products.V1Beta.CloudExportAdditionalProperties.Parser, new[]{ "PropertyName", "TextValue", "BoolValue", "IntValue", "FloatValue", "MinValue", "MaxValue", "UnitCode" }, new[]{ "PropertyName", "BoolValue", "MinValue", "MaxValue", "UnitCode" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive), global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Parser, new[]{ "Amount", "Percentage", "Type" }, new[]{ "Value", "Type" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive), global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Parser, new[]{ "Amount", "Percentage", "Type" }, new[]{ "Value", "Type" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1Beta.ProductSustainabilityIncentive.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1Beta.AutomatedDiscounts), global::Google.Shopping.Merchant.Products.V1Beta.AutomatedDiscounts.Parser, new[]{ "PriorPrice", "PriorPriceProgressive", "GadPrice" }, null, null, null, null)
           }));
     }
     #endregion
@@ -12492,6 +12497,315 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Information regarding Automated Discounts.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AutomatedDiscounts : pb::IMessage<AutomatedDiscounts>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutomatedDiscounts> _parser = new pb::MessageParser<AutomatedDiscounts>(() => new AutomatedDiscounts());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutomatedDiscounts> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Products.V1Beta.ProductsCommonReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutomatedDiscounts() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutomatedDiscounts(AutomatedDiscounts other) : this() {
+      priorPrice_ = other.priorPrice_ != null ? other.priorPrice_.Clone() : null;
+      priorPriceProgressive_ = other.priorPriceProgressive_ != null ? other.priorPriceProgressive_.Clone() : null;
+      gadPrice_ = other.gadPrice_ != null ? other.gadPrice_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutomatedDiscounts Clone() {
+      return new AutomatedDiscounts(this);
+    }
+
+    /// <summary>Field number for the "prior_price" field.</summary>
+    public const int PriorPriceFieldNumber = 1;
+    private global::Google.Shopping.Type.Price priorPrice_;
+    /// <summary>
+    /// The price prior to the application of the first price reduction.
+    /// Absent if the information about the prior price of the product is not
+    /// available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price PriorPrice {
+      get { return priorPrice_; }
+      set {
+        priorPrice_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "prior_price_progressive" field.</summary>
+    public const int PriorPriceProgressiveFieldNumber = 2;
+    private global::Google.Shopping.Type.Price priorPriceProgressive_;
+    /// <summary>
+    /// The price prior to the application of consecutive price reductions.
+    /// Absent if the information about the prior price of the product is not
+    /// available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price PriorPriceProgressive {
+      get { return priorPriceProgressive_; }
+      set {
+        priorPriceProgressive_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gad_price" field.</summary>
+    public const int GadPriceFieldNumber = 3;
+    private global::Google.Shopping.Type.Price gadPrice_;
+    /// <summary>
+    /// The current sale price for products with a price optimized using Google
+    /// Automated Discounts (GAD). Absent if the information about the GAD_price of
+    /// the product is not available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price GadPrice {
+      get { return gadPrice_; }
+      set {
+        gadPrice_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutomatedDiscounts);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutomatedDiscounts other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PriorPrice, other.PriorPrice)) return false;
+      if (!object.Equals(PriorPriceProgressive, other.PriorPriceProgressive)) return false;
+      if (!object.Equals(GadPrice, other.GadPrice)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (priorPrice_ != null) hash ^= PriorPrice.GetHashCode();
+      if (priorPriceProgressive_ != null) hash ^= PriorPriceProgressive.GetHashCode();
+      if (gadPrice_ != null) hash ^= GadPrice.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (priorPrice_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PriorPrice);
+      }
+      if (priorPriceProgressive_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PriorPriceProgressive);
+      }
+      if (gadPrice_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(GadPrice);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (priorPrice_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PriorPrice);
+      }
+      if (priorPriceProgressive_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(PriorPriceProgressive);
+      }
+      if (gadPrice_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(GadPrice);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (priorPrice_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PriorPrice);
+      }
+      if (priorPriceProgressive_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PriorPriceProgressive);
+      }
+      if (gadPrice_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GadPrice);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutomatedDiscounts other) {
+      if (other == null) {
+        return;
+      }
+      if (other.priorPrice_ != null) {
+        if (priorPrice_ == null) {
+          PriorPrice = new global::Google.Shopping.Type.Price();
+        }
+        PriorPrice.MergeFrom(other.PriorPrice);
+      }
+      if (other.priorPriceProgressive_ != null) {
+        if (priorPriceProgressive_ == null) {
+          PriorPriceProgressive = new global::Google.Shopping.Type.Price();
+        }
+        PriorPriceProgressive.MergeFrom(other.PriorPriceProgressive);
+      }
+      if (other.gadPrice_ != null) {
+        if (gadPrice_ == null) {
+          GadPrice = new global::Google.Shopping.Type.Price();
+        }
+        GadPrice.MergeFrom(other.GadPrice);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (priorPrice_ == null) {
+              PriorPrice = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(PriorPrice);
+            break;
+          }
+          case 18: {
+            if (priorPriceProgressive_ == null) {
+              PriorPriceProgressive = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(PriorPriceProgressive);
+            break;
+          }
+          case 26: {
+            if (gadPrice_ == null) {
+              GadPrice = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(GadPrice);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (priorPrice_ == null) {
+              PriorPrice = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(PriorPrice);
+            break;
+          }
+          case 18: {
+            if (priorPriceProgressive_ == null) {
+              PriorPriceProgressive = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(PriorPriceProgressive);
+            break;
+          }
+          case 26: {
+            if (gadPrice_ == null) {
+              GadPrice = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(GadPrice);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

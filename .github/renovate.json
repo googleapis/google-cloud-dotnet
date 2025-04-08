@@ -8,7 +8,7 @@
   ],
   "ignorePaths": [
     "issues/**",
-    "apis/Google.Cloud.DataCatalog.V1/Google.Cloud.DataCatalog.V1/**"
+    "apis/Google.Shopping.Merchant.Products.V1Beta/Google.Shopping.Merchant.Products.V1Beta/**"
   ],
   "ignoreDeps": [
     "Grpc.Core",

@@ -148,7 +148,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta
     /// <summary>ProductsService client wrapper, for convenient use.</summary>
     /// <remarks>
     /// Service to use Product resource.
-    /// This service works for products with online channel only.
     /// </remarks>
     public abstract partial class ProductsServiceClient
     {
@@ -274,9 +273,9 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// Required. The name of the product to retrieve.
         /// Format: `accounts/{account}/products/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/products/online~en~US~sku123"
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -296,9 +295,9 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// Required. The name of the product to retrieve.
         /// Format: `accounts/{account}/products/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/products/online~en~US~sku123"
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -318,9 +317,9 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// Required. The name of the product to retrieve.
         /// Format: `accounts/{account}/products/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/products/online~en~US~sku123"
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -337,9 +336,9 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// Required. The name of the product to retrieve.
         /// Format: `accounts/{account}/products/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/products/online~en~US~sku123"
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -359,9 +358,9 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// Required. The name of the product to retrieve.
         /// Format: `accounts/{account}/products/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/products/online~en~US~sku123"
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -381,9 +380,9 @@ namespace Google.Shopping.Merchant.Products.V1Beta
         /// Required. The name of the product to retrieve.
         /// Format: `accounts/{account}/products/{product}`
         /// where the last section `product` consists of 4 parts:
-        /// channel~content_language~feed_label~offer_id
+        /// `channel~content_language~feed_label~offer_id`
         /// example for product name is
-        /// "accounts/123/products/online~en~US~sku123"
+        /// `accounts/123/products/online~en~US~sku123`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -392,8 +391,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         /// <summary>
         /// Lists the processed products in your Merchant Center account. The response
-        /// might contain fewer items than specified by pageSize. Rely on pageToken to
-        /// determine if there are more items to be requested.
+        /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+        /// to determine if there are more items to be requested.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the updated processed product can be retrieved.
@@ -406,8 +405,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         /// <summary>
         /// Lists the processed products in your Merchant Center account. The response
-        /// might contain fewer items than specified by pageSize. Rely on pageToken to
-        /// determine if there are more items to be requested.
+        /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+        /// to determine if there are more items to be requested.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the updated processed product can be retrieved.
@@ -420,15 +419,15 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         /// <summary>
         /// Lists the processed products in your Merchant Center account. The response
-        /// might contain fewer items than specified by pageSize. Rely on pageToken to
-        /// determine if there are more items to be requested.
+        /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+        /// to determine if there are more items to be requested.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the updated processed product can be retrieved.
         /// </summary>
         /// <param name="parent">
         /// Required. The account to list processed products for.
-        /// Format: accounts/{account}
+        /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -459,15 +458,15 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         /// <summary>
         /// Lists the processed products in your Merchant Center account. The response
-        /// might contain fewer items than specified by pageSize. Rely on pageToken to
-        /// determine if there are more items to be requested.
+        /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+        /// to determine if there are more items to be requested.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the updated processed product can be retrieved.
         /// </summary>
         /// <param name="parent">
         /// Required. The account to list processed products for.
-        /// Format: accounts/{account}
+        /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -498,15 +497,15 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         /// <summary>
         /// Lists the processed products in your Merchant Center account. The response
-        /// might contain fewer items than specified by pageSize. Rely on pageToken to
-        /// determine if there are more items to be requested.
+        /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+        /// to determine if there are more items to be requested.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the updated processed product can be retrieved.
         /// </summary>
         /// <param name="parent">
         /// Required. The account to list processed products for.
-        /// Format: accounts/{account}
+        /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -537,15 +536,15 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         /// <summary>
         /// Lists the processed products in your Merchant Center account. The response
-        /// might contain fewer items than specified by pageSize. Rely on pageToken to
-        /// determine if there are more items to be requested.
+        /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+        /// to determine if there are more items to be requested.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the updated processed product can be retrieved.
         /// </summary>
         /// <param name="parent">
         /// Required. The account to list processed products for.
-        /// Format: accounts/{account}
+        /// Format: `accounts/{account}`
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -578,7 +577,6 @@ namespace Google.Shopping.Merchant.Products.V1Beta
     /// <summary>ProductsService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
     /// Service to use Product resource.
-    /// This service works for products with online channel only.
     /// </remarks>
     public sealed partial class ProductsServiceClientImpl : ProductsServiceClient
     {
@@ -657,8 +655,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         /// <summary>
         /// Lists the processed products in your Merchant Center account. The response
-        /// might contain fewer items than specified by pageSize. Rely on pageToken to
-        /// determine if there are more items to be requested.
+        /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+        /// to determine if there are more items to be requested.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the updated processed product can be retrieved.
@@ -674,8 +672,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta
 
         /// <summary>
         /// Lists the processed products in your Merchant Center account. The response
-        /// might contain fewer items than specified by pageSize. Rely on pageToken to
-        /// determine if there are more items to be requested.
+        /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+        /// to determine if there are more items to be requested.
         /// 
         /// After inserting, updating, or deleting a product input, it may take several
         /// minutes before the updated processed product can be retrieved.
