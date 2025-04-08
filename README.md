@@ -13,7 +13,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.LongRunning](https://cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.LongRunning)](https://nuget.org/packages/Google.LongRunning) | Support for the Long-Running Operations API pattern |
+| [Google.Cloud.DataCatalog.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DataCatalog.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.DataCatalog.V1)](https://nuget.org/packages/Google.Cloud.DataCatalog.V1) | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
 
 If you need support for other Google APIs, check out the
 [Google .NET API Client library](https://github.com/google/google-api-dotnet-client)
