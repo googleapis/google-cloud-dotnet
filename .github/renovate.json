@@ -8,7 +8,7 @@
   ],
   "ignorePaths": [
     "issues/**",
-    "apis/Google.Cloud.AIPlatform.V1Beta1/Google.Cloud.AIPlatform.V1Beta1/**"
+    "apis/Google.Cloud.Parallelstore.V1Beta/Google.Cloud.Parallelstore.V1Beta/**"
   ],
   "ignoreDeps": [
     "Grpc.Core",

@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 DestinationParallelstore = new DestinationParallelstore(),
                 RequestId = "",
                 ServiceAccountAsServiceAccountName = ServiceAccountName.FromProjectServiceAccount("[PROJECT]", "[SERVICE_ACCOUNT]"),
+                MetadataOptions = new TransferMetadataOptions(),
             };
             // Make the request
             Operation<ImportDataResponse, ImportDataMetadata> response = await parallelstoreClient.ImportDataAsync(request);
