@@ -13,7 +13,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Cloud.Parallelstore.V1Beta](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Parallelstore.V1Beta/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.Parallelstore.V1Beta)](https://nuget.org/packages/Google.Cloud.Parallelstore.V1Beta) | [Parallelstore](http://cloud/parallelstore?hl=en) |
+| [Google.LongRunning](https://cloud.google.com/dotnet/docs/reference/Google.LongRunning/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.LongRunning)](https://nuget.org/packages/Google.LongRunning) | Support for the Long-Running Operations API pattern |
 
 If you need support for other Google APIs, check out the
 [Google .NET API Client library](https://github.com/google/google-api-dotnet-client)
