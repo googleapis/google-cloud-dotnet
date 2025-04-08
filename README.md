@@ -13,7 +13,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Cloud.DataCatalog.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.DataCatalog.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.DataCatalog.V1)](https://nuget.org/packages/Google.Cloud.DataCatalog.V1) | [Data Catalog](https://cloud.google.com/data-catalog/docs) |
+| [Google.Shopping.Merchant.Products.V1Beta](https://googleapis.dev/dotnet/Google.Shopping.Merchant.Products.V1Beta/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Shopping.Merchant.Products.V1Beta)](https://nuget.org/packages/Google.Shopping.Merchant.Products.V1Beta) | [Merchant](https://developers.google.com/merchant/api) |
 
 If you need support for other Google APIs, check out the
 [Google .NET API Client library](https://github.com/google/google-api-dotnet-client)

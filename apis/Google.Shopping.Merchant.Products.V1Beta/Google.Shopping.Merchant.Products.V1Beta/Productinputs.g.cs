@@ -173,8 +173,7 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
     private string name_ = "";
     /// <summary>
     /// Identifier. The name of the product input.
-    /// Format:
-    /// `"{productinput.name=accounts/{account}/productInputs/{productinput}}"`
+    /// Format: accounts/{account}/productInputs/{productinput}
     /// where the last section `productinput` consists of 4 parts:
     /// channel~content_language~feed_label~offer_id
     /// example for product input name is

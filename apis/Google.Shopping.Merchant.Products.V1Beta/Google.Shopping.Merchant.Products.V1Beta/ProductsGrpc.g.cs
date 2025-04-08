@@ -25,7 +25,6 @@ using grpc = global::Grpc.Core;
 namespace Google.Shopping.Merchant.Products.V1Beta {
   /// <summary>
   /// Service to use Product resource.
-  /// This service works for products with online channel only.
   /// </summary>
   public static partial class ProductsService
   {
@@ -116,8 +115,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
 
       /// <summary>
       /// Lists the processed products in your Merchant Center account. The response
-      /// might contain fewer items than specified by pageSize. Rely on pageToken to
-      /// determine if there are more items to be requested.
+      /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+      /// to determine if there are more items to be requested.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the updated processed product can be retrieved.
@@ -222,8 +221,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
       /// <summary>
       /// Lists the processed products in your Merchant Center account. The response
-      /// might contain fewer items than specified by pageSize. Rely on pageToken to
-      /// determine if there are more items to be requested.
+      /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+      /// to determine if there are more items to be requested.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the updated processed product can be retrieved.
@@ -240,8 +239,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
       /// <summary>
       /// Lists the processed products in your Merchant Center account. The response
-      /// might contain fewer items than specified by pageSize. Rely on pageToken to
-      /// determine if there are more items to be requested.
+      /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+      /// to determine if there are more items to be requested.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the updated processed product can be retrieved.
@@ -256,8 +255,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
       /// <summary>
       /// Lists the processed products in your Merchant Center account. The response
-      /// might contain fewer items than specified by pageSize. Rely on pageToken to
-      /// determine if there are more items to be requested.
+      /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+      /// to determine if there are more items to be requested.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the updated processed product can be retrieved.
@@ -274,8 +273,8 @@ namespace Google.Shopping.Merchant.Products.V1Beta {
       }
       /// <summary>
       /// Lists the processed products in your Merchant Center account. The response
-      /// might contain fewer items than specified by pageSize. Rely on pageToken to
-      /// determine if there are more items to be requested.
+      /// might contain fewer items than specified by `pageSize`. Rely on `pageToken`
+      /// to determine if there are more items to be requested.
       ///
       /// After inserting, updating, or deleting a product input, it may take several
       /// minutes before the updated processed product can be retrieved.
