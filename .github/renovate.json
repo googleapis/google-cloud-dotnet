@@ -8,7 +8,7 @@
   ],
   "ignorePaths": [
     "issues/**",
-    "apis/Google.LongRunning/Google.LongRunning/**"
+    "apis/Google.Cloud.DataCatalog.V1/Google.Cloud.DataCatalog.V1/**"
   ],
   "ignoreDeps": [
     "Grpc.Core",
