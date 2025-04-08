@@ -1,0 +1,16 @@
+{
+  "commands": {
+    "integration-test-library": {
+      "environmentVariables": [
+        {
+          "name": "TEST_PROJECT",
+          "secretName": "integration-test-project"
+        },
+        {
+          "name": "FIRESTORE_TEST_PROJECT",
+          "secretName": "firestore-test-project"
+        }
+      ]
+    }
+  }
+}
