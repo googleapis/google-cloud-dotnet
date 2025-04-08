@@ -135,7 +135,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "Y2h1bmtpbmdfY29uZmlnIncKG1JhZ0ZpbGVUcmFuc2Zvcm1hdGlvbkNvbmZp",
             "ZxJYChhyYWdfZmlsZV9jaHVua2luZ19jb25maWcYASABKAsyNi5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVDaHVua2luZ0NvbmZp",
-            "ZyLDBAoUUmFnRmlsZVBhcnNpbmdDb25maWcSXwoPYWR2YW5jZWRfcGFyc2Vy",
+            "ZyKeBQoUUmFnRmlsZVBhcnNpbmdDb25maWcSXwoPYWR2YW5jZWRfcGFyc2Vy",
             "GAMgASgLMkQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdG",
             "aWxlUGFyc2luZ0NvbmZpZy5BZHZhbmNlZFBhcnNlckgAElsKDWxheW91dF9w",
             "YXJzZXIYBCABKAsyQi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
@@ -143,47 +143,51 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "YXJzZXIYBSABKAsyPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
             "LlJhZ0ZpbGVQYXJzaW5nQ29uZmlnLkxsbVBhcnNlckgAEiQKGHVzZV9hZHZh",
             "bmNlZF9wZGZfcGFyc2luZxgCIAEoCEICGAEaMgoOQWR2YW5jZWRQYXJzZXIS",
-            "IAoYdXNlX2FkdmFuY2VkX3BkZl9wYXJzaW5nGAEgASgIGkwKDExheW91dFBh",
+            "IAoYdXNlX2FkdmFuY2VkX3BkZl9wYXJzaW5nGAEgASgIGnkKDExheW91dFBh",
             "cnNlchIWCg5wcm9jZXNzb3JfbmFtZRgBIAEoCRIkChxtYXhfcGFyc2luZ19y",
-            "ZXF1ZXN0c19wZXJfbWluGAIgASgFGmQKCUxsbVBhcnNlchISCgptb2RlbF9u",
-            "YW1lGAEgASgJEiQKHG1heF9wYXJzaW5nX3JlcXVlc3RzX3Blcl9taW4YAiAB",
-            "KAUSHQoVY3VzdG9tX3BhcnNpbmdfcHJvbXB0GAMgASgJQggKBnBhcnNlciLZ",
-            "AQoTVXBsb2FkUmFnRmlsZUNvbmZpZxJcChhyYWdfZmlsZV9jaHVua2luZ19j",
-            "b25maWcYASABKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGEx",
-            "LlJhZ0ZpbGVDaHVua2luZ0NvbmZpZ0ICGAESZAoecmFnX2ZpbGVfdHJhbnNm",
-            "b3JtYXRpb25fY29uZmlnGAMgASgLMjwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5SYWdGaWxlVHJhbnNmb3JtYXRpb25Db25maWcigQkKFElt",
-            "cG9ydFJhZ0ZpbGVzQ29uZmlnEkAKCmdjc19zb3VyY2UYAiABKAsyKi5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLkdjc1NvdXJjZUgAElEKE2dv",
-            "b2dsZV9kcml2ZV9zb3VyY2UYAyABKAsyMi5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLkdvb2dsZURyaXZlU291cmNlSAASRAoMc2xhY2tfc291",
-            "cmNlGAYgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5T",
-            "bGFja1NvdXJjZUgAEkIKC2ppcmFfc291cmNlGAcgASgLMisuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5KaXJhU291cmNlSAASUQoTc2hhcmVf",
-            "cG9pbnRfc291cmNlcxgNIAEoCzIyLmdvb2dsZS5jbG91ZC5haXBsYXRmb3Jt",
-            "LnYxYmV0YTEuU2hhcmVQb2ludFNvdXJjZXNIABJXChhwYXJ0aWFsX2ZhaWx1",
-            "cmVfZ2NzX3NpbmsYCyABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExLkdjc0Rlc3RpbmF0aW9uQgIYAUgBEmEKHXBhcnRpYWxfZmFpbHVy",
-            "ZV9iaWdxdWVyeV9zaW5rGAwgASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5CaWdRdWVyeURlc3RpbmF0aW9uQgIYAUgBElEKFmltcG9y",
-            "dF9yZXN1bHRfZ2NzX3NpbmsYDiABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0",
-            "Zm9ybS52MWJldGExLkdjc0Rlc3RpbmF0aW9uSAISWwobaW1wb3J0X3Jlc3Vs",
-            "dF9iaWdxdWVyeV9zaW5rGA8gASgLMjQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5CaWdRdWVyeURlc3RpbmF0aW9uSAISXAoYcmFnX2ZpbGVf",
-            "Y2h1bmtpbmdfY29uZmlnGAQgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
-            "cm0udjFiZXRhMS5SYWdGaWxlQ2h1bmtpbmdDb25maWdCAhgBEmQKHnJhZ19m",
-            "aWxlX3RyYW5zZm9ybWF0aW9uX2NvbmZpZxgQIAEoCzI8Lmdvb2dsZS5jbG91",
-            "ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZVRyYW5zZm9ybWF0aW9uQ29u",
-            "ZmlnElsKF3JhZ19maWxlX3BhcnNpbmdfY29uZmlnGAggASgLMjUuZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SYWdGaWxlUGFyc2luZ0NvbmZp",
-            "Z0ID4EEBEisKHm1heF9lbWJlZGRpbmdfcmVxdWVzdHNfcGVyX21pbhgFIAEo",
-            "BUID4EEBQg8KDWltcG9ydF9zb3VyY2VCFgoUcGFydGlhbF9mYWlsdXJlX3Np",
-            "bmtCFAoSaW1wb3J0X3Jlc3VsdF9zaW5rQukBCiNjb20uZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjFiZXRhMUISVmVydGV4UmFnRGF0YVByb3RvUAFaQ2Ns",
-            "b3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxh",
-            "dGZvcm1wYjthaXBsYXRmb3JtcGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9y",
-            "bS5WMUJldGExygIfR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoC",
-            "Ikdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "ZXF1ZXN0c19wZXJfbWluGAIgASgFEisKI2dsb2JhbF9tYXhfcGFyc2luZ19y",
+            "ZXF1ZXN0c19wZXJfbWluGAMgASgFGpEBCglMbG1QYXJzZXISEgoKbW9kZWxf",
+            "bmFtZRgBIAEoCRIkChxtYXhfcGFyc2luZ19yZXF1ZXN0c19wZXJfbWluGAIg",
+            "ASgFEisKI2dsb2JhbF9tYXhfcGFyc2luZ19yZXF1ZXN0c19wZXJfbWluGAQg",
+            "ASgFEh0KFWN1c3RvbV9wYXJzaW5nX3Byb21wdBgDIAEoCUIICgZwYXJzZXIi",
+            "2QEKE1VwbG9hZFJhZ0ZpbGVDb25maWcSXAoYcmFnX2ZpbGVfY2h1bmtpbmdf",
+            "Y29uZmlnGAEgASgLMjYuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
+            "MS5SYWdGaWxlQ2h1bmtpbmdDb25maWdCAhgBEmQKHnJhZ19maWxlX3RyYW5z",
+            "Zm9ybWF0aW9uX2NvbmZpZxgDIAEoCzI8Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuUmFnRmlsZVRyYW5zZm9ybWF0aW9uQ29uZmlnIrUJChRJ",
+            "bXBvcnRSYWdGaWxlc0NvbmZpZxJACgpnY3Nfc291cmNlGAIgASgLMiouZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5HY3NTb3VyY2VIABJRChNn",
+            "b29nbGVfZHJpdmVfc291cmNlGAMgASgLMjIuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFiZXRhMS5Hb29nbGVEcml2ZVNvdXJjZUgAEkQKDHNsYWNrX3Nv",
+            "dXJjZRgGIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
+            "U2xhY2tTb3VyY2VIABJCCgtqaXJhX3NvdXJjZRgHIAEoCzIrLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuSmlyYVNvdXJjZUgAElEKE3NoYXJl",
+            "X3BvaW50X3NvdXJjZXMYDSABKAsyMi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MWJldGExLlNoYXJlUG9pbnRTb3VyY2VzSAASVwoYcGFydGlhbF9mYWls",
+            "dXJlX2djc19zaW5rGAsgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
+            "djFiZXRhMS5HY3NEZXN0aW5hdGlvbkICGAFIARJhCh1wYXJ0aWFsX2ZhaWx1",
+            "cmVfYmlncXVlcnlfc2luaxgMIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuQmlnUXVlcnlEZXN0aW5hdGlvbkICGAFIARJRChZpbXBv",
+            "cnRfcmVzdWx0X2djc19zaW5rGA4gASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjFiZXRhMS5HY3NEZXN0aW5hdGlvbkgCElsKG2ltcG9ydF9yZXN1",
+            "bHRfYmlncXVlcnlfc2luaxgPIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuQmlnUXVlcnlEZXN0aW5hdGlvbkgCElwKGHJhZ19maWxl",
+            "X2NodW5raW5nX2NvbmZpZxgEIAEoCzI2Lmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuUmFnRmlsZUNodW5raW5nQ29uZmlnQgIYARJkCh5yYWdf",
+            "ZmlsZV90cmFuc2Zvcm1hdGlvbl9jb25maWcYECABKAsyPC5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlJhZ0ZpbGVUcmFuc2Zvcm1hdGlvbkNv",
+            "bmZpZxJbChdyYWdfZmlsZV9wYXJzaW5nX2NvbmZpZxgIIAEoCzI1Lmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmFnRmlsZVBhcnNpbmdDb25m",
+            "aWdCA+BBARIrCh5tYXhfZW1iZWRkaW5nX3JlcXVlc3RzX3Blcl9taW4YBSAB",
+            "KAVCA+BBARIyCiVnbG9iYWxfbWF4X2VtYmVkZGluZ19yZXF1ZXN0c19wZXJf",
+            "bWluGBIgASgFQgPgQQFCDwoNaW1wb3J0X3NvdXJjZUIWChRwYXJ0aWFsX2Zh",
+            "aWx1cmVfc2lua0IUChJpbXBvcnRfcmVzdWx0X3NpbmtC6QEKI2NvbS5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExQhJWZXJ0ZXhSYWdEYXRhUHJv",
+            "dG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRmb3JtL2FwaXYxYmV0",
+            "YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dvb2dsZS5DbG91ZC5B",
+            "SVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
+            "MWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiZXRhMWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ApiAuthReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -204,10 +208,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Parser, new[]{ "FixedLengthChunking", "ChunkSize", "ChunkOverlap" }, new[]{ "ChunkingConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking), global::Google.Cloud.AIPlatform.V1Beta1.RagFileChunkingConfig.Types.FixedLengthChunking.Parser, new[]{ "ChunkSize", "ChunkOverlap" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig.Parser, new[]{ "RagFileChunkingConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Parser, new[]{ "AdvancedParser", "LayoutParser", "LlmParser", "UseAdvancedPdfParsing" }, new[]{ "Parser" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.AdvancedParser.Parser, new[]{ "UseAdvancedPdfParsing" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser.Parser, new[]{ "ProcessorName", "MaxParsingRequestsPerMin" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LlmParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LlmParser.Parser, new[]{ "ModelName", "MaxParsingRequestsPerMin", "CustomParsingPrompt" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LayoutParser.Parser, new[]{ "ProcessorName", "MaxParsingRequestsPerMin", "GlobalMaxParsingRequestsPerMin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LlmParser), global::Google.Cloud.AIPlatform.V1Beta1.RagFileParsingConfig.Types.LlmParser.Parser, new[]{ "ModelName", "MaxParsingRequestsPerMin", "GlobalMaxParsingRequestsPerMin", "CustomParsingPrompt" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig), global::Google.Cloud.AIPlatform.V1Beta1.UploadRagFileConfig.Parser, new[]{ "RagFileChunkingConfig", "RagFileTransformationConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "ImportResultGcsSink", "ImportResultBigquerySink", "RagFileChunkingConfig", "RagFileTransformationConfig", "RagFileParsingConfig", "MaxEmbeddingRequestsPerMin" }, new[]{ "ImportSource", "PartialFailureSink", "ImportResultSink" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig), global::Google.Cloud.AIPlatform.V1Beta1.ImportRagFilesConfig.Parser, new[]{ "GcsSource", "GoogleDriveSource", "SlackSource", "JiraSource", "SharePointSources", "PartialFailureGcsSink", "PartialFailureBigquerySink", "ImportResultGcsSink", "ImportResultBigquerySink", "RagFileChunkingConfig", "RagFileTransformationConfig", "RagFileParsingConfig", "MaxEmbeddingRequestsPerMin", "GlobalMaxEmbeddingRequestsPerMin" }, new[]{ "ImportSource", "PartialFailureSink", "ImportResultSink" }, null, null, null)
           }));
     }
     #endregion
@@ -7442,6 +7446,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         public LayoutParser(LayoutParser other) : this() {
           processorName_ = other.processorName_;
           maxParsingRequestsPerMin_ = other.maxParsingRequestsPerMin_;
+          globalMaxParsingRequestsPerMin_ = other.globalMaxParsingRequestsPerMin_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -7490,6 +7495,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "global_max_parsing_requests_per_min" field.</summary>
+        public const int GlobalMaxParsingRequestsPerMinFieldNumber = 3;
+        private int globalMaxParsingRequestsPerMin_;
+        /// <summary>
+        /// The maximum number of requests the job is allowed to make to the Document
+        /// AI processor per minute in this project. Consult
+        /// https://cloud.google.com/document-ai/quotas and the Quota page for your
+        /// project to set an appropriate value here.
+        /// If this value is not specified,
+        /// max_parsing_requests_per_min will be used by indexing
+        /// pipeline as the global limit.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int GlobalMaxParsingRequestsPerMin {
+          get { return globalMaxParsingRequestsPerMin_; }
+          set {
+            globalMaxParsingRequestsPerMin_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -7507,6 +7533,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (ProcessorName != other.ProcessorName) return false;
           if (MaxParsingRequestsPerMin != other.MaxParsingRequestsPerMin) return false;
+          if (GlobalMaxParsingRequestsPerMin != other.GlobalMaxParsingRequestsPerMin) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -7516,6 +7543,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           if (ProcessorName.Length != 0) hash ^= ProcessorName.GetHashCode();
           if (MaxParsingRequestsPerMin != 0) hash ^= MaxParsingRequestsPerMin.GetHashCode();
+          if (GlobalMaxParsingRequestsPerMin != 0) hash ^= GlobalMaxParsingRequestsPerMin.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -7542,6 +7570,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(16);
             output.WriteInt32(MaxParsingRequestsPerMin);
           }
+          if (GlobalMaxParsingRequestsPerMin != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(GlobalMaxParsingRequestsPerMin);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -7560,6 +7592,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(16);
             output.WriteInt32(MaxParsingRequestsPerMin);
           }
+          if (GlobalMaxParsingRequestsPerMin != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(GlobalMaxParsingRequestsPerMin);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -7575,6 +7611,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (MaxParsingRequestsPerMin != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxParsingRequestsPerMin);
+          }
+          if (GlobalMaxParsingRequestsPerMin != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(GlobalMaxParsingRequestsPerMin);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -7593,6 +7632,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (other.MaxParsingRequestsPerMin != 0) {
             MaxParsingRequestsPerMin = other.MaxParsingRequestsPerMin;
+          }
+          if (other.GlobalMaxParsingRequestsPerMin != 0) {
+            GlobalMaxParsingRequestsPerMin = other.GlobalMaxParsingRequestsPerMin;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -7617,6 +7659,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 MaxParsingRequestsPerMin = input.ReadInt32();
                 break;
               }
+              case 24: {
+                GlobalMaxParsingRequestsPerMin = input.ReadInt32();
+                break;
+              }
             }
           }
         #endif
@@ -7638,6 +7684,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 16: {
                 MaxParsingRequestsPerMin = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                GlobalMaxParsingRequestsPerMin = input.ReadInt32();
                 break;
               }
             }
@@ -7687,6 +7737,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         public LlmParser(LlmParser other) : this() {
           modelName_ = other.modelName_;
           maxParsingRequestsPerMin_ = other.maxParsingRequestsPerMin_;
+          globalMaxParsingRequestsPerMin_ = other.globalMaxParsingRequestsPerMin_;
           customParsingPrompt_ = other.customParsingPrompt_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
@@ -7733,6 +7784,27 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
         }
 
+        /// <summary>Field number for the "global_max_parsing_requests_per_min" field.</summary>
+        public const int GlobalMaxParsingRequestsPerMinFieldNumber = 4;
+        private int globalMaxParsingRequestsPerMin_;
+        /// <summary>
+        /// The maximum number of requests the job is allowed to make to the
+        /// LLM model per minute in this project. Consult
+        /// https://cloud.google.com/vertex-ai/generative-ai/docs/quotas
+        /// and your document size to set an appropriate value here.
+        /// If this value is not specified,
+        /// max_parsing_requests_per_min will be used by indexing pipeline job as the
+        /// global limit.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int GlobalMaxParsingRequestsPerMin {
+          get { return globalMaxParsingRequestsPerMin_; }
+          set {
+            globalMaxParsingRequestsPerMin_ = value;
+          }
+        }
+
         /// <summary>Field number for the "custom_parsing_prompt" field.</summary>
         public const int CustomParsingPromptFieldNumber = 3;
         private string customParsingPrompt_ = "";
@@ -7766,6 +7838,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (ModelName != other.ModelName) return false;
           if (MaxParsingRequestsPerMin != other.MaxParsingRequestsPerMin) return false;
+          if (GlobalMaxParsingRequestsPerMin != other.GlobalMaxParsingRequestsPerMin) return false;
           if (CustomParsingPrompt != other.CustomParsingPrompt) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
@@ -7776,6 +7849,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           int hash = 1;
           if (ModelName.Length != 0) hash ^= ModelName.GetHashCode();
           if (MaxParsingRequestsPerMin != 0) hash ^= MaxParsingRequestsPerMin.GetHashCode();
+          if (GlobalMaxParsingRequestsPerMin != 0) hash ^= GlobalMaxParsingRequestsPerMin.GetHashCode();
           if (CustomParsingPrompt.Length != 0) hash ^= CustomParsingPrompt.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -7807,6 +7881,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(26);
             output.WriteString(CustomParsingPrompt);
           }
+          if (GlobalMaxParsingRequestsPerMin != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(GlobalMaxParsingRequestsPerMin);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -7829,6 +7907,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             output.WriteRawTag(26);
             output.WriteString(CustomParsingPrompt);
           }
+          if (GlobalMaxParsingRequestsPerMin != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(GlobalMaxParsingRequestsPerMin);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -7844,6 +7926,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (MaxParsingRequestsPerMin != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxParsingRequestsPerMin);
+          }
+          if (GlobalMaxParsingRequestsPerMin != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(GlobalMaxParsingRequestsPerMin);
           }
           if (CustomParsingPrompt.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomParsingPrompt);
@@ -7865,6 +7950,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           if (other.MaxParsingRequestsPerMin != 0) {
             MaxParsingRequestsPerMin = other.MaxParsingRequestsPerMin;
+          }
+          if (other.GlobalMaxParsingRequestsPerMin != 0) {
+            GlobalMaxParsingRequestsPerMin = other.GlobalMaxParsingRequestsPerMin;
           }
           if (other.CustomParsingPrompt.Length != 0) {
             CustomParsingPrompt = other.CustomParsingPrompt;
@@ -7896,6 +7984,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
                 CustomParsingPrompt = input.ReadString();
                 break;
               }
+              case 32: {
+                GlobalMaxParsingRequestsPerMin = input.ReadInt32();
+                break;
+              }
             }
           }
         #endif
@@ -7921,6 +8013,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               }
               case 26: {
                 CustomParsingPrompt = input.ReadString();
+                break;
+              }
+              case 32: {
+                GlobalMaxParsingRequestsPerMin = input.ReadInt32();
                 break;
               }
             }
@@ -8232,6 +8328,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       ragFileTransformationConfig_ = other.ragFileTransformationConfig_ != null ? other.ragFileTransformationConfig_.Clone() : null;
       ragFileParsingConfig_ = other.ragFileParsingConfig_ != null ? other.ragFileParsingConfig_.Clone() : null;
       maxEmbeddingRequestsPerMin_ = other.maxEmbeddingRequestsPerMin_;
+      globalMaxEmbeddingRequestsPerMin_ = other.globalMaxEmbeddingRequestsPerMin_;
       switch (other.ImportSourceCase) {
         case ImportSourceOneofCase.GcsSource:
           GcsSource = other.GcsSource.Clone();
@@ -8496,6 +8593,26 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "global_max_embedding_requests_per_min" field.</summary>
+    public const int GlobalMaxEmbeddingRequestsPerMinFieldNumber = 18;
+    private int globalMaxEmbeddingRequestsPerMin_;
+    /// <summary>
+    /// Optional. The max number of queries per minute that the indexing pipeline
+    /// job is allowed to make to the embedding model specified in the project.
+    /// Please follow the quota usage guideline of the embedding model you use to
+    /// set the value properly. If this value is not specified,
+    /// max_embedding_requests_per_min will be used by indexing pipeline job as the
+    /// global limit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int GlobalMaxEmbeddingRequestsPerMin {
+      get { return globalMaxEmbeddingRequestsPerMin_; }
+      set {
+        globalMaxEmbeddingRequestsPerMin_ = value;
+      }
+    }
+
     private object importSource_;
     /// <summary>Enum of possible cases for the "import_source" oneof.</summary>
     public enum ImportSourceOneofCase {
@@ -8590,6 +8707,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(RagFileTransformationConfig, other.RagFileTransformationConfig)) return false;
       if (!object.Equals(RagFileParsingConfig, other.RagFileParsingConfig)) return false;
       if (MaxEmbeddingRequestsPerMin != other.MaxEmbeddingRequestsPerMin) return false;
+      if (GlobalMaxEmbeddingRequestsPerMin != other.GlobalMaxEmbeddingRequestsPerMin) return false;
       if (ImportSourceCase != other.ImportSourceCase) return false;
       if (PartialFailureSinkCase != other.PartialFailureSinkCase) return false;
       if (ImportResultSinkCase != other.ImportResultSinkCase) return false;
@@ -8613,6 +8731,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (ragFileTransformationConfig_ != null) hash ^= RagFileTransformationConfig.GetHashCode();
       if (ragFileParsingConfig_ != null) hash ^= RagFileParsingConfig.GetHashCode();
       if (MaxEmbeddingRequestsPerMin != 0) hash ^= MaxEmbeddingRequestsPerMin.GetHashCode();
+      if (GlobalMaxEmbeddingRequestsPerMin != 0) hash ^= GlobalMaxEmbeddingRequestsPerMin.GetHashCode();
       hash ^= (int) importSourceCase_;
       hash ^= (int) partialFailureSinkCase_;
       hash ^= (int) importResultSinkCase_;
@@ -8686,6 +8805,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(RagFileTransformationConfig);
       }
+      if (GlobalMaxEmbeddingRequestsPerMin != 0) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(GlobalMaxEmbeddingRequestsPerMin);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8748,6 +8871,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(130, 1);
         output.WriteMessage(RagFileTransformationConfig);
       }
+      if (GlobalMaxEmbeddingRequestsPerMin != 0) {
+        output.WriteRawTag(144, 1);
+        output.WriteInt32(GlobalMaxEmbeddingRequestsPerMin);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8797,6 +8924,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (MaxEmbeddingRequestsPerMin != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxEmbeddingRequestsPerMin);
       }
+      if (GlobalMaxEmbeddingRequestsPerMin != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(GlobalMaxEmbeddingRequestsPerMin);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8829,6 +8959,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
       if (other.MaxEmbeddingRequestsPerMin != 0) {
         MaxEmbeddingRequestsPerMin = other.MaxEmbeddingRequestsPerMin;
+      }
+      if (other.GlobalMaxEmbeddingRequestsPerMin != 0) {
+        GlobalMaxEmbeddingRequestsPerMin = other.GlobalMaxEmbeddingRequestsPerMin;
       }
       switch (other.ImportSourceCase) {
         case ImportSourceOneofCase.GcsSource:
@@ -9014,6 +9147,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(RagFileTransformationConfig);
             break;
           }
+          case 144: {
+            GlobalMaxEmbeddingRequestsPerMin = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -9133,6 +9270,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               RagFileTransformationConfig = new global::Google.Cloud.AIPlatform.V1Beta1.RagFileTransformationConfig();
             }
             input.ReadMessage(RagFileTransformationConfig);
+            break;
+          }
+          case 144: {
+            GlobalMaxEmbeddingRequestsPerMin = input.ReadInt32();
             break;
           }
         }
