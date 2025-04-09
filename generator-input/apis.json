@@ -2103,6 +2103,28 @@
       "blockRelease": "See b/342251668"
     },
     {
+      "id": "Google.Cloud.DeviceStreaming.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Device Streaming",
+      "productUrl": "https://cloud.google.com/device-streaming/docs",
+      "description": "Recommended Google client library to access the Google Device Streaming API, which lets you securely connect to remote physical Android devices hosted in Google's secure data centers. It allows you to test your app against some of the latest Android devices on demand.",
+      "tags": [
+        "testing",
+        "devices",
+        "android",
+        "streaming"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/devicestreaming/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "devicestreaming",
+      "serviceConfigFile": "devicestreaming_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Diagnostics.AspNetCore3",
       "version": "5.2.0",
       "type": "other",

@@ -3962,6 +3962,17 @@
             "sourcePaths": [
                 "apis/Google.Cloud.Chronicle.V1/Google.Cloud.Chronicle.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.DeviceStreaming.V1",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/devicestreaming/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.DeviceStreaming.V1/Google.Cloud.DeviceStreaming.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
