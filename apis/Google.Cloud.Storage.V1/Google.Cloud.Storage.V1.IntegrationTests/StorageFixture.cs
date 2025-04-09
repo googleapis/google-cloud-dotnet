@@ -64,7 +64,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         /// <summary>
         /// Name of a bucket with hierarchical namespace enabled
         /// </summary>
-        public string HnsBucket => BucketPrefix + "hns";
+        public string HnsBucket => BucketPrefix + "-hns";
 
         /// <summary>
         /// A small amount of content. Do not mutate the array.
