@@ -10,7 +10,7 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Grpc" />
-    <PackageReference Include="Grafeas.V1" VersionOverride="3.6.0" />
+    <PackageReference Include="Grafeas.V1" VersionOverride="3.8.0" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
 </Project>

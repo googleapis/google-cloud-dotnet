@@ -1302,7 +1302,7 @@
         "kubernetes"
       ],
       "dependencies": {
-        "Grafeas.V1": "3.6.0"
+        "Grafeas.V1": "3.8.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/binaryauthorization/v1",
