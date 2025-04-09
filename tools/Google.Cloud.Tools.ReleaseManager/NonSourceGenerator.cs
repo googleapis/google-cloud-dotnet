@@ -150,6 +150,7 @@ internal sealed class NonSourceGenerator
     private static readonly HashSet<string> PermittedPatchDefaultDependencies = new() { ConfigureAwaitAnalyzer };
 
     public ApiCatalog ApiCatalog { get; }
+    private PipelineState PipelineState { get; }
     public RootLayout RootLayout { get; }
 
     /// <summary>
@@ -169,6 +170,7 @@ internal sealed class NonSourceGenerator
     {
         RootLayout = rootLayout;
         ApiCatalog = ApiCatalog.Load(rootLayout);
+        PipelineState = PipelineState.Load(rootLayout);
     }
 
     #region API-specific files
@@ -184,7 +186,7 @@ internal sealed class NonSourceGenerator
     internal void GenerateApiFiles(ApiMetadata api)
     {
         // If we haven't generated any source code yet, don't generate project files etc either.
-        if (!api.HasSource(RootLayout))
+        if (!WillHaveSource(api))
         {
             return;
         }
@@ -666,7 +668,7 @@ api-name: {api.Id}
         };
 
         var ambiguousDescriptions = ApiCatalog.Apis
-            .Where(api => api.HasSource(RootLayout))
+            .Where(WillHaveSource)
             .Select(api => api.EffectiveListingDescription)
             .GroupBy(description => description)
             .Where(g => g.Count() > 1)
@@ -676,7 +678,7 @@ api-name: {api.Id}
         {
             // TODO: What about 2.0.0-beta00 etc? We'd need to know what version to link to.
             // We can cross that bridge when we come to it.
-            if (!api.HasSource(RootLayout) || api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00" || api.ReleaseLevelOverride == "unreleased")
+            if (!WillHaveSource(api) || api.Version == "1.0.0-beta00" || api.Version == "1.0.0-alpha00" || api.ReleaseLevelOverride == "unreleased")
             {
                 continue;
             }
@@ -717,7 +719,7 @@ api-name: {api.Id}
         string json = File.ReadAllText(templatePath);
         JObject jobj = JObject.Parse(json);
         JArray ignorePaths = (JArray) jobj["ignorePaths"];
-        foreach (var api in ApiCatalog.Apis.Where(api => api.HasSource(RootLayout)))
+        foreach (var api in ApiCatalog.Apis.Where(WillHaveSource))
         {
             ignorePaths.Add($"apis/{api.Id}/{api.Id}/**");
         }
@@ -726,6 +728,22 @@ api-name: {api.Id}
         string outputPath = Path.Combine(RootLayout.GeneratorOutput, ".github", "renovate.json");
         Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
         File.WriteAllText(outputPath, json);
+    }
+
+    /// <summary>
+    /// Returns whether the given API will have source code by the time the current operation is
+    /// complete - either because we've just generated it, or because it has a last-generated
+    /// commit in the pipeline state, or because it's not a generated API.
+    /// </summary>
+    private bool WillHaveSource(ApiMetadata api)
+    {
+        if (api.ProtoPath is null || api.HasSource(RootLayout))
+        {
+            return true;
+        }
+        var libraryId = ApiCatalog.PackageGroups.FirstOrDefault(pg => pg.PackageIds.Contains(api.Id))?.Id ?? api.Id;
+        var libraryState = PipelineState.Libraries.FirstOrDefault(lib => lib.Id == libraryId);
+        return !string.IsNullOrEmpty(libraryState?.LastGeneratedCommit);
     }
     #endregion
 
