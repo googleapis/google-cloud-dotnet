@@ -1382,6 +1382,28 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Cloud.Chronicle.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Chronicle",
+      "productUrl": "https://cloud.google.com/chronicle/docs/secops/secops-overview",
+      "description": "Recommended Google client library to access the Chronicle (Google Security Operations) API.",
+      "tags": [
+        "secops",
+        "security"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "3.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/chronicle/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "chronicle",
+      "serviceConfigFile": "chronicle_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.CloudBuild.V1",
       "version": "2.15.0",
       "type": "grpc",
