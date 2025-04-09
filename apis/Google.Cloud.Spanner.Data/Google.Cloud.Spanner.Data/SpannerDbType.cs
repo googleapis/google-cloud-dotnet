@@ -102,7 +102,7 @@ namespace Google.Cloud.Spanner.Data
         public static SpannerDbType PgOid { get; } = new SpannerDbType(TypeCode.Int64, TypeAnnotationCode.PgOid);
 
         /// <summary>
-        /// Representation of PostgreSQL Interval type.
+        /// Representation of PostgreSQL and GoogleSQL Interval type.
         /// </summary>
         public static SpannerDbType Interval { get; } = new SpannerDbType(TypeCode.Interval);
 

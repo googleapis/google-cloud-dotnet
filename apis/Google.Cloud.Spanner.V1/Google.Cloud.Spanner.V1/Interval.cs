@@ -15,7 +15,9 @@
 using Google.Api.Gax;
 using System;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Numerics;
 using System.Text;
 
@@ -26,21 +28,17 @@ namespace Google.Cloud.Spanner.V1;
 /// </summary>
 public class Interval
 {
-    private const int Uninitialized = 0;
-    private const int ParsingDate = 1;
-    private const int ParsingTime = 2;
     internal const long NanosecondsInASecond = 1000000000L;
     internal const long NanosecondsInAMinute = NanosecondsInASecond * 60;
     internal const long NanosecondsInAnHour = NanosecondsInAMinute * 60;
-    internal const long NanosecondsInADay = NanosecondsInAnHour * 24;
-    internal const long NanosecondsInAMonth = NanosecondsInADay * 30;
-    internal const long NanosecondsInAYear = NanosecondsInAMonth * 12;
     internal const long NanosecondsInAMillisecond = 1000000L;
     internal const long NanosecondsInAMicrosecond = 1000L;
+    internal const int MonthsInAYear = 12;
     internal const int MaxMonths = 120000;
     internal const int MinMonths = -MaxMonths;
     internal const int MaxDays = 3660000;
     internal const int MinDays = -MaxDays;
+    internal static readonly BigInteger MaxNanoseconds = BigInteger.Parse("316224000000000000000");
 
     /// <summary>
     /// Month portion of this interval.
@@ -62,24 +60,13 @@ public class Interval
     /// </summary>
     private Interval(int months, int days, BigInteger nanoseconds)
     {
-        if (months > MaxMonths || months < MinMonths)
-        {
-            throw new ArgumentException($"The interval type supports a range from {MinMonths} to {MaxMonths} months");
-        }
+        GaxPreconditions.CheckArgumentRange(months, nameof(months), MinMonths, MaxMonths);
         Months = months;
 
-        if (days > MaxDays || days < MinDays)
-        {
-            throw new ArgumentException($"The interval type supports a range from {MinDays} to {MaxDays} days");
-        }
+        GaxPreconditions.CheckArgumentRange(days, nameof(days), MinDays, MaxDays);
         Days = days;
 
-        BigInteger MaxNanoseconds = BigInteger.Parse("316224000000000000000");
-
-        if (nanoseconds > MaxNanoseconds || nanoseconds < -MaxNanoseconds)
-        {
-            throw new ArgumentException($"The interval type supports a range from -{MaxNanoseconds} to {MaxNanoseconds} nanoseonds");
-        }
+        GaxPreconditions.CheckArgumentRange(nanoseconds, nameof(nanoseconds), -MaxNanoseconds, MaxNanoseconds);
         Nanoseconds = nanoseconds;
     }
 
@@ -91,10 +78,7 @@ public class Interval
     /// </summary>
     public static Interval Parse(string text)
     {
-        if (text is null)
-        {
-            throw new ArgumentNullException(nameof(text));
-        }
+        GaxPreconditions.CheckNotNull(text, nameof(text));
 
         var state = new IntervalParsingState();
         var end = -1;
@@ -114,27 +98,23 @@ public class Interval
                     state.MayBeTerminal = false;
                     state.IsTerminal = false;
                     state.IsTime = false;
-                    state.IsValidResolution = true;
                     state.NextAllowed = IntervalParsingState.AfterP;
                     break;
                 case 'Y':
                     state.MayBeTerminal = true;
                     state.IsTerminal = false;
-                    state.IsValidResolution = true;
                     state.Years = ParseInt();
                     state.NextAllowed = IntervalParsingState.AfterY;
                     break;
                 case 'M' when !state.IsTime:
                     state.MayBeTerminal = true;
                     state.IsTerminal = false;
-                    state.IsValidResolution = true;
                     state.Months = ParseInt();
                     state.NextAllowed = IntervalParsingState.AfterMonth;
                     break;
                 case 'D':
                     state.MayBeTerminal = true;
                     state.IsTerminal = false;
-                    state.IsValidResolution = true;
                     state.Days = ParseInt();
                     state.NextAllowed = IntervalParsingState.AfterD;
                     break;
@@ -142,28 +122,24 @@ public class Interval
                     state.MayBeTerminal = false;
                     state.IsTerminal = false;
                     state.IsTime = true;
-                    state.IsValidResolution = true;
                     state.NextAllowed = IntervalParsingState.AfterT;
                     break;
                 case 'H':
                     state.MayBeTerminal = true;
                     state.IsTerminal = false;
-                    state.IsValidResolution = true;
                     state.Hours = ParseInt();
                     state.NextAllowed = IntervalParsingState.AfterH;
                     break;
                 case 'M' when state.IsTime:
                     state.MayBeTerminal = true;
                     state.IsTerminal = false;
-                    state.IsValidResolution = true;
                     state.Minutes = ParseLong();
                     state.NextAllowed = IntervalParsingState.AfterMins;
                     break;
                 case 'S':
                     state.MayBeTerminal = true;
                     state.IsTerminal = true;
-                    state.IsValidResolution = IsValidResolution();
-                    state.Seconds = ParseDecimal();
+                    state.Seconds = ParseSeconds();
                     state.NextAllowed = null;
                     break;
                 default:
@@ -186,32 +162,21 @@ public class Interval
             throw new FormatException(text);
         }
 
-        // We do not have a valid precision for the fractional seconds
-        if (!state.IsValidResolution)
-        {
-            throw new ArgumentException(text);
-        }
-
         int ParseInt() => int.Parse(text.Substring(state.Start, end - state.Start), CultureInfo.InvariantCulture.NumberFormat);
         long ParseLong() => long.Parse(text.Substring(state.Start, end - state.Start), CultureInfo.InvariantCulture.NumberFormat);
-        decimal ParseDecimal() => decimal.Parse(text.Substring(state.Start, end - state.Start).Replace(',', '.'), CultureInfo.InvariantCulture.NumberFormat);
-
-        bool IsValidResolution() {
-            string[] splitText = text.Substring(state.Start, end - state.Start).Replace(',', '.').Split('.');
-
-            // If we have an int number, it is valid
-            if (splitText.Length < 2)
-            {
-                return true;
-            }
+        decimal ParseSeconds()
+        {
+            string textDecimal = text.Substring(state.Start, end - state.Start).Replace(',', '.');
+            string[] splitDecimal = textDecimal.Split('.');
 
             // If we have more than 9 digits after the decimal, it is not valid
-            if (splitText[1].Length > 9)
+            if (splitDecimal.Length > 1 && splitDecimal[1].Length > 9)
             {
-                return false;
+                throw new ArgumentOutOfRangeException("The Interval type only accepts a resolution of 9 digits after a decimal point (nanoseconds).");
             }
 
-            return true;
+
+            return decimal.Parse(textDecimal, CultureInfo.InvariantCulture.NumberFormat);
         }
 
         int totalMonths = Interval.YearsToMonths(state.Years) + state.Months;
@@ -228,10 +193,13 @@ public class Interval
     /// <returns><c>true</c> if <paramref name="text"/> was parsed successfully; <c>false</c> otherwise.</returns>
     public static bool TryParse(string text, out Interval interval)
     {
-        try {
+        try
+        {
             interval = Interval.Parse(text);
             return true;
-        } catch(Exception) {
+        }
+        catch (Exception)
+        {
             interval = null;
             return false;
         }
@@ -242,94 +210,67 @@ public class Interval
     /// </summary>
     public override string ToString()
     {
-        int years;
-        int months;
-        int days = Days;
-        int hours;
-        int minutes;
-        float seconds;
-        BigInteger remainingNanoseconds = this.Nanoseconds;
+        BigInteger remainingNanoseconds = Nanoseconds;
 
-        years = this.Months / 12;
-        months = this.Months % 12;
-        hours = (int) (remainingNanoseconds / NanosecondsInAnHour);
+        int years = Interval.MonthsToYears(Months);
+        int months = Months % MonthsInAYear;
+        int hours = Interval.NanosecondsToHours(remainingNanoseconds);
         remainingNanoseconds %= NanosecondsInAnHour;
-        minutes = (int) (remainingNanoseconds / NanosecondsInAMinute);
+        long minutes = Interval.NanosecondsToMinutes(remainingNanoseconds);
         remainingNanoseconds %= NanosecondsInAMinute;
-        seconds = (float) remainingNanoseconds / NanosecondsInASecond;
+        decimal seconds = Interval.NanosecondsToSeconds(remainingNanoseconds);
 
-        StringBuilder intervalSB = new StringBuilder("P", 15);
+        StringBuilder intervalBuilder = new StringBuilder("P");
 
         if (years != 0)
         {
-            intervalSB.Append($"{years}Y");
+            intervalBuilder.Append($"{years}Y");
         }
 
         if (months != 0)
         {
-            intervalSB.Append($"{months}M");
+            intervalBuilder.Append($"{months}M");
         }
 
-        if (days != 0)
+        if (Days != 0)
         {
-            intervalSB.Append($"{days}D");
+            intervalBuilder.Append($"{Days}D");
         }
 
         if (hours != 0 || minutes != 0 || seconds != 0)
         {
-            intervalSB.Append("T");
+            intervalBuilder.Append("T");
 
             if (hours != 0)
             {
-                intervalSB.Append($"{hours}H");
+                intervalBuilder.Append($"{hours}H");
             }
 
             if (minutes != 0)
             {
-                intervalSB.Append($"{minutes}M");
+                intervalBuilder.Append($"{minutes}M");
             }
 
             if (seconds != 0)
             {
-                intervalSB.Append($"{seconds}S");
+                intervalBuilder.Append($"{seconds.ToString("0.#########", CultureInfo.InvariantCulture)}S");
             }
         }
 
-        string intervalString = intervalSB.ToString();
-
-        if (intervalString == "P")
+        if (intervalBuilder.Length == 1)
         {
             return "P0Y";
         }
 
-        return intervalString;
+        return intervalBuilder.ToString(); ;
     }
 
-    /// <summary>
-    /// Compares this instance of Interval with another object.
-    /// The equality is based upon type, number of days, number of months and number of nanoseconds.
-    /// </summary>
-    public override bool Equals(object obj)
-    {
-        Interval other = obj as Interval;
+    /// <inheritdocs/>
+    public override bool Equals(object obj) =>
+        obj is Interval other && other.Months == Months && other.Days == Days && other.Nanoseconds == Nanoseconds;
 
-        if (other == null)
-        {
-            return false;
-        }
-
-        if (this.Months != other.Months && this.Days != other.Days && this.Nanoseconds != other.Nanoseconds)
-        {
-            return false;
-        }
-
-        return true;
-    }
-
-    /// <summary>
-    /// Gets the object hashcode
-    /// </summary>
-    public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(this.Days.GetHashCode(), this.Months.GetHashCode(), this.Nanoseconds.GetHashCode());
+    /// <inheritdocs/>
+    public override int GetHashCode() => GaxEqualityHelpers.CombineHashCodes(Days.GetHashCode(), Months.GetHashCode(), Nanoseconds.GetHashCode());
 
     /// <summary>
     /// Creates an interval from the given months, days and nanoseconds.
@@ -349,17 +290,17 @@ public class Interval
     /// <summary>
     /// Creates an Interval based on the seconds given.
     /// </summary>
-    public static Interval FromSeconds(BigInteger seconds) => new Interval(0, 0, NanosecondsInASecond * seconds);
+    public static Interval FromSeconds(decimal seconds) => new Interval(0, 0, Interval.SecondsToNanoseconds(seconds));
 
     /// <summary>
     /// Creates an Interval based on the milliseconds given.
     /// </summary>
-    public static Interval FromMilliseconds(BigInteger milliseconds) => new Interval(0, 0, NanosecondsInAMillisecond * milliseconds);
+    public static Interval FromMilliseconds(BigInteger milliseconds) => new Interval(0, 0, Interval.MillisecondsToNanoseconds(milliseconds));
 
     /// <summary>
     /// Creates an Interval based on the microseconds given.
     /// </summary>
-    public static Interval FromMicroseconds(BigInteger microseconds) => new Interval(0, 0, NanosecondsInAMicrosecond * microseconds);
+    public static Interval FromMicroseconds(BigInteger microseconds) => new Interval(0, 0, Interval.MicroseondsToNanoseconds(microseconds));
 
     /// <summary>
     /// Creates an Interval based on the nanoseconds given.
@@ -369,11 +310,23 @@ public class Interval
 
     private static int YearsToMonths(int years) => years * 12;
 
-    private static BigInteger HoursToNanoseconds(int hours) => hours * NanosecondsInAnHour;
+    private static BigInteger HoursToNanoseconds(int hours) => new BigInteger(hours) * NanosecondsInAnHour;
 
-    private static BigInteger MinutesToNanoseconds(long minutes) => minutes * NanosecondsInAMinute;
+    private static BigInteger MinutesToNanoseconds(long minutes) => new BigInteger(minutes) * NanosecondsInAMinute;
 
     private static BigInteger SecondsToNanoseconds(decimal seconds) => new BigInteger(seconds * NanosecondsInASecond);
+
+    private static int MonthsToYears(int months) => months / MonthsInAYear;
+
+    private static int NanosecondsToHours(BigInteger nanoseconds) => (int) (nanoseconds / NanosecondsInAnHour);
+
+    private static long NanosecondsToMinutes(BigInteger nanoseconds) => (long) (nanoseconds / NanosecondsInAMinute);
+
+    private static decimal NanosecondsToSeconds(BigInteger nanoseconds) => (decimal) nanoseconds / NanosecondsInASecond;
+
+    private static BigInteger MillisecondsToNanoseconds(BigInteger milliseconds) => milliseconds * NanosecondsInAMillisecond;
+
+    private static BigInteger MicroseondsToNanoseconds(BigInteger microseconds) => microseconds * NanosecondsInAMicrosecond;
 
     private class IntervalParsingState
     {
@@ -409,11 +362,6 @@ public class Interval
         public bool IsTerminal { get; set; }
 
         /// <summary>
-        /// True if the provided fractional digits is less or equal to 9.
-        /// </summary>
-        public bool IsValidResolution { get; set; } = false;
-
-        /// <summary>
         /// The delimeters that are allowed next.
         /// </summary>
         public char[] NextAllowed { get; set; } = P;
@@ -425,8 +373,5 @@ public class Interval
         public int Hours { get; set; }
         public long Minutes { get; set; }
         public decimal Seconds { get; set; }
-
-        public override string ToString() =>
-            $"Years: {Years}, Months: {Months}, Days: {Days}, Hours: {Hours}, Minutes: {Minutes}, Seconds: {Seconds}";
     }
 }

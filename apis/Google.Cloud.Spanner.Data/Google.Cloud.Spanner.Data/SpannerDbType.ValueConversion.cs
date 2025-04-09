@@ -293,9 +293,9 @@ namespace Google.Cloud.Spanner.Data
                     }
                     if (value is string stringValue)
                     {
-                        return Value.ForString(V1.Interval.Parse(value.ToString()).ToString());
+                        return Value.ForString(V1.Interval.Parse(stringValue).ToString());
                     }
-                    throw new ArgumentException("Interval parameters must be on an ISO8601 format");
+                    throw new ArgumentException("Interval parameters must be of type string");
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
             }

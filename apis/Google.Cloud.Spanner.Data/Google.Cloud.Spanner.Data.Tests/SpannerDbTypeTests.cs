@@ -83,7 +83,6 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "TIMESTAMP", SpannerDbType.Timestamp };
             yield return new object[] { "NUMERIC", SpannerDbType.Numeric };
             yield return new object[] { "NUMERIC{PG}", SpannerDbType.PgNumeric };
-            yield return new object[] { "INTERVAL", SpannerDbType.Interval };
 
             yield return new object[] { " STRING  ", SpannerDbType.String };
             yield return new object[] { "  BOOL  ", SpannerDbType.Bool };
@@ -98,6 +97,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "  TIMESTAMP  ", SpannerDbType.Timestamp };
             yield return new object[] { "  NUMERIC  ", SpannerDbType.Numeric };
             yield return new object[] { "  NUMERIC{PG}  ", SpannerDbType.PgNumeric };
+            yield return new object[] { " INTERVAL ", SpannerDbType.Interval };
 
             yield return new object[] { "STRING(2)", SpannerDbType.String.WithSize(2) };
             yield return new object[] { "STRING(100)", SpannerDbType.String.WithSize(100) };
@@ -124,6 +124,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { "ARRAY<INT64>", SpannerDbType.ArrayOf(SpannerDbType.Int64) };
             yield return new object[] { "ARRAY<OID{PG}>", SpannerDbType.ArrayOf(SpannerDbType.PgOid) };
             yield return new object[] { "ARRAY<TIMESTAMP>", SpannerDbType.ArrayOf(SpannerDbType.Timestamp) };
+            yield return new object[] { "ARRAY<INTERVAL>", SpannerDbType.ArrayOf(SpannerDbType.Interval) };
 
             yield return new object[] { "ARRAY<STRING(5)>", SpannerDbType.ArrayOf(SpannerDbType.String), false };
             yield return new object[] { "ARRAY<BYTES(5)>", SpannerDbType.ArrayOf(SpannerDbType.Bytes), false };
@@ -183,9 +184,10 @@ namespace Google.Cloud.Spanner.Data.Tests
                 { "F10", SpannerDbType.Json, null },
                 { "F11", SpannerDbType.PgNumeric, null },
                 { "F12", SpannerDbType.PgJsonb, null },
-                { "F13", SpannerDbType.PgOid, null }
+                { "F13", SpannerDbType.PgOid, null },
+                { "F14", SpannerDbType.Interval, null}
             };
-            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT32,F7:FLOAT64,F8:TIMESTAMP,F9:NUMERIC,F10:JSON,F11:NUMERIC{PG},F12:JSONB{PG},F13:OID{PG}>", sampleStruct.GetSpannerDbType() };
+            yield return new object[] { "STRUCT<F1:STRING,F2:INT64,F3:BOOL,F4:BYTES,F5:DATE,F6:FLOAT32,F7:FLOAT64,F8:TIMESTAMP,F9:NUMERIC,F10:JSON,F11:NUMERIC{PG},F12:JSONB{PG},F13:OID{PG},F14:INTERVAL>", sampleStruct.GetSpannerDbType() };
 
             sampleStruct = new SpannerStruct
             {

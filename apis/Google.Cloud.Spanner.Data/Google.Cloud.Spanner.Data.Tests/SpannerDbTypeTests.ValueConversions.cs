@@ -134,6 +134,13 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return PgNumeric.NaN;
         }
 
+        private static IEnumerable<Interval> GetIntervalsForArray()
+        {
+            yield return Interval.Parse("P1Y");
+            yield return Interval.Parse("P1Y2M3DT4H5M6.5S");
+            yield return Interval.Parse("PT0.9S");
+        }
+
         private static readonly BigInteger MaxValueForPgNumeric = BigInteger.Pow(10, 147455) - 1;
 
         private static readonly string ExpectedMaxValueForPgNumeric = MaxValueForPgNumeric.ToString();
@@ -408,6 +415,11 @@ namespace Google.Cloud.Spanner.Data.Tests
                 new List<PgNumeric>(GetPgNumericsForArray()), SpannerDbType.ArrayOf(SpannerDbType.PgNumeric),
                 "[ \""+ExpectedMinValueForPgNumeric+"\", \""+ExpectedMaxValueForPgNumeric+"\", \"NaN\" ]"
             };
+            yield return new object[]
+            {
+                new List<Interval>(GetIntervalsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Interval),
+                "[ \"P1Y\", \"P1Y2M3DT4H5M6.5S\", \"PT0.9S\" ]"
+            };
             // JSON can not be converted from Value to Clr, as there is no unique Clr type for JSON.
             yield return new object[]
             {
@@ -665,6 +677,11 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { double.NegativeInfinity, SpannerDbType.PgNumeric };
             yield return new object[] { double.PositiveInfinity, SpannerDbType.PgNumeric };
             yield return new object[] { double.NaN, SpannerDbType.PgNumeric };
+
+            // Spanner type = Interval tests.
+            yield return new object[] { "invalid", SpannerDbType.Interval };
+            yield return new object[] { "1Y2M", SpannerDbType.Interval };
+            yield return new object[] { "P1H", SpannerDbType.Interval };
         }
 
         private static readonly CultureInfo[] s_cultures = new[]

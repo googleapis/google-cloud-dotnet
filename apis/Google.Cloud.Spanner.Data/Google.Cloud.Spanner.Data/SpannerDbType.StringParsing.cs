@@ -50,6 +50,7 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Bytes:
                 case TypeCode.Json:
                 case TypeCode.Numeric:
+                case TypeCode.Interval:
                     if (!string.IsNullOrEmpty(remainder))
                     {
                         //unexepected inner remainder on simple type
@@ -106,9 +107,6 @@ namespace Google.Cloud.Spanner.Data
                         currentIndex = endFieldIndex + 1;
                     }
                     spannerDbType = new SpannerDbType(fields);
-                    return true;
-                case TypeCode.Interval:
-                    spannerDbType = new SpannerDbType(type.Code);
                     return true;
                 case TypeCode.Proto:
                     if (string.IsNullOrEmpty(remainder))
@@ -172,11 +170,6 @@ namespace Google.Cloud.Spanner.Data
             {
                 type.Code = TypeCode.Int64;
                 type.TypeAnnotation = TypeAnnotationCode.PgOid;
-                return true;
-            }
-            else if (string.Equals(trimmedComplexName, "INTERVAL", StringComparison.OrdinalIgnoreCase))
-            {
-                type.Code = TypeCode.Interval;
                 return true;
             }
 
