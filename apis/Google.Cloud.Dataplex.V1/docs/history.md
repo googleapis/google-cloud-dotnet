@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.8.0, released 2025-04-09
+
+### New features
+
+- Add Data Discovery result statistics
+- Add EntryLinkEvent for logs
+
 ## Version 3.7.0, released 2025-03-17
 
 ### New features
