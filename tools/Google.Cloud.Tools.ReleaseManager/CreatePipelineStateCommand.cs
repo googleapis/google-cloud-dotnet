@@ -15,10 +15,8 @@
 using Google.Cloud.Tools.Common;
 using Google.Protobuf.WellKnownTypes;
 using LibGit2Sharp;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager;
@@ -44,9 +42,7 @@ public sealed class CreatePipelineStateCommand : CommandBase
     protected override int ExecuteImpl(string[] args)
     {
         var catalog = ApiCatalog.Load(RootLayout);
-        var pipelineStateFile = Path.Combine(RootLayout.GeneratorInput, "pipeline-state.json");
-
-        var previousState = JsonConvert.DeserializeObject<PipelineState>(File.ReadAllText(pipelineStateFile));
+        var previousState = PipelineState.Load(RootLayout);
 
         using var repo = new Repository(RootLayout.RepositoryRoot);
         using var googleapisRepo = new Repository(args[0]);
@@ -85,11 +81,7 @@ public sealed class CreatePipelineStateCommand : CommandBase
             }
         }
 
-        // Slightly fiddly serialization to mimic the indentation that Librarian uses.
-        var serializer = new JsonSerializer { DefaultValueHandling = DefaultValueHandling.Ignore };
-        using var fileWriter = File.CreateText(pipelineStateFile);
-        using var jsonWriter = new JsonTextWriter(fileWriter) { Formatting = Formatting.Indented, Indentation = 4 };
-        serializer.Serialize(jsonWriter, state);
+        state.Save(RootLayout);
         return 0;
 
         void MaybeAddApiLibrary(ApiMetadata api)
@@ -210,57 +202,5 @@ public sealed class CreatePipelineStateCommand : CommandBase
     {
         var predicate = GitHelpers.CreateCommitPredicateForPathPrefix(path);
         return commits.Where(predicate).FirstOrDefault();
-    }
-
-    // Eventually use have a proto for the pipeline state schema. The first draft is at
-    // https://github.com/googleapis/generator/blob/main/proto/pipeline.proto
-    // but for the moment we'll just create a copy here as a class - we only need the JSON representation.
-    // (We'll use strings for automation levels for simplicity for now.)
-    private class PipelineState
-    {
-        [JsonProperty("imageTag")]
-        public string ImageTag { get; set; }
-
-        [JsonProperty("libraries")]
-        public List<LibraryState> Libraries { get; } = new();
-
-        [JsonProperty("commonLibrarySourcePaths")]
-        public List<string> CommonLibrarySourcePaths { get; } = new();
-
-        [JsonProperty("ignoredApiPaths")]
-        public List<string> IgnoredApiPaths { get; } = new();
-    }
-
-    private class LibraryState
-    {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
-        [JsonProperty("currentVersion")]
-        public string CurrentVersion { get; set; }
-
-        [JsonProperty("nextVersion")]
-        public string NextVersion { get; set; }
-
-        [JsonProperty("generationAutomationLevel")]
-        public string GenerationAutomationLevel { get; set; }
-
-        [JsonProperty("releaseAutomationLevel")]
-        public string ReleaseAutomationLevel { get; set; }
-
-        [JsonProperty("releaseTimestamp")]
-        public string ReleaseTimestamp { get; set; }
-
-        [JsonProperty("lastGeneratedCommit")]
-        public string LastGeneratedCommit { get; set; }
-
-        [JsonProperty("lastReleasedCommit")]
-        public string LastReleasedCommit { get; set; }
-
-        [JsonProperty("apiPaths")]
-        public List<string> ApiPaths { get; set; } = new();
-
-        [JsonProperty("sourcePaths")]
-        public List<string> SourcePaths { get; } = new();
     }
 }
