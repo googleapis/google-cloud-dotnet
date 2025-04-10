@@ -9,6 +9,9 @@
         {
           "name": "FIRESTORE_TEST_PROJECT",
           "secretName": "firestore-test-project"
+        },
+        {
+          "name": "INTEGRATION_TEST_SERVICE_ACCOUNT_JSON"
         }
       ]
     }
