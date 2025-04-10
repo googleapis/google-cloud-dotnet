@@ -13,6 +13,12 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using Google.Protobuf.WellKnownTypes;
+using Newtonsoft.Json;
+using SharpCompress.Archives;
+using SharpCompress.Archives.Tar;
+using SharpCompress.Common;
+using SharpCompress.Writers.Tar;
 using System;
 using System.IO;
 using System.Linq;
@@ -42,9 +48,105 @@ internal class PackageLibraryCommand : IContainerCommand
         }
         Processes.RunBashScript(Path.Combine(repoRoot, "docs"), "builddocs.sh", apis.Select(api => api.Id));
 
-        // TODO: We need to create the relevant docs bundles to push later. Ideally, we'll create tgz files
-        // ready to just upload. We can probably call into DocUploader directly.
-
+        foreach (var api in apis)
+        {
+            PackageDocumentation(rootLayout, api, outputDirectory);
+        }
         return 0;
+    }
+
+    // This is the container equivalent of running uploaddocs.sh, but creating a tgz file instead of
+    // directly pushing to GCS. The code for metadata and compression is taken from DocUploader, but we may be
+    // able to retire that tool later.
+    private static void PackageDocumentation(RootLayout rootLayout, ApiMetadata api, string outputDirectory)
+    {
+        var docsDir = rootLayout.CreateDocsLayout(api.Id).OutputDirectory;
+        // Note: a comment in uploaddocs.sh claims we don't generate documentation for all packages.
+        // I believe this is no longer true.
+        var siteDir = Path.Combine(docsDir, "site");
+        FixDocfxOutput(siteDir, api);
+
+        var devSiteDir = Path.Combine(docsDir, "devsite");
+
+        BundleDocumentation(siteDir, api, outputDirectory, "googleapisdev");
+        if (Directory.Exists(devSiteDir))
+        {
+            BundleDocumentation(devSiteDir, api, outputDirectory, "devsite");
+        }
+    }
+
+    private static void FixDocfxOutput(string directory, ApiMetadata api)
+    {
+        // Remove the "All APIs" link from the toc if it exists.
+        var tocFile = Path.Combine(directory, "toc.html");
+        var tocLines = File.ReadLines(tocFile).ToList();
+        var allApisMatch = tocLines
+            .Select((line, index) => (line, index))
+            .FirstOrDefault(pair => pair.line.Contains("All APIs"));
+        if (allApisMatch.line is not null)
+        {
+            // Remove 3 lines: the list item start, link, list item end
+            tocLines.RemoveRange(allApisMatch.index - 1, 3);
+            File.WriteAllLines(tocFile, tocLines);
+        }
+
+        // Insert a baseUrl at the start of xrefmap.yml
+        var xrefmapFile = Path.Combine(directory, "xrefmap.yml");
+        var xrefmapLines = File.ReadLines(xrefmapFile).ToList();
+        if (xrefmapLines[0].StartsWith("baseUrl"))
+        {
+            xrefmapLines.Insert(0, $"baseUrl: https://googleapis.dev/dotnet/{api.Id}/{api.Version}/");
+            File.WriteAllLines(xrefmapFile, xrefmapLines);
+        }
+    }
+
+    private static void BundleDocumentation(string inputDirectory, ApiMetadata api, string outputDirectory, string outputPrefix)
+    {
+        var metadata = new Metadata
+        {
+            UpdateTime = Timestamp.FromDateTimeOffset(DateTimeOffset.UtcNow).ToString().Trim('\"'),
+            Name = api.Id,
+            Version = api.Version,
+            Language = "dotnet",
+            GithubRepository = Environment.GetEnvironmentVariable("DOCS_METADATA_REPO") ?? ""
+        };
+        var json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
+        File.WriteAllText("docs.metadata.json", json);
+        using var tgz = File.Create(Path.Combine(outputDirectory, $"{outputPrefix}-{api.Id}-{api.Version}.tar.gz"));
+        CompressDirectory(inputDirectory, tgz);
+    }
+
+    /// <summary>
+    /// Compress the given directory to the output stream.
+    /// </summary>
+    private static void CompressDirectory(string directory, Stream output)
+    {
+        if (Directory.EnumerateFiles(directory).Count() == 0)
+        {
+            throw new InvalidOperationException($"The documentation path `{directory}` is empty");
+        }
+
+        using var archive = TarArchive.Create();
+        archive.AddAllFromDirectory(directory);
+        var writerOptions = new TarWriterOptions(CompressionType.GZip, finalizeArchiveOnClose: true);
+        archive.SaveTo(output, writerOptions);
+    }
+
+    private class Metadata
+    {
+        [JsonProperty("updateTime")]
+        public string UpdateTime { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
+
+        [JsonProperty("version")]
+        public string Version { get; set; }
+
+        [JsonProperty("language")]
+        public string Language { get; set; }
+
+        [JsonProperty("githubRepository")]
+        public string GithubRepository { get; set; }
     }
 }

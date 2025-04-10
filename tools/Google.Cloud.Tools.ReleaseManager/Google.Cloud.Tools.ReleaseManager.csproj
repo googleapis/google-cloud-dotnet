@@ -21,6 +21,8 @@
      - for libraries which target that, and that then fails to use the channel.
      -->
     <PackageReference Include="Grpc.Net.Client" VersionOverride="2.66.0" />
+
+    <PackageReference Include="SharpCompress" />
   </ItemGroup>
 
 </Project>

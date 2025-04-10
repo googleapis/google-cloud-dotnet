@@ -11,6 +11,14 @@
           "secretName": "firestore-test-project"
         }
       ]
+    },
+    "package-library": {
+      "environmentVariables": [
+        {
+          "name": "DOCS_METADATA_REPO",
+          "defaultValue": "googleapis/google-cloud-dotnet"
+        }
+      ]
     }
   }
 }
