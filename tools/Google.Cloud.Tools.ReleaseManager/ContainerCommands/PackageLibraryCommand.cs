@@ -45,6 +45,10 @@ internal class PackageLibraryCommand : IContainerCommand
                 "-c", "Release",
                 "-o", outputDirectory,
                 $"apis/{api.Id}/{api.Id}");
+
+            // Run with a working directory of the repo root so we have access to generate-sbom,
+            // but pass the full filename in.
+            Processes.RunDotnet(repoRoot, "generate-sbom", Path.Combine(outputDirectory, $"{api.Id}.{api.Version}.nupkg"));
         }
         Processes.RunBashScript(Path.Combine(repoRoot, "docs"), "builddocs.sh", apis.Select(api => api.Id));
 
