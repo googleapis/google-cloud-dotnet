@@ -6835,6 +6835,867 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StopAutonomousDatabase_sync",
+      "title": "StopAutonomousDatabaseRequestObject",
+      "description": "Snippet for StopAutonomousDatabase",
+      "file": "OracleDatabaseClient.StopAutonomousDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StopAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.StopAutonomousDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StopAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StopAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StopAutonomousDatabase_async",
+      "title": "StopAutonomousDatabaseRequestObjectAsync",
+      "description": "Snippet for StopAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.StopAutonomousDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StopAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.StopAutonomousDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StopAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StopAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StopAutonomousDatabase_sync_flattened",
+      "title": "StopAutonomousDatabase",
+      "description": "Snippet for StopAutonomousDatabase",
+      "file": "OracleDatabaseClient.StopAutonomousDatabaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StopAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StopAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StopAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StopAutonomousDatabase_async_flattened",
+      "title": "StopAutonomousDatabaseAsync",
+      "description": "Snippet for StopAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.StopAutonomousDatabaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StopAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StopAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StopAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StopAutonomousDatabase_sync_flattened_resourceNames",
+      "title": "StopAutonomousDatabaseResourceNames",
+      "description": "Snippet for StopAutonomousDatabase",
+      "file": "OracleDatabaseClient.StopAutonomousDatabaseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StopAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StopAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StopAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StopAutonomousDatabase_async_flattened_resourceNames",
+      "title": "StopAutonomousDatabaseResourceNamesAsync",
+      "description": "Snippet for StopAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.StopAutonomousDatabaseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StopAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StopAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StopAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StopAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StartAutonomousDatabase_sync",
+      "title": "StartAutonomousDatabaseRequestObject",
+      "description": "Snippet for StartAutonomousDatabase",
+      "file": "OracleDatabaseClient.StartAutonomousDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StartAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.StartAutonomousDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StartAutonomousDatabase_async",
+      "title": "StartAutonomousDatabaseRequestObjectAsync",
+      "description": "Snippet for StartAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.StartAutonomousDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StartAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.StartAutonomousDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StartAutonomousDatabase_sync_flattened",
+      "title": "StartAutonomousDatabase",
+      "description": "Snippet for StartAutonomousDatabase",
+      "file": "OracleDatabaseClient.StartAutonomousDatabaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StartAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StartAutonomousDatabase_async_flattened",
+      "title": "StartAutonomousDatabaseAsync",
+      "description": "Snippet for StartAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.StartAutonomousDatabaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StartAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StartAutonomousDatabase_sync_flattened_resourceNames",
+      "title": "StartAutonomousDatabaseResourceNames",
+      "description": "Snippet for StartAutonomousDatabase",
+      "file": "OracleDatabaseClient.StartAutonomousDatabaseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StartAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_StartAutonomousDatabase_async_flattened_resourceNames",
+      "title": "StartAutonomousDatabaseResourceNamesAsync",
+      "description": "Snippet for StartAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.StartAutonomousDatabaseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.StartAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "StartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.StartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RestartAutonomousDatabase_sync",
+      "title": "RestartAutonomousDatabaseRequestObject",
+      "description": "Snippet for RestartAutonomousDatabase",
+      "file": "OracleDatabaseClient.RestartAutonomousDatabaseRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RestartAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.RestartAutonomousDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RestartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RestartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RestartAutonomousDatabase_async",
+      "title": "RestartAutonomousDatabaseRequestObjectAsync",
+      "description": "Snippet for RestartAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.RestartAutonomousDatabaseRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RestartAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.RestartAutonomousDatabaseRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RestartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RestartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RestartAutonomousDatabase_sync_flattened",
+      "title": "RestartAutonomousDatabase",
+      "description": "Snippet for RestartAutonomousDatabase",
+      "file": "OracleDatabaseClient.RestartAutonomousDatabaseSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RestartAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RestartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RestartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RestartAutonomousDatabase_async_flattened",
+      "title": "RestartAutonomousDatabaseAsync",
+      "description": "Snippet for RestartAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.RestartAutonomousDatabaseAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RestartAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RestartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RestartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RestartAutonomousDatabase_sync_flattened_resourceNames",
+      "title": "RestartAutonomousDatabaseResourceNames",
+      "description": "Snippet for RestartAutonomousDatabase",
+      "file": "OracleDatabaseClient.RestartAutonomousDatabaseResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartAutonomousDatabase",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RestartAutonomousDatabase",
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RestartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RestartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "oracledatabase_v1_generated_OracleDatabase_RestartAutonomousDatabase_async_flattened_resourceNames",
+      "title": "RestartAutonomousDatabaseResourceNamesAsync",
+      "description": "Snippet for RestartAutonomousDatabaseAsync",
+      "file": "OracleDatabaseClient.RestartAutonomousDatabaseResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RestartAutonomousDatabaseAsync",
+        "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient.RestartAutonomousDatabaseAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.OracleDatabase.V1.AutonomousDatabaseName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.OracleDatabase.V1.AutonomousDatabase, Google.Cloud.OracleDatabase.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "OracleDatabaseClient",
+          "fullName": "Google.Cloud.OracleDatabase.V1.OracleDatabaseClient"
+        },
+        "method": {
+          "shortName": "RestartAutonomousDatabase",
+          "fullName": "google.cloud.oracledatabase.v1.OracleDatabase.RestartAutonomousDatabase",
+          "service": {
+            "shortName": "OracleDatabase",
+            "fullName": "google.cloud.oracledatabase.v1.OracleDatabase"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

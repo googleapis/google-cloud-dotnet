@@ -78,6 +78,12 @@ namespace Google.Cloud.OracleDatabase.V1
             ListAutonomousDbVersionsSettings = existing.ListAutonomousDbVersionsSettings;
             ListAutonomousDatabaseCharacterSetsSettings = existing.ListAutonomousDatabaseCharacterSetsSettings;
             ListAutonomousDatabaseBackupsSettings = existing.ListAutonomousDatabaseBackupsSettings;
+            StopAutonomousDatabaseSettings = existing.StopAutonomousDatabaseSettings;
+            StopAutonomousDatabaseOperationsSettings = existing.StopAutonomousDatabaseOperationsSettings.Clone();
+            StartAutonomousDatabaseSettings = existing.StartAutonomousDatabaseSettings;
+            StartAutonomousDatabaseOperationsSettings = existing.StartAutonomousDatabaseOperationsSettings.Clone();
+            RestartAutonomousDatabaseSettings = existing.RestartAutonomousDatabaseSettings;
+            RestartAutonomousDatabaseOperationsSettings = existing.RestartAutonomousDatabaseOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -626,6 +632,99 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListAutonomousDatabaseBackupsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.Internal, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.StopAutonomousDatabase</c> and <c>OracleDatabaseClient.StopAutonomousDatabaseAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopAutonomousDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.StopAutonomousDatabase</c> and
+        /// <c>OracleDatabaseClient.StopAutonomousDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StopAutonomousDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.StartAutonomousDatabase</c> and <c>OracleDatabaseClient.StartAutonomousDatabaseAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartAutonomousDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.StartAutonomousDatabase</c> and
+        /// <c>OracleDatabaseClient.StartAutonomousDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartAutonomousDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.RestartAutonomousDatabase</c> and
+        /// <c>OracleDatabaseClient.RestartAutonomousDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RestartAutonomousDatabaseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.RestartAutonomousDatabase</c> and
+        /// <c>OracleDatabaseClient.RestartAutonomousDatabaseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RestartAutonomousDatabaseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -4201,6 +4300,420 @@ namespace Google.Cloud.OracleDatabase.V1
             }
             return ListAutonomousDatabaseBackupsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> StopAutonomousDatabase(StopAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StopAutonomousDatabaseAsync(StopAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StopAutonomousDatabaseAsync(StopAutonomousDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            StopAutonomousDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StopAutonomousDatabase</c>.</summary>
+        public virtual lro::OperationsClient StopAutonomousDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopAutonomousDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> PollOnceStopAutonomousDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutonomousDatabase, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopAutonomousDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopAutonomousDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> PollOnceStopAutonomousDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutonomousDatabase, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopAutonomousDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> StopAutonomousDatabase(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StopAutonomousDatabase(new StopAutonomousDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StopAutonomousDatabaseAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StopAutonomousDatabaseAsync(new StopAutonomousDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StopAutonomousDatabaseAsync(string name, st::CancellationToken cancellationToken) =>
+            StopAutonomousDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> StopAutonomousDatabase(AutonomousDatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            StopAutonomousDatabase(new StopAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StopAutonomousDatabaseAsync(AutonomousDatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            StopAutonomousDatabaseAsync(new StopAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StopAutonomousDatabaseAsync(AutonomousDatabaseName name, st::CancellationToken cancellationToken) =>
+            StopAutonomousDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> StartAutonomousDatabase(StartAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StartAutonomousDatabaseAsync(StartAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StartAutonomousDatabaseAsync(StartAutonomousDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            StartAutonomousDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartAutonomousDatabase</c>.</summary>
+        public virtual lro::OperationsClient StartAutonomousDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartAutonomousDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> PollOnceStartAutonomousDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutonomousDatabase, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartAutonomousDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartAutonomousDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> PollOnceStartAutonomousDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutonomousDatabase, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartAutonomousDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> StartAutonomousDatabase(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StartAutonomousDatabase(new StartAutonomousDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StartAutonomousDatabaseAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StartAutonomousDatabaseAsync(new StartAutonomousDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StartAutonomousDatabaseAsync(string name, st::CancellationToken cancellationToken) =>
+            StartAutonomousDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> StartAutonomousDatabase(AutonomousDatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            StartAutonomousDatabase(new StartAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StartAutonomousDatabaseAsync(AutonomousDatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            StartAutonomousDatabaseAsync(new StartAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StartAutonomousDatabaseAsync(AutonomousDatabaseName name, st::CancellationToken cancellationToken) =>
+            StartAutonomousDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> RestartAutonomousDatabase(RestartAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RestartAutonomousDatabaseAsync(RestartAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RestartAutonomousDatabaseAsync(RestartAutonomousDatabaseRequest request, st::CancellationToken cancellationToken) =>
+            RestartAutonomousDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RestartAutonomousDatabase</c>.</summary>
+        public virtual lro::OperationsClient RestartAutonomousDatabaseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RestartAutonomousDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> PollOnceRestartAutonomousDatabase(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutonomousDatabase, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestartAutonomousDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RestartAutonomousDatabase</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> PollOnceRestartAutonomousDatabaseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AutonomousDatabase, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RestartAutonomousDatabaseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> RestartAutonomousDatabase(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RestartAutonomousDatabase(new RestartAutonomousDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RestartAutonomousDatabaseAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            RestartAutonomousDatabaseAsync(new RestartAutonomousDatabaseRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RestartAutonomousDatabaseAsync(string name, st::CancellationToken cancellationToken) =>
+            RestartAutonomousDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AutonomousDatabase, OperationMetadata> RestartAutonomousDatabase(AutonomousDatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            RestartAutonomousDatabase(new RestartAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RestartAutonomousDatabaseAsync(AutonomousDatabaseName name, gaxgrpc::CallSettings callSettings = null) =>
+            RestartAutonomousDatabaseAsync(new RestartAutonomousDatabaseRequest
+            {
+                AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Autonomous Database in the following format:
+        /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RestartAutonomousDatabaseAsync(AutonomousDatabaseName name, st::CancellationToken cancellationToken) =>
+            RestartAutonomousDatabaseAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>OracleDatabase client wrapper implementation, for convenient use.</summary>
@@ -4253,6 +4766,12 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<ListAutonomousDatabaseBackupsRequest, ListAutonomousDatabaseBackupsResponse> _callListAutonomousDatabaseBackups;
 
+        private readonly gaxgrpc::ApiCall<StopAutonomousDatabaseRequest, lro::Operation> _callStopAutonomousDatabase;
+
+        private readonly gaxgrpc::ApiCall<StartAutonomousDatabaseRequest, lro::Operation> _callStartAutonomousDatabase;
+
+        private readonly gaxgrpc::ApiCall<RestartAutonomousDatabaseRequest, lro::Operation> _callRestartAutonomousDatabase;
+
         /// <summary>
         /// Constructs a client wrapper for the OracleDatabase service, with the specified gRPC client and settings.
         /// </summary>
@@ -4275,6 +4794,9 @@ namespace Google.Cloud.OracleDatabase.V1
             CreateAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAutonomousDatabaseOperationsSettings, logger);
             DeleteAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAutonomousDatabaseOperationsSettings, logger);
             RestoreAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestoreAutonomousDatabaseOperationsSettings, logger);
+            StopAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopAutonomousDatabaseOperationsSettings, logger);
+            StartAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartAutonomousDatabaseOperationsSettings, logger);
+            RestartAutonomousDatabaseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RestartAutonomousDatabaseOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListCloudExadataInfrastructures = clientHelper.BuildApiCall<ListCloudExadataInfrastructuresRequest, ListCloudExadataInfrastructuresResponse>("ListCloudExadataInfrastructures", grpcClient.ListCloudExadataInfrastructuresAsync, grpcClient.ListCloudExadataInfrastructures, effectiveSettings.ListCloudExadataInfrastructuresSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCloudExadataInfrastructures);
@@ -4342,6 +4864,15 @@ namespace Google.Cloud.OracleDatabase.V1
             _callListAutonomousDatabaseBackups = clientHelper.BuildApiCall<ListAutonomousDatabaseBackupsRequest, ListAutonomousDatabaseBackupsResponse>("ListAutonomousDatabaseBackups", grpcClient.ListAutonomousDatabaseBackupsAsync, grpcClient.ListAutonomousDatabaseBackups, effectiveSettings.ListAutonomousDatabaseBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListAutonomousDatabaseBackups);
             Modify_ListAutonomousDatabaseBackupsApiCall(ref _callListAutonomousDatabaseBackups);
+            _callStopAutonomousDatabase = clientHelper.BuildApiCall<StopAutonomousDatabaseRequest, lro::Operation>("StopAutonomousDatabase", grpcClient.StopAutonomousDatabaseAsync, grpcClient.StopAutonomousDatabase, effectiveSettings.StopAutonomousDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStopAutonomousDatabase);
+            Modify_StopAutonomousDatabaseApiCall(ref _callStopAutonomousDatabase);
+            _callStartAutonomousDatabase = clientHelper.BuildApiCall<StartAutonomousDatabaseRequest, lro::Operation>("StartAutonomousDatabase", grpcClient.StartAutonomousDatabaseAsync, grpcClient.StartAutonomousDatabase, effectiveSettings.StartAutonomousDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStartAutonomousDatabase);
+            Modify_StartAutonomousDatabaseApiCall(ref _callStartAutonomousDatabase);
+            _callRestartAutonomousDatabase = clientHelper.BuildApiCall<RestartAutonomousDatabaseRequest, lro::Operation>("RestartAutonomousDatabase", grpcClient.RestartAutonomousDatabaseAsync, grpcClient.RestartAutonomousDatabase, effectiveSettings.RestartAutonomousDatabaseSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRestartAutonomousDatabase);
+            Modify_RestartAutonomousDatabaseApiCall(ref _callRestartAutonomousDatabase);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4390,6 +4921,12 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_ListAutonomousDatabaseCharacterSetsApiCall(ref gaxgrpc::ApiCall<ListAutonomousDatabaseCharacterSetsRequest, ListAutonomousDatabaseCharacterSetsResponse> call);
 
         partial void Modify_ListAutonomousDatabaseBackupsApiCall(ref gaxgrpc::ApiCall<ListAutonomousDatabaseBackupsRequest, ListAutonomousDatabaseBackupsResponse> call);
+
+        partial void Modify_StopAutonomousDatabaseApiCall(ref gaxgrpc::ApiCall<StopAutonomousDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_StartAutonomousDatabaseApiCall(ref gaxgrpc::ApiCall<StartAutonomousDatabaseRequest, lro::Operation> call);
+
+        partial void Modify_RestartAutonomousDatabaseApiCall(ref gaxgrpc::ApiCall<RestartAutonomousDatabaseRequest, lro::Operation> call);
 
         partial void OnConstruction(OracleDatabase.OracleDatabaseClient grpcClient, OracleDatabaseSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -4442,6 +4979,12 @@ namespace Google.Cloud.OracleDatabase.V1
         partial void Modify_ListAutonomousDatabaseCharacterSetsRequest(ref ListAutonomousDatabaseCharacterSetsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListAutonomousDatabaseBackupsRequest(ref ListAutonomousDatabaseBackupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StopAutonomousDatabaseRequest(ref StopAutonomousDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StartAutonomousDatabaseRequest(ref StartAutonomousDatabaseRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RestartAutonomousDatabaseRequest(ref RestartAutonomousDatabaseRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Exadata Infrastructures in a given project and location.
@@ -4996,6 +5539,87 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_ListAutonomousDatabaseBackupsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAutonomousDatabaseBackupsRequest, ListAutonomousDatabaseBackupsResponse, AutonomousDatabaseBackup>(_callListAutonomousDatabaseBackups, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>StopAutonomousDatabase</c>.</summary>
+        public override lro::OperationsClient StopAutonomousDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutonomousDatabase, OperationMetadata> StopAutonomousDatabase(StopAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopAutonomousDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<AutonomousDatabase, OperationMetadata>(_callStopAutonomousDatabase.Sync(request, callSettings), StopAutonomousDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Stops an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StopAutonomousDatabaseAsync(StopAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopAutonomousDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<AutonomousDatabase, OperationMetadata>(await _callStopAutonomousDatabase.Async(request, callSettings).ConfigureAwait(false), StopAutonomousDatabaseOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StartAutonomousDatabase</c>.</summary>
+        public override lro::OperationsClient StartAutonomousDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutonomousDatabase, OperationMetadata> StartAutonomousDatabase(StartAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartAutonomousDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<AutonomousDatabase, OperationMetadata>(_callStartAutonomousDatabase.Sync(request, callSettings), StartAutonomousDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Starts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> StartAutonomousDatabaseAsync(StartAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartAutonomousDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<AutonomousDatabase, OperationMetadata>(await _callStartAutonomousDatabase.Async(request, callSettings).ConfigureAwait(false), StartAutonomousDatabaseOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RestartAutonomousDatabase</c>.</summary>
+        public override lro::OperationsClient RestartAutonomousDatabaseOperationsClient { get; }
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AutonomousDatabase, OperationMetadata> RestartAutonomousDatabase(RestartAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestartAutonomousDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<AutonomousDatabase, OperationMetadata>(_callRestartAutonomousDatabase.Sync(request, callSettings), RestartAutonomousDatabaseOperationsClient);
+        }
+
+        /// <summary>
+        /// Restarts an Autonomous Database.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AutonomousDatabase, OperationMetadata>> RestartAutonomousDatabaseAsync(RestartAutonomousDatabaseRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RestartAutonomousDatabaseRequest(ref request, ref callSettings);
+            return new lro::Operation<AutonomousDatabase, OperationMetadata>(await _callRestartAutonomousDatabase.Async(request, callSettings).ConfigureAwait(false), RestartAutonomousDatabaseOperationsClient);
         }
     }
 
