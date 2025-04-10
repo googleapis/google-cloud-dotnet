@@ -80,6 +80,10 @@ namespace Google.Cloud.Iap.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest> __Marshaller_google_cloud_iap_v1_UpdateIapSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest> __Marshaller_google_cloud_iap_v1_ValidateIapAttributeExpressionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse> __Marshaller_google_cloud_iap_v1_ValidateIapAttributeExpressionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest> __Marshaller_google_cloud_iap_v1_ListTunnelDestGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse> __Marshaller_google_cloud_iap_v1_ListTunnelDestGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse.Parser));
@@ -135,6 +139,14 @@ namespace Google.Cloud.Iap.V1 {
         "UpdateIapSettings",
         __Marshaller_google_cloud_iap_v1_UpdateIapSettingsRequest,
         __Marshaller_google_cloud_iap_v1_IapSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest, global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse> __Method_ValidateIapAttributeExpression = new grpc::Method<global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest, global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ValidateIapAttributeExpression",
+        __Marshaller_google_cloud_iap_v1_ValidateIapAttributeExpressionRequest,
+        __Marshaller_google_cloud_iap_v1_ValidateIapAttributeExpressionResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse> __Method_ListTunnelDestGroups = new grpc::Method<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse>(
@@ -252,6 +264,18 @@ namespace Google.Cloud.Iap.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.IapSettings> UpdateIapSettings(global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Validates that a given CEL expression conforms to IAP restrictions.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse> ValidateIapAttributeExpression(global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -628,6 +652,54 @@ namespace Google.Cloud.Iap.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateIapSettings, null, options, request);
       }
       /// <summary>
+      /// Validates that a given CEL expression conforms to IAP restrictions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse ValidateIapAttributeExpression(global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ValidateIapAttributeExpression(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Validates that a given CEL expression conforms to IAP restrictions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse ValidateIapAttributeExpression(global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ValidateIapAttributeExpression, null, options, request);
+      }
+      /// <summary>
+      /// Validates that a given CEL expression conforms to IAP restrictions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse> ValidateIapAttributeExpressionAsync(global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ValidateIapAttributeExpressionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Validates that a given CEL expression conforms to IAP restrictions.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse> ValidateIapAttributeExpressionAsync(global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ValidateIapAttributeExpression, null, options, request);
+      }
+      /// <summary>
       /// Lists the existing TunnelDestGroups. To group across all locations, use a
       /// `-` as the location ID. For example:
       /// `/v1/projects/123/iap_tunnel/locations/-/destGroups`
@@ -894,6 +966,7 @@ namespace Google.Cloud.Iap.V1 {
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
           .AddMethod(__Method_GetIapSettings, serviceImpl.GetIapSettings)
           .AddMethod(__Method_UpdateIapSettings, serviceImpl.UpdateIapSettings)
+          .AddMethod(__Method_ValidateIapAttributeExpression, serviceImpl.ValidateIapAttributeExpression)
           .AddMethod(__Method_ListTunnelDestGroups, serviceImpl.ListTunnelDestGroups)
           .AddMethod(__Method_CreateTunnelDestGroup, serviceImpl.CreateTunnelDestGroup)
           .AddMethod(__Method_GetTunnelDestGroup, serviceImpl.GetTunnelDestGroup)
@@ -913,6 +986,7 @@ namespace Google.Cloud.Iap.V1 {
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
       serviceBinder.AddMethod(__Method_GetIapSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.GetIapSettingsRequest, global::Google.Cloud.Iap.V1.IapSettings>(serviceImpl.GetIapSettings));
       serviceBinder.AddMethod(__Method_UpdateIapSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.UpdateIapSettingsRequest, global::Google.Cloud.Iap.V1.IapSettings>(serviceImpl.UpdateIapSettings));
+      serviceBinder.AddMethod(__Method_ValidateIapAttributeExpression, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionRequest, global::Google.Cloud.Iap.V1.ValidateIapAttributeExpressionResponse>(serviceImpl.ValidateIapAttributeExpression));
       serviceBinder.AddMethod(__Method_ListTunnelDestGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.ListTunnelDestGroupsRequest, global::Google.Cloud.Iap.V1.ListTunnelDestGroupsResponse>(serviceImpl.ListTunnelDestGroups));
       serviceBinder.AddMethod(__Method_CreateTunnelDestGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.CreateTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup>(serviceImpl.CreateTunnelDestGroup));
       serviceBinder.AddMethod(__Method_GetTunnelDestGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iap.V1.GetTunnelDestGroupRequest, global::Google.Cloud.Iap.V1.TunnelDestGroup>(serviceImpl.GetTunnelDestGroup));
