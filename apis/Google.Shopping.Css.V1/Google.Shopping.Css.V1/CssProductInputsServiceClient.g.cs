@@ -466,7 +466,10 @@ namespace Google.Shopping.Css.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the CSS product input resource to delete.
-        /// Format: accounts/{account}/cssProductInputs/{css_product_input}
+        /// Format: accounts/{account}/cssProductInputs/{css_product_input}, where the
+        /// last section `css_product_input` consists of 3 parts:
+        /// contentLanguage~feedLabel~offerId. Example:
+        /// accounts/123/cssProductInputs/de~DE~rawProvidedId123
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -484,7 +487,10 @@ namespace Google.Shopping.Css.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the CSS product input resource to delete.
-        /// Format: accounts/{account}/cssProductInputs/{css_product_input}
+        /// Format: accounts/{account}/cssProductInputs/{css_product_input}, where the
+        /// last section `css_product_input` consists of 3 parts:
+        /// contentLanguage~feedLabel~offerId. Example:
+        /// accounts/123/cssProductInputs/de~DE~rawProvidedId123
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -502,7 +508,10 @@ namespace Google.Shopping.Css.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the CSS product input resource to delete.
-        /// Format: accounts/{account}/cssProductInputs/{css_product_input}
+        /// Format: accounts/{account}/cssProductInputs/{css_product_input}, where the
+        /// last section `css_product_input` consists of 3 parts:
+        /// contentLanguage~feedLabel~offerId. Example:
+        /// accounts/123/cssProductInputs/de~DE~rawProvidedId123
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -517,7 +526,10 @@ namespace Google.Shopping.Css.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the CSS product input resource to delete.
-        /// Format: accounts/{account}/cssProductInputs/{css_product_input}
+        /// Format: accounts/{account}/cssProductInputs/{css_product_input}, where the
+        /// last section `css_product_input` consists of 3 parts:
+        /// contentLanguage~feedLabel~offerId. Example:
+        /// accounts/123/cssProductInputs/de~DE~rawProvidedId123
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -535,7 +547,10 @@ namespace Google.Shopping.Css.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the CSS product input resource to delete.
-        /// Format: accounts/{account}/cssProductInputs/{css_product_input}
+        /// Format: accounts/{account}/cssProductInputs/{css_product_input}, where the
+        /// last section `css_product_input` consists of 3 parts:
+        /// contentLanguage~feedLabel~offerId. Example:
+        /// accounts/123/cssProductInputs/de~DE~rawProvidedId123
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -553,7 +568,10 @@ namespace Google.Shopping.Css.V1
         /// </summary>
         /// <param name="name">
         /// Required. The name of the CSS product input resource to delete.
-        /// Format: accounts/{account}/cssProductInputs/{css_product_input}
+        /// Format: accounts/{account}/cssProductInputs/{css_product_input}, where the
+        /// last section `css_product_input` consists of 3 parts:
+        /// contentLanguage~feedLabel~offerId. Example:
+        /// accounts/123/cssProductInputs/de~DE~rawProvidedId123
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

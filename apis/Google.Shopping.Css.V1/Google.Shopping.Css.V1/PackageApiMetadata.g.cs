@@ -35,6 +35,7 @@ namespace Google.Shopping.Css.V1
             yield return CssProductCommonReflection.Descriptor;
             yield return CssProductInputsReflection.Descriptor;
             yield return CssProductsReflection.Descriptor;
+            yield return QuotaReflection.Descriptor;
         }
     }
 }
