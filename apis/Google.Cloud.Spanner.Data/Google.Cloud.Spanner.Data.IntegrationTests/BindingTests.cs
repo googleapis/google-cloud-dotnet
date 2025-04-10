@@ -60,6 +60,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.Bytes,
             SpannerDbType.Float32,
             SpannerDbType.Json,
+            SpannerDbType.Interval,
             SpannerDbType.FromClrType(typeof(Duration)),
             SpannerDbType.FromClrType(typeof(Rectangle)),
             SpannerDbType.FromClrType(typeof(Person)),
@@ -75,8 +76,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.Float32),
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))),
-            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),            
-            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),            
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
         };
@@ -298,6 +299,21 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindJsonEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.Json),
             new string[] { });
+
+        [Fact]
+        public async Task BindInterval() =>  await TestBindNonNull(
+            SpannerDbType.Interval,
+            Interval.Parse("P1Y"));
+
+        [Fact]
+        public async Task BindIntervalArray() =>  await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.Interval),
+            new Interval[] {Interval.Parse("P1Y"), null, Interval.Parse("PT1H")});
+
+        [Fact]
+        public async Task BindIntervalEmptyArray() =>  await TestBindNonNull(
+            SpannerDbType.Interval,
+            new Interval[] { });
 
         [SkippableFact] //"b/348711708
         public async Task BindProtobufValue() => await TestBindNonNull(
