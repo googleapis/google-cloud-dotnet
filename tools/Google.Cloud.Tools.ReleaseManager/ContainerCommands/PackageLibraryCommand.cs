@@ -38,10 +38,10 @@ internal class PackageLibraryCommand : IContainerCommand
         foreach (var api in apis)
         {
             Console.WriteLine($"Packing {api.Id}");
+            // Note that although we'll be in the same repo directory as the one used
+            // for building and testing, we'll be in a new container, so the NuGet package
+            // cache will be empty - so we restore as part of packing.
             Processes.RunDotnet(repoRoot, "pack",
-                // It would be nice to use --no-build here,
-                // but we may not have the .NET Framework build at this point.
-                "--no-restore",
                 "-c", "Release",
                 "-o", outputDirectory,
                 $"apis/{api.Id}/{api.Id}");
