@@ -214,10 +214,10 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. The resource name of the Job. job_id is unique
-    /// within the project, that is either set by the customer or
+    /// within the project and location, that is either set by the customer or
     /// defined by the service. Format:
-    /// projects/{project}/locations/global/jobs/{job_id} .
-    /// For example: "projects/123456/locations/global/jobs/job01".
+    /// projects/{project}/locations/{location}/jobs/{job_id} .
+    /// For example: "projects/123456/locations/us-central1/jobs/job01".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1647,9 +1647,9 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     /// upon.
     ///  `manifest_location` should either be
     /// 1) An absolute path to the object in the format of
-    /// `gs://bucket_name/path/file_name.csv`.
+    /// gs://bucket_name/path/file_name.csv.
     /// 2) An absolute path with a single wildcard character in the file name, for
-    /// example `gs://bucket_name/path/file_name*.csv`.
+    /// example gs://bucket_name/path/file_name*.csv.
     /// If manifest location is specified with a wildcard, objects in all manifest
     /// files matching the pattern will be acted upon.
     /// </summary>
