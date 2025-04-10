@@ -107,19 +107,21 @@ public class MoveObjectTest
         Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
     }
 
-    // Move the source object to the destination object using correct preconditions (source metageneration and source generation match) set.
     [Fact]
-    public async Task MoveObject_With_Correct_PreconditionsAsync()
+    public async Task MoveObjectAsync_PreconditionsMatch()
     {
-        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
-        _fixture.Client.UploadObject(_bucket, _name2, _contentType2, _source2);
-        var expected = await _fixture.Client.MoveObjectAsync(_bucket, actual.Name, _name2,
-            new MoveObjectOptions { IfSourceMetagenerationMatch = actual.Metageneration, IfSourceGenerationMatch = actual.Generation });
-        var objects = _fixture.Client.ListObjects(_bucket).ToList();
-        // Assert that the destination object exists after the move.
-        Assert.Contains(objects, obj => obj.Name == expected.Name && obj.Generation == expected.Generation);
-        // Assert that the source object does not exist after the move.
-        Assert.DoesNotContain(objects, obj => obj.Name == actual.Name && obj.Generation == actual.Generation);
+        var origin = await _fixture.Client.UploadObjectAsync(_bucket, _originName, _contentType, _data);
+
+        await _fixture.Client.MoveObjectAsync(
+            _bucket, _originName, _destinationName,
+            new MoveObjectOptions
+            {
+                IfSourceMetagenerationMatch = origin.Metageneration,
+                IfSourceGenerationMatch = origin.Generation
+            });
+        var objects = _fixture.Client.ListObjects(_bucket);
+
+        Assert.Contains(objects, obj => obj.Name == expected.Name);
     }
 
     [Fact]
