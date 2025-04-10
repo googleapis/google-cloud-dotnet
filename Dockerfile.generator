@@ -40,6 +40,8 @@ COPY --from=build /src/packages/Google.Protobuf.Tools.* protobuf
 COPY --from=build /src/packages/Grpc.Tools.* grpc
 COPY --from=build /src/gapic-generator-csharp/Google.Api.Generator/bin/Release/*/* gapic
 COPY --from=build /src/tools/Google.Cloud.Tools.ReleaseManager/bin/Release/* ReleaseManager
+# Copy the tool configuration from the local source
+COPY .config .
 
 ENV PROTOBUF_TOOLS_ROOT=/app/protobuf
 ENV PROTOC=/app/protobuf/tools/linux_x64/protoc
@@ -51,6 +53,9 @@ ENV HOME=/root
 # Create a really minimal generator-input in the container, for
 # "unconfigured" generation.
 COPY generator-input/CommonResourcesConfig.json generator-input/
+
+# Make sure we have all the dotnet tools we need
+RUN dotnet tool restore
 
 # Required for dotnet tools to run as an arbitrary user (so we can
 # create files in mounted volumes more appropriately)
