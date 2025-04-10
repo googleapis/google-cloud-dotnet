@@ -71,6 +71,7 @@
     "apis/Google.Cloud.BinaryAuthorization.V1Beta1/Google.Cloud.BinaryAuthorization.V1Beta1/**",
     "apis/Google.Cloud.CertificateManager.V1/Google.Cloud.CertificateManager.V1/**",
     "apis/Google.Cloud.Channel.V1/Google.Cloud.Channel.V1/**",
+    "apis/Google.Cloud.Chronicle.V1/Google.Cloud.Chronicle.V1/**",
     "apis/Google.Cloud.CloudBuild.V1/Google.Cloud.CloudBuild.V1/**",
     "apis/Google.Cloud.CloudBuild.V2/Google.Cloud.CloudBuild.V2/**",
     "apis/Google.Cloud.CloudControlsPartner.V1/Google.Cloud.CloudControlsPartner.V1/**",
