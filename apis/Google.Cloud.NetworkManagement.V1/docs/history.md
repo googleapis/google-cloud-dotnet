@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.14.0, released 2025-04-10
+
+### New features
+
+- add messages and fields related to Direct VPC Egress
+- add messages and fields related to Serverless External
+- add messages and fields related to Route
+- add enum types related to Firewall
+- add enum types related to Google Service
+- add enum types related to Abort
+- add enum types related to Drop
+
+### Documentation improvements
+
+- update outdated comments
+- Update comments for Connectivity Test
+
 ## Version 2.13.0, released 2025-01-13
 
 ### New features
