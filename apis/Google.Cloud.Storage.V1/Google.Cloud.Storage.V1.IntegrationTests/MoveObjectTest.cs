@@ -85,9 +85,8 @@ public class MoveObjectTest
         Assert.DoesNotContain(objects, obj => obj.Name == actual.Name && obj.Generation == actual.Generation);
     }
 
-    // Prevent moving the source object to the destination object using bad preconditions (wrong destination generation) set.
     [Fact]
-    public async Task PreventMoveObject_With_Wrong_GenerationAsync()
+    public async Task MoveObjectAsync_GenerationMissmatch_Fails()
     {
         var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
         await _fixture.Client.UploadObjectAsync(_bucket, _name2, _contentType2, _source2);
