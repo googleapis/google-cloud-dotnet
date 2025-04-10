@@ -1,0 +1,9 @@
+[
+  {
+    "method": "ListDeviceSessions",
+    "client": "DirectAccessServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}"
+    }
+  }
+]
