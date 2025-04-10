@@ -468,6 +468,42 @@ namespace Google.Cloud.OracleDatabase.V1
         }
     }
 
+    public partial class StopAutonomousDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::AutonomousDatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::AutonomousDatabaseName AutonomousDatabaseName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::AutonomousDatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class StartAutonomousDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::AutonomousDatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::AutonomousDatabaseName AutonomousDatabaseName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::AutonomousDatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RestartAutonomousDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::AutonomousDatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::AutonomousDatabaseName AutonomousDatabaseName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::AutonomousDatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GenerateAutonomousDatabaseWalletRequest
     {
         /// <summary>
