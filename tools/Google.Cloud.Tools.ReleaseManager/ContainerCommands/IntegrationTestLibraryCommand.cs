@@ -15,6 +15,7 @@
 using Google.Cloud.Tools.Common;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager.ContainerCommands;
@@ -25,6 +26,7 @@ internal class IntegrationTestLibraryCommand : IContainerCommand
 
     public int Execute(ContainerOptions options)
     {
+        MaybeSaveServiceAccount();
         var repoRoot = options.RequireOption(options.RepoRoot);
         var rootLayout = RootLayout.ForRepositoryRoot(repoRoot);
         var catalog = ApiCatalog.Load(rootLayout);
@@ -43,5 +45,37 @@ internal class IntegrationTestLibraryCommand : IContainerCommand
             }
         }
         return 0;
+    }
+
+    private void MaybeSaveServiceAccount()
+    {
+        const string ServiceAccountJsonEnvironmentVariable = "INTEGRATION_TEST_SERVICE_ACCOUNT_JSON";
+        const string ServiceAccountFileEnvironmentVariable = "GOOGLE_APPLICATION_CREDENTIALS";
+
+        var json = Environment.GetEnvironmentVariable(ServiceAccountJsonEnvironmentVariable);
+        if (string.IsNullOrEmpty(json))
+        {
+            return;
+        }
+        // Don't do anything if we're not running in Docker. The presence of an "/app/ReleaseManager" directory
+        // is a reasonable heuristic for this...
+        if (!Directory.Exists("/app/ReleaseManager"))
+        {
+            Console.WriteLine("Not saving service account JSON: not running in Docker");
+            return;
+        }
+        // Don't do anything if we've already set GOOGLE_APPLICATION_CREDENTIALS for some reason.
+        if (!string.IsNullOrEmpty(Environment.GetEnvironmentVariable(ServiceAccountFileEnvironmentVariable)))
+        {
+            Console.WriteLine($"Not saving service account JSON: {ServiceAccountFileEnvironmentVariable} is already set");
+            return;
+        }
+        if (!string.IsNullOrEmpty(json))
+        {
+            var serviceAccountFile = "/app/service-account.json";
+            File.WriteAllText(serviceAccountFile, json);
+            Environment.SetEnvironmentVariable(ServiceAccountFileEnvironmentVariable, serviceAccountFile);
+            Console.WriteLine("Saved service account details for testing");
+        }
     }
 }
