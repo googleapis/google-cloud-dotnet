@@ -3968,6 +3968,7 @@
             "id": "Google.Cloud.DeviceStreaming.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "9df9ac76f78f5fa9d4fb637f7672b8c8be9cd7a1",
             "apiPaths": [
                 "google/cloud/devicestreaming/v1"
             ],
