@@ -3956,6 +3956,7 @@
             "id": "Google.Cloud.Chronicle.V1",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "e707cf49f510323cdb8b5b7650eaefd278299440",
             "apiPaths": [
                 "google/cloud/chronicle/v1"
             ],

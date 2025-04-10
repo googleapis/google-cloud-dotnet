@@ -1,0 +1,246 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.chronicle.v1",
+  "libraryPackage": "Google.Cloud.Chronicle.V1",
+  "services": {
+    "DataAccessControlService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataAccessControlServiceClient",
+          "rpcs": {
+            "CreateDataAccessLabel": {
+              "methods": [
+                "CreateDataAccessLabel",
+                "CreateDataAccessLabelAsync"
+              ]
+            },
+            "CreateDataAccessScope": {
+              "methods": [
+                "CreateDataAccessScope",
+                "CreateDataAccessScopeAsync"
+              ]
+            },
+            "DeleteDataAccessLabel": {
+              "methods": [
+                "DeleteDataAccessLabel",
+                "DeleteDataAccessLabelAsync"
+              ]
+            },
+            "DeleteDataAccessScope": {
+              "methods": [
+                "DeleteDataAccessScope",
+                "DeleteDataAccessScopeAsync"
+              ]
+            },
+            "GetDataAccessLabel": {
+              "methods": [
+                "GetDataAccessLabel",
+                "GetDataAccessLabelAsync"
+              ]
+            },
+            "GetDataAccessScope": {
+              "methods": [
+                "GetDataAccessScope",
+                "GetDataAccessScopeAsync"
+              ]
+            },
+            "ListDataAccessLabels": {
+              "methods": [
+                "ListDataAccessLabels",
+                "ListDataAccessLabelsAsync"
+              ]
+            },
+            "ListDataAccessScopes": {
+              "methods": [
+                "ListDataAccessScopes",
+                "ListDataAccessScopesAsync"
+              ]
+            },
+            "UpdateDataAccessLabel": {
+              "methods": [
+                "UpdateDataAccessLabel",
+                "UpdateDataAccessLabelAsync"
+              ]
+            },
+            "UpdateDataAccessScope": {
+              "methods": [
+                "UpdateDataAccessScope",
+                "UpdateDataAccessScopeAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "EntityService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "EntityServiceClient",
+          "rpcs": {
+            "CreateWatchlist": {
+              "methods": [
+                "CreateWatchlist",
+                "CreateWatchlistAsync"
+              ]
+            },
+            "DeleteWatchlist": {
+              "methods": [
+                "DeleteWatchlist",
+                "DeleteWatchlistAsync"
+              ]
+            },
+            "GetWatchlist": {
+              "methods": [
+                "GetWatchlist",
+                "GetWatchlistAsync"
+              ]
+            },
+            "ListWatchlists": {
+              "methods": [
+                "ListWatchlists",
+                "ListWatchlistsAsync"
+              ]
+            },
+            "UpdateWatchlist": {
+              "methods": [
+                "UpdateWatchlist",
+                "UpdateWatchlistAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "InstanceService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "InstanceServiceClient",
+          "rpcs": {
+            "GetInstance": {
+              "methods": [
+                "GetInstance",
+                "GetInstanceAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ReferenceListService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReferenceListServiceClient",
+          "rpcs": {
+            "CreateReferenceList": {
+              "methods": [
+                "CreateReferenceList",
+                "CreateReferenceListAsync"
+              ]
+            },
+            "GetReferenceList": {
+              "methods": [
+                "GetReferenceList",
+                "GetReferenceListAsync"
+              ]
+            },
+            "ListReferenceLists": {
+              "methods": [
+                "ListReferenceLists",
+                "ListReferenceListsAsync"
+              ]
+            },
+            "UpdateReferenceList": {
+              "methods": [
+                "UpdateReferenceList",
+                "UpdateReferenceListAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RuleService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RuleServiceClient",
+          "rpcs": {
+            "CreateRetrohunt": {
+              "methods": [
+                "CreateRetrohunt",
+                "CreateRetrohuntAsync"
+              ]
+            },
+            "CreateRule": {
+              "methods": [
+                "CreateRule",
+                "CreateRuleAsync"
+              ]
+            },
+            "DeleteRule": {
+              "methods": [
+                "DeleteRule",
+                "DeleteRuleAsync"
+              ]
+            },
+            "GetRetrohunt": {
+              "methods": [
+                "GetRetrohunt",
+                "GetRetrohuntAsync"
+              ]
+            },
+            "GetRule": {
+              "methods": [
+                "GetRule",
+                "GetRuleAsync"
+              ]
+            },
+            "GetRuleDeployment": {
+              "methods": [
+                "GetRuleDeployment",
+                "GetRuleDeploymentAsync"
+              ]
+            },
+            "ListRetrohunts": {
+              "methods": [
+                "ListRetrohunts",
+                "ListRetrohuntsAsync"
+              ]
+            },
+            "ListRuleDeployments": {
+              "methods": [
+                "ListRuleDeployments",
+                "ListRuleDeploymentsAsync"
+              ]
+            },
+            "ListRuleRevisions": {
+              "methods": [
+                "ListRuleRevisions",
+                "ListRuleRevisionsAsync"
+              ]
+            },
+            "ListRules": {
+              "methods": [
+                "ListRules",
+                "ListRulesAsync"
+              ]
+            },
+            "UpdateRule": {
+              "methods": [
+                "UpdateRule",
+                "UpdateRuleAsync"
+              ]
+            },
+            "UpdateRuleDeployment": {
+              "methods": [
+                "UpdateRuleDeployment",
+                "UpdateRuleDeploymentAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
