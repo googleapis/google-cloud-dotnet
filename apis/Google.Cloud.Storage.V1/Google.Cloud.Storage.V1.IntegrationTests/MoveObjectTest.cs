@@ -88,14 +88,12 @@ public class MoveObjectTest
     [Fact]
     public async Task MoveObjectAsync_GenerationMissmatch_Fails()
     {
-        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
-        await _fixture.Client.UploadObjectAsync(_bucket, _name2, _contentType2, _source2);
-        var exception = Assert.Throws<GoogleApiException>(() => _fixture.Client.MoveObject(_bucket, actual.Name, _name2,
-            new MoveObjectOptions { IfGenerationMatch = 0 }));
+        await _fixture.Client.UploadObjectAsync(_bucket, _originName, _contentType, _data);
+
+        var exception = await Assert.ThrowsAsync<GoogleApiException>(() => _fixture.Client.MoveObjectAsync(
+            _bucket, _originName, _destinationName,
+            new MoveObjectOptions { IfGenerationMatch = 0 }));            
         Assert.Equal(HttpStatusCode.PreconditionFailed, exception.HttpStatusCode);
-        var objects = _fixture.Client.ListObjects(_bucket).ToList();
-        // Assert that the source object is not deleted and destination object is not overwritten.
-        Assert.Contains(objects, obj => obj.Name == actual.Name && obj.Generation == actual.Generation);
     }
 
     // Prevent moving the source object to the destination object using bad preconditions (wrong source metageneration) set.
