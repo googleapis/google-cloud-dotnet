@@ -136,10 +136,28 @@
                 "ListGiVersionsAsync"
               ]
             },
+            "RestartAutonomousDatabase": {
+              "methods": [
+                "RestartAutonomousDatabase",
+                "RestartAutonomousDatabaseAsync"
+              ]
+            },
             "RestoreAutonomousDatabase": {
               "methods": [
                 "RestoreAutonomousDatabase",
                 "RestoreAutonomousDatabaseAsync"
+              ]
+            },
+            "StartAutonomousDatabase": {
+              "methods": [
+                "StartAutonomousDatabase",
+                "StartAutonomousDatabaseAsync"
+              ]
+            },
+            "StopAutonomousDatabase": {
+              "methods": [
+                "StopAutonomousDatabase",
+                "StopAutonomousDatabaseAsync"
               ]
             }
           }
