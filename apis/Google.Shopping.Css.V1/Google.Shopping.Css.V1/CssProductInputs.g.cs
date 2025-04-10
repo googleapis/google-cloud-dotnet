@@ -149,7 +149,10 @@ namespace Google.Shopping.Css.V1 {
     /// <summary>
     /// The name of the CSS Product input.
     /// Format:
-    /// `accounts/{account}/cssProductInputs/{css_product_input}`
+    /// `accounts/{account}/cssProductInputs/{css_product_input}`, where the
+    /// last section `css_product_input` consists of 3 parts:
+    /// contentLanguage~feedLabel~offerId. Example:
+    /// accounts/123/cssProductInputs/de~DE~rawProvidedId123
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1228,7 +1231,10 @@ namespace Google.Shopping.Css.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The name of the CSS product input resource to delete.
-    /// Format: accounts/{account}/cssProductInputs/{css_product_input}
+    /// Format: accounts/{account}/cssProductInputs/{css_product_input}, where the
+    /// last section `css_product_input` consists of 3 parts:
+    /// contentLanguage~feedLabel~offerId. Example:
+    /// accounts/123/cssProductInputs/de~DE~rawProvidedId123
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
