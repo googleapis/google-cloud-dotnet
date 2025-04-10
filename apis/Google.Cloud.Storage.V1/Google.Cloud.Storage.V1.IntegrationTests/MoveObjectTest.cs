@@ -38,12 +38,10 @@ public class MoveObjectTest
     {
         _fixture = fixture;
         _bucket = _fixture.HnsBucket;
-        _name1 = IdGenerator.FromGuid();
-        _name2 = IdGenerator.FromGuid();
-        _contentType1 = "application/octet-stream";
-        _contentType2 = "application/x-replaced";
-        _source1 = GenerateData(100);
-        _source2 = GenerateData(50);
+        _originName = IdGenerator.FromGuid();
+        _destinationName = IdGenerator.FromGuid();
+        _contentType = "application/octet-stream";
+        _data = GenerateData(100);
     }
 
     // Moves an object within a hierarchical namespace enabled bucket.
