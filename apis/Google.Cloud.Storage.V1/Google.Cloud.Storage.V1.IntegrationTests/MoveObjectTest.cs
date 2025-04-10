@@ -48,18 +48,17 @@ public class MoveObjectTest
     [Fact]
     public async Task MoveObjectAsync()
     {
-        var actual = await _fixture.Client.UploadObjectAsync(_bucket, _name1, _contentType1, _source1);
-        _fixture.Client.UploadObject(_bucket, _name2, _contentType2, _source2);
-        var expected = await _fixture.Client.MoveObjectAsync(_bucket, actual.Name, _name2);
+        await _fixture.Client.UploadObjectAsync(_bucket, _originName, _contentType, _data);
+        
+        await _fixture.Client.MoveObjectAsync(_bucket, _originName, _destinationName);
+        
+        var objects = _fixture.Client.ListObjects(_bucket);        
+        Assert.DoesNotContain(objects, obj => obj.Name == _originName);
+        Assert.Contains(objects, obj => obj.Name == _destinationName);
+        
         using var stream = new MemoryStream();
-        await _fixture.Client.DownloadObjectAsync(_bucket, _name2, stream);
-        // Assert that the content of the destination object is the same as the source object.
-        Assert.Equal(_source1.ToArray(), stream.ToArray());
-        var objects = _fixture.Client.ListObjects(_bucket).ToList();
-        // Assert that the destination object exists after the move.
-        Assert.Contains(objects, obj => obj.Name == expected.Name && obj.Generation == expected.Generation);
-        // Assert that the source object does not exist after the move.
-        Assert.DoesNotContain(objects, obj => obj.Name == actual.Name && obj.Generation == actual.Generation);
+        await _fixture.Client.DownloadObjectAsync(_bucket, _destinationName, stream);
+        Assert.Equal(_data.ToArray(), stream.ToArray());
     }
 
     // Move an object to a folders and subfolders by creating folders and subfolders if necessary.
