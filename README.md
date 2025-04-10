@@ -13,7 +13,6 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Shopping.Css.V1](https://googleapis.dev/dotnet/Google.Shopping.Css.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Shopping.Css.V1)](https://nuget.org/packages/Google.Shopping.Css.V1) | [CSS](https://developers.google.com/comparison-shopping-services/api) |
 
 If you need support for other Google APIs, check out the
 [Google .NET API Client library](https://github.com/google/google-api-dotnet-client)
