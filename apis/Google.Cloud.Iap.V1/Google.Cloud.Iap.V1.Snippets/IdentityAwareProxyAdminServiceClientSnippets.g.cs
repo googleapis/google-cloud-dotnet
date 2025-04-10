@@ -196,6 +196,41 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ValidateIapAttributeExpression</summary>
+        public void ValidateIapAttributeExpressionRequestObject()
+        {
+            // Snippet: ValidateIapAttributeExpression(ValidateIapAttributeExpressionRequest, CallSettings)
+            // Create client
+            IdentityAwareProxyAdminServiceClient identityAwareProxyAdminServiceClient = IdentityAwareProxyAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ValidateIapAttributeExpressionRequest request = new ValidateIapAttributeExpressionRequest
+            {
+                Name = "",
+                Expression = "",
+            };
+            // Make the request
+            ValidateIapAttributeExpressionResponse response = identityAwareProxyAdminServiceClient.ValidateIapAttributeExpression(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ValidateIapAttributeExpressionAsync</summary>
+        public async Task ValidateIapAttributeExpressionRequestObjectAsync()
+        {
+            // Snippet: ValidateIapAttributeExpressionAsync(ValidateIapAttributeExpressionRequest, CallSettings)
+            // Additional: ValidateIapAttributeExpressionAsync(ValidateIapAttributeExpressionRequest, CancellationToken)
+            // Create client
+            IdentityAwareProxyAdminServiceClient identityAwareProxyAdminServiceClient = await IdentityAwareProxyAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ValidateIapAttributeExpressionRequest request = new ValidateIapAttributeExpressionRequest
+            {
+                Name = "",
+                Expression = "",
+            };
+            // Make the request
+            ValidateIapAttributeExpressionResponse response = await identityAwareProxyAdminServiceClient.ValidateIapAttributeExpressionAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListTunnelDestGroups</summary>
         public void ListTunnelDestGroupsRequestObject()
         {

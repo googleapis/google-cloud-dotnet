@@ -13,7 +13,7 @@ Each package name links to the documentation for that package.
 
 | Package | Latest version | Description |
 |---------|----------------|-------------|
-| [Google.Cloud.Firestore.Admin.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore.Admin.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.Firestore.Admin.V1)](https://nuget.org/packages/Google.Cloud.Firestore.Admin.V1) | [Firestore Administration (e.g. index management)](https://firebase.google.com) |
+| [Google.Cloud.Iap.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Iap.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.Iap.V1)](https://nuget.org/packages/Google.Cloud.Iap.V1) | [Cloud Identity-Aware Proxy](https://cloud.google.com/iap/docs/) |
 
 If you need support for other Google APIs, check out the
 [Google .NET API Client library](https://github.com/google/google-api-dotnet-client)

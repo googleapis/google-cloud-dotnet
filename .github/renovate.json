@@ -8,7 +8,7 @@
   ],
   "ignorePaths": [
     "issues/**",
-    "apis/Google.Cloud.Firestore.Admin.V1/Google.Cloud.Firestore.Admin.V1/**"
+    "apis/Google.Cloud.Iap.V1/Google.Cloud.Iap.V1/**"
   ],
   "ignoreDeps": [
     "Grpc.Core",

@@ -54,6 +54,7 @@ namespace Google.Cloud.Iap.V1
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             GetIapSettingsSettings = existing.GetIapSettingsSettings;
             UpdateIapSettingsSettings = existing.UpdateIapSettingsSettings;
+            ValidateIapAttributeExpressionSettings = existing.ValidateIapAttributeExpressionSettings;
             ListTunnelDestGroupsSettings = existing.ListTunnelDestGroupsSettings;
             CreateTunnelDestGroupSettings = existing.CreateTunnelDestGroupSettings;
             GetTunnelDestGroupSettings = existing.GetTunnelDestGroupSettings;
@@ -128,6 +129,19 @@ namespace Google.Cloud.Iap.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateIapSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IdentityAwareProxyAdminServiceClient.ValidateIapAttributeExpression</c> and
+        /// <c>IdentityAwareProxyAdminServiceClient.ValidateIapAttributeExpressionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ValidateIapAttributeExpressionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -503,6 +517,33 @@ namespace Google.Cloud.Iap.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<IapSettings> UpdateIapSettingsAsync(UpdateIapSettingsRequest request, st::CancellationToken cancellationToken) =>
             UpdateIapSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Validates that a given CEL expression conforms to IAP restrictions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ValidateIapAttributeExpressionResponse ValidateIapAttributeExpression(ValidateIapAttributeExpressionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Validates that a given CEL expression conforms to IAP restrictions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValidateIapAttributeExpressionResponse> ValidateIapAttributeExpressionAsync(ValidateIapAttributeExpressionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Validates that a given CEL expression conforms to IAP restrictions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ValidateIapAttributeExpressionResponse> ValidateIapAttributeExpressionAsync(ValidateIapAttributeExpressionRequest request, st::CancellationToken cancellationToken) =>
+            ValidateIapAttributeExpressionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists the existing TunnelDestGroups. To group across all locations, use a
@@ -1197,6 +1238,8 @@ namespace Google.Cloud.Iap.V1
 
         private readonly gaxgrpc::ApiCall<UpdateIapSettingsRequest, IapSettings> _callUpdateIapSettings;
 
+        private readonly gaxgrpc::ApiCall<ValidateIapAttributeExpressionRequest, ValidateIapAttributeExpressionResponse> _callValidateIapAttributeExpression;
+
         private readonly gaxgrpc::ApiCall<ListTunnelDestGroupsRequest, ListTunnelDestGroupsResponse> _callListTunnelDestGroups;
 
         private readonly gaxgrpc::ApiCall<CreateTunnelDestGroupRequest, TunnelDestGroup> _callCreateTunnelDestGroup;
@@ -1240,6 +1283,9 @@ namespace Google.Cloud.Iap.V1
             _callUpdateIapSettings = clientHelper.BuildApiCall<UpdateIapSettingsRequest, IapSettings>("UpdateIapSettings", grpcClient.UpdateIapSettingsAsync, grpcClient.UpdateIapSettings, effectiveSettings.UpdateIapSettingsSettings).WithGoogleRequestParam("iap_settings.name", request => request.IapSettings?.Name);
             Modify_ApiCall(ref _callUpdateIapSettings);
             Modify_UpdateIapSettingsApiCall(ref _callUpdateIapSettings);
+            _callValidateIapAttributeExpression = clientHelper.BuildApiCall<ValidateIapAttributeExpressionRequest, ValidateIapAttributeExpressionResponse>("ValidateIapAttributeExpression", grpcClient.ValidateIapAttributeExpressionAsync, grpcClient.ValidateIapAttributeExpression, effectiveSettings.ValidateIapAttributeExpressionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callValidateIapAttributeExpression);
+            Modify_ValidateIapAttributeExpressionApiCall(ref _callValidateIapAttributeExpression);
             _callListTunnelDestGroups = clientHelper.BuildApiCall<ListTunnelDestGroupsRequest, ListTunnelDestGroupsResponse>("ListTunnelDestGroups", grpcClient.ListTunnelDestGroupsAsync, grpcClient.ListTunnelDestGroups, effectiveSettings.ListTunnelDestGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTunnelDestGroups);
             Modify_ListTunnelDestGroupsApiCall(ref _callListTunnelDestGroups);
@@ -1270,6 +1316,8 @@ namespace Google.Cloud.Iap.V1
 
         partial void Modify_UpdateIapSettingsApiCall(ref gaxgrpc::ApiCall<UpdateIapSettingsRequest, IapSettings> call);
 
+        partial void Modify_ValidateIapAttributeExpressionApiCall(ref gaxgrpc::ApiCall<ValidateIapAttributeExpressionRequest, ValidateIapAttributeExpressionResponse> call);
+
         partial void Modify_ListTunnelDestGroupsApiCall(ref gaxgrpc::ApiCall<ListTunnelDestGroupsRequest, ListTunnelDestGroupsResponse> call);
 
         partial void Modify_CreateTunnelDestGroupApiCall(ref gaxgrpc::ApiCall<CreateTunnelDestGroupRequest, TunnelDestGroup> call);
@@ -1294,6 +1342,8 @@ namespace Google.Cloud.Iap.V1
         partial void Modify_GetIapSettingsRequest(ref GetIapSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateIapSettingsRequest(ref UpdateIapSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ValidateIapAttributeExpressionRequest(ref ValidateIapAttributeExpressionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTunnelDestGroupsRequest(ref ListTunnelDestGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1443,6 +1493,30 @@ namespace Google.Cloud.Iap.V1
         {
             Modify_UpdateIapSettingsRequest(ref request, ref callSettings);
             return _callUpdateIapSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Validates that a given CEL expression conforms to IAP restrictions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ValidateIapAttributeExpressionResponse ValidateIapAttributeExpression(ValidateIapAttributeExpressionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ValidateIapAttributeExpressionRequest(ref request, ref callSettings);
+            return _callValidateIapAttributeExpression.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Validates that a given CEL expression conforms to IAP restrictions.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ValidateIapAttributeExpressionResponse> ValidateIapAttributeExpressionAsync(ValidateIapAttributeExpressionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ValidateIapAttributeExpressionRequest(ref request, ref callSettings);
+            return _callValidateIapAttributeExpression.Async(request, callSettings);
         }
 
         /// <summary>
