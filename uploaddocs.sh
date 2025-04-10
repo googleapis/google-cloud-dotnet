@@ -19,7 +19,11 @@ do
   pair=$(basename $nupkg | sed -r 's/^(.*)\.([0-9]+\.[0-9]+\.[0-9]+(-.*)?)\.nupkg$/\1 \2/g')
   pkg=$(echo $pair | cut -d\  -f 1)
   version=$(echo $pair | cut -d\  -f 2)
-  
+
+  # Legacy comment - as of 2025-04-10 I (jonskeet@google.com) believe the comment
+  # below to be untrue (and massively out of date) but I'll leave the comment and
+  # logic in place for now, in the hope that we can remove this script entirely.
+  #
   # Currently we don't generate documentation for libraries such as
   # Google.Cloud.Spanner.V1.Common. When we've moved entirely to googleapis.dev,
   # we can change this to generate reference documentation for all packages.
