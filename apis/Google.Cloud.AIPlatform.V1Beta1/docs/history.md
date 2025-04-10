@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta25, released 2025-04-10
+
+### New features
+
+- Add global quota config to vertex rag engine api
+- add FeatureViewDirectWrite API
+- add Gen AI logging public preview API
+
 ## Version 1.0.0-beta24, released 2025-03-31
 
 ### New features
