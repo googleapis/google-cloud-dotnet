@@ -1,0 +1,1283 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.DeviceStreaming.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.devicestreaming.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_CreateDeviceSession_sync",
+      "title": "CreateDeviceSessionRequestObject",
+      "description": "Snippet for CreateDeviceSession",
+      "file": "DirectAccessServiceClient.CreateDeviceSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.CreateDeviceSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.CreateDeviceSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.CreateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_CreateDeviceSession_async",
+      "title": "CreateDeviceSessionRequestObjectAsync",
+      "description": "Snippet for CreateDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.CreateDeviceSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.CreateDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.CreateDeviceSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.CreateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 48,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 46,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_CreateDeviceSession_sync_flattened",
+      "title": "CreateDeviceSession",
+      "description": "Snippet for CreateDeviceSession",
+      "file": "DirectAccessServiceClient.CreateDeviceSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.CreateDeviceSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+            "name": "deviceSession"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.CreateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_CreateDeviceSession_async_flattened",
+      "title": "CreateDeviceSessionAsync",
+      "description": "Snippet for CreateDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.CreateDeviceSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.CreateDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+            "name": "deviceSession"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.CreateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_CreateDeviceSession_sync_flattened_resourceNames",
+      "title": "CreateDeviceSessionResourceNames",
+      "description": "Snippet for CreateDeviceSession",
+      "file": "DirectAccessServiceClient.CreateDeviceSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.CreateDeviceSession",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+            "name": "deviceSession"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.CreateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_CreateDeviceSession_async_flattened_resourceNames",
+      "title": "CreateDeviceSessionResourceNamesAsync",
+      "description": "Snippet for CreateDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.CreateDeviceSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.CreateDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+            "name": "deviceSession"
+          },
+          {
+            "type": "System.String",
+            "name": "deviceSessionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CreateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.CreateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_ListDeviceSessions_sync",
+      "title": "ListDeviceSessionsRequestObject",
+      "description": "Snippet for ListDeviceSessions",
+      "file": "DirectAccessServiceClient.ListDeviceSessionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeviceSessions",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.ListDeviceSessions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.ListDeviceSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeviceStreaming.V1.ListDeviceSessionsResponse, Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeviceSessions",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.ListDeviceSessions",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_ListDeviceSessions_async",
+      "title": "ListDeviceSessionsRequestObjectAsync",
+      "description": "Snippet for ListDeviceSessionsAsync",
+      "file": "DirectAccessServiceClient.ListDeviceSessionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeviceSessionsAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.ListDeviceSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.ListDeviceSessionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeviceStreaming.V1.ListDeviceSessionsResponse, Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeviceSessions",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.ListDeviceSessions",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_ListDeviceSessions_sync_flattened",
+      "title": "ListDeviceSessions",
+      "description": "Snippet for ListDeviceSessions",
+      "file": "DirectAccessServiceClient.ListDeviceSessionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeviceSessions",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.ListDeviceSessions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeviceStreaming.V1.ListDeviceSessionsResponse, Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeviceSessions",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.ListDeviceSessions",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_ListDeviceSessions_async_flattened",
+      "title": "ListDeviceSessionsAsync",
+      "description": "Snippet for ListDeviceSessionsAsync",
+      "file": "DirectAccessServiceClient.ListDeviceSessionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeviceSessionsAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.ListDeviceSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeviceStreaming.V1.ListDeviceSessionsResponse, Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeviceSessions",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.ListDeviceSessions",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_ListDeviceSessions_sync_flattened_resourceNames",
+      "title": "ListDeviceSessionsResourceNames",
+      "description": "Snippet for ListDeviceSessions",
+      "file": "DirectAccessServiceClient.ListDeviceSessionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeviceSessions",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.ListDeviceSessions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DeviceStreaming.V1.ListDeviceSessionsResponse, Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeviceSessions",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.ListDeviceSessions",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_ListDeviceSessions_async_flattened_resourceNames",
+      "title": "ListDeviceSessionsResourceNamesAsync",
+      "description": "Snippet for ListDeviceSessionsAsync",
+      "file": "DirectAccessServiceClient.ListDeviceSessionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListDeviceSessionsAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.ListDeviceSessionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DeviceStreaming.V1.ListDeviceSessionsResponse, Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "ListDeviceSessions",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.ListDeviceSessions",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_GetDeviceSession_sync",
+      "title": "GetDeviceSessionRequestObject",
+      "description": "Snippet for GetDeviceSession",
+      "file": "DirectAccessServiceClient.GetDeviceSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.GetDeviceSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.GetDeviceSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.GetDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_GetDeviceSession_async",
+      "title": "GetDeviceSessionRequestObjectAsync",
+      "description": "Snippet for GetDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.GetDeviceSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.GetDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.GetDeviceSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.GetDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_GetDeviceSession_sync_flattened",
+      "title": "GetDeviceSession",
+      "description": "Snippet for GetDeviceSession",
+      "file": "DirectAccessServiceClient.GetDeviceSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.GetDeviceSession",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.GetDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_GetDeviceSession_async_flattened",
+      "title": "GetDeviceSessionAsync",
+      "description": "Snippet for GetDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.GetDeviceSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.GetDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.GetDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_GetDeviceSession_sync_flattened_resourceNames",
+      "title": "GetDeviceSessionResourceNames",
+      "description": "Snippet for GetDeviceSession",
+      "file": "DirectAccessServiceClient.GetDeviceSessionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.GetDeviceSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.DeviceSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.GetDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_GetDeviceSession_async_flattened_resourceNames",
+      "title": "GetDeviceSessionResourceNamesAsync",
+      "description": "Snippet for GetDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.GetDeviceSessionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.GetDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.DeviceSessionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "GetDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.GetDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_CancelDeviceSession_sync",
+      "title": "CancelDeviceSessionRequestObject",
+      "description": "Snippet for CancelDeviceSession",
+      "file": "DirectAccessServiceClient.CancelDeviceSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.CancelDeviceSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.CancelDeviceSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CancelDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.CancelDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_CancelDeviceSession_async",
+      "title": "CancelDeviceSessionRequestObjectAsync",
+      "description": "Snippet for CancelDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.CancelDeviceSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.CancelDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.CancelDeviceSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "CancelDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.CancelDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_UpdateDeviceSession_sync",
+      "title": "UpdateDeviceSessionRequestObject",
+      "description": "Snippet for UpdateDeviceSession",
+      "file": "DirectAccessServiceClient.UpdateDeviceSessionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.UpdateDeviceSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.UpdateDeviceSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.UpdateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_UpdateDeviceSession_async",
+      "title": "UpdateDeviceSessionRequestObjectAsync",
+      "description": "Snippet for UpdateDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.UpdateDeviceSessionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.UpdateDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.UpdateDeviceSessionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.UpdateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_UpdateDeviceSession_sync_flattened",
+      "title": "UpdateDeviceSession",
+      "description": "Snippet for UpdateDeviceSession",
+      "file": "DirectAccessServiceClient.UpdateDeviceSessionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeviceSession",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.UpdateDeviceSession",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+            "name": "deviceSession"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.UpdateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_UpdateDeviceSession_async_flattened",
+      "title": "UpdateDeviceSessionAsync",
+      "description": "Snippet for UpdateDeviceSessionAsync",
+      "file": "DirectAccessServiceClient.UpdateDeviceSessionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateDeviceSessionAsync",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.UpdateDeviceSessionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DeviceStreaming.V1.DeviceSession",
+            "name": "deviceSession"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.DeviceStreaming.V1.DeviceSession>",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateDeviceSession",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.UpdateDeviceSession",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "devicestreaming_v1_generated_DirectAccessService_AdbConnect_sync",
+      "title": "AdbConnect",
+      "description": "Snippet for AdbConnect",
+      "file": "DirectAccessServiceClient.AdbConnectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AdbConnect",
+        "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient.AdbConnect",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.BidirectionalStreamingSettings",
+            "name": "streamingSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient+AdbConnectStream",
+        "client": {
+          "shortName": "DirectAccessServiceClient",
+          "fullName": "Google.Cloud.DeviceStreaming.V1.DirectAccessServiceClient"
+        },
+        "method": {
+          "shortName": "AdbConnect",
+          "fullName": "google.cloud.devicestreaming.v1.DirectAccessService.AdbConnect",
+          "service": {
+            "shortName": "DirectAccessService",
+            "fullName": "google.cloud.devicestreaming.v1.DirectAccessService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 74,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 72,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
