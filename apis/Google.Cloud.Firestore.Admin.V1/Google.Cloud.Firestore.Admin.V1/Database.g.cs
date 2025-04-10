@@ -28,7 +28,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "b29nbGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29n",
             "bGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8i3BMKCERhdGFiYXNlEgwKBG5hbWUYASABKAkSEAoD",
+            "aW1lc3RhbXAucHJvdG8irhUKCERhdGFiYXNlEgwKBG5hbWUYASABKAkSEAoD",
             "dWlkGAMgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYBSABKAsyGi5nb29nbGUu",
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBiABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLZGVsZXRlX3Rp",
@@ -50,52 +50,57 @@ namespace Google.Cloud.Firestore.Admin.V1 {
             "ZxgXIAEoCzIuLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuRGF0YWJhc2Uu",
             "Q21la0NvbmZpZ0ID4EEBEhgKC3ByZXZpb3VzX2lkGBkgASgJQgPgQQMSSAoL",
             "c291cmNlX2luZm8YGiABKAsyLi5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYx",
-            "LkRhdGFiYXNlLlNvdXJjZUluZm9CA+BBAxIMCgRldGFnGGMgASgJGkgKCkNt",
-            "ZWtDb25maWcSGQoMa21zX2tleV9uYW1lGAEgASgJQgPgQQISHwoSYWN0aXZl",
-            "X2tleV92ZXJzaW9uGAIgAygJQgPgQQMa5wEKClNvdXJjZUluZm8STQoGYmFj",
-            "a3VwGAEgASgLMjsuZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MS5EYXRhYmFz",
-            "ZS5Tb3VyY2VJbmZvLkJhY2t1cFNvdXJjZUgAEjoKCW9wZXJhdGlvbhgDIAEo",
-            "CUIn+kEkCiJmaXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vT3BlcmF0aW9uGkQK",
-            "DEJhY2t1cFNvdXJjZRI0CgZiYWNrdXAYASABKAlCJPpBIQofZmlyZXN0b3Jl",
-            "Lmdvb2dsZWFwaXMuY29tL0JhY2t1cEIICgZzb3VyY2UaiAQKEEVuY3J5cHRp",
-            "b25Db25maWcSeAoZZ29vZ2xlX2RlZmF1bHRfZW5jcnlwdGlvbhgBIAEoCzJT",
-            "Lmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuRGF0YWJhc2UuRW5jcnlwdGlv",
-            "bkNvbmZpZy5Hb29nbGVEZWZhdWx0RW5jcnlwdGlvbk9wdGlvbnNIABJtChV1",
-            "c2Vfc291cmNlX2VuY3J5cHRpb24YAiABKAsyTC5nb29nbGUuZmlyZXN0b3Jl",
-            "LmFkbWluLnYxLkRhdGFiYXNlLkVuY3J5cHRpb25Db25maWcuU291cmNlRW5j",
-            "cnlwdGlvbk9wdGlvbnNIABJ8ChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRp",
-            "b24YAyABKAsyVS5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNl",
-            "LkVuY3J5cHRpb25Db25maWcuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvbk9w",
-            "dGlvbnNIABogCh5Hb29nbGVEZWZhdWx0RW5jcnlwdGlvbk9wdGlvbnMaGQoX",
-            "U291cmNlRW5jcnlwdGlvbk9wdGlvbnMaPQogQ3VzdG9tZXJNYW5hZ2VkRW5j",
-            "cnlwdGlvbk9wdGlvbnMSGQoMa21zX2tleV9uYW1lGAEgASgJQgPgQQJCEQoP",
-            "ZW5jcnlwdGlvbl90eXBlIlcKDERhdGFiYXNlVHlwZRIdChlEQVRBQkFTRV9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASFAoQRklSRVNUT1JFX05BVElWRRABEhIKDkRB",
-            "VEFTVE9SRV9NT0RFEAIidwoPQ29uY3VycmVuY3lNb2RlEiAKHENPTkNVUlJF",
-            "TkNZX01PREVfVU5TUEVDSUZJRUQQABIOCgpPUFRJTUlTVElDEAESDwoLUEVT",
-            "U0lNSVNUSUMQAhIhCh1PUFRJTUlTVElDX1dJVEhfRU5USVRZX0dST1VQUxAD",
-            "IpsBCh1Qb2ludEluVGltZVJlY292ZXJ5RW5hYmxlbWVudBIxCi1QT0lOVF9J",
-            "Tl9USU1FX1JFQ09WRVJZX0VOQUJMRU1FTlRfVU5TUEVDSUZJRUQQABIiCh5Q",
-            "T0lOVF9JTl9USU1FX1JFQ09WRVJZX0VOQUJMRUQQARIjCh9QT0lOVF9JTl9U",
-            "SU1FX1JFQ09WRVJZX0RJU0FCTEVEEAIiYgoYQXBwRW5naW5lSW50ZWdyYXRp",
-            "b25Nb2RlEisKJ0FQUF9FTkdJTkVfSU5URUdSQVRJT05fTU9ERV9VTlNQRUNJ",
-            "RklFRBAAEgsKB0VOQUJMRUQQARIMCghESVNBQkxFRBACIn8KFURlbGV0ZVBy",
-            "b3RlY3Rpb25TdGF0ZRInCiNERUxFVEVfUFJPVEVDVElPTl9TVEFURV9VTlNQ",
-            "RUNJRklFRBAAEh4KGkRFTEVURV9QUk9URUNUSU9OX0RJU0FCTEVEEAESHQoZ",
-            "REVMRVRFX1BST1RFQ1RJT05fRU5BQkxFRBACOlLqQU8KIWZpcmVzdG9yZS5n",
-            "b29nbGVhcGlzLmNvbS9EYXRhYmFzZRIncHJvamVjdHMve3Byb2plY3R9L2Rh",
-            "dGFiYXNlcy97ZGF0YWJhc2V9UgEBQsMCCh1jb20uZ29vZ2xlLmZpcmVzdG9y",
-            "ZS5hZG1pbi52MUINRGF0YWJhc2VQcm90b1ABWjljbG91ZC5nb29nbGUuY29t",
-            "L2dvL2ZpcmVzdG9yZS9hcGl2MS9hZG1pbi9hZG1pbnBiO2FkbWlucGKiAgRH",
-            "Q0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoCH0dvb2ds",
-            "ZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5cVjHqAiNHb29nbGU6OkNsb3VkOjpG",
-            "aXJlc3RvcmU6OkFkbWluOjpWMepBZAoiZmlyZXN0b3JlLmdvb2dsZWFwaXMu",
-            "Y29tL09wZXJhdGlvbhI+cHJvamVjdHMve3Byb2plY3R9L2RhdGFiYXNlcy97",
-            "ZGF0YWJhc2V9L29wZXJhdGlvbnMve29wZXJhdGlvbn1iBnByb3RvMw=="));
+            "LkRhdGFiYXNlLlNvdXJjZUluZm9CA+BBAxIbCglmcmVlX3RpZXIYHiABKAhC",
+            "A+BBA0gAiAEBEgwKBGV0YWcYYyABKAkSUgoQZGF0YWJhc2VfZWRpdGlvbhgc",
+            "IAEoDjIzLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuRGF0YWJhc2UuRGF0",
+            "YWJhc2VFZGl0aW9uQgPgQQUaSAoKQ21la0NvbmZpZxIZCgxrbXNfa2V5X25h",
+            "bWUYASABKAlCA+BBAhIfChJhY3RpdmVfa2V5X3ZlcnNpb24YAiADKAlCA+BB",
+            "AxrnAQoKU291cmNlSW5mbxJNCgZiYWNrdXAYASABKAsyOy5nb29nbGUuZmly",
+            "ZXN0b3JlLmFkbWluLnYxLkRhdGFiYXNlLlNvdXJjZUluZm8uQmFja3VwU291",
+            "cmNlSAASOgoJb3BlcmF0aW9uGAMgASgJQif6QSQKImZpcmVzdG9yZS5nb29n",
+            "bGVhcGlzLmNvbS9PcGVyYXRpb24aRAoMQmFja3VwU291cmNlEjQKBmJhY2t1",
+            "cBgBIAEoCUIk+kEhCh9maXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vQmFja3Vw",
+            "QggKBnNvdXJjZRqIBAoQRW5jcnlwdGlvbkNvbmZpZxJ4Chlnb29nbGVfZGVm",
+            "YXVsdF9lbmNyeXB0aW9uGAEgASgLMlMuZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
+            "bi52MS5EYXRhYmFzZS5FbmNyeXB0aW9uQ29uZmlnLkdvb2dsZURlZmF1bHRF",
+            "bmNyeXB0aW9uT3B0aW9uc0gAEm0KFXVzZV9zb3VyY2VfZW5jcnlwdGlvbhgC",
+            "IAEoCzJMLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuRGF0YWJhc2UuRW5j",
+            "cnlwdGlvbkNvbmZpZy5Tb3VyY2VFbmNyeXB0aW9uT3B0aW9uc0gAEnwKG2N1",
+            "c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgDIAEoCzJVLmdvb2dsZS5maXJl",
+            "c3RvcmUuYWRtaW4udjEuRGF0YWJhc2UuRW5jcnlwdGlvbkNvbmZpZy5DdXN0",
+            "b21lck1hbmFnZWRFbmNyeXB0aW9uT3B0aW9uc0gAGiAKHkdvb2dsZURlZmF1",
+            "bHRFbmNyeXB0aW9uT3B0aW9ucxoZChdTb3VyY2VFbmNyeXB0aW9uT3B0aW9u",
+            "cxo9CiBDdXN0b21lck1hbmFnZWRFbmNyeXB0aW9uT3B0aW9ucxIZCgxrbXNf",
+            "a2V5X25hbWUYASABKAlCA+BBAkIRCg9lbmNyeXB0aW9uX3R5cGUiVwoMRGF0",
+            "YWJhc2VUeXBlEh0KGURBVEFCQVNFX1RZUEVfVU5TUEVDSUZJRUQQABIUChBG",
+            "SVJFU1RPUkVfTkFUSVZFEAESEgoOREFUQVNUT1JFX01PREUQAiJ3Cg9Db25j",
+            "dXJyZW5jeU1vZGUSIAocQ09OQ1VSUkVOQ1lfTU9ERV9VTlNQRUNJRklFRBAA",
+            "Eg4KCk9QVElNSVNUSUMQARIPCgtQRVNTSU1JU1RJQxACEiEKHU9QVElNSVNU",
+            "SUNfV0lUSF9FTlRJVFlfR1JPVVBTEAMimwEKHVBvaW50SW5UaW1lUmVjb3Zl",
+            "cnlFbmFibGVtZW50EjEKLVBPSU5UX0lOX1RJTUVfUkVDT1ZFUllfRU5BQkxF",
+            "TUVOVF9VTlNQRUNJRklFRBAAEiIKHlBPSU5UX0lOX1RJTUVfUkVDT1ZFUllf",
+            "RU5BQkxFRBABEiMKH1BPSU5UX0lOX1RJTUVfUkVDT1ZFUllfRElTQUJMRUQQ",
+            "AiJiChhBcHBFbmdpbmVJbnRlZ3JhdGlvbk1vZGUSKwonQVBQX0VOR0lORV9J",
+            "TlRFR1JBVElPTl9NT0RFX1VOU1BFQ0lGSUVEEAASCwoHRU5BQkxFRBABEgwK",
+            "CERJU0FCTEVEEAIifwoVRGVsZXRlUHJvdGVjdGlvblN0YXRlEicKI0RFTEVU",
+            "RV9QUk9URUNUSU9OX1NUQVRFX1VOU1BFQ0lGSUVEEAASHgoaREVMRVRFX1BS",
+            "T1RFQ1RJT05fRElTQUJMRUQQARIdChlERUxFVEVfUFJPVEVDVElPTl9FTkFC",
+            "TEVEEAIiUQoPRGF0YWJhc2VFZGl0aW9uEiAKHERBVEFCQVNFX0VESVRJT05f",
+            "VU5TUEVDSUZJRUQQABIMCghTVEFOREFSRBABEg4KCkVOVEVSUFJJU0UQAjpS",
+            "6kFPCiFmaXJlc3RvcmUuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USJ3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9kYXRhYmFzZXMve2RhdGFiYXNlfVIBAUIMCgpfZnJl",
+            "ZV90aWVyQsMCCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1pbi52MUINRGF0",
+            "YWJhc2VQcm90b1ABWjljbG91ZC5nb29nbGUuY29tL2dvL2ZpcmVzdG9yZS9h",
+            "cGl2MS9hZG1pbi9hZG1pbnBiO2FkbWlucGKiAgRHQ0ZTqgIfR29vZ2xlLkNs",
+            "b3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoCH0dvb2dsZVxDbG91ZFxGaXJlc3Rv",
+            "cmVcQWRtaW5cVjHqAiNHb29nbGU6OkNsb3VkOjpGaXJlc3RvcmU6OkFkbWlu",
+            "OjpWMepBZAoiZmlyZXN0b3JlLmdvb2dsZWFwaXMuY29tL09wZXJhdGlvbhI+",
+            "cHJvamVjdHMve3Byb2plY3R9L2RhdGFiYXNlcy97ZGF0YWJhc2V9L29wZXJh",
+            "dGlvbnMve29wZXJhdGlvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database), global::Google.Cloud.Firestore.Admin.V1.Database.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "LocationId", "Type", "ConcurrencyMode", "VersionRetentionPeriod", "EarliestVersionTime", "PointInTimeRecoveryEnablement", "AppEngineIntegrationMode", "KeyPrefix", "DeleteProtectionState", "CmekConfig", "PreviousId", "SourceInfo", "Etag" }, null, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.CmekConfig), global::Google.Cloud.Firestore.Admin.V1.Database.Types.CmekConfig.Parser, new[]{ "KmsKeyName", "ActiveKeyVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database), global::Google.Cloud.Firestore.Admin.V1.Database.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "DeleteTime", "LocationId", "Type", "ConcurrencyMode", "VersionRetentionPeriod", "EarliestVersionTime", "PointInTimeRecoveryEnablement", "AppEngineIntegrationMode", "KeyPrefix", "DeleteProtectionState", "CmekConfig", "PreviousId", "SourceInfo", "FreeTier", "Etag", "DatabaseEdition" }, new[]{ "FreeTier" }, new[]{ typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseType), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.ConcurrencyMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.PointInTimeRecoveryEnablement), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.AppEngineIntegrationMode), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DeleteProtectionState), typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.CmekConfig), global::Google.Cloud.Firestore.Admin.V1.Database.Types.CmekConfig.Parser, new[]{ "KmsKeyName", "ActiveKeyVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.SourceInfo), global::Google.Cloud.Firestore.Admin.V1.Database.Types.SourceInfo.Parser, new[]{ "Backup", "Operation" }, new[]{ "Source" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.SourceInfo.Types.BackupSource), global::Google.Cloud.Firestore.Admin.V1.Database.Types.SourceInfo.Types.BackupSource.Parser, new[]{ "Backup" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.EncryptionConfig), global::Google.Cloud.Firestore.Admin.V1.Database.Types.EncryptionConfig.Parser, new[]{ "GoogleDefaultEncryption", "UseSourceEncryption", "CustomerManagedEncryption" }, new[]{ "EncryptionType" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.EncryptionConfig.Types.GoogleDefaultEncryptionOptions), global::Google.Cloud.Firestore.Admin.V1.Database.Types.EncryptionConfig.Types.GoogleDefaultEncryptionOptions.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Database.Types.EncryptionConfig.Types.SourceEncryptionOptions), global::Google.Cloud.Firestore.Admin.V1.Database.Types.EncryptionConfig.Types.SourceEncryptionOptions.Parser, null, null, null, null, null),
@@ -117,6 +122,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
   {
     private static readonly pb::MessageParser<Database> _parser = new pb::MessageParser<Database>(() => new Database());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Database> Parser { get { return _parser; } }
@@ -144,6 +150,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Database(Database other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       uid_ = other.uid_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -161,7 +168,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       cmekConfig_ = other.cmekConfig_ != null ? other.cmekConfig_.Clone() : null;
       previousId_ = other.previousId_;
       sourceInfo_ = other.sourceInfo_ != null ? other.sourceInfo_.Clone() : null;
+      freeTier_ = other.freeTier_;
       etag_ = other.etag_;
+      databaseEdition_ = other.databaseEdition_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -457,6 +466,46 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       }
     }
 
+    /// <summary>Field number for the "free_tier" field.</summary>
+    public const int FreeTierFieldNumber = 30;
+    private readonly static bool FreeTierDefaultValue = false;
+
+    private bool freeTier_;
+    /// <summary>
+    /// Output only. Background: Free tier is the ability of a Firestore database
+    /// to use a small amount of resources every day without being charged. Once
+    /// usage exceeds the free tier limit further usage is charged.
+    ///
+    /// Whether this database can make use of the free tier. Only one database
+    /// per project can be eligible for the free tier.
+    ///
+    /// The first (or next) database that is created in a project without a free
+    /// tier database will be marked as eligible for the free tier. Databases that
+    /// are created while there is a free tier database will not be eligible for
+    /// the free tier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool FreeTier {
+      get { if ((_hasBits0 & 1) != 0) { return freeTier_; } else { return FreeTierDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        freeTier_ = value;
+      }
+    }
+    /// <summary>Gets whether the "free_tier" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFreeTier {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "free_tier" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFreeTier() {
+      _hasBits0 &= ~1;
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
@@ -471,6 +520,21 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       get { return etag_; }
       set {
         etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "database_edition" field.</summary>
+    public const int DatabaseEditionFieldNumber = 28;
+    private global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition databaseEdition_ = global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition.Unspecified;
+    /// <summary>
+    /// Immutable. The edition of the database.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition DatabaseEdition {
+      get { return databaseEdition_; }
+      set {
+        databaseEdition_ = value;
       }
     }
 
@@ -506,7 +570,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (!object.Equals(CmekConfig, other.CmekConfig)) return false;
       if (PreviousId != other.PreviousId) return false;
       if (!object.Equals(SourceInfo, other.SourceInfo)) return false;
+      if (FreeTier != other.FreeTier) return false;
       if (Etag != other.Etag) return false;
+      if (DatabaseEdition != other.DatabaseEdition) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -531,7 +597,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (cmekConfig_ != null) hash ^= CmekConfig.GetHashCode();
       if (PreviousId.Length != 0) hash ^= PreviousId.GetHashCode();
       if (sourceInfo_ != null) hash ^= SourceInfo.GetHashCode();
+      if (HasFreeTier) hash ^= FreeTier.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (DatabaseEdition != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition.Unspecified) hash ^= DatabaseEdition.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -618,6 +686,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(SourceInfo);
       }
+      if (DatabaseEdition != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition.Unspecified) {
+        output.WriteRawTag(224, 1);
+        output.WriteEnum((int) DatabaseEdition);
+      }
+      if (HasFreeTier) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(FreeTier);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -700,6 +776,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(SourceInfo);
       }
+      if (DatabaseEdition != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition.Unspecified) {
+        output.WriteRawTag(224, 1);
+        output.WriteEnum((int) DatabaseEdition);
+      }
+      if (HasFreeTier) {
+        output.WriteRawTag(240, 1);
+        output.WriteBool(FreeTier);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -765,8 +849,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       if (sourceInfo_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SourceInfo);
       }
+      if (HasFreeTier) {
+        size += 2 + 1;
+      }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (DatabaseEdition != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) DatabaseEdition);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -852,8 +942,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         }
         SourceInfo.MergeFrom(other.SourceInfo);
       }
+      if (other.HasFreeTier) {
+        FreeTier = other.FreeTier;
+      }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.DatabaseEdition != global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition.Unspecified) {
+        DatabaseEdition = other.DatabaseEdition;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -957,6 +1053,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
               SourceInfo = new global::Google.Cloud.Firestore.Admin.V1.Database.Types.SourceInfo();
             }
             input.ReadMessage(SourceInfo);
+            break;
+          }
+          case 224: {
+            DatabaseEdition = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition) input.ReadEnum();
+            break;
+          }
+          case 240: {
+            FreeTier = input.ReadBool();
             break;
           }
           case 794: {
@@ -1065,6 +1169,14 @@ namespace Google.Cloud.Firestore.Admin.V1 {
               SourceInfo = new global::Google.Cloud.Firestore.Admin.V1.Database.Types.SourceInfo();
             }
             input.ReadMessage(SourceInfo);
+            break;
+          }
+          case 224: {
+            DatabaseEdition = (global::Google.Cloud.Firestore.Admin.V1.Database.Types.DatabaseEdition) input.ReadEnum();
+            break;
+          }
+          case 240: {
+            FreeTier = input.ReadBool();
             break;
           }
           case 794: {
@@ -1200,6 +1312,26 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         /// Delete protection is enabled
         /// </summary>
         [pbr::OriginalName("DELETE_PROTECTION_ENABLED")] DeleteProtectionEnabled = 2,
+      }
+
+      /// <summary>
+      /// The edition of the database.
+      /// </summary>
+      public enum DatabaseEdition {
+        /// <summary>
+        /// Not used.
+        /// </summary>
+        [pbr::OriginalName("DATABASE_EDITION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Standard edition.
+        ///
+        /// This is the default setting if not specified.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 1,
+        /// <summary>
+        /// Enterprise edition.
+        /// </summary>
+        [pbr::OriginalName("ENTERPRISE")] Enterprise = 2,
       }
 
       /// <summary>
