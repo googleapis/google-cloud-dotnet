@@ -89,6 +89,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateValue", SpannerDbType.Date, null },
                 { "NumericValue", SpannerDbType.Numeric, null },
                 { "JsonValue", SpannerDbType.Json, null },
+                { "IntervalValue", SpannerDbType.Interval },
                 { "ProtobufDurationValue", SpannerDbType.FromClrType(typeof(Duration)), null },
                 { "ProtobufRectangleValue", SpannerDbType.FromClrType(typeof(Rectangle)), null },
                 { "ProtobufPersonValue", SpannerDbType.FromClrType(typeof(Person)), null },
@@ -105,6 +106,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), null },
                 { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null },
                 { "JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), null },
+                { "IntervalArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Interval) },
                 { "ProtobufDurationArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))), null },
                 { "ProtobufRectangleArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))), null },
                 { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), null },
@@ -131,6 +133,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("IntervalValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufDurationValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufRectangleValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufPersonValue")));
@@ -145,6 +148,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("IntervalArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufDurationArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufRectangleArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufValueWrapperValue")));
@@ -172,6 +176,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             double?[] dArray = { 0.0, null, 2.0 };
             SpannerNumeric?[] nArray = { SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("2.0") };
             string[] jsonArray = { "{\"f1\":\"v1\"}", "{}", "[]", null };
+            Interval[] intervalArray = { Interval.Parse("P1Y"), null, Interval.Parse("PT1H") };
             string[] sArray = { "abc", null, "123" };
             string[] base64Array =
             {
@@ -221,6 +226,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateValue", SpannerDbType.Date, testDate },
                 { "NumericValue", SpannerDbType.Numeric, SpannerNumeric.Parse("2.0") },
                 { "JsonValue", SpannerDbType.Json, "{\"f1\":\"v1\"}" },
+                { "IntervalValue", SpannerDbType.Interval, Interval.Parse("P1Y") },
                 { "ProtobufDurationValue", SpannerDbType.FromClrType(typeof(Duration)), Duration.FromTimeSpan(TimeSpan.FromHours(1)) },
                 { "ProtobufRectangleValue", SpannerDbType.FromClrType(typeof(Rectangle)), testRectangle },
                 { "ProtobufPersonValue", SpannerDbType.FromClrType(typeof(Person)), testPerson },
@@ -236,6 +242,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), dtArray },
                 { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), nArray },
                 { "JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), jsonArray },
+                { "IntervalArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Interval), intervalArray },
                 { "ProtobufDurationArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))), pdArray },
                 { "ProtobufRectangleArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))), rArray },
                 { "ProtobufPersonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))), pArray },
@@ -266,6 +273,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(testDate, reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")));
                 Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
                 Assert.Equal("{\"f1\":\"v1\"}", reader.GetFieldValue<string>(reader.GetOrdinal("JsonValue")));
+                Assert.Equal(Interval.Parse("P1Y"), reader.GetFieldValue<Interval>(reader.GetOrdinal("IntervalValue")));
                 Assert.Equal(Duration.FromTimeSpan(TimeSpan.FromHours(1)), reader.GetFieldValue<Duration>(reader.GetOrdinal("ProtobufDurationValue")));
                 Assert.Equal(testRectangle, reader.GetFieldValue<Rectangle>(reader.GetOrdinal("ProtobufRectangleValue")));
                 Assert.Equal(testPerson, reader.GetFieldValue<Person>(reader.GetOrdinal("ProtobufPersonValue")));
@@ -281,6 +289,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(dtArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("DateArrayValue")));
                 Assert.Equal(nArray, reader.GetFieldValue<SpannerNumeric?[]>(reader.GetOrdinal("NumericArrayValue")));
                 Assert.Equal(jsonArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
+                Assert.Equal(intervalArray, reader.GetFieldValue<Interval[]>(reader.GetOrdinal("IntervalArrayValue")));
                 Assert.Equal(pdArray, reader.GetFieldValue<Duration[]>(reader.GetOrdinal("ProtobufDurationArrayValue")));
                 Assert.Equal(rArray, reader.GetFieldValue<Rectangle[]>(reader.GetOrdinal("ProtobufRectangleArrayValue")));
                 Assert.Equal(pArray, reader.GetFieldValue<Person[]>(reader.GetOrdinal("ProtobufPersonArrayValue")));
@@ -368,6 +377,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), new DateTime[0] },
                 { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), new SpannerNumeric[0] },
                 { "JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), new string[0] },
+                { "IntervalArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Interval), new Interval[0] },
                 { "ProtobufDurationArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))), new Duration[0] },
                 { "ProtobufRectangleArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))), new Rectangle[0] },
                 { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), new Value[0] },
@@ -388,6 +398,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(new DateTime[0], reader.GetFieldValue<DateTime[]>(reader.GetOrdinal("DateArrayValue")));
                 Assert.Equal(new SpannerNumeric[0], reader.GetFieldValue<SpannerNumeric[]>(reader.GetOrdinal("NumericArrayValue")));
                 Assert.Equal(new string[0], reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
+                Assert.Equal(new Interval[0], reader.GetFieldValue<Interval[]>(reader.GetOrdinal("IntervalArrayValue")));
                 Assert.Equal(new Duration[0], reader.GetFieldValue<Duration[]>(reader.GetOrdinal("ProtobufDurationArrayValue")));
                 Assert.Equal(new Rectangle[0], reader.GetFieldValue<Rectangle[]>(reader.GetOrdinal("ProtobufRectangleArrayValue")));
                 Assert.Equal(new Value[0], reader.GetFieldValue<Value[]>(reader.GetOrdinal("ProtobufValueArrayValue")));
