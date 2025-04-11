@@ -27,6 +27,7 @@ public class ContainerOptions
     private const string ApiRootOption = "api-root";
     private const string GeneratorInputOption = "generator-input";
     private const string GeneratorOutputOption = "generator-output";
+    private const string PackageOutputOption = "package-output";
     private const string TestOption = "test";
     private const string OutputOption = "output";
     private const string VersionOption = "version";
@@ -38,6 +39,7 @@ public class ContainerOptions
     internal string ApiRoot { get; set; }
     internal string GeneratorInput { get; set; }
     internal string GeneratorOutput { get; set; }
+    internal string PackageOutput { get; set; }
     internal bool Test { get; set; }
     internal string Version { get; set; }
     internal string Output { get; set; }
@@ -51,6 +53,7 @@ public class ContainerOptions
         ApiRoot = options.GetValueOrDefault(ApiRootOption);
         GeneratorInput = options.GetValueOrDefault(GeneratorInputOption);
         GeneratorOutput = options.GetValueOrDefault(GeneratorOutputOption);
+        PackageOutput = options.GetValueOrDefault(PackageOutputOption);
         Test = options.GetValueOrDefault(TestOption) == "true";
         Version = options.GetValueOrDefault(VersionOption);
         Output = options.GetValueOrDefault(OutputOption);
