@@ -1722,5 +1722,216 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for UpdateRagEngineConfig</summary>
+        public void UpdateRagEngineConfigRequestObject()
+        {
+            // Snippet: UpdateRagEngineConfig(UpdateRagEngineConfigRequest, CallSettings)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = VertexRagDataServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateRagEngineConfigRequest request = new UpdateRagEngineConfigRequest
+            {
+                RagEngineConfig = new RagEngineConfig(),
+            };
+            // Make the request
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> response = vertexRagDataServiceClient.UpdateRagEngineConfig(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RagEngineConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> retrievedResponse = vertexRagDataServiceClient.PollOnceUpdateRagEngineConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RagEngineConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRagEngineConfigAsync</summary>
+        public async Task UpdateRagEngineConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateRagEngineConfigAsync(UpdateRagEngineConfigRequest, CallSettings)
+            // Additional: UpdateRagEngineConfigAsync(UpdateRagEngineConfigRequest, CancellationToken)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = await VertexRagDataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateRagEngineConfigRequest request = new UpdateRagEngineConfigRequest
+            {
+                RagEngineConfig = new RagEngineConfig(),
+            };
+            // Make the request
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> response = await vertexRagDataServiceClient.UpdateRagEngineConfigAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RagEngineConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> retrievedResponse = await vertexRagDataServiceClient.PollOnceUpdateRagEngineConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RagEngineConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRagEngineConfig</summary>
+        public void UpdateRagEngineConfig()
+        {
+            // Snippet: UpdateRagEngineConfig(RagEngineConfig, CallSettings)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = VertexRagDataServiceClient.Create();
+            // Initialize request argument(s)
+            RagEngineConfig ragEngineConfig = new RagEngineConfig();
+            // Make the request
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> response = vertexRagDataServiceClient.UpdateRagEngineConfig(ragEngineConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RagEngineConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> retrievedResponse = vertexRagDataServiceClient.PollOnceUpdateRagEngineConfig(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RagEngineConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateRagEngineConfigAsync</summary>
+        public async Task UpdateRagEngineConfigAsync()
+        {
+            // Snippet: UpdateRagEngineConfigAsync(RagEngineConfig, CallSettings)
+            // Additional: UpdateRagEngineConfigAsync(RagEngineConfig, CancellationToken)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = await VertexRagDataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RagEngineConfig ragEngineConfig = new RagEngineConfig();
+            // Make the request
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> response = await vertexRagDataServiceClient.UpdateRagEngineConfigAsync(ragEngineConfig);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RagEngineConfig result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RagEngineConfig, UpdateRagEngineConfigOperationMetadata> retrievedResponse = await vertexRagDataServiceClient.PollOnceUpdateRagEngineConfigAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RagEngineConfig retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRagEngineConfig</summary>
+        public void GetRagEngineConfigRequestObject()
+        {
+            // Snippet: GetRagEngineConfig(GetRagEngineConfigRequest, CallSettings)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = VertexRagDataServiceClient.Create();
+            // Initialize request argument(s)
+            GetRagEngineConfigRequest request = new GetRagEngineConfigRequest
+            {
+                RagEngineConfigName = RagEngineConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            RagEngineConfig response = vertexRagDataServiceClient.GetRagEngineConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRagEngineConfigAsync</summary>
+        public async Task GetRagEngineConfigRequestObjectAsync()
+        {
+            // Snippet: GetRagEngineConfigAsync(GetRagEngineConfigRequest, CallSettings)
+            // Additional: GetRagEngineConfigAsync(GetRagEngineConfigRequest, CancellationToken)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = await VertexRagDataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetRagEngineConfigRequest request = new GetRagEngineConfigRequest
+            {
+                RagEngineConfigName = RagEngineConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            RagEngineConfig response = await vertexRagDataServiceClient.GetRagEngineConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRagEngineConfig</summary>
+        public void GetRagEngineConfig()
+        {
+            // Snippet: GetRagEngineConfig(string, CallSettings)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = VertexRagDataServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/ragEngineConfig";
+            // Make the request
+            RagEngineConfig response = vertexRagDataServiceClient.GetRagEngineConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRagEngineConfigAsync</summary>
+        public async Task GetRagEngineConfigAsync()
+        {
+            // Snippet: GetRagEngineConfigAsync(string, CallSettings)
+            // Additional: GetRagEngineConfigAsync(string, CancellationToken)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = await VertexRagDataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/ragEngineConfig";
+            // Make the request
+            RagEngineConfig response = await vertexRagDataServiceClient.GetRagEngineConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRagEngineConfig</summary>
+        public void GetRagEngineConfigResourceNames()
+        {
+            // Snippet: GetRagEngineConfig(RagEngineConfigName, CallSettings)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = VertexRagDataServiceClient.Create();
+            // Initialize request argument(s)
+            RagEngineConfigName name = RagEngineConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            RagEngineConfig response = vertexRagDataServiceClient.GetRagEngineConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRagEngineConfigAsync</summary>
+        public async Task GetRagEngineConfigResourceNamesAsync()
+        {
+            // Snippet: GetRagEngineConfigAsync(RagEngineConfigName, CallSettings)
+            // Additional: GetRagEngineConfigAsync(RagEngineConfigName, CancellationToken)
+            // Create client
+            VertexRagDataServiceClient vertexRagDataServiceClient = await VertexRagDataServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RagEngineConfigName name = RagEngineConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            RagEngineConfig response = await vertexRagDataServiceClient.GetRagEngineConfigAsync(name);
+            // End snippet
+        }
     }
 }
