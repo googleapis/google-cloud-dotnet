@@ -49,26 +49,35 @@ namespace Google.Cloud.Dataplex.V1 {
             "FQoIZW5jb2RpbmcYAyABKAlCA+BBARIkChd0eXBlX2luZmVyZW5jZV9kaXNh",
             "YmxlZBgEIAEoCEID4EEBEhIKBXF1b3RlGAUgASgJQgPgQQEaSgoLSnNvbk9w",
             "dGlvbnMSFQoIZW5jb2RpbmcYASABKAlCA+BBARIkChd0eXBlX2luZmVyZW5j",
-            "ZV9kaXNhYmxlZBgCIAEoCEID4EEBQhEKD3Jlc291cmNlX2NvbmZpZyLJAQoT",
+            "ZV9kaXNhYmxlZBgCIAEoCEID4EEBQhEKD3Jlc291cmNlX2NvbmZpZyK3BAoT",
             "RGF0YURpc2NvdmVyeVJlc3VsdBJiChNiaWdxdWVyeV9wdWJsaXNoaW5nGAEg",
             "ASgLMkAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEaXNjb3ZlcnlS",
-            "ZXN1bHQuQmlnUXVlcnlQdWJsaXNoaW5nQgPgQQMaTgoSQmlnUXVlcnlQdWJs",
-            "aXNoaW5nEjgKB2RhdGFzZXQYASABKAlCJ+BBA/pBIQofYmlncXVlcnkuZ29v",
-            "Z2xlYXBpcy5jb20vRGF0YXNldEKsAgocY29tLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MUISRGF0YURpc2NvdmVyeVByb3RvUAFaOGNsb3VkLmdvb2dsZS5j",
-            "b20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBi6kFI",
-            "Ch9iaWdxdWVyeS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0EiVwcm9qZWN0cy97",
-            "cHJvamVjdH0vZGF0YXNldHMve2RhdGFzZXR96kFwCixiaWdxdWVyeWNvbm5l",
-            "Y3Rpb24uZ29vZ2xlYXBpcy5jb20vQ29ubmVjdGlvbhJAcHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nvbm5lY3Rpb25zL3tjb25u",
-            "ZWN0aW9ufWIGcHJvdG8z"));
+            "ZXN1bHQuQmlnUXVlcnlQdWJsaXNoaW5nQgPgQQMSWgoPc2Nhbl9zdGF0aXN0",
+            "aWNzGAIgASgLMjwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEaXNj",
+            "b3ZlcnlSZXN1bHQuU2NhblN0YXRpc3RpY3NCA+BBAxplChJCaWdRdWVyeVB1",
+            "Ymxpc2hpbmcSOAoHZGF0YXNldBgBIAEoCUIn4EED+kEhCh9iaWdxdWVyeS5n",
+            "b29nbGVhcGlzLmNvbS9EYXRhc2V0EhUKCGxvY2F0aW9uGAIgASgJQgPgQQMa",
+            "+AEKDlNjYW5TdGF0aXN0aWNzEhoKEnNjYW5uZWRfZmlsZV9jb3VudBgBIAEo",
+            "BRIcChRkYXRhX3Byb2Nlc3NlZF9ieXRlcxgCIAEoAxIWCg5maWxlc19leGNs",
+            "dWRlZBgDIAEoBRIWCg50YWJsZXNfY3JlYXRlZBgEIAEoBRIWCg50YWJsZXNf",
+            "ZGVsZXRlZBgFIAEoBRIWCg50YWJsZXNfdXBkYXRlZBgGIAEoBRIYChBmaWxl",
+            "c2V0c19jcmVhdGVkGAcgASgFEhgKEGZpbGVzZXRzX2RlbGV0ZWQYCCABKAUS",
+            "GAoQZmlsZXNldHNfdXBkYXRlZBgJIAEoBUKsAgocY29tLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcGxleC52MUISRGF0YURpc2NvdmVyeVByb3RvUAFaOGNsb3VkLmdv",
+            "b2dsZS5jb20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxl",
+            "eHBi6kFICh9iaWdxdWVyeS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0EiVwcm9q",
+            "ZWN0cy97cHJvamVjdH0vZGF0YXNldHMve2RhdGFzZXR96kFwCixiaWdxdWVy",
+            "eWNvbm5lY3Rpb24uZ29vZ2xlYXBpcy5jb20vQ29ubmVjdGlvbhJAcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nvbm5lY3Rpb25z",
+            "L3tjb25uZWN0aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Parser, new[]{ "BigqueryPublishingConfig", "StorageConfig" }, new[]{ "ResourceConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.BigQueryPublishingConfig), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.BigQueryPublishingConfig.Parser, new[]{ "TableType", "Connection", "Location" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.BigQueryPublishingConfig.Types.TableType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Parser, new[]{ "IncludePatterns", "ExcludePatterns", "CsvOptions", "JsonOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.CsvOptions), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.CsvOptions.Parser, new[]{ "HeaderRows", "Delimiter", "Encoding", "TypeInferenceDisabled", "Quote" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.JsonOptions), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.JsonOptions.Parser, new[]{ "Encoding", "TypeInferenceDisabled" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoveryResult), global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Parser, new[]{ "BigqueryPublishing" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.BigQueryPublishing), global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.BigQueryPublishing.Parser, new[]{ "Dataset" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoveryResult), global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Parser, new[]{ "BigqueryPublishing", "ScanStatistics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.BigQueryPublishing), global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.BigQueryPublishing.Parser, new[]{ "Dataset", "Location" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics), global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics.Parser, new[]{ "ScannedFileCount", "DataProcessedBytes", "FilesExcluded", "TablesCreated", "TablesDeleted", "TablesUpdated", "FilesetsCreated", "FilesetsDeleted", "FilesetsUpdated" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -1667,6 +1676,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataDiscoveryResult(DataDiscoveryResult other) : this() {
       bigqueryPublishing_ = other.bigqueryPublishing_ != null ? other.bigqueryPublishing_.Clone() : null;
+      scanStatistics_ = other.scanStatistics_ != null ? other.scanStatistics_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1691,6 +1701,21 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "scan_statistics" field.</summary>
+    public const int ScanStatisticsFieldNumber = 2;
+    private global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics scanStatistics_;
+    /// <summary>
+    /// Output only. Statistics of the DataDiscoveryScan.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics ScanStatistics {
+      get { return scanStatistics_; }
+      set {
+        scanStatistics_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1707,6 +1732,7 @@ namespace Google.Cloud.Dataplex.V1 {
         return true;
       }
       if (!object.Equals(BigqueryPublishing, other.BigqueryPublishing)) return false;
+      if (!object.Equals(ScanStatistics, other.ScanStatistics)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1715,6 +1741,7 @@ namespace Google.Cloud.Dataplex.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (bigqueryPublishing_ != null) hash ^= BigqueryPublishing.GetHashCode();
+      if (scanStatistics_ != null) hash ^= ScanStatistics.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1737,6 +1764,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(BigqueryPublishing);
       }
+      if (scanStatistics_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ScanStatistics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1751,6 +1782,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(BigqueryPublishing);
       }
+      if (scanStatistics_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ScanStatistics);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1763,6 +1798,9 @@ namespace Google.Cloud.Dataplex.V1 {
       int size = 0;
       if (bigqueryPublishing_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(BigqueryPublishing);
+      }
+      if (scanStatistics_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ScanStatistics);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1781,6 +1819,12 @@ namespace Google.Cloud.Dataplex.V1 {
           BigqueryPublishing = new global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.BigQueryPublishing();
         }
         BigqueryPublishing.MergeFrom(other.BigqueryPublishing);
+      }
+      if (other.scanStatistics_ != null) {
+        if (scanStatistics_ == null) {
+          ScanStatistics = new global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics();
+        }
+        ScanStatistics.MergeFrom(other.ScanStatistics);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1804,6 +1848,13 @@ namespace Google.Cloud.Dataplex.V1 {
             input.ReadMessage(BigqueryPublishing);
             break;
           }
+          case 18: {
+            if (scanStatistics_ == null) {
+              ScanStatistics = new global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics();
+            }
+            input.ReadMessage(ScanStatistics);
+            break;
+          }
         }
       }
     #endif
@@ -1824,6 +1875,13 @@ namespace Google.Cloud.Dataplex.V1 {
               BigqueryPublishing = new global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.BigQueryPublishing();
             }
             input.ReadMessage(BigqueryPublishing);
+            break;
+          }
+          case 18: {
+            if (scanStatistics_ == null) {
+              ScanStatistics = new global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics();
+            }
+            input.ReadMessage(ScanStatistics);
             break;
           }
         }
@@ -1875,6 +1933,7 @@ namespace Google.Cloud.Dataplex.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BigQueryPublishing(BigQueryPublishing other) : this() {
           dataset_ = other.dataset_;
+          location_ = other.location_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1899,6 +1958,21 @@ namespace Google.Cloud.Dataplex.V1 {
           }
         }
 
+        /// <summary>Field number for the "location" field.</summary>
+        public const int LocationFieldNumber = 2;
+        private string location_ = "";
+        /// <summary>
+        /// Output only. The location of the BigQuery publishing dataset.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Location {
+          get { return location_; }
+          set {
+            location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1915,6 +1989,7 @@ namespace Google.Cloud.Dataplex.V1 {
             return true;
           }
           if (Dataset != other.Dataset) return false;
+          if (Location != other.Location) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1923,6 +1998,7 @@ namespace Google.Cloud.Dataplex.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
+          if (Location.Length != 0) hash ^= Location.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1945,6 +2021,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(10);
             output.WriteString(Dataset);
           }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1959,6 +2039,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(10);
             output.WriteString(Dataset);
           }
+          if (Location.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Location);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1971,6 +2055,9 @@ namespace Google.Cloud.Dataplex.V1 {
           int size = 0;
           if (Dataset.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Dataset);
+          }
+          if (Location.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1986,6 +2073,9 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (other.Dataset.Length != 0) {
             Dataset = other.Dataset;
+          }
+          if (other.Location.Length != 0) {
+            Location = other.Location;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2006,6 +2096,10 @@ namespace Google.Cloud.Dataplex.V1 {
                 Dataset = input.ReadString();
                 break;
               }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
             }
           }
         #endif
@@ -2023,6 +2117,526 @@ namespace Google.Cloud.Dataplex.V1 {
                 break;
               case 10: {
                 Dataset = input.ReadString();
+                break;
+              }
+              case 18: {
+                Location = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Statistics of the DataDiscoveryScan.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ScanStatistics : pb::IMessage<ScanStatistics>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ScanStatistics> _parser = new pb::MessageParser<ScanStatistics>(() => new ScanStatistics());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ScanStatistics> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ScanStatistics() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ScanStatistics(ScanStatistics other) : this() {
+          scannedFileCount_ = other.scannedFileCount_;
+          dataProcessedBytes_ = other.dataProcessedBytes_;
+          filesExcluded_ = other.filesExcluded_;
+          tablesCreated_ = other.tablesCreated_;
+          tablesDeleted_ = other.tablesDeleted_;
+          tablesUpdated_ = other.tablesUpdated_;
+          filesetsCreated_ = other.filesetsCreated_;
+          filesetsDeleted_ = other.filesetsDeleted_;
+          filesetsUpdated_ = other.filesetsUpdated_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ScanStatistics Clone() {
+          return new ScanStatistics(this);
+        }
+
+        /// <summary>Field number for the "scanned_file_count" field.</summary>
+        public const int ScannedFileCountFieldNumber = 1;
+        private int scannedFileCount_;
+        /// <summary>
+        /// The number of files scanned.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int ScannedFileCount {
+          get { return scannedFileCount_; }
+          set {
+            scannedFileCount_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "data_processed_bytes" field.</summary>
+        public const int DataProcessedBytesFieldNumber = 2;
+        private long dataProcessedBytes_;
+        /// <summary>
+        /// The data processed in bytes.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long DataProcessedBytes {
+          get { return dataProcessedBytes_; }
+          set {
+            dataProcessedBytes_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "files_excluded" field.</summary>
+        public const int FilesExcludedFieldNumber = 3;
+        private int filesExcluded_;
+        /// <summary>
+        /// The number of files excluded.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int FilesExcluded {
+          get { return filesExcluded_; }
+          set {
+            filesExcluded_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "tables_created" field.</summary>
+        public const int TablesCreatedFieldNumber = 4;
+        private int tablesCreated_;
+        /// <summary>
+        /// The number of tables created.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int TablesCreated {
+          get { return tablesCreated_; }
+          set {
+            tablesCreated_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "tables_deleted" field.</summary>
+        public const int TablesDeletedFieldNumber = 5;
+        private int tablesDeleted_;
+        /// <summary>
+        /// The number of tables deleted.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int TablesDeleted {
+          get { return tablesDeleted_; }
+          set {
+            tablesDeleted_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "tables_updated" field.</summary>
+        public const int TablesUpdatedFieldNumber = 6;
+        private int tablesUpdated_;
+        /// <summary>
+        /// The number of tables updated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int TablesUpdated {
+          get { return tablesUpdated_; }
+          set {
+            tablesUpdated_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "filesets_created" field.</summary>
+        public const int FilesetsCreatedFieldNumber = 7;
+        private int filesetsCreated_;
+        /// <summary>
+        /// The number of filesets created.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int FilesetsCreated {
+          get { return filesetsCreated_; }
+          set {
+            filesetsCreated_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "filesets_deleted" field.</summary>
+        public const int FilesetsDeletedFieldNumber = 8;
+        private int filesetsDeleted_;
+        /// <summary>
+        /// The number of filesets deleted.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int FilesetsDeleted {
+          get { return filesetsDeleted_; }
+          set {
+            filesetsDeleted_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "filesets_updated" field.</summary>
+        public const int FilesetsUpdatedFieldNumber = 9;
+        private int filesetsUpdated_;
+        /// <summary>
+        /// The number of filesets updated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int FilesetsUpdated {
+          get { return filesetsUpdated_; }
+          set {
+            filesetsUpdated_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ScanStatistics);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ScanStatistics other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ScannedFileCount != other.ScannedFileCount) return false;
+          if (DataProcessedBytes != other.DataProcessedBytes) return false;
+          if (FilesExcluded != other.FilesExcluded) return false;
+          if (TablesCreated != other.TablesCreated) return false;
+          if (TablesDeleted != other.TablesDeleted) return false;
+          if (TablesUpdated != other.TablesUpdated) return false;
+          if (FilesetsCreated != other.FilesetsCreated) return false;
+          if (FilesetsDeleted != other.FilesetsDeleted) return false;
+          if (FilesetsUpdated != other.FilesetsUpdated) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ScannedFileCount != 0) hash ^= ScannedFileCount.GetHashCode();
+          if (DataProcessedBytes != 0L) hash ^= DataProcessedBytes.GetHashCode();
+          if (FilesExcluded != 0) hash ^= FilesExcluded.GetHashCode();
+          if (TablesCreated != 0) hash ^= TablesCreated.GetHashCode();
+          if (TablesDeleted != 0) hash ^= TablesDeleted.GetHashCode();
+          if (TablesUpdated != 0) hash ^= TablesUpdated.GetHashCode();
+          if (FilesetsCreated != 0) hash ^= FilesetsCreated.GetHashCode();
+          if (FilesetsDeleted != 0) hash ^= FilesetsDeleted.GetHashCode();
+          if (FilesetsUpdated != 0) hash ^= FilesetsUpdated.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ScannedFileCount != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(ScannedFileCount);
+          }
+          if (DataProcessedBytes != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(DataProcessedBytes);
+          }
+          if (FilesExcluded != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(FilesExcluded);
+          }
+          if (TablesCreated != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(TablesCreated);
+          }
+          if (TablesDeleted != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(TablesDeleted);
+          }
+          if (TablesUpdated != 0) {
+            output.WriteRawTag(48);
+            output.WriteInt32(TablesUpdated);
+          }
+          if (FilesetsCreated != 0) {
+            output.WriteRawTag(56);
+            output.WriteInt32(FilesetsCreated);
+          }
+          if (FilesetsDeleted != 0) {
+            output.WriteRawTag(64);
+            output.WriteInt32(FilesetsDeleted);
+          }
+          if (FilesetsUpdated != 0) {
+            output.WriteRawTag(72);
+            output.WriteInt32(FilesetsUpdated);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ScannedFileCount != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(ScannedFileCount);
+          }
+          if (DataProcessedBytes != 0L) {
+            output.WriteRawTag(16);
+            output.WriteInt64(DataProcessedBytes);
+          }
+          if (FilesExcluded != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(FilesExcluded);
+          }
+          if (TablesCreated != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(TablesCreated);
+          }
+          if (TablesDeleted != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(TablesDeleted);
+          }
+          if (TablesUpdated != 0) {
+            output.WriteRawTag(48);
+            output.WriteInt32(TablesUpdated);
+          }
+          if (FilesetsCreated != 0) {
+            output.WriteRawTag(56);
+            output.WriteInt32(FilesetsCreated);
+          }
+          if (FilesetsDeleted != 0) {
+            output.WriteRawTag(64);
+            output.WriteInt32(FilesetsDeleted);
+          }
+          if (FilesetsUpdated != 0) {
+            output.WriteRawTag(72);
+            output.WriteInt32(FilesetsUpdated);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ScannedFileCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScannedFileCount);
+          }
+          if (DataProcessedBytes != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(DataProcessedBytes);
+          }
+          if (FilesExcluded != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(FilesExcluded);
+          }
+          if (TablesCreated != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TablesCreated);
+          }
+          if (TablesDeleted != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TablesDeleted);
+          }
+          if (TablesUpdated != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TablesUpdated);
+          }
+          if (FilesetsCreated != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(FilesetsCreated);
+          }
+          if (FilesetsDeleted != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(FilesetsDeleted);
+          }
+          if (FilesetsUpdated != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(FilesetsUpdated);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ScanStatistics other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ScannedFileCount != 0) {
+            ScannedFileCount = other.ScannedFileCount;
+          }
+          if (other.DataProcessedBytes != 0L) {
+            DataProcessedBytes = other.DataProcessedBytes;
+          }
+          if (other.FilesExcluded != 0) {
+            FilesExcluded = other.FilesExcluded;
+          }
+          if (other.TablesCreated != 0) {
+            TablesCreated = other.TablesCreated;
+          }
+          if (other.TablesDeleted != 0) {
+            TablesDeleted = other.TablesDeleted;
+          }
+          if (other.TablesUpdated != 0) {
+            TablesUpdated = other.TablesUpdated;
+          }
+          if (other.FilesetsCreated != 0) {
+            FilesetsCreated = other.FilesetsCreated;
+          }
+          if (other.FilesetsDeleted != 0) {
+            FilesetsDeleted = other.FilesetsDeleted;
+          }
+          if (other.FilesetsUpdated != 0) {
+            FilesetsUpdated = other.FilesetsUpdated;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ScannedFileCount = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                DataProcessedBytes = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                FilesExcluded = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                TablesCreated = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                TablesDeleted = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                TablesUpdated = input.ReadInt32();
+                break;
+              }
+              case 56: {
+                FilesetsCreated = input.ReadInt32();
+                break;
+              }
+              case 64: {
+                FilesetsDeleted = input.ReadInt32();
+                break;
+              }
+              case 72: {
+                FilesetsUpdated = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ScannedFileCount = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                DataProcessedBytes = input.ReadInt64();
+                break;
+              }
+              case 24: {
+                FilesExcluded = input.ReadInt32();
+                break;
+              }
+              case 32: {
+                TablesCreated = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                TablesDeleted = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                TablesUpdated = input.ReadInt32();
+                break;
+              }
+              case 56: {
+                FilesetsCreated = input.ReadInt32();
+                break;
+              }
+              case 64: {
+                FilesetsDeleted = input.ReadInt32();
+                break;
+              }
+              case 72: {
+                FilesetsUpdated = input.ReadInt32();
                 break;
               }
             }
