@@ -9761,7 +9761,7 @@ namespace Google.Cloud.EdgeNetwork.V1 {
   }
 
   /// <summary>
-  /// Message for requesting diagnositcs of a router within a specific zone.
+  /// Message for requesting diagnostics of a router within a specific zone.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DiagnoseRouterRequest : pb::IMessage<DiagnoseRouterRequest>
