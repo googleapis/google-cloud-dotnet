@@ -2458,6 +2458,12 @@
                 "GetRagCorpusAsync"
               ]
             },
+            "GetRagEngineConfig": {
+              "methods": [
+                "GetRagEngineConfig",
+                "GetRagEngineConfigAsync"
+              ]
+            },
             "GetRagFile": {
               "methods": [
                 "GetRagFile",
@@ -2486,6 +2492,12 @@
               "methods": [
                 "UpdateRagCorpus",
                 "UpdateRagCorpusAsync"
+              ]
+            },
+            "UpdateRagEngineConfig": {
+              "methods": [
+                "UpdateRagEngineConfig",
+                "UpdateRagEngineConfigAsync"
               ]
             },
             "UploadRagFile": {
