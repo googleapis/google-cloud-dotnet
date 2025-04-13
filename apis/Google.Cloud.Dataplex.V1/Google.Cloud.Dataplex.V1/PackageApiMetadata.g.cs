@@ -84,6 +84,7 @@ namespace Google.Cloud.Dataplex.V1
         {
             yield return AnalyzeReflection.Descriptor;
             yield return CatalogReflection.Descriptor;
+            yield return CmekReflection.Descriptor;
             yield return ContentReflection.Descriptor;
             yield return DataDiscoveryReflection.Descriptor;
             yield return DataProfileReflection.Descriptor;

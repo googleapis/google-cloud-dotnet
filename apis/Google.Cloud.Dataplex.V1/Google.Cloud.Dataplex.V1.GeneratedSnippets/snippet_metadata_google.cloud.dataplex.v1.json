@@ -7300,6 +7300,1418 @@
       ]
     },
     {
+      "regionTag": "dataplex_v1_generated_CmekService_CreateEncryptionConfig_sync",
+      "title": "CreateEncryptionConfigRequestObject",
+      "description": "Snippet for CreateEncryptionConfig",
+      "file": "CmekServiceClient.CreateEncryptionConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.CreateEncryptionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateEncryptionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.CreateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_CreateEncryptionConfig_async",
+      "title": "CreateEncryptionConfigRequestObjectAsync",
+      "description": "Snippet for CreateEncryptionConfigAsync",
+      "file": "CmekServiceClient.CreateEncryptionConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.CreateEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CreateEncryptionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.CreateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_CreateEncryptionConfig_sync_flattened",
+      "title": "CreateEncryptionConfig",
+      "description": "Snippet for CreateEncryptionConfig",
+      "file": "CmekServiceClient.CreateEncryptionConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.CreateEncryptionConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+            "name": "encryptionConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "encryptionConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.CreateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_CreateEncryptionConfig_async_flattened",
+      "title": "CreateEncryptionConfigAsync",
+      "description": "Snippet for CreateEncryptionConfigAsync",
+      "file": "CmekServiceClient.CreateEncryptionConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.CreateEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+            "name": "encryptionConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "encryptionConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.CreateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_CreateEncryptionConfig_sync_flattened_resourceNames",
+      "title": "CreateEncryptionConfigResourceNames",
+      "description": "Snippet for CreateEncryptionConfig",
+      "file": "CmekServiceClient.CreateEncryptionConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.CreateEncryptionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+            "name": "encryptionConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "encryptionConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.CreateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_CreateEncryptionConfig_async_flattened_resourceNames",
+      "title": "CreateEncryptionConfigResourceNamesAsync",
+      "description": "Snippet for CreateEncryptionConfigAsync",
+      "file": "CmekServiceClient.CreateEncryptionConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.CreateEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+            "name": "encryptionConfig"
+          },
+          {
+            "type": "System.String",
+            "name": "encryptionConfigId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "CreateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.CreateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_UpdateEncryptionConfig_sync",
+      "title": "UpdateEncryptionConfigRequestObject",
+      "description": "Snippet for UpdateEncryptionConfig",
+      "file": "CmekServiceClient.UpdateEncryptionConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.UpdateEncryptionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateEncryptionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.UpdateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_UpdateEncryptionConfig_async",
+      "title": "UpdateEncryptionConfigRequestObjectAsync",
+      "description": "Snippet for UpdateEncryptionConfigAsync",
+      "file": "CmekServiceClient.UpdateEncryptionConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.UpdateEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.UpdateEncryptionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.UpdateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_UpdateEncryptionConfig_sync_flattened",
+      "title": "UpdateEncryptionConfig",
+      "description": "Snippet for UpdateEncryptionConfig",
+      "file": "CmekServiceClient.UpdateEncryptionConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.UpdateEncryptionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+            "name": "encryptionConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.UpdateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_UpdateEncryptionConfig_async_flattened",
+      "title": "UpdateEncryptionConfigAsync",
+      "description": "Snippet for UpdateEncryptionConfigAsync",
+      "file": "CmekServiceClient.UpdateEncryptionConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.UpdateEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+            "name": "encryptionConfig"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataplex.V1.EncryptionConfig, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.UpdateEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_DeleteEncryptionConfig_sync",
+      "title": "DeleteEncryptionConfigRequestObject",
+      "description": "Snippet for DeleteEncryptionConfig",
+      "file": "CmekServiceClient.DeleteEncryptionConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.DeleteEncryptionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteEncryptionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.DeleteEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_DeleteEncryptionConfig_async",
+      "title": "DeleteEncryptionConfigRequestObjectAsync",
+      "description": "Snippet for DeleteEncryptionConfigAsync",
+      "file": "CmekServiceClient.DeleteEncryptionConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.DeleteEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DeleteEncryptionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.DeleteEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_DeleteEncryptionConfig_sync_flattened",
+      "title": "DeleteEncryptionConfig",
+      "description": "Snippet for DeleteEncryptionConfig",
+      "file": "CmekServiceClient.DeleteEncryptionConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.DeleteEncryptionConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.DeleteEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_DeleteEncryptionConfig_async_flattened",
+      "title": "DeleteEncryptionConfigAsync",
+      "description": "Snippet for DeleteEncryptionConfigAsync",
+      "file": "CmekServiceClient.DeleteEncryptionConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.DeleteEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.DeleteEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_DeleteEncryptionConfig_sync_flattened_resourceNames",
+      "title": "DeleteEncryptionConfigResourceNames",
+      "description": "Snippet for DeleteEncryptionConfig",
+      "file": "CmekServiceClient.DeleteEncryptionConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.DeleteEncryptionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.DeleteEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_DeleteEncryptionConfig_async_flattened_resourceNames",
+      "title": "DeleteEncryptionConfigResourceNamesAsync",
+      "description": "Snippet for DeleteEncryptionConfigAsync",
+      "file": "CmekServiceClient.DeleteEncryptionConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.DeleteEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataplex.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.DeleteEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 39,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_ListEncryptionConfigs_sync",
+      "title": "ListEncryptionConfigsRequestObject",
+      "description": "Snippet for ListEncryptionConfigs",
+      "file": "CmekServiceClient.ListEncryptionConfigsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEncryptionConfigs",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.ListEncryptionConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListEncryptionConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEncryptionConfigsResponse, Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "ListEncryptionConfigs",
+          "fullName": "google.cloud.dataplex.v1.CmekService.ListEncryptionConfigs",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_ListEncryptionConfigs_async",
+      "title": "ListEncryptionConfigsRequestObjectAsync",
+      "description": "Snippet for ListEncryptionConfigsAsync",
+      "file": "CmekServiceClient.ListEncryptionConfigsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEncryptionConfigsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.ListEncryptionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ListEncryptionConfigsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEncryptionConfigsResponse, Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "ListEncryptionConfigs",
+          "fullName": "google.cloud.dataplex.v1.CmekService.ListEncryptionConfigs",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 84,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 82,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_ListEncryptionConfigs_sync_flattened",
+      "title": "ListEncryptionConfigs",
+      "description": "Snippet for ListEncryptionConfigs",
+      "file": "CmekServiceClient.ListEncryptionConfigsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEncryptionConfigs",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.ListEncryptionConfigs",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEncryptionConfigsResponse, Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "ListEncryptionConfigs",
+          "fullName": "google.cloud.dataplex.v1.CmekService.ListEncryptionConfigs",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_ListEncryptionConfigs_async_flattened",
+      "title": "ListEncryptionConfigsAsync",
+      "description": "Snippet for ListEncryptionConfigsAsync",
+      "file": "CmekServiceClient.ListEncryptionConfigsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEncryptionConfigsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.ListEncryptionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEncryptionConfigsResponse, Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "ListEncryptionConfigs",
+          "fullName": "google.cloud.dataplex.v1.CmekService.ListEncryptionConfigs",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_ListEncryptionConfigs_sync_flattened_resourceNames",
+      "title": "ListEncryptionConfigsResourceNames",
+      "description": "Snippet for ListEncryptionConfigs",
+      "file": "CmekServiceClient.ListEncryptionConfigsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEncryptionConfigs",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.ListEncryptionConfigs",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Dataplex.V1.ListEncryptionConfigsResponse, Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "ListEncryptionConfigs",
+          "fullName": "google.cloud.dataplex.v1.CmekService.ListEncryptionConfigs",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_ListEncryptionConfigs_async_flattened_resourceNames",
+      "title": "ListEncryptionConfigsResourceNamesAsync",
+      "description": "Snippet for ListEncryptionConfigsAsync",
+      "file": "CmekServiceClient.ListEncryptionConfigsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEncryptionConfigsAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.ListEncryptionConfigsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.OrganizationLocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Dataplex.V1.ListEncryptionConfigsResponse, Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "ListEncryptionConfigs",
+          "fullName": "google.cloud.dataplex.v1.CmekService.ListEncryptionConfigs",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 40,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_GetEncryptionConfig_sync",
+      "title": "GetEncryptionConfigRequestObject",
+      "description": "Snippet for GetEncryptionConfig",
+      "file": "CmekServiceClient.GetEncryptionConfigRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.GetEncryptionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetEncryptionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.GetEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_GetEncryptionConfig_async",
+      "title": "GetEncryptionConfigRequestObjectAsync",
+      "description": "Snippet for GetEncryptionConfigAsync",
+      "file": "CmekServiceClient.GetEncryptionConfigRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.GetEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.GetEncryptionConfigRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.GetEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_GetEncryptionConfig_sync_flattened",
+      "title": "GetEncryptionConfig",
+      "description": "Snippet for GetEncryptionConfig",
+      "file": "CmekServiceClient.GetEncryptionConfigSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.GetEncryptionConfig",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.GetEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_GetEncryptionConfig_async_flattened",
+      "title": "GetEncryptionConfigAsync",
+      "description": "Snippet for GetEncryptionConfigAsync",
+      "file": "CmekServiceClient.GetEncryptionConfigAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.GetEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.GetEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_GetEncryptionConfig_sync_flattened_resourceNames",
+      "title": "GetEncryptionConfigResourceNames",
+      "description": "Snippet for GetEncryptionConfig",
+      "file": "CmekServiceClient.GetEncryptionConfigResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionConfig",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.GetEncryptionConfig",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.EncryptionConfig",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.GetEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CmekService_GetEncryptionConfig_async_flattened_resourceNames",
+      "title": "GetEncryptionConfigResourceNamesAsync",
+      "description": "Snippet for GetEncryptionConfigAsync",
+      "file": "CmekServiceClient.GetEncryptionConfigResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEncryptionConfigAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient.GetEncryptionConfigAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.EncryptionConfigName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.EncryptionConfig>",
+        "client": {
+          "shortName": "CmekServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CmekServiceClient"
+        },
+        "method": {
+          "shortName": "GetEncryptionConfig",
+          "fullName": "google.cloud.dataplex.v1.CmekService.GetEncryptionConfig",
+          "service": {
+            "shortName": "CmekService",
+            "fullName": "google.cloud.dataplex.v1.CmekService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataplex_v1_generated_ContentService_CreateContent_sync",
       "title": "CreateContentRequestObject",
       "description": "Snippet for CreateContent",
