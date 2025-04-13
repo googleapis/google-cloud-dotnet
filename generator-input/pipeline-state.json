@@ -1435,7 +1435,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-07-08T16:38:20Z",
-            "lastGeneratedCommit": "2dc21fecf8709ee1e7937e8be3a9a136a1fdb613",
+            "lastGeneratedCommit": "1472ceabecd9e6acbcd8dd8f75f0f4335c36e16c",
             "apiPaths": [
                 "google/cloud/edgenetwork/v1"
             ],
