@@ -127,4 +127,16 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetRagEngineConfigRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::RagEngineConfigName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::RagEngineConfigName RagEngineConfigName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::RagEngineConfigName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }
