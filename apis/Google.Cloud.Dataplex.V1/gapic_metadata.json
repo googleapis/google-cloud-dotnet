@@ -170,6 +170,45 @@
         }
       }
     },
+    "CmekService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CmekServiceClient",
+          "rpcs": {
+            "CreateEncryptionConfig": {
+              "methods": [
+                "CreateEncryptionConfig",
+                "CreateEncryptionConfigAsync"
+              ]
+            },
+            "DeleteEncryptionConfig": {
+              "methods": [
+                "DeleteEncryptionConfig",
+                "DeleteEncryptionConfigAsync"
+              ]
+            },
+            "GetEncryptionConfig": {
+              "methods": [
+                "GetEncryptionConfig",
+                "GetEncryptionConfigAsync"
+              ]
+            },
+            "ListEncryptionConfigs": {
+              "methods": [
+                "ListEncryptionConfigs",
+                "ListEncryptionConfigsAsync"
+              ]
+            },
+            "UpdateEncryptionConfig": {
+              "methods": [
+                "UpdateEncryptionConfig",
+                "UpdateEncryptionConfigAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ContentService": {
       "clients": {
         "grpc": {

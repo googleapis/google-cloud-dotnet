@@ -1666,6 +1666,51 @@ namespace Google.Cloud.Dataplex.V1
                     }
                 }
             }
+
+            public partial class ExportJobSpec
+            {
+                public partial class Types
+                {
+                    public partial class ExportJobScope
+                    {
+                        /// <summary>
+                        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Projects"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<gagr::ProjectName> ProjectsAsProjectNames
+                        {
+                            get => new gax::ResourceNameList<gagr::ProjectName>(Projects, s => string.IsNullOrEmpty(s) ? null : gagr::ProjectName.Parse(s, allowUnparsed: true));
+                        }
+
+                        /// <summary>
+                        /// <see cref="EntryGroupName"/>-typed view over the <see cref="EntryGroups"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<EntryGroupName> EntryGroupsAsEntryGroupNames
+                        {
+                            get => new gax::ResourceNameList<EntryGroupName>(EntryGroups, s => string.IsNullOrEmpty(s) ? null : EntryGroupName.Parse(s, allowUnparsed: true));
+                        }
+
+                        /// <summary>
+                        /// <see cref="EntryTypeName"/>-typed view over the <see cref="EntryTypes"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<EntryTypeName> EntryTypesAsEntryTypeNames
+                        {
+                            get => new gax::ResourceNameList<EntryTypeName>(EntryTypes, s => string.IsNullOrEmpty(s) ? null : EntryTypeName.Parse(s, allowUnparsed: true));
+                        }
+
+                        /// <summary>
+                        /// <see cref="AspectTypeName"/>-typed view over the <see cref="AspectTypes"/> resource name
+                        /// property.
+                        /// </summary>
+                        public gax::ResourceNameList<AspectTypeName> AspectTypesAsAspectTypeNames
+                        {
+                            get => new gax::ResourceNameList<AspectTypeName>(AspectTypes, s => string.IsNullOrEmpty(s) ? null : AspectTypeName.Parse(s, allowUnparsed: true));
+                        }
+                    }
+                }
+            }
         }
     }
 }
