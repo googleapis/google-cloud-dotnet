@@ -2126,7 +2126,7 @@
     },
     {
       "id": "Google.Cloud.Diagnostics.AspNetCore3",
-      "version": "5.2.0",
+      "version": "5.3.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "targetFrameworks": "netcoreapp3.1",
@@ -2155,7 +2155,7 @@
     },
     {
       "id": "Google.Cloud.Diagnostics.Common",
-      "version": "5.2.0",
+      "version": "5.3.0",
       "targetFrameworks": "netstandard2.0",
       "type": "other",
       "description": "Google Cloud Logging, Trace and Error Reporting Instrumentation Libraries Common Components.",
@@ -2169,8 +2169,8 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc": "default",
-        "Google.Cloud.Logging.V2": "4.3.0",
-        "Google.Cloud.Trace.V1": "3.3.0",
+        "Google.Cloud.Logging.V2": "4.4.0",
+        "Google.Cloud.Trace.V1": "3.4.0",
         "Microsoft.Extensions.Http": "6.0.0",
         "System.Diagnostics.StackTrace": "4.3.0"
       },

@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.3.0, released 2025-04-14
+
+### New features
+
+- Change netstandard2.1 target to netstandard2.0 ([commit cba7759](https://github.com/googleapis/google-cloud-dotnet/commit/cba77591907c4a4594a184466534ee9e258bb5ef))
+- Remove unnecessary net462 target from Google.Cloud.Diagnostics.Common. ([commit 4a7ba3e](https://github.com/googleapis/google-cloud-dotnet/commit/4a7ba3ef66af9702ea3f583bc247a6a1e02a0339))
+
 ## Version 5.2.0, released 2024-03-05
 
 No API surface changes; just dependency updates.
