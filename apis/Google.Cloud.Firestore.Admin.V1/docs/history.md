@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.13.0, released 2025-04-14
+
+### New features
+
+- New Firestore index modes and Database Editions ([commit 5592a07](https://github.com/googleapis/google-cloud-dotnet/commit/5592a0700f8219ae3ef20c04c01c685be2c0acb6))
+- Add the UserCreds API ([commit a8687d8](https://github.com/googleapis/google-cloud-dotnet/commit/a8687d8c865a9bd98d6400252c2611ccae46d8a8))
+
 ## Version 3.12.0, released 2025-01-27
 
 ### Bug fixes
