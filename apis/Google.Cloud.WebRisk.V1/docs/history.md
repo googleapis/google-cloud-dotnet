@@ -1,5 +1,16 @@
 # Version history
 
+## Version 2.7.0, released 2025-04-14
+
+### New features
+
+- A new method_signature `parent,submission` is added to method `SubmitUri` in service `WebRiskService`
+
+### Documentation improvements
+
+- A comment for message `ThreatInfo` is changed
+- A comment for message `SubmitUriMetadata` is changed
+
 ## Version 2.6.0, released 2024-05-14
 
 ### New features
