@@ -6381,7 +6381,7 @@
     },
     {
       "id": "Google.Shopping.Css.V1",
-      "version": "1.0.0-beta06",
+      "version": "1.0.0-beta07",
       "type": "grpc",
       "productName": "CSS",
       "productUrl": "https://developers.google.com/comparison-shopping-services/api",
