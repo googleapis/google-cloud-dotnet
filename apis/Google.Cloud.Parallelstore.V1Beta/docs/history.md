@@ -1,5 +1,27 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2025-04-14
+
+### New features
+
+- A new value `REPAIRING` is added to enum `State`
+- A new message `TransferMetadataOptions` is added
+- A new field `metadata_options` is added to message `v1beta.ImportDataRequest`
+- A new field `metadata_options` is added to message `v1beta.ExportDataRequest`
+- A new message `TransferErrorLogEntry` is added
+- A new message `TransferErrorSummary` is added
+- A new field `error_summary` is added to message `v1beta.TransferOperationMetadata`
+- A new field `objects_failed` is added to message `v1beta.TransferCounters`
+- A new field `bytes_failed` is added to message `v1beta.TransferCounters`
+- Field `daos_version` in message `v1beta.Instance` is Deprecated
+
+### Documentation improvements
+
+- fields `directory_stripe_level` `deployment_type` `file_stripe_level` in message `v1beta.Instance` documented as immutable
+- A comment for field `requested_cancellation` in message `.google.cloud.parallelstore.v1beta.OperationMetadata` is changed
+- A comment for field `requested_cancellation` in message `.google.cloud.parallelstore.v1beta.ImportDataMetadata` is changed
+- A comment for field `requested_cancellation` in message `.google.cloud.parallelstore.v1beta.ExportDataMetadata` is changed
+
 ## Version 1.0.0-beta07, released 2024-12-06
 
 ### New features
