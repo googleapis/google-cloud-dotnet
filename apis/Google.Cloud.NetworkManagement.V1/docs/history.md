@@ -1,5 +1,22 @@
 # Version history
 
+## Version 2.14.0, released 2025-04-14
+
+### New features
+
+- Add messages and fields related to Direct VPC Egress ([commit de88df2](https://github.com/googleapis/google-cloud-dotnet/commit/de88df27cae30a0a14fc9ad0cbab9660ca807c13))
+- Add messages and fields related to Serverless External ([commit de88df2](https://github.com/googleapis/google-cloud-dotnet/commit/de88df27cae30a0a14fc9ad0cbab9660ca807c13))
+- Add messages and fields related to Route ([commit de88df2](https://github.com/googleapis/google-cloud-dotnet/commit/de88df27cae30a0a14fc9ad0cbab9660ca807c13))
+- Add enum types related to Firewall ([commit de88df2](https://github.com/googleapis/google-cloud-dotnet/commit/de88df27cae30a0a14fc9ad0cbab9660ca807c13))
+- Add enum types related to Google Service ([commit de88df2](https://github.com/googleapis/google-cloud-dotnet/commit/de88df27cae30a0a14fc9ad0cbab9660ca807c13))
+- Add enum types related to Abort ([commit de88df2](https://github.com/googleapis/google-cloud-dotnet/commit/de88df27cae30a0a14fc9ad0cbab9660ca807c13))
+- Add enum types related to Drop ([commit de88df2](https://github.com/googleapis/google-cloud-dotnet/commit/de88df27cae30a0a14fc9ad0cbab9660ca807c13))
+
+### Documentation improvements
+
+- Update outdated comments ([commit de88df2](https://github.com/googleapis/google-cloud-dotnet/commit/de88df27cae30a0a14fc9ad0cbab9660ca807c13))
+- Update comments for Connectivity Test ([commit f758706](https://github.com/googleapis/google-cloud-dotnet/commit/f758706345bc48b8cd432740651503373e781cfd))
+
 ## Version 2.13.0, released 2025-01-13
 
 ### New features
