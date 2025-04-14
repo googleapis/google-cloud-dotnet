@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.8.0, released 2025-04-14
+
+### New features
+
+- Add Data Discovery result statistics ([commit 8501d35](https://github.com/googleapis/google-cloud-dotnet/commit/8501d35b9f45a3bda71372cfe3a12b7c8846dfeb))
+- Removing internal visibility labels for cmek public preview ([commit 8501d35](https://github.com/googleapis/google-cloud-dotnet/commit/8501d35b9f45a3bda71372cfe3a12b7c8846dfeb))
+- A new message `ExportJobResult` is added ([commit 8501d35](https://github.com/googleapis/google-cloud-dotnet/commit/8501d35b9f45a3bda71372cfe3a12b7c8846dfeb))
+- A new message `ExportJobSpec` is added ([commit 8501d35](https://github.com/googleapis/google-cloud-dotnet/commit/8501d35b9f45a3bda71372cfe3a12b7c8846dfeb))
+- A new value `EXPORT` is added to enum `Type` ([commit 8501d35](https://github.com/googleapis/google-cloud-dotnet/commit/8501d35b9f45a3bda71372cfe3a12b7c8846dfeb))
+- A new field `export_spec` is added to message `.google.cloud.dataplex.v1.MetadataJob` ([commit 8501d35](https://github.com/googleapis/google-cloud-dotnet/commit/8501d35b9f45a3bda71372cfe3a12b7c8846dfeb))
+- A new field `export_result` is added to message `.google.cloud.dataplex.v1.MetadataJob` ([commit 8501d35](https://github.com/googleapis/google-cloud-dotnet/commit/8501d35b9f45a3bda71372cfe3a12b7c8846dfeb))
+- Add Data Discovery result statistics ([commit 2bb3767](https://github.com/googleapis/google-cloud-dotnet/commit/2bb37671fc8c313a68bddaf7ed6aace3e2751f30))
+- Add EntryLinkEvent for logs ([commit 2bb3767](https://github.com/googleapis/google-cloud-dotnet/commit/2bb37671fc8c313a68bddaf7ed6aace3e2751f30))
+
+### Documentation improvements
+
+- Minor formatting changes ([commit 8501d35](https://github.com/googleapis/google-cloud-dotnet/commit/8501d35b9f45a3bda71372cfe3a12b7c8846dfeb))
+
 ## Version 3.7.0, released 2025-03-17
 
 ### New features
