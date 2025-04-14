@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.3.0, released 2025-04-14
+
+### New features
+
+- add new AutonomousDatabase RPCs
+
+### Documentation improvements
+
+- the network and cidr fields of AutonomousDatabase are now marked optional
+
 ## Version 1.2.0, released 2025-03-17
 
 ### New features
