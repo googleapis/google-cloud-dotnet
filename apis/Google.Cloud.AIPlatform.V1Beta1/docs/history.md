@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta25, released 2025-04-14
+
+### New features
+
+- Add UpdateRagEngineConfig rpc ([commit 5f27e9d](https://github.com/googleapis/google-cloud-dotnet/commit/5f27e9daf30450d2419be4f151c151a85cf6bcd0))
+- Add RagEngineConfig to specify RAG project-level config ([commit 5f27e9d](https://github.com/googleapis/google-cloud-dotnet/commit/5f27e9daf30450d2419be4f151c151a85cf6bcd0))
+- Add rag_managed_db_config to RagEngineConfig for specifying Basic or Enterprise RagManagedDb tiers ([commit 5f27e9d](https://github.com/googleapis/google-cloud-dotnet/commit/5f27e9daf30450d2419be4f151c151a85cf6bcd0))
+- Add global quota config to vertex rag engine api ([commit 0156095](https://github.com/googleapis/google-cloud-dotnet/commit/015609574a9ca49480434b301cd11b463b0f8eff))
+- Add FeatureViewDirectWrite API ([commit 41b15c9](https://github.com/googleapis/google-cloud-dotnet/commit/41b15c999d57962e1ac94d1cf0193f09748b7ac3))
+- Add Gen AI logging public preview API ([commit e0cca8f](https://github.com/googleapis/google-cloud-dotnet/commit/e0cca8f8a70e916c0c710923c7659e2816febbc8))
+
 ## Version 1.0.0-beta24, released 2025-03-31
 
 ### New features
