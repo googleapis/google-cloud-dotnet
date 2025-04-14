@@ -1,5 +1,19 @@
 # Version history
 
+## Version 3.0.0-beta09, released 2025-04-14
+
+### New features
+
+- Expose google.cloud.location.Locations API ([commit ed6c6aa](https://github.com/googleapis/google-cloud-dotnet/commit/ed6c6aadcf10ec1c43f7104d3278d2ccef6a1d1d))
+- Add new fields to CustomClass and PhraseSet.Phrase messages ([commit ed6c6aa](https://github.com/googleapis/google-cloud-dotnet/commit/ed6c6aadcf10ec1c43f7104d3278d2ccef6a1d1d))
+- Add ALAW support to RecognitionConfig ([commit ed6c6aa](https://github.com/googleapis/google-cloud-dotnet/commit/ed6c6aadcf10ec1c43f7104d3278d2ccef6a1d1d))
+- Make transcript_normalization field optional ([commit ed6c6aa](https://github.com/googleapis/google-cloud-dotnet/commit/ed6c6aadcf10ec1c43f7104d3278d2ccef6a1d1d))
+- Deprecating speaker_tag (int) for speaker_label (string) ([commit ed6c6aa](https://github.com/googleapis/google-cloud-dotnet/commit/ed6c6aadcf10ec1c43f7104d3278d2ccef6a1d1d))
+
+### Documentation improvements
+
+- Miscellaneous clarifications ([commit ed6c6aa](https://github.com/googleapis/google-cloud-dotnet/commit/ed6c6aadcf10ec1c43f7104d3278d2ccef6a1d1d))
+
 ## Version 3.0.0-beta08, released 2024-05-14
 
 ### New features
