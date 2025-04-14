@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2025-04-14
+
+### New features
+
+- A new field `automated_discounts` is added to message `google.shopping.merchant.products.v1beta.Product` ([commit 3fa8264](https://github.com/googleapis/google-cloud-dotnet/commit/3fa82645814f3a40b22bb69ffae700265f48572f))
+
+### Documentation improvements
+
+- Modified several comments ([commit 3fa8264](https://github.com/googleapis/google-cloud-dotnet/commit/3fa82645814f3a40b22bb69ffae700265f48572f))
+
 ## Version 1.0.0-beta03, released 2025-03-17
 
 ### New features
