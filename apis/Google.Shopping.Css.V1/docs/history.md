@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2025-04-14
+
+### New features
+
+- Introduce QuotaService for CSS API
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.shopping.css.v1.CssProductInput` is changed
+- A comment for field `name` in message `.google.shopping.css.v1.DeleteCssProductInputRequest` is changed
+- added a clarifying note to the description of the parent field in the Account resource
+
 ## Version 1.0.0-beta06, released 2025-01-06
 
 ### New features
