@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.10.0, released 2025-04-14
+
+### New features
+
+- Add the GoModule and KfpArtifact resources ([commit 1ea561f](https://github.com/googleapis/google-cloud-dotnet/commit/1ea561f2551a266b7d5842398e87a9642a672fb4))
+
+### Documentation improvements
+
+- Remove the restriction of the maximum numbers of versions that can be deleted in one BatchDeleteVersions call ([commit 1ea561f](https://github.com/googleapis/google-cloud-dotnet/commit/1ea561f2551a266b7d5842398e87a9642a672fb4))
+
 ## Version 2.9.0, released 2024-10-29
 
 ### New features
