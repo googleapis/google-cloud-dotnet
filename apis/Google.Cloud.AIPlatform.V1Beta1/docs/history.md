@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta25, released 2025-04-14
+
+### New features
+
+- add UpdateRagEngineConfig rpc
+- add RagEngineConfig to specify RAG project-level config
+- add rag_managed_db_config to RagEngineConfig for specifying Basic or Enterprise RagManagedDb tiers
+- Add global quota config to vertex rag engine api
+- add FeatureViewDirectWrite API
+- add Gen AI logging public preview API
+
 ## Version 1.0.0-beta24, released 2025-03-31
 
 ### New features
