@@ -1,5 +1,88 @@
 # Version history
 
+## Version 5.0.0-beta06, released 2025-04-14
+
+### New features
+
+- Support transaction tag through SpannerTransactionOptions. ([commit 382cdaf](https://github.com/googleapis/google-cloud-dotnet/commit/382cdafe378b20dc69fbb550eec47c35249ce038))
+- Support commit priority through SpannerTransactionOptions. ([commit 12da3b6](https://github.com/googleapis/google-cloud-dotnet/commit/12da3b63ed2282a76b6369d394f89beb3a53fbc2))
+- Support commit timeout through SpannerTransactionOptions. ([commit bf50e98](https://github.com/googleapis/google-cloud-dotnet/commit/bf50e98d4e7e0058a312716f14af4b5cd334b154))
+- **BREAKING CHANGE** Make all transaction types support SpannerTransactionOptions ([commit 7e9f553](https://github.com/googleapis/google-cloud-dotnet/commit/7e9f553b0cd8bcfd53e456a9a6eab0e457877f35))
+- Support log commit stats through SpannerTransactionOptions. ([commit d7251a3](https://github.com/googleapis/google-cloud-dotnet/commit/d7251a37adbaeeb224da97cc31385189534ad04d))
+- Support transaction dispose behavior through SpannerTransactionOptions. ([commit 41e716a](https://github.com/googleapis/google-cloud-dotnet/commit/41e716a86b196c1eaf95e38845f238fc11475153))
+- Add a last field in the PartialResultSet ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A new enum `IsolationLevel` is added ([commit c1059d1](https://github.com/googleapis/google-cloud-dotnet/commit/c1059d1638eeddd294d6a7fe92cb68343836b875))
+- A new field `isolation_level` is added to message `.google.spanner.v1.TransactionOptions` ([commit c1059d1](https://github.com/googleapis/google-cloud-dotnet/commit/c1059d1638eeddd294d6a7fe92cb68343836b875))
+- Add instance partitions field in backup proto ([commit 08930c5](https://github.com/googleapis/google-cloud-dotnet/commit/08930c554fcf973cf80a10b07b785f50bbdd574f))
+- Add AddSplitPoints API ([commit adacd9b](https://github.com/googleapis/google-cloud-dotnet/commit/adacd9be4a6de29d8773132792f73c1155a5e2ae))
+- Exposing InstanceType in Instance configuration (to define PROVISIONED or FREE spanner instance) ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- Exposing FreeInstanceMetadata in Instance configuration (to define the metadata related to FREE instance type) ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- Exposing storage_limit_per_processing_unit in InstanceConfig ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- Exposing QuorumType in InstanceConfig ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- Exposing FreeInstanceAvailability in InstanceConfig ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- Add UUID in Spanner TypeCode enum ([commit cacdc3b](https://github.com/googleapis/google-cloud-dotnet/commit/cacdc3b7f06949be2a642495e6b3265accfce0cf))
+- Add the last statement option to ExecuteSqlRequest and ExecuteBatchDmlRequest ([commit 85f11dc](https://github.com/googleapis/google-cloud-dotnet/commit/85f11dcc5ca26b68edcf128c6f8f2f0170f24f8d))
+
+### Documentation improvements
+
+- A comment for field `rows` in message `.google.spanner.v1.ResultSet` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `stats` in message `.google.spanner.v1.ResultSet` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `precommit_token` in message `.google.spanner.v1.ResultSet` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `values` in message `.google.spanner.v1.PartialResultSet` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `chunked_value` in message `.google.spanner.v1.PartialResultSet` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `stats` in message `.google.spanner.v1.PartialResultSet` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `precommit_token` in message `.google.spanner.v1.PartialResultSet` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for message `ResultSetMetadata` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `row_type` in message `.google.spanner.v1.ResultSetMetadata` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for message `ResultSetStats` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `query_plan` in message `.google.spanner.v1.ResultSetStats` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for field `row_count_lower_bound` in message `.google.spanner.v1.ResultSetStats` is changed ([commit 872c61a](https://github.com/googleapis/google-cloud-dotnet/commit/872c61a15c7152bc4db5d96176da5194175e869e))
+- A comment for enum value `READ_LOCK_MODE_UNSPECIFIED` in enum `ReadLockMode` is changed ([commit c1059d1](https://github.com/googleapis/google-cloud-dotnet/commit/c1059d1638eeddd294d6a7fe92cb68343836b875))
+- A comment for enum value `PESSIMISTIC` in enum `ReadLockMode` is changed ([commit c1059d1](https://github.com/googleapis/google-cloud-dotnet/commit/c1059d1638eeddd294d6a7fe92cb68343836b875))
+- A comment for enum value `OPTIMISTIC` in enum `ReadLockMode` is changed ([commit c1059d1](https://github.com/googleapis/google-cloud-dotnet/commit/c1059d1638eeddd294d6a7fe92cb68343836b875))
+- Fix typo timzeone -> timezone ([commit c1d4fff](https://github.com/googleapis/google-cloud-dotnet/commit/c1d4fff69ba777d2e68984bb2dfb44a16a9e84c6))
+- A comment for method `ListInstanceConfigs` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `CreateInstanceConfig` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `UpdateInstanceConfig` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `ListInstanceConfigOperations` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `CreateInstance` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `UpdateInstance` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `CreateInstancePartition` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `UpdateInstancePartition` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `ListInstancePartitionOperations` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for method `MoveInstance` in service `InstanceAdmin` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `location` in message `.google.spanner.admin.instance.v1.ReplicaInfo` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for enum value `GOOGLE_MANAGED` in enum `Type` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for enum value `USER_MANAGED` in enum `Type` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `replicas` in message `.google.spanner.admin.instance.v1.InstanceConfig` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `optional_replicas` in message `.google.spanner.admin.instance.v1.InstanceConfig` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `base_config` in message `.google.spanner.admin.instance.v1.InstanceConfig` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `storage_utilization_percent` in message `.google.spanner.admin.instance.v1.AutoscalingConfig` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for enum `DefaultBackupScheduleType` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for enum value `NONE` in enum `DefaultBackupScheduleType` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for enum value `AUTOMATIC` in enum `DefaultBackupScheduleType` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `node_count` in message `.google.spanner.admin.instance.v1.Instance` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `processing_units` in message `.google.spanner.admin.instance.v1.Instance` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `default_backup_schedule_type` in message `.google.spanner.admin.instance.v1.Instance` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for message `CreateInstanceConfigRequest` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `instance_config` in message `.google.spanner.admin.instance.v1.CreateInstanceConfigRequest` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for message `UpdateInstanceConfigRequest` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for message `DeleteInstanceConfigRequest` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `filter` in message `.google.spanner.admin.instance.v1.ListInstanceConfigOperationsRequest` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `operations` in message `.google.spanner.admin.instance.v1.ListInstanceConfigOperationsResponse` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `node_count` in message `.google.spanner.admin.instance.v1.InstancePartition` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `processing_units` in message `.google.spanner.admin.instance.v1.InstancePartition` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `referencing_backups` in message `.google.spanner.admin.instance.v1.InstancePartition` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `parent` in message `.google.spanner.admin.instance.v1.ListInstancePartitionsRequest` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `unreachable` in message `.google.spanner.admin.instance.v1.ListInstancePartitionsResponse` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `filter` in message `.google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `instance_partition_deadline` in message `.google.spanner.admin.instance.v1.ListInstancePartitionOperationsRequest` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+- A comment for field `operations` in message `.google.spanner.admin.instance.v1.ListInstancePartitionOperationsResponse` is changed ([commit 1a75431](https://github.com/googleapis/google-cloud-dotnet/commit/1a754313d61d53f4518b029376e9bbde9a4c3c9f))
+
+### Breaking changes
+
+- All transaction types support SpannerTransactionOptions; this is breaking compared with previous betas, but not compared with previous GA.
+
 ## Version 5.0.0-beta05, released 2024-11-07
 
 ### New features
