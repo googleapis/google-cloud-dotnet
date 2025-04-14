@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.5.0, released 2025-04-14
+
+### New features
+
+- Add resource definition for Revision ([commit 3fe1c4c](https://github.com/googleapis/google-cloud-dotnet/commit/3fe1c4ca18bc78641fbc59b6e2290e655a6581a9))
+
+### Documentation improvements
+
+- Typos fixes and small improvements ([commit 3fe1c4c](https://github.com/googleapis/google-cloud-dotnet/commit/3fe1c4ca18bc78641fbc59b6e2290e655a6581a9))
+- Fix typo in comments ([commit 77775ed](https://github.com/googleapis/google-cloud-dotnet/commit/77775ed0ec2d313b7bf92a6552fafb53a3d6e121))
+- Minor documentation improvements ([commit ea91b3d](https://github.com/googleapis/google-cloud-dotnet/commit/ea91b3dc759bc46e6a8baa13cb6ba6c0cc9efb9c))
+
 ## Version 3.4.0, released 2024-12-06
 
 ### New features

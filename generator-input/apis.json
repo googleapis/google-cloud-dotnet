@@ -2011,7 +2011,7 @@
     },
     {
       "id": "Google.Cloud.Deploy.V1",
-      "version": "3.4.0",
+      "version": "3.5.0",
       "type": "grpc",
       "productName": "Google Cloud Deploy",
       "productUrl": "https://cloud.google.com/deploy/",
@@ -2025,7 +2025,7 @@
         "kubernetes"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "3.3.0",
+        "Google.Cloud.Iam.V1": "3.4.0",
         "Google.Cloud.Location": "2.3.0",
         "Google.LongRunning": "3.3.0"
       },
