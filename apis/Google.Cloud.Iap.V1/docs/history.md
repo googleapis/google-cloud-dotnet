@@ -1,5 +1,38 @@
 # Version history
 
+## Version 2.8.0, released 2025-04-14
+
+### New features
+
+- Identity-aware Proxy (IAP) released a feature `Use IAP with Workforce Identity Federation`(https://cloud.google.com/iap/docs/use-workforce-identity-federation) at Feb 7, 2025. Two settings field are newly introduced in the feature release: `workforce_identity_settings` and `identity_sources` ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.iap.v1.TunnelDestGroup` is changed ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- A comment for field `cidrs` in message `.google.cloud.iap.v1.TunnelDestGroup` is changed ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- A comment for field `fqdns` in message `.google.cloud.iap.v1.TunnelDestGroup` is changed ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `access_settings` in message `.google.cloud.iap.v1.IapSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `application_settings` in message `.google.cloud.iap.v1.IapSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `gcip_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `cors_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `oauth_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `reauth_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `allowed_domains_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `tenant_ids` in message `.google.cloud.iap.v1.GcipSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `programmatic_clients` in message `.google.cloud.iap.v1.OAuthSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- A comment for enum `PolicyType` is changed ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `method` in message `.google.cloud.iap.v1.ReauthSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `max_age` in message `.google.cloud.iap.v1.ReauthSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `policy_type` in message `.google.cloud.iap.v1.ReauthSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `enable` in message `.google.cloud.iap.v1.AllowedDomainsSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `domains` in message `.google.cloud.iap.v1.AllowedDomainsSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `csm_settings` in message `.google.cloud.iap.v1.ApplicationSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `access_denied_page_settings` in message `.google.cloud.iap.v1.ApplicationSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `attribute_propagation_settings` in message `.google.cloud.iap.v1.ApplicationSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `expression` in message `.google.cloud.iap.v1.AttributePropagationSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `output_credentials` in message `.google.cloud.iap.v1.AttributePropagationSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+- Mark `enable` in message `.google.cloud.iap.v1.AttributePropagationSettings` as optional ([commit 176a5d4](https://github.com/googleapis/google-cloud-dotnet/commit/176a5d4219c80331664486163755841f86f98cb7))
+
 ## Version 2.7.0, released 2024-05-14
 
 ### New features
