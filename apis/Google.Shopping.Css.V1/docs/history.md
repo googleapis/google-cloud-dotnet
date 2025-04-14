@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2025-04-14
+
+### New features
+
+- Introduce QuotaService for CSS API ([commit 7969a13](https://github.com/googleapis/google-cloud-dotnet/commit/7969a13a6f0cdd19962976b9c9a0a8bb99db8c29))
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.shopping.css.v1.CssProductInput` is changed ([commit 7969a13](https://github.com/googleapis/google-cloud-dotnet/commit/7969a13a6f0cdd19962976b9c9a0a8bb99db8c29))
+- A comment for field `name` in message `.google.shopping.css.v1.DeleteCssProductInputRequest` is changed ([commit 7969a13](https://github.com/googleapis/google-cloud-dotnet/commit/7969a13a6f0cdd19962976b9c9a0a8bb99db8c29))
+- Added a clarifying note to the description of the parent field in the Account resource ([commit 95a25d1](https://github.com/googleapis/google-cloud-dotnet/commit/95a25d1e19375b1f1ceb45308d1aba704b746a97))
+
 ## Version 1.0.0-beta06, released 2025-01-06
 
 ### New features
