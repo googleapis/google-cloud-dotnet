@@ -1,5 +1,27 @@
 # Version history
 
+## Version 3.11.0, released 2025-04-14
+
+### New features
+
+- Support HD voice custom pronunciations ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+
+### Documentation improvements
+
+- A comment for method `StreamingSynthesize` in service `TextToSpeech` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for enum value `OGG_OPUS` in enum `AudioEncoding` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for enum value `PCM` in enum `AudioEncoding` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for field `low_latency_journey_synthesis` in message `.google.cloud.texttospeech.v1.AdvancedVoiceOptions` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for enum value `PHONETIC_ENCODING_IPA` in enum `PhoneticEncoding` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for enum value `PHONETIC_ENCODING_X_SAMPA` in enum `PhoneticEncoding` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for field `phrase` in message `.google.cloud.texttospeech.v1.CustomPronunciationParams` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for field `pronunciations` in message `.google.cloud.texttospeech.v1.CustomPronunciations` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for message `MultiSpeakerMarkup` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for field `custom_pronunciations` in message `.google.cloud.texttospeech.v1.SynthesisInput` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for field `voice_clone` in message `.google.cloud.texttospeech.v1.VoiceSelectionParams` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for field `audio_encoding` in message `.google.cloud.texttospeech.v1.StreamingAudioConfig` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+- A comment for field `text` in message `.google.cloud.texttospeech.v1.StreamingSynthesisInput` is changed ([commit 19b3b40](https://github.com/googleapis/google-cloud-dotnet/commit/19b3b40e17daeda4fb9266a2e87524fb6b4599f9))
+
 ## Version 3.10.0, released 2025-01-13
 
 ### New features
