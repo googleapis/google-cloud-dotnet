@@ -1,5 +1,27 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2025-04-14
+
+### New features
+
+- A new value `REPAIRING` is added to enum `State` ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A new message `TransferMetadataOptions` is added ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A new field `metadata_options` is added to message `v1beta.ImportDataRequest` ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A new field `metadata_options` is added to message `v1beta.ExportDataRequest` ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A new message `TransferErrorLogEntry` is added ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A new message `TransferErrorSummary` is added ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A new field `error_summary` is added to message `v1beta.TransferOperationMetadata` ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A new field `objects_failed` is added to message `v1beta.TransferCounters` ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A new field `bytes_failed` is added to message `v1beta.TransferCounters` ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- Field `daos_version` in message `v1beta.Instance` is Deprecated ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+
+### Documentation improvements
+
+- Fields `directory_stripe_level` `deployment_type` `file_stripe_level` in message `v1beta.Instance` documented as immutable ([commit b7d0ea6](https://github.com/googleapis/google-cloud-dotnet/commit/b7d0ea6382c64d796e244c91c3778e5ff26664e0))
+- A comment for field `requested_cancellation` in message `.google.cloud.parallelstore.v1beta.OperationMetadata` is changed ([commit 87849d8](https://github.com/googleapis/google-cloud-dotnet/commit/87849d889576530c291df8350c15f63466b97884))
+- A comment for field `requested_cancellation` in message `.google.cloud.parallelstore.v1beta.ImportDataMetadata` is changed ([commit 87849d8](https://github.com/googleapis/google-cloud-dotnet/commit/87849d889576530c291df8350c15f63466b97884))
+- A comment for field `requested_cancellation` in message `.google.cloud.parallelstore.v1beta.ExportDataMetadata` is changed ([commit 87849d8](https://github.com/googleapis/google-cloud-dotnet/commit/87849d889576530c291df8350c15f63466b97884))
+
 ## Version 1.0.0-beta07, released 2024-12-06
 
 ### New features
