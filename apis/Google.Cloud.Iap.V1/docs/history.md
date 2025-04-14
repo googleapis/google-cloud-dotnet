@@ -1,5 +1,38 @@
 # Version history
 
+## Version 2.8.0, released 2025-04-14
+
+### New features
+
+- Identity-aware Proxy (IAP) released a feature `Use IAP with Workforce Identity Federation`(https://cloud.google.com/iap/docs/use-workforce-identity-federation) at Feb 7, 2025. Two settings field are newly introduced in the feature release: `workforce_identity_settings` and `identity_sources`
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.cloud.iap.v1.TunnelDestGroup` is changed
+- A comment for field `cidrs` in message `.google.cloud.iap.v1.TunnelDestGroup` is changed
+- A comment for field `fqdns` in message `.google.cloud.iap.v1.TunnelDestGroup` is changed
+- Mark `access_settings` in message `.google.cloud.iap.v1.IapSettings` as optional
+- Mark `application_settings` in message `.google.cloud.iap.v1.IapSettings` as optional
+- Mark `gcip_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional
+- Mark `cors_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional
+- Mark `oauth_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional
+- Mark `reauth_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional
+- Mark `allowed_domains_settings` in message `.google.cloud.iap.v1.AccessSettings` as optional
+- Mark `tenant_ids` in message `.google.cloud.iap.v1.GcipSettings` as optional
+- Mark `programmatic_clients` in message `.google.cloud.iap.v1.OAuthSettings` as optional
+- A comment for enum `PolicyType` is changed
+- Mark `method` in message `.google.cloud.iap.v1.ReauthSettings` as optional
+- Mark `max_age` in message `.google.cloud.iap.v1.ReauthSettings` as optional
+- Mark `policy_type` in message `.google.cloud.iap.v1.ReauthSettings` as optional
+- Mark `enable` in message `.google.cloud.iap.v1.AllowedDomainsSettings` as optional
+- Mark `domains` in message `.google.cloud.iap.v1.AllowedDomainsSettings` as optional
+- Mark `csm_settings` in message `.google.cloud.iap.v1.ApplicationSettings` as optional
+- Mark `access_denied_page_settings` in message `.google.cloud.iap.v1.ApplicationSettings` as optional
+- Mark `attribute_propagation_settings` in message `.google.cloud.iap.v1.ApplicationSettings` as optional
+- Mark `expression` in message `.google.cloud.iap.v1.AttributePropagationSettings` as optional
+- Mark `output_credentials` in message `.google.cloud.iap.v1.AttributePropagationSettings` as optional
+- Mark `enable` in message `.google.cloud.iap.v1.AttributePropagationSettings` as optional
+
 ## Version 2.7.0, released 2024-05-14
 
 ### New features
