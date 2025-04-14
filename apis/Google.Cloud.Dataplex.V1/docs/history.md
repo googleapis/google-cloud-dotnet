@@ -1,5 +1,23 @@
 # Version history
 
+## Version 3.8.0, released 2025-04-14
+
+### New features
+
+- Add Data Discovery result statistics
+- Removing internal visibility labels for cmek public preview
+- A new message `ExportJobResult` is added
+- A new message `ExportJobSpec` is added
+- A new value `EXPORT` is added to enum `Type`
+- A new field `export_spec` is added to message `.google.cloud.dataplex.v1.MetadataJob`
+- A new field `export_result` is added to message `.google.cloud.dataplex.v1.MetadataJob`
+- Add Data Discovery result statistics
+- Add EntryLinkEvent for logs
+
+### Documentation improvements
+
+- minor formatting changes
+
 ## Version 3.7.0, released 2025-03-17
 
 ### New features
