@@ -3712,7 +3712,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-05-09T17:12:25Z",
-            "lastGeneratedCommit": "d72ca0d2ef7a786e2ffd59fa04e1c9241e09a7a9",
+            "lastGeneratedCommit": "9289a2cf33c44c5bce517e784eed0fd06cdce143",
             "apiPaths": [
                 "google/shopping/merchant/lfp/v1beta"
             ],
