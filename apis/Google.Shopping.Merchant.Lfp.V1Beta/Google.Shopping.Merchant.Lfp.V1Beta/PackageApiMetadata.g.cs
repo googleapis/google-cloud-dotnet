@@ -31,6 +31,7 @@ namespace Google.Shopping.Merchant.Lfp.V1Beta
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return LfpinventoryReflection.Descriptor;
+            yield return LfpmerchantstateReflection.Descriptor;
             yield return LfpsaleReflection.Descriptor;
             yield return LfpstoreReflection.Descriptor;
         }
