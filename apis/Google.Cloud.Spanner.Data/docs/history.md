@@ -1,5 +1,31 @@
 # Version history
 
+## Version 5.0.0, released 2025-04-16
+
+### New features
+
+Note: V5.0.0 contains all the new features added in previous beta versions V5.0.0-beta0x.
+Here, we highlight those that introduced breaking changes with respect to previous stable versions V4.x.x.
+
+- Transactions support SpannerTransactionCreationOptions and SpannerTransactionOptions.
+  BREAKING CHANGE: SpannerConection methods that open a transaction, like BeginTransacion, Open and RunWithRetriableTransaction sets of methods now
+accept both option types as parameter, while some of the previously existing methods have been deprecated and will be removed on the next major version.
+- After a successfull commit or rollback, the transaction is disposed.
+  BREAKING CHANGE: Attempting to use a disposed transaction will result in a client side error. See the Google.Cloud.Spanner.Data.SpannerTransaction.DisposeBehavior documentation for more information.
+- Add support for FLOAT32
+  BREAKING CHANGE: The default mapping for values of CLR type decimal was FLOAT64 and it is now Numeric.
+The default mapping for values of CLR type float was FLOAT64 and it is now FLOAT32.
+- Support inline transactions.
+  BREAKING CHANGE: In supporting inline transactions the main breaking change is behavioral: transactions are not prewarmed, instead they are acquired
+as needed, mainly through inlining transaction creation in the first command that attempts to use a transaction. The method
+`Google.Cloud.Spanner.V1.PooledSession.WithFreshTransactionOrNewAsync` has been removed, as a transaction is not created by the session until command execution.
+Use instead `Google.Cloud.Spanner.V1.PooledSession.RefreshedOrNewAsync` which returns a new PooledSession instance that either represents the same
+session but with no transaction associated to it or a newly acquired session. Since transactions are not prewarmed, the session pool does not need
+to distinguish between read-only and read-write session/transaction pairs. In the statistics classes that may be used for diagnostic purposes all
+properties distinguishing between read-only and read-write statistics have been removed. Similarly, `Google.Cloud.Spanner.V1.SessionPoolOptions.WriteSessionsFraction`
+has bee removed.
+- BREAKING CHANGE: Remove Obsolete code that had been introduced before v5.0.0-beta01.
+
 ## Version 5.0.0-beta06, released 2025-04-14
 
 ### New features
@@ -206,7 +232,7 @@ as needed, mainly through inlining transaction creation in the first command tha
 Use instead `Google.Cloud.Spanner.V1.PooledSession.RefreshedOrNewAsync` which returns a new PooledSession instance that either represents the same
 session but with no transaction associated to it or a newly acquired session. Since transactions are not prewarmed, the session pool does not need
 to distinguish between read-only and read-write session/transaction pairs. In the statistics classes that may be used for diagnostic purposes all
-properties distinguising between read-only and read-write statistics have been removed. Similarly, `Google.Cloud.Spanner.V1.SessionPoolOptions.WriteSessionsFraction`
+properties distinguishing between read-only and read-write statistics have been removed. Similarly, `Google.Cloud.Spanner.V1.SessionPoolOptions.WriteSessionsFraction`
 has bee removed.
 
 ## Version 4.6.0, released 2023-06-26

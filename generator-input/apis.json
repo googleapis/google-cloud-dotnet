@@ -5015,7 +5015,7 @@
       "protoPath": "google/spanner/admin/database/v1",
       "productName": "Google Cloud Spanner Database Administration",
       "productUrl": "https://cloud.google.com/spanner/",
-      "version": "5.0.0-beta06",
+      "version": "5.0.0",
       "commonResourcesConfig": "tweaks/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
@@ -5043,7 +5043,7 @@
       "protoPath": "google/spanner/admin/instance/v1",
       "productName": "Google Cloud Spanner Instance Administration",
       "productUrl": "https://cloud.google.com/spanner/",
-      "version": "5.0.0-beta06",
+      "version": "5.0.0",
       "commonResourcesConfig": "tweaks/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
@@ -5068,7 +5068,7 @@
     {
       "id": "Google.Cloud.Spanner.Data",
       "targetFrameworks": "netstandard2.1;net462",
-      "version": "5.0.0-beta06",
+      "version": "5.0.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "description": "Google ADO.NET Provider for Google Cloud Spanner.",
@@ -5104,7 +5104,7 @@
     {
       "id": "Google.Cloud.Spanner.Common.V1",
       "type": "other",
-      "version": "5.0.0-beta06",
+      "version": "5.0.0",
       "description": "Common resource names used by all Spanner V1 APIs",
       "tags": [
         "Spanner"
@@ -5120,7 +5120,7 @@
       "protoPath": "google/spanner/v1",
       "productName": "Google Cloud Spanner",
       "productUrl": "https://cloud.google.com/spanner/",
-      "version": "5.0.0-beta06",
+      "version": "5.0.0",
       "commonResourcesConfig": "tweaks/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
