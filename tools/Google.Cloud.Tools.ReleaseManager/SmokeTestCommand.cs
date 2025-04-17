@@ -120,7 +120,6 @@ namespace Google.Cloud.Tools.ReleaseManager
             var ret = new Dictionary<string, string>();
 
             MaybeAddEnvironmentVariable("TEST_PROJECT", "PROJECT_ID");
-            MaybeAddEnvironmentVariable("FIRESTORE_TEST_PROJECT", "FIRESTORE_PROJECT_ID");
             MaybeAddEnvironmentVariable("TEST_PROJECT_LOCATION", "PROJECT_APPENGINE_LOCATION");
             if (MaybeGetServiceAccountId() is string serviceAccountId)
             {

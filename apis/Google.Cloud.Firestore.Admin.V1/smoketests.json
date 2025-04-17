@@ -1,9 +1,9 @@
 [
   {
     "client": "FirestoreAdminClient",
-    "method": "ListIndexes",
+    "method": "ListDatabases",
     "arguments": {
-      "parent": "projects/${FIRESTORE_PROJECT_ID}/databases/(default)/collectionGroups/collection"
+      "parent": "projects/${PROJECT_ID}"
     }
   }
 ]
