@@ -46,9 +46,6 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         private const string DatabaseLocation = "us-east1";
 
-        // This is not the test project environment variable used by other integration tests,
-        // as Datastore and Firestore can't both be active in the same project.
-        private const string ProjectEnvironmentVariable = "FIRESTORE_TEST_PROJECT";
         public FirestoreDb FirestoreDb { get; }
 
         /// <summary>
@@ -89,7 +86,7 @@ namespace Google.Cloud.Firestore.IntegrationTests
 
         private int _uniqueCollectionCounter = 0;
 
-        public FirestoreFixture() : base(ProjectEnvironmentVariable)
+        public FirestoreFixture() : base()
         {
             RunningOnEmulator = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("FIRESTORE_EMULATOR_HOST"));
             AdminClient = FirestoreAdminClient.Create();

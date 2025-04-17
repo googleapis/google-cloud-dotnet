@@ -28,57 +28,8 @@ internal class Program
 {
     private static async Task Main()
     {
-        string project = Environment.GetEnvironmentVariable("FIRESTORE_TEST_PROJECT");
-
-        await DeleteCollectionsAsync(project);
-        await DeleteIndexesAsync(project);
+        string project = Environment.GetEnvironmentVariable("TEST_PROJECT");
         await DeleteDatabasesAsync(project);
-    }
-
-    private static async Task DeleteCollectionsAsync(string projectId)
-    {
-        var db = await FirestoreDb.CreateAsync(projectId);
-        var collections = await db.ListRootCollectionsAsync()
-            .Where(collection => collection.Id.StartsWith("test-", StringComparison.Ordinal))
-            .ToListAsync();
-        foreach (var collection in collections)
-        {
-            // Log which collections we're deleting here rather than in DeleteCollectionAsync,
-            // as that's called recursively.
-            Console.WriteLine($"Deleting collection {collection.Id}");
-            await DeleteCollectionAsync(collection);
-        }
-
-        async Task DeleteCollectionAsync(CollectionReference collection)
-        {
-            var allDocs = await collection.ListDocumentsAsync().ToListAsync();
-            // Note: one batch per collection is less efficient than filling the batch each time,
-            // but it's not a big problem.
-            var batch = db.StartBatch();
-            foreach (var doc in allDocs)
-            {
-                foreach (var child in await doc.ListCollectionsAsync().ToListAsync())
-                {
-                    await DeleteCollectionAsync(child);
-                }
-                batch.Delete(doc);
-            }
-            await batch.CommitAsync();
-        }
-    }
-
-    private static async Task DeleteIndexesAsync(string projectId)
-    {
-        var adminClient = await FirestoreAdminClient.CreateAsync();
-        var indexes = await adminClient.ListIndexesAsync(new CollectionGroupName(projectId, "(default)", "-"))
-            .Where(index => index.IndexName.CollectionId.StartsWith("test-", StringComparison.Ordinal))
-            .ToListAsync();
-
-        foreach (var index in indexes)
-        {
-            Console.WriteLine($"Deleting index {index.Name}");
-            await adminClient.DeleteIndexAsync(index.IndexName);
-        }
     }
 
     private static async Task DeleteDatabasesAsync(string projectId)

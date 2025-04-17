@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -33,8 +33,9 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task GettingStarted()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             // Sample: GettingStarted
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // Create a document with a random ID in the "users" collection.
             CollectionReference collection = db.Collection("users");
@@ -74,6 +75,7 @@ namespace Google.Cloud.Firestore.Snippets
         public void DetectEmulator()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             // Sample: EmulatorDetection
             FirestoreDb db = new FirestoreDbBuilder
             {

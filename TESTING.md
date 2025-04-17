@@ -162,21 +162,6 @@ Running against the emulator requires:
 Currently there are no runnable snippets, but when they are added, they will
 have the same requirements.
 
-Google.Cloud.Firestore
-----------------------
-
-Firestore cannot currently operate on a Google Cloud project that also has a
-Datastore database. You will need a second project:
-
-- Create a project on the [Firebase Console](https://console.firebase.google.com/)
-- Enable Firestore on that project (within the Firebase Console)
-- Set the `FIRESTORE_TEST_PROJECT` environment variable with that
-  project ID
-- Add the account identified in your service account JSON file as an
-  owner of the project, or download the service account JSON file for
-  the Firestore project, and change the `GOOGLE_APPLICATION_CREDENTIALS`
-  environment variable when you want to run the Firestore tests.
-
 Google.Cloud.Storage.V1
 -----------------------
 

@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -53,8 +53,9 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task AttributedClassUsage()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             // Sample: AttributedClassUsage
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // Create a document with a random ID in the "cities" collection.
             CollectionReference collection = db.Collection("cities");
@@ -79,8 +80,9 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task DictionaryUsage()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             // Sample: DictionaryUsage
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // Create a document with a random ID in the "cities" collection.
             CollectionReference collection = db.Collection("cities");
@@ -105,8 +107,9 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task AnonymousTypeUsage()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             // Sample: AnonymousTypeUsage
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // Create a document with a random ID in the "cities" collection.
             CollectionReference collection = db.Collection("cities");
@@ -148,7 +151,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task AnonymousTypeSentinel()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // Create a document with a random ID in the "scores" collection.
             CollectionReference collection = db.Collection("scores");
@@ -300,9 +304,10 @@ namespace Google.Cloud.Firestore.Snippets
         [Fact]
         public async Task SnapshotAttributes()
         {
-            // Sample: SnapshotAttributesUsage
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            // Sample: SnapshotAttributesUsage
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // Create a document with a random ID in the "rooms" collection.
             CollectionReference collection = db.Collection("rooms");
@@ -326,10 +331,13 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task ConverterRegistry()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
+
             // Sample: ConverterRegistry
             FirestoreDb db = new FirestoreDbBuilder
             {
                 ProjectId = projectId,
+                DatabaseId = databaseId,
                 ConverterRegistry = new ConverterRegistry
                 {
                     new GuidConverter()
@@ -351,7 +359,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task EnumSerializationByName()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
             CollectionReference collection = db.Collection("enums");
             DocumentReference document = await collection.AddAsync(new { Value = SerializedByName.FirstValue });
             DocumentSnapshot snapshot = await document.GetSnapshotAsync();
@@ -374,7 +383,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task ValueTuples()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
             CollectionReference collection = db.Collection("snippet-users");
             Company company = new Company
             {

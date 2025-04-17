@@ -1,4 +1,4 @@
-﻿// Copyright 2017, Google Inc. All rights reserved.
+// Copyright 2017, Google Inc. All rights reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -32,8 +32,9 @@ namespace Google.Cloud.Firestore.Snippets
         public void References()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             // Sample: References
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // You can create references directly from FirestoreDb:
             CollectionReference citiesFromDb = db.Collection("cities");
@@ -71,8 +72,9 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task AddAsync()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             // Sample: AddAsync
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // Create a document with a random ID in the "cities" collection.
             CollectionReference collection = db.Collection("cities");
@@ -94,7 +96,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task UpdateAsync()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             CollectionReference collection = db.Collection("cities");
             City city = new City
@@ -121,7 +124,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task SetAsyncOverwrite()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             CollectionReference collection = db.Collection("cities");
             City city = new City
@@ -149,7 +153,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task SetAsyncMergeAll()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             CollectionReference collection = db.Collection("cities");
             City city = new City
@@ -173,7 +178,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task SetAsyncMergeSpecific()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             CollectionReference collection = db.Collection("cities");
             City city = new City
@@ -201,7 +207,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task DeleteAsync()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             CollectionReference collection = db.Collection("cities");
             City city = new City
@@ -232,9 +239,10 @@ namespace Google.Cloud.Firestore.Snippets
             await tmp.Document("daily").SetAsync(new { Counter = 0 });
 
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
 
             // Sample: TransactionAsyncCallbackNoResult
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
             CollectionReference collection = db.Collection("counters");
             DocumentReference currentCounter = collection.Document("current");
             DocumentReference dailyCounter = collection.Document("daily");
@@ -257,9 +265,10 @@ namespace Google.Cloud.Firestore.Snippets
             await tmp.Document("daily").SetAsync(new { Counter = 0 });
 
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
 
             // Sample: TransactionAsyncCallbackWithResult
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
             CollectionReference collection = db.Collection("counters");
             DocumentReference currentCounter = collection.Document("current");
 
@@ -279,7 +288,8 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task DocumentShapshot()
         {
             string projectId = _fixture.ProjectId;
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            string databaseId = _fixture.DatabaseId;
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
 
             // Create a document with a random ID in the "cities" collection.
             CollectionReference collection = db.Collection("cities");
@@ -313,8 +323,9 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task QuerySnapshot()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             // Sample: QuerySnapshot
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
             CollectionReference collection = db.Collection("cities");
 
             // A CollectionReference is a Query, so we can just fetch everything
@@ -345,9 +356,10 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task ListenQuery()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             string collectionId = _fixture.CreateUniqueCollection().Id;
             // Sample: ListenQuery
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
             CollectionReference collection = db.Collection(collectionId);
             Query query = collection.WhereGreaterThan("Score", 5).OrderByDescending("Score");
 
@@ -405,9 +417,10 @@ namespace Google.Cloud.Firestore.Snippets
         public async Task ListenDocument()
         {
             string projectId = _fixture.ProjectId;
+            string databaseId = _fixture.DatabaseId;
             string collectionId = _fixture.CreateUniqueCollection().Id;
             // Sample: ListenDocument
-            FirestoreDb db = FirestoreDb.Create(projectId);
+            FirestoreDb db = new FirestoreDbBuilder { ProjectId = projectId, DatabaseId = databaseId }.Build();
             // Create a random document ID. The document doesn't exist yet.
             DocumentReference doc = db.Collection(collectionId).Document();
 
