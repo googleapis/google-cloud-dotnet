@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Environment variables:
-# - COMMITTISH_OVERRIDE: The commit to actually build the release from, if not the one that has been checked out
 # - SKIP_NUGET_PUSH: If non-empty, the push to nuget.org is skipped
 # - SKIP_GOOGLEAPISDEV_UPLOAD: If non-empty, the push to googleapis.dev is skipped
 
@@ -41,18 +40,8 @@ DOCS_CREDENTIALS="$SECRETS_LOCATION/docuploader_service_account"
 GOOGLE_CLOUD_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-cloud-nuget-api-key)"
 GOOGLE_APIS_PACKAGES_NUGET_API_KEY="$(cat "$SECRETS_LOCATION"/google-apis-nuget-api-key)"
 
-COMMITTISH=$COMMITTISH_OVERRIDE
-if [[ $COMMITTISH_OVERRIDE = "" ]]
-then
-  COMMITTISH=$(git rev-parse HEAD)
-else
-  COMMITTISH=$COMMITTISH_OVERRIDE
-fi
-
-echo "Building with commit $COMMITTISH"
-
 # Build the release and run the tests.
-./buildrelease.sh $COMMITTISH
+./buildrelease.sh
 
 # Restore tools just in case we haven't done so already.
 # (If we're using autorelease, this should have happened, but
@@ -63,7 +52,7 @@ if [[ $SKIP_NUGET_PUSH = "" ]]
 then
   echo "Pushing NuGet packages"
   # Push the changes to nuget.
-  cd ./releasebuild/nuget
+  cd ./nuget
   for pkg in *.nupkg
   do
     # Work out just the package ID based on the filename.
@@ -95,7 +84,7 @@ then
     dotnet generate-sbom $pkg
     dotnet nuget push -s https://api.nuget.org/v3/index.json -k $pkg_nuget_api_key $pkg
   done
-  cd ../..
+  cd ..
 else
   echo "Skipping NuGet push"
 fi
@@ -104,11 +93,10 @@ fi
 if [[ -f $DOCS_CREDENTIALS && $SKIP_GOOGLEAPISDEV_UPLOAD = "" ]]
 then
   echo "Uploading documentation to googleapis.dev and devsite"
-  ./uploaddocs.sh releasebuild/nuget releasebuild/docs/output $DOCS_CREDENTIALS docs-staging docs-staging-v2
+  ./uploaddocs.sh nuget docs/output $DOCS_CREDENTIALS docs-staging docs-staging-v2
 else
   echo "Skipping googleapis.dev and devsite upload"
 fi
 
-# Process the build log in releasebuild
-cd releasebuild
+# Process the build log
 ./processbuildtiminglog.sh
