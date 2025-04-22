@@ -3975,6 +3975,17 @@
             "sourcePaths": [
                 "apis/Google.Cloud.DeviceStreaming.V1/Google.Cloud.DeviceStreaming.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.FinancialServices.V1",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/financialservices/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.FinancialServices.V1/Google.Cloud.FinancialServices.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
