@@ -3975,6 +3975,17 @@
             "sourcePaths": [
                 "apis/Google.Cloud.DeviceStreaming.V1/Google.Cloud.DeviceStreaming.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.Lustre.V1",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/lustre/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.Lustre.V1/Google.Cloud.Lustre.V1"
+            ]
         }
     ],
     "commonLibrarySourcePaths": [
