@@ -1228,6 +1228,11 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
+    public partial class SetLabelsMachineImageRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class DeleteNetworkAttachmentRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -2514,6 +2519,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class PerformMaintenanceReservationBlockRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class DeleteReservationRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
@@ -2524,6 +2538,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class InsertReservationRequest
+    {
+        internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
+        {
+            pollRequest.Zone = Zone;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class PerformMaintenanceReservationRequest
     {
         internal void PopulatePollRequestFields(GetZoneOperationRequest pollRequest)
         {

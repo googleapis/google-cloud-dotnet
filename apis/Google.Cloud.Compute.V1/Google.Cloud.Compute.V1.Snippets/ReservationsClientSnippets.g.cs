@@ -827,6 +827,144 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for PerformMaintenance</summary>
+        public void PerformMaintenanceRequestObject()
+        {
+            // Snippet: PerformMaintenance(PerformMaintenanceReservationRequest, CallSettings)
+            // Create client
+            ReservationsClient reservationsClient = ReservationsClient.Create();
+            // Initialize request argument(s)
+            PerformMaintenanceReservationRequest request = new PerformMaintenanceReservationRequest
+            {
+                Zone = "",
+                ReservationsPerformMaintenanceRequestResource = new ReservationsPerformMaintenanceRequest(),
+                RequestId = "",
+                Reservation = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationsClient.PerformMaintenance(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationsClient.PollOncePerformMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenanceAsync</summary>
+        public async Task PerformMaintenanceRequestObjectAsync()
+        {
+            // Snippet: PerformMaintenanceAsync(PerformMaintenanceReservationRequest, CallSettings)
+            // Additional: PerformMaintenanceAsync(PerformMaintenanceReservationRequest, CancellationToken)
+            // Create client
+            ReservationsClient reservationsClient = await ReservationsClient.CreateAsync();
+            // Initialize request argument(s)
+            PerformMaintenanceReservationRequest request = new PerformMaintenanceReservationRequest
+            {
+                Zone = "",
+                ReservationsPerformMaintenanceRequestResource = new ReservationsPerformMaintenanceRequest(),
+                RequestId = "",
+                Reservation = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationsClient.PerformMaintenanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationsClient.PollOncePerformMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenance</summary>
+        public void PerformMaintenance()
+        {
+            // Snippet: PerformMaintenance(string, string, string, ReservationsPerformMaintenanceRequest, CallSettings)
+            // Create client
+            ReservationsClient reservationsClient = ReservationsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string reservation = "";
+            ReservationsPerformMaintenanceRequest reservationsPerformMaintenanceRequestResource = new ReservationsPerformMaintenanceRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = reservationsClient.PerformMaintenance(project, zone, reservation, reservationsPerformMaintenanceRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = reservationsClient.PollOncePerformMaintenance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PerformMaintenanceAsync</summary>
+        public async Task PerformMaintenanceAsync()
+        {
+            // Snippet: PerformMaintenanceAsync(string, string, string, ReservationsPerformMaintenanceRequest, CallSettings)
+            // Additional: PerformMaintenanceAsync(string, string, string, ReservationsPerformMaintenanceRequest, CancellationToken)
+            // Create client
+            ReservationsClient reservationsClient = await ReservationsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string reservation = "";
+            ReservationsPerformMaintenanceRequest reservationsPerformMaintenanceRequestResource = new ReservationsPerformMaintenanceRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await reservationsClient.PerformMaintenanceAsync(project, zone, reservation, reservationsPerformMaintenanceRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await reservationsClient.PollOncePerformMaintenanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for Resize</summary>
         public void ResizeRequestObject()
         {
